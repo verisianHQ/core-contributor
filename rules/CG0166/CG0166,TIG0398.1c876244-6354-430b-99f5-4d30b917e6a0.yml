@@ -1,0 +1,95 @@
+# Variable: RDOMAIN
+# Condition: IDVARVAL ^= null
+# Rule: RDOMAIN ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Two-character abbreviation for the domain of the parent
+                  record(s). Null for comments collected on a general comments
+                  or additional information CRF page.
+                Document: SDTMIG v3.4
+                Item: Specification
+                Section: '5.1'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0166
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Value of identifying variable of the parent record(s). Used only
+                  when individual comments are related to domain records. null
+                  for comments collected on separate CRFs.
+                Document: IG v3.2
+                Item: Specification
+                Section: '5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0166
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Value of identifying variable of the parent record(s). Used only
+                  when individual comments are related to domain records. null
+                  for comments collected on separate CRFs.
+                Document: IG v3.3
+                Item: Specification
+                Section: '5.1'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0166
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Two-character abbreviation for the domain of the parent
+                  record(s). Null for comments collected on a general comments
+                  or additional information CRF page.
+                Document: TIG 1.0
+                Item: Specification
+                Section: 2.8.10.2
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0398
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+
+Check:
+  all:
+    - name: IDVARVAL
+      operator: non_empty
+    - name: RDOMAIN
+      operator: empty
+Core:
+  Id: CORE-000017
+  Status: Published
+  Version: '1'
+Description: Verify RDOMAIN is not null when IDVARVAL is not null
+Executability: Fully Executable
+Outcome:
+  Message: RDOMAIN has a missing value when IDVARVAL has a non-missing value
+  Output Variables:
+    - RDOMAIN
+    - IDVARVAL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - CO
+  Use Case: INDH
+Sensitivity: Record
