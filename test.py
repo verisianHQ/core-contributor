@@ -1,16 +1,13 @@
 #!/usr/bin/env python3
 """
-Contributor test script for CDISC Rules Engine.
+Contributor test script for SQL CDISC Rules Engine Contributor Repo.
 Runs validation using the engine submodule with PostgreSQL.
 """
 
+import os
 import sys
 import subprocess
 from pathlib import Path
-from typing import List, Optional, Tuple
-import logging
-
-logging.basicConfig(level=logging.CRITICAL)
 
 def check_setup() -> bool:
     """Verify that setup has been completed, run setup if needed."""
@@ -61,6 +58,22 @@ def run_setup() -> bool:
         print(f"\nError running setup: {e}")
         return False
 
+if not os.path.exists("venv"):
+    run_setup()
+
+if 'VIRTUAL_ENV' not in os.environ:
+        if sys.platform == "win32":
+            newpython = os.path.join("venv", 'Scripts', 'python.exe')
+        else:
+            newpython = os.path.join("venv", 'bin', 'python')
+        args = [newpython] + sys.argv
+        os.environ['VIRTUAL_ENV'] = "venv"
+        os.execv(newpython, args)
+
+from typing import List, Optional, Tuple
+import logging
+
+logging.basicConfig(level=logging.CRITICAL)
 
 def get_available_rules() -> List[str]:
     rules_dir = Path("rules")
