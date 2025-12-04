@@ -62,13 +62,13 @@ if not os.path.exists("venv"):
     run_setup()
 
 if 'VIRTUAL_ENV' not in os.environ:
-        if sys.platform == "win32":
-            newpython = os.path.join("venv", 'Scripts', 'python.exe')
-        else:
-            newpython = os.path.join("venv", 'bin', 'python')
-        args = [newpython] + sys.argv
-        os.environ['VIRTUAL_ENV'] = "venv"
-        os.execv(newpython, args)
+    if sys.platform == "win32":
+        newpython = os.path.join("venv", 'Scripts', 'python.exe')
+    else:
+        newpython = os.path.join("venv", 'bin', 'python')
+    args = [newpython] + sys.argv
+    os.environ['VIRTUAL_ENV'] = "venv"
+    os.execv(newpython, args)
 
 from typing import List, Optional, Tuple
 import logging
@@ -297,6 +297,131 @@ def display_summary(summary: dict):
     results_path = Path("rules") / rule_id / "results"
     print(f"\nDetailed results saved to: {results_path}")
 
+def generate_rule_results(rule_id: str, save_results: bool = True) -> dict:
+    """
+    Generate validation results for a rule. Called by github actions.
+    """
+    summary = {
+        "rule_id": rule_id,
+        "positive_tests": [],
+        "negative_tests": [],
+        "status": "passed"
+    }
+    
+    rule_path = Path("rules") / rule_id
+    
+    rule_yaml_files = list(rule_path.glob("*.yml"))
+    if not rule_yaml_files:
+        return summary
+    
+    engine_path = Path("engine")
+    if str(engine_path) not in sys.path:
+        sys.path.insert(0, str(engine_path))
+    
+    try:
+        from engine.cdisc_rules_engine.utilities.ig_specification import IGSpecification
+        from engine.tests.rule_regression.regression import sharepoint_xlsx_to_test_datasets, process_test_case_dataset
+        import yaml
+        
+        with open(rule_yaml_files[0], 'r') as f:
+            rule = yaml.safe_load(f)
+        
+        ig_specs = IGSpecification(
+            standard="sdtmig",
+            standard_version="3.4",
+            standard_substandard=None,
+            define_xml_version=None
+        )
+        
+        for test_type in ["positive", "negative"]:
+            test_type_path = rule_path / test_type
+            if not test_type_path.exists():
+                continue
+            
+            expected = "0 errors" if test_type == "positive" else ">0 errors"
+            
+            for case_dir in sorted(test_type_path.iterdir()):
+                if not case_dir.is_dir():
+                    continue
+                
+                case_id = case_dir.name
+                data_dir = case_dir / "data"
+                
+                excel_files = list(data_dir.glob("*.xlsx")) + list(data_dir.glob("*.xls"))
+                if not excel_files:
+                    continue
+                
+                try:
+                    test_datasets = sharepoint_xlsx_to_test_datasets(str(excel_files[0]))
+                    
+                    regression_errors = {}
+                    sql_results, _ = process_test_case_dataset(
+                        regression_errors=regression_errors,
+                        define_xml_file_path=None,
+                        data_test_datasets=test_datasets,
+                        ig_specs=ig_specs,
+                        rule=rule,
+                        test_case_folder_path=str(data_dir),
+                        cur_core_id=rule_id,
+                        use_pgserver=True
+                    )
+                    
+                    if "results_sql" not in regression_errors:
+                        summary[f"{test_type}_tests"].append({
+                            "case_id": case_id,
+                            "passed": False,
+                            "total_errors": None,
+                            "expected": expected,
+                            "error": "No SQL results"
+                        })
+                        summary["status"] = "failed"
+                        continue
+                    
+                    regression_error_results = regression_errors["results_sql"]
+                    total_errors = sum(len(ds.get('errors', [])) for ds in regression_error_results)
+
+                    if save_results:
+                        results_path = Path("rules") / rule_id / test_type / case_id / "results"
+                        results_path.mkdir(parents=True, exist_ok=True)
+                        results_file = results_path / "results.json"
+                        
+                        with results_file.open("w") as f:
+                            from json import dump
+                            dump(sql_results, f, indent=2)
+                                            
+                    if test_type == "positive":
+                        passed = (total_errors == 0)
+                    else:
+                        passed = (total_errors > 0)
+                    
+                    summary[f"{test_type}_tests"].append({
+                        "case_id": case_id,
+                        "passed": passed,
+                        "total_errors": total_errors,
+                        "expected": expected
+                    })
+                    
+                    if not passed:
+                        summary["status"] = "failed"
+
+                except Exception as e:
+                    import traceback
+                    traceback.print_exc()
+                    
+                    summary[f"{test_type}_tests"].append({
+                        "case_id": case_id,
+                        "passed": False,
+                        "total_errors": None,
+                        "expected": expected,
+                        "error": str(e)
+                    })
+                    summary["status"] = "failed"
+    
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+    
+    return summary
 
 def main():
     print("Core SQL Rules Engine - Contributor Test Suite")
