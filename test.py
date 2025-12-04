@@ -14,7 +14,7 @@ logging.basicConfig(level=logging.CRITICAL)
 
 def check_setup() -> bool:
     """Verify that setup has been completed, run setup if needed."""
-    venv_path = Path("engine/venv")
+    venv_path = Path("venv")
     engine_path = Path("engine")
     
     if not engine_path.exists() or not any(engine_path.iterdir()):
@@ -52,7 +52,6 @@ def run_setup() -> bool:
             )
         
         if result.returncode == 0:
-            print("\nSetup completed successfully!")
             return True
         else:
             print(f"\nSetup failed with return code: {result.returncode}")

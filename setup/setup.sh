@@ -108,8 +108,6 @@ if [ -z "$PYTHON_CMD" ]; then
     fi
 fi
 
-cd engine
-
 echo "Setting up virtual environment..."
 
 if [ -d "venv" ] && [ ! -f "venv/bin/activate" ]; then
@@ -127,20 +125,18 @@ VENV_PYTHON=$(which python)
 echo "Installing dependencies..."
 python -m pip install --upgrade pip --quiet
 
-if [ ! -f "requirements.txt" ]; then
+if [ ! -f "engine/requirements.txt" ]; then
     echo "requirements.txt not found in engine directory"
     exit 1
 fi
 
-pip install -r requirements.txt --quiet
+pip install -r engine/requirements.txt --quiet
 
-if [ ! -f "requirements-dev.txt" ]; then
+if [ ! -f "engine/requirements-dev.txt" ]; then
     echo "requirements-dev.txt not found in engine directory"
     exit 1
 fi
 
-pip install -r requirements-dev.txt --quiet
-
-cd ..
+pip install -r engine/requirements-dev.txt --quiet
 
 echo "Setup completed successfully!"

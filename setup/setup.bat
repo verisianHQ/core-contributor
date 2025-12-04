@@ -120,7 +120,6 @@ if !errorlevel! equ 0 (
 
 echo.
 echo Setting up virtual environment...
-cd engine
 
 if exist "venv\" (
     if not exist "venv\Scripts\activate.bat" (
@@ -155,14 +154,14 @@ echo.
 echo Installing dependencies...
 python -m pip install --upgrade pip --quiet
 
-if not exist "requirements.txt" (
+if not exist "engine/requirements.txt" (
     echo requirements.txt not found in engine directory
     cd ..
     pause
     exit /b 1
 )
 
-pip install -r requirements.txt --quiet
+pip install -r engine/requirements.txt --quiet
 if !errorlevel! neq 0 (
     echo Failed to install dependencies
     cd ..
@@ -170,22 +169,20 @@ if !errorlevel! neq 0 (
     exit /b 1
 )
 
-if not exist "requirements-dev.txt" (
+if not exist "engine/requirements-dev.txt" (
     echo requirements-dev.txt not found in engine directory
     cd ..
     pause
     exit /b 1
 )
 
-pip install -r requirements-dev.txt --quiet
+pip install -r engine/requirements-dev.txt --quiet
 if !errorlevel! neq 0 (
     echo Failed to install dependencies
     cd ..
     pause
     exit /b 1
 )
-
-cd ..
 
 echo.
 echo Setup completed successfully!
