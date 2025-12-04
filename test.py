@@ -29,7 +29,6 @@ def check_setup() -> bool:
 
 
 def run_setup() -> bool:
-    """Run the appropriate setup script for the current platform."""
     print("\nRunning setup...")
     
     setup_path = Path("setup")
@@ -65,7 +64,6 @@ def run_setup() -> bool:
 
 
 def get_available_rules() -> List[str]:
-    """Get list of available rule directories."""
     rules_dir = Path("rules")
     if not rules_dir.exists():
         print("Error: 'rules' directory not found!")
@@ -76,7 +74,6 @@ def get_available_rules() -> List[str]:
 
 
 def prompt_for_rule(available_rules: List[str]) -> str:
-    """Prompt user to select which rule to test."""
     print("\nAvailable Rules:")
     print("-" * 60)
     
@@ -99,7 +96,6 @@ def prompt_for_rule(available_rules: List[str]) -> str:
 
 
 def get_test_cases(rule_id: str) -> dict:
-    """Get positive and negative test cases for a rule."""
     rule_path = Path("rules") / rule_id
     
     test_cases = {
@@ -123,19 +119,16 @@ def get_test_cases(rule_id: str) -> dict:
     return test_cases
 
 
-def run_validation(rule_id: str, test_type: str, case_id: str, data_path: str) -> Tuple[Optional[dict], Optional[dict]]:
-    """Run validation using engine's regression test infrastructure."""
+def run_validation(rule_id: str, test_type: str, case_id: str, data_path: str) -> Optional[Tuple[Optional[dict], Optional[dict]]]:
     print(f"\nRunning {test_type} test case: {case_id}")
     
     rule_path = Path("rules") / rule_id
     
-    # Find rule YAML
     rule_yaml_files = list(rule_path.glob("*.yml"))
     if not rule_yaml_files:
         print(f"  Error: No rule YAML file found")
         return None
     
-    # Find Excel file
     data_path_obj = Path(data_path)
     excel_files = list(data_path_obj.glob("*.xlsx")) + list(data_path_obj.glob("*.xls"))
     if not excel_files:
@@ -143,25 +136,21 @@ def run_validation(rule_id: str, test_type: str, case_id: str, data_path: str) -
         return None
     
     try:
-        # Add engine to path
         engine_path = Path("engine")
         if str(engine_path) not in sys.path:
             sys.path.insert(0, str(engine_path))
         
+        from engine.cdisc_rules_engine.utilities.ig_specification import IGSpecification
         from engine.tests.rule_regression.regression import sharepoint_xlsx_to_test_datasets, process_test_case_dataset
         import yaml
         
-        # Load rule
         with open(rule_yaml_files[0], 'r') as f:
             rule = yaml.safe_load(f)
         
-        # Convert Excel to TestDatasets
         print(f"  Loading test data...")
         test_datasets = sharepoint_xlsx_to_test_datasets(str(excel_files[0]))
         
-        # Setup args for process_test_case_dataset
         regression_errors = {}
-        from engine.cdisc_rules_engine.utilities.ig_specification import IGSpecification
         ig_specs = IGSpecification(
             standard="sdmtig",
             standard_version="3.4",
@@ -169,7 +158,6 @@ def run_validation(rule_id: str, test_type: str, case_id: str, data_path: str) -
             define_xml_version=None
         )
         
-        # Run validation
         print(f"  Running validation...")
         sql_results, _ = process_test_case_dataset(
             regression_errors=regression_errors,
@@ -182,7 +170,6 @@ def run_validation(rule_id: str, test_type: str, case_id: str, data_path: str) -
             use_pgserver=True
         )
 
-        # Extract results from regression_errors dict
         regression_error_results = None
         if "results_sql" in regression_errors:
             regression_error_results = regression_errors["results_sql"]
@@ -199,8 +186,8 @@ def run_validation(rule_id: str, test_type: str, case_id: str, data_path: str) -
         return None
 
 
-def analyze_results(rule_id: str, test_cases: dict) -> dict:
-    """Analyze test results and determine pass/fail."""
+def analyse_results(rule_id: str, test_cases: dict) -> dict:
+    """Analyse test results and determine pass/fail."""
     summary = {
         "rule_id": rule_id,
         "positive_tests": [],
@@ -257,7 +244,6 @@ def analyze_results(rule_id: str, test_cases: dict) -> dict:
 
 
 def display_summary(summary: dict):
-    """Display test results summary."""
     print("\n" + "="*60)
     print("Test Results Summary")
     print("="*60)
@@ -301,8 +287,7 @@ def display_summary(summary: dict):
 
 
 def main():
-    """Main execution function."""
-    print("CDISC Rules Engine - Contributor Test Suite")
+    print("Core SQL Rules Engine - Contributor Test Suite")
     print("="*60)
     
     if not check_setup():
@@ -325,7 +310,7 @@ def main():
     
     print(f"Found {len(test_cases['positive'])} positive and {len(test_cases['negative'])} negative test cases")
     
-    summary = analyze_results(rule_id, test_cases)
+    summary = analyse_results(rule_id, test_cases)
     display_summary(summary)
     
     if summary["status"] == "failed":
