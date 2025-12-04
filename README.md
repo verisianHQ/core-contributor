@@ -1,7 +1,7 @@
 # core-contributor
 Contribution framework for rules and test data with automated regression testing. Edit rules and test data, then validate against the PostgreSQL-based CORE engine.
 
-# Steps
+# Local Setup Steps
 
 1) Install git
 2) Install vscode
@@ -18,7 +18,7 @@ Contribution framework for rules and test data with automated regression testing
 9) Edit a rule and test data as desired
 10) When you want to run the rule against test data, make sure you are in the core-contributor folder and run one of the following: \
         WINDOWS: `.\run\windows_run.bat` \
-        MAC: `./run/bash_run.sh`
+        MAC: `./run/bash_run.sh` \
   a) If you haven't run the setup script, don't worry, it will run automatically when you execute this command
 11) Check your run results in the `results` folder. Note that there is a separate `results` folder for each test case, which contains only the information relevant to that particular case
 12) If everything looks good: FOLLOW THE GUIDE FOR ADD, COMMIT AND PRs
@@ -30,7 +30,8 @@ Contribution framework for rules and test data with automated regression testing
 If you want to set up YAML validation for your rule files, follow these steps:
 1) Go to the `Extensions` tab in the VSCode left sidebar
 2) Search `yaml` and install the Red Hat YAML extension (it should be the top one)
-3) Once it's installed, go to File > Preferences > Settings, and search 'yaml schema'. Click the `Edit in settings.json` option under Yaml: Schemas
-4) Paste the following into "yaml.schemas": \
+3) Once it's installed, go to File > Preferences > Settings, and search 'yaml schema'.
+4) Click the `Edit in settings.json` option under Yaml: Schemas
+5) Paste the following into "yaml.schemas": \
        `"https://rule-editor.cdisc.org/api/schema": "/*.yml"`
-5) There you go! You will now see errors and pop-ups if you try to use erroneous options in your yml files. If, after a few seconds, you don't see this behaviour, try restarting VSCode.
+6) There you go! You will now see errors and pop-ups if you try to use erroneous options in your yml files. If, after a few seconds, you don't see this behaviour, try restarting VSCode.
