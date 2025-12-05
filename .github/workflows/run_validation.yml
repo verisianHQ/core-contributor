@@ -22,27 +22,23 @@ jobs:
         with:
           python-version: '3.12'
       
-      - name: Initialize engine submodule
-        run: |
-          git submodule update --init --recursive
-          cd engine
-          SUBMODULE_COMMIT=$(git rev-parse HEAD)
-          echo "Using engine submodule at commit: $SUBMODULE_COMMIT"
-
-      - name: Create virtual environment
+      - name: Create and Install dependencies
         run: |
           python -m venv venv
+          source venv/bin/activate
 
-      - name: Install engine dependencies
-        run: |
+          git submodule update --init --recursive
+          
           cd engine
+          
+          SUBMODULE_COMMIT=$(git rev-parse HEAD)
+          echo "Using engine submodule at commit: $SUBMODULE_COMMIT"
+          
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install -r requirements-dev.txt
-
-      - name: Activate environment
-        run: |
-          source venv/bin/activate
+          
+          cd ..
 
       - name: Detect changed rules
         id: changed-rules
@@ -95,7 +91,7 @@ jobs:
             # Generate fresh results (overwrites results.json)
             echo ""
             echo "Generating fresh results..."
-            python -c "from test import generate_rule_results; generate_rule_results('$RULE_ID')"
+            ./venv/bin/python -c "from test import generate_rule_results; generate_rule_results('$RULE_ID')"
             
             if [ $? -ne 0 ]; then
               echo "ERROR: Failed to generate results for $RULE_ID"
@@ -136,7 +132,7 @@ jobs:
                 fi
                 
                 # Compare with Python
-                python tests/validator.py "$COMMITTED_RESULTS" "$GENERATED_RESULTS" "$TEST_TYPE" "$CASE_ID"
+                ./venv/bin/python tests/validator.py "$COMMITTED_RESULTS" "$GENERATED_RESULTS" "$TEST_TYPE" "$CASE_ID"
                 
                 if [ $? -ne 0 ]; then
                   RULE_PASSED=false
