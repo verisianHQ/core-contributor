@@ -1,44 +1,38 @@
 {
-  "IE": [
+  "datasets": [
     {
-      "executionStatus": "success",
       "dataset": "ie.xpt",
       "domain": "IE",
-      "variables": [
-        "IECAT",
-        "IEORRES"
-      ],
-      "message": "IEORRES is not equal to 'N' when IECAT equals 'INCLUSION'.",
+      "execution_status": "success",
+      "execution_message": "IEORRES is not equal to 'N' when IECAT equals 'INCLUSION'.",
+      "number_errors": 3,
       "errors": [
         {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC015",
           "value": {
             "IECAT": "INCLUSION",
             "IEORRES": "Y"
-          },
-          "dataset": "ie.xpt",
-          "row": 1,
-          "USUBJID": "CDISC015",
-          "SEQ": 1
+          }
         },
         {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "CDISC016",
           "value": {
             "IECAT": "INCLUSION",
             "IEORRES": "Yes"
-          },
-          "dataset": "ie.xpt",
-          "row": 2,
-          "USUBJID": "CDISC016",
-          "SEQ": 1
+          }
         },
         {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC017",
           "value": {
             "IECAT": "INCLUSION",
             "IEORRES": "Nope"
-          },
-          "dataset": "ie.xpt",
-          "row": 3,
-          "USUBJID": "CDISC017",
-          "SEQ": 1
+          }
         }
       ]
     }
