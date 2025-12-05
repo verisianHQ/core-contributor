@@ -9,6 +9,10 @@ on:
 jobs:
   validate-rules:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
     
     steps:
       - name: Checkout PR
@@ -60,22 +64,36 @@ jobs:
 
       - name: Validate changed rules
         if: steps.changed-rules.outputs.rules != ''
+        id: validate
+        continue-on-error: true
         run: |
-          set -e
-          
           # Define the python path at the TOP of this step so it's easy to reuse
           PYTHON_CMD="./venv/bin/python"
           
           RULES='${{ steps.changed-rules.outputs.rules }}'
           
+          # Initialize report file
+          REPORT_FILE="validation_report.md"
+          echo "# Rule Validation Report" > $REPORT_FILE
+          echo "" >> $REPORT_FILE
+          echo "**Commit:** \`${{ github.event.pull_request.head.sha }}\`" >> $REPORT_FILE
+          echo "" >> $REPORT_FILE
+          
+          OVERALL_SUCCESS=true
+          
           echo "$RULES" | jq -r '.[]' | while read -r RULE_ID; do
             echo ""
             echo "Validating $RULE_ID"
+            echo "## Rule: $RULE_ID" >> $REPORT_FILE
+            echo "" >> $REPORT_FILE
 
             YML_COUNT=$(find "rules/$RULE_ID" -maxdepth 1 -name "*.yml" | wc -l)
             if [ "$YML_COUNT" -eq 0 ]; then
               echo "ERROR: No YAML file found in rules/$RULE_ID/"
-              exit 1
+              echo "**ERROR:** No YAML file found in rules/$RULE_ID/" >> $REPORT_FILE
+              echo "" >> $REPORT_FILE
+              OVERALL_SUCCESS=false
+              continue
             fi
             
             # Backup committed results
@@ -97,12 +115,14 @@ jobs:
             echo ""
             echo "Generating fresh results..."
             
-            # USE THE VARIABLE DEFINED AT THE TOP OF THIS BLOCK
             $PYTHON_CMD -c "from test import generate_rule_results; generate_rule_results('$RULE_ID')"
             
             if [ $? -ne 0 ]; then
               echo "ERROR: Failed to generate results for $RULE_ID"
-              exit 1
+              echo "**ERROR:** Failed to generate results" >> $REPORT_FILE
+              echo "" >> $REPORT_FILE
+              OVERALL_SUCCESS=false
+              continue
             fi
             
             # Compare results
@@ -110,6 +130,9 @@ jobs:
             echo "Comparing generated vs committed results..."
             
             RULE_PASSED=true
+            CASE_COUNT=0
+            PASSED_COUNT=0
+            FAILED_COUNT=0
             
             for TEST_TYPE in positive negative; do
               TEST_PATH="rules/$RULE_ID/$TEST_TYPE"
@@ -127,30 +150,119 @@ jobs:
                 COMMITTED_RESULTS="$CASE_DIR/results/results.json.committed"
                 GENERATED_RESULTS="$CASE_DIR/results/results.json"
                 
+                CASE_COUNT=$((CASE_COUNT + 1))
+                
                 if [ ! -f "$COMMITTED_RESULTS" ]; then
                   echo "  $TEST_TYPE/$CASE_ID: No committed results found"
+                  echo "\`$TEST_TYPE/$CASE_ID\`: No committed results found" >> $REPORT_FILE
                   continue
                 fi
                 
                 if [ ! -f "$GENERATED_RESULTS" ]; then
                   echo "  $TEST_TYPE/$CASE_ID: Failed to generate results"
+                  echo "\`$TEST_TYPE/$CASE_ID\`: Failed to generate results" >> $REPORT_FILE
                   RULE_PASSED=false
+                  FAILED_COUNT=$((FAILED_COUNT + 1))
                   continue
                 fi
                 
-                # USE THE VARIABLE DEFINED AT THE TOP OF THIS BLOCK
-                $PYTHON_CMD tests/validator.py "$COMMITTED_RESULTS" "$GENERATED_RESULTS" "$TEST_TYPE" "$CASE_ID"
+                # Create unique temp file for this case
+                TEMP_OUTPUT="/tmp/validator_${TEST_TYPE}_${CASE_ID}.txt"
                 
-                if [ $? -ne 0 ]; then
+                # Run validator and capture output (tee sends to both stdout and file)
+                $PYTHON_CMD tests/validator.py "$COMMITTED_RESULTS" "$GENERATED_RESULTS" "$TEST_TYPE" "$CASE_ID" 2>&1 | tee "$TEMP_OUTPUT"
+                VALIDATOR_EXIT_CODE=${PIPESTATUS[0]}
+                
+                if [ $VALIDATOR_EXIT_CODE -ne 0 ]; then
+                  echo "\`$TEST_TYPE/$CASE_ID\`: Validation failed" >> $REPORT_FILE
                   RULE_PASSED=false
+                  FAILED_COUNT=$((FAILED_COUNT + 1))
+                else
+                  echo "\`$TEST_TYPE/$CASE_ID\`: Passed" >> $REPORT_FILE
+                  PASSED_COUNT=$((PASSED_COUNT + 1))
                 fi
+                
+                # Add validator output details for ALL cases (passed or failed)
+                if [ -f "$TEMP_OUTPUT" ] && [ -s "$TEMP_OUTPUT" ]; then
+                  echo "<details><summary>View details</summary>" >> $REPORT_FILE
+                  echo "" >> $REPORT_FILE
+                  echo '```' >> $REPORT_FILE
+                  cat "$TEMP_OUTPUT" >> $REPORT_FILE
+                  echo '```' >> $REPORT_FILE
+                  echo "</details>" >> $REPORT_FILE
+                fi
+                echo "" >> $REPORT_FILE
               done
             done
             
+            echo "" >> $REPORT_FILE
+            echo "**Summary:** $PASSED_COUNT passed, $FAILED_COUNT failed (Total: $CASE_COUNT test cases)" >> $REPORT_FILE
+            echo "" >> $REPORT_FILE
+            
             if [ "$RULE_PASSED" = false ]; then
               echo "Validation failed for $RULE_ID"
-              exit 1
+              OVERALL_SUCCESS=false
+            else
+              echo "All validations passed for $RULE_ID"
             fi
-            
-            echo "All validations passed for $RULE_ID"
           done
+          
+          # Exit with appropriate code
+          if [ "$OVERALL_SUCCESS" = false ]; then
+            exit 1
+          fi
+
+      - name: Post validation report
+        if: always() && steps.changed-rules.outputs.rules != ''
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const reportPath = 'validation_report.md';
+            
+            let reportBody = '## Rule Validation Results\n\n';
+            reportBody += 'No validation report generated.';
+            
+            if (fs.existsSync(reportPath)) {
+              reportBody = fs.readFileSync(reportPath, 'utf8');
+            }
+            
+            // Add workflow run link
+            reportBody += '\n\n---\n';
+            reportBody += `[View workflow run](${context.payload.repository.html_url}/actions/runs/${context.runId})`;
+            
+            // Find existing comment
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            
+            const botComment = comments.find(comment => 
+              comment.user.type === 'Bot' && 
+              comment.body.includes('Rule Validation Results')
+            );
+            
+            // Create or update comment
+            if (botComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: reportBody
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: reportBody
+              });
+            }
+
+      - name: Check validation status
+        if: steps.validate.outcome == 'failure'
+        run: |
+          echo "Validation failed - see report in PR comments"
+          exit 1
