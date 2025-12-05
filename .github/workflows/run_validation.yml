@@ -1,10 +1,14 @@
 name: Validate Rule Contributions
 
 on:
-  pull_request:
+  push:
+    branches: [main]
     paths:
       - 'rules/**'
-    types: [opened, synchronize, reopened]
+  pull_request:
+    branches: [main]
+    paths:
+      - 'rules/**'
 
 jobs:
   validate-rules:
@@ -74,7 +78,7 @@ jobs:
             
             echo ""
             echo "Generating fresh results..."
-            python test.py:generate_rule_results "$RULE_ID"
+            python test.py generate_rule_results "$RULE_ID"
             
             if [ $? -ne 0 ]; then
               echo "ERROR: Failed to generate results for $RULE_ID"
