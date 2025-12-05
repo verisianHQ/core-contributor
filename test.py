@@ -97,7 +97,7 @@ def run_validation(
 
         regression_errors = {}
         ig_specs = IGSpecification(
-            standard="sdmtig", standard_version="3.4", standard_substandard=None, define_xml_version=None
+            standard="sdtmig", standard_version="3.4", standard_substandard=None, define_xml_version=None
         )
 
         print(f"  Running validation...")
@@ -138,7 +138,7 @@ def analyse_results(rule_id: str, test_cases: dict) -> dict:
 
         for case in test_cases[test_type]:
             case_id = case["case_id"]
-            sql_results, regression_error_results = run_validation(rule_id, test_type, case_id, case["data_path"])
+            _, regression_error_results = run_validation(rule_id, test_type, case_id, case["data_path"])
 
             results_path = Path("rules") / rule_id / test_type / case_id / "results"
             if not results_path.exists():
@@ -147,7 +147,10 @@ def analyse_results(rule_id: str, test_cases: dict) -> dict:
             with results_path.open("w") as f:
                 from json import dump
 
-                dump(sql_results, f, indent=2)
+                if regression_error_results:
+                    dump(regression_error_results, f, indent=2)
+                else:
+                    dump({"datasets": []}, f, indent=2)
 
             if regression_error_results is None:
                 summary[f"{test_type}_tests"].append(
@@ -309,7 +312,7 @@ def generate_rule_results(rule_id: str, save_results: bool = True) -> dict:
                         with results_file.open("w") as f:
                             from json import dump
 
-                            dump(sql_results, f, indent=2)
+                            dump({"datasets": regression_error_results}, f, indent=2)
 
                     if test_type == "positive":
                         passed = total_errors == 0
