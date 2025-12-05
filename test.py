@@ -71,13 +71,13 @@ def run_validation(
 
     rule_yaml_files = list(rule_path.glob("*.yml"))
     if not rule_yaml_files:
-        print(f"  Error: No rule YAML file found")
+        print("  Error: No rule YAML file found")
         return None
 
     data_path_obj = Path(data_path)
     excel_files = list(data_path_obj.glob("*.xlsx")) + list(data_path_obj.glob("*.xls"))
     if not excel_files:
-        print(f"  Error: No Excel files found")
+        print("  Error: No Excel files found")
         return None
 
     try:
@@ -92,7 +92,7 @@ def run_validation(
         with open(rule_yaml_files[0], "r") as f:
             rule = yaml.safe_load(f)
 
-        print(f"  Loading test data...")
+        print("  Loading test data...")
         test_datasets = sharepoint_xlsx_to_test_datasets(str(excel_files[0]))
 
         regression_errors = {}
@@ -100,7 +100,7 @@ def run_validation(
             standard="sdtmig", standard_version="3.4", standard_substandard=None, define_xml_version=None
         )
 
-        print(f"  Running validation...")
+        print("  Running validation...")
         sql_results, _ = process_test_case_dataset(
             regression_errors=regression_errors,
             define_xml_file_path=None,
@@ -342,7 +342,7 @@ def generate_rule_results(rule_id: str, save_results: bool = True) -> dict:
                     )
                     summary["status"] = "failed"
 
-    except Exception as e:
+    except Exception:
         import traceback
 
         traceback.print_exc()
