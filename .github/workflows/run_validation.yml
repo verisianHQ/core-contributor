@@ -1,10 +1,6 @@
 name: Validate Rule Contributions
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'rules/**'
   pull_request:
     branches: [main]
     paths:
