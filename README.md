@@ -12,7 +12,7 @@ Contribution framework for rules and test data with automated regression testing
        `git clone --recurse-submodules https://github.com/verisianHQ/core-contributor.git`
 7) Right click on the 'core-contributor' folder and open with VSCode (if this is not an option, do `cd core-contributor` and then `code .`)
 8) Make sure the in-built terminal is visible within VSCode - if it isn't, go to View > Terminal
-9) You will need to setup the python environment, which will take a little bit of time. You can do this now or wait until you want to run a rule
+9) You will need to setup the python environment, which will take a little bit of time. You can do this now or wait until you want to run a rule \
        - To setup now, make sure you are in the core-contributor folder in the VSCode terminal, and run one of the following: \
               WINDOWS: `.\setup\windows_setup.bat` \
               MAC: `./setup/bash_setup.sh`
@@ -25,7 +25,7 @@ Contribution framework for rules and test data with automated regression testing
 1) Make sure you are on the main branch and that it is up to date. Run the following two commands: \
        `git checkout main` \
        `git pull origin main`
-2) Create a new branch to work on your changes, named as such: <your-name>/<rule-id>/<change> (eg richard/CG00001/edit): \
+2) Create a new branch to work on your changes, named as such: `<your-name>/<rule-id>/<change>` (eg `richard/CG00001/edit`): \
        `git branch <your-branch-name>`
 3) Switch to your new branch: \
        `git checkout <your-branch-name>`
@@ -43,7 +43,8 @@ Contribution framework for rules and test data with automated regression testing
        `git push origin <your-branch-name>` \
        - It may be easier to use VSCode to stage, commit and push your changes for you. To do this, see the SUPPLEMENTARY GUIDE
 9) Go to the online repository and create a pull request (PR) from your newly pushed branch
-10) On the PR page, make sure the information at the top is correct. It should be: `base: main ← compare: <branch-name>`
+10) On the PR page, make sure the information at the top is correct. It should be: \
+       `base: main ← compare: <branch-name>`
 11) Name your PR using the format `<rule-id> <fix>` and add a brief description of your changes
 12) On the PR, add reviewers (Els, Richard, Maximo) by clicking the cog in the top right corner, and add yourself as an assignee
 13) You're done! Keep an eye on the PR to make sure the automated checks pass, as well as to respond to any comments from reviewers. If you need to edit any changes on the PR, you can simply checkout your branch (`git checkout <your-branch-name>`), make your changes, and commit and push them - the PR will automatically update!
@@ -51,7 +52,7 @@ Contribution framework for rules and test data with automated regression testing
        `git checkout main` \
        `git pull origin main`
 
-*SUPPLEMENTARY GUIDE HERE*
+For further detail on any of these steps or git in general, see *SUPPLEMENTARY GUIDE HERE*
 
 
 # YAML Validation
