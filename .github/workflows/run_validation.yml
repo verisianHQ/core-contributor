@@ -129,37 +129,37 @@ jobs:
                 
                 # Compare with Python
                 python -c "
-                  import json
-                  import sys
+import json
+import sys
 
-                  with open('$COMMITTED_RESULTS') as f:
-                      committed = json.load(f)
-                  with open('$GENERATED_RESULTS') as f:
-                      generated = json.load(f)
+with open('$COMMITTED_RESULTS') as f:
+    committed = json.load(f)
+with open('$GENERATED_RESULTS') as f:
+    generated = json.load(f)
 
-                  committed_errors = sum(len(ds.get('errors', [])) for ds in committed.get('datasets', []))
-                  generated_errors = sum(len(ds.get('errors', [])) for ds in generated.get('datasets', []))
+committed_errors = sum(len(ds.get('errors', [])) for ds in committed.get('datasets', []))
+generated_errors = sum(len(ds.get('errors', [])) for ds in generated.get('datasets', []))
 
-                  if committed_errors != generated_errors:
-                      print(f'  $TEST_TYPE/$CASE_ID: Error count mismatch')
-                      print(f'    Committed: {committed_errors} errors')
-                      print(f'    Generated: {generated_errors} errors')
-                      sys.exit(1)
+if committed_errors != generated_errors:
+    print(f'  $TEST_TYPE/$CASE_ID: Error count mismatch')
+    print(f'    Committed: {committed_errors} errors')
+    print(f'    Generated: {generated_errors} errors')
+    sys.exit(1)
 
-                  # Validate expectations
-                  if '$TEST_TYPE' == 'positive':
-                      if generated_errors == 0:
-                          print(f'  $TEST_TYPE/$CASE_ID: 0 errors (valid positive test)')
-                      else:
-                          print(f'  $TEST_TYPE/$CASE_ID: {generated_errors} errors (should be 0)')
-                          sys.exit(1)
-                  else:
-                      if generated_errors > 0:
-                          print(f'  $TEST_TYPE/$CASE_ID: {generated_errors} errors (valid negative test)')
-                      else:
-                          print(f'  $TEST_TYPE/$CASE_ID: 0 errors (should be >0)')
-                          sys.exit(1)
-                "
+# Validate expectations
+if '$TEST_TYPE' == 'positive':
+    if generated_errors == 0:
+        print(f'  $TEST_TYPE/$CASE_ID: 0 errors (valid positive test)')
+    else:
+        print(f'  $TEST_TYPE/$CASE_ID: {generated_errors} errors (should be 0)')
+        sys.exit(1)
+else:
+    if generated_errors > 0:
+        print(f'  $TEST_TYPE/$CASE_ID: {generated_errors} errors (valid negative test)')
+    else:
+        print(f'  $TEST_TYPE/$CASE_ID: 0 errors (should be >0)')
+        sys.exit(1)
+"
                 if [ $? -ne 0 ]; then
                   RULE_PASSED=false
                 fi
