@@ -155,6 +155,12 @@ jobs:
             echo "All validations passed for $RULE_ID"
           done
 
+      - name: Upload validation results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-results
+
       - name: Comment on PR
         if: failure()
         uses: actions/github-script@v7
