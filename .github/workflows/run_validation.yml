@@ -28,7 +28,11 @@ jobs:
           cd engine
           SUBMODULE_COMMIT=$(git rev-parse HEAD)
           echo "Using engine submodule at commit: $SUBMODULE_COMMIT"
-      
+
+      - name: Create virtual environment
+        run: |
+          python -m venv venv
+
       - name: Install engine dependencies
         run: |
           cd engine

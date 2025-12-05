@@ -118,10 +118,6 @@ if [ ! -d "venv" ]; then
     $PYTHON_CMD -m venv venv
 fi
 
-source venv/bin/activate
-
-VENV_PYTHON=$(which python)
-
 echo "Installing dependencies..."
 python -m pip install --upgrade pip --quiet
 
@@ -138,5 +134,9 @@ if [ ! -f "engine/requirements-dev.txt" ]; then
 fi
 
 pip install -r engine/requirements-dev.txt --quiet
+
+source venv/bin/activate
+
+VENV_PYTHON=$(which python)
 
 echo "Setup completed successfully!"
