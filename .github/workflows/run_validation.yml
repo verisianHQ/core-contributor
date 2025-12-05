@@ -166,27 +166,32 @@ jobs:
                   continue
                 fi
                 
-                $PYTHON_CMD tests/validator.py "$COMMITTED_RESULTS" "$GENERATED_RESULTS" "$TEST_TYPE" "$CASE_ID" > /tmp/validator_output.txt 2>&1
-                VALIDATOR_EXIT_CODE=$?
+                # Create unique temp file for this case
+                TEMP_OUTPUT="/tmp/validator_${TEST_TYPE}_${CASE_ID}.txt"
+                
+                # Run validator and capture output (tee sends to both stdout and file)
+                $PYTHON_CMD tests/validator.py "$COMMITTED_RESULTS" "$GENERATED_RESULTS" "$TEST_TYPE" "$CASE_ID" 2>&1 | tee "$TEMP_OUTPUT"
+                VALIDATOR_EXIT_CODE=${PIPESTATUS[0]}
                 
                 if [ $VALIDATOR_EXIT_CODE -ne 0 ]; then
                   echo "\`$TEST_TYPE/$CASE_ID\`: Validation failed" >> $REPORT_FILE
-                  # Add details from validator output
-                  if [ -f /tmp/validator_output.txt ]; then
-                    echo "<details><summary>Show diff</summary>" >> $REPORT_FILE
-                    echo "" >> $REPORT_FILE
-                    echo '```' >> $REPORT_FILE
-                    cat /tmp/validator_output.txt >> $REPORT_FILE
-                    echo '```' >> $REPORT_FILE
-                    echo "</details>" >> $REPORT_FILE
-                    echo "" >> $REPORT_FILE
-                  fi
                   RULE_PASSED=false
                   FAILED_COUNT=$((FAILED_COUNT + 1))
                 else
                   echo "\`$TEST_TYPE/$CASE_ID\`: Passed" >> $REPORT_FILE
                   PASSED_COUNT=$((PASSED_COUNT + 1))
                 fi
+                
+                # Add validator output details for ALL cases (passed or failed)
+                if [ -f "$TEMP_OUTPUT" ] && [ -s "$TEMP_OUTPUT" ]; then
+                  echo "<details><summary>View details</summary>" >> $REPORT_FILE
+                  echo "" >> $REPORT_FILE
+                  echo '```' >> $REPORT_FILE
+                  cat "$TEMP_OUTPUT" >> $REPORT_FILE
+                  echo '```' >> $REPORT_FILE
+                  echo "</details>" >> $REPORT_FILE
+                fi
+                echo "" >> $REPORT_FILE
               done
             done
             
