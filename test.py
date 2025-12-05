@@ -97,7 +97,7 @@ def run_validation(
 
         regression_errors = {}
         ig_specs = IGSpecification(
-            standard="sdmtig", standard_version="3.4", standard_substandard=None, define_xml_version=None
+            standard="sdtmig", standard_version="3.4", standard_substandard=None, define_xml_version=None
         )
 
         print(f"  Running validation...")
