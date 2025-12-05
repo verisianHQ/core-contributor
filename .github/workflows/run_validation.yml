@@ -25,24 +25,21 @@ jobs:
       - name: Setup Virtual Environment
         run: python -m venv venv
 
-      - name: Initialise engine submodule and Install Dependencies
+      - name: Initialize engine submodule and Install Dependencies
         run: |
-          VENV_BIN_PATH=$(pwd)/venv/bin
-          PYTHON_BIN=$VENV_BIN_PATH/python
-          PIP_BIN=$VENV_BIN_PATH/pip
+          VENV_PYTHON=$(pwd)/venv/bin/python
+          VENV_PIP=$(pwd)/venv/bin/pip
           
-          $PYTHON_BIN -m pip install --upgrade pip
+          $VENV_PYTHON -m pip install --upgrade pip
           
           git submodule update --init --recursive
           
           cd engine
-          
-          $PIP_BIN install -r requirements.txt
-          $PIP_BIN install -r requirements-dev.txt
+          $VENV_PIP install -r requirements.txt
+          $VENV_PIP install -r requirements-dev.txt
           
           SUBMODULE_COMMIT=$(git rev-parse HEAD)
           echo "Using engine submodule at commit: $SUBMODULE_COMMIT"
-          
           cd ..
 
       - name: Detect changed rules
@@ -60,11 +57,14 @@ jobs:
             RULES_JSON=$(echo "$CHANGED_RULES" | jq -R -s -c 'split("\n") | map(select(length > 0))')
             echo "rules=$RULES_JSON" >> $GITHUB_OUTPUT
           fi
-      
+
       - name: Validate changed rules
         if: steps.changed-rules.outputs.rules != ''
         run: |
           set -e
+          
+          # Define the python path at the TOP of this step so it's easy to reuse
+          PYTHON_CMD="./venv/bin/python"
           
           RULES='${{ steps.changed-rules.outputs.rules }}'
           
@@ -78,7 +78,7 @@ jobs:
               exit 1
             fi
             
-            # Backup committed results before generating new ones
+            # Backup committed results
             echo ""
             echo "Backing up committed results..."
             for TEST_TYPE in positive negative; do
@@ -93,17 +93,19 @@ jobs:
               fi
             done
             
-            # Generate fresh results (overwrites results.json)
+            # Generate fresh results
             echo ""
             echo "Generating fresh results..."
-            $VENV_BIN_PATH/python -c "from test import generate_rule_results; generate_rule_results('$RULE_ID')"
+            
+            # USE THE VARIABLE DEFINED AT THE TOP OF THIS BLOCK
+            $PYTHON_CMD -c "from test import generate_rule_results; generate_rule_results('$RULE_ID')"
             
             if [ $? -ne 0 ]; then
               echo "ERROR: Failed to generate results for $RULE_ID"
               exit 1
             fi
             
-            # Compare backup (committed) vs fresh (generated)
+            # Compare results
             echo ""
             echo "Comparing generated vs committed results..."
             
@@ -136,8 +138,8 @@ jobs:
                   continue
                 fi
                 
-                # Compare with Python
-                $VENV_BIN_PATH/python tests/validator.py "$COMMITTED_RESULTS" "$GENERATED_RESULTS" "$TEST_TYPE" "$CASE_ID"
+                # USE THE VARIABLE DEFINED AT THE TOP OF THIS BLOCK
+                $PYTHON_CMD tests/validator.py "$COMMITTED_RESULTS" "$GENERATED_RESULTS" "$TEST_TYPE" "$CASE_ID"
                 
                 if [ $? -ne 0 ]; then
                   RULE_PASSED=false
@@ -146,19 +148,9 @@ jobs:
             done
             
             if [ "$RULE_PASSED" = false ]; then
-              echo ""
-              echo "============================================================"
               echo "Validation failed for $RULE_ID"
-              echo "The committed results.json files don't match the generated results."
-              echo "============================================================"
-              echo ""
               exit 1
             fi
             
-            echo ""
-            echo "All validations passed for $RULE_ID"
+            echo "✓ All validations passed for $RULE_ID"
           done
-          
-          echo ""
-          echo "All validations passed"
-          echo ""
