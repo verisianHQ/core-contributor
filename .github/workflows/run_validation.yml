@@ -182,15 +182,3 @@ jobs:
           echo ""
           echo "All validations passed"
           echo ""
-      
-      - name: Comment on PR
-        if: failure()
-        uses: actions/github-script@v7
-        with:
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: 'Rule validation failed. Please check the workflow logs for details.'
-            })
