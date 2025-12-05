@@ -138,7 +138,7 @@ def analyse_results(rule_id: str, test_cases: dict) -> dict:
 
         for case in test_cases[test_type]:
             case_id = case["case_id"]
-            sql_results, regression_error_results = run_validation(rule_id, test_type, case_id, case["data_path"])
+            _, regression_error_results = run_validation(rule_id, test_type, case_id, case["data_path"])
 
             results_path = Path("rules") / rule_id / test_type / case_id / "results"
             if not results_path.exists():
