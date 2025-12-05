@@ -62,13 +62,8 @@ jobs:
             echo ""
             echo "Validating $RULE_ID"
             
-            if [ ! -d "rules/$RULE_ID" ]; then
-              echo "ERROR: Rule directory not found: rules/$RULE_ID"
-              exit 1
-            fi
-            
-            if [ ! -f "rules/$RULE_ID/$RULE_ID.yml" ]; then
-              echo "ERROR: Rule YAML not found: rules/$RULE_ID/$RULE_ID.yml"
+            if [ ! -f "rules/$RULE_ID/*.yml" ]; then
+              echo "ERROR: Rule YAML not found in rules/$RULE_ID"
               exit 1
             fi
             
