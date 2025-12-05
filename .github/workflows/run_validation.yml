@@ -27,19 +27,22 @@ jobs:
 
       - name: Initialise engine submodule and Install Dependencies
         run: |
-          PYTHON_BIN=./venv/bin/python
-          PIP_BIN=./venv/bin/pip
+          VENV_BIN_PATH=$(pwd)/venv/bin
+          PYTHON_BIN=$VENV_BIN_PATH/python
+          PIP_BIN=$VENV_BIN_PATH/pip
           
           $PYTHON_BIN -m pip install --upgrade pip
           
           git submodule update --init --recursive
           
           cd engine
+          
           $PIP_BIN install -r requirements.txt
           $PIP_BIN install -r requirements-dev.txt
           
           SUBMODULE_COMMIT=$(git rev-parse HEAD)
           echo "Using engine submodule at commit: $SUBMODULE_COMMIT"
+          
           cd ..
 
       - name: Detect changed rules
