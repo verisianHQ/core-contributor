@@ -159,7 +159,7 @@ else:
     else:
         print(f'  $TEST_TYPE/$CASE_ID: 0 errors (should be >0)')
         sys.exit(1)
-"
+                "
                 if [ $? -ne 0 ]; then
                   RULE_PASSED=false
                 fi
