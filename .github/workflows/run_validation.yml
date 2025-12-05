@@ -22,22 +22,24 @@ jobs:
         with:
           python-version: '3.12'
       
-      - name: Create and Install dependencies
-        run: |
-          python -m venv venv
-          source venv/bin/activate
+      - name: Setup Virtual Environment
+        run: python -m venv venv
 
+      - name: Initialise engine submodule and Install Dependencies
+        run: |
+          PYTHON_BIN=./venv/bin/python
+          PIP_BIN=./venv/bin/pip
+          
+          $PYTHON_BIN -m pip install --upgrade pip
+          
           git submodule update --init --recursive
           
           cd engine
+          $PIP_BIN install -r requirements.txt
+          $PIP_BIN install -r requirements-dev.txt
           
           SUBMODULE_COMMIT=$(git rev-parse HEAD)
           echo "Using engine submodule at commit: $SUBMODULE_COMMIT"
-          
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install -r requirements-dev.txt
-          
           cd ..
 
       - name: Detect changed rules
