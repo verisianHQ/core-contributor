@@ -207,16 +207,6 @@ jobs:
             fi
           done
           
-          # Add overall summary at the end
-          echo "---" >> $REPORT_FILE
-          if [ "$OVERALL_SUCCESS" = true ]; then
-            echo "## Overall Result: PASSED" >> $REPORT_FILE
-            echo "All rule validations completed successfully!" >> $REPORT_FILE
-          else
-            echo "## Overall Result: FAILED" >> $REPORT_FILE
-            echo "One or more rule validations failed. Please review the details above." >> $REPORT_FILE
-          fi
-          
           # Exit with appropriate code
           if [ "$OVERALL_SUCCESS" = false ]; then
             exit 1
