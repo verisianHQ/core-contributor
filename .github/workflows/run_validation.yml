@@ -96,7 +96,7 @@ jobs:
             # Generate fresh results (overwrites results.json)
             echo ""
             echo "Generating fresh results..."
-            ./venv/bin/python -c "from test import generate_rule_results; generate_rule_results('$RULE_ID')"
+            $VENV_BIN_PATH/python -c "from test import generate_rule_results; generate_rule_results('$RULE_ID')"
             
             if [ $? -ne 0 ]; then
               echo "ERROR: Failed to generate results for $RULE_ID"
@@ -137,7 +137,7 @@ jobs:
                 fi
                 
                 # Compare with Python
-                ./venv/bin/python tests/validator.py "$COMMITTED_RESULTS" "$GENERATED_RESULTS" "$TEST_TYPE" "$CASE_ID"
+                $VENV_BIN_PATH/python tests/validator.py "$COMMITTED_RESULTS" "$GENERATED_RESULTS" "$TEST_TYPE" "$CASE_ID"
                 
                 if [ $? -ne 0 ]; then
                   RULE_PASSED=false
