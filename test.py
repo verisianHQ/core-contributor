@@ -129,6 +129,57 @@ def run_validation(
         return None
 
 
+def json_to_readable(results_data: dict, output_path: Path):
+    """Make a readable text file from JSON results."""
+    with output_path.open("w") as f:
+        datasets = results_data.get("datasets", [])
+        
+        if not datasets:
+            f.write("No validation results found.\n")
+            return
+        
+        total_errors = sum(len(ds.get("errors", [])) for ds in datasets)
+        f.write(f"Total Errors Found: {total_errors}\n")
+        f.write("\n")
+        
+        for dataset in datasets:
+            dataset_name = dataset.get("dataset", "Unknown")
+            domain = dataset.get("domain", "N/A")
+            execution_message = dataset.get("execution_message", "")
+            errors = dataset.get("errors", [])
+            
+            f.write(f"Dataset: {dataset_name}\n")
+            f.write(f"Domain: {domain}\n")
+            if execution_message:
+                f.write(f"Rule Message: {execution_message}\n")
+            f.write(f"Errors in this dataset: {len(errors)}\n")
+            
+            if not errors:
+                f.write("  No errors found in this dataset.\n")
+            else:
+                f.write("\n")
+                for i, error in enumerate(errors, 1):
+                    f.write(f"  Error {i}:\n")
+                    
+                    row_num = error.get("row")
+                    if row_num is not None:
+                        f.write(f"    Row: {row_num}\n")
+                    
+                    for key, val in error.items():
+                        if key not in ["row", "value"]:
+                            f.write(f"    {key}: {val}\n")
+                    
+                    value_dict = error.get("value", {})
+                    if value_dict:
+                        f.write(f"    Problematic values:\n")
+                        for key, val in value_dict.items():
+                            f.write(f"      {key}: {val}\n")
+                    
+                    f.write("\n")
+            
+            f.write("\n")
+
+
 def analyse_results(rule_id: str, test_cases: dict) -> dict:
     """Analyse test results and determine pass/fail."""
     summary = {"rule_id": rule_id, "positive_tests": [], "negative_tests": [], "status": "passed"}
@@ -143,14 +194,22 @@ def analyse_results(rule_id: str, test_cases: dict) -> dict:
             results_path = Path("rules") / rule_id / test_type / case_id / "results"
             if not results_path.exists():
                 results_path.mkdir(parents=True, exist_ok=True)
-            results_path /= "results.json"
-            with results_path.open("w") as f:
+            
+            results_json_file = results_path / "results.json"
+            results_txt_file = results_path / "results.txt"
+            
+            with results_json_file.open("w") as f:
                 from json import dump
 
                 if regression_error_results:
                     dump(regression_error_results, f, indent=2)
                 else:
                     dump({"datasets": []}, f, indent=2)
+            
+            if regression_error_results:
+                json_to_readable(regression_error_results, results_txt_file)
+            else:
+                json_to_readable({"datasets": []}, results_txt_file)
 
             if regression_error_results is None:
                 summary[f"{test_type}_tests"].append(
@@ -160,6 +219,7 @@ def analyse_results(rule_id: str, test_cases: dict) -> dict:
                         "total_errors": None,
                         "expected": expected,
                         "error": "Failed to run validation",
+                        "results_path": str(results_path)
                     }
                 )
                 summary["status"] = "failed"
@@ -175,7 +235,13 @@ def analyse_results(rule_id: str, test_cases: dict) -> dict:
                 passed = total_errors > 0
 
             summary[f"{test_type}_tests"].append(
-                {"case_id": case_id, "passed": passed, "total_errors": total_errors, "expected": expected}
+                {
+                    "case_id": case_id,
+                    "passed": passed,
+                    "total_errors": total_errors,
+                    "expected": expected,
+                    "results_path": str(results_path)
+                }
             )
 
             if not passed:
@@ -200,7 +266,8 @@ def display_summary(summary: dict):
         case_id = test["case_id"]
         passed = test["passed"]
         status_symbol = "[PASS]" if passed else "[FAIL]"
-        print(f"  {status_symbol} Case {case_id}")
+        results_path = test.get("results_path", "")
+        print(f"  {status_symbol} Case {case_id} - Results at: {results_path}")
         if not passed:
             print(f"      Expected: {test['expected']}")
             if test.get("total_errors") is not None:
@@ -213,7 +280,8 @@ def display_summary(summary: dict):
         case_id = test["case_id"]
         passed = test["passed"]
         status_symbol = "[PASS]" if passed else "[FAIL]"
-        print(f"  {status_symbol} Case {case_id}")
+        results_path = test.get("results_path", "")
+        print(f"  {status_symbol} Case {case_id} - Results at: {results_path}")
         if not passed:
             print(f"      Expected: {test['expected']}")
             if test.get("total_errors") is not None:
@@ -222,9 +290,6 @@ def display_summary(summary: dict):
                 print(f"      Error: {test['error']}")
 
     print("\n" + "=" * 60)
-
-    results_path = Path("rules") / rule_id / "results"
-    print(f"\nDetailed results saved to: {results_path}")
 
 
 def generate_rule_results(rule_id: str, save_results: bool = True) -> dict:
@@ -307,12 +372,14 @@ def generate_rule_results(rule_id: str, save_results: bool = True) -> dict:
                     if save_results:
                         results_path = Path("rules") / rule_id / test_type / case_id / "results"
                         results_path.mkdir(parents=True, exist_ok=True)
-                        results_file = results_path / "results.json"
+                        results_json_file = results_path / "results.json"
+                        results_txt_file = results_path / "results.txt"
 
-                        with results_file.open("w") as f:
+                        with results_json_file.open("w") as f:
                             from json import dump
-
                             dump({"datasets": regression_error_results}, f, indent=2)
+                        
+                        json_to_readable({"datasets": regression_error_results}, results_txt_file)
 
                     if test_type == "positive":
                         passed = total_errors == 0
