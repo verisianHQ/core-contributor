@@ -6,18 +6,29 @@ Contribution framework for rules and test data with automated regression testing
 1) Create a free github account: https://github.com/signup
 2) Install git, following the instructions here: https://git-scm.com/install/
 3) Install VSCode, following the instructions here: https://code.visualstudio.com/download
-4) Open your terminal
+4) Open VSCode and inside of it a terminal (Top Menu -> Terminal -> New terminal)
 5) Navigate to the directory you wish to use for rule editing by using `cd` commands 
 6) Clone this repo using the following command: \
        `git clone --recurse-submodules https://github.com/verisianHQ/core-contributor.git`
-7) Right click on the 'core-contributor' folder and open with VSCode (if this is not an option, do `cd core-contributor` and then `code .`)
-8) Make sure the in-built terminal is visible within VSCode - if it isn't, go to View > Terminal
-9) You will need to setup the python environment, which will take a little bit of time. You can do this now or wait until you want to run a rule \
-       - To setup now, make sure you are in the core-contributor folder in the VSCode terminal, and run one of the following: \
+7) In VSCode, select "Open folder" and select the repository folder
+8) This should re-open a new terminal in the repository folder. If that is not the case, open a new terminal in VSCode and navigate to the repository folder.
+9) You will need to setup the python environment, which will take a little bit of time.
+       - Assuming you are in the core-contributor folder in the VSCode terminal, run one of the following depending on your operating system (ignore messages and warnings): \
               WINDOWS: `.\setup\windows_setup.bat` \
               MAC: `./setup/bash_setup.sh`
+       - Windows might prompt you, asking if you want to install python - the answer is yes!
 
 *IMPORTANT NOTE* - if you start the setup script and stop it midway through, you may get some strange errors when you try to run rules. If you have any doubts, rerun the setup script, and make sure it completes.
+
+10) Set up the rule authoring autocompletion and real-time schema validation:
+ - Go to the `Extensions` tab in the VSCode left sidebar
+ - Search `yaml` and install the Red Hat YAML extension (it should be the top one)
+ - Once it's installed, go to File > Preferences > Settings, and search 'yaml schema'.
+ - Click the `Edit in settings.json` option under Yaml: Schemas
+ - Paste the following into "yaml.schemas": \
+       `"https://rule-editor.cdisc.org/api/schema": "/*.yml"`
+ - save the `settings.json`
+ - There you go! You will now see errors and pop-ups if you try to use erroneous options in your yml files. If, after a few seconds, you don't see this behaviour, try restarting VSCode.
 
 
 # Rule and Test Data Editing Process
@@ -53,16 +64,3 @@ Contribution framework for rules and test data with automated regression testing
        `git pull origin main`
 
 For further detail on any of these steps or git in general, see *SUPPLEMENTARY GUIDE HERE*
-
-
-# YAML Validation
-
-If you want to set up YAML validation for your rule files, follow these steps:
-
-1) Go to the `Extensions` tab in the VSCode left sidebar
-2) Search `yaml` and install the Red Hat YAML extension (it should be the top one)
-3) Once it's installed, go to File > Preferences > Settings, and search 'yaml schema'.
-4) Click the `Edit in settings.json` option under Yaml: Schemas
-5) Paste the following into "yaml.schemas": \
-       `"https://rule-editor.cdisc.org/api/schema": "/*.yml"`
-6) There you go! You will now see errors and pop-ups if you try to use erroneous options in your yml files. If, after a few seconds, you don't see this behaviour, try restarting VSCode.
