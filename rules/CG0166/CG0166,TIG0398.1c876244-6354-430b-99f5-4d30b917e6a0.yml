@@ -70,6 +70,8 @@ Check:
   all:
     - name: IDVARVAL
       operator: non_empty
+    - name: RDOMAIN
+      operator: empty
 
 Core:
   Id: CORE-000017
