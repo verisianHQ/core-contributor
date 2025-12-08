@@ -71,7 +71,7 @@ Check:
     - name: IDVARVAL
       operator: non_empty
     - name: RDOMAIN
-      operator: non_empty
+      operator: empty
 
 Core:
   Id: CORE-000017
