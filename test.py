@@ -23,6 +23,67 @@ def get_available_rules() -> List[str]:
     return sorted(rule_dirs)
 
 
+def prompt_for_rule(available_rules: List[str]) -> str:
+    print("\nAvailable Rules:")
+    print("-" * 60)
+
+    for i, rule in enumerate(available_rules, 1):
+        print(f"  {i}. {rule}")
+
+    print("\nWhich rule would you like to test?")
+
+    while True:
+        choice = input("Enter rule ID (e.g., CG0001) or number: ").strip()
+
+        if choice.isdigit():
+            idx = int(choice) - 1
+            if 0 <= idx < len(available_rules):
+                return available_rules[idx]
+        elif choice in available_rules:
+            return choice
+
+        print(f"Invalid choice. Please enter a number 1-{len(available_rules)} or a valid rule ID.")
+
+
+def prompt_for_test_case(rule_id: str) -> Optional[str]:
+    """Prompt user to optionally select a specific test case."""
+    print("\nWould you like to test a specific test case? (Leave blank to test all cases)")
+    
+    rule_path = Path("rules") / rule_id
+    test_cases = []
+    
+    for test_type in ["positive", "negative"]:
+        test_type_path = rule_path / test_type
+        if test_type_path.exists():
+            for case_dir in sorted(test_type_path.iterdir()):
+                if case_dir.is_dir():
+                    test_cases.append(f"{test_type}/{case_dir.name}")
+    
+    if test_cases:
+        print("\nAvailable test cases:")
+        for i, tc in enumerate(test_cases, 1):
+            print(f"  {i}. {tc}")
+    
+    while True:
+        choice = input("\nEnter test case (e.g., positive/01) or number, or press Enter to test all: ").strip()
+        
+        if not choice:
+            return None
+        
+        if choice.isdigit():
+            idx = int(choice) - 1
+            if 0 <= idx < len(test_cases):
+                return test_cases[idx]
+        elif choice in test_cases:
+            return choice
+        else:
+            matching = [tc for tc in test_cases if choice in tc]
+            if len(matching) == 1:
+                return matching[0]
+        
+        print(f"Invalid choice. Please enter a number 1-{len(test_cases)}, a valid test case path, or press Enter for all.")
+
+
 def get_test_cases(rule_id: str) -> dict:
     rule_path = Path("rules") / rule_id
 
@@ -504,6 +565,7 @@ def parse_arguments():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
             Examples:
+            python test.py                             # Interactive mode - prompts for rule and test case
             python test.py -r CG0176                   # Test all cases for CG0176
             python test.py -r CG0176 -tc positive/01   # Test specific case for CG0176
             python test.py -r CG0176 -v                # Test CG0176 with verbose output
@@ -515,7 +577,7 @@ def parse_arguments():
     parser.add_argument(
         "-r", "--rule",
         type=str,
-        help="Rule ID to test (e.g., CG0176)"
+        help="Rule ID to test (e.g., CG0176). If not provided, runs in interactive mode."
     )
     
     parser.add_argument(
@@ -544,6 +606,38 @@ def main():
 
     print("Core SQL Rules Engine - Contributor Test Suite")
     print("=" * 60)
+    
+    if len(sys.argv) == 1:
+        available_rules = get_available_rules()
+        
+        if not available_rules:
+            print("Error: No rules found in the 'rules' directory!")
+            sys.exit(1)
+        
+        rule_id = prompt_for_rule(available_rules)
+        test_case = prompt_for_test_case(rule_id)
+        verbose = False
+        
+        if test_case:
+            print(f"\nTesting rule {rule_id} - test case {test_case}")
+            summary = analyse_single_test_case(rule_id, test_case, verbose=verbose)
+        else:
+            print(f"\nCollecting test cases for {rule_id}...")
+            test_cases = get_test_cases(rule_id)
+            
+            if not test_cases["positive"] and not test_cases["negative"]:
+                print(f"Error: No test cases found for {rule_id}")
+                sys.exit(1)
+            
+            print(f"Found {len(test_cases['positive'])} positive and {len(test_cases['negative'])} negative test cases")
+            summary = analyse_results(rule_id, test_cases, verbose=verbose)
+        
+        display_summary(summary)
+        
+        if summary["status"] == "failed":
+            sys.exit(1)
+        
+        return
     
     if not args.rule and not args.all_rules:
         print("Error: Must specify either --rule, --rule with --test-case or --all-rules")
