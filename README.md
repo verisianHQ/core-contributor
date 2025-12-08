@@ -52,7 +52,7 @@ Contribution framework for rules and test data with automated regression testing
        `git add .` \
        `git commit -m "your custom message"` \
        `git push origin <your-branch-name>` \
-       - It may be easier to use VSCode to stage, commit and push your changes for you. To do this, see [this](https://docs.google.com/document/d/15ydgj4AqtEnFtlXL-J4DLJV32q_Q71gKn0ucu4tYYQw/edit?pli=1&tab=t.0) supplementary guice
+       - It may be easier to use VSCode to stage, commit and push your changes for you. To do this, see [this](https://docs.google.com/document/d/15ydgj4AqtEnFtlXL-J4DLJV32q_Q71gKn0ucu4tYYQw/edit?pli=1&tab=t.0#bookmark=id.mnk2lsoectvz) supplementary guide
 9) Go to the online repository and create a pull request (PR) from your newly pushed branch
 10) On the PR page, make sure the information at the top is correct. It should be: \
        `base: main ← compare: <branch-name>`
