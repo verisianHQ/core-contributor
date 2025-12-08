@@ -12,10 +12,10 @@ Contribution framework for rules and test data with automated regression testing
        `git clone --recurse-submodules https://github.com/verisianHQ/core-contributor.git`
 7) In VSCode, select "Open folder" and select the repository folder
 8) This should re-open a new terminal in the repository folder. If that is not the case, open a new terminal in VSCode and navigate to the repository folder.
-9) You will need to setup the python environment, which will take a little bit of time.
+9) You will need to setup the python environment, which will take a little bit of time. \
        - Assuming you are in the core-contributor folder in the VSCode terminal, run one of the following depending on your operating system (ignore messages and warnings): \
               WINDOWS: `.\setup\windows_setup.bat` \
-              MAC: `./setup/bash_setup.sh`
+              MAC: `./setup/bash_setup.sh` \
        - Windows might prompt you, asking if you want to install python - the answer is yes!
 
 *IMPORTANT NOTE* - if you start the setup script and stop it midway through, you may get some strange errors when you try to run rules. If you have any doubts, rerun the setup script, and make sure it completes.
@@ -27,7 +27,7 @@ Contribution framework for rules and test data with automated regression testing
  - Click the `Edit in settings.json` option under Yaml: Schemas
  - Paste the following into "yaml.schemas": \
        `"https://rule-editor.cdisc.org/api/schema": "/*.yml"`
- - save the `settings.json`
+ - Save the `settings.json`
  - There you go! You will now see errors and pop-ups if you try to use erroneous options in your yml files. If, after a few seconds, you don't see this behaviour, try restarting VSCode.
 
 
@@ -45,14 +45,14 @@ Contribution framework for rules and test data with automated regression testing
               WINDOWS: `.\run\windows_run.bat` \
               MAC: `./run/bash_run.sh` \
        - If you haven't run the setup script before, don't worry, it will run automatically when you execute this command
-6) Check your run results in the `results` folder. Note that there is a separate `results` folder for each test case, which contains only the information relevant to that particular case
+6) Check your run results in the `results` folder. Note that there is a separate `results` folder for each test case, which contains only the information relevant to that particular case \
        - There will be a `results.json` file, with the code-produced rule output, and a `results.txt` file, which will summarise your results in a more human-readable format. Feel free to examine both
 7) If you are unhappy with the results of your changes, continue to edit and run the rule until you are satisfied
 8) Create a PR to add your changes to the repository. To do this, run the following commands: \
        `git add .` \
        `git commit -m "your custom message"` \
        `git push origin <your-branch-name>` \
-       - It may be easier to use VSCode to stage, commit and push your changes for you. To do this, see the SUPPLEMENTARY GUIDE
+       - It may be easier to use VSCode to stage, commit and push your changes for you. To do this, see [this](https://docs.google.com/document/d/15ydgj4AqtEnFtlXL-J4DLJV32q_Q71gKn0ucu4tYYQw/edit?pli=1&tab=t.0) supplementary guice
 9) Go to the online repository and create a pull request (PR) from your newly pushed branch
 10) On the PR page, make sure the information at the top is correct. It should be: \
        `base: main ← compare: <branch-name>`
@@ -63,4 +63,4 @@ Contribution framework for rules and test data with automated regression testing
        `git checkout main` \
        `git pull origin main`
 
-For further detail on any of these steps or git in general, see *SUPPLEMENTARY GUIDE HERE*
+For further detail on any of these steps or git in general, see [this](https://docs.google.com/document/d/15ydgj4AqtEnFtlXL-J4DLJV32q_Q71gKn0ucu4tYYQw/edit?pli=1&tab=t.0) supplementary guide
