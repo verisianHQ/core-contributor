@@ -546,7 +546,7 @@ def main():
     print("=" * 60)
     
     if not args.rule and not args.all_rules:
-        print("Error: Must specify either --rule or --all-rules")
+        print("Error: Must specify either --rule, --rule with --test-case or --all-rules")
         print("Run 'python test.py -h' for help")
         sys.exit(1)
     
