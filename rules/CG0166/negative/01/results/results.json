@@ -1,34 +1,29 @@
 {
-  "CO": [
+  "datasets": [
     {
-      "executionStatus": "success",
       "dataset": "co.xpt",
       "domain": "CO",
-      "variables": [
-        "IDVARVAL",
-        "RDOMAIN"
-      ],
-      "message": "RDOMAIN has a missing value when IDVARVAL has a non-missing value",
+      "execution_status": "success",
+      "execution_message": "RDOMAIN has a missing value when IDVARVAL has a non-missing value",
+      "number_errors": 2,
       "errors": [
         {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "YY-20",
           "value": {
             "IDVARVAL": "7",
             "RDOMAIN": null
-          },
-          "dataset": "co.xpt",
-          "row": 3,
-          "USUBJID": "YY-20",
-          "SEQ": 3
+          }
         },
         {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "AB-99",
           "value": {
             "IDVARVAL": "VS2",
             "RDOMAIN": null
-          },
-          "dataset": "co.xpt",
-          "row": 5,
-          "USUBJID": "AB-99",
-          "SEQ": 5
+          }
         }
       ]
     }
