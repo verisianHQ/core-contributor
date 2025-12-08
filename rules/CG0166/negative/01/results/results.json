@@ -5,15 +5,22 @@
       "domain": "CO",
       "execution_status": "success",
       "execution_message": "RDOMAIN has a missing value when IDVARVAL has a non-missing value",
-      "number_errors": 2,
+      "number_errors": 4,
       "errors": [
         {
           "row": 3,
           "SEQ": 3,
           "USUBJID": "YY-20",
           "value": {
-            "IDVARVAL": "7",
-            "RDOMAIN": null
+            "IDVARVAL": "7"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "ZZ-23",
+          "value": {
+            "IDVARVAL": "COMBO1"
           }
         },
         {
@@ -21,8 +28,15 @@
           "SEQ": 5,
           "USUBJID": "AB-99",
           "value": {
-            "IDVARVAL": "VS2",
-            "RDOMAIN": null
+            "IDVARVAL": "VS2"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "XX-11",
+          "value": {
+            "IDVARVAL": "4"
           }
         }
       ]
