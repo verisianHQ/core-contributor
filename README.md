@@ -6,16 +6,15 @@ Contribution framework for rules and test data with automated regression testing
 *IMPORTANT NOTE* - you may need your IT support team to install some of the following software for you. In particular, the setup script requires python3.12 to run properly. If you don't have it installed, the script will attempt to install it for you, but this is likely to be blocked by your company settings. If so, you will need to contact IT.
 
 1) Create a free github account: https://github.com/signup
-2) Install git, following the instructions here: https://git-scm.com/install/
-       - Keep all the default settings throughout the installer
+2) Install git, following the instructions here: https://git-scm.com/install/ \
+       - Keep all the default settings throughout the installer \
        - You DO NOT need to actually run git as a program, so close any pop-ups that appear after the installation
 3) Install VSCode, following the instructions here: https://code.visualstudio.com/download
 4) Open VSCode and a terminal within it: \
        - Top Menu → Terminal → New Terminal (check the three dots in the top menu if you don't see 'Terminal')
 5) Create a new empty directory on your machine for storing the repository and subsequent rule editing, and navigate to it in the terminal using `cd` commands. Avoid OneDrive if possible. \
        - There is sometimes an AI 'helper' box popup in the terminal - make sure you are typing commands into the command line itself, not the box \
-       - If any of the folder names you are navigating through have spaces (eg 'My Folder'), you will need to wrap the path in quotes, eg: \
-              - `cd "C:\Users\rich\Documents\Core Contributor Folder"`
+       - If any of the folder names you are navigating through have spaces (eg 'My Folder'), you will need to wrap the path in quotes, eg: `cd "C:\Users\rich\Documents\Core Contributor Folder"`
 6) Clone this repo into that directory by running the following command: \
        `git clone --recurse-submodules https://github.com/verisianHQ/core-contributor.git`
 7) In VSCode, select "Open Folder" and select the repository folder you just cloned - it should be called `core-contributor`
@@ -28,16 +27,16 @@ Contribution framework for rules and test data with automated regression testing
 
 *IMPORTANT NOTE* - if you start the setup script and stop it midway through, you may get some strange errors when you try to run rules in the future. If you have any doubts, rerun the setup script, and make sure it completes.
 
-10) Set up the rule authoring auto-completion and real-time schema validation:
-        - Go to the `Extensions` tab in the VSCode left sidebar
-        - Search `yaml` and install the Red Hat YAML extension (it should be the top one)
-        - Once it's installed, search 'yaml schema' in the settings:
+10) Set up the rule authoring auto-completion and real-time schema validation: \
+        - Go to the `Extensions` tab in the VSCode left sidebar \
+        - Search `yaml` and install the Red Hat YAML extension (it should be the top one) \
+        - Once it's installed, search 'yaml schema' in the settings: \
               WINDOWS: File → Preferences → Settings \
               MAC: Code → Settings → Settings \
         - Click the `Edit in settings.json` option under Yaml: Schemas
         - Paste the following into "yaml.schemas": \
-              `"https://rule-editor.cdisc.org/api/schema": "/*.yml"`
-        - Save the `settings.json`
+              `"https://rule-editor.cdisc.org/api/schema": "/*.yml"` \
+        - Save the `settings.json` \
         - There you go! You should now see schema validation in yaml files. If you don't see this behaviour after a few seconds, try restarting VSCode
 
 
@@ -58,7 +57,7 @@ If you'd like to take advantage of this (and I strongly recommend it for at leas
 5) When you want to run the rule against test data, make sure you are in the core-contributor folder and run one of the following: \
               WINDOWS: `.\run\windows_run.bat` \
               MAC: `./run/bash_run.sh` \
-       - If you haven't run the setup script before, don't worry; it will run automatically when you execute this command
+       - If you haven't run the setup script before, don't worry; it will run automatically when you execute this command \
        - You will be prompted to select the rule you wish to run, as well as the test case(s)
 6) Check your run results in the `results` folder. Note that there is a separate `results` folder for each test case, which contains only the information relevant to that particular case \
        - There will be a `results.json` file, with the code-produced rule output, and a `results.txt` file, which will summarise your results in a more human-readable format. Feel free to examine both
@@ -71,7 +70,7 @@ If you'd like to take advantage of this (and I strongly recommend it for at leas
 10) On the PR page, make sure the information at the top is correct. It should be: \
        `base: main ← compare: <branch-name>`
 11) Name your PR using the format `<rule-id> <fix>` and add a brief description of your changes
-12) On the PR, add reviewers (Els, Richard, Maximo) by clicking the cog in the top right corner, and add yourself as an assignee
+12) On the PR, add reviewers (both the 'Rules Team' and 'Engineers Team' are required) by clicking the cog in the top right corner, and add yourself as an assignee
 13) You're done! Keep an eye on the PR to make sure the automated checks pass, as well as to respond to any comments from reviewers. If you need to edit any changes on the PR, you can simply checkout your branch (`git checkout <your-branch-name>`), make your changes, and commit and push them - the PR will automatically update!
 14) If you want to start editing another rule, don't forget to run the below commands on VSCode terminal again: \
        `git checkout main` \
