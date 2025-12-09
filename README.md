@@ -7,8 +7,8 @@ Contribution framework for rules and test data with automated regression testing
 
 1) Create a free github account: https://github.com/signup
 2) Install git, following the instructions here: https://git-scm.com/install/ \
-       * Keep all the default settings throughout the installer \
-       * You DO NOT need to actually run git as a program, so close any pop-ups that appear after the installation
+* Keep all the default settings throughout the installer \
+* You DO NOT need to actually run git as a program, so close any pop-ups that appear after the installation
 3) Install VSCode, following the instructions here: https://code.visualstudio.com/download
 4) Open VSCode and a terminal within it: \
        - Top Menu → Terminal → New Terminal (check the three dots in the top menu if you don't see 'Terminal')
