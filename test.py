@@ -5,6 +5,7 @@ Runs validation using the engine submodule with PostgreSQL.
 """
 
 import sys
+import argparse
 from pathlib import Path
 from typing import List, Optional, Tuple
 import logging
@@ -42,6 +43,45 @@ def prompt_for_rule(available_rules: List[str]) -> str:
             return choice
 
         print(f"Invalid choice. Please enter a number 1-{len(available_rules)} or a valid rule ID.")
+
+
+def prompt_for_test_case(rule_id: str) -> Optional[str]:
+    """Prompt user to optionally select a specific test case."""
+    print("\nWould you like to test a specific test case? (Leave blank to test all cases)")
+    
+    rule_path = Path("rules") / rule_id
+    test_cases = []
+    
+    for test_type in ["positive", "negative"]:
+        test_type_path = rule_path / test_type
+        if test_type_path.exists():
+            for case_dir in sorted(test_type_path.iterdir()):
+                if case_dir.is_dir():
+                    test_cases.append(f"{test_type}/{case_dir.name}")
+    
+    if test_cases:
+        print("\nAvailable test cases:")
+        for i, tc in enumerate(test_cases, 1):
+            print(f"  {i}. {tc}")
+    
+    while True:
+        choice = input("\nEnter test case (e.g., positive/01) or number, or press Enter to test all: ").strip()
+        
+        if not choice:
+            return None
+        
+        if choice.isdigit():
+            idx = int(choice) - 1
+            if 0 <= idx < len(test_cases):
+                return test_cases[idx]
+        elif choice in test_cases:
+            return choice
+        else:
+            matching = [tc for tc in test_cases if choice in tc]
+            if len(matching) == 1:
+                return matching[0]
+        
+        print(f"Invalid choice. Please enter a number 1-{len(test_cases)}, a valid test case path, or press Enter for all.")
 
 
 def get_test_cases(rule_id: str) -> dict:
@@ -180,7 +220,7 @@ def json_to_readable(results_data: dict, output_path: Path):
             f.write("\n")
 
 
-def analyse_results(rule_id: str, test_cases: dict) -> dict:
+def analyse_results(rule_id: str, test_cases: dict, verbose: bool = False) -> dict:
     """Analyse test results and determine pass/fail."""
     summary = {"rule_id": rule_id, "positive_tests": [], "negative_tests": [], "status": "passed"}
 
@@ -210,6 +250,13 @@ def analyse_results(rule_id: str, test_cases: dict) -> dict:
                 json_to_readable(regression_error_results, results_txt_file)
             else:
                 json_to_readable({"datasets": []}, results_txt_file)
+
+            if verbose:
+                print(f"\n{'='*60}")
+                print(f"{rule_id} results for {test_type}/{case_id}:")
+                print(f"{'='*60}")
+                with results_txt_file.open("r") as f:
+                    print(f.read())
 
             if regression_error_results is None:
                 summary[f"{test_type}_tests"].append(
@@ -250,13 +297,108 @@ def analyse_results(rule_id: str, test_cases: dict) -> dict:
     return summary
 
 
-def display_summary(summary: dict):
-    print("\n" + "=" * 60)
-    print("Test Results Summary")
-    print("=" * 60)
+def analyse_single_test_case(rule_id: str, test_case_path: str, verbose: bool = False) -> dict:
+    """Analyse a single test case and determine pass/fail."""
+    parts = test_case_path.split("/")
+    if len(parts) != 2:
+        print(f"Error: Invalid test case path format. Expected e.g., 'positive/01', got '{test_case_path}'")
+        sys.exit(1)
+    
+    test_type, case_id = parts
+    if test_type not in ["positive", "negative"]:
+        print(f"Error: Test type must be 'positive' or 'negative', got '{test_type}'")
+        sys.exit(1)
+    
+    rule_path = Path("rules") / rule_id
+    case_path = rule_path / test_type / case_id
+    
+    if not case_path.exists():
+        print(f"Error: Test case path does not exist: {case_path}")
+        sys.exit(1)
+    
+    data_dir = case_path / "data"
+    if not data_dir.exists():
+        print(f"Error: Data directory not found: {data_dir}")
+        sys.exit(1)
+    
+    summary = {"rule_id": rule_id, "positive_tests": [], "negative_tests": [], "status": "passed"}
+    expected = "0 errors" if test_type == "positive" else ">0 errors"
+    
+    _, regression_error_results = run_validation(rule_id, test_type, case_id, str(data_dir))
+    
+    results_path = Path("rules") / rule_id / test_type / case_id / "results"
+    if not results_path.exists():
+        results_path.mkdir(parents=True, exist_ok=True)
+    
+    results_json_file = results_path / "results.json"
+    results_txt_file = results_path / "results.txt"
+    
+    with results_json_file.open("w") as f:
+        from json import dump
 
+        if regression_error_results:
+            dump(regression_error_results, f, indent=2)
+        else:
+            dump({"datasets": []}, f, indent=2)
+    
+    if regression_error_results:
+        json_to_readable(regression_error_results, results_txt_file)
+    else:
+        json_to_readable({"datasets": []}, results_txt_file)
+
+    if verbose:
+        print(f"\n{'='*60}")
+        print(f"Results for {test_type}/{case_id}:")
+        print(f"{'='*60}")
+        with results_txt_file.open("r") as f:
+            print(f.read())
+
+    if regression_error_results is None:
+        summary[f"{test_type}_tests"].append(
+            {
+                "case_id": case_id,
+                "passed": False,
+                "total_errors": None,
+                "expected": expected,
+                "error": "Failed to run validation",
+                "results_path": str(results_path)
+            }
+        )
+        summary["status"] = "failed"
+        return summary
+
+    total_errors = 0
+    for dataset_result in regression_error_results.get("datasets", []):
+        total_errors += len(dataset_result.get("errors", []))
+
+    if test_type == "positive":
+        passed = total_errors == 0
+    else:
+        passed = total_errors > 0
+
+    summary[f"{test_type}_tests"].append(
+        {
+            "case_id": case_id,
+            "passed": passed,
+            "total_errors": total_errors,
+            "expected": expected,
+            "results_path": str(results_path)
+        }
+    )
+
+    if not passed:
+        summary["status"] = "failed"
+
+    return summary
+
+
+def display_summary(summary: dict):
     rule_id = summary["rule_id"]
     status = summary["status"]
+    
+    print("\n" + "=" * 60)
+    print(f"{rule_id} Test Results Summary")
+    print("=" * 60)
 
     print(f"\nRule: {rule_id}")
     print(f"Overall Status: {status.upper()}")
@@ -409,7 +551,7 @@ def generate_rule_results(rule_id: str, save_results: bool = True) -> dict:
                     )
                     summary["status"] = "failed"
 
-    except Exception:
+    except Exception as e:
         import traceback
 
         traceback.print_exc()
@@ -417,31 +559,140 @@ def generate_rule_results(rule_id: str, save_results: bool = True) -> dict:
     return summary
 
 
+def parse_arguments():
+    parser = argparse.ArgumentParser(
+        description="Core SQL Rules Engine - Contributor Test Suite",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+            Examples:
+            python test.py                             # Interactive mode - prompts for rule and test case
+            python test.py -r CG0176                   # Test all cases for CG0176
+            python test.py -r CG0176 -tc positive/01   # Test specific case for CG0176
+            python test.py -r CG0176 -v                # Test CG0176 with verbose output
+            python test.py --all-rules                 # Test all rules
+            python test.py --all-rules -v              # Test all rules with verbose output
+        """
+    )
+    
+    parser.add_argument(
+        "-r", "--rule",
+        type=str,
+        help="Rule ID to test (e.g., CG0176). If not provided, runs in interactive mode."
+    )
+    
+    parser.add_argument(
+        "-all", "--all-rules",
+        action="store_true",
+        help="Run tests for all available rules"
+    )
+    
+    parser.add_argument(
+        "-tc", "--test-case",
+        type=str,
+        help="Specific test case to run (e.g., positive/01). Requires --rule to be specified."
+    )
+    
+    parser.add_argument(
+        "-v", "--verbose",
+        action="store_true",
+        help="Print results.txt content to terminal"
+    )
+    
+    return parser.parse_args()
+
+
 def main():
+    args = parse_arguments()
+
     print("Core SQL Rules Engine - Contributor Test Suite")
     print("=" * 60)
-
+    
+    if len(sys.argv) == 1:
+        available_rules = get_available_rules()
+        
+        if not available_rules:
+            print("Error: No rules found in the 'rules' directory!")
+            sys.exit(1)
+        
+        rule_id = prompt_for_rule(available_rules)
+        test_case = prompt_for_test_case(rule_id)
+        verbose = False
+        
+        if test_case:
+            print(f"\nTesting rule {rule_id} - test case {test_case}")
+            summary = analyse_single_test_case(rule_id, test_case, verbose=verbose)
+        else:
+            print(f"\nCollecting test cases for {rule_id}...")
+            test_cases = get_test_cases(rule_id)
+            
+            if not test_cases["positive"] and not test_cases["negative"]:
+                print(f"Error: No test cases found for {rule_id}")
+                sys.exit(1)
+            
+            print(f"Found {len(test_cases['positive'])} positive and {len(test_cases['negative'])} negative test cases")
+            summary = analyse_results(rule_id, test_cases, verbose=verbose)
+        
+        display_summary(summary)
+        
+        if summary["status"] == "failed":
+            sys.exit(1)
+        
+        return
+    
+    if not args.rule and not args.all_rules:
+        print("Error: Must specify either --rule, --rule with --test-case or --all-rules")
+        print("Run 'python test.py -h' for help")
+        sys.exit(1)
+    
+    if args.rule and args.all_rules:
+        print("Error: Cannot specify both --rule and --all-rules")
+        sys.exit(1)
+    
+    if args.test_case and not args.rule:
+        print("Error: --test-case requires --rule to be specified")
+        sys.exit(1)
+    
     available_rules = get_available_rules()
 
     if not available_rules:
         print("Error: No rules found in the 'rules' directory!")
         sys.exit(1)
-
-    rule_id = prompt_for_rule(available_rules)
-
-    print(f"\nCollecting test cases for {rule_id}...")
-    test_cases = get_test_cases(rule_id)
-
-    if not test_cases["positive"] and not test_cases["negative"]:
-        print(f"Error: No test cases found for {rule_id}")
-        sys.exit(1)
-
-    print(f"Found {len(test_cases['positive'])} positive and {len(test_cases['negative'])} negative test cases")
-
-    summary = analyse_results(rule_id, test_cases)
-    display_summary(summary)
-
-    if summary["status"] == "failed":
+    
+    rules_to_test = []
+    
+    if args.all_rules:
+        rules_to_test = available_rules
+        print(f"\nTesting all {len(rules_to_test)} rules...")
+    else:
+        if args.rule not in available_rules:
+            print(f"Error: Rule '{args.rule}' not found!")
+            print(f"Available rules: {', '.join(available_rules)}")
+            sys.exit(1)
+        rules_to_test = [args.rule]
+    
+    all_passed = True
+    
+    for rule_id in rules_to_test:
+        if args.test_case:
+            print(f"\nTesting rule {rule_id} - test case {args.test_case}")
+            summary = analyse_single_test_case(rule_id, args.test_case, verbose=args.verbose)
+        else:
+            print(f"\nCollecting test cases for {rule_id}...")
+            test_cases = get_test_cases(rule_id)
+            
+            if not test_cases["positive"] and not test_cases["negative"]:
+                print(f"Warning: No test cases found for {rule_id}")
+                continue
+            
+            print(f"Found {len(test_cases['positive'])} positive and {len(test_cases['negative'])} negative test cases")
+            summary = analyse_results(rule_id, test_cases, verbose=args.verbose)
+        
+        display_summary(summary)
+        
+        if summary["status"] == "failed":
+            all_passed = False
+    
+    if not all_passed:
         sys.exit(1)
 
 

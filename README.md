@@ -44,7 +44,14 @@ Contribution framework for rules and test data with automated regression testing
 5) When you want to run the rule against test data, make sure you are in the core-contributor folder and run one of the following: \
               WINDOWS: `.\run\windows_run.bat` \
               MAC: `./run/bash_run.sh` \
-       - If you haven't run the setup script before, don't worry, it will run automatically when you execute this command
+       - If you haven't run the setup script before, don't worry, it will run automatically when you execute this command \
+       - You can also use the test script directly with various options: \
+              `python test.py` - Interactive mode (prompts you for rule and test case selection) \
+              `python test.py -r <rule-id>` - Test all cases for a specific rule \
+              `python test.py -r <rule-id> -tc <test-case>` - Test a specific case (e.g., `positive/01`) \
+              `python test.py -r <rule-id> -v` - Test with verbose output (prints results to terminal) \
+              `python test.py --all-rules` - Test all rules \
+              `python test.py -h` - See all available options
 6) Check your run results in the `results` folder. Note that there is a separate `results` folder for each test case, which contains only the information relevant to that particular case \
        - There will be a `results.json` file, with the code-produced rule output, and a `results.txt` file, which will summarise your results in a more human-readable format. Feel free to examine both
 7) If you are unhappy with the results of your changes, continue to edit and run the rule until you are satisfied
