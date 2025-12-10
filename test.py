@@ -19,30 +19,20 @@ def get_available_rules() -> List[str]:
         print("Error: 'rules' directory not found!")
         sys.exit(1)
 
-    rule_dirs = [d.name for d in rules_dir.iterdir() if d.is_dir() and d.name.startswith("CG")]
+    rule_dirs = [d.name for d in rules_dir.iterdir() if d.is_dir() and d.name.startswith("CORE-")]
     return sorted(rule_dirs)
 
 
 def prompt_for_rule(available_rules: List[str]) -> str:
-    print("\nAvailable Rules:")
-    print("-" * 60)
-
-    for i, rule in enumerate(available_rules, 1):
-        print(f"  {i}. {rule}")
-
     print("\nWhich rule would you like to test?")
 
     while True:
-        choice = input("Enter rule ID (e.g., CG0001) or number: ").strip()
+        choice = input("Enter rule ID (e.g. CORE-000215): ").strip()
 
-        if choice.isdigit():
-            idx = int(choice) - 1
-            if 0 <= idx < len(available_rules):
-                return available_rules[idx]
-        elif choice in available_rules:
+        if choice in available_rules:
             return choice
 
-        print(f"Invalid choice. Please enter a number 1-{len(available_rules)} or a valid rule ID.")
+        print(f"Invalid choice. Please enter a valid rule ID. Available rules: {', '.join(available_rules)}")
 
 
 def prompt_for_test_case(rule_id: str) -> Optional[str]:
@@ -168,7 +158,7 @@ def run_validation(
         traceback.print_exc()
         return None
 
-
+    
 def json_to_readable(results_data: dict, output_path: Path):
     """Make a readable text file from JSON results."""
     with output_path.open("w") as f:
@@ -565,19 +555,19 @@ def parse_arguments():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
             Examples:
-            python test.py                             # Interactive mode - prompts for rule and test case
-            python test.py -r CG0176                   # Test all cases for CG0176
-            python test.py -r CG0176 -tc positive/01   # Test specific case for CG0176
-            python test.py -r CG0176 -v                # Test CG0176 with verbose output
-            python test.py --all-rules                 # Test all rules
-            python test.py --all-rules -v              # Test all rules with verbose output
+            python test.py                                 # Interactive mode - prompts for rule and test case
+            python test.py -r CORE-000176                  # Test all cases for CORE-000176
+            python test.py -r CORE-000176 -tc positive/01  # Test specific case for CORE-000176
+            python test.py -r CORE-000176 -v               # Test CORE-000176 with verbose output
+            python test.py --all-rules                     # Test all rules
+            python test.py --all-rules -v                  # Test all rules with verbose output
         """
     )
     
     parser.add_argument(
         "-r", "--rule",
         type=str,
-        help="Rule ID to test (e.g., CG0176). If not provided, runs in interactive mode."
+        help="Rule ID to test (e.g., CORE-000176). If not provided, runs in interactive mode."
     )
     
     parser.add_argument(
