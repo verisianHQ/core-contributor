@@ -50,7 +50,7 @@ jobs:
         id: changed-rules
         run: |
           # Get list of changed rule directories
-          CHANGED_RULES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD | grep '^rules/CG' | cut -d'/' -f2 | sort -u)
+          CHANGED_RULES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD | grep '^rules/CORE-' | cut -d'/' -f2 | sort -u)
           
           if [ -z "$CHANGED_RULES" ]; then
             echo "No rule changes detected"

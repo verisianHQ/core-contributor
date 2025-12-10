@@ -49,7 +49,7 @@ If you'd like to take advantage of this (and I strongly recommend it for at leas
 1) Make sure you are on the main branch and that it is up to date. Run the following two commands: \
        `git checkout main` \
        `git pull origin main`
-2) Create a new branch to work on your changes, named as such: `<your-name>/<rule-id>/<change>` (eg `richard/CG00001/edit`): \
+2) Create a new branch to work on your changes, named as such: `<your-name>/<rule-id>/<change>` (eg `richard/CORE-000001/edit`): \
        `git branch <your-branch-name>`
 3) Switch to your new branch: \
        `git checkout <your-branch-name>`
