@@ -91,7 +91,7 @@ def get_test_cases(rule_id: str) -> dict:
 
     return test_cases
 
-
+    
 def run_validation(
     rule_id: str, test_type: str, case_id: str, data_path: str
 ) -> Optional[Tuple[Optional[dict], Optional[dict]]]:
