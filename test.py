@@ -158,7 +158,7 @@ def run_validation(
         traceback.print_exc()
         return None
 
-
+    
 def json_to_readable(results_data: dict, output_path: Path):
     """Make a readable text file from JSON results."""
     with output_path.open("w") as f:
