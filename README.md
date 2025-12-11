@@ -15,7 +15,7 @@ Contribution framework for rules and test data with automated regression testing
 5) Create a new empty directory on your machine for storing the repository and subsequent rule editing, and navigate to it in the terminal using `cd` commands. Avoid OneDrive if possible. \
        - There is sometimes an AI 'helper' box popup in the terminal - make sure you are typing commands into the command line itself, not the box \
        - If any of the folder names you are navigating through have spaces (eg 'My Folder'), you will need to wrap the path in quotes, eg: `cd "C:\Users\rich\Documents\Core Contributor Folder"`
-6) Clone this repo into that directory by running the following command: \
+6) Clone this repo into that directory by running the following command (DO NOT RUN MORE THAN ONCE): \
        `git clone --recurse-submodules https://github.com/verisianHQ/core-contributor.git` \
        *IMPORTANT NOTE* - unless something goes badly wrong and you need to fully delete the entire directory, you should never need to run this command again. 
 7) In VSCode, select "Open Folder" and select the repository folder you just cloned - it should be called `core-contributor`
