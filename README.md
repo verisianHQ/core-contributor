@@ -106,8 +106,8 @@ We have included some additional functionality in the test script. To take advan
 
 # Something's Wrong!
 
-Git is great, but it is easy to overlook something and make a mistake. If you're stuck or confused, please reach out to [Richard](mailto:richard@verisian.com) or [Maximo](mailto:maximo@verisian.com) for support - we're always happy to help! /
-However, here are some quick fixes for common issues you might experience:
+Git is great, but it is easy to overlook something and make a mistake. If you're stuck or confused, please reach out to [Richard]<a href=mailto:richard@verisian.com> or [Maximo]<a href=mailto:maximo@verisian.com> for support - we're always happy to help! /
+However, here are some quick fixes for common issues you might experience: \
 
 > ***I accidentally made my changes on the main branch but haven't committed them yet***
 
@@ -117,7 +117,7 @@ If the branch you want to move your changes to already exists, run: \
 `git checkout <existing-branch-name>` \
 `git stash pop` \
 If you want to move the changes to a new branch, you can run this useful one-liner: \
-`git switch -c <new-branch-name>` 
+`git switch -c <new-branch-name>` \
 
 > ***I accidentally made my changes on the main branch and committed them***
 
@@ -127,16 +127,16 @@ Otherwise, create a new branch from main which includes your changes and then re
 `git checkout main` \
 `git reset --hard HEAD~1` \
 `git checkout <new-branch-name>` \
-*IMPORTANT NOTE* - if you've committed more than once on main, you'll need to replace `HEAD~1` with `HEAD~n` where `n` is the number of commits you've made
+*IMPORTANT NOTE* - if you've committed more than once on main, you'll need to replace `HEAD~1` with `HEAD~n` where `n` is the number of commits you've made \
 
 > ***I've made some changes that I want to push to the repo and other changes that I don't want to keep***
 
 In the source control sidebar panel (the icon is three dots connected by lines), you will see all of the changes you've made. \
 You can right-click on any of these and select 'Discard Changes' \
-This will completely remove your changes, so make sure you don't want them before doing this!
+This will completely remove your changes, so make sure you don't want them before doing this! \
 
 > ***I want to work on multiple rules at once!***
 
 You can! You can create multiple branches for different rules and they will all be isolated from each other.
-Just make sure to use `checkout` commands or the console to switch to the relevant branch before you make changes.
+Just make sure to use `checkout` commands or the console to switch to the relevant branch before you make changes. \
 
