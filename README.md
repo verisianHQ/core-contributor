@@ -106,7 +106,8 @@ We have included some additional functionality in the test script. To take advan
 
 # Something's Wrong!
 
-Git is great, but it is easy to overlook something and make a mistake. If you're stuck or confused, please reach out to Richard (richard@verisian.com) or Maximo (maximo@verisian.com) for support - we're always happy to help! \
+Git is great, but it is easy to overlook something and make a mistake. \
+If you're stuck or confused, please reach out to Richard (richard@verisian.com) or Maximo (maximo@verisian.com) for support - we're always happy to help! \
 However, here are some quick fixes for common issues you might experience: \
 <br />
 
@@ -124,7 +125,7 @@ If you want to move the changes to a new branch, you can run this useful one-lin
 > ***I accidentally made my changes on the main branch and committed them***
 
 In this case, you won't be able to move your changes to an already existing branch easily. If you desperately need to do this, reach out to us \
-Otherwise, create a new branch from main which includes your changes and then reset main:
+Otherwise, create a new branch from main which includes your changes and then reset main: \
 `git checkout -b <new-branch-name>` \
 `git checkout main` \
 `git reset --hard HEAD~1` \
@@ -141,6 +142,6 @@ This will completely remove your changes, so make sure you don't want them befor
 
 > ***I want to work on multiple rules at once!***
 
-You can! You can create multiple branches for different rules and they will all be isolated from each other.
+You can! You can create multiple branches for different rules and they will all be isolated from each other. \
 Just make sure to use `checkout` commands or the console to switch to the relevant branch before you make changes.
 
