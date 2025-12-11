@@ -9,10 +9,7 @@ import argparse
 from pathlib import Path
 from typing import List, Optional, Tuple
 import logging
-import warnings
 
-# suppresses the UserWarning from openpyxl about unknown extensions
-warnings.filterwarnings('ignore', category=UserWarning, module='openpyxl')
 logging.basicConfig(level=logging.CRITICAL)
 
 
@@ -96,25 +93,22 @@ def get_test_cases(rule_id: str) -> dict:
 
 
 def run_validation(
-    rule_id: str, test_type: str, case_id: str, data_path: str, silent: bool = False
+    rule_id: str, test_type: str, case_id: str, data_path: str
 ) -> Optional[Tuple[Optional[dict], Optional[dict]]]:
-    if not silent:
-        print(f"\nRunning {test_type} test case: {case_id}")
+    print(f"\nRunning {test_type} test case: {case_id}")
 
     rule_path = Path("rules") / rule_id
 
     rule_yaml_files = list(rule_path.glob("*.yml"))
     if not rule_yaml_files:
-        if not silent:
-            print("Error: No rule YAML file found")
-        return None, {"error": f"No result - rule YAML not found in {rule_path}", "exception": "Rule YAML file missing"}
+        print("  Error: No rule YAML file found")
+        return None
 
     data_path_obj = Path(data_path)
     excel_files = list(data_path_obj.glob("*.xlsx")) + list(data_path_obj.glob("*.xls"))
     if not excel_files:
-        if not silent:
-            print("Error: No Excel files found")
-        return None, {"error": f"No result - no Excel files found in {data_path}", "exception": "Excel test data missing"}
+        print("  Error: No Excel files found")
+        return None
 
     try:
         engine_path = Path("engine")
@@ -128,8 +122,7 @@ def run_validation(
         with open(rule_yaml_files[0], "r") as f:
             rule = yaml.safe_load(f)
 
-        if not silent:
-            print("Loading test data...")
+        print("  Loading test data...")
         test_datasets = sharepoint_xlsx_to_test_datasets(str(excel_files[0]))
 
         regression_errors = {}
@@ -137,8 +130,7 @@ def run_validation(
             standard="sdtmig", standard_version="3.4", standard_substandard=None, define_xml_version=None
         )
 
-        if not silent:
-            print("Running validation...")
+        print("  Running validation...")
         sql_results, _ = process_test_case_dataset(
             regression_errors=regression_errors,
             define_xml_file_path=None,
@@ -154,30 +146,22 @@ def run_validation(
         if "results_sql" in regression_errors:
             regression_error_results = regression_errors["results_sql"]
             total_errors = sum(len(ds.get("errors", [])) for ds in regression_error_results)
-            if not silent:
-                print(f"Validation completed: {total_errors} errors found")
+            print(f"  Validation completed: {total_errors} errors found")
             return sql_results, {"datasets": regression_error_results}
 
         return sql_results, None
 
     except Exception as e:
-        if not silent:
-            print(f"Exception: {e}")
-        error_msg = f"No result - either the rule or test case data {excel_files[0] if excel_files else data_path} is broken"
-        return None, {"error": error_msg, "exception": str(e)}
+        print(f"  Error: {e}")
+        import traceback
+
+        traceback.print_exc()
+        return None
 
     
 def json_to_readable(results_data: dict, output_path: Path):
     """Make a readable text file from JSON results."""
     with output_path.open("w") as f:
-        if "error" in results_data:
-            f.write("EXECUTION ERROR\n")
-            f.write("===============\n")
-            f.write(f"{results_data['error']}\n")
-            if "exception" in results_data:
-                f.write(f"Details: {results_data['exception']}\n")
-            return
-
         datasets = results_data.get("datasets", [])
         
         if not datasets:
@@ -226,7 +210,7 @@ def json_to_readable(results_data: dict, output_path: Path):
             f.write("\n")
 
 
-def analyse_results(rule_id: str, test_cases: dict, verbose: bool = False, silent: bool = False) -> dict:
+def analyse_results(rule_id: str, test_cases: dict, verbose: bool = False) -> dict:
     """Analyse test results and determine pass/fail."""
     summary = {"rule_id": rule_id, "positive_tests": [], "negative_tests": [], "status": "passed"}
 
@@ -235,7 +219,7 @@ def analyse_results(rule_id: str, test_cases: dict, verbose: bool = False, silen
 
         for case in test_cases[test_type]:
             case_id = case["case_id"]
-            _, regression_error_results = run_validation(rule_id, test_type, case_id, case["data_path"], silent=silent)
+            _, regression_error_results = run_validation(rule_id, test_type, case_id, case["data_path"])
 
             results_path = Path("rules") / rule_id / test_type / case_id / "results"
             if not results_path.exists():
@@ -257,28 +241,12 @@ def analyse_results(rule_id: str, test_cases: dict, verbose: bool = False, silen
             else:
                 json_to_readable({"datasets": []}, results_txt_file)
 
-            if verbose and not silent:
+            if verbose:
                 print(f"\n{'='*60}")
                 print(f"{rule_id} results for {test_type}/{case_id}:")
                 print(f"{'='*60}")
                 with results_txt_file.open("r") as f:
                     print(f.read())
-
-            if regression_error_results and "error" in regression_error_results:
-                exception_detail = regression_error_results.get("exception", "N/A")
-                summary[f"{test_type}_tests"].append(
-                    {
-                        "case_id": case_id,
-                        "passed": False,
-                        "total_errors": None,
-                        "expected": expected,
-                        "error": regression_error_results["error"],
-                        "exception": exception_detail,
-                        "results_path": str(results_path),
-                    }
-                )
-                summary["status"] = "failed"
-                continue
 
             if regression_error_results is None:
                 summary[f"{test_type}_tests"].append(
@@ -287,8 +255,7 @@ def analyse_results(rule_id: str, test_cases: dict, verbose: bool = False, silen
                         "passed": False,
                         "total_errors": None,
                         "expected": expected,
-                        "error": "Failed to run validation (Unknown error)",
-                        "exception": "Engine returned no results (Silent Failure)",
+                        "error": "Failed to run validation",
                         "results_path": str(results_path)
                     }
                 )
@@ -376,22 +343,6 @@ def analyse_single_test_case(rule_id: str, test_case_path: str, verbose: bool = 
         with results_txt_file.open("r") as f:
             print(f.read())
 
-    if regression_error_results and "error" in regression_error_results:
-        exception_detail = regression_error_results.get("exception", "N/A")
-        summary[f"{test_type}_tests"].append(
-            {
-                "case_id": case_id,
-                "passed": False,
-                "total_errors": None,
-                "expected": expected,
-                "error": regression_error_results["error"],
-                "exception": exception_detail,
-                "results_path": str(results_path)
-            }
-        )
-        summary["status"] = "failed"
-        return summary
-
     if regression_error_results is None:
         summary[f"{test_type}_tests"].append(
             {
@@ -399,8 +350,7 @@ def analyse_single_test_case(rule_id: str, test_case_path: str, verbose: bool = 
                 "passed": False,
                 "total_errors": None,
                 "expected": expected,
-                "error": "Failed to run validation (Unknown error)",
-                "exception": "Engine returned no results (Silent Failure)",
+                "error": "Failed to run validation",
                 "results_path": str(results_path)
             }
         )
@@ -456,8 +406,6 @@ def display_summary(summary: dict):
                 print(f"      Got: {test['total_errors']} errors")
             if test.get("error"):
                 print(f"      Error: {test['error']}")
-            if test.get("exception"):
-                print(f"      Exception: {test['exception']}")
 
     print(f"\nNegative Test Cases: {len(summary['negative_tests'])}")
     for test in summary["negative_tests"]:
@@ -472,8 +420,6 @@ def display_summary(summary: dict):
                 print(f"      Got: {test['total_errors']} errors")
             if test.get("error"):
                 print(f"      Error: {test['error']}")
-            if test.get("exception"):
-                print(f"      Exception: {test['exception']}")
 
     print("\n" + "=" * 60)
 
@@ -547,7 +493,6 @@ def generate_rule_results(rule_id: str, save_results: bool = True) -> dict:
                                 "total_errors": None,
                                 "expected": expected,
                                 "error": "No SQL results",
-                                "exception": "Engine returned no results (Silent Failure)",
                             }
                         )
                         summary["status"] = "failed"
@@ -581,20 +526,9 @@ def generate_rule_results(rule_id: str, save_results: bool = True) -> dict:
                         summary["status"] = "failed"
 
                 except Exception as e:
-                    error_msg = f"No result - either the rule or test case data {excel_files[0]} is broken"
-                    exception_str = str(e)
+                    import traceback
 
-                    if save_results:
-                        results_path = Path("rules") / rule_id / test_type / case_id / "results"
-                        results_path.mkdir(parents=True, exist_ok=True)
-                        results_json_file = results_path / "results.json"
-                        results_txt_file = results_path / "results.txt"
-                        
-                        error_data = {"error": error_msg, "exception": str(e)}
-                        with results_json_file.open("w") as f:
-                            from json import dump
-                            dump(error_data, f, indent=2)
-                        json_to_readable(error_data, results_txt_file)
+                    traceback.print_exc()
 
                     summary[f"{test_type}_tests"].append(
                         {
@@ -603,13 +537,13 @@ def generate_rule_results(rule_id: str, save_results: bool = True) -> dict:
                             "total_errors": None,
                             "expected": expected,
                             "error": str(e),
-                            "exception": exception_str,
                         }
                     )
                     summary["status"] = "failed"
 
     except Exception as e:
         import traceback
+
         traceback.print_exc()
 
     return summary
@@ -626,6 +560,7 @@ def parse_arguments():
             python test.py -r CORE-000176 -tc positive/01  # Test specific case for CORE-000176
             python test.py -r CORE-000176 -v               # Test CORE-000176 with verbose output
             python test.py --all-rules                     # Test all rules
+            python test.py --all-rules -v                  # Test all rules with verbose output
         """
     )
     
@@ -717,6 +652,7 @@ def main():
     
     if args.all_rules:
         rules_to_test = available_rules
+        print(f"\nTesting all {len(rules_to_test)} rules...")
     else:
         if args.rule not in available_rules:
             print(f"Error: Rule '{args.rule}' not found!")
@@ -724,100 +660,29 @@ def main():
             sys.exit(1)
         rules_to_test = [args.rule]
     
-    passed_rules = []
-    failed_rules = []
-    error_rules = []
-    total_rules = len(rules_to_test)
-    use_progress_bar = args.all_rules and not args.rule and not args.test_case
+    all_passed = True
     
-    if not use_progress_bar:
-        print(f"\nTesting {total_rules} rules...")
-
-    for i, rule_id in enumerate(rules_to_test, 1):
-        if use_progress_bar:
-             sys.stdout.write(f"\r[{i}/{total_rules}] Testing {rule_id}...")
-             sys.stdout.flush()
-
+    for rule_id in rules_to_test:
         if args.test_case:
-            if not use_progress_bar:
-                print(f"\nTesting rule {rule_id} - test case {args.test_case}")
+            print(f"\nTesting rule {rule_id} - test case {args.test_case}")
             summary = analyse_single_test_case(rule_id, args.test_case, verbose=args.verbose)
         else:
-            if not use_progress_bar:
-                print(f"\nCollecting test cases for {rule_id}...")
-            
+            print(f"\nCollecting test cases for {rule_id}...")
             test_cases = get_test_cases(rule_id)
             
             if not test_cases["positive"] and not test_cases["negative"]:
-                if not use_progress_bar:
-                    print(f"Warning: No test cases found for {rule_id}")
+                print(f"Warning: No test cases found for {rule_id}")
                 continue
             
-            if not use_progress_bar:
-                print(f"Found {len(test_cases['positive'])} positive and {len(test_cases['negative'])} negative test cases")
-            
-            summary = analyse_results(rule_id, test_cases, verbose=args.verbose, silent=use_progress_bar)
+            print(f"Found {len(test_cases['positive'])} positive and {len(test_cases['negative'])} negative test cases")
+            summary = analyse_results(rule_id, test_cases, verbose=args.verbose)
         
-        has_error = False
-        for t in summary['positive_tests'] + summary['negative_tests']:
-            if t.get('error'):
-                if t.get('error').startswith('No result -'):
-                    has_error = True
-                    break
-        
-        if has_error:
-            error_rules.append(summary)
-        elif summary['status'] == 'passed':
-            passed_rules.append(rule_id)
-        else:
-            failed_rules.append(summary)
-
-        if not use_progress_bar:
-            display_summary(summary)
+        display_summary(summary)
         
         if summary["status"] == "failed":
-            if args.all_rules and not args.ignore_errors:
-                pass
+            all_passed = False
     
-    if use_progress_bar:
-        sys.stdout.write(f"\r[{total_rules}/{total_rules}] Testing Complete!\n")
-        sys.stdout.flush()
-        
-        print("\n" + "=" * 60)
-        print("FINAL SUMMARY")
-        print("=" * 60)
-        print(f"Total Rules Tested: {len(passed_rules) + len(failed_rules) + len(error_rules)}")
-        print(f"Fully Passed: {len(passed_rules)}")
-        
-        if failed_rules:
-            print(f"\nFailed Rules ({len(failed_rules)}):")
-            for s in failed_rules:
-                print(f"  - {s['rule_id']} (Validation failure)")
-        
-        if error_rules:
-            print(f"\nRules with Execution Errors ({len(error_rules)}):")
-
-            exception_counts = {}
-            for s in error_rules:
-                for t in s['positive_tests'] + s['negative_tests']:
-                    if t.get('error') and t.get('error').startswith('No result -'):
-                        exception_msg = t.get('exception', 'N/A')
-                        exception_counts[exception_msg] = exception_counts.get(exception_msg, 0) + 1
-            
-            print(f"\n  Total unique exceptions: {len(exception_counts)}")
-            for exception, count in exception_counts.items():
-                print(f"  - {exception} (occurred {count} times)")
-
-            print("\nDetailed Errors:")
-            for s in error_rules:
-                print(f"  - {s['rule_id']}")
-                for t in s['positive_tests'] + s['negative_tests']:
-                    if t.get('error') and t.get('error').startswith('No result -'):
-                        case_type = 'positive' if t in s['positive_tests'] else 'negative'
-                        exception_msg = t.get('exception', 'Details N/A')
-                        print(f"      Case {t['case_id']} ({case_type}): {exception_msg}")
-
-    if len(failed_rules) > 0 or len(error_rules) > 0:
+    if not all_passed:
         sys.exit(1)
 
 
