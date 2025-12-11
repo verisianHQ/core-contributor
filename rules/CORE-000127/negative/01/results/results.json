@@ -1,0 +1,21 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AESHOSP is completed, but not equal to \"N\" or \"Y\"",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC008",
+          "value": {
+            "AESHOSP": "B"
+          }
+        }
+      ]
+    }
+  ]
+}

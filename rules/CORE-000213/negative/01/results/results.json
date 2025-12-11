@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "More than one record per subject per DSSCAT per EPOCH",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "S001",
+          "value": {
+            "DSSCAT": "STUDY PARTICIPATION",
+            "EPOCH": "TREATMENT"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "S001",
+          "value": {
+            "DSSCAT": "STUDY PARTICIPATION",
+            "EPOCH": "TREATMENT"
+          }
+        }
+      ]
+    }
+  ]
+}

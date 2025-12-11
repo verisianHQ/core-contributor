@@ -1,0 +1,108 @@
+# Variable: --PTCD
+# Condition: 
+# Rule: --DECOD and --PTCD have a one-to-one relationship
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Standardized or dictionary-derived text for the description of
+                  an event or intervention. Equivalent to the Preferred Term (PT
+                  in MedDRA).
+                Document: Model v2.0
+                Item: --DECOD
+                Section: Events
+              - Cited Guidance: The preferred term code assigned to the event from MedDRA.
+                Document: Model v2.0
+                Item: --PTCD
+                Section: Events
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0049
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Dictionary or sponsor-defined derived text description of the
+                  topic variable, --TERM, or the modified topic variable
+                  (--MODIFY), if applicable. Equivalent to the Preferred Term
+                  (PT in MedDRA).
+                Document: Model v1.7
+                Item: --DECOD
+                Section: 2.2.2
+              - Cited Guidance: MedDRA Preferred Term code.
+                Document: Model v1.7
+                Item: --PTCD
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0049
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Dictionary or sponsor-defined derived text description of the
+                  topic variable, --TERM, or the modified topic variable
+                  (--MODIFY), if applicable. Equivalent to the Preferred Term
+                  (PT in MedDRA).
+                Document: Model v1.4
+                Item: --DECOD
+                Section: 2.2.2
+              - Cited Guidance: MedDRA Preferred Term code.
+                Document: Model v1.4
+                Item: --PTCD
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0049
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: --DECOD[Standardized or dictionary-derived text for the
+                  description of an event or intervention. Equivalent to the
+                  Preferred Term (PT in MedDRA).]|--PTCD[The preferred term code
+                  assigned to the event from MedDRA.]
+                Document: SDTM v2.1
+                Item: --DECOD|--PTCD
+                Section: 3.1.2 The Events Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0327
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --PTCD
+      operator: is_not_unique_relationship
+      value: --DECOD
+Core:
+  Id: CORE-000268
+  Status: Published
+  Version: '1'
+Description: Trigger error when --DECOD and --PTCD do not have a one-to-one relationship
+Executability: Fully Executable
+Outcome:
+  Message: --DECOD and --PTCD do not have a one-to-one relationship
+  Output Variables:
+    - --PTCD
+    - --DECOD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Record

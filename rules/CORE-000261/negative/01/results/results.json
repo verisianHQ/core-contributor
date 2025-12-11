@@ -1,0 +1,21 @@
+{
+  "datasets": [
+    {
+      "dataset": "pr.xpt",
+      "domain": "PR",
+      "execution_status": "success",
+      "execution_message": "PRSTTPT is present in dataset, but PRSTRTPT is not present in dataset.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "PRSTTPT": "2021-01-08"
+          }
+        }
+      ]
+    }
+  ]
+}

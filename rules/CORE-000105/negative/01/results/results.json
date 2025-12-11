@@ -1,0 +1,73 @@
+{
+  "datasets": [
+    {
+      "dataset": "oe.xpt",
+      "domain": "OE",
+      "execution_status": "success",
+      "execution_message": "OELOBXFL = 'Y', but OESTRESC is empty.",
+      "number_errors": 6,
+      "errors": [
+        {
+          "row": 7,
+          "SEQ": 7,
+          "USUBJID": "CDISC001",
+          "value": {
+            "OELOBXFL": "Y",
+            "OESTRESC": null,
+            "OETESTCD": "INTP"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 8,
+          "USUBJID": "CDISC001",
+          "value": {
+            "OELOBXFL": "Y",
+            "OESTRESC": null,
+            "OETESTCD": "INTP"
+          }
+        },
+        {
+          "row": 12,
+          "SEQ": 5,
+          "USUBJID": "CDISC003",
+          "value": {
+            "OELOBXFL": "Y",
+            "OESTRESC": null,
+            "OETESTCD": "INTP"
+          }
+        },
+        {
+          "row": 13,
+          "SEQ": 6,
+          "USUBJID": "CDISC003",
+          "value": {
+            "OELOBXFL": "Y",
+            "OESTRESC": null,
+            "OETESTCD": "INTP"
+          }
+        },
+        {
+          "row": 15,
+          "SEQ": 7,
+          "USUBJID": "CDISC004",
+          "value": {
+            "OELOBXFL": "Y",
+            "OESTRESC": null,
+            "OETESTCD": "INTP"
+          }
+        },
+        {
+          "row": 16,
+          "SEQ": 8,
+          "USUBJID": "CDISC004",
+          "value": {
+            "OELOBXFL": "Y",
+            "OESTRESC": null,
+            "OETESTCD": "INTP"
+          }
+        }
+      ]
+    }
+  ]
+}

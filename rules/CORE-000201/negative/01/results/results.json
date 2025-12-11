@@ -1,0 +1,37 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "USUBJID is not found in DM.USUBJID",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "002",
+          "value": {
+            "USUBJID": "002"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "003",
+          "value": {
+            "USUBJID": "003"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

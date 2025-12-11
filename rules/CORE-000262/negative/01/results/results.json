@@ -1,0 +1,53 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000262, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "RFSTDTC in DM dataset is empty but CMSTRF is completed.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMSTRF": "ONGOING"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC003",
+          "value": {
+            "CMSTRF": "ONGOING"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 3,
+          "USUBJID": "CDISC005",
+          "value": {
+            "CMSTRF": "BEFORE"
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": 1,
+          "USUBJID": "CDISC009",
+          "value": {
+            "CMSTRF": "AFTER"
+          }
+        }
+      ]
+    }
+  ]
+}

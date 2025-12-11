@@ -1,0 +1,93 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMCAT is equal to DOMAIN.",
+      "number_errors": 10,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMCAT": "Concomitant/Prior Medications"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMCAT": "Concomitant/Prior Medications"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMCAT": "Concomitant/Prior Medications"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMCAT": "Concomitant/Prior Medications"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMCAT": "Concomitant/Prior Medications"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMCAT": "Concomitant/Prior Medications"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 7,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMCAT": "Concomitant/Prior Medications"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CMCAT": "Concomitant/Prior Medications"
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": 2,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CMCAT": "Concomitant/Prior Medications"
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": 3,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CMCAT": "Concomitant/Prior Medications"
+          }
+        }
+      ]
+    }
+  ]
+}

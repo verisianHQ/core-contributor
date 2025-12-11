@@ -1,0 +1,76 @@
+# Variable: GEN
+# Condition: Dataset planned for submission
+# Rule: Dataset > 0 records
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: In the event that no records are present in a dataset (e.g., a
+                  small PK study where no subjects took concomitant
+                  medications), the empty dataset should not be submitted and
+                  should not be described in the Define-XML document.
+                Document: IG v3.4
+                Section: '3.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0408
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: In the event that no records are present in a dataset (e.g., a
+                  small PK study where no subjects took concomitant
+                  medications); the empty dataset should not be submitted and
+                  should not be described in the define.xml document.
+                Document: IG v3.2
+                Section: '3.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0408
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: In the event that no records are present in a dataset (e.g., a
+                  small PK study where no subjects took concomitant
+                  medications); the empty dataset should not be submitted and
+                  should not be described in the Define-XML document.
+                Document: IG v3.3
+                Section: '3.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0408
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: $records_in_dataset
+      operator: equal_to
+      value: 0
+Core:
+  Id: CORE-000579
+  Status: Published
+  Version: '1'
+Description: Raise an error when a dataset has no records.
+Executability: Fully Executable
+Operations:
+  - id: $records_in_dataset
+    operator: record_count
+Outcome:
+  Message: Dataset has no record.
+Rule Type: Dataset Metadata Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset

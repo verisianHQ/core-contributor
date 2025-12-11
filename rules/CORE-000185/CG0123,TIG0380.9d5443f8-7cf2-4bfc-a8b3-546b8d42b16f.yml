@@ -1,0 +1,91 @@
+# Variable: ACTARMCD
+# Condition: 
+# Rule: ACTARMCD value length <= 20
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Code of actual Arm. ACTARMCD is limited to 20 characters. It is
+                  not subject to the character restrictions that apply to
+                  TESTCD.
+                Document: IG v3.4
+                Item: Specification
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0123
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: ACTARMCD is limited to 20 characters and does not have special
+                  character restrictions.
+                Document: IG v3.2
+                Item: Specification
+                Section: '5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0123
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Code of actual Arm. ACTARMCD is limited to 20 characters. It is
+                  not subject to the character restrictions that apply to
+                  TESTCD.
+                Document: IG v3.3
+                Item: Specification
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0123
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Code of actual Arm. ACTARMCD is limited to 20 characters. It is
+                  not subject to the character restrictions that apply to
+                  TESTCD.
+                Document: TIG 1.0
+                Item: ACTARMCD
+                Section: 2.8.10.4
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0380
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: ACTARMCD
+      operator: longer_than
+      value: 20
+Core:
+  Id: CORE-000185
+  Status: Published
+  Version: '1'
+Description: Trigger error if length of ACTARMCD is greater than 20 characters
+Executability: Fully Executable
+Outcome:
+  Message: Length of ACTARMCD is greater than 20 characters
+  Output Variables:
+    - ACTARMCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+  Use Case: INDH
+Sensitivity: Record

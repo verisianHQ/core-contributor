@@ -1,0 +1,21 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMENTPT exists in a dataset, but CMENRTPT does not exist.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "CMENTPT": null
+          }
+        }
+      ]
+    }
+  ]
+}

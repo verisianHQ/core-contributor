@@ -1,0 +1,140 @@
+# Variable: ECDOSE
+# Condition: ECOCCUR = 'N'
+# Rule: ECDOSE = null or > 0
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: For example, if 0 tablets are taken within a timeframe or 0 mL
+                  is infused at a visit, then  ECOCCUR = 'N' is the standard
+                  representation of the collected doses not taken, not
+                  given,  or missed. Dose amount variables (e.g., ECDOSE,
+                  ECDOSTXT) must not be set to zero (0) as  an alternative
+                  method for indicating doses not taken, not given, or missed.
+                Document: IG v3.4
+                Item: Assumption 4a
+                Section: 6.1.3.2
+              - Cited Guidance: Qualifiers that indicate dose amount (e.g., ECDOSE, ECDOSTXT)
+                  may be populated with positive (non-zero) values in cases
+                  where the sponsor feels it is necessary and/or appropriate to
+                  represent specific dose amounts not taken, not given, or
+                  missed.
+                Document: IG v3.4
+                Item: Assumption 4b
+                Section: 6.1.3.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0101
+              Version: '2'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: IG v3.2[6.1][Assumption 4a][For example, if 0 tablets are taken
+                  within a timeframe or 0 mL infused at a visit, then ECOCCUR =
+                  'N' is the standard representation of the collected doses not
+                  taken, not given, or missed. Dose amount variables (e.g.,
+                  ECDOSE, ECDOSTXT) must not be set to zero (0) as an
+                  alternative method for indicating doses not taken, not given,
+                  or missed.]|IG v3.2[6.1][Assumption 4b][Qualifiers that
+                  indicate dose amount (e.g., ECDOSE, ECDOSTXT) may be populated
+                  with positive (non-zero) values in cases where the sponsor
+                  feels it is necessary and/or appropriate to represent specific
+                  dose amounts not taken, not given, or missed.]
+                Document: IG v3.2
+                Item: IG v3.2[6.1][Assumption 4a]|IG v3.2[6.1][Assumption 4b]
+                Section: IG v3.2[6.1]
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0101
+              Version: '2'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: IG v3.3[6.1.3.2][Assumption 4a][For example, if 0 tablets are
+                  taken within a timeframe or 0 mL infused at a visit, then
+                  ECOCCUR = 'N' is the standard representation of the collected
+                  doses not taken, not given, or missed. Dose amount variables
+                  (e.g., ECDOSE, ECDOSTXT) must not be set to zero (0) as an
+                  alternative method for indicating doses not taken, not given,
+                  or missed.]|IIG v3.3[6.1.3.2][Assumption 4b][Qualifiers that
+                  indicate dose amount (e.g., ECDOSE, ECDOSTXT) may be populated
+                  with positive (non-zero) values in cases where the sponsor
+                  feels it is necessary and/or appropriate to represent specific
+                  dose amounts not taken, not given, or missed.]
+                Document: IG v3.3
+                Item: IG v3.3[6.1.3.2][Assumption 4a]|IG v3.3[6.1.3.2][Assumption 4b]
+                Section: IG v3.3[6.1.3.2]
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0101
+              Version: '2'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: '[Assumption 4a][For example, if 0 tablets are taken within a
+                  timeframe or 0 mL is  infused at a visit, then ECOCCUR = ''N''
+                  is the standard representation of the collected doses not
+                  taken, not given, or missed. Dose amount variables (e.g.,
+                  ECDOSE, ECDOSTXT) must not be set to zero (0) as an
+                  alternative method for indicating doses not taken, not given,
+                  or missed.'
+                Document: TIG 1.0
+                Item: Assumption 4a
+                Section: 2.8.10.11
+              - Cited Guidance: '[Assumption 4b][Qualifiers that indicate dose amount (e.g.,
+                  ECDOSE, ECDOSTXT) may be populated with positive (non-zero)
+                  values in cases where the sponsor feels it is necessary and/or
+                  appropriate to represent specific dose amounts not taken, not
+                  given, or missed.]'
+                Document: TIG 1.0
+                Item: Assumption 4b
+                Section: 2.8.10.11
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0366
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: ECOCCUR # The condition is ECOCCUR = "N"
+      operator: equal_to
+      value: N
+    - name: ECDOSE
+        # The rule is ECDOSE is null or > 0
+        # so the failure criteria is not empty and LE 0
+        # which is the same as just LE 0
+      operator: less_than_or_equal_to
+      value: 0
+Core:
+  Id: CORE-000004
+  Status: Published
+  Version: '1'
+Description: When ECOCCUR indicates no dose, then ECDOSE needs to be null or >
+  0; it cannot be used to indicate a dose wasn't taken.
+Executability: Fully Executable
+Outcome:
+  Message: ECOCCUR indicates dose was not given, but ECDOSE is not blank or has a
+    value less than or equal to 0
+  Output Variables:
+    - ECDOSE
+    - ECOCCUR
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - EC
+  Use Case: INDH
+Sensitivity: Record

@@ -1,0 +1,139 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AECAT is equal to AEDECOD.",
+      "number_errors": 14,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AECAT": "INJECTION SITE REACTION",
+            "AEDECOD": "INJECTION SITE REACTION"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AECAT": "INJECTION SITE REACTION",
+            "AEDECOD": "INJECTION SITE REACTION"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AECAT": "INJECTION SITE REACTION",
+            "AEDECOD": "INJECTION SITE REACTION"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AECAT": "CHEST DISCOMFORT",
+            "AEDECOD": "CHEST DISCOMFORT"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AECAT": "HEADACHE",
+            "AEDECOD": "HEADACHE"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 7,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AECAT": "COUGH",
+            "AEDECOD": "Cough"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 1,
+          "USUBJID": "CDISC013",
+          "value": {
+            "AECAT": "MYOCARDIAL INFARCTION",
+            "AEDECOD": "MYOCARDIAL INFARCTION"
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": 1,
+          "USUBJID": "CDISC016",
+          "value": {
+            "AECAT": "Paraesthesia Oral",
+            "AEDECOD": "PARAESTHESIA ORAL"
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": 2,
+          "USUBJID": "CDISC016",
+          "value": {
+            "AECAT": "NASOPHARYNGITIS",
+            "AEDECOD": "NASOPHARYNGITIS"
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": 3,
+          "USUBJID": "CDISC016",
+          "value": {
+            "AECAT": "SUPRAVENTRICULAR EXTRASYSTOLES",
+            "AEDECOD": "SUPRAVENTRICULAR EXTRASYSTOLES"
+          }
+        },
+        {
+          "row": 12,
+          "SEQ": 4,
+          "USUBJID": "CDISC016",
+          "value": {
+            "AECAT": "RASH PRURITIC",
+            "AEDECOD": "RASH PRURITIC"
+          }
+        },
+        {
+          "row": 13,
+          "SEQ": 5,
+          "USUBJID": "CDISC016",
+          "value": {
+            "AECAT": "VENTRICULAR EXTRASYSTOLES",
+            "AEDECOD": "VENTRICULAR EXTRASYSTOLES"
+          }
+        },
+        {
+          "row": 14,
+          "SEQ": 6,
+          "USUBJID": "CDISC016",
+          "value": {
+            "AECAT": "CONJUNCTIVAL HAEMORRHAGE",
+            "AEDECOD": "CONJUNCTIVAL HAEMORRHAGE"
+          }
+        },
+        {
+          "row": 15,
+          "SEQ": 7,
+          "USUBJID": "CDISC016",
+          "value": {
+            "AECAT": "CERUMEN IMPACTION",
+            "AEDECOD": "Cerumen Impaction"
+          }
+        }
+      ]
+    }
+  ]
+}

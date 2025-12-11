@@ -1,0 +1,215 @@
+# Variable: TSVAL
+# Condition: TSPARMCD = SSTDTC (Study Start Date)
+# Rule: TSVAL conforms to ISO 8601 date
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Further information about the parameters is included below in
+                  Table 1. TSVAL may have controlled terminology depending on
+                  the value of TSPARMCD
+                Document: IG v3.2
+                Item: Assumption 3
+                Section: '7.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0285
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Further information about the parameters is included Appendix
+                  C1, Trial Summary Codes. TSVAL may have controlled terminology
+                  depending on the value of TSPARMCD. Conditions for including
+                  parameters are included in Appendix C1, Trial Summary Codes.
+                Document: IG v3.3
+                Item: Assumption 3
+                Section: '7.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0285
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+    ##CGO285 is similar to TRC1734c. Added FDA Business rule.      
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A dataset named ts.xpt with information on study start date must
+                  be present for each study in Module 4, sections 4.2.3.1,
+                  4.2.3.2, 4.2.3.4, and in Module 5, sections 5.3.1.1, 5.3.1.2,
+                  5.3.3.1, 5.3.3.2, 5.3.3.3, 5.3.3.4, 5.3.4, 5.3.5.1, 5.3.5.2
+                Document: FDA
+                Section: TRC1734
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1734c
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A dataset named ts.xpt with information on study start date must
+                  be present for each study in Module 4, sections 4.2.3.1,
+                  4.2.3.2, 4.2.3.4, and in Module 5, sections 5.3.1.1, 5.3.1.2,
+                  5.3.3.1, 5.3.3.2, 5.3.3.3, 5.3.3.4, 5.3.4, 5.3.5.1, 5.3.5.2
+                Document: FDA
+                Section: TRC1734
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1734c
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A dataset named ts.xpt with information on study start date must
+                  be present for each study in Module 4, sections 4.2.3.1,
+                  4.2.3.2, 4.2.3.4, and in Module 5, sections 5.3.1.1, 5.3.1.2,
+                  5.3.3.1, 5.3.3.2, 5.3.3.3, 5.3.3.4, 5.3.4, 5.3.5.1, 5.3.5.2
+                Document: FDA
+                Section: TRC1734
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1734c
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: A dataset named ts.xpt with information on study start date must
+                  be present for each study in Module 4, sections 4.2.3.1,
+                  4.2.3.2, 4.2.3.4, and in Module 5, sections 5.3.1.1, 5.3.1.2,
+                  5.3.3.1, 5.3.3.2, 5.3.3.3, 5.3.3.4, 5.3.4, 5.3.5.1, 5.3.5.2
+                Document: FDA
+                Section: TRC1734
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1734c
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: A dataset named ts.xpt with information on study start date must
+                  be present for each study in Module 4, sections 4.2.3.1,
+                  4.2.3.2, 4.2.3.4, and in Module 5, sections 5.3.1.1, 5.3.1.2,
+                  5.3.3.1, 5.3.3.2, 5.3.3.3, 5.3.3.4, 5.3.4, 5.3.5.1, 5.3.5.2
+                Document: FDA
+                Section: TRC1734
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1734c
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: A dataset named ts.xpt with information on study start date must
+                  be present for each study in Module 4, sections 4.2.3.1,
+                  4.2.3.2, 4.2.3.4, and in Module 5, sections 5.3.1.1, 5.3.1.2,
+                  5.3.3.1, 5.3.3.2, 5.3.3.3, 5.3.3.4, 5.3.4, 5.3.5.1, 5.3.5.2
+                Document: FDA
+                Section: TRC1734
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1734c
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: A dataset named ts.xpt with information on study start date must
+                  be present for each study in Module 4, sections 4.2.3.1,
+                  4.2.3.2, 4.2.3.4, and in Module 5, sections 5.3.1.1, 5.3.1.2,
+                  5.3.3.1, 5.3.3.2, 5.3.3.3, 5.3.3.4, 5.3.4, 5.3.5.1, 5.3.5.2
+                Document: FDA
+                Section: TRC1734
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1734c
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: A dataset named ts.xpt with information on study start date must
+                  be present for each study in Module 4, sections 4.2.3.1,
+                  4.2.3.2, 4.2.3.4, and in Module 5, sections 5.3.1.1, 5.3.1.2,
+                  5.3.3.1, 5.3.3.2, 5.3.3.3, 5.3.3.4, 5.3.4, 5.3.5.1, 5.3.5.2
+                Document: FDA
+                Section: TRC1734
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1734c
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: A dataset named ts.xpt with information on study start date must
+                  be present for each study in Module 4, sections 4.2.3.1,
+                  4.2.3.2, 4.2.3.4, and in Module 5, sections 5.3.1.1, 5.3.1.2,
+                  5.3.3.1, 5.3.3.2, 5.3.3.3, 5.3.3.4, 5.3.4, 5.3.5.1, 5.3.5.2
+                Document: FDA
+                Section: TRC1734
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1734c
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: SENDIG-AR
+        References:
+          - Citations:
+              - Cited Guidance: A dataset named ts.xpt with information on study start date must
+                  be present for each study in Module 4, sections 4.2.3.1,
+                  4.2.3.2, 4.2.3.4, and in Module 5, sections 5.3.1.1, 5.3.1.2,
+                  5.3.3.1, 5.3.3.2, 5.3.3.3, 5.3.3.4, 5.3.4, 5.3.5.1, 5.3.5.2
+                Document: FDA
+                Section: TRC1734
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1734c
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+
+Check:
+  all:
+    - name: TSPARMCD
+      operator: equal_to
+      value: SSTDTC
+    - name: TSVAL
+      operator: invalid_date
+Core:
+  Id: CORE-000505
+  Status: Published
+  Version: '1'
+Description: 'Raise an error when TSVAL for TSPARMCD=SSTDTC is not a valid date/time'
+Executability: Fully Executable
+Outcome:
+  Message: 'Invalid date for TSVAL for TSPARMCD = SSTDTC (Study Start Date)'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

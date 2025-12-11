@@ -1,0 +1,21 @@
+{
+  "datasets": [
+    {
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "execution_status": "success",
+      "execution_message": "VSTPTNUM exists in a dataset, but VSTPT does not exist. When time points are represented in SDTMIG domains, both VSTPT and VSTPTNUM must be used.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "VSTPTNUM": 1.0
+          }
+        }
+      ]
+    }
+  ]
+}

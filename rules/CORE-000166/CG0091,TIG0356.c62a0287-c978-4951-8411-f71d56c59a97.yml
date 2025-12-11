@@ -1,0 +1,59 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: '"The description of the time when a protocol-defined activity
+                  is planned to occur, used for study data tabulation."'
+                Document: Model v2.0
+                Item: --TPT
+                Section: Timing
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0091
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The description of the time when a protocol-defined activity is
+                  planned to occur, used for study data tabulation.
+                Document: SDTM v2.1
+                Item: --TPT
+                Section: Section 3.1.5 Timing Variables for All Classes
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0356
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --TPTNUM
+      operator: exists
+    - name: --TPT
+      operator: not_exists
+Core:
+  Id: CORE-000166
+  Status: Published
+  Version: '1'
+Description: Raise an error when --TPT is not present but --TPTNUM is present in dataset.
+Executability: Fully Executable
+Outcome:
+  Message: --TPT is not present when --TPTNUM is present in a dataset
+  Output Variables:
+    - --TPTNUM
+    - --TPT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Dataset

@@ -1,0 +1,97 @@
+# Variable: IETEST
+# Condition: 
+# Rule: IETEST in TI.IETEST
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The complete list of Inclusion/Exclusion criteria can be found
+                  in the Trial Inclusion/Exclusion Criteria (TI) dataset
+                  described in Section 7.4.1, Trial Inclusion/Exclusion
+                  Criteria.
+                Document: IG v3.4
+                Item: Specification
+                Section: 6.3.4
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0178
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'The complete list of Inclusion/Exclusion criteria can be found
+                  in the TI trial inclusion/exclusion criteria dataset described
+                  in Section 7.4 - Trial Summary and Eligibility: Trial
+                  Inclusion/Exclusion Criteria (TI).'
+                Document: IG v3.2
+                Item: Assumption 2
+                Section: '6.3'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0178
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'The complete list of Inclusion/Exclusion criteria can be found
+                  in the TI trial inclusion/exclusion criteria dataset described
+                  in Section 7.4 - Trial Summary and Eligibility: Trial
+                  Inclusion/Exclusion Criteria (TI).'
+                Document: IG v3.3
+                Item: Assumption 1
+                Section: 6.3.4
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0178
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The complete list of Inclusion/Exclusion criteria can be found
+                  in the Trial Inclusion/Exclusion Criteria (TI) dataset.
+                Document: TIG 1.0
+                Item: Assumption 1
+                Section: 2.8.10.13
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0407
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: IETEST
+      operator: is_not_contained_by
+      value: $ti_ietest
+Core:
+  Id: CORE-000227
+  Status: Published
+  Version: '1'
+Description: Check if IETEST is not in TI.IETEST
+Executability: Fully Executable
+Operations:
+  - domain: TI
+    id: $ti_ietest
+    name: IETEST
+    operator: distinct
+Outcome:
+  Message: IETEST is not in TI.IETEST
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - IE
+  Use Case: INDH
+Sensitivity: Record

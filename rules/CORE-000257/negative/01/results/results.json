@@ -1,0 +1,67 @@
+{
+  "datasets": [
+    {
+      "dataset": "pr.xpt",
+      "domain": "PR",
+      "execution_status": "success",
+      "execution_message": "PRSTRTPT is completed, but PRSTTPT is not completed.",
+      "number_errors": 6,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC009",
+          "value": {
+            "PRSTRTPT": "AFTER",
+            "PRSTTPT": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC010",
+          "value": {
+            "PRSTRTPT": "AFTER",
+            "PRSTTPT": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC011",
+          "value": {
+            "PRSTRTPT": "AFTER",
+            "PRSTTPT": null
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "CDISC012",
+          "value": {
+            "PRSTRTPT": "BEFORE",
+            "PRSTTPT": null
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 10,
+          "USUBJID": "CDISC013",
+          "value": {
+            "PRSTRTPT": "BEFORE",
+            "PRSTTPT": null
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 11,
+          "USUBJID": "CDISC014",
+          "value": {
+            "PRSTRTPT": "BEFORE",
+            "PRSTTPT": null
+          }
+        }
+      ]
+    }
+  ]
+}

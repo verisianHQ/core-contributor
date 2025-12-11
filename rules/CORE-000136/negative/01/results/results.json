@@ -1,0 +1,90 @@
+{
+  "datasets": [
+    {
+      "dataset": "relrec.xpt",
+      "domain": "RELREC",
+      "execution_status": "success",
+      "execution_message": "IDVARVAL and USUBJID are not completed, but IDVAR equals Sequence Number.",
+      "number_errors": 7,
+      "errors": [
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "IDVAR": "DDSEQ",
+            "IDVARVAL": null,
+            "RDOMAIN": "DD",
+            "RELID": "AEDD"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "IDVAR": "AESEQ",
+            "IDVARVAL": null,
+            "RDOMAIN": "AE",
+            "RELID": "AEFA"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "IDVAR": "FASEQ",
+            "IDVARVAL": null,
+            "RDOMAIN": "FA",
+            "RELID": "AEFA"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "IDVAR": "AESEQ",
+            "IDVARVAL": null,
+            "RDOMAIN": "AE",
+            "RELID": "AECM1"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "IDVAR": "CMSEQ",
+            "IDVARVAL": null,
+            "RDOMAIN": "AE",
+            "RELID": "AECM1"
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "IDVAR": "AESEQ",
+            "IDVARVAL": null,
+            "RDOMAIN": "AE",
+            "RELID": "AEMH1"
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "IDVAR": "MHSEQ",
+            "IDVARVAL": null,
+            "RDOMAIN": "AE",
+            "RELID": "AEMH1"
+          }
+        }
+      ]
+    }
+  ]
+}

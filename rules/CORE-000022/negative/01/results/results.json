@@ -1,0 +1,211 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "At least one of the Seriousness criteria (AESCAN, AESCONG, AESDISAB, AESDTH, AESHOSP, AESLIFE, AESOD or AESMIE)  = 'Y', but AESER = 'N' or empty.",
+      "number_errors": 11,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 727,
+          "USUBJID": "CDISC-TEST-046",
+          "value": {
+            "AESCAN": "Y",
+            "AESCONG": "N",
+            "AESDISAB": "N",
+            "AESDTH": "N",
+            "AESER": "N",
+            "AESHOSP": "N",
+            "AESLIFE": "N",
+            "AESMIE": "N",
+            "AESOD": "N",
+            "AESTDTC": "2019-03-24",
+            "AETERM": "UPSET STOMACH"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 735,
+          "USUBJID": "CDISC-TEST-046",
+          "value": {
+            "AESCAN": "N",
+            "AESCONG": "Y",
+            "AESDISAB": "N",
+            "AESDTH": "N",
+            "AESER": "N",
+            "AESHOSP": "N",
+            "AESLIFE": "N",
+            "AESMIE": "N",
+            "AESOD": "N",
+            "AESTDTC": "2019-04-29",
+            "AETERM": "HEADACHE"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 782,
+          "USUBJID": "CDISC-TEST-049",
+          "value": {
+            "AESCAN": "N",
+            "AESCONG": "N",
+            "AESDISAB": "Y",
+            "AESDTH": "N",
+            "AESER": "N",
+            "AESHOSP": "N",
+            "AESLIFE": "N",
+            "AESMIE": "N",
+            "AESOD": "N",
+            "AESTDTC": "2019-03-09",
+            "AETERM": "HEADACHE"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 783,
+          "USUBJID": "CDISC-TEST-049",
+          "value": {
+            "AESCAN": "N",
+            "AESCONG": "N",
+            "AESDISAB": "N",
+            "AESDTH": "Y",
+            "AESER": "N",
+            "AESHOSP": "N",
+            "AESLIFE": "N",
+            "AESMIE": "N",
+            "AESOD": "N",
+            "AESTDTC": "2019-03-15",
+            "AETERM": "HEADACHE"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 839,
+          "USUBJID": "CDISC-TEST-052",
+          "value": {
+            "AESCAN": "N",
+            "AESCONG": "N",
+            "AESDISAB": "N",
+            "AESDTH": "N",
+            "AESER": "N",
+            "AESHOSP": "Y",
+            "AESLIFE": "N",
+            "AESMIE": "N",
+            "AESOD": "N",
+            "AESTDTC": "2019-05-08",
+            "AETERM": "HEADACHE"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 840,
+          "USUBJID": "CDISC-TEST-052",
+          "value": {
+            "AESCAN": "N",
+            "AESCONG": "N",
+            "AESDISAB": "N",
+            "AESDTH": "N",
+            "AESER": "N",
+            "AESHOSP": "N",
+            "AESLIFE": "Y",
+            "AESMIE": "N",
+            "AESOD": "N",
+            "AESTDTC": "2019-03-30",
+            "AETERM": "HYPERTENSION"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 843,
+          "USUBJID": "CDISC-TEST-052",
+          "value": {
+            "AESCAN": "N",
+            "AESCONG": "N",
+            "AESDISAB": "N",
+            "AESDTH": "N",
+            "AESER": "N",
+            "AESHOSP": "N",
+            "AESLIFE": "N",
+            "AESMIE": "N",
+            "AESOD": "Y",
+            "AESTDTC": "2019-07-10",
+            "AETERM": "HYPERTENSION"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 844,
+          "USUBJID": "CDISC-TEST-052",
+          "value": {
+            "AESCAN": "N",
+            "AESCONG": "N",
+            "AESDISAB": "N",
+            "AESDTH": "N",
+            "AESER": "N",
+            "AESHOSP": "N",
+            "AESLIFE": "N",
+            "AESMIE": "Y",
+            "AESOD": "N",
+            "AESTDTC": "2019-03-26",
+            "AETERM": "HYPOGLYCAEMIA"
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": 881,
+          "USUBJID": "CDISC-TEST-055",
+          "value": {
+            "AESCAN": "N",
+            "AESCONG": "Y",
+            "AESDISAB": "N",
+            "AESDTH": "N",
+            "AESER": null,
+            "AESHOSP": "N",
+            "AESLIFE": "N",
+            "AESMIE": "N",
+            "AESOD": "N",
+            "AESTDTC": "2019-08-31",
+            "AETERM": "CARDIAC ARREST"
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": 882,
+          "USUBJID": "CDISC-TEST-055",
+          "value": {
+            "AESCAN": "Y",
+            "AESCONG": null,
+            "AESDISAB": null,
+            "AESDTH": null,
+            "AESER": null,
+            "AESHOSP": null,
+            "AESLIFE": null,
+            "AESMIE": null,
+            "AESOD": null,
+            "AESTDTC": "2019-04-18",
+            "AETERM": "DIARRHOEA"
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": 897,
+          "USUBJID": "CDISC-TEST-055",
+          "value": {
+            "AESCAN": null,
+            "AESCONG": null,
+            "AESDISAB": null,
+            "AESDTH": "Y",
+            "AESER": null,
+            "AESHOSP": null,
+            "AESLIFE": null,
+            "AESMIE": null,
+            "AESOD": null,
+            "AESTDTC": "2019-03-21",
+            "AETERM": "PNEUMONIA"
+          }
+        }
+      ]
+    }
+  ]
+}

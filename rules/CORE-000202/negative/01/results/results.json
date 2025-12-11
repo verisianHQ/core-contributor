@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "relrec.xpt",
+      "domain": "RELREC",
+      "execution_status": "success",
+      "execution_message": "RELTYPE is populated when IDVAR is populated with a 'SEQ' value.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "IDVAR": "LBSEQ",
+            "RELTYPE": "ONE"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "IDVAR": "LBSEQ",
+            "RELTYPE": "ONE"
+          }
+        }
+      ]
+    }
+  ]
+}

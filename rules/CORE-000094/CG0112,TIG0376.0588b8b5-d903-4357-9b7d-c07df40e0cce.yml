@@ -1,0 +1,89 @@
+# Variable: --DOSTXT
+# Condition: 
+# Rule: --DOSTXT value is non-numeric
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A textual description of the quantity of an agent (e.g., drug,
+                  substance, radiation) taken or absorbed at a single
+                  administration.
+                Document: Model v2.0
+                Section: Interventions
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0112
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Dosing information collected in text form. Examples: <1 per
+                  day, 200-400. Not populated when --DOSE is populated.'
+                Document: Model v1.4
+                Item: 'Specification: --DOSTXT'
+                Section: 2.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0112
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Dosing information collected in text form. Examples: <1 per
+                  day, 200-400. Not populated when --DOSE is populated.'
+                Document: Model v1.7
+                Item: Specification
+                Section: 2.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0112
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: A textual description of the quantity of an agent (e.g., drug,
+                  substance, radiation) taken or absorbed at a single
+                  administration.
+                Document: SDTM v2.1
+                Item: --DOSTXT
+                Section: 3.1.1 The Interventions Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0376
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --DOSTXT
+      operator: matches_regex
+      value: ^\d*\.?\d*$
+    - name: --DOSTXT
+      operator: non_empty
+Core:
+  Id: CORE-000094
+  Status: Published
+  Version: '1'
+Description: Raise an error if --DOSTXT value is numeric.
+Executability: Fully Executable
+Outcome:
+  Message: --DOSTXT value is numeric.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Record

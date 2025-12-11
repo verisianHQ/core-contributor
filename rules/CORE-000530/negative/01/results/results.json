@@ -1,0 +1,40 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "ACTARM should be equal to ARM when ACTARM is Screen Failure or Not Assigned.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ACTARM": "Not Assigned",
+            "ARM": "Zanomaline Low Dose (54 mg)"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "ACTARM": "Screen Failure",
+            "ARM": "Zanomaline Low Dose (54 mg)"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC003",
+          "value": {
+            "ACTARM": "Screen Failure",
+            "ARM": "Zanomaline High Dose (81 mg)"
+          }
+        }
+      ]
+    }
+  ]
+}

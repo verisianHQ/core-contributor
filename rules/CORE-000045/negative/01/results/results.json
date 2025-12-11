@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "ARMNRS value is missing when ARMCD value is missing",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ARMCD": null,
+            "ARMNRS": null
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": null,
+          "USUBJID": "CDISC011",
+          "value": {
+            "ARMCD": null,
+            "ARMNRS": null
+          }
+        }
+      ]
+    }
+  ]
+}

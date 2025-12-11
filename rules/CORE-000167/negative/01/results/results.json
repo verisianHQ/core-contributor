@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "execution_status": "success",
+      "execution_message": "VSTPTREF must be present when VSELTM is present in a dataset",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "VSELTM": "PT30M",
+            "VSTPTREF": "Not in dataset"
+          }
+        }
+      ]
+    }
+  ]
+}

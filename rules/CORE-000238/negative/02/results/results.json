@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "RFXENDTC does not equal the latest value of EX.EXSTDTC or EX.EXENDTC",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "$max_ex_exendtc": "2013-01-22",
+            "$max_ex_exstdtc": "2013-01-23",
+            "RFXENDTC": "2013-01-24"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000238, dataset=EX",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

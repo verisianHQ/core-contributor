@@ -1,0 +1,49 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMSTAT should be \"NOT DONE\" when CMREASND is provided.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMREASND": "Subject's Decision",
+            "CMSTAT": "Not Done"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "MHSTAT should be \"NOT DONE\" when MHREASND is provided.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "MHREASND": "Subject's Decision",
+            "MHSTAT": "Not Done"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "MHREASND": "Subject's Decision",
+            "MHSTAT": null
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "datasets": [
+    {
+      "dataset": "suppae.xpt",
+      "domain": "SUPPAE",
+      "execution_status": "success",
+      "execution_message": "QORIG = ASSIGNED but QEVAL is not populated",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "QEVAL": null,
+            "QORIG": "Assigned"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "QEVAL": null,
+            "QORIG": "Assigned"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "QEVAL": null,
+            "QORIG": "Assigned"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "QEVAL": null,
+            "QORIG": "Assigned"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "QEVAL": null,
+            "QORIG": "Assigned"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "suppec.xpt",
+      "domain": "SUPPEC",
+      "execution_status": "success",
+      "execution_message": "QORIG = ASSIGNED but QEVAL is not populated",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "QEVAL": null,
+            "QORIG": "ASSIGNED"
+          }
+        }
+      ]
+    }
+  ]
+}

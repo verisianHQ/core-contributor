@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "apdm.xpt",
+      "domain": "AP",
+      "execution_status": "success",
+      "execution_message": "RSUBJID must equal DM.USUBJID when RSUBJID is populated and RSUBJID does not equal POOLID",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "POOLID": null,
+            "RSUBJID": "CDISC-TEST-001",
+            "USUBJID": null
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000235, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

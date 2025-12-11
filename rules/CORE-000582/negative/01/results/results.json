@@ -1,0 +1,53 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVALn is null when TSVAL(n+1) is populated.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 22,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSGRPID": "EFFICACY",
+            "TSPARMCD": "OBJPRIM",
+            "TSVAL": null
+          }
+        },
+        {
+          "row": 24,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSGRPID": "EFFICACY",
+            "TSPARMCD": "OUTMSPRI",
+            "TSVAL": "To assess the dose-dependent improvement in subject depression. Improved scores on the Patient Health Questionnaire(PHQ-9) and the Hamilton Depression Rating Scale(HAMD 17) will indicate improvements,"
+          }
+        },
+        {
+          "row": 25,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "TSGRPID": "EFFICACY",
+            "TSPARMCD": "OUTMSPRI",
+            "TSVAL": "To assess the dose-dependent improvements in satisfaction with subjects' lives as a whole. Improved scores on the Satisfaction With Life Survery (SWLS) will indicate improvements."
+          }
+        },
+        {
+          "row": 26,
+          "SEQ": 3,
+          "USUBJID": "None",
+          "value": {
+            "TSGRPID": "EFFICACY",
+            "TSPARMCD": "OUTMSPRI",
+            "TSVAL": "To assess the dose-dependent improvements in subject memory and learning. Improved scores on the Auditory Verbal Learning Test (AVLT-REY) will indicate improvements."
+          }
+        }
+      ]
+    }
+  ]
+}

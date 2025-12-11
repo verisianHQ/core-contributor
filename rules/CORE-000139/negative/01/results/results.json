@@ -1,0 +1,41 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMENDY is not null when either CMENDTC or DM.RFSTDTC do not contain complete values in their date portion",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMENDTC": "2013-04",
+            "CMENDY": 151.0,
+            "RFSTDTC": "2012-11-30"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMENDTC": "2013----14",
+            "CMENDY": 166.0,
+            "RFSTDTC": "2012-11-30"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000139, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

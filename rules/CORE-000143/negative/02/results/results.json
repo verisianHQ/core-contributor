@@ -1,0 +1,45 @@
+{
+  "datasets": [
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "success",
+      "execution_message": "ETCD value is greater than 8",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ETCD": "SCREENPERIOD"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ETCD": "LOWERDOSE"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "ETCD": "SCREENINGS"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 2,
+          "USUBJID": "CDISC002",
+          "value": {
+            "ETCD": "HIGHESTDOSE"
+          }
+        }
+      ]
+    }
+  ]
+}

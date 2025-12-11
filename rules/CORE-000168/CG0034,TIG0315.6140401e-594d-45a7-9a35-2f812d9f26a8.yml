@@ -1,0 +1,102 @@
+# Variable: VISITNUM
+# Condition: VISITNUM ^= null
+# Rule: VISITNUM in SV.VISITNUM
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The Subject Visits domain consolidates information about the
+                  timing of subject visits that is otherwise spread over domains
+                  that include the visit variables (VISITNUM and possibly VISIT
+                  and/or VISITDY).
+                Document: IG v3.4
+                Section: '5.5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0034
+              Version: '2'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The Subject Visits domain consolidates information about the
+                  timing of subject visits that is otherwise spread over domains
+                  that include the visit variables (VISITNUM and possibly VISIT
+                  and/or VISITDY).
+                Document: IG v3.3
+                Section: '5.5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0034
+              Version: '2'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The Subject Visits domain consolidates information about the
+                  timing of subject visits that is otherwise spread over domains
+                  that include the visit variables (VISITNUM and possibly VISIT
+                  and/or VISITDY).
+                Document: IG v3.2
+                Section: '5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0034
+              Version: '2'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The Subject Visits domain consolidates information about the
+                  timing of subject visits that is otherwise spread over domains
+                  that include the visit variables (VISITNUM and possibly VISIT
+                  and/or VISITDY).
+                Document: TIG 1.0
+                Item: Assumption 1
+                Section: 2.8.10.25
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0315
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: VISITNUM
+      operator: non_empty
+    - name: VISITNUM
+      operator: is_not_contained_by
+      value: $sv_visitnum
+Core:
+  Id: CORE-000168
+  Status: Published
+  Version: '1'
+Description: If VISITNUM is not null then VISITNUM should be among SV.VISITNUM
+Executability: Fully Executable
+Operations:
+  - domain: SV
+    group:
+      - USUBJID
+    id: $sv_visitnum
+    name: VISITNUM
+    operator: distinct
+Outcome:
+  Message: VISITNUM is not among VISITNUM in SV domain.
+  Output Variables:
+    - VISITNUM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Exclude:
+      - SV
+  Use Case: INDH
+Sensitivity: Record

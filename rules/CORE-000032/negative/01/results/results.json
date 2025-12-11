@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "ft.xpt",
+      "domain": "FT",
+      "execution_status": "success",
+      "execution_message": "FTEVALID is present.  FTEVALID must not be used to model QRS data.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "FTEVALID": "PERSON A",
+            "QSEVALID": "Not in dataset"
+          }
+        }
+      ]
+    }
+  ]
+}

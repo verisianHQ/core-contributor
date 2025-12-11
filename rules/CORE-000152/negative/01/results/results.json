@@ -1,0 +1,49 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "There is not a one-to-one relationship between TSVAL and TSVALCD",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "N",
+            "TSVALCD": "C49487"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "N",
+            "TSVALCD": "C49488"
+          }
+        },
+        {
+          "row": 16,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "N",
+            "TSVALCD": "C49487"
+          }
+        },
+        {
+          "row": 31,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "Y",
+            "TSVALCD": "C49488"
+          }
+        }
+      ]
+    }
+  ]
+}

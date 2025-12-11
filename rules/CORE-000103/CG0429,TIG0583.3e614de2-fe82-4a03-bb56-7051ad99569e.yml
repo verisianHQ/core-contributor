@@ -1,0 +1,113 @@
+# Variable: --CAT
+# Condition: --SCAT ^= null
+# Rule: --CAT ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A further grouping or classification of the category for the
+                  topic of the finding, event, or intervention. The category is
+                  in --CAT.
+                Document: Model v2.0
+                Item: --SCAT
+                Section: Interventions
+              - Cited Guidance: A further grouping or classification of the category for the
+                  topic of the finding, event, or intervention. The category is
+                  in --CAT.
+                Document: Model v2.0
+                Item: --SCAT
+                Section: Events
+              - Cited Guidance: A further grouping or classification of the category for the
+                  topic of the finding, event, or intervention. The category is
+                  in --CAT.
+                Document: Model v2.0
+                Item: --SCAT
+                Section: Findings
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0429
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Used to define a further categorization of --CAT values.
+                Document: Model v1.4
+                Section: 2.2.1|2.2.2|2.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0429
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: '2.2.1[Table 3.2.1 --SCAT][Used to define a further
+                  categorization of --CAT values.]|2.2.2[Table 3.2.2
+                  --SCAT][Used to define a further categorization of --CAT
+                  values.]|2.2.3[Table 3.2.3 --SCAT][Used to define a further
+                  categorization of --CAT values.]'
+                Document: Model v1.7
+                Item: '2.2.1[Table 3.2.1: --SCAT]|2.2.2[Table 3.2.2: --SCAT]|2.2.3[Table 3.2.3:
+                  --SCAT]'
+                Section: 2.2.1|2.2.2|2.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0429
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Interventions[A further grouping or classification of the
+                  category for the topic of the finding, event, or intervention.
+                  The category is in --CAT.]|Events[A further grouping or
+                  classification of the category for the topic of the finding,
+                  event, or intervention. The category is in --CAT.]|Findings[A
+                  further grouping or classification of the category for the
+                  topic of the finding, event, or intervention. The category is
+                  in --CAT.]
+                Document: SDTM v2.1
+                Item: Specifications --SCAT
+                Section: Section 3.1.1 The Interventions Observation Class|Section 3.1.2 The
+                  Events Observation Class Section|3.1.3 The Findings
+                  Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0583
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --SCAT
+      operator: non_empty
+    - name: --CAT
+      operator: empty
+Core:
+  Id: CORE-000103
+  Status: Published
+  Version: '1'
+Description: Part A - Raise an error when --SCAT is not empty, but --CAT is empty.
+Executability: Fully Executable
+Outcome:
+  Message: --CAT should not be null when --SCAT is populated
+  Output Variables:
+    - --CAT
+    - --SCAT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Record

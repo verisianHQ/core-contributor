@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBORRES is not a continuous measurment but LBSTNRLO is not empty.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "LBORRES": "CHAR RESULT",
+            "LBSTNRLO": 2.0
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+# Variable: USUBJID
+# Condition: 
+# Rule: USUBJID unique within a submission
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Identifier used to uniquely identify a subject across all
+                  studies for all applications or submissions involving the
+                  product.
+                Document: IG v3.4
+                Item: Specification
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0151
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Identifier used to uniquely identify a subject across all
+                  studies
+                Document: IG v3.2
+                Item: Specification
+                Section: '5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0151
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Identifier used to uniquely identify a subject across all
+                  studies
+                Document: IG v3.3
+                Item: Specification
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0151
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Identifier used to uniquely identify a subject across all
+                  studies for all applications or submissions involving the
+                  product.
+                Document: TIG 1.0
+                Item: Specification
+                Section: 2.8.10.4
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0392
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: No more than one animal may have the same USUBJID within a
+                  submission.
+                Document: SENDIG v3.0
+                Item: Text
+                Section: 4.2.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND37
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: No more than one animal may have the same USUBJID within a
+                  submission.
+                Document: SENDIG v3.1
+                Item: Text
+                Section: 4.2.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND37
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: No more than one animal may have the same USUBJID within a
+                  submission.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.2.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND37
+              Version: "1"
+            Version: "5.0"
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: No more than one animal may have the same USUBJID within a
+                  submission.
+                Document: SENDIG v3.1
+                Item: Text
+                Section: 4.2.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND37
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: No more than one animal may have the same USUBJID within a
+                  submission.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.2.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND37
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: No more than one animal may have the same USUBJID within a
+                  submission.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.2.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND37
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: A sequence of characters used to uniquely identify a subject
+                  across all studies for all applications or submissions
+                  involving the product.
+                Document: TIG v1.0
+                Item: Text
+                Section: SDTM v2.1, Identifiers for All Classes, USUBJID
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0255
+              Version: "1"
+            Version: "1.0"
+        Substandard: SEND
+        Version: "1.0"
+Check:
+  all:
+    - name: USUBJID
+      operator: is_not_unique_set
+      value: DOMAIN
+Core:
+  Id: CORE-000351
+  Status: Published
+  Version: '1'
+Description: USUBJID must be unique across all studies
+Executability: Partially Executable
+Outcome:
+  Message: USUBJID is not unique within study
+  Output Variables:
+    - USUBJID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+  Use Case: NONCLIN, INDH
+Sensitivity: Record

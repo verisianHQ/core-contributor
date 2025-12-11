@@ -1,0 +1,21 @@
+{
+  "datasets": [
+    {
+      "dataset": "ft.xpt",
+      "domain": "FT",
+      "execution_status": "success",
+      "execution_message": "FTDTHREL must never be used in SDTM-based data for human clinical trials",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "FTDTHREL": null
+          }
+        }
+      ]
+    }
+  ]
+}

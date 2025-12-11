@@ -1,0 +1,85 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSSEQ is not unique within TSPARMCD",
+      "number_errors": 8,
+      "errors": [
+        {
+          "row": 10,
+          "SEQ": 3,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "DOSE",
+            "TSSEQ": 3.0
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": 3,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "DOSE",
+            "TSSEQ": 3.0
+          }
+        },
+        {
+          "row": 24,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "OUTMSPRI",
+            "TSSEQ": 1.0
+          }
+        },
+        {
+          "row": 25,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "OUTMSPRI",
+            "TSSEQ": 2.0
+          }
+        },
+        {
+          "row": 27,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "OUTMSPRI",
+            "TSSEQ": 1.0
+          }
+        },
+        {
+          "row": 28,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "OUTMSPRI",
+            "TSSEQ": 2.0
+          }
+        },
+        {
+          "row": 50,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "TTYPE",
+            "TSSEQ": 1.0
+          }
+        },
+        {
+          "row": 51,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "TTYPE",
+            "TSSEQ": 1.0
+          }
+        }
+      ]
+    }
+  ]
+}

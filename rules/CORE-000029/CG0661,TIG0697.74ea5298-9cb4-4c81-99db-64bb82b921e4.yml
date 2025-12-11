@@ -1,0 +1,61 @@
+# Variable: --TPT
+# Condition: --TPTNUM present in dataset
+# Rule: --TPT present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: When time points are represented in SDTMIG domains, both --TPT
+                  and --TPTNUM must be used.
+                Document: IG v3.4
+                Section: 4.4.10
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0661
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: TIG 1.0
+                Document: Time points will be represented using both --TPT and --TPTNUM. There
+                  will be a one-to-one relationship between values of --TPT and
+                  --TPTNUM.
+                Item: Planned Timing table NUM 5
+                Section: 2.8.7.5
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0697
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --TPTNUM
+      operator: exists
+    - name: --TPT
+      operator: not_exists
+Core:
+  Id: CORE-000029
+  Status: Published
+  Version: '1'
+Description: Raise an error when --TPTNUM exists in a dataset and --TPT does not exist.
+Executability: Fully Executable
+Outcome:
+  Message: --TPTNUM exists in a dataset, but --TPT does not exist. When time
+    points are represented in SDTMIG domains, both --TPT and --TPTNUM must be
+    used.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Dataset

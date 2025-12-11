@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "Invalid date for TSVAL for TSPARMCD = SENDTC (Study End Date)",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "SENDTC",
+            "TSVAL": "2023-02-30"
+          }
+        }
+      ]
+    }
+  ]
+}

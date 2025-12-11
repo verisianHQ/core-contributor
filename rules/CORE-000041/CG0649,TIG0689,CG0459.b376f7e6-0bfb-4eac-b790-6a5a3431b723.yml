@@ -1,0 +1,119 @@
+# Variable: TSVALNF
+# Condition: TSVAL not populated with values or synonyms of values in the ISO 21090 null flavor codelist (or other terms that can be represented as null flavors), unless the term is included in published terminology.
+# Rule: TSVALNF = null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Some codelists used for TSVAL include terms which are also null
+                  flavors. For example, the Pharmaceutical Dosage Form codelist
+                  includes the values 'UNKNOWN' and 'NOT APPLICABLE. In such
+                  cases, TSVAL should have the term from the codelist and
+                  TSVALNF should be null.
+                Document: SDTMIG v3.4
+                Item: Assumption 11
+                Section: 7.4.2
+              - Cited Guidance: While it would be possible to allow a value such as NONE or
+                  UNBOUNDED to be entered in TSVAL,  validation programs would
+                  then have to recognize this special term as an exception to
+                  the expected data format. Therefore, it was decided that a
+                  separate null flavor variable that uses the ISO 21090 null
+                  flavor terminology would be a better solution.
+                Document: SDTMIG v3.4
+                Section: 7.4.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0649
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Some codelists used for TSVAL include terms which are also null
+                  flavors. For example, the Pharmaceutical Dosage Form codelist
+                  includes the values "UNKNOWN" and "NOT APPLICABLE". In such
+                  cases, TSVAL should have the term from the codelist and
+                  TSVALNF should be null.
+                Document: TIG v1.0
+                Item: Assumption 11
+                Section: 2.8.10.32
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0689
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: While it would be possible to allow a value such as NONE or
+                  UNBOUNDED to be entered in TSVAL, validation programs would
+                  then have to recognize this special term as an exception to
+                  the expected data format. Therefore, it was decided that a
+                  separate null flavor variable that uses the ISO 21090 null
+                  flavor terminology would be a better solution.
+                Document: IG v3.2
+                Section: 'Section 7.4-TS: Use of Null Flavor Enumeration'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0459
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The variable TSVALNF is based on the idea of a "null flavor" as
+                  embodied in the ISO 21090 standard; "Health Informatics'
+                  Harmonized data types for information exchange." A null flavor
+                  is an ancillary piece of data that provides additional
+                  information when its primary piece of data is null (has a
+                  missing value). There is controlled terminology for the null
+                  flavor data item which includes such familiar values as
+                  Unknown; Other; and Not Applicable among its fourteen terms
+                Document: IG v3.3
+                Section: 7.4.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0459
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: TSVAL
+      operator: non_empty
+    - name: TSVAL
+      operator: not_matches_regex
+      value: (?i:^(NI|No information|INV|Invalid|OTH|Other|PINF|Positive
+        infinity|NINF|Negative
+        infinity|UNC|Unencoded|DER|Derived|UNK|Unknown|ASKU|Asked but
+        unknown|NAV|Temporarily unavailable|NASK|Not
+        asked|TRC|Trace|MSK|Masked|QS|Sufficient Quantity)$)
+    - name: TSVALNF
+      operator: non_empty
+Core:
+  Id: CORE-000041
+  Status: Published
+  Version: '1'
+Description: Raise and error when TSVAL is not populated TSVAL is populated with
+  values or synonyms of values in the ISO 21090 null flavor codelist (or other
+  terms that can be represented as null flavors) but TSVALNF is completed.
+Executability: Fully Executable
+Outcome:
+  Message: TSVAL is not populated with an ISO 21090 null flavor or null flavor
+    description but TSVALNF is populated.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+  Use Case: INDH
+Sensitivity: Record

@@ -1,0 +1,29 @@
+{
+  "datasets": [
+    {
+      "dataset": "ti.xpt",
+      "domain": "TI",
+      "execution_status": "success",
+      "execution_message": "IETESTCD is not unique",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETESTCD": "INCL04"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETESTCD": "INCL04"
+          }
+        }
+      ]
+    }
+  ]
+}

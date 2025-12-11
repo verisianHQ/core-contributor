@@ -1,0 +1,21 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMTRT is equal to 'MULTIPLE'",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMTRT": "MULTIPLE"
+          }
+        }
+      ]
+    }
+  ]
+}

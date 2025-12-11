@@ -1,0 +1,174 @@
+{
+  "datasets": [
+    {
+      "dataset": "tv.xpt",
+      "domain": "TV",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ft.xpt",
+      "domain": "FT",
+      "execution_status": "success",
+      "execution_message": "VISITDY is not null when VISITNUM is not in TV.VISITNUM",
+      "number_errors": 17,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 137,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VISITDY": 56.0,
+            "VISITNUM": 300.0
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 138,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VISITDY": 56.0,
+            "VISITNUM": 300.0
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 139,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VISITDY": 56.0,
+            "VISITNUM": 300.0
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 140,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VISITDY": 56.0,
+            "VISITNUM": 300.0
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 141,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VISITDY": 56.0,
+            "VISITNUM": 300.0
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 142,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VISITDY": 56.0,
+            "VISITNUM": 300.0
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 143,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VISITDY": 56.0,
+            "VISITNUM": 300.0
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 144,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VISITDY": 56.0,
+            "VISITNUM": 300.0
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": 145,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VISITDY": 56.0,
+            "VISITNUM": 300.0
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": 146,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VISITDY": 56.0,
+            "VISITNUM": 300.0
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": 147,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VISITDY": 56.0,
+            "VISITNUM": 300.0
+          }
+        },
+        {
+          "row": 12,
+          "SEQ": 148,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VISITDY": 56.0,
+            "VISITNUM": 300.0
+          }
+        },
+        {
+          "row": 13,
+          "SEQ": 149,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VISITDY": 56.0,
+            "VISITNUM": 300.0
+          }
+        },
+        {
+          "row": 14,
+          "SEQ": 150,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VISITDY": 56.0,
+            "VISITNUM": 300.0
+          }
+        },
+        {
+          "row": 15,
+          "SEQ": 151,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VISITDY": 56.0,
+            "VISITNUM": 300.0
+          }
+        },
+        {
+          "row": 16,
+          "SEQ": 152,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VISITDY": 56.0,
+            "VISITNUM": 300.0
+          }
+        },
+        {
+          "row": 17,
+          "SEQ": 153,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VISITDY": 56.0,
+            "VISITNUM": 300.0
+          }
+        }
+      ]
+    }
+  ]
+}

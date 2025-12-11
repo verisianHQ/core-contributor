@@ -1,0 +1,37 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "ACTARM value in DM dataset is not among the values of ARM variable in the TA dataset. This is allowed only in a multistage study with incomplete ARM assignment. Please confirm if your study is a multistage assignment study.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ACTARM": "Zanomaline Low Dose 54 mg"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "ACTARM": "Zanomaline Low Dose 54 mg"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ta.xpt",
+      "domain": "TA",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000209, dataset=TA",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "execution_status": "success",
+      "execution_message": "VSTPT is not present when VSTPTNUM is present in a dataset",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "VSTPT": "Not in dataset",
+            "VSTPTNUM": 1.0
+          }
+        }
+      ]
+    }
+  ]
+}

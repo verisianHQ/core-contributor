@@ -1,0 +1,24 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "DMDY is not calculated correctly even though the date portion of DMDTC is complete, the date portion of DM.RFSTDTC is a complete date, and DMDY is not empty.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "$val_dy": -1,
+            "DMDTC": "2012-11-29",
+            "DMDY": -5.0,
+            "RFSTDTC": "2012-11-30"
+          }
+        }
+      ]
+    }
+  ]
+}

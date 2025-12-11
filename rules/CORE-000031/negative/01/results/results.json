@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "ft.xpt",
+      "domain": "FT",
+      "execution_status": "success",
+      "execution_message": "FTEVAL is present.  FTEVAL must not be used to model QRS data.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "FTEVAL": "PERSON A",
+            "QSEVAL": "Not in dataset"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "A record exists in TS where TSPARMCD = STYPE and TSVAL = INTERVENTIONAL but TSVAL for TSPARMCD = INTMODEL is empty.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 18,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "$STYPE_INTERVENTIONAL": 2,
+            "TSGRPID": null,
+            "TSPARMCD": "INTMODEL",
+            "TSVAL": null
+          }
+        },
+        {
+          "row": 19,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "$STYPE_INTERVENTIONAL": 1,
+            "TSGRPID": "1",
+            "TSPARMCD": "INTMODEL",
+            "TSVAL": null
+          }
+        },
+        {
+          "row": 20,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "$STYPE_INTERVENTIONAL": 1,
+            "TSGRPID": "2",
+            "TSPARMCD": "INTMODEL",
+            "TSVAL": null
+          }
+        },
+        {
+          "row": 22,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "$STYPE_INTERVENTIONAL": 2,
+            "TSGRPID": null,
+            "TSPARMCD": "INTMODEL",
+            "TSVAL": null
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+# Variable: MIDS
+# Condition: MIDS present in dataset
+# Rule: TM dataset present in study
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0501
+              Version: '2'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The name of a specific instance of a Disease Milestone
+                  Type (MIDSTYPE) described in the Trial Disease Milestones dataset
+                  (see Section 5.1.4.3, Trial Disease Milestones). This should be
+                  unique within a subject. Used only in conjunction with RELMIDS and
+                  MIDSDTC.
+                Document: Model v2.0
+                Item: MIDS
+                Section: Timing
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0501
+              Version: '2'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The name of a specific instance of a Disease Milestone
+                  Type (MIDSTYPE) described in the Trial Disease Milestones dataset
+                  (see Section 3.5, Trial Disease Milestones). This should be unique
+                  within a subject. Used only in conjunction with RELMIDS and MIDSDTC.
+                Document: Model v1.7
+                Item: MIDS
+                Section: 2.2.5
+Check:
+  all:
+    - name: $MIDS_EXISTS
+      operator: equal_to
+      value: true
+    - name: TM
+      operator: not_exists
+Core:
+  Id: CORE-000297
+  Status: Published
+  Version: '1'
+Description: Raise an error when variable MIDS is present in any of the dataset and
+  TM dataset is missing.
+Executability: Fully Executable
+Operations:
+  - id: $MIDS_EXISTS
+    name: MIDS
+    operator: variable_exists
+Outcome:
+  Message: TM dataset is missing when MIDS variable is present in one of the dataset.
+Rule Type: Domain Presence Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset

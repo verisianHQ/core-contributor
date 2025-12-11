@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBORRES cannot be null when LBSTAT is null or LBDRVFL not equal to 'Y'",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBDRVFL": null,
+            "LBORRES": null,
+            "LBSTAT": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBDRVFL": null,
+            "LBORRES": null,
+            "LBSTAT": null
+          }
+        }
+      ]
+    }
+  ]
+}

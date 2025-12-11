@@ -1,0 +1,53 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "AGEU is completed, but both AGE and AGETXT are not completed.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "015246-099-0000-00000",
+          "value": {
+            "AGE": null,
+            "AGETXT": "Not in dataset",
+            "AGEU": "YEARS"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "015246-099-0000-00001",
+          "value": {
+            "AGE": null,
+            "AGETXT": "Not in dataset",
+            "AGEU": "YEARS"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "015246-099-0000-00002",
+          "value": {
+            "AGE": null,
+            "AGETXT": "Not in dataset",
+            "AGEU": "YEARS"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "015246-099-0000-00003",
+          "value": {
+            "AGE": null,
+            "AGETXT": "Not in dataset",
+            "AGEU": "YEARS"
+          }
+        }
+      ]
+    }
+  ]
+}

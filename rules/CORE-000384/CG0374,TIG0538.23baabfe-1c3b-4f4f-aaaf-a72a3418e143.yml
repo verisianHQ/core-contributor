@@ -1,0 +1,90 @@
+# Variable: GEN
+# Condition: RELREC dataset present in study
+# Rule: Dataset present in study with DOMAIN = RELREC.RDOMAIN
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Two-character abbreviation for the domain of the parent
+                  record(s). '
+                Document: Model v2.0
+                Item: RDOMAIN
+                Section: Related Records
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0374
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Two-character abbreviation for the domain of the parent
+                  record(s).
+                Document: Model v1.4
+                Item: RDOMAIN Description
+                Section: 4.1.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0374
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 2-character abbreviation for the domain of the parent record(s).
+                Document: Model v1.7
+                Item: RDOMAIN Description
+                Section: 4.1.1.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0374
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Two-character abbreviation for the domain of the parent
+                  record(s).
+                Document: SDTM v2.1
+                Item: RDOMAIN
+                Section: 6.1 Related Records Dataset
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0538
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: RDOMAIN
+      operator: is_not_contained_by
+      value: $study_domains
+Core:
+  Id: CORE-000384
+  Status: Published
+  Version: '1'
+Description: RELREC.RDOMAIN must represent a dataset that is present in the study.
+Executability: Fully Executable
+Operations:
+  - id: $study_domains
+    operator: study_domains
+Outcome:
+  Message: RELREC.RDOMAIN does not represent a dataset present in the study
+  Output Variables:
+    - RDOMAIN
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - RELREC
+  Use Case: INDH, PROD
+Sensitivity: Record

@@ -1,0 +1,74 @@
+# Variable: --EVDTYP
+# Condition: 
+# Rule: --EVDTYP not present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: MH Domain only
+                Document: Model v2.0
+                Item: --EVDTYP
+                Section: Events
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0567
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The concept of domain-specific variables was first introduced in
+                  SDTM v1.5. These variables are for use only in a specific
+                  domain and will be identified in the appropriate
+                  implementation guide.
+                Document: Model v1.7
+                Item: MHEVDTYP
+                Section: Table 2.2.12.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0567
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: MH Domain only
+                Document: SDTM v2.1
+                Item: --EVDTYP
+                Section: 3.1.2 The Events Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0652
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --EVDTYP
+      operator: exists
+Core:
+  Id: CORE-000114
+  Status: Published
+  Version: '1'
+Description: Raise an error when --EVDTYP is present in a dataset other than MH.
+Executability: Fully Executable
+Outcome:
+  Message: --EVDTYP is present in a dataset other than MH.
+  Output Variables:
+    - --EVDTYP
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      #  - FINDINGS
+      - EVENTS
+  Domains:
+    Exclude:
+      - MH
+  Use Case: INDH, PROD
+Sensitivity: Dataset

@@ -1,0 +1,49 @@
+{
+  "datasets": [
+    {
+      "dataset": "ti.xpt",
+      "domain": "TI",
+      "execution_status": "success",
+      "execution_message": "IETESTCD is not unique within TIVERS",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETESTCD": "INCL08",
+            "TIVERS": null
+          }
+        },
+        {
+          "row": 20,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETESTCD": "INCL08",
+            "TIVERS": null
+          }
+        },
+        {
+          "row": 22,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETESTCD": "EXCL22",
+            "TIVERS": null
+          }
+        },
+        {
+          "row": 26,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETESTCD": "EXCL22",
+            "TIVERS": null
+          }
+        }
+      ]
+    }
+  ]
+}

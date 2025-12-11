@@ -1,0 +1,30 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "Visit Day cannot be found in Trial Visit (TV) domain",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 5,
+          "SEQ": 2,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 200.0
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "tv.xpt",
+      "domain": "TV",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000249, dataset=TV",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

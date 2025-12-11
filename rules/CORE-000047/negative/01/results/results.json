@@ -1,0 +1,117 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "ARM value in DM dataset is not among the values of ARM variable in TA dataset. This is allowed only in a multistage study with incomplete ARM assignment. Please confirm if your study is a multistage assignment study",
+      "number_errors": 12,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ARM": "Zanomaline Low Dose (54 mg)"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "ARM": "Zanomaline Low Dose (54 mg)"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC003",
+          "value": {
+            "ARM": "Zanomaline High Dose (81 mg)"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "CDISC005",
+          "value": {
+            "ARM": "Zanomaline High Dose (81 mg)"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "CDISC006",
+          "value": {
+            "ARM": "Zanomaline Low Dose (54 mg)"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "CDISC007",
+          "value": {
+            "ARM": "Zanomaline High Dose (81 mg)"
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "CDISC010",
+          "value": {
+            "ARM": "Zanomaline High Dose (81 mg)"
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": null,
+          "USUBJID": "CDISC011",
+          "value": {
+            "ARM": "Zanomaline High Dose (81 mg)"
+          }
+        },
+        {
+          "row": 14,
+          "SEQ": null,
+          "USUBJID": "CDISC014",
+          "value": {
+            "ARM": "Zanomaline High Dose (81 mg)"
+          }
+        },
+        {
+          "row": 16,
+          "SEQ": null,
+          "USUBJID": "CDISC016",
+          "value": {
+            "ARM": "Zanomaline Low Dose (54 mg)"
+          }
+        },
+        {
+          "row": 17,
+          "SEQ": null,
+          "USUBJID": "CDISC017",
+          "value": {
+            "ARM": "Zanomaline Low Dose (54 mg)"
+          }
+        },
+        {
+          "row": 18,
+          "SEQ": null,
+          "USUBJID": "CDISC018",
+          "value": {
+            "ARM": "Zanomaline High Dose (81 mg)"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ta.xpt",
+      "domain": "TA",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000047, dataset=TA",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

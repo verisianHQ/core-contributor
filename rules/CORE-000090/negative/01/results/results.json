@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "co.xpt",
+      "domain": "CO",
+      "execution_status": "success",
+      "execution_message": "RDOMAIN has a missing value but IDVAR has a non-missing value",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "YY-20",
+          "value": {
+            "IDVAR": "AESEQ",
+            "RDOMAIN": null
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "AB-99",
+          "value": {
+            "IDVAR": "VSGRPID",
+            "RDOMAIN": null
+          }
+        }
+      ]
+    }
+  ]
+}

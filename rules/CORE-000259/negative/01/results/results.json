@@ -1,0 +1,61 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000259, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ss.xpt",
+      "domain": "SS",
+      "execution_status": "success",
+      "execution_message": "Date time of collection of subject status in SS domain, where survival status is marked as DEAD, is not on or after the date time of death populated in DM domain.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "DTHDTC": "2013-01-14",
+            "SSDTC": "2013-01-13",
+            "SSSTRESC": "DEAD"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "CDISC004",
+          "value": {
+            "DTHDTC": "2021-05-01",
+            "SSDTC": "2021-04-30",
+            "SSSTRESC": "DEAD"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "CDISC007",
+          "value": {
+            "DTHDTC": "2021-07-02",
+            "SSDTC": "2021-05-02",
+            "SSSTRESC": "DEAD"
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "DTHDTC": "2021-08-13",
+            "SSDTC": "2021-08-12",
+            "SSSTRESC": "DEAD"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000177, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "DM.RFENDTC is empty, but AEENRF is completed.",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 735,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEENRF": "ONGOING"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 783,
+          "USUBJID": "CDISC004",
+          "value": {
+            "AEENRF": "ONGOING"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 839,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AEENRF": "ONGOING"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 844,
+          "USUBJID": "CDISC008",
+          "value": {
+            "AEENRF": "BEFORE"
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": 882,
+          "USUBJID": "CDISC010",
+          "value": {
+            "AEENRF": "AFTER"
+          }
+        }
+      ]
+    }
+  ]
+}

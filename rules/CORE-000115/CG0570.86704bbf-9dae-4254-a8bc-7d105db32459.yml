@@ -1,0 +1,72 @@
+# Variable: ARM
+# Condition: 
+# Rule: ARM not in ('Screen Failure', 'Not Assigned', 'Unplanned Treatment', 'Not Treated')
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0570
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The trial arms table describes each planned arm in
+                  the trial.
+                Document: SDTMIG v3.4
+                Section: '7.2'
+              - Cited Guidance: The trial arms table describes each planned arm in
+                  the trial.
+                Document: SDTMIG v3.4
+                Section: 7.3.1
+              - Cited Guidance: The trial arms table describes each planned arm in
+                  the trial.
+                Document: SDTMIG v3.4
+                Section: '5.2'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0570
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The trial arms table describes each planned arm in
+                  the trial.
+                Document: IG v3.3
+                Item: Specification
+                Section: 7.2|5.2|7.3
+Check:
+  all:
+    - name: ARM
+      operator: is_contained_by_case_insensitive
+      value:
+        - Screen Failure
+        - Not Assigned
+        - Not Treated
+        - Unplanned Treatment
+Core:
+  Id: CORE-000115
+  Status: Published
+  Version: '1'
+Description: Raise an error when ARM is 'Screen Failure', 'Not Assigned', 'Unplanned
+  Treatment', 'Not Treated'
+Executability: Fully Executable
+Outcome:
+  Message: ARM cannot be equal to 'Screen Failure', 'Not Assigned', 'Unplanned Treatment'
+    or 'Not Treated'.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+      - TA
+      - TV
+Sensitivity: Record

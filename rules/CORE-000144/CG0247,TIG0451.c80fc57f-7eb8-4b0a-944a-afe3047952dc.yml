@@ -1,0 +1,86 @@
+# Variable: TAETORD
+# Condition: 
+# Rule: TAETORD is unique within an ARM
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Number that gives the order of the Element within the Arm.
+                Document: IG v3.4
+                Item: Specification
+                Section: 7.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0247
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Number that gives the order of the Element within the Arm.
+                Document: IG v3.3
+                Item: Specification
+                Section: '7.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0247
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Number that gives the order of the Element within the Arm.
+                Document: IG v3.2
+                Item: Specification
+                Section: '7.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0247
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Number that gives the order of the Element within the Arm.
+                Document: TIG 1.0
+                Item: Specification;TAETORD
+                Section: 2.8.10.27
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0451
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: TAETORD
+      operator: is_not_unique_set
+      value:
+        - ARM
+Core:
+  Id: CORE-000144
+  Status: Published
+  Version: '1'
+Description: Trigger error when TAETORD is not unique within an ARM
+Executability: Fully Executable
+Outcome:
+  Message: TAETORD is not unique within ARM
+  Output Variables:
+    - TAETORD
+    - ARM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TA
+  Use Case: INDH
+Sensitivity: Record

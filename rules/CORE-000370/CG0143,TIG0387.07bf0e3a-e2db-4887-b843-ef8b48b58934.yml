@@ -1,0 +1,138 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: This will be the same as the date of informed consent in the
+                  Disposition domain, if that protocol milestone is
+                  documented.  Would be null only in studies not collecting the
+                  date of informed consent.
+                Document: SDTMIG v3.4
+                Item: Specification
+                Section: '5.2'
+              - Cited Guidance: "RFICDTC should correspond to the date of the informed consent
+                  protocol milestone in DS, if that protocol milestone is
+                  documented in DS.
+
+                  \ In the event that there are multiple informed consents, this
+                  will be the date of the first one."
+                Document: SDTMIG v3.4
+                Item: Assumption 10c
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0143
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Specification[This will be the same as the date of informed
+                  consent in the Disposition domain, if that protocol milestone
+                  is documented. Would be null only in studies not collecting
+                  the date of informed consent.]|Assumption 13[RFICDTC should
+                  correspond to the date of the informed . . . In the event that
+                  there are multiple informed consents, this will be the date of
+                  the first one.]
+                Document: IG v3.2
+                Item: Specification|Assumption 13
+                Section: '5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0143
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Specification[This will be the same as the date of informed
+                  consent in the Disposition domain, if that protocol milestone
+                  is documented. Would be null only in studies not collecting
+                  the date of informed consent.]|Assumption 10c[In the event
+                  that there are multiple informed consents, this will be the
+                  date of the first one.]
+                Document: IG v3.3
+                Item: Specification|Assumption 10c
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0143
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: RFICDTC should correspond to the date of the informed consent
+                  protocol milestone in Disposition (DS), if that protocol
+                  milestone is documented in DS. In the event that there are
+                  multiple informed consents, this will be the date of the
+                  first. RFPENDTC will be the last date of participation for a
+                  subject for data included in a submission. This should be the
+                  last date of any record for the subject in the database at the
+                  time it is locked for submission. As such, it may not be the
+                  last date of participation in the study if the submission
+                  includes interim data.
+                Document: TIG 1.0
+                Item: Specification|Assumption 10c
+                Section: 2.8.10.4
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0387
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+# Variable: RFICDTC
+# Condition: DS.DSTERM indicates informed consent obtained
+# Rule: RFICDTC = earliest DS.DSSTDTC
+Check:
+  all:
+    - name: DSTERM
+      operator: contains
+      value: INFORMED CONSENT
+    - name: RFICDTC
+      operator: date_not_equal_to
+      value: $min_ds_dsstdtc
+    - name: $min_ds_dsstdtc
+      operator: equal_to
+      value: DSSTDTC
+Core:
+  Id: CORE-000370
+  Status: Published
+  Version: '1'
+Description: DM.RFICDTC must equal the earliest DS.DSSTDTC when DSTERM indicates
+  informed consent obtained.
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: DM
+Operations:
+  - domain: DS
+    group:
+      - USUBJID
+    id: $min_ds_dsstdtc
+    name: DSSTDTC
+    operator: min_date
+Outcome:
+  Message: DM.RFICDTC is not equal to the earliest DSSTDTC, when DSTERM indicates
+    Informed consent obtained.
+  Output Variables:
+    - DSDECOD
+    - RFICDTC
+    - DSSTDTC
+    - $min_ds_dsstdtc
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - DS
+  Use Case: INDH
+Sensitivity: Record

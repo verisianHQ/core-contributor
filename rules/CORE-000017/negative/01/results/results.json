@@ -4,7 +4,7 @@
       "dataset": "co.xpt",
       "domain": "CO",
       "execution_status": "success",
-      "execution_message": "RDOMAIN has a missing value when IDVARVAL has a non-missing value",
+      "execution_message": "RDOMAIN has a missing value when IDVARVAL has a non-missing value.",
       "number_errors": 2,
       "errors": [
         {
@@ -12,6 +12,7 @@
           "SEQ": 3,
           "USUBJID": "YY-20",
           "value": {
+            "IDVAR": "AESEQ",
             "IDVARVAL": "7",
             "RDOMAIN": null
           }
@@ -21,6 +22,7 @@
           "SEQ": 5,
           "USUBJID": "AB-99",
           "value": {
+            "IDVAR": "VSGRPID",
             "IDVARVAL": "VS2",
             "RDOMAIN": null
           }

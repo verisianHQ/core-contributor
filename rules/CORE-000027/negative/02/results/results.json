@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    {
+      "dataset": "te.xpt",
+      "domain": "TE",
+      "execution_status": "success",
+      "execution_message": "At least one of TEENRL and TEDUR must be populated.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ETCD": "E002",
+            "TEDUR": null,
+            "TEENRL": null
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ETCD": "E003",
+            "TEDUR": null,
+            "TEENRL": null
+          }
+        }
+      ]
+    }
+  ]
+}

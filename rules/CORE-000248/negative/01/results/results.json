@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AERFTDTC is populated when AETPTREF is null",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "123101",
+          "value": {
+            "AERFTDTC": "2005-10-10",
+            "AETPTREF": null
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "There are no DS records for subject who was assigned treatment",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "USUBJID": "S001"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000296, dataset=DS",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

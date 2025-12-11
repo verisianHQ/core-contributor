@@ -1,0 +1,92 @@
+# Variable: IETESTCD
+# Condition: TIVERS not present in dataset
+# Rule: IETESTCD unique in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0256
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The number of this version of the Inclusion/Exclusion
+                  criteria. May be omitted if there is only one version.
+                Document: IG v3.4
+                Item: Specification
+                Section: 7.4.1
+              - Cited Guidance: Individual criteria do not have versions. If a criterion
+                  changes, it should be treated as a new criterion, with a new value
+                  for IETESTCD.
+                Document: IG v3.4
+                Item: Assumption 3
+                Section: 7.4.1
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0256
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The number of this version of the Inclusion/Exclusion
+                  criteria. May be omitted if there is only one version.
+                Document: IG v3.3
+                Item: Specification
+                Section: 7.4.1
+              - Cited Guidance: Individual criteria do not have versions. If a criterion
+                  changes, it should be treated as a new criterion, with a new value
+                  for IETESTCD.
+                Document: IG v3.3
+                Item: Assumption 3
+                Section: 7.4.1
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0256
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The number of this version of the Inclusion/Exclusion
+                  criteria. May be omitted if there is only one version.
+                Document: IG v3.2
+                Item: Specification
+                Section: '7.4'
+              - Cited Guidance: Individual criteria do not have versions. If a criterion
+                  changes, it should be treated as a new criterion, with a new value
+                  for IETESTCD.
+                Document: IG v3.2
+                Item: Assumption 3
+                Section: '7.4'
+Check:
+  all:
+    - name: TIVERS
+      operator: not_exists
+    - name: IETESTCD
+      operator: is_not_unique_set
+      value: DOMAIN
+Core:
+  Id: CORE-000146
+  Status: Published
+  Version: '1'
+Description: Trigger error when IETESTCD is not unique within dataset
+Executability: Fully Executable
+Outcome:
+  Message: IETESTCD is not unique
+  Output Variables:
+    - IETESTCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TI
+Sensitivity: Record

@@ -1,0 +1,40 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSPARMCD = ACTSUB but the value provided in TSVAL is not a positive integer.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "ACTSUB",
+            "TSVAL": "-1"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "ACTSUB",
+            "TSVAL": "0"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "ACTSUB",
+            "TSVAL": "1.5"
+          }
+        }
+      ]
+    }
+  ]
+}

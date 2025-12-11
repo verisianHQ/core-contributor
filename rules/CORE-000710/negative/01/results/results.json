@@ -1,0 +1,122 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMSTRTPT is not in ('BEFORE', 'COINCIDENT', 'AFTER', 'UNKNOWN')",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CMDTC": "2013-05-20",
+            "CMSTRTPT": null,
+            "CMSTTPT": "2013-05-19"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CMDTC": "2013-05-20",
+            "CMSTRTPT": "ONGOING",
+            "CMSTTPT": "2013-05-10"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 3,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CMDTC": "2013-05-20",
+            "CMSTRTPT": "ONGOING",
+            "CMSTTPT": "2013-05-10"
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": 3,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CMDTC": "2013-05-20",
+            "CMSTRTPT": "POST",
+            "CMSTTPT": "2013-05-10"
+          }
+        },
+        {
+          "row": 13,
+          "SEQ": 3,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CMDTC": "2013-05-20",
+            "CMSTRTPT": "UNK",
+            "CMSTTPT": "2013-05-10"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "MHSTRTPT is not in ('BEFORE', 'COINCIDENT', 'AFTER', 'UNKNOWN')",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "MHDTC": "2013-05-20",
+            "MHSTRTPT": "ONGOING",
+            "MHSTTPT": "2013-02-18"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 1,
+          "USUBJID": "CDISC006",
+          "value": {
+            "MHDTC": "2013-05-20",
+            "MHSTRTPT": "ONGOING",
+            "MHSTTPT": "2007-04-20"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 1,
+          "USUBJID": "CDISC007",
+          "value": {
+            "MHDTC": "2013-05-20",
+            "MHSTRTPT": "ONGOING",
+            "MHSTTPT": "2012-05-20"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 1,
+          "USUBJID": "CDISC012",
+          "value": {
+            "MHDTC": "2013-05-03",
+            "MHSTRTPT": null,
+            "MHSTTPT": "2013-05-02"
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": 1,
+          "USUBJID": "CDISC013",
+          "value": {
+            "MHDTC": "2013-05-04",
+            "MHSTRTPT": null,
+            "MHSTTPT": "2013-04-04"
+          }
+        }
+      ]
+    }
+  ]
+}

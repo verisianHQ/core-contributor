@@ -1,0 +1,73 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: When findings are collected about an event or intervention, and
+                  the name of the event or intervention is collected in an
+                  "Other, specify" CRF field, the value in --OBJ variable
+                  depends on whether the FA record has a parent record and
+                  whether the "Other, specify" value was coded.
+                Document: IG v3.4
+                Section: '4.2.7.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0602
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: When findings are collected about an event or intervention, and
+                  the name of the event or intervention is collected in an
+                  "Other, specify" CRF field, the value in --OBJ variable
+                  depends on whether the FA record has a parent record and
+                  whether the "Other, specify" value was coded.
+                Document: TIG 1.0
+                Section: 2.8.7.4
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0656
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --DECOD
+      operator: empty
+    - name: RELREC.FAOBJ
+      operator: non_empty
+    - name: --TRT
+      operator: not_equal_to
+      value: RELREC.FAOBJ
+Core:
+  Id: CORE-000757
+  Status: Published
+  Version: '1'
+Description: When findings are collected about an intervention, and the
+  interventions parent record exists and --DECOD = null, FAOBJ should be equal
+  to --TRT.
+Executability: Fully Executable
+Match Datasets:
+  - Name: RELREC
+    Wildcard: FA
+Outcome:
+  Message: Interventions parent record exists and --DECOD = null, but FAOBJ is not
+    equal to --TRT.
+  Output Variables:
+    - RELREC.FAOBJ
+    - --TRT
+    - --DECOD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Record

@@ -1,0 +1,114 @@
+# Variable: --TPTREF
+# Condition: --ELTM present in dataset
+# Rule: --TPTREF present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The description of a time point that acts as a fixed reference
+                  for a series of planned time points, used for study data
+                  tabulation. Description of the fixed  reference point referred
+                  to by --ELTM, --TPTNUM, --TPT, --STINT, and --ENINT.
+                Document: Model v2.0
+                Section: Timing
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0092
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Model v1.4[2.2.5 Timing Variables for All
+                  Classes][Specification][(--TPTREF) Description of the fixed
+                  reference point referred to by --ELTM, --TPTNUM, and --TPT.
+                  Examples: PREVIOUS DOSE, PREVIOUS MEAL.]|IG v3.2[4.1.4.10
+                  Representing Time Points][If the protocol describes the
+                  scheduling of a dose using a reference intervention or
+                  assessment, then --TPTREF should be populated, even if it does
+                  not contribute to uniqueness. The fact that time points are
+                  related to a reference time point, and what that reference
+                  time point is, are important for interpreting the data
+                  collected at the time point.]'
+                Document: Model v1.4|IG v3.2
+                Item: Model v1.4[2.2.5 Timing Variables for All Classes][Specification]
+                Section: Model v1.4[2.2.5 Timing Variables for All Classes]|IG v3.2[4.1.4.10
+                  Representing Time Points]
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0092
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Model v1.7[2.2.5 Timing Variables for All Classes][Table
+                  2.2.5.1: --TPTREF]Description of the fixed reference point
+                  referred to by --ELTM, --TPTNUM, --TPT, --STINT, and --ENINT.
+                  Examples: "PREVIOUS DOSE", "PREVIOUS MEAL".]|IG v3.3[4.4.10
+                  Representing Time Points][If the protocol describes the
+                  scheduling of a dose using a reference intervention or
+                  assessment, then --TPTREF should be populated, even if it does
+                  not contribute to uniqueness. The fact that time points are
+                  related to a reference time point, and what that reference
+                  time point is, are important for interpreting the data
+                  collected at the time point.]'
+                Document: Model v1.7|IG v3.3
+                Item: 'Model v1.7[2.2.5 Timing Variables for All Classes][Table 2.2.5.1:
+                  --TPTREF]'
+                Section: Model v1.7[2.2.5 Timing Variables for All Classes]|IG v3.3[4.4.10
+                  Representing Time Points]
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0092
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The description of a time point that acts as a fixed reference
+                  for a series of planned time points, used for study data
+                  tabulation. Description of the fixed reference point referred
+                  to by --ELTM, --TPTNUM, --TPT, --STINT, and --ENINT.
+                Document: SDTM v2.1
+                Item: --TPTREF
+                Section: Section 3.1.5 Timing Variables for All Classes
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0357
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --ELTM
+      operator: exists
+    - name: --TPTREF
+      operator: not_exists
+Core:
+  Id: CORE-000167
+  Status: Published
+  Version: '1'
+Description: Raise an error when--ELTM is present but --TPTREF is not present in dataset.
+Executability: Fully Executable
+Outcome:
+  Message: --TPTREF must be present when --ELTM is present in a dataset
+  Output Variables:
+    - --ELTM
+    - --TPTREF
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Dataset

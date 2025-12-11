@@ -1,0 +1,102 @@
+# Variable: DSSTDTC
+# Condition: DSDECOD = 'DEATH'
+# Rule: DSSTDTC = DM.DTHDTC
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Date/time of death for any subject who died, in ISO 8601 format.
+                  Should represent the date/time that is captured in the
+                  clinical-trial database.
+                Document: SDTMIG v3.4
+                Item: Specification
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0069
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Date/time of death for any subject who died, in ISO 8601 format.
+                  Should represent the date/time that is captured in the
+                  clinical-trial database.
+                Document: SDTMIG v3.3
+                Item: Specification
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0069
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Date/time of death for any subject who died, in ISO 8601 format.
+                  Should represent the date/time that is captured in the
+                  clinical-trial database.
+                Document: SDTMIG v3.2
+                Item: Specification
+                Section: '5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0069
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Date/time of death for any subject who died, in ISO 8601 format.
+                  Should represent the date/time that is captured in the
+                  clinical-trial database.
+                Document: TIG 1.0
+                Item: Specification
+                Section: 2.8.10.4
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0339
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: DSDECOD
+      operator: equal_to
+      value: DEATH
+    - name: DSSTDTC
+      operator: not_equal_to
+      value: DTHDTC
+Core:
+  Id: CORE-000034
+  Status: Published
+  Version: '1'
+Description: Raise an error when DSSTDTC is not equal to DM.DTHDTC and DSDECOD
+  is equal to "DEATH"
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: DM
+Outcome:
+  Message: DSSTDTC does not equal DM.DTHDTC, when DSDECOD equals "DEATH".
+  Output Variables:
+    - DSDECOD
+    - DSSTDTC
+    - DTHDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - DS
+  Use Case: INDH
+Sensitivity: Record

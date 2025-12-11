@@ -1,0 +1,40 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Milestone associated with RFSTDTC is start of treatment and ARMNRS is not null and different from 'UNPLANNED TREATMENT', but RFSTDTC is not empty.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ARMNRS": "SCREEN FAILURE",
+            "RFSTDTC": "2012-11-30"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "ARMNRS": "ASSIGNED, NOT TREATED",
+            "RFSTDTC": "2012-11-15"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "CDISC004",
+          "value": {
+            "ARMNRS": "NOT ASSIGNED",
+            "RFSTDTC": "2013-10-08"
+          }
+        }
+      ]
+    }
+  ]
+}

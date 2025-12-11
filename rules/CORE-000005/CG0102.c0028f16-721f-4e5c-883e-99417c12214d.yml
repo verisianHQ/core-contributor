@@ -1,0 +1,79 @@
+# Variable: EXDOSE
+# Condition: EXTRT = 'PLACEBO'
+# Rule: EXDOSE = 0
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0102
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Doses of placebo should be represented by EXTRT =
+                  "PLACEBO" and EXDOSE = "0" (indicating 0 mg of active ingredient
+                  was taken or administered).
+                Document: SDTMIG v3.4
+                Item: Assumption 2b
+                Section: 6.1.3.1
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0102
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Doses of placebo should be represented by EXTRT =
+                  'PLACEBO' and EXDOSE = 0 (indicating 0 mg of active ingredient was
+                  taken or administered).
+                Document: IG v3.2
+                Item: Assumption 2b
+                Section: '6.1'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0102
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Doses of placebo should be represented by EXTRT =
+                  'PLACEBO' and EXDOSE = 0 (indicating 0 mg of active ingredient was
+                  taken or administered).
+                Document: IG v3.3
+                Item: Assumption 2b
+                Section: 6.1.3.1
+Check:
+  all:
+    - name: EXTRT
+      operator: equal_to
+      value: PLACEBO
+    - name: EXDOSE
+      operator: not_equal_to
+      value: 0
+Core:
+  Id: CORE-000005
+  Status: Published
+  Version: '1'
+Description: When EXTRT is PLACEBO, EXDOSE must equal 0
+Executability: Fully Executable
+Outcome:
+  Message: EXTRT is PLACEBO, but EXDOSE is not equal to 0.
+  Output Variables:
+    - EXTRT
+    - EXDOSE
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - EX
+Sensitivity: Record

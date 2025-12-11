@@ -1,0 +1,37 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBDY is not calculated correctly even though the date portion of LBDTC is complete, the date portion of DM.RFSTDTC is a complete date, and LBDY is not empty.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "$val_dy": 1,
+            "LBDTC": "2012-11-30",
+            "LBDY": 2.0,
+            "RFSTDTC": "2012-11-30"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "execution_error",
+      "execution_message": "SQL operation execution error",
+      "number_errors": 1,
+      "errors": [
+        {
+          "error": "SQL error in sqldaydatavalidatoroperation operation",
+          "message": "column or relation does not exist"
+        }
+      ]
+    }
+  ]
+}

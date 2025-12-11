@@ -1,0 +1,69 @@
+# Variable: VISIT
+# Condition: SVUPDES = null
+# Rule: VISIT in TV.VISIT
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Protocol-defined description of clinical encounter.
+                Document: IG v3.2
+                Item: Specification
+                Section: 5 SV
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0215
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Protocol-defined description of clinical encounter.
+                Document: IG v3.3
+                Item: Specification
+                Section: '5.5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0215
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+
+Check:
+  all:
+    - any:
+        - name: SVUPDES
+          operator: empty
+        - name: SVUPDES
+          operator: not_exists
+    - name: VISIT
+      operator: is_not_contained_by
+      value: $visits_in_tv
+Core:
+  Id: CORE-000333
+  Status: Published
+  Version: '1'
+Description: 'Raise an error when SVUPDES is null and SV.VISIT is not in TV.VISIT'
+Executability: Partially Executable - Possible Overreporting
+Operations:
+  - domain: TV
+    id: $visits_in_tv
+    name: VISIT
+    operator: distinct
+Outcome:
+  Message: SVUPDES is not populated or does not exist, but the VISIT does not
+    equal a VISIT present in TV
+  Output Variables:
+    - SVUPDES
+    - VISIT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - SV
+Sensitivity: Record

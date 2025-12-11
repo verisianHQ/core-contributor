@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "DSDECOD is not equal to \"COMPLETED\" when DSTERM equals \"COMPLETED\".",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "015246-300-0004-00002",
+          "value": {
+            "DSDECOD": "ADVERSE EVENT",
+            "DSTERM": "COMPLETED"
+          }
+        }
+      ]
+    }
+  ]
+}

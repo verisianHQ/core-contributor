@@ -1,0 +1,40 @@
+{
+  "datasets": [
+    {
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "execution_status": "success",
+      "execution_message": "CESTTPT is completed and CESTRTPT is empty",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CESTRTPT": null,
+            "CESTTPT": "FIRST DOSE"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 14,
+          "USUBJID": "CDISC003",
+          "value": {
+            "CESTRTPT": null,
+            "CESTTPT": "FIRST DOSE"
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": 4,
+          "USUBJID": "CDISC011",
+          "value": {
+            "CESTRTPT": null,
+            "CESTTPT": "FIRST DOSE"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "datasets": [
+    {
+      "dataset": "suppdm.xpt",
+      "domain": "SUPPDM",
+      "execution_status": "success",
+      "execution_message": "QLABEL > 40 chars.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC008",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": null,
+            "QLABEL": "Race 1Race 1Race 1Race 1Race 1Race 1vRace 1Race 1Race 1Race 1Race 1Race 1vvvRace 1Race 1Race 1vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC008",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": null,
+            "QLABEL": "Race 22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC008",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": null,
+            "QLABEL": "Race 3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333"
+          }
+        }
+      ]
+    }
+  ]
+}

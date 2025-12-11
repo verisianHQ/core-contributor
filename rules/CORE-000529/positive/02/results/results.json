@@ -1,0 +1,25 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "execution_error",
+      "execution_message": "SQL operation execution error",
+      "number_errors": 1,
+      "errors": [
+        {
+          "error": "SQL error in sqldaydatavalidatoroperation operation",
+          "message": "column or relation does not exist"
+        }
+      ]
+    }
+  ]
+}

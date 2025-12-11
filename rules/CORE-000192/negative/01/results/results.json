@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "RFENDTC is not blank when ARMNRS is provided.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC003",
+          "value": {
+            "ARMNRS": "SCREEN FAILURE",
+            "RFENDTC": "2013-10-29"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC004",
+          "value": {
+            "ARMNRS": "ASSIGNED, NOT TREATED",
+            "RFENDTC": "2014-03-18"
+          }
+        }
+      ]
+    }
+  ]
+}

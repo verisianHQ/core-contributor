@@ -1,0 +1,66 @@
+# Variable: RFENDTC
+# Condition: Milestone associated with RFENDTC is end of treatment and ACTARM not in (‘Screen Failure’, ‘Not Assigned’, ‘Not Treated’)
+# Rule: RFENDTC ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'IG v3.2[5][Specification: RFENDTC][Required for all randomized
+                  subjects; null for screen failures or unassigned subjects.]|IG
+                  v3.2[5][Specification: ACTARM][Randomized subjects who were
+                  not treated will be given a value of “Not Treated”. Values
+                  should be “Screen Failure” for screen failures and “Not
+                  Assigned” for subjects not assigned to treatment.]|IG
+                  v3.2[5][Assumption 10][This definition applies for most
+                  interventional studies, when the start of treatment is the
+                  natural and preferred starting point for study day variables
+                  and thus the logical value for RFSTDTC. In such studies, when
+                  data are submitted for subjects who are ineligible for
+                  treatment (e.g., screen failures with ARMCD=SCRNFAIL),
+                  subjects who were enrolled but not assigned to an arm
+                  (ARMCD=NOTASSGN), or subjects who were randomized but not
+                  treated (ACTARMCD=NOTTRT), RFSTDTC will be null.]'
+                Document: IG v3.2
+                Item: 'IG v3.2[5][Specification: RFENDTC]|IG v3.2[5][Specification: ACTARM]|IG
+                  v3.2[5][Assumption 10]'
+                Section: IG v3.2[5]
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0142
+              Version: '2'
+            Version: '2.0'
+        Version: '3.2'
+Check:
+  all:
+    - name: ACTARM
+      operator: is_not_contained_by
+      value:
+        - Screen Failure
+        - Not Assigned
+        - Not Treated
+        - SCREEN FAILURE
+        - NOT ASSIGNED
+        - NOT TREATED
+    - name: RFENDTC
+      operator: empty
+Core:
+  Id: CORE-000378
+  Status: Published
+  Version: '1'
+Description: 'Raise an error when RFENDTC is null, but ACTARM is not Screen
+  Failure, Not Assigned, or Not Treated'
+Executability: Fully Executable
+Outcome:
+  Message: RFENDTC must not be null when ACTARM is a value other than Screen
+    Failure, Not Assigned, or Not Treated.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

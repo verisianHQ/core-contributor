@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBSTREFN is null when LBSTREFC is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBSTREFC": "ABC",
+            "LBSTREFN": null
+          }
+        }
+      ]
+    }
+  ]
+}

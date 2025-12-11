@@ -1,0 +1,40 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBSCAT is equal to LBCAT",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "LBCAT": "BIOCHEMISTRY",
+            "LBSCAT": "BIOCHEMISTRY"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "LBCAT": "BIOCHEMISTRY",
+            "LBSCAT": "BIOCHEMISTRY"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "LBCAT": "BIOCHEMISTRY",
+            "LBSCAT": "BIOCHEMISTRY"
+          }
+        }
+      ]
+    }
+  ]
+}

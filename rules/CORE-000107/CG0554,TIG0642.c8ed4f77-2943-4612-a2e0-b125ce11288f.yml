@@ -1,0 +1,114 @@
+# Variable: GEN
+# Condition: 
+# Rule: STUDYID, DOMAIN, and --SEQ exist and at least one of USUBJID, APID, SPDEVID, or POOLID
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: STUDYID, DOMAIN, and --SEQ are required in all domains based on
+                  one of the 3 general observation classes. Each general class
+                  domain must also include at least one of the following subject
+                  identifiers USUBJID, SPDEVID, or POOLID.
+                Document: Model v2.0
+                Section: Identifiers
+              - Cited Guidance: The Associated Persons Identifier (APID) will be required in all
+                  AP datasets, and will identify records as AP data.'
+                Document: Model v2.0
+                Section: Associated Persons Data
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0554
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'STUDYID, DOMAIN, and --SEQ are required in all domains based on
+                  one of the 3 general observation classes. Each general class
+                  domain must also include at least one of the following subject
+                  identifiers: USUBJID, APID, SPDEVID, or POOLID.'
+                Document: Model v1.7
+                Section: 2.2.4
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0554
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: STUDYID, DOMAIN, and --SEQ are required in all domains based on
+                  one of the 3 general observation classes. Each general class
+                  domain must also include at least one of the following subject
+                  identifiers - SUBJID, SPDEVID, or POOLID.
+                Document: SDTM v2.1
+                Section: Section 3.1.4 Identifiers For All Classes
+              - Cited Guidance: The Associated Persons Identifier (APID) will be required in all
+                  AP datasets, and will identify records as AP data.
+                Document: SDTM v2.1
+                Section: Section 4.0  Associated Persons Data
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0642
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  any:
+    - all:
+        - name: DOMAIN
+          operator: prefix_matches_regex
+          prefix: 2
+          value: (AP|ap)
+        - name: APID
+          operator: not_exists
+    - all:
+        - name: DOMAIN
+          operator: not_prefix_matches_regex
+          prefix: 2
+          value: (AP|ap)
+        - name: STUDYID
+          operator: exists
+        - name: --SEQ
+          operator: exists
+        - name: USUBJID
+          operator: not_exists
+        - name: SPDEVID
+          operator: not_exists
+        - name: POOLID
+          operator: not_exists
+        #added for TIG
+        - name: SPTOBID
+          operator: not_exists
+        - name: STOCONID
+          operator: not_exists
+Core:
+  Id: CORE-000107
+  Status: Published
+  Version: '1'
+Description: APID is required in all Associated Persons Data. In addition to
+  STUDYID, DOMAIN, and --SEQ being required for all domains based on one of the
+  3 general observation classes, one of USUBJID, APID, SPDEVID, or POOLID must
+  also be present.
+Executability: Fully Executable
+Outcome:
+  Message: An appropriate identifier is not present; USUBJID, APID, SPDEVID,
+    SPTOBID, POOLID, SPTOBID, STOCONID should be present.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+      - INTERVENTIONS
+      - FINDINGS ABOUT
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Dataset

@@ -1,0 +1,99 @@
+# Variable: IEORRES
+# Condition: IECAT = 'EXCLUSION'
+# Rule: IEORRES = 'Y'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The intent of the domain model is to collect responses to only
+                  those criteria that the subject did not meet, and not the
+                  responses to all criteria. 
+                Document: SDTMIG v3.4
+                Item: Assumption 1
+                Section: 6.3.4
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0175
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The intent of the domain model is to collect response to only
+                  those criteria that the subject did not meet, and not the
+                  responses to all criteria.
+                Document: IG v3.2
+                Item: Assumption 2
+                Section: '6.3'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0175
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The intent of the domain model is to collect response to only
+                  those criteria that the subject did not meet, and not the
+                  responses to all criteria.
+                Document: IG v3.3
+                Item: Assumption 1
+                Section: 6.3.4
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0175
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The intent of the domain model is to collect responses to only
+                  those criteria that the subject did not meet, and not the
+                  responses to all criteria.
+                Document: TIG 1.0
+                Item: Assumption 1
+                Section: '2.8.10.13'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0404
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: IECAT
+      operator: equal_to
+      value: EXCLUSION
+      value_is_literal: true
+    - name: IEORRES
+      operator: not_equal_to
+      value: Y
+      value_is_literal: true
+Core:
+  Id: CORE-000011
+  Status: Published
+  Version: '1'
+Description: Raise an error when IECAT is equal to 'EXCLUSION' and IEORRES is
+  not equal to 'Y'.
+Executability: Fully Executable
+Outcome:
+  Message: IEORRES is not equal to 'Y' when IECAT equals 'EXCLUSION'.
+  Output Variables:
+    - IECAT
+    - IEORRES
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - IE
+  Use Case: INDH
+Sensitivity: Record

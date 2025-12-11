@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMSTTPT is completed and CMSTRTPT is empty",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMSTRTPT": null,
+            "CMSTTPT": "SCREENING"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMSTRTPT": null,
+            "CMSTTPT": "SCREENING"
+          }
+        }
+      ]
+    }
+  ]
+}

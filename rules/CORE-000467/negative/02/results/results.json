@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVAL is missing when TSPARMCD = STOPRULE.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 46,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSGRPID": "1",
+            "TSPARMCD": "STOPRULE",
+            "TSVAL": null
+          }
+        }
+      ]
+    }
+  ]
+}

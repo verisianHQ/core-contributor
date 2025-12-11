@@ -1,0 +1,69 @@
+# Variable: GEN
+# Condition: 
+# Rule: Event is not derived
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The DV domain is an Events model for collected protocol
+                  deviations and not for derived protocol deviations that are
+                  more likely to be part of analysis.
+                Document: IG v3.4
+                Item: Assumption 1
+                Section: 6.2.7
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0076
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The DV domain is an Events model for collected protocol
+                  deviations and not for derived protocol deviations that are
+                  more likely to be part of analysis
+                Document: IG v3.2
+                Item: Assumption 1
+                Section: '6.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0076
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The DV domain is an Events model for collected protocol
+                  deviations and not for derived protocol deviations that are
+                  more likely to be part of analysis.
+                Document: IG v3.3
+                Item: Assumption 1
+                Section: 6.2.4
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0076
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Core:
+  Id: CORE-000348
+  Status: Draft
+  Version: '1'
+Description: Trigger error if deviation record is a derived variable, not a
+  deviation that was collected
+Executability: Not Executable
+Outcome:
+  Message: Deviation event must not be derived deviation
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - DV
+Sensitivity: Record

@@ -1,0 +1,157 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "If AESER = \"N\" then none of the seriousness criteria (AESCAN, AESCONG, AESDISAB, AESDTH, AESHOSP, AESLIFE, AESOD, AESMIE) could be equal to \"Y\".",
+      "number_errors": 9,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 727,
+          "USUBJID": "CDISC-TEST-046",
+          "value": {
+            "AESCAN": null,
+            "AESCONG": " ",
+            "AESDISAB": "N",
+            "AESDTH": "N",
+            "AESER": "Y",
+            "AESHOSP": "N",
+            "AESLIFE": "N",
+            "AESMIE": "N",
+            "AESOD": "N"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 735,
+          "USUBJID": "CDISC-TEST-046",
+          "value": {
+            "AESCAN": "N",
+            "AESCONG": null,
+            "AESDISAB": "N",
+            "AESDTH": "N",
+            "AESER": "Y",
+            "AESHOSP": "N",
+            "AESLIFE": "N",
+            "AESMIE": " ",
+            "AESOD": "N"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 782,
+          "USUBJID": "CDISC-TEST-049",
+          "value": {
+            "AESCAN": "N",
+            "AESCONG": "N",
+            "AESDISAB": null,
+            "AESDTH": "N",
+            "AESER": "Y",
+            "AESHOSP": "N",
+            "AESLIFE": "N",
+            "AESMIE": "N",
+            "AESOD": "N"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 783,
+          "USUBJID": "CDISC-TEST-049",
+          "value": {
+            "AESCAN": "N",
+            "AESCONG": " ",
+            "AESDISAB": "N",
+            "AESDTH": null,
+            "AESER": "Y",
+            "AESHOSP": "N",
+            "AESLIFE": "N",
+            "AESMIE": "N",
+            "AESOD": "N"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 839,
+          "USUBJID": "CDISC-TEST-052",
+          "value": {
+            "AESCAN": "N",
+            "AESCONG": "N",
+            "AESDISAB": "N",
+            "AESDTH": "N",
+            "AESER": "Y",
+            "AESHOSP": null,
+            "AESLIFE": "N",
+            "AESMIE": "N",
+            "AESOD": "N"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 840,
+          "USUBJID": "CDISC-TEST-052",
+          "value": {
+            "AESCAN": "N",
+            "AESCONG": "N",
+            "AESDISAB": "N",
+            "AESDTH": "N",
+            "AESER": "Y",
+            "AESHOSP": "N",
+            "AESLIFE": null,
+            "AESMIE": "N",
+            "AESOD": "N"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 843,
+          "USUBJID": "CDISC-TEST-052",
+          "value": {
+            "AESCAN": "N",
+            "AESCONG": "N",
+            "AESDISAB": "N",
+            "AESDTH": "N",
+            "AESER": "Y",
+            "AESHOSP": "N",
+            "AESLIFE": "N",
+            "AESMIE": " ",
+            "AESOD": null
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 844,
+          "USUBJID": "CDISC-TEST-052",
+          "value": {
+            "AESCAN": "N",
+            "AESCONG": "N",
+            "AESDISAB": "N",
+            "AESDTH": "N",
+            "AESER": "Y",
+            "AESHOSP": "N",
+            "AESLIFE": "N",
+            "AESMIE": null,
+            "AESOD": "N"
+          }
+        },
+        {
+          "row": 12,
+          "SEQ": 897,
+          "USUBJID": "CDISC-TEST-055",
+          "value": {
+            "AESCAN": null,
+            "AESCONG": null,
+            "AESDISAB": null,
+            "AESDTH": " ",
+            "AESER": null,
+            "AESHOSP": null,
+            "AESLIFE": null,
+            "AESMIE": null,
+            "AESOD": null
+          }
+        }
+      ]
+    }
+  ]
+}

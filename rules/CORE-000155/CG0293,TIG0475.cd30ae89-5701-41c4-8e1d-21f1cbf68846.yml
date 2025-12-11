@@ -1,0 +1,95 @@
+# Variable: ARMCD
+# Condition: ARMCD ^= null
+# Rule: ARMCD in TA.ARMCD
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 2. If the timing of Visits for a trial does not depend on which
+                  ARM a subject is in, then ARMCD should be null.
+                Document: IG v3.4
+                Item: Specification
+                Section: 7.3.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0293
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 2. If the timing of Visits for a trial does not depend on which
+                  ARM a subject is in, then ARMCD should be null.
+                Document: IG v3.2
+                Item: Specification
+                Section: '7'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0293
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 2. If the timing of Visits for a trial does not depend on which
+                  ARM a subject is in, then ARMCD should be null.
+                Document: IG v3.3
+                Item: Specification
+                Section: 7.3.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0293
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: 2. If the timing of Visits for a trial does not depend on which
+                  ARM a subject is in, then ARMCD should be null.
+                Document: TIG 1.0
+                Item: Specification ARMCD
+                Section: 2.8.10.31
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0475
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: ARMCD
+      operator: non_empty
+    - name: ARMCD
+      operator: is_not_contained_by
+      value: $ta_armcd
+Core:
+  Id: CORE-000155
+  Status: Published
+  Version: '1'
+Description: Trigger error when ARMCD is populated and ARMCD is not in TA.ARMCD
+Executability: Fully Executable
+Operations:
+  - domain: TA
+    id: $ta_armcd
+    name: ARMCD
+    operator: distinct
+Outcome:
+  Message: ARMCD is not in TA.ARMCD
+  Output Variables:
+    - ARMCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TV
+  Use Case: INDH
+Sensitivity: Record

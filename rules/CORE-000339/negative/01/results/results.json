@@ -1,0 +1,76 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSPARMCD = FCNTRY but TSVCDREF is not equal to 'ISO 3166-1 alpha-3'",
+      "number_errors": 7,
+      "errors": [
+        {
+          "row": 15,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "FCNTRY",
+            "TSVCDREF": "ISO3166-1 alpha-3"
+          }
+        },
+        {
+          "row": 16,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "FCNTRY",
+            "TSVCDREF": "ISO 3166-1alpha-3"
+          }
+        },
+        {
+          "row": 17,
+          "SEQ": 3,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "FCNTRY",
+            "TSVCDREF": "ISO3166-1alpha-3"
+          }
+        },
+        {
+          "row": 18,
+          "SEQ": 4,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "FCNTRY",
+            "TSVCDREF": "ISO 3166 1 alpha 3"
+          }
+        },
+        {
+          "row": 19,
+          "SEQ": 5,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "FCNTRY",
+            "TSVCDREF": "ISO 3166-1 alpha-"
+          }
+        },
+        {
+          "row": 20,
+          "SEQ": 6,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "FCNTRY",
+            "TSVCDREF": "3166-1 alpha-3"
+          }
+        },
+        {
+          "row": 21,
+          "SEQ": 7,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "FCNTRY",
+            "TSVCDREF": "SO 3166-1 alpha-3"
+          }
+        }
+      ]
+    }
+  ]
+}

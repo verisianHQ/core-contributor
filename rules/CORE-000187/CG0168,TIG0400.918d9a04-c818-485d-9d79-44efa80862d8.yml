@@ -1,0 +1,135 @@
+# Variable: CODTC
+# Condition: IDVAR ^= null
+# Rule: CODTC = null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Date/time of comment on dedicated comment form. Should be null
+                  if this is a child record of another domain or if comment date
+                  was not collected.
+                Document: IG v3.4
+                Item: Specification
+                Section: '5.1'
+              - Cited Guidance: Those related to a specific parent record or group of parent
+                  records, in which case the value of the variable RDOMAIN is
+                  set to the DOMAIN code of the parent record(s) and the
+                  variables IDVAR and IDVARVAL are populated with the key
+                  variable name and value of the parent record(s). Assumptions
+                  for populating IDVAR and IDVARVAL are further described in
+                  Section 8.5, Relating Comments to a Parent Domain. CODTC
+                  should be null because the timing of the parent record(s) is
+                  inherited by the comment record. See example, Rows 3-5.
+                Document: IG v3.4
+                Item: Assumption 2c
+                Section: '5.1'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0168
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: '[Date/time of comment on dedicated comment form. Should be null
+                  if this is a child record of another domain or if comment date
+                  was not collected.][Those related to a specific parent record
+                  or group of parent records, in which case the value of the
+                  variable RDOMAIN is set to the DOMAIN code of the parent
+                  record(s) and the variables IDVAR and IDVARVAL are populated
+                  with the key variable name and value of the parent
+                  record(s).][Assumptions for populating IDVAR and IDVARVAL are
+                  further described in Section 8: 8.5, Relating Comments To A
+                  Parent Domain. CODTC should be null because the timing of the
+                  parent record(s) is inherited by the comment record. See
+                  example, Rows 3-5.]'
+                Document: IG v3.2
+                Item: Specification
+                Section: '5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0168
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: '[Date/time of comment on dedicated comment form. Should be null
+                  if this is a child record of another domain or if comment date
+                  was not collected.][Those related to a specific parent record
+                  or group of parent records, in which case the value of the
+                  variable RDOMAIN is set to the DOMAIN code of the parent
+                  record(s) and the variables IDVAR and IDVARVAL are populated
+                  with the key variable name and value of the parent
+                  record(s).][Assumptions for populating IDVAR and IDVARVAL are
+                  further described in Section 8: 8.5, Relating Comments To A
+                  Parent Domain. CODTC should be null because the timing of the
+                  parent record(s) is inherited by the comment record. See
+                  example, Rows 3-5.]'
+                Document: IG v3.3
+                Item: Specification
+                Section: '5.1'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0168
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Specification[Date/time of comment on dedicated comment form.
+                  Should be null if this is a child record of another domain or
+                  if comment date was not collected.]|Assumption 2c[Those
+                  related to a specific parent record or group of parent
+                  records, in which case the value of the variable RDOMAIN is
+                  set to the DOMAIN code of the parent record(s) and the
+                  variables IDVAR and IDVARVAL are populated with the key
+                  variable name and value of the parent record(s). Assumptions
+                  for populating IDVAR and IDVARVAL are further described in
+                  Section 2.8.5.4  Relating Comments to a Domain. CODTC should
+                  be null because the timing of the parent record(s) is
+                  inherited by the comment record
+                Document: TIG 1.0
+                Item: Specification|Assumption 3c
+                Section: 2.8.10.2
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0400
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+
+Check:
+  all:
+    - name: IDVAR
+      operator: non_empty
+    - name: CODTC
+      operator: non_empty
+Core:
+  Id: CORE-000187
+  Status: Published
+  Version: '1'
+Description: Trigger error when IDVAR is not null and CODTC is not null
+Executability: Fully Executable
+Outcome:
+  Message: CODTC is populated when IDVAR is also populated
+  Output Variables:
+    - USUBJID
+    - IDVAR
+    - CODTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - CO
+  Use Case: INDH
+Sensitivity: Record

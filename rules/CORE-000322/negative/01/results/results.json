@@ -1,0 +1,40 @@
+{
+  "datasets": [
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "DSCAT equals PROTOCOL MILESTONE but DSTERM is not equal to DSDECOD",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "015246-076-0003-00003",
+          "value": {
+            "DSDECOD": "Future USE OF SAMPLES INFORMED CONSENT OBTAINED",
+            "DSTERM": "FUTURE USE OF SAMPLES INFORMED CONSENT OBTAINED"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "015246-203-0003-00001",
+          "value": {
+            "DSDECOD": "STUDY INFORMED CONSENT OBTAINE",
+            "DSTERM": "STUDY INFORMED CONSENT OBTAINED"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "015246-300-0004-00002",
+          "value": {
+            "DSDECOD": "ADVERSE EVENT",
+            "DSTERM": "COMPLETED"
+          }
+        }
+      ]
+    }
+  ]
+}

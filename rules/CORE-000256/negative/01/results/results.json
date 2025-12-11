@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "success",
+      "execution_message": "Missing value for SEUPDES, when ETCD='UNPLAN'",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "1201001",
+          "value": {
+            "ETCD": "UNPLAN",
+            "SEUPDES": null
+          }
+        }
+      ]
+    }
+  ]
+}

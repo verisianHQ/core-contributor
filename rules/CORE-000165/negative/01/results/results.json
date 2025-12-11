@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "execution_status": "success",
+      "execution_message": "VSTPTREF is not present when VSRFTDTC is present in a dataset",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "VSRFTDTC": "2012-12-01T08:00",
+            "VSTPTREF": "Not in dataset"
+          }
+        }
+      ]
+    }
+  ]
+}

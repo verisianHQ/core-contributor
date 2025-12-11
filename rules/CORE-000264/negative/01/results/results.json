@@ -1,0 +1,53 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "Primary analysis used but AEBODSYS and AESOC are not equal",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1593,
+          "USUBJID": "CDISC-TEST-099",
+          "value": {
+            "AEBODSYS": "Infections and infestations",
+            "AESOC": "Cardiac disorders",
+            "AETERM": "PNEUMONIA"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 1595,
+          "USUBJID": "CDISC-TEST-099",
+          "value": {
+            "AEBODSYS": "Cardiac disorders",
+            "AESOC": "CARDIAC disorders",
+            "AETERM": "URINARY TRACT INFECTION"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 1596,
+          "USUBJID": "CDISC-TEST-100",
+          "value": {
+            "AEBODSYS": "Musculoskeletal and connective tissue disorders",
+            "AESOC": "Gastrointestinal disorders",
+            "AETERM": "UPSET STOMACH"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 1598,
+          "USUBJID": "CDISC-TEST-100",
+          "value": {
+            "AEBODSYS": "Musculoskeletal and connective TISSUE disorders",
+            "AESOC": "Musculoskeletal and connective tissue disorders",
+            "AETERM": "BACK PAIN"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+# Variable: --SEQ
+# Condition: 
+# Rule: --SEQ is in a consistent chronological order
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Sequence Number given to ensure uniqueness of subject records
+                  within a domain. Should be assigned to be consistent
+                  chronological order.
+                Document: IG v3.2
+                Item: Specification
+                Section: 5 SE
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0662
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 5.3[Specification][Sequence number given to ensure uniqueness of
+                  subject records within a domain. Should be assigned to be
+                  consistent chronological order.]5.4[Specification][Sequence
+                  number to ensure uniqueness of subject records. Should be
+                  assigned to be consistent chronological order.]
+                Document: IG v3.3
+                Item: Specification
+                Section: 5.3|5.4
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0620
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 5.3[Specification][Sequence number given to ensure uniqueness of
+                  subject records within a domain. Should be assigned to be
+                  consistent chronological order]|5.4[Specification][Sequence
+                  number to ensure uniqueness of subject records. Should be
+                  assigned to be consistent chronological order.]
+                Document: IG v3.4
+                Item: Specification
+                Section: 5.3|5.4
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0620
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The values of SESTDTC provide the chronological order of the
+                  actual subject Elements.  SESEQ should be assigned to be
+                  consistent with the chronological order.
+                Document: IG v3.1
+                Item: Specification
+                Section: 5.3.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND130.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The values of SESTDTC provide the chronological order of the
+                  actual subject Elements.  SESEQ should be assigned to be
+                  consistent with the chronological order.
+                Document: IG v3.1
+                Item: Specification
+                Section: 5.3.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND130
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The values of SESTDTC provide the chronological order of the
+                  actual subject Elements.  SESEQ should be assigned to be
+                  consistent with the chronological order.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 5.3.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND130.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The values of SESTDTC provide the chronological order of the
+                  actual subject Elements.  SESEQ should be assigned to be
+                  consistent with the chronological order.
+                Document: IG v3.1
+                Item: Specification
+                Section: 5.3.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND130.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The values of SESTDTC provide the chronological order of the
+                  actual subject Elements.  SESEQ should be assigned to be
+                  consistent with the chronological order.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 5.3.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND130.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: The values of SESTDTC provide the chronological order of the
+                  actual subject Elements.  SESEQ should be assigned to be
+                  consistent with the chronological order.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 5.3.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND130.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The values of SESTDTC provide the chronological order of the
+                  actual subject elements. SESEQ should be assigned to be
+                  consistent with the chronological order.
+                Document: TIG v1.0
+                Item: Assumption 7
+                Section: 2.8.9.26
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0066
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Sequence number given to ensure uniqueness of subject records
+                  within a domain. Should be assigned to be consistent
+                  chronological order.
+                Document: TIG v1.0
+                Item: Specifications
+                Section: 2.8.10.24
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0661
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --SEQ
+      operator: target_is_not_sorted_by
+      value:
+        - name: --STDTC
+          null_position: last
+          sort_order: asc
+      within: USUBJID
+Core:
+  Id: CORE-000535
+  Status: Published
+  Version: '1'
+Description: Trigger error when the order of --SEQ is not chronological (based
+  on --STDTC) within USUBJID
+Executability: Fully Executable
+Outcome:
+  Message: --SEQ is not chronological (based on --STDTC) within USUBJID
+  Output Variables:
+    - --SEQ
+    - --STDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - SM
+      - SE
+  Use Case: NONCLIN, INDH
+Sensitivity: Record

@@ -1,0 +1,53 @@
+{
+  "datasets": [
+    {
+      "dataset": "suppdm.xpt",
+      "domain": "SUPPDM",
+      "execution_status": "success",
+      "execution_message": "QNAM > 8 chars or contains letters that are in not in uppercase, more than only letters, numbers, underscores, or starts with a number.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC006",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": null,
+            "QNAM": "RACE11111"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC007",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": null,
+            "QNAM": "RaCE22"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC008",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": null,
+            "QNAM": "RACE@3"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": null,
+            "QNAM": "1RACE"
+          }
+        }
+      ]
+    }
+  ]
+}

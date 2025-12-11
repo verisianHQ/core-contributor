@@ -1,0 +1,107 @@
+# Variable: IDVARVAL
+# Condition: IDVAR ^= null
+# Rule: IDVARVAL ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A record in a SUPP-- dataset relates back to its parent
+                  record(s) via the key identified by the STUDYID, RDOMAIN,
+                  USUBJID, and IDVAR/IDVARVAL variables. An exception is SUPP--
+                  dataset  records that are related to Demographics (DM)
+                  records, where both IDVAR and IDVARVAL will be  null because
+                  the key variables STUDYID, RDOMAIN, and USUBJID are sufficient
+                  to identify the unique parent record in DM (DM has one record
+                  per USUBJID)
+                Document: SDTMIG v3.4
+                Section: 8.4.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0204
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A record in a SUPP-- dataset relates back to its parent
+                  record(s) via the key identified by the STUDYID, RDOMAIN, and
+                  IDVAR/IDVARVAL variables. An exception is SUPP-- dataset
+                  records that are related to Demographics (DM) records, such as
+                  the Intent To Treat (ITT) and Safety (SAFETY) subject-level
+                  population flags, where both IDVAR and IDVARVAL will be null
+                  because the key variables STUDYID, RDOMAIN, and USUBJID are
+                  sufficient to identify the unique parent record in DM (DM has
+                  one record per USUBJID).
+                Document: SDTMIG v3.3
+                Section: 8.4.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0204
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A record in a SUPP-- dataset relates back to its parent
+                  record(s) via the key identified by the STUDYID, RDOMAIN, and
+                  IDVAR/IDVARVAL variables. An exception is SUPP-- dataset
+                  records that are related to Demographics (DM) records, such as
+                  the Intent To Treat (ITT) and Safety (SAFETY) subject-level
+                  population flags, where both IDVAR and IDVARVAL will be null
+                  because the key variables STUDYID, RDOMAIN, and USUBJID are
+                  sufficient to identify the unique parent record in DM (DM has
+                  one record per USUBJID).
+                Document: SDTMIG v3.2
+                Section: 8.4.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0204
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: IDVAR and IDVARVAL will be populated in all SUPP-- datasets with
+                  the exception of SUPPDM.
+                Document: TIG 1.0
+                Section: 2.8.5.3
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0424
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: IDVAR
+      operator: non_empty
+    - name: IDVARVAL
+      operator: empty
+Core:
+  Id: CORE-000135
+  Status: Published
+  Version: '1'
+Description: Raise an error when IDVAR is not empty and IDVARVAL is empty.
+Executability: Fully Executable
+Outcome:
+  Message: IDVAR is not empty but IDVARVAL is empty.
+  Output Variables:
+    - IDVAR
+    - IDVARVAL
+    - QNAM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - SUPP--
+  Use Case: INDH, PROD
+Sensitivity: Record

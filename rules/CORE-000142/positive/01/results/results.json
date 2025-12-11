@@ -1,0 +1,37 @@
+{
+  "datasets": [
+    {
+      "dataset": "ft.xpt",
+      "domain": "FT",
+      "execution_status": "success",
+      "execution_message": "FTELTM is not the same value across records with the same values of DOMAIN, VISITNUM, FTTPTREF, and FTTPTNUM.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 134,
+          "USUBJID": "CDISC007",
+          "value": {
+            "DOMAIN": "FT",
+            "FTELTM": "PT1H",
+            "FTTPT": "90 MIN POST",
+            "FTTPTNUM": 2.0,
+            "VISITNUM": 201.0
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 135,
+          "USUBJID": "CDISC007",
+          "value": {
+            "DOMAIN": "FT",
+            "FTELTM": "PT1H",
+            "FTTPT": "90 MIN POST",
+            "FTTPTNUM": 2.0,
+            "VISITNUM": 201.0
+          }
+        }
+      ]
+    }
+  ]
+}

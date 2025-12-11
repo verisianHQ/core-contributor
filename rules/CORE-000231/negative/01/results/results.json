@@ -1,0 +1,49 @@
+{
+  "datasets": [
+    {
+      "dataset": "relsub.xpt",
+      "domain": "RELSUB",
+      "execution_status": "success",
+      "execution_message": "RSUBJID when populated cannot equal USUBJID",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "HEM021-001",
+          "value": {
+            "RSUBJID": "HEM021-001",
+            "USUBJID": "HEM021-001"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "HEM021-002",
+          "value": {
+            "RSUBJID": "HEM021-002",
+            "USUBJID": "HEM021-002"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "HEM021-003",
+          "value": {
+            "RSUBJID": "HEM021-003",
+            "USUBJID": "HEM021-003"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "HEM021-004",
+          "value": {
+            "RSUBJID": "HEM021-004",
+            "USUBJID": "HEM021-004"
+          }
+        }
+      ]
+    }
+  ]
+}

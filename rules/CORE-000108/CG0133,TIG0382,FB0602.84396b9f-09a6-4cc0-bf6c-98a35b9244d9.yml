@@ -1,0 +1,152 @@
+# Variable: DTHFL
+# Condition: DD record present for subject
+# Rule: DTHFL = 'Y'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Indicates the subject died. Should be "Y" or null. Should be
+                  populated even when the death date is unknown.
+                Document: IG v3.4
+                Item: Specification
+                Section: '5.2'
+              - Cited Guidance: A findings domain that contains the diagnosis of the cause of
+                  death for a subject.
+                Document: IG v3.4
+                Item: DD Description
+                Section: 6.3.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0133
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Specification[Indicates the subject died. Should be Y or null.
+                  Should be populated even when the death date is unknown.]|DD
+                  Assumption 1[This domain captures information pertaining to
+                  the death of a subject, including the causes of death.]
+                Document: IG v3.2
+                Item: Specification|DD Assumption 1
+                Section: '5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0133
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: IG v3.3[5.2][Indicates the subject died. Should be Y or null.
+                  Should be populated even when the death date is unknown.]||IG
+                  v3.3[6.3.2][A findings domain that contains the diagnosis of
+                  the cause of death for a subject]
+                Document: IG v3.3
+                Section: IG v3.3[5.2]|IG v3.3[6.3.2]
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0133
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Indicates the subject died. Should be "Y" or null. Should be
+                  populated even when the death date is unknown.
+                Document: TIG 1.0
+                Item: Specification
+                Section: 2.8.10.4
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0382
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+  #CG0133 is identical to rule FB0602. Added metadata for FB0602.
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0602
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0602
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0602
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: DTHFL
+      operator: not_equal_to
+      value: 'Y'
+    - name: USUBJID
+      operator: is_contained_by
+      value: $usubjids_in_dd
+Core:
+  Id: CORE-000108
+  Status: Published
+  Version: '1'
+Description: When a record is present in DD domain for a subject, death flag is
+  populated as Y in DM dataset for corresponding subject
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: DD
+Operations:
+  - domain: DD
+    id: $usubjids_in_dd
+    name: USUBJID
+    operator: distinct
+Outcome:
+  Message: DD record present for subject, but DTHFL is not equal to "Y".
+  Output Variables:
+    - DTHFL
+    - USUBJID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+  Use Case: INDH
+Sensitivity: Dataset

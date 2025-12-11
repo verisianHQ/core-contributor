@@ -1,0 +1,40 @@
+{
+  "datasets": [
+    {
+      "dataset": "suppec.xpt",
+      "domain": "SUPPEC",
+      "execution_status": "success",
+      "execution_message": "IDVAR is empty but IDVARVAL is not empty",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": "122"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": "123"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": "124"
+          }
+        }
+      ]
+    }
+  ]
+}

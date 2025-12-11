@@ -1,0 +1,29 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "DM.ARMCD must equal DM.ACTARMCD when subject is either a screen failure or not assigned to treatment",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "015246-300-0004-00002",
+          "value": {
+            "ARMCD": "NOTASSGN"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "015246-300-0004-00007",
+          "value": {
+            "ARMCD": "SCRNFAIL"
+          }
+        }
+      ]
+    }
+  ]
+}

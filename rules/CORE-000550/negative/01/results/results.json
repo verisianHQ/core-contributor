@@ -1,0 +1,55 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "Variables not listed in the Model List of Allowed Variables for Observation Class should be in SUPPQUAL.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 22,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AESTDYXX"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Variables not listed in the Model List of Allowed Variables for Observation Class should be in SUPPQUAL.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ARMCDXX"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "Variables not listed in the Model List of Allowed Variables for Observation Class should be in SUPPQUAL.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBSPIDXX"
+          }
+        }
+      ]
+    }
+  ]
+}

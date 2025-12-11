@@ -1,0 +1,93 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "Missing AESMIE=Y where SUPPAE.QNAM=AESOSP",
+      "number_errors": 8,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "AESMIE": null,
+            "QNAM": "AESOSP"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "AESMIE": "N",
+            "QNAM": "AESOSP"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 4,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "AESMIE": "N",
+            "QNAM": "AESOSP"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 5,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "AESMIE": "N",
+            "QNAM": "AESOSP"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 18,
+          "USUBJID": "CDISC-TEST-002",
+          "value": {
+            "AESMIE": "N",
+            "QNAM": "AESOSP"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 19,
+          "USUBJID": "CDISC-TEST-002",
+          "value": {
+            "AESMIE": "N",
+            "QNAM": "AESOSP"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 20,
+          "USUBJID": "CDISC-TEST-002",
+          "value": {
+            "AESMIE": "N",
+            "QNAM": "AESOSP"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 29,
+          "USUBJID": "CDISC-TEST-002",
+          "value": {
+            "AESMIE": "N",
+            "QNAM": "AESOSP"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "suppae.xpt",
+      "domain": "SUPPAE",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000597, dataset=SUPPAE",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

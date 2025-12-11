@@ -1,0 +1,24 @@
+{
+  "datasets": [
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "success",
+      "execution_message": "ECDOSE is empty, ECOCCUR is not equal to 'N' and ECSTAT is empty, but ECDOSTXT is also empty.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ECDOSE": null,
+            "ECDOSTXT": null,
+            "ECOCCUR": "Y",
+            "ECSTAT": null
+          }
+        }
+      ]
+    }
+  ]
+}

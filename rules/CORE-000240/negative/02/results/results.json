@@ -1,0 +1,21 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMSTRF is populated when CMOCCUR = \"N\"",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMSTRF": "AFTER"
+          }
+        }
+      ]
+    }
+  ]
+}

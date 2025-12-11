@@ -1,0 +1,40 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVAL is not NULL and does not conform to ISO 8601 time period",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "LENGTH",
+            "TSVAL": "string"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "LENGTH",
+            "TSVAL": "100"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "LENGTH",
+            "TSVAL": "10-22-2011 11:16:32"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,326 @@
+# Variable: --RFTDTC
+# Condition: --TPTREF = null
+# Rule: --RFTDTC = null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The actual date or date and time of a time point that acts as a
+                  fixed reference for a series of planned time points,
+                  represented in a standardized character format. The fixed
+                  reference point is in --TPTREF
+                Document: Model v2.0
+                Item: --RFTDTC
+                Section: Timing
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0026
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Date/time for a fixed reference time point defined by --TPTREF
+                Document: Model v1.7
+                Item: --RFTDTC
+                Section: 2.2.5
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0026
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Date/time for a fixed reference time point defined by --TPTREF
+                  in ISO 8601 character format.
+                Document: Model v1.4
+                Item: Table 2.2.5, --RFTDTC
+                Section: 2.2.5
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0026
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: If an --RFTDTC entry is used, then the --TPTREF should be
+                  provided.
+                Document: IG v3.0
+                Section: 4.4.7
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND63
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Since the --RFTDTC represents the actual date/time of the fixed
+                  reference point (--TPTREF), the --TPTREF should be provided
+                  whenever --RFTDTC is populated.
+                Document: IG v3.1
+                Section: 4.4.7.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND63
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Since the --RFTDTC represents the actual date/time of the fixed
+                  reference point (--TPTREF), the --TPTREF should be provided
+                  whenever --RFTDTC is populated.
+                Document: IG v3.1.1
+                Section: 4.4.7.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND63
+              Version: "1"
+            Version: "5.0"
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Since the --RFTDTC represents the actual date/time of the fixed
+                  reference point (--TPTREF), the --TPTREF should be provided
+                  whenever --RFTDTC is populated.
+                Document: IG v3.1
+                Section: 4.4.7.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND63
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Since the --RFTDTC represents the actual date/time of the fixed
+                  reference point (--TPTREF), the --TPTREF should be provided
+                  whenever --RFTDTC is populated.
+                Document: IG v3.1.1
+                Section: 4.4.7.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND63
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Since the --RFTDTC represents the actual date/time of the fixed
+                  reference point (--TPTREF), the --TPTREF should be provided
+                  whenever --RFTDTC is populated.
+                Document: IG v3.1.1
+                Section: 4.4.7.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND63
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: "When instances of an activity are scheduled at planned time
+                  intervals relative to a fixed reference point (e.g., an
+                  exposure), the following timing variables will be used
+                  --TPTREF Represents a description of the fixed reference point
+                  from which the planned observation will be made. --RFTDTC
+                  Represents the actual date/time of the value of --TPTREF"
+                Document: TIG v1.0
+                Item: Timing Relative to Reference Points, Table Num 3
+                Section: 2.8.7.6 Representing References and Relative Timing
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0265
+              Version: "1"
+            Version: "1.0"
+        Substandard: SEND
+        Version: "1.0"
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The actual date or date and time of a time point that acts as a
+                  fixed reference for a series of planned time points,
+                  represented in a standardized character format. The fixed
+                  reference point is in --TPTREF.
+                Document: SDTM v2.1
+                Item: --RFTDTC
+                Section: 3.1.5 Timing Variables for All Classes
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0308
+              Version: "1"
+            Version: "1.0"
+        Substandard: SDTM
+        Version: "1.0"
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Time point reference should be provided, when reference time
+                  point is used.
+                Document: FDA
+                Section: FDAB037
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3702
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Time point reference should be provided, when reference time
+                  point is used.
+                Document: FDA
+                Section: FDAB037
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3702
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Time point reference should be provided, when reference time
+                  point is used.
+                Document: FDA
+                Section: FDAB037
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3702
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Time point reference should be provided, when reference time
+                  point is used.
+                Document: FDA
+                Section: FDAB037
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3702
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Time point reference should be provided, when reference time
+                  point is used.
+                Document: FDA
+                Section: FDAB037
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3702
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Time point reference should be provided, when reference time
+                  point is used.
+                Document: FDA
+                Section: FDAB037
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3702
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Time point reference should be provided, when reference time
+                  point is used.
+                Document: FDA
+                Section: FDAB037
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3702
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Time point reference should be provided, when reference time
+                  point is used.
+                Document: FDA
+                Section: FDAB037
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3702
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Time point reference should be provided, when reference time
+                  point is used.
+                Document: FDA
+                Section: FDAB037
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3702
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: SENDIG-AR
+        References:
+          - Citations:
+              - Cited Guidance: Time point reference should be provided, when reference time
+                  point is used.
+                Document: FDA
+                Section: FDAB037
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3702
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  all:
+    - name: --TPTREF
+      operator: empty
+    - name: --RFTDTC
+      operator: exists
+    - name: --RFTDTC
+      operator: non_empty
+Core:
+  Id: CORE-000248
+  Status: Published
+  Version: '1'
+Description: Trigger error when --TPTREF = null and --RFTDTC is populated
+Executability: Fully Executable
+Outcome:
+  Message: --RFTDTC is populated when --TPTREF is null
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD, NONCLIN
+Sensitivity: Record

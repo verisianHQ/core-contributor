@@ -1,0 +1,35 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "A record exists in TS where TSPARMCD = HLTSUBJI and TSVAL = N but TSVAL for TSPARMCD = TDIGRP is empty.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 50,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "$HLTSUBJI_N": 1,
+            "TSGRPID": "2",
+            "TSPARMCD": "TDIGRP",
+            "TSVAL": null
+          }
+        },
+        {
+          "row": 51,
+          "SEQ": 3,
+          "USUBJID": "None",
+          "value": {
+            "$HLTSUBJI_N": 1,
+            "TSGRPID": "3",
+            "TSPARMCD": "TDIGRP",
+            "TSVAL": null
+          }
+        }
+      ]
+    }
+  ]
+}

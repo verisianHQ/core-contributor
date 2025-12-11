@@ -1,0 +1,113 @@
+{
+  "datasets": [
+    {
+      "dataset": "suppae.xpt",
+      "domain": "SUPPAE",
+      "execution_status": "success",
+      "execution_message": "QNAM > 8 chars or contains letters that are in not in uppercase, more than only letters, numbers, underscores, or starts with a number.",
+      "number_errors": 10,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "AESPID",
+            "IDVARVAL": "1",
+            "QNAM": "DICTVERSION"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "AESPID",
+            "IDVARVAL": "10",
+            "QNAM": "DICTVERSION"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "AESPID",
+            "IDVARVAL": "11",
+            "QNAM": "1DICTV"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "AESPID",
+            "IDVARVAL": "12",
+            "QNAM": "dICTV"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "AESPID",
+            "IDVARVAL": "13",
+            "QNAM": "DI&ION"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "AESPID",
+            "IDVARVAL": "14",
+            "QNAM": "DICTVERSION"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "AESPID",
+            "IDVARVAL": "15",
+            "QNAM": "DICTVER'"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "AESPID",
+            "IDVARVAL": "2",
+            "QNAM": "DICTVERSION"
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "AESPID",
+            "IDVARVAL": "3",
+            "QNAM": "DICTVERSION"
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "AESPID",
+            "IDVARVAL": "4",
+            "QNAM": "DICTVERSION"
+          }
+        }
+      ]
+    }
+  ]
+}

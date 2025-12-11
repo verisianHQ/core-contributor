@@ -1,0 +1,89 @@
+# Variable: IESTRESC
+# Condition: 
+# Rule: IESTRESC = IEORRES
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Response to Inclusion/Exclusion criterion result in standard
+                  format
+                Document: SDTMIG v3.4
+                Item: ''
+                Section: 6.3.4
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0177
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Response to Inclusion/Exclusion criterion result in standard
+                  format.
+                Document: IG v3.2
+                Item: Specification
+                Section: '6.3'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0177
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Response to Inclusion/Exclusion criterion result in standard
+                  format.
+                Document: IG v3.3
+                Item: Specification
+                Section: 6.3.4
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0177
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Response to Inclusion/Exclusion criterion result in standard
+                  format.
+                Document: TIG 1.0
+                Item: Specification-IESTRESC
+                Section: 2.8.10.13
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0406
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: IESTRESC
+      operator: not_equal_to
+      value: IEORRES
+Core:
+  Id: CORE-000025
+  Status: Published
+  Version: '1'
+Description: IESTRESC is not equal to IEORRES
+Executability: Fully Executable
+Outcome:
+  Message: IESTRESC is not equal to IEORRES
+  Output Variables:
+    - IEORRES
+    - IESTRESC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - IE
+  Use Case: INDH
+Sensitivity: Record

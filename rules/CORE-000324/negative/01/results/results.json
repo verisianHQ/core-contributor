@@ -1,0 +1,62 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMENRTPT is not in ('BEFORE', 'COINCIDENT', 'ONGOING', 'UNKNOWN')",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 6,
+          "SEQ": 2,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CMDTC": "2013-05-20",
+            "CMENRTPT": "AFTER",
+            "CMENTPT": "2013-05-20"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "MHENRTPT is not in ('BEFORE', 'COINCIDENT', 'ONGOING', 'UNKNOWN')",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC003",
+          "value": {
+            "MHDTC": "2013-05-20",
+            "MHENRTPT": "AFTER",
+            "MHENTPT": "2013-05-20"
+          }
+        },
+        {
+          "row": 12,
+          "SEQ": 1,
+          "USUBJID": "CDISC012",
+          "value": {
+            "MHDTC": "2013-05-03",
+            "MHENRTPT": "AFTER",
+            "MHENTPT": "2013-05-03"
+          }
+        },
+        {
+          "row": 13,
+          "SEQ": 1,
+          "USUBJID": "CDISC013",
+          "value": {
+            "MHDTC": "2013-05-04",
+            "MHENRTPT": null,
+            "MHENTPT": "2013-05-04"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "datasets": [
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "MHCAT is grouping all records into one generic group. If no smaller categorization can be applied, then it is not necessary to include or populate this variable.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC010",
+          "value": {
+            "MHCAT": "GENERAL"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "CDISC011",
+          "value": {
+            "MHCAT": "GENERAL"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC012",
+          "value": {
+            "MHCAT": "GENERAL"
+          }
+        }
+      ]
+    }
+  ]
+}

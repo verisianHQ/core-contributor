@@ -1,0 +1,84 @@
+{
+  "datasets": [
+    {
+      "dataset": "eg.xpt",
+      "domain": "EG",
+      "execution_status": "success",
+      "execution_message": "Value for EGSTAT is populated, when EGORRES is populated",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "123102",
+          "value": {
+            "EGORRES": "0.15",
+            "EGSTAT": "NOT DONE"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "Value for FASTAT is populated, when FAORRES is populated",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "123101",
+          "value": {
+            "FAORRES": "SEVERE",
+            "FASTAT": "NOT DONE"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "mi.xpt",
+      "domain": "MI",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "Value for LBSTAT is populated, when LBORRES is populated",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "123101",
+          "value": {
+            "LBORRES": "30",
+            "LBSTAT": "NOT DONE"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "execution_status": "success",
+      "execution_message": "Value for VSSTAT is populated, when VSORRES is populated",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "123101",
+          "value": {
+            "VSORRES": "154",
+            "VSSTAT": "NOT DONE"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "datasets": [
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "Primary analysis was used but MHSOCCD and MHBDSYCD are not equal",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "CDISC004",
+          "value": {
+            "MHBDSYCD": 2.0,
+            "MHSOCCD": 7.0,
+            "MHTERM": "ALZHEIMER'S DISEASE"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC005",
+          "value": {
+            "MHBDSYCD": 3.0,
+            "MHSOCCD": 8.0,
+            "MHTERM": "ALZHEIMER'S DISEASE"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "CDISC006",
+          "value": {
+            "MHBDSYCD": 4.0,
+            "MHSOCCD": 9.0,
+            "MHTERM": "ALZHEIMER'S DISEASE"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 1,
+          "USUBJID": "CDISC007",
+          "value": {
+            "MHBDSYCD": 5.0,
+            "MHSOCCD": 10.0,
+            "MHTERM": "ALZHEIMER'S DISEASE"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 1,
+          "USUBJID": "CDISC008",
+          "value": {
+            "MHBDSYCD": 6.0,
+            "MHSOCCD": 11.0,
+            "MHTERM": "ALZHEIMER'S DISEASE"
+          }
+        }
+      ]
+    }
+  ]
+}

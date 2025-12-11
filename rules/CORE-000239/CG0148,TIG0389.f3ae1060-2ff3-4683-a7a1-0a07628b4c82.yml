@@ -1,0 +1,105 @@
+# Variable: RFXSTDTC
+# Condition: EX records present for subject
+# Rule: RFXSTDTC = earliest EX.EXSTDTC
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: First date of exposure to any protocol-specified treatment or
+                  therapy, equal to the earliest value of EXSTDTC.
+                Document: IG v3.4
+                Item: Specification
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0148
+              Version: '2'
+            Version: '2.0'
+        Version: '3.4'
+
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: First date of exposure to any protocol-specified treatment or
+                  therapy, equal to the earliest value of EXSTDTC.
+                Document: IG v3.3
+                Item: Specification
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0148
+              Version: '2'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: First date/time of exposure to any protocol-specified treatment
+                  or therapy, equal to the earliest value of EXSTDTC.
+                Document: IG v3.2
+                Item: Specification
+                Section: '5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0148
+              Version: '2'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: First date/time of exposure to any protocol-specified product,
+                  equal to the earliest value of EXSTDTC.
+                Document: TIG 1.0
+                Item: Specification
+                Section: 2.8.10.4
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0389
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: USUBJID
+      operator: is_contained_by
+      value: $ex_usubjid
+    - name: RFXSTDTC
+      operator: not_equal_to
+      value: $min_ex_exstdtc
+Core:
+  Id: CORE-000239
+  Status: Published
+  Version: '1'
+Description: Raise an error when EX records are present for subject but RFXSTDTC
+  does not equal the earliest value of EX.EXSTDTC
+Executability: Fully Executable
+Operations:
+  - domain: EX
+    id: $ex_usubjid
+    name: USUBJID
+    operator: distinct
+  - domain: EX
+    group:
+      - USUBJID
+    id: $min_ex_exstdtc
+    name: EXSTDTC
+    operator: min_date
+Outcome:
+  Message: RFXSTDTC does not equal the earliest value of EX.EXSTDTC
+  Output Variables:
+    - RFXSTDTC
+    - $min_ex_exstdtc
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+  Use Case: INDH
+Sensitivity: Record

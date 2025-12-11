@@ -1,0 +1,93 @@
+{
+  "datasets": [
+    {
+      "dataset": "sv.xpt",
+      "domain": "SV",
+      "execution_status": "success",
+      "execution_message": "VISITNUM for planned visit is not in TV.",
+      "number_errors": 8,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVPRESP": "Y",
+            "VISITNUM": 14.0
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVPRESP": "Y",
+            "VISITNUM": 15.0
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVPRESP": "Y",
+            "VISITNUM": 16.0
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVPRESP": "Y",
+            "VISITNUM": 5.01
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVPRESP": "Y",
+            "VISITNUM": 17.0
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVPRESP": "Y",
+            "VISITNUM": 19.0
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVPRESP": "Y",
+            "VISITNUM": 101.0
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVPRESP": "Y",
+            "VISITNUM": 201.0
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "tv.xpt",
+      "domain": "TV",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000039, dataset=TV",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

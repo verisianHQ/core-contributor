@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000097, dataset=SE",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "sv.xpt",
+      "domain": "SV",
+      "execution_status": "success",
+      "execution_message": "EPOCH values don't match between Subject Visits (SV) and Subject Elements (SE) datasets.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "1201001",
+          "value": {
+            "EPOCH": "SCREENING",
+            "SESTDTC": "2018-08-13",
+            "SVSTDTC": "2018-08-20"
+          }
+        }
+      ]
+    }
+  ]
+}

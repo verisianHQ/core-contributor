@@ -1,0 +1,81 @@
+# Variable: --STREFC
+# Condition: --ORREF ^= null or --DRVFL='Y'
+# Rule: --STREFC ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Reference value for the result or finding copied or derived from
+                  --ORREF in a standard format.
+                Document: SDTM v2.0
+                Item: --STREFC
+                Section: Findings
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0549
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Reference value for the result or finding copied or derived from
+                  --ORREF in a standard format.
+                Document: Model v1.7
+                Item: --STREFC
+                Section: Table 2.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0549
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Reference value for the result or finding copied or derived from
+                  --ORREF in a standard format.
+                Document: SDTM v2.1
+                Item: --STREFC
+                Section: 3.1.3 The Findings Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0637
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - any:
+        - name: --ORREF
+          operator: non_empty
+        - name: --DRVFL
+          operator: equal_to
+          value: Y
+    - name: --STREFC
+      operator: empty
+Core:
+  Id: CORE-000110
+  Status: Published
+  Version: '1'
+Description: Raise an error when (--ORREF ^= null or --DRVFL='Y') and --STREFC is null.
+Executability: Fully Executable
+Outcome:
+  Message: --STREFC is null when --ORREF is non-empty or --DRVFL is equal to 'Y'
+  Output Variables:
+    - --ORREF
+    - --DRVFL
+    - --STREFC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Record

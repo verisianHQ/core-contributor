@@ -1,0 +1,21 @@
+{
+  "datasets": [
+    {
+      "dataset": "ms.xpt",
+      "domain": "MS",
+      "execution_status": "success",
+      "execution_message": "The MB dataset is not present when the MS dataset is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "MS": "ms.xpt"
+          }
+        }
+      ]
+    }
+  ]
+}

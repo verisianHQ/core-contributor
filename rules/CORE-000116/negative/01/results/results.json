@@ -1,0 +1,29 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBSPCUFL is not null or equal to 'N'",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "LBSPCUFL": "Y"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "LBSPCUFL": "No"
+          }
+        }
+      ]
+    }
+  ]
+}

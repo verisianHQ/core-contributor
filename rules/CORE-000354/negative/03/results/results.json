@@ -1,0 +1,161 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "The date portion of LBDTC is not complete date or the date portion of DM.RFSTDTC is not complete date, but LBDY is not empty",
+      "number_errors": 14,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "123101",
+          "value": {
+            "LBDTC": "2005-01",
+            "LBDY": -15.0,
+            "RFSTDTC": "2005-10-13"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "LBDTC": "2005-10",
+            "LBDY": 1.0,
+            "RFSTDTC": "2005-10-13"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "123101",
+          "value": {
+            "LBDTC": "2006-03",
+            "LBDY": 141.0,
+            "RFSTDTC": "2005-10-13"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "123101",
+          "value": {
+            "LBDTC": null,
+            "LBDY": 213.0,
+            "RFSTDTC": "2005-10-13"
+          }
+        },
+        {
+          "row": 17,
+          "SEQ": 27,
+          "USUBJID": "123102",
+          "value": {
+            "LBDTC": "2005-09-28",
+            "LBDY": -15.0,
+            "RFSTDTC": "2005-10"
+          }
+        },
+        {
+          "row": 18,
+          "SEQ": 28,
+          "USUBJID": "123102",
+          "value": {
+            "LBDTC": "2005-10-13",
+            "LBDY": 1.0,
+            "RFSTDTC": "2005-10"
+          }
+        },
+        {
+          "row": 19,
+          "SEQ": 29,
+          "USUBJID": "123102",
+          "value": {
+            "LBDTC": "2006-03-02",
+            "LBDY": 141.0,
+            "RFSTDTC": "2005-10"
+          }
+        },
+        {
+          "row": 20,
+          "SEQ": 30,
+          "USUBJID": "123102",
+          "value": {
+            "LBDTC": "2006-05-13",
+            "LBDY": 213.0,
+            "RFSTDTC": "2005-10"
+          }
+        },
+        {
+          "row": 21,
+          "SEQ": 31,
+          "USUBJID": "123102",
+          "value": {
+            "LBDTC": "2005-09-28",
+            "LBDY": -15.0,
+            "RFSTDTC": "2005-10"
+          }
+        },
+        {
+          "row": 22,
+          "SEQ": 32,
+          "USUBJID": "123102",
+          "value": {
+            "LBDTC": "2005-10-13",
+            "LBDY": 1.0,
+            "RFSTDTC": "2005-10"
+          }
+        },
+        {
+          "row": 23,
+          "SEQ": 33,
+          "USUBJID": "123102",
+          "value": {
+            "LBDTC": "2006-03-02",
+            "LBDY": 141.0,
+            "RFSTDTC": "2005-10"
+          }
+        },
+        {
+          "row": 24,
+          "SEQ": 34,
+          "USUBJID": "123102",
+          "value": {
+            "LBDTC": "2006-05-13",
+            "LBDY": 213.0,
+            "RFSTDTC": "2005-10"
+          }
+        },
+        {
+          "row": 25,
+          "SEQ": 35,
+          "USUBJID": "123102",
+          "value": {
+            "LBDTC": "2005-09-28",
+            "LBDY": -15.0,
+            "RFSTDTC": "2005-10"
+          }
+        },
+        {
+          "row": 26,
+          "SEQ": 36,
+          "USUBJID": "123102",
+          "value": {
+            "LBDTC": "2005-10-13",
+            "LBDY": 1.0,
+            "RFSTDTC": "2005-10"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "datasets": [
+    {
+      "dataset": "ml.xpt",
+      "domain": "ML",
+      "execution_status": "success",
+      "execution_message": "MLTPTREF is empty and MLELTM is not empty",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "123101",
+          "value": {
+            "MLELTM": "-PT10M",
+            "MLTPTREF": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "MLELTM": "PT1H",
+            "MLTPTREF": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "123101",
+          "value": {
+            "MLELTM": "PT2H",
+            "MLTPTREF": null
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "123101",
+          "value": {
+            "MLELTM": "PT24H",
+            "MLTPTREF": null
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "123101",
+          "value": {
+            "MLELTM": "PT48H",
+            "MLTPTREF": null
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "pc.xpt",
+      "domain": "PC",
+      "execution_status": "success",
+      "execution_message": "PCTPTREF is empty and PCELTM is not empty",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "123101",
+          "value": {
+            "PCELTM": "PT2H",
+            "PCTPTREF": null
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "123101",
+          "value": {
+            "PCELTM": "PT24H",
+            "PCTPTREF": null
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "123101",
+          "value": {
+            "PCELTM": "PT48H",
+            "PCTPTREF": null
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "datasets": [
+    {
+      "dataset": "sv.xpt",
+      "domain": "SV",
+      "execution_status": "success",
+      "execution_message": "VISIT and VISITNUM do not have a one-to-one relationship",
+      "number_errors": 6,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "VISIT": "VISIT 1 (WEEK -2)",
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "VISIT": "VISIT 2 (WEEK 0)",
+            "VISITNUM": 200.0
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "VISIT": "VISIT 3 (WEEK 1)",
+            "VISITNUM": 300.0
+          }
+        },
+        {
+          "row": 30,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-002",
+          "value": {
+            "VISIT": "VISIT 1",
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 31,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-002",
+          "value": {
+            "VISIT": "VISIT 2",
+            "VISITNUM": 200.0
+          }
+        },
+        {
+          "row": 32,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-002",
+          "value": {
+            "VISIT": "VISIT 3",
+            "VISITNUM": 300.0
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "tv.xpt",
+      "domain": "TV",
+      "execution_status": "success",
+      "execution_message": "VISIT and VISITNUM do not have a one-to-one relationship",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "VISIT": "VISIT 7 (WEEK 5)",
+            "VISITNUM": 700.0
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "VISIT": "VISIT 8 (WEEK 6)",
+            "VISITNUM": 700.0
+          }
+        }
+      ]
+    }
+  ]
+}

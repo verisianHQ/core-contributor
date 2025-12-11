@@ -1,0 +1,107 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "The date portion of LBDTC is not complete date or the date portion of DM.RFSTDTC is not complete date, but LBDY is not empty",
+      "number_errors": 7,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "123102",
+          "value": {
+            "LBDTC": "2005-09-28",
+            "LBDY": -15.0,
+            "RFSTDTC": "2005-10"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "123102",
+          "value": {
+            "LBDTC": "2005-09-28",
+            "LBDY": -15.0,
+            "RFSTDTC": "2005-10"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "123102",
+          "value": {
+            "LBDTC": null,
+            "LBDY": 1.0,
+            "RFSTDTC": "2005-10"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 7,
+          "USUBJID": "123102",
+          "value": {
+            "LBDTC": null,
+            "LBDY": 141.0,
+            "RFSTDTC": "2005-10"
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": 1,
+          "USUBJID": "123101",
+          "value": {
+            "LBDTC": "2005-09",
+            "LBDY": -15.0,
+            "RFSTDTC": "2005-10-13T10:15"
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": 3,
+          "USUBJID": "123101",
+          "value": {
+            "LBDTC": null,
+            "LBDY": 141.0,
+            "RFSTDTC": "2005-10-13T10:15"
+          }
+        },
+        {
+          "row": 12,
+          "SEQ": 4,
+          "USUBJID": "123101",
+          "value": {
+            "LBDTC": "2006-05",
+            "LBDY": 213.0,
+            "RFSTDTC": "2005-10-13T10:15"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "datasets": [
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "success",
+      "execution_message": "ETCD is not equal to 'UNPLAN' and not equal to TE.ETCD",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ETCD": "LOWER"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "ETCD": "SCREENING"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 2,
+          "USUBJID": "CDISC002",
+          "value": {
+            "ETCD": "HIGHEST"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "te.xpt",
+      "domain": "TE",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000173, dataset=TE",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

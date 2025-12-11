@@ -1,0 +1,274 @@
+# Variable: TEENRL
+# Condition: TEDUR = null
+# Rule: TEENRL ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Either TEENRL or TEDUR must be present for each Element.
+                Document: SDTMIG v3.4
+                Item: Specification
+                Section: 7.2.2
+              - Cited Guidance: At least one of TEENRL and TEDUR must be populated. Both may be
+                  populated.
+                Document: SDTMIG v3.4
+                Item: Assumption 12
+                Section: 7.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0328
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Specification[Either TEENRL or TEDUR must be present for each
+                  Element.]|Assumption 12[At least one of TEENRL or TEDUR must
+                  be populated. Both may be populated.]
+                Document: IG v3.2
+                Item: Specification|Assumption 12
+                Section: '7.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0328
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Specification[Either TEENRL or TEDUR must be present for each
+                  Element.]|Assumption 12[At least one of TEENRL or TEDUR must
+                  be populated. Both may be populated.]
+                Document: IG v3.3
+                Item: Specification|Assumption 12
+                Section: 7.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0328
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Either TEENRL or TEDUR must be present for each Element.
+                Document: TIG 1.0
+                Item: Specification TEENRL
+                Section: 2.8.10.28
+              - Cited Guidance: At least one of TEENRL and TEDUR must be populated. Both may be
+                  populated.
+                Document: TIG 1.0
+                Item: Assumption 12
+                Section: 2.8.10.28
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0496
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Either TEENRL or TEDUR must be populated for each Element.
+                Document: IG v3.4
+                Item: Specification
+                Section: 7.2.2
+              - Cited Guidance: At least one of TEENRL and TEDUR must be populated. Both may be
+                  populated.
+                Document: IG v3.4
+                Item: Assumption 12
+                Section: 7.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0329
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Specification[Either TEENRL or TEDUR must be present for each
+                  Element.]|Assumption 12[At least one of TEENRL or TEDUR must
+                  be populated. Both may be populated.]
+                Document: IG v3.2
+                Item: Specification|Assumption 12
+                Section: '7.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0329
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Specification[Either TEENRL or TEDUR must be present for each
+                  Element.]|Assumption 12[At least one of TEENRL or TEDUR must
+                  be populated. Both may be populated.]
+                Document: IG v3.3
+                Item: Specification|Assumption 12
+                Section: 7.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0329
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Specification TEENRL [Either TEENRL or TEDUR must be present for
+                  each Element.
+                Document: TIG 1.0
+                Item: Specification TEENRL
+                Section: 2.8.10.28
+              - Cited Guidance: Assumption 12[At least one of TEENRL and TEDUR must be
+                  populated. Both may be populated.]
+                Document: TIG 1.0
+                Item: Assumption 12
+                Section: 2.8.10.28
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0497
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Either TEENRL or TEDUR must be present for each Element; both
+                  may be present.
+                Document: IG v3.0
+                Item: Specification
+                Section: 7.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND214
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Either TEENRL or TEDUR must be present for each Element; both
+                  may be present.
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND214
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Either TEENRL or TEDUR must be present for each Element; both
+                  may be present.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND214
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Either TEENRL or TEDUR must be present for each Element; both
+                  may be present.
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND214
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Either TEENRL or TEDUR must be present for each Element; both
+                  may be present.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND214
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Either TEENRL or TEDUR must be present for each Element; both
+                  may be present.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND214
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Either TEENRL or TEDUR must be present for each Element; both
+                  may be present.
+                Document: TIG v1.0
+                Item: TEENRL CDISC Notes
+                Section: 2.8.9.29
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0141
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - any:
+        - name: TEDUR
+          operator: empty
+        - name: TEDUR
+          operator: not_exists
+    - any:
+        - name: TEENRL
+          operator: empty
+        - name: TEENRL
+          operator: not_exists
+Core:
+  Id: CORE-000027
+  Status: Published
+  Version: '1'
+Description: Either TEENRL or TEDUR must be present for each Element.
+Executability: Fully Executable
+Outcome:
+  Message: At least one of TEENRL and TEDUR must be populated.
+  Output Variables:
+    - ETCD
+    - TEDUR
+    - TEENRL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TE
+  Use Case: INDH, NONCLIN
+Sensitivity: Record

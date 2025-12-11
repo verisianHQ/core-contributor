@@ -1,0 +1,232 @@
+# Variable: GEN
+# Condition: 
+# Rule: Variables are ordered with Identifiers first, followed by the Topic, Qualifier, and Timing variables. Within each role, variables are ordered as shown in SDTM: Tables 2.2.1, 2.2.2, 2.2.3, 2.2.3.1, 2.2.4, and 2.2.5
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Variables for the three general observation classes must be
+                  ordered with Identifiers first; followed by the Topic;
+                  Qualifier; and Timing variables. Within each role; variables
+                  must be ordered as shown in SDTM: Tables 2.2.1; 2.2.2; 2.2.3;
+                  2.2.3.1; 2.2.4; and 2.2.5'
+                Document: IG v3.2
+                Section: 4.1.1.4
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0330
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Variables for the three general observation classes must be
+                  ordered with Identifiers first; followed by the Topic;
+                  Qualifier; and Timing variables. Within each role; variables
+                  must be ordered as shown in SDTM: Tables 2.2.1; 2.2.2; 2.2.3;
+                  2.2.3.1; 2.2.4; and 2.2.5'
+                Document: IG v3.3
+                Section: 4.1.4
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0330
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Variables for the 3 general observation classes must be ordered
+                  with Identifiers variables first, followed by Topic,
+                  Qualifier, and Timing variables. Within each role, variables
+                  must be ordered as shown in SDTM Sections 3.1.1, The
+                  Interventions Observation Class; 3.1.2, The Events Observation
+                  Class; 3.1.3, The Findings Observation Class; 3.1.3.1,
+                  Findings About Events or Interventions; 3.1.4, Identifiers for
+                  All Classes; and 3.1.5, Timing Variables for All Classes.
+                Document: IG v3.4
+                Section: 4.1.4
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0664
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Dataset variables will be ordered per guidance in the SDTM Model
+                  v1.2. Variable order in TIG Domain Specifications aligns with
+                  variable order in the SDTM.
+                Document: TIG 1.0
+                Item: Tabulation Datasets Num 3
+                Section: '2.6'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0698
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The order of variables in the data definition file should
+                  reflect the order of variables in the dataset. The order of
+                  variables in the SDTM domain models has been chosen to
+                  facilitate the review of the models and application of the
+                  models. Variables for the three general observation classes
+                  should be ordered with Identifiers first, followed by the
+                  Topic Qualifier, and Timing variables. Within each role,
+                  variables are ordered as shown in Tables 2.2.1-2.2.5 of the
+                  SDTM.
+                Document: SENDIG v3.0
+                Item: Text
+                Section: 4.1.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND48
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The order of variables in the data definition file should
+                  reflect the order of variables in the dataset. The order of
+                  variables in the SDTM domain models has been chosen to
+                  facilitate the review of the models and application of the
+                  models. Variables for the three general observation classes
+                  should be ordered with Identifiers first, followed by the
+                  Topic Qualifier, and Timing variables. Within each role,
+                  variables are ordered as shown in Tables 2.2.1-2.2.5 of the
+                  SDTM.
+                Document: SENDIG v3.1
+                Item: Text
+                Section: 4.1.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND48
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The order of variables in the data definition file should
+                  reflect the order of variables in the dataset. The order of
+                  variables in the SDTM domain models has been chosen to
+                  facilitate the review of the models and application of the
+                  models. Variables for the three general observation classes
+                  should be ordered with Identifiers first, followed by the
+                  Topic Qualifier, and Timing variables. Within each role,
+                  variables are ordered as shown in Tables 2.2.1-2.2.5 of the
+                  SDTM.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.1.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND48
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: The order of variables in the data definition file should
+                  reflect the order of variables in the dataset. The order of
+                  variables in the SDTM domain models has been chosen to
+                  facilitate the review of the models and application of the
+                  models. Variables for the three general observation classes
+                  should be ordered with Identifiers first, followed by the
+                  Topic Qualifier, and Timing variables. Within each role,
+                  variables are ordered as shown in Tables 2.2.1-2.2.5 of the
+                  SDTM.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.1.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND48
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The order of variables in the data definition file should
+                  reflect the order of variables in the dataset. The order of
+                  variables in the SDTM domain models has been chosen to
+                  facilitate the review of the models and application of the
+                  models. Variables for the three general observation classes
+                  should be ordered with Identifiers first, followed by the
+                  Topic Qualifier, and Timing variables. Within each role,
+                  variables are ordered as shown in Tables 2.2.1-2.2.5 of the
+                  SDTM.
+                Document: SENDIG v3.1
+                Item: Text
+                Section: 4.1.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND48
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The order of variables in the data definition file should
+                  reflect the order of variables in the dataset. The order of
+                  variables in the SDTM domain models has been chosen to
+                  facilitate the review of the models and application of the
+                  models. Variables for the three general observation classes
+                  should be ordered with Identifiers first, followed by the
+                  Topic Qualifier, and Timing variables. Within each role,
+                  variables are ordered as shown in Tables 2.2.1-2.2.5 of the
+                  SDTM.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.1.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND48
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+Check:
+  all:
+    - name: $column_order_from_dataset
+      operator: is_not_ordered_subset_of
+      value: $column_order_from_library
+Core:
+  Id: CORE-000852
+  Status: Published
+  Version: '1'
+Description: 'Raise an error when variables are not in the specified order'
+Executability: Fully Executable
+Operations:
+  # variable order in CDISC-Library
+  - id: $column_order_from_library
+    operator: get_column_order_from_library
+  # variable order in dataset
+  - id: $column_order_from_dataset
+    operator: get_column_order_from_dataset
+Outcome:
+  Message: Variables are not in the correct order as shown in SDTM for the
+    observation class.
+  Output Variables:
+    - $column_order_from_dataset
+    - $column_order_from_library
+Rule Type: Variable Metadata Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset

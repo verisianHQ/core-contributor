@@ -1,0 +1,53 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "ACTARM is not in TA.ARM, but ACTARM in DM does not equal Screen Failure, Not Assigned, Not Treated, or Unplanned Treatment.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ACTARM": "ACME Low Dose"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "ACTARM": "ACME Low Dose"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC003",
+          "value": {
+            "ACTARM": "ACME High Dose"
+          }
+        },
+        {
+          "row": 15,
+          "SEQ": null,
+          "USUBJID": "CDISC015",
+          "value": {
+            "ACTARM": null
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ta.xpt",
+      "domain": "TA",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000367, dataset=TA",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

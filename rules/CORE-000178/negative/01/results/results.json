@@ -1,0 +1,61 @@
+{
+  "datasets": [
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000178, dataset=DS",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ss.xpt",
+      "domain": "SS",
+      "execution_status": "success",
+      "execution_message": "SSSTRESC = 'DEAD', but SSDTC < max DS.DSSTDTC.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "$max_ds_dsstdtc": "2021-03-13",
+            "SSDTC": "2021-03-12",
+            "SSSTRESC": "DEAD"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC003",
+          "value": {
+            "$max_ds_dsstdtc": "2021-05-09",
+            "SSDTC": "2021-04-09",
+            "SSSTRESC": "DEAD"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "CDISC004",
+          "value": {
+            "$max_ds_dsstdtc": "2021-06-01",
+            "SSDTC": "2021-05-02",
+            "SSSTRESC": "DEAD"
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "$max_ds_dsstdtc": "2021-08-16",
+            "SSDTC": "2021-08-13",
+            "SSSTRESC": "DEAD"
+          }
+        }
+      ]
+    }
+  ]
+}

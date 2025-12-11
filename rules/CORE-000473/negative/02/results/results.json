@@ -1,0 +1,24 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "A record exists in TS where TSPARMCD = HLTSUBJI and TSVAL = Y but TSVAL for TSPARMCD = TDIGRP is not empty or does not equal HEALTHY SUBJECTS.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 47,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "$HLTSUBJI_Y": 1,
+            "TSGRPID": "1",
+            "TSPARMCD": "TDIGRP",
+            "TSVAL": "Patients with Probable Mild to Moderate Alzheimers Disease"
+          }
+        }
+      ]
+    }
+  ]
+}

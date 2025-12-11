@@ -1,0 +1,89 @@
+# Variable: ARMCD
+# Condition: 
+# Rule: ARMCD value length <= 20
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: ARMCD is limited to 20 characters and does not have the
+                  character restrictions that apply to --TESTCD
+                Document: SDTMIG v3.4
+                Section: 4.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0153
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: ARMCD is limited to 20 characters and does not have special
+                  character restrictions.
+                Document: IG v3.2
+                Section: 4.1.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0153
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: ARMCD is limited to 20 characters and does not have special
+                  character restrictions.
+                Document: IG v3.3
+                Section: 4.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0153
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: ARMCD is limited to 20 characters and does not have special
+                  character restrictions. The maximum length of ARMCD is longer
+                  than that for other short variables to accommodate the kind of
+                  values that are likely to be needed for crossover trials.
+                Document: TIG 1.0
+                Item: Specification ARMCD
+                Section: 2.8.10.27
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0394
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: ARMCD
+      operator: matches_regex
+      value: ^(.){21,}$
+Core:
+  Id: CORE-000010
+  Status: Published
+  Version: '1'
+Description: Verify ARMCD value length is <= 20
+Executability: Fully Executable
+Outcome:
+  Message: ARMCD value length is greater than 20
+  Output Variables:
+    - ARMCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - DM
+      - TA
+  Use Case: INDH
+Sensitivity: Record

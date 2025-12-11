@@ -1,0 +1,103 @@
+# Variable: SSDTC
+# Condition: SSSTRESC = 'DEAD'
+# Rule: SSDTC >= all DS.DSSTDTC
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0172
+              Version: '2'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Subject Status does not contain details about the circumstances
+                  of a subject's status. The response to the status assessment
+                  may trigger collection of additional details, but those
+                  details are to be stored in appropriate separate domains. For
+                  example, if a  subject's survival status is "DEAD", the date
+                  of death must be stored in DM and within a final disposition
+                  record in DS. Only the status collection date, the status
+                  question, and the status response are stored in SS.
+                Document: IG v3.4
+                Item: Assumption 1
+                Section: 6.3.11
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0172
+              Version: '2'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Subject Status does not contain details about the circumstances
+                  of a subject's status. The response to the status assessment
+                  may trigger collection of additional details but those details
+                  are to be stored in appropriate separate domains. For example,
+                  if a subject's Survival Status is “DEAD”, the date of death
+                  must be stored in DM and within a final disposition record in
+                  DS. Only the status collection date, the status question and
+                  the status response are stored in SS.
+                Document: IG v3.3
+                Item: Assumption 1
+                Section: 6.3.15
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0172
+              Version: '2'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Subject Status does not contain details about the circumstances
+                  of a subject's status. The response to the status assessment
+                  may trigger collection of additional details but those details
+                  are to be stored in appropriate separate domains. For example,
+                  if a subject's Survival Status is "DEAD", the date of death
+                  must be stored in DM and within a final disposition record in
+                  DS. Only the status collection date, the status question and
+                  the status response are stored in SS.
+                Document: IG v3.2
+                Item: Assumption 1
+                Section: 6.3.
+Check:
+  all:
+    - name: SSSTRESC
+      operator: equal_to
+      value: DEAD
+      value_is_literal: true
+    - name: SSDTC
+      operator: date_less_than
+      value: $max_ds_dsstdtc
+Core:
+  Id: CORE-000178
+  Status: Published
+  Version: '1'
+Description: Raise an error when SSSTRESC = 'DEAD' and SSDTC < max DS.DSSTDTC.
+Executability: Fully Executable
+Operations:
+  - operator: max_date
+    domain: DS
+    name: DSSTDTC
+    id: $max_ds_dsstdtc
+    group:
+      - USUBJID
+Outcome:
+  Message: SSSTRESC = 'DEAD', but SSDTC < max DS.DSSTDTC.
+  Output Variables:
+    - SSSTRESC
+    - SSDTC
+    - $max_ds_dsstdtc
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - SS
+Sensitivity: Record

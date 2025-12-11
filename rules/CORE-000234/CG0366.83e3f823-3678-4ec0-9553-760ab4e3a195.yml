@@ -1,0 +1,75 @@
+# Variable: RSUBJID
+# Condition: RDEVID ^= null
+# Rule: RSUBJID = null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0366
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Associated Persons (AP) are persons other than study
+                  subjects who can be associated with a study, a particular study
+                  subject, or a device used in the study.
+                Document: Model v2.0
+                Item: ' '
+                Section: Associated Persons
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0366
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Associated Persons (AP) are persons who can be associated
+                  with a study; a particular study subject or a device used in the
+                  study.
+                Document: Model v1.4
+                Section: 5.1.1
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0366
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Associated Persons (AP) are persons who can be associated
+                  with a study; a particular study subject or a device used in the
+                  study.
+                Document: Model v1.7
+                Section: '6.1'
+Check:
+  all:
+    - name: RDEVID
+      operator: non_empty
+    - name: RSUBJID
+      operator: non_empty
+Core:
+  Id: CORE-000234
+  Status: Published
+  Version: '1'
+Description: Verify that RSUBJID is empty when RDEVID is populated
+Executability: Fully Executable
+Outcome:
+  Message: RSUBJID must be missing when RDEVID is populated
+  Output Variables:
+    - RDEVID
+    - RSUBJID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - AP--
+Sensitivity: Record

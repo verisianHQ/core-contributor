@@ -1,0 +1,93 @@
+# Variable: LBTOXGR
+# Condition: Numeric scale used
+# Rule: LBTOXGR is a numeric value
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: '"If value is from a numeric scale, represent only the
+                  number  (e.g., "2" and not "Grade 2")."'
+                Document: IG v3.4
+                Item: Specification
+                Section: 6.3.5.6
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0185
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If value is from a numeric scale, represent only the number
+                  (e.g., "2" and not "Grade 2").
+                Document: IG v3.2
+                Item: Specification
+                Section: '6.3'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0185
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If value is from a numeric scale, represent only the number
+                  (e.g., "2" and not "Grade 2").
+                Document: IG v3.3
+                Item: Specification
+                Section: 6.3.6
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0185
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Records toxicity grade value using a standard toxicity scale
+                  (such as the NCI CTCAE). If value is from a numeric scale,
+                  represent only the number (e.g., "2" and not "Grade 2").
+                Document: TIG 1.0
+                Item: Specification-LBTOXGR
+                Section: 2.8.10.14
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0414
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: LBTOXGR
+      operator: matches_regex
+      value: .*[a-zA-Z].* # identifiers string contains characters
+    - name: LBTOXGR
+      operator: matches_regex
+      value: .*[0-9].* #identifies that string also contains a number  
+Core:
+  Id: CORE-000169
+  Status: Published
+  Version: '1'
+Description: Raise a warning when LBTOXGR is not numeric
+Executability: Fully Executable
+Outcome:
+  Message: Verify that LBTOXGR value is not from a numeric scale
+  Output Variables:
+    - LBTOXGR
+    - LBTOX
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - LB
+  Use Case: INDH
+Sensitivity: Record
