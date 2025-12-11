@@ -72,15 +72,14 @@ Check:
       operator: non_empty
     - name: RDOMAIN
       operator: empty
-
 Core:
   Id: CORE-000017
   Status: Published
   Version: '1'
-Description: Verify RDOMAIN is not null when IDVARVAL is not null
+Description: Raise an error when RDOMAIN is not populated when IDVARVAL is populated.
 Executability: Fully Executable
 Outcome:
-  Message: RDOMAIN has a missing value when IDVARVAL has a non-missing value
+  Message: IDVARVAL is populated but RDOMAIN is missing.
   Output Variables:
     - RDOMAIN
     - IDVARVAL
