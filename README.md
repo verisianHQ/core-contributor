@@ -34,7 +34,7 @@ Contribution framework for rules and test data with automated regression testing
         - Once it's installed, search 'yaml schema' in the settings: \
               WINDOWS: File → Preferences → Settings \
               MAC: Code → Settings → Settings \
-        - Click the `Edit in settings.json` option under Yaml: Schemas
+        - Click the `Edit in settings.json` option under Yaml: Schemas \
         - Paste the following into "yaml.schemas": \
               `"https://rule-editor.cdisc.org/api/schema": "/*.yml"` \
         - Save the `settings.json` \
