@@ -152,7 +152,7 @@ class TestRunner:
             print("Error: Could not import engine modules. Is the submodule initialised?")
             sys.exit(1)
 
-    def run_validation(self, rule_id: str, data_path: str, silent: bool = False) -> Tuple[Any, Optional[dict]]:
+    def run_validation(self, rule_id: str, data_path: str) -> Tuple[Any, Optional[dict]]:
         """Invokes the engine to validate data against the rule."""
         rule_path = RULES_DIR / rule_id
         rule_ymls = list(rule_path.glob("*.yml"))
@@ -169,9 +169,6 @@ class TestRunner:
         try:
             import yaml
             from engine.tests.rule_regression.regression import sharepoint_xlsx_to_test_datasets, process_test_case_dataset
-
-            if not silent:
-                print(f"Running validation on {data_path}...")
 
             with open(rule_ymls[0], "r") as f:
                 rule = yaml.safe_load(f)
@@ -198,12 +195,12 @@ class TestRunner:
         except Exception as e:
             return None, {"error": f"No result - either the rule or test case data {excel_files[0].name} is broken", "exception": str(e)}
 
-    def evaluate_case(self, rule_id: str, test_type: str, case_info: dict, silent: bool = False) -> dict:
+    def evaluate_case(self, rule_id: str, test_type: str, case_info: dict) -> dict:
         """Runs validation, saves results, and determines pass/fail status."""
         case_id = case_info["case_id"]
         expected = "0 errors" if test_type == "positive" else ">0 errors"
         
-        _, results_data = self.run_validation(rule_id, case_info["data_path"], silent=silent)
+        _, results_data = self.run_validation(rule_id, case_info["data_path"])
         
         if results_data is None:
              results_data = {
@@ -235,7 +232,7 @@ class TestRunner:
             "results_path": results_path
         }
 
-    def run_rule_suite(self, rule_id: str, specific_case: str = None, silent: bool = False) -> dict:
+    def run_rule_suite(self, rule_id: str, specific_case: str = None) -> dict:
         """Runs all (or one) test cases for a specific rule."""
         summary = {
             "rule_id": rule_id,
@@ -255,12 +252,11 @@ class TestRunner:
             else: all_cases["positive"] = []
 
         if not all_cases["positive"] and not all_cases["negative"]:
-            if not silent: print(f"No test cases found for {rule_id}")
             return summary
 
         for test_type in ["positive", "negative"]:
             for case in all_cases[test_type]:
-                result = self.evaluate_case(rule_id, test_type, case, silent=silent)
+                result = self.evaluate_case(rule_id, test_type, case)
                 summary[f"{test_type}_tests"].append(result)
                 if not result["passed"]:
                     summary["status"] = "failed"
@@ -349,7 +345,7 @@ def main():
             sys.stdout.write(f"\r[{i}/{total}] Testing {rule_id}...")
             sys.stdout.flush()
         
-        summary = runner.run_rule_suite(rule_id, args.test_case, silent=use_bar)
+        summary = runner.run_rule_suite(rule_id, args.test_case)
         
         has_error = any(t.get("error") for t in summary["positive_tests"] + summary["negative_tests"])
         
@@ -383,7 +379,7 @@ def main():
 def generate_rule_results(rule_id: str) -> dict:
     """Function run by the pr comment bot github action run_validation."""
     runner = TestRunner()
-    return runner.run_rule_suite(rule_id, silent=True)
+    return runner.run_rule_suite(rule_id)
 
 if __name__ == "__main__":
     try:
