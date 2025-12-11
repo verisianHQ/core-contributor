@@ -84,7 +84,7 @@ class ResultReporter:
     @staticmethod
     def display_rule_summary(summary: dict):
         """Prints the execution summary for a single rule to the console."""
-        print(f"\n{'='*60}\n{summary['rule_id']} Test Results Summary\n{'='*60}")
+        print(f"\n{'='*60}\n{summary['rule_id']} Test Results Summary")
         print(f"\nRule: {summary['rule_id']}")
         print(f"Overall Status: {summary['status'].upper()}")
 
@@ -336,9 +336,6 @@ def main():
     results = {"passed": [], "failed": [], "error": []}
     total = len(rules_to_run)
     use_bar = args.all_rules
-
-    print(f"Core SQL Rules Engine - Test Suite")
-    print("=" * 60)
 
     for i, rule_id in enumerate(rules_to_run, 1):
         if use_bar:
