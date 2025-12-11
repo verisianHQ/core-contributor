@@ -108,7 +108,7 @@ We have included some additional functionality in the test script. To take advan
 
 Git is great, but it is easy to overlook something and make a mistake. If you're stuck or confused, please reach out to Richard (richard@verisian.com) or Maximo (maximo@verisian.com) for support - we're always happy to help! \
 However, here are some quick fixes for common issues you might experience: \
-&NewLine;
+<br />
 
 > ***I accidentally made my changes on the main branch but haven't committed them yet***
 
@@ -119,7 +119,7 @@ If the branch you want to move your changes to already exists, run: \
 `git stash pop` \
 If you want to move the changes to a new branch, you can run this useful one-liner: \
 `git switch -c <new-branch-name>` \
-&NewLine;
+<br />
 
 > ***I accidentally made my changes on the main branch and committed them***
 
@@ -130,14 +130,14 @@ Otherwise, create a new branch from main which includes your changes and then re
 `git reset --hard HEAD~1` \
 `git checkout <new-branch-name>` \
 *IMPORTANT NOTE* - if you've committed more than once on main, you'll need to replace `HEAD~1` with `HEAD~n` where `n` is the number of commits you've made \
-&NewLine;
+<br />
 
 > ***I've made some changes that I want to push to the repo and other changes that I don't want to keep***
 
 In the source control sidebar panel (the icon is three dots connected by lines), you will see all of the changes you've made. \
 You can right-click on any of these and select 'Discard Changes' \
 This will completely remove your changes, so make sure you don't want them before doing this! \
-&NewLine;
+<br />
 
 > ***I want to work on multiple rules at once!***
 
