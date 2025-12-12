@@ -9,7 +9,7 @@ import json
 import logging
 import warnings
 from pathlib import Path
-from typing import List, Optional, Tuple, Any
+from typing import List, Optional, Tuple, Any, Dict
 
 warnings.filterwarnings('ignore', category=UserWarning, module='openpyxl')
 logging.basicConfig(level=logging.CRITICAL)
@@ -21,8 +21,8 @@ ENGINE_DIR = Path("engine")
 class ResultReporter:
     """Handles formatting, printing, and saving of test results."""
 
-    @staticmethod
-    def json_to_readable(results_data: dict, output_path: Path):
+    @classmethod
+    def json_to_readable(cls, results_data: dict, output_path: Path):
         """Write a human-readable summary of the JSON results to a text file."""
         with output_path.open("w") as f:
             if "error" in results_data:
@@ -69,8 +69,8 @@ class ResultReporter:
                         f.write("\n")
                 f.write("\n")
 
-    @staticmethod
-    def save_case_results(rule_id: str, test_type: str, case_id: str, results: dict):
+    @classmethod
+    def save_case_results(cls, rule_id: str, test_type: str, case_id: str, results: dict):
         """Saves JSON and TXT results to the file system."""
         results_path = RULES_DIR / rule_id / test_type / case_id / "results"
         results_path.mkdir(parents=True, exist_ok=True)
@@ -78,7 +78,7 @@ class ResultReporter:
         with (results_path / "results.json").open("w") as f:
             json.dump(results, f, indent=2)
 
-        ResultReporter.json_to_readable(results, results_path / "results.txt")
+        cls.json_to_readable(results, results_path / "results.txt")
         return str(results_path)
 
     @staticmethod
@@ -109,8 +109,7 @@ class TestRunner:
 
     def __init__(self):
         self._setup_engine_path()
-        self.ig_specs = None
-        self._init_engine_specs()
+        self.ig_specs = self._init_engine_specs()
 
     @staticmethod
     def _setup_engine_path():
@@ -141,10 +140,10 @@ class TestRunner:
         return cases
 
     def _init_engine_specs(self):
-        """Initialises IG Specifications once to avoid overhead."""
+        """Initialises and returns IG Specifications."""
         try:
             from engine.cdisc_rules_engine.utilities.ig_specification import IGSpecification
-            self.ig_specs = IGSpecification(
+            return IGSpecification(
                 standard="sdtmig", standard_version="3.4", 
                 standard_substandard=None, define_xml_version=None
             )
@@ -232,8 +231,27 @@ class TestRunner:
             "results_path": results_path
         }
 
+    def _get_cases_to_run(self, rule_id: str, specific_case: str = None) -> Dict[str, List[dict]]:
+        all_cases = self.get_test_cases(rule_id)
+        
+        if not specific_case:
+            return all_cases
+
+        target_type, target_id = specific_case.split('/')
+        filtered = {
+            "positive": [], 
+            "negative": []
+        }
+        
+        if target_type in filtered:
+            found = next((c for c in all_cases[target_type] if c['case_id'] == target_id), None)
+            if found:
+                filtered[target_type].append(found)
+                
+        return filtered
+
     def run_rule_suite(self, rule_id: str, specific_case: str = None) -> dict:
-        """Runs all (or one) test cases for a specific rule."""
+        """Runs test cases based on the filtered list."""
         summary = {
             "rule_id": rule_id,
             "positive_tests": [], 
@@ -241,21 +259,13 @@ class TestRunner:
             "status": "passed"
         }
         
-        all_cases = self.get_test_cases(rule_id)
+        cases_to_run = self._get_cases_to_run(rule_id, specific_case)
         
-        if specific_case:
-            target_type, target_id = specific_case.split('/')
-            all_cases = {
-                target_type: [c for c in all_cases[target_type] if c['case_id'] == target_id]
-            }
-            if target_type == "positive": all_cases["negative"] = []
-            else: all_cases["positive"] = []
-
-        if not all_cases["positive"] and not all_cases["negative"]:
+        if not cases_to_run["positive"] and not cases_to_run["negative"]:
             return summary
 
         for test_type in ["positive", "negative"]:
-            for case in all_cases[test_type]:
+            for case in cases_to_run[test_type]:
                 result = self.evaluate_case(rule_id, test_type, case)
                 summary[f"{test_type}_tests"].append(result)
                 if not result["passed"]:
