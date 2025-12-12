@@ -45,7 +45,7 @@ Contribution framework for rules and test data with automated regression testing
 
 *IMPORTANT NOTE* - For the following section, I have detailed the exact process to follow with relevant git commands to be executed in the terminal. If in doubt, you can always fall back to this process. \
 However, VSCode integrates with git very effectively, and so there are intuitive point-and-click alternatives to all of the following commands with only simple configuration required. \
-If you'd like to take advantage of this (and I strongly recommend it for at least staging, committing and pushing your changes), please see [this](https://docs.google.com/document/d/15ydgj4AqtEnFtlXL-J4DLJV32q_Q71gKn0ucu4tYYQw/edit?pli=1&tab=t.0#bookmark=id.mnk2lsoectvz) supplementary guide, complete with screenshots \
+If you'd like to take advantage of this (and I strongly recommend it for at least staging, committing and pushing your changes), please see [this](https://docs.google.com/document/d/15ydgj4AqtEnFtlXL-J4DLJV32q_Q71gKn0ucu4tYYQw/edit?tab=t.0#bookmark=id.v2ehj99lxmyr) supplementary guide, complete with screenshots \
 You'll need to run the following commands to get it working: \
 `git config --global user.email "<your-github-email>"` \
 `git config --global user.name "<your-github-username>"`
