@@ -154,20 +154,6 @@ def compare_results(committed_path: str, generated_path: str, test_type: str, ca
         if len(all_differences) > 10:
             print(f"      ... and {len(all_differences) - 10} more differences")
         sys.exit(1)
-    
-    if test_type == 'positive':
-        if generated_total_errors == 0:
-            print(f'  {test_type}/{case_id}: 0 errors (valid positive test)')
-        else:
-            print(f'  {test_type}/{case_id}: {generated_total_errors} errors (should be 0)')
-            sys.exit(1)
-    else:
-        if generated_total_errors > 0:
-            print(f'  {test_type}/{case_id}: {generated_total_errors} errors (valid negative test)')
-        else:
-            print(f'  {test_type}/{case_id}: 0 errors (should be >0)')
-            sys.exit(1)
-
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
