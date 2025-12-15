@@ -1,0 +1,105 @@
+# Variable: GEN
+# Condition: Subject has more than one record per Epoch with DSCAT = 'DISPOSITION EVENT'
+# Rule: DSSCAT must be present
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: An event with DSCAT = “DISPOSITION EVENT” describes either
+                  disposition of study participation or of a study
+                  treatment.  It describes whether a subject completed study
+                  participation or a study treatment, and if not, the reason
+                  they did not complete it. Dispositions may be described for
+                  each Epoch (e.g., screening, initial treatment, washout,
+                  cross-over treatment, follow-up) or for the study as a whole.
+                  If disposition events for both study participation and study
+                  treatment(s) are to be represented, then DSSCAT provides this
+                  distinction. The value of DSSCAT is based on the sponsor's
+                  controlled terminology, however for records with DSCAT =
+                  "DISPOSITION EVENT", DSSCAT = "STUDY PARTICIPATION" is used to
+                  represent disposition of study participation. DSSCAT = "STUDY
+                  TREATMENT" can be used as a generic identifier when a study
+                  has only a single treatment. If a study has multiple
+                  treatments, then DSSCAT should name the individual treatment.
+                Document: IG v3.4
+                Item: DS – Assumption 2b
+                Section: 6.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0535
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If separate disposition events for both study participation and
+                  study treatment(s) are to be represented, then DSSCAT provides
+                  this distinction.
+                Document: IG v3.3
+                Item: Assumption 2.b
+                Section: 6.2.3 DS
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0535
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: An event with DSCAT = “DISPOSITION EVENT” describes either
+                  disposition of study participation or of a product exposure.
+                  It describes whether a subject completed study participation
+                  or a product exposure and, if not, the reason they did not
+                  complete it. Dispositions may be described for each epoch
+                  (e.g., screening, initial exposure, washout, cross-over,
+                  follow-up) or for the study as a whole. If disposition events
+                  for both study participation and product exposure(s) are to be
+                  represented, then DSSCAT provides this distinction.
+                Document: TIG 1.0
+                Item: Assumption 2b
+                Section: 2.8.10.8
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0628
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: DSCAT
+      operator: is_not_unique_set
+      value:
+        - USUBJID
+        - EPOCH
+    - name: DSCAT
+      operator: equal_to
+      value: DISPOSITION EVENT
+    - name: DSSCAT
+      operator: not_exists
+Core:
+  Id: CORE-000212
+  Status: Published
+  Version: '1'
+Description: When subject has more than one record per Epoch with DSCAT =
+  DISPOSITION EVENT, DSSCAT must be present.
+Executability: Fully Executable
+Outcome:
+  Message: DSSCAT is not present when subject has more than one record per Epoch
+    with DSCAT = 'DISPOSITION EVENT'.
+  Output Variables:
+    - USUBJID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - DS
+  Use Case: INDH
+Sensitivity: Dataset

@@ -1,0 +1,53 @@
+# Variable: ACTARM
+# Condition: ACTARM in ('Screen Failure', 'Not Assigned')
+# Rule: ACTARM = ARM
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Values should be "Screen Failure" for screen failures and "Not
+                  Assigned" for subjects not assigned to treatment.
+                Document: IG v3.2
+                Item: Specification
+                Section: '5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0119
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+Check:
+  all:
+    - name: ACTARM
+      operator: is_contained_by
+      value:
+        - Screen Failure
+        - Not Assigned
+        - SCREEN FAILURE
+        - NOT ASSIGNED
+    - name: ACTARM
+      operator: not_equal_to
+      value: ARM
+Core:
+  Id: CORE-000530
+  Status: Published
+  Version: '1'
+Description: 'Raise an error when ACTARM is Screen Failure or Not Assigned, and
+  ACTARM does not equal ARM'
+Executability: Fully Executable
+Outcome:
+  Message: ACTARM should be equal to ARM when ACTARM is Screen Failure or Not Assigned.
+  Output Variables:
+    - ACTARM
+    - ARM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

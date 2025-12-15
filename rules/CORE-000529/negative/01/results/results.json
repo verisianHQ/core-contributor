@@ -1,0 +1,105 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "FADY is not calculated correctly even though the date portion of FADTC is complete, the date portion of DM.RFSTDTC is a complete date, and FADY is not empty.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "$val_dy": 18,
+            "FADTC": "2012-12-02",
+            "FADY": 35.0,
+            "RFSTDTC": "2012-11-15"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC004",
+          "value": {
+            "$val_dy": 5,
+            "FADTC": "2013-10-12",
+            "FADY": 3.0,
+            "RFSTDTC": "2013-10-08"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC007",
+          "value": {
+            "$val_dy": -34,
+            "FADTC": "2012-12-02",
+            "FADY": -30.0,
+            "RFSTDTC": "2013-01-05"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "CDISC008",
+          "value": {
+            "$val_dy": 206,
+            "FADTC": "2014-12-02",
+            "FADY": 230.0,
+            "RFSTDTC": "2014-05-11"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ie.xpt",
+      "domain": "IE",
+      "execution_status": "success",
+      "execution_message": "IEDY is not calculated correctly even though the date portion of IEDTC is complete, the date portion of DM.RFSTDTC is a complete date, and IEDY is not empty.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "$val_dy": -3,
+            "IEDTC": "2022-03-17",
+            "IEDY": -4.0,
+            "RFSTDTC": "2022-03-20"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBDY is not calculated correctly even though the date portion of LBDTC is complete, the date portion of DM.RFSTDTC is a complete date, and LBDY is not empty.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "$val_dy": 11,
+            "LBDTC": "2022-03-30",
+            "LBDY": 2.0,
+            "RFSTDTC": "2022-03-20"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+# Variable: DSDECOD
+# Condition: SS.SSSTRESC = 'DEAD'
+# Rule: DSDECOD = 'DEATH'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: For example, if a subject's survival status is "DEAD", the date
+                  of death must be stored in DM and within a final disposition
+                  record in DS.
+                Document: SDTMIG v3.4
+                Item: Assumption 1
+                Section: 6.3.11
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0067
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: For example, if a subject's Survival Status is "DEAD", the date
+                  of death must be stored in DM and within a final disposition
+                  record in DS.
+                Document: SDTMIG v3.3
+                Item: Assumption 1
+                Section: 6.3.15
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0067
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: For example, if a subject's Survival Status is "DEAD", the date
+                  of death must be stored in DM and within a final disposition
+                  record in DS.
+                Document: SDTMIG v3.2
+                Item: Assumption 2
+                Section: '6.3'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0067
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+  #CG0067 is identical to rule FB0614. Added metadata for FB0614 by Malini Narreddy on 2025-03-07
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0614
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0614
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0614
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: SSSTRESC
+      operator: equal_to
+      value: DEAD
+      value_is_literal: true
+    - name: $ds_dsdecod
+      operator: does_not_contain
+      value: DEATH
+      value_is_literal: true
+Core:
+  Id: CORE-000251
+  Status: Published
+  Version: '1'
+Description: When SS.SSSTRESC = "DEAD", the final disposition record must have
+  DSDECOD ^= "DEATH".
+Executability: Fully Executable
+Operations:
+  - domain: DS
+    group:
+      - USUBJID
+    id: $ds_dsdecod
+    name: DSDECOD
+    operator: distinct
+Outcome:
+  Message: DSDECOD is not "DEATH", When SS.SSSTRESC = "DEAD".
+  Output Variables:
+    - SSSTRESC
+    - $ds_dsdecod
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - SS
+Sensitivity: Record

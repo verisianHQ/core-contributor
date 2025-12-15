@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "ag.xpt",
+      "domain": "AG",
+      "execution_status": "success",
+      "execution_message": "Value for AGVAMTU is populated, when AGTRTV is NULL.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "XYZ-001-002",
+          "value": {
+            "AGTRTV": null,
+            "AGVAMTU": "mL"
+          }
+        }
+      ]
+    }
+  ]
+}

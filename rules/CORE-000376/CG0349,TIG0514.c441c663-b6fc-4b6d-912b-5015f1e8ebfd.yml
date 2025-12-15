@@ -1,0 +1,154 @@
+# Variable: GEN
+# Condition: Custom domain and variable name is not STUDYID, DOMAIN, USUBJID, POOLID, SPDEVID, VISIT, VISITNUM, VISITDY, ELEMENT, TAETORD, EPOCH.
+# Rule: First 2 characters of the Variable Name = the 2-character domain code
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'The following variables are exceptions to the philosophy that
+                  all variable names are prefixed with the Domain Identifier:
+                  -Required Identifiers (STUDYID, DOMAIN, USUBJID) -Commonly
+                  used grouping and merge Keys (e.g., VISIT, VISITNUM, VISITDY)
+                  All Demographics domain (DM) variables other than DMDTC and
+                  DMDY -All variables in RELREC and SUPPQUAL, and some variables
+                  in Comments and Trial Design datasets. Required Identifiers
+                  are not prefixed because they are usually used as keys when
+                  merging/joining observations. The --SEQ and the optional
+                  Identifiers --GRPID and --REFID are prefixed because they may
+                  be used as keys when relating observations across domains.'
+                Document: IG v3.4
+                Section: 4.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0349
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'The philosophy applied to determine which variable names use a
+                  prefix was that all variable names are prefixed with the
+                  Domain Identifier in which they originate except the
+                  following: a. Required Identifiers (STUDYID; DOMAIN; USUBJID).
+                  b. Commonly used grouping and merge Keys (VISIT; VISITNUM;
+                  VISITDY); and many of the variables in trial design (such as
+                  ELEMENT and ARM). c. All Demographics domain (DM) variables
+                  other than DMDTC and DMDY. d. All variables in RELREC and
+                  SUPPQUAL; and some variables in Comments and Trial Design
+                  datasets.'
+                Document: IG v3.2
+                Section: 4.1.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0349
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'The following variables are exceptions to the philosophy that
+                  all variable names are prefixed with the Domain Identifier: -
+                  Required Identifiers (STUDYID; DOMAIN; USUBJID). -Commonly
+                  used grouping and merge Keys (e.g.,VISIT; VISITNUM; VISITDY).
+                  -All Demographics domain (DM) variables other than DMDTC and
+                  DMDY. -All variables in RELREC and SUPPQUAL; and some
+                  variables in Comments and Trial Design datasets. Required
+                  Identifiers are not prefixed because they are usually used as
+                  keys when merging/joining observations. The --SEQ and the
+                  optional Identifiers --GRPID and --REFID are prefixed because
+                  they may be used as keys when relating observations across
+                  domains.'
+                Document: IG v3.3
+                Section: 4.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0349
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Apply the domain code to the appropriate variables in the
+                  domain by replacing all variable prefixes (shown in the SDTM
+                  as “--“) with the domain code.'
+                Document: TIG 1.0
+                Item: 5a
+                Section: 2.8.3
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0514
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: $domain_is_custom
+      operator: equal_to
+      value: true
+    - name: variable_name
+      operator: is_not_contained_by
+      value:
+        - STUDYID
+        - DOMAIN
+        - USUBJID
+        - POOLID
+        - SPDEVID
+        - VISIT
+        - VISITNUM
+        - VISITDY
+        - ELEMENT
+        - TAETORD
+        - EPOCH
+        - NHOID
+        - FOCID
+        - SPTOBID
+        - STOCONID
+        - IGDCMPID
+        - MIDS
+        - RELMIDS
+        - MIDSDTC
+        - RSUBJID
+        - RDEVID
+        - SREL
+        - APID
+    - name: variable_name
+      operator: prefix_is_not_contained_by
+      prefix: 2
+      value: $domain_list
+Core:
+  Id: CORE-000376
+  Status: Published
+  Version: '1'
+Description: Raise an error when the two first characters of a prefixed variable
+  within a custom domain do not match the DOMAIN value.
+Executability: Fully Executable
+Operations:
+  - id: $domain_list
+    name: DOMAIN
+    operator: distinct
+  - id: $domain_is_custom
+    operator: domain_is_custom
+Outcome:
+  Message: First 2 characters of prefixed variable within custom domain do not
+    match the DOMAIN value.
+  Output Variables:
+    - $domain_list
+    - variable_name
+Rule Type: Variable Metadata Check
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+      - INTERVENTIONS
+      - EVENTS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Record

@@ -1,0 +1,70 @@
+{
+  "datasets": [
+    {
+      "dataset": "ie.xpt",
+      "domain": "IE",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBSTRESC should not be blank when either LBORRES is provided or LBDRVFL = 'Y' .",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBDRVFL": null,
+            "LBORRES": "93",
+            "LBSTRESC": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBDRVFL": "Y",
+            "LBORRES": null,
+            "LBSTRESC": null
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "execution_status": "success",
+      "execution_message": "VSSTRESC should not be blank when either VSORRES is provided or VSDRVFL = 'Y' .",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSDRVFL": null,
+            "VSORRES": "71",
+            "VSSTRESC": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSDRVFL": "Y",
+            "VSORRES": null,
+            "VSSTRESC": null
+          }
+        }
+      ]
+    }
+  ]
+}

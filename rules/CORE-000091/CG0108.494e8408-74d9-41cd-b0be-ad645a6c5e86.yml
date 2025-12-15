@@ -1,0 +1,77 @@
+# Variable: --VAMTU
+# Condition: --TRTV = null
+# Rule: --VAMTU = null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0108
+              Version: '2'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Variable Qualifier of --VAMT.
+                Document: Model v2.0
+                Item: --VAMTU
+                Section: Interventions
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0108
+              Version: '2'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: '--TRTV:Vehicle for administration of treatment, such
+                  as a liquid in which the treatment drug is dissolved. Example: SALINE.
+                  --VAMT: Amount of the prepared product (treatment + vehicle) administered
+                  or given. Note: should not be diluent amount alone. --VAMTU: Units
+                  for the prepared product (treatment + vehicle). Examples: mL, mg.'
+                Document: Model v1.4
+                Section: 2.2.1
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0108
+              Version: '2'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: '--TRTV:Vehicle for administration of treatment, such
+                  as a liquid in which the treatment drug is dissolved. Example: SALINE.
+                  --VAMT: Amount of the prepared product (treatment + vehicle) administered
+                  or given. Note: should not be diluent amount alone. --VAMTU: Units
+                  for the prepared product (treatment + vehicle). Examples: mL, mg.'
+                Document: Model v1.7
+                Section: 2.2.1
+Check:
+  all:
+    - name: --TRTV
+      operator: empty
+    - name: --VAMTU
+      operator: non_empty
+Core:
+  Id: CORE-000091
+  Status: Published
+  Version: '1'
+Description: Raise an error when --TRTV is null, --VAMTU is not null
+Executability: Fully Executable
+Outcome:
+  Message: Value for --VAMTU is populated, when --TRTV is NULL.
+  Output Variables:
+    - --TRTV
+    - --VAMTU
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

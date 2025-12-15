@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "success",
+      "execution_message": "SEENDTC is null when element is not the last.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 12,
+          "SEQ": 3,
+          "USUBJID": "CDISC005",
+          "value": {
+            "SEENDTC": null,
+            "SESTDTC": "2013-02-19"
+          }
+        }
+      ]
+    }
+  ]
+}

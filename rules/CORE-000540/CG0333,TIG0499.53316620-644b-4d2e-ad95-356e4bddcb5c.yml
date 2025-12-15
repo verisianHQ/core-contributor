@@ -1,0 +1,122 @@
+# Variable: GEN
+# Condition: Dataset split by parent domain and dataset name length > 2 and dataset name begins with 'FA'
+# Rule: The characters of the dataset name after 'FA' equal a domain that present in the study
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'If splitting Findings About by parent domain, then the dataset
+                  name would be the domain code, "FA", plus the two-character
+                  domain code for parent domain code (e.g., "FACM"). '
+                Document: IG v3.4
+                Item: '6'
+                Section: 4.1.7
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0333
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Split dataset names can be up to four characters in length. For
+                  example; if splitting by --CAT; then dataset names would be
+                  the domain name plus up to two additional characters (e.g.,
+                  QS36 for SF-36). If splitting Findings About by parent domain;
+                  then the dataset name would be the domain name plus the
+                  two-character domain code describing the parent domain code
+                  (e.g., FACM). The four-character dataset-name limitation
+                  allows the use of a Supplemental Qualifier dataset associated
+                  with the split dataset.
+                Document: IG v3.2
+                Item: '6'
+                Section: 4.1.1.7
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0333
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Split dataset names can be up to four characters in length. For
+                  example; if splitting by --CAT; then dataset names would be
+                  the domain name plus up to two additional characters (e.g.,
+                  QS36 for SF-36). If splitting Findings About by parent domain;
+                  then the dataset name would be the domain name plus the
+                  two-character domain code describing the parent domain code
+                  (e.g., FACM). The four-character dataset-name limitation
+                  allows the use of a Supplemental Qualifier dataset associated
+                  with the split dataset.
+                Document: IG v3.3
+                Item: '6'
+                Section: 4.1.7
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0333
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: If splitting Findings About by parent domain, then the dataset
+                  name would be the domain code, "FA", plus the two-character
+                  domain code for parent domain code (e.g., "FACM"). The
+                  four-character dataset-name limitation allows the use of a
+                  Supplemental Qualifier dataset associated with the split
+                  dataset.
+                Document: TIG 1.0
+                Item: Num 9.e.i
+                Section: '2.6'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0499
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: dataset_name
+      operator: matches_regex
+      value: ^[a-z(?-i)]{2}[a-z(?-i)]{1,2}
+    - name: dataset_name
+      operator: prefix_equal_to
+      prefix: 2
+      value: 'FA'
+    - name: dataset_name
+      operator: suffix_is_not_contained_by
+      suffix: 2
+      value: $list_dataset_names
+Core:
+  Id: CORE-000540
+  Status: Published
+  Version: '1'
+Description: Raise an error when parent domain referenced in Findings About
+  dataset name is not present in the study.
+Executability: Fully Executable
+Operations:
+  - id: $list_dataset_names
+    operator: dataset_names
+Outcome:
+  Message: Parent domain referenced in Findings About dataset name is not present
+    in the study
+  Output Variables:
+    - dataset_name
+    - $list_dataset_names
+Rule Type: Dataset Metadata Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+    include_split_datasets: true
+  Use Case: INDH
+Sensitivity: Dataset

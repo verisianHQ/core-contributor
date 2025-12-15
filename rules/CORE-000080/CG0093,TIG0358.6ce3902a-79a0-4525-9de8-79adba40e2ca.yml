@@ -1,0 +1,103 @@
+# Variable: --TPTREF
+# Condition: --ELTM, --TPTNUM, and --TPT not present in dataset
+# Rule: --TPTREF not present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The description of a time point that acts as a fixed reference
+                  for a series of planned time points, used for study data
+                  tabulation. Description of the fixed reference point referred
+                  to by --ELTM, --TPTNUM, --TPT, --STINT, and --ENINT.
+                Document: Model v2.0
+                Item: --TPTREF
+                Section: Timing
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0093
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: '(--TPTREF) Description of the fixed reference point referred to
+                  by --ELTM, --TPTNUM, and --TPT. Examples: PREVIOUS DOSE,
+                  PREVIOUS MEAL.'
+                Document: Model v1.4
+                Item: Specification
+                Section: 2.2.5 Timing Variables for All Classes
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0093
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Description of the fixed reference point referred to by --ELTM,
+                  --TPTNUM, --TPT, --STINT, and --ENINT. Examples: "PREVIOUS
+                  DOSE", "PREVIOUS MEAL".'
+                Document: Model v1.7
+                Item: 'Table 2.2.5.1: --TPTREF'
+                Section: 2.2.5 Timing Variables for All Classes
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0093
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The description of a time point that acts as a fixed reference
+                  for a series of planned time points, used for study data
+                  tabulation. Description of the fixed reference point referred
+                  to by --ELTM, --TPTNUM, --TPT, --STINT, and --ENINT.
+                Document: SDTM v2.1
+                Item: --TPTREF
+                Section: Section 3.1.5 Timing Variables for All Classes
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0358
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --ELTM
+      operator: not_exists
+    - name: --TPTNUM
+      operator: not_exists
+    - name: --TPT
+      operator: not_exists
+    - name: --TPTREF
+      operator: exists
+Core:
+  Id: CORE-000080
+  Status: Published
+  Version: '1'
+Description: Raise an error when --ELTM, --TPTNUM, and --TPT are not present in
+  dataset, but --TPTREF is present.
+Executability: Fully Executable
+Outcome:
+  Message: --TPTREF is present when --ELTM, --TPTNUM, and --TPT are not present.
+  Output Variables:
+    - --TPTREF
+    - --ELTM
+    - --TPTNUM
+    - --TPT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Dataset

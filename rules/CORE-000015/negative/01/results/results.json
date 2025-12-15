@@ -1,0 +1,216 @@
+{
+  "datasets": [
+    {
+      "dataset": "ag.xpt",
+      "domain": "AG",
+      "execution_status": "success",
+      "execution_message": "AGPRESP is missing in dataset when AGOCCUR is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "AGOCCUR": null,
+            "AGPRESP": "Not in dataset"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMPRESP is missing in dataset when CMOCCUR is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "CMOCCUR": null,
+            "CMPRESP": "Not in dataset"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "success",
+      "execution_message": "ECPRESP is missing in dataset when ECOCCUR is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "ECOCCUR": null,
+            "ECPRESP": "Not in dataset"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000015, dataset=EX",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ml.xpt",
+      "domain": "ML",
+      "execution_status": "success",
+      "execution_message": "MLPRESP is missing in dataset when MLOCCUR is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "MLOCCUR": null,
+            "MLPRESP": "Not in dataset"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "pr.xpt",
+      "domain": "PR",
+      "execution_status": "success",
+      "execution_message": "PRPRESP is missing in dataset when PROCCUR is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "PROCCUR": null,
+            "PRPRESP": "Not in dataset"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "su.xpt",
+      "domain": "SU",
+      "execution_status": "success",
+      "execution_message": "SUPRESP is missing in dataset when SUOCCUR is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "SUOCCUR": null,
+            "SUPRESP": "Not in dataset"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000015, dataset=AE",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "be.xpt",
+      "domain": "BE",
+      "execution_status": "success",
+      "execution_message": "BEPRESP is missing in dataset when BEOCCUR is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "BEOCCUR": null,
+            "BEPRESP": "Not in dataset"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "execution_status": "success",
+      "execution_message": "CEPRESP is missing in dataset when CEOCCUR is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "CEOCCUR": null,
+            "CEPRESP": "Not in dataset"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000015, dataset=DS",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "dv.xpt",
+      "domain": "DV",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000015, dataset=DV",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ho.xpt",
+      "domain": "HO",
+      "execution_status": "success",
+      "execution_message": "HOPRESP is missing in dataset when HOOCCUR is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "HOOCCUR": null,
+            "HOPRESP": "Not in dataset"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "MHPRESP is missing in dataset when MHOCCUR is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "MHOCCUR": null,
+            "MHPRESP": "Not in dataset"
+          }
+        }
+      ]
+    }
+  ]
+}

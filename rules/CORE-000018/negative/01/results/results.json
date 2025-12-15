@@ -1,0 +1,437 @@
+{
+  "datasets": [
+    {
+      "dataset": "ag.xpt",
+      "domain": "AG",
+      "execution_status": "success",
+      "execution_message": "AGOCCUR is blank when AGPRESP is equal to \"Y\" and AGSTAT is not provided.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "AGOCCUR": null,
+            "AGPRESP": "Y",
+            "AGSTAT": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "AGOCCUR": null,
+            "AGPRESP": "Y",
+            "AGSTAT": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "AGOCCUR": null,
+            "AGPRESP": "Y",
+            "AGSTAT": null
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "success",
+      "execution_message": "ECOCCUR is blank when ECPRESP is equal to \"Y\" and ECSTAT is not provided.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ECOCCUR": null,
+            "ECPRESP": "Y",
+            "ECSTAT": "Not in dataset"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ECOCCUR": null,
+            "ECPRESP": "Y",
+            "ECSTAT": "Not in dataset"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ECOCCUR": null,
+            "ECPRESP": "Y",
+            "ECSTAT": "Not in dataset"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ECOCCUR": null,
+            "ECPRESP": "Y",
+            "ECSTAT": "Not in dataset"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000018, dataset=EX",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ml.xpt",
+      "domain": "ML",
+      "execution_status": "success",
+      "execution_message": "MLOCCUR is blank when MLPRESP is equal to \"Y\" and MLSTAT is not provided.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "MLOCCUR": null,
+            "MLPRESP": "Y",
+            "MLSTAT": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "MLOCCUR": null,
+            "MLPRESP": "Y",
+            "MLSTAT": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "MLOCCUR": null,
+            "MLPRESP": "Y",
+            "MLSTAT": null
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "pr.xpt",
+      "domain": "PR",
+      "execution_status": "success",
+      "execution_message": "PROCCUR is blank when PRPRESP is equal to \"Y\" and PRSTAT is not provided.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "PROCCUR": null,
+            "PRPRESP": "Y",
+            "PRSTAT": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "PROCCUR": null,
+            "PRPRESP": "Y",
+            "PRSTAT": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "PROCCUR": null,
+            "PRPRESP": "Y",
+            "PRSTAT": null
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "su.xpt",
+      "domain": "SU",
+      "execution_status": "success",
+      "execution_message": "SUOCCUR is blank when SUPRESP is equal to \"Y\" and SUSTAT is not provided.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SUOCCUR": null,
+            "SUPRESP": "Y",
+            "SUSTAT": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SUOCCUR": null,
+            "SUPRESP": "Y",
+            "SUSTAT": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SUOCCUR": null,
+            "SUPRESP": "Y",
+            "SUSTAT": null
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000018, dataset=AE",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "be.xpt",
+      "domain": "BE",
+      "execution_status": "success",
+      "execution_message": "BEOCCUR is blank when BEPRESP is equal to \"Y\" and BESTAT is not provided.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "BEOCCUR": null,
+            "BEPRESP": "Y",
+            "BESTAT": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "BEOCCUR": null,
+            "BEPRESP": "Y",
+            "BESTAT": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "BEOCCUR": null,
+            "BEPRESP": "Y",
+            "BESTAT": null
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "BEOCCUR": null,
+            "BEPRESP": "Y",
+            "BESTAT": null
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "execution_status": "success",
+      "execution_message": "CEOCCUR is blank when CEPRESP is equal to \"Y\" and CESTAT is not provided.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CEOCCUR": null,
+            "CEPRESP": "Y",
+            "CESTAT": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CEOCCUR": null,
+            "CEPRESP": "Y",
+            "CESTAT": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CEOCCUR": null,
+            "CEPRESP": "Y",
+            "CESTAT": null
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CEOCCUR": null,
+            "CEPRESP": "Y",
+            "CESTAT": null
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000018, dataset=DS",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "dv.xpt",
+      "domain": "DV",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000018, dataset=DV",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ho.xpt",
+      "domain": "HO",
+      "execution_status": "success",
+      "execution_message": "HOOCCUR is blank when HOPRESP is equal to \"Y\" and HOSTAT is not provided.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "HOOCCUR": null,
+            "HOPRESP": "Y",
+            "HOSTAT": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "HOOCCUR": null,
+            "HOPRESP": "Y",
+            "HOSTAT": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "HOOCCUR": null,
+            "HOPRESP": "Y",
+            "HOSTAT": null
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "HOOCCUR": null,
+            "HOPRESP": "Y",
+            "HOSTAT": null
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "MHOCCUR is blank when MHPRESP is equal to \"Y\" and MHSTAT is not provided.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "MHOCCUR": null,
+            "MHPRESP": "Y",
+            "MHSTAT": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "MHOCCUR": null,
+            "MHPRESP": "Y",
+            "MHSTAT": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "MHOCCUR": null,
+            "MHPRESP": "Y",
+            "MHSTAT": null
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "MHOCCUR": null,
+            "MHPRESP": "Y",
+            "MHSTAT": null
+          }
+        }
+      ]
+    }
+  ]
+}

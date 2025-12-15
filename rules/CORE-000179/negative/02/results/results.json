@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSPARM and TSPARMCD don't have a one-to-one relationship.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARM": "Planned Maximum Age of\nSubjects",
+            "TSPARMCD": "AGEMAX"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARM": "Planned Maximum Age of\nSubjects",
+            "TSPARMCD": "AGEMIN"
+          }
+        }
+      ]
+    }
+  ]
+}

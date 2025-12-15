@@ -1,0 +1,45 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "ARM cannot be equal to 'Screen Failure', 'Not Assigned', 'Unplanned Treatment' or 'Not Treated'.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ARM": "NOT TREATED"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "ARM": "NOT ASSIGNED"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC003",
+          "value": {
+            "ARM": "SCREEN FAILURE"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "CDISC004",
+          "value": {
+            "ARM": "UNPLANNED TREATMENT"
+          }
+        }
+      ]
+    }
+  ]
+}

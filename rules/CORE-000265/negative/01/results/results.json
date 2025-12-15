@@ -1,0 +1,67 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMENRTPT is completed, but CMENTPT is not completed.",
+      "number_errors": 6,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC003",
+          "value": {
+            "CMENRTPT": "ONGOING",
+            "CMENTPT": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC005",
+          "value": {
+            "CMENRTPT": "ONGOING",
+            "CMENTPT": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC017",
+          "value": {
+            "CMENRTPT": "ONGOING",
+            "CMENTPT": null
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 2,
+          "USUBJID": "CDISC017",
+          "value": {
+            "CMENRTPT": "ONGOING",
+            "CMENTPT": null
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 3,
+          "USUBJID": "CDISC017",
+          "value": {
+            "CMENRTPT": "ONGOING",
+            "CMENTPT": null
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 4,
+          "USUBJID": "CDISC017",
+          "value": {
+            "CMENRTPT": "ONGOING",
+            "CMENTPT": null
+          }
+        }
+      ]
+    }
+  ]
+}

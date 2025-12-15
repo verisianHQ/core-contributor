@@ -1,0 +1,89 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The unit of measure for the standardized result of the
+                  measurement, test, or examination.  Variable(s) Qualified,
+                  --STRESC and --STRESN and --STNRLO and --STNRHI and --STREFC
+                  and --STREFN and --LLOQ and --ULOQ.
+                Document: Model v2.0
+                Section: Findings
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0426
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: '--STRESU: Standardized units used for --STRESC and --STRESN.'
+                Document: Model v1.4
+                Section: 2.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0426
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: '--STRESU: Standardized units used for --STRESC, --STRESN,
+                  --STREFC, and --STREFN. Example: "mol/L".'
+                Document: Model v1.7
+                Section: 2.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0426
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: 'The unit of measure for the standardized result of the
+                  measurement, test, or examination.  Variable(s) Qualified:
+                  --STRESC and --STRESN and --STNRLO and --STNRHI and --STREFC
+                  and --STREFN and --LLOQ and --ULOQ.'
+                Document: SDTM v2.1
+                Item: --STRESU
+                Section: 3.1.3 The Findings Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0580
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+# Variable: --STRESC
+# Condition: --STRESU ^= null
+# Rule: --STRESC (in standard units) ^= null
+Check:
+  all:
+    - name: --STRESU
+      operator: non_empty
+    - name: --STRESC
+      operator: empty
+Core:
+  Id: CORE-000133
+  Status: Published
+  Version: '1'
+Description: When --STRESU is populated, --STRESC must also be populated. Please
+  note that this rule, as executed, cannot check if --STRESC is populated with
+  the standardized unit.
+Executability: Fully Executable
+Outcome:
+  Message: Missing value for --STRESC, when --STRESU is provided
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Record

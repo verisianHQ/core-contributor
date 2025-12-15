@@ -1,0 +1,29 @@
+{
+  "datasets": [
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "success",
+      "execution_message": "SEENDTC is not equal to SESTDTC of the next element.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SEENDTC": "2012-11-30"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "SEENDTC": "2012-11-15"
+          }
+        }
+      ]
+    }
+  ]
+}

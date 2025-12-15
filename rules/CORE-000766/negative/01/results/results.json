@@ -1,0 +1,47 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000766, dataset=CM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "Related record is present in the parent domain dataset and \"Other, specify\" value was coded.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "AEDECOD": null,
+            "AETERM": "FATIGUE",
+            "RELREC.FAOBJ": "ERROR"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000766, dataset=FA",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "relrec.xpt",
+      "domain": "RELREC",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000766, dataset=RELREC",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Note that Elements that have different start and end rules are
+                  different Elements and must have different values of ELEMENT
+                  and ETCD.
+                Document: IG v3.4
+                Item: Assumption 13
+                Section: 7.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0325
+              Version: '2'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Specification[Expresses rule for ending Element. Either TEENRL
+                  or TEDUR must be present for each Element.]|Assumption 15[Note
+                  that Elements that have different start and end rules are
+                  different Elements and must have different values of ELEMENT
+                  and ETCD.]
+                Document: IG v3.2
+                Item: Specification|Assumption 15
+                Section: '7.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0325
+              Version: '2'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Note that Elements that have different start and end rules are
+                  different Elements and must have different values of ELEMENT
+                  and ETCD.
+                Document: IG v3.3
+                Item: Assumption 15
+                Section: 7.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0325
+              Version: '2'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Note that elements that have different start and end rules are
+                  different elements and must have different values of ELEMENT
+                  and ETCD.
+                Document: TIG 1.0
+                Item: Assumption 15
+                Section: 2.8.10.28
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0495
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+# Variable: ETCD
+# Condition: 
+# Rule: The combination of ELEMENT, TESTRL, TEENRL, and TEDUR is unique for each ETCD
+Check:
+  any:
+    - name: ETCD
+      operator: is_not_unique_set
+      value:
+        - ELEMENT
+        - TESTRL
+        - TEENRL
+        - TEDUR
+    - all:
+        - name: ETCD
+          operator: is_unique_set
+          value:
+            - ELEMENT
+            - TESTRL
+            - TEENRL
+            - TEDUR
+        - name: ELEMENT
+          operator: is_not_unique_set
+          value:
+            - TESTRL
+            - TEENRL
+            - TEDUR
+        - name: TESTRL
+          operator: is_not_unique_set
+          value:
+            - ELEMENT
+            - TEENRL
+            - TEDUR
+        - name: TEENRL
+          operator: is_not_unique_set
+          value:
+            - ELEMENT
+            - TESTRL
+            - TEDUR
+        - name: TEDUR
+          operator: is_not_unique_set
+          value:
+            - ELEMENT
+            - TEENRL
+            - TESTRL
+Core:
+  Id: CORE-000580
+  Status: Published
+  Version: '1'
+Description: The combination of TESTRL, TEENRL, and TEDUR must be unique for each ETCD.
+Executability: Fully Executable
+Outcome:
+  Message: The combination of TESTRL, TEENRL, and TEDUR is not unique for each ETCD.
+  Output Variables:
+    - ETCD
+    - ELEMENT
+    - TESTRL
+    - TEENRL
+    - TEDUR
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TE
+  Use Case: INDH
+Sensitivity: Record

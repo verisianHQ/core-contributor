@@ -1,0 +1,170 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: TAETORD is an integer.
+                Document: IG v3.4
+                Item: Assumption 1
+                Section: 7.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0248
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: TAETORD is an integer.
+                Document: IG v3.2
+                Item: Assumption 1
+                Section: '7.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0248
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: TAETORD is an integer.
+                Document: IG v3.3
+                Item: Assumption 1
+                Section: 7.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0248
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: TAETORD value should be an integer.
+                Document: IG v3.0
+                Section: 7.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND221
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: TAETORD value should be an integer.
+                Document: IG v3.1
+                Section: 7.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND221
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: TAETORD value should be an integer.
+                Document: IG v3.1.1
+                Section: 7.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND221
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: TAETORD value should be an integer.
+                Document: IG v3.1
+                Section: 7.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND221
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: TAETORD value should be an integer.
+                Document: IG v3.1.1
+                Section: 7.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND221
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: TAETORD value should be an integer.
+                Document: IG v3.1.1
+                Section: 7.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND221
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: TAETORD is an integer.
+                Document: TIG 1.0
+                Item: Specification;TAETORD
+                Section: 2.8.10.27
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0452
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: This value should be an integer.
+                Document: TIG 1.0
+                Item: TAETORD CDISC Notes
+                Section: 2.8.9.28
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0148
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+# Variable: TAETORD
+# Condition: 
+# Rule: TAETORD is an integer
+Check:
+  all:
+    - name: TAETORD
+      operator: not_matches_regex
+      value: ^(-?[1-9]\d*|0)$
+Core:
+  Id: CORE-000534
+  Status: Published
+  Version: '1'
+Description: TAETORD must be an integer
+Executability: Fully Executable
+Outcome:
+  Message: TAETORD is not an integer
+  Output Variables:
+    - TAETORD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TA
+  Use Case: INDH, NONCLIN
+Sensitivity: Record

@@ -1,0 +1,97 @@
+# Variable: ACTARM
+# Condition: Study does not use multi-stage arm assignments and ACTARM ^= null
+# Rule: ACTARM in TA.ARM
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: With the exception of studies which use multi-stage Arm
+                  assignments, must be a value of ARM in the Trial Arms Dataset.
+                  If the subject was not assigned to an Arm or followed a course
+                  not described by any planned Arm, ACTARM is null and ARMNRS is
+                  populated.
+                Document: IG v3.4
+                Item: Specification
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0514
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: With the exception of studies which use multi-stage arm
+                  assignments, must be a value of ARMCD in the Trial Arms
+                  Dataset. If the subject was not assigned to an arm or followed
+                  a course not described by any planned arm, ACTARMCD is null
+                  and ARMNRS is populated.
+                Document: IG v3.3
+                Item: Specification
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0514
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: With the exception of studies which use multi-stage Arm
+                  assignments, must be a value of ARMCD in the Trial Arms
+                  Dataset. If the subject was not assigned to an Arm or followed
+                  a course not described by any planned Arm, ACTARMCD is null
+                  and ARMNRS is populated.
+                Document: TIG 1.0
+                Item: Specification:ACTARM
+                Section: 2.8.10.4
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0609
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: ACTARM
+      operator: non_empty
+    - name: ACTARM
+      operator: is_not_contained_by
+      value: $ta_arm
+Core:
+  Id: CORE-000209
+  Status: Published
+  Version: '1'
+Description: When study does not use multi-stage arm assignments and ACTARM is
+  populated, ACTARM must be present in TA.ARM. This rule has been executed to
+  identify all cases when ACTARM is not present in TA.ARM and therefore
+  acknowledges that false positives may be recorded when multi-stage arm
+  assignments are in use.
+Executability: Partially Executable - Possible Overreporting
+Operations:
+  - domain: TA
+    id: $ta_arm
+    name: ARM
+    operator: distinct
+Outcome:
+  Message: ACTARM value in DM dataset is not among the values of ARM variable in
+    the TA dataset. This is allowed only in a multistage study with incomplete
+    ARM assignment. Please confirm if your study is a multistage assignment
+    study.
+  Output Variables:
+    - ACTARM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+  Use Case: INDH
+Sensitivity: Record

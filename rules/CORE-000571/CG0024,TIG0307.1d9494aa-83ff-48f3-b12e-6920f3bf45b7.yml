@@ -1,0 +1,104 @@
+# Variable: --LNKID
+# Condition: --LNKID present in a domain
+# Rule: --LNKID present in another domain
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: --LNKID is a grouping identifier used to identify a record in
+                  one domain that is related to records in another domain, often
+                  forming a one-to-many relationship.
+                Document: IG v3.4
+                Item: 2.E.1
+                Section: 4.2.6
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0024
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: --LNKID is a grouping identifier used to identify a record in
+                  one domain that is related to records in another domain, often
+                  forming a one-to-many relationship.
+                Document: IG v3.3
+                Item: 2.E.1
+                Section: 4.2.6
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0024
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Identifier used to link related records across domains.
+                Document: IG v3.2
+                Item: Specification
+                Section: '6.1'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0024
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: A sequence of characters used to uniquely identify a record, for
+                  a subject, in one domain and link it to 1 or more records for
+                  that subject in another domain.
+                Document: SDTM v2.1
+                Item: -LNKID, Definition column
+                Section: SDTM 3.1.4 Identifiers for All Classes
+              - Cited Guidance: Groups of records can be related by using grouping variables
+                  such as --LNKID or --LNKGRP in IDVAR.  Using --LNKID or
+                  --LNKGRP can be a more efficient method of representing
+                  relationships in RELREC when relating a single or group of
+                  records in one dataset to a group of records in another
+                  dataset.
+                Document: TIG v1.0
+                Item: -LNKID, Definition column
+                Section: 2.8.5.2
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0307
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --LNKID
+      operator: exists
+    - name: $VARIABLE_COUNT
+      operator: less_than
+      value: 2
+Core:
+  Id: "CORE-000571"
+  Status: Published
+  Version: '1'
+Description: Verify that when --LNKID is present in one domain it is also
+  present in another domain.
+Executability: Fully Executable
+Operations:
+  - id: $VARIABLE_COUNT
+    name: --LNKID
+    operator: variable_count
+Outcome:
+  Message: "LNKID variable is only found in one domain."
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Dataset

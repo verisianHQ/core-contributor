@@ -1,0 +1,97 @@
+# Variable: TSVAL
+# Condition: TSPARMCD = 'AGEMAX' and TSVAL ^= null
+# Rule: TSVAL conforms to ISO 8601
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: When the trial summary parameter is AGEMAX, then TSVAL should
+                  have a value expressed as an ISO8601 time duration (e.g., P43Y
+                  for 43 years old or P6M for 6 months old).
+                Document: IG v3.4
+                Section: 7.4.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0270
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Further information about the parameters is included below in
+                  Table 1. TSVAL may have controlled terminology depending on
+                  the value of TSPARMCD
+                Document: IG v3.2
+                Item: Assumption 3
+                Section: 7.4|Appendix C1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0270
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Further information about the parameters is included Appendix
+                  C1, Trial Summary Codes. TSVAL may have controlled terminology
+                  depending on the value of TSPARMCD. Conditions for including
+                  parameters are included in Appendix C1, Trial Summary Codes.
+                Document: IG v3.3
+                Item: Assumption 3
+                Section: '7.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0270
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Standards for tabulation and analysis require representation of
+                  dates and/or times, intervals of time, and durations of time
+                  in ISO 8601 format as defined by the International
+                  Organization for Standardization (ISO) (http://www.iso.org).
+                Document: TIG 1.0
+                Item: ''
+                Section: '2.3'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0471
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: TSPARMCD
+      operator: equal_to
+      value: AGEMAX
+    - name: TSVAL
+      operator: non_empty
+    - name: TSVAL
+      negative: false
+      operator: invalid_duration
+Core:
+  Id: CORE-000294
+  Status: Published
+  Version: '1'
+Description: Trigger error when TSPARMCD = 'AGEMAX' and TSVAL ^= null and TSVAL
+  does not conform to ISO 8601
+Executability: Fully Executable
+Outcome:
+  Message: TSVAL is not in ISO 8601 format
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+  Use Case: INDH
+Sensitivity: Record

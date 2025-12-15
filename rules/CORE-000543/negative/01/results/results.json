@@ -1,0 +1,45 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "ARMCD does not equal ACTARMCD when subject is either a screen failure or not assigned to treatment",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "015246-300-0004-00006",
+          "value": {
+            "ARMCD": "sCRNFAIL"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "015246-300-0004-00007",
+          "value": {
+            "ARMCD": "Drug B"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "015246-300-0004-00008",
+          "value": {
+            "ARMCD": null
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "015246-300-0004-00009",
+          "value": {
+            "ARMCD": "NOTASSGN"
+          }
+        }
+      ]
+    }
+  ]
+}

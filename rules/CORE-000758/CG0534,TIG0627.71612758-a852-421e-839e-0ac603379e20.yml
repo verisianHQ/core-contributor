@@ -1,0 +1,142 @@
+# Variable: RFSTDTC
+# Condition: Milestone associated with RFSTDTC is start of treatment and ARMNRS ^=null and ARMNRS ^='UNPLANNED TREATMENT'.
+# Rule: RFSTDTC = null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Reference Start Date/time for the subject in ISO 8601 character
+                  format. Usually equivalent to date/time when subject was first
+                  exposed to study treatment. See Assumption 9 for additional
+                  detail on when RFSTDTC may be null.
+                Document: IG v3.3
+                Item: Specification
+                Section: '5.2'
+              - Cited Guidance: ARMNRS is populated with "UNPLANNED TREATMENT", ACTARMUD should
+                  be populated with a description of the unplanned treatment
+                  received.
+                Document: IG v3.3
+                Item: Assumption 4.a.4
+                Section: '5.2'
+              - Cited Guidance: As described in Section 4.1.4, Order of the Variables, RFSTDTC
+                  is used to calculate study day variables. RFSTDTC is usually
+                  defined as the date/time when a subject was first exposed to
+                  study drug. This definition applies for most interventional
+                  studies, when the start of treatment is the natural and
+                  preferred starting point for study day variables and thus the
+                  logical value for RFSTDTC. In such studies, when data are
+                  submitted for subjects who are ineligible for treatment (e.g.,
+                  screen failures with ARMNRS = "SCREEN FAILURE"), subjects who
+                  were enrolled but not assigned to an arm (e.g., ARMNRS = "NOT
+                  ASSIGNED"), or subjects who were randomized but not treated
+                  (e.g., ARMNRS = "NOT TREATED"), RFSTDTC will be null. For
+                  studies with designs that include a substantial portion of
+                  subjects who are not expected to be treated, a different
+                  protocol milestone may be chosen as the starting point for
+                  study day variables. Some examples include non-interventional
+                  or observational studies, studies with a no-treatment arm, or
+                  studies where there is a delay between randomization and
+                  treatment.
+                Document: IG v3.3
+                Item: Assumption 9
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0534
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Reference Start Date/time for the subject in ISO 8601 character
+                  format. Usually equivalent to date/time when subject was first
+                  exposed to study treatment. See Assumption 9 for additional
+                  detail on when RFSTDTC may be null.
+                Document: IG v3.4
+                Item: Specification
+                Section: '5.2'
+              - Cited Guidance: RFSTDTC is used to calculate study day variables. RFSTDTC is
+                  usually defined as the date/time when a subject was first
+                  exposed to study drug. This definition applies for most
+                  interventional studies, when the start of treatment is the
+                  natural and preferred starting point for study day variables
+                  and thus the logical value for RFSTDTC. In such studies, when
+                  data are submitted for subjects who are ineligible for
+                  treatment (e.g., screen failures with ARMNRS = "SCREEN
+                  FAILURE"), subjects who were enrolled but not assigned to an
+                  arm (e.g., ARMNRS = "NOT ASSIGNED"), or subjects who were
+                  randomized but not treated (e.g., ARMNRS = "NOT TREATED"),
+                  RFSTDTC will be null. For studies with designs that include a
+                  substantial portion of subjects who are not expected to be
+                  treated, a different protocol milestone may be chosen as the
+                  starting point for study day variables. Some examples include
+                  non-interventional or observational studies, studies with a
+                  no-treatment Arm, or studies where there is a delay between
+                  randomization and treatment.
+                Document: IG v3.4
+                Item: Assumption 9
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0534
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: RFSTDTC Reference start date/time for the subject in ISO 8601
+                  character format. Usually equivalent to date/time when subject
+                  was first exposed to study product
+                Document: TIG 1.0
+                Item: Specification
+                Section: 2.8.10.4
+              - Cited Guidance: RFSTDTC is used to calculate study day variables
+                Document: TIG 1.0
+                Item: Assumption 9
+                Section: 2.8.10.4
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0627
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: ARMNRS
+      operator: non_empty
+    - name: ARMNRS
+      operator: not_equal_to
+      value: 'UNPLANNED TREATMENT'
+      value_is_literal: true
+    - name: RFSTDTC
+      operator: non_empty
+Core:
+  Id: 'CORE-000758'
+  Status: Published
+  Version: '1'
+Description: 'Raise an error when milestone associated with RFSTDTC is start of
+  treatment and ARMNRS is not null and different from ''UNPLANNED TREATMENT'',
+  but RFSTDTC is not null.'
+Executability: Partially Executable
+Outcome:
+  Message: 'Milestone associated with RFSTDTC is start of treatment and ARMNRS is
+    not null and different from ''UNPLANNED TREATMENT'', but RFSTDTC is not
+    empty.'
+  Output Variables:
+    - ARMNRS
+    - RFSTDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+  Use Case: INDH
+Sensitivity: Record

@@ -1,0 +1,37 @@
+{
+  "datasets": [
+    {
+      "dataset": "co.xpt",
+      "domain": "CO",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000384, dataset=CO",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "relrec.xpt",
+      "domain": "RELREC",
+      "execution_status": "success",
+      "execution_message": "RELREC.RDOMAIN does not represent a dataset present in the study",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "RDOMAIN": "LB"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "supplb.xpt",
+      "domain": "SUPPLB",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000384, dataset=SUPPLB",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

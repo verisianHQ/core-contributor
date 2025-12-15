@@ -1,0 +1,37 @@
+{
+  "datasets": [
+    {
+      "dataset": "ie.xpt",
+      "domain": "IE",
+      "execution_status": "success",
+      "execution_message": "IETESTCD from IE domain does not exist in IETESTCD of TI domain.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "CDISC015",
+          "value": {
+            "IETESTCD": "INCL06"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "CDISC015",
+          "value": {
+            "IETESTCD": "EXCL04"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ti.xpt",
+      "domain": "TI",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000228, dataset=TI",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

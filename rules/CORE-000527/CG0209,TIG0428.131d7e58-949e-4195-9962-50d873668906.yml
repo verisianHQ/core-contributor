@@ -1,0 +1,138 @@
+# Variable: SEENDTC
+# Condition: Not last record
+# Rule: SEENDTC ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Since there are, by definition, no gaps between Elements, the
+                  value of SEENDTC for one Element will always be the same as
+                  the value of SESTDTC for the next Element. '
+                Document: IG v3.4
+                Item: Assumption 8
+                Section: '5.3'
+              - Cited Guidance: '"Note that SESTDTC is required, although --STDTC is not
+                  required in any other subject-level dataset. The purpose of
+                  the dataset is to record the Elements a subject actually
+                  passed through. We assume that if it is known that a subject
+                  passed through a particular Element, then there must be some
+                  information on when it started, even if that information is
+                  imprecise. Thus, SESTDTC may not be null, although some
+                  records may not have all the components (e.g., year, month,
+                  day, hour, minute) of the date/time value collected."'
+                Document: IG v3.4
+                Item: Assumption 9
+                Section: '5.3'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0209
+              Version: '2'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Assumption 10[Since there are, by definition, no gaps between
+                  Elements, the value of SEENDTC for one Element will always be
+                  the same as the value of SESTDTC for the next
+                  Element.]|Assumption 11[Note that SESTDTC is required,
+                  although --STDTC is not required in any other subject-level
+                  dataset. The purpose of the dataset is to record the Elements
+                  a subject actually passed through. We assume that if it is
+                  known that a subject passed through a particular Element, then
+                  there must be some information on when it started, even if
+                  that information is imprecise. Thus, SESTDTC may not be null,
+                  although some records may not have all the components (e.g.,
+                  year, month, day, hour, minute) of the date/time value
+                  collected.]
+                Document: IG v3.2
+                Item: Assumption 10|Assumption 11
+                Section: 5 SE
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0209
+              Version: '2'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Assumption 8[Since there are, by definition, no gaps between
+                  Elements, the value of SEENDTC for one Element will always be
+                  the same as the value of SESTDTC for the next
+                  Element.]|Assumption 9[Note that SESTDTC is required, although
+                  --STDTC is not required in any other subject-level dataset.
+                  The purpose of the dataset is to record the Elements a subject
+                  actually passed through. We assume that if it is known that a
+                  subject passed through a particular Element, then there must
+                  be some information on when it started, even if that
+                  information is imprecise. Thus, SESTDTC may not be null,
+                  although some records may not have all the components (e.g.,
+                  year, month, day, hour, minute) of the date/time value
+                  collected.]
+                Document: IG v3.3
+                Item: Assumption 8|Assumption 9
+                Section: '5.3'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0209
+              Version: '2'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Since there are, by definition, no gaps between Elements, the
+                  value of SEENDTC for one Element will always be the same as
+                  the value of SESTDTC for the next Element.
+                Document: TIG 1.0
+                Item: Assumption 7
+                Section: 2.8.10.24
+              - Cited Guidance: Note that SESTDTC is required, although --STDTC is not required
+                  in any other subject-level dataset. The purpose of the dataset
+                  is to record the Elements a subject actually passed through.
+                  We assume that if it is known that a subject passed through a
+                  particular Element, then there must be some information on
+                  when it started, even if that information is imprecise. Thus,
+                  SESTDTC may not be null, although some records may not have
+                  all the components (e.g., year, month, day, hour, minute) of
+                  the date/time value collected.
+                Document: TIG 1.0
+                Item: Assumption 8
+                Section: 2.8.10.24
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0428
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: SEENDTC
+      operator: empty_within_except_last_row
+      ordering: SESTDTC
+      value: USUBJID
+Core:
+  Id: CORE-000527
+  Status: Published
+  Version: '1'
+Description: Trigger error where element is not the last element and SEENDTC is null.
+Executability: Fully Executable
+Outcome:
+  Message: SEENDTC is null when element is not the last.
+  Output Variables:
+    - SESTDTC
+    - SEENDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - SE
+  Use Case: INDH
+Sensitivity: Record

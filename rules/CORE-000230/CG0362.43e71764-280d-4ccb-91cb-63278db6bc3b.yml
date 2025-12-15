@@ -1,0 +1,73 @@
+# Variable: USUBJID
+# Condition: POOLID ^= null
+# Rule: USUBJID = null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Either USUBJID or POOILD must be populated.
+                Document: Model v2.0
+                Item: USUBJID
+                Section: RELSUB
+              - Cited Guidance: Either USUBJID or POOLID must be populated.
+                Document: Model v2.0
+                Item: POOLID
+                Section: RELSUB
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0362
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Either USUBJID or POOLID must be populated.
+                Document: Model v1.4
+                Section: ''
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0362
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Either USUBJID or POOLID must be populated.
+                Document: Model v1.7
+                Section: Table 4.1.4.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0362
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: POOLID
+      operator: non_empty
+    - name: USUBJID
+      operator: non_empty
+Core:
+  Id: CORE-000230
+  Status: Published
+  Version: '1'
+Description: Verify that when POOLID is populated, USUBJID is not populated
+Executability: Fully Executable
+Outcome:
+  Message: USUBJID must be null when POOLID is populated
+  Output Variables:
+    - POOLID
+    - USUBJID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - RELSUB
+Sensitivity: Record

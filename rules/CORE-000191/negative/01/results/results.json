@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "RFENDTC is missing when ARM is provided.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ARM": "Zanomaline Low Dose (54 mg)",
+            "RFENDTC": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC003",
+          "value": {
+            "ARM": "Zanomaline High Dose (100 mg)",
+            "RFENDTC": null
+          }
+        }
+      ]
+    }
+  ]
+}

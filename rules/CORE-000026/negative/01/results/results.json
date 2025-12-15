@@ -1,0 +1,21 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "The LBTPTNUM variable does not exist when LBTPT does exist.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "LBTPT": "A"
+          }
+        }
+      ]
+    }
+  ]
+}

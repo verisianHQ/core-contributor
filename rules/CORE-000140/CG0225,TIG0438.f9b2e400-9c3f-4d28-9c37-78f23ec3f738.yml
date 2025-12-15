@@ -1,0 +1,101 @@
+# Variable: VISITDY
+# Condition: VISITNUM is NOT in TV.VISITNUM
+# Rule: VISITDY = null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: VISITDY must not be populated for unplanned visits, since
+                  VISITDY is, by definition, the planned study day of visit, and
+                  since the actual study day of an unplanned visit belongs in a
+                  --DY variable.
+                Document: IG v3.4
+                Section: 4.4.5
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0225
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: VISITDY must not be populated for unplanned visits, since
+                  VISITDY is, by definition, the planned study day of visit, and
+                  since the actual study day of an unplanned visit belongs in a
+                  --DY variable.
+                Document: IG v3.3
+                Section: 4.4.5
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0225
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: VISITDY must not be populated for unplanned visits, since
+                  VISITDY is, by definition, the planned study day of visit, and
+                  since the actual study day of an unplanned visit belongs in a
+                  --DY variable.
+                Document: IG v3.2
+                Section: 4.1.4.5
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0225
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: VISITDY must not be populated for unplanned visits, since
+                  VISITDY is, by definition, the planned study day of visit, and
+                  since the actual study day of an unplanned visit belongs in a
+                  --DY variable.
+                Document: TIG 1.0
+                Item: Num 1
+                Section: 2.8.7.5
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0438
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: VISITNUM
+      operator: is_not_contained_by
+      value: $tv_visitnum
+    - name: VISITDY
+      operator: non_empty
+Core:
+  Id: CORE-000140
+  Status: Published
+  Version: '1'
+Description: Trigger error if VISITDY is populated when VISITNUM is not in TV.
+Executability: Fully Executable
+Operations:
+  - domain: TV
+    id: $tv_visitnum
+    name: VISITNUM
+    operator: distinct
+Outcome:
+  Message: VISITDY is not null when VISITNUM is not in TV.VISITNUM
+  Output Variables:
+    - VISITNUM
+    - VISITDY
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Record

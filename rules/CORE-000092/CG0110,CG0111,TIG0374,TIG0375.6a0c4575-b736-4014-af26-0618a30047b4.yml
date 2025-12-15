@@ -1,0 +1,141 @@
+# Variable: --DOSE
+# Condition: --DOSTXT ^= null
+# Rule: --DOSE = null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Not populated when --DOSTXT is populated.
+                Document: Model v2.0
+                Item: --DOSE
+                Section: Interventions
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0110
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Not populated when --DOSE is populated.
+                Document: Model v2.0
+                Item: --DOSTXT
+                Section: Interventions
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0111
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Amount of --TRT when numeric. Not populated when --DOSTXT is
+                  populated.
+                Document: Model v1.4
+                Item: --DOSE Specification
+                Section: 2.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0110
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Not populated when --DOSE is populated
+                Document: Model v1.4
+                Item: --DOSTXT
+                Section: Interventions
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0111
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Amount of --TRT when numeric. Not populated when --DOSTXT is
+                  populated.
+                Document: Model v1.7
+                Item: --DOSE Specification
+                Section: 2.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0110
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Not populated when --DOSE is populated.
+                Document: Model v1.7
+                Item: --DOSTXT
+                Section: Interventions
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0111
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Not populated when --DOSTXT is populated.
+                Document: SDTM v2.1
+                Item: --DOSE
+                Section: 3.1.1 The Interventions Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0374
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Not populated when --DOSE is populated.
+                Document: SDTM v2.1
+                Item: --DOSTXT
+                Section: 3.1.1 The Interventions Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0375
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --DOSTXT
+      operator: non_empty
+    - name: --DOSE
+      operator: non_empty
+Core:
+  Id: CORE-000092
+  Status: Published
+  Version: '1'
+Description: Raise an error when --DOSE ^= null and --DOSTXT ^= null.
+Executability: Fully Executable
+Outcome:
+  Message: Both --DOSE and --DOSTXT values are populated
+  Output Variables:
+    - --DOSE
+    - --DOSTXT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Record

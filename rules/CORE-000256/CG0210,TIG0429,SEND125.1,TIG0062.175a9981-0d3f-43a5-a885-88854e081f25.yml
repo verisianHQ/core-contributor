@@ -1,0 +1,211 @@
+# Variable: ETCD
+# Condition: SEUPDES = null
+# Rule: ETCD ^= 'UNPLAN'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If the sponsor decides that the subject's experience for a
+                  particular\ \ period of time cannot be represented with one of
+                  the planned Elements, then\ \ that period of time should be
+                  represented as an unplanned Element. The value\ \ of ETCD for
+                  an unplanned Element is "UNPLAN" and SEUPDES should\ \ be
+                  populated with a description of the unplanned Element.
+                Document: IG v3.4
+                Item: Assumption 4
+                Section: '5.3'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0210
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If the sponsor decides that the subject's experience for a
+                  particular period of time cannot be represented with one of
+                  the planned Elements, then that period of time should be
+                  represented as an unplanned Element. The value of ETCD for an
+                  unplanned Element is "UNPLAN" and SEUPDES should be populated
+                  with a description of the unplanned Element only if ETCD has
+                  the value of "UNPLAN".
+                Document: IG v3.2
+                Item: Assumption 6
+                Section: 5 SE
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0210
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If the sponsor decides that the subject's experience for a
+                  particular period of time cannot be represented with one of
+                  the planned Elements, then that period of time should be
+                  represented as an unplanned Element. The value of ETCD for an
+                  unplanned Element is "UNPLAN" and SEUPDES should be populated
+                  with a description of the unplanned Element only if ETCD has
+                  the value of "UNPLAN".
+                Document: IG v3.3
+                Item: Assumption 4
+                Section: '5.3'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0210
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: If the applicant decides that the subject's experience for a
+                  particular period of time cannot be represented with one of
+                  the planned elements, then that period of time should be
+                  represented as an unplanned element. The value of ETCD for an
+                  unplanned element is “UNPLAN” and SEUPDES should be populated
+                  with a description of the unplanned element.
+                Document: TIG v1.0
+                Item: Assumption 3
+                Section: 2.8.10.24
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0429
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Description of what happened to the subject during this
+                  unplanned Element.
+                Document: SENDIG v3.0
+                Item: Specification
+                Section: 5.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND125.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: For unplanned Elements, ETCD should be populated with 'UNPLAN',
+                  ELEMENT should be left blank, and SEUPDES should be populated
+                  with a description of the unplanned Element.
+                Document: SENDIG v3.1
+                Item: Specification
+                Section: 5.3.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND125.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: For unplanned Elements, ETCD should be populated with 'UNPLAN',
+                  ELEMENT should be left blank, and SEUPDES should be populated
+                  with a description of the unplanned Element.
+                Document: SENDIG v3.1.1
+                Item: Specification
+                Section: 5.3.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND125.1
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: For unplanned Elements, ETCD should be populated with 'UNPLAN',
+                  ELEMENT should be left blank, and SEUPDES should be populated
+                  with a description of the unplanned Element.
+                Document: SENDIG v3.1
+                Item: Specification
+                Section: 5.3.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND125.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: For unplanned Elements, ETCD should be populated with 'UNPLAN',
+                  ELEMENT should be left blank, and SEUPDES should be populated
+                  with a description of the unplanned Element.
+                Document: SENDIG v3.1.1
+                Item: Specification
+                Section: 5.3.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND125.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: For unplanned Elements, ETCD should be populated with 'UNPLAN',
+                  ELEMENT should be left blank, and SEUPDES should be populated
+                  with a description of the unplanned Element.
+                Document: SENDIG v3.1.1
+                Item: Specification
+                Section: 5.3.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND125.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: For unplanned Elements, ETCD should be populated with “UNPLAN”,
+                  ELEMENT should be left blank, and SEUPDES should be populated
+                  with a description of the unplanned Element.
+                Document: TIG v1.0
+                Item: Assumption 5
+                Section: 2.8.9.26
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0062
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: SEUPDES
+      operator: empty
+    - name: ETCD
+      operator: equal_to
+      value: UNPLAN
+Core:
+  Id: CORE-000256
+  Status: Published
+  Version: '1'
+Description: Raise an error when ETCD = 'UNPLAN', SEUPDES = null
+Executability: Fully Executable
+Outcome:
+  Message: Missing value for SEUPDES, when ETCD='UNPLAN'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - SE
+  Use Case: INDH, NONCLIN
+Sensitivity: Record

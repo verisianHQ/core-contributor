@@ -1,0 +1,61 @@
+{
+  "datasets": [
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "success",
+      "execution_message": "ECOCCUR is not 'N', ECSTAT and ECDOSTXT are both empty but ECDOSE is less than or equal to 0.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 6,
+          "SEQ": 29,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ECDOSE": -1.0,
+            "ECDOSTXT": null,
+            "ECOCCUR": "Y",
+            "ECSTAT": null,
+            "ECSTDTC": "2012-12-28"
+          }
+        },
+        {
+          "row": 13,
+          "SEQ": 124,
+          "USUBJID": "CDISC008",
+          "value": {
+            "ECDOSE": 0.0,
+            "ECDOSTXT": null,
+            "ECOCCUR": "Y",
+            "ECSTAT": null,
+            "ECSTDTC": "2014-09-11"
+          }
+        },
+        {
+          "row": 15,
+          "SEQ": 126,
+          "USUBJID": "CDISC008",
+          "value": {
+            "ECDOSE": 0.0,
+            "ECDOSTXT": null,
+            "ECOCCUR": "Y",
+            "ECSTAT": null,
+            "ECSTDTC": "2014-09-13"
+          }
+        },
+        {
+          "row": 16,
+          "SEQ": 127,
+          "USUBJID": "CDISC008",
+          "value": {
+            "ECDOSE": -5.0,
+            "ECDOSTXT": null,
+            "ECOCCUR": null,
+            "ECSTAT": null,
+            "ECSTDTC": "2014-09-14"
+          }
+        }
+      ]
+    }
+  ]
+}

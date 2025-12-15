@@ -1,0 +1,21 @@
+{
+  "datasets": [
+    {
+      "dataset": "mi.xpt",
+      "domain": "MI",
+      "execution_status": "success",
+      "execution_message": "MICONCU is present in a dataset other than MS.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "MICONCU": "ug/dL"
+          }
+        }
+      ]
+    }
+  ]
+}

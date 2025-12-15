@@ -1,0 +1,211 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Using SDTM-specified standard domain names and prefixes where
+                  applicable.
+                Document: SDTMIG v3.4
+                Section: 3.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0001
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Check the CDISC Controlled Terminology [see Appendix C -
+                  Controlled Terminology] for reserved two-character domain
+                  identifiers or abbreviations. If one has not been assigned by
+                  CDISC, then the sponsor may select the unique two-character
+                  domain code to be used consistently throughout the submission.
+                Document: IG v3.2
+                Item: 3.d
+                Section: '2.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0001
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Determine the domain code, one that is not a domain code in the
+                  CDISC Controlled Terminology codelist "SDTM Domain
+                  Abbreviations" available at
+                  http://www.cancer.gov/research/resources/terminology/cdisc. If
+                  it desired to have this domain code as part of CDISC
+                  controlled terminology, then submit a request to
+                  https://ncitermform.nci.nih.gov/ncitermform/?version=cdisc.
+                  The sponsor-selected, two-character domain code should be used
+                  consistently throughout the submission.
+                Document: IG v3.3
+                Item: 3.e
+                Section: '2.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0001
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: A dataset is created using a domain specification in this guide
+                  when the scientific nature or role of the data is within the
+                  scope of a domain. Domains are extended or custom domain
+                  specifications are only used when data are different in nature
+                  and are not in scope for domains in this guide.
+                Document: TIG 1.0
+                Item: Table 2 Num 2
+                Section: '2.5'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0289
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: See SEND CT for a list of standard and reserved domain codes
+                Document: SENDIG v3.0
+                Item: Text
+                Section: 4.1.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND16
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: See SEND CT for a list of standard and reserved domain codes
+                Document: SENDIG v3.1
+                Item: Text
+                Section: 4.1.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND16
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: See SEND CT for a list of standard and reserved domain codes
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.1.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND16
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: See SEND CT for a list of standard and reserved domain codes
+                Document: SENDIG v3.1
+                Item: Text
+                Section: 4.1.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND16
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: See SEND CT for a list of standard and reserved domain codes
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND16
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: See SEND CT for a list of standard and reserved domain codes
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND16
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: To support implementation of standards, controlled terminology
+                  will be used to name domain datasets and variables in datasets
+                  when applicable.
+                Document: TIG v1.0
+                Item: Standards for Tabulation
+                Section: 2.3.
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0090
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+# Variable: DOMAIN
+# Condition: Not custom domain
+# Rule: DOMAIN = valid Domain Code published by CDISC
+Check:
+  all:
+    - name: $domain_is_custom
+      operator: equal_to
+      value: false
+    - name: define_variable_ccode
+      operator: equal_to
+      value: C66734
+    - name: define_variable_codelist_coded_codes
+      operator: is_not_contained_by
+      value: $domain_lib_ccode
+Core:
+  Id: CORE-000929
+  Status: Published
+  Version: '1'
+Description: Raise and error when the DOMAIN Code is not a valid Domain Code
+  published by CDISC.
+Executability: Fully Executable
+Operations:
+  - id: $domain_is_custom
+    operator: domain_is_custom
+  - codelists:
+      - DOMAIN
+    id: $domain_lib_ccode
+    level: term
+    operator: codelist_terms
+    returntype: code
+Outcome:
+  Message: DOMAIN Code is not a published DOMAIN Code in CDISC Controlled Terminology.
+  Output Variables:
+    - $domain_lib_ccode
+    - define_variable_codelist_coded_codes
+Rule Type: Define Item Metadata Check against Library Metadata
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD, NONCLIN
+Sensitivity: Record

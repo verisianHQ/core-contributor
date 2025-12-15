@@ -1,0 +1,53 @@
+# Variable: QNAM
+# Condition: Population flags included in submission
+# Rule: Population flags in SUPPDM
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'When study population flags are included in SDTM, they are
+                  treated as Supplemental Qualifiers (see Section 8: 8.4,
+                  Relating Non-Standard Variables Values To A Parent Domain) to
+                  DM and placed in the SUPPDM dataset. Controlled terms for
+                  these subject-level population flags, (e.g., COMPLT, SAFETY,
+                  ITT and PPROT) are listed in Appendix C2 - Supplemental
+                  Qualifier Name Codes.'
+                Document: IG v3.2
+                Item: Assumption 5
+                Section: 5|Appendix C2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0138
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+Check:
+  all:
+    - name: QNAM
+      operator: is_contained_by_case_insensitive
+      value:
+        - COMPLT
+        - FULLSET
+        - ITT
+        - PPROT
+        - SAFETY
+Core:
+  Id: CORE-000533
+  Status: Published
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: 'A SUPP domain other than SUPPDM contains population flags (name
+    fragments reserved)'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+  Domains:
+    Exclude:
+      - SUPPDM
+Sensitivity: Dataset

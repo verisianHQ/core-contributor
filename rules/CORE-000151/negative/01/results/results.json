@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVAL is null when TSVAL1 is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 24,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": null,
+            "TSVAL1": "test 123"
+          }
+        }
+      ]
+    }
+  ]
+}

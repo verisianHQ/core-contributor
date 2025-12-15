@@ -1,0 +1,60 @@
+# Variable: EPOCH
+# Condition: Multiple events per subject where DSCAT = 'DISPOSITION EVENT'
+# Rule: EPOCH ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'A sponsor may collect one disposition event for the trial as a
+                  whole, or they may collect disposition for each Epoch of the
+                  trial. When disposition is collected for each Epoch, the
+                  variable EPOCH should be included in the DS dataset. When
+                  EPOCH is populated for disposition events (records with DSCAT
+                  = DISPOSITION EVENT), EPOCH is the name of the Epoch for the
+                  disposition event described in the record. This is a subtly
+                  different meaning from that of EPOCH when it is used in other
+                  general-observation-class domains, where EPOCH, as a Timing
+                  variable, is the name of the Epoch during which --STDTC or
+                  --DTC falls. The values of EPOCH are drawn from the Trial Arms
+                  domain, Section 7.2 - Experimental Design: Trial Arms (TA)'
+                Document: IG v3.2
+                Item: 'DS Assumption 3.C:'
+                Section: '6.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0063
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+Check:
+  all:
+    - name: DSCAT
+      operator: present_on_multiple_rows_within
+      within: USUBJID
+    - name: DSCAT
+      operator: equal_to
+      value: DISPOSITION EVENT
+      value_is_literal: true
+    - name: EPOCH
+      operator: empty
+Core:
+  Id: CORE-000329
+  Status: Published
+  Version: '1'
+Description: Raise an error when multiple records within same USUBJID exist with
+  DSCAT = DISPOSITION EVENT but EPOCH is empty
+Executability: Fully Executable
+Outcome:
+  Message: Multiple records within same USUBJID exist with DSCAT = DISPOSITION
+    EVENT but EPOCH is empty
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - DS
+Sensitivity: Record

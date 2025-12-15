@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "Missing value for LBSTRESC, when LBSTRESU is provided",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "LBSTRESC": null,
+            "LBSTRESU": "mg/L"
+          }
+        }
+      ]
+    }
+  ]
+}

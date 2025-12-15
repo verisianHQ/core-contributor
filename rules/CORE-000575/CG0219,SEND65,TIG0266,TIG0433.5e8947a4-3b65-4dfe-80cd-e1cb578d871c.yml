@@ -1,0 +1,244 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Timing variables (SDTM Table 2.2.5) are an essential component
+                  of all SDTM subject-level domain datasets. In general, all
+                  domains based on the three general observation classes should
+                  have at least one Timing variable. In the Events or
+                  Interventions general observation class, this could be the
+                  start date of the event or intervention. In the Findings
+                  observation class, where data are usually collected at
+                  multiple visits, at least one Timing variable must be used.
+                Document: IG v3.4
+                Section: '4.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0219
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: In general, all domains based on the three general observation
+                  classes should have at least one Timing variable. in the
+                  Events or Interventions general observation class this could
+                  be the start date of the event or intervention. in the
+                  Findings observation class where data are usually collected at
+                  multiple visits, at least one Timing variable must be used.
+                Document: IG v3.2
+                Section: 4.1.4
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0219
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Timing variables (SDTM Table 2.2.5) are an essential component
+                  of all SDTM subject-level domain datasets. In general, all
+                  domains based on the three general observation classes should
+                  have at least one Timing variable. In the Events or
+                  Interventions general observation class, this could be the
+                  start date of the event or intervention. In the Findings
+                  observation class, where data are usually collected at
+                  multiple visits, at least one Timing variable must be used.
+                Document: IG v3.3
+                Section: '4.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0219
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Timing variables (SDTM Table 2.2.5) are an
+                  essential    component of all SDTM subject-level domain
+                  datasets. In general, all domains based on the three general
+                  observation classes should have at least one Timing variable.
+                  In the Events or Interventions general observation class this
+                  could be the start date of the event or intervention. In the
+                  Findings observation class where data are usually collected at
+                  multiple study days, either --DTC or --DY must beused.
+                Document: SENDIG v3.0
+                Item: Text
+                Section: 4.4.
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND65
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Timing variables (SDTM Table 2.2.5) are an essential component
+                  of all SDTM subject-level domain datasets. In general, all
+                  domains based on the three general observation classes should
+                  have at least one Timing variable. In the Events or
+                  Interventions general observation class this could be the
+                  start date of the event or intervention. In the Findings
+                  observation class where data are usually collected at multiple
+                  study days, either --DTC or --DY must be used.
+                Document: SENDIG v3.1
+                Item: Text
+                Section: 4.4.
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND65
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Timing variables (SDTM Table 2.2.5) are an essential component
+                  of all SDTM subject-level domain datasets. In general, all
+                  domains based on the three general observation classes should
+                  have at least one Timing variable. In the Events or
+                  Interventions general observation class this could be the
+                  start date of the event or intervention. In the Findings
+                  observation class where data are usually collected at multiple
+                  study days, either --DTC or --DY must be used.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.4.
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND65
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Timing variables (SDTM Table 2.2.5) are an essential component
+                  of all SDTM subject-level domain datasets. In general, all
+                  domains based on the three general observation classes should
+                  have at least one Timing variable. In the Events or
+                  Interventions general observation class this could be the
+                  start date of the event or intervention. In the Findings
+                  observation class where data are usually collected at multiple
+                  study days, either --DTC or --DY must be used.
+                Document: SENDIG v3.1
+                Item: Text
+                Section: 4.4.
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND65
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Timing variables (SDTM Table 2.2.5) are an essential component
+                  of all SDTM subject-level domain datasets. In general, all
+                  domains based on the three general observation classes should
+                  have at least one Timing variable. In the Events or
+                  Interventions general observation class this could be the
+                  start date of the event or intervention. In the Findings
+                  observation class where data are usually collected at multiple
+                  study days, either --DTC or --DY must be used.
+                Document: SENDIG v3.1.1
+                Section: 4.4.
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND65
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Timing variables (SDTM Table 2.2.5) are an essential component
+                  of all SDTM subject-level domain datasets. In general, all
+                  domains based on the three general observation classes should
+                  have at least one Timing variable. In the Events or
+                  Interventions general observation class this could be the
+                  start date of the event or intervention. In the Findings
+                  observation class where data are usually collected at multiple
+                  study days, either --DTC or --DY must be used.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.4.
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND65
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Include the applicable SDTM Timing variables. In general, the
+                  domain must have at least one timing variable.
+                Document: TIG v1.0
+                Item: 4d
+                Section: 2.8.3 How to Create New Specifications
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0266
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Include the applicable SDTM Timing variables. In general, the
+                  domain must have at least one timing variable.
+                Document: TIG v1.0
+                Item: 4d
+                Section: 2.8.3
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0433
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: $dataset_variables
+      operator: shares_no_elements_with
+      value: $timing_variables
+Core:
+  Id: CORE-000575
+  Status: Published
+  Version: '1'
+Description: There must be at least one timing variable for any of the domains
+  based on the three general observation classes
+Executability: Partially Executable - Possible Underreporting
+Operations:
+  - id: $dataset_variables
+    operator: get_column_order_from_dataset
+  - id: $timing_variables
+    key_name: role
+    key_value: Timing
+    operator: get_model_filtered_variables
+Outcome:
+  Message: No timing variable is provided
+  Output Variables:
+    - $dataset_variables
+    - $timing_variables
+Rule Type: Variable Metadata Check
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+      - INTERVENTIONS
+      - EVENTS
+  Domains:
+    Exclude:
+      - IE
+      - SC
+  Use Case: NONCLIN, INDH
+Sensitivity: Dataset

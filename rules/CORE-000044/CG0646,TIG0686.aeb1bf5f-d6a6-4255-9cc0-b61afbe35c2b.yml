@@ -1,0 +1,53 @@
+# Variable: 
+# Condition: 
+# Rule: SJ dataset not present
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The SJ dataset must not be used in human clinical trials.
+                Document: SDTM v2.0
+                Section: Subject Repro Stages
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0646
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Not in human clinical trials.
+                Document: SDTM v2.1
+                Section: Section 3.2.3.2 Subject Repro Stages
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0686
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  any:
+    - name: SJ
+      operator: exists
+Core:
+  Id: CORE-000044
+  Status: Published
+  Version: '1'
+Description: Raise an error when SJ dataset is present.
+Executability: Fully Executable
+Outcome:
+  Message: SJ dataset is present.
+Rule Type: Domain Presence Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - SJ
+  Use Case: INDH, PROD
+Sensitivity: Dataset

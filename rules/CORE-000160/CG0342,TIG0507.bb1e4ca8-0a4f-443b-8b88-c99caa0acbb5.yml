@@ -1,0 +1,89 @@
+# Variable: --TRT
+# Condition: 
+# Rule: --TRT ^= 'OTHER'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Interventions: If a list of specific treatments is provided
+                  along with "Other, Specify", --TRT should be populated with
+                  the name of the treatment found in the specified text.'
+                Document: IG v3.4
+                Section: 4.2.7.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0342
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Interventions: If a list of specific treatments is provided
+                  along with "Other, Specify", --TRT should be populated with
+                  the name of the treatment found in the specified text.'
+                Document: IG v3.3
+                Section: 4.2.7.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0342
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Interventions: If a list of specific treatments is provided
+                  along with "Other, Specify", --TRT should be populated with
+                  the name of the treatment found in the specified text.'
+                Document: IG v3.2
+                Section: 4.1.2.7.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0342
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: For Interventions general observations class domains, each
+                  collected value will be represented in --TRT in its own
+                  record.
+                Document: TIG 1.0
+                Item: Num 3
+                Section: 2.8.7.4
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0507
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --TRT
+      operator: equal_to
+      value: OTHER
+Core:
+  Id: CORE-000160
+  Status: Published
+  Version: '1'
+Description: Raise an error when --TRT = 'OTHER'
+Executability: Fully Executable
+Outcome:
+  Message: --TRT is equal to 'OTHER'
+  Output Variables:
+    - --TRT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Record

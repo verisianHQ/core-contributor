@@ -1,0 +1,41 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AESTDY is not null when either AESTDTC or DM.RFSTDTC do not contain complete values in their date portion",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "001",
+          "value": {
+            "AESTDTC": "2005-10",
+            "AESTDY": 1.0,
+            "RFSTDTC": "2022-03-20"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "002",
+          "value": {
+            "AESTDTC": "2005-10-13T13:05",
+            "AESTDY": 1.0,
+            "RFSTDTC": "2022-03"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

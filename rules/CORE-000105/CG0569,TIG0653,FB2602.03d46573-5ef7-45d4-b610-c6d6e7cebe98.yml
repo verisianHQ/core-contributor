@@ -1,0 +1,109 @@
+# Variable: --STRESC
+# Condition: --LOBXFL = 'Y'
+# Rule: --STRESC ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Operationally-derived indicator used to identify the last
+                  non-missing value prior to RFXSTDTC. Result value is in
+                  --STRESC.
+                Document: Model v2.0
+                Item: --STRESC
+                Section: Findings
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0569
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Operationally-derived indicator used to identify the last
+                  non-missing value prior to RFXSTDTC. Should be "Y" or null.
+                Document: Model v1.7
+                Item: --LOXBFL
+                Section: Table 2.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0569
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Operationally-derived indicator used to identify the last
+                  non-missing value prior to RFXSTDTC. Result value is in
+                  --STRESC.
+                Document: SDTM v2.1
+                Item: --STRESC
+                Section: 3.1.3 The Findings Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0653
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Records with a baseline flag should have a corresponding
+                  standard result with a standardized unit where available.'
+                Document: FDA
+                Section: FDAB026
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB2602
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Records with a baseline flag should have a corresponding
+                  standard result with a standardized unit where available.'
+                Document: FDA
+                Section: FDAB026
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB2602
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: --LOBXFL
+      operator: equal_to
+      value: Y
+      value_is_literal: true
+    - name: --STRESC
+      operator: empty
+Core:
+  Id: CORE-000105
+  Status: Published
+  Version: '1'
+Description: Raise an error when --LOBXFL = 'Y' and --STRESC is empty.
+Executability: Fully Executable
+Outcome:
+  Message: --LOBXFL = 'Y', but --STRESC is empty.
+  Output Variables:
+    - --LOBXFL
+    - --TESTCD
+    - --STRESC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Record

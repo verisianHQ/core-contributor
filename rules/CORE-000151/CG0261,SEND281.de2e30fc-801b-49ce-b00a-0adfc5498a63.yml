@@ -1,0 +1,162 @@
+# Variable: TSVAL
+# Condition: TSVAL1 ^= null
+# Rule: TSVAL ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Text over 200 characters can be added to additional columns
+                  TSVAL1-TSVALn.
+                Document: IG v3.4
+                Item: Specification
+                Section: 7.4.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0261
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Text over 200 characters can be added to additional columns
+                  TSVAL1-TSVALn.
+                Document: IG v3.2
+                Item: Specification
+                Section: '7.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0261
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Text over 200 characters can be added to additional columns
+                  TSVAL1-TSVALn.
+                Document: IG v3.3
+                Item: Specification
+                Section: 7.4.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0261
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      # Extended for SEND rule SEND281 by Jozef
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Trial Summary allows for one TSVAL value to span multiple
+                  variables (TSVAL-TSVALn), in order to accommodate values
+                  longer than 200 characters.
+                Document: IG v3.0
+                Item: Specification
+                Section: 7.6.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND281
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Trial Summary allows for one TSVAL value to span multiple
+                  variables (TSVAL-TSVALn), in order to accommodate values
+                  longer than 200 characters.
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.6.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND281
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Trial Summary allows for one TSVAL value to span multiple
+                  variables (TSVAL-TSVALn), in order to accommodate values
+                  longer than 200 characters.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.6.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND281
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Trial Summary allows for one TSVAL value to span multiple
+                  variables (TSVAL-TSVALn), in order to accommodate values
+                  longer than 200 characters.
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.6.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND281
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Trial Summary allows for one TSVAL value to span multiple
+                  variables (TSVAL-TSVALn), in order to accommodate values
+                  longer than 200 characters.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.6.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND281
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Trial Summary allows for one TSVAL value to span multiple
+                  variables (TSVAL-TSVALn), in order to accommodate values
+                  longer than 200 characters.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.6.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND281
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: TSVAL1
+      operator: non_empty
+    - name: TSVAL
+      operator: empty
+Core:
+  Id: CORE-000151
+  Status: Published
+  Version: '1'
+Description: Trigger error when TSVAL1 is populated and TSVAL is null
+Executability: Fully Executable
+Outcome:
+  Message: TSVAL is null when TSVAL1 is populated.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

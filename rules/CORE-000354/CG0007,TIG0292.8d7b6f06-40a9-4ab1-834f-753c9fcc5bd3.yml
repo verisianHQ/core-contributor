@@ -1,0 +1,110 @@
+# Variable: --DY
+# Condition: The date portion of --DTC ^= complete date or the date portion of DM.RFSTDTC ^= complete date
+# Rule: --DY = null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The permissible Study Day variables (--DY, --STDY, and --ENDY) .
+                  . . are determined by comparing the date portion of the
+                  respective date/time variables (--DTC, --STDTC, and --ENDTC)
+                  to the date portion of the Subject Reference Start Date
+                  (RFSTDTC from the Demographics domain)
+                Document: SDTMIG v3.4
+                Section: 4.4.4
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0007
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The permissible Study Day variables (--DY, --STDY, and --ENDY) .
+                  . . are determined by comparing the date portion of the
+                  respective date/time variables (--DTC, --STDTC, and --ENDTC)
+                  to the date portion of the Subject Reference Start Date
+                  (RFSTDTC from the Demographics domain).
+                Document: SDTMIG v3.3
+                Section: 4.4.4
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0007
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The permissible Study Day variables (--DY, --STDY, and --ENDY) .
+                  . . are determined by comparing the date portion of the
+                  respective date/time variables (--DTC, --STDTC, and --ENDTC)
+                  to the date portion of the Subject Reference Start Date
+                  (RFSTDTC from the Demographics domain).
+                Document: SDTMIG v3.2
+                Section: 4.1.4.4
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0007
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: 'TIG'
+        References:
+          - Citations:
+              - Cited Guidance: Variables --DY, --STDY, and --ENDY represent the timing of
+                  observations in days relative to the reference start date in
+                  RFSTDTC where the value of --DY is the relative day of the
+                  date populated in --DTC for the observation,--STDTC is the
+                  relative day of the date populated in --STDTC for the
+                  observation; an--ENDY is the relative day of the of the date
+                  populated in --ENDTC for the observation.
+                Document: TIG 1.0
+                Section: 2.8.7.6
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0292
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --DY
+      operator: non_empty
+    - any:
+        - name: --DTC
+          operator: is_incomplete_date
+        - name: RFSTDTC
+          operator: is_incomplete_date
+Core:
+  Id: CORE-000354
+  Status: Published
+  Version: '1'
+Description: Raise an error when the date portion of --DTC is an incomplete date
+  or the date portion of DM.RFSTDTC is an incomplete date, but --DY is not empty
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: DM
+Outcome:
+  Message: The date portion of --DTC is not complete date or the date portion of
+    DM.RFSTDTC is not complete date, but --DY is not empty
+  Output Variables:
+    - --DY
+    - --DTC
+    - RFSTDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Record

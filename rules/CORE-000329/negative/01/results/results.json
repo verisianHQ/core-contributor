@@ -1,0 +1,49 @@
+{
+  "datasets": [
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "Multiple records within same USUBJID exist with DSCAT = DISPOSITION EVENT but EPOCH is empty",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "015246-076-0003-00003",
+          "value": {
+            "DSCAT": "DISPOSITION EVENT",
+            "EPOCH": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "015246-076-0003-00003",
+          "value": {
+            "DSCAT": "DISPOSITION EVENT",
+            "EPOCH": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "015246-076-0003-00003",
+          "value": {
+            "DSCAT": "DISPOSITION EVENT",
+            "EPOCH": null
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "015246-036-0002-00004",
+          "value": {
+            "DSCAT": "DISPOSITION EVENT",
+            "EPOCH": null
+          }
+        }
+      ]
+    }
+  ]
+}

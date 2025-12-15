@@ -1,0 +1,54 @@
+# Variable: --DTHREL
+# Condition: 
+# Rule: --DTHREL not present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: --DTHREL is not be used in human clinical trials.
+                Document: SDTM v2.0
+                Section: Findings
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0627
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Not in human clinical trials.
+                Document: SDTM v2.1
+                Item: --DTHREL
+                Section: Findings
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0668
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --DTHREL
+      operator: exists
+Core:
+  Id: CORE-000054
+  Status: Published
+  Version: '1'
+Description: Raise an error when --DTHREL is present.
+Executability: Fully Executable
+Outcome:
+  Message: --DTHREL is present.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Dataset

@@ -1,0 +1,65 @@
+# Variable: --MODIFY
+# Condition: --TERM modified for coding
+# Rule: --MODIFY ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A value which represents an alteration to a collected value for
+                  coding purposes. Synonym Qualifier of --TERM.
+                Document: Model v2.0
+                Item: --MODIFY
+                Section: Events
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0047
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If the value for --TERM is modified for coding purposes, then
+                  the modified text is placed here.
+                Document: Model v1.4
+                Item: Table 2.2.2
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0047
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If the value for --TERM is modified for coding purposes, then
+                  the modified text is placed here.
+                Document: Model v1.7
+                Item: Table 2.2.2.1
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0047
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Core:
+  Id: CORE-000346
+  Status: Draft
+  Version: '1'
+Description: Trigger error when --TERM has been modified for coding and --MODIFY is null
+Executability: Not Executable
+Outcome:
+  Message: --MODIFY is not populated when --TERM has been modified for coding
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

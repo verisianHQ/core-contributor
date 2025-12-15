@@ -1,0 +1,82 @@
+# Variable: TSVAL
+# Condition: TSPARMCD = 'CURTRT' and record exists where TSPARMCD = 'ADDON' and TSVAL = 'Y'
+# Rule: TSVAL ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: IG v3.2[7.4][Assumption 3][Further information about the
+                  parameters is included below in Table 1. TSVAL may have
+                  controlled terminology depending on the value of TSPARMCD.]|IG
+                  v3.2[Appendix C1][Required when ADDON equals "Y"]
+                Document: IG v3.2
+                Item: IG v3.2[7.4][Assumption 3]|IG v3.2[Appendix C1]
+                Section: IG v3.2[7.4]|IG v3.2[Appendix C1]
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0275
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: IG v3.3[7.4.2][Assumption 3][Further information about the
+                  parameters is included Appendix C1, Trial Summary Codes. TSVAL
+                  may have controlled terminology depending on the value of
+                  TSPARMCD. Conditions for including parameters are included in
+                  Appendix C1, Trial Summary Codes.]|IG v3.3[Appendix
+                  C1][Required when ADDON equals "Y"]
+                Document: IG v3.3
+                Item: IG v3.3[7.4.2][Assumption 3]|IG v3.3[Appendix C1]
+                Section: IG v3.3[7.4.2]|IG v3.3[Appendix C1]
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0275
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: TSPARMCD
+      operator: equal_to
+      value: CURTRT
+    - name: $ADDON_Y
+      operator: greater_than_or_equal_to
+      value: 1
+    - name: TSVAL
+      operator: empty
+Core:
+  Id: CORE-000532
+  Status: Published
+  Version: '1'
+Description: 'Raise an error when a record exists in TS where TSPARMCD = ADDON
+  and TSVAL = Y but TSVAL for TSPARMCD = CURTRT is empty.'
+Executability: Fully Executable
+Operations:
+  - filter:
+      TSPARMCD: ADDON
+      TSVAL: "Y"
+    group:
+      - TSGRPID
+    id: $ADDON_Y
+    operator: record_count
+Outcome:
+  Message: 'A record exists in TS where TSPARMCD = ADDON and TSVAL = Y but TSVAL
+    for TSPARMCD = CURTRT is empty.'
+  Output Variables:
+    - TSGRPID
+    - TSPARMCD
+    - TSVAL
+    - $ADDON_Y
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

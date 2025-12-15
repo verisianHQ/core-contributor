@@ -1,0 +1,63 @@
+{
+  "datasets": [
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "Primary analysis used but MHBODSYS and MHSOC are not equal",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC003",
+          "value": {
+            "MHBODSYS": null,
+            "MHSOC": "Neurodegenerative Diseases",
+            "MHTERM": "ALZHEIMER'S DISEASE"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC005",
+          "value": {
+            "MHBODSYS": "Neurodegenerative Diseases",
+            "MHSOC": "Neurodegenerative Diseases 1",
+            "MHTERM": "ALZHEIMER'S DISEASE"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "CDISC006",
+          "value": {
+            "MHBODSYS": "Neurodegenerative Diseases",
+            "MHSOC": null,
+            "MHTERM": "ALZHEIMER'S DISEASE"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 1,
+          "USUBJID": "CDISC007",
+          "value": {
+            "MHBODSYS": "Neurodegenerative Diseases",
+            "MHSOC": "Bodysystem 2",
+            "MHTERM": "ALZHEIMER'S DISEASE"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 1,
+          "USUBJID": "CDISC008",
+          "value": {
+            "MHBODSYS": "NEURODEGENERATIVE DISEASES",
+            "MHSOC": "Neurodegenerative Diseases",
+            "MHTERM": "ALZHEIMER'S DISEASE"
+          }
+        }
+      ]
+    }
+  ]
+}

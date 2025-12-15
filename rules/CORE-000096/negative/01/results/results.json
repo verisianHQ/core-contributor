@@ -1,0 +1,74 @@
+{
+  "datasets": [
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "success",
+      "execution_message": "ECPORTOT variable is present, when ECLOC variable does not exist in a dataset.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "ECLOC": "Not in dataset",
+            "ECPORTOT": "SINGLE"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "pr.xpt",
+      "domain": "PR",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AEPORTOT variable is present, when AELOC variable does not exist in a dataset.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "AELOC": "Not in dataset",
+            "AEPORTOT": "PARTIAL"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "oe.xpt",
+      "domain": "OE",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "tu.xpt",
+      "domain": "TU",
+      "execution_status": "success",
+      "execution_message": "TUPORTOT variable is present, when TULOC variable does not exist in a dataset.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "TULOC": "Not in dataset",
+            "TUPORTOT": "SINGLE"
+          }
+        }
+      ]
+    }
+  ]
+}

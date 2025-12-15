@@ -1,0 +1,104 @@
+# Variable: --REASND
+# Condition: --PRESP not present in dataset
+# Rule: --REASND not present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: --PRESP[An indication that the event or intervention was
+                  prospectively stated or detailed on the CRF.]|--OCCUR[An
+                  indication as to whether a prespecified event or intervention
+                  has occurred.]
+                Document: SDTM v2.0
+                Section: Events|Interventions
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0053
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: (--PRESP/Events) Used to indicate whether the event describe by
+                  --TERM was pre-specified on a CRF. Value is Y for
+                  pre-specified events, null for spontaneously reported events.
+                  (--PRESP/Interventions) Used when a specific intervention is
+                  pre-specified on a CRF. Values should be "Y" or null.
+                  (--REASND) Used in conjunction with --STAT when value is NOT
+                  DONE
+                Document: SDTM v1.7
+                Section: 2.2.1 (Interventions )|2.2.2 (Events)
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0053
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: (--PRESP/Events) Used to indicate whether the event describe by
+                  --TERM was pre-specified on a CRF. Value is Y for
+                  pre-specified events, null for spontaneously reported events.
+                  (--PRESP/Interventions) Used when a specific intervention is
+                  pre-specified on a CRF. Values should be "Y" or null.
+                  (--REASND) Used in conjunction with --STAT when value is NOT
+                  DONE
+                Document: SDTM v1.4
+                Section: 2.2.1 (Interventions )|2.2.2 (Events)
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0053
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: --PRESP[An indication that the event or intervention was
+                  prospectively stated or detailed on the CRF.]|--OCCUR[An
+                  indication as to whether a prespecified event or intervention
+                  has occurred.]
+                Document: SDTM v2.1
+                Item: '--PRESP|--STAT'
+                Section: 3.1.2 The Events Observation Class|3.1.2 The Interventions Observation
+                  Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0329
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --PRESP
+      operator: not_exists
+    - name: --REASND
+      operator: exists
+Core:
+  Id: CORE-000030
+  Status: Published
+  Version: '1'
+Description: Raise and error when --REASND is present in dataset and --PRESP is
+  not present in dataset
+Executability: Fully Executable
+Outcome:
+  Message: --REASND should not be present in dataset when --PRESP is not present
+    in dataset
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+      - INTERVENTIONS
+  Domains:
+    Exclude:
+      - DS
+      - DV
+      - EX
+  Use Case: INDH, PROD
+Sensitivity: Dataset

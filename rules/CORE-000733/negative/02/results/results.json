@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSPARMCD = RANDQT record is not present",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "$rand_count": "Operation variable not found",
+            "$trt_count": 1,
+            "TSPARMCD": "TRT"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "$rand_count": "Operation variable not found",
+            "$trt_count": 1,
+            "TSPARMCD": "RAND"
+          }
+        }
+      ]
+    }
+  ]
+}

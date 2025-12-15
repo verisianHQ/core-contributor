@@ -1,0 +1,45 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Subject has no records in EX but ACTARMCD is not equal to SCRNFAIL, NOTASSGN or NOTTRT.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "015246-076-0003-00003",
+          "value": {
+            "ACTARMCD": "RANDOM"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "015246-300-0004-00002",
+          "value": {
+            "ACTARMCD": "RANDOM"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "015246-999-0004-9999",
+          "value": {
+            "ACTARMCD": "RANDOM"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000366, dataset=EX",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

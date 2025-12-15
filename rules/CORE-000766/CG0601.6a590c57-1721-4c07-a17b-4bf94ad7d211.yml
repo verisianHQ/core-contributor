@@ -1,0 +1,55 @@
+# Variable: --OBJ
+# Condition: Events parent record exists and DECOD = null
+# Rule: --OBJ = --TERM
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: When findings are collected about an event or intervention, and
+                  the name of the event or intervention is collected in an
+                  "Other, specify" CRF field, the value in --OBJ variable
+                  depends on whether the FA record has a parent record and
+                  whether the "Other, specify" value was coded.
+                Document: IG v3.4
+                Section: '4.2.7.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0601
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+Check:
+  all:
+    - name: --DECOD
+      operator: empty
+    - name: --TERM
+      operator: not_equal_to
+      value: RELREC.FAOBJ
+Core:
+  Id: CORE-000766
+  Status: Published
+  Version: '1'
+Description: 'When findings are collected, and the Events parent record exists
+  and --DECOD is null, FAOBJ should not be equal to --TERM'
+Executability: Fully Executable
+Match Datasets:
+  - Name: RELREC
+    Wildcard: FA
+Outcome:
+  Message: Related record is present in the parent domain dataset and "Other,
+    specify" value was coded.
+  Output Variables:
+    - --DECOD
+    - --TERM
+    - RELREC.FAOBJ
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

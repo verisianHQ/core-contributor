@@ -1,0 +1,106 @@
+# Variable: ETCD
+# Condition: SEUPDES ^= null
+# Rule: ETCD = 'UNPLAN'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If the sponsor decides that the subject's experience for a
+                  particular period of time cannot be represented with one of
+                  the planned Elements, then that period of time should be
+                  represented as an unplanned Element. The value of ETCD for an
+                  unplanned Element is "UNPLAN" and SEUPDES should be populated
+                  with a description of the unplanned Element.
+                Document: IG v3.4
+                Item: Assumption 4
+                Section: '5.3'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0211
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If the sponsor decides that the subject's experience for a
+                  particular period of time cannot be represented with one of
+                  the planned Elements, then that period of time should be
+                  represented as an unplanned Element. The value of ETCD for an
+                  unplanned Element is "UNPLAN" and SEUPDES should be populated
+                  with a description of the unplanned Element only if ETCD has
+                  the value of "UNPLAN".
+                Document: IG v3.2
+                Item: Assumption 6
+                Section: 5 SE
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0211
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If the sponsor decides that the subject's experience for a
+                  particular period of time cannot be represented with one of
+                  the planned Elements, then that period of time should be
+                  represented as an unplanned Element. The value of ETCD for an
+                  unplanned Element is "UNPLAN" and SEUPDES should be populated
+                  with a description of the unplanned Element only if ETCD has
+                  the value of "UNPLAN".
+                Document: IG v3.3
+                Item: Assumption 4
+                Section: '5.3'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0211
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: If the applicant decides that the subject's experience for a
+                  particular period of time cannot be represented with one of
+                  the planned elements, then that period of time should be
+                  represented as an unplanned element. The value of ETCD for an
+                  unplanned element is “UNPLAN” and SEUPDES should be populated
+                  with a description of the unplanned element.
+                Document: TIG 1.0
+                Item: Assumption 3
+                Section: 2.8.10.24
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0430
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: SEUPDES
+      operator: non_empty
+    - name: ETCD
+      operator: not_equal_to
+      value: UNPLAN
+Core:
+  Id: CORE-000095
+  Status: Published
+  Version: '1'
+Description: Raise an error when SEUPDES ^= null, ETCD ^= 'UNPLAN'
+Executability: Fully Executable
+Outcome:
+  Message: ETCD is not 'UNPLAN', when SEUPDES is not empty
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - SE
+  Use Case: INDH
+Sensitivity: Record

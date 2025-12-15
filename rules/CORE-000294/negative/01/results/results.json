@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVAL is not in ISO 8601 format",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 4,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "AGEMAX",
+            "TSVAL": "64"
+          }
+        }
+      ]
+    }
+  ]
+}

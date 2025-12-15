@@ -1,0 +1,90 @@
+# Variable: --PTCD
+# Condition: --PTCD ^= null
+# Rule: --DECOD ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The preferred term code assigned to the event from MedDRA.
+                Document: Model v2.0
+                Item: --PTCD
+                Section: Events
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0050
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: MedDRA Preferred Term code.
+                Document: Model v1.7
+                Item: --PTCD
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0050
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: MedDRA Preferred Term code.
+                Document: Model v1.4
+                Item: --PTCD
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0050
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: --DECOD[Standardized or dictionary-derived text for the
+                  description of an event or intervention. Equivalent to the
+                  Preferred Term (PT in MedDRA).]|--PTCD[The preferred term code
+                  assigned to the event from MedDRA.]
+                Document: SDTM v2.1
+                Item: --PTCD
+                Section: 3.1.2 The Events Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0328
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --PTCD
+      operator: non_empty
+    - name: --DECOD
+      operator: empty
+Core:
+  Id: CORE-000267
+  Status: Published
+  Version: '1'
+Description: Raise an error when --DECOD is not populated but --PTCD is populated
+Executability: Fully Executable
+Outcome:
+  Message: --DECOD should be populated when --PTCD is populated
+  Output Variables:
+    - --TERM
+    - --PTCD
+    - --DECOD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Record

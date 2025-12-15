@@ -1,0 +1,1838 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "tv.xpt",
+      "domain": "TV",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000249, dataset=TV",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "Visit Day cannot be found in Trial Visit (TV) domain",
+      "number_errors": 100,
+      "errors": [
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": 10,
+          "USUBJID": "CDISC-TEST-002",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 16,
+          "SEQ": 16,
+          "USUBJID": "CDISC-TEST-003",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 22,
+          "SEQ": 22,
+          "USUBJID": "CDISC-TEST-004",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 28,
+          "SEQ": 28,
+          "USUBJID": "CDISC-TEST-005",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 34,
+          "SEQ": 34,
+          "USUBJID": "CDISC-TEST-006",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 40,
+          "SEQ": 40,
+          "USUBJID": "CDISC-TEST-007",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 46,
+          "SEQ": 46,
+          "USUBJID": "CDISC-TEST-008",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 52,
+          "SEQ": 52,
+          "USUBJID": "CDISC-TEST-009",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 58,
+          "SEQ": 58,
+          "USUBJID": "CDISC-TEST-010",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 64,
+          "SEQ": 64,
+          "USUBJID": "CDISC-TEST-011",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 70,
+          "SEQ": 70,
+          "USUBJID": "CDISC-TEST-012",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 76,
+          "SEQ": 76,
+          "USUBJID": "CDISC-TEST-013",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 82,
+          "SEQ": 82,
+          "USUBJID": "CDISC-TEST-014",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 88,
+          "SEQ": 88,
+          "USUBJID": "CDISC-TEST-015",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 94,
+          "SEQ": 94,
+          "USUBJID": "CDISC-TEST-016",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 100,
+          "SEQ": 100,
+          "USUBJID": "CDISC-TEST-017",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 106,
+          "SEQ": 106,
+          "USUBJID": "CDISC-TEST-018",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 112,
+          "SEQ": 112,
+          "USUBJID": "CDISC-TEST-019",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 118,
+          "SEQ": 118,
+          "USUBJID": "CDISC-TEST-020",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 124,
+          "SEQ": 124,
+          "USUBJID": "CDISC-TEST-021",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 130,
+          "SEQ": 130,
+          "USUBJID": "CDISC-TEST-022",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 136,
+          "SEQ": 136,
+          "USUBJID": "CDISC-TEST-023",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 142,
+          "SEQ": 142,
+          "USUBJID": "CDISC-TEST-024",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 148,
+          "SEQ": 148,
+          "USUBJID": "CDISC-TEST-025",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 154,
+          "SEQ": 154,
+          "USUBJID": "CDISC-TEST-026",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 160,
+          "SEQ": 160,
+          "USUBJID": "CDISC-TEST-027",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 166,
+          "SEQ": 166,
+          "USUBJID": "CDISC-TEST-028",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 172,
+          "SEQ": 172,
+          "USUBJID": "CDISC-TEST-029",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 178,
+          "SEQ": 178,
+          "USUBJID": "CDISC-TEST-030",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 184,
+          "SEQ": 184,
+          "USUBJID": "CDISC-TEST-031",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 190,
+          "SEQ": 190,
+          "USUBJID": "CDISC-TEST-032",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 196,
+          "SEQ": 196,
+          "USUBJID": "CDISC-TEST-033",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 202,
+          "SEQ": 202,
+          "USUBJID": "CDISC-TEST-034",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 208,
+          "SEQ": 208,
+          "USUBJID": "CDISC-TEST-035",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 214,
+          "SEQ": 214,
+          "USUBJID": "CDISC-TEST-036",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 220,
+          "SEQ": 220,
+          "USUBJID": "CDISC-TEST-037",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 226,
+          "SEQ": 226,
+          "USUBJID": "CDISC-TEST-038",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 232,
+          "SEQ": 232,
+          "USUBJID": "CDISC-TEST-039",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 238,
+          "SEQ": 238,
+          "USUBJID": "CDISC-TEST-040",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 244,
+          "SEQ": 244,
+          "USUBJID": "CDISC-TEST-041",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 250,
+          "SEQ": 250,
+          "USUBJID": "CDISC-TEST-042",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 256,
+          "SEQ": 256,
+          "USUBJID": "CDISC-TEST-043",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 262,
+          "SEQ": 262,
+          "USUBJID": "CDISC-TEST-044",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 268,
+          "SEQ": 268,
+          "USUBJID": "CDISC-TEST-045",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 274,
+          "SEQ": 274,
+          "USUBJID": "CDISC-TEST-046",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 280,
+          "SEQ": 280,
+          "USUBJID": "CDISC-TEST-047",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 286,
+          "SEQ": 286,
+          "USUBJID": "CDISC-TEST-048",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 292,
+          "SEQ": 292,
+          "USUBJID": "CDISC-TEST-049",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 298,
+          "SEQ": 298,
+          "USUBJID": "CDISC-TEST-050",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 304,
+          "SEQ": 304,
+          "USUBJID": "CDISC-TEST-051",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 310,
+          "SEQ": 310,
+          "USUBJID": "CDISC-TEST-052",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 316,
+          "SEQ": 316,
+          "USUBJID": "CDISC-TEST-053",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 322,
+          "SEQ": 322,
+          "USUBJID": "CDISC-TEST-054",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 328,
+          "SEQ": 328,
+          "USUBJID": "CDISC-TEST-055",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 334,
+          "SEQ": 334,
+          "USUBJID": "CDISC-TEST-056",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 340,
+          "SEQ": 340,
+          "USUBJID": "CDISC-TEST-057",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 346,
+          "SEQ": 346,
+          "USUBJID": "CDISC-TEST-058",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 352,
+          "SEQ": 352,
+          "USUBJID": "CDISC-TEST-059",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 355,
+          "SEQ": 355,
+          "USUBJID": "CDISC-TEST-060",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 364,
+          "SEQ": 364,
+          "USUBJID": "CDISC-TEST-061",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 370,
+          "SEQ": 370,
+          "USUBJID": "CDISC-TEST-062",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 376,
+          "SEQ": 376,
+          "USUBJID": "CDISC-TEST-063",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 382,
+          "SEQ": 382,
+          "USUBJID": "CDISC-TEST-064",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 385,
+          "SEQ": 385,
+          "USUBJID": "CDISC-TEST-065",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 394,
+          "SEQ": 394,
+          "USUBJID": "CDISC-TEST-066",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 400,
+          "SEQ": 400,
+          "USUBJID": "CDISC-TEST-067",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 406,
+          "SEQ": 406,
+          "USUBJID": "CDISC-TEST-068",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 412,
+          "SEQ": 412,
+          "USUBJID": "CDISC-TEST-069",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 415,
+          "SEQ": 415,
+          "USUBJID": "CDISC-TEST-070",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 424,
+          "SEQ": 424,
+          "USUBJID": "CDISC-TEST-071",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 430,
+          "SEQ": 430,
+          "USUBJID": "CDISC-TEST-072",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 436,
+          "SEQ": 436,
+          "USUBJID": "CDISC-TEST-073",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 442,
+          "SEQ": 442,
+          "USUBJID": "CDISC-TEST-074",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 445,
+          "SEQ": 445,
+          "USUBJID": "CDISC-TEST-075",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 454,
+          "SEQ": 454,
+          "USUBJID": "CDISC-TEST-076",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 460,
+          "SEQ": 460,
+          "USUBJID": "CDISC-TEST-077",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 466,
+          "SEQ": 466,
+          "USUBJID": "CDISC-TEST-078",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 472,
+          "SEQ": 472,
+          "USUBJID": "CDISC-TEST-079",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 475,
+          "SEQ": 475,
+          "USUBJID": "CDISC-TEST-080",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 484,
+          "SEQ": 484,
+          "USUBJID": "CDISC-TEST-081",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 490,
+          "SEQ": 490,
+          "USUBJID": "CDISC-TEST-082",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 496,
+          "SEQ": 496,
+          "USUBJID": "CDISC-TEST-083",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 502,
+          "SEQ": 502,
+          "USUBJID": "CDISC-TEST-084",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 505,
+          "SEQ": 505,
+          "USUBJID": "CDISC-TEST-085",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 514,
+          "SEQ": 514,
+          "USUBJID": "CDISC-TEST-086",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 520,
+          "SEQ": 520,
+          "USUBJID": "CDISC-TEST-087",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 526,
+          "SEQ": 526,
+          "USUBJID": "CDISC-TEST-088",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 532,
+          "SEQ": 532,
+          "USUBJID": "CDISC-TEST-089",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 535,
+          "SEQ": 535,
+          "USUBJID": "CDISC-TEST-090",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 544,
+          "SEQ": 544,
+          "USUBJID": "CDISC-TEST-091",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 550,
+          "SEQ": 550,
+          "USUBJID": "CDISC-TEST-092",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 556,
+          "SEQ": 556,
+          "USUBJID": "CDISC-TEST-093",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 562,
+          "SEQ": 562,
+          "USUBJID": "CDISC-TEST-094",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 565,
+          "SEQ": 565,
+          "USUBJID": "CDISC-TEST-095",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 574,
+          "SEQ": 574,
+          "USUBJID": "CDISC-TEST-096",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 580,
+          "SEQ": 580,
+          "USUBJID": "CDISC-TEST-097",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 586,
+          "SEQ": 586,
+          "USUBJID": "CDISC-TEST-098",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 592,
+          "SEQ": 592,
+          "USUBJID": "CDISC-TEST-099",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 595,
+          "SEQ": 595,
+          "USUBJID": "CDISC-TEST-100",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "sv.xpt",
+      "domain": "SV",
+      "execution_status": "success",
+      "execution_message": "Visit Day cannot be found in Trial Visit (TV) domain",
+      "number_errors": 100,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 30,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-002",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 59,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-003",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 88,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-004",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 117,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-005",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 146,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-006",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 175,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-007",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 204,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-008",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 233,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-009",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 262,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-010",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 291,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-011",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 320,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-012",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 349,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-013",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 378,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-014",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 407,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-015",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 436,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-016",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 465,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-017",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 494,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-018",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 523,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-019",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 552,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-020",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 581,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-021",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 610,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-022",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 639,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-023",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 668,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-024",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 697,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-025",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 726,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-026",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 755,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-027",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 784,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-028",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 813,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-029",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 842,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-030",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 871,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-031",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 900,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-032",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 929,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-033",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 958,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-034",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 987,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-035",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1016,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-036",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1045,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-037",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1074,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-038",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1103,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-039",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1132,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-040",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1161,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-041",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1190,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-042",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1219,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-043",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1248,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-044",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1277,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-045",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1306,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-046",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1335,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-047",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1364,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-048",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1393,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-049",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1422,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-050",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1451,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-051",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1480,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-052",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1509,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-053",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1538,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-054",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1567,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-055",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1596,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-056",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1625,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-057",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1654,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-058",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1683,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-059",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1712,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-060",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1734,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-061",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1763,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-062",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1792,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-063",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1821,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-064",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1850,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-065",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1877,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-066",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1906,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-067",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1935,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-068",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1964,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-069",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 1993,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-070",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2012,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-071",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2041,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-072",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2070,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-073",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2099,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-074",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2128,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-075",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2142,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-076",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2171,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-077",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2200,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-078",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2229,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-079",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2258,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-080",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2283,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-081",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2312,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-082",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2341,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-083",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2370,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-084",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2399,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-085",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2419,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-086",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2448,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-087",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2477,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-088",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2506,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-089",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2535,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-090",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2562,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-091",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2591,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-092",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2620,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-093",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2649,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-094",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2678,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-095",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2694,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-096",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2723,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-097",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2752,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-098",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2781,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-099",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        },
+        {
+          "row": 2810,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-100",
+          "value": {
+            "VISITDY": -15.0,
+            "VISITNUM": 100.0
+          }
+        }
+      ]
+    }
+  ]
+}

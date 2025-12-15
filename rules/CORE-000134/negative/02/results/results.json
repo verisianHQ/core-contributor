@@ -1,0 +1,90 @@
+{
+  "datasets": [
+    {
+      "dataset": "suppec.xpt",
+      "domain": "SUPPEC",
+      "execution_status": "success",
+      "execution_message": "RDOMAIN is not 'DM' but IDVAR is empty.",
+      "number_errors": 7,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": "122",
+            "QNAM": "ECREASOC",
+            "RDOMAIN": "EC"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": "123",
+            "QNAM": "ECREASOC",
+            "RDOMAIN": "EC"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": "124",
+            "QNAM": "ECREASOC",
+            "RDOMAIN": "EC"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": "125",
+            "QNAM": "ECREASOC",
+            "RDOMAIN": "EC"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": "126",
+            "QNAM": "ECREASOC",
+            "RDOMAIN": "EC"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": "127",
+            "QNAM": "ECREASOC",
+            "RDOMAIN": "EC"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": "128",
+            "QNAM": "ECREASOC",
+            "RDOMAIN": "EC"
+          }
+        }
+      ]
+    }
+  ]
+}

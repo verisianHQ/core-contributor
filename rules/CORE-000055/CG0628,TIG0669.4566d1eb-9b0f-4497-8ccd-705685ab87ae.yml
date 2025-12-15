@@ -1,0 +1,54 @@
+# Variable: --EXCLFL
+# Condition: 
+# Rule: --EXCLFL not present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: --EXCLFL is not be used in human clinical trials.
+                Document: SDTM v2.0
+                Section: Findings
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0628
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Not in human clinical trials.
+                Document: SDTM v2.1
+                Item: --EXCLFL
+                Section: Findings
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0669
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --EXCLFL
+      operator: exists
+Core:
+  Id: CORE-000055
+  Status: Published
+  Version: '1'
+Description: Raise an error when --EXCLFL is present.
+Executability: Fully Executable
+Outcome:
+  Message: --EXCLFL is present.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Dataset

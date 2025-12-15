@@ -1,0 +1,115 @@
+# Variable: RFXENDTC
+# Condition: EX records present for subject
+# Rule: RFXENDTC = latest value of EX.EXSTDTC or EX.EXENDTC
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Equal to the latest value of EXENDTC (or the latest value of
+                  EXSTDTC if EXENDTC was not collected or is missing).
+                Document: IG v3.4
+                Item: Specification
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0147
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Equal to the latest value of EXENDTC (or the latest value of
+                  EXSTDTC if EXENDTC was not collected or is missing).
+                Document: IG v3.3
+                Item: Specification
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0147
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Equal to the latest value of EXENDTC (or the latest value of
+                  EXSTDTC if EXENDTC was not collected or is missing).
+                Document: IG v3.2
+                Item: Specification
+                Section: '5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0147
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Last date/time of exposure to any protocol-specified product,
+                  equal to the latest value of EXENDTC (or the latest value of
+                  EXSTDTC if EXENDTC was not collected or is missing).
+                Document: TIG 1.0
+                Item: Specification
+                Section: 2.8.10.4
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0388
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: USUBJID
+      operator: is_contained_by
+      value: $ex_usubjid
+    - name: RFXENDTC
+      operator: not_equal_to
+      value: $max_ex_exstdtc
+    - name: RFXENDTC
+      operator: not_equal_to
+      value: $max_ex_exendtc
+Core:
+  Id: CORE-000238
+  Status: Published
+  Version: '1'
+Description: Raise an error when EX records are present for subject but RFXENDTC
+  does not equal the latest value of EX.EXSTDTC or EX.EXENDTC
+Executability: Fully Executable
+Operations:
+  - domain: EX
+    id: $ex_usubjid
+    name: USUBJID
+    operator: distinct
+  - domain: EX
+    group:
+      - USUBJID
+    id: $max_ex_exstdtc
+    name: EXSTDTC
+    operator: max_date
+  - domain: EX
+    group:
+      - USUBJID
+    id: $max_ex_exendtc
+    name: EXENDTC
+    operator: max_date
+Outcome:
+  Message: RFXENDTC does not equal the latest value of EX.EXSTDTC or EX.EXENDTC
+  Output Variables:
+    - RFXENDTC
+    - $max_ex_exstdtc
+    - $max_ex_exendtc
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+  Use Case: INDH
+Sensitivity: Record

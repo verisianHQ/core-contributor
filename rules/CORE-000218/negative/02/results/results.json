@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "co.xpt",
+      "domain": "CO",
+      "execution_status": "success",
+      "execution_message": "IDVAR is empty but IDVARVAL is not empty",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC009",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": "20"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC009",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": "1"
+          }
+        }
+      ]
+    }
+  ]
+}

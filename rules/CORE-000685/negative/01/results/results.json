@@ -1,0 +1,333 @@
+{
+  "datasets": [
+    {
+      "dataset": "ft.xpt",
+      "domain": "FT",
+      "execution_status": "success",
+      "execution_message": "FTTPT and FTTPTNUM do not have a one-to-one relationship per unique value of VISITNUM",
+      "number_errors": 32,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 120,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FTTPT": "30 MIN POST1",
+            "FTTPTNUM": 1.0,
+            "VISITNUM": 2.0
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 121,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FTTPT": "30 MIN POST1",
+            "FTTPTNUM": 1.0,
+            "VISITNUM": 2.0
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 122,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FTTPT": "30 MIN POST1",
+            "FTTPTNUM": 1.0,
+            "VISITNUM": 2.0
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 123,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FTTPT": "30 MIN POST1",
+            "FTTPTNUM": 1.0,
+            "VISITNUM": 2.0
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 256,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FTTPT": "30 MIN POST2",
+            "FTTPTNUM": 4.0,
+            "VISITNUM": 8.0
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 257,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FTTPT": "30 MIN POST2",
+            "FTTPTNUM": 4.0,
+            "VISITNUM": 8.0
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 258,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FTTPT": "30 MIN POST2",
+            "FTTPTNUM": 4.0,
+            "VISITNUM": 8.0
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 259,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FTTPT": "30 MIN POST2",
+            "FTTPTNUM": 4.0,
+            "VISITNUM": 8.0
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": 392,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FTTPT": "30 MIN POST4",
+            "FTTPTNUM": 10.0,
+            "VISITNUM": 201.0
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": 393,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FTTPT": "30 MIN POST4",
+            "FTTPTNUM": 10.0,
+            "VISITNUM": 201.0
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": 394,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FTTPT": "30 MIN POST4",
+            "FTTPTNUM": 10.0,
+            "VISITNUM": 201.0
+          }
+        },
+        {
+          "row": 12,
+          "SEQ": 395,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FTTPT": "30 MIN POST4",
+            "FTTPTNUM": 10.0,
+            "VISITNUM": 201.0
+          }
+        },
+        {
+          "row": 13,
+          "SEQ": 120,
+          "USUBJID": "CDISC002",
+          "value": {
+            "FTTPT": "30 MIN POST",
+            "FTTPTNUM": 1.0,
+            "VISITNUM": 2.0
+          }
+        },
+        {
+          "row": 14,
+          "SEQ": 121,
+          "USUBJID": "CDISC002",
+          "value": {
+            "FTTPT": "30 MIN POST",
+            "FTTPTNUM": 1.0,
+            "VISITNUM": 2.0
+          }
+        },
+        {
+          "row": 15,
+          "SEQ": 122,
+          "USUBJID": "CDISC002",
+          "value": {
+            "FTTPT": "30 MIN POST",
+            "FTTPTNUM": 1.0,
+            "VISITNUM": 2.0
+          }
+        },
+        {
+          "row": 16,
+          "SEQ": 123,
+          "USUBJID": "CDISC002",
+          "value": {
+            "FTTPT": "30 MIN POST",
+            "FTTPTNUM": 1.0,
+            "VISITNUM": 2.0
+          }
+        },
+        {
+          "row": 17,
+          "SEQ": 256,
+          "USUBJID": "CDISC002",
+          "value": {
+            "FTTPT": "30 MIN POST3",
+            "FTTPTNUM": 4.0,
+            "VISITNUM": 8.0
+          }
+        },
+        {
+          "row": 18,
+          "SEQ": 257,
+          "USUBJID": "CDISC002",
+          "value": {
+            "FTTPT": "30 MIN POST3",
+            "FTTPTNUM": 4.0,
+            "VISITNUM": 8.0
+          }
+        },
+        {
+          "row": 19,
+          "SEQ": 258,
+          "USUBJID": "CDISC002",
+          "value": {
+            "FTTPT": "30 MIN POST3",
+            "FTTPTNUM": 4.0,
+            "VISITNUM": 8.0
+          }
+        },
+        {
+          "row": 20,
+          "SEQ": 259,
+          "USUBJID": "CDISC002",
+          "value": {
+            "FTTPT": "30 MIN POST3",
+            "FTTPTNUM": 4.0,
+            "VISITNUM": 8.0
+          }
+        },
+        {
+          "row": 21,
+          "SEQ": 120,
+          "USUBJID": "CDISC003",
+          "value": {
+            "FTTPT": "30 MIN POST1",
+            "FTTPTNUM": 1.0,
+            "VISITNUM": 2.0
+          }
+        },
+        {
+          "row": 22,
+          "SEQ": 121,
+          "USUBJID": "CDISC003",
+          "value": {
+            "FTTPT": "30 MIN POST1",
+            "FTTPTNUM": 1.0,
+            "VISITNUM": 2.0
+          }
+        },
+        {
+          "row": 23,
+          "SEQ": 122,
+          "USUBJID": "CDISC003",
+          "value": {
+            "FTTPT": "30 MIN POST",
+            "FTTPTNUM": 1.0,
+            "VISITNUM": 2.0
+          }
+        },
+        {
+          "row": 24,
+          "SEQ": 123,
+          "USUBJID": "CDISC003",
+          "value": {
+            "FTTPT": "30 MIN POST",
+            "FTTPTNUM": 1.0,
+            "VISITNUM": 2.0
+          }
+        },
+        {
+          "row": 25,
+          "SEQ": 256,
+          "USUBJID": "CDISC003",
+          "value": {
+            "FTTPT": "30 MIN POST2",
+            "FTTPTNUM": 4.0,
+            "VISITNUM": 8.0
+          }
+        },
+        {
+          "row": 26,
+          "SEQ": 257,
+          "USUBJID": "CDISC003",
+          "value": {
+            "FTTPT": "30 MIN POST2",
+            "FTTPTNUM": 4.0,
+            "VISITNUM": 8.0
+          }
+        },
+        {
+          "row": 27,
+          "SEQ": 258,
+          "USUBJID": "CDISC003",
+          "value": {
+            "FTTPT": "30 MIN POST3",
+            "FTTPTNUM": 4.0,
+            "VISITNUM": 8.0
+          }
+        },
+        {
+          "row": 28,
+          "SEQ": 259,
+          "USUBJID": "CDISC003",
+          "value": {
+            "FTTPT": "30 MIN POST3",
+            "FTTPTNUM": 4.0,
+            "VISITNUM": 8.0
+          }
+        },
+        {
+          "row": 29,
+          "SEQ": 528,
+          "USUBJID": "CDISC003",
+          "value": {
+            "FTTPT": "30 MIN POST5",
+            "FTTPTNUM": 10.0,
+            "VISITNUM": 201.0
+          }
+        },
+        {
+          "row": 30,
+          "SEQ": 529,
+          "USUBJID": "CDISC003",
+          "value": {
+            "FTTPT": "31 MIN POST5",
+            "FTTPTNUM": 10.0,
+            "VISITNUM": 201.0
+          }
+        },
+        {
+          "row": 31,
+          "SEQ": 530,
+          "USUBJID": "CDISC003",
+          "value": {
+            "FTTPT": "32 MIN POST5",
+            "FTTPTNUM": 10.0,
+            "VISITNUM": 201.0
+          }
+        },
+        {
+          "row": 32,
+          "SEQ": 531,
+          "USUBJID": "CDISC003",
+          "value": {
+            "FTTPT": "33 MIN POST5",
+            "FTTPTNUM": 10.0,
+            "VISITNUM": 201.0
+          }
+        }
+      ]
+    }
+  ]
+}

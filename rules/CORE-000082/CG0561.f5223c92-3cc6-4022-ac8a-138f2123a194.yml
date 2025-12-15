@@ -1,0 +1,58 @@
+# Variable: PESTRESC
+# Condition: PEORRES =  null
+# Rule: PESTRESC = null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0561
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: If PEORRES is null, PESTRESC must be null.
+                Document: IG v3.4
+                Item: Specification
+                Section: 6.3.8
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0561
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: If PEORRES is null, PESTRESC must be null.
+                Document: IG v3.3
+                Item: PESTRESC
+                Section: 6.3.12
+Check:
+  all:
+    - name: PEORRES
+      operator: empty
+    - name: PESTRESC
+      operator: non_empty
+Core:
+  Id: CORE-000082
+  Status: Published
+  Version: '1'
+Description: Verify that PESTRESC is null when PEORRES is null
+Executability: Fully Executable
+Outcome:
+  Message: PESTRESC value is not missing when PEORRES value is missing
+  Output Variables:
+    - PEORRES
+    - PESTRESC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - PE
+Sensitivity: Record

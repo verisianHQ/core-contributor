@@ -1,0 +1,679 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "There is not a one-to-one relationship between AEBODSYS and AEBDSYSCD",
+      "number_errors": 74,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "AEBDSYCD": "A",
+            "AEBODSYS": "Apple"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "AEBDSYCD": "B",
+            "AEBODSYS": "Apple"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Apple"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 2,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEBDSYCD": "A",
+            "AEBODSYS": "Apple"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 3,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEBDSYCD": "B",
+            "AEBODSYS": "Apple"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 4,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEBDSYCD": "A",
+            "AEBODSYS": "Apple"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 5,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEBDSYCD": "B",
+            "AEBODSYS": "Apple"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 6,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Apple"
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": 7,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEBDSYCD": "A",
+            "AEBODSYS": "Apple"
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": 8,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEBDSYCD": "B",
+            "AEBODSYS": "Apple"
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": 9,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Apple"
+          }
+        },
+        {
+          "row": 12,
+          "SEQ": 1,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEBDSYCD": "A",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 13,
+          "SEQ": 2,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEBDSYCD": "B",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 14,
+          "SEQ": 3,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 15,
+          "SEQ": 4,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEBDSYCD": "A",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 16,
+          "SEQ": 5,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEBDSYCD": "B",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 17,
+          "SEQ": 6,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 18,
+          "SEQ": 7,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEBDSYCD": "A",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 19,
+          "SEQ": 8,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEBDSYCD": "B",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 20,
+          "SEQ": 9,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 21,
+          "SEQ": 10,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEBDSYCD": "B",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 22,
+          "SEQ": 11,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 23,
+          "SEQ": 12,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEBDSYCD": "B",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 24,
+          "SEQ": 13,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEBDSYCD": "A",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 25,
+          "SEQ": 14,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEBDSYCD": "B",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 26,
+          "SEQ": 15,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 27,
+          "SEQ": 16,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEBDSYCD": "A",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 28,
+          "SEQ": 17,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEBDSYCD": "B",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 29,
+          "SEQ": 18,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 30,
+          "SEQ": 19,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEBDSYCD": "A",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 31,
+          "SEQ": 1,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AEBDSYCD": "B",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 32,
+          "SEQ": 2,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 33,
+          "SEQ": 3,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AEBDSYCD": "B",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 34,
+          "SEQ": 4,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 35,
+          "SEQ": 5,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AEBDSYCD": "B",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 36,
+          "SEQ": 6,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AEBDSYCD": "A",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 37,
+          "SEQ": 7,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AEBDSYCD": "B",
+            "AEBODSYS": "Blue"
+          }
+        },
+        {
+          "row": 38,
+          "SEQ": 1,
+          "USUBJID": "CDISC007",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 39,
+          "SEQ": 2,
+          "USUBJID": "CDISC007",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 40,
+          "SEQ": 3,
+          "USUBJID": "CDISC007",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 41,
+          "SEQ": 1,
+          "USUBJID": "CDISC008",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 42,
+          "SEQ": 1,
+          "USUBJID": "CDISC009",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 43,
+          "SEQ": 2,
+          "USUBJID": "CDISC009",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 44,
+          "SEQ": 3,
+          "USUBJID": "CDISC009",
+          "value": {
+            "AEBDSYCD": "A",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 45,
+          "SEQ": 4,
+          "USUBJID": "CDISC009",
+          "value": {
+            "AEBDSYCD": "B",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 46,
+          "SEQ": 1,
+          "USUBJID": "CDISC011",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 47,
+          "SEQ": 2,
+          "USUBJID": "CDISC011",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 48,
+          "SEQ": 3,
+          "USUBJID": "CDISC011",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 49,
+          "SEQ": 4,
+          "USUBJID": "CDISC011",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 50,
+          "SEQ": 1,
+          "USUBJID": "CDISC013",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 51,
+          "SEQ": 1,
+          "USUBJID": "CDISC014",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 52,
+          "SEQ": 2,
+          "USUBJID": "CDISC014",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 53,
+          "SEQ": 1,
+          "USUBJID": "CDISC016",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 54,
+          "SEQ": 2,
+          "USUBJID": "CDISC016",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 55,
+          "SEQ": 3,
+          "USUBJID": "CDISC016",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 56,
+          "SEQ": 4,
+          "USUBJID": "CDISC016",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 57,
+          "SEQ": 5,
+          "USUBJID": "CDISC016",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 58,
+          "SEQ": 6,
+          "USUBJID": "CDISC016",
+          "value": {
+            "AEBDSYCD": "A",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 59,
+          "SEQ": 7,
+          "USUBJID": "CDISC016",
+          "value": {
+            "AEBDSYCD": "B",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 60,
+          "SEQ": 1,
+          "USUBJID": "CDISC017",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 61,
+          "SEQ": 2,
+          "USUBJID": "CDISC017",
+          "value": {
+            "AEBDSYCD": "A",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 62,
+          "SEQ": 3,
+          "USUBJID": "CDISC017",
+          "value": {
+            "AEBDSYCD": "B",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 63,
+          "SEQ": 4,
+          "USUBJID": "CDISC017",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 64,
+          "SEQ": 5,
+          "USUBJID": "CDISC017",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 65,
+          "SEQ": 1,
+          "USUBJID": "CDISC018",
+          "value": {
+            "AEBDSYCD": "A",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 66,
+          "SEQ": 2,
+          "USUBJID": "CDISC018",
+          "value": {
+            "AEBDSYCD": "B",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 67,
+          "SEQ": 3,
+          "USUBJID": "CDISC018",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 68,
+          "SEQ": 4,
+          "USUBJID": "CDISC018",
+          "value": {
+            "AEBDSYCD": "A",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 69,
+          "SEQ": 5,
+          "USUBJID": "CDISC018",
+          "value": {
+            "AEBDSYCD": "B",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 70,
+          "SEQ": 6,
+          "USUBJID": "CDISC018",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 71,
+          "SEQ": 7,
+          "USUBJID": "CDISC018",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 72,
+          "SEQ": 8,
+          "USUBJID": "CDISC018",
+          "value": {
+            "AEBDSYCD": "A",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 73,
+          "SEQ": 9,
+          "USUBJID": "CDISC018",
+          "value": {
+            "AEBDSYCD": "B",
+            "AEBODSYS": "Carrot"
+          }
+        },
+        {
+          "row": 74,
+          "SEQ": 10,
+          "USUBJID": "CDISC018",
+          "value": {
+            "AEBDSYCD": "C",
+            "AEBODSYS": "Carrot"
+          }
+        }
+      ]
+    }
+  ]
+}

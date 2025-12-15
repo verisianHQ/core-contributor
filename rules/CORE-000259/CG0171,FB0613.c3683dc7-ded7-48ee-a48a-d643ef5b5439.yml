@@ -1,0 +1,146 @@
+# Variable: SSDTC
+# Condition: SSSTRESC = 'DEAD'
+# Rule: SSDTC >= DM.DTHDTC
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Subject Status does not contain details about the circumstances
+                  of a subject's status. The response to the status assessment
+                  may trigger collection of additional details, but those
+                  details are to be stored in appropriate separate domains. For
+                  example, if a subject's survival status is "DEAD", the date of
+                  death must be stored in DM and within a final disposition
+                  record in DS. Only the status collection date, the status
+                  question, and the status response are stored in SS.
+                Document: IG v3.4
+                Item: Assumption 1
+                Section: 6.3.11
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0171
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Subject Status does not contain details about the circumstances
+                  of a subject's status. The response to the status assessment
+                  may trigger collection of additional details but those details
+                  are to be stored in appropriate separate domains. For example,
+                  if a subject's Survival Status is "DEAD", the date of death
+                  must be stored in DM and within a final disposition record in
+                  DS. Only the status collection date, the status question and
+                  the status response are stored in SS.
+                Document: IG v3.3
+                Item: Assumption 1
+                Section: 6.3.15
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0171
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Subject Status does not contain details about the circumstances
+                  of a subject's status. The response to the status assessment
+                  may trigger collection of additional details but those details
+                  are to be stored in appropriate separate domains. For example,
+                  if a subject's Survival Status is "DEAD", the date of death
+                  must be stored in DM and within a final disposition record in
+                  DS. Only the status collection date, the status question and
+                  the status response are stored in SS.
+                Document: IG v3.2
+                Item: Assumption 2
+                Section: 6.3.
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0171
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+  #CG0171 is identical to rule FB0613. Added metadata for FB0613 on 2025-01-20
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0613
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0613
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0613
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: SSSTRESC
+      operator: equal_to
+      value: DEAD
+      value_is_literal: true
+    - name: SSDTC
+      operator: date_less_than
+      value: DTHDTC
+Core:
+  Id: CORE-000259
+  Status: Published
+  Version: '1'
+Description: Date time of collection of subject status in SS domain, where
+  survival status is marked as DEAD, is on or after the date time of death
+  populated in DM domain #Message has been updated as per the FDA Business Rules Spreadsheet.
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: DM
+Outcome:
+  Message: Date time of collection of subject status in SS domain, where survival
+    status is marked as DEAD, is not on or after the date time of death
+    populated in DM domain. #Error message has been updated as per the FDA Business Rules Spreadsheet.
+  Output Variables:
+    - SSSTRESC
+    - SSDTC
+    - DTHDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - SS
+Sensitivity: Record

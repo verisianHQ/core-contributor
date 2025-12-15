@@ -1,0 +1,42 @@
+{
+  "datasets": [
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "facm.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "Parent domain referenced in Findings About dataset name is not present in the study",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "$list_dataset_names": [
+              "fa",
+              "facm",
+              "fa1"
+            ],
+            "dataset_name": "FACM"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "fa1.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

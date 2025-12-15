@@ -1,0 +1,21 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBEXCLFL must never be used in SDTM-based human trials",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "LBEXCLFL": null
+          }
+        }
+      ]
+    }
+  ]
+}

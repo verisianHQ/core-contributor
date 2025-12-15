@@ -1,0 +1,61 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000181, dataset=AE",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "apmhe.xpt",
+      "domain": "AP",
+      "execution_status": "success",
+      "execution_message": "APAP Domain value length is not equal to 4.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "APMHE"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "APMHE"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "APMHE"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "APMHE"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000181, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

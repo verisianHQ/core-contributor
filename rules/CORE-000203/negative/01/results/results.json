@@ -1,0 +1,66 @@
+{
+  "datasets": [
+    {
+      "dataset": "supplb.xpt",
+      "domain": "SUPPLB",
+      "execution_status": "success",
+      "execution_message": "The combination of IDVAR, IDVARVAL, and QNAM is not unique per parent subject record",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "IDVAR": "LBSEQ",
+            "IDVARVAL": "220",
+            "QNAM": "LBCLSIG",
+            "USUBJID": "S001"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "IDVAR": "LBSEQ",
+            "IDVARVAL": "220",
+            "QNAM": "LBCLSIG",
+            "USUBJID": "S001"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "suppdm.xpt",
+      "domain": "SUPPDM",
+      "execution_status": "success",
+      "execution_message": "The combination of IDVAR, IDVARVAL, and QNAM is not unique per parent subject record",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": null,
+            "QNAM": "RACEMLT",
+            "USUBJID": "S001"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": null,
+            "QNAM": "RACEMLT",
+            "USUBJID": "S001"
+          }
+        }
+      ]
+    }
+  ]
+}

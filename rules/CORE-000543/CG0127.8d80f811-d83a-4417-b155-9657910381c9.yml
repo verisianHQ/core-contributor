@@ -1,0 +1,51 @@
+# Variable: ACTARMCD
+# Condition: ACTARMCD in ('SCRNFAIL', 'NOTASSGN')
+# Rule: ACTARMCD = ARMCD
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Values should be "SCRNFAIL" for screen failures and "NOTASSGN"
+                  for subjects not assigned to treatment.
+                Document: IG v3.2
+                Item: Specification
+                Section: '5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0127
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+Check:
+  all:
+    - name: ACTARMCD
+      operator: is_contained_by
+      value:
+        - SCRNFAIL
+        - NOTASSGN
+    - name: ACTARMCD
+      operator: not_equal_to
+      value: ARMCD
+Core:
+  Id: CORE-000543
+  Status: Published
+  Version: '1'
+Description: Raise an error when ACTARMCD equals "SCRFNFAIL" or "NOTASSGN" but
+  ARMCD doesn't equal ACTARMCD.
+Executability: Fully Executable
+Outcome:
+  Message: ARMCD does not equal ACTARMCD when subject is either a screen failure
+    or not assigned to treatment
+  Output Variables:
+    - ARMCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

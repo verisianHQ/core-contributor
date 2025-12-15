@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "RFSTDTC must not be null when ACTARM is not in (Screen Failure, Not Assigned, Not Treated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "015246-999-0004-9999",
+          "value": {
+            "ACTARM": "Placebo",
+            "RFSTDTC": null
+          }
+        }
+      ]
+    }
+  ]
+}

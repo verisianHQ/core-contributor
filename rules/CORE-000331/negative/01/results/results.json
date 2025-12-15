@@ -1,0 +1,45 @@
+{
+  "datasets": [
+    {
+      "dataset": "ta.xpt",
+      "domain": "TA",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000331, dataset=TA",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "DM.ACTARMCD must equal SCRNFAIL, NOTASSGN, NOTTRT, or UNPLAN if the value is not present in TA.ARMCD",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "015246-300-0004-00010",
+          "value": {
+            "ACTARMCD": "ZAN_MED"
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": null,
+          "USUBJID": "015246-300-0004-00011",
+          "value": {
+            "ACTARMCD": "ZAN_UNK"
+          }
+        },
+        {
+          "row": 12,
+          "SEQ": null,
+          "USUBJID": "015246-300-0004-00012",
+          "value": {
+            "ACTARMCD": null
+          }
+        }
+      ]
+    }
+  ]
+}

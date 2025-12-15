@@ -1,0 +1,85 @@
+# Variable: ACTARM
+# Condition: ACTARMCD = null
+# Rule: ACTARM = null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: "\"If ACTARMCD is null, then ACTARM must be null and ARMNRS
+                  must  be populated with the reason ACTARMCD is null.
+
+                  \ Both ARMCD and ACTARMCD will be null for
+                  subjects who were not assigned to treatment.\ 
+
+                  \ The same reason  will provide the reason
+                  that both are null.\""
+                Document: IG v3.4
+                Item: Assumption 4
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0522
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If ACTARMCD is null, then ACTARM must be null and ARMNRS must be
+                  populated with the reason ACTARMCD is null.
+                Document: IG v3.3
+                Item: Assumption 4
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0522
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: If ACTARMCD is null, then ACTARM must be null and ARMNRS must be
+                  populated with the reason ACTARMCD is null. Both ARMCD and
+                  ACTARMCD will be null for subjects who were not assigned to an
+                  arm. The same reason will provide the reason that both are
+                  null.
+                Document: TIG 1.0
+                Item: Assumption 4.a.ii
+                Section: 2.8.10.4
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0617
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: ACTARMCD
+      operator: empty
+    - name: ACTARM
+      operator: non_empty
+Core:
+  Id: CORE-000120
+  Status: Published
+  Version: '1'
+Description: Raise an error when ACTARM is not empty, but ACTARMCD is empty
+Executability: Fully Executable
+Outcome:
+  Message: ACTARM is populated, when ACTARMCD is NULL
+  Output Variables:
+    - ACTARMCD
+    - ACTARM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+  Use Case: INDH
+Sensitivity: Record

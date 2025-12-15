@@ -1,0 +1,102 @@
+# Variable: --TRTV
+# Condition: --VAMT ^= null
+# Rule: --TRTV ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A carrier or inert medium in which a medicinally active agent is
+                  administered.
+                Document: Model v2.0
+                Item: --TRTV
+                Section: Interventions
+              - Cited Guidance: Amount of the prepared product (treatment plus vehicle)
+                  administered.
+                Document: Model v2.0
+                Item: --VAMT
+                Section: Interventions
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0423
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: '--TRTV:Vehicle for administration of treatment; such as a
+                  liquid in which the treatment drug is dissolved. Example:
+                  SALINE. --VAMT: Amount of the prepared product (treatment +
+                  vehicle) administered or given. Note: should not be diluent
+                  amount alone. --VAMTU: Units for the prepared product
+                  (treatment + vehicle). Examples: mL; mg.'
+                Document: Model v1.4
+                Section: 2.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0423
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: '--TRTV:Vehicle for administration of treatment; such as a
+                  liquid in which the treatment drug is dissolved. Example:
+                  SALINE. --VAMT: Amount of the prepared product (treatment +
+                  vehicle) administered or given. Note: should not be diluent
+                  amount alone. --VAMTU: Units for the prepared product
+                  (treatment + vehicle). Examples: mL; mg.'
+                Document: Model v1.7
+                Section: 2.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0423
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: --TRTV[A carrier or inert medium in which a medicinally active
+                  agent is administered.]|--VAMT[Amount of the prepared product
+                  (treatment plus vehicle) administered.]
+                Document: SDTM v2.1
+                Item: Specifications '--TRTV|'--VAMT
+                Section: Section 3.1.1 The Interventions Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0578
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --VAMT
+      operator: non_empty
+    - name: --TRTV
+      operator: empty
+Core:
+  Id: CORE-000100
+  Status: Published
+  Version: '1'
+Description: Raise an error when --VAMT is not empty, but --TRTV is empty.
+Executability: Fully Executable
+Outcome:
+  Message: Missing --TRTV value, when --VAMT value is populated.
+  Output Variables:
+    - --TRTV
+    - --VAMT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Record

@@ -1,0 +1,105 @@
+# Variable: AESMIE
+# Condition: Record present in SUPPAE where SUPPAE.QNAM=AESOSP
+# Rule: AESMIE = 'Y'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: When a description of Other Medically Important Serious Adverse
+                  Events category is collected on a CRF, sponsors should place
+                  the description in the SUPPAE dataset using the standard
+                  supplemental qualifier name code AESOSP.
+                Document: IG v3.4
+                Item: Asumtpion 6c
+                Section: 6.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0043
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: When a description of Other Medically Important Serious Adverse
+                  Events category is collected on a CRF, sponsors should place
+                  the description in the SUPPAE dataset using the standard
+                  supplemental qualifier name code AESOSP.
+                Document: IG v3.2
+                Item: Assumption 6c
+                Section: '6.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0043
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: When a description of Other Medically Important Serious Adverse
+                  Events category is collected on a CRF, sponsors should place
+                  the description in the SUPPAE dataset using the standard
+                  supplemental qualifier name code AESOSP.
+                Document: IG v3.3
+                Item: Assumption 6c
+                Section: 6.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0043
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: When a description of "Other Medically Important Serious Adverse
+                  Events" category is collected on a CRF, applicants should
+                  place the description in the SUPPAE dataset using the standard
+                  supplemental qualifier name code AESOSP.
+                Document: TIG 1.0
+                Item: Assumption 7c
+                Section: 2.8.10.1
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0322
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: QNAM
+      operator: equal_to
+      value: AESOSP
+      value_is_literal: true
+    - name: AESMIE
+      operator: not_equal_to
+      value: Y
+Core:
+  Id: CORE-000597
+  Status: Published
+  Version: '1'
+Description: When SUPPAE.QNAM=AESOSP is present, a record with AESMIE=Y should be present
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: SUPPAE
+Outcome:
+  Message: Missing AESMIE=Y where SUPPAE.QNAM=AESOSP
+  Output Variables:
+    - QNAM
+    - AESMIE
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - AE
+  Use Case: INDH
+Sensitivity: Record

@@ -1,0 +1,21 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMREASND should not be present in dataset when CMPRESP is not present in dataset",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "CMREASND": null
+          }
+        }
+      ]
+    }
+  ]
+}

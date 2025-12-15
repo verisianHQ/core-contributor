@@ -1,0 +1,76 @@
+# Variable: --LOBXFL
+# Condition: 
+# Rule: Value must be 'Y' or null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The value should be "Y" or null.
+                Document: IG v3.4
+                Item: Specification
+                Section: Various Findings Domains
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0541
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The value should be "Y" or null.
+                Document: IG v3.3
+                Item: CDISC Notes
+                Section: Various Findings Domains
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0541
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The value should be "Y" or null.
+                Document: TIG 1.0
+                Item: Specification:--LOBXFL
+                Section: Various Finding Domains
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0634
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --LOBXFL
+      operator: not_equal_to
+      value: Y
+    - name: --LOBXFL
+      operator: non_empty
+Core:
+  Id: CORE-000170
+  Status: Published
+  Version: '1'
+Description: Raise an error when --LOBXFL is not 'Y' or null
+Executability: Fully Executable
+Outcome:
+  Message: Value of --LOBXFL must be 'Y' or null
+  Output Variables:
+    - --CAT
+    - --TEST
+    - --TESTCD
+    - --LOBXFL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Record

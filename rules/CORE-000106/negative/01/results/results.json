@@ -1,0 +1,58 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMENTPT is completed, but CMENRTPT is not completed.",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 7,
+          "SEQ": 1,
+          "USUBJID": "CDISC005",
+          "value": {
+            "CMENRTPT": null,
+            "CMENTPT": "2013-08-06"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 4,
+          "USUBJID": "CDISC005",
+          "value": {
+            "CMENRTPT": null,
+            "CMENTPT": "2013-08-06"
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": 1,
+          "USUBJID": "CDISC017",
+          "value": {
+            "CMENRTPT": null,
+            "CMENTPT": "2014-03-08"
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": 2,
+          "USUBJID": "CDISC017",
+          "value": {
+            "CMENRTPT": null,
+            "CMENTPT": "2014-03-08"
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": 3,
+          "USUBJID": "CDISC017",
+          "value": {
+            "CMENRTPT": null,
+            "CMENTPT": "2014-03-08"
+          }
+        }
+      ]
+    }
+  ]
+}

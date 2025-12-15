@@ -1,0 +1,30 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "RFXSTDTC does not equal the earliest value of EX.EXSTDTC",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "$min_ex_exstdtc": "2012-11-30",
+            "RFXSTDTC": "2012-12-01"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000239, dataset=EX",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

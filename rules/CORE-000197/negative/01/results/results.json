@@ -1,0 +1,83 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AECAT is equal to AEBODSYS.",
+      "number_errors": 7,
+      "errors": [
+        {
+          "row": 7,
+          "SEQ": 1593,
+          "USUBJID": "CDISC-TEST-099",
+          "value": {
+            "AEBODSYS": "Infections and infestations",
+            "AECAT": "INFECTIONS AND INFESTATIONS",
+            "AETERM": "PNEUMONIA"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 1594,
+          "USUBJID": "CDISC-TEST-099",
+          "value": {
+            "AEBODSYS": "Infections and infestations",
+            "AECAT": "INFECTIONS AND INFESTATIONS",
+            "AETERM": "PNEUMONIA"
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": 1595,
+          "USUBJID": "CDISC-TEST-099",
+          "value": {
+            "AEBODSYS": "INFECTIONS AND INFESTATIONS",
+            "AECAT": "INFECTIONS AND INFESTATIONS",
+            "AETERM": "URINARY TRACT INFECTION"
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": 1596,
+          "USUBJID": "CDISC-TEST-100",
+          "value": {
+            "AEBODSYS": "Gastrointestinal disorders",
+            "AECAT": "Gastrointestinal disorders",
+            "AETERM": "UPSET STOMACH"
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": 1597,
+          "USUBJID": "CDISC-TEST-100",
+          "value": {
+            "AEBODSYS": "Cardiac disorders",
+            "AECAT": "CARDIAC DISORDERS",
+            "AETERM": "ATRIAL FIBRILLATION"
+          }
+        },
+        {
+          "row": 12,
+          "SEQ": 1598,
+          "USUBJID": "CDISC-TEST-100",
+          "value": {
+            "AEBODSYS": "Musculoskeletal and connective tissue disorders",
+            "AECAT": "MUSCULOSKELETAL AND CONNECTIVE TISSUE DISORDERS",
+            "AETERM": "BACK PAIN"
+          }
+        },
+        {
+          "row": 13,
+          "SEQ": 1599,
+          "USUBJID": "CDISC-TEST-100",
+          "value": {
+            "AEBODSYS": "Musculoskeletal and connective tissue disorders",
+            "AECAT": "MUSCULOSKELETAL AND CONNECTIVE TISSUE DISORDERS",
+            "AETERM": "BACK PAIN"
+          }
+        }
+      ]
+    }
+  ]
+}

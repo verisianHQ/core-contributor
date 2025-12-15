@@ -1,0 +1,54 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000552, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMSTDY is not properly calculated per study day algorithm",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 7,
+          "SEQ": 5,
+          "USUBJID": "CDISC007",
+          "value": {
+            "$val_stdy": 45,
+            "CMSTDTC": "2013-02-18",
+            "CMSTDY": null,
+            "RFSTDTC": "2013-01-05"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 6,
+          "USUBJID": "CDISC008",
+          "value": {
+            "$val_stdy": -447,
+            "CMSTDTC": "2013-02-18",
+            "CMSTDY": 45.0,
+            "RFSTDTC": "2014-05-11"
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": 2,
+          "USUBJID": "CDISC010",
+          "value": {
+            "$val_stdy": -799,
+            "CMSTDTC": "2011-07-15",
+            "CMSTDY": -511.0,
+            "RFSTDTC": "2013-09-21"
+          }
+        }
+      ]
+    }
+  ]
+}

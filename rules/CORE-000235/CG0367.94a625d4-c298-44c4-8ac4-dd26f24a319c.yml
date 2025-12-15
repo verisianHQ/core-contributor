@@ -1,0 +1,95 @@
+# Variable: RSUBJID
+# Condition: RSUBJID ^=null and RSUBJID ^= POOLID
+# Rule: RSUBJID = DM.USUBJID
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Identifier for a related study subject or pool of study
+                  subjects. The subject(s) may be human or animal. RSUBJID will
+                  be populated with the USUBJID of the related subject or the
+                  POOLID of the related pool. RSUBJID will be null for data
+                  about associated persons who are related to the study but not
+                  to any of the study subjects.
+                Document: Model v2.0
+                Item: RSUBJID
+                Section: Associated Persons
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0367
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Identifier for a related study subject or pool of study
+                  subjects. The subject(s) may be human or animal. RSUBJID will
+                  be populated with the USUBJID of the related subject or the
+                  POOLID of the related pool. RSUBJID will be null for data
+                  about associated persons who are related to the study but not
+                  to any of the study subjects.
+                Document: Model v1.4
+                Section: 5.1.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0367
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Identifier for a related subject or pool of subjects. RSUBJID
+                  may be populated with the USUBJID of the related subject or
+                  the POOLID of the related pool.  RSUBJID will be null for data
+                  about associated persons who are related to the study but not
+                  to any study subjects
+                Document: Model v1.7
+                Section: 6.1.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0367
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: RSUBJID
+      operator: non_empty
+    - name: RSUBJID
+      operator: not_equal_to
+      value: POOLID
+    - name: RSUBJID
+      operator: is_not_contained_by
+      value: $dm_usubjid
+Core:
+  Id: CORE-000235
+  Status: Published
+  Version: '1'
+Description: Verify that RSUBJID=DM.USUBJID when RSUBJID is populated and
+  RSUBJID is not equal to POOLID
+Executability: Fully Executable
+Operations:
+  - domain: DM
+    id: $dm_usubjid
+    name: USUBJID
+    operator: distinct
+Outcome:
+  Message: RSUBJID must equal DM.USUBJID when RSUBJID is populated and RSUBJID
+    does not equal POOLID
+  Output Variables:
+    - USUBJID
+    - RSUBJID
+    - POOLID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - AP--
+Sensitivity: Record

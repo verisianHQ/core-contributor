@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "oe.xpt",
+      "domain": "OE",
+      "execution_status": "success",
+      "execution_message": "OELAT is present when OELOC is not present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "OELAT": "RIGHT",
+            "OELOC": "Not in dataset"
+          }
+        }
+      ]
+    }
+  ]
+}

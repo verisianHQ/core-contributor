@@ -1,0 +1,208 @@
+# Variable: DOMAIN
+# Condition: 
+# Rule: Dataset name begins with DOMAIN value
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Each study subject domain dataset is distinguished by a unique,
+                  2-character code that should be used consistently throughout
+                  the submission. This code, which is stored in the SDTM
+                  variable named DOMAIN, is used in the dataset name, as the
+                  value of the DOMAIN variable in that dataset, and as a prefix
+                  for most variable names in that dataset.
+                Document: Model v2.0
+                Section: Study Subject Data
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0413
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'This code; which is stored in the SDTM variable named DOMAIN;
+                  is used in four ways: as the dataset name; the value of the
+                  DOMAIN variable in that dataset; as a prefix for most variable
+                  names in that dataset; and as a value in the RDOMAIN variable
+                  in relationship tables.'
+                Document: Model v1.4
+                Section: '2.1'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0413
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Each domain dataset is distinguished by a unique; 2-character
+                  code that should be used consistently throughout the
+                  submission. This code; which is stored in the SDTM variable
+                  named DOMAIN; is used in 4 ways: as the dataset name; as the
+                  value of the DOMAIN variable in that dataset; as a prefix for
+                  most variable names in that dataset; and as a value in the
+                  RDOMAIN variable in relationship tables.'
+                Document: Model v1.7
+                Section: '2.1'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0413
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Each study subject domain dataset is distinguished by a unique
+                  2-character code. This code, which is stored in the SDTM
+                  variable named DOMAIN, is used in the dataset name, as the
+                  value of the DOMAIN variable in that dataset, and as a prefix
+                  for most variable names in that dataset.
+                Document: SDTM v2.1
+                Item: DOMAIN
+                Section: Section 3 Study Subject Data
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0568
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: SDTM datasets are normally named to be consistent with the
+                  domain code.
+                Document: SENDIG v3.0
+                Item: Text
+                Section: 4.1.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: SDTM datasets are normally named to be consistent with the
+                  domain code.
+                Document: SENDIG v3.1
+                Item: Text
+                Section: 4.1.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: SDTM datasets are normally named to be consistent with the
+                  domain code.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.1.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND1
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: SDTM datasets are normally named to be consistent with the
+                  domain code.
+                Document: SENDIG v3.1
+                Item: Text
+                Section: 4.1.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: SDTM datasets are normally named to be consistent with the
+                  domain code.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: SDTM datasets are normally named to be consistent with the
+                  domain code.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Domain datasets based on the SDTM general observations classes
+                  will be named using the two-character code for the domain or
+                  using the applicable four-character code when a dataset is
+                  split. Supplemental Qualifier datasets will be named using
+                  convention SUPP concatenated with the two-character domain
+                  code or four-character code when a dataset is split (e.g.,
+                  SUPPDM, SUPPFA, SUPPFACM). All other datasets will be named
+                  using the code for the domain or dataset and (e.g., DM,
+                  RELREC).
+                Document: TIG v1.0
+                Item: Tabulation Datasets Table, Num 2
+                Section: 2.6 Guidance for Datasets
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0037
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: dataset_name
+      operator: prefix_not_equal_to
+      prefix: 2
+      value: DOMAIN
+Core:
+  Id: CORE-000598
+  Status: Published
+  Version: '1'
+Description: The dataset name must begin with the DOMAIN value.
+Executability: Fully Executable
+Outcome:
+  Message: Dataset name does not begin with DOMAIN value
+Rule Type: Dataset Metadata Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Exclude:
+      - SUPP--
+      - RELREC
+      - RELREF
+      - POOLDEF
+  Use Case: INDH, PROD, NONCLIN
+Sensitivity: Dataset

@@ -1,0 +1,46 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "execution_error",
+      "execution_message": "SQL operator execution error",
+      "number_errors": 1,
+      "errors": [
+        {
+          "error": "SQL error in date_less_than operator",
+          "message": "invalid input syntax"
+        }
+      ]
+    },
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "MHENRTPT is not in ('BEFORE', 'COINCIDENT', 'ONGOING', 'AFTER', 'UNKNOWN')",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 6,
+          "SEQ": 1,
+          "USUBJID": "CDISC006",
+          "value": {
+            "MHDTC": "2013-05-20",
+            "MHENRTPT": "WRONG",
+            "MHENTPT": "2013-05-19"
+          }
+        },
+        {
+          "row": 13,
+          "SEQ": 1,
+          "USUBJID": "CDISC013",
+          "value": {
+            "MHDTC": "2013-05-04",
+            "MHENRTPT": null,
+            "MHENTPT": "2013-05-02"
+          }
+        }
+      ]
+    }
+  ]
+}

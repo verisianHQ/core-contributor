@@ -1,0 +1,101 @@
+{
+  "datasets": [
+    {
+      "dataset": "oe.xpt",
+      "domain": "OE",
+      "execution_status": "success",
+      "execution_message": "Value length of OETEST > 40.",
+      "number_errors": 11,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 7,
+          "USUBJID": "CDISC001",
+          "value": {
+            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 8,
+          "USUBJID": "CDISC001",
+          "value": {
+            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": 10,
+          "USUBJID": "CDISC001",
+          "value": {
+            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": 11,
+          "USUBJID": "CDISC001",
+          "value": {
+            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+          }
+        },
+        {
+          "row": 12,
+          "SEQ": 5,
+          "USUBJID": "CDISC003",
+          "value": {
+            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+          }
+        },
+        {
+          "row": 13,
+          "SEQ": 6,
+          "USUBJID": "CDISC003",
+          "value": {
+            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+          }
+        },
+        {
+          "row": 14,
+          "SEQ": 7,
+          "USUBJID": "CDISC003",
+          "value": {
+            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+          }
+        },
+        {
+          "row": 15,
+          "SEQ": 7,
+          "USUBJID": "CDISC004",
+          "value": {
+            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+          }
+        },
+        {
+          "row": 16,
+          "SEQ": 8,
+          "USUBJID": "CDISC004",
+          "value": {
+            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+          }
+        }
+      ]
+    }
+  ]
+}

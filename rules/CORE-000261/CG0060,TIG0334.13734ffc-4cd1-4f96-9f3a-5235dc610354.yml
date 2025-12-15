@@ -1,0 +1,94 @@
+# Variable: --STRTPT
+# Condition: --STTPT present in dataset
+# Rule: --STRTPT present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The characterization of the start of an observation relative to
+                  a reference time point.  The sponsor-defined reference time
+                  point is in --STTPT.
+                Document: Model v2.0
+                Item: --STRTPT
+                Section: Timing
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0060
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Identifies the start of the observation as being before or after
+                  the sponsor-defined reference time point defined by variable
+                  --STTPT.
+                Document: Model v1.7
+                Item: Table 2.2.5.1 --STRTPT
+                Section: 2.2.5 Timing Variables for All Classes
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0060
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: (--STRTPT) Identifies the start of the observation as being
+                  before or after the sponsor-defined reference time point
+                  defined by variable --STTPT.
+                Document: Model v1.4
+                Item: Specification
+                Section: 2.2.5 Timing Variables for All Classes
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0060
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The characterization of the start of an observation relative to
+                  a reference time point. The sponsor-defined reference time
+                  point is in --STTPT.
+                Document: SDTM v2.1
+                Item: --STRTPT
+                Section: Section 3.1.5 Timing Variables for All Classes
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0334
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --STTPT
+      operator: exists
+    - name: --STRTPT
+      operator: not_exists
+Core:
+  Id: CORE-000261
+  Status: Published
+  Version: '1'
+Description: Raise an error when --STTPT is present in dataset and --STRTPT is
+  not present in dataset.
+Executability: Fully Executable
+Outcome:
+  Message: --STTPT is present in dataset, but --STRTPT is not present in dataset.
+  Output Variables:
+    - --STTPT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Dataset

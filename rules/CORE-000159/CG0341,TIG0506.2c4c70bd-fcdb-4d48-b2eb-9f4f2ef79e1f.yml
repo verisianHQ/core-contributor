@@ -1,0 +1,104 @@
+# Variable: --TESTCD
+# Condition: 
+# Rule: --TESTCD ^= 'OTHER'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Findings: "Other, Specify" for tests may be handled similarly
+                  to Interventions. --TESTCD and --TEST should be populated with
+                  the code and description of the test found in the specified
+                  text. If specific tests are not prespecified on the CRF and
+                  the investigator has the option of writing in tests, then the
+                  name of the test would have to be coded to ensure that all
+                  --TESTCD and --TEST values are consistent with the test
+                  controlled terminology.'
+                Document: IG v3.4
+                Section: 4.2.7.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0341
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Findings: "Other; Specify" for tests may be handled similarly
+                  to Interventions. --TESTCD and --TEST should be populated with
+                  the code and description of the test found in the specified
+                  text. If specific tests are not prespecified on the CRF and
+                  the investigator has the option of writing in tests, then the
+                  name of the test would have to be coded to ensure that all
+                  --TESTCD and --TEST values are consistent with the test
+                  controlled terminology.'
+                Document: IG v3.3
+                Section: 4.2.7.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0341
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Findings: "Other; Specify" for tests may be handled similarly
+                  to Interventions. --TESTCD and --TEST should be populated with
+                  the code and description of the test found in the specified
+                  text. If specific tests are not prespecified on the CRF and
+                  the investigator has the option of writing free text for
+                  tests; then the name of the test would have to be coded to
+                  ensure that all --TESTCD and --TEST values are controlled
+                  terminology and are not free text.'
+                Document: IG v3.2
+                Section: 4.1.2.7.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0341
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: For Findings general observations class domains, each collected
+                  value will be represented in --TESTCD and --TEST in its own
+                  record per controlled terminology.
+                Document: TIG 1.0
+                Item: Num 3
+                Section: '2.8.7.4'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0506
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --TESTCD
+      operator: equal_to
+      value: OTHER
+Core:
+  Id: CORE-000159
+  Status: Published
+  Version: '1'
+Description: Raise an error when --TESTCD = 'OTHER'
+Executability: Fully Executable
+Outcome:
+  Message: --TESTCD is equal to 'OTHER'
+  Output Variables:
+    - --TESTCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Record

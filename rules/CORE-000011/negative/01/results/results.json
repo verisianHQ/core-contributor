@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "ie.xpt",
+      "domain": "IE",
+      "execution_status": "success",
+      "execution_message": "IEORRES is not equal to 'Y' when IECAT equals 'EXCLUSION'.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC015",
+          "value": {
+            "IECAT": "EXCLUSION",
+            "IEORRES": "N"
+          }
+        }
+      ]
+    }
+  ]
+}

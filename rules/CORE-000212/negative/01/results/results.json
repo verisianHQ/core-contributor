@@ -1,0 +1,21 @@
+{
+  "datasets": [
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "DSSCAT is not present when subject has more than one record per Epoch with DSCAT = 'DISPOSITION EVENT'.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "USUBJID": "S001"
+          }
+        }
+      ]
+    }
+  ]
+}

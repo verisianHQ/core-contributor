@@ -1,0 +1,64 @@
+# Variable: RELMIDS
+# Condition: RELMIDS present in dataset
+# Rule: TM dataset present in study
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0502
+              Version: '2'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The temporal relationship of the observation to the Disease
+                  Milestone Instance Name in MIDS.
+                Document: Model v2.0
+                Item: RELMIDS
+                Section: Timing
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0502
+              Version: '2'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: 'The temporal relationship of the observation to the Disease
+                  Milestone Instance Name in MIDS. Examples: "IMMEDIATELY
+                  BEFORE", "AT TIME OF", "AFTER".'
+                Document: Model v1.7
+                Item: RELMIDS
+                Section: 2.2.5
+Check:
+  all:
+    - name: $RELMIDS_EXISTS
+      operator: equal_to
+      value: true
+    - name: TM
+      operator: not_exists
+Core:
+  Id: CORE-000777
+  Status: Published
+  Version: '1'
+Description: Raise an error when variable RELMIDS is present in any of the
+  dataset and TM dataset is missing in a study.
+Executability: Fully Executable
+Operations:
+  - id: $RELMIDS_EXISTS
+    name: RELMIDS
+    operator: variable_exists
+Outcome:
+  Message: TM dataset is missing when RELMIDS variable is present in any of the dataset.
+Rule Type: Domain Presence Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset

@@ -1,0 +1,227 @@
+# Variable: --TPTREF
+# Condition: --RFTDTC present in dataset
+# Rule: --TPTREF present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: '"The actual date or date and time of a time point that acts as
+                  a fixed reference for a series of planned time points,
+                  represented in a standardized character format. The fixed
+                  reference point is in --TPTREF"'
+                Document: Model v2.0
+                Item: RFTDTC
+                Section: Timing
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0090
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: '"Date/time for a fixed reference time point defined by
+                  --TPTREF."'
+                Document: Model v1.7
+                Item: Table 2.2.5.1 --RFTDTC
+                Section: 2.2.5 Timing Variables for All Classes
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0090
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: '"(--RFTDTC) Date/time for a fixed reference time point defined
+                  by --TPTREF in ISO 8601 character format."'
+                Document: Model v1.4
+                Item: Specification
+                Section: 2.2.5 Timing Variables for All Classes
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0090
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The actual date or date and time of a time point that acts as a
+                  fixed reference for a series of planned time points,
+                  represented in a standardized character format. The fixed
+                  reference point is in --TPTREF.
+                Document: SDTM v2.1
+                Item: --RFTDTC
+                Section: Section 3.1.5 Timing Variables for All Classes
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0355
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Time point reference should be provided, when reference time
+                  point is used.
+                Document: FDA
+                Section: FDAB037
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3701
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Time point reference should be provided, when reference time
+                  point is used.
+                Document: FDA
+                Section: FDAB037
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3701
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Time point reference should be provided, when reference time
+                  point is used.
+                Document: FDA
+                Section: FDAB037
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3701
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Time point reference should be provided, when reference time
+                  point is used.
+                Document: FDA
+                Section: FDAB037
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3701
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Time point reference should be provided, when reference time
+                  point is used.
+                Document: FDA
+                Section: FDAB037
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3701
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Time point reference should be provided, when reference time
+                  point is used.
+                Document: FDA
+                Section: FDAB037
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3701
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Time point reference should be provided, when reference time
+                  point is used.
+                Document: FDA
+                Section: FDAB037
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3701
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Time point reference should be provided, when reference time
+                  point is used.
+                Document: FDA
+                Section: FDAB037
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3701
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Time point reference should be provided, when reference time
+                  point is used.
+                Document: FDA
+                Section: FDAB037
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3701
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: SENDIG-AR
+        References:
+          - Citations:
+              - Cited Guidance: Time point reference should be provided, when reference time
+                  point is used.
+                Document: FDA
+                Section: FDAB037
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3701
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  all:
+    - name: --RFTDTC
+      operator: exists
+    - name: --TPTREF
+      operator: not_exists
+Core:
+  Id: CORE-000165
+  Status: Published
+  Version: '1'
+Description: Raise an error when --TPTREF is not present in dataset when
+  --RFTDTC is present.
+Executability: Fully Executable
+Outcome:
+  Message: --TPTREF is not present when --RFTDTC is present in a dataset
+  Output Variables:
+    - --RFTDTC
+    - --TPTREF
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Dataset

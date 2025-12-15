@@ -1,0 +1,190 @@
+# Variable: GEN
+# Condition: 
+# Rule: Variable labels are in title case
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Use title case for all labels (title case means to capitalize
+                  the first letter of every word except for articles,
+                  prepositions, and conjunctions).
+                Document: IG v3.4
+                Item: 3h
+                Section: '2.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0359
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Use title case for all labels (title case means to capitalize
+                  the first letter of every word except for articles;
+                  prepositions; and conjunctions).
+                Document: IG v3.2
+                Item: 3h
+                Section: '2.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0359
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Use title case for all labels (title case means to capitalize
+                  the first letter of every word except for articles;
+                  prepositions; and conjunctions).
+                Document: IG v3.3
+                Item: 3h
+                Section: '2.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0359
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Variable descriptive names (labels), up to 40 characters in
+                  title case, should be provided as data variable labels.
+                Document: IG v3.0
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND29
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Variable descriptive names (labels), up to 40 characters in
+                  title case, should be provided as data variable labels.
+                Document: IG v3.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND29
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Variable descriptive names (labels), up to 40 characters in
+                  title case, should be provided as data variable labels.
+                Document: IG v3.1.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND29
+              Version: "1"
+            Version: "5.0"
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Variable descriptive names (labels), up to 40 characters in
+                  title case, should be provided as data variable labels.
+                Document: IG v3.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND29
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Variable descriptive names (labels), up to 40 characters in
+                  title case, should be provided as data variable labels.
+                Document: IG v3.1.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND29
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Variable descriptive names (labels), up to 40 characters in
+                  title case, should be provided as data variable labels.
+                Document: IG v3.1.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND29
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Descriptive labels per this guide, up to 40 characters, will be
+                  provided as data variable labels for all variables, including
+                  Supplemental Qualifier variables. Use title case for all
+                  labels
+                Document: TIG 1.0
+                Item: Tabulation Datasets table NUM 5
+                Section: 2.6|2.8.2|2.8.3
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0524
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Descriptive labels per this guide, up to 40 characters, will be
+                  provided as data variable labels for all variables, including
+                  Supplemental Qualifier variables.
+                Document: TIG 1.0
+                Item: Tabulation Datasets table, Num 5
+                Section: 2.6 Guidance for Datasets
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0205
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: variable_label
+      operator: not_matches_regex
+      # value: ^\s*[A-Z]\S*\s*((a|an|the|and|per|to|but|or|for|in|of|on|with|([A-Z]\S*))\s*)*$
+      # Updated by Jozef Aerts, added "and/or", "is", "within" and "from"
+      # as these appear in existing labels in SDTM Model 2.0 (I did not check in earlier model versions)
+      # value: ^\s*[A-Z]\S*\s*((a|an|the|and|per|to|but|or|for|in|of|on|with|and/or|is|within|from|([A-Z]\S*))\s*)*$
+      # update 2025-07-24:
+      value: ^\s*[A-Z]\S*\s*((a|an|the|as|and|per|to|but|or|for|in|is|of|on|with|and\/or|is|within|from|([A-Z]\S*))\s*)*$
+Core:
+  Id: CORE-000594
+  Status: Published
+  Version: '1'
+Description: Raise an error when a variable label is not in title case
+Executability: Fully Executable
+Outcome:
+  Message: Variable label is not in title case.
+Rule Type: Variable Metadata Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD, NONCLIN
+Sensitivity: Record

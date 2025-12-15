@@ -1,0 +1,53 @@
+{
+  "datasets": [
+    {
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "execution_status": "success",
+      "execution_message": "VSORRES is missing even though VSLOBXFL= \"Y\" and either VSDRVFL is not present in dataset or is not equal to \"Y\"",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 18,
+          "SEQ": 18,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSDRVFL": "Not in dataset",
+            "VSLOBXFL": "Y",
+            "VSORRES": null
+          }
+        },
+        {
+          "row": 32,
+          "SEQ": 32,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSDRVFL": "Not in dataset",
+            "VSLOBXFL": "Y",
+            "VSORRES": null
+          }
+        },
+        {
+          "row": 53,
+          "SEQ": 53,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSDRVFL": "Not in dataset",
+            "VSLOBXFL": "Y",
+            "VSORRES": null
+          }
+        },
+        {
+          "row": 58,
+          "SEQ": 58,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSDRVFL": "Not in dataset",
+            "VSLOBXFL": "Y",
+            "VSORRES": null
+          }
+        }
+      ]
+    }
+  ]
+}

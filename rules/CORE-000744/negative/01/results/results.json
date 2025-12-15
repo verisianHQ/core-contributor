@@ -1,0 +1,227 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000744, dataset=AE",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "Related record is present in the parent domain dataset but FAOBJ is not equal to the \"TERM\", \"TRT\" or \"DECOD\" of the parent domain.",
+      "number_errors": 18,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FAOBJ": "INJECTION SITE REACTION",
+            "RELREC.**DECOD": "Not in dataset",
+            "RELREC.**TERM": "Not in dataset",
+            "RELREC.**TRT": "Not in dataset"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FAOBJ": "INJECTION SITE REACTION",
+            "RELREC.**DECOD": "Not in dataset",
+            "RELREC.**TERM": "Not in dataset",
+            "RELREC.**TRT": "Not in dataset"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FAOBJ": "INJECTION SITE REACTION",
+            "RELREC.**DECOD": "Not in dataset",
+            "RELREC.**TERM": "Not in dataset",
+            "RELREC.**TRT": "Not in dataset"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FAOBJ": "INJECTION SITE REACTION",
+            "RELREC.**DECOD": "Not in dataset",
+            "RELREC.**TERM": "Not in dataset",
+            "RELREC.**TRT": "Not in dataset"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FAOBJ": "INJECTION SITE REACTION",
+            "RELREC.**DECOD": "Not in dataset",
+            "RELREC.**TERM": "Not in dataset",
+            "RELREC.**TRT": "Not in dataset"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FAOBJ": "INJECTION SITE REACTION",
+            "RELREC.**DECOD": "Not in dataset",
+            "RELREC.**TERM": "Not in dataset",
+            "RELREC.**TRT": "Not in dataset"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "FAOBJ": "INJECTION SITE REACTION",
+            "RELREC.**DECOD": "Not in dataset",
+            "RELREC.**TERM": "Not in dataset",
+            "RELREC.**TRT": "Not in dataset"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 2,
+          "USUBJID": "CDISC002",
+          "value": {
+            "FAOBJ": "INJECTION SITE REACTION",
+            "RELREC.**DECOD": "Not in dataset",
+            "RELREC.**TERM": "Not in dataset",
+            "RELREC.**TRT": "Not in dataset"
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": 3,
+          "USUBJID": "CDISC002",
+          "value": {
+            "FAOBJ": "INJECTION SITE REACTION",
+            "RELREC.**DECOD": "Not in dataset",
+            "RELREC.**TERM": "Not in dataset",
+            "RELREC.**TRT": "Not in dataset"
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": 4,
+          "USUBJID": "CDISC002",
+          "value": {
+            "FAOBJ": "INJECTION SITE REACTION",
+            "RELREC.**DECOD": "Not in dataset",
+            "RELREC.**TERM": "Not in dataset",
+            "RELREC.**TRT": "Not in dataset"
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": 5,
+          "USUBJID": "CDISC002",
+          "value": {
+            "FAOBJ": "INJECTION SITE REACTION",
+            "RELREC.**DECOD": "Not in dataset",
+            "RELREC.**TERM": "Not in dataset",
+            "RELREC.**TRT": "Not in dataset"
+          }
+        },
+        {
+          "row": 12,
+          "SEQ": 6,
+          "USUBJID": "CDISC002",
+          "value": {
+            "FAOBJ": "INJECTION SITE REACTION",
+            "RELREC.**DECOD": "Not in dataset",
+            "RELREC.**TERM": "Not in dataset",
+            "RELREC.**TRT": "Not in dataset"
+          }
+        },
+        {
+          "row": 13,
+          "SEQ": 7,
+          "USUBJID": "CDISC002",
+          "value": {
+            "FAOBJ": "INJECTION SITE REACTION",
+            "RELREC.**DECOD": "Not in dataset",
+            "RELREC.**TERM": "Not in dataset",
+            "RELREC.**TRT": "Not in dataset"
+          }
+        },
+        {
+          "row": 14,
+          "SEQ": 8,
+          "USUBJID": "CDISC002",
+          "value": {
+            "FAOBJ": "INJECTION SITE REACTION",
+            "RELREC.**DECOD": "Not in dataset",
+            "RELREC.**TERM": "Not in dataset",
+            "RELREC.**TRT": "Not in dataset"
+          }
+        },
+        {
+          "row": 15,
+          "SEQ": 9,
+          "USUBJID": "CDISC002",
+          "value": {
+            "FAOBJ": "INJECTION SITE REACTION",
+            "RELREC.**DECOD": "Not in dataset",
+            "RELREC.**TERM": "Not in dataset",
+            "RELREC.**TRT": "Not in dataset"
+          }
+        },
+        {
+          "row": 16,
+          "SEQ": 10,
+          "USUBJID": "CDISC002",
+          "value": {
+            "FAOBJ": "INVALID FAOBJ",
+            "RELREC.**DECOD": "Not in dataset",
+            "RELREC.**TERM": "Not in dataset",
+            "RELREC.**TRT": "Not in dataset"
+          }
+        },
+        {
+          "row": 17,
+          "SEQ": 11,
+          "USUBJID": "CDISC002",
+          "value": {
+            "FAOBJ": "INJECTION SITE REACTION",
+            "RELREC.**DECOD": "Not in dataset",
+            "RELREC.**TERM": "Not in dataset",
+            "RELREC.**TRT": "Not in dataset"
+          }
+        },
+        {
+          "row": 18,
+          "SEQ": 12,
+          "USUBJID": "CDISC002",
+          "value": {
+            "FAOBJ": "INJECTION SITE REACTION",
+            "RELREC.**DECOD": "Not in dataset",
+            "RELREC.**TERM": "Not in dataset",
+            "RELREC.**TRT": "Not in dataset"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "relrec.xpt",
+      "domain": "RELREC",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000744, dataset=RELREC",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

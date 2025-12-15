@@ -1,0 +1,89 @@
+# Variable: --SCAT
+# Condition: 
+# Rule: --SCAT ^= --DECOD
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the
+                  domain  name or dictionary classification provided by --DECOD
+                  and --BODSYS.
+                Document: IG v3.4
+                Section: 4.2.6
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0338
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the
+                  domain  name or dictionary classification provided by --DECOD
+                  and --BODSYS.
+                Document: IG v3.3
+                Section: 4.2.6
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0338
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the
+                  domain  name or dictionary classification provided by --DECOD
+                  and --BODSYS.
+                Document: IG v3.2
+                Section: 4.1.2.6
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0338
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Values for --CAT and --SCAT will not be the domain name or
+                  dictionary classification represented in --DECOD and --BODSYS.
+                Document: TIG 1.0
+                Item: General Conventions table NUM 7
+                Section: 2.8.7.1
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0503
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --SCAT
+      operator: equal_to_case_insensitive
+      value: --DECOD
+Core:
+  Id: CORE-000195
+  Status: Published
+  Version: '1'
+Description: Raise an error when --SCAT = --DECOD.
+Executability: Fully Executable
+Outcome:
+  Message: --SCAT is equal to --DECOD.
+  Output Variables:
+    - --DECOD
+    - --SCAT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Record

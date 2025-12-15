@@ -1,0 +1,75 @@
+# Variable: MIDSTYPE
+# Condition: MIDSTYPE = TM.MIDSTYPE and TM.TMRPT = 'N'
+# Rule: MIDSTYPE is unique per subject
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0545
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: For Disease Milestones that can occur only once (TMRPT = "N")
+                  the value of MIDS may be the value in MIDSTYPE or may an
+                  abbreviated version.
+                Document: IG v3.4
+                Item: Assumption 2.a
+                Section: '5.4'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0545
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: For Disease Milestones that can occur only once (TMRPT = "N")
+                  the value of MIDS may be the value in MIDSTYPE or may an
+                  abbreviated version.
+                Document: IG v3.4
+                Item: Assumption 2.a
+                Section: '5.5'
+Check:
+  all:
+    - name: MIDSTYPE
+      operator: is_contained_by
+      value: $tm_midstype
+    - name: TMRPT
+      operator: equal_to
+      value: N
+    - name: MIDSTYPE
+      operator: is_not_unique_set
+      value: USUBJID
+Core:
+  Id: CORE-000216
+  Status: Published
+  Version: '1'
+Description: MIDSTYPE must be unique within subject when MIDSTYPE = TM.MIDSTYPE
+  and TM.TMRPT = 'N'
+Executability: Fully Executable
+Match Datasets:
+  - Name: TM
+    Keys:
+      - MIDSTYPE
+Operations:
+  - domain: TM
+    id: $tm_midstype
+    name: MIDSTYPE
+    operator: distinct
+Outcome:
+  Message: MIDSTYPE is not unique within subject when MIDSTYPE = TM.MIDSTYPE and
+    TM.TMRPT = 'N'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - SM
+Sensitivity: Record

@@ -1,0 +1,94 @@
+{
+  "datasets": [
+    {
+      "dataset": "ho.xpt",
+      "domain": "HO",
+      "execution_status": "success",
+      "execution_message": "HOSTRTPT is completed, but HOSTTPT is not completed.",
+      "number_errors": 9,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC012",
+          "value": {
+            "HOSTRTPT": "BEFORE",
+            "HOSTTPT": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "CDISC013",
+          "value": {
+            "HOSTRTPT": "AFTER",
+            "HOSTTPT": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC014",
+          "value": {
+            "HOSTRTPT": "BEFORE",
+            "HOSTTPT": null
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "CDISC016",
+          "value": {
+            "HOSTRTPT": "BEFORE",
+            "HOSTTPT": null
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 2,
+          "USUBJID": "CDISC017",
+          "value": {
+            "HOSTRTPT": "BEFORE",
+            "HOSTTPT": null
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 1,
+          "USUBJID": "CDISC018",
+          "value": {
+            "HOSTRTPT": "AFTER",
+            "HOSTTPT": null
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 1,
+          "USUBJID": "CDISC019",
+          "value": {
+            "HOSTRTPT": "BEFORE",
+            "HOSTTPT": null
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 1,
+          "USUBJID": "CDISC020",
+          "value": {
+            "HOSTRTPT": "BEFORE",
+            "HOSTTPT": null
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": 2,
+          "USUBJID": "CDISC021",
+          "value": {
+            "HOSTRTPT": "BEFORE",
+            "HOSTTPT": null
+          }
+        }
+      ]
+    }
+  ]
+}
