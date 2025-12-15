@@ -1,0 +1,81 @@
+# Variable: --BDSYCD
+# Condition: --BODSYS ^= null
+# Rule: --BDSYCD ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Events[--BODSYSCD][Variable Qualifier of BODSYS]
+                Document: Model v2.0
+                Item: --BODSYS
+                Section: Events
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0082
+              Version: '2'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Variable Qualifier of --BODSYS
+                Document: Model v1.7
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0082
+              Version: '2'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Variable Qualifier of --BODSYS
+                Document: Model v1.4
+                Section: Events
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0082
+              Version: '2'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Events[--BODSYSCD][Variable Qualifier of BODSYS]
+                Document: SDTM v2.1
+                Item: --BODSYS
+                Section: 3.1.2 The Events Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0347
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --BODSYS
+      operator: non_empty
+    - name: --BDSYCD
+      operator: empty
+Core:
+  Id: CORE-000024
+  Status: Published
+  Version: '1'
+Description: Raise an error if --BODSYS is not empty, --BDSYCD is empty
+Executability: Fully Executable
+Outcome:
+  Message: --BODSYS is not empty and --BDSYCD is empty
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Record

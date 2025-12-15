@@ -1,0 +1,51 @@
+# Variable: RFSTDTC
+# Condition: Milestone associated with RFSTDTC is start of treatment and ACTARM not in ('Screen Failure' 'Not Assigned' 'Not Treated')
+# Rule: RFSTDTC ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Required for all randomized subjects.
+                Document: IG v3.2
+                Item: Specification
+                Section: '5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0146
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+Check:
+  all:
+    - name: ACTARM
+      operator: is_not_contained_by
+      value:
+        - Screen Failure
+        - Not Assigned
+        - Not Treated
+        - SCREEN FAILURE
+        - NOT ASSIGNED
+        - NOT TREATED
+    - name: RFSTDTC
+      operator: empty
+Core:
+  Id: CORE-000380
+  Status: Published
+  Version: '1'
+Description: 'Raise an error when RFSTDTC is null, but ACTARM is neither Screen
+  Failure, Not Assigned, nor Not Treated'
+Executability: Fully Executable
+Outcome:
+  Message: RFSTDTC must not be null when ACTARM is not in (Screen Failure, Not
+    Assigned, Not Treated.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

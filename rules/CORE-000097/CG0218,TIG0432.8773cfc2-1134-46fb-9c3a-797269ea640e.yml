@@ -1,0 +1,106 @@
+# Variable: EPOCH
+# Condition: EPOCH present in dataset and SESTDTC <= SVSTDTC and SVSTDTC <= SEENDTC
+# Rule: EPOCH = SE.EPOCH
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If TAETORD and/or EPOCH are added, then the values must be those
+                  at the start of the visit.
+                Document: IG v3.4
+                Item: Assumption 11
+                Section: '5.5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0218
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If TAETORD and/or EPOCH are added, then the values must be those
+                  at the start of the visit.It would be inappropriate to add the
+                  variables that support time points (--TPT, --TPTNUM, --ELTM,
+                  --TPTREF, and --RFTDTC), since the topic of this dataset is
+                  visits.
+                Document: IG v3.2
+                Item: Assumption 11
+                Section: 5 SV
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0218
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If TAETORD and/or EPOCH are added, then the values must be those
+                  at the start of the visit.It would be inappropriate to add the
+                  variables that support time points (--TPT, --TPTNUM, --ELTM,
+                  --TPTREF, and --RFTDTC), since the topic of this dataset is
+                  visits.
+                Document: IG v3.3
+                Item: Assumption 11
+                Section: '5.5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0218
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: If TAETORD and/or EPOCH are added, then the values must be those
+                  at the start of the visit.
+                Document: TIG 1.0
+                Item: Assumption 11
+                Section: 2.8.10.25
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0432
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: EPOCH
+      operator: exists
+    - name: SESTDTC
+      operator: date_less_than_or_equal_to
+      value: SVSTDTC
+    - name: SVSTDTC
+      operator: date_less_than_or_equal_to
+      value: SEENDTC
+    - name: EPOCH
+      operator: not_equal_to
+      value: SE.EPOCH
+Core:
+  Id: CORE-000097
+  Status: Published
+  Version: '1'
+Description: Raise an error when variable EPOCH values don't match between
+  Subject Visits (SV) and Subject Elements (SE) datasets.
+Executability: Partially Executable - Possible Overreporting
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: SE
+Outcome:
+  Message: EPOCH values don't match between Subject Visits (SV) and Subject
+    Elements (SE) datasets.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - SV
+  Use Case: INDH
+Sensitivity: Record

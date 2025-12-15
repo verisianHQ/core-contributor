@@ -1,0 +1,99 @@
+# Variable: --TPTNUM
+# Condition: --TPT present in dataset
+# Rule: --TPTNUM present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: When time points are represented in SDTMIG domains, both --TPT
+                  and --TPTNUM must be used.
+                Document: IG v3.3
+                Section: 4.4.10 Timing Variables for All Classes
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0468
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: When time points are used, --TPTNUM is expected. Within the
+                  context that defines uniqueness for a time point, which may
+                  include domain, visit, and reference time point, there must be
+                  a one-to-relationship between values of --TPT and --TPTNUM. in
+                  other words, if domain, visit, and reference time point
+                  uniquely identify subject data, then if two subjects have
+                  records with the same values of DOMAIN, VISITNUM, --TPTREF,
+                  and --TPTNUM, then these records may not have different time
+                  point descriptions in --TPT.
+                Document: IG v3.2
+                Section: 4.1.4.10
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0468
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: When time points are used, --TPTNUM is expected. Within the
+                  context that defines uniqueness for a time point, which may
+                  include domain, visit, and reference time point, there must be
+                  a one-to-relationship between values of --TPT and --TPTNUM. in
+                  other words, if domain, visit, and reference time point
+                  uniquely identify subject data, then if two subjects have
+                  records with the same values of DOMAIN, VISITNUM, --TPTREF,
+                  and --TPTNUM, then these records may not have different time
+                  point descriptions in --TPT.
+                Document: IG v3.3
+                Section: 4.4.10
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0468
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Time points will be represented using both --TPT and --TPTNUM.
+                  There will be a one-to-one relationship between values of
+                  --TPT and --TPTNUM.
+                Document: TIG 1.0
+                Item: Num 5
+                Section: 2.8.7.5
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0598
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --TPT
+      operator: exists
+    - name: --TPTNUM
+      operator: not_exists
+Core:
+  Id: CORE-000026
+  Status: Published
+  Version: '1'
+Description: When --TPT is present in a dataset, --TPTNUM must also be present.
+Executability: Fully Executable
+Outcome:
+  Message: The --TPTNUM variable does not exist when --TPT does exist.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Dataset

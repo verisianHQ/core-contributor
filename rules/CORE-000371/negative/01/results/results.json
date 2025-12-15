@@ -1,0 +1,118 @@
+{
+  "datasets": [
+    {
+      "dataset": "ta.xpt",
+      "domain": "TA",
+      "execution_status": "success",
+      "execution_message": "ARM is \"Screen Failure\", \"Not Assigned\", \"Unplanned Treatment\" or \"Not Treated\"",
+      "number_errors": 8,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARM": "Screen Failure"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARM": "Screen Failure"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARM": "Unplanned Treatment"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARM": "Unplanned Treatment"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARM": "Not Assigned"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARM": "Not Assigned"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARM": "Not Treated"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARM": "Not Treated"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "tv.xpt",
+      "domain": "TV",
+      "execution_status": "success",
+      "execution_message": "ARM is \"Screen Failure\", \"Not Assigned\", \"Unplanned Treatment\" or \"Not Treated\"",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARM": "Screen Failure"
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARM": "Not Assigned"
+          }
+        },
+        {
+          "row": 12,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARM": "Unplanned Treatment"
+          }
+        },
+        {
+          "row": 13,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARM": "Not Treated"
+          }
+        }
+      ]
+    }
+  ]
+}

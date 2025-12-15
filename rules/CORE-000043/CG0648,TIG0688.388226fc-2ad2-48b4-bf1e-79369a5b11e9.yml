@@ -1,0 +1,53 @@
+# Variable: 
+# Condition: 
+# Rule: TP dataset not present
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The TP dataset must not be used in human clinical trials.
+                Document: SDTM v2.0
+                Section: Trial Repro Paths
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0648
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Not in human clinical trials.
+                Document: SDTM v2.1
+                Section: Section 5.1.3.2 Trial Repro Paths
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0688
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: TP
+      operator: exists
+Core:
+  Id: CORE-000043
+  Status: Published
+  Version: '1'
+Description: Raise an error when TP dataset is present.
+Executability: Fully Executable
+Outcome:
+  Message: TP dataset is present.
+Rule Type: Domain Presence Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - TP
+  Use Case: INDH
+Sensitivity: Dataset

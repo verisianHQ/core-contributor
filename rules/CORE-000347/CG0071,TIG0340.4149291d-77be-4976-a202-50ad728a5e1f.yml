@@ -1,0 +1,88 @@
+# Variable: DSTERM
+# Condition: DSCAT = 'DISPOSITION EVENT'
+# Rule: DSTERM = 'COMPLETED' or the reason for discontinuation
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: When DSCAT = "DISPOSITION EVENT" DSTERM contains either
+                  "COMPLETED" or, if the subject did not complete, specific
+                  verbatim information about the reason for non-completion
+                Document: IG v3.4
+                Item: Assumption 3b
+                Section: 6.2.4
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0071
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: When DSCAT='DISPOSITION EVENT", DSTERM contains either
+                  "COMPLETED" or, if the subject did not complete, specific
+                  verbatim information about the disposition event
+                Document: IG v3.2
+                Item: Assumption 3a
+                Section: '6.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0071
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: When DSCAT = "DISPOSITION EVENT" DSTERM contains either
+                  "COMPLETED" or, if the subject did not complete, specific
+                  verbatim information about the reason for non-completion
+                Document: IG v3.3
+                Item: Assumption 3b
+                Section: 6.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0071
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: When DSCAT = "DISPOSITION EVENT" DSTERM contains
+                  either "COMPLETED" or, if the subject did not complete,
+                  specific verbatim information about the reason for
+                  non-completion
+                Document: TIG v1.0
+                Item: Assumption 3b
+                Section: 2.8.10.8
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0340
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Core:
+  Id: CORE-000347
+  Status: Draft
+  Version: '1'
+Description: Trigger error when DSCAT = 'DISPOSITION EVENT' and DSTERM does not
+  equal 'COMPLETED' or the reason for discontinuation
+Executability: Not Executable
+Outcome:
+  Message: DSTERM does not equal 'COMPLETED' or the reason for discontinuation
+    when DSCAT = 'DISPOSITION EVENT'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - DS
+  Use Case: INDH
+Sensitivity: Record

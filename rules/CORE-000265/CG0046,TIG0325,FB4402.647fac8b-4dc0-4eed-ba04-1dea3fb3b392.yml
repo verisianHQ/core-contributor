@@ -1,0 +1,237 @@
+# Variable: --ENTPT
+# Condition: --ENRTPT ^= null
+# Rule: --ENTPT ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The characterization of the end of an observation relative to a
+                  reference time point.  The sponsor-defined reference time
+                  point is in --ENTPT.
+                Document: Model v2.0
+                Item: --ENRTPT
+                Section: Timing
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0046
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Identifies the end of the observation as being before or after
+                  the sponsor-defined reference time point defined by variable
+                  --ENTPT.
+                Document: Model v1.7
+                Item: Table 2.2.5.1 --ENTPT
+                Section: 2.2.5 Timing Variables for All Classes
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0046
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: (--ENRTPT) Identifies the end of the observation as being before
+                  or after the sponsor-defined reference time point defined by
+                  variable --ENTPT.
+                Document: Model v1.4
+                Item: Specification
+                Section: 2.2.5 Timing Variables for All Classes
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0046
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The characterization of the end of an observation relative to a
+                  reference time point. The sponsor-defined reference time point
+                  is in --ENTPT.
+                Document: SDTM v2.1
+                Item: --ENRTPT
+                Section: Section 3.1.5 Timing Variables for All Classes
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0325
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+  # CG0046 is identical to rule FB4402. Added metadata for FB4402 Jozef Aerts 2024-12-19
+  - Organization: 'FDA'
+    Standards:
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'When using --ENRTPT, --ENTPT must be defined. --ENRTPT uses the
+                  time point established by --ENTPT to characterize the start of
+                  an observation.'
+                Document: 'FDA'
+                Section: 'FDAB044'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB4402'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'When using --ENRTPT, --ENTPT must be defined. --ENRTPT uses the
+                  time point established by --ENTPT to characterize the start of
+                  an observation.'
+                Document: 'FDA'
+                Section: 'FDAB044'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB4402'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'When using --ENRTPT, --ENTPT must be defined. --ENRTPT uses the
+                  time point established by --ENTPT to characterize the start of
+                  an observation.'
+                Document: 'FDA'
+                Section: 'FDAB044'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB4402'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'When using --ENRTPT, --ENTPT must be defined. --ENRTPT uses the
+                  time point established by --ENTPT to characterize the start of
+                  an observation.'
+                Document: 'FDA'
+                Section: 'FDAB044'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB4402'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'When using --ENRTPT, --ENTPT must be defined. --ENRTPT uses the
+                  time point established by --ENTPT to characterize the start of
+                  an observation.'
+                Document: 'FDA'
+                Section: 'FDAB044'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB4402'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'When using --ENRTPT, --ENTPT must be defined. --ENRTPT uses the
+                  time point established by --ENTPT to characterize the start of
+                  an observation.'
+                Document: 'FDA'
+                Section: 'FDAB044'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB4402'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'When using --ENRTPT, --ENTPT must be defined. --ENRTPT uses the
+                  time point established by --ENTPT to characterize the start of
+                  an observation.'
+                Document: 'FDA'
+                Section: 'FDAB044'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB4402'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'When using --ENRTPT, --ENTPT must be defined. --ENRTPT uses the
+                  time point established by --ENTPT to characterize the start of
+                  an observation.'
+                Document: 'FDA'
+                Section: 'FDAB044'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB4402'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: 'SENDIG-AR'
+        References:
+          - Citations:
+              - Cited Guidance: 'When using --ENRTPT, --ENTPT must be defined. --ENRTPT uses the
+                  time point established by --ENTPT to characterize the start of
+                  an observation.'
+                Document: 'FDA'
+                Section: 'FDAB044'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB4402'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: 'SENDIG-GENETOX'
+        References:
+          - Citations:
+              - Cited Guidance: 'When using --ENRTPT, --ENTPT must be defined. --ENRTPT uses the
+                  time point established by --ENTPT to characterize the start of
+                  an observation.'
+                Document: 'FDA'
+                Section: 'FDAB044'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB4402'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  all:
+    - name: --ENRTPT
+      operator: non_empty
+    - name: --ENTPT
+      operator: empty
+Core:
+  Id: CORE-000265
+  Status: Published
+  Version: '1'
+Description: Raise an error when --ENRTPT is completed and --ENTPT is not completed.
+Executability: Fully Executable
+Outcome:
+  Message: --ENRTPT is completed, but --ENTPT is not completed.
+  Output Variables:
+    - --ENRTPT
+    - --ENTPT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Record

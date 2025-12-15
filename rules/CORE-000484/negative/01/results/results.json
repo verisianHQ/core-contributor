@@ -1,0 +1,93 @@
+{
+  "datasets": [
+    {
+      "dataset": "relrec.xpt",
+      "domain": "RELREC",
+      "execution_status": "success",
+      "execution_message": "Unique RELID is NOT present on multiple RELREC records within a subject.",
+      "number_errors": 10,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "RELID": "AEDS1"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "RELID": "AEDS2"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "RELID": "AEDD3"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "RELID": "AEDD4"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "RELID": "AEFA5"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "RELID": "AEFA6"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "RELID": "AECM1"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "RELID": "AECM2"
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "RELID": "AECM3"
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "RELID": "AECM4"
+          }
+        }
+      ]
+    }
+  ]
+}

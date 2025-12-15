@@ -1,0 +1,17 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "execution_error",
+      "execution_message": "SQL operator execution error",
+      "number_errors": 1,
+      "errors": [
+        {
+          "error": "SQL error in matches_regex operator",
+          "message": "invalid regular expression: invalid embedded option\n"
+        }
+      ]
+    }
+  ]
+}

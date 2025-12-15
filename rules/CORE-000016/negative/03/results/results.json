@@ -1,0 +1,414 @@
+{
+  "datasets": [
+    {
+      "dataset": "ag.xpt",
+      "domain": "AG",
+      "execution_status": "success",
+      "execution_message": "AGPRESP should be populated as \"Y\" when AGOCCUR is provided.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "AGOCCUR": "Y",
+            "AGPRESP": "Not in dataset"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "AGOCCUR": "N",
+            "AGPRESP": "Not in dataset"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "AGOCCUR": "Y",
+            "AGPRESP": "Not in dataset"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMPRESP should be populated as \"Y\" when CMOCCUR is provided.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMOCCUR": "Y",
+            "CMPRESP": null
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "success",
+      "execution_message": "ECPRESP should be populated as \"Y\" when ECOCCUR is provided.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ECOCCUR": "Y",
+            "ECPRESP": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ECOCCUR": "N",
+            "ECPRESP": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ECOCCUR": "Y",
+            "ECPRESP": null
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000016, dataset=EX",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ml.xpt",
+      "domain": "ML",
+      "execution_status": "success",
+      "execution_message": "MLPRESP should be populated as \"Y\" when MLOCCUR is provided.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "MLOCCUR": "Y",
+            "MLPRESP": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "MLOCCUR": "N",
+            "MLPRESP": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "MLOCCUR": "Y",
+            "MLPRESP": null
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "pr.xpt",
+      "domain": "PR",
+      "execution_status": "success",
+      "execution_message": "PRPRESP should be populated as \"Y\" when PROCCUR is provided.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "PROCCUR": "Y",
+            "PRPRESP": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "PROCCUR": "N",
+            "PRPRESP": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "PROCCUR": "Y",
+            "PRPRESP": null
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "su.xpt",
+      "domain": "SU",
+      "execution_status": "success",
+      "execution_message": "SUPRESP should be populated as \"Y\" when SUOCCUR is provided.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SUOCCUR": "Y",
+            "SUPRESP": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SUOCCUR": "N",
+            "SUPRESP": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SUOCCUR": "N",
+            "SUPRESP": null
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000016, dataset=AE",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "be.xpt",
+      "domain": "BE",
+      "execution_status": "success",
+      "execution_message": "BEPRESP should be populated as \"Y\" when BEOCCUR is provided.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "BEOCCUR": "Y",
+            "BEPRESP": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "BEOCCUR": "N",
+            "BEPRESP": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "BEOCCUR": "Y",
+            "BEPRESP": null
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "BEOCCUR": "N",
+            "BEPRESP": null
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "execution_status": "success",
+      "execution_message": "CEPRESP should be populated as \"Y\" when CEOCCUR is provided.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CEOCCUR": "Y",
+            "CEPRESP": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CEOCCUR": "Y",
+            "CEPRESP": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CEOCCUR": "Y",
+            "CEPRESP": null
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CEOCCUR": "N",
+            "CEPRESP": null
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000016, dataset=DS",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "dv.xpt",
+      "domain": "DV",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000016, dataset=DV",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ho.xpt",
+      "domain": "HO",
+      "execution_status": "success",
+      "execution_message": "HOPRESP should be populated as \"Y\" when HOOCCUR is provided.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "HOOCCUR": "Y",
+            "HOPRESP": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "HOOCCUR": "Y",
+            "HOPRESP": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "HOOCCUR": "Y",
+            "HOPRESP": null
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "HOOCCUR": "N",
+            "HOPRESP": null
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "MHPRESP should be populated as \"Y\" when MHOCCUR is provided.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "MHOCCUR": "Y",
+            "MHPRESP": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "MHOCCUR": "Y",
+            "MHPRESP": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "MHOCCUR": "Y",
+            "MHPRESP": null
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "MHOCCUR": "N",
+            "MHPRESP": null
+          }
+        }
+      ]
+    }
+  ]
+}

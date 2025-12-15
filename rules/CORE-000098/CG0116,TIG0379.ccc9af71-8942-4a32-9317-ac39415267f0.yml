@@ -1,0 +1,106 @@
+# Variable: --DIR
+# Condition: --LOC not present in dataset
+# Rule: --DIR not present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Variable Qualifer of --LOC.
+                Document: Model v2.0
+                Item: --DIR
+                Section: Events
+              - Cited Guidance: Variable Qualifer of --LOC.
+                Document: Model v2.0
+                Item: --DIR
+                Section: Interventions
+              - Cited Guidance: Variable Qualifer of --LOC.
+                Document: Model v2.0
+                Item: --DIR
+                Section: Findings
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0116
+              Version: '2'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Qualifier for anatomical location further detailing
+                  directionality ...
+                Document: Model v1.4
+                Item: --DIR Specification
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0116
+              Version: '2'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Qualifier for anatomical location further detailing
+                  directionality ...
+                Document: Model v1.7
+                Item: --DIR Specification
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0116
+              Version: '2'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Events[Variable Qualifier of --LOC.]
+                Document: SDTM v2.1
+                Item: --DIR
+                Section: Section 3.1.2 The Events Observation Class
+              - Cited Guidance: Interventions[Variable Qualifier of --LOC.]
+                Document: SDTM v2.1
+                Item: --DIR
+                Section: Section 3.1.1 The Interventions Observation Class
+              - Cited Guidance: Findings[Variable Qualifier of --LOC.]
+                Document: SDTM v2.1
+                Item: --DIR
+                Section: Section 3.1.3 The Findings Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0379
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --LOC
+      operator: not_exists
+    - name: --DIR
+      operator: exists
+Core:
+  Id: CORE-000098
+  Status: Published
+  Version: '1'
+Description: Raise an error when --LOC does not exists in a dataset, --DIR exists.
+Executability: Fully Executable
+Outcome:
+  Message: --DIR variable is present, when --LOC variable does not exist in a dataset.
+  Output Variables:
+    - --LOC
+    - --DIR
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+      - FINDINGS
+      - EVENTS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Dataset

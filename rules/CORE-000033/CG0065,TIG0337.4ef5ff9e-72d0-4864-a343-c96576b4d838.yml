@@ -1,0 +1,90 @@
+# Variable: DSDECOD
+# Condition: DSTERM = 'COMPLETED'
+# Rule: DSDECOD = 'COMPLETED'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: When DSTERM = "COMPLETED", DSDECOD is the term "COMPLETED" from
+                  the controlled terminology codelist NCOMPLT.
+                Document: SDTMIG v3.4
+                Item: Assumption 3.b.i.
+                Section: 6.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0065
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: b. When DSTERM = 'COMPLETED', DSDECOD = 'COMPLETED'.
+                Document: SDTMIG v3.3
+                Item: Assumption 3b
+                Section: 6.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0065
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: b. When DSTERM = 'COMPLETED', DSDECOD = 'COMPLETED'.
+                Document: SDTMIG v3.2
+                Item: Assumption 3b
+                Section: '6.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0065
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: When DSTERM = "COMPLETED", DSDECOD is the term "COMPLETED" from
+                  the Controlled Terminology codelist NCOMPLT.
+                Document: TIG 1.0
+                Item: Assumption 3.b.i.
+                Section: 2.8.10.8
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0337
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: DSTERM
+      operator: equal_to
+      value: COMPLETED
+    - name: DSDECOD
+      operator: not_equal_to
+      value: COMPLETED
+Core:
+  Id: CORE-000033
+  Status: Published
+  Version: '1'
+Description: Raise an error when DSTERM = "COMPLETED" and DSDECOD not equal to "COMPLETED".
+Executability: Fully Executable
+Outcome:
+  Message: DSDECOD is not equal to "COMPLETED" when DSTERM equals "COMPLETED".
+  Output Variables:
+    - DSTERM
+    - DSDECOD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - DS
+  Use Case: INDH
+Sensitivity: Record

@@ -1,0 +1,134 @@
+# Variable: --STRESC
+# Condition: --ORRES ^= null or --DRVFL = 'Y'
+# Rule: --STRESC ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Model v2.0[Findings][The standardized result of the measurement,
+                  test, or examination in character format. --STRESC should
+                  store all results or findings in character format; if results
+                  are numeric, they should also be stored in numeric format in
+                  --STRESN. If various tests have results "NONE", "NEG", and
+                  "NEGATIVE" in --ORRES and these results effectively have the
+                  same meaning, they could be represented in standard format in
+                  --STRESC as "NEGATIVE".]|IG v3.4[6.3.5.3][Contains the result
+                  value for all findings, copied or derived from LBORRES in a
+                  standard format or standard units.]
+                Document: Model v2.0|IG v3.4
+                Item: Specification
+                Section: Findings|6.3.5.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0397
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: IG v3.2[6.3 LB][Contains the result value for all findings;
+                  copied or derived from LBORRES in a standard format or
+                  standard units. LBSTRESC should store all results or findings
+                  in character format; if results are numeric; they should also
+                  be stored in numeric format in LBSTRESN. For example; if a
+                  test has results 'NONE'; 'NEG'; and 'NEGATIVE' in LBORRES and
+                  these results effectively have the same meaning; they could be
+                  represented in standard format in LBSTRESC as 'NEGATIVE'. For
+                  other examples; see general assumptions.]|Model
+                  v1.4[2.2.3][Contains the result value for all findings; copied
+                  or derived from --ORRES in a standard format or in standard
+                  units.]
+                Document: IG v3.2|Model v1.4
+                Section: IG v3.2[6.3 LB]|Model v1.4[2.2.3]
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0397
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: IG v3.3[6.3.6][Contains the result value for all findings;
+                  copied or derived from --ORRES in a standard format or in
+                  standard units.]|Model v1.7[2.2.3] Contains the result value
+                  for all findings; copied or derived from LBORRES in a standard
+                  format or standard units. LBSTRESC should store all results or
+                  findings in character format; if results are numeric; they
+                  should also be stored in numeric format in LBSTRESN. For
+                  example; if a test has results 'NONE'; 'NEG'; and 'NEGATIVE'
+                  in LBORRES and these results effectively have the same
+                  meaning; they could be represented in standard format in
+                  LBSTRESC as 'NEGATIVE'. For other examples; see general
+                  assumptions.]
+                Document: IG v3.3|Model v1.7
+                Section: IG v3.3[6.3.6]|Model v1.7[2.2.3]
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0397
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The standardized result of the measurement, test, or examination
+                  in character format. --STRESC should store all results or
+                  findings in character format; if results are numeric, they
+                  should also be stored in numeric format in --STRESN. If
+                  various tests have results "NONE", "NEG", and "NEGATIVE" in
+                  --ORRES and these results effectively have the same meaning,
+                  they could be represented in standard format in --STRESC as
+                  "NEGATIVE"
+                Document: SDTM v2.1
+                Section: 3.3.3 The Findings Observation Class
+              - Cited Guidance: Values will be populated in --STRESC when --ORRES is populated.
+                  Numeric values represented in --STRESC will be assigned to
+                  --STRESN.
+                Document: TIG v1.0
+                Item: Table 3 Num 3
+                Section: 2.8.7.1
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0559
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - any:
+        - name: --ORRES
+          operator: non_empty
+        - name: --DRVFL
+          operator: equal_to
+          value: Y
+    - all:
+        - name: --STRESC
+          operator: empty
+Core:
+  Id: CORE-000021
+  Status: Published
+  Version: '1'
+Description: Raise an error when the value for --STRESC is null.
+Executability: Fully Executable
+Outcome:
+  Message: --STRESC should not be blank when either --ORRES is provided or --DRVFL
+    = 'Y' .
+  Output Variables:
+    - --ORRES
+    - --DRVFL
+    - --STRESC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Record

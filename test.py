@@ -390,20 +390,31 @@ def main():
         for s in results["failed"]: 
             print(f"  - {s['rule_id']}")
             if args.verbose:
-                for t in s['positive_tests'] + s['negative_tests']:
+                for t in s['positive_tests']:
                     if not t['passed']:
-                        print(f"      Case {t['case_id']}: Expected {t['expected']}, Got {t['total_errors']} errors")
-    
+                        print(f"      Case positive/{t['case_id']}: Expected {t['expected']}, Got {t['total_errors']} errors")
+                for t in s['negative_tests']:
+                    if not t['passed']:
+                        print(f"      Case negative/{t['case_id']}: Expected {t['expected']}, Got {t['total_errors']} errors")
+
     if results["error"]:
         print("\nExecution Errors:")
         for s in results["error"]: 
             print(f"  - {s['rule_id']}")
             if args.verbose:
-                for t in s['positive_tests'] + s['negative_tests']:
+                for t in s['positive_tests']:
                     if t.get('error'):
-                        print(f"      Case {t['case_id']} Error: {t['error']}")
+                        print(f"      Case positive/{t['case_id']}")
+                        print(f"      - Error: {t['error']}")
                         if t.get('exception'):
-                            print(f"      Details: {t['exception']}")
+                            print(f"      - Exception: {t['exception']}")
+                for t in s['negative_tests']:
+                    if t.get('error'):
+                        print(f"      Case negative/{t['case_id']}")
+                        print(f"      - Error: {t['error']}")
+                        if t.get('exception'):
+                            print(f"      - Exception: {t['exception']}")
+
 
     sys.exit(1 if results["failed"] or results["error"] else 0)
 

@@ -1,0 +1,29 @@
+{
+  "datasets": [
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "success",
+      "execution_message": "SESTDTC is required.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "1201001",
+          "value": {
+            "SESTDTC": null
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 2,
+          "USUBJID": "1201002",
+          "value": {
+            "SESTDTC": null
+          }
+        }
+      ]
+    }
+  ]
+}

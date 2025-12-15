@@ -1,0 +1,53 @@
+{
+  "datasets": [
+    {
+      "dataset": "te.xpt",
+      "domain": "TE",
+      "execution_status": "success",
+      "execution_message": "At least one of TEENRL and TEDUR must be populated.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ETCD": "E000",
+            "TEDUR": null,
+            "TEENRL": "Not in dataset"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ETCD": "E001",
+            "TEDUR": null,
+            "TEENRL": "Not in dataset"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ETCD": "E002",
+            "TEDUR": null,
+            "TEENRL": "Not in dataset"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ETCD": "E003",
+            "TEDUR": null,
+            "TEENRL": "Not in dataset"
+          }
+        }
+      ]
+    }
+  ]
+}

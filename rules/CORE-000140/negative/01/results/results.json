@@ -1,0 +1,30 @@
+{
+  "datasets": [
+    {
+      "dataset": "tv.xpt",
+      "domain": "TV",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "sv.xpt",
+      "domain": "SV",
+      "execution_status": "success",
+      "execution_message": "VISITDY is not null when VISITNUM is not in TV.VISITNUM",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VISITDY": 40.0,
+            "VISITNUM": 5.01
+          }
+        }
+      ]
+    }
+  ]
+}

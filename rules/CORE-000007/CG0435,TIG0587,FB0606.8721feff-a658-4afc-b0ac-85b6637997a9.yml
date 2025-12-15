@@ -1,0 +1,134 @@
+# Variable: DTHFL
+# Condition: DTHDTC ^= null
+# Rule: DTHFL = 'Y'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: DTHDTC[The date or date and time of death, represented in a
+                  standardized character format.] DTHFL[An indication that the
+                  subject died.]
+                Document: Model v2.0
+                Item: DTHDTC|DTHFL
+                Section: Demographics
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0435
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A value of 'Y' indicates the subject died. Should be Y or null.
+                  Should be populated even when the death date is unknown.
+                Document: Model v1.4
+                Section: 2.2.6
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0435
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A value of "Y" indicates the subject died. Should be "Y" or
+                  null. Should be populated even when the death date is unknown.
+                Document: Model v1.7
+                Section: Table 2.2.6.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0435
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: DTHDTC[The date or date and time of death, represented in a
+                  standardized character format.]|DTHFL[An indication that the
+                  subject died.]
+                Document: SDTM v2.1
+                Item: DTHDTC|DTHFL
+                Section: 3.2.1 Demographics
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0587
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+  #CG0435 is identical to rule FB0606. Added metadata for FB0606.
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0606
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0606
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0606
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: DTHDTC
+      operator: non_empty
+    - name: DTHFL
+      operator: not_equal_to
+      value: Y
+Core:
+  Id: CORE-000007
+  Status: Published
+  Version: '1'
+Description: When a DTHDTC is populated in DM domain, death flag is populated as
+  Y in DM dataset for corresponding subject
+Executability: Fully Executable
+Outcome:
+  Message: DTHFL is not "Y", when DTHDTC is populated
+  Output Variables:
+    - DTHDTC
+    - DTHFL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+  Use Case: INDH
+Sensitivity: Record

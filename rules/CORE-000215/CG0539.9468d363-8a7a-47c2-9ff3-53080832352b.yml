@@ -1,0 +1,89 @@
+# Variable: GEN
+# Condition: Subject has more than one record per Epoch with DSCAT = 'DISPOSITION EVENT'
+# Rule: No more than 1 record per subject has DSSCAT = 'STUDY TREATMENT'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: DSSCAT = 'STUDY TREATMENT' can be used as a generic identifier
+                  when a study has only a single treatment.
+                Document: IG v3.4
+                Item: Assumption 2.b.2
+                Section: 6.2.3
+              - Cited Guidance: If a study has multiple treatments, then DSSCAT should name the
+                  individual treatment.
+                Document: IG v3.4
+                Item: Assumption 2.b.3
+                Section: 6.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0539
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Assumption 2.b.2[DSSCAT = 'STUDY TREATMENT' can be used as a
+                  generic identifier when a study has only a single
+                  treatment.]|Assumption 2.b.3[If a study has multiple
+                  treatments, then DSSCAT should name the individual treatment.]
+                Document: IG v3.3
+                Item: Assumption 2.b.2|Assumption 2.b.3
+                Section: 6.2.3 DS
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0539
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: $disposition_event_count
+      operator: greater_than
+      value: 1
+    - name: DSSCAT
+      operator: equal_to
+      value: STUDY TREATMENT
+      value_is_literal: true
+    - name: DSSCAT
+      operator: is_not_unique_set
+      value:
+        - USUBJID
+        - EPOCH
+Core:
+  Id: CORE-000215
+  Status: Published
+  Version: '1'
+Description: Trigger error when subject has more than one record per Epoch with
+  DSCAT = 'DISPOSITION EVENT' and more than one record where DSSCAT = 'STUDY
+  TREATMENT'
+Executability: Fully Executable
+Operations:
+  - domain: DS
+    filter:
+      DSCAT: DISPOSITION EVENT
+    group:
+      - USUBJID
+      - EPOCH
+    id: $disposition_event_count
+    name: DSCAT
+    operator: record_count
+Outcome:
+  Message: More than 1 record exists per subject per EPOCH with DSCAT =
+    'DISPOSITION EVENT' and DSSCAT = 'STUDY TREATMENT'.
+  Output Variables:
+    - USUBJID
+    - DSCAT
+    - DSSCAT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - DS
+Sensitivity: Record

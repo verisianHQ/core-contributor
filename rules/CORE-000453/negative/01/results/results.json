@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Missing value for AGE, when AGEU is provided",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-004",
+          "value": {
+            "AGE": null,
+            "AGETXT": "Not in dataset",
+            "AGEU": "YEARS"
+          }
+        }
+      ]
+    }
+  ]
+}

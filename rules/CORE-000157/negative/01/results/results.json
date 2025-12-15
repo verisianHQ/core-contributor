@@ -1,0 +1,21 @@
+{
+  "datasets": [
+    {
+      "dataset": "tv.xpt",
+      "domain": "TV",
+      "execution_status": "success",
+      "execution_message": "Length of ARMCD is greater than 20",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARMCD": "AA-BB-AA-BB-AA-BB-AAA"
+          }
+        }
+      ]
+    }
+  ]
+}

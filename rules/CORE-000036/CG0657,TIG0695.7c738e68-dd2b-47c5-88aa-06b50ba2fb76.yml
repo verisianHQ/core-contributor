@@ -1,0 +1,84 @@
+# Variable: VISIT
+# Condition: SVPRESP = 'Y'
+# Rule: VISIT in TV.VISIT
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Value is "Y" for planned visits, null for unplanned visits.
+                Document: SDTMIG v3.4
+                Item: SVPRESP
+                Section: '5.5'
+              - Cited Guidance: The values of VISITNUM in the TV dataset are the valid values of
+                  VISITNUM for planned Visits.  Any values of VISITNUM that
+                  appear in subject-level datasets that are not in the TV
+                  dataset are assumed to correspond to unplanned Visits....  If
+                  a subject-level dataset includes both VISITNUM and VISIT, then
+                  records that include values of VISITNUM that appear in the TV
+                  dataset should also include the corresponding values of VISIT
+                  from the TV dataset.
+                Document: SDTMIG v3.4
+                Item: Assumption 6
+                Section: 7.3.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0657
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: 2.8.10.25 [Specification][SVPRESP] [Value is "Y" for planned
+                  visits, null for unplanned visits.]|Section 10.8.33[Assumption
+                  6] [The values of VISITNUM in the TV dataset are the valid
+                  values of VISITNUM for planned Visits. Any values of VISITNUM
+                  that appear in subject-level datasets that are not in the TV
+                  dataset are assumed to correspond to unplanned Visits.  If a
+                  subject-level dataset includes both VISITNUM and VISIT, then
+                  records that include values of VISITNUM that appear in the TV
+                  dataset should also include the corresponding values of VISIT
+                  from the TV dataset.]
+                Document: TIG 1.0
+                Item: Specification
+                Section: 2.8.10.25|2.8.10.33
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0695
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: SVPRESP
+      operator: equal_to
+      value: Y
+    - name: VISIT
+      operator: is_not_contained_by
+      value: $tv_visit
+Core:
+  Id: CORE-000036
+  Status: Published
+  Version: '1'
+Description: Raise an error when SVPRESP is "Y" and VISIT is not present in TV.VISIT.
+Executability: Fully Executable
+Operations:
+  - domain: TV
+    id: $tv_visit
+    name: VISIT
+    operator: distinct
+Outcome:
+  Message: Planned visit is not found in TV.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - SV
+  Use Case: INDH
+Sensitivity: Record

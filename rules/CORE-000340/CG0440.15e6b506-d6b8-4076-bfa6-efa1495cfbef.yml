@@ -1,0 +1,62 @@
+# Variable: TSVAL
+# Condition: TSPARMCD = 'PLANSUB'
+# Rule: TSVAL is integer and > 0
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Further information about the parameters is included below in
+                  Table 1. TSVAL may have controlled terminology depending on
+                  the value of TSPARMCD
+                Document: IG v3.2
+                Item: Assumption 3
+                Section: 7.4|Appendix C1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0440
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Further information about the parameters is included below in
+                  Table 1. TSVAL may have controlled terminology depending on
+                  the value of TSPARMCD
+                Document: IG v3.3
+                Item: Assumption 3
+                Section: '7.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0440
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: TSPARMCD
+      operator: equal_to
+      value: PLANSUB
+    - name: TSVAL
+      operator: not_matches_regex
+      value: ^[1-9]\d*$
+Core:
+  Id: CORE-000340
+  Status: Published
+  Version: '1'
+Description: Raise an error when TSPARMCD = "PLANSUB" and the value provided in
+  TSVAL is not an integer greater than 0.
+Executability: Fully Executable
+Outcome:
+  Message: TSPARMCD = PLANSUB but the value provided in TSVAL is not a positive integer.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

@@ -1,0 +1,70 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "USUBJID is not found in DM.USUBJID",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "002",
+          "value": {
+            "USUBJID": "002"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "003",
+          "value": {
+            "USUBJID": "003"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "relrec.xpt",
+      "domain": "RELREC",
+      "execution_status": "success",
+      "execution_message": "USUBJID is not found in DM.USUBJID",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "005",
+          "value": {
+            "USUBJID": "005"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "006",
+          "value": {
+            "USUBJID": "006"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "007",
+          "value": {
+            "USUBJID": "007"
+          }
+        }
+      ]
+    }
+  ]
+}

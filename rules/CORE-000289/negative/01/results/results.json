@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBORRES is not a continuous measurement but LBORNRHI is not empty.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "ALB",
+          "value": {
+            "LBORNRHI": "30",
+            "LBORRES": "NEGATIVE"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "Prot",
+          "value": {
+            "LBORNRHI": "POSITIVE",
+            "LBORRES": "POSITIVE"
+          }
+        }
+      ]
+    }
+  ]
+}

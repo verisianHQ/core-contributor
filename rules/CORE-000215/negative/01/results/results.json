@@ -1,0 +1,73 @@
+{
+  "datasets": [
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "More than 1 record exists per subject per EPOCH with DSCAT = 'DISPOSITION EVENT' and DSSCAT = 'STUDY TREATMENT'.",
+      "number_errors": 6,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "S001",
+          "value": {
+            "DSCAT": "DISPOSITION EVENT",
+            "DSSCAT": "STUDY TREATMENT",
+            "USUBJID": "S001"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "S001",
+          "value": {
+            "DSCAT": "DISPOSITION EVENT",
+            "DSSCAT": "STUDY TREATMENT",
+            "USUBJID": "S001"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 2,
+          "USUBJID": "S002",
+          "value": {
+            "DSCAT": "DISPOSITION EVENT",
+            "DSSCAT": "STUDY TREATMENT",
+            "USUBJID": "S002"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 3,
+          "USUBJID": "S002",
+          "value": {
+            "DSCAT": "DISPOSITION EVENT",
+            "DSSCAT": "STUDY TREATMENT",
+            "USUBJID": "S002"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 4,
+          "USUBJID": "S002",
+          "value": {
+            "DSCAT": "DISPOSITION EVENT",
+            "DSSCAT": "STUDY TREATMENT",
+            "USUBJID": "S002"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 5,
+          "USUBJID": "S002",
+          "value": {
+            "DSCAT": "DISPOSITION EVENT",
+            "DSSCAT": "STUDY TREATMENT",
+            "USUBJID": "S002"
+          }
+        }
+      ]
+    }
+  ]
+}

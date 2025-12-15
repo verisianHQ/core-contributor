@@ -1,0 +1,40 @@
+{
+  "datasets": [
+    {
+      "dataset": "ft.xpt",
+      "domain": "FT",
+      "execution_status": "success",
+      "execution_message": "FTTPT and FTTPTNUM do not have a one-to-one relationship",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 120,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FTTPT": "30 MIN POST",
+            "FTTPTNUM": 30.0
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 121,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FTTPT": "30 MIN POST",
+            "FTTPTNUM": 1.0
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 134,
+          "USUBJID": "CDISC007",
+          "value": {
+            "FTTPT": "60 MIN POST",
+            "FTTPTNUM": 1.0
+          }
+        }
+      ]
+    }
+  ]
+}

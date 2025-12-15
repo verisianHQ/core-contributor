@@ -1,0 +1,101 @@
+# Variable: --BODSYS
+# Condition: Primary SOC used for analysis
+# Rule: --BODSYS = --SOC
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0039
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Dictionary derived. Body system or organ class used
+                  by the sponsor from the coding dictionary (e.g., MedDRA). When using
+                  a multi-axial dictionary such as MedDRA, this should contain the
+                  SOC used for the sponsor's analyses and summary tables which may
+                  not necessarily be the primary SOC.
+                Document: SDTMIG v3.4
+                Item: Specification
+                Section: 6.2.1
+              - Cited Guidance: Body system or system organ class assigned for analysis
+                  from a standard hierarchy (e.g. MedDRA) associated with an event.
+                Document: Model v2.0
+                Item: --BODSYS
+                Section: Events
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0039
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Dictionary derived. Body system or organ class used
+                  by the sponsor from the coding dictionary (e.g., MedDRA). When using
+                  a multi-axial dictionary such as MedDRA, this should contain the
+                  SOC used for the sponsor's analyses and summary tables which may
+                  not necessarily be the primary SOC.
+                Document: SDTMIG v3.3
+                Item: Specification
+                Section: 6.2.1
+              - Cited Guidance: Body system or system organ class assigned for analysis
+                  from a standard hierarchy (e.g. MedDRA) associated with an event.
+                Document: Model v1.7
+                Item: Table 2.2.2.1 --BODSYS
+                Section: 2.2.2
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0039
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Dictionary derived. Body system or organ class used
+                  by the sponsor from the coding dictionary (e.g., MedDRA). When using
+                  a multi-axial dictionary such as MedDRA, this should contain the
+                  SOC used for the sponsor's analyses and summary tables which may
+                  not necessarily be the primary SOC.
+                Document: SDTMIG v3.3
+                Item: Specification
+                Section: 6.2 AE
+              - Cited Guidance: Body system or system organ class assigned for analysis
+                  from a standard hierarchy (e. g. MedDRA) associated with an event.
+                Document: Model v1.4
+                Item: Table 2.2.2.1 --BODSYS
+                Section: 2.2.2
+Check:
+  all:
+    - name: --BODSYS
+      operator: not_equal_to
+      value: --SOC
+Core:
+  Id: CORE-000264
+  Status: Published
+  Version: '1'
+Description: Raise an error if primary SOC is used for analysis and -BODSYS is not
+  equal to -SOC
+Executability: Fully Executable
+Outcome:
+  Message: Primary analysis used but --BODSYS and --SOC are not equal
+  Output Variables:
+    - --TERM
+    - --BODSYS
+    - --SOC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Exclude:
+      - DS
+      - DV
+      - HO
+Sensitivity: Record

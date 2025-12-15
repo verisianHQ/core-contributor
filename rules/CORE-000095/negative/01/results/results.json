@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "success",
+      "execution_message": "ETCD is not 'UNPLAN', when SEUPDES is not empty",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 5,
+          "SEQ": 2,
+          "USUBJID": "1201002",
+          "value": {
+            "ETCD": "TRTZ",
+            "SEUPDES": "Unplanned treatement"
+          }
+        }
+      ]
+    }
+  ]
+}

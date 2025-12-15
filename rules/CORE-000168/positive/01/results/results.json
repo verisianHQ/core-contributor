@@ -1,0 +1,141 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "oe.xpt",
+      "domain": "OE",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "sv.xpt",
+      "domain": "SV",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000168, dataset=SV",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "tv.xpt",
+      "domain": "TV",
+      "execution_status": "success",
+      "execution_message": "VISITNUM is not among VISITNUM in SV domain.",
+      "number_errors": 12,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "VISITNUM": 1.0
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "VISITNUM": 2.0
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "VISITNUM": 3.0
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "VISITNUM": 4.0
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "VISITNUM": 5.0
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "VISITNUM": 7.0
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "VISITNUM": 8.0
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "VISITNUM": 9.0
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "VISITNUM": 10.0
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "VISITNUM": 11.0
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "VISITNUM": 12.0
+          }
+        },
+        {
+          "row": 12,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "VISITNUM": 13.0
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

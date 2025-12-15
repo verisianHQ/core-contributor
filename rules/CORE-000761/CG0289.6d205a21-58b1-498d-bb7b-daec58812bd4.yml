@@ -1,0 +1,78 @@
+# Variable: TSVCDVER
+# Condition: TSVCDREF = 'CDISC'
+# Rule: TSVCDVER = valid published version (date)
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The version number of the Reference Terminology, if applicable.
+                Document: IG v3.4
+                Section: 7.4.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0289
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The version number of the Reference Terminology, if applicable.
+                Document: IG v3.2
+                Item: Specification
+                Section: '7.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0289
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The version number of the Reference Terminology, if applicable.
+                Document: IG v3.3
+                Item: Specification
+                Section: 7.4.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0289
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: TSVCDREF
+      operator: equal_to
+      value: CDISC
+    - name: TSVCDVER
+      operator: is_not_contained_by
+      value: $valid_dates
+Core:
+  Id: CORE-000761
+  Status: Published
+  Version: '1'
+Description: Trigger error when TSVCDREF = 'CDISC' and TSVCDVER is not a valid
+  published version (date)
+Executability: Fully Executable
+Operations:
+  - ct_package_types:
+      - SDTM
+    id: $valid_dates
+    operator: valid_codelist_dates
+Outcome:
+  Message: TSVCDVER is not a valid published version (date)
+  Output Variables:
+    - TSVCDREF
+    - $valid_dates
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

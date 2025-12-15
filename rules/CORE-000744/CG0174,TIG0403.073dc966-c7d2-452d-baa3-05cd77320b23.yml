@@ -1,0 +1,110 @@
+# Variable: FAOBJ
+# Condition: Related record present in parent domain dataset
+# Rule: FAOBJ in (--TERM, --TRT, --DECOD)
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If an FA record does have a parent record, the value in FAOBJ
+                  should match the value in --TERM or --TRT, unless the parent
+                  domain is dictionary coded or subject to controlled
+                  terminology, in which case FAOBJ should match the value in
+                  --DECOD.
+                Document: IG v3.4
+                Section: 6.4.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0174
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: In general, the value in FAOBJ should match the value in --TERM
+                  or --TRT, unless the parent domain is dictionary coded or
+                  subject to controlled terminology, in which case FAOBJ should
+                  then match the value in --DECOD.
+                Document: IG v3.3
+                Section: 6.4.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0174
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: In general, the value in FAOBJ should match the value in --TERM
+                  or --TRT, unless the parent domain is dictionary coded or
+                  subject to controlled terminology, in which case FAOBJ should
+                  then match the value in --DECOD.
+                Document: IG v3.2
+                Section: 6.4.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0174
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: A record in FA may or may not have a parent record in an events
+                  or interventions domain. If an FA record does have a parent
+                  record, the value in FAOBJ should match the value in --TERM or
+                  --TRT, unless the parent domain is dictionary coded or subject
+                  to controlled terminology. In such cases, the value
+                  represented in FAOBJ will match the value represented in
+                  --DECOD.
+                Document: TIG 1.0
+                Section: 2.8.4
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0403
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: FAOBJ
+      operator: not_equal_to
+      value: RELREC.**TERM
+    - name: FAOBJ
+      operator: not_equal_to
+      value: RELREC.**TRT
+    - name: FAOBJ
+      operator: not_equal_to_case_insensitive
+      value: RELREC.**DECOD
+Core:
+  Id: CORE-000744
+  Status: Published
+  Version: '1'
+Description: Raise an error when a related record is present in the parent
+  domain dataset but FAOBJ is not equal to the --TERM, --TRT or --DECOD of the
+  parent domain.
+Executability: Fully Executable
+Match Datasets:
+  - Name: RELREC
+Outcome:
+  Message: Related record is present in the parent domain dataset but FAOBJ is not
+    equal to the "TERM", "TRT" or "DECOD" of the parent domain.
+  Output Variables:
+    - FAOBJ
+    - RELREC.**TERM
+    - RELREC.**TRT
+    - RELREC.**DECOD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS ABOUT
+  Domains:
+    Include:
+      - FA
+  Use Case: INDH
+Sensitivity: Record

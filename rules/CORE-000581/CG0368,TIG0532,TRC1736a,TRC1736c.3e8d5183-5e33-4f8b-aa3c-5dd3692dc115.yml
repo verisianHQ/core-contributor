@@ -1,0 +1,231 @@
+# Variable: GEN
+# Condition: Study on human subjects
+# Rule: DM dataset present in study
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Each study must include 1 standardized set of observations in a
+                  specific structure; this is the Demographics domain described
+                  here.
+                Document: Model v2.0
+                Section: Demographics
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0368
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Each study must include one standardized set of observations in
+                  a specific structure; this is the Demographics domain
+                  described in Table 2.2.6.
+                Document: Model v1.4
+                Section: 2.2.6
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0368
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Each study must include one standardized set of observations in
+                  a specific structure; this is the Demographics domain
+                  described in Table 2.2.6.
+                Document: Model v1.7
+                Section: 2.2.6
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0368
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: For studies that assess the impact of tobacco products on the
+                  health of individuals, DM is required even if no other
+                  datasets are generated.
+                Document: TIG 1.0
+                Item: Table 2 Num 3
+                Section: '2.5'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0532
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: For Study Data Tabulation Model (SDTM) data, a DM dataset and
+                  define.xml must be submitted in Module 5, sections 5.3.1.1,
+                  5.3.1.2, 5.3.3.1, 5.3.3.2, 5.3.3.3, 5.3.3.4, 5.3.4, 5.3.5.1,
+                  5.3.5.2
+                Document: FDA
+                Section: TRC1736
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1736a
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: For Study Data Tabulation Model (SDTM) data, a DM dataset and
+                  define.xml must be submitted in Module 5, sections 5.3.1.1,
+                  5.3.1.2, 5.3.3.1, 5.3.3.2, 5.3.3.3, 5.3.3.4, 5.3.4, 5.3.5.1,
+                  5.3.5.2
+                Document: FDA
+                Section: TRC1736
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1736a
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: For Study Data Tabulation Model (SDTM) data, a DM dataset and
+                  define.xml must be submitted in Module 5, sections 5.3.1.1,
+                  5.3.1.2, 5.3.3.1, 5.3.3.2, 5.3.3.3, 5.3.3.4, 5.3.4, 5.3.5.1,
+                  5.3.5.2
+                Document: FDA
+                Section: TRC1736
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1736a
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: For Standard for Exchange of Nonclinical Data (SEND) data, a
+                  Demographic (DM) dataset and define.xml must be submitted in
+                  Module 4, sections 4.2.3.1, 4.2.3.2, 4.2.3.4
+                Document: FDA
+                Section: TRC1736
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1736c
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: For Standard for Exchange of Nonclinical Data (SEND) data, a
+                  Demographic (DM) dataset and define.xml must be submitted in
+                  Module 4, sections 4.2.3.1, 4.2.3.2, 4.2.3.4
+                Document: FDA
+                Section: TRC1736
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1736c
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: For Standard for Exchange of Nonclinical Data (SEND) data, a
+                  Demographic (DM) dataset and define.xml must be submitted in
+                  Module 4, sections 4.2.3.1, 4.2.3.2, 4.2.3.4
+                Document: FDA
+                Section: TRC1736
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1736c
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: For Standard for Exchange of Nonclinical Data (SEND) data, a
+                  Demographic (DM) dataset and define.xml must be submitted in
+                  Module 4, sections 4.2.3.1, 4.2.3.2, 4.2.3.4
+                Document: FDA
+                Section: TRC1736
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1736c
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: For Standard for Exchange of Nonclinical Data (SEND) data, a
+                  Demographic (DM) dataset and define.xml must be submitted in
+                  Module 4, sections 4.2.3.1, 4.2.3.2, 4.2.3.4
+                Document: FDA
+                Section: TRC1736
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1736c
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: For Standard for Exchange of Nonclinical Data (SEND) data, a
+                  Demographic (DM) dataset and define.xml must be submitted in
+                  Module 4, sections 4.2.3.1, 4.2.3.2, 4.2.3.4
+                Document: FDA
+                Section: TRC1736
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1736c
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: SENDIG-AR
+        References:
+          - Citations:
+              - Cited Guidance: For Standard for Exchange of Nonclinical Data (SEND) data, a
+                  Demographic (DM) dataset and define.xml must be submitted in
+                  Module 4, sections 4.2.3.1, 4.2.3.2, 4.2.3.4
+                Document: FDA
+                Section: TRC1736
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1736c
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  all:
+    - name: DM
+      operator: not_exists
+Core:
+  Id: CORE-000581
+  Status: Published
+  Version: '1'
+Description: Raise an error when DM dataset is not present
+Executability: Fully Executable
+Outcome:
+  Message: DM dataset is missing.
+Rule Type: Domain Presence Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Dataset

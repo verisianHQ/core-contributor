@@ -1,0 +1,64 @@
+# Variable: --EVALID
+# Condition: Domain in ('QS', 'FT') or (Domain = 'RS' and it's the Clinical Classification Use Case)
+# Rule: --EVALID not present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0660
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: --EVAL and --EVALID must not be used to model QRS
+                  data in SDTM.
+                Document: SDTMIG v3.4
+                Item: Assumption 8
+                Section: 6.3.9.1
+              - Cited Guidance: --EVAL and --EVALID must not be used to model QRS
+                  data in SDTM.
+                Document: SDTMIG v3.4
+                Item: Assumption 8
+                Section: 6.3.9.2
+              - Cited Guidance: --EVAL and --EVALID must not be used to model QRS
+                  data in SDTM.
+                Document: SDTMIG v3.4
+                Item: Assumption 8
+                Section: 6.3.9.3.2
+Check:
+  any:
+    - name: QSEVALID
+      operator: exists
+    - name: FTEVALID
+      operator: exists
+#    - all:
+#        - name: RSEVALID
+#          operator: exists
+#        - name: RSCAT
+#          operator: "references_correct_codelist"
+#          value: "CCCAT"
+Core:
+  Id: CORE-000032
+  Status: Published
+  Version: '1'
+Description: --EVALID must not be used to model QRS data.   This includes the 'QS'
+  and 'FT' domains as well as the 'RS' domain when the record pertains to a Clinical
+  Classification Use Case). This rule has been fully executed for the QS and FT domains
+  only.
+Executability: Fully Executable
+Outcome:
+  Message: --EVALID is present.  --EVALID must not be used to model QRS data.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - QS
+      - FT
+      - RS
+Sensitivity: Dataset

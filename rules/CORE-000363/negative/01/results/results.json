@@ -1,0 +1,32 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000363, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "The earliest disposition date for \"INFORMED CONSENT OBTAINED\" is not equal to DM.RFICDTC",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 6,
+          "SEQ": 1,
+          "USUBJID": "015246-300-0004-00002",
+          "value": {
+            "$min_ds_dsstdtc": "2018-04-17",
+            "DSDECOD": "INFORMED CONSENT OBTAINED",
+            "DSSTDTC": "2018-04-17",
+            "RFICDTC": "2018-04-20"
+          }
+        }
+      ]
+    }
+  ]
+}

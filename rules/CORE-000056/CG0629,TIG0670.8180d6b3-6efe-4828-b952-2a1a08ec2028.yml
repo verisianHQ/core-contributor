@@ -1,0 +1,54 @@
+# Variable: --REASEX
+# Condition: 
+# Rule: --REASEX not present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: --REASEX is not be used in human clinical trials.
+                Document: SDTM v2.0
+                Section: Findings
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0629
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Not in human clinical trials.
+                Document: SDTM v2.1
+                Item: --REASEX
+                Section: Findings
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0670
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --REASEX
+      operator: exists
+Core:
+  Id: CORE-000056
+  Status: Published
+  Version: '1'
+Description: Raise an error when --REASEX is present.
+Executability: Fully Executable
+Outcome:
+  Message: --REASEX is present.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Dataset

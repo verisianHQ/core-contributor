@@ -1,0 +1,40 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "Throw error when TSPARMCD is equal to COMPTRT, CURTRT, or TRT and TSVCDREF ^= UNII",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "COMPTRT",
+            "TSVCDREF": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "CURTRT",
+            "TSVCDREF": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "TRT",
+            "TSVCDREF": "ISO 8601"
+          }
+        }
+      ]
+    }
+  ]
+}

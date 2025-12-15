@@ -1,0 +1,70 @@
+{
+  "datasets": [
+    {
+      "dataset": "co.xpt",
+      "domain": "CO",
+      "execution_status": "success",
+      "execution_message": "RDOMAIN does not represent a dataset present in the study.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "$study_domains": [
+              "CO",
+              "RELREC",
+              "SUPPLB"
+            ],
+            "RDOMAIN": "IS"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "relrec.xpt",
+      "domain": "RELREC",
+      "execution_status": "success",
+      "execution_message": "RDOMAIN does not represent a dataset present in the study.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "$study_domains": [
+              "CO",
+              "RELREC",
+              "SUPPLB"
+            ],
+            "RDOMAIN": "LB"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "supplb.xpt",
+      "domain": "SUPPLB",
+      "execution_status": "success",
+      "execution_message": "RDOMAIN does not represent a dataset present in the study.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "$study_domains": [
+              "CO",
+              "RELREC",
+              "SUPPLB"
+            ],
+            "RDOMAIN": "LB"
+          }
+        }
+      ]
+    }
+  ]
+}

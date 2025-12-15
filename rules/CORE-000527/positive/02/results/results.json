@@ -1,0 +1,36 @@
+{
+  "datasets": [
+    {
+      "dataset": "qscg.xpt",
+      "domain": "QS",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000527, dataset=QSCG",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "qspg.xpt",
+      "domain": "QS",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000527, dataset=QSPG",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "suppqscg.xpt",
+      "domain": "SUPPQS",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000527, dataset=SUPPQSCG",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

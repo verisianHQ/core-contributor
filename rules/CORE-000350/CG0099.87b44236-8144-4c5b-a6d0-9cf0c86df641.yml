@@ -1,0 +1,65 @@
+# Variable: --MODIFY
+# Condition: --TRT modified
+# Rule: --MODIFY ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A value which represents an alteration to a collected value for
+                  coding purposes. Synonym Qualifier of --TRT.
+                Document: Model v2.0
+                Item: --MODIFY
+                Section: Interventions
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0099
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If the value for --TRT is modified for coding purposes, then the
+                  modified text is placed here.
+                Document: Model v1.4
+                Section: 2.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0099
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If the value for --TRT is modified for coding purposes, then the
+                  modified text is placed here.
+                Document: Model v1.7
+                Section: 2.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0099
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Core:
+  Id: CORE-000350
+  Status: Draft
+  Version: '1'
+Description: Trigger error if --TRT represents an alteration to the collected
+  value for coding purposes and --MODIFY is null
+Executability: Not Executable
+Outcome:
+  Message: --MODIFY is null when --TRT represents an alteration to the collected value.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - CM
+      - SU
+Sensitivity: Record

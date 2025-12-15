@@ -1,0 +1,137 @@
+# Variable: DTHFL
+# Condition: AE record with AESDTH= "Y" present for the subject
+# Rule: DTHFL = 'Y'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Indicates the subject died. Should be Y or null. Should be
+                  populated even when the death date is unknown.
+                Document: IG v3.4
+                Item: Specification
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0135
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Indicates the subject died. Should be Y or null. Should be
+                  populated even when the death date is unknown.
+                Document: IG v3.2
+                Item: Specification
+                Section: '5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0135
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Indicates the subject died. Should be Y or null. Should be
+                  populated even when the death date is unknown.
+                Document: IG v3.3
+                Item: Specification
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0135
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Indicates the subject died. Should be "Y" or null. Should be
+                  populated even when the death date is unknown.
+                Document: TIG 1.0
+                Item: Specification
+                Section: 2.8.10.4
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0384
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+  #CG0135 is identical to rule FB0604. Added metadata for FB0604 by Malini Narreddy on 2025-03-05
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0604
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0604
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0604
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: AESDTH
+      operator: equal_to
+      value: Y
+      value_is_literal: true
+    - name: DTHFL
+      operator: not_equal_to
+      value: Y
+      value_is_literal: true
+Core:
+  Id: CORE-000253
+  Status: Published
+  Version: '1'
+Description: When AE.AESDTH is 'Y', DTHFL must be 'Y'
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: AE
+Outcome:
+  Message: DTHFL is not 'Y' when AE.AESDTH is 'Y'.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+  Use Case: INDH
+Sensitivity: Record

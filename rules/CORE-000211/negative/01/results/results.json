@@ -1,0 +1,93 @@
+{
+  "datasets": [
+    {
+      "dataset": "suppdm.xpt",
+      "domain": "SUPPDM",
+      "execution_status": "success",
+      "execution_message": "Population flag is present in SUPPDM",
+      "number_errors": 10,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "QNAM": "SAFETY"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "QNAM": "ENRFL"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "QNAM": "EFFFL"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "QNAM": "PPROTFL"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "QNAM": "COMPLT"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "QNAM": "FULLSET"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "QNAM": "ITT"
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "QNAM": "PPROT"
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "QNAM": "ITTFL"
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "QNAM": "COMPLFL"
+          }
+        }
+      ]
+    }
+  ]
+}

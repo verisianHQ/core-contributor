@@ -1,0 +1,24 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "A record exists in TS where TSPARMCD = ADDON and TSVAL = Y but TSVAL for TSPARMCD = CURTRT is empty.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "$ADDON_Y": 1,
+            "TSGRPID": "DRUG A",
+            "TSPARMCD": "CURTRT",
+            "TSVAL": null
+          }
+        }
+      ]
+    }
+  ]
+}

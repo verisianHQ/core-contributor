@@ -1,0 +1,96 @@
+# Variable: AGETXT
+# Condition: AGEU ^= null and AGE = null
+# Rule: AGETXT ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Variable Qualifier of AGE or AGETXT.
+                Document: Model v2.0
+                Item: AGEU
+                Section: Demographics
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0434
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Units associated with AGE or AGETXT.
+                Document: Model v1.4
+                Section: 2.2.6
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0434
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Units associated with AGE or AGETXT.
+                Document: Model v1.7
+                Section: Table 2.2.6.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0434
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Variable Qualifier of AGE or AGETXT.
+                Document: SDTM v2.1
+                Item: AGEU
+                Section: 3.2.1 Demographics
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0586
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  any:
+    - all:
+        - name: AGEU
+          operator: non_empty
+        - name: AGE
+          operator: empty
+        - name: AGETXT
+          operator: empty
+    - all:
+        - name: AGEU
+          operator: non_empty
+        - name: AGE
+          operator: empty
+        - name: AGETXT
+          operator: not_exists
+Core:
+  Id: CORE-000122
+  Status: Published
+  Version: '1'
+Description: Raise an error when AGEU is completed but both AGETXT and AGE are
+  not completed.
+Executability: Fully Executable
+Outcome:
+  Message: AGEU is completed, but both AGE and AGETXT are not completed.
+  Output Variables:
+    - AGE
+    - AGEU
+    - AGETXT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+  Use Case: INDH
+Sensitivity: Record

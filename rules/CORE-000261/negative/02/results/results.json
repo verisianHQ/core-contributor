@@ -1,0 +1,21 @@
+{
+  "datasets": [
+    {
+      "dataset": "ho.xpt",
+      "domain": "HO",
+      "execution_status": "success",
+      "execution_message": "HOSTTPT is present in dataset, but HOSTRTPT is not present in dataset.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "HOSTTPT": "FIRST DOSE"
+          }
+        }
+      ]
+    }
+  ]
+}

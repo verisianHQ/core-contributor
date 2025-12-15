@@ -1,0 +1,24 @@
+{
+  "datasets": [
+    {
+      "dataset": "mb.xpt",
+      "domain": "MB",
+      "execution_status": "success",
+      "execution_message": "MBRESCAT is expected when MBTESTCD='ORGANISM', MSSTRESC!='NO GROWTH', MBMETHOD!='GRAM STAIN'",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "ABC-001-002",
+          "value": {
+            "MBMETHOD": "NOT GRAM STAIN",
+            "MBRESCAT": null,
+            "MBSTRESC": "NOT NO GROWTH",
+            "MBTESTCD": "ORGANISM"
+          }
+        }
+      ]
+    }
+  ]
+}

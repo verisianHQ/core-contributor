@@ -1,0 +1,59 @@
+# Variable: MBRESCAT
+# Condition: MBTESTCD = 'ORGANISM' and MBSTRESC ^= 'NO GROWTH' and MBMETHOD ^= 'GRAM STAIN'
+# Rule: MBRESCAT ^= null
+# This rule is ONLY applicable to SDTMIG-3.2
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: MBRESCAT is expected in all records where a microorganism has
+                  been identified to differentiate between colonizing organisms
+                  and the one(s) that are causing the infection. It is not
+                  expected when there is 'No growth' or when the results are
+                  from a gram stain
+                Document: IG v3.2
+                Item: Assumption 6
+                Section: '6.3'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0193
+              Version: '2'
+            Version: '2.0'
+        Version: '3.2'
+# IMPLEMENTATION: WHEN: MBTESTCD = 'ORGANISM' and MBSTRESC != 'NO GROWTH' and MBMETHOD != 'GRAM STAIN'
+# THEN:
+Check:
+  all:
+    - name: MBTESTCD
+      operator: equal_to
+      value: 'ORGANISM'
+    - name: MBSTRESC
+      operator: not_equal_to_case_insensitive
+      value: 'NO GROWTH'
+    - name: MBMETHOD
+      operator: not_equal_to_case_insensitive
+      value: 'GRAM STAIN'
+    - name: MBRESCAT
+      operator: empty
+
+Core:
+  Id: CORE-000332
+  Status: Published
+  Version: '1'
+Description: Raise an error when MBTESTCD=ORGANISM, MSSTRESC!='NO GROWTH',
+  MBMETHOD!='GRAM STAIN' and MBRESCAT is empty
+Executability: Fully Executable
+Outcome:
+  Message: MBRESCAT is expected when MBTESTCD='ORGANISM', MSSTRESC!='NO GROWTH',
+    MBMETHOD!='GRAM STAIN'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - MB
+Sensitivity: Record

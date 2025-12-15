@@ -1,0 +1,62 @@
+# Variable: --ULOQ
+# Condition: --ULOQ present in dataset
+# Rule: --ULOQ is expressed using the units in --STRESU
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Units will be those used for --STRESU.
+                Document: Model v2.0
+                Item: --ULOQ
+                Section: Findings
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0399
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Indicates the upper limit of quantitation for an assay. Units
+                  will be those used for --STRESU.
+                Document: Model v1.4
+                Section: 2.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0399
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Indicates the upper limit of quantitation for an assay. Units
+                  will be those used for --STRESU.
+                Document: Model v1.7
+                Section: 2.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0399
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Core:
+  Id: CORE-000205
+  Status: Draft
+  Version: '1'
+Description: Trigger error when --ULOQ is not expressed using the units in --STRESU
+Executability: Not Executable
+Outcome:
+  Message: --ULOQ is not expressed using the units in --STRESU
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

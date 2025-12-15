@@ -1,0 +1,107 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Supplemental Qualifier datasets for split domains would also be
+                  split. The nomenclature would include the additional
+                  one-to-two characters used to identify the split dataset
+                  (e.g., SUPPQS36, SUPPFACM). The value of RDOMAIN in the SUPP--
+                  datasets would be the two-character domain code (e.g., QS,
+                  FA).
+                Document: IG v3.4
+                Item: '7'
+                Section: 4.1.7
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0334
+              Version: '2'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Supplemental Qualifier datasets for split domains would also be
+                  split. The nomenclature would include the additional
+                  one-to-two characters used to identify the split dataset
+                  (e.g., SUPPQS36; SUPPFACM). The value of RDOMAIN in the SUPP--
+                  datasets would be the two-character domain code (e.g., QS;
+                  FA).
+                Document: IG v3.2
+                Item: '7'
+                Section: 4.1.1.7
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0334
+              Version: '2'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Supplemental Qualifier datasets for split domains would also be
+                  split. The nomenclature would include the additional
+                  one-to-two characters used to identify the split dataset
+                  (e.g., SUPPQS36; SUPPFACM). The value of RDOMAIN in the SUPP--
+                  datasets would be the two-character domain code (e.g., QS;
+                  FA).
+                Document: IG v3.3
+                Item: '7'
+                Section: 4.1.7
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0334
+              Version: '2'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Supplemental Qualifier datasets for split domains will also be
+                  split. The nomenclature will include the additional one to two
+                  characters used to identify the split dataset (e.g., SUPPLBHM,
+                  SUPPFACM). The value of RDOMAIN in the SUPP-- datasets would
+                  be the two-character domain code (e.g., LB, FA).
+                Document: TIG 1.0
+                Item: 'Num 9.e.ii'
+                Section: '2.6'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0500
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: RDOMAIN
+      operator: does_not_equal_string_part
+      regex: .{4}(..).*
+      value: $dataset_name
+Core:
+  Id: CORE-000538
+  Status: Published
+  Version: '1'
+Description: Trigger error when RDOMAIN does not match characters 5 and 6 of the
+  Supplementary dataset name
+Executability: Fully Executable
+Operations:
+  - id: $dataset_name
+    name: dataset_name
+    operator: extract_metadata
+Outcome:
+  Message: RDOMAIN does not match characters 5 and 6 of the dataset name
+  Output Variables:
+    - $dataset_name
+    - RDOMAIN
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - SUPP--
+  Use Case: INDH, PROD
+Sensitivity: Record

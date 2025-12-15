@@ -1,0 +1,55 @@
+# Variable: --METHOD
+# Condition: 
+# Rule: --METHOD not present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Not be used in human clinical trials.
+                Document: SDTM v2.0
+                Item: --METHOD
+                Section: Interventions
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0621
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Not in human clinical trials.
+                Document: SDTM v2.1
+                Item: --METHOD
+                Section: 3.1.1 The Interventions Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0662
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --METHOD
+      operator: exists
+Core:
+  Id: CORE-000048
+  Status: Published
+  Version: '1'
+Description: Raise an error when --METHOD is present in an Interventions dataset.
+Executability: Fully Executable
+Outcome:
+  Message: --METHOD is present in an interventions domain.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Dataset

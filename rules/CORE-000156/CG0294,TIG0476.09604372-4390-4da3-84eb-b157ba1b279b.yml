@@ -1,0 +1,97 @@
+# Variable: ARM
+# Condition: ARM ^= null
+# Rule: ARM in TA.ARM
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 1. Name given to an Arm or Treatment Group. 2. If the timing of
+                  visits for a trial does not depend on which Arm a subject is
+                  in, then Arm should be left blank.
+                Document: IG v3.4
+                Item: Specification
+                Section: 7.3.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0294
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 1. Name given to an Arm or Treatment Group. 2. If the timing of
+                  Visits for a trial does not depend on which Arm a subject is
+                  in, then Arm should be left blank.
+                Document: IG v3.2
+                Item: Specification
+                Section: '7'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0294
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 1. Name given to an Arm or Treatment Group. 2. If the timing of
+                  Visits for a trial does not depend on which Arm a subject is
+                  in, then Arm should be left blank.
+                Document: IG v3.3
+                Item: Specification
+                Section: 7.3.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0294
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: 1. Name given to an Arm or Product Exposure Group. 2. If the
+                  timing of Visits for a trial does not depend on which Arm a
+                  subject is in, then Arm should be left blank.
+                Document: TIG 1.0
+                Item: Specification:ARM
+                Section: 2.8.10.31
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0476
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: ARM
+      operator: non_empty
+    - name: ARM
+      operator: is_not_contained_by
+      value: $ta_arm
+Core:
+  Id: CORE-000156
+  Status: Published
+  Version: '1'
+Description: Trigger error when ARM is populated and ARM is not in TA.ARM
+Executability: Fully Executable
+Operations:
+  - domain: TA
+    id: $ta_arm
+    name: ARM
+    operator: distinct
+Outcome:
+  Message: ARM is not in TA.ARM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TV
+  Use Case: INDH
+Sensitivity: Record

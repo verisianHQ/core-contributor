@@ -1,0 +1,66 @@
+# Variable: ACTARMCD
+# Condition: No records in EX for Subject
+# Rule: DM.ACTARMCD in ('SCRNFAIL', 'NOTASSGN', 'NOTTRT')
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: "Specification[ACTARMCD: Randomized subjects who were not
+                  treated will be given a value of NOTTRT. Values should be
+                  \"SCRNFAIL\" for screen failures and \"NOTASSGN\" for subjects
+                  not assigned to treatment]|Assumption 4[Subjects withdrawn
+                  from a trial before assignment to an Arm, if they are not
+                  screen failures, should have ARMCD = 'NOTASSGN' and ARM = 'Not
+                  Assigned'.]|Assumption 10[subjects who are ineligible for
+                  treatment (e.g., screen failures with ARMCD=SCRNFAIL),
+                  subjects who were enrolled but not assigned to an arm
+                  (ARMCD=NOTASSGN), or subjects who were randomized but not
+                  treated (ACTARMCD=NOTTRT), RFSTDTC will be null.]"
+                Document: IG v3.2
+                Item: Specification|Assumption 4|Assumption 10
+                Section: '5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0109
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+Check:
+  all:
+    - name: ACTARMCD
+      operator: is_not_contained_by_case_insensitive
+      value:
+        - SCRNFAIL
+        - NOTASSGN
+        - NOTTRT
+    - name: USUBJID
+      operator: is_not_contained_by
+      value: $usubjids_in_ex
+Core:
+  Id: CORE-000366
+  Status: Published
+  Version: '1'
+Description: Raise an error when subject has no records in EX but ACTARMCD is
+  not equal to SCRNFAIL, NOTASSGN or NOTTRT.
+Executability: Fully Executable
+Operations:
+  - domain: EX
+    id: $usubjids_in_ex
+    name: USUBJID
+    operator: distinct
+Outcome:
+  Message: Subject has no records in EX but ACTARMCD is not equal to SCRNFAIL,
+    NOTASSGN or NOTTRT.
+  Output Variables:
+    - ACTARMCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

@@ -1,0 +1,100 @@
+# Variable: --ELTM
+# Condition: --TPTREF = null
+# Rule: --ELTM = null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The interval of time between a planned time point and a fixed
+                  reference point, represented in a standardized character
+                  format. The fixed reference point is in --TPTREF.
+                Document: SDTM Model v2.0
+                Item: --ELTM
+                Section: Timing
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0008
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Planned Elapsed time relative to a planned fixed reference
+                  (--TPTREF) such as "Previous Dose" or "Previous Meal". This
+                  variable is useful where there are repetitive measures. Not a
+                  clock time or a date/time variable, but an
+                  interval.   Format=ISO8601
+                Document: SDTM Model v1.7
+                Item: Table 2.2.5, --ELTM
+                Section: 2.2.5
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0008
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Planned Elapsed time in ISO 8601 character format relative to a
+                  planned fixed reference (--TPTREF) such as "Previous Dose" or
+                  "Previous Meal".
+                Document: SDTM Model v1.4
+                Item: Table 2.2.5, --ELTM
+                Section: 2.2.5
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0008
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: "When instances of an activity are scheduled at planned time
+                  intervals relative to a fixed reference point (e.g., an
+                  exposure), the following timing variables will be used:
+                  --TPTREF- Represents a description of the fixed reference
+                  point from which the planned observation will be made.-ELTM
+                  represents the planned elapsed time from the fixed timepoint
+                  reference to the planned observation."
+                Document: TIG 1.0
+                Item: Table 2 Num 3
+                Section: 2.8.7.6
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0293
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --TPTREF
+      operator: empty
+    - name: --ELTM
+      operator: non_empty
+Core:
+  Id: CORE-000028
+  Status: Published
+  Version: '1'
+Description: Raise an error when --TPTREF is empty, but --ELTM is not empty
+Executability: Fully Executable
+Outcome:
+  Message: --TPTREF is empty and --ELTM is not empty
+  Output Variables:
+    - --TPTREF
+    - --ELTM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Record

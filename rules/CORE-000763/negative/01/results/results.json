@@ -1,0 +1,92 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMSTTPT is equal to the date of collection or assessment but CMSTRTPT is not in ('BEFORE', 'COINCIDENT',  'UNKNOWN').",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 6,
+          "SEQ": 2,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CMDTC": "2013-05-20",
+            "CMSTRTPT": null,
+            "CMSTTPT": "2013-05-20"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "MHSTTPT is equal to the date of collection or assessment but MHSTRTPT is not in ('BEFORE', 'COINCIDENT',  'UNKNOWN').",
+      "number_errors": 6,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "MHDTC": "2013-05-20",
+            "MHSTRTPT": "ONGOING",
+            "MHSTTPT": "2013-05-20"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC003",
+          "value": {
+            "MHDTC": "2013-05-20",
+            "MHSTRTPT": "AFTER",
+            "MHSTTPT": "2013-05-20"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 1,
+          "USUBJID": "CDISC006",
+          "value": {
+            "MHDTC": "2013-05-20",
+            "MHSTRTPT": "ONGOING",
+            "MHSTTPT": "2013-05-20"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 1,
+          "USUBJID": "CDISC007",
+          "value": {
+            "MHDTC": "2013-05-20",
+            "MHSTRTPT": "ONGOING",
+            "MHSTTPT": "2013-05-20"
+          }
+        },
+        {
+          "row": 12,
+          "SEQ": 1,
+          "USUBJID": "CDISC012",
+          "value": {
+            "MHDTC": "2013-05-03",
+            "MHSTRTPT": "AFTER",
+            "MHSTTPT": "2013-05-03"
+          }
+        },
+        {
+          "row": 13,
+          "SEQ": 1,
+          "USUBJID": "CDISC013",
+          "value": {
+            "MHDTC": "2013-05-04",
+            "MHSTRTPT": null,
+            "MHSTTPT": "2013-05-04"
+          }
+        }
+      ]
+    }
+  ]
+}

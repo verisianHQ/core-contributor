@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "sv.xpt",
+      "domain": "SV",
+      "execution_status": "success",
+      "execution_message": "VISITDY is populated when SVUPDES is also populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVUPDES": "UNSCHEDULED LABS",
+            "USUBJID": "CDISC001",
+            "VISITDY": 24.0
+          }
+        }
+      ]
+    }
+  ]
+}

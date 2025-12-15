@@ -1,0 +1,118 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Date/time of informed consent in ISO 8601 character format. This
+                  will be the same as the date of informed consent in the
+                  Disposition domain, if that protocol milestone is documented.
+                Document: IG v3.4
+                Item: Specification
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0068
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Date/time of informed consent in ISO 8601 character format. This
+                  will be the same as the date of informed consent in the
+                  Disposition domain, if that protocol milestone is documented.
+                Document: IG v3.2
+                Item: Specification
+                Section: '5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0068
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Date/time of informed consent in ISO 8601 character format. This
+                  will be the same as the date of informed consent in the
+                  Disposition domain, if that protocol milestone is documented.
+                Document: IG v3.3
+                Item: Specification
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0068
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Date/time of informed consent in ISO 8601 character format. This
+                  will be the same as the date of informed consent in the
+                  Disposition domain, if that protocol milestone is documented.
+                Document: TIG 1.0
+                Item: Specification
+                Section: 2.8.10.4
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0338
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+# Variable: DSSTDTC
+# Condition: Multiple informed consents obtained and DSDECOD = 'INFORMED CONSENT OBTAINED'
+# Rule: For each subject, earliest DSSTDTC = DM.RFICDTC
+Check:
+  all:
+    - name: DSDECOD
+      operator: present_on_multiple_rows_within
+      within: USUBJID
+    - name: DSDECOD
+      operator: equal_to
+      value: INFORMED CONSENT OBTAINED
+    - name: $min_ds_dsstdtc
+      operator: not_equal_to
+      value: RFICDTC
+    - name: $min_ds_dsstdtc
+      operator: equal_to
+      value: DSSTDTC
+Core:
+  Id: CORE-000363
+  Status: Published
+  Version: '1'
+Description: When there are multiple informed consents obtained and DSDECOD =
+  'INFORMED CONSENT OBTAINED', the earliest DSSTDTC for each subject should be
+  equal to DM.RFICDTC.
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: DM
+Operations:
+  - domain: DS
+    group:
+      - USUBJID
+    id: $min_ds_dsstdtc
+    name: DSSTDTC
+    operator: min_date
+Outcome:
+  Message: The earliest disposition date for "INFORMED CONSENT OBTAINED" is not
+    equal to DM.RFICDTC
+  Output Variables:
+    - RFICDTC
+    - $min_ds_dsstdtc
+    - DSDECOD
+    - DSSTDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - DS
+  Use Case: INDH
+Sensitivity: Record

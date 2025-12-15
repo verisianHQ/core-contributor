@@ -1,0 +1,58 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "ARM should be equal to ACTARM when ARM is Screen Failure or Not Assigned.",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "015246-076-0003-00003",
+          "value": {
+            "ACTARM": "Drug A",
+            "ARM": "Screen Failure"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "015246-300-0004-00002",
+          "value": {
+            "ACTARM": null,
+            "ARM": "Not Assigned"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "015246-300-0004-00006",
+          "value": {
+            "ACTARM": "Drug A",
+            "ARM": "SCREEN FAILURE"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "015246-300-0004-00007",
+          "value": {
+            "ACTARM": "Not Assigned",
+            "ARM": "Screen Failure"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "015246-300-0004-00008",
+          "value": {
+            "ACTARM": "Not Assigned",
+            "ARM": "NOT ASSIGNED"
+          }
+        }
+      ]
+    }
+  ]
+}

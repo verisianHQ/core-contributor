@@ -1,0 +1,70 @@
+# Variable: 
+# Condition: RACE = MULTIPLE
+# Rule: Multiple SUPPDM.QNAM records exist for the subject
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If multiple races are collected then the value of RACE should be
+                  'MULTIPLE' and the additional information will be included in
+                  the Supplemental Qualifiers dataset.
+                Document: IG v3.3
+                Item: Assumption 6
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0531
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If multiple races are collected, then the value of RACE should
+                  be “MULTIPLE” and the additional information will be included
+                  in the Supplemental Qualifiers dataset.
+                Document: IG v3.4
+                Item: Assumption 6
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0531
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+Check:
+  all:
+    - name: $multiple_race
+      operator: greater_than_or_equal_to
+      value: 1
+    - name: SUPPDM
+      operator: not_exists
+Core:
+  Id: CORE-000844
+  Status: Published
+  Version: '1'
+Description: Part A - Raise an error when RACE in DM equals 'MULTIPLE' and
+  SUPPDM dataset is not present.
+Executability: Fully Executable
+Operations:
+  - domain: DM
+    filter:
+      RACE: MULTIPLE
+    id: $multiple_race
+    name: RACE
+    operator: record_count
+Outcome:
+  Message: RACE in DM equals 'MULTIPLE' but multiple races are not collected in SUPPDM.
+  Output Variables:
+    - $multiple_race
+Rule Type: Domain Presence Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

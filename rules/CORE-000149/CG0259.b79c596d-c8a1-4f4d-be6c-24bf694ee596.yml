@@ -1,0 +1,68 @@
+# Variable: TSVALNF
+# Condition: TSVAL = null
+# Rule: TSVALNF ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0259
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: TSVAL can only be null when TSVALNF is populated.
+                Document: IG v3.4
+                Item: Specification
+                Section: 7.4.2
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0259
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: TSVAL can only be null when TSVALNF is populated.
+                Document: IG v3.2
+                Item: Specification
+                Section: '7.4'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0259
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: TSVAL can only be null when TSVALNF is populated.
+                Document: IG v3.3
+                Item: Specification
+                Section: 7.4.2
+Check:
+  all:
+    - name: TSVAL
+      operator: empty
+    - name: TSVALNF
+      operator: empty
+Core:
+  Id: CORE-000149
+  Status: Published
+  Version: '1'
+Description: Trigger error when TSVAL is null and TSVALNF is null
+Executability: Fully Executable
+Outcome:
+  Message: TSVALNF is null when TSVAL is null.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

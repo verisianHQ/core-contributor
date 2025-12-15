@@ -1,0 +1,84 @@
+# Variable: GEN
+# Condition: Use of value 'MULTIPLE' is appropriate to the data being represented
+# Rule: Value in associated codelist or 'MULTIPLE'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Conformance with the SDTMIG Domain Models is minimally indicated
+                  by following SDTM-specified controlled terminology and format
+                  guidelines for variables, when provided
+                Document: IG v3.4
+                Section: 3.2.2
+              - Cited Guidance: The SDTM permits one value for each Qualifier variable per
+                  record. If multiple values exist (e.g., due to a "Check all
+                  that apply" instruction on a CRF), then the value for the
+                  Qualifier variable should be "MULTIPLE" and SUPP-- should be
+                  used to store the individual responses.
+                Document: IG v3.4
+                Section: 4.2.8.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0020
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 3.2.2[Conformance with the SDTMIG Domain Models is minimally
+                  indicated by following SDTM-specified controlled terminology
+                  and format guidelines for variables, when
+                  provided]4.1.2.8.3[The SDTM permits one value for each
+                  Qualifier variable per record. If multiple values exist (e.g.,
+                  due to a "Check all that apply" instruction on a CRF), then
+                  the value for the Qualifier variable should be "MULTIPLE" and
+                  SUPP-- should be used to store the individual responses.]
+                Document: IG v3.2
+                Section: 3.2.2|4.1.2.8.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0020
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 3.2.2[Conformance with the SDTMIG Domain Models is minimally
+                  indicated by following SDTM-specified controlled terminology
+                  and format guidelines for variables, when provided]4.2.8.3[The
+                  SDTM permits one value for each Qualifier variable per record.
+                  If multiple values exist (e.g., due to a "Check all that
+                  apply" instruction on a CRF), then the value for the Qualifier
+                  variable should be "MULTIPLE" and SUPP-- should be used to
+                  store the individual responses.]
+                Document: IG v3.3
+                Section: 3.2.2|4.2.8.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0020
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Core:
+  Id: CORE-000344
+  Status: Draft
+  Version: '1'
+Description: Trigger error if the value of a variable, which is associated with
+  an extensible codelist, is in the associated codelist or equal to 'MULTIPLE'
+Executability: Not Executable
+Outcome:
+  Message: Variable is not equal to value within the extensible codelist, nor
+    equal to MULTIPLE
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

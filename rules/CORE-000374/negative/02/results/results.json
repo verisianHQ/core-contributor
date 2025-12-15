@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "There is more than one record per subject per EPOCH",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "S001",
+          "value": {
+            "DSCAT": "DISPOSITION EVENT",
+            "DSSCAT": "Not in dataset",
+            "EPOCH": "TREATMENT"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "S001",
+          "value": {
+            "DSCAT": "DISPOSITION EVENT",
+            "DSSCAT": "Not in dataset",
+            "EPOCH": "TREATMENT"
+          }
+        }
+      ]
+    }
+  ]
+}

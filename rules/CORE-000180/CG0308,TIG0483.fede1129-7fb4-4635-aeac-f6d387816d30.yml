@@ -1,0 +1,86 @@
+# Variable: DOMAIN
+# Condition: 
+# Rule: DOMAIN value length = 2
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Each domain dataset is distinguished by a unique, two-character
+                  code
+                Document: IG v3.4
+                Section: '2.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0308
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Each domain dataset is distinguished by a unique, two-character
+                  code
+                Document: IG v3.2
+                Section: '2.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0308
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Each domain dataset is distinguished by a unique, two-character
+                  code
+                Document: IG v3.3
+                Section: '2.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0308
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Domain datasets based on the SDTM general observations classes
+                  will be named using the two-character code for the domain or
+                  using the applicable four-character code when a dataset is
+                  split.
+                Document: TIG 1.0
+                Item: Num 2
+                Section: '2.6'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0483
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+
+Check:
+  all:
+    - name: DOMAIN
+      operator: longer_than
+      value: 2
+Core:
+  Id: CORE-000180
+  Status: Published
+  Version: '1'
+Description: Raise an error when DOMAIN value length is not equal 2.
+Executability: Fully Executable
+Outcome:
+  Message: Domain value length is not equal 2.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Exclude:
+      - RELATIONSHIP
+  Domains:
+    Exclude:
+      - AP--
+  Use Case: INDH, PROD
+Sensitivity: Dataset

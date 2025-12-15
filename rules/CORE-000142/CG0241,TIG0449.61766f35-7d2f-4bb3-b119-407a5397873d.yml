@@ -1,0 +1,133 @@
+# Variable: --ELTM
+# Condition: --TPT ^= null and --TPTNUM ^= null and --ELTM ^= null
+# Rule: --ELTM is the same value across records with the same values of DOMAIN, VISITNUM, --TPTREF, and --TPTNUM
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Within the context that defines uniqueness for a time point,
+                  there is likely to be a one-to-one relationship between most
+                  values of --TPT and --ELTM. However, since --ELTM can only be
+                  populated with ISO 8601 periods of time (as described in
+                  Section 4.4.3, Intervals of Time and Use of Duration for --DUR
+                  Variables), --ELTM may not be populated for all time points.
+                  For example, --ELTM is likely to be null for time points
+                  described by text such as 'pre-dose' or 'before breakfast.'
+                  When --ELTM is populated, if two subjects have records with
+                  the same values of DOMAIN, VISITNUM, --TPTREF, and --TPTNUM,
+                  then these records may not have different values in --ELTM.
+                Document: IG v3.4
+                Section: 4.4.10
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0241
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Within the context that defines uniqueness for a time point,
+                  there is likely to be a one-to-one relationship between most
+                  values of --TPT and --ELTM. However, since --ELTM can only be
+                  populated with ISO 8601 periods of time (as described in
+                  Section 4.1.4.3, Intervals of Time and Use of Duration for
+                  --DUR Variables), --ELTM may not be populated for all time
+                  points. For example, --ELTM is likely to be null for time
+                  points described by text such as 'pre-dose' or 'before
+                  breakfast.' When --ELTM is populated, if two subjects have
+                  records with the same values of DOMAIN, VISITNUM, --TPTREF,
+                  and --TPTNUM, then these records may not have different values
+                  in --ELTM.
+                Document: IG v3.3
+                Section: 4.4.10
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0241
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Within the context that defines uniqueness for a time point,
+                  there is likely to be a one-to-one relationship between most
+                  values of --TPT and --ELTM. However, since --ELTM can only be
+                  populated with ISO 8601 periods of time (as described in
+                  Section 4.1.4.3, Intervals of Time and Use of Duration for
+                  --DUR Variables), --ELTM may not be populated for all time
+                  points. For example, --ELTM is likely to be null for time
+                  points described by text such as 'pre-dose' or 'before
+                  breakfast.' When --ELTM is populated, if two subjects have
+                  records with the same values of DOMAIN, VISITNUM, --TPTREF,
+                  and --TPTNUM, then these records may not have different values
+                  in --ELTM.
+                Document: IG v3.2
+                Section: 4.1.4.10
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0241
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Represents the planned elapsed time from the fixed timepoint
+                  reference to the planned observation. The value of this
+                  variable is usually also reflected in the value of variable
+                  --TPT.
+                Document: TIG 1.0
+                Item: Sub Section Timing Relative to Reference Points Num 3
+                Section: '2.8.7.5'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0449
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --TPT
+      operator: non_empty
+    - name: --TPTNUM
+      operator: non_empty
+    - name: --ELTM
+      operator: non_empty
+    - name: --ELTM
+      operator: is_inconsistent_across_dataset
+      value:
+        - DOMAIN
+        - VISITNUM
+        - --TPTREF
+        - --TPTNUM
+Core:
+  Id: CORE-000142
+  Status: Published
+  Version: '1'
+Description: Raise an error when --TPT ^= null and --TPTNUM ^= null and --ELTM
+  ^= null and --ELTM does not have the same value across records with the same
+  values of DOMAIN, VISITNUM, --TPTREF, and --TPTNUM.
+Executability: Fully Executable
+Outcome:
+  Message: --ELTM is not the same value across records with the same values of
+    DOMAIN, VISITNUM, --TPTREF, and --TPTNUM.
+  Output Variables:
+    - --TPT
+    - --TPTNUM
+    - --ELTM
+    - VISITNUM
+    - DOMAIN
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Record

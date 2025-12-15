@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "RFSTDTC must be null when ACTARM in (Screen failure, Not Assigned, Not Treated).",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "015246-076-0003-00003",
+          "value": {
+            "ACTARM": "Screen Failure",
+            "RFSTDTC": "2023-01-02"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "015246-300-0004-00002",
+          "value": {
+            "ACTARM": "Not Assigned",
+            "RFSTDTC": "2023-01-02"
+          }
+        }
+      ]
+    }
+  ]
+}

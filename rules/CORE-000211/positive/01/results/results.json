@@ -1,0 +1,29 @@
+{
+  "datasets": [
+    {
+      "dataset": "suppdm.xpt",
+      "domain": "SUPPDM",
+      "execution_status": "success",
+      "execution_message": "Population flag is present in SUPPDM",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "QNAM": "EXITT"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "QNAM": "XENRFL"
+          }
+        }
+      ]
+    }
+  ]
+}

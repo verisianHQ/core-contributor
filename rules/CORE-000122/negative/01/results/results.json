@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "AGEU is completed, but both AGE and AGETXT are not completed.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "015246-099-0000-00002",
+          "value": {
+            "AGE": null,
+            "AGETXT": null,
+            "AGEU": "YEARS"
+          }
+        }
+      ]
+    }
+  ]
+}

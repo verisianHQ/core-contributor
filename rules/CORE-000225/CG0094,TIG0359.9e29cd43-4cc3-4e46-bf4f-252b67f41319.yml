@@ -1,0 +1,109 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The explanation for why requested information was not available.
+                  Used in conjunction with --STAT when value is "NOT DONE".
+                Document: Model v2.0
+                Section: Interventions
+              - Cited Guidance: The explanation for why requested information was not available.
+                  Used in conjunction with --STAT when value is "NOT DONE".
+                Document: Model v2.0
+                Section: Events
+              - Cited Guidance: The explanation for why requested information was not available.
+                  Used in conjunction with --STAT when value is "NOT DONE".
+                Document: Model v2.0
+                Section: Findings
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0094
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Reason not done. Used in conjunction with --STAT when value is
+                  NOT DONE.
+                Document: Model v1.4
+                Item: The Findings Observation Class
+                Section: 2.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0094
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Reason not done. Used in conjunction with --STAT when value is
+                  "NOT DONE".
+                Document: Model v1.7
+                Item: 'Table 2.2.1.1, 2.2.2.1, 2.2.3.1: --REASND'
+                Section: 2.2.1|2.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0094
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Events[The explanation for why requested information was not
+                  available. Used in conjunction with --STAT when value is "NOT
+                  DONE".]|Interventions[The explanation for why requested
+                  information was not available. Used in conjunction with --STAT
+                  when value is "NOT DONE".]|Findings[The explanation for why
+                  requested information was not available. Used in conjunction
+                  with --STAT when value is "NOT DONE".]
+                Document: SDTM v2.1
+                Item: --REASND
+                Section: Section 3.1.2 The Events Observation Class|Section 3.1.1 The
+                  Interventions Observation Class|Section 3.1.3 The Findings
+                  Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0359
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+# Variable: --STAT
+# Condition: --REASND ^= null
+# Rule: --STAT = 'NOT DONE'
+Check:
+  all:
+    - name: --REASND
+      operator: non_empty
+    - name: --STAT
+      operator: not_equal_to
+      value: NOT DONE
+Core:
+  Id: CORE-000225
+  Status: Published
+  Version: '1'
+Description: Raise an error when --REASND is provided and --STAT is not equal to "NOT DONE".
+Executability: Fully Executable
+Outcome:
+  Message: --STAT should be "NOT DONE" when --REASND is provided.
+  Output Variables:
+    - --STAT
+    - --REASND
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Exclude:
+      - EX
+      - AE
+      - DS
+      - DV
+      - IE
+  Use Case: INDH, PROD
+Sensitivity: Record

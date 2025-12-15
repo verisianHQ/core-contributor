@@ -1,0 +1,92 @@
+# Variable: QLABEL
+# Condition: 
+# Rule: QLABEL value length <= 40
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: This is the long name or label associated with QNAM. The value
+                  in QLABEL cannot be longer than 40 characters. This will often
+                  be the column label in the sponsor's original dataset.
+                Document: Model v2.0
+                Item: QLABEL
+                Section: Supplemental Qualifiers
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0416
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: This is the long name or label associated with QNAM. The value
+                  in QLABEL cannot be longer than 40 characters. This will often
+                  be the column label in the sponsor's original dataset.
+                Document: Model v1.7
+                Section: 4.1.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0416
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: This is the long name or label associated with QNAM. The value
+                  in QLABEL cannot be longer than 40 characters. This will often
+                  be the column label in the sponsor's original dataset.
+                Document: Model v1.4
+                Section: 4.1.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0416
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: This is the long name or label associated with QNAM. The value
+                  in QLABEL cannot be longer than 40 characters. This will often
+                  be the column label in the sponsor's original dataset.
+                Document: SDTM v2.1
+                Item: QLABEL
+                Section: Section 6.2 Supplemental Qualifiers Data set
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0571
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: QLABEL
+      operator: longer_than
+      value: 40
+Core:
+  Id: CORE-000222
+  Status: Published
+  Version: '1'
+Description: Raise an error when QLABEL > 40 chars.
+Executability: Fully Executable
+Outcome:
+  Message: QLABEL > 40 chars.
+  Output Variables:
+    - IDVAR
+    - IDVARVAL
+    - QLABEL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - SUPP--
+  Use Case: INDH, PROD
+Sensitivity: Record

@@ -1,0 +1,132 @@
+# Variable: --TPT
+# Condition: VISITNUM not present in dataset and --TPTREF present in dataset
+# Rule: --TPT and --TPTNUM have a one-to-one relationship per unique values of --TPTREF
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Within the context that defines uniqueness for a time point,
+                  which may include domain, visit, and reference time point,
+                  there must be a one-to-relationship between values of --TPT
+                  and --TPTNUM. in other words, if domain, visit, and reference
+                  time point uniquely identify subject data, then if two
+                  subjects have records with the same values of DOMAIN,
+                  VISITNUM, --TPTREF, and --TPTNUM, then these records may not
+                  have different time point descriptions in --TPT.
+                Document: IG v3.2
+                Section: 4.1.4.10
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0572
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Within the context that defines uniqueness for a time point,
+                  which may include domain, visit, and reference time point,
+                  there must be a one-to-relationship between values of --TPT
+                  and --TPTNUM. in other words, if domain, visit, and reference
+                  time point uniquely identify subject data, then if two
+                  subjects have records with the same values of DOMAIN,
+                  VISITNUM, --TPTREF, and --TPTNUM, then these records may not
+                  have different time point descriptions in --TPT.
+                Document: IG v3.3
+                Section: 4.4.10
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0572
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0924
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0924
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0924
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: VISITNUM
+      operator: not_exists
+    - name: --TPTREF
+      operator: exists
+    - any:
+        - name: --TPT
+          operator: is_inconsistent_across_dataset
+          value:
+            - --TPTNUM
+            - --TPTREF
+        - name: --TPTNUM
+          operator: is_inconsistent_across_dataset
+          value:
+            - --TPT
+            - --TPTREF
+Core:
+  Id: CORE-000686
+  Status: Published
+  Version: '1'
+Description: Raise an error when VISITNUM is not present in the dataset and
+  --TPTREF is present in the dataset, and --TPT and --TPTNUM do not have a
+  one-to-one relationship per unique value of --TPTREF
+Executability: Fully Executable
+Outcome:
+  Message: --TPT and --TPTNUM do not have a one-to-one relationship per unique
+    value of --TPTREF
+  Output Variables:
+    - --TPT
+    - --TPTNUM
+    - --TPTREF
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

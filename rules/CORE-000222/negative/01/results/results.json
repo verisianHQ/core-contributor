@@ -1,0 +1,113 @@
+{
+  "datasets": [
+    {
+      "dataset": "suppae.xpt",
+      "domain": "SUPPAE",
+      "execution_status": "success",
+      "execution_message": "QLABEL > 40 chars.",
+      "number_errors": 10,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "AESPID",
+            "IDVARVAL": "1",
+            "QLABEL": "This is the wrongly used Dictionary Version in this Study"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "AESPID",
+            "IDVARVAL": "10",
+            "QLABEL": "This is the wrongly used Dictionary Version in this Study"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "AESPID",
+            "IDVARVAL": "11",
+            "QLABEL": "This is the wrongly used Dictionary Version in this Study"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "AESPID",
+            "IDVARVAL": "12",
+            "QLABEL": "This is the wrongly used Dictionary Version in this Study"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "AESPID",
+            "IDVARVAL": "13",
+            "QLABEL": "This is the wrongly used Dictionary Version in this Study"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "AESPID",
+            "IDVARVAL": "14",
+            "QLABEL": "This is the wrongly used Dictionary Version in this Study"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "AESPID",
+            "IDVARVAL": "15",
+            "QLABEL": "This is the wrongly used Dictionary Version in this Study"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "AESPID",
+            "IDVARVAL": "2",
+            "QLABEL": "This is the wrongly used Dictionary Version in this Study"
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "AESPID",
+            "IDVARVAL": "3",
+            "QLABEL": "This is the wrongly used Dictionary Version in this Study"
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "AESPID",
+            "IDVARVAL": "4",
+            "QLABEL": "This is the wrongly used Dictionary Version in this Study"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+# Variable: GEN
+# Condition: SUPP-- dataset present in study
+# Rule: Dataset present in study with DOMAIN = SUPP--.RDOMAIN
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: There is a one-to-one correspondence between a domain dataset
+                  and it's Supplemental Qualifier dataset by creating one
+                  SUPPQUAL for each domain dataset. The single SUPPQUAL dataset
+                  option that was introduced in SDTMIG v3.1.1 is now
+                  deprecated.  The set of Supplemental Qualifiers for each
+                  domain is included in a separate dataset with the name SUPP--
+                  where “--“ denotes the source domain which the supplemental
+                  Qualifiers relate back to.
+                Document: IG v3.2
+                Section: 8.4.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0373
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: There is a one-to-one correspondence between a domain dataset
+                  and it's Supplemental Qualifier dataset by creating one
+                  SUPPQUAL for each domain dataset. The single SUPPQUAL dataset
+                  option that was introduced in SDTMIG v3.1.1 is now deprecated.
+                  The set of Supplemental Qualifiers for each domain is included
+                  in a separate dataset with the name SUPP-- where '--' denotes
+                  the source domain which the supplemental Qualifiers relate
+                  back to.
+                Document: IG v3.2
+                Section: 8.4.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0373
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: There is a one-to-one correspondence between a domain dataset
+                  and its Supplemental Qualifier dataset. The single SUPPQUAL
+                  dataset option that was introduced in SDTMIG v3.1 was
+                  deprecated. The set of Supplemental Qualifiers for each domain
+                  is included in a separate dataset with the name SUPP-- where
+                  "--" denotes the source domain which the Supplemental
+                  Qualifiers relate back to.
+                Document: IG v3.3
+                Section: 8.4.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0373
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: There will be only one SUPP-- dataset for a parent dataset.
+                  Relationships between records in the SUPP-- dataset and
+                  observations in the parent dataset are specified using the key
+                  variables STUDYID, RDOMAIN (the domain code of the observation
+                  in the relationship), USUBJID
+                Document: TIG 1.0
+                Item: ''
+                Section: 2.8.5.3
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0537
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: RDOMAIN
+      operator: is_not_contained_by
+      value: $study_domains
+Core:
+  Id: CORE-000457
+  Status: Published
+  Version: '1'
+Description: Trigger error when SUPP--.RDOMAIN does not represent a dataset
+  present in the study
+Executability: Fully Executable
+Operations:
+  - id: $study_domains
+    operator: study_domains
+Outcome:
+  Message: SUPP--.RDOMAIN does not represent a dataset present in the study
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - SUPP--
+  Use Case: INDH, PROD
+Sensitivity: Dataset

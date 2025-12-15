@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "DTHFL is not \"Y\", when DTHDTC is populated",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "015246-099-0000-00002",
+          "value": {
+            "DTHDTC": "2018-06-10",
+            "DTHFL": null
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "015246-099-0000-00003",
+          "value": {
+            "DTHDTC": "2018-09-04",
+            "DTHFL": "N"
+          }
+        }
+      ]
+    }
+  ]
+}

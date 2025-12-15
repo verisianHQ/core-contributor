@@ -1,0 +1,142 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: "If the reference time point corresponds to the date of
+                  collection or assessment: Start values:  an observation can
+                  start BEFORE that time point, can start COINCIDENT with that
+                  time point, or it is  unknown (U) when it started. End values:
+                  an observation can end BEFORE that time point, can end
+                  COINCIDENT  with that time point, can be known that it didn't
+                  end but was ONGOING, or it is unknown (U) at all when
+                  it  ended or if it was ongoing. AFTER is not a valid value in
+                  this case because it would represent an event  after the date
+                  of collection. If the reference time point is prior to the
+                  date of collection or assessment: Start values:
+                  an  observation can start BEFORE the reference point, can
+                  start COINCIDENT with the reference point, can start  AFTER
+                  the reference point, or it may not be known (U) when it
+                  started. End values: an observation can end  BEFORE the
+                  reference point, can end COINCIDENT with the reference point,
+                  can end AFTER the reference point,  can be known that it
+                  didn't end but was ONGOING, or it is unknown (U) when it ended
+                  or if it was ongoing."
+                Document: IG v3.4
+                Section: 4.4.7
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0234
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: "If the reference time point corresponds to the date of
+                  collection or assessment: Start values: an observation can
+                  start BEFORE that time point, can start COINCIDENT with that
+                  time point, or it is unknown (U) when it started. End values:
+                  an observation can end BEFORE that time point, can end
+                  COINCIDENT with that time point, can be known that it didn't
+                  end but was ONGOING, or it is unknown (U) at all when it ended
+                  or if it was ongoing. AFTER is not a valid value in this case
+                  because it would represent an event after the date of
+                  collection."
+                Document: IG v3.2
+                Section: 4.1.4.7
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0234
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: "If the reference time point corresponds to the date of
+                  collection or assessment: Start values: an observation can
+                  start BEFORE that time point, can start COINCIDENT with that
+                  time point, or it is unknown (U) when it started. End values:
+                  an observation can end BEFORE that time point, can end
+                  COINCIDENT with that time point, can be known that it didn't
+                  end but was ONGOING, or it is unknown (U) at all when it ended
+                  or if it was ongoing. AFTER is not a valid value in this case
+                  because it would represent an event after the date of
+                  collection."
+                Document: IG v3.3
+                Section: 4.4.7
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0234
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: "If the reference time point corresponds to the date of
+                  collection or assessment: Start values: an observation can
+                  start BEFORE that time point, can start COINCIDENT with that
+                  time point, or it is unknown (U) when it started. End values:
+                  an observation can end BEFORE that time point, can end
+                  COINCIDENT with that time point, can be known that it didn't
+                  end but was ONGOING, or it is unknown (U) at all when it ended
+                  or if it was ongoing. AFTER is not a valid value in this case
+                  because it would represent an event after the date of
+                  collection."
+                Document: TIG 1.0
+                Item: Num 2
+                Section: 2.8.7.6
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0443
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+# Variable: --ENRTPT
+# Condition: --ENTPT corresponds to the date of collection or assessment.
+# Rule: --ENRTPT in ('BEFORE', 'COINCIDENT', 'ONGOING', 'UNKNOWN')
+Check:
+  all:
+    - name: --ENTPT
+      operator: non_empty
+    - name: --ENTPT
+      operator: is_complete_date
+    - name: --DTC
+      operator: exists
+    - name: --ENTPT
+      operator: date_equal_to
+      value: --DTC
+    - name: --ENRTPT
+      operator: is_not_contained_by
+      value:
+        - BEFORE
+        - COINCIDENT
+        - ONGOING
+        - UNKNOWN
+Core:
+  Id: CORE-000324
+  Status: Published
+  Version: '1'
+Description: Trigger error when --ENRTPT is not in ('BEFORE', 'COINCIDENT',
+  'ONGOING', 'UNKNOWN')
+Executability: Partially Executable
+Outcome:
+  Message: --ENRTPT is not in ('BEFORE', 'COINCIDENT', 'ONGOING', 'UNKNOWN')
+  Output Variables:
+    - --ENTPT
+    - --ENRTPT
+    - --DTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Record

@@ -1,0 +1,113 @@
+# Variable: RDOMAIN
+# Condition: RDOMAIN ^= null
+# Rule: RDOMAIN is dataset in study
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Each study must include 1 standardized set of observations in a
+                  specific structure; this is the Demographics domain described
+                  here.
+                Document: Model v2.0
+                Item: RDOMAIN
+                Section: Comments
+              - Cited Guidance: Each study must include 1 standardized set of observations in a
+                  specific structure; this is the Demographics domain described
+                  here.
+                Document: Model v2.0
+                Item: RDOMAIN
+                Section: Supplemental Qualifiers
+              - Cited Guidance: Each study must incude 1 standardized set of observations in a
+                  specific structure; this is the Demographics domain described
+                  here.
+                Document: Model v2.0
+                Item: RDOMAIN
+                Section: Related Records
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0369
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Domain Abbreviation of the parent record(s).
+                Document: Model v1.4
+                Section: 2.2.7
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0369
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Domain Abbreviation of the parent record(s).
+                Document: Model v1.7
+                Section: 2.2.7
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0369
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Comments[Each study must include 1 standardized set of
+                  observations in a specific structure; this is the Demographics
+                  domain described here.]|Supplemental Qualifiers[Each study
+                  must include 1 standardized set of observations in a specific
+                  structure; this is the Demographics domain described
+                  here.]|Related Records[Each study must include 1 standardized
+                  set of observations in a specific structure; this is the
+                  Demographics domain described here.]
+                Document: SDTM v2.1
+                Item: RDOMAIN
+                Section: 3.2.2 Comments| 6.2 Supplemental Qualifiers Datasets | Section 6.1
+                  Related Records Dataset
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0533
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: RDOMAIN
+      operator: non_empty
+    - name: RDOMAIN
+      operator: is_not_contained_by
+      value: $study_domains
+Core:
+  Id: CORE-000502
+  Status: Published
+  Version: '1'
+Description: Raise an error when RDOMAIN is populated but the referenced RDOMAIN
+  doesn't exist as a dataset in the present study
+Executability: Fully Executable
+Operations:
+  - id: $study_domains
+    operator: study_domains
+Outcome:
+  Message: RDOMAIN does not represent a dataset present in the study.
+  Output Variables:
+    - RDOMAIN
+    - $study_domains
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - CO
+      - RELREC
+      - SUPP--
+  Use Case: INDH, PROD
+Sensitivity: Dataset

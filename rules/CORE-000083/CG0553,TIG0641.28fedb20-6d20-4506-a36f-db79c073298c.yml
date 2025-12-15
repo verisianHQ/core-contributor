@@ -1,0 +1,88 @@
+# Variable: --ORRES
+# Condition: --LOBXFL = 'Y' and --DRVFL = null
+# Rule: --ORRES ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Operationally derived indicator used to identify the last
+                  non-missing value prior to RFXSTDTC.  Result value is in
+                  --STRESC. Should be "Y" or null.
+                Document: Model v2.0
+                Item: --LOBXFL
+                Section: The Findings Observation Class
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0553
+              Version: '2'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Operationally-derived indicator used to identify the last
+                  non-missing value prior to RFXSTDTC. Should be "Y" or null.
+                Document: Model v1.7
+                Item: --LOBXFL
+                Section: Table 2.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0553
+              Version: '2'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Operationally derived indicator used to identify the last
+                  non-missing value prior to RFXSTDTC. Result value is in
+                  --STRESC. Should be "Y" or null.
+                Document: SDTM v2.1
+                Item: --LOBXFL
+                Section: 3.1.3 The Findings Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0641
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --ORRES
+      operator: empty
+    - name: --LOBXFL
+      operator: equal_to
+      value: Y
+    - any:
+        - name: --DRVFL
+          operator: not_exists
+        - name: --DRVFL
+          operator: not_equal_to
+          value: Y
+Core:
+  Id: CORE-000083
+  Status: Published
+  Version: '1'
+Description: Verify that --ORRES is not null when --LOBXFL = Y and --DRVFL= null
+  or --DRVFL is not present in the dataset
+Executability: Fully Executable
+Outcome:
+  Message: --ORRES is missing even though --LOBXFL= "Y" and either --DRVFL is not
+    present in dataset or is not equal to "Y"
+  Output Variables:
+    - --ORRES
+    - --LOBXFL
+    - --DRVFL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Record

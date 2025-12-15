@@ -1,0 +1,29 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Length of ACTARMCD is greater than 20 characters",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "015246-099-0000-00001",
+          "value": {
+            "ACTARMCD": "THIS IS LONGER THAN 20 CHARACTERS"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "015246-099-0000-00003",
+          "value": {
+            "ACTARMCD": "THIS IS LONGER THAN 20 CHARACTERS"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The value in TSPARM cannot be longer than 40 characters.
+                Document: IG v3.4
+                Item: Specification
+                Section: 7.4.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0258
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The value in TSPARM cannot be longer than 40 characters.
+                Document: IG v3.2
+                Item: Specification
+                Section: '7.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0258
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The value in TSPARM cannot be longer than 40 characters.
+                Document: IG v3.3
+                Item: Specification
+                Section: 7.4.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0258
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The value in TSPARM cannot be longer than 40 characters.
+                Document: TIG 1.0
+                Item: Specification:TSPARM
+                Section: 2.8.10.30
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0462
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+# Variable: TSPARM
+# Condition: 
+# Rule: TSPARM value length <= 40
+Check:
+  all:
+    - name: TSPARM
+      operator: longer_than
+      value: 40
+Core:
+  Id: CORE-000148
+  Status: Published
+  Version: '1'
+Description: Trigger error when length of TSPARM value is greater than 40
+Executability: Fully Executable
+Outcome:
+  Message: Length of TSPARM is greater than 40
+  Output Variables:
+    - TSPARM
+    - TSPARMCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+  Use Case: INDH
+Sensitivity: Record

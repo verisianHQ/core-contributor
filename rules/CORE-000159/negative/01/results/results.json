@@ -1,0 +1,21 @@
+{
+  "datasets": [
+    {
+      "dataset": "ft.xpt",
+      "domain": "FT",
+      "execution_status": "success",
+      "execution_message": "FTTESTCD is equal to 'OTHER'",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FTTESTCD": "OTHER"
+          }
+        }
+      ]
+    }
+  ]
+}

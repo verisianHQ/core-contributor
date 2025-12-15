@@ -1,0 +1,57 @@
+# Variable: SVPRESP
+# Condition: 
+# Rule: SVPRESP in ("Y", null)
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Values should be "Y" or null.
+                Document: SDTM v2.0
+                Section: Subject Visits
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0653
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Subject Visits[SVPRESP][Values should be "Y" or null.]
+                Document: SDTM v2.1
+                Item: SVPRESP
+                Section: 3.2.3.3 Subject Visits
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0691
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: SVPRESP
+      operator: not_equal_to
+      value: Y
+    - name: SVPRESP
+      operator: non_empty
+Core:
+  Id: CORE-000037
+  Status: Published
+  Version: '1'
+Description: Raise an error when SVPRESP not "Y" or null.
+Executability: Fully Executable
+Outcome:
+  Message: SVPRESP is not null and not equal to "Y". Values should be "Y" or null.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - SV
+  Use Case: INDH
+Sensitivity: Record

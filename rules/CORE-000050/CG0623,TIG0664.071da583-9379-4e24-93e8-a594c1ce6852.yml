@@ -1,0 +1,56 @@
+# Variable: --RSTIND
+# Condition: 
+# Rule: --RSTIND not present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Not in human clinical trials.
+                Document: Model v2.0
+                Item: --RSTIND
+                Section: Interventions|Findings
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0623
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Not in human clinical trials.
+                Document: SDTM v2.1
+                Item: --RSTIND
+                Section: Interventions|Findings
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0664
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --RSTIND
+      operator: exists
+Core:
+  Id: CORE-000050
+  Status: Published
+  Version: '1'
+Description: Raise an error when --RSTIND is present.
+Executability: Fully Executable
+Outcome:
+  Message: --RSTIND is present.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Dataset

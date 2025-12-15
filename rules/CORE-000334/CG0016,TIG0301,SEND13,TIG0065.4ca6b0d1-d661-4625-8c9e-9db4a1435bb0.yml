@@ -1,0 +1,224 @@
+# Variable: GEN
+# Condition: Variable Core Status = Expected
+# Rule: Variable present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: "When the study does not include the data item for an expected
+                  variable, however, a null column must still be included in the
+                  dataset, and a comment must be included in the Define-XML
+                  document to state that the study does not include the data
+                  item."
+                Document: SDTM v1.4
+                Section: 4.1.5
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0016
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: "When no data has been collected for an expected variable,
+                  however, a null column must still be included in the dataset,
+                  and a comment must be included in the define.xml to state that
+                  data was not collected."
+                Document: IG v3.3
+                Section: 4.1.5
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0016
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: "When no data has been collected for an expected variable
+                  however, a null column must still be included in the dataset,
+                  and a comment must be included in the define.xml to state that
+                  data was not collected."
+                Document: IG v3.2
+                Section: 4.1.1.5
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0016
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: All Required and Expected tabulation variables are included as
+                  columns
+                Document: TIG v1.0
+                Item: Table 2 Num
+                Section: 2.5.
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0301
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: An Expected variable is any variable necessary to make a record
+                  useful in the context of a specific domain. Columns for
+                  Expected variables must be present in each submitted dataset
+                  even if all values are null. Expected variables may contain
+                  some null values, but in most cases will not contain null
+                  values for every record.
+                Document: SENDIG v3.0
+                Item: Text
+                Section: 4.1.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND13
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: An Expected variable is any variable necessary to make a record
+                  useful in the context of a specific domain. Columns for
+                  Expected variables must be present in each submitted dataset
+                  even if all values are null. Expected variables may contain
+                  some null values, but in most cases will not contain null
+                  values for every record.
+                Document: SENDIG v3.1
+                Item: Text
+                Section: 4.1.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND13
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: An Expected variable is any variable necessary to make a record
+                  useful in the context of a specific domain. Columns for
+                  Expected variables must be present in each submitted dataset
+                  even if all values are null. Expected variables may contain
+                  some null values, but in most cases will not contain null
+                  values for every record.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.1.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND13
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: An Expected variable is any variable necessary to make a record
+                  useful in the context of a specific domain. Columns for
+                  Expected variables must be present in each submitted dataset
+                  even if all values are null. Expected variables may contain
+                  some null values, but in most cases will not contain null
+                  values for every record.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.1.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND13
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: An Expected variable is any variable necessary to make a record
+                  useful in the context of a specific domain. Columns for
+                  Expected variables must be present in each submitted dataset
+                  even if all values are null. Expected variables may contain
+                  some null values, but in most cases will not contain null
+                  values for every record.
+                Document: SENDIG v3.1
+                Item: Text
+                Section: 4.1.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND13
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: An Expected variable is any variable necessary to make a record
+                  useful in the context of a specific domain. Columns for
+                  Expected variables must be present in each submitted dataset
+                  even if all values are null. Expected variables may contain
+                  some null values, but in most cases will not contain null
+                  values for every record.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.1.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND13
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Exp for variables which are Expected to be included in the
+                  resulting dataset, even if all values are null. Such variables
+                  are considered necessary to make the data record useful in the
+                  context of the domain.
+                Document: TIG v1.0
+                Item: Table Row 7
+                Section: 2.8.1 How to Read Domain Specifications
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0065
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: variable_name
+      operator: not_contains_all
+      value:
+        - $expected_variables
+Core:
+  Id: CORE-000334
+  Status: Published
+  Version: '1'
+Description: Raise an error when an expected variable is not present in the dataset.
+Executability: Fully Executable
+Operations:
+  - id: $expected_variables
+    operator: expected_variables
+  - id: $dataset_variables
+    operator: get_column_order_from_dataset
+Outcome:
+  Message: At least one expected variable is missing from dataset
+  Output Variables:
+    - $dataset_variables
+    - $expected_variables
+Rule Type: Variable Metadata Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD, NONCLIN
+Sensitivity: Dataset

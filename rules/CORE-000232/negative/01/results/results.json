@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "relsub.xpt",
+      "domain": "RELSUB",
+      "execution_status": "success",
+      "execution_message": "When RSUBJID is populated, RUSBJID cannot equal POOLID",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "POOLID": "HEM021-002",
+            "RSUBJID": "HEM021-002"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "POOLID": "HEM021-003",
+            "RSUBJID": "HEM021-003"
+          }
+        }
+      ]
+    }
+  ]
+}

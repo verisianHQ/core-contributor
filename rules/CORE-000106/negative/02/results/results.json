@@ -1,0 +1,85 @@
+{
+  "datasets": [
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "MHENTPT is completed, but MHENRTPT is not completed.",
+      "number_errors": 8,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "MHENRTPT": null,
+            "MHENTPT": "2021-05-01"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "MHENRTPT": null,
+            "MHENTPT": "2021-02-15"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC003",
+          "value": {
+            "MHENRTPT": null,
+            "MHENTPT": "2015-05-09"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "CDISC004",
+          "value": {
+            "MHENRTPT": null,
+            "MHENTPT": "2011-06-11"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 1,
+          "USUBJID": "CDISC005",
+          "value": {
+            "MHENRTPT": null,
+            "MHENTPT": "2000-06-11"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 1,
+          "USUBJID": "CDISC006",
+          "value": {
+            "MHENRTPT": null,
+            "MHENTPT": "2021-05-01"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 1,
+          "USUBJID": "CDISC007",
+          "value": {
+            "MHENRTPT": null,
+            "MHENTPT": "2021-05-02"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 1,
+          "USUBJID": "CDISC008",
+          "value": {
+            "MHENRTPT": null,
+            "MHENTPT": "2021-11-23"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "Verify that LBTOXGR value is not from a numeric scale",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTOX": null,
+            "LBTOXGR": "Grade 2"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "LBTOX": null,
+            "LBTOXGR": "XXXXXx 44"
+          }
+        }
+      ]
+    }
+  ]
+}

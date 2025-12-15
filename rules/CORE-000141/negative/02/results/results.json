@@ -1,0 +1,67 @@
+{
+  "datasets": [
+    {
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "execution_status": "success",
+      "execution_message": "VSTPT and VSTPTNUM do not have a one-to-one relationship",
+      "number_errors": 6,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSTPT": "10MIN POSTDOSE",
+            "VSTPTNUM": null
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSTPT": null,
+            "VSTPTNUM": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSTPT": "PREDOSE",
+            "VSTPTNUM": null
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSTPT": "PREDOSE",
+            "VSTPTNUM": -1.0
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 6,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSTPT": "10MIN POSTDOSE",
+            "VSTPTNUM": 5.0
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 7,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSTPT": "5MIN POSTDOSE",
+            "VSTPTNUM": 5.0
+          }
+        }
+      ]
+    }
+  ]
+}

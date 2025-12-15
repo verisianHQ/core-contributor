@@ -1,0 +1,116 @@
+# Variable: --TOX
+# Condition: --TOXGR not present in dataset
+# Rule: --TOX not present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Variable Qualifier of --TOXGR
+                Document: Model v2.0
+                Item: --TOX
+                Section: Events
+              - Cited Guidance: Variable Qualifier of --TOXGR
+                Document: Model v2.0
+                Item: --TOX
+                Section: Findings
+              - Cited Guidance: Variable Qualifier of --TOXGR
+                Document: Model v1.7
+                Section: 2.2.2
+              - Cited Guidance: Variable Qualifier of --TOXGR
+                Document: Model v1.4
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0084
+              Version: '2'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Variable Qualifier of --TOXGR
+                Document: Model v2.0
+                Item: --TOX
+                Section: Events
+              - Cited Guidance: Variable Qualifier of --TOXGR
+                Document: Model v2.0
+                Item: --TOX
+                Section: Findings
+              - Cited Guidance: Variable Qualifier of --TOXGR
+                Document: Model v1.7
+                Section: 2.2.2
+              - Cited Guidance: Variable Qualifier of --TOXGR
+                Document: Model v1.4
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0084
+              Version: '2'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Variable Qualifier of --TOXGR
+                Document: Model v2.0
+                Item: --TOX
+                Section: Events
+              - Cited Guidance: Variable Qualifier of --TOXGR
+                Document: Model v2.0
+                Item: --TOX
+                Section: Findings
+              - Cited Guidance: Variable Qualifier of --TOXGR
+                Document: Model v1.7
+                Section: 2.2.2
+              - Cited Guidance: Variable Qualifier of --TOXGR
+                Document: Model v1.4
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0084
+              Version: '2'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Events[--TOX][Variable Qualifier of
+                  --TOXGR]|Findings[--TOX][Variable Qualifier of --TOXGR]
+                Document: SDTM v2.1
+                Item: --TOX
+                Section: Section 3.1.2 The Events Observation Class|Section 3.1.3 The Findings
+                  Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0349
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --TOXGR
+      operator: not_exists
+    - name: --TOX # checking failure criteria; when --TOXGR is not present, but --TOX is, there's a problem because --TOX is only supposed to be there to qualify --TOXGR
+      operator: exists
+Core:
+  Id: CORE-000023
+  Status: Published
+  Version: '1'
+Description: Raise an error when --TOXGR is not present in dataset, but --TOX is present
+Executability: Fully Executable
+Outcome:
+  Message: --TOX present in dataset even though --TOXGR is not
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Dataset

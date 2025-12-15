@@ -1,0 +1,53 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AEDECOD should be populated when AEPTCD is populated",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "AEDECOD": null,
+            "AEPTCD": "INJECTION SITE REACTION",
+            "AETERM": "INJECTION SITE REACTION"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "AEDECOD": null,
+            "AEPTCD": "FATIGUE",
+            "AETERM": "FATIGUE"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEDECOD": null,
+            "AEPTCD": "INJECTION SITE REACTION",
+            "AETERM": "INJECTION SITE REACTION"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 4,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEDECOD": null,
+            "AEPTCD": "%^!",
+            "AETERM": "INCONTINENCE"
+          }
+        }
+      ]
+    }
+  ]
+}

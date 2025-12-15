@@ -1,0 +1,85 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AEPRESP does not equal 'Y' or is not empty.",
+      "number_errors": 9,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "AEPRESP": "N"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEPRESP": "N"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 17,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEPRESP": "N"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 18,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEPRESP": "N"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 19,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEPRESP": "NOT DONE"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 1,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AEPRESP": "N"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 2,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AEPRESP": "N"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 3,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AEPRESP": "N"
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": 4,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AEPRESP": "UNKNOWN"
+          }
+        }
+      ]
+    }
+  ]
+}

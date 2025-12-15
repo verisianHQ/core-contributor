@@ -1,0 +1,57 @@
+{
+  "datasets": [
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "MHENDTC ^= null and MHENDTC is on or after the DM.RFSTDTC. The medical history dataset should include the subject's prior history at the start of the trial.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "CDISC004",
+          "value": {
+            "MHENDTC": "2013-10-08",
+            "RFSTDTC": "2013-10-08"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 1,
+          "USUBJID": "CDISC006",
+          "value": {
+            "MHENDTC": "2013-03-20",
+            "RFSTDTC": "2013-03-19"
+          }
+        },
+        {
+          "row": 13,
+          "SEQ": 1,
+          "USUBJID": "CDISC013",
+          "value": {
+            "MHENDTC": "2013-08-22",
+            "RFSTDTC": "2013-07-22"
+          }
+        },
+        {
+          "row": 14,
+          "SEQ": 1,
+          "USUBJID": "CDISC014",
+          "value": {
+            "MHENDTC": "2013-04-03",
+            "RFSTDTC": "2013-04-03"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000250, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

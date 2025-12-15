@@ -1,0 +1,41 @@
+{
+  "datasets": [
+    {
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "execution_status": "success",
+      "execution_message": "The date portion of CEDTC is not complete date or the date portion of DM.RFSTDTC is not complete date, but CEDY is not empty",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CEDTC": "2014-10",
+            "CEDY": 174.0,
+            "RFSTDTC": "2012-11-30"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "CDISC008",
+          "value": {
+            "CEDTC": "2014-10-31",
+            "CEDY": 174.0,
+            "RFSTDTC": "2012-11"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

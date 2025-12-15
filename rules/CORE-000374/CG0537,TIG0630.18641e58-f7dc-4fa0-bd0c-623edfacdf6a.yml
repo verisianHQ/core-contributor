@@ -1,0 +1,108 @@
+# Variable: GEN
+# Condition: DSCAT = 'DISPOSITION EVENT' and DSSCAT is NOT present in dataset.
+# Rule: At most one record per subject per epoch
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If disposition events for both study participation and study
+                  treatment(s) are to be represented, then DSSCAT provides this
+                  distinction.
+                Document: IG v3.4
+                Item: Assumption 2.b
+                Section: 6.2.3
+              - Cited Guidance: "ICH E3: Section 10.1 indicates that 'the specific reason for
+                  discontinuation' should be presented, and that summaries
+                  should be 'grouped by treatment and by major reason.' The
+                  CDISC SDS Team interprets this guidance as requiring one
+                  standardized disposition term (DSDECOD) per disposition event.
+                  If multiple reasons are reported, the sponsor should identify
+                  a primary reason and use that to populate DSTERM and DSDECOD.
+                  Additional reasons should be submitted in SUPPDS."
+                Document: IG v3.4
+                Item: Assumption 5
+                Section: 6.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0537
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: "Assumption 2.b[If disposition events for both study
+                  participation and study treatment(s) are to be represented,
+                  then DSSCAT provides this distinction]|Assumption 5[ICH E3:
+                  Section 10.1 indicates that 'the specific reason for
+                  discontinuation' should be presented, and that summaries
+                  should be 'grouped by treatment and by major reason.' The
+                  CDISC SDS Team interprets this guidance as requiring one
+                  standardized disposition term (DSDECOD) per disposition event.
+                  If multiple reasons are reported, the sponsor should identify
+                  a primary reason and use that to populate DSTERM and DSDECOD.
+                  Additional reasons should be submitted in SUPPDS.]"
+                Document: IG v3.3
+                Item: Assumption 2.b|Assumption 5
+                Section: 6.2.3 DS
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0537
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: For records with DSCAT = ""DISPOSITION EVENT"", DSSCAT = ""STUDY
+                  PARTICIPATION"" is used to represent disposition of study
+                  participation. DSSCAT = ""PRODUCT EXPOSURE"" is used when a
+                  study has only a single product. If a study has multiple
+                  products, then DSSCAT should name the individual product."
+                Document: TIG 1.0
+                Item: Assumption 2b
+                Section: 2.8.10.8
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0630
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: DSCAT
+      operator: equal_to
+      value: DISPOSITION EVENT
+      value_is_literal: true
+    - name: DSSCAT
+      operator: not_exists
+    - name: DSCAT
+      operator: is_not_unique_set
+      value:
+        - EPOCH
+        - USUBJID
+Core:
+  Id: CORE-000374
+  Status: Published
+  Version: '1'
+Description: Trigger error when there is more than one record per subject per EPOCH
+Executability: Fully Executable
+Outcome:
+  Message: There is more than one record per subject per EPOCH
+  Output Variables:
+    - DSCAT
+    - DSSCAT
+    - EPOCH
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - DS
+  Use Case: INDH
+Sensitivity: Record

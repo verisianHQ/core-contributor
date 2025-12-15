@@ -1,0 +1,108 @@
+# Variable: GEN
+# Condition: DSCAT = 'DISPOSITION EVENT' and DSSCAT is present in dataset.
+# Rule: At most one record per subject per DSSCAT per epoch, including null values of DSSCAT
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If disposition events for both study participation and study
+                  treatment(s) are to be represented, then DSSCAT provides this
+                  distinction.
+                Document: IG v3.4
+                Item: Assumption 2.b
+                Section: 6.2.3
+              - Cited Guidance: "ICH E3: Section 10.1 indicates that 'the specific reason for
+                  discontinuation' should be presented, and that summaries
+                  should be 'grouped by treatment and by major reason.' The
+                  CDISC SDS Team interprets this guidance as requiring one
+                  standardized disposition term (DSDECOD) per disposition event.
+                  If multiple reasons are reported, the sponsor should identify
+                  a primary reason and use that to populate DSTERM and DSDECOD.
+                  Additional reasons should be submitted in SUPPDS."
+                Document: IG v3.4
+                Item: Assumption 5
+                Section: 6.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0536
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: "Assumption 2.b[If disposition events for both study
+                  participation and study treatment(s) are to be represented,
+                  then DSSCAT provides this distinction.]|Assumption
+                  2.b|Assumption 5[ICH E3: Section 10.1 indicates that 'the
+                  specific reason for discontinuation' should be presented, and
+                  that summaries should be 'grouped by treatment and by major
+                  reason.' The CDISC SDS Team interprets this guidance as
+                  requiring one standardized disposition term (DSDECOD) per
+                  disposition event. If multiple reasons are reported, the
+                  sponsor should identify a primary reason and use that to
+                  populate DSTERM and DSDECOD. Additional reasons should be
+                  submitted in SUPPDS.]"
+                Document: IG v3.3
+                Item: Assumption 2.b|Assumption 5
+                Section: 6.2.3 DS
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0536
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: If disposition events for both study participation and product
+                  exposure(s) are to be represented, then DSSCAT provides this
+                  distinction
+                Document: TIG 1.0
+                Item: Assumption 2.b
+                Section: 2.8.10.8
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0629
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: DSCAT
+      operator: equal_to
+      value: DISPOSITION EVENT
+      value_is_literal: true
+    - name: DSSCAT
+      operator: exists
+    - name: EPOCH
+      operator: is_not_unique_set
+      value:
+        - USUBJID
+        - DSSCAT
+
+Core:
+  Id: CORE-000213
+  Status: Published
+  Version: '1'
+Description: Trigger error when there is more than one record per subject per
+  DSSCAT per EPOCH
+Executability: Fully Executable
+Outcome:
+  Message: More than one record per subject per DSSCAT per EPOCH
+  Output Variables:
+    - DSSCAT
+    - EPOCH
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - DS
+  Use Case: INDH
+Sensitivity: Record

@@ -1,0 +1,106 @@
+# Variable: --STRF
+# Condition: DM.RFSTDTC = null
+# Rule: --STRF = null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The characterization of the start of an observation relative to
+                  the study reference period. The sponsor-defined reference
+                  period is a continuous period of time defined by a discrete
+                  starting  point and a discrete ending point represented by
+                  RFSTDTC and RFENDTC in Demographics.
+                Document: Model 2.0
+                Item: --STRF
+                Section: Timing
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0226
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Identifies the start of the observation as being before, during,
+                  or after   the sponsor-defined reference period.The
+                  sponsor-defined reference period is a continuous period of
+                  time defined by a discrete starting point and a discrete
+                  ending point represented by RFSTDTC and RFENDTC in
+                  Demographics.
+                Document: Model 1.7
+                Item: 'Table 2.2.5.1: --STRF'
+                Section: 2.2.5
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0226
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Identifies the start of the observation as being before, during,
+                  or after the sponsor-defined reference period. The
+                  sponsor-defined reference period is a continuous period of
+                  time defined by a discrete starting point and a discrete
+                  ending point represented by RFSTDTC and RFENDTC in
+                  Demographics.
+                Document: Model 1.4
+                Section: 2.2.5
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0226
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The characterization of the start of an observation relative to
+                  the study reference period. The sponsor-defined reference
+                  period is a continuous period of time defined by a discrete
+                  starting point and a discrete ending point represented by
+                  RFSTDTC and RFENDTC in Demographics.
+                Document: SDTM v2.1
+                Item: --STRF
+                Section: Section 3.1.5 Timing Variables for All Classes
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0439
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: RFSTDTC
+      operator: empty
+    - name: --STRF
+      operator: non_empty
+Core:
+  Id: CORE-000262
+  Status: Published
+  Version: '1'
+Description: Raise an error when RFSTDTC in DM is empty and --STRF is not empty.
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: DM
+Outcome:
+  Message: RFSTDTC in DM dataset is empty but --STRF is completed.
+  Output Variables:
+    - --STRF
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Exclude:
+      - DM
+  Use Case: INDH
+Sensitivity: Record

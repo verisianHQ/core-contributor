@@ -1,0 +1,96 @@
+# Variable: --ENRTPT
+# Condition: --ENTPT ^= null
+# Rule: --ENRTPT ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The description or date and/or time of a time point that acts as
+                  a fixed reference for characterizing the end of an
+                  observation. This is the sponsor-defined reference point
+                  referred to by --ENRTPT.
+                Document: Model v2.0
+                Item: --ENTPT
+                Section: Timing
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0045
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Identifies the end of the observation as being before or after
+                  the sponsor-defined reference time point defined by variable
+                  --ENTPT.
+                Document: Model v1.7
+                Item: Table 2.2.5.1 --ENTPT
+                Section: 2.2.5 Timing Variables for All Classes
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0045
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: (--ENRTPT) Identifies the end of the observation as being before
+                  or after the sponsor-defined reference time point defined by
+                  variable --ENTPT.
+                Document: Model v1.4
+                Item: Specification
+                Section: 2.2.5 Timing Variables for All Classes
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0045
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The description or date and/or time of a time point that acts as
+                  a fixed reference for characterizing the end of an
+                  observation. This is the sponsor-defined reference point
+                  referred to by --ENRTPT
+                Document: SDTM v2.1
+                Item: --ENTPT
+                Section: Section 3.1.5 Timing Variables for All Classes
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0324
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --ENTPT
+      operator: non_empty
+    - name: --ENRTPT
+      operator: empty
+Core:
+  Id: CORE-000106
+  Status: Published
+  Version: '1'
+Description: Raise an error when --ENTPT is completed and --ENRTPT is not completed.
+Executability: Fully Executable
+Outcome:
+  Message: --ENTPT is completed, but --ENRTPT is not completed.
+  Output Variables:
+    - --ENRTPT
+    - --ENTPT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Record

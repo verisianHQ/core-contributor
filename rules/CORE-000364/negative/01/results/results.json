@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "EPOCH should be null if DSCAT is protocol milestone",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC010",
+          "value": {
+            "DSCAT": "PROTOCOL MILESTONE",
+            "DSDECOD": "RANDOMIZATION CODE ALLOCATED",
+            "EPOCH": "FIRST TREATMENT EPOCH"
+          }
+        }
+      ]
+    }
+  ]
+}

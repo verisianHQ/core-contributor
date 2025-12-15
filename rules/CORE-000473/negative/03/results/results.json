@@ -1,0 +1,68 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "A record exists in TS where TSPARMCD = HLTSUBJI and TSVAL = Y but TSVAL for TSPARMCD = TDIGRP is not empty or does not equal HEALTHY SUBJECTS.",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 50,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "$HLTSUBJI_Y": 1,
+            "TSGRPID": "1",
+            "TSPARMCD": "TDIGRP",
+            "TSVAL": "Patients with Probable Mild to Moderate Alzheimers Disease"
+          }
+        },
+        {
+          "row": 51,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "$HLTSUBJI_Y": 1,
+            "TSGRPID": "2",
+            "TSPARMCD": "TDIGRP",
+            "TSVAL": "HEALTHY"
+          }
+        },
+        {
+          "row": 52,
+          "SEQ": 3,
+          "USUBJID": "None",
+          "value": {
+            "$HLTSUBJI_Y": 1,
+            "TSGRPID": null,
+            "TSPARMCD": "TDIGRP",
+            "TSVAL": "HEALTHY"
+          }
+        },
+        {
+          "row": 53,
+          "SEQ": 4,
+          "USUBJID": "None",
+          "value": {
+            "$HLTSUBJI_Y": 2,
+            "TSGRPID": "4",
+            "TSPARMCD": "TDIGRP",
+            "TSVAL": "HEALTHY"
+          }
+        },
+        {
+          "row": 54,
+          "SEQ": 5,
+          "USUBJID": "None",
+          "value": {
+            "$HLTSUBJI_Y": 2,
+            "TSGRPID": "4",
+            "TSPARMCD": "TDIGRP",
+            "TSVAL": "NOT HEALTHY"
+          }
+        }
+      ]
+    }
+  ]
+}

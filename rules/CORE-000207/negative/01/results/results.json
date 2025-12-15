@@ -1,0 +1,21 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBSTDTC is present in a Findings general observation class",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "LBSTDTC": "1999-06-19"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "datasets": [
+    {
+      "dataset": "sv.xpt",
+      "domain": "SV",
+      "execution_status": "success",
+      "execution_message": "VISITDY is populated when SVPRESP is null.  VISITDY is the Planned Study Day of a visit. It should not be populated for unplanned visits.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVPRESP": null,
+            "VISITDY": 31.0
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVPRESP": null,
+            "VISITDY": 62.0
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVPRESP": null,
+            "VISITDY": 63.0
+          }
+        }
+      ]
+    }
+  ]
+}

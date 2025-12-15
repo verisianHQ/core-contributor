@@ -1,0 +1,119 @@
+# Variable: ETCD
+# Condition: ETCD ^= 'UNPLAN'
+# Rule: ETCD = TE.ETCD
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The Subject Elements domain allows the submission of data on the
+                  timing of the trial Elements a subject actually passed through
+                  in their participation in the trial. Read Section 7.2.2, Trial
+                  Elements, on the Trial Elements (TE) dataset and Section
+                  7.2.1, Trial Arms, on the Trial Arms (TA) dataset, as these
+                  datasets define a trial's planned Elements and describe the
+                  planned sequences of Elements for the Arms of the trial.
+                Document: IG V3.4
+                Item: Assumptions
+                Section: '5.3'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0414
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The Subject Elements domain allows the submission of data on the
+                  timing of the trial Elements a subject actually passed through
+                  in their participation in the trial. Please read Section 7.2.2
+                  - Experimental Design; Trial Elements (TE); on the Trial
+                  Elements dataset and Section 7.2.1 - Experimental Design;
+                  Trial Arms (TA); on the Trial Arms dataset; as these datasets
+                  define a trial's planned Elements; and describe the planned
+                  sequences of lements for the Arms of the trial.
+                Document: IG V3.3
+                Item: Assumptions
+                Section: 5 SE
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0414
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The Subject Elements domain allows the submission of data on the
+                  timing of the trial Elements a subject actually passed through
+                  in their participation in the trial. Please read Section 7.2 -
+                  Experimental Design; Trial Elements (TE); on the Trial
+                  Elements dataset and Section 7.2 - Experimental Design; Trial
+                  Arms (TA); on the Trial Arms dataset; as these datasets define
+                  a trial's planned Elements; and describe the planned sequences
+                  of lements for the Arms of the trial.
+                Document: IG V3.2
+                Item: Assumptions 2
+                Section: 5 SE
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0414
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The Subject Elements domain allows the submission of data on the
+                  timing of the trial Elements a subject actually passed through
+                  in their participation in the trial.  Section 10.8.30  Trial
+                  Elements  and Section 10.8.29  Trial Arms, as these datasets
+                  define a trial's planned Elements and describe the planned
+                  sequences of Elements for the Arms of the trial.
+                Document: TIG 1.0
+                Item: Assumptions
+                Section: 2.8.10.24|2.8.10.29
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0569
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: ETCD
+      operator: not_equal_to
+      value: UNPLAN
+    - name: ETCD
+      operator: is_not_contained_by
+      value: $te_etcd
+Core:
+  Id: CORE-000173
+  Status: Published
+  Version: '1'
+Description: Raise an error when ETCD is not equal to 'UNPLAN' and not equal to TE.ETCD
+Executability: Fully Executable
+Operations:
+  - domain: TE
+    id: $te_etcd
+    name: ETCD
+    operator: distinct
+Outcome:
+  Message: ETCD is not equal to 'UNPLAN' and not equal to TE.ETCD
+  Output Variables:
+    - ETCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - SE
+      - TA
+  Use Case: INDH
+Sensitivity: Record

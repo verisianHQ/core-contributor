@@ -1,0 +1,39 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "DTHFL is not \"Y\", when SS.SSSTRESC equals \"DEAD\"",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "015246-076-0003-00003",
+          "value": {
+            "DTHFL": null,
+            "SSSTRESC": "DEAD"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "015246-300-0004-00002",
+          "value": {
+            "DTHFL": "N",
+            "SSSTRESC": "DEAD"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ss.xpt",
+      "domain": "SS",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000008, dataset=SS",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

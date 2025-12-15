@@ -1,0 +1,65 @@
+# Variable: AGE
+# Condition: AGEU ^= null and AGETXT = null
+# Rule: AGE ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Units associated with AGE or AGETXT.
+                Document: Model v1.4
+                Section: 2.2.6
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0433
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Units associated with AGE or AGETXT.
+                Document: Model v1.7
+                Section: Table 2.2.6.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0433
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: AGEU
+      operator: non_empty
+    - any:
+        - name: AGETXT
+          operator: not_exists
+        - name: AGETXT
+          operator: empty
+    - any:
+        - name: AGE
+          operator: not_exists
+        - name: AGE
+          operator: empty
+Core:
+  Id: CORE-000453
+  Status: Published
+  Version: '1'
+Description: Raise an error when AGE is empty, but AGEU is not empty.
+Executability: Fully Executable
+Outcome:
+  Message: Missing value for AGE, when AGEU is provided
+  Output Variables:
+    - AGE
+    - AGEU
+    - AGETXT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

@@ -1,0 +1,70 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: '"USUBJID: Either USUBJID or POOILD must be populated."'
+                Document: Model v2.0
+                Item: USUBJID
+                Section: RELSUB
+              - Cited Guidance: '"POOILD: Either USUBJID or POOILD must be populated."        '
+                Document: Model v2.0
+                Item: POOLID
+                Section: RELSUB
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0361
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Either USUBJID or POOLID must be populated.
+                Document: Model v1.4
+                Section: 4.1.4
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0361
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Either USUBJID or POOLID must be populated.
+                Document: Model v1.7
+                Section: Table 4.1.4.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0361
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: USUBJID
+      operator: non_empty
+    - name: POOLID
+      operator: non_empty
+Core:
+  Id: CORE-000229
+  Status: Published
+  Version: '1'
+Description: Verify that When USUBJID is populated, POOLID is not populated
+Executability: Fully Executable
+Outcome:
+  Message: POOLID must be null when USUBJID is populated
+  Output Variables:
+    - USUBJID
+    - POOLID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - RELSUB
+Sensitivity: Record

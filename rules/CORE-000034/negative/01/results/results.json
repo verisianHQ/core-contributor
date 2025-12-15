@@ -1,0 +1,51 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000034, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "DSSTDTC does not equal DM.DTHDTC, when DSDECOD equals \"DEATH\".",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 7,
+          "SEQ": 7,
+          "USUBJID": "015246-076-0003-00003",
+          "value": {
+            "DSDECOD": "DEATH",
+            "DSSTDTC": "2022-02-20",
+            "DTHDTC": "2021-02-18"
+          }
+        },
+        {
+          "row": 21,
+          "SEQ": 4,
+          "USUBJID": "015246-888-0008-08888",
+          "value": {
+            "DSDECOD": "DEATH",
+            "DSSTDTC": "2019-01-10",
+            "DTHDTC": null
+          }
+        },
+        {
+          "row": 26,
+          "SEQ": 5,
+          "USUBJID": "015246-999-0003-09999",
+          "value": {
+            "DSDECOD": "DEATH",
+            "DSSTDTC": "2021-01-10",
+            "DTHDTC": "2021-01"
+          }
+        }
+      ]
+    }
+  ]
+}

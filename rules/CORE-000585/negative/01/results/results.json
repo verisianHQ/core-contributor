@@ -1,0 +1,104 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "One of following variables is not present in the dataset; STUDYID, DOMAIN, USUBJID (or POOLID) or AESEQ.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "AESEQ": 2.0,
+            "DOMAIN": "Not in dataset",
+            "POOLID": "Not in dataset",
+            "STUDYID": "TEST",
+            "USUBJID": "001"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "One of following variables is not present in the dataset; STUDYID, DOMAIN, USUBJID (or POOLID) or LBSEQ.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "DOMAIN": "LB",
+            "LBSEQ": 1.0,
+            "POOLID": "Not in dataset",
+            "STUDYID": "ABC123",
+            "USUBJID": "Not in dataset"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "success",
+      "execution_message": "One of following variables is not present in the dataset; STUDYID, DOMAIN, USUBJID (or POOLID) or ECSEQ.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "DOMAIN": "EC",
+            "ECSEQ": 1.0,
+            "POOLID": "Not in dataset",
+            "STUDYID": "Not in dataset",
+            "USUBJID": "CDISC001"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "One of following variables is not present in the dataset; STUDYID, DOMAIN, USUBJID (or POOLID) or FASEQ.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "DOMAIN": "FA",
+            "FASEQ": "Not in dataset",
+            "POOLID": "ABC123-0201",
+            "STUDYID": "ABC123",
+            "USUBJID": "Not in dataset"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "relrec.xpt",
+      "domain": "RELREC",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000585, dataset=RELREC",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "supplb.xpt",
+      "domain": "SUPPLB",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000585, dataset=SUPPLB",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

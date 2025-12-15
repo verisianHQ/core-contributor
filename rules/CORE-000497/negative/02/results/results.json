@@ -1,0 +1,35 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "A record exists in TS where TSPARMCD = STYPE and TSVAL = INTERVENTIONAL but TSVAL for TSPARMCD = PCLAS is empty when PCLAS is applicable.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 30,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "$STYPE_INTERVENTIONAL": 1,
+            "TSGRPID": "2",
+            "TSPARMCD": "PCLAS",
+            "TSVAL": null
+          }
+        },
+        {
+          "row": 31,
+          "SEQ": 3,
+          "USUBJID": "None",
+          "value": {
+            "$STYPE_INTERVENTIONAL": 1,
+            "TSGRPID": "3",
+            "TSPARMCD": "PCLAS",
+            "TSVAL": null
+          }
+        }
+      ]
+    }
+  ]
+}

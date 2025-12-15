@@ -1,0 +1,128 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: "If the reference time point corresponds to the date of
+                  collection or assessment: Start values: an  observation can
+                  start BEFORE that time point, can start COINCIDENT with that
+                  time point, or it is unknown  (U) when it started. End values:
+                  an observation can end BEFORE that time point, can end
+                  COINCIDENT with  that time point, can be known that it didn't
+                  end but was ONGOING, or it is unknown (U) at all when
+                  it  ended or if it was ongoing.  AFTER is not a valid value in
+                  this case because it would represent an event after the date
+                  of collection."
+                Document: IG v3.4
+                Section: 4.4.7
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0232
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: "If the reference time point corresponds to the date of
+                  collection or assessment: Start values: an observation can
+                  start BEFORE that time point, can start COINCIDENT with that
+                  time point, or it is unknown (U) when it started. End values:
+                  an observation can end BEFORE that time point, can end
+                  COINCIDENT with that time point, can be known that it didn't
+                  end but was ONGOING, or it is unknown (U) at all when it ended
+                  or if it was ongoing. AFTER is not a valid value in this case
+                  because it would represent an event after the date of
+                  collection."
+                Document: IG v3.2
+                Section: 4.1.4.7
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0232
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: "If the reference time point corresponds to the date of
+                  collection or assessment: Start values: an observation can
+                  start BEFORE that time point, can start COINCIDENT with that
+                  time point, or it is unknown (U) when it started. End values:
+                  an observation can end BEFORE that time point, can end
+                  COINCIDENT with that time point, can be known that it didn't
+                  end but was ONGOING, or it is unknown (U) at all when it ended
+                  or if it was ongoing. AFTER is not a valid value in this case
+                  because it would represent an event after the date of
+                  collection."
+                Document: IG v3.3
+                Section: 4.4.7
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0232
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: If the reference time point corresponds to the date of
+                  collection or assessment; Start values; an observation can
+                  start BEFORE that time point, can start COINCIDENT with that
+                  time point, or it is unknown (U) when it started. End values;
+                  an observation can end BEFORE that time point, can end
+                  COINCIDENT with that time point, can be known that it didn't
+                  end but was ONGOING, or it is unknown (U) at all when it ended
+                  or if it was ongoing. AFTER is not a valid value in this case
+                  because it would represent an event after the date of
+                  collection.
+                Document: TIG 1.0
+                Item: Num 1
+                Section: 2.8.7.6
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0441
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+# Variable: --STRTPT
+# Condition: --STTPT corresponds to the date of collection or assessment.
+# Rule: --STRTPT in ('BEFORE', 'COINCIDENT', 'UNKNOWN')
+Check:
+  all:
+    - name: --STTPT
+      operator: non_empty
+    - name: --STTPT
+      operator: is_complete_date
+    - name: --DTC
+      operator: exists
+    - name: --STTPT
+      operator: date_equal_to
+      value: --DTC
+    - name: --STRTPT
+      operator: is_not_contained_by
+      value:
+        - BEFORE
+        - COINCIDENT
+        - UNKNOWN
+Core:
+  Id: CORE-000763
+  Status: Published
+  Version: '1'
+Description: Trigger error when --STRTPT is not in ('BEFORE', 'COINCIDENT', 'UNKNOWN')
+Executability: Partially Executable
+Outcome:
+  Message: --STTPT is equal to the date of collection or assessment but --STRTPT
+    is not in ('BEFORE', 'COINCIDENT',  'UNKNOWN').
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Record

@@ -1,0 +1,661 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AEDECOD and AEPTCD do not have a one-to-one relationship",
+      "number_errors": 72,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "INJECTION SITE REACTION"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "FATIGUE"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "INJECTION SITE REACTION"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 2,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "SHOULDER PAIN"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 3,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "JOINT DISLOCATION"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 4,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "INCONTINENCE"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 5,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "INJECTION SITE REACTION"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 6,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "SKIN LACERATION"
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": 7,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "CONFUSIONAL STATE"
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": 8,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "DYSPNOEA"
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": 9,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "SUDDEN DEATH"
+          }
+        },
+        {
+          "row": 12,
+          "SEQ": 1,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "HYPERHIDROSIS"
+          }
+        },
+        {
+          "row": 13,
+          "SEQ": 2,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "STOMACH DISCOMFORT"
+          }
+        },
+        {
+          "row": 14,
+          "SEQ": 3,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "PAIN"
+          }
+        },
+        {
+          "row": 15,
+          "SEQ": 4,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "NASAL CONGESTION"
+          }
+        },
+        {
+          "row": 16,
+          "SEQ": 5,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "MALAISE"
+          }
+        },
+        {
+          "row": 17,
+          "SEQ": 6,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "MYALGIA"
+          }
+        },
+        {
+          "row": 18,
+          "SEQ": 7,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "PHARYNGOLARYNGEAL PAIN"
+          }
+        },
+        {
+          "row": 19,
+          "SEQ": 8,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "PRODUCTIVE COUGH"
+          }
+        },
+        {
+          "row": 20,
+          "SEQ": 9,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "DIZZINESS"
+          }
+        },
+        {
+          "row": 21,
+          "SEQ": 10,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "DIZZINESS"
+          }
+        },
+        {
+          "row": 22,
+          "SEQ": 11,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "CONTUSION"
+          }
+        },
+        {
+          "row": 23,
+          "SEQ": 12,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "HEADACHE"
+          }
+        },
+        {
+          "row": 24,
+          "SEQ": 13,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "EPISTAXIS"
+          }
+        },
+        {
+          "row": 25,
+          "SEQ": 14,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "INJECTION SITE REACTION"
+          }
+        },
+        {
+          "row": 26,
+          "SEQ": 15,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "RESPIRATORY TRACT CONGESTION"
+          }
+        },
+        {
+          "row": 27,
+          "SEQ": 16,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "RHINITIS"
+          }
+        },
+        {
+          "row": 28,
+          "SEQ": 17,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "FEELING ABNORMAL"
+          }
+        },
+        {
+          "row": 29,
+          "SEQ": 18,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "LIBIDO DECREASED"
+          }
+        },
+        {
+          "row": 30,
+          "SEQ": 19,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "LISTLESS"
+          }
+        },
+        {
+          "row": 31,
+          "SEQ": 1,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "INJECTION SITE REACTION"
+          }
+        },
+        {
+          "row": 32,
+          "SEQ": 2,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "INJECTION SITE REACTION"
+          }
+        },
+        {
+          "row": 33,
+          "SEQ": 3,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "INJECTION SITE REACTION"
+          }
+        },
+        {
+          "row": 34,
+          "SEQ": 4,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "INJECTION SITE REACTION"
+          }
+        },
+        {
+          "row": 35,
+          "SEQ": 5,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "CHEST DISCOMFORT"
+          }
+        },
+        {
+          "row": 36,
+          "SEQ": 6,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "HEADACHE"
+          }
+        },
+        {
+          "row": 37,
+          "SEQ": 7,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "COUGH"
+          }
+        },
+        {
+          "row": 38,
+          "SEQ": 1,
+          "USUBJID": "CDISC007",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "INJECTION SITE REACTION"
+          }
+        },
+        {
+          "row": 39,
+          "SEQ": 2,
+          "USUBJID": "CDISC007",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "SALIVARY HYPERSECRETION"
+          }
+        },
+        {
+          "row": 40,
+          "SEQ": 3,
+          "USUBJID": "CDISC007",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "PARAESTHESIA"
+          }
+        },
+        {
+          "row": 41,
+          "SEQ": 1,
+          "USUBJID": "CDISC008",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "COMPLETED SUICIDE"
+          }
+        },
+        {
+          "row": 42,
+          "SEQ": 1,
+          "USUBJID": "CDISC009",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "HEART RATE IRREGULAR"
+          }
+        },
+        {
+          "row": 43,
+          "SEQ": 2,
+          "USUBJID": "CDISC009",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "DIZZINESS"
+          }
+        },
+        {
+          "row": 44,
+          "SEQ": 3,
+          "USUBJID": "CDISC009",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "HEADACHE"
+          }
+        },
+        {
+          "row": 45,
+          "SEQ": 4,
+          "USUBJID": "CDISC009",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "HEART RATE IRREGULAR"
+          }
+        },
+        {
+          "row": 46,
+          "SEQ": 1,
+          "USUBJID": "CDISC011",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "DIZZINESS"
+          }
+        },
+        {
+          "row": 47,
+          "SEQ": 2,
+          "USUBJID": "CDISC011",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "INJECTION SITE REACTION"
+          }
+        },
+        {
+          "row": 48,
+          "SEQ": 3,
+          "USUBJID": "CDISC011",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "DIZZINESS"
+          }
+        },
+        {
+          "row": 49,
+          "SEQ": 4,
+          "USUBJID": "CDISC011",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "INJECTION SITE REACTION"
+          }
+        },
+        {
+          "row": 50,
+          "SEQ": 1,
+          "USUBJID": "CDISC013",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "MYOCARDIAL INFARCTION"
+          }
+        },
+        {
+          "row": 51,
+          "SEQ": 1,
+          "USUBJID": "CDISC014",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "INJECTION SITE REACTION"
+          }
+        },
+        {
+          "row": 52,
+          "SEQ": 2,
+          "USUBJID": "CDISC014",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "NASOPHARYNGITIS"
+          }
+        },
+        {
+          "row": 53,
+          "SEQ": 1,
+          "USUBJID": "CDISC016",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "PARAESTHESIA ORAL"
+          }
+        },
+        {
+          "row": 54,
+          "SEQ": 2,
+          "USUBJID": "CDISC016",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "NASOPHARYNGITIS"
+          }
+        },
+        {
+          "row": 55,
+          "SEQ": 3,
+          "USUBJID": "CDISC016",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "SUPRAVENTRICULAR EXTRASYSTOLES"
+          }
+        },
+        {
+          "row": 56,
+          "SEQ": 4,
+          "USUBJID": "CDISC016",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "RASH PRURITIC"
+          }
+        },
+        {
+          "row": 57,
+          "SEQ": 5,
+          "USUBJID": "CDISC016",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "VENTRICULAR EXTRASYSTOLES"
+          }
+        },
+        {
+          "row": 58,
+          "SEQ": 6,
+          "USUBJID": "CDISC016",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "CONJUNCTIVAL HAEMORRHAGE"
+          }
+        },
+        {
+          "row": 59,
+          "SEQ": 7,
+          "USUBJID": "CDISC016",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "CERUMEN IMPACTION"
+          }
+        },
+        {
+          "row": 60,
+          "SEQ": 1,
+          "USUBJID": "CDISC017",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "FALL"
+          }
+        },
+        {
+          "row": 61,
+          "SEQ": 2,
+          "USUBJID": "CDISC017",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "BALANCE DISORDER"
+          }
+        },
+        {
+          "row": 62,
+          "SEQ": 3,
+          "USUBJID": "CDISC017",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "CONTUSION"
+          }
+        },
+        {
+          "row": 63,
+          "SEQ": 4,
+          "USUBJID": "CDISC017",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "COORDINATION ABNORMAL"
+          }
+        },
+        {
+          "row": 64,
+          "SEQ": 5,
+          "USUBJID": "CDISC017",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "INJECTION SITE REACTION"
+          }
+        },
+        {
+          "row": 65,
+          "SEQ": 1,
+          "USUBJID": "CDISC018",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "BACK PAIN"
+          }
+        },
+        {
+          "row": 66,
+          "SEQ": 2,
+          "USUBJID": "CDISC018",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "NAUSEA"
+          }
+        },
+        {
+          "row": 67,
+          "SEQ": 3,
+          "USUBJID": "CDISC018",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "AMNESIA"
+          }
+        },
+        {
+          "row": 68,
+          "SEQ": 4,
+          "USUBJID": "CDISC018",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "NAUSEA"
+          }
+        },
+        {
+          "row": 69,
+          "SEQ": 5,
+          "USUBJID": "CDISC018",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "LETHARGY"
+          }
+        },
+        {
+          "row": 70,
+          "SEQ": 6,
+          "USUBJID": "CDISC018",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "NAUSEA"
+          }
+        },
+        {
+          "row": 71,
+          "SEQ": 7,
+          "USUBJID": "CDISC018",
+          "value": {
+            "AEDECOD": "General",
+            "AEPTCD": "NAUSEA"
+          }
+        },
+        {
+          "row": 72,
+          "SEQ": 8,
+          "USUBJID": "CDISC018",
+          "value": {
+            "AEDECOD": "Other",
+            "AEPTCD": "INJECTION SITE REACTION"
+          }
+        }
+      ]
+    }
+  ]
+}

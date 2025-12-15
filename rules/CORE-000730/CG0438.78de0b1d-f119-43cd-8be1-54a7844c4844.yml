@@ -1,0 +1,67 @@
+# Variable: TSVAL
+# Condition: TSPARMCD = 'AGEMIN' and TSVAL ^= null
+# Rule: TSVAL conforms to ISO 8601 time period
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Further information about the parameters is included below in
+                  Table 1. TSVAL may have controlled terminology depending on
+                  the value of TSPARMCD
+                Document: IG v3.2
+                Item: Assumption 3
+                Section: 7.4|Appendix C1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0438
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Further information about the parameters is included below in
+                  Table 1. TSVAL may have controlled terminology depending on
+                  the value of TSPARMCD
+                Document: IG v3.3
+                Item: Assumption 3
+                Section: '7.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0438
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: TSPARMCD
+      operator: equal_to
+      value: AGEMIN
+    - name: TSVAL
+      operator: non_empty
+    - name: TSVAL
+      negative: true
+      operator: invalid_duration
+Core:
+  Id: CORE-000730
+  Status: Published
+  Version: '1'
+Description: 'When TSPARMCD is equal to AGEMIN and TSVAL is not null, TSVAL
+  should conform to ISO 8601'
+Executability: Fully Executable
+Outcome:
+  Message: 'TSVAL does not conform to ISO 8601'
+  Output Variables:
+    - TSVAL
+    - TSPARMCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

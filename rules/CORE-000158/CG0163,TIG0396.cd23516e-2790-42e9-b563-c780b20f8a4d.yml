@@ -1,0 +1,104 @@
+# Variable: IDVAR
+# Condition: Comment related to Domain Records and RDOMAIN not in (null, 'DM')
+# Rule: IDVAR ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Identifying variable in the parent dataset that identifies the
+                  record(s) to which the comment applies.  Examples AESEQ or
+                  CMGRPID. Used only when individual comments are related to
+                  domain records.  Null for comments collected on separate CRFs.
+                Document: IG v3.4
+                Item: Specification
+                Section: '5.1'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0163
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Identifying variable in the parent dataset that identifies the
+                  record(s) to which the comment applies. Examples AESEQ or
+                  CMGRPID. Used only when individual comments are related to
+                  domain records. null for comments collected on separate CRFs.
+                Document: IG v3.2
+                Item: Specification
+                Section: '5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0163
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Identifying variable in the parent dataset that identifies the
+                  record(s) to which the comment applies. Examples AESEQ or
+                  CMGRPID. Used only when individual comments are related to
+                  domain records. null for comments collected on separate CRFs.
+                Document: IG v3.3
+                Item: Specification
+                Section: '5.1'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0163
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Identifying variable in the parent dataset that identifies the
+                  record(s) to which the comment applies. Examples AESEQ or
+                  CMGRPID. Used only when individual comments are related to
+                  domain records. Null for comments collected on separate CRFs.
+                Document: TIG 1.0
+                Item: Specification
+                Section: 2.8.10.2
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0396
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+
+Check:
+  any:
+    - all:
+        - name: RDOMAIN
+          operator: non_empty
+        - name: RDOMAIN
+          operator: not_equal_to
+          value: DM
+          value_is_literal: true
+        - name: IDVAR
+          operator: empty
+Core:
+  Id: CORE-000158
+  Status: Published
+  Version: '1'
+Description: IDVAR must be specified.
+Executability: Fully Executable
+Outcome:
+  Message: IDVAR should not be missing when RDOMAIN is not in (empty, DM).
+  Output Variables:
+    - RDOMAIN
+    - IDVAR
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - CO
+  Use Case: INDH
+Sensitivity: Record

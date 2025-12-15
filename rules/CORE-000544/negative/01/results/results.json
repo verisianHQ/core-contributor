@@ -1,0 +1,165 @@
+{
+  "datasets": [
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "DSSEQ is not a unique number per USUBJID per domain, nor a unique number per POOLID per domain, including when the domain is split into multiple files",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "0001",
+          "value": {
+            "DSSEQ": 5.0,
+            "POOLID": "Not in dataset",
+            "USUBJID": "0001"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 5,
+          "USUBJID": "0001",
+          "value": {
+            "DSSEQ": 5.0,
+            "POOLID": "Not in dataset",
+            "USUBJID": "0001"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ss1.xpt",
+      "domain": "SS",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ss2.xpt",
+      "domain": "SS",
+      "execution_status": "success",
+      "execution_message": "SSSEQ is not a unique number per USUBJID per domain, nor a unique number per POOLID per domain, including when the domain is split into multiple files",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 13,
+          "SEQ": 14,
+          "USUBJID": "0002",
+          "value": {
+            "POOLID": "Not in dataset",
+            "SSSEQ": 14.0,
+            "USUBJID": "0002"
+          }
+        },
+        {
+          "row": 14,
+          "SEQ": 14,
+          "USUBJID": "0002",
+          "value": {
+            "POOLID": "Not in dataset",
+            "SSSEQ": 14.0,
+            "USUBJID": "0002"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AESEQ is not a unique number per USUBJID per domain, nor a unique number per POOLID per domain, including when the domain is split into multiple files",
+      "number_errors": 7,
+      "errors": [
+        {
+          "row": 8,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "AESEQ": 1.0,
+            "POOLID": "0002",
+            "USUBJID": "Not in dataset"
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "AESEQ": 1.0,
+            "POOLID": "0002",
+            "USUBJID": "Not in dataset"
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "AESEQ": 1.0,
+            "POOLID": "0002",
+            "USUBJID": "Not in dataset"
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "AESEQ": 1.0,
+            "POOLID": "0002",
+            "USUBJID": "Not in dataset"
+          }
+        },
+        {
+          "row": 12,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "AESEQ": 1.0,
+            "POOLID": "0002",
+            "USUBJID": "Not in dataset"
+          }
+        },
+        {
+          "row": 13,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "AESEQ": 1.0,
+            "POOLID": "0002",
+            "USUBJID": "Not in dataset"
+          }
+        },
+        {
+          "row": 14,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "AESEQ": 1.0,
+            "POOLID": "0002",
+            "USUBJID": "Not in dataset"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "lbae.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "lbds.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

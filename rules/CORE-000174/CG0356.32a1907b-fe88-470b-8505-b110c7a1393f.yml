@@ -1,0 +1,81 @@
+# Variable: SPECIES
+# Condition: 
+# Rule: SPECIES not present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0356
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: "The following variables can be used for non-clinical\
+                  \ studies (SEND) but must NEVER be used in the Demographics domain\
+                  \ for human clinical trials. However, the use of these variables\
+                  \ is currently  being evaluated in Findings general observation\
+                  \ class domains being developed for use in the  tabulations of virology\
+                  \ data:\n  SPECIES (Demographics)\n  STRAIN (Demographics)\n  SBSTRAIN\
+                  \ (Demographics)"
+                Document: IG 3.4
+                Section: '2.7'
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0356
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: 'The following variables can be used for non-clinical
+                  studies (SEND) but must NEVER be used in the Demographics domain
+                  for human clinical trials. However; the use of these variables is
+                  currently being evaluated in Findings general observation class
+                  domains being developed for use in the tabulations of virology data:
+                  SPECIES (Demographics) STRAIN (Demographics) SBSTRAIN (Demographics)'
+                Document: IG v3.2
+                Section: '2.7'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0356
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The following variables can be used for non-clinical
+                  studies (SEND) but must NEVER be used in the Demographics domain
+                  for human clinical trials; where all subjects are human. See Section
+                  9.2; Non-host Organism Identifiers (OI); for information about representing
+                  taxonomic information for non-host organisms such as bacteria and
+                  viruses. SPECIES (Demographics) STRAIN (Demographics) SBSTRAIN (Demographics)
+                Document: IG v3.3
+                Section: '2.7'
+Check:
+  all:
+    - name: SPECIES
+      operator: exists
+Core:
+  Id: CORE-000174
+  Status: Published
+  Version: '1'
+Description: Verify variable SPECIES does not exist in DM dataset
+Executability: Fully Executable
+Outcome:
+  Message: SPECIES is present in DM dataset.
+  Output Variables:
+    - SPECIES
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Dataset

@@ -1,0 +1,73 @@
+{
+  "datasets": [
+    {
+      "dataset": "te.xpt",
+      "domain": "TE",
+      "execution_status": "success",
+      "execution_message": "The combination of TESTRL, TEENRL, and TEDUR is not unique for each ETCD.",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ELEMENT": "HUMAN INSULIN",
+            "ETCD": "E001",
+            "TEDUR": "Not in dataset",
+            "TEENRL": "END OF TREATMENT",
+            "TESTRL": "FIRST DOSE OF HUMAN INSULIN"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ELEMENT": "HUMAN INSULIN",
+            "ETCD": "E002",
+            "TEDUR": "Not in dataset",
+            "TEENRL": "END OF TREATMENT",
+            "TESTRL": "FIRST DOSE OF HUMAN INSULIN"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ELEMENT": "Y",
+            "ETCD": "E006",
+            "TEDUR": "Not in dataset",
+            "TEENRL": null,
+            "TESTRL": "INFORMED CONSENT SIGNED2"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ELEMENT": "Y",
+            "ETCD": "E006",
+            "TEDUR": "Not in dataset",
+            "TEENRL": null,
+            "TESTRL": "INFORMED CONSENT SIGNED2"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ELEMENT": "Y",
+            "ETCD": "E007",
+            "TEDUR": "Not in dataset",
+            "TEENRL": null,
+            "TESTRL": "INFORMED CONSENT SIGNED2"
+          }
+        }
+      ]
+    }
+  ]
+}

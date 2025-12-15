@@ -1,0 +1,29 @@
+{
+  "datasets": [
+    {
+      "dataset": "apdm.xpt",
+      "domain": "AP",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "apdrug1ex.xpt",
+      "domain": "AP",
+      "execution_status": "success",
+      "execution_message": "Associated Persons non-supplemental qualifier dataset associated with a split dataset does not have a dataset name with a length greater than 4 and less than, or equal to, 6.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "dataset_name": "APDRUG1EX"
+          }
+        }
+      ]
+    }
+  ]
+}

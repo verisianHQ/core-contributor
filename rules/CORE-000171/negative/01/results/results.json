@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMENTPT should be present when CMENRTPT is present in a dataset",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "CMENRTPT": null,
+            "CMENTPT": "Not in dataset"
+          }
+        }
+      ]
+    }
+  ]
+}

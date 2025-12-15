@@ -1,0 +1,45 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "STUDYID is not equal to DM.STUDYID",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "STUDYID": "CDISCPILOT02"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "CDISC003",
+          "value": {
+            "STUDYID": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC008",
+          "value": {
+            "STUDYID": "CDISCPILOT03"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

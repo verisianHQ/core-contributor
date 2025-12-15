@@ -1,0 +1,83 @@
+# Variable: GEN
+# Condition: MS dataset present in study
+# Rule: MB dataset present in study
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0191
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The domain pair uses DOMAIN as an Identifier to group
+                  parent records (e.g., MB) from child records (e.g., MS) and enables
+                  a dataset-level relationship to be described in RELREC.
+                Document: IG v3.4
+                Item: Item 1, bullet 5
+                Section: '2.6'
+              - Cited Guidance: MS is used for representing data from drug susceptibility
+                  testing on the organisms identified in MB.
+                Document: IG v3.4
+                Section: 6.3.5.4
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0191
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: '2.6[Item 1, Bullet 5][The domain pair uses DOMAIN
+                  as an Identifier to group parent records (e.g., MB) from child records
+                  (e.g., MS) and enables a dataset-level relationship to be described
+                  in RELREC.]|6.3[MS Assumption 1][Definition: The MS domain is designed
+                  to store any findings related to the organisms found and submitted
+                  in MB.]'
+                Document: IG v3.2
+                Item: 2.6[Item 1, Bullet 5]|6.3[MS Assumption 1]
+                Section: 2.6|6.3
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0191
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: 2.6[Item 1][The domain pair uses DOMAIN as an Identifier
+                  to group parent records (e.g., MB) from child records (e.g., MS)
+                  and enables a dataset-level relationship to be described in RELREC.]|6.3.7[MS
+                  is used for representing data from drug susceptibility testing on
+                  the organisms identified in MB.]
+                Document: IG v3.3
+                Item: 2.6[Item 1]|6.3.7[Bullet 5]
+                Section: 2.6|6.3.7
+Check:
+  all:
+    - name: MS
+      operator: exists
+    - name: MB
+      operator: not_exists
+Core:
+  Id: CORE-000188
+  Status: Published
+  Version: '1'
+Description: Trigger error if MS dataset is present and MB dataset is not present.
+Executability: Fully Executable
+Outcome:
+  Message: The MB dataset is not present when the MS dataset is present.
+Rule Type: Domain Presence Check
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - MS
+Sensitivity: Dataset

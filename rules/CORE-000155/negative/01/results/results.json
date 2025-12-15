@@ -1,0 +1,117 @@
+{
+  "datasets": [
+    {
+      "dataset": "ta.xpt",
+      "domain": "TA",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000155, dataset=TA",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "tv.xpt",
+      "domain": "TV",
+      "execution_status": "success",
+      "execution_message": "ARMCD is not in TA.ARMCD",
+      "number_errors": 12,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARMCD": "ZAN_LOWER"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARMCD": "ZAN_LOWER"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARMCD": "ZAN_LOWER"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARMCD": "ZAN_LOWER"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARMCD": "ZAN_LOWER"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARMCD": "ZAN_LOWER"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARMCD": "ZAN_HIGHEST"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARMCD": "ZAN_HIGHEST"
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARMCD": "ZAN_HIGHEST"
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARMCD": "ZAN_HIGHEST"
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARMCD": "PLACEBO"
+          }
+        },
+        {
+          "row": 12,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARMCD": "PLACEBO"
+          }
+        }
+      ]
+    }
+  ]
+}

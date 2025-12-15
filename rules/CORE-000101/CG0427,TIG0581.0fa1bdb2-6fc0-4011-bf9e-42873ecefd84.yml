@@ -1,0 +1,90 @@
+# Variable: --STRESC
+# Condition: --RESCAT ^= null
+# Rule: --STRESC ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A grouping or classification of the results of an assessment.
+                  The result is in --STRESC.
+                Document: Model v2.0
+                Item: --RESCAT
+                Section: Findings
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0427
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: '--STRESC: Contains the result value for all findings, copied or
+                  derived from --ORRES in a standard format or in standard
+                  units. --RESCAT: used to categorize the result of a finding.'
+                Document: Model v1.4
+                Section: 2.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0427
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: '--STRESC: Contains the result value for all findings, copied or
+                  derived from --ORRES in a standard format or in standard
+                  units. --RESCAT: used to categorize the result of a finding.'
+                Document: Model v1.7
+                Section: 2.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0427
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: --RESCAT A grouping or classification of the results of an
+                  assessment. The result is in --STRESC.
+                Document: SDTM v2.1
+                Item: Specification --RESCAT
+                Section: 3.1.3 The Findings Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0581
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --RESCAT
+      operator: non_empty
+    - name: --STRESC
+      operator: empty
+Core:
+  Id: CORE-000101
+  Status: Published
+  Version: '1'
+Description: Raise an error when --RESCAT is not empty, but --STRESC is empty
+Executability: Fully Executable
+Outcome:
+  Message: Missing --STRESC value, when --RESCAT value is populated.
+  Output Variables:
+    - --RESCAT
+    - --STRESC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Record
