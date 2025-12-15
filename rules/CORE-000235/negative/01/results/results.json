@@ -5,8 +5,18 @@
       "domain": "AP",
       "execution_status": "success",
       "execution_message": "RSUBJID must equal DM.USUBJID when RSUBJID is populated and RSUBJID does not equal POOLID",
-      "number_errors": 1,
+      "number_errors": 2,
       "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "POOLID": "PID_001",
+            "RSUBJID": "CDISC-TEST-004",
+            "USUBJID": "CDISC-TEST-001"
+          }
+        },
         {
           "row": 2,
           "SEQ": null,

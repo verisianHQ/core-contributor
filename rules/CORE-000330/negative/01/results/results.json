@@ -5,7 +5,7 @@
       "domain": "DM",
       "execution_status": "success",
       "execution_message": "ARM should be equal to ACTARM when ARM is Screen Failure or Not Assigned.",
-      "number_errors": 5,
+      "number_errors": 3,
       "errors": [
         {
           "row": 1,
@@ -26,30 +26,12 @@
           }
         },
         {
-          "row": 6,
-          "SEQ": null,
-          "USUBJID": "015246-300-0004-00006",
-          "value": {
-            "ACTARM": "Drug A",
-            "ARM": "SCREEN FAILURE"
-          }
-        },
-        {
           "row": 7,
           "SEQ": null,
           "USUBJID": "015246-300-0004-00007",
           "value": {
             "ACTARM": "Not Assigned",
             "ARM": "Screen Failure"
-          }
-        },
-        {
-          "row": 8,
-          "SEQ": null,
-          "USUBJID": "015246-300-0004-00008",
-          "value": {
-            "ACTARM": "Not Assigned",
-            "ARM": "NOT ASSIGNED"
           }
         }
       ]

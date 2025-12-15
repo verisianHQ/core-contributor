@@ -5,7 +5,7 @@
       "domain": "DM",
       "execution_status": "success",
       "execution_message": "RFSTDTC must not be null when ACTARM is not in (Screen Failure, Not Assigned, Not Treated.",
-      "number_errors": 4,
+      "number_errors": 1,
       "errors": [
         {
           "row": 3,
@@ -13,33 +13,6 @@
           "USUBJID": "015246-999-0004-9999",
           "value": {
             "ACTARM": "Placebo",
-            "RFSTDTC": null
-          }
-        },
-        {
-          "row": 4,
-          "SEQ": null,
-          "USUBJID": "015246-076-0003-00004",
-          "value": {
-            "ACTARM": "Placebo",
-            "RFSTDTC": null
-          }
-        },
-        {
-          "row": 5,
-          "SEQ": null,
-          "USUBJID": "015246-300-0004-00012",
-          "value": {
-            "ACTARM": "IKd",
-            "RFSTDTC": null
-          }
-        },
-        {
-          "row": 6,
-          "SEQ": null,
-          "USUBJID": "015246-999-0004-1000",
-          "value": {
-            "ACTARM": "IKd",
             "RFSTDTC": null
           }
         }

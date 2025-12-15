@@ -47,35 +47,6 @@
       "execution_message": null,
       "number_errors": 0,
       "errors": []
-    },
-    {
-      "dataset": "suppec.xpt",
-      "domain": "SUPPEC",
-      "execution_status": "execution_error",
-      "execution_message": "SQL operator execution error",
-      "number_errors": 1,
-      "errors": [
-        {
-          "error": "SQL error in is_not_unique_set operator",
-          "message": "No valid columns found for uniqueness check."
-        }
-      ]
-    },
-    {
-      "dataset": "lb.xpt",
-      "domain": "LB",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
-    },
-    {
-      "dataset": "sv.xpt",
-      "domain": "SV",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
     }
   ]
 }

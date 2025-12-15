@@ -3,29 +3,13 @@
     {
       "dataset": "cm.xpt",
       "domain": "CM",
-      "execution_status": "success",
-      "execution_message": "CMENRTPT is not in ('BEFORE', 'COINCIDENT', 'ONGOING', 'AFTER', 'UNKNOWN')",
-      "number_errors": 2,
+      "execution_status": "execution_error",
+      "execution_message": "SQL operator execution error",
+      "number_errors": 1,
       "errors": [
         {
-          "row": 6,
-          "SEQ": 2,
-          "USUBJID": "CDISC002",
-          "value": {
-            "CMDTC": "2013-05-21",
-            "CMENRTPT": "WRONG",
-            "CMENTPT": "2013-05-20"
-          }
-        },
-        {
-          "row": 7,
-          "SEQ": 3,
-          "USUBJID": "CDISC002",
-          "value": {
-            "CMDTC": "2013-05-20T10:31",
-            "CMENRTPT": "WRONG",
-            "CMENTPT": "2013-05-20T10:30"
-          }
+          "error": "SQL error in date_less_than operator",
+          "message": "invalid input syntax"
         }
       ]
     },
@@ -51,7 +35,7 @@
           "SEQ": 1,
           "USUBJID": "CDISC013",
           "value": {
-            "MHDTC": "2013-05-03",
+            "MHDTC": "2013-05-04",
             "MHENRTPT": null,
             "MHENTPT": "2013-05-02"
           }

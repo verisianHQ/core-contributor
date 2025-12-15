@@ -5,11 +5,47 @@
       "domain": "EC",
       "execution_status": "success",
       "execution_message": "ECOCCUR indicates dose was not given, but ECDOSE is not blank or has a value less than or equal to 0",
-      "number_errors": 1,
+      "number_errors": 5,
       "errors": [
         {
-          "row": 7,
+          "row": 11,
           "SEQ": 122,
+          "USUBJID": "CDISC009",
+          "value": {
+            "ECDOSE": 0.0,
+            "ECOCCUR": "N"
+          }
+        },
+        {
+          "row": 13,
+          "SEQ": 124,
+          "USUBJID": "CDISC009",
+          "value": {
+            "ECDOSE": 0.0,
+            "ECOCCUR": "N"
+          }
+        },
+        {
+          "row": 14,
+          "SEQ": 125,
+          "USUBJID": "CDISC009",
+          "value": {
+            "ECDOSE": 0.0,
+            "ECOCCUR": "N"
+          }
+        },
+        {
+          "row": 15,
+          "SEQ": 126,
+          "USUBJID": "CDISC009",
+          "value": {
+            "ECDOSE": 0.0,
+            "ECOCCUR": "N"
+          }
+        },
+        {
+          "row": 16,
+          "SEQ": 127,
           "USUBJID": "CDISC009",
           "value": {
             "ECDOSE": 0.0,

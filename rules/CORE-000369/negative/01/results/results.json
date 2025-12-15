@@ -5,7 +5,7 @@
       "domain": "DM",
       "execution_status": "success",
       "execution_message": "RFENDTC must be null when ACTARM in (Screen Failure, Not Assigned, Not Treated).",
-      "number_errors": 6,
+      "number_errors": 2,
       "errors": [
         {
           "row": 1,
@@ -19,45 +19,9 @@
         {
           "row": 2,
           "SEQ": null,
-          "USUBJID": "015246-076-0003-00004",
+          "USUBJID": "015246-300-0004-00002",
           "value": {
             "ACTARM": "Not Assigned",
-            "RFENDTC": "2023-01-02"
-          }
-        },
-        {
-          "row": 3,
-          "SEQ": null,
-          "USUBJID": "015246-076-0003-00005",
-          "value": {
-            "ACTARM": "NOT ASSIGNED",
-            "RFENDTC": "2023-01-02"
-          }
-        },
-        {
-          "row": 4,
-          "SEQ": null,
-          "USUBJID": "015246-076-0003-00006",
-          "value": {
-            "ACTARM": "Not Treated",
-            "RFENDTC": "2023-01-02"
-          }
-        },
-        {
-          "row": 5,
-          "SEQ": null,
-          "USUBJID": "015246-076-0003-00007",
-          "value": {
-            "ACTARM": "NOT TREATED",
-            "RFENDTC": "2023-01-02"
-          }
-        },
-        {
-          "row": 6,
-          "SEQ": null,
-          "USUBJID": "015246-076-0003-00008",
-          "value": {
-            "ACTARM": "SCREEN FAILURE",
             "RFENDTC": "2023-01-02"
           }
         }
