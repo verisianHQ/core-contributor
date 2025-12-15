@@ -222,13 +222,16 @@ jobs:
             const reportPath = 'validation_report.md';
             
             let reportBody = '## Rule Validation Results\n\n';
-            reportBody += 'No validation report generated.';
+            let detailedContent = 'No validation report generated.';
             
             if (fs.existsSync(reportPath)) {
-              reportBody = fs.readFileSync(reportPath, 'utf8');
+              detailedContent = fs.readFileSync(reportPath, 'utf8');
             }
             
-            // Add workflow run link
+            reportBody += '<details>\n';
+            reportBody += '<summary><strong>Click to expand full report</strong></summary>\n\n';
+            reportBody += detailedContent;
+            reportBody += '\n</details>';
             reportBody += '\n\n---\n';
             reportBody += `[View workflow run](${context.payload.repository.html_url}/actions/runs/${context.runId})`;
             
