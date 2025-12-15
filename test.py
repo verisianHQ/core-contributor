@@ -8,6 +8,7 @@ import argparse
 import json
 import logging
 import warnings
+import textwrap
 from pathlib import Path
 from typing import List, Optional, Tuple, Any, Dict
 
@@ -82,7 +83,7 @@ class ResultReporter:
         return str(results_path)
 
     @staticmethod
-    def display_rule_summary(summary: dict):
+    def display_rule_summary(summary: dict, verbose: bool = False):
         """Prints the execution summary for a single rule to the console."""
         print(f"\n{'='*60}\n{summary['rule_id']} Test Results Summary")
         print(f"\nRule: {summary['rule_id']}")
@@ -90,17 +91,25 @@ class ResultReporter:
 
         for test_type in ["positive", "negative"]:
             tests = summary[f"{test_type}_tests"]
-            print(f"\n{test_type.capitalize()} Test Cases: {len(tests)}")
+            print(f"{'-'*54}")
+            print(f"{test_type.capitalize()} Test Cases: {len(tests)}")
             for test in tests:
                 symbol = "[PASS]" if test["passed"] else "[FAIL]"
-                print(f"  {symbol} Case {test['case_id']} - Results at: {test['results_path']}")
-                if not test["passed"]:
+                print(f"\n  {symbol} Case {test['case_id']} - Results at: {test['results_path']}")
+                
+                if verbose:
+                    txt_path = Path(test['results_path']) / "results.txt"
+                    if txt_path.exists():
+                        print(f"\n{textwrap.indent(txt_path.read_text().strip(), "     ")}")
+                
+                if not test["passed"] and not verbose:
                     print(f"      Expected: {test['expected']}")
                     if test.get("total_errors") is not None:
                         print(f"      Got: {test['total_errors']} errors")
                     if test.get("error"):
                         print(f"      Error: {test['error']}")
                         print(f"      Exception: {test.get('exception', 'N/A')}")
+
         print("\n" + "=" * 60)
 
 
@@ -324,35 +333,42 @@ def main():
         print("Error: No rules found in 'rules' directory.")
         sys.exit(1)
 
-    if not args.rule and not args.all_rules:
-        rule_id = InteractiveHandler.prompt_rule(available_rules)
-        cases = runner.get_test_cases(rule_id)
-        specific_case = InteractiveHandler.prompt_case(cases)
-        
+    if not args.all_rules:
+        if args.rule:
+            rule_id = args.rule
+        else:
+            rule_id = InteractiveHandler.prompt_rule(available_rules)
+            
+        if args.rule and args.test_case:
+             specific_case = args.test_case
+        elif not args.rule:
+            cases = runner.get_test_cases(rule_id)
+            specific_case = InteractiveHandler.prompt_case(cases)
+        else:
+            specific_case = None
+
         print(f"\nRunning {rule_id}...")
         summary = runner.run_rule_suite(rule_id, specific_case)
-        ResultReporter.display_rule_summary(summary)
+        
+        ResultReporter.display_rule_summary(summary, verbose=args.verbose)
         sys.exit(0 if summary["status"] == "passed" else 1)
 
-    if args.test_case and not args.rule:
-        print("Error: --test-case requires --rule.")
+    if args.test_case:
+        print("Error: --test-case cannot be used with --all-rules.")
         sys.exit(1)
 
-    rules_to_run = available_rules if args.all_rules else [args.rule]
-    if not args.all_rules and args.rule not in available_rules:
-        print(f"Error: Rule {args.rule} not found.")
-        sys.exit(1)
-
+    rules_to_run = available_rules
     results = {"passed": [], "failed": [], "error": []}
     total = len(rules_to_run)
-    use_bar = args.all_rules
+    
+    print(f"Core SQL Rules Engine - Test Suite")
+    print("=" * 60)
 
     for i, rule_id in enumerate(rules_to_run, 1):
-        if use_bar:
-            sys.stdout.write(f"\r[{i}/{total}] Testing {rule_id}...")
-            sys.stdout.flush()
+        sys.stdout.write(f"\r[{i}/{total}] Testing {rule_id}...")
+        sys.stdout.flush()
         
-        summary = runner.run_rule_suite(rule_id, args.test_case)
+        summary = runner.run_rule_suite(rule_id)
         
         has_error = any(t.get("error") for t in summary["positive_tests"] + summary["negative_tests"])
         
@@ -363,23 +379,31 @@ def main():
         else:
             results["failed"].append(summary)
 
-        if not use_bar:
-            ResultReporter.display_rule_summary(summary)
-
-    if use_bar:
-        sys.stdout.write("\n\n")
-        print("=" * 60)
-        print("FINAL SUMMARY")
-        print("=" * 60)
-        print(f"Total: {total} | Passed: {len(results['passed'])} | Failed: {len(results['failed'])} | Errors: {len(results['error'])}")
-        
-        if results["failed"]:
-            print("\nFailed Validation:")
-            for s in results["failed"]: print(f"  - {s['rule_id']}")
-        
-        if results["error"]:
-            print("\nExecution Errors:")
-            for s in results["error"]: print(f"  - {s['rule_id']}")
+    sys.stdout.write("\n\n")
+    print("=" * 60)
+    print("FINAL SUMMARY")
+    print("=" * 60)
+    print(f"Total: {total} | Passed: {len(results['passed'])} | Failed: {len(results['failed'])} | Errors: {len(results['error'])}")
+    
+    if results["failed"]:
+        print("\nFailed Validation:")
+        for s in results["failed"]: 
+            print(f"  - {s['rule_id']}")
+            if args.verbose:
+                for t in s['positive_tests'] + s['negative_tests']:
+                    if not t['passed']:
+                        print(f"      Case {t['case_id']}: Expected {t['expected']}, Got {t['total_errors']} errors")
+    
+    if results["error"]:
+        print("\nExecution Errors:")
+        for s in results["error"]: 
+            print(f"  - {s['rule_id']}")
+            if args.verbose:
+                for t in s['positive_tests'] + s['negative_tests']:
+                    if t.get('error'):
+                        print(f"      Case {t['case_id']} Error: {t['error']}")
+                        if t.get('exception'):
+                            print(f"      Details: {t['exception']}")
 
     sys.exit(1 if results["failed"] or results["error"] else 0)
 
