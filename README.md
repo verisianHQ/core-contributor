@@ -12,7 +12,7 @@ https://www.cdisc.org/volunteer
 2) Install git, following the instructions here: https://git-scm.com/install/ \
        - Keep all the default settings throughout the installer \
        - You DO NOT need to actually run git as a program, so close any pop-ups that appear after the installation
-3) Install VSCode, following the instructions here: https://code.visualstudio.com/download
+3) Install VSCode (*not* VSCodeUser), following the instructions here: https://code.visualstudio.com/download
 4) Open VSCode and a terminal within it: \
        - Top Menu → Terminal → New Terminal (check the three dots in the top menu if you don't see 'Terminal')
 5) Create a new empty directory on your machine for storing the repository and subsequent rule editing, and navigate to it in the terminal using `cd` commands. Avoid OneDrive if possible. \
@@ -34,7 +34,7 @@ https://www.cdisc.org/volunteer
 10) Set up the rule authoring auto-completion and real-time schema validation: \
         - Go to the `Extensions` tab in the VSCode left sidebar \
         - Search `yaml` and install the Red Hat YAML extension (it should be the top one) \
-        - Once it's installed, search 'yaml schema' in the settings: \
+        - Once it's installed, search 'yaml schema' using the search bar at the top of the settings: \
               WINDOWS: File → Preferences → Settings \
               MAC: Code → Settings → Settings \
         - Click the `Edit in settings.json` option under Yaml: Schemas \
@@ -77,6 +77,7 @@ You'll need to run the following commands to get it working: \
        `git add .` \
        `git commit -m "your custom message"` \
        `git push origin <your-branch-name>` \
+       - The first time you commit, you may have to log in to github
 9) Go to the online repository and create a pull request (PR) from your newly pushed branch
 10) On the PR page, make sure the information at the top is correct. It should be: \
        `base: main ← compare: <branch-name>`
