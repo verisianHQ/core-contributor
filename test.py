@@ -168,6 +168,9 @@ class TestRunner:
         if not rule_ymls:
             return None, {"error": "Rule YAML missing", "exception": f"No YAML found in {rule_path}"}
 
+        if len(rule_ymls) > 1:
+            return None, {"error": "Multiple Rule YAMLs", "exception": f"Multiple Rule YAMLs found in {rule_path}"}
+
         data_path_obj = Path(data_path)
         excel_files = list(data_path_obj.glob("*.xlsx")) + list(data_path_obj.glob("*.xls"))
         
