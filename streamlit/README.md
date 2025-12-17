@@ -4,8 +4,8 @@ To view the dashboard, follow the steps below. Please note that if you've never 
     WINDOWS: `.\venv\Scripts\activate` \
     MAC: source `./venv/bin/activate`
 2. If this is your first time trying to use the dashboard, run: \
-    `pip install -r streamlit/requirements.txt` \
-   - If you've run this command before, skip to 3
+    `pip install -r streamlit/requirements.txt` 
+    - If you've run this command before, skip to 3
 4. Run: \
   `streamlit run ./streamlit/app.py`
 
