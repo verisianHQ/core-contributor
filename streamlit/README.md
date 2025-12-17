@@ -6,7 +6,9 @@ To view the dashboard, follow the steps below. Please note that if you've never 
 2. If this is your first time trying to use the dashboard, run: \
     `pip install -r streamlit/requirements.txt` 
     - If you've run this command before, skip to 3
-4. Run: \
+3. Run: \
   `streamlit run ./streamlit/app.py`
 
 The dashboard should open automatically in your default browser! If it doesn't, paste the 'Local URL' link found in the terminal into your browser.
+
+To use the terminal for other tasks, you'll need to stop streamlit by pressing CTRL + C with the terminal selected (note that this will close the dashboard)
