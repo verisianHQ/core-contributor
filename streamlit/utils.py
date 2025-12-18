@@ -2,6 +2,7 @@ import pandas as pd
 import os
 import json
 from pathlib import Path
+import yaml
 
 
 def yml_folders(rules_dir):
@@ -103,3 +104,61 @@ def get_test_execution_stats(rules_dir):
                     print(f"Error reading {result_file}: {e}")
 
     return pd.DataFrame(results_data)
+
+def get_xlsx_completion_data(filepath):
+    try:
+        df = pd.read_excel(filepath)
+        df["Completion"] = df.apply(determine_cg_completion, axis=1)
+    except Exception as e:
+        print(f"Error reading Excel file: {e}")
+        return pd.DataFrame()
+
+def determine_cg_completion(row):
+    core_id = row['CORE-ID']
+    status = row['Status']
+    
+    if pd.isna(core_id) or core_id == '':
+        return 'Missing'
+    
+    if pd.isna(status):
+        status = ''
+    else:
+        status = str(status)
+    
+    if 'DRAFT' in status and 'PUBLISHED' in status:
+        return 'Partially Completed'
+    
+    if status in ['DRAFT', 'DRAFT - NOT EXECUTABLE']:
+        return 'Unimplemented'
+    
+    if status == 'PUBLISHED':
+        return 'Completed'
+    
+    return 'Unknown'
+
+def get_core_status_stats(rules_dir):
+    status_counts = []
+    rules_path = Path(rules_dir)
+    
+    if not rules_path.exists():
+        return pd.DataFrame()
+
+    for rule_folder in rules_path.iterdir():
+        if not rule_folder.is_dir():
+            continue
+            
+        yml_files = list(rule_folder.glob("*.yml")) + list(rule_folder.glob("*.yaml"))
+        if not yml_files:
+            continue
+            
+        try:
+            with open(yml_files[0], "r") as f:
+                data = yaml.safe_load(f)
+                status = data.get("Core", {}).get("Status")
+                if not status or str(status).strip() == "":
+                    status = "Blank"
+                status_counts.append(status)
+        except Exception as e:
+            print(f"Error reading YAML in {rule_folder.name}: {e}")
+
+    return pd.Series(status_counts).value_counts()
