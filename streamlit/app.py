@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from pathlib import Path
 from utils import yml_folders, read_SOT, filter_standard, perc_calc, get_test_execution_stats
 from pie_chart import make_pie
 from bar_chart import make_horizontal_bar
@@ -7,17 +8,19 @@ from constants import SOT_PATH, RULES_DIR
 
 st.set_page_config(layout="wide", page_title="Rules Contributor Dashboard")
 
+
 def main():
     st.title("Rules Contributor Dashboard")
     st.markdown("---")
-
-    completed_rules = yml_folders(RULES_DIR)
+    script_dir = Path(__file__).parent
+    rules_path = script_dir / RULES_DIR
+    completed_rules = yml_folders(rules_path)
     file = read_SOT(SOT_PATH)
     sdtm_rules = filter_standard(file, "SDTMIG")
-    test_stats = get_test_execution_stats(RULES_DIR)
-    
+    test_stats = get_test_execution_stats(rules_path)
+
     col1, col2 = st.columns(2)
-    
+
     with col1:
         completed_core_ids = set(completed_rules["Core-ID"])
         sdtm_core_ids = set(sdtm_rules["Core-ID"])
@@ -56,31 +59,31 @@ def main():
         st.warning("No test results found. Please run the tests to generate `results.json` files.")
     else:
         col_pie, col_bar = st.columns([1, 2])
-        
+
         with col_pie:
             status_counts = test_stats["Status"].value_counts()
             make_pie(
-                status_counts.index.tolist(), 
-                status_counts.values.tolist(), 
+                status_counts.index.tolist(),
+                status_counts.values.tolist(),
                 "Overall Test Results",
                 color_scheme="category10",
-                show_full_label=True
+                show_full_label=True,
             )
 
         with col_bar:
             failed = test_stats[test_stats["Status"] == "Failed"].copy()
             failed["Issue"] = failed["Failure Reason"]
-            
+
             errored = test_stats[test_stats["Status"] == "Errored"].copy()
             errored["Issue"] = errored["Exception"]
-            
+
             combined_issues = pd.concat([failed, errored])
-            
+
             if not combined_issues.empty:
                 make_horizontal_bar(
                     combined_issues,
                     "Failure & Error Details",
-                    tooltip_cols=["Core-ID", "Case ID", "Test Type", "Status", "Issue"]
+                    tooltip_cols=["Core-ID", "Case ID", "Test Type", "Status", "Issue"],
                 )
             else:
                 st.success("No failures or errors found.")
@@ -90,6 +93,7 @@ def main():
             with st.expander("Details for Failures/Errors"):
                 st.write("Filtering for Failed or Errored cases:")
                 st.dataframe(problematic_cases, use_container_width=True)
+
 
 if __name__ == "__main__":
     main()
