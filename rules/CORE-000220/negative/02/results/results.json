@@ -1,0 +1,77 @@
+{
+  "datasets": [
+    {
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "execution_status": "success",
+      "execution_message": "VSTESTCD > 8 chars or contains more than only letters, numbers, underscores, or starts with a number.",
+      "number_errors": 8,
+      "errors": [
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSTESTCD": "DIABPPULSE"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSTESTCD": "DIABPPULSE"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSTESTCD": "DIABPPULSE"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 7,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSTESTCD": "DIABPPULSE"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 8,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSTESTCD": "DIABPPULSE"
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": 9,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSTESTCD": "DIABPPULSE"
+          }
+        },
+        {
+          "row": 12,
+          "SEQ": 22,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSTESTCD": "1PULSE"
+          }
+        },
+        {
+          "row": 16,
+          "SEQ": 26,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSTESTCD": "PULSE&&&&&&&"
+          }
+        }
+      ]
+    }
+  ]
+}

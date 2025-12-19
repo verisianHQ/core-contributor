@@ -1,0 +1,85 @@
+{
+  "datasets": [
+    {
+      "dataset": "ti.xpt",
+      "domain": "TI",
+      "execution_status": "success",
+      "execution_message": "IECAT should not be null when IESCAT is populated",
+      "number_errors": 8,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IECAT": null,
+            "IESCAT": "INCLUSION SUB"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IECAT": null,
+            "IESCAT": "INCLUSION SUB"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IECAT": null,
+            "IESCAT": "INCLUSION SUB"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IECAT": null,
+            "IESCAT": "EXCLUSION SUB"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IECAT": null,
+            "IESCAT": "EXCLUSION SUB"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IECAT": null,
+            "IESCAT": "EXCLUSION SUB"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IECAT": null,
+            "IESCAT": "EXCLUSION SUB"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IECAT": null,
+            "IESCAT": "EXCLUSION SUB"
+          }
+        }
+      ]
+    }
+  ]
+}

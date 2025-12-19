@@ -1,0 +1,184 @@
+{
+  "datasets": [
+    {
+      "dataset": "ag.xpt",
+      "domain": "AG",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMSCAT exists in a dataset, but CMCAT does not exist.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "CMCAT": "Not in dataset",
+            "CMSCAT": "PRIOR DMARDS"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "success",
+      "execution_message": "EXSCAT exists in a dataset, but EXCAT does not exist.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "EXCAT": "Not in dataset",
+            "EXSCAT": "HIGHLIGHTED DOSE"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ml.xpt",
+      "domain": "ML",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "pr.xpt",
+      "domain": "PR",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "su.xpt",
+      "domain": "SU",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "be.xpt",
+      "domain": "BE",
+      "execution_status": "success",
+      "execution_message": "BESCAT exists in a dataset, but BECAT does not exist.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "BECAT": "Not in dataset",
+            "BESCAT": "COLLECTION"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "MHSCAT exists in a dataset, but MHCAT does not exist.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "MHCAT": "Not in dataset",
+            "MHSCAT": "RESPIRATORY"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "da.xpt",
+      "domain": "DA",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "eg.xpt",
+      "domain": "EG",
+      "execution_status": "success",
+      "execution_message": "EGSCAT exists in a dataset, but EGCAT does not exist.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "EGCAT": "Not in dataset",
+            "EGSCAT": "INTERVAL"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "FASCAT exists in a dataset, but FACAT does not exist.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "FACAT": "Not in dataset",
+            "FASCAT": "GERD"
+          }
+        }
+      ]
+    }
+  ]
+}
