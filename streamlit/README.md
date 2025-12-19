@@ -11,4 +11,4 @@ To view the dashboard, follow the steps below. Please note that if you've never 
 
 The dashboard should open automatically in your default browser. If it doesn't, paste the 'Local URL' link found in the terminal into your browser.
 
-To use the terminal for other tasks, you'll need to stop streamlit by pressing CTRL + C with the terminal selected (note that this will close the dashboard)
+To use the terminal for other tasks, you'll need to stop streamlit by pressing CTRL + C with the terminal selected (note that this will cause the dashboard to lose connection. If you want to view the dashboard again you should rerun the streamlit command and open a new tab)
