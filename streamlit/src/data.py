@@ -1,14 +1,7 @@
 from pathlib import Path
 
-from src.components.utils import (
-    yml_folders,
-    read_SOT,
-    filter_standard,
-    get_test_execution_stats,
-    get_core_status_stats,
-    get_xlsx_completion_data,
-)
-from src.constants import SOT_PATH, RULES_DIR, CG_LIB_PATH
+from src.components.utils import UtilityFunctions
+from src.constants import SOT_PATH, RULES_DIR, CG_LIB_PATH, CG_CSV_PATH
 
 
 def path_extender(path):
@@ -17,11 +10,19 @@ def path_extender(path):
     return full_path
 
 
-rules_path = path_extender(RULES_DIR)
-cg_path = path_extender(CG_LIB_PATH)
+class IngestedData:
 
-completed_rules = yml_folders(rules_path)
-core_status_data = get_core_status_stats(rules_path)
-sdtm_rules = filter_standard(read_SOT(SOT_PATH), "SDTMIG")
-test_stats = get_test_execution_stats(rules_path)
-cg_data = get_xlsx_completion_data(cg_path)
+    util = UtilityFunctions
+
+    rules_path = path_extender(RULES_DIR)
+    cg_path = path_extender(CG_LIB_PATH)
+    cg_csv_path = path_extender(CG_CSV_PATH)
+
+    completed_rules = util.yml_folders(rules_path)
+    core_status_data = util.get_yaml_fields(rules_path, keys=["Core", "Status"])
+    verified_data = util.get_yaml_fields(rules_path, keys=["Verification"], null_value="Unverified")
+    sot_rules = util.get_csv_cols(SOT_PATH)
+    sdtm_rules = util.filter_standard(sot_rules, "SDTMIG")
+    test_stats = util.get_test_execution_stats(rules_path)
+    cg_data = util.get_xlsx_completion_data(cg_path)
+    els_verified_data = util.get_csv_cols(cg_csv_path, cols=["Rule ID"])
