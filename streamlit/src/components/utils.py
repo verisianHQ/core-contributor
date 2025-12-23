@@ -8,25 +8,68 @@ import yaml
 class UtilityFunctions:
 
     @staticmethod
-    def yml_folders(rules_dir):
-        folders_with_yml = []
-        for root, dirs, files in os.walk(rules_dir):
-            yml_files = [f for f in files if f.endswith(".yml")]
+    def get_all_yml_data(rules_dir):
+        ymls = []
+        for root, _, files in os.walk(rules_dir):
+            yml_files = [f for f in files if f.endswith((".yml", ".yaml"))]
             if yml_files:
                 folder_name = os.path.relpath(root, rules_dir)
-                folders_with_yml.append({"Core-ID": folder_name})
-        return pd.DataFrame(folders_with_yml)
+                try:
+                    with open(os.path.join(root, yml_files[0]), "r") as f:
+                        rule_data = yaml.safe_load(f)
+
+                    standards = set()
+                    authorities = UtilityFunctions.chain_get(rule_data, ["Authorities"], nv=[])
+                    for auth in authorities:
+                        auth_standards = UtilityFunctions.chain_get(auth, ["Standards"], nv=[])
+                        for std in auth_standards:
+                            name = std.get("Name")
+                            if name:
+                                standards.add(name)
+                    
+                    status = UtilityFunctions.chain_get(rule_data, ["Core", "Status"], nv="No Status")
+                    verification = UtilityFunctions.chain_get(rule_data, ["Verification"], nv="Unverified")
+
+                    ymls.append({
+                        "Core-ID": folder_name,
+                        "Standard": sorted(list(standards)),
+                        "Core-Status": status,
+                        "Verification": verification
+                    })
+                except Exception as e:
+                    print(f"Error processing {folder_name}: {e}")
+
+        if not ymls:
+            return pd.DataFrame(columns=["Core-ID", "Standard", "Core-Status", "Verification"])
+
+        return pd.DataFrame(ymls)
 
     @staticmethod
     def get_csv_cols(filepath, cols=None):
-        df = pd.read_csv(filepath)
-        if not cols:
-            return df
-        else:
-            return df[cols]
+        try:
+            df = pd.read_csv(filepath)
+            if not cols:
+                return df
+            else:
+                return df[cols]
+        except Exception as e:
+            print(f"Error reading CSV {filepath}: {e}")
+            return pd.DataFrame()
+
+    @staticmethod
+    def sort_standards(df):
+        if df.empty or "Standard Name" not in df.columns:
+            return []
+        standards_list = []
+        for s in df["Standard Name"].dropna().unique().tolist():
+            for t in s.split(","):
+                standards_list.append(t.strip())
+        return sorted(set(standards_list))
 
     @staticmethod
     def filter_standard(df, standard):
+        if df.empty or "Standard Name" not in df.columns:
+            return pd.DataFrame(columns=df.columns)
         filtered_df = df[df["Standard Name"].str.contains(standard, na=False)]
         return filtered_df
 
@@ -138,7 +181,7 @@ class UtilityFunctions:
             return "Partially Completed"
 
         if status in ["DRAFT", "DRAFT - NOT EXECUTABLE"]:
-            return "Unimplemented"
+            return "Incomplete"
 
         if status == "PUBLISHED":
             return "Completed"
@@ -182,6 +225,9 @@ class UtilityFunctions:
 
     @staticmethod
     def extract_issues(test_stats):
+        if test_stats.empty:
+            return pd.DataFrame()
+        
         failed = test_stats[test_stats["Status"] == "Failed"].copy()
         failed["Issue"] = failed["Failure Reason"]
 

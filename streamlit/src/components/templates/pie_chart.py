@@ -7,7 +7,7 @@ def make_pie(labels, num, title, color_scheme="category10", donut=True, show_ful
     source = pd.DataFrame({"category": labels, "value": num})
 
     if show_full_label:
-        source["display_text"] = source["category"] + ": " + source["value"].astype(str)
+        source["display_text"] = source["category"].astype(str) + ": " + source["value"].astype(str)
     else:
         source["display_text"] = source["value"].astype(str)
 
