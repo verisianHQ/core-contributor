@@ -58,13 +58,46 @@ class UtilityFunctions:
 
     @staticmethod
     def sort_standards(df):
-        if df.empty or "Standard Name" not in df.columns:
+        if df.empty or any([col not in df.columns for col in ("Core-ID", "conformance_id")]):
             return []
-        standards_list = []
-        for s in df["Standard Name"].dropna().unique().tolist():
-            for t in s.split(","):
-                standards_list.append(t.strip())
-        return sorted(set(standards_list))
+            
+        standards_set = set()
+        
+        for _, row in df.iterrows():
+            core_id = str(row.get("Core-ID", "")).strip()
+            conf_id = str(row.get("conformance_id", "")).strip()
+            
+            standard_name = None
+            
+            # core-id
+            if core_id.startswith("CORE"):
+                if conf_id.startswith("CG"):
+                    standard_name = "SDTMIG"
+                elif conf_id.startswith("AD"):
+                    standard_name = "ADaMIG"
+                elif conf_id.startswith("SE"):
+                    standard_name = "SENDIG"
+            
+            # conformance id
+            elif "." in core_id:
+                parts = core_id.split(".")
+                if len(parts) > 1:
+                    standard_name = parts[1]
+            
+            else:
+                standard_name = core_id
+
+            # typos and non-standards
+            if standard_name:
+                clean_name = standard_name.upper()
+                
+                if clean_name == "ADAMIG":
+                    clean_name = "ADaMIG"
+                
+                if clean_name not in ["", "NAN", "ALL"]:
+                    standards_set.add(clean_name)
+            
+        return sorted(list(standards_set))
 
     @staticmethod
     def filter_standard(df, standard):

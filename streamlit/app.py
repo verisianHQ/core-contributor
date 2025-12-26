@@ -65,10 +65,7 @@ def main():
         dsp.rule_comment_verification_display(v_counts)
 
     with col3:
-        if not s_counts.empty:
-            dsp.core_rule_status_display(s_counts)
-        else:
-            st.info("No status data for selection.")
+        dsp.core_rule_status_display(s_counts)
 
     col4, col5 = st.columns(2)
 
