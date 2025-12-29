@@ -1,0 +1,61 @@
+{
+  "datasets": [
+    {
+      "dataset": "ti.xpt",
+      "domain": "TI",
+      "execution_status": "success",
+      "execution_message": "IETESTCD > 8 chars or contains more than only letters, numbers, underscores, or starts with a number.",
+      "number_errors": 6,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETESTCD": "INCL0201A"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETESTCD": "1INCL06"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETESTCD": "INCL070001"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETESTCD": "INCL082121212"
+          }
+        },
+        {
+          "row": 12,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETESTCD": "EXCL12&"
+          }
+        },
+        {
+          "row": 15,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETESTCD": "EXCL15123145"
+          }
+        }
+      ]
+    }
+  ]
+}

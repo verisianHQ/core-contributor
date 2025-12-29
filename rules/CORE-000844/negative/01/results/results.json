@@ -1,0 +1,21 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "RACE in DM equals 'MULTIPLE' but multiple races are not collected in SUPPDM.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "$multiple_race": 2
+          }
+        }
+      ]
+    }
+  ]
+}
