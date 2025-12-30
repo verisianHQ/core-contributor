@@ -61,15 +61,23 @@ class ResultReporter:
                             f.write(f"    Row: {row}\n")
 
                         for key, val in error.items():
-                            if key not in ["row", "value"]:
+                            if key not in ["row", "value", "highlighted_in_test_case"]:
                                 f.write(f"    {key}: {val}\n")
 
                         if value_dict := error.get("value", {}):
                             f.write("    Problematic values:\n")
                             for k, v in value_dict.items():
                                 f.write(f"      {k}: {v}\n")
+
+                        if error.get("highlighted_in_test_case") is not None:
+                            highlight_status = "Yes" if error["highlighted_in_test_case"] else "No"
+                            f.write(f"    Highlighted in Test Case: {highlight_status}\n")
                         f.write("\n")
                 f.write("\n")
+
+            if unmatched := results_data.get("unmatched_highlights_in_test_case"):
+                f.write(f"Unmatched highlighted cells in test case: {len(unmatched)}\n")
+                f.write("Check results.json for more information, or examine the test case file directly.\n")
 
     @classmethod
     def save_case_results(cls, rule_id: str, test_type: str, case_id: str, results: dict):
@@ -234,9 +242,22 @@ class TestRunner:
                         for ref in test_case_cell_errors.get(ds.get("dataset", []), []):
                             if err.get("row") == ref.get("row") and err.get("value") == ref.get("value"):
                                 err.update({"highlighted_in_test_case": True})
+                                ref.update({"matched": True})
                                 break
                             else:
                                 err.update({"highlighted_in_test_case": False})
+
+            # get list of unmatched highlights from test case
+            unmatched = {
+                ds: [ref for ref in test_case_cell_errors.get(ds, []) if not ref.get("matched")]
+                for ds in test_case_cell_errors
+            }
+
+            # remove datasets with no unmatched highlights
+            unmatched = {ds: v for ds, v in unmatched.items() if v}
+
+            if unmatched:
+                results_data["unmatched_highlights_in_test_case"] = unmatched
 
         results_path = ResultReporter.save_case_results(rule_id, test_type, case_id, results_data)
 
