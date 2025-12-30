@@ -86,7 +86,7 @@ class ResultReporter:
         results_path.mkdir(parents=True, exist_ok=True)
 
         with (results_path / "results.json").open("w") as f:
-            json.dump(results, f, indent=2)
+            json.dump(results, f, indent=2, default=str),
 
         cls.json_to_readable(results, results_path / "results.txt")
         return str(results_path)
@@ -295,11 +295,7 @@ class TestRunner:
                         highlighted_cells.setdefault(sheet.title, []).append(
                             {
                                 "row": int(cell.row) - 4,
-                                "value": {
-                                    sheet.cell(row=1, column=cell.column).value: (
-                                        str(cell.value) if cell.value is not None else cell.value
-                                    )
-                                },
+                                "value": {sheet.cell(row=1, column=cell.column).value: cell.value},
                             }
                         )
         return highlighted_cells
