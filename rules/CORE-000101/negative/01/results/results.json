@@ -14,7 +14,8 @@
           "value": {
             "DDRESCAT": "UNDERTERMINED",
             "DDSTRESC": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -40,7 +41,8 @@
           "value": {
             "MIRESCAT": "NEGATIVE",
             "MISTRESC": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -58,7 +60,8 @@
           "value": {
             "MSRESCAT": "JDKSAJJDSAKF",
             "MSSTRESC": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -78,5 +81,139 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "dd.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "DDSTRESC": "DDSTRESC"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "DDRESCAT": "DDRESCAT"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "DDSTRESC": null
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "DDRESCAT": "UNDERTERMINED"
+        }
+      }
+    ],
+    "mb.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "MBSTRESC": "MBSTRESC"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "MBRESCAT": "MBRESCAT"
+        }
+      }
+    ],
+    "mi.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "MISTRESC": "MISTRESC"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "MIRESCAT": "MIRESCAT"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "MISTRESC": null
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "MIRESCAT": "NEGATIVE"
+        }
+      }
+    ],
+    "ms.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "MSSTRESC": "MSSTRESC"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "MSRESCAT": "MSRESCAT"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "MSSTRESC": null
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "MSRESCAT": "JDKSAJJDSAKF"
+        }
+      }
+    ],
+    "oe.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "OESTRESC": "OESTRESC"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "OERESCAT": "OERESCAT"
+        }
+      }
+    ],
+    "ur.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "URSTRESC": "URSTRESC"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "URRESCAT": "URRESCAT"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "URSTRESC": "N"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "URRESCAT": "JDFJAFDJSFKA"
+        }
+      }
+    ]
+  }
 }

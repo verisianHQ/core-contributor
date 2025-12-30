@@ -16,9 +16,98 @@
             "TSGRPID": null,
             "TSPARMCD": "TDIGRP",
             "TSVAL": "Patients with Probable Mild to Moderate Alzheimers Disease"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ts.xpt": [
+      {
+        "row": 16,
+        "value": {
+          "TSPARMCD": "HLTSUBJI"
+        }
+      },
+      {
+        "row": 16,
+        "value": {
+          "TSPARM": "Healthy Subject Indicator"
+        }
+      },
+      {
+        "row": 16,
+        "value": {
+          "TSVAL": "Y"
+        }
+      },
+      {
+        "row": 16,
+        "value": {
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 16,
+        "value": {
+          "TSVALCD": "C49487"
+        }
+      },
+      {
+        "row": 16,
+        "value": {
+          "TSVCDREF": "CDISC"
+        }
+      },
+      {
+        "row": 16,
+        "value": {
+          "TSVCDVER": "2020-03-27"
+        }
+      },
+      {
+        "row": 45,
+        "value": {
+          "TSPARMCD": "TDIGRP"
+        }
+      },
+      {
+        "row": 45,
+        "value": {
+          "TSPARM": "Diagnosis Group"
+        }
+      },
+      {
+        "row": 45,
+        "value": {
+          "TSVAL": "Patients with Probable Mild to Moderate Alzheimers Disease"
+        }
+      },
+      {
+        "row": 45,
+        "value": {
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 45,
+        "value": {
+          "TSVALCD": null
+        }
+      },
+      {
+        "row": 45,
+        "value": {
+          "TSVCDREF": null
+        }
+      },
+      {
+        "row": 45,
+        "value": {
+          "TSVCDVER": null
+        }
+      }
+    ]
+  }
 }

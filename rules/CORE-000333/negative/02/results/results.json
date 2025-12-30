@@ -14,7 +14,8 @@
           "value": {
             "SVUPDES": "Not in dataset",
             "VISIT": "UNSCHEDULED1"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 10,
@@ -23,7 +24,8 @@
           "value": {
             "SVUPDES": "Not in dataset",
             "VISIT": null
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 16,
@@ -32,7 +34,8 @@
           "value": {
             "SVUPDES": "Not in dataset",
             "VISIT": "UNSCHEDULED"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -44,5 +47,27 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "sv.xpt": [
+      {
+        "row": 5,
+        "value": {
+          "VISIT": "UNSCHEDULED1"
+        }
+      },
+      {
+        "row": 10,
+        "value": {
+          "VISIT": null
+        }
+      },
+      {
+        "row": 16,
+        "value": {
+          "VISIT": "UNSCHEDULED"
+        }
+      }
+    ]
+  }
 }

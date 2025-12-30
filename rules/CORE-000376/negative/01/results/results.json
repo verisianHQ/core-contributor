@@ -16,7 +16,8 @@
               "ZM"
             ],
             "variable_name": "AEINDC"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 7,
@@ -27,7 +28,8 @@
               "ZM"
             ],
             "variable_name": "CMDOSE"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -51,5 +53,21 @@
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "zm.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "AEINDC": "AEINDC"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "CMDOSE": "CMDOSE"
+        }
+      }
+    ]
+  }
 }

@@ -14,9 +14,38 @@
           "value": {
             "DSDECOD": "ADVERSE EVENT",
             "DSTERM": "COMPLETED"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ds.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "DSTERM": "DSTERM"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "DSDECOD": "DSDECOD"
+        }
+      },
+      {
+        "row": 3,
+        "value": {
+          "DSTERM": "COMPLETED"
+        }
+      },
+      {
+        "row": 3,
+        "value": {
+          "DSDECOD": "ADVERSE EVENT"
+        }
+      }
+    ]
+  }
 }

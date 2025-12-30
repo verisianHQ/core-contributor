@@ -28,7 +28,8 @@
             "MHDTC": "2013-05-20",
             "MHENRTPT": "WRONG",
             "MHENTPT": "2013-05-19"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 13,
@@ -38,9 +39,34 @@
             "MHDTC": "2013-05-04",
             "MHENRTPT": null,
             "MHENTPT": "2013-05-02"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "cm.xpt": [
+      {
+        "row": 6,
+        "value": {
+          "CMENRTPT": "WRONG"
+        }
+      }
+    ],
+    "mh.xpt": [
+      {
+        "row": 6,
+        "value": {
+          "MHENRTPT": "WRONG"
+        }
+      },
+      {
+        "row": 13,
+        "value": {
+          "MHENRTPT": null
+        }
+      }
+    ]
+  }
 }

@@ -15,7 +15,8 @@
             "$rand_count": "Operation variable not found",
             "$trt_count": 1,
             "TSPARMCD": "TRT"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 2,
@@ -25,9 +26,32 @@
             "$rand_count": "Operation variable not found",
             "$trt_count": 1,
             "TSPARMCD": "RAND"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ts.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "TSPARMCD": "TSPARMCD"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "TSPARMCD": "TRT"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "TSPARMCD": "RAND"
+        }
+      }
+    ]
+  }
 }

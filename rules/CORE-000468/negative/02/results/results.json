@@ -16,7 +16,8 @@
             "TSGRPID": "1",
             "TSPARMCD": "TRT",
             "TSVAL": null
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 45,
@@ -27,7 +28,8 @@
             "TSGRPID": "2",
             "TSPARMCD": "TRT",
             "TSVAL": null
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 54,
@@ -38,9 +40,182 @@
             "TSGRPID": null,
             "TSPARMCD": "TRT",
             "TSVAL": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ts.xpt": [
+      {
+        "row": 42,
+        "value": {
+          "TSPARMCD": "STYPE"
+        }
+      },
+      {
+        "row": 42,
+        "value": {
+          "TSPARM": "Study Type"
+        }
+      },
+      {
+        "row": 42,
+        "value": {
+          "TSVAL": "INTERVENTIONAL"
+        }
+      },
+      {
+        "row": 42,
+        "value": {
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 43,
+        "value": {
+          "TSPARMCD": "TRT"
+        }
+      },
+      {
+        "row": 43,
+        "value": {
+          "TSPARM": "Investigational Therapy or Treatment"
+        }
+      },
+      {
+        "row": 43,
+        "value": {
+          "TSVAL": null
+        }
+      },
+      {
+        "row": 43,
+        "value": {
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 44,
+        "value": {
+          "TSPARMCD": "STYPE"
+        }
+      },
+      {
+        "row": 44,
+        "value": {
+          "TSPARM": "Study Type"
+        }
+      },
+      {
+        "row": 44,
+        "value": {
+          "TSVAL": "INTERVENTIONAL"
+        }
+      },
+      {
+        "row": 44,
+        "value": {
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 45,
+        "value": {
+          "TSPARMCD": "TRT"
+        }
+      },
+      {
+        "row": 45,
+        "value": {
+          "TSPARM": "Investigational Therapy or Treatment"
+        }
+      },
+      {
+        "row": 45,
+        "value": {
+          "TSVAL": null
+        }
+      },
+      {
+        "row": 45,
+        "value": {
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 52,
+        "value": {
+          "TSPARMCD": "STYPE"
+        }
+      },
+      {
+        "row": 52,
+        "value": {
+          "TSPARM": "Study Type"
+        }
+      },
+      {
+        "row": 52,
+        "value": {
+          "TSVAL": "INTERVENTIONAL"
+        }
+      },
+      {
+        "row": 52,
+        "value": {
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 53,
+        "value": {
+          "TSPARMCD": "STYPE"
+        }
+      },
+      {
+        "row": 53,
+        "value": {
+          "TSPARM": "Study Type"
+        }
+      },
+      {
+        "row": 53,
+        "value": {
+          "TSVAL": "INTERVENTIONAL"
+        }
+      },
+      {
+        "row": 53,
+        "value": {
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 54,
+        "value": {
+          "TSPARMCD": "TRT"
+        }
+      },
+      {
+        "row": 54,
+        "value": {
+          "TSPARM": "Investigational Therapy or Treatment"
+        }
+      },
+      {
+        "row": 54,
+        "value": {
+          "TSVAL": null
+        }
+      },
+      {
+        "row": 54,
+        "value": {
+          "TSVALNF": null
+        }
+      }
+    ]
+  }
 }

@@ -15,9 +15,50 @@
             "ACTARMCD": "PLACEBO",
             "ARMCD": "IKD",
             "ARMNRS": "UNPLANNED TREATMENT"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "dm.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "ARMNRS": "ARMNRS"
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "ARMCD": "IKD"
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "ARM": "IKd"
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "ACTARMCD": "PLACEBO"
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "ACTARM": "Placebo"
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "ARMNRS": "UNPLANNED TREATMENT"
+        }
+      }
+    ]
+  }
 }

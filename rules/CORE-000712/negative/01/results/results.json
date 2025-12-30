@@ -37,5 +37,37 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "supplb.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "IDVAR": "LBSEK"
+        }
+      }
+    ],
+    "relrec.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "IDVAR": "LBSEK"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "IDVAR": "COSEK"
+        }
+      }
+    ],
+    "co.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "IDVAR": "LBSEK"
+        }
+      }
+    ]
+  }
 }

@@ -295,7 +295,11 @@ class TestRunner:
                         highlighted_cells.setdefault(sheet.title, []).append(
                             {
                                 "row": int(cell.row) - 4,
-                                "value": {sheet.cell(row=1, column=cell.column).value: cell.value},
+                                "value": {
+                                    sheet.cell(row=1, column=cell.column).value: (
+                                        str(cell.value) if cell.value is not None else cell.value
+                                    )
+                                },
                             }
                         )
         return highlighted_cells

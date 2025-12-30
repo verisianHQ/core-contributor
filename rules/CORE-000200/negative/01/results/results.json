@@ -15,7 +15,8 @@
             "LBDRVFL": null,
             "LBORRES": null,
             "LBSTAT": null
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 3,
@@ -25,9 +26,26 @@
             "LBDRVFL": null,
             "LBORRES": null,
             "LBSTAT": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "lb.xpt": [
+      {
+        "row": 2,
+        "value": {
+          "LBSTAT": null
+        }
+      },
+      {
+        "row": 3,
+        "value": {
+          "LBDRVFL": null
+        }
+      }
+    ]
+  }
 }

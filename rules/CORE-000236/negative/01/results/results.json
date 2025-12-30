@@ -14,7 +14,8 @@
           "value": {
             "MHSTDTC": "2012-11-20",
             "RFSTDTC": "2012-11-15"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 10,
@@ -23,7 +24,8 @@
           "value": {
             "MHSTDTC": "2013-09-25",
             "RFSTDTC": "2013-09-21"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 17,
@@ -32,7 +34,8 @@
           "value": {
             "MHSTDTC": "2012-12-20",
             "RFSTDTC": "2012-12-17"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -44,5 +47,27 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "mh.xpt": [
+      {
+        "row": 2,
+        "value": {
+          "MHSTDTC": "2012-11-20"
+        }
+      },
+      {
+        "row": 10,
+        "value": {
+          "MHSTDTC": "2013-09-25"
+        }
+      },
+      {
+        "row": 17,
+        "value": {
+          "MHSTDTC": "2012-12-20"
+        }
+      }
+    ]
+  }
 }

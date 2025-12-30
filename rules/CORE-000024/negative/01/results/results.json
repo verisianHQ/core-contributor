@@ -14,7 +14,8 @@
           "value": {
             "AEBDSYCD": null,
             "AEBODSYS": "Musculoskeletal and connective tissue disorders"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 4,
@@ -23,7 +24,8 @@
           "value": {
             "AEBDSYCD": null,
             "AEBODSYS": "Nervous system disorders"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 6,
@@ -32,9 +34,32 @@
           "value": {
             "AEBDSYCD": null,
             "AEBODSYS": "Vascular disorders"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ae.xpt": [
+      {
+        "row": 2,
+        "value": {
+          "AEBDSYCD": null
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "AEBDSYCD": null
+        }
+      },
+      {
+        "row": 6,
+        "value": {
+          "AEBDSYCD": null
+        }
+      }
+    ]
+  }
 }

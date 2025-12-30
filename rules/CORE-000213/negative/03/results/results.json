@@ -14,7 +14,8 @@
           "value": {
             "DSSCAT": "STUDY PARTICIPATION",
             "EPOCH": "TREATMENT"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 6,
@@ -23,9 +24,26 @@
           "value": {
             "DSSCAT": "STUDY PARTICIPATION",
             "EPOCH": "TREATMENT"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ds.xpt": [
+      {
+        "row": 5,
+        "value": {
+          "DSSCAT": "STUDY PARTICIPATION"
+        }
+      },
+      {
+        "row": 6,
+        "value": {
+          "DSSCAT": "STUDY PARTICIPATION"
+        }
+      }
+    ]
+  }
 }

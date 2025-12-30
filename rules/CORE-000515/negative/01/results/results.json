@@ -14,7 +14,8 @@
           "value": {
             "ACTARMCD": "A",
             "USUBJID": "CDISC-TEST-002"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 3,
@@ -23,7 +24,8 @@
           "value": {
             "ACTARMCD": "B",
             "USUBJID": "CDISC-TEST-003"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -35,5 +37,27 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "dm.xpt": [
+      {
+        "row": 2,
+        "value": {
+          "ACTARMCD": "A"
+        }
+      },
+      {
+        "row": 3,
+        "value": {
+          "USUBJID": "CDISC-TEST-003"
+        }
+      },
+      {
+        "row": 3,
+        "value": {
+          "ACTARMCD": "B"
+        }
+      }
+    ]
+  }
 }

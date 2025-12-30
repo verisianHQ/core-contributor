@@ -15,7 +15,8 @@
             "CMDTC": "2013-05-20",
             "CMSTRTPT": null,
             "CMSTTPT": "2013-05-20"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -88,5 +89,15 @@
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "cm.xpt": [
+      {
+        "row": 6,
+        "value": {
+          "CMENRTPT": "AFTER"
+        }
+      }
+    ]
+  }
 }

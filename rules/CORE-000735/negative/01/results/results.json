@@ -14,7 +14,8 @@
           "value": {
             "TSPARMCD": "COMPTRT",
             "TSVCDREF": null
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 2,
@@ -23,7 +24,8 @@
           "value": {
             "TSPARMCD": "CURTRT",
             "TSVCDREF": null
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 3,
@@ -32,9 +34,32 @@
           "value": {
             "TSPARMCD": "TRT",
             "TSVCDREF": "ISO 8601"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ts.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "TSPARMCD": "COMPTRT"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "TSPARMCD": "CURTRT"
+        }
+      },
+      {
+        "row": 3,
+        "value": {
+          "TSPARMCD": "TRT"
+        }
+      }
+    ]
+  }
 }

@@ -1,4 +1,128 @@
 {
   "error": "No result - either the rule or test case data unit-test-coreid-CG0112-negative.xlsx is broken",
-  "exception": "cannot unpack non-iterable NoneType object"
+  "exception": "cannot unpack non-iterable NoneType object",
+  "unmatched_highlights_in_test_case": {
+    "ag.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "AGDOSE": "AGDOSE"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "AGDOSTXT": "AGDOSTXT"
+        }
+      }
+    ],
+    "cm.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "CMDOSE": "CMDOSE"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "CMDOSTXT": "CMDOSTXT"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "CMDOSTXT": "100"
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "CMDOSTXT": "2.5"
+        }
+      }
+    ],
+    "ec.xpt": [
+      {
+        "row": 0,
+        "value": {
+          "null": "ECDOSE"
+        }
+      },
+      {
+        "row": 0,
+        "value": {
+          "null": "ECDOSTXT"
+        }
+      }
+    ],
+    "ex.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "EXDOSE": "EXDOSE"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "EXDOSTXT": "EXDOSTXT"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "EXDOSTXT": "500"
+        }
+      }
+    ],
+    "ml.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "MLDOSE": "MLDOSE"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "MLDOSTXT": "MLDOSTXT"
+        }
+      }
+    ],
+    "pr.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "PRDOSE": "PRDOSE"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "PRDOSTXT": "PRDOSTXT"
+        }
+      }
+    ],
+    "su.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "SUDOSE": "SUDOSE"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "SUDOSTXT": "SUDOSTXT"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "SUDOSTXT": "3"
+        }
+      }
+    ]
+  }
 }

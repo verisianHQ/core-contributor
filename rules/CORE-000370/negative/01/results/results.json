@@ -24,7 +24,8 @@
             "DSDECOD": "INFORMED CONSENT OBTAINED",
             "DSSTDTC": "2018-03-06",
             "RFICDTC": "2018-05-20"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 18,
@@ -35,9 +36,70 @@
             "DSDECOD": "INFORMED CONSENT OBTAINED",
             "DSSTDTC": "2018-04-06",
             "RFICDTC": "2019-08-15"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "dm.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "RFICDTC": "RFICDTC"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "USUBJID": "015246-076-0003-00003"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "RFICDTC": "2018-05-20"
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "USUBJID": "015246-888-0008-08888"
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "RFICDTC": "2019-08-15"
+        }
+      }
+    ],
+    "ds.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "USUBJID": "015246-076-0003-00003"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "DSSTDTC": "2018-03-06"
+        }
+      },
+      {
+        "row": 18,
+        "value": {
+          "USUBJID": "015246-888-0008-08888"
+        }
+      },
+      {
+        "row": 18,
+        "value": {
+          "DSSTDTC": "2018-04-06"
+        }
+      }
+    ]
+  }
 }

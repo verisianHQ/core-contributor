@@ -14,7 +14,8 @@
           "value": {
             "SVUPDES": null,
             "VISITNUM": 101.0
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 10,
@@ -23,7 +24,8 @@
           "value": {
             "SVUPDES": null,
             "VISITNUM": 201.0
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -35,5 +37,21 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "sv.xpt": [
+      {
+        "row": 9,
+        "value": {
+          "VISITNUM": "101"
+        }
+      },
+      {
+        "row": 10,
+        "value": {
+          "VISITNUM": "201"
+        }
+      }
+    ]
+  }
 }

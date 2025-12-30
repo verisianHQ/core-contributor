@@ -15,7 +15,8 @@
             "TSGRPID": "EFFICACY",
             "TSPARMCD": "OBJPRIM",
             "TSVAL": null
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 24,
@@ -25,7 +26,8 @@
             "TSGRPID": "EFFICACY",
             "TSPARMCD": "OUTMSPRI",
             "TSVAL": "To assess the dose-dependent improvement in subject depression. Improved scores on the Patient Health Questionnaire(PHQ-9) and the Hamilton Depression Rating Scale(HAMD 17) will indicate improvements,"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 25,
@@ -35,7 +37,8 @@
             "TSGRPID": "EFFICACY",
             "TSPARMCD": "OUTMSPRI",
             "TSVAL": "To assess the dose-dependent improvements in satisfaction with subjects' lives as a whole. Improved scores on the Satisfaction With Life Survery (SWLS) will indicate improvements."
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 26,
@@ -45,9 +48,62 @@
             "TSGRPID": "EFFICACY",
             "TSPARMCD": "OUTMSPRI",
             "TSVAL": "To assess the dose-dependent improvements in subject memory and learning. Improved scores on the Auditory Verbal Learning Test (AVLT-REY) will indicate improvements."
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ts.xpt": [
+      {
+        "row": 22,
+        "value": {
+          "TSVAL": null
+        }
+      },
+      {
+        "row": 22,
+        "value": {
+          "TSVAL1": "To document the efficacy profile of Zanomaline."
+        }
+      },
+      {
+        "row": 24,
+        "value": {
+          "TSVAL1": null
+        }
+      },
+      {
+        "row": 24,
+        "value": {
+          "TSVAL2": "and blah blah blah"
+        }
+      },
+      {
+        "row": 25,
+        "value": {
+          "TSVAL1": null
+        }
+      },
+      {
+        "row": 25,
+        "value": {
+          "TSVAL2": "blablabli"
+        }
+      },
+      {
+        "row": 26,
+        "value": {
+          "TSVAL1": null
+        }
+      },
+      {
+        "row": 26,
+        "value": {
+          "TSVAL2": "blablabla"
+        }
+      }
+    ]
+  }
 }

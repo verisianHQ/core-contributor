@@ -13,7 +13,8 @@
           "USUBJID": "015246-099-0000-00000",
           "value": {
             "DTHFL": "N"
-          }
+          },
+          "highlighted_in_test_case": true
         },
         {
           "row": 2,
@@ -21,7 +22,8 @@
           "USUBJID": "015246-099-0000-00001",
           "value": {
             "DTHFL": "U"
-          }
+          },
+          "highlighted_in_test_case": true
         },
         {
           "row": 4,
@@ -29,9 +31,20 @@
           "USUBJID": "015246-099-0000-00003",
           "value": {
             "DTHFL": "N"
-          }
+          },
+          "highlighted_in_test_case": true
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "dm.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "DTHFL": "DTHFL"
+        }
+      }
+    ]
+  }
 }

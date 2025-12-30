@@ -13,7 +13,8 @@
           "USUBJID": "015246-300-0004-00002",
           "value": {
             "ARMCD": "NOTASSGN"
-          }
+          },
+          "highlighted_in_test_case": true
         },
         {
           "row": 7,
@@ -21,9 +22,26 @@
           "USUBJID": "015246-300-0004-00007",
           "value": {
             "ARMCD": "SCRNFAIL"
-          }
+          },
+          "highlighted_in_test_case": true
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "dm.xpt": [
+      {
+        "row": 2,
+        "value": {
+          "ARM": "Not Assigned"
+        }
+      },
+      {
+        "row": 7,
+        "value": {
+          "ARM": "Screen Failure"
+        }
+      }
+    ]
+  }
 }

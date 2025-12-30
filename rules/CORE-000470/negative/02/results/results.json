@@ -16,7 +16,8 @@
             "TSGRPID": "1",
             "TSPARMCD": "INTTYPE",
             "TSVAL": null
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 20,
@@ -27,7 +28,8 @@
             "TSGRPID": "2",
             "TSPARMCD": "INTTYPE",
             "TSVAL": null
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 21,
@@ -38,7 +40,8 @@
             "TSGRPID": null,
             "TSPARMCD": "INTTYPE",
             "TSVAL": null
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 22,
@@ -49,9 +52,254 @@
             "TSGRPID": null,
             "TSPARMCD": "INTTYPE",
             "TSVAL": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ts.xpt": [
+      {
+        "row": 19,
+        "value": {
+          "TSGRPID": "1"
+        }
+      },
+      {
+        "row": 19,
+        "value": {
+          "TSPARMCD": "INTTYPE"
+        }
+      },
+      {
+        "row": 19,
+        "value": {
+          "TSPARM": "Intervention Type"
+        }
+      },
+      {
+        "row": 19,
+        "value": {
+          "TSVAL": null
+        }
+      },
+      {
+        "row": 19,
+        "value": {
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 20,
+        "value": {
+          "TSGRPID": "2"
+        }
+      },
+      {
+        "row": 20,
+        "value": {
+          "TSPARMCD": "INTTYPE"
+        }
+      },
+      {
+        "row": 20,
+        "value": {
+          "TSPARM": "Intervention Type"
+        }
+      },
+      {
+        "row": 20,
+        "value": {
+          "TSVAL": null
+        }
+      },
+      {
+        "row": 20,
+        "value": {
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 21,
+        "value": {
+          "TSGRPID": null
+        }
+      },
+      {
+        "row": 21,
+        "value": {
+          "TSPARMCD": "INTTYPE"
+        }
+      },
+      {
+        "row": 21,
+        "value": {
+          "TSPARM": "Intervention Type"
+        }
+      },
+      {
+        "row": 21,
+        "value": {
+          "TSVAL": null
+        }
+      },
+      {
+        "row": 21,
+        "value": {
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 22,
+        "value": {
+          "TSGRPID": null
+        }
+      },
+      {
+        "row": 22,
+        "value": {
+          "TSPARMCD": "INTTYPE"
+        }
+      },
+      {
+        "row": 22,
+        "value": {
+          "TSPARM": "Intervention Type"
+        }
+      },
+      {
+        "row": 22,
+        "value": {
+          "TSVAL": null
+        }
+      },
+      {
+        "row": 22,
+        "value": {
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 45,
+        "value": {
+          "TSGRPID": "1"
+        }
+      },
+      {
+        "row": 45,
+        "value": {
+          "TSPARMCD": "STYPE"
+        }
+      },
+      {
+        "row": 45,
+        "value": {
+          "TSPARM": "Study Type"
+        }
+      },
+      {
+        "row": 45,
+        "value": {
+          "TSVAL": "INTERVENTIONAL"
+        }
+      },
+      {
+        "row": 45,
+        "value": {
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 46,
+        "value": {
+          "TSGRPID": "2"
+        }
+      },
+      {
+        "row": 46,
+        "value": {
+          "TSPARMCD": "STYPE"
+        }
+      },
+      {
+        "row": 46,
+        "value": {
+          "TSPARM": "Study Type"
+        }
+      },
+      {
+        "row": 46,
+        "value": {
+          "TSVAL": "INTERVENTIONAL"
+        }
+      },
+      {
+        "row": 46,
+        "value": {
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 47,
+        "value": {
+          "TSGRPID": null
+        }
+      },
+      {
+        "row": 47,
+        "value": {
+          "TSPARMCD": "STYPE"
+        }
+      },
+      {
+        "row": 47,
+        "value": {
+          "TSPARM": "Study Type"
+        }
+      },
+      {
+        "row": 47,
+        "value": {
+          "TSVAL": "INTERVENTIONAL"
+        }
+      },
+      {
+        "row": 47,
+        "value": {
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 48,
+        "value": {
+          "TSGRPID": null
+        }
+      },
+      {
+        "row": 48,
+        "value": {
+          "TSPARMCD": "STYPE"
+        }
+      },
+      {
+        "row": 48,
+        "value": {
+          "TSPARM": "Study Type"
+        }
+      },
+      {
+        "row": 48,
+        "value": {
+          "TSVAL": "INTERVENTIONAL"
+        }
+      },
+      {
+        "row": 48,
+        "value": {
+          "TSVALNF": null
+        }
+      }
+    ]
+  }
 }

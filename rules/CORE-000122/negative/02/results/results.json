@@ -15,7 +15,8 @@
             "AGE": null,
             "AGETXT": "Not in dataset",
             "AGEU": "YEARS"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 2,
@@ -25,7 +26,8 @@
             "AGE": null,
             "AGETXT": "Not in dataset",
             "AGEU": "YEARS"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 3,
@@ -35,7 +37,8 @@
             "AGE": null,
             "AGETXT": "Not in dataset",
             "AGEU": "YEARS"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 4,
@@ -45,9 +48,74 @@
             "AGE": null,
             "AGETXT": "Not in dataset",
             "AGEU": "YEARS"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "dm.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "AGE": "AGE"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "AGEU": "AGEU"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "AGE": null
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "AGEU": "YEARS"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "AGE": null
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "AGEU": "YEARS"
+        }
+      },
+      {
+        "row": 3,
+        "value": {
+          "AGE": null
+        }
+      },
+      {
+        "row": 3,
+        "value": {
+          "AGEU": "YEARS"
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "AGE": null
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "AGEU": "YEARS"
+        }
+      }
+    ]
+  }
 }

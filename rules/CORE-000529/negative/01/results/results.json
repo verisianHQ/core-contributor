@@ -24,7 +24,8 @@
             "FADTC": "2012-12-02",
             "FADY": 35.0,
             "RFSTDTC": "2012-11-15"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 2,
@@ -35,7 +36,8 @@
             "FADTC": "2013-10-12",
             "FADY": 3.0,
             "RFSTDTC": "2013-10-08"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 4,
@@ -46,7 +48,8 @@
             "FADTC": "2012-12-02",
             "FADY": -30.0,
             "RFSTDTC": "2013-01-05"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 5,
@@ -57,7 +60,8 @@
             "FADTC": "2014-12-02",
             "FADY": 230.0,
             "RFSTDTC": "2014-05-11"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -77,7 +81,8 @@
             "IEDTC": "2022-03-17",
             "IEDY": -4.0,
             "RFSTDTC": "2022-03-20"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -97,9 +102,62 @@
             "LBDTC": "2022-03-30",
             "LBDY": 2.0,
             "RFSTDTC": "2022-03-20"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "dm.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "DMDY": null
+        }
+      }
+    ],
+    "fa.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "FADY": "35"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "FADY": "3"
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "FADY": "-30"
+        }
+      },
+      {
+        "row": 5,
+        "value": {
+          "FADY": "230"
+        }
+      }
+    ],
+    "ie.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "IEDY": "-4"
+        }
+      }
+    ],
+    "lb.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "LBDY": "2"
+        }
+      }
+    ]
+  }
 }

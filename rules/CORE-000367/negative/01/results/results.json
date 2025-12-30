@@ -13,7 +13,8 @@
           "USUBJID": "CDISC001",
           "value": {
             "ACTARM": "ACME Low Dose"
-          }
+          },
+          "highlighted_in_test_case": true
         },
         {
           "row": 2,
@@ -21,7 +22,8 @@
           "USUBJID": "CDISC002",
           "value": {
             "ACTARM": "ACME Low Dose"
-          }
+          },
+          "highlighted_in_test_case": true
         },
         {
           "row": 3,
@@ -29,7 +31,8 @@
           "USUBJID": "CDISC003",
           "value": {
             "ACTARM": "ACME High Dose"
-          }
+          },
+          "highlighted_in_test_case": true
         },
         {
           "row": 15,
@@ -37,7 +40,8 @@
           "USUBJID": "CDISC015",
           "value": {
             "ACTARM": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -49,5 +53,27 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "dm.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "ACTARMCD": "ACME_LOW_D"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "ACTARMCD": "ACME_LOW_D"
+        }
+      },
+      {
+        "row": 3,
+        "value": {
+          "ACTARMCD": "ACME_HIGH_D"
+        }
+      }
+    ]
+  }
 }

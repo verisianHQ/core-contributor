@@ -14,7 +14,8 @@
           "value": {
             "ECLOC": "Not in dataset",
             "ECPORTOT": "SINGLE"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -40,7 +41,8 @@
           "value": {
             "AELOC": "Not in dataset",
             "AEPORTOT": "PARTIAL"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -66,9 +68,64 @@
           "value": {
             "TULOC": "Not in dataset",
             "TUPORTOT": "SINGLE"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ec.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "ECPORTOT": "ECPORTOT"
+        }
+      }
+    ],
+    "pr.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "PRLOC": "PRLOC"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "PRPORTOT": "PRPORTOT"
+        }
+      }
+    ],
+    "ae.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "AEPORTOT": "AEPORTOT"
+        }
+      }
+    ],
+    "oe.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "OELOC": "OELOC"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "OEPORTOT": "OEPORTOT"
+        }
+      }
+    ],
+    "tu.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "TUPORTOT": "TUPORTOT"
+        }
+      }
+    ]
+  }
 }

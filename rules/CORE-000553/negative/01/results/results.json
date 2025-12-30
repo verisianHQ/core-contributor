@@ -16,7 +16,8 @@
             "AEENDTC": "2022-03-19",
             "AEENDY": -2.0,
             "RFSTDTC": "2022-03-20"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 2,
@@ -27,7 +28,8 @@
             "AEENDTC": "2022-03-20",
             "AEENDY": 0.0,
             "RFSTDTC": "2022-03-20"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -47,7 +49,8 @@
             "CMENDTC": "2013-05-10",
             "CMENDY": null,
             "RFSTDTC": "2013-01-05"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 8,
@@ -58,7 +61,8 @@
             "CMENDTC": "2014-05-20",
             "CMENDY": 11.0,
             "RFSTDTC": "2014-05-11"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 10,
@@ -69,7 +73,8 @@
             "CMENDTC": "2013-06-05",
             "CMENDY": -107.0,
             "RFSTDTC": "2013-09-21"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -81,5 +86,41 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ae.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "AEENDY": "-2"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "AEENDY": "0"
+        }
+      }
+    ],
+    "cm.xpt": [
+      {
+        "row": 7,
+        "value": {
+          "CMENDY": null
+        }
+      },
+      {
+        "row": 8,
+        "value": {
+          "CMENDY": "11"
+        }
+      },
+      {
+        "row": 10,
+        "value": {
+          "CMENDY": "-107"
+        }
+      }
+    ]
+  }
 }

@@ -14,7 +14,8 @@
           "value": {
             "DTHDTC": "2018-06-10",
             "DTHFL": null
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 4,
@@ -23,9 +24,50 @@
           "value": {
             "DTHDTC": "2018-09-04",
             "DTHFL": "N"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "dm.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "DTHDTC": "DTHDTC"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "DTHFL": "DTHFL"
+        }
+      },
+      {
+        "row": 3,
+        "value": {
+          "DTHDTC": "2018-06-10"
+        }
+      },
+      {
+        "row": 3,
+        "value": {
+          "DTHFL": null
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "DTHDTC": "2018-09-04"
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "DTHFL": "N"
+        }
+      }
+    ]
+  }
 }

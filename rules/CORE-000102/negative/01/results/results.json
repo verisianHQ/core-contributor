@@ -14,7 +14,8 @@
           "value": {
             "AETOX": "CTCAE 4.03",
             "AETOXGR": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -48,7 +49,8 @@
           "value": {
             "EGTOX": "CTCAE 4.03",
             "EGTOXGR": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -66,7 +68,8 @@
           "value": {
             "LBTOX": "CTCAE 4.03",
             "LBTOXGR": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -86,5 +89,141 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ae.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "AETOX": "AETOX"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "AETOXGR": "AETOXGR"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "AETOX": "CTCAE 4.03"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "AETOXGR": null
+        }
+      }
+    ],
+    "mh.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "MHTOX": "MHTOX"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "MHTOXGR": "MHTOXGR"
+        }
+      }
+    ],
+    "ce.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "CETOX": "CETOX"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "CETOXGR": "CETOXGR"
+        }
+      }
+    ],
+    "eg.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "EGTOX": "EGTOX"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "EGTOXGR": "EGTOXGR"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "EGTOX": "CTCAE 4.03"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "EGTOXGR": null
+        }
+      }
+    ],
+    "lb.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "LBTOX": "LBTOX"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "LBTOXGR": "LBTOXGR"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "LBTOX": "CTCAE 4.03"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "LBTOXGR": null
+        }
+      }
+    ],
+    "pc.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "PCTOX": "PCTOX"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "PCTOXGR": "PCTOXGR"
+        }
+      }
+    ],
+    "pp.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "PPTOX": "PPTOX"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "PPTOXGR": "PPTOXGR"
+        }
+      }
+    ]
+  }
 }

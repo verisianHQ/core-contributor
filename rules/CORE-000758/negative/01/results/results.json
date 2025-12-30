@@ -14,7 +14,8 @@
           "value": {
             "ARMNRS": "SCREEN FAILURE",
             "RFSTDTC": "2012-11-30"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 2,
@@ -23,7 +24,8 @@
           "value": {
             "ARMNRS": "ASSIGNED, NOT TREATED",
             "RFSTDTC": "2012-11-15"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 4,
@@ -32,9 +34,50 @@
           "value": {
             "ARMNRS": "NOT ASSIGNED",
             "RFSTDTC": "2013-10-08"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "dm.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "RFSTDTC": "2012-11-30"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "ARMNRS": "SCREEN FAILURE"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "RFSTDTC": "2012-11-15"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "ARMNRS": "ASSIGNED, NOT TREATED"
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "RFSTDTC": "2013-10-08"
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "ARMNRS": "NOT ASSIGNED"
+        }
+      }
+    ]
+  }
 }

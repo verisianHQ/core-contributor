@@ -39,7 +39,8 @@
             "LBDTC": "2005-09-28",
             "LBDY": -15.0,
             "RFSTDTC": "2005-10"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 5,
@@ -49,7 +50,8 @@
             "LBDTC": "2005-09-28",
             "LBDY": -15.0,
             "RFSTDTC": "2005-10"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 6,
@@ -59,7 +61,8 @@
             "LBDTC": null,
             "LBDY": 1.0,
             "RFSTDTC": "2005-10"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 7,
@@ -69,7 +72,8 @@
             "LBDTC": null,
             "LBDY": 141.0,
             "RFSTDTC": "2005-10"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 9,
@@ -79,7 +83,8 @@
             "LBDTC": "2005-09",
             "LBDY": -15.0,
             "RFSTDTC": "2005-10-13T10:15"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 11,
@@ -89,7 +94,8 @@
             "LBDTC": null,
             "LBDY": 141.0,
             "RFSTDTC": "2005-10-13T10:15"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 12,
@@ -99,9 +105,62 @@
             "LBDTC": "2006-05",
             "LBDY": 213.0,
             "RFSTDTC": "2005-10-13T10:15"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "lb.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "LBDY": "-15"
+        }
+      },
+      {
+        "row": 5,
+        "value": {
+          "LBDY": "-15"
+        }
+      },
+      {
+        "row": 6,
+        "value": {
+          "LBDY": "1"
+        }
+      },
+      {
+        "row": 7,
+        "value": {
+          "LBDY": "141"
+        }
+      },
+      {
+        "row": 9,
+        "value": {
+          "LBDY": "-15"
+        }
+      },
+      {
+        "row": 10,
+        "value": {
+          "LBDY": null
+        }
+      },
+      {
+        "row": 11,
+        "value": {
+          "LBDY": "141"
+        }
+      },
+      {
+        "row": 12,
+        "value": {
+          "LBDY": "213"
+        }
+      }
+    ]
+  }
 }

@@ -14,7 +14,8 @@
           "value": {
             "DTHFL": null,
             "SSSTRESC": "DEAD"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 2,
@@ -23,7 +24,8 @@
           "value": {
             "DTHFL": "N",
             "SSSTRESC": "DEAD"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -35,5 +37,53 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "dm.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "DTHFL": "DTHFL"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "DTHFL": null
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "DTHFL": "N"
+        }
+      }
+    ],
+    "ss.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "SSSTRESC": "SSSTRESC"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "SSSTRESC": "DEAD"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "SSSTRESC": "DEAD"
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "SSSTRESC": "DEAD"
+        }
+      }
+    ]
+  }
 }

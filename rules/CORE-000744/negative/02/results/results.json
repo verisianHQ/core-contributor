@@ -24,7 +24,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 4,
@@ -35,7 +36,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -47,5 +49,95 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ae.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "USUBJID": "CDISC001"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "AESEQ": "1"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "AETERM": "INJECTION SITE REACTIONS"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "AEDECOD": null
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "USUBJID": "CDISC001"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "AESEQ": "2"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "AETERM": null
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "AEDECOD": "Headache"
+        }
+      }
+    ],
+    "fa.xpt": [
+      {
+        "row": 3,
+        "value": {
+          "USUBJID": "CDISC001"
+        }
+      },
+      {
+        "row": 3,
+        "value": {
+          "FASEQ": "3"
+        }
+      },
+      {
+        "row": 3,
+        "value": {
+          "FAOBJ": "INJECTION SITE REACTION"
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "USUBJID": "CDISC001"
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "FASEQ": "4"
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "FAOBJ": "FATIGUE"
+        }
+      }
+    ]
+  }
 }

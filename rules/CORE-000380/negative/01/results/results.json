@@ -14,9 +14,50 @@
           "value": {
             "ACTARM": "Placebo",
             "RFSTDTC": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "dm.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "RFSTDTC": "2023-01-02"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "RFENDTC": "2023-01-02"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "RFSTDTC": "2023-01-02"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "RFENDTC": "2023-01-02"
+        }
+      },
+      {
+        "row": 3,
+        "value": {
+          "RFSTDTC": null
+        }
+      },
+      {
+        "row": 3,
+        "value": {
+          "RFENDTC": null
+        }
+      }
+    ]
+  }
 }

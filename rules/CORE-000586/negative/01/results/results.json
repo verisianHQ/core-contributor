@@ -14,7 +14,8 @@
           "value": {
             "DSCAT": "DISPOSITION EVENT",
             "EPOCH": "FU"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 5,
@@ -23,9 +24,62 @@
           "value": {
             "DSCAT": "DISPOSITION EVENT",
             "EPOCH": "FU"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ds.xpt": [
+      {
+        "row": 4,
+        "value": {
+          "DSTERM": "STUDY INFORMED CONSENT OBTAINED"
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "DSDECOD": "STUDY INFORMED CONSENT OBTAINED"
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "DSCAT": "DISPOSITION EVENT"
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "EPOCH": "FU"
+        }
+      },
+      {
+        "row": 5,
+        "value": {
+          "DSTERM": "ADVERSE EVENT"
+        }
+      },
+      {
+        "row": 5,
+        "value": {
+          "DSDECOD": "COMPLETED"
+        }
+      },
+      {
+        "row": 5,
+        "value": {
+          "DSCAT": "DISPOSITION EVENT"
+        }
+      },
+      {
+        "row": 5,
+        "value": {
+          "EPOCH": "FU"
+        }
+      }
+    ]
+  }
 }

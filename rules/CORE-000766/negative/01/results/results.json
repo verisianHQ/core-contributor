@@ -23,7 +23,8 @@
             "AEDECOD": null,
             "AETERM": "FATIGUE",
             "RELREC.FAOBJ": "ERROR"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -43,5 +44,115 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ae.xpt": [
+      {
+        "row": 3,
+        "value": {
+          "AETERM": "FATIGUE"
+        }
+      },
+      {
+        "row": 3,
+        "value": {
+          "AEDECOD": null
+        }
+      }
+    ],
+    "fa.xpt": [
+      {
+        "row": 2,
+        "value": {
+          "FAOBJ": "ERROR"
+        }
+      }
+    ],
+    "relrec.xpt": [
+      {
+        "row": 5,
+        "value": {
+          "STUDYID": "CDISCPILOT01"
+        }
+      },
+      {
+        "row": 5,
+        "value": {
+          "RDOMAIN": "EX"
+        }
+      },
+      {
+        "row": 5,
+        "value": {
+          "USUBJID": ""
+        }
+      },
+      {
+        "row": 5,
+        "value": {
+          "IDVAR": "EXLNKID"
+        }
+      },
+      {
+        "row": 5,
+        "value": {
+          "IDVARVAL": ""
+        }
+      },
+      {
+        "row": 5,
+        "value": {
+          "RELTYPE": "ONE"
+        }
+      },
+      {
+        "row": 5,
+        "value": {
+          "RELID": "EXFA"
+        }
+      },
+      {
+        "row": 6,
+        "value": {
+          "STUDYID": "CDISCPILOT01"
+        }
+      },
+      {
+        "row": 6,
+        "value": {
+          "RDOMAIN": "FA"
+        }
+      },
+      {
+        "row": 6,
+        "value": {
+          "USUBJID": ""
+        }
+      },
+      {
+        "row": 6,
+        "value": {
+          "IDVAR": "FALNKID"
+        }
+      },
+      {
+        "row": 6,
+        "value": {
+          "IDVARVAL": ""
+        }
+      },
+      {
+        "row": 6,
+        "value": {
+          "RELTYPE": "ONE"
+        }
+      },
+      {
+        "row": 6,
+        "value": {
+          "RELID": "EXFA"
+        }
+      }
+    ]
+  }
 }

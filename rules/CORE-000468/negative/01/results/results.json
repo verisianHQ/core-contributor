@@ -16,9 +16,62 @@
             "TSGRPID": null,
             "TSPARMCD": "TRT",
             "TSVAL": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ts.xpt": [
+      {
+        "row": 42,
+        "value": {
+          "TSPARMCD": "STYPE"
+        }
+      },
+      {
+        "row": 42,
+        "value": {
+          "TSPARM": "Study Type"
+        }
+      },
+      {
+        "row": 42,
+        "value": {
+          "TSVAL": "INTERVENTIONAL"
+        }
+      },
+      {
+        "row": 42,
+        "value": {
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 49,
+        "value": {
+          "TSPARMCD": "TRT"
+        }
+      },
+      {
+        "row": 49,
+        "value": {
+          "TSPARM": "Investigational Therapy or Treatment"
+        }
+      },
+      {
+        "row": 49,
+        "value": {
+          "TSVAL": null
+        }
+      },
+      {
+        "row": 49,
+        "value": {
+          "TSVALNF": null
+        }
+      }
+    ]
+  }
 }

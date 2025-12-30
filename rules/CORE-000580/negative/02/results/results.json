@@ -17,7 +17,8 @@
             "TEDUR": "Not in dataset",
             "TEENRL": "END OF TREATMENT",
             "TESTRL": "FIRST DOSE OF HUMAN INSULIN"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 3,
@@ -29,7 +30,8 @@
             "TEDUR": "Not in dataset",
             "TEENRL": "END OF TREATMENT",
             "TESTRL": "FIRST DOSE OF HUMAN INSULIN"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 6,
@@ -41,7 +43,8 @@
             "TEDUR": "Not in dataset",
             "TEENRL": null,
             "TESTRL": "INFORMED CONSENT SIGNED2"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 7,
@@ -53,7 +56,8 @@
             "TEDUR": "Not in dataset",
             "TEENRL": null,
             "TESTRL": "INFORMED CONSENT SIGNED2"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 8,
@@ -65,9 +69,134 @@
             "TEDUR": "Not in dataset",
             "TEENRL": null,
             "TESTRL": "INFORMED CONSENT SIGNED2"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "te.xpt": [
+      {
+        "row": 2,
+        "value": {
+          "ETCD": "E001"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "ELEMENT": "HUMAN INSULIN"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "TESTRL": "FIRST DOSE OF HUMAN INSULIN"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "TEENRL": "END OF TREATMENT"
+        }
+      },
+      {
+        "row": 3,
+        "value": {
+          "ETCD": "E002"
+        }
+      },
+      {
+        "row": 3,
+        "value": {
+          "ELEMENT": "HUMAN INSULIN"
+        }
+      },
+      {
+        "row": 3,
+        "value": {
+          "TESTRL": "FIRST DOSE OF HUMAN INSULIN"
+        }
+      },
+      {
+        "row": 3,
+        "value": {
+          "TEENRL": "END OF TREATMENT"
+        }
+      },
+      {
+        "row": 6,
+        "value": {
+          "ETCD": "E006"
+        }
+      },
+      {
+        "row": 6,
+        "value": {
+          "ELEMENT": "Y"
+        }
+      },
+      {
+        "row": 6,
+        "value": {
+          "TESTRL": "INFORMED CONSENT SIGNED2"
+        }
+      },
+      {
+        "row": 6,
+        "value": {
+          "TEENRL": null
+        }
+      },
+      {
+        "row": 7,
+        "value": {
+          "ETCD": "E006"
+        }
+      },
+      {
+        "row": 7,
+        "value": {
+          "ELEMENT": "Y"
+        }
+      },
+      {
+        "row": 7,
+        "value": {
+          "TESTRL": "INFORMED CONSENT SIGNED2"
+        }
+      },
+      {
+        "row": 7,
+        "value": {
+          "TEENRL": null
+        }
+      },
+      {
+        "row": 8,
+        "value": {
+          "ETCD": "E007"
+        }
+      },
+      {
+        "row": 8,
+        "value": {
+          "ELEMENT": "Y"
+        }
+      },
+      {
+        "row": 8,
+        "value": {
+          "TESTRL": "INFORMED CONSENT SIGNED2"
+        }
+      },
+      {
+        "row": 8,
+        "value": {
+          "TEENRL": null
+        }
+      }
+    ]
+  }
 }

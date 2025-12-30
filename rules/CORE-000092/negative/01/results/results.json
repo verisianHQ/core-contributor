@@ -1,4 +1,188 @@
 {
   "error": "No result - either the rule or test case data unit-test-coreid-CG0110-negative.xlsx is broken",
-  "exception": "cannot unpack non-iterable NoneType object"
+  "exception": "cannot unpack non-iterable NoneType object",
+  "unmatched_highlights_in_test_case": {
+    "ag.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "AGDOSE": "AGDOSE"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "AGDOSTXT": "AGDOSTXT"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "AGDOSE": "250"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "AGDOSTXT": "250-300"
+        }
+      }
+    ],
+    "cm.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "CMDOSE": "CMDOSE"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "CMDOSTXT": "CMDOSTXT"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "CMDOSE": "100"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "CMDOSTXT": "100-120"
+        }
+      }
+    ],
+    "ec.xpt": [
+      {
+        "row": 0,
+        "value": {
+          "null": "ECDOSE"
+        }
+      },
+      {
+        "row": 0,
+        "value": {
+          "null": "ECDOSTXT"
+        }
+      },
+      {
+        "row": 5,
+        "value": {
+          "null": "2"
+        }
+      },
+      {
+        "row": 5,
+        "value": {
+          "null": "2-3"
+        }
+      }
+    ],
+    "ex.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "EXDOSE": "EXDOSE"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "EXDOSTXT": "EXDOSTXT"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "EXDOSE": "500"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "EXDOSTXT": "500-600"
+        }
+      }
+    ],
+    "ml.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "MLDOSE": "MLDOSE"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "MLDOSTXT": "MLDOSTXT"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "MLDOSE": "8"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "MLDOSTXT": "8"
+        }
+      }
+    ],
+    "pr.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "PRDOSE": "PRDOSE"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "PRDOSTXT": "PRDOSTXT"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "PRDOSE": "25"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "PRDOSTXT": "25-30"
+        }
+      }
+    ],
+    "su.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "SUDOSE": "SUDOSE"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "SUDOSTXT": "SUDOSTXT"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "SUDOSE": "3"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "SUDOSTXT": "3-4"
+        }
+      }
+    ]
+  }
 }

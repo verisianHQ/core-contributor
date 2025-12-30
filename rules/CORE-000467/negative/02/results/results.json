@@ -15,9 +15,50 @@
             "TSGRPID": "1",
             "TSPARMCD": "STOPRULE",
             "TSVAL": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ts.xpt": [
+      {
+        "row": 46,
+        "value": {
+          "TSPARMCD": "STOPRULE"
+        }
+      },
+      {
+        "row": 46,
+        "value": {
+          "TSPARM": "Study Stop Rules"
+        }
+      },
+      {
+        "row": 46,
+        "value": {
+          "TSVAL": null
+        }
+      },
+      {
+        "row": 47,
+        "value": {
+          "TSPARMCD": "STOPRULE"
+        }
+      },
+      {
+        "row": 47,
+        "value": {
+          "TSPARM": "Study Stop Rules"
+        }
+      },
+      {
+        "row": 47,
+        "value": {
+          "TSVAL": "WHEN SAE OCCURS"
+        }
+      }
+    ]
+  }
 }

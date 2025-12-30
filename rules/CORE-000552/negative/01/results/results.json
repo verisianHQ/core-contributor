@@ -24,7 +24,8 @@
             "CMSTDTC": "2013-02-18",
             "CMSTDY": null,
             "RFSTDTC": "2013-01-05"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 8,
@@ -35,7 +36,8 @@
             "CMSTDTC": "2013-02-18",
             "CMSTDY": 45.0,
             "RFSTDTC": "2014-05-11"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 10,
@@ -46,9 +48,32 @@
             "CMSTDTC": "2011-07-15",
             "CMSTDY": -511.0,
             "RFSTDTC": "2013-09-21"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "cm.xpt": [
+      {
+        "row": 7,
+        "value": {
+          "CMSTDY": null
+        }
+      },
+      {
+        "row": 8,
+        "value": {
+          "CMSTDY": "45"
+        }
+      },
+      {
+        "row": 10,
+        "value": {
+          "CMSTDY": "-511"
+        }
+      }
+    ]
+  }
 }

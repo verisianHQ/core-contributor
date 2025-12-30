@@ -23,7 +23,8 @@
             "DSDECOD": "DEATH",
             "DSSTDTC": "2022-02-20",
             "DTHDTC": "2021-02-18"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 21,
@@ -33,7 +34,8 @@
             "DSDECOD": "DEATH",
             "DSSTDTC": "2019-01-10",
             "DTHDTC": null
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 26,
@@ -43,9 +45,94 @@
             "DSDECOD": "DEATH",
             "DSSTDTC": "2021-01-10",
             "DTHDTC": "2021-01"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "dm.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "DTHDTC": "DTHDTC"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "DTHDTC": "2021-02-18"
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "DTHDTC": null
+        }
+      },
+      {
+        "row": 5,
+        "value": {
+          "DTHDTC": "2021-01"
+        }
+      }
+    ],
+    "ds.xpt": [
+      {
+        "row": 7,
+        "value": {
+          "USUBJID": "015246-076-0003-00003"
+        }
+      },
+      {
+        "row": 7,
+        "value": {
+          "DSDECOD": "DEATH"
+        }
+      },
+      {
+        "row": 7,
+        "value": {
+          "DSSTDTC": "2022-02-20"
+        }
+      },
+      {
+        "row": 21,
+        "value": {
+          "USUBJID": "015246-888-0008-08888"
+        }
+      },
+      {
+        "row": 21,
+        "value": {
+          "DSDECOD": "DEATH"
+        }
+      },
+      {
+        "row": 21,
+        "value": {
+          "DSSTDTC": "2019-01-10"
+        }
+      },
+      {
+        "row": 26,
+        "value": {
+          "USUBJID": "015246-999-0003-09999"
+        }
+      },
+      {
+        "row": 26,
+        "value": {
+          "DSDECOD": "DEATH"
+        }
+      },
+      {
+        "row": 26,
+        "value": {
+          "DSSTDTC": "2021-01-10"
+        }
+      }
+    ]
+  }
 }

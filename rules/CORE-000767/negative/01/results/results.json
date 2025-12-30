@@ -14,7 +14,8 @@
           "value": {
             "CMDECOD": "TEST",
             "RELREC.FAOBJ": "ASPIRINA"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -32,7 +33,8 @@
           "value": {
             "AEDECOD": "TEST",
             "RELREC.FAOBJ": "ERYTHEMA"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -50,7 +52,8 @@
           "value": {
             "FADECOD": "TEST",
             "RELREC.FAOBJ": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 1,
@@ -59,7 +62,8 @@
           "value": {
             "FADECOD": "TEST",
             "RELREC.FAOBJ": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -71,5 +75,31 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "cm.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "CMDECOD": "TEST"
+        }
+      }
+    ],
+    "ae.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "AEDECOD": "TEST"
+        }
+      }
+    ],
+    "fa.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "FADECOD": "TEST"
+        }
+      }
+    ]
+  }
 }

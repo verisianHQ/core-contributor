@@ -15,7 +15,8 @@
             "CMDTC": "2013-05-20",
             "CMSTRTPT": null,
             "CMSTTPT": "2013-05-19"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 3,
@@ -25,7 +26,8 @@
             "CMDTC": "2013-05-20",
             "CMSTRTPT": "ONGOING",
             "CMSTTPT": "2013-05-10"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 7,
@@ -35,7 +37,8 @@
             "CMDTC": "2013-05-20",
             "CMSTRTPT": "ONGOING",
             "CMSTTPT": "2013-05-10"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 10,
@@ -45,7 +48,8 @@
             "CMDTC": "2013-05-20",
             "CMSTRTPT": "POST",
             "CMSTTPT": "2013-05-10"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 13,
@@ -55,7 +59,8 @@
             "CMDTC": "2013-05-20",
             "CMSTRTPT": "UNK",
             "CMSTTPT": "2013-05-10"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -74,7 +79,8 @@
             "MHDTC": "2013-05-20",
             "MHSTRTPT": "ONGOING",
             "MHSTTPT": "2013-02-18"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 6,
@@ -84,7 +90,8 @@
             "MHDTC": "2013-05-20",
             "MHSTRTPT": "ONGOING",
             "MHSTTPT": "2007-04-20"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 7,
@@ -94,7 +101,8 @@
             "MHDTC": "2013-05-20",
             "MHSTRTPT": "ONGOING",
             "MHSTTPT": "2012-05-20"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 8,
@@ -104,7 +112,8 @@
             "MHDTC": "2013-05-03",
             "MHSTRTPT": null,
             "MHSTTPT": "2013-05-02"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 9,
@@ -114,9 +123,76 @@
             "MHDTC": "2013-05-04",
             "MHSTRTPT": null,
             "MHSTTPT": "2013-04-04"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "cm.xpt": [
+      {
+        "row": 2,
+        "value": {
+          "CMSTRTPT": null
+        }
+      },
+      {
+        "row": 3,
+        "value": {
+          "CMSTRTPT": "ONGOING"
+        }
+      },
+      {
+        "row": 7,
+        "value": {
+          "CMSTRTPT": "ONGOING"
+        }
+      },
+      {
+        "row": 10,
+        "value": {
+          "CMSTRTPT": "POST"
+        }
+      },
+      {
+        "row": 13,
+        "value": {
+          "CMSTRTPT": "UNK"
+        }
+      }
+    ],
+    "mh.xpt": [
+      {
+        "row": 2,
+        "value": {
+          "MHSTRTPT": "ONGOING"
+        }
+      },
+      {
+        "row": 6,
+        "value": {
+          "MHSTRTPT": "ONGOING"
+        }
+      },
+      {
+        "row": 7,
+        "value": {
+          "MHSTRTPT": "ONGOING"
+        }
+      },
+      {
+        "row": 8,
+        "value": {
+          "MHSTRTPT": null
+        }
+      },
+      {
+        "row": 9,
+        "value": {
+          "MHSTRTPT": null
+        }
+      }
+    ]
+  }
 }

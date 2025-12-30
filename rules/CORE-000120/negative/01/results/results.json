@@ -14,9 +14,32 @@
           "value": {
             "ACTARM": "IKD",
             "ACTARMCD": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "dm.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "ACTARM": "ACTARM"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "ACTARMCD": null
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "ACTARM": "IKD"
+        }
+      }
+    ]
+  }
 }

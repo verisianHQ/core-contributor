@@ -15,7 +15,8 @@
             "AGE": 34.0,
             "AGETXT": null,
             "AGEU": null
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 2,
@@ -25,9 +26,26 @@
             "AGE": null,
             "AGETXT": "31-34",
             "AGEU": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "dm.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "AGEU": null
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "AGEU": null
+        }
+      }
+    ]
+  }
 }

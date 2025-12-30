@@ -55,5 +55,59 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "supplb.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "IDVARVAL": "320"
+        }
+      }
+    ],
+    "relrec.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "IDVARVAL": "320"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "IDVARVAL": "2"
+        }
+      }
+    ],
+    "co.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "IDVARVAL": "20"
+        }
+      }
+    ],
+    "ae.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "AESEQ": "1"
+        }
+      }
+    ],
+    "lb.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "LBSEQ": "321"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "LBGRPID": "21"
+        }
+      }
+    ]
+  }
 }

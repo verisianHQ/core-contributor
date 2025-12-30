@@ -15,7 +15,8 @@
             "DSSEQ": 5.0,
             "POOLID": "Not in dataset",
             "USUBJID": "0001"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 6,
@@ -25,7 +26,8 @@
             "DSSEQ": 5.0,
             "POOLID": "Not in dataset",
             "USUBJID": "0001"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -52,7 +54,8 @@
             "POOLID": "Not in dataset",
             "SSSEQ": 14.0,
             "USUBJID": "0002"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 14,
@@ -62,7 +65,8 @@
             "POOLID": "Not in dataset",
             "SSSEQ": 14.0,
             "USUBJID": "0002"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -81,7 +85,8 @@
             "AESEQ": 1.0,
             "POOLID": "0002",
             "USUBJID": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 9,
@@ -91,7 +96,8 @@
             "AESEQ": 1.0,
             "POOLID": "0002",
             "USUBJID": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 10,
@@ -101,7 +107,8 @@
             "AESEQ": 1.0,
             "POOLID": "0002",
             "USUBJID": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 11,
@@ -111,7 +118,8 @@
             "AESEQ": 1.0,
             "POOLID": "0002",
             "USUBJID": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 12,
@@ -121,7 +129,8 @@
             "AESEQ": 1.0,
             "POOLID": "0002",
             "USUBJID": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 13,
@@ -131,7 +140,8 @@
             "AESEQ": 1.0,
             "POOLID": "0002",
             "USUBJID": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 14,
@@ -141,7 +151,8 @@
             "AESEQ": 1.0,
             "POOLID": "0002",
             "USUBJID": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -161,5 +172,181 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ds.xpt": [
+      {
+        "row": 5,
+        "value": {
+          "DSSEQ": "5"
+        }
+      },
+      {
+        "row": 6,
+        "value": {
+          "DSSEQ": "5"
+        }
+      }
+    ],
+    "ss1.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "SSSEQ": "1"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "SSSEQ": "2"
+        }
+      },
+      {
+        "row": 3,
+        "value": {
+          "SSSEQ": "3"
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "SSSEQ": "4"
+        }
+      },
+      {
+        "row": 5,
+        "value": {
+          "SSSEQ": "5"
+        }
+      },
+      {
+        "row": 6,
+        "value": {
+          "SSSEQ": "6"
+        }
+      },
+      {
+        "row": 7,
+        "value": {
+          "SSSEQ": "7"
+        }
+      }
+    ],
+    "ss2.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "SSSEQ": "1"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "SSSEQ": "2"
+        }
+      },
+      {
+        "row": 3,
+        "value": {
+          "SSSEQ": "3"
+        }
+      },
+      {
+        "row": 4,
+        "value": {
+          "SSSEQ": "4"
+        }
+      },
+      {
+        "row": 5,
+        "value": {
+          "SSSEQ": "5"
+        }
+      },
+      {
+        "row": 6,
+        "value": {
+          "SSSEQ": "6"
+        }
+      },
+      {
+        "row": 7,
+        "value": {
+          "SSSEQ": "7"
+        }
+      },
+      {
+        "row": 13,
+        "value": {
+          "SSSEQ": "14"
+        }
+      },
+      {
+        "row": 14,
+        "value": {
+          "SSSEQ": "14"
+        }
+      }
+    ],
+    "ae.xpt": [
+      {
+        "row": 8,
+        "value": {
+          "AESEQ": "1"
+        }
+      },
+      {
+        "row": 9,
+        "value": {
+          "AESEQ": "1"
+        }
+      },
+      {
+        "row": 10,
+        "value": {
+          "AESEQ": "1"
+        }
+      },
+      {
+        "row": 11,
+        "value": {
+          "AESEQ": "1"
+        }
+      },
+      {
+        "row": 12,
+        "value": {
+          "AESEQ": "1"
+        }
+      },
+      {
+        "row": 13,
+        "value": {
+          "AESEQ": "1"
+        }
+      },
+      {
+        "row": 14,
+        "value": {
+          "AESEQ": "1"
+        }
+      }
+    ],
+    "lbae.xpt": [
+      {
+        "row": 8,
+        "value": {
+          "LBSEQ": "1"
+        }
+      }
+    ],
+    "lbds.xpt": [
+      {
+        "row": 8,
+        "value": {
+          "LBSEQ": "1"
+        }
+      }
+    ]
+  }
 }

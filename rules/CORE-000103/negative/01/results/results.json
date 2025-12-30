@@ -14,7 +14,8 @@
           "value": {
             "AGCAT": null,
             "AGSCAT": "DFAJF"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -32,7 +33,8 @@
           "value": {
             "CMCAT": null,
             "CMSCAT": "PRIOR DMARDS"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -109,7 +111,8 @@
           "value": {
             "AECAT": null,
             "AESCAT": "NEUROLOGIC"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -167,7 +170,8 @@
           "value": {
             "EGCAT": null,
             "EGSCAT": "INTERVAL"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -185,9 +189,240 @@
           "value": {
             "FACAT": null,
             "FASCAT": "GERD"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ag.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "AGCAT": "AGCAT"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "AGSCAT": "AGSCAT"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "AGCAT": null
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "AGSCAT": "DFAJF"
+        }
+      }
+    ],
+    "cm.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "CMCAT": "CMCAT"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "CMSCAT": "CMSCAT"
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "CMCAT": null
+        }
+      },
+      {
+        "row": 1,
+        "value": {
+          "CMSCAT": "PRIOR DMARDS"
+        }
+      }
+    ],
+    "ex.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "EXCAT": "EXCAT"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "EXSCAT": "EXSCAT"
+        }
+      }
+    ],
+    "ml.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "MLCAT": "MLCAT"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "MLSCAT": "MLSCAT"
+        }
+      }
+    ],
+    "ae.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "AECAT": "AECAT"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "AESCAT": "AESCAT"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "AECAT": null
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "AESCAT": "NEUROLOGIC"
+        }
+      }
+    ],
+    "be.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "BECAT": "BECAT"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "BESCAT": "BESCAT"
+        }
+      }
+    ],
+    "ce.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "CECAT": "CECAT"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "CESCAT": "CESCAT"
+        }
+      }
+    ],
+    "ds.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "DSCAT": "DSCAT"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "DSSCAT": "DSSCAT"
+        }
+      }
+    ],
+    "mh.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "MHCAT": "MHCAT"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "MHSCAT": "MHSCAT"
+        }
+      }
+    ],
+    "da.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "DACAT": "DACAT"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "DASCAT": "DASCAT"
+        }
+      }
+    ],
+    "eg.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "EGCAT": "EGCAT"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "EGSCAT": "EGSCAT"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "EGCAT": null
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "EGSCAT": "INTERVAL"
+        }
+      }
+    ],
+    "fa.xpt": [
+      {
+        "row": -3,
+        "value": {
+          "FACAT": "FACAT"
+        }
+      },
+      {
+        "row": -3,
+        "value": {
+          "FASCAT": "FASCAT"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "FACAT": null
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "FASCAT": "GERD"
+        }
+      }
+    ]
+  }
 }

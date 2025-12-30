@@ -15,7 +15,8 @@
             "POOLID": "PID_001",
             "RSUBJID": "CDISC-TEST-004",
             "USUBJID": "CDISC-TEST-001"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 2,
@@ -25,7 +26,8 @@
             "POOLID": null,
             "RSUBJID": "CDISC-TEST-001",
             "USUBJID": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -37,5 +39,35 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "apdm.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "RSUBJID": "CDISC-TEST-004"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "RSUBJID": "CDISC-TEST-001"
+        }
+      }
+    ],
+    "dm.xpt": [
+      {
+        "row": 1,
+        "value": {
+          "RSUBJID": "CDISC-TEST-001"
+        }
+      },
+      {
+        "row": 2,
+        "value": {
+          "RSUBJID": "CDISC-TEST-999"
+        }
+      }
+    ]
+  }
 }
