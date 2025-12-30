@@ -241,11 +241,6 @@ class TestRunner:
         results_path = ResultReporter.save_case_results(rule_id, test_type, case_id, results_data)
 
         if "error" in results_data:
-            # get highlighted data
-            # make set
-            # make set from errors
-            # compare
-            # return line
             return {
                 "case_id": case_id,
                 "passed": False,
