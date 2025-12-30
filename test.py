@@ -9,10 +9,11 @@ import json
 import logging
 import warnings
 import textwrap
+import openpyxl as op
 from pathlib import Path
 from typing import List, Optional, Tuple, Any, Dict
 
-warnings.filterwarnings('ignore', category=UserWarning, module='openpyxl')
+warnings.filterwarnings("ignore", category=UserWarning, module="openpyxl")
 logging.basicConfig(level=logging.CRITICAL)
 
 RULES_DIR = Path("rules")
@@ -46,7 +47,7 @@ class ResultReporter:
                 f.write(f"Domain: {dataset.get('domain', 'N/A')}\n")
                 if msg := dataset.get("execution_message"):
                     f.write(f"Rule Message: {msg}\n")
-                
+
                 errors = dataset.get("errors", [])
                 f.write(f"Errors in this dataset: {len(errors)}\n")
 
@@ -58,11 +59,11 @@ class ResultReporter:
                         f.write(f"  Error {i}:\n")
                         if row := error.get("row"):
                             f.write(f"    Row: {row}\n")
-                        
+
                         for key, val in error.items():
                             if key not in ["row", "value"]:
                                 f.write(f"    {key}: {val}\n")
-                        
+
                         if value_dict := error.get("value", {}):
                             f.write("    Problematic values:\n")
                             for k, v in value_dict.items():
@@ -96,12 +97,12 @@ class ResultReporter:
             for test in tests:
                 symbol = "[PASS]" if test["passed"] else "[FAIL]"
                 print(f"\n  {symbol} Case {test['case_id']} - Results at: {test['results_path']}")
-                
+
                 if verbose:
-                    txt_path = Path(test['results_path']) / "results.txt"
+                    txt_path = Path(test["results_path"]) / "results.txt"
                     if txt_path.exists():
                         print(f"\n{textwrap.indent(txt_path.read_text().strip(), "     ")}")
-                
+
                 if not test["passed"] and not verbose:
                     print(f"      Expected: {test['expected']}")
                     if test.get("total_errors") is not None:
@@ -144,7 +145,7 @@ class TestRunner:
                 for case_dir in sorted(test_type_path.iterdir()):
                     if case_dir.is_dir():
                         data_dir = case_dir / "data"
-                        if list(data_dir.glob("*.xls*")):
+                        if list(data_dir.glob("[!~]*.xls*")):
                             cases[test_type].append({"case_id": case_dir.name, "data_path": str(data_dir)})
         return cases
 
@@ -152,9 +153,9 @@ class TestRunner:
         """Initialises and returns IG Specifications."""
         try:
             from engine.cdisc_rules_engine.utilities.ig_specification import IGSpecification
+
             return IGSpecification(
-                standard="sdtmig", standard_version="3.4", 
-                standard_substandard=None, define_xml_version=None
+                standard="sdtmig", standard_version="3.4", standard_substandard=None, define_xml_version=None
             )
         except ImportError:
             print("Error: Could not import engine modules. Is the submodule initialised?")
@@ -163,8 +164,8 @@ class TestRunner:
     def run_validation(self, rule_id: str, data_path: str) -> Tuple[Any, Optional[dict]]:
         """Invokes the engine to validate data against the rule."""
         rule_path = RULES_DIR / rule_id
-        rule_ymls = list(rule_path.glob("*.yml"))
-        
+        rule_ymls = list(rule_path.glob("[!~]*.yml"))
+
         if not rule_ymls:
             return None, {"error": "Rule YAML missing", "exception": f"No YAML found in {rule_path}"}
 
@@ -172,21 +173,24 @@ class TestRunner:
             return None, {"error": "Multiple Rule YAMLs", "exception": f"Multiple Rule YAMLs found in {rule_path}"}
 
         data_path_obj = Path(data_path)
-        excel_files = list(data_path_obj.glob("*.xlsx")) + list(data_path_obj.glob("*.xls"))
-        
+        excel_files = list(data_path_obj.glob("[!~]*.xlsx")) + list(data_path_obj.glob("[!~]*.xls"))
+
         if not excel_files:
             return None, {"error": "Excel data missing", "exception": f"No Excel files in {data_path}"}
 
         try:
             import yaml
-            from engine.tests.rule_regression.regression import sharepoint_xlsx_to_test_datasets, process_test_case_dataset
+            from engine.tests.rule_regression.regression import (
+                sharepoint_xlsx_to_test_datasets,
+                process_test_case_dataset,
+            )
 
             with open(rule_ymls[0], "r") as f:
                 rule = yaml.safe_load(f)
 
             test_datasets = sharepoint_xlsx_to_test_datasets(str(excel_files[0]))
             regression_errors = {}
-            
+
             sql_results, _ = process_test_case_dataset(
                 regression_errors=regression_errors,
                 define_xml_file_path=None,
@@ -200,28 +204,48 @@ class TestRunner:
 
             if "results_sql" in regression_errors:
                 return sql_results, {"datasets": regression_errors["results_sql"]}
-            
+
             return sql_results, {"datasets": []}
 
         except Exception as e:
-            return None, {"error": f"No result - either the rule or test case data {excel_files[0].name} is broken", "exception": str(e)}
+            return None, {
+                "error": f"No result - either the rule or test case data {excel_files[0].name} is broken",
+                "exception": str(e),
+            }
 
     def evaluate_case(self, rule_id: str, test_type: str, case_info: dict) -> dict:
         """Runs validation, saves results, and determines pass/fail status."""
         case_id = case_info["case_id"]
         expected = "0 errors" if test_type == "positive" else ">0 errors"
-        
+
         _, results_data = self.run_validation(rule_id, case_info["data_path"])
-        
+
         if results_data is None:
-             results_data = {
-                "error": "Unknown Error",
-                "exception": "Engine returned None"
-            }
+            results_data = {"error": "Unknown Error", "exception": "Engine returned None"}
+
+        if test_type == "negative":
+            test_case_cell_errors = self.get_excel_errors(case_info["data_path"])
+            for ds in results_data.get("datasets", []):
+                for err in ds.get("errors", []):
+                    if "row" in err:
+                        if not test_case_cell_errors:
+                            err.update({"highlighted_in_test_case": False})
+                            continue
+                        for ref in test_case_cell_errors.get(ds.get("dataset", []), []):
+                            if err.get("row") == ref.get("row") and err.get("value") == ref.get("value"):
+                                err.update({"highlighted_in_test_case": True})
+                                break
+                            else:
+                                err.update({"highlighted_in_test_case": False})
 
         results_path = ResultReporter.save_case_results(rule_id, test_type, case_id, results_data)
 
         if "error" in results_data:
+            # get highlighted data
+            # make set
+            # make set from errors
+            # compare
+            # return line
             return {
                 "case_id": case_id,
                 "passed": False,
@@ -240,39 +264,48 @@ class TestRunner:
             "passed": passed,
             "total_errors": total_errors,
             "expected": expected,
-            "results_path": results_path
+            "results_path": results_path,
         }
+
+    def get_excel_errors(self, data_path: str):
+        xl_path = list(Path(data_path).glob("[!~]*.xls*"))[0]
+        highlighted_cells = {}
+
+        wb = op.load_workbook(xl_path, data_only=True)
+        for sheet in wb.worksheets:
+            for row in sheet.iter_rows():
+                for cell in row:
+                    if cell.fill.start_color.index == "FFFFFF00":
+                        highlighted_cells.setdefault(sheet.title, []).append(
+                            {
+                                "row": int(cell.row) - 4,
+                                "value": {sheet.cell(row=1, column=cell.column).value: cell.value},
+                            }
+                        )
+        return highlighted_cells
 
     def _get_cases_to_run(self, rule_id: str, specific_case: str = None) -> Dict[str, List[dict]]:
         all_cases = self.get_test_cases(rule_id)
-        
+
         if not specific_case:
             return all_cases
 
-        target_type, target_id = specific_case.split('/')
-        filtered = {
-            "positive": [], 
-            "negative": []
-        }
-        
+        target_type, target_id = specific_case.split("/")
+        filtered = {"positive": [], "negative": []}
+
         if target_type in filtered:
-            found = next((c for c in all_cases[target_type] if c['case_id'] == target_id), None)
+            found = next((c for c in all_cases[target_type] if c["case_id"] == target_id), None)
             if found:
                 filtered[target_type].append(found)
-                
+
         return filtered
 
     def run_rule_suite(self, rule_id: str, specific_case: str = None) -> dict:
         """Runs test cases based on the filtered list."""
-        summary = {
-            "rule_id": rule_id,
-            "positive_tests": [], 
-            "negative_tests": [],
-            "status": "passed"
-        }
-        
+        summary = {"rule_id": rule_id, "positive_tests": [], "negative_tests": [], "status": "passed"}
+
         cases_to_run = self._get_cases_to_run(rule_id, specific_case)
-        
+
         if not cases_to_run["positive"] and not cases_to_run["negative"]:
             return summary
 
@@ -282,19 +315,20 @@ class TestRunner:
                 summary[f"{test_type}_tests"].append(result)
                 if not result["passed"]:
                     summary["status"] = "failed"
-        
+
         return summary
 
 
 class InteractiveHandler:
     """Handles user prompts for interactive mode."""
-    
+
     @staticmethod
     def prompt_rule(available: List[str]) -> str:
         print("\nWhich rule would you like to test?")
         while True:
             choice = input("Enter rule ID (e.g. CORE-000215): ").strip()
-            if choice in available: return choice
+            if choice in available:
+                return choice
             print(f"Invalid. Available: {', '.join(available[:5])}...")
 
     @staticmethod
@@ -304,18 +338,21 @@ class InteractiveHandler:
         for t_type in ["positive", "negative"]:
             for c in available[t_type]:
                 flat_list.append(f"{t_type}/{c['case_id']}")
-        
-        if not flat_list: return None
+
+        if not flat_list:
+            return None
 
         for i, tc in enumerate(flat_list, 1):
             print(f"  {i}. {tc}")
 
         while True:
             choice = input("\nEnter case (e.g., positive/01, number, or Enter): ").strip()
-            if not choice: return None
-            if choice in flat_list: return choice
-            if choice.isdigit() and 0 <= int(choice)-1 < len(flat_list):
-                return flat_list[int(choice)-1]
+            if not choice:
+                return None
+            if choice in flat_list:
+                return choice
+            if choice.isdigit() and 0 <= int(choice) - 1 < len(flat_list):
+                return flat_list[int(choice) - 1]
             print("Invalid choice.")
 
 
@@ -326,6 +363,7 @@ def parse_args():
     parser.add_argument("-tc", "--test-case", help="Specific case (e.g., positive/01)")
     parser.add_argument("-v", "--verbose", action="store_true", help="Print detailed results")
     return parser.parse_args()
+
 
 def main():
     args = parse_args()
@@ -341,9 +379,9 @@ def main():
             rule_id = args.rule
         else:
             rule_id = InteractiveHandler.prompt_rule(available_rules)
-            
+
         if args.rule and args.test_case:
-             specific_case = args.test_case
+            specific_case = args.test_case
         elif not args.rule:
             cases = runner.get_test_cases(rule_id)
             specific_case = InteractiveHandler.prompt_case(cases)
@@ -352,7 +390,7 @@ def main():
 
         print(f"\nRunning {rule_id}...")
         summary = runner.run_rule_suite(rule_id, specific_case)
-        
+
         ResultReporter.display_rule_summary(summary, verbose=args.verbose)
         sys.exit(0 if summary["status"] == "passed" else 1)
 
@@ -363,18 +401,18 @@ def main():
     rules_to_run = available_rules
     results = {"passed": [], "failed": [], "error": []}
     total = len(rules_to_run)
-    
-    print(f"Core SQL Rules Engine - Test Suite")
+
+    print("Core SQL Rules Engine - Test Suite")
     print("=" * 60)
 
     for i, rule_id in enumerate(rules_to_run, 1):
         sys.stdout.write(f"\r[{i}/{total}] Testing {rule_id}...")
         sys.stdout.flush()
-        
+
         summary = runner.run_rule_suite(rule_id)
-        
+
         has_error = any(t.get("error") for t in summary["positive_tests"] + summary["negative_tests"])
-        
+
         if has_error:
             results["error"].append(summary)
         elif summary["status"] == "passed":
@@ -386,45 +424,52 @@ def main():
     print("=" * 60)
     print("FINAL SUMMARY")
     print("=" * 60)
-    print(f"Total: {total} | Passed: {len(results['passed'])} | Failed: {len(results['failed'])} | Errors: {len(results['error'])}")
-    
+    print(
+        f"Total: {total} | Passed: {len(results['passed'])} | Failed: {len(results['failed'])} | Errors: {len(results['error'])}"  # noqa
+    )
+
     if results["failed"]:
         print("\nFailed Validation:")
-        for s in results["failed"]: 
+        for s in results["failed"]:
             print(f"  - {s['rule_id']}")
             if args.verbose:
-                for t in s['positive_tests']:
-                    if not t['passed']:
-                        print(f"      Case positive/{t['case_id']}: Expected {t['expected']}, Got {t['total_errors']} errors")
-                for t in s['negative_tests']:
-                    if not t['passed']:
-                        print(f"      Case negative/{t['case_id']}: Expected {t['expected']}, Got {t['total_errors']} errors")
+                for t in s["positive_tests"]:
+                    if not t["passed"]:
+                        print(
+                            f"      Case positive/{t['case_id']}: Expected {t['expected']}, Got {t['total_errors']} errors"  # noqa
+                        )
+                for t in s["negative_tests"]:
+                    if not t["passed"]:
+                        print(
+                            f"      Case negative/{t['case_id']}: Expected {t['expected']}, Got {t['total_errors']} errors"  # noqa
+                        )
 
     if results["error"]:
         print("\nExecution Errors:")
-        for s in results["error"]: 
+        for s in results["error"]:
             print(f"  - {s['rule_id']}")
             if args.verbose:
-                for t in s['positive_tests']:
-                    if t.get('error'):
+                for t in s["positive_tests"]:
+                    if t.get("error"):
                         print(f"      Case positive/{t['case_id']}")
                         print(f"      - Error: {t['error']}")
-                        if t.get('exception'):
+                        if t.get("exception"):
                             print(f"      - Exception: {t['exception']}")
-                for t in s['negative_tests']:
-                    if t.get('error'):
+                for t in s["negative_tests"]:
+                    if t.get("error"):
                         print(f"      Case negative/{t['case_id']}")
                         print(f"      - Error: {t['error']}")
-                        if t.get('exception'):
+                        if t.get("exception"):
                             print(f"      - Exception: {t['exception']}")
 
-
     sys.exit(1 if results["failed"] or results["error"] else 0)
+
 
 def generate_rule_results(rule_id: str) -> dict:
     """Function run by the pr comment bot github action run_validation."""
     runner = TestRunner()
     return runner.run_rule_suite(rule_id)
+
 
 if __name__ == "__main__":
     try:
