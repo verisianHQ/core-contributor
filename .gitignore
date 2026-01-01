@@ -212,5 +212,10 @@ rules/*/*/*/results/results.txt
 # DS_Store
 *.DS_Store
 
+# open files
+[~]*.xlsx
+[~]*.yaml
+[~]*.yml
+
 # xlsx extension
 verisian-xlsx-editor/
