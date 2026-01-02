@@ -26,85 +26,23 @@
     "ts.xpt": [
       {
         "row": 16,
-        "value": {
-          "TSPARMCD": "HLTSUBJI"
-        }
-      },
-      {
-        "row": 16,
-        "value": {
-          "TSPARM": "Healthy Subject Indicator"
-        }
-      },
-      {
-        "row": 16,
-        "value": {
-          "TSVAL": "N"
-        }
-      },
-      {
-        "row": 16,
-        "value": {
-          "TSVALNF": null
-        }
-      },
-      {
-        "row": 16,
-        "value": {
-          "TSVALCD": "C49487"
-        }
-      },
-      {
-        "row": 16,
-        "value": {
-          "TSVCDREF": "CDISC"
-        }
-      },
-      {
-        "row": 16,
-        "value": {
+        "unmatched_values": {
+          "TSPARMCD": "HLTSUBJI",
+          "TSPARM": "Healthy Subject Indicator",
+          "TSVAL": "N",
+          "TSVALNF": null,
+          "TSVALCD": "C49487",
+          "TSVCDREF": "CDISC",
           "TSVCDVER": "2020-03-27"
         }
       },
       {
         "row": 45,
-        "value": {
-          "TSPARMCD": "TDIGRP"
-        }
-      },
-      {
-        "row": 45,
-        "value": {
-          "TSPARM": "Diagnosis Group"
-        }
-      },
-      {
-        "row": 45,
-        "value": {
-          "TSVAL": null
-        }
-      },
-      {
-        "row": 45,
-        "value": {
-          "TSVALNF": null
-        }
-      },
-      {
-        "row": 45,
-        "value": {
-          "TSVALCD": null
-        }
-      },
-      {
-        "row": 45,
-        "value": {
-          "TSVCDREF": null
-        }
-      },
-      {
-        "row": 45,
-        "value": {
+        "unmatched_values": {
+          "TSPARM": "Diagnosis Group",
+          "TSVALNF": null,
+          "TSVALCD": null,
+          "TSVCDREF": null,
           "TSVCDVER": null
         }
       }

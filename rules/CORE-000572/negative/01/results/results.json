@@ -9,7 +9,8 @@
       "errors": [
         {
           "error": "SQL error in date_less_than operator",
-          "message": "invalid input syntax"
+          "message": "invalid input syntax",
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -49,22 +50,8 @@
     "cm.xpt": [
       {
         "row": 6,
-        "value": {
+        "unmatched_values": {
           "CMENRTPT": "WRONG"
-        }
-      }
-    ],
-    "mh.xpt": [
-      {
-        "row": 6,
-        "value": {
-          "MHENRTPT": "WRONG"
-        }
-      },
-      {
-        "row": 13,
-        "value": {
-          "MHENRTPT": null
         }
       }
     ]

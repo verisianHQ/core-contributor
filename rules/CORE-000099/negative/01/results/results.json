@@ -34,7 +34,7 @@
             "FAORRES": "SEVERE",
             "FASTAT": "NOT DONE"
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     },
@@ -89,91 +89,47 @@
     "eg.xpt": [
       {
         "row": -3,
-        "value": {
-          "EGORRES": "EGORRES"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "EGORRES": "EGORRES",
           "EGSTAT": "EGSTAT"
         }
       },
       {
         "row": 3,
-        "value": {
+        "unmatched_values": {
           "EGORRES": 0.15
-        }
-      },
-      {
-        "row": 3,
-        "value": {
-          "EGSTAT": "NOT DONE"
         }
       }
     ],
     "fa.xpt": [
       {
         "row": -3,
-        "value": {
-          "FAORRES": "FAORRES"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "FAORRES": "FAORRES",
           "FASTAT": "FASTAT"
-        }
-      },
-      {
-        "row": 1,
-        "value": {
-          "FAORRES": "SEVERE"
-        }
-      },
-      {
-        "row": 1,
-        "value": {
-          "FASTAT": "NOT DONE"
         }
       }
     ],
     "lb.xpt": [
       {
         "row": -3,
-        "value": {
-          "LBORRES": "LBORRES"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "LBORRES": "LBORRES",
           "LBSTAT": "LBSTAT"
         }
       },
       {
         "row": 1,
-        "value": {
+        "unmatched_values": {
           "LBORRES": 30
-        }
-      },
-      {
-        "row": 1,
-        "value": {
-          "LBSTAT": "NOT DONE"
         }
       }
     ],
     "mi.xpt": [
       {
         "row": -3,
-        "value": {
-          "MIORRES": "MIORRES"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "MIORRES": "MIORRES",
           "MISTAT": "MISTAT"
         }
       }
@@ -181,26 +137,15 @@
     "vs.xpt": [
       {
         "row": -3,
-        "value": {
-          "VSORRES": "VSORRES"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "VSORRES": "VSORRES",
           "VSSTAT": "VSSTAT"
         }
       },
       {
         "row": 1,
-        "value": {
+        "unmatched_values": {
           "VSORRES": 154
-        }
-      },
-      {
-        "row": 1,
-        "value": {
-          "VSSTAT": "NOT DONE"
         }
       }
     ]

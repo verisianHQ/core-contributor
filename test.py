@@ -75,8 +75,8 @@ class ResultReporter:
                         f.write("\n")
                 f.write("\n")
 
-            if unmatched := results_data.get("unmatched_highlights_in_test_case"):
-                f.write(f"Unmatched highlighted cells in test case: {len(unmatched)}\n")
+            if results_data.get("unmatched_highlights_in_test_case"):
+                f.write("There are unmatched highlighted cells in test case\n")
                 f.write("Check results.json for more information, or examine the test case file directly.\n")
 
     @classmethod
@@ -233,28 +233,7 @@ class TestRunner:
 
         if test_type == "negative":
             test_case_cell_errors = self.get_excel_errors(case_info["data_path"])
-            for ds in results_data.get("datasets", []):
-                for err in ds.get("errors", []):
-                    if "row" in err:
-                        if not test_case_cell_errors:
-                            err.update({"highlighted_in_test_case": False})
-                            continue
-                        for ref in test_case_cell_errors.get(ds.get("dataset", []), []):
-                            if err.get("row") == ref.get("row") and err.get("value") == ref.get("value"):
-                                err.update({"highlighted_in_test_case": True})
-                                ref.update({"matched": True})
-                                break
-                            else:
-                                err.update({"highlighted_in_test_case": False})
-
-            # get list of unmatched highlights from test case
-            unmatched = {
-                ds: [ref for ref in test_case_cell_errors.get(ds, []) if not ref.get("matched")]
-                for ds in test_case_cell_errors
-            }
-
-            # remove datasets with no unmatched highlights
-            unmatched = {ds: v for ds, v in unmatched.items() if v}
+            results_data, unmatched = self.check_errors_with_test_case(results_data, test_case_cell_errors)
 
             if unmatched:
                 results_data["unmatched_highlights_in_test_case"] = unmatched
@@ -288,17 +267,143 @@ class TestRunner:
         highlighted_cells = {}
 
         wb = op.load_workbook(xl_path, data_only=True)
+        highlighted_cells = {}
+
         for sheet in wb.worksheets:
+            sheet_data = []
             for row in sheet.iter_rows():
+                row_values = {}
+
                 for cell in row:
                     if cell.fill.start_color.index == "FFFFFF00":
-                        highlighted_cells.setdefault(sheet.title, []).append(
-                            {
-                                "row": int(cell.row) - 4,
-                                "value": {sheet.cell(row=1, column=cell.column).value: cell.value},
-                            }
-                        )
+                        col_name = sheet.cell(row=1, column=cell.column).value
+                        row_values[col_name] = cell.value
+
+                if row_values:
+                    row_entry = {"row": cell.row - 4, "value": row_values}
+                    sheet_data.append(row_entry)
+
+            if sheet_data:
+                highlighted_cells[sheet.title] = sheet_data
+
         return highlighted_cells
+
+    def check_errors_with_test_case(self, report_data, test_case):
+        unmatched = {}
+
+        if not test_case:
+            for ds in report_data.get("datasets", {}):
+                for err in ds.get("errors", []):
+                    err["highlighted_in_test_case"] = False
+        else:
+
+            remaining_test_data = {}
+            for ds, rows in test_case.items():
+                # Create a lookup: {ds_name: {row_num: {key: val}}}
+                remaining_test_data[ds] = {r["row"]: dict(r["value"]) for r in rows}
+                unmatched[ds] = []
+
+            for entry in report_data.get("datasets", []):
+                ds_name = entry.get("dataset")
+                errors = entry.get("errors", [])
+
+                for error_entry in errors:
+                    row_num = error_entry.get("row")
+                    error_vals = error_entry.get("value", {})
+
+                    if ds_name in remaining_test_data and row_num in remaining_test_data[ds_name]:
+                        test_row_values = remaining_test_data[ds_name][row_num]
+
+                        match = True
+                        for key, ev in error_vals.items():
+                            if str(key).startswith("$"):
+                                continue
+                            if key not in test_row_values:
+                                match = False
+                                continue
+                            hv = test_row_values.get(key)
+
+                            if (None if hv == "" else hv) == (None if ev == "" else ev):
+                                if key in test_row_values:
+                                    del test_row_values[key]
+                            else:
+                                match = False
+
+                        error_entry["highlighted_in_test_case"] = match
+                    else:
+                        error_entry["highlighted_in_test_case"] = False
+
+            for ds_name, rows_map in remaining_test_data.items():
+                for row_num, leftover_vals in rows_map.items():
+                    if leftover_vals:
+                        unmatched[ds_name].append({"row": row_num, "unmatched_values": leftover_vals})
+
+                if not unmatched[ds_name]:
+                    del unmatched[ds_name]
+
+        return report_data, unmatched
+
+    """
+            # loop through errors
+            # check if row in test_data
+            # check if k:v pairs are all in test_data
+            # if all are, label error with highlighted_in_test_case = True
+            # if not all are, label error with highlighted_in_test_case = False
+            # in either case, for any unmatched k:v pairs in test_data, add them to unmatched
+
+
+            # map errors for fast lookup and tracking
+            # {dataset_name: {row_num: error_entry_dict}}
+            error_map = {}
+            for entry in report_data.get("datasets", []):
+                ds_name = entry.get("dataset")
+                error_map[ds_name] = {err.get("row", ""): err for err in entry.get("errors", [])}
+
+            for ds_name, rows in test_data.items():
+                ds_errors = error_map.get(ds_name, {})
+
+                for row in rows:
+                    row_num = row["row"]
+                    highlighted_vals = row["value"]
+
+                    if row_num in ds_errors:
+                        error_entry = ds_errors[row_num]
+                        error_vals = error_entry.get("value", {})
+
+                        checked_keys = set()
+                        mismatched_vals = {}
+
+                        for key, ev in error_vals.items():
+                            checked_keys.add(key)
+
+                            hv = highlighted_vals.get(key)
+
+                            if (None if hv == "" else hv) != (None if ev == "" else ev):
+                                mismatched_vals[key] = hv
+
+                        error_entry["highlighted_in_test_case"] = len(mismatched_vals) == 0
+
+                        # get unchecked highlights in this row
+                        all_keys = set(highlighted_vals.keys())
+                        unmatched_keys = all_keys - checked_keys
+
+                        final_unmatched_row = {k: highlighted_vals[k] for k in unmatched_keys}
+                        final_unmatched_row.update(mismatched_vals)
+
+                        if final_unmatched_row:
+                            unmatched.append(
+                                {
+                                    "dataset": ds_name,
+                                    "row": row_num,
+                                    "unmatched_values": final_unmatched_row
+                                }
+                            )
+
+                    else:
+                        unmatched.append({"dataset": ds_name, "row": row_num, "unmatched_values": highlighted_vals})
+
+        return report_data, unmatched
+    """
 
     def _get_cases_to_run(self, rule_id: str, specific_case: str = None) -> Dict[str, List[dict]]:
         all_cases = self.get_test_cases(rule_id)

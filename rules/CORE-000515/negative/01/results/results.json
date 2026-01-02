@@ -25,7 +25,7 @@
             "ACTARMCD": "B",
             "USUBJID": "CDISC-TEST-003"
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     },
@@ -37,27 +37,5 @@
       "number_errors": 0,
       "errors": []
     }
-  ],
-  "unmatched_highlights_in_test_case": {
-    "dm.xpt": [
-      {
-        "row": 2,
-        "value": {
-          "ACTARMCD": "A"
-        }
-      },
-      {
-        "row": 3,
-        "value": {
-          "USUBJID": "CDISC-TEST-003"
-        }
-      },
-      {
-        "row": 3,
-        "value": {
-          "ACTARMCD": "B"
-        }
-      }
-    ]
-  }
+  ]
 }

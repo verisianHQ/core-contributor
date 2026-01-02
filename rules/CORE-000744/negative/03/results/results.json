@@ -5,7 +5,7 @@
     "fa.xpt": [
       {
         "row": 1,
-        "value": {
+        "unmatched_values": {
           "FAOBJ": "INVALID VALUE FOR FAOBJ"
         }
       }
@@ -13,85 +13,25 @@
     "relrec.xpt": [
       {
         "row": 5,
-        "value": {
-          "STUDYID": "CDISCPILOT01"
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "RDOMAIN": "EX"
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "USUBJID": ""
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "IDVAR": "EXLNKID"
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "IDVARVAL": ""
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "RELTYPE": "ONE"
-        }
-      },
-      {
-        "row": 5,
-        "value": {
+        "unmatched_values": {
+          "STUDYID": "CDISCPILOT01",
+          "RDOMAIN": "EX",
+          "USUBJID": "",
+          "IDVAR": "EXLNKID",
+          "IDVARVAL": "",
+          "RELTYPE": "ONE",
           "RELID": "EXFA"
         }
       },
       {
         "row": 6,
-        "value": {
-          "STUDYID": "CDISCPILOT01"
-        }
-      },
-      {
-        "row": 6,
-        "value": {
-          "RDOMAIN": "FA"
-        }
-      },
-      {
-        "row": 6,
-        "value": {
-          "USUBJID": ""
-        }
-      },
-      {
-        "row": 6,
-        "value": {
-          "IDVAR": "FALNKID"
-        }
-      },
-      {
-        "row": 6,
-        "value": {
-          "IDVARVAL": ""
-        }
-      },
-      {
-        "row": 6,
-        "value": {
-          "RELTYPE": "ONE"
-        }
-      },
-      {
-        "row": 6,
-        "value": {
+        "unmatched_values": {
+          "STUDYID": "CDISCPILOT01",
+          "RDOMAIN": "FA",
+          "USUBJID": "",
+          "IDVAR": "FALNKID",
+          "IDVARVAL": "",
+          "RELTYPE": "ONE",
           "RELID": "EXFA"
         }
       }

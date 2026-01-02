@@ -17,7 +17,7 @@
             "TSPARMCD": "CURTRT",
             "TSVAL": null
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         },
         {
           "row": 11,
@@ -29,7 +29,7 @@
             "TSPARMCD": "CURTRT",
             "TSVAL": null
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     }
@@ -38,505 +38,119 @@
     "ts.xpt": [
       {
         "row": 3,
-        "value": {
-          "STUDYID": null
-        }
-      },
-      {
-        "row": 3,
-        "value": {
-          "DOMAIN": null
-        }
-      },
-      {
-        "row": 3,
-        "value": {
-          "TSSEQ": null
-        }
-      },
-      {
-        "row": 3,
-        "value": {
-          "TSGRPID": null
-        }
-      },
-      {
-        "row": 3,
-        "value": {
-          "TSPARMCD": "ADDON"
-        }
-      },
-      {
-        "row": 3,
-        "value": {
-          "TSPARM": "Added on to Existing Treatments"
-        }
-      },
-      {
-        "row": 3,
-        "value": {
-          "TSVAL": "Y"
-        }
-      },
-      {
-        "row": 3,
-        "value": {
-          "TSVALNF": null
-        }
-      },
-      {
-        "row": 3,
-        "value": {
-          "TSVALCD": "C49488"
-        }
-      },
-      {
-        "row": 3,
-        "value": {
-          "TSVCDREF": "CDISC"
-        }
-      },
-      {
-        "row": 3,
-        "value": {
+        "unmatched_values": {
+          "STUDYID": null,
+          "DOMAIN": null,
+          "TSSEQ": null,
+          "TSGRPID": null,
+          "TSPARMCD": "ADDON",
+          "TSPARM": "Added on to Existing Treatments",
+          "TSVAL": "Y",
+          "TSVALNF": null,
+          "TSVALCD": "C49488",
+          "TSVCDREF": "CDISC",
           "TSVCDVER": "2020-03-27"
         }
       },
       {
         "row": 4,
-        "value": {
-          "STUDYID": "CDISCPILOT01"
-        }
-      },
-      {
-        "row": 4,
-        "value": {
-          "DOMAIN": "TS"
-        }
-      },
-      {
-        "row": 4,
-        "value": {
-          "TSSEQ": 1
-        }
-      },
-      {
-        "row": 4,
-        "value": {
-          "TSGRPID": "DRUG A"
-        }
-      },
-      {
-        "row": 4,
-        "value": {
-          "TSPARMCD": "ADDON"
-        }
-      },
-      {
-        "row": 4,
-        "value": {
-          "TSPARM": "Added on to Existing Treatments"
-        }
-      },
-      {
-        "row": 4,
-        "value": {
-          "TSVAL": "Y"
-        }
-      },
-      {
-        "row": 4,
-        "value": {
-          "TSVALNF": null
-        }
-      },
-      {
-        "row": 4,
-        "value": {
-          "TSVALCD": "C49488"
-        }
-      },
-      {
-        "row": 4,
-        "value": {
-          "TSVCDREF": "CDISC"
-        }
-      },
-      {
-        "row": 4,
-        "value": {
+        "unmatched_values": {
+          "STUDYID": "CDISCPILOT01",
+          "DOMAIN": "TS",
+          "TSSEQ": 1,
+          "TSGRPID": "DRUG A",
+          "TSPARMCD": "ADDON",
+          "TSPARM": "Added on to Existing Treatments",
+          "TSVAL": "Y",
+          "TSVALNF": null,
+          "TSVALCD": "C49488",
+          "TSVCDREF": "CDISC",
           "TSVCDVER": "2020-03-27"
         }
       },
       {
         "row": 5,
-        "value": {
-          "STUDYID": null
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "DOMAIN": null
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "TSSEQ": null
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "TSGRPID": "DRUG B"
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "TSPARMCD": "ADDON"
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "TSPARM": "Added on to Existing Treatments"
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "TSVAL": "N"
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "TSVALNF": null
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "TSVALCD": "C49487"
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "TSVCDREF": "CDISC"
-        }
-      },
-      {
-        "row": 5,
-        "value": {
+        "unmatched_values": {
+          "STUDYID": null,
+          "DOMAIN": null,
+          "TSSEQ": null,
+          "TSGRPID": "DRUG B",
+          "TSPARMCD": "ADDON",
+          "TSPARM": "Added on to Existing Treatments",
+          "TSVAL": "N",
+          "TSVALNF": null,
+          "TSVALCD": "C49487",
+          "TSVCDREF": "CDISC",
           "TSVCDVER": "2020-03-27"
         }
       },
       {
         "row": 8,
-        "value": {
-          "STUDYID": null
-        }
-      },
-      {
-        "row": 8,
-        "value": {
-          "DOMAIN": null
-        }
-      },
-      {
-        "row": 8,
-        "value": {
-          "TSSEQ": null
-        }
-      },
-      {
-        "row": 8,
-        "value": {
-          "TSGRPID": "DRUG A"
-        }
-      },
-      {
-        "row": 8,
-        "value": {
-          "TSPARMCD": "CURTRT"
-        }
-      },
-      {
-        "row": 8,
-        "value": {
-          "TSPARM": "Current Therapy or Treatment"
-        }
-      },
-      {
-        "row": 8,
-        "value": {
-          "TSVAL": null
-        }
-      },
-      {
-        "row": 8,
-        "value": {
-          "TSVALNF": null
-        }
-      },
-      {
-        "row": 8,
-        "value": {
-          "TSVALCD": null
-        }
-      },
-      {
-        "row": 8,
-        "value": {
-          "TSVCDREF": null
-        }
-      },
-      {
-        "row": 8,
-        "value": {
+        "unmatched_values": {
+          "STUDYID": null,
+          "DOMAIN": null,
+          "TSSEQ": null,
+          "TSPARM": "Current Therapy or Treatment",
+          "TSVALNF": null,
+          "TSVALCD": null,
+          "TSVCDREF": null,
           "TSVCDVER": null
         }
       },
       {
         "row": 9,
-        "value": {
-          "STUDYID": null
-        }
-      },
-      {
-        "row": 9,
-        "value": {
-          "DOMAIN": null
-        }
-      },
-      {
-        "row": 9,
-        "value": {
-          "TSSEQ": null
-        }
-      },
-      {
-        "row": 9,
-        "value": {
-          "TSGRPID": "DRUG B"
-        }
-      },
-      {
-        "row": 9,
-        "value": {
-          "TSPARMCD": "CURTRT"
-        }
-      },
-      {
-        "row": 9,
-        "value": {
-          "TSPARM": "Current Therapy or Treatment"
-        }
-      },
-      {
-        "row": 9,
-        "value": {
-          "TSVAL": "Aspirin"
-        }
-      },
-      {
-        "row": 9,
-        "value": {
-          "TSVALNF": null
-        }
-      },
-      {
-        "row": 9,
-        "value": {
-          "TSVALCD": null
-        }
-      },
-      {
-        "row": 9,
-        "value": {
-          "TSVCDREF": null
-        }
-      },
-      {
-        "row": 9,
-        "value": {
+        "unmatched_values": {
+          "STUDYID": null,
+          "DOMAIN": null,
+          "TSSEQ": null,
+          "TSGRPID": "DRUG B",
+          "TSPARMCD": "CURTRT",
+          "TSPARM": "Current Therapy or Treatment",
+          "TSVAL": "Aspirin",
+          "TSVALNF": null,
+          "TSVALCD": null,
+          "TSVCDREF": null,
           "TSVCDVER": null
         }
       },
       {
         "row": 10,
-        "value": {
-          "STUDYID": null
-        }
-      },
-      {
-        "row": 10,
-        "value": {
-          "DOMAIN": null
-        }
-      },
-      {
-        "row": 10,
-        "value": {
-          "TSSEQ": null
-        }
-      },
-      {
-        "row": 10,
-        "value": {
-          "TSGRPID": "DRUG C"
-        }
-      },
-      {
-        "row": 10,
-        "value": {
-          "TSPARMCD": "CURTRT"
-        }
-      },
-      {
-        "row": 10,
-        "value": {
-          "TSPARM": "Current Therapy or Treatment"
-        }
-      },
-      {
-        "row": 10,
-        "value": {
-          "TSVAL": "Aspirin"
-        }
-      },
-      {
-        "row": 10,
-        "value": {
-          "TSVALNF": null
-        }
-      },
-      {
-        "row": 10,
-        "value": {
-          "TSVALCD": null
-        }
-      },
-      {
-        "row": 10,
-        "value": {
-          "TSVCDREF": null
-        }
-      },
-      {
-        "row": 10,
-        "value": {
+        "unmatched_values": {
+          "STUDYID": null,
+          "DOMAIN": null,
+          "TSSEQ": null,
+          "TSGRPID": "DRUG C",
+          "TSPARMCD": "CURTRT",
+          "TSPARM": "Current Therapy or Treatment",
+          "TSVAL": "Aspirin",
+          "TSVALNF": null,
+          "TSVALCD": null,
+          "TSVCDREF": null,
           "TSVCDVER": null
         }
       },
       {
         "row": 11,
-        "value": {
-          "STUDYID": null
-        }
-      },
-      {
-        "row": 11,
-        "value": {
-          "DOMAIN": null
-        }
-      },
-      {
-        "row": 11,
-        "value": {
-          "TSSEQ": null
-        }
-      },
-      {
-        "row": 11,
-        "value": {
-          "TSGRPID": null
-        }
-      },
-      {
-        "row": 11,
-        "value": {
-          "TSPARMCD": "CURTRT"
-        }
-      },
-      {
-        "row": 11,
-        "value": {
-          "TSPARM": "Current Therapy or Treatment"
-        }
-      },
-      {
-        "row": 11,
-        "value": {
-          "TSVAL": null
-        }
-      },
-      {
-        "row": 11,
-        "value": {
-          "TSVALNF": null
-        }
-      },
-      {
-        "row": 11,
-        "value": {
-          "TSVALCD": null
-        }
-      },
-      {
-        "row": 11,
-        "value": {
-          "TSVCDREF": null
-        }
-      },
-      {
-        "row": 11,
-        "value": {
+        "unmatched_values": {
+          "STUDYID": null,
+          "DOMAIN": null,
+          "TSSEQ": null,
+          "TSPARM": "Current Therapy or Treatment",
+          "TSVALNF": null,
+          "TSVALCD": null,
+          "TSVCDREF": null,
           "TSVCDVER": null
         }
       },
       {
         "row": 51,
-        "value": {
-          "TSPARMCD": "TDIGRP"
-        }
-      },
-      {
-        "row": 51,
-        "value": {
-          "TSPARM": "Diagnosis Group"
-        }
-      },
-      {
-        "row": 51,
-        "value": {
-          "TSVAL": "Patients with Probable Mild to Moderate Alzheimers Disease"
-        }
-      },
-      {
-        "row": 51,
-        "value": {
-          "TSVALNF": null
-        }
-      },
-      {
-        "row": 51,
-        "value": {
-          "TSVALCD": null
-        }
-      },
-      {
-        "row": 51,
-        "value": {
-          "TSVCDREF": null
-        }
-      },
-      {
-        "row": 51,
-        "value": {
+        "unmatched_values": {
+          "TSPARMCD": "TDIGRP",
+          "TSPARM": "Diagnosis Group",
+          "TSVAL": "Patients with Probable Mild to Moderate Alzheimers Disease",
+          "TSVALNF": null,
+          "TSVALCD": null,
+          "TSVCDREF": null,
           "TSVCDVER": null
         }
       }

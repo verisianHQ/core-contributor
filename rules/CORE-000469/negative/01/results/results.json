@@ -17,7 +17,7 @@
             "TSPARMCD": "INTMODEL",
             "TSVAL": null
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     }
@@ -26,91 +26,23 @@
     "ts.xpt": [
       {
         "row": 18,
-        "value": {
-          "STUDYID": "CDISCPILOT01"
-        }
-      },
-      {
-        "row": 18,
-        "value": {
-          "DOMAIN": "TS"
-        }
-      },
-      {
-        "row": 18,
-        "value": {
-          "TSSEQ": 1
-        }
-      },
-      {
-        "row": 18,
-        "value": {
-          "TSGRPID": null
-        }
-      },
-      {
-        "row": 18,
-        "value": {
-          "TSPARMCD": "INTMODEL"
-        }
-      },
-      {
-        "row": 18,
-        "value": {
-          "TSPARM": "Intervention Model"
-        }
-      },
-      {
-        "row": 18,
-        "value": {
-          "TSVAL": null
-        }
-      },
-      {
-        "row": 18,
-        "value": {
-          "TSVALNF": null
-        }
-      },
-      {
-        "row": 18,
-        "value": {
-          "TSVALCD": "C82639"
-        }
-      },
-      {
-        "row": 18,
-        "value": {
-          "TSVCDREF": "CDISC"
-        }
-      },
-      {
-        "row": 18,
-        "value": {
+        "unmatched_values": {
+          "STUDYID": "CDISCPILOT01",
+          "DOMAIN": "TS",
+          "TSSEQ": 1,
+          "TSPARM": "Intervention Model",
+          "TSVALNF": null,
+          "TSVALCD": "C82639",
+          "TSVCDREF": "CDISC",
           "TSVCDVER": "2020-03-27"
         }
       },
       {
         "row": 42,
-        "value": {
-          "TSPARMCD": "STYPE"
-        }
-      },
-      {
-        "row": 42,
-        "value": {
-          "TSPARM": "Study Type"
-        }
-      },
-      {
-        "row": 42,
-        "value": {
-          "TSVAL": "INTERVENTIONAL"
-        }
-      },
-      {
-        "row": 42,
-        "value": {
+        "unmatched_values": {
+          "TSPARMCD": "STYPE",
+          "TSPARM": "Study Type",
+          "TSVAL": "INTERVENTIONAL",
           "TSVALNF": null
         }
       }

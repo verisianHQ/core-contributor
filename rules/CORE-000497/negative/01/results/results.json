@@ -26,49 +26,17 @@
     "ts.xpt": [
       {
         "row": 29,
-        "value": {
-          "TSPARMCD": "PCLAS"
-        }
-      },
-      {
-        "row": 29,
-        "value": {
-          "TSPARM": "Pharmacologic Class"
-        }
-      },
-      {
-        "row": 29,
-        "value": {
-          "TSVAL": null
-        }
-      },
-      {
-        "row": 29,
-        "value": {
+        "unmatched_values": {
+          "TSPARM": "Pharmacologic Class",
           "TSVALNF": null
         }
       },
       {
         "row": 42,
-        "value": {
-          "TSPARMCD": "STYPE"
-        }
-      },
-      {
-        "row": 42,
-        "value": {
-          "TSPARM": "Study Type"
-        }
-      },
-      {
-        "row": 42,
-        "value": {
-          "TSVAL": "INTERVENTIONAL"
-        }
-      },
-      {
-        "row": 42,
-        "value": {
+        "unmatched_values": {
+          "TSPARMCD": "STYPE",
+          "TSPARM": "Study Type",
+          "TSVAL": "INTERVENTIONAL",
           "TSVALNF": null
         }
       }

@@ -16,7 +16,7 @@
             "$trt_count": 1,
             "TSPARMCD": "TRT"
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         },
         {
           "row": 2,
@@ -27,7 +27,7 @@
             "$trt_count": 1,
             "TSPARMCD": "RAND"
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     }
@@ -36,20 +36,8 @@
     "ts.xpt": [
       {
         "row": -3,
-        "value": {
+        "unmatched_values": {
           "TSPARMCD": "TSPARMCD"
-        }
-      },
-      {
-        "row": 1,
-        "value": {
-          "TSPARMCD": "TRT"
-        }
-      },
-      {
-        "row": 2,
-        "value": {
-          "TSPARMCD": "RAND"
         }
       }
     ]

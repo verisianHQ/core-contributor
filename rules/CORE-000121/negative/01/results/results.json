@@ -16,7 +16,7 @@
             "ARMCD": "IKD",
             "ARMNRS": "UNPLANNED TREATMENT"
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     }
@@ -25,38 +25,15 @@
     "dm.xpt": [
       {
         "row": -3,
-        "value": {
+        "unmatched_values": {
           "ARMNRS": "ARMNRS"
         }
       },
       {
         "row": 4,
-        "value": {
-          "ARMCD": "IKD"
-        }
-      },
-      {
-        "row": 4,
-        "value": {
-          "ARM": "IKd"
-        }
-      },
-      {
-        "row": 4,
-        "value": {
-          "ACTARMCD": "PLACEBO"
-        }
-      },
-      {
-        "row": 4,
-        "value": {
+        "unmatched_values": {
+          "ARM": "IKd",
           "ACTARM": "Placebo"
-        }
-      },
-      {
-        "row": 4,
-        "value": {
-          "ARMNRS": "UNPLANNED TREATMENT"
         }
       }
     ]

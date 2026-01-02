@@ -17,7 +17,7 @@
             "TSPARMCD": "PCLAS",
             "TSVAL": null
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         },
         {
           "row": 31,
@@ -29,7 +29,7 @@
             "TSPARMCD": "PCLAS",
             "TSVAL": null
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     }
@@ -38,259 +38,78 @@
     "ts.xpt": [
       {
         "row": 19,
-        "value": {
-          "TSGRPID": "1"
-        }
-      },
-      {
-        "row": 19,
-        "value": {
-          "TSPARMCD": "INTTYPE"
-        }
-      },
-      {
-        "row": 19,
-        "value": {
-          "TSPARM": "Intervention Type"
-        }
-      },
-      {
-        "row": 19,
-        "value": {
-          "TSVAL": null
-        }
-      },
-      {
-        "row": 19,
-        "value": {
+        "unmatched_values": {
+          "TSGRPID": "1",
+          "TSPARMCD": "INTTYPE",
+          "TSPARM": "Intervention Type",
+          "TSVAL": null,
           "TSVALNF": null
         }
       },
       {
         "row": 29,
-        "value": {
-          "TSGRPID": "1"
-        }
-      },
-      {
-        "row": 29,
-        "value": {
-          "TSPARMCD": "PCLAS"
-        }
-      },
-      {
-        "row": 29,
-        "value": {
-          "TSPARM": "Pharmacologic Class"
-        }
-      },
-      {
-        "row": 29,
-        "value": {
-          "TSVAL": "Acetylcholine Release Inhibitor"
-        }
-      },
-      {
-        "row": 29,
-        "value": {
-          "TSVALNF": null
-        }
-      },
-      {
-        "row": 29,
-        "value": {
+        "unmatched_values": {
+          "TSGRPID": "1",
+          "TSPARMCD": "PCLAS",
+          "TSPARM": "Pharmacologic Class",
+          "TSVAL": "Acetylcholine Release Inhibitor",
+          "TSVALNF": null,
           "TSVALCD": "N0000175771"
         }
       },
       {
         "row": 30,
-        "value": {
-          "TSGRPID": "2"
-        }
-      },
-      {
-        "row": 30,
-        "value": {
-          "TSPARMCD": "PCLAS"
-        }
-      },
-      {
-        "row": 30,
-        "value": {
-          "TSPARM": "Pharmacologic Class"
-        }
-      },
-      {
-        "row": 30,
-        "value": {
-          "TSVAL": null
-        }
-      },
-      {
-        "row": 30,
-        "value": {
-          "TSVALNF": "NAV"
-        }
-      },
-      {
-        "row": 30,
-        "value": {
+        "unmatched_values": {
+          "TSPARM": "Pharmacologic Class",
+          "TSVALNF": "NAV",
           "TSVALCD": null
         }
       },
       {
         "row": 31,
-        "value": {
-          "TSGRPID": "3"
-        }
-      },
-      {
-        "row": 31,
-        "value": {
-          "TSPARMCD": "PCLAS"
-        }
-      },
-      {
-        "row": 31,
-        "value": {
-          "TSPARM": "Pharmacologic Class"
-        }
-      },
-      {
-        "row": 31,
-        "value": {
-          "TSVAL": null
-        }
-      },
-      {
-        "row": 31,
-        "value": {
-          "TSVALNF": null
-        }
-      },
-      {
-        "row": 31,
-        "value": {
+        "unmatched_values": {
+          "TSPARM": "Pharmacologic Class",
+          "TSVALNF": null,
           "TSVALCD": null
         }
       },
       {
         "row": 44,
-        "value": {
-          "TSGRPID": "1"
-        }
-      },
-      {
-        "row": 44,
-        "value": {
-          "TSPARMCD": "STYPE"
-        }
-      },
-      {
-        "row": 44,
-        "value": {
-          "TSPARM": "Study Type"
-        }
-      },
-      {
-        "row": 44,
-        "value": {
-          "TSVAL": "INTERVENTIONAL"
-        }
-      },
-      {
-        "row": 44,
-        "value": {
+        "unmatched_values": {
+          "TSGRPID": "1",
+          "TSPARMCD": "STYPE",
+          "TSPARM": "Study Type",
+          "TSVAL": "INTERVENTIONAL",
           "TSVALNF": null
         }
       },
       {
         "row": 45,
-        "value": {
-          "TSGRPID": "2"
-        }
-      },
-      {
-        "row": 45,
-        "value": {
-          "TSPARMCD": "STYPE"
-        }
-      },
-      {
-        "row": 45,
-        "value": {
-          "TSPARM": "Study Type"
-        }
-      },
-      {
-        "row": 45,
-        "value": {
-          "TSVAL": "INTERVENTIONAL"
-        }
-      },
-      {
-        "row": 45,
-        "value": {
+        "unmatched_values": {
+          "TSGRPID": "2",
+          "TSPARMCD": "STYPE",
+          "TSPARM": "Study Type",
+          "TSVAL": "INTERVENTIONAL",
           "TSVALNF": null
         }
       },
       {
         "row": 46,
-        "value": {
-          "TSGRPID": "3"
-        }
-      },
-      {
-        "row": 46,
-        "value": {
-          "TSPARMCD": "STYPE"
-        }
-      },
-      {
-        "row": 46,
-        "value": {
-          "TSPARM": "Study Type"
-        }
-      },
-      {
-        "row": 46,
-        "value": {
-          "TSVAL": "INTERVENTIONAL"
-        }
-      },
-      {
-        "row": 46,
-        "value": {
+        "unmatched_values": {
+          "TSGRPID": "3",
+          "TSPARMCD": "STYPE",
+          "TSPARM": "Study Type",
+          "TSVAL": "INTERVENTIONAL",
           "TSVALNF": null
         }
       },
       {
         "row": 47,
-        "value": {
-          "TSGRPID": "4"
-        }
-      },
-      {
-        "row": 47,
-        "value": {
-          "TSPARMCD": "STYPE"
-        }
-      },
-      {
-        "row": 47,
-        "value": {
-          "TSPARM": "Study Type"
-        }
-      },
-      {
-        "row": 47,
-        "value": {
-          "TSVAL": "INTERVENTIONAL"
-        }
-      },
-      {
-        "row": 47,
-        "value": {
+        "unmatched_values": {
+          "TSGRPID": "4",
+          "TSPARMCD": "STYPE",
+          "TSPARM": "Study Type",
+          "TSVAL": "INTERVENTIONAL",
           "TSVALNF": null
         }
       }

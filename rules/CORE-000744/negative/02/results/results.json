@@ -54,49 +54,19 @@
     "ae.xpt": [
       {
         "row": 1,
-        "value": {
-          "USUBJID": "CDISC001"
-        }
-      },
-      {
-        "row": 1,
-        "value": {
-          "AESEQ": 1
-        }
-      },
-      {
-        "row": 1,
-        "value": {
-          "AETERM": "INJECTION SITE REACTIONS"
-        }
-      },
-      {
-        "row": 1,
-        "value": {
+        "unmatched_values": {
+          "USUBJID": "CDISC001",
+          "AESEQ": 1,
+          "AETERM": "INJECTION SITE REACTIONS",
           "AEDECOD": null
         }
       },
       {
         "row": 2,
-        "value": {
-          "USUBJID": "CDISC001"
-        }
-      },
-      {
-        "row": 2,
-        "value": {
-          "AESEQ": 2
-        }
-      },
-      {
-        "row": 2,
-        "value": {
-          "AETERM": null
-        }
-      },
-      {
-        "row": 2,
-        "value": {
+        "unmatched_values": {
+          "USUBJID": "CDISC001",
+          "AESEQ": 2,
+          "AETERM": null,
           "AEDECOD": "Headache"
         }
       }
@@ -104,38 +74,16 @@
     "fa.xpt": [
       {
         "row": 3,
-        "value": {
-          "USUBJID": "CDISC001"
-        }
-      },
-      {
-        "row": 3,
-        "value": {
+        "unmatched_values": {
+          "USUBJID": "CDISC001",
           "FASEQ": 3
         }
       },
       {
-        "row": 3,
-        "value": {
-          "FAOBJ": "INJECTION SITE REACTION"
-        }
-      },
-      {
         "row": 4,
-        "value": {
-          "USUBJID": "CDISC001"
-        }
-      },
-      {
-        "row": 4,
-        "value": {
+        "unmatched_values": {
+          "USUBJID": "CDISC001",
           "FASEQ": 4
-        }
-      },
-      {
-        "row": 4,
-        "value": {
-          "FAOBJ": "FATIGUE"
         }
       }
     ]

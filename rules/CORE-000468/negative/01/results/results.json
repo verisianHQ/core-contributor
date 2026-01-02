@@ -26,49 +26,17 @@
     "ts.xpt": [
       {
         "row": 42,
-        "value": {
-          "TSPARMCD": "STYPE"
-        }
-      },
-      {
-        "row": 42,
-        "value": {
-          "TSPARM": "Study Type"
-        }
-      },
-      {
-        "row": 42,
-        "value": {
-          "TSVAL": "INTERVENTIONAL"
-        }
-      },
-      {
-        "row": 42,
-        "value": {
+        "unmatched_values": {
+          "TSPARMCD": "STYPE",
+          "TSPARM": "Study Type",
+          "TSVAL": "INTERVENTIONAL",
           "TSVALNF": null
         }
       },
       {
         "row": 49,
-        "value": {
-          "TSPARMCD": "TRT"
-        }
-      },
-      {
-        "row": 49,
-        "value": {
-          "TSPARM": "Investigational Therapy or Treatment"
-        }
-      },
-      {
-        "row": 49,
-        "value": {
-          "TSVAL": null
-        }
-      },
-      {
-        "row": 49,
-        "value": {
+        "unmatched_values": {
+          "TSPARM": "Investigational Therapy or Treatment",
           "TSVALNF": null
         }
       }

@@ -16,7 +16,7 @@
             "AGETXT": null,
             "AGEU": "YEARS"
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     }
@@ -25,38 +25,10 @@
     "dm.xpt": [
       {
         "row": -3,
-        "value": {
-          "AGE": "AGE"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
-          "AGETXT": "AGETXT"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "AGE": "AGE",
+          "AGETXT": "AGETXT",
           "AGEU": "AGEU"
-        }
-      },
-      {
-        "row": 3,
-        "value": {
-          "AGE": null
-        }
-      },
-      {
-        "row": 3,
-        "value": {
-          "AGETXT": null
-        }
-      },
-      {
-        "row": 3,
-        "value": {
-          "AGEU": "YEARS"
         }
       }
     ]

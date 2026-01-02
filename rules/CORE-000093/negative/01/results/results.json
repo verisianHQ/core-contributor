@@ -5,25 +5,15 @@
     "ag.xpt": [
       {
         "row": -3,
-        "value": {
-          "AGDOSE": "AGDOSE"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "AGDOSE": "AGDOSE",
           "AGDOSU": "AGDOSU"
         }
       },
       {
         "row": 2,
-        "value": {
-          "AGDOSE": 250
-        }
-      },
-      {
-        "row": 2,
-        "value": {
+        "unmatched_values": {
+          "AGDOSE": 250,
           "AGDOSU": null
         }
       }
@@ -31,37 +21,17 @@
     "cm.xpt": [
       {
         "row": -3,
-        "value": {
-          "CMDOSE": "CMDOSE"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
-          "CMDOSU": "CMDOSU"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "CMDOSE": "CMDOSE",
+          "CMDOSU": "CMDOSU",
           "CMDOSTOT": "CMDOSTOT"
         }
       },
       {
         "row": 2,
-        "value": {
-          "CMDOSE": 100
-        }
-      },
-      {
-        "row": 2,
-        "value": {
-          "CMDOSU": null
-        }
-      },
-      {
-        "row": 2,
-        "value": {
+        "unmatched_values": {
+          "CMDOSE": 100,
+          "CMDOSU": null,
           "CMDOSTOT": 200
         }
       }
@@ -69,25 +39,15 @@
     "ex.xpt": [
       {
         "row": -3,
-        "value": {
-          "EXDOSE": "EXDOSE"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "EXDOSE": "EXDOSE",
           "EXDOSU": "EXDOSU"
         }
       },
       {
         "row": 1,
-        "value": {
-          "EXDOSE": 1000
-        }
-      },
-      {
-        "row": 1,
-        "value": {
+        "unmatched_values": {
+          "EXDOSE": 1000,
           "EXDOSU": null
         }
       }
@@ -95,25 +55,15 @@
     "ml.xpt": [
       {
         "row": -3,
-        "value": {
-          "MLDOSTXT": "MLDOSTXT"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "MLDOSTXT": "MLDOSTXT",
           "MLDOSU": "MLDOSU"
         }
       },
       {
         "row": 1,
-        "value": {
-          "MLDOSTXT": 2
-        }
-      },
-      {
-        "row": 1,
-        "value": {
+        "unmatched_values": {
+          "MLDOSTXT": 2,
           "MLDOSU": null
         }
       }
@@ -121,31 +71,16 @@
     "pr.xpt": [
       {
         "row": -3,
-        "value": {
-          "PRDOSE": "PRDOSE"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
-          "PRDOSTXT": "PRDOSTXT"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "PRDOSE": "PRDOSE",
+          "PRDOSTXT": "PRDOSTXT",
           "PRDOSU": "PRDOSU"
         }
       },
       {
         "row": 1,
-        "value": {
-          "PRDOSE": 70
-        }
-      },
-      {
-        "row": 1,
-        "value": {
+        "unmatched_values": {
+          "PRDOSE": 70,
           "PRDOSU": null
         }
       }
@@ -153,31 +88,16 @@
     "su.xpt": [
       {
         "row": -3,
-        "value": {
-          "SUDOSE": "SUDOSE"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
-          "SUDOSU": "SUDOSU"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "SUDOSE": "SUDOSE",
+          "SUDOSU": "SUDOSU",
           "SUDOSTOT": "SUDOSTOT"
         }
       },
       {
         "row": 2,
-        "value": {
-          "SUDOSU": null
-        }
-      },
-      {
-        "row": 2,
-        "value": {
+        "unmatched_values": {
+          "SUDOSU": null,
           "SUDOSTOT": 3
         }
       }

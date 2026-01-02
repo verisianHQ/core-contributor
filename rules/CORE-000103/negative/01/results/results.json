@@ -15,7 +15,7 @@
             "AGCAT": null,
             "AGSCAT": "DFAJF"
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     },
@@ -34,7 +34,7 @@
             "CMCAT": null,
             "CMSCAT": "PRIOR DMARDS"
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     },
@@ -84,7 +84,8 @@
           "value": {
             "SUCAT": null,
             "SUSCAT": "TOBACCO"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 2,
@@ -93,7 +94,8 @@
           "value": {
             "SUCAT": null,
             "SUSCAT": "CAFFEINE"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -112,7 +114,7 @@
             "AECAT": null,
             "AESCAT": "NEUROLOGIC"
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     },
@@ -171,7 +173,7 @@
             "EGCAT": null,
             "EGSCAT": "INTERVAL"
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     },
@@ -190,7 +192,7 @@
             "FACAT": null,
             "FASCAT": "GERD"
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     }
@@ -199,65 +201,26 @@
     "ag.xpt": [
       {
         "row": -3,
-        "value": {
-          "AGCAT": "AGCAT"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "AGCAT": "AGCAT",
           "AGSCAT": "AGSCAT"
-        }
-      },
-      {
-        "row": 1,
-        "value": {
-          "AGCAT": null
-        }
-      },
-      {
-        "row": 1,
-        "value": {
-          "AGSCAT": "DFAJF"
         }
       }
     ],
     "cm.xpt": [
       {
         "row": -3,
-        "value": {
-          "CMCAT": "CMCAT"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "CMCAT": "CMCAT",
           "CMSCAT": "CMSCAT"
-        }
-      },
-      {
-        "row": 1,
-        "value": {
-          "CMCAT": null
-        }
-      },
-      {
-        "row": 1,
-        "value": {
-          "CMSCAT": "PRIOR DMARDS"
         }
       }
     ],
     "ex.xpt": [
       {
         "row": -3,
-        "value": {
-          "EXCAT": "EXCAT"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "EXCAT": "EXCAT",
           "EXSCAT": "EXSCAT"
         }
       }
@@ -265,13 +228,8 @@
     "ml.xpt": [
       {
         "row": -3,
-        "value": {
-          "MLCAT": "MLCAT"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "MLCAT": "MLCAT",
           "MLSCAT": "MLSCAT"
         }
       }
@@ -279,39 +237,17 @@
     "ae.xpt": [
       {
         "row": -3,
-        "value": {
-          "AECAT": "AECAT"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "AECAT": "AECAT",
           "AESCAT": "AESCAT"
-        }
-      },
-      {
-        "row": 2,
-        "value": {
-          "AECAT": null
-        }
-      },
-      {
-        "row": 2,
-        "value": {
-          "AESCAT": "NEUROLOGIC"
         }
       }
     ],
     "be.xpt": [
       {
         "row": -3,
-        "value": {
-          "BECAT": "BECAT"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "BECAT": "BECAT",
           "BESCAT": "BESCAT"
         }
       }
@@ -319,13 +255,8 @@
     "ce.xpt": [
       {
         "row": -3,
-        "value": {
-          "CECAT": "CECAT"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "CECAT": "CECAT",
           "CESCAT": "CESCAT"
         }
       }
@@ -333,13 +264,8 @@
     "ds.xpt": [
       {
         "row": -3,
-        "value": {
-          "DSCAT": "DSCAT"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "DSCAT": "DSCAT",
           "DSSCAT": "DSSCAT"
         }
       }
@@ -347,13 +273,8 @@
     "mh.xpt": [
       {
         "row": -3,
-        "value": {
-          "MHCAT": "MHCAT"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "MHCAT": "MHCAT",
           "MHSCAT": "MHSCAT"
         }
       }
@@ -361,13 +282,8 @@
     "da.xpt": [
       {
         "row": -3,
-        "value": {
-          "DACAT": "DACAT"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "DACAT": "DACAT",
           "DASCAT": "DASCAT"
         }
       }
@@ -375,52 +291,18 @@
     "eg.xpt": [
       {
         "row": -3,
-        "value": {
-          "EGCAT": "EGCAT"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "EGCAT": "EGCAT",
           "EGSCAT": "EGSCAT"
-        }
-      },
-      {
-        "row": 2,
-        "value": {
-          "EGCAT": null
-        }
-      },
-      {
-        "row": 2,
-        "value": {
-          "EGSCAT": "INTERVAL"
         }
       }
     ],
     "fa.xpt": [
       {
         "row": -3,
-        "value": {
-          "FACAT": "FACAT"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "FACAT": "FACAT",
           "FASCAT": "FASCAT"
-        }
-      },
-      {
-        "row": 2,
-        "value": {
-          "FACAT": null
-        }
-      },
-      {
-        "row": 2,
-        "value": {
-          "FASCAT": "GERD"
         }
       }
     ]

@@ -25,37 +25,15 @@
     "ts.xpt": [
       {
         "row": 46,
-        "value": {
-          "TSPARMCD": "STOPRULE"
-        }
-      },
-      {
-        "row": 46,
-        "value": {
-          "TSPARM": "Study Stop Rules"
-        }
-      },
-      {
-        "row": 46,
-        "value": {
-          "TSVAL": null
-        }
-      },
-      {
-        "row": 47,
-        "value": {
-          "TSPARMCD": "STOPRULE"
-        }
-      },
-      {
-        "row": 47,
-        "value": {
+        "unmatched_values": {
           "TSPARM": "Study Stop Rules"
         }
       },
       {
         "row": 47,
-        "value": {
+        "unmatched_values": {
+          "TSPARMCD": "STOPRULE",
+          "TSPARM": "Study Stop Rules",
           "TSVAL": "WHEN SAE OCCURS"
         }
       }

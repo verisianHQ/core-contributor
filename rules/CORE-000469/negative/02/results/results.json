@@ -17,7 +17,7 @@
             "TSPARMCD": "INTMODEL",
             "TSVAL": null
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         },
         {
           "row": 19,
@@ -29,7 +29,7 @@
             "TSPARMCD": "INTMODEL",
             "TSVAL": null
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         },
         {
           "row": 20,
@@ -41,7 +41,7 @@
             "TSPARMCD": "INTMODEL",
             "TSVAL": null
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         },
         {
           "row": 22,
@@ -53,7 +53,7 @@
             "TSPARMCD": "INTMODEL",
             "TSVAL": null
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     }
@@ -62,361 +62,89 @@
     "ts.xpt": [
       {
         "row": 18,
-        "value": {
-          "STUDYID": "CDISCPILOT01"
-        }
-      },
-      {
-        "row": 18,
-        "value": {
-          "DOMAIN": "TS"
-        }
-      },
-      {
-        "row": 18,
-        "value": {
-          "TSSEQ": 1
-        }
-      },
-      {
-        "row": 18,
-        "value": {
-          "TSGRPID": null
-        }
-      },
-      {
-        "row": 18,
-        "value": {
-          "TSPARMCD": "INTMODEL"
-        }
-      },
-      {
-        "row": 18,
-        "value": {
-          "TSPARM": "Intervention Model"
-        }
-      },
-      {
-        "row": 18,
-        "value": {
-          "TSVAL": null
-        }
-      },
-      {
-        "row": 18,
-        "value": {
-          "TSVALNF": null
-        }
-      },
-      {
-        "row": 18,
-        "value": {
-          "TSVALCD": "C82639"
-        }
-      },
-      {
-        "row": 18,
-        "value": {
-          "TSVCDREF": "CDISC"
-        }
-      },
-      {
-        "row": 18,
-        "value": {
+        "unmatched_values": {
+          "STUDYID": "CDISCPILOT01",
+          "DOMAIN": "TS",
+          "TSSEQ": 1,
+          "TSPARM": "Intervention Model",
+          "TSVALNF": null,
+          "TSVALCD": "C82639",
+          "TSVCDREF": "CDISC",
           "TSVCDVER": "2020-03-27"
         }
       },
       {
         "row": 19,
-        "value": {
-          "STUDYID": "CDISCPILOT01"
-        }
-      },
-      {
-        "row": 19,
-        "value": {
-          "DOMAIN": "TS"
-        }
-      },
-      {
-        "row": 19,
-        "value": {
-          "TSSEQ": 1
-        }
-      },
-      {
-        "row": 19,
-        "value": {
-          "TSGRPID": "1"
-        }
-      },
-      {
-        "row": 19,
-        "value": {
-          "TSPARMCD": "INTMODEL"
-        }
-      },
-      {
-        "row": 19,
-        "value": {
-          "TSPARM": "Intervention Model"
-        }
-      },
-      {
-        "row": 19,
-        "value": {
-          "TSVAL": null
-        }
-      },
-      {
-        "row": 19,
-        "value": {
-          "TSVALNF": null
-        }
-      },
-      {
-        "row": 19,
-        "value": {
-          "TSVALCD": "C1909"
-        }
-      },
-      {
-        "row": 19,
-        "value": {
-          "TSVCDREF": "CDISC"
-        }
-      },
-      {
-        "row": 19,
-        "value": {
+        "unmatched_values": {
+          "STUDYID": "CDISCPILOT01",
+          "DOMAIN": "TS",
+          "TSSEQ": 1,
+          "TSPARM": "Intervention Model",
+          "TSVALNF": null,
+          "TSVALCD": "C1909",
+          "TSVCDREF": "CDISC",
           "TSVCDVER": "2020-03-27"
         }
       },
       {
         "row": 20,
-        "value": {
-          "STUDYID": "CDISCPILOT01"
-        }
-      },
-      {
-        "row": 20,
-        "value": {
-          "DOMAIN": "TS"
-        }
-      },
-      {
-        "row": 20,
-        "value": {
-          "TSSEQ": 2
-        }
-      },
-      {
-        "row": 20,
-        "value": {
-          "TSGRPID": "2"
-        }
-      },
-      {
-        "row": 20,
-        "value": {
-          "TSPARMCD": "INTMODEL"
-        }
-      },
-      {
-        "row": 20,
-        "value": {
-          "TSPARM": "Intervention Model"
-        }
-      },
-      {
-        "row": 20,
-        "value": {
-          "TSVAL": null
-        }
-      },
-      {
-        "row": 20,
-        "value": {
-          "TSVALNF": null
-        }
-      },
-      {
-        "row": 20,
-        "value": {
-          "TSVALCD": "C1910"
-        }
-      },
-      {
-        "row": 20,
-        "value": {
-          "TSVCDREF": "CDISC"
-        }
-      },
-      {
-        "row": 20,
-        "value": {
+        "unmatched_values": {
+          "STUDYID": "CDISCPILOT01",
+          "DOMAIN": "TS",
+          "TSSEQ": 2,
+          "TSPARM": "Intervention Model",
+          "TSVALNF": null,
+          "TSVALCD": "C1910",
+          "TSVCDREF": "CDISC",
           "TSVCDVER": "2020-03-28"
         }
       },
       {
         "row": 22,
-        "value": {
-          "STUDYID": "CDISCPILOT01"
-        }
-      },
-      {
-        "row": 22,
-        "value": {
-          "DOMAIN": "TS"
-        }
-      },
-      {
-        "row": 22,
-        "value": {
-          "TSSEQ": 2
-        }
-      },
-      {
-        "row": 22,
-        "value": {
-          "TSGRPID": null
-        }
-      },
-      {
-        "row": 22,
-        "value": {
-          "TSPARMCD": "INTMODEL"
-        }
-      },
-      {
-        "row": 22,
-        "value": {
-          "TSPARM": "Intervention Model"
-        }
-      },
-      {
-        "row": 22,
-        "value": {
-          "TSVAL": null
-        }
-      },
-      {
-        "row": 22,
-        "value": {
-          "TSVALNF": null
-        }
-      },
-      {
-        "row": 22,
-        "value": {
-          "TSVALCD": "C1910"
-        }
-      },
-      {
-        "row": 22,
-        "value": {
-          "TSVCDREF": "CDISC"
-        }
-      },
-      {
-        "row": 22,
-        "value": {
+        "unmatched_values": {
+          "STUDYID": "CDISCPILOT01",
+          "DOMAIN": "TS",
+          "TSSEQ": 2,
+          "TSPARM": "Intervention Model",
+          "TSVALNF": null,
+          "TSVALCD": "C1910",
+          "TSVCDREF": "CDISC",
           "TSVCDVER": "2020-03-28"
         }
       },
       {
         "row": 45,
-        "value": {
-          "TSPARMCD": "STYPE"
-        }
-      },
-      {
-        "row": 45,
-        "value": {
-          "TSPARM": "Study Type"
-        }
-      },
-      {
-        "row": 45,
-        "value": {
-          "TSVAL": "INTERVENTIONAL"
-        }
-      },
-      {
-        "row": 45,
-        "value": {
+        "unmatched_values": {
+          "TSPARMCD": "STYPE",
+          "TSPARM": "Study Type",
+          "TSVAL": "INTERVENTIONAL",
           "TSVALNF": null
         }
       },
       {
         "row": 46,
-        "value": {
-          "TSPARMCD": "STYPE"
-        }
-      },
-      {
-        "row": 46,
-        "value": {
-          "TSPARM": "Study Type"
-        }
-      },
-      {
-        "row": 46,
-        "value": {
-          "TSVAL": "INTERVENTIONAL"
-        }
-      },
-      {
-        "row": 46,
-        "value": {
+        "unmatched_values": {
+          "TSPARMCD": "STYPE",
+          "TSPARM": "Study Type",
+          "TSVAL": "INTERVENTIONAL",
           "TSVALNF": null
         }
       },
       {
         "row": 47,
-        "value": {
-          "TSPARMCD": "STYPE"
-        }
-      },
-      {
-        "row": 47,
-        "value": {
-          "TSPARM": "Study Type"
-        }
-      },
-      {
-        "row": 47,
-        "value": {
-          "TSVAL": "INTERVENTIONAL"
-        }
-      },
-      {
-        "row": 47,
-        "value": {
+        "unmatched_values": {
+          "TSPARMCD": "STYPE",
+          "TSPARM": "Study Type",
+          "TSVAL": "INTERVENTIONAL",
           "TSVALNF": null
         }
       },
       {
         "row": 48,
-        "value": {
-          "TSPARMCD": "STYPE"
-        }
-      },
-      {
-        "row": 48,
-        "value": {
-          "TSPARM": "Study Type"
-        }
-      },
-      {
-        "row": 48,
-        "value": {
-          "TSVAL": "INTERVENTIONAL"
-        }
-      },
-      {
-        "row": 48,
-        "value": {
+        "unmatched_values": {
+          "TSPARMCD": "STYPE",
+          "TSPARM": "Study Type",
+          "TSVAL": "INTERVENTIONAL",
           "TSVALNF": null
         }
       }

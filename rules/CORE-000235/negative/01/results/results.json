@@ -41,30 +41,16 @@
     }
   ],
   "unmatched_highlights_in_test_case": {
-    "apdm.xpt": [
-      {
-        "row": 1,
-        "value": {
-          "RSUBJID": "CDISC-TEST-004"
-        }
-      },
-      {
-        "row": 2,
-        "value": {
-          "RSUBJID": "CDISC-TEST-001"
-        }
-      }
-    ],
     "dm.xpt": [
       {
         "row": 1,
-        "value": {
+        "unmatched_values": {
           "RSUBJID": "CDISC-TEST-001"
         }
       },
       {
         "row": 2,
-        "value": {
+        "unmatched_values": {
           "RSUBJID": "CDISC-TEST-999"
         }
       }

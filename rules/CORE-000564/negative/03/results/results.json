@@ -15,7 +15,7 @@
             "TSPARMCD": "INDIC",
             "TSVCDREF": "SNO"
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         },
         {
           "row": 50,
@@ -25,37 +25,9 @@
             "TSPARMCD": "TDIGRP",
             "TSVCDREF": "MED"
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     }
-  ],
-  "unmatched_highlights_in_test_case": {
-    "ts.xpt": [
-      {
-        "row": 20,
-        "value": {
-          "TSPARMCD": "INDIC"
-        }
-      },
-      {
-        "row": 20,
-        "value": {
-          "TSVCDREF": "SNO"
-        }
-      },
-      {
-        "row": 50,
-        "value": {
-          "TSPARMCD": "TDIGRP"
-        }
-      },
-      {
-        "row": 50,
-        "value": {
-          "TSVCDREF": "MED"
-        }
-      }
-    ]
-  }
+  ]
 }

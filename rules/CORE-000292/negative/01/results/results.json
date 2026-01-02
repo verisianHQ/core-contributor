@@ -31,25 +31,15 @@
     "ex.xpt": [
       {
         "row": -3,
-        "value": {
-          "EXVAMT": "EXVAMT"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "EXVAMT": "EXVAMT",
           "EXVAMTU": "EXVAMTU"
         }
       },
       {
         "row": 1,
-        "value": {
-          "EXVAMT": 0.1
-        }
-      },
-      {
-        "row": 1,
-        "value": {
+        "unmatched_values": {
+          "EXVAMT": 0.1,
           "EXVAMTU": "mL"
         }
       }

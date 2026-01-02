@@ -180,7 +180,7 @@
             ],
             "QNAM": "LBCLSIG"
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         },
         {
           "row": 2,
@@ -355,7 +355,7 @@
             ],
             "QNAM": "LBSTAT"
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     },
@@ -511,7 +511,7 @@
             ],
             "QNAM": "AESEV"
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         },
         {
           "row": 2,
@@ -642,39 +642,9 @@
             ],
             "QNAM": "AEPRESP"
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     }
-  ],
-  "unmatched_highlights_in_test_case": {
-    "suppae.xpt": [
-      {
-        "row": 1,
-        "value": {
-          "QNAM": "AESEV"
-        }
-      },
-      {
-        "row": 2,
-        "value": {
-          "QNAM": "AEPRESP"
-        }
-      }
-    ],
-    "supplb.xpt": [
-      {
-        "row": 1,
-        "value": {
-          "QNAM": "LBCLSIG"
-        }
-      },
-      {
-        "row": 2,
-        "value": {
-          "QNAM": "LBSTAT"
-        }
-      }
-    ]
-  }
+  ]
 }

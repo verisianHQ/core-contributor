@@ -9,7 +9,8 @@
       "errors": [
         {
           "error": "Column not found in data",
-          "message": "IDVAR"
+          "message": "IDVAR",
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -42,7 +43,7 @@
     "supplb.xpt": [
       {
         "row": 1,
-        "value": {
+        "unmatched_values": {
           "IDVAR": "LBSEK"
         }
       }
@@ -50,13 +51,13 @@
     "relrec.xpt": [
       {
         "row": 1,
-        "value": {
+        "unmatched_values": {
           "IDVAR": "LBSEK"
         }
       },
       {
         "row": 2,
-        "value": {
+        "unmatched_values": {
           "IDVAR": "COSEK"
         }
       }
@@ -64,7 +65,7 @@
     "co.xpt": [
       {
         "row": 1,
-        "value": {
+        "unmatched_values": {
           "IDVAR": "LBSEK"
         }
       }

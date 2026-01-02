@@ -23,7 +23,7 @@
             "$ds_dsdecod": null,
             "SSSTRESC": "DEAD"
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     }
@@ -32,25 +32,15 @@
     "ds.xpt": [
       {
         "row": 7,
-        "value": {
-          "USUBJID": "015246-076-0003-00003"
-        }
-      },
-      {
-        "row": 7,
-        "value": {
+        "unmatched_values": {
+          "USUBJID": "015246-076-0003-00003",
           "DSDECOD": null
         }
       },
       {
         "row": 12,
-        "value": {
-          "USUBJID": "015246-300-0004-00002"
-        }
-      },
-      {
-        "row": 12,
-        "value": {
+        "unmatched_values": {
+          "USUBJID": "015246-300-0004-00002",
           "DSDECOD": "DEATH"
         }
       }
@@ -58,19 +48,13 @@
     "ss.xpt": [
       {
         "row": -3,
-        "value": {
+        "unmatched_values": {
           "SSSTRESC": "SSSTRESC"
         }
       },
       {
-        "row": 2,
-        "value": {
-          "SSSTRESC": "DEAD"
-        }
-      },
-      {
         "row": 4,
-        "value": {
+        "unmatched_values": {
           "SSSTRESC": "DEAD"
         }
       }

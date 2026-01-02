@@ -49,7 +49,8 @@
               "ZB"
             ],
             "variable_name": "LBORRES"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
@@ -58,13 +59,8 @@
     "zm.xpt": [
       {
         "row": -3,
-        "value": {
-          "AEINDC": "AEINDC"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "AEINDC": "AEINDC",
           "CMDOSE": "CMDOSE"
         }
       }

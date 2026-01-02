@@ -246,37 +246,17 @@
     "ae.xpt": [
       {
         "row": 2,
-        "value": {
-          "USUBJID": "CDISC001"
-        }
-      },
-      {
-        "row": 2,
-        "value": {
-          "AELNKID": "2"
-        }
-      },
-      {
-        "row": 2,
-        "value": {
+        "unmatched_values": {
+          "USUBJID": "CDISC001",
+          "AELNKID": "2",
           "AETERM": "FATIGUE"
         }
       },
       {
         "row": 7,
-        "value": {
-          "USUBJID": "CDISC002"
-        }
-      },
-      {
-        "row": 7,
-        "value": {
-          "AELNKID": "5"
-        }
-      },
-      {
-        "row": 7,
-        "value": {
+        "unmatched_values": {
+          "USUBJID": "CDISC002",
+          "AELNKID": "5",
           "AETERM": "INJECTION SITE REACTION"
         }
       }
@@ -284,141 +264,48 @@
     "fa.xpt": [
       {
         "row": 5,
-        "value": {
-          "USUBJID": "CDISC001"
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "FALNKGRP": 2
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "FAOBJ": "INJECTION SITE REACTION"
-        }
-      },
-      {
-        "row": 6,
-        "value": {
-          "USUBJID": "CDISC001"
-        }
-      },
-      {
-        "row": 6,
-        "value": {
+        "unmatched_values": {
+          "USUBJID": "CDISC001",
           "FALNKGRP": 2
         }
       },
       {
         "row": 6,
-        "value": {
-          "FAOBJ": "INJECTION SITE REACTION"
+        "unmatched_values": {
+          "USUBJID": "CDISC001",
+          "FALNKGRP": 2
         }
       },
       {
         "row": 16,
-        "value": {
-          "USUBJID": "CDISC002"
-        }
-      },
-      {
-        "row": 16,
-        "value": {
+        "unmatched_values": {
+          "USUBJID": "CDISC002",
           "FALNKGRP": "5"
-        }
-      },
-      {
-        "row": 16,
-        "value": {
-          "FAOBJ": "INVALID FAOBJ"
         }
       }
     ],
     "relrec.xpt": [
       {
         "row": 5,
-        "value": {
-          "STUDYID": "CDISCPILOT01"
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "RDOMAIN": "AE"
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "USUBJID": ""
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "IDVAR": "AELNKID"
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "IDVARVAL": ""
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "RELTYPE": "ONE"
-        }
-      },
-      {
-        "row": 5,
-        "value": {
+        "unmatched_values": {
+          "STUDYID": "CDISCPILOT01",
+          "RDOMAIN": "AE",
+          "USUBJID": "",
+          "IDVAR": "AELNKID",
+          "IDVARVAL": "",
+          "RELTYPE": "ONE",
           "RELID": "AEFA"
         }
       },
       {
         "row": 6,
-        "value": {
-          "STUDYID": "CDISCPILOT01"
-        }
-      },
-      {
-        "row": 6,
-        "value": {
-          "RDOMAIN": "FA"
-        }
-      },
-      {
-        "row": 6,
-        "value": {
-          "USUBJID": ""
-        }
-      },
-      {
-        "row": 6,
-        "value": {
-          "IDVAR": "FALNKGRP"
-        }
-      },
-      {
-        "row": 6,
-        "value": {
-          "IDVARVAL": ""
-        }
-      },
-      {
-        "row": 6,
-        "value": {
-          "RELTYPE": "MANY"
-        }
-      },
-      {
-        "row": 6,
-        "value": {
+        "unmatched_values": {
+          "STUDYID": "CDISCPILOT01",
+          "RDOMAIN": "FA",
+          "USUBJID": "",
+          "IDVAR": "FALNKGRP",
+          "IDVARVAL": "",
+          "RELTYPE": "MANY",
           "RELID": "AEFA"
         }
       }

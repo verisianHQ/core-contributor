@@ -15,7 +15,7 @@
             "DDRESCAT": "UNDERTERMINED",
             "DDSTRESC": null
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     },
@@ -42,7 +42,7 @@
             "MIRESCAT": "NEGATIVE",
             "MISTRESC": null
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     },
@@ -61,7 +61,7 @@
             "MSRESCAT": "JDKSAJJDSAKF",
             "MSSTRESC": null
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     },
@@ -86,39 +86,17 @@
     "dd.xpt": [
       {
         "row": -3,
-        "value": {
-          "DDSTRESC": "DDSTRESC"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "DDSTRESC": "DDSTRESC",
           "DDRESCAT": "DDRESCAT"
-        }
-      },
-      {
-        "row": 2,
-        "value": {
-          "DDSTRESC": null
-        }
-      },
-      {
-        "row": 2,
-        "value": {
-          "DDRESCAT": "UNDERTERMINED"
         }
       }
     ],
     "mb.xpt": [
       {
         "row": -3,
-        "value": {
-          "MBSTRESC": "MBSTRESC"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "MBSTRESC": "MBSTRESC",
           "MBRESCAT": "MBRESCAT"
         }
       }
@@ -126,65 +104,26 @@
     "mi.xpt": [
       {
         "row": -3,
-        "value": {
-          "MISTRESC": "MISTRESC"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "MISTRESC": "MISTRESC",
           "MIRESCAT": "MIRESCAT"
-        }
-      },
-      {
-        "row": 1,
-        "value": {
-          "MISTRESC": null
-        }
-      },
-      {
-        "row": 1,
-        "value": {
-          "MIRESCAT": "NEGATIVE"
         }
       }
     ],
     "ms.xpt": [
       {
         "row": -3,
-        "value": {
-          "MSSTRESC": "MSSTRESC"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "MSSTRESC": "MSSTRESC",
           "MSRESCAT": "MSRESCAT"
-        }
-      },
-      {
-        "row": 1,
-        "value": {
-          "MSSTRESC": null
-        }
-      },
-      {
-        "row": 1,
-        "value": {
-          "MSRESCAT": "JDKSAJJDSAKF"
         }
       }
     ],
     "oe.xpt": [
       {
         "row": -3,
-        "value": {
-          "OESTRESC": "OESTRESC"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "OESTRESC": "OESTRESC",
           "OERESCAT": "OERESCAT"
         }
       }
@@ -192,25 +131,15 @@
     "ur.xpt": [
       {
         "row": -3,
-        "value": {
-          "URSTRESC": "URSTRESC"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "URSTRESC": "URSTRESC",
           "URRESCAT": "URRESCAT"
         }
       },
       {
         "row": 2,
-        "value": {
-          "URSTRESC": "N"
-        }
-      },
-      {
-        "row": 2,
-        "value": {
+        "unmatched_values": {
+          "URSTRESC": "N",
           "URRESCAT": "JDFJAFDJSFKA"
         }
       }

@@ -15,7 +15,7 @@
             "AETOX": "CTCAE 4.03",
             "AETOXGR": null
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     },
@@ -50,7 +50,7 @@
             "EGTOX": "CTCAE 4.03",
             "EGTOXGR": null
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     },
@@ -69,7 +69,7 @@
             "LBTOX": "CTCAE 4.03",
             "LBTOXGR": null
           },
-          "highlighted_in_test_case": false
+          "highlighted_in_test_case": true
         }
       ]
     },
@@ -94,39 +94,17 @@
     "ae.xpt": [
       {
         "row": -3,
-        "value": {
-          "AETOX": "AETOX"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "AETOX": "AETOX",
           "AETOXGR": "AETOXGR"
-        }
-      },
-      {
-        "row": 1,
-        "value": {
-          "AETOX": "CTCAE 4.03"
-        }
-      },
-      {
-        "row": 1,
-        "value": {
-          "AETOXGR": null
         }
       }
     ],
     "mh.xpt": [
       {
         "row": -3,
-        "value": {
-          "MHTOX": "MHTOX"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "MHTOX": "MHTOX",
           "MHTOXGR": "MHTOXGR"
         }
       }
@@ -134,13 +112,8 @@
     "ce.xpt": [
       {
         "row": -3,
-        "value": {
-          "CETOX": "CETOX"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "CETOX": "CETOX",
           "CETOXGR": "CETOXGR"
         }
       }
@@ -148,65 +121,26 @@
     "eg.xpt": [
       {
         "row": -3,
-        "value": {
-          "EGTOX": "EGTOX"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "EGTOX": "EGTOX",
           "EGTOXGR": "EGTOXGR"
-        }
-      },
-      {
-        "row": 1,
-        "value": {
-          "EGTOX": "CTCAE 4.03"
-        }
-      },
-      {
-        "row": 1,
-        "value": {
-          "EGTOXGR": null
         }
       }
     ],
     "lb.xpt": [
       {
         "row": -3,
-        "value": {
-          "LBTOX": "LBTOX"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "LBTOX": "LBTOX",
           "LBTOXGR": "LBTOXGR"
-        }
-      },
-      {
-        "row": 1,
-        "value": {
-          "LBTOX": "CTCAE 4.03"
-        }
-      },
-      {
-        "row": 1,
-        "value": {
-          "LBTOXGR": null
         }
       }
     ],
     "pc.xpt": [
       {
         "row": -3,
-        "value": {
-          "PCTOX": "PCTOX"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "PCTOX": "PCTOX",
           "PCTOXGR": "PCTOXGR"
         }
       }
@@ -214,13 +148,8 @@
     "pp.xpt": [
       {
         "row": -3,
-        "value": {
-          "PPTOX": "PPTOX"
-        }
-      },
-      {
-        "row": -3,
-        "value": {
+        "unmatched_values": {
+          "PPTOX": "PPTOX",
           "PPTOXGR": "PPTOXGR"
         }
       }
