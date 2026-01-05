@@ -44,8 +44,8 @@ https://www.cdisc.org/volunteer
         - There you go! You should now see schema validation in yaml files. If you don't see this behaviour after a few seconds, try restarting VSCode
 
 11) Install the XLSX Editor plugin: \
-        - In the VS Code file explorer, locate the `.vsix` file in the root directory of this repository. \
-        - Right-click the file and select "Install Extension VSIX".
+        - In the VS Code file explorer, locate the `.vsix` file in the root directory of this repository \
+        - Right-click the file and select "Install Extension VSIX"
 
 
 # Rule and Test Data Editing Process
@@ -151,7 +151,7 @@ This will completely remove your changes, so make sure you don't want them befor
 > ***I want to work on multiple rules at once!***
 
 You can! You can create multiple branches for different rules and they will all be isolated from each other. \
-Just make sure to use `checkout` commands or the console to switch to the relevant branch before you make changes.
+Just make sure to use `checkout` commands or the console to switch to the relevant branch before you make changes. \
 <br />
 
 > ***The XLSX editor isn't loading or looks strange***
