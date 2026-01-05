@@ -44,7 +44,7 @@ https://www.cdisc.org/volunteer
         - There you go! You should now see schema validation in yaml files. If you don't see this behaviour after a few seconds, try restarting VSCode
 
 11) Install the XLSX Editor plugin: \
-        - In the VS Code file explorer, locate the `.vsix` file in the root directory of this repository.
+        - In the VS Code file explorer, locate the `.vsix` file in the root directory of this repository. \
         - Right-click the file and select "Install Extension VSIX".
 
 
@@ -152,7 +152,8 @@ This will completely remove your changes, so make sure you don't want them befor
 
 You can! You can create multiple branches for different rules and they will all be isolated from each other. \
 Just make sure to use `checkout` commands or the console to switch to the relevant branch before you make changes.
+<br />
 
-> ***The XLSX Editor isn't loading or looks strange***
+> ***The XLSX editor isn't loading or looks strange***
 
-Ensure you have no other Excel-related extensions enabled. VS Code may conflict if multiple plugins try to handle .xlsx files simultaneously. Disabling other Excel plugins and restarting VS Code usually fixes this.
+Ensure you have no other Excel-related extensions enabled. There may be conflicts if multiple VSCode extensions try to handle .xlsx files simultaneously. Try disabling other Excel extensions and restarting VSCode to fix this.
