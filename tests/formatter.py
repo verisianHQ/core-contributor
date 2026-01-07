@@ -1,4 +1,6 @@
+from copy import copy
 import sys
+import argparse
 from pathlib import Path
 from typing import List, Optional, Dict
 import openpyxl
@@ -8,215 +10,338 @@ RULES_DIR = Path("rules")
 
 BOLD_FONT = Font(bold=True)
 ITALIC_FONT = Font(italic=True)
-METADATA_FILL = PatternFill(start_color="FFFFCC", end_color="FFFFCC", fill_type="solid")
+LIGHT_FILL = PatternFill(start_color="FFFFCC", end_color="FFFFCC", fill_type="solid")
+
+LIBRARY_SHEET = {
+    "name": "Library",
+    "index": 0,
+    "headers": ["Product", "Version"],
+    "defaults": {"A2": "sdtmig", "B2": "3-4"},
+}
+
+DATASETS_SHEET = {
+    "name": "Datasets",
+    "index": 1,
+    "headers": ["Filename", "Label"],
+}
+
+VALIDATION_SHEET = {
+    "name": "Validation",
+    "index": 2,
+    "headers": [
+        "Error group", "Sheet/Domain", "Error level", 
+        "Row num", "Variable", "Error value"
+    ],
+}
+
 
 class FileManager:
-    """Collect test case files from repo."""
-
-    @staticmethod
-    def get_available_rules() -> List[str]:
-        if not RULES_DIR.exists():
-            return []
-        return sorted([d.name for d in RULES_DIR.iterdir() if d.is_dir() and d.name.startswith("CORE-")])
+    """Handles discovery of test case files."""
 
     @staticmethod
     def get_all_test_cases() -> List[dict]:
         """Returns a flat list of all test cases across all rules."""
-        all_cases = []
-        rules = FileManager.get_available_rules()
-        for rule in rules:
-            all_cases.extend(FileManager.get_test_cases(rule))
-        return all_cases
+        if not RULES_DIR.exists():
+            return []
 
-    @staticmethod
-    def get_test_cases(rule_id: str) -> list:
-        rule_path = RULES_DIR / rule_id
         cases = []
+        rule_dirs = sorted([d for d in RULES_DIR.iterdir() if d.is_dir() and d.name.startswith("CORE-")])
+        
+        for rule_path in rule_dirs:
+            for test_type in ["positive", "negative"]:
+                type_dir = rule_path / test_type
+                if not type_dir.exists():
+                    continue
 
-        for test_type in ["positive", "negative"]:
-            test_type_path = rule_path / test_type
-            if test_type_path.exists():
-                for case_dir in sorted(test_type_path.iterdir()):
-                    if case_dir.is_dir():
-                        data_dir = case_dir / "data"
-                        # Grab all excel files that aren't temp files (~$)
-                        data_files = list(data_dir.glob("[!~]*.xls*"))
-                        if data_files:
-                            cases.append(
-                                {
-                                    "rule_id": rule_id,
-                                    "case_id": case_dir.name,
-                                    "type": test_type,
-                                    "path": data_files[0]
-                                }
-                            )
+                for case_dir in sorted(type_dir.iterdir()):
+                    if not case_dir.is_dir():
+                        continue
+                    
+                    data_dir = case_dir / "data"
+                    excel_files = list(data_dir.glob("[!~]*.xls*")) # Ignore temp files
+                    
+                    if excel_files:
+                        cases.append({
+                            "rule_id": rule_path.name,
+                            "case_id": case_dir.name,
+                            "type": test_type,
+                            "path": excel_files[0]
+                        })
         return cases
 
 
 class LabelManager:
-    """Scrapes existing 'Datasets' sheets to learn label mappings."""
+    """Scrapes existing sheets to build a global map of Filename -> Label."""
     
     def __init__(self):
         self.label_map: Dict[str, str] = {}
 
     def scan_all_files(self, cases: List[dict]):
-        print("Scanning all files to build dataset label map...")
+        print("Scanning files to build label map...")
         for case in cases:
-            try:
-                wb = openpyxl.load_workbook(case["path"], read_only=True, data_only=True)
-                if "Datasets" in wb.sheetnames:
-                    ws = wb["Datasets"]
-                    for row in ws.iter_rows(min_row=2, values_only=True):
-                        if row and len(row) >= 2:
-                            fname = row[0]
-                            flabel = row[1]
-                            if fname and flabel and isinstance(fname, str):
-                                self.label_map[fname] = flabel
-                wb.close()
-            except Exception as e:
-                print(f"Warning: Could not scan {case['path']}: {e}")
-        
-        print(f"Found {len(self.label_map)} unique dataset labels.")
+            self._scan_file(case["path"])
+        print(f"Map built. Found {len(self.label_map)} unique labels.")
+
+    def _scan_file(self, path: Path):
+        try:
+            wb = openpyxl.load_workbook(path, read_only=True, data_only=True)
+            if "Datasets" in wb.sheetnames:
+                ws = wb["Datasets"]
+                for row in ws.iter_rows(min_row=2, max_col=2, values_only=True):
+                    if row and len(row) >= 2 and row[0] and row[1]:
+                        self.label_map[str(row[0])] = str(row[1])
+            wb.close()
+        except Exception:
+            pass
 
     def get_label(self, filename: str) -> str:
-        return self.label_map.get(filename, "Unknown Dataset")
+        return self.label_map.get(filename, "Unknown")
 
 
 class Formatter:
-    """Handle formatting and styling of xlsx files using openpyxl."""
+    """
+    Orchestrates the formatting of a single Excel file.
+    """
     
     def __init__(self, file_path: Path, label_manager: LabelManager):
         self.file_path = file_path
         self.label_manager = label_manager
-        self.wb = None
+        self.wb: Optional[openpyxl.Workbook] = None
+        self.is_negative = (self.file_path.parents[2].name == "negative")
 
     def format(self) -> bool:
+        """Main execution flow."""
         try:
             self.wb = openpyxl.load_workbook(self.file_path)
             
-            self._ensure_library_sheet()
-            self._ensure_datasets_sheet()
-            self._format_xpt_sheets()
+            self._ensure_sheets()
+            self._populate_sheets()
+            self._style_sheets()
             
             self.wb.save(self.file_path)
+            self.wb.close()
             return True
         except Exception as e:
             print(f"Failed to format {self.file_path}: {e}")
             return False
 
-    def _ensure_library_sheet(self):
-        """Creates or updates the Library sheet."""
-        if "Library" in self.wb.sheetnames:
-            ws = self.wb["Library"]
-        else:
-            ws = self.wb.create_sheet("Library", 0)
-
-        ws["A1"] = "Product"
-        ws["B1"] = "Version"
-        ws["A1"].font = BOLD_FONT
-        ws["B1"].font = BOLD_FONT
-        ws["A2"] = "sdtmig" if ws["A2"] else ws["A2"]
-        ws["B2"] = "3-4" if ws["B2"] else ws["B2"]
-
-    def _ensure_datasets_sheet(self):
-        """Creates or updates the Datasets sheet based on .xpt sheets present."""
-        if "Datasets" in self.wb.sheetnames:
-            ws = self.wb["Datasets"]
-            ws.delete_rows(1, ws.max_row)
-        else:
-            ws = self.wb.create_sheet("Datasets", 1)
-
-        ws["A1"] = "Filename"
-        ws["B1"] = "Label"
-        ws["A1"].font = BOLD_FONT
-        ws["B1"].font = BOLD_FONT
-
-        xpt_sheets = [name for name in self.wb.sheetnames if name.lower().endswith(".xpt")]
+    def _ensure_sheets(self):
+        """Creates missing sheets and orders tabs."""
+        self._ensure_sheet_exists(LIBRARY_SHEET["name"], LIBRARY_SHEET["index"])
+        self._ensure_sheet_exists(DATASETS_SHEET["name"], DATASETS_SHEET["index"])
         
-        for index, sheet_name in enumerate(xpt_sheets, start=2):
-            label = self.label_manager.get_label(sheet_name)
-            ws.cell(row=index, column=1, value=sheet_name)
-            ws.cell(row=index, column=2, value=label)
+        if self.is_negative:
+            self._ensure_sheet_exists(VALIDATION_SHEET["name"], VALIDATION_SHEET["index"])
 
-    def _format_xpt_sheets(self):
-        """Applies styling to all .xpt sheets."""
+    def _ensure_sheet_exists(self, name: str, index: int):
+        if name not in self.wb.sheetnames:
+            self.wb.create_sheet(name)
+        
+        sheet = self.wb[name]
+        current_index = self.wb.index(sheet)
+        
+        if current_index != index:
+            offset = index - current_index
+            self.wb.move_sheet(sheet, offset=offset)
+
+    def _populate_sheets(self):
+        self._populate_library()
+        self._populate_datasets()
+        if self.is_negative:
+            self._populate_validation()
+
+    def _populate_library(self):
+        ws = self.wb[LIBRARY_SHEET["name"]]
+        for col_idx, header in enumerate(LIBRARY_SHEET["headers"], 1):
+            ws.cell(row=1, column=col_idx, value=header)
+        
+        for cell_coord, value in LIBRARY_SHEET["defaults"].items():
+            if not ws[cell_coord].value:
+                ws[cell_coord] = value
+
+    def _populate_datasets(self):
+        ws = self.wb[DATASETS_SHEET["name"]]
+        
+        ws.delete_rows(1, ws.max_row)
+        
+        ws.append(DATASETS_SHEET["headers"])
+
+        xpt_sheets = [s for s in self.wb.sheetnames if s.lower().endswith(".xpt")]
+        
+        for sheet_name in xpt_sheets:
+            label = self.label_manager.get_label(sheet_name)
+            ws.append([sheet_name, label])
+
+    def _populate_validation(self):
+        ws = self.wb[VALIDATION_SHEET["name"]]
+        if ws.max_row == 1 and ws.cell(1, 1).value is None:
+             for col_idx, header in enumerate(VALIDATION_SHEET["headers"], 1):
+                ws.cell(row=1, column=col_idx, value=header)
+
+    def _style_sheets(self):
+        self._style_standard_sheet(LIBRARY_SHEET["name"])
+        self._style_standard_sheet(DATASETS_SHEET["name"])
+        
+        if self.is_negative:
+            self._style_standard_sheet(VALIDATION_SHEET["name"])
+            
+        self._style_xpt_sheets()
+
+    def _style_standard_sheet(self, sheet_name: str):
+        """Applies Bold Header style to a standard sheet."""
+        if sheet_name not in self.wb.sheetnames:
+            return
+        
+        ws = self.wb[sheet_name]
+        for cell in ws[1]:
+            cell.font = BOLD_FONT
+
+    def _style_xpt_sheets(self):
+        """Applies specific styling rules to .xpt sheets."""
         for sheet_name in self.wb.sheetnames:
             if not sheet_name.lower().endswith(".xpt"):
                 continue
             
             ws = self.wb[sheet_name]
             
-            # Rule 1: Top row bold
             for cell in ws[1]:
                 cell.font = BOLD_FONT
-            
-            # Rule 2: Rows 2-4 highlighted #FFFFCC and italic
-            for row in ws.iter_rows(min_row=2, max_row=4):
-                for cell in row:
-                    cell.fill = METADATA_FILL
+
+            for row_idx in range(2, 5): 
+                for col_idx in range(1, ws.max_column + 1):
+                    cell = ws.cell(row=row_idx, column=col_idx)
+                    cell.fill = LIGHT_FILL
                     cell.font = ITALIC_FONT
+
+class Sanitiser:
+    @staticmethod
+    def sanitize_xlsx(file_path: str):
+        path = Path(file_path)
+        print(f"Sanitizing: {path.name}...")
+        
+        try:
+            old_wb = openpyxl.load_workbook(path)
             
-            # Rule 3: Rows 5+ unstyled
+            new_wb = openpyxl.Workbook()
+            new_wb.remove(new_wb.active)
+
+            for sheet_name in old_wb.sheetnames:
+                source = old_wb[sheet_name]
+                target = new_wb.create_sheet(title=sheet_name)
+
+                for row in source.iter_rows():
+                    for cell in row:
+                        new_cell = target.cell(row=cell.row, column=cell.column, value=cell.value)
+                        if cell.has_style:
+                            new_cell.font = copy(cell.font)
+                            new_cell.border = copy(cell.border)
+                            new_cell.fill = copy(cell.fill)
+                            new_cell.number_format = copy(cell.number_format)
+                            new_cell.alignment = copy(cell.alignment)
+
+            new_wb.save(path)
+            
+        except Exception as e:
+            print(f"Error sanitizing {path.name}: {e}")
 
 class InteractiveHandler:
-    """Handles user prompts for interactive mode."""
-
     @staticmethod
-    def prompt_case(available: list[dict]) -> Optional[list[dict]]:
-        print(f"\nFound {len(available)} total test cases.")
-        print("Format specific case? (Leave blank for all)")
+    def select_cases(all_cases: List[dict]) -> List[dict]:
+        print(f"\nFound {len(all_cases)} total test cases.")
+        user_input = input("Enter specific case ID (e.g. CORE-000123/positive/01) or Press Enter for ALL: ").strip()
         
-        lookup = []
-        for idx, tc in enumerate(available):
-            id_str = f"{tc['rule_id']}/{tc['type']}/{tc['case_id']}"
-            lookup.append(id_str)
+        if not user_input:
+            return all_cases
+        
+        selected = [
+            c for c in all_cases 
+            if f"{c['rule_id']}/{c['type']}/{c['case_id']}" == user_input
+        ]
+        
+        if not selected:
+            print("No matching cases found.")
+            return []
+        return selected
 
-        while True:
-            choice = input("\nEnter case (e.g., CORE-000424/positive/01) or Enter for all): ").strip()
-            
-            if not choice:
-                return available
-            
-            matches = [tc for tc in available if f"{tc['rule_id']}/{tc['type']}/{tc['case_id']}" == choice]
-            if matches:
-                return matches
-                
-            print("Invalid choice. Try again.")
+def parse_arguments():
+    parser = argparse.ArgumentParser(description="Excel Test Case Formatter")
+    
+    parser.add_argument("-r", "--rule", type=str, help="Rule ID (e.g., CORE-000123)")
+    parser.add_argument("-tc", "--testcase", type=str, help="Test case sub-path (e.g., negative/01). Requires -r.")
+    parser.add_argument("-all", "--all", action="store_true", help="Run on all test cases in all rules.")
+    
+    args = parser.parse_args()
+    
+    if args.testcase and not args.rule:
+        parser.error("The -tc argument requires -r to be specified.")
+        
+    return args
 
+def filter_cases_by_args(all_cases: List[dict], args) -> List[dict]:
+    """Filters the full list of cases based on CLI arguments."""
+    
+    if args.all:
+        return all_cases
+    
+    if args.rule:
+        filtered = [c for c in all_cases if c['rule_id'] == args.rule]
+        
+        if args.testcase:
+            filtered = [
+                c for c in filtered 
+                if f"{c['type']}/{c['case_id']}" == args.testcase
+            ]
+            
+        if not filtered:
+            msg = f"No cases found for Rule '{args.rule}'"
+            if args.testcase:
+                msg += f" and Case '{args.testcase}'"
+            print(msg)
+            sys.exit(1)
+            
+        return filtered
+
+    return None
 
 def main():
-    all_cases = FileManager.get_all_test_cases()
+    args = parse_arguments()
 
+    all_cases = FileManager.get_all_test_cases()
     if not all_cases:
-        print("Error: No test cases found in 'rules' directory.")
+        print("No test cases found in 'rules' directory.")
         sys.exit(1)
 
-    label_manager = LabelManager()
-    label_manager.scan_all_files(all_cases)
+    label_mgr = LabelManager()
+    label_mgr.scan_all_files(all_cases)
 
-    selected_cases = InteractiveHandler.prompt_case(all_cases)
+    selected_cases = filter_cases_by_args(all_cases, args)
     
+    if selected_cases is None:
+        selected_cases = InteractiveHandler.select_cases(all_cases)
+
     if not selected_cases:
-        print("No cases selected.")
         sys.exit(0)
 
     print(f"\nProcessing {len(selected_cases)} files...")
     success_count = 0
     
     for case in selected_cases:
-        print(f" -> Formatting {case['rule_id']}/{case['type']}/{case['case_id']} ... ", end="")
-        formatter = Formatter(case['path'], label_manager)
+        case_id_str = f"{case['rule_id']}/{case['type']}/{case['case_id']}"
+        print(f" -> {case_id_str} ... ", end="")
+        
+        formatter = Formatter(case['path'], label_mgr)
         if formatter.format():
             print("OK")
             success_count += 1
         else:
             print("FAILED")
+        
+        Sanitiser.sanitize_xlsx(case['path'])
 
-    print(f"\nDone. {success_count}/{len(selected_cases)} files formatted.")
+    print(f"\nComplete. {success_count}/{len(selected_cases)} formatted.")
 
 if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-        print("\nInterrupted.")
-        sys.exit(1)
+        sys.exit(0)
