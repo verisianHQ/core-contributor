@@ -1,4 +1,40 @@
 {
   "error": "No result - either the rule or test case data unit-test-coreid-CG0174_EX_FA_negative.xlsx is broken",
-  "exception": "Unknown variable type: nan. This data needs fixing."
+  "exception": "Unknown variable type: nan. This data needs fixing.",
+  "unmatched_highlights_in_test_case": {
+    "fa.xpt": [
+      {
+        "row": 1,
+        "unmatched_values": {
+          "FAOBJ": "INVALID VALUE FOR FAOBJ"
+        }
+      }
+    ],
+    "relrec.xpt": [
+      {
+        "row": 5,
+        "unmatched_values": {
+          "STUDYID": "CDISCPILOT01",
+          "RDOMAIN": "EX",
+          "USUBJID": "",
+          "IDVAR": "EXLNKID",
+          "IDVARVAL": "",
+          "RELTYPE": "ONE",
+          "RELID": "EXFA"
+        }
+      },
+      {
+        "row": 6,
+        "unmatched_values": {
+          "STUDYID": "CDISCPILOT01",
+          "RDOMAIN": "FA",
+          "USUBJID": "",
+          "IDVAR": "FALNKID",
+          "IDVARVAL": "",
+          "RELTYPE": "ONE",
+          "RELID": "EXFA"
+        }
+      }
+    ]
+  }
 }

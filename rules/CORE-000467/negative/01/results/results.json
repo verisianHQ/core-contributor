@@ -15,9 +15,20 @@
             "TSGRPID": null,
             "TSPARMCD": "STOPRULE",
             "TSVAL": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ts.xpt": [
+      {
+        "row": 46,
+        "unmatched_values": {
+          "TSPARM": "Study Stop Rules"
+        }
+      }
+    ]
+  }
 }

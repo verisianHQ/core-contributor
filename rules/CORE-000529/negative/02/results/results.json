@@ -16,7 +16,8 @@
             "LBDTC": "2012-11-30",
             "LBDY": 2.0,
             "RFSTDTC": "2012-11-30"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -29,7 +30,8 @@
       "errors": [
         {
           "error": "SQL error in sqldaydatavalidatoroperation operation",
-          "message": "column or relation does not exist"
+          "message": "column or relation does not exist",
+          "highlighted_in_test_case": false
         }
       ]
     }

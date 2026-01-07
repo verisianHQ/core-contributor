@@ -21,9 +21,28 @@
           "USUBJID": null,
           "value": {
             "$EXVAMTU_EXISTS": true
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ex.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "EXVAMT": "EXVAMT",
+          "EXVAMTU": "EXVAMTU"
+        }
+      },
+      {
+        "row": 1,
+        "unmatched_values": {
+          "EXVAMT": 0.1,
+          "EXVAMTU": "mL"
+        }
+      }
+    ]
+  }
 }

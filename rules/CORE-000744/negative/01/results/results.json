@@ -24,7 +24,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 2,
@@ -35,7 +36,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 3,
@@ -46,7 +48,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 4,
@@ -57,7 +60,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 5,
@@ -68,7 +72,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 6,
@@ -79,7 +84,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 7,
@@ -90,7 +96,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 8,
@@ -101,7 +108,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 9,
@@ -112,7 +120,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 10,
@@ -123,7 +132,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 11,
@@ -134,7 +144,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 12,
@@ -145,7 +156,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 13,
@@ -156,7 +168,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 14,
@@ -167,7 +180,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 15,
@@ -178,7 +192,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 16,
@@ -189,7 +204,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 17,
@@ -200,7 +216,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 18,
@@ -211,7 +228,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -223,5 +241,74 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ae.xpt": [
+      {
+        "row": 2,
+        "unmatched_values": {
+          "USUBJID": "CDISC001",
+          "AELNKID": "2",
+          "AETERM": "FATIGUE"
+        }
+      },
+      {
+        "row": 7,
+        "unmatched_values": {
+          "USUBJID": "CDISC002",
+          "AELNKID": "5",
+          "AETERM": "INJECTION SITE REACTION"
+        }
+      }
+    ],
+    "fa.xpt": [
+      {
+        "row": 5,
+        "unmatched_values": {
+          "USUBJID": "CDISC001",
+          "FALNKGRP": 2
+        }
+      },
+      {
+        "row": 6,
+        "unmatched_values": {
+          "USUBJID": "CDISC001",
+          "FALNKGRP": 2
+        }
+      },
+      {
+        "row": 16,
+        "unmatched_values": {
+          "USUBJID": "CDISC002",
+          "FALNKGRP": "5"
+        }
+      }
+    ],
+    "relrec.xpt": [
+      {
+        "row": 5,
+        "unmatched_values": {
+          "STUDYID": "CDISCPILOT01",
+          "RDOMAIN": "AE",
+          "USUBJID": "",
+          "IDVAR": "AELNKID",
+          "IDVARVAL": "",
+          "RELTYPE": "ONE",
+          "RELID": "AEFA"
+        }
+      },
+      {
+        "row": 6,
+        "unmatched_values": {
+          "STUDYID": "CDISCPILOT01",
+          "RDOMAIN": "FA",
+          "USUBJID": "",
+          "IDVAR": "FALNKGRP",
+          "IDVARVAL": "",
+          "RELTYPE": "MANY",
+          "RELID": "AEFA"
+        }
+      }
+    ]
+  }
 }

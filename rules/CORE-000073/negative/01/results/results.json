@@ -13,9 +13,27 @@
           "USUBJID": null,
           "value": {
             "RPATHCD": "ABCD"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "dm.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "ACTARM": "ACTARM"
+        }
+      },
+      {
+        "row": 2,
+        "unmatched_values": {
+          "ACTARMCD": "IKD",
+          "ACTARM": "IKD"
+        }
+      }
+    ]
+  }
 }

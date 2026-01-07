@@ -14,7 +14,8 @@
           "value": {
             "DDRESCAT": "UNDERTERMINED",
             "DDSTRESC": null
-          }
+          },
+          "highlighted_in_test_case": true
         }
       ]
     },
@@ -40,7 +41,8 @@
           "value": {
             "MIRESCAT": "NEGATIVE",
             "MISTRESC": null
-          }
+          },
+          "highlighted_in_test_case": true
         }
       ]
     },
@@ -58,7 +60,8 @@
           "value": {
             "MSRESCAT": "JDKSAJJDSAKF",
             "MSSTRESC": null
-          }
+          },
+          "highlighted_in_test_case": true
         }
       ]
     },
@@ -78,5 +81,68 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "dd.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "DDSTRESC": "DDSTRESC",
+          "DDRESCAT": "DDRESCAT"
+        }
+      }
+    ],
+    "mb.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "MBSTRESC": "MBSTRESC",
+          "MBRESCAT": "MBRESCAT"
+        }
+      }
+    ],
+    "mi.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "MISTRESC": "MISTRESC",
+          "MIRESCAT": "MIRESCAT"
+        }
+      }
+    ],
+    "ms.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "MSSTRESC": "MSSTRESC",
+          "MSRESCAT": "MSRESCAT"
+        }
+      }
+    ],
+    "oe.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "OESTRESC": "OESTRESC",
+          "OERESCAT": "OERESCAT"
+        }
+      }
+    ],
+    "ur.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "URSTRESC": "URSTRESC",
+          "URRESCAT": "URRESCAT"
+        }
+      },
+      {
+        "row": 2,
+        "unmatched_values": {
+          "URSTRESC": "N",
+          "URRESCAT": "JDFJAFDJSFKA"
+        }
+      }
+    ]
+  }
 }

@@ -14,7 +14,8 @@
           "value": {
             "DSDECOD": "Future USE OF SAMPLES INFORMED CONSENT OBTAINED",
             "DSTERM": "FUTURE USE OF SAMPLES INFORMED CONSENT OBTAINED"
-          }
+          },
+          "highlighted_in_test_case": true
         },
         {
           "row": 2,
@@ -23,7 +24,8 @@
           "value": {
             "DSDECOD": "STUDY INFORMED CONSENT OBTAINE",
             "DSTERM": "STUDY INFORMED CONSENT OBTAINED"
-          }
+          },
+          "highlighted_in_test_case": true
         },
         {
           "row": 3,
@@ -32,9 +34,21 @@
           "value": {
             "DSDECOD": "ADVERSE EVENT",
             "DSTERM": "COMPLETED"
-          }
+          },
+          "highlighted_in_test_case": true
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ds.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "DSTERM": "DSTERM",
+          "DSDECOD": "DSDECOD"
+        }
+      }
+    ]
+  }
 }

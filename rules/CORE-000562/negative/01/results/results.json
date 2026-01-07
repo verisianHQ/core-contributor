@@ -16,9 +16,36 @@
             "TSGRPID": null,
             "TSPARMCD": "TDIGRP",
             "TSVAL": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ts.xpt": [
+      {
+        "row": 16,
+        "unmatched_values": {
+          "TSPARMCD": "HLTSUBJI",
+          "TSPARM": "Healthy Subject Indicator",
+          "TSVAL": "N",
+          "TSVALNF": null,
+          "TSVALCD": "C49487",
+          "TSVCDREF": "CDISC",
+          "TSVCDVER": "2020-03-27"
+        }
+      },
+      {
+        "row": 45,
+        "unmatched_values": {
+          "TSPARM": "Diagnosis Group",
+          "TSVALNF": null,
+          "TSVALCD": null,
+          "TSVCDREF": null,
+          "TSVCDVER": null
+        }
+      }
+    ]
+  }
 }

@@ -14,9 +14,21 @@
           "value": {
             "TSPARMCD": "TDIGRP",
             "TSVCDREF": null
-          }
+          },
+          "highlighted_in_test_case": true
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ts.xpt": [
+      {
+        "row": 20,
+        "unmatched_values": {
+          "TSPARMCD": "INDIC",
+          "TSVCDREF": "SNOMED"
+        }
+      }
+    ]
+  }
 }

@@ -23,7 +23,8 @@
             "AEDECOD": null,
             "AETERM": "FATIGUE",
             "RELREC.FAOBJ": "ERROR"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -43,5 +44,41 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "fa.xpt": [
+      {
+        "row": 2,
+        "unmatched_values": {
+          "FAOBJ": "ERROR"
+        }
+      }
+    ],
+    "relrec.xpt": [
+      {
+        "row": 5,
+        "unmatched_values": {
+          "STUDYID": "CDISCPILOT01",
+          "RDOMAIN": "EX",
+          "USUBJID": "",
+          "IDVAR": "EXLNKID",
+          "IDVARVAL": "",
+          "RELTYPE": "ONE",
+          "RELID": "EXFA"
+        }
+      },
+      {
+        "row": 6,
+        "unmatched_values": {
+          "STUDYID": "CDISCPILOT01",
+          "RDOMAIN": "FA",
+          "USUBJID": "",
+          "IDVAR": "FALNKID",
+          "IDVARVAL": "",
+          "RELTYPE": "ONE",
+          "RELID": "EXFA"
+        }
+      }
+    ]
+  }
 }

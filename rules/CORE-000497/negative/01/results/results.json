@@ -16,9 +16,30 @@
             "TSGRPID": null,
             "TSPARMCD": "PCLAS",
             "TSVAL": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ts.xpt": [
+      {
+        "row": 29,
+        "unmatched_values": {
+          "TSPARM": "Pharmacologic Class",
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 42,
+        "unmatched_values": {
+          "TSPARMCD": "STYPE",
+          "TSPARM": "Study Type",
+          "TSVAL": "INTERVENTIONAL",
+          "TSVALNF": null
+        }
+      }
+    ]
+  }
 }

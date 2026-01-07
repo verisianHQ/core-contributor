@@ -9,7 +9,8 @@
       "errors": [
         {
           "error": "Column not found in data",
-          "message": "IDVAR"
+          "message": "IDVAR",
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -22,7 +23,8 @@
       "errors": [
         {
           "error": "Column not found in data",
-          "message": "IDVAR"
+          "message": "IDVAR",
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -35,7 +37,8 @@
       "errors": [
         {
           "error": "Column not found in data",
-          "message": "IDVAR"
+          "message": "IDVAR",
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -55,5 +58,54 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "supplb.xpt": [
+      {
+        "row": 1,
+        "unmatched_values": {
+          "IDVARVAL": "320"
+        }
+      }
+    ],
+    "relrec.xpt": [
+      {
+        "row": 1,
+        "unmatched_values": {
+          "IDVARVAL": "320"
+        }
+      },
+      {
+        "row": 2,
+        "unmatched_values": {
+          "IDVARVAL": "2"
+        }
+      }
+    ],
+    "co.xpt": [
+      {
+        "row": 1,
+        "unmatched_values": {
+          "IDVARVAL": "20"
+        }
+      }
+    ],
+    "ae.xpt": [
+      {
+        "row": 1,
+        "unmatched_values": {
+          "AESEQ": 1
+        }
+      }
+    ],
+    "lb.xpt": [
+      {
+        "row": 1,
+        "unmatched_values": {
+          "LBSEQ": "321",
+          "LBGRPID": "21"
+        }
+      }
+    ]
+  }
 }

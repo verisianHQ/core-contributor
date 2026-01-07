@@ -13,9 +13,38 @@
           "USUBJID": null,
           "value": {
             "LBRPENDY": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "lb.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "FETUSID": "FETUSID",
+          "LBIMPLBL": "LBIMPLBL",
+          "LBRESLOC": "LBRESLOC",
+          "LBDTHREL": "LBDTHREL",
+          "LBEXCLFL": "LBEXCLFL",
+          "LBREASEX": "LBREASEX",
+          "LBUSCHFL": "LBUSCHFL",
+          "LBRSTIND": "LBRSTIND",
+          "LBRSTMOD": "LBRSTMOD",
+          "RPHASE": "RPHASE",
+          "RPPLDY": "RPPLDY",
+          "RPPLSTDY": "RPPLSTDY",
+          "RPPLENDY": "RPPLENDY",
+          "LBNOMDY": "LBNOMDY",
+          "LBNOMLBL": "LBNOMLBL",
+          "LBRPDY": "LBRPDY",
+          "LBRPSTDY": "LBRPSTDY",
+          "LBRPENDY": "LBRPENDY",
+          "LBDETECT": "LBDETECT"
+        }
+      }
+    ]
+  }
 }

@@ -15,7 +15,8 @@
             "VSDRVFL": "Not in dataset",
             "VSLOBXFL": "Y",
             "VSORRES": null
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 32,
@@ -25,7 +26,8 @@
             "VSDRVFL": "Not in dataset",
             "VSLOBXFL": "Y",
             "VSORRES": null
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 53,
@@ -35,7 +37,8 @@
             "VSDRVFL": "Not in dataset",
             "VSLOBXFL": "Y",
             "VSORRES": null
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 58,
@@ -45,9 +48,110 @@
             "VSDRVFL": "Not in dataset",
             "VSLOBXFL": "Y",
             "VSORRES": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "vs.xpt": [
+      {
+        "row": 18,
+        "unmatched_values": {
+          "STUDYID": "CDISCPILOT01",
+          "DOMAIN": "VS",
+          "USUBJID": "CDISC001",
+          "VSSEQ": "18",
+          "VSTESTCD": "PULSE",
+          "VSTEST": "Pulse Rate",
+          "VSPOS": "STANDING",
+          "VSORRESU": null,
+          "VSSTRESC": "50",
+          "VSSTRESN": "50",
+          "VSSTRESU": "beats/min",
+          "VSSTAT": "",
+          "VSLOC": null,
+          "VSREPNUM": null,
+          "VISITNUM": "3",
+          "VISIT": "BASELINE",
+          "EPOCH": "SCREENING",
+          "VSDTC": "2012-11-30",
+          "VSDY": "1"
+        }
+      },
+      {
+        "row": 32,
+        "unmatched_values": {
+          "STUDYID": "CDISCPILOT01",
+          "DOMAIN": "VS",
+          "USUBJID": "CDISC001",
+          "VSSEQ": "32",
+          "VSTESTCD": "SYSBP",
+          "VSTEST": "Systolic Blood Pressure",
+          "VSPOS": "STANDING",
+          "VSORRESU": null,
+          "VSSTRESC": "130",
+          "VSSTRESN": "130",
+          "VSSTRESU": "mmHg",
+          "VSSTAT": "",
+          "VSLOC": null,
+          "VSREPNUM": null,
+          "VISITNUM": "3",
+          "VISIT": "BASELINE",
+          "EPOCH": "SCREENING",
+          "VSDTC": "2012-11-30",
+          "VSDY": "1"
+        }
+      },
+      {
+        "row": 53,
+        "unmatched_values": {
+          "STUDYID": "CDISCPILOT01",
+          "DOMAIN": "VS",
+          "USUBJID": "CDISC001",
+          "VSSEQ": "53",
+          "VSTESTCD": "WEIGHT",
+          "VSTEST": "Weight",
+          "VSPOS": null,
+          "VSORRESU": null,
+          "VSSTRESC": "78.93",
+          "VSSTRESN": "78.93",
+          "VSSTRESU": "kg",
+          "VSSTAT": "",
+          "VSLOC": null,
+          "VSREPNUM": null,
+          "VISITNUM": "3",
+          "VISIT": "BASELINE",
+          "EPOCH": "SCREENING",
+          "VSDTC": "2012-11-30",
+          "VSDY": "1"
+        }
+      },
+      {
+        "row": 58,
+        "unmatched_values": {
+          "STUDYID": "CDISCPILOT01",
+          "DOMAIN": "VS",
+          "USUBJID": "CDISC001",
+          "VSSEQ": "58",
+          "VSTESTCD": "BMI",
+          "VSTEST": "Body Mass Index",
+          "VSPOS": null,
+          "VSORRESU": null,
+          "VSSTRESC": "23.8613612343856",
+          "VSSTRESN": "23.8613612343856",
+          "VSSTRESU": "kg/m2",
+          "VSSTAT": "",
+          "VSLOC": null,
+          "VSREPNUM": null,
+          "VISITNUM": "1",
+          "VISIT": "SCREENING 1",
+          "EPOCH": "SCREENING",
+          "VSDTC": "2012-11-23",
+          "VSDY": "-7"
+        }
+      }
+    ]
+  }
 }

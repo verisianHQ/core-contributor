@@ -16,9 +16,36 @@
             "TSGRPID": null,
             "TSPARMCD": "INTMODEL",
             "TSVAL": null
-          }
+          },
+          "highlighted_in_test_case": true
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ts.xpt": [
+      {
+        "row": 18,
+        "unmatched_values": {
+          "STUDYID": "CDISCPILOT01",
+          "DOMAIN": "TS",
+          "TSSEQ": 1,
+          "TSPARM": "Intervention Model",
+          "TSVALNF": null,
+          "TSVALCD": "C82639",
+          "TSVCDREF": "CDISC",
+          "TSVCDVER": "2020-03-27"
+        }
+      },
+      {
+        "row": 42,
+        "unmatched_values": {
+          "TSPARMCD": "STYPE",
+          "TSPARM": "Study Type",
+          "TSVAL": "INTERVENTIONAL",
+          "TSVALNF": null
+        }
+      }
+    ]
+  }
 }

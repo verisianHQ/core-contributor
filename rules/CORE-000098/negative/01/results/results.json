@@ -14,7 +14,8 @@
           "value": {
             "ECDIR": "UPPER",
             "ECLOC": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -40,7 +41,8 @@
           "value": {
             "AEDIR": null,
             "AELOC": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -60,5 +62,50 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ec.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "ECDIR": "ECDIR"
+        }
+      }
+    ],
+    "pr.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "PRLOC": "PRLOC",
+          "PRDIR": "PRDIR"
+        }
+      }
+    ],
+    "ae.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "AEDIR": "AEDIR"
+        }
+      }
+    ],
+    "oe.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "OELOC": "OELOC",
+          "OEDIR": "OEDIR"
+        }
+      }
+    ],
+    "tu.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "TULOC": "TULOC",
+          "TUDIR": "TUDIR"
+        }
+      }
+    ]
+  }
 }

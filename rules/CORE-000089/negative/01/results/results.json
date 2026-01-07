@@ -14,9 +14,27 @@
           "value": {
             "AGTRTV": null,
             "AGVAMT": "0.1"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ag.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "AGTRTV": "AGTRTV",
+          "AGVAMT": "AGVAMT"
+        }
+      },
+      {
+        "row": 2,
+        "unmatched_values": {
+          "AGVAMT": 0.1
+        }
+      }
+    ]
+  }
 }

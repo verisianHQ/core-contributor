@@ -1,4 +1,106 @@
 {
   "error": "No result - either the rule or test case data unit-test-coreid-CG0114-negative.xlsx is broken",
-  "exception": "cannot unpack non-iterable NoneType object"
+  "exception": "cannot unpack non-iterable NoneType object",
+  "unmatched_highlights_in_test_case": {
+    "ag.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "AGDOSE": "AGDOSE",
+          "AGDOSU": "AGDOSU"
+        }
+      },
+      {
+        "row": 2,
+        "unmatched_values": {
+          "AGDOSE": 250,
+          "AGDOSU": null
+        }
+      }
+    ],
+    "cm.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "CMDOSE": "CMDOSE",
+          "CMDOSU": "CMDOSU",
+          "CMDOSTOT": "CMDOSTOT"
+        }
+      },
+      {
+        "row": 2,
+        "unmatched_values": {
+          "CMDOSE": 100,
+          "CMDOSU": null,
+          "CMDOSTOT": 200
+        }
+      }
+    ],
+    "ex.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "EXDOSE": "EXDOSE",
+          "EXDOSU": "EXDOSU"
+        }
+      },
+      {
+        "row": 1,
+        "unmatched_values": {
+          "EXDOSE": 1000,
+          "EXDOSU": null
+        }
+      }
+    ],
+    "ml.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "MLDOSTXT": "MLDOSTXT",
+          "MLDOSU": "MLDOSU"
+        }
+      },
+      {
+        "row": 1,
+        "unmatched_values": {
+          "MLDOSTXT": 2,
+          "MLDOSU": null
+        }
+      }
+    ],
+    "pr.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "PRDOSE": "PRDOSE",
+          "PRDOSTXT": "PRDOSTXT",
+          "PRDOSU": "PRDOSU"
+        }
+      },
+      {
+        "row": 1,
+        "unmatched_values": {
+          "PRDOSE": 70,
+          "PRDOSU": null
+        }
+      }
+    ],
+    "su.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "SUDOSE": "SUDOSE",
+          "SUDOSU": "SUDOSU",
+          "SUDOSTOT": "SUDOSTOT"
+        }
+      },
+      {
+        "row": 2,
+        "unmatched_values": {
+          "SUDOSU": null,
+          "SUDOSTOT": 3
+        }
+      }
+    ]
+  }
 }

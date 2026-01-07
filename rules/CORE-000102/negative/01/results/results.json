@@ -14,7 +14,8 @@
           "value": {
             "AETOX": "CTCAE 4.03",
             "AETOXGR": null
-          }
+          },
+          "highlighted_in_test_case": true
         }
       ]
     },
@@ -48,7 +49,8 @@
           "value": {
             "EGTOX": "CTCAE 4.03",
             "EGTOXGR": null
-          }
+          },
+          "highlighted_in_test_case": true
         }
       ]
     },
@@ -66,7 +68,8 @@
           "value": {
             "LBTOX": "CTCAE 4.03",
             "LBTOXGR": null
-          }
+          },
+          "highlighted_in_test_case": true
         }
       ]
     },
@@ -86,5 +89,70 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ae.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "AETOX": "AETOX",
+          "AETOXGR": "AETOXGR"
+        }
+      }
+    ],
+    "mh.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "MHTOX": "MHTOX",
+          "MHTOXGR": "MHTOXGR"
+        }
+      }
+    ],
+    "ce.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "CETOX": "CETOX",
+          "CETOXGR": "CETOXGR"
+        }
+      }
+    ],
+    "eg.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "EGTOX": "EGTOX",
+          "EGTOXGR": "EGTOXGR"
+        }
+      }
+    ],
+    "lb.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "LBTOX": "LBTOX",
+          "LBTOXGR": "LBTOXGR"
+        }
+      }
+    ],
+    "pc.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "PCTOX": "PCTOX",
+          "PCTOXGR": "PCTOXGR"
+        }
+      }
+    ],
+    "pp.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "PPTOX": "PPTOX",
+          "PPTOXGR": "PPTOXGR"
+        }
+      }
+    ]
+  }
 }

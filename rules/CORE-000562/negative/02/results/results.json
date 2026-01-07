@@ -16,7 +16,8 @@
             "TSGRPID": "2",
             "TSPARMCD": "TDIGRP",
             "TSVAL": null
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 51,
@@ -27,9 +28,106 @@
             "TSGRPID": "3",
             "TSPARMCD": "TDIGRP",
             "TSVAL": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ts.xpt": [
+      {
+        "row": 16,
+        "unmatched_values": {
+          "TSPARMCD": "HLTSUBJI",
+          "TSPARM": "Healthy Subject Indicator",
+          "TSVAL": "Y",
+          "TSVALNF": null,
+          "TSVALCD": "C49487",
+          "TSVCDREF": "CDISC",
+          "TSVCDVER": "2020-03-27"
+        }
+      },
+      {
+        "row": 17,
+        "unmatched_values": {
+          "TSPARMCD": "HLTSUBJI",
+          "TSPARM": "Healthy Subject Indicator",
+          "TSVAL": "N",
+          "TSVALNF": null,
+          "TSVALCD": "C49488",
+          "TSVCDREF": "CDISC",
+          "TSVCDVER": "2020-03-28"
+        }
+      },
+      {
+        "row": 18,
+        "unmatched_values": {
+          "TSPARMCD": "HLTSUBJI",
+          "TSPARM": "Healthy Subject Indicator",
+          "TSVAL": "N",
+          "TSVALNF": null,
+          "TSVALCD": "C49488",
+          "TSVCDREF": "CDISC",
+          "TSVCDVER": "2020-03-27"
+        }
+      },
+      {
+        "row": 19,
+        "unmatched_values": {
+          "TSPARMCD": "HLTSUBJI",
+          "TSPARM": "Healthy Subject Indicator",
+          "TSVAL": "N",
+          "TSVALNF": null,
+          "TSVALCD": "C49488",
+          "TSVCDREF": "CDISC",
+          "TSVCDVER": "2020-03-28"
+        }
+      },
+      {
+        "row": 20,
+        "unmatched_values": {
+          "TSPARMCD": "HLTSUBJI",
+          "TSPARM": "Healthy Subject Indicator",
+          "TSVAL": "N",
+          "TSVALNF": null,
+          "TSVALCD": "C49488",
+          "TSVCDREF": "CDISC",
+          "TSVCDVER": "2020-03-29"
+        }
+      },
+      {
+        "row": 49,
+        "unmatched_values": {
+          "TSPARMCD": "TDIGRP",
+          "TSPARM": "Diagnosis Group",
+          "TSVAL": null,
+          "TSVALNF": null,
+          "TSVALCD": null,
+          "TSVCDREF": null,
+          "TSVCDVER": null
+        }
+      },
+      {
+        "row": 50,
+        "unmatched_values": {
+          "TSPARM": "Diagnosis Group",
+          "TSVALNF": null,
+          "TSVALCD": null,
+          "TSVCDREF": null,
+          "TSVCDVER": null
+        }
+      },
+      {
+        "row": 51,
+        "unmatched_values": {
+          "TSPARM": "Diagnosis Group",
+          "TSVALNF": null,
+          "TSVALCD": null,
+          "TSVCDREF": null,
+          "TSVCDVER": null
+        }
+      }
+    ]
+  }
 }

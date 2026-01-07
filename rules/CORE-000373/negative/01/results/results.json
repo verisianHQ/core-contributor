@@ -14,9 +14,42 @@
           "value": {
             "TSPARMCD": "RANDOM",
             "TSVAL": "U"
-          }
+          },
+          "highlighted_in_test_case": true
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ts.xpt": [
+      {
+        "row": 3,
+        "unmatched_values": {
+          "STUDYID": "ABC",
+          "DOMAIN": "TS",
+          "TSSEQ": "3",
+          "TSGRPID": "P3",
+          "TSPARM": "Trial is Randomized",
+          "TSVALCD": "C17998",
+          "TSVCDREF": "CDISC",
+          "TSVCDVER": "2023-12-15 00:00:00"
+        }
+      },
+      {
+        "row": 5,
+        "unmatched_values": {
+          "STUDYID": "ABC",
+          "DOMAIN": "TS",
+          "TSSEQ": "5",
+          "TSGRPID": "P5",
+          "TSPARMCD": "RANDOM",
+          "TSPARM": "Trial is Randomized",
+          "TSVAL": "NA",
+          "TSVALCD": "C48660",
+          "TSVCDREF": "CDISC",
+          "TSVCDVER": "2023-12-15 00:00:00"
+        }
+      }
+    ]
+  }
 }

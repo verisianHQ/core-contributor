@@ -14,7 +14,8 @@
           "value": {
             "ACTARM": "Drug A",
             "ARM": "Screen Failure"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 2,
@@ -23,7 +24,8 @@
           "value": {
             "ACTARM": null,
             "ARM": "Not Assigned"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 7,
@@ -32,9 +34,32 @@
           "value": {
             "ACTARM": "Not Assigned",
             "ARM": "Screen Failure"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "dm.xpt": [
+      {
+        "row": 1,
+        "unmatched_values": {
+          "ACTARMCD": "DRUGA"
+        }
+      },
+      {
+        "row": 2,
+        "unmatched_values": {
+          "ACTARMCD": null
+        }
+      },
+      {
+        "row": 7,
+        "unmatched_values": {
+          "ACTARMCD": "NOTASSGN"
+        }
+      }
+    ]
+  }
 }

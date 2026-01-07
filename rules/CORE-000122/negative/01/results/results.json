@@ -15,9 +15,22 @@
             "AGE": null,
             "AGETXT": null,
             "AGEU": "YEARS"
-          }
+          },
+          "highlighted_in_test_case": true
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "dm.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "AGE": "AGE",
+          "AGETXT": "AGETXT",
+          "AGEU": "AGEU"
+        }
+      }
+    ]
+  }
 }

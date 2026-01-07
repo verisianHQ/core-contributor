@@ -16,7 +16,8 @@
             "TSGRPID": "1",
             "TSPARMCD": "TDIGRP",
             "TSVAL": "Patients with Probable Mild to Moderate Alzheimers Disease"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 51,
@@ -27,7 +28,8 @@
             "TSGRPID": "2",
             "TSPARMCD": "TDIGRP",
             "TSVAL": "HEALTHY"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 52,
@@ -38,7 +40,8 @@
             "TSGRPID": null,
             "TSPARMCD": "TDIGRP",
             "TSVAL": "HEALTHY"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 53,
@@ -49,7 +52,8 @@
             "TSGRPID": "4",
             "TSPARMCD": "TDIGRP",
             "TSVAL": "HEALTHY"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 54,
@@ -60,9 +64,136 @@
             "TSGRPID": "4",
             "TSPARMCD": "TDIGRP",
             "TSVAL": "NOT HEALTHY"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ts.xpt": [
+      {
+        "row": 16,
+        "unmatched_values": {
+          "TSPARMCD": "HLTSUBJI",
+          "TSPARM": "Healthy Subject Indicator",
+          "TSVAL": "Y",
+          "TSVALNF": null,
+          "TSVALCD": "C49487",
+          "TSVCDREF": "CDISC",
+          "TSVCDVER": "2020-03-27"
+        }
+      },
+      {
+        "row": 17,
+        "unmatched_values": {
+          "TSPARMCD": "HLTSUBJI",
+          "TSPARM": "Healthy Subject Indicator",
+          "TSVAL": "Y",
+          "TSVALNF": null,
+          "TSVALCD": "C49487",
+          "TSVCDREF": "CDISC",
+          "TSVCDVER": "2020-03-28"
+        }
+      },
+      {
+        "row": 18,
+        "unmatched_values": {
+          "TSPARMCD": "HLTSUBJI",
+          "TSPARM": "Healthy Subject Indicator",
+          "TSVAL": "N",
+          "TSVALNF": null,
+          "TSVALCD": "C49488",
+          "TSVCDREF": "CDISC",
+          "TSVCDVER": "2020-03-27"
+        }
+      },
+      {
+        "row": 19,
+        "unmatched_values": {
+          "TSPARMCD": "HLTSUBJI",
+          "TSPARM": "Healthy Subject Indicator",
+          "TSVAL": "Y",
+          "TSVALNF": null,
+          "TSVALCD": "C49487",
+          "TSVCDREF": "CDISC",
+          "TSVCDVER": "2020-03-28"
+        }
+      },
+      {
+        "row": 20,
+        "unmatched_values": {
+          "TSPARMCD": "HLTSUBJI",
+          "TSPARM": "Healthy Subject Indicator",
+          "TSVAL": "Y",
+          "TSVALNF": null,
+          "TSVALCD": "C49487",
+          "TSVCDREF": "CDISC",
+          "TSVCDVER": "2020-03-27"
+        }
+      },
+      {
+        "row": 21,
+        "unmatched_values": {
+          "TSPARMCD": "HLTSUBJI",
+          "TSPARM": "Healthy Subject Indicator",
+          "TSVAL": "Y",
+          "TSVALNF": null,
+          "TSVALCD": "C49487",
+          "TSVCDREF": "CDISC",
+          "TSVCDVER": "2020-03-28"
+        }
+      },
+      {
+        "row": 50,
+        "unmatched_values": {
+          "TSPARM": "Diagnosis Group",
+          "TSVALNF": null,
+          "TSVALCD": null,
+          "TSVCDREF": null,
+          "TSVCDVER": null
+        }
+      },
+      {
+        "row": 51,
+        "unmatched_values": {
+          "TSPARM": "Diagnosis Group",
+          "TSVALNF": null,
+          "TSVALCD": null,
+          "TSVCDREF": null,
+          "TSVCDVER": null
+        }
+      },
+      {
+        "row": 52,
+        "unmatched_values": {
+          "TSPARM": "Diagnosis Group",
+          "TSVALNF": null,
+          "TSVALCD": null,
+          "TSVCDREF": null,
+          "TSVCDVER": null
+        }
+      },
+      {
+        "row": 53,
+        "unmatched_values": {
+          "TSPARM": "Diagnosis Group",
+          "TSVALNF": null,
+          "TSVALCD": null,
+          "TSVCDREF": null,
+          "TSVCDVER": null
+        }
+      },
+      {
+        "row": 54,
+        "unmatched_values": {
+          "TSPARM": "Diagnosis Group",
+          "TSVALNF": null,
+          "TSVALCD": null,
+          "TSVCDREF": null,
+          "TSVCDVER": null
+        }
+      }
+    ]
+  }
 }

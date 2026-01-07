@@ -14,7 +14,8 @@
           "value": {
             "DTHDTC": "2018-06-10",
             "DTHFL": null
-          }
+          },
+          "highlighted_in_test_case": true
         },
         {
           "row": 4,
@@ -23,9 +24,21 @@
           "value": {
             "DTHDTC": "2018-09-04",
             "DTHFL": "N"
-          }
+          },
+          "highlighted_in_test_case": true
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "dm.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "DTHDTC": "DTHDTC",
+          "DTHFL": "DTHFL"
+        }
+      }
+    ]
+  }
 }

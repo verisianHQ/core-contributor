@@ -14,7 +14,8 @@
           "value": {
             "ACTARM": "Screen Failure",
             "RFENDTC": "2023-01-02"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 2,
@@ -23,9 +24,33 @@
           "value": {
             "ACTARM": "Not Assigned",
             "RFENDTC": "2023-01-02"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "dm.xpt": [
+      {
+        "row": 1,
+        "unmatched_values": {
+          "RFSTDTC": "2023-01-02"
+        }
+      },
+      {
+        "row": 2,
+        "unmatched_values": {
+          "RFSTDTC": "2023-01-02"
+        }
+      },
+      {
+        "row": 3,
+        "unmatched_values": {
+          "RFSTDTC": null,
+          "RFENDTC": null
+        }
+      }
+    ]
+  }
 }

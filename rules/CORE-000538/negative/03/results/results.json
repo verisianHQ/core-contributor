@@ -8,5 +8,27 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "supplbch.xpt": [
+      {
+        "row": 1,
+        "unmatched_values": {
+          "RDOMAIN": "DM"
+        }
+      },
+      {
+        "row": 2,
+        "unmatched_values": {
+          "RDOMAIN": "CH"
+        }
+      },
+      {
+        "row": 4,
+        "unmatched_values": {
+          "RDOMAIN": "BC"
+        }
+      }
+    ]
+  }
 }

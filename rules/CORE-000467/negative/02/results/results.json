@@ -15,9 +15,28 @@
             "TSGRPID": "1",
             "TSPARMCD": "STOPRULE",
             "TSVAL": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ts.xpt": [
+      {
+        "row": 46,
+        "unmatched_values": {
+          "TSPARM": "Study Stop Rules"
+        }
+      },
+      {
+        "row": 47,
+        "unmatched_values": {
+          "TSPARMCD": "STOPRULE",
+          "TSPARM": "Study Stop Rules",
+          "TSVAL": "WHEN SAE OCCURS"
+        }
+      }
+    ]
+  }
 }

@@ -1,4 +1,116 @@
 {
   "error": "No result - either the rule or test case data unit-test-coreid-CG0110-negative.xlsx is broken",
-  "exception": "cannot unpack non-iterable NoneType object"
+  "exception": "cannot unpack non-iterable NoneType object",
+  "unmatched_highlights_in_test_case": {
+    "ag.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "AGDOSE": "AGDOSE",
+          "AGDOSTXT": "AGDOSTXT"
+        }
+      },
+      {
+        "row": 2,
+        "unmatched_values": {
+          "AGDOSE": 250,
+          "AGDOSTXT": "250-300"
+        }
+      }
+    ],
+    "cm.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "CMDOSE": "CMDOSE",
+          "CMDOSTXT": "CMDOSTXT"
+        }
+      },
+      {
+        "row": 2,
+        "unmatched_values": {
+          "CMDOSE": 100,
+          "CMDOSTXT": "100-120"
+        }
+      }
+    ],
+    "ec.xpt": [
+      {
+        "row": 0,
+        "unmatched_values": {
+          "null": "ECDOSTXT"
+        }
+      },
+      {
+        "row": 5,
+        "unmatched_values": {
+          "null": "2-3"
+        }
+      }
+    ],
+    "ex.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "EXDOSE": "EXDOSE",
+          "EXDOSTXT": "EXDOSTXT"
+        }
+      },
+      {
+        "row": 2,
+        "unmatched_values": {
+          "EXDOSE": 500,
+          "EXDOSTXT": "500-600"
+        }
+      }
+    ],
+    "ml.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "MLDOSE": "MLDOSE",
+          "MLDOSTXT": "MLDOSTXT"
+        }
+      },
+      {
+        "row": 2,
+        "unmatched_values": {
+          "MLDOSE": 8,
+          "MLDOSTXT": 8
+        }
+      }
+    ],
+    "pr.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "PRDOSE": "PRDOSE",
+          "PRDOSTXT": "PRDOSTXT"
+        }
+      },
+      {
+        "row": 2,
+        "unmatched_values": {
+          "PRDOSE": 25,
+          "PRDOSTXT": "25-30"
+        }
+      }
+    ],
+    "su.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "SUDOSE": "SUDOSE",
+          "SUDOSTXT": "SUDOSTXT"
+        }
+      },
+      {
+        "row": 2,
+        "unmatched_values": {
+          "SUDOSE": 3,
+          "SUDOSTXT": "3-4"
+        }
+      }
+    ]
+  }
 }

@@ -24,7 +24,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 4,
@@ -35,7 +36,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -47,5 +49,43 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ae.xpt": [
+      {
+        "row": 1,
+        "unmatched_values": {
+          "USUBJID": "CDISC001",
+          "AESEQ": 1,
+          "AETERM": "INJECTION SITE REACTIONS",
+          "AEDECOD": null
+        }
+      },
+      {
+        "row": 2,
+        "unmatched_values": {
+          "USUBJID": "CDISC001",
+          "AESEQ": 2,
+          "AETERM": null,
+          "AEDECOD": "Headache"
+        }
+      }
+    ],
+    "fa.xpt": [
+      {
+        "row": 3,
+        "unmatched_values": {
+          "USUBJID": "CDISC001",
+          "FASEQ": 3
+        }
+      },
+      {
+        "row": 4,
+        "unmatched_values": {
+          "USUBJID": "CDISC001",
+          "FASEQ": 4
+        }
+      }
+    ]
+  }
 }

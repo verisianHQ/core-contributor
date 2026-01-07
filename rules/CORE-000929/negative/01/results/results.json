@@ -9,7 +9,8 @@
       "errors": [
         {
           "error": "An unknown exception has occurred",
-          "message": "Operation codelist_terms is not implemented"
+          "message": "Operation codelist_terms is not implemented",
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -22,7 +23,8 @@
       "errors": [
         {
           "error": "An unknown exception has occurred",
-          "message": "Operation codelist_terms is not implemented"
+          "message": "Operation codelist_terms is not implemented",
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -35,7 +37,8 @@
       "errors": [
         {
           "error": "An unknown exception has occurred",
-          "message": "Operation codelist_terms is not implemented"
+          "message": "Operation codelist_terms is not implemented",
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -48,9 +51,49 @@
       "errors": [
         {
           "error": "An unknown exception has occurred",
-          "message": "Operation codelist_terms is not implemented"
+          "message": "Operation codelist_terms is not implemented",
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "cm.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "CMDOSE": "CMDOSE",
+          "CMDOSTXT": "CMDOSTXT"
+        }
+      },
+      {
+        "row": 1,
+        "unmatched_values": {
+          "CMDOSE": null,
+          "CMDOSTXT": 100
+        }
+      },
+      {
+        "row": 2,
+        "unmatched_values": {
+          "CMDOSE": null,
+          "CMDOSTXT": 100
+        }
+      },
+      {
+        "row": 3,
+        "unmatched_values": {
+          "CMDOSE": null,
+          "CMDOSTXT": 100
+        }
+      },
+      {
+        "row": 4,
+        "unmatched_values": {
+          "CMDOSE": null,
+          "CMDOSTXT": 100
+        }
+      }
+    ]
+  }
 }

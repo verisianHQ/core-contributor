@@ -16,9 +16,30 @@
             "TSGRPID": null,
             "TSPARMCD": "TRT",
             "TSVAL": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ts.xpt": [
+      {
+        "row": 42,
+        "unmatched_values": {
+          "TSPARMCD": "STYPE",
+          "TSPARM": "Study Type",
+          "TSVAL": "INTERVENTIONAL",
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 49,
+        "unmatched_values": {
+          "TSPARM": "Investigational Therapy or Treatment",
+          "TSVALNF": null
+        }
+      }
+    ]
+  }
 }

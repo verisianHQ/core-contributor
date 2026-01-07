@@ -22,7 +22,8 @@
           "value": {
             "CMCAT": "Not in dataset",
             "CMSCAT": "PRIOR DMARDS"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -48,7 +49,8 @@
           "value": {
             "EXCAT": "Not in dataset",
             "EXSCAT": "HIGHLIGHTED DOSE"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -98,7 +100,8 @@
           "value": {
             "BECAT": "Not in dataset",
             "BESCAT": "COLLECTION"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -132,7 +135,8 @@
           "value": {
             "MHCAT": "Not in dataset",
             "MHSCAT": "RESPIRATORY"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -158,7 +162,8 @@
           "value": {
             "EGCAT": "Not in dataset",
             "EGSCAT": "INTERVAL"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -176,9 +181,138 @@
           "value": {
             "FACAT": "Not in dataset",
             "FASCAT": "GERD"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ag.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "AGCAT": "AGCAT",
+          "AGSCAT": "AGSCAT"
+        }
+      }
+    ],
+    "cm.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "CMSCAT": "CMSCAT"
+        }
+      }
+    ],
+    "ec.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "ECCAT": "ECCAT",
+          "ECSCAT": "ECSCAT"
+        }
+      }
+    ],
+    "ex.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "EXSCAT": "EXSCAT"
+        }
+      }
+    ],
+    "ml.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "MLCAT": "MLCAT",
+          "MLSCAT": "MLSCAT"
+        }
+      }
+    ],
+    "pr.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "PRCAT": "PRCAT",
+          "PRSCAT": "PRSCAT"
+        }
+      }
+    ],
+    "ae.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "AECAT": "AECAT",
+          "AESCAT": "AESCAT"
+        }
+      }
+    ],
+    "be.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "BESCAT": "BESCAT"
+        }
+      }
+    ],
+    "ce.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "CECAT": "CECAT",
+          "CESCAT": "CESCAT"
+        }
+      }
+    ],
+    "ds.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "DSCAT": "DSCAT",
+          "DSSCAT": "DSSCAT"
+        }
+      }
+    ],
+    "mh.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "MHSCAT": "MHSCAT"
+        }
+      }
+    ],
+    "da.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "DACAT": "DACAT",
+          "DASCAT": "DASCAT"
+        }
+      }
+    ],
+    "eg.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "EGSCAT": "EGSCAT"
+        }
+      }
+    ],
+    "fa.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "FASCAT": "FASCAT"
+        }
+      },
+      {
+        "row": 1,
+        "unmatched_values": {
+          "FASCAT": "GERD"
+        }
+      }
+    ]
+  }
 }

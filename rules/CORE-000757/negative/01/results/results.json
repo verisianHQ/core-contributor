@@ -15,7 +15,8 @@
             "CMDECOD": null,
             "CMTRT": "HYDROCORTISONE, TOPICAL",
             "RELREC.FAOBJ": "ERYTHEMA"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -43,5 +44,33 @@
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "relrec.xpt": [
+      {
+        "row": 5,
+        "unmatched_values": {
+          "STUDYID": "CDISCPILOT01",
+          "RDOMAIN": "EX",
+          "USUBJID": "",
+          "IDVAR": "EXLNKID",
+          "IDVARVAL": "",
+          "RELTYPE": "ONE",
+          "RELID": "EXFA"
+        }
+      },
+      {
+        "row": 6,
+        "unmatched_values": {
+          "STUDYID": "CDISCPILOT01",
+          "RDOMAIN": "FA",
+          "USUBJID": "",
+          "IDVAR": "FALNKID",
+          "IDVARVAL": "",
+          "RELTYPE": "ONE",
+          "RELID": "EXFA"
+        }
+      }
+    ]
+  }
 }

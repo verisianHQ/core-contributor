@@ -16,7 +16,8 @@
             "TSGRPID": "1",
             "TSPARMCD": "TRT",
             "TSVAL": null
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 45,
@@ -27,7 +28,8 @@
             "TSGRPID": "2",
             "TSPARMCD": "TRT",
             "TSVAL": null
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 54,
@@ -38,9 +40,71 @@
             "TSGRPID": null,
             "TSPARMCD": "TRT",
             "TSVAL": null
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ts.xpt": [
+      {
+        "row": 42,
+        "unmatched_values": {
+          "TSPARMCD": "STYPE",
+          "TSPARM": "Study Type",
+          "TSVAL": "INTERVENTIONAL",
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 43,
+        "unmatched_values": {
+          "TSPARM": "Investigational Therapy or Treatment",
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 44,
+        "unmatched_values": {
+          "TSPARMCD": "STYPE",
+          "TSPARM": "Study Type",
+          "TSVAL": "INTERVENTIONAL",
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 45,
+        "unmatched_values": {
+          "TSPARM": "Investigational Therapy or Treatment",
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 52,
+        "unmatched_values": {
+          "TSPARMCD": "STYPE",
+          "TSPARM": "Study Type",
+          "TSVAL": "INTERVENTIONAL",
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 53,
+        "unmatched_values": {
+          "TSPARMCD": "STYPE",
+          "TSPARM": "Study Type",
+          "TSVAL": "INTERVENTIONAL",
+          "TSVALNF": null
+        }
+      },
+      {
+        "row": 54,
+        "unmatched_values": {
+          "TSPARM": "Investigational Therapy or Treatment",
+          "TSVALNF": null
+        }
+      }
+    ]
+  }
 }

@@ -14,7 +14,8 @@
           "value": {
             "AGCAT": null,
             "AGSCAT": "DFAJF"
-          }
+          },
+          "highlighted_in_test_case": true
         }
       ]
     },
@@ -32,7 +33,8 @@
           "value": {
             "CMCAT": null,
             "CMSCAT": "PRIOR DMARDS"
-          }
+          },
+          "highlighted_in_test_case": true
         }
       ]
     },
@@ -82,7 +84,8 @@
           "value": {
             "SUCAT": null,
             "SUSCAT": "TOBACCO"
-          }
+          },
+          "highlighted_in_test_case": false
         },
         {
           "row": 2,
@@ -91,7 +94,8 @@
           "value": {
             "SUCAT": null,
             "SUSCAT": "CAFFEINE"
-          }
+          },
+          "highlighted_in_test_case": false
         }
       ]
     },
@@ -109,7 +113,8 @@
           "value": {
             "AECAT": null,
             "AESCAT": "NEUROLOGIC"
-          }
+          },
+          "highlighted_in_test_case": true
         }
       ]
     },
@@ -167,7 +172,8 @@
           "value": {
             "EGCAT": null,
             "EGSCAT": "INTERVAL"
-          }
+          },
+          "highlighted_in_test_case": true
         }
       ]
     },
@@ -185,9 +191,120 @@
           "value": {
             "FACAT": null,
             "FASCAT": "GERD"
-          }
+          },
+          "highlighted_in_test_case": true
         }
       ]
     }
-  ]
+  ],
+  "unmatched_highlights_in_test_case": {
+    "ag.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "AGCAT": "AGCAT",
+          "AGSCAT": "AGSCAT"
+        }
+      }
+    ],
+    "cm.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "CMCAT": "CMCAT",
+          "CMSCAT": "CMSCAT"
+        }
+      }
+    ],
+    "ex.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "EXCAT": "EXCAT",
+          "EXSCAT": "EXSCAT"
+        }
+      }
+    ],
+    "ml.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "MLCAT": "MLCAT",
+          "MLSCAT": "MLSCAT"
+        }
+      }
+    ],
+    "ae.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "AECAT": "AECAT",
+          "AESCAT": "AESCAT"
+        }
+      }
+    ],
+    "be.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "BECAT": "BECAT",
+          "BESCAT": "BESCAT"
+        }
+      }
+    ],
+    "ce.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "CECAT": "CECAT",
+          "CESCAT": "CESCAT"
+        }
+      }
+    ],
+    "ds.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "DSCAT": "DSCAT",
+          "DSSCAT": "DSSCAT"
+        }
+      }
+    ],
+    "mh.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "MHCAT": "MHCAT",
+          "MHSCAT": "MHSCAT"
+        }
+      }
+    ],
+    "da.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "DACAT": "DACAT",
+          "DASCAT": "DASCAT"
+        }
+      }
+    ],
+    "eg.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "EGCAT": "EGCAT",
+          "EGSCAT": "EGSCAT"
+        }
+      }
+    ],
+    "fa.xpt": [
+      {
+        "row": -3,
+        "unmatched_values": {
+          "FACAT": "FACAT",
+          "FASCAT": "FASCAT"
+        }
+      }
+    ]
+  }
 }
