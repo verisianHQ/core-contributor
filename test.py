@@ -61,23 +61,38 @@ class ResultReporter:
                             f.write(f"    Row: {row}\n")
 
                         for key, val in error.items():
-                            if key not in ["row", "value", "highlighted_in_test_case"]:
+                            if key not in ["row", "value", "validated"]:
                                 f.write(f"    {key}: {val}\n")
 
-                        if value_dict := error.get("value", {}):
-                            f.write("    Problematic values:\n")
-                            for k, v in value_dict.items():
-                                f.write(f"      {k}: {v}\n")
-
-                        if error.get("highlighted_in_test_case") is not None:
-                            highlight_status = "Yes" if error["highlighted_in_test_case"] else "No"
-                            f.write(f"    Highlighted in Test Case: {highlight_status}\n")
+                        if error.get("validated") is not None:
+                            validation = "Yes" if error["validated"] else "No"
+                            f.write(f"    Fully Validated in Test Case: {validation}\n")
                         f.write("\n")
                 f.write("\n")
 
-            if unmatched := results_data.get("unmatched_highlights_in_test_case"):
-                f.write(f"Unmatched highlighted cells in test case: {len(unmatched)}\n")
+            if any(
+                [
+                    results_data.get("validated"),
+                    results_data.get("unhighlighted_validations"),
+                    results_data.get("unvalidated_highlights"),
+                ]
+            ):
+                f.write("***ISSUES***\n")
+
+            if results_data.get("validated"):
+                f.write("Mismatch between validation sheet and engine errors\n")
                 f.write("Check results.json for more information, or examine the test case file directly.\n")
+
+            if uh_v := results_data.get("unhighlighted_validations"):
+                print(uh_v)
+                f.write("The following error groups on the validations sheet are not highlighted correctly:\n")
+                f.write(", ".join(str(v) for e in uh_v for v in e.values()) + "\n")
+
+            if uv_h := results_data.get("unvalidated_highlights"):
+                print(uv_h)
+                f.write("The following rows have highlights that do not match the validations sheet:\n")
+                ids = [f"{k}: {v}" for e in uv_h for k, v in e.items()]
+                f.write("\n".join(", ".join(ids[i : i + 2]) for i in range(0, len(ids), 2)))  # noqa
 
     @classmethod
     def save_case_results(cls, rule_id: str, test_type: str, case_id: str, results: dict):
@@ -232,32 +247,18 @@ class TestRunner:
             results_data = {"error": "Unknown Error", "exception": "Engine returned None"}
 
         if test_type == "negative":
-            test_case_cell_errors = self.get_excel_errors(case_info["data_path"])
-            for ds in results_data.get("datasets", []):
-                for err in ds.get("errors", []):
-                    if "row" in err:
-                        if not test_case_cell_errors:
-                            err.update({"highlighted_in_test_case": False})
-                            continue
-                        for ref in test_case_cell_errors.get(ds.get("dataset", []), []):
-                            if err.get("row") == ref.get("row") and err.get("value") == ref.get("value"):
-                                err.update({"highlighted_in_test_case": True})
-                                ref.update({"matched": True})
-                                break
-                            else:
-                                err.update({"highlighted_in_test_case": False})
+            validations = self.get_validation_info(case_info["data_path"])
+            if validations:
+                results_data, unmatched = self.validate_errors(results_data, validations)
+                highlights = self.get_excel_highlights(case_info["data_path"])
+                unhighlighted_validations, unvalidated_highlights = self.check_highlights(validations, highlights)
 
-            # get list of unmatched highlights from test case
-            unmatched = {
-                ds: [ref for ref in test_case_cell_errors.get(ds, []) if not ref.get("matched")]
-                for ds in test_case_cell_errors
-            }
-
-            # remove datasets with no unmatched highlights
-            unmatched = {ds: v for ds, v in unmatched.items() if v}
-
-            if unmatched:
-                results_data["unmatched_highlights_in_test_case"] = unmatched
+                if unmatched:
+                    results_data["unmatched_validation"] = unmatched
+                if unhighlighted_validations:
+                    results_data["unhighlighted_validations"] = unhighlighted_validations
+                if unvalidated_highlights:
+                    results_data["unvalidated_highlights"] = unvalidated_highlights
 
         results_path = ResultReporter.save_case_results(rule_id, test_type, case_id, results_data)
 
@@ -283,7 +284,26 @@ class TestRunner:
             "results_path": results_path,
         }
 
-    def get_excel_errors(self, data_path: str):
+    def get_validation_info(self, data_path: str):
+        xl_path = list(Path(data_path).glob("[!~]*.xls*"))[0]
+        wb = op.load_workbook(xl_path, data_only=True)
+        validation_values = {}
+
+        if "Validation" in wb.sheetnames:
+            ws = wb["Validation"]
+            headers = [cell.value for cell in ws[1]][1:]
+
+            for row in ws.iter_rows(min_row=2, values_only=True):
+                error_group_id = row[0]
+                if error_group_id is None:
+                    continue
+                error_values = row[1:]
+                row_data = dict(zip(headers, error_values))
+                validation_values.setdefault(error_group_id, []).append(row_data)
+
+        return validation_values
+
+    def get_excel_highlights(self, data_path: str):
         xl_path = list(Path(data_path).glob("[!~]*.xls*"))[0]
         highlighted_cells = {}
 
@@ -292,13 +312,95 @@ class TestRunner:
             for row in sheet.iter_rows():
                 for cell in row:
                     if cell.fill.start_color.index == "FFFFFF00":
-                        highlighted_cells.setdefault(sheet.title, []).append(
-                            {
-                                "row": int(cell.row) - 4,
-                                "value": {sheet.cell(row=1, column=cell.column).value: cell.value},
-                            }
-                        )
+                        sheet_data = highlighted_cells.setdefault(sheet.title, {})
+                        row_data = sheet_data.setdefault(int(cell.row), {})
+                        row_data.update({sheet.cell(row=1, column=cell.column).value: cell.value})
         return highlighted_cells
+
+    def validate_errors(self, results_data: dict, validations: dict):
+        unmatched = []
+
+        flat_validation = {}
+        for _, entries in validations.items():
+            if not entries:
+                continue
+            error_level = entries[0]["Error level"].lower()
+            sheet = entries[0]["Sheet"]
+            row = entries[0]["Row num"] if entries[0]["Row num"] in [1, "N/A"] else entries[0]["Row num"] - 4
+            values = frozenset((e["Variable"], e["Error value"]) for e in entries)
+
+            flat_validation[(sheet, error_level, row)] = values
+
+        for ds in results_data["datasets"]:
+            sheet_name = ds["dataset"]
+
+            for error_obj in ds["errors"]:
+                res_values = frozenset(error_obj["value"].items())
+
+                match_found = False
+                for (v_sheet, v_error_level, v_row), v_values in flat_validation.items():
+                    if v_sheet == sheet_name:
+                        if v_error_level == "record":
+                            if v_values == res_values:
+                                match_found = True
+                        elif v_error_level == "variable" or v_error_level == "dataset":
+                            if frozenset(v[0] for v in v_values if v[1] != "[ABSENT]") == frozenset(
+                                v[0] for v in res_values if v[1] != "[ABSENT]"
+                            ) or not frozenset(v[0] for v in v_values if v[1] != "[ABSENT]"):
+                                match_found = True
+
+                        if match_found:
+                            error_obj["validated"] = True
+                            del flat_validation[(v_sheet, v_error_level, v_row)]
+                            break
+
+                if not match_found:
+                    error_obj["validated"] = False
+
+        for _, values in flat_validation.items():
+            unmatched.append({"value": dict(values)})
+
+        return results_data, unmatched
+
+    def check_highlights(self, validations: dict, highlights: dict):
+        unmatched_validations = []
+        matched_highlights = set()
+
+        for v_id, v_entries in validations.items():
+            for e in v_entries:
+                sheet, error_level, row, var, error_val = (
+                    e["Sheet"],
+                    e["Error level"].lower(),
+                    e["Row num"],
+                    e["Variable"],
+                    e["Error value"],
+                )
+                if error_level == "record":
+                    h_val = highlights.get(sheet, {}).get(row, {}).get(var)
+                    match = h_val == error_val
+                if error_level == "variable":
+                    if error_val == "[PRESENT]":
+                        h_id = highlights.get(sheet, {}).get(row, {})
+                        match = var in h_id
+                    else:
+                        continue
+                if error_level == "dataset":
+                    continue
+
+                if match:
+                    matched_highlights.add((sheet, row, var))
+                    continue
+
+                unmatched_validations.append({v_id: [sheet, error_level, row, var, error_val]})
+
+        unmatched_highlights = []
+        for sheet, rows in highlights.items():
+            for row_num, vals in rows.items():
+                for var in vals.keys():
+                    if (sheet, row_num, var) not in matched_highlights:
+                        unmatched_highlights.append({"Sheet": sheet, "Row": row_num, "Variable": var})
+
+        return unmatched_validations, unmatched_highlights
 
     def _get_cases_to_run(self, rule_id: str, specific_case: str = None) -> Dict[str, List[dict]]:
         all_cases = self.get_test_cases(rule_id)
