@@ -216,9 +216,7 @@ class Formatter:
 class Sanitiser:
     @staticmethod
     def sanitize_xlsx(file_path: str):
-        path = Path(file_path)
-        print(f"Sanitizing: {path.name}...")
-        
+        path = Path(file_path)        
         try:
             old_wb = openpyxl.load_workbook(path)
             
@@ -322,23 +320,21 @@ def main():
     if not selected_cases:
         sys.exit(0)
 
-    print(f"\nProcessing {len(selected_cases)} files...")
+    total_cases = len(selected_cases)
+    print(f"Processing {total_cases} files...")
     success_count = 0
     
-    for case in selected_cases:
+    for i, case in enumerate(selected_cases, 1):
         case_id_str = f"{case['rule_id']}/{case['type']}/{case['case_id']}"
-        print(f" -> {case_id_str} ... ", end="")
+        print(f"\r\033[K[{i}/{total_cases}] Processing: {case_id_str}", end="", flush=True)
         
         formatter = Formatter(case['path'], label_mgr)
         if formatter.format():
-            print("OK")
             success_count += 1
-        else:
-            print("FAILED")
         
         Sanitiser.sanitize_xlsx(case['path'])
 
-    print(f"\nComplete. {success_count}/{len(selected_cases)} formatted.")
+    print(f"\n\nComplete. {success_count}/{total_cases} formatted.")
 
 if __name__ == "__main__":
     try:
