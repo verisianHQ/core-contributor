@@ -14,9 +14,32 @@
           "value": {
             "AGTRTV": null,
             "AGVAMTU": "mL"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ag.xpt",
+      "Row": 1,
+      "Variable": "AGTRTV"
+    },
+    {
+      "Sheet": "ag.xpt",
+      "Row": 1,
+      "Variable": "AGVAMTU"
+    },
+    {
+      "Sheet": "ag.xpt",
+      "Row": 6,
+      "Variable": "AGTRTV"
+    },
+    {
+      "Sheet": "ag.xpt",
+      "Row": 6,
+      "Variable": "AGVAMTU"
     }
   ]
 }

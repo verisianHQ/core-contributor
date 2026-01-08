@@ -15,7 +15,8 @@
             "AGE": null,
             "AGETXT": "Not in dataset",
             "AGEU": "YEARS"
-          }
+          },
+          "validated": false
         },
         {
           "row": 2,
@@ -25,7 +26,8 @@
             "AGE": null,
             "AGETXT": "Not in dataset",
             "AGEU": "YEARS"
-          }
+          },
+          "validated": false
         },
         {
           "row": 3,
@@ -35,7 +37,8 @@
             "AGE": null,
             "AGETXT": "Not in dataset",
             "AGEU": "YEARS"
-          }
+          },
+          "validated": false
         },
         {
           "row": 4,
@@ -45,9 +48,62 @@
             "AGE": null,
             "AGETXT": "Not in dataset",
             "AGEU": "YEARS"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "dm.xpt",
+      "Row": 1,
+      "Variable": "AGE"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 1,
+      "Variable": "AGEU"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 5,
+      "Variable": "AGE"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 5,
+      "Variable": "AGEU"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 6,
+      "Variable": "AGE"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 6,
+      "Variable": "AGEU"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 7,
+      "Variable": "AGE"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 7,
+      "Variable": "AGEU"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 8,
+      "Variable": "AGE"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 8,
+      "Variable": "AGEU"
     }
   ]
 }

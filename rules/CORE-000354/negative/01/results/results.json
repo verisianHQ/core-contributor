@@ -23,7 +23,8 @@
             "LBDTC": "2005-09-28",
             "LBDY": -15.0,
             "RFSTDTC": "2005-10"
-          }
+          },
+          "validated": false
         },
         {
           "row": 5,
@@ -33,7 +34,8 @@
             "LBDTC": "2005-09-28",
             "LBDY": -15.0,
             "RFSTDTC": "2005-10"
-          }
+          },
+          "validated": false
         },
         {
           "row": 6,
@@ -43,7 +45,8 @@
             "LBDTC": null,
             "LBDY": 1.0,
             "RFSTDTC": "2005-10"
-          }
+          },
+          "validated": false
         },
         {
           "row": 7,
@@ -53,7 +56,8 @@
             "LBDTC": null,
             "LBDY": 141.0,
             "RFSTDTC": "2005-10"
-          }
+          },
+          "validated": false
         },
         {
           "row": 9,
@@ -63,7 +67,8 @@
             "LBDTC": "2005-09",
             "LBDY": -15.0,
             "RFSTDTC": "2005-10-13T10:15"
-          }
+          },
+          "validated": false
         },
         {
           "row": 11,
@@ -73,7 +78,8 @@
             "LBDTC": null,
             "LBDY": 141.0,
             "RFSTDTC": "2005-10-13T10:15"
-          }
+          },
+          "validated": false
         },
         {
           "row": 12,
@@ -83,7 +89,8 @@
             "LBDTC": "2006-05",
             "LBDY": 213.0,
             "RFSTDTC": "2005-10-13T10:15"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -102,6 +109,48 @@
       "execution_message": null,
       "number_errors": 0,
       "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "lb.xpt",
+      "Row": 5,
+      "Variable": "LBDY"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 9,
+      "Variable": "LBDY"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 10,
+      "Variable": "LBDY"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 11,
+      "Variable": "LBDY"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 13,
+      "Variable": "LBDY"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 14,
+      "Variable": "LBDY"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 15,
+      "Variable": "LBDY"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 16,
+      "Variable": "LBDY"
     }
   ]
 }

@@ -143,7 +143,8 @@
               "AEPDUR"
             ],
             "QNAM": "AESEV"
-          }
+          },
+          "validated": false
         },
         {
           "row": 2,
@@ -273,7 +274,8 @@
               "AEPDUR"
             ],
             "QNAM": "AEPRESP"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -456,7 +458,8 @@
               "LBPDUR"
             ],
             "QNAM": "LBCLSIG"
-          }
+          },
+          "validated": false
         },
         {
           "row": 2,
@@ -630,7 +633,8 @@
               "LBPDUR"
             ],
             "QNAM": "LBSTAT"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -641,6 +645,28 @@
       "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000783, dataset=LB",
       "number_errors": 0,
       "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "suppae.xpt",
+      "Row": 5,
+      "Variable": "QNAM"
+    },
+    {
+      "Sheet": "suppae.xpt",
+      "Row": 6,
+      "Variable": "QNAM"
+    },
+    {
+      "Sheet": "supplb.xpt",
+      "Row": 5,
+      "Variable": "QNAM"
+    },
+    {
+      "Sheet": "supplb.xpt",
+      "Row": 6,
+      "Variable": "QNAM"
     }
   ]
 }

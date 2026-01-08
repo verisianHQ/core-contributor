@@ -14,9 +14,17 @@
           "value": {
             "TSPARMCD": "SENDTC",
             "TSVAL": "2023-02-30"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ts.xpt",
+      "Row": 5,
+      "Variable": "TSVAL"
     }
   ]
 }

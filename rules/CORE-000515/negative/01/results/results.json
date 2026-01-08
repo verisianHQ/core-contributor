@@ -14,7 +14,8 @@
           "value": {
             "ACTARMCD": "A",
             "USUBJID": "CDISC-TEST-002"
-          }
+          },
+          "validated": false
         },
         {
           "row": 3,
@@ -23,7 +24,8 @@
           "value": {
             "ACTARMCD": "B",
             "USUBJID": "CDISC-TEST-003"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -34,6 +36,23 @@
       "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000515, dataset=DS",
       "number_errors": 0,
       "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "dm.xpt",
+      "Row": 6,
+      "Variable": "ACTARMCD"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 7,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 7,
+      "Variable": "ACTARMCD"
     }
   ]
 }

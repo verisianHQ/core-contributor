@@ -15,7 +15,8 @@
             "TSGRPID": "EFFICACY",
             "TSPARMCD": "OBJPRIM",
             "TSVAL": null
-          }
+          },
+          "validated": false
         },
         {
           "row": 24,
@@ -25,7 +26,8 @@
             "TSGRPID": "EFFICACY",
             "TSPARMCD": "OUTMSPRI",
             "TSVAL": "To assess the dose-dependent improvement in subject depression. Improved scores on the Patient Health Questionnaire(PHQ-9) and the Hamilton Depression Rating Scale(HAMD 17) will indicate improvements,"
-          }
+          },
+          "validated": false
         },
         {
           "row": 25,
@@ -35,7 +37,8 @@
             "TSGRPID": "EFFICACY",
             "TSPARMCD": "OUTMSPRI",
             "TSVAL": "To assess the dose-dependent improvements in satisfaction with subjects' lives as a whole. Improved scores on the Satisfaction With Life Survery (SWLS) will indicate improvements."
-          }
+          },
+          "validated": false
         },
         {
           "row": 26,
@@ -45,9 +48,52 @@
             "TSGRPID": "EFFICACY",
             "TSPARMCD": "OUTMSPRI",
             "TSVAL": "To assess the dose-dependent improvements in subject memory and learning. Improved scores on the Auditory Verbal Learning Test (AVLT-REY) will indicate improvements."
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ts.xpt",
+      "Row": 26,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 26,
+      "Variable": "TSVAL1"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 28,
+      "Variable": "TSVAL1"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 28,
+      "Variable": "TSVAL2"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 29,
+      "Variable": "TSVAL1"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 29,
+      "Variable": "TSVAL2"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 30,
+      "Variable": "TSVAL1"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 30,
+      "Variable": "TSVAL2"
     }
   ]
 }

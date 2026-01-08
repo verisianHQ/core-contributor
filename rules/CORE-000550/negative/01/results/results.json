@@ -13,7 +13,8 @@
           "USUBJID": "None",
           "value": {
             "variable_name": "ARMCDXX"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -30,7 +31,8 @@
           "USUBJID": "None",
           "value": {
             "variable_name": "AESTDYXX"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -47,9 +49,27 @@
           "USUBJID": "None",
           "value": {
             "variable_name": "LBSPIDXX"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "dm.xpt",
+      "Row": 1,
+      "Variable": "ARMCDXX"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AESTDYXX"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "LBSPIDXX"
     }
   ]
 }

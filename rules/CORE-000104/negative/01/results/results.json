@@ -22,7 +22,8 @@
           "value": {
             "CMCAT": "Not in dataset",
             "CMSCAT": "PRIOR DMARDS"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -48,7 +49,8 @@
           "value": {
             "EXCAT": "Not in dataset",
             "EXSCAT": "HIGHLIGHTED DOSE"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -98,7 +100,8 @@
           "value": {
             "BECAT": "Not in dataset",
             "BESCAT": "COLLECTION"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -132,7 +135,8 @@
           "value": {
             "MHCAT": "Not in dataset",
             "MHSCAT": "RESPIRATORY"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -158,7 +162,8 @@
           "value": {
             "EGCAT": "Not in dataset",
             "EGSCAT": "INTERVAL"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -176,9 +181,127 @@
           "value": {
             "FACAT": "Not in dataset",
             "FASCAT": "GERD"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ag.xpt",
+      "Row": 1,
+      "Variable": "AGCAT"
+    },
+    {
+      "Sheet": "ag.xpt",
+      "Row": 1,
+      "Variable": "AGSCAT"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 1,
+      "Variable": "CMSCAT"
+    },
+    {
+      "Sheet": "ec.xpt",
+      "Row": 1,
+      "Variable": "ECCAT"
+    },
+    {
+      "Sheet": "ec.xpt",
+      "Row": 1,
+      "Variable": "ECSCAT"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 1,
+      "Variable": "EXSCAT"
+    },
+    {
+      "Sheet": "ml.xpt",
+      "Row": 1,
+      "Variable": "MLCAT"
+    },
+    {
+      "Sheet": "ml.xpt",
+      "Row": 1,
+      "Variable": "MLSCAT"
+    },
+    {
+      "Sheet": "pr.xpt",
+      "Row": 1,
+      "Variable": "PRCAT"
+    },
+    {
+      "Sheet": "pr.xpt",
+      "Row": 1,
+      "Variable": "PRSCAT"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AECAT"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AESCAT"
+    },
+    {
+      "Sheet": "be.xpt",
+      "Row": 1,
+      "Variable": "BESCAT"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 1,
+      "Variable": "CECAT"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 1,
+      "Variable": "CESCAT"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 1,
+      "Variable": "DSCAT"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 1,
+      "Variable": "DSSCAT"
+    },
+    {
+      "Sheet": "mh.xpt",
+      "Row": 1,
+      "Variable": "MHSCAT"
+    },
+    {
+      "Sheet": "da.xpt",
+      "Row": 1,
+      "Variable": "DACAT"
+    },
+    {
+      "Sheet": "da.xpt",
+      "Row": 1,
+      "Variable": "DASCAT"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 1,
+      "Variable": "EGSCAT"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 1,
+      "Variable": "FASCAT"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 5,
+      "Variable": "FASCAT"
     }
   ]
 }

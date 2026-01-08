@@ -24,7 +24,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 4,
@@ -35,7 +36,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -46,6 +48,78 @@
       "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000744, dataset=RELREC",
       "number_errors": 0,
       "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ae.xpt",
+      "Row": 5,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 5,
+      "Variable": "AESEQ"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 5,
+      "Variable": "AETERM"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 5,
+      "Variable": "AEDECOD"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 6,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 6,
+      "Variable": "AESEQ"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 6,
+      "Variable": "AETERM"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 6,
+      "Variable": "AEDECOD"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 7,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 7,
+      "Variable": "FASEQ"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 7,
+      "Variable": "FAOBJ"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 8,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 8,
+      "Variable": "FASEQ"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 8,
+      "Variable": "FAOBJ"
     }
   ]
 }

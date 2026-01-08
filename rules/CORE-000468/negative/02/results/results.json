@@ -16,7 +16,8 @@
             "TSGRPID": "1",
             "TSPARMCD": "TRT",
             "TSVAL": null
-          }
+          },
+          "validated": false
         },
         {
           "row": 45,
@@ -27,7 +28,8 @@
             "TSGRPID": "2",
             "TSPARMCD": "TRT",
             "TSVAL": null
-          }
+          },
+          "validated": false
         },
         {
           "row": 54,
@@ -38,9 +40,152 @@
             "TSGRPID": null,
             "TSPARMCD": "TRT",
             "TSVAL": null
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ts.xpt",
+      "Row": 46,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 46,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 46,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 46,
+      "Variable": "TSVALNF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 47,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 47,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 47,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 47,
+      "Variable": "TSVALNF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 48,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 48,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 48,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 48,
+      "Variable": "TSVALNF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 49,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 49,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 49,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 49,
+      "Variable": "TSVALNF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 56,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 56,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 56,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 56,
+      "Variable": "TSVALNF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 57,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 57,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 57,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 57,
+      "Variable": "TSVALNF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 58,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 58,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 58,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 58,
+      "Variable": "TSVALNF"
     }
   ]
 }

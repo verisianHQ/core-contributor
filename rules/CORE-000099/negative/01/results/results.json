@@ -14,7 +14,8 @@
           "value": {
             "EGORRES": "0.15",
             "EGSTAT": "NOT DONE"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -32,7 +33,8 @@
           "value": {
             "FAORRES": "SEVERE",
             "FASTAT": "NOT DONE"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -50,7 +52,8 @@
           "value": {
             "LBORRES": "30",
             "LBSTAT": "NOT DONE"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -76,9 +79,102 @@
           "value": {
             "VSORRES": "154",
             "VSSTAT": "NOT DONE"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "eg.xpt",
+      "Row": 1,
+      "Variable": "EGORRES"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 1,
+      "Variable": "EGSTAT"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 7,
+      "Variable": "EGORRES"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 7,
+      "Variable": "EGSTAT"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 1,
+      "Variable": "FAORRES"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 1,
+      "Variable": "FASTAT"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 5,
+      "Variable": "FAORRES"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 5,
+      "Variable": "FASTAT"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "LBORRES"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "LBSTAT"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 5,
+      "Variable": "LBORRES"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 5,
+      "Variable": "LBSTAT"
+    },
+    {
+      "Sheet": "mi.xpt",
+      "Row": 1,
+      "Variable": "MIORRES"
+    },
+    {
+      "Sheet": "mi.xpt",
+      "Row": 1,
+      "Variable": "MISTAT"
+    },
+    {
+      "Sheet": "vs.xpt",
+      "Row": 1,
+      "Variable": "VSORRES"
+    },
+    {
+      "Sheet": "vs.xpt",
+      "Row": 1,
+      "Variable": "VSSTAT"
+    },
+    {
+      "Sheet": "vs.xpt",
+      "Row": 5,
+      "Variable": "VSORRES"
+    },
+    {
+      "Sheet": "vs.xpt",
+      "Row": 5,
+      "Variable": "VSSTAT"
     }
   ]
 }

@@ -22,7 +22,8 @@
           "value": {
             "SVUPDES": null,
             "VISIT": null
-          }
+          },
+          "validated": false
         },
         {
           "row": 16,
@@ -31,9 +32,27 @@
           "value": {
             "SVUPDES": null,
             "VISIT": "UNSCHEDULED"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "sv.xpt",
+      "Row": 9,
+      "Variable": "VISIT"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 14,
+      "Variable": "VISIT"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 20,
+      "Variable": "VISIT"
     }
   ]
 }

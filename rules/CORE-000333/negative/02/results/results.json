@@ -22,7 +22,8 @@
           "value": {
             "SVUPDES": "Not in dataset",
             "VISIT": "UNSCHEDULED1"
-          }
+          },
+          "validated": false
         },
         {
           "row": 10,
@@ -31,7 +32,8 @@
           "value": {
             "SVUPDES": "Not in dataset",
             "VISIT": null
-          }
+          },
+          "validated": false
         },
         {
           "row": 16,
@@ -40,9 +42,27 @@
           "value": {
             "SVUPDES": "Not in dataset",
             "VISIT": "UNSCHEDULED"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "sv.xpt",
+      "Row": 9,
+      "Variable": "VISIT"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 14,
+      "Variable": "VISIT"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 20,
+      "Variable": "VISIT"
     }
   ]
 }

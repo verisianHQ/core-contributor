@@ -14,7 +14,8 @@
           "value": {
             "AETOX": "CTCAE 4.03",
             "AETOXGR": null
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -48,7 +49,8 @@
           "value": {
             "EGTOX": "CTCAE 4.03",
             "EGTOXGR": null
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -66,7 +68,8 @@
           "value": {
             "LBTOX": "CTCAE 4.03",
             "LBTOXGR": null
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -85,6 +88,108 @@
       "execution_message": null,
       "number_errors": 0,
       "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AETOX"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AETOXGR"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 5,
+      "Variable": "AETOX"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 5,
+      "Variable": "AETOXGR"
+    },
+    {
+      "Sheet": "mh.xpt",
+      "Row": 1,
+      "Variable": "MHTOX"
+    },
+    {
+      "Sheet": "mh.xpt",
+      "Row": 1,
+      "Variable": "MHTOXGR"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 1,
+      "Variable": "CETOX"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 1,
+      "Variable": "CETOXGR"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 1,
+      "Variable": "EGTOX"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 1,
+      "Variable": "EGTOXGR"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 5,
+      "Variable": "EGTOX"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 5,
+      "Variable": "EGTOXGR"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "LBTOX"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "LBTOXGR"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 5,
+      "Variable": "LBTOX"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 5,
+      "Variable": "LBTOXGR"
+    },
+    {
+      "Sheet": "pc.xpt",
+      "Row": 1,
+      "Variable": "PCTOX"
+    },
+    {
+      "Sheet": "pc.xpt",
+      "Row": 1,
+      "Variable": "PCTOXGR"
+    },
+    {
+      "Sheet": "pp.xpt",
+      "Row": 1,
+      "Variable": "PPTOX"
+    },
+    {
+      "Sheet": "pp.xpt",
+      "Row": 1,
+      "Variable": "PPTOXGR"
     }
   ]
 }

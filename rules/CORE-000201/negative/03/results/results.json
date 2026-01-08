@@ -21,7 +21,8 @@
           "USUBJID": "S01",
           "value": {
             "USUBJID": "S01"
-          }
+          },
+          "validated": false
         },
         {
           "row": 2,
@@ -29,9 +30,22 @@
           "USUBJID": "S02",
           "value": {
             "USUBJID": "S02"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 5,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 6,
+      "Variable": "USUBJID"
     }
   ]
 }

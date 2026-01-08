@@ -14,7 +14,8 @@
           "value": {
             "DDRESCAT": "UNDERTERMINED",
             "DDSTRESC": null
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -40,7 +41,8 @@
           "value": {
             "MIRESCAT": "NEGATIVE",
             "MISTRESC": null
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -58,7 +60,8 @@
           "value": {
             "MSRESCAT": "JDKSAJJDSAKF",
             "MSSTRESC": null
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -77,6 +80,108 @@
       "execution_message": null,
       "number_errors": 0,
       "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "dd.xpt",
+      "Row": 1,
+      "Variable": "DDSTRESC"
+    },
+    {
+      "Sheet": "dd.xpt",
+      "Row": 1,
+      "Variable": "DDRESCAT"
+    },
+    {
+      "Sheet": "dd.xpt",
+      "Row": 6,
+      "Variable": "DDSTRESC"
+    },
+    {
+      "Sheet": "dd.xpt",
+      "Row": 6,
+      "Variable": "DDRESCAT"
+    },
+    {
+      "Sheet": "mb.xpt",
+      "Row": 1,
+      "Variable": "MBSTRESC"
+    },
+    {
+      "Sheet": "mb.xpt",
+      "Row": 1,
+      "Variable": "MBRESCAT"
+    },
+    {
+      "Sheet": "mi.xpt",
+      "Row": 1,
+      "Variable": "MISTRESC"
+    },
+    {
+      "Sheet": "mi.xpt",
+      "Row": 1,
+      "Variable": "MIRESCAT"
+    },
+    {
+      "Sheet": "mi.xpt",
+      "Row": 5,
+      "Variable": "MISTRESC"
+    },
+    {
+      "Sheet": "mi.xpt",
+      "Row": 5,
+      "Variable": "MIRESCAT"
+    },
+    {
+      "Sheet": "ms.xpt",
+      "Row": 1,
+      "Variable": "MSSTRESC"
+    },
+    {
+      "Sheet": "ms.xpt",
+      "Row": 1,
+      "Variable": "MSRESCAT"
+    },
+    {
+      "Sheet": "ms.xpt",
+      "Row": 5,
+      "Variable": "MSSTRESC"
+    },
+    {
+      "Sheet": "ms.xpt",
+      "Row": 5,
+      "Variable": "MSRESCAT"
+    },
+    {
+      "Sheet": "oe.xpt",
+      "Row": 1,
+      "Variable": "OESTRESC"
+    },
+    {
+      "Sheet": "oe.xpt",
+      "Row": 1,
+      "Variable": "OERESCAT"
+    },
+    {
+      "Sheet": "ur.xpt",
+      "Row": 1,
+      "Variable": "URSTRESC"
+    },
+    {
+      "Sheet": "ur.xpt",
+      "Row": 1,
+      "Variable": "URRESCAT"
+    },
+    {
+      "Sheet": "ur.xpt",
+      "Row": 6,
+      "Variable": "URSTRESC"
+    },
+    {
+      "Sheet": "ur.xpt",
+      "Row": 6,
+      "Variable": "URRESCAT"
     }
   ]
 }

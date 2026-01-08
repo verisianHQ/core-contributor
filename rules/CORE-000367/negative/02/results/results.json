@@ -13,7 +13,8 @@
           "USUBJID": "CDISC001",
           "value": {
             "ACTARM": "ACME Low Dose"
-          }
+          },
+          "validated": false
         },
         {
           "row": 2,
@@ -21,7 +22,8 @@
           "USUBJID": "CDISC002",
           "value": {
             "ACTARM": "ACME Low Dose"
-          }
+          },
+          "validated": false
         },
         {
           "row": 3,
@@ -29,7 +31,8 @@
           "USUBJID": "CDISC003",
           "value": {
             "ACTARM": "ACME High Dose"
-          }
+          },
+          "validated": false
         },
         {
           "row": 5,
@@ -37,7 +40,8 @@
           "USUBJID": "CDISC005",
           "value": {
             "ACTARM": "ScreEN failURE"
-          }
+          },
+          "validated": false
         },
         {
           "row": 15,
@@ -45,7 +49,8 @@
           "USUBJID": "CDISC015",
           "value": {
             "ACTARM": null
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -56,6 +61,28 @@
       "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000367, dataset=TA",
       "number_errors": 0,
       "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "dm.xpt",
+      "Row": 5,
+      "Variable": "ACTARM"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 6,
+      "Variable": "ACTARM"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 7,
+      "Variable": "ACTARM"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 9,
+      "Variable": "ACTARM"
     }
   ]
 }

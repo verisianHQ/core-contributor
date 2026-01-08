@@ -14,7 +14,8 @@
           "value": {
             "DSCAT": "DISPOSITION EVENT",
             "EPOCH": "FU"
-          }
+          },
+          "validated": false
         },
         {
           "row": 5,
@@ -23,9 +24,52 @@
           "value": {
             "DSCAT": "DISPOSITION EVENT",
             "EPOCH": "FU"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ds.xpt",
+      "Row": 8,
+      "Variable": "DSTERM"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 8,
+      "Variable": "DSDECOD"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 8,
+      "Variable": "DSCAT"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 8,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 9,
+      "Variable": "DSTERM"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 9,
+      "Variable": "DSDECOD"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 9,
+      "Variable": "DSCAT"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 9,
+      "Variable": "EPOCH"
     }
   ]
 }

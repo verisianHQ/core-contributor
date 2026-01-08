@@ -21,9 +21,22 @@
           "USUBJID": null,
           "value": {
             "$EXVAMT_EXISTS": true
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ex.xpt",
+      "Row": 5,
+      "Variable": "EXVAMT"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 5,
+      "Variable": "EXVAMTU"
     }
   ]
 }
