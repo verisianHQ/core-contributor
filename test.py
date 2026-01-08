@@ -84,12 +84,10 @@ class ResultReporter:
                 f.write("Check results.json for more information, or examine the test case file directly.\n")
 
             if uh_v := results_data.get("unhighlighted_validations"):
-                print(uh_v)
                 f.write("The following error groups on the validations sheet are not highlighted correctly:\n")
                 f.write(", ".join(str(v) for e in uh_v for v in e.values()) + "\n")
 
             if uv_h := results_data.get("unvalidated_highlights"):
-                print(uv_h)
                 f.write("The following rows have highlights that do not match the validations sheet:\n")
                 ids = [f"{k}: {v}" for e in uv_h for k, v in e.items()]
                 f.write("\n".join(", ".join(ids[i : i + 2]) for i in range(0, len(ids), 2)))  # noqa
@@ -248,17 +246,16 @@ class TestRunner:
 
         if test_type == "negative":
             validations = self.get_validation_info(case_info["data_path"])
-            if validations:
-                results_data, unmatched = self.validate_errors(results_data, validations)
-                highlights = self.get_excel_highlights(case_info["data_path"])
-                unhighlighted_validations, unvalidated_highlights = self.check_highlights(validations, highlights)
+            results_data, unmatched = self.validate_errors(results_data, validations)
+            highlights = self.get_excel_highlights(case_info["data_path"])
+            unhighlighted_validations, unvalidated_highlights = self.check_highlights(validations, highlights)
 
-                if unmatched:
-                    results_data["unmatched_validation"] = unmatched
-                if unhighlighted_validations:
-                    results_data["unhighlighted_validations"] = unhighlighted_validations
-                if unvalidated_highlights:
-                    results_data["unvalidated_highlights"] = unvalidated_highlights
+            if unmatched:
+                results_data["unmatched_validation"] = unmatched
+            if unhighlighted_validations:
+                results_data["unhighlighted_validations"] = unhighlighted_validations
+            if unvalidated_highlights:
+                results_data["unvalidated_highlights"] = unvalidated_highlights
 
         results_path = ResultReporter.save_case_results(rule_id, test_type, case_id, results_data)
 
