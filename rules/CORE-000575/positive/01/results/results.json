@@ -1,18 +1,10 @@
 {
   "datasets": [
     {
-      "dataset": "ae.xpt",
-      "domain": "AE",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
-    },
-    {
-      "dataset": "lb.xpt",
-      "domain": "LB",
-      "execution_status": "success",
-      "execution_message": null,
+      "dataset": "ie.xpt",
+      "domain": "IE",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000575, dataset=IE",
       "number_errors": 0,
       "errors": []
     },
@@ -25,10 +17,18 @@
       "errors": []
     },
     {
-      "dataset": "ie.xpt",
-      "domain": "IE",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000575, dataset=IE",
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": null,
       "number_errors": 0,
       "errors": []
     }

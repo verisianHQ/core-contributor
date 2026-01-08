@@ -1,24 +1,6 @@
 {
   "datasets": [
     {
-      "dataset": "aprelsub.xpt",
-      "domain": "AP",
-      "execution_status": "success",
-      "execution_message": "RSUBJID must be missing when RDEVID is populated",
-      "number_errors": 1,
-      "errors": [
-        {
-          "row": 3,
-          "SEQ": null,
-          "USUBJID": null,
-          "value": {
-            "RDEVID": "Device X",
-            "RSUBJID": "HEM021-001"
-          }
-        }
-      ]
-    },
-    {
       "dataset": "aplb.xpt",
       "domain": "AP",
       "execution_status": "success",
@@ -32,6 +14,24 @@
           "value": {
             "RDEVID": "CK001",
             "RSUBJID": "CK001"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "aprelsub.xpt",
+      "domain": "AP",
+      "execution_status": "success",
+      "execution_message": "RSUBJID must be missing when RDEVID is populated",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "RDEVID": "Device X",
+            "RSUBJID": "HEM021-001"
           }
         }
       ]

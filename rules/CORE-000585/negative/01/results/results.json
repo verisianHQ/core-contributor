@@ -1,6 +1,27 @@
 {
   "datasets": [
     {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "success",
+      "execution_message": "One of following variables is not present in the dataset; STUDYID, DOMAIN, USUBJID (or POOLID) or ECSEQ.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "DOMAIN": "EC",
+            "ECSEQ": 1.0,
+            "POOLID": "Not in dataset",
+            "STUDYID": "Not in dataset",
+            "USUBJID": "CDISC001"
+          }
+        }
+      ]
+    },
+    {
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
@@ -38,27 +59,6 @@
             "POOLID": "Not in dataset",
             "STUDYID": "ABC123",
             "USUBJID": "Not in dataset"
-          }
-        }
-      ]
-    },
-    {
-      "dataset": "ec.xpt",
-      "domain": "EC",
-      "execution_status": "success",
-      "execution_message": "One of following variables is not present in the dataset; STUDYID, DOMAIN, USUBJID (or POOLID) or ECSEQ.",
-      "number_errors": 1,
-      "errors": [
-        {
-          "row": null,
-          "SEQ": null,
-          "USUBJID": null,
-          "value": {
-            "DOMAIN": "EC",
-            "ECSEQ": 1.0,
-            "POOLID": "Not in dataset",
-            "STUDYID": "Not in dataset",
-            "USUBJID": "CDISC001"
           }
         }
       ]

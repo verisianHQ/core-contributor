@@ -1,168 +1,6 @@
 {
   "datasets": [
     {
-      "dataset": "ae.xpt",
-      "domain": "AE",
-      "execution_status": "success",
-      "execution_message": "At least one Required variable has a null value",
-      "number_errors": 2,
-      "errors": [
-        {
-          "row": 1,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "STUDYID",
-            "variable_value": null
-          }
-        },
-        {
-          "row": 8,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "USUBJID",
-            "variable_value": null
-          }
-        }
-      ]
-    },
-    {
-      "dataset": "ex.xpt",
-      "domain": "EX",
-      "execution_status": "success",
-      "execution_message": "At least one Required variable has a null value",
-      "number_errors": 8,
-      "errors": [
-        {
-          "row": 41,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXTRT",
-            "variable_value": null
-          }
-        },
-        {
-          "row": 42,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXTRT",
-            "variable_value": null
-          }
-        },
-        {
-          "row": 43,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXTRT",
-            "variable_value": null
-          }
-        },
-        {
-          "row": 44,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXTRT",
-            "variable_value": null
-          }
-        },
-        {
-          "row": 45,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXTRT",
-            "variable_value": null
-          }
-        },
-        {
-          "row": 46,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXTRT",
-            "variable_value": null
-          }
-        },
-        {
-          "row": 47,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXTRT",
-            "variable_value": null
-          }
-        },
-        {
-          "row": 48,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXTRT",
-            "variable_value": null
-          }
-        }
-      ]
-    },
-    {
-      "dataset": "lb.xpt",
-      "domain": "LB",
-      "execution_status": "success",
-      "execution_message": "At least one Required variable has a null value",
-      "number_errors": 5,
-      "errors": [
-        {
-          "row": 139,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBSEQ",
-            "variable_value": null
-          }
-        },
-        {
-          "row": 140,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBSEQ",
-            "variable_value": null
-          }
-        },
-        {
-          "row": 141,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBSEQ",
-            "variable_value": null
-          }
-        },
-        {
-          "row": 142,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBSEQ",
-            "variable_value": null
-          }
-        },
-        {
-          "row": 143,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBSEQ",
-            "variable_value": null
-          }
-        }
-      ]
-    },
-    {
       "dataset": "ta.xpt",
       "domain": "TA",
       "execution_status": "success",
@@ -274,6 +112,168 @@
           "USUBJID": "None",
           "value": {
             "variable_name": "EPOCH",
+            "variable_value": null
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "At least one Required variable has a null value",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "STUDYID",
+            "variable_value": null
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "USUBJID",
+            "variable_value": null
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "At least one Required variable has a null value",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 139,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBSEQ",
+            "variable_value": null
+          }
+        },
+        {
+          "row": 140,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBSEQ",
+            "variable_value": null
+          }
+        },
+        {
+          "row": 141,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBSEQ",
+            "variable_value": null
+          }
+        },
+        {
+          "row": 142,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBSEQ",
+            "variable_value": null
+          }
+        },
+        {
+          "row": 143,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBSEQ",
+            "variable_value": null
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "success",
+      "execution_message": "At least one Required variable has a null value",
+      "number_errors": 8,
+      "errors": [
+        {
+          "row": 41,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EXTRT",
+            "variable_value": null
+          }
+        },
+        {
+          "row": 42,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EXTRT",
+            "variable_value": null
+          }
+        },
+        {
+          "row": 43,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EXTRT",
+            "variable_value": null
+          }
+        },
+        {
+          "row": 44,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EXTRT",
+            "variable_value": null
+          }
+        },
+        {
+          "row": 45,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EXTRT",
+            "variable_value": null
+          }
+        },
+        {
+          "row": 46,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EXTRT",
+            "variable_value": null
+          }
+        },
+        {
+          "row": 47,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EXTRT",
+            "variable_value": null
+          }
+        },
+        {
+          "row": 48,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EXTRT",
             "variable_value": null
           }
         }

@@ -1,6 +1,14 @@
 {
   "datasets": [
     {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
       "dataset": "facm.xpt",
       "domain": "FA",
       "execution_status": "success",
@@ -13,10 +21,10 @@
           "USUBJID": null,
           "value": {
             "$list_dataset_names": [
-              "facm",
               "cm",
-              "famh",
-              "mh"
+              "facm",
+              "mh",
+              "famh"
             ],
             "dataset_name": "FACM"
           }
@@ -24,8 +32,8 @@
       ]
     },
     {
-      "dataset": "cm.xpt",
-      "domain": "CM",
+      "dataset": "mh.xpt",
+      "domain": "MH",
       "execution_status": "success",
       "execution_message": null,
       "number_errors": 0,
@@ -44,23 +52,15 @@
           "USUBJID": null,
           "value": {
             "$list_dataset_names": [
-              "facm",
               "cm",
-              "famh",
-              "mh"
+              "facm",
+              "mh",
+              "famh"
             ],
             "dataset_name": "FAMH"
           }
         }
       ]
-    },
-    {
-      "dataset": "mh.xpt",
-      "domain": "MH",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
     }
   ]
 }

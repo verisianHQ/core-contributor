@@ -1,4 +1,23 @@
 {
-  "error": "No result - either the rule or test case data unit-test-coreid-CG0554-lb_neg.xlsx is broken",
-  "exception": "Worksheet named 'Datasets' not found"
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "An appropriate identifier is not present; USUBJID, APID, SPDEVID, SPTOBID, POOLID, SPTOBID, STOCONID should be present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "DOMAIN": "LB",
+            "LBSEQ": 1.0,
+            "STUDYID": "CDISC-TEST"
+          }
+        }
+      ]
+    }
+  ]
 }

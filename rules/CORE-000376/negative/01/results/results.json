@@ -1,6 +1,26 @@
 {
   "datasets": [
     {
+      "dataset": "zb.xpt",
+      "domain": "ZB",
+      "execution_status": "success",
+      "execution_message": "First 2 characters of prefixed variable within custom domain do not match the DOMAIN value.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "$domain_list": [
+              "ZB"
+            ],
+            "variable_name": "LBORRES"
+          }
+        }
+      ]
+    },
+    {
       "dataset": "zm.xpt",
       "domain": "ZM",
       "execution_status": "success",
@@ -27,26 +47,6 @@
               "ZM"
             ],
             "variable_name": "CMDOSE"
-          }
-        }
-      ]
-    },
-    {
-      "dataset": "zb.xpt",
-      "domain": "ZB",
-      "execution_status": "success",
-      "execution_message": "First 2 characters of prefixed variable within custom domain do not match the DOMAIN value.",
-      "number_errors": 1,
-      "errors": [
-        {
-          "row": 8,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "$domain_list": [
-              "ZB"
-            ],
-            "variable_name": "LBORRES"
           }
         }
       ]

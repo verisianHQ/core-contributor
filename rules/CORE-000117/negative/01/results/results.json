@@ -1,4 +1,63 @@
 {
-  "error": "No result - either the rule or test case data cm.xlsx is broken",
-  "exception": "Worksheet named 'Datasets' not found"
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMSTAT should equal 'NOT DONE' when CMPRESP = 'Y' and CMOCCUR = null",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMOCCUR": null,
+            "CMPRESP": "Y",
+            "CMSTAT": "DONE"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMOCCUR": null,
+            "CMPRESP": "Y",
+            "CMSTAT": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMOCCUR": null,
+            "CMPRESP": "Y",
+            "CMSTAT": "837"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMOCCUR": null,
+            "CMPRESP": "Y",
+            "CMSTAT": null
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMOCCUR": null,
+            "CMPRESP": "Y",
+            "CMSTAT": "ASPIRIN"
+          }
+        }
+      ]
+    }
+  ]
 }

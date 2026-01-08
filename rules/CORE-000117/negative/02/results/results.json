@@ -1,4 +1,183 @@
 {
-  "error": "No result - either the rule or test case data mh.xlsx is broken",
-  "exception": "Worksheet named 'Datasets' not found"
+  "datasets": [
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "MHSTAT should equal 'NOT DONE' when MHPRESP = 'Y' and MHOCCUR = null",
+      "number_errors": 17,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "MHOCCUR": null,
+            "MHPRESP": "Y",
+            "MHSTAT": "DONE"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "MHOCCUR": null,
+            "MHPRESP": "Y",
+            "MHSTAT": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC003",
+          "value": {
+            "MHOCCUR": null,
+            "MHPRESP": "Y",
+            "MHSTAT": "837"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "CDISC004",
+          "value": {
+            "MHOCCUR": null,
+            "MHPRESP": "Y",
+            "MHSTAT": null
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 1,
+          "USUBJID": "CDISC005",
+          "value": {
+            "MHOCCUR": null,
+            "MHPRESP": "Y",
+            "MHSTAT": "ASPIRIN"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 1,
+          "USUBJID": "CDISC006",
+          "value": {
+            "MHOCCUR": null,
+            "MHPRESP": "Y",
+            "MHSTAT": null
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 1,
+          "USUBJID": "CDISC007",
+          "value": {
+            "MHOCCUR": null,
+            "MHPRESP": "Y",
+            "MHSTAT": "not done"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 1,
+          "USUBJID": "CDISC008",
+          "value": {
+            "MHOCCUR": null,
+            "MHPRESP": "Y",
+            "MHSTAT": null
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": 1,
+          "USUBJID": "CDISC009",
+          "value": {
+            "MHOCCUR": null,
+            "MHPRESP": "Y",
+            "MHSTAT": null
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": 1,
+          "USUBJID": "CDISC010",
+          "value": {
+            "MHOCCUR": null,
+            "MHPRESP": "Y",
+            "MHSTAT": null
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": 1,
+          "USUBJID": "CDISC011",
+          "value": {
+            "MHOCCUR": null,
+            "MHPRESP": "Y",
+            "MHSTAT": null
+          }
+        },
+        {
+          "row": 12,
+          "SEQ": 1,
+          "USUBJID": "CDISC012",
+          "value": {
+            "MHOCCUR": null,
+            "MHPRESP": "Y",
+            "MHSTAT": null
+          }
+        },
+        {
+          "row": 13,
+          "SEQ": 1,
+          "USUBJID": "CDISC013",
+          "value": {
+            "MHOCCUR": null,
+            "MHPRESP": "Y",
+            "MHSTAT": null
+          }
+        },
+        {
+          "row": 14,
+          "SEQ": 1,
+          "USUBJID": "CDISC014",
+          "value": {
+            "MHOCCUR": null,
+            "MHPRESP": "Y",
+            "MHSTAT": null
+          }
+        },
+        {
+          "row": 15,
+          "SEQ": 1,
+          "USUBJID": "CDISC016",
+          "value": {
+            "MHOCCUR": null,
+            "MHPRESP": "Y",
+            "MHSTAT": null
+          }
+        },
+        {
+          "row": 16,
+          "SEQ": 1,
+          "USUBJID": "CDISC017",
+          "value": {
+            "MHOCCUR": null,
+            "MHPRESP": "Y",
+            "MHSTAT": null
+          }
+        },
+        {
+          "row": 17,
+          "SEQ": 1,
+          "USUBJID": "CDISC018",
+          "value": {
+            "MHOCCUR": null,
+            "MHPRESP": "Y",
+            "MHSTAT": null
+          }
+        }
+      ]
+    }
+  ]
 }

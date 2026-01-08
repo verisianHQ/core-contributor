@@ -1,4 +1,75 @@
 {
-  "error": "No result - either the rule or test case data unit-test-coreid-CG0154-negative.xlsx is broken",
-  "exception": "Worksheet named 'Datasets' not found"
+  "datasets": [
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000132, dataset=SE",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ta.xpt",
+      "domain": "TA",
+      "execution_status": "success",
+      "execution_message": "ELEMENT and ETCD do not have a one-to-one relationship.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ELEMENT": null,
+            "ETCD": "SCREEN"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ELEMENT": "Screening",
+            "ETCD": "SCREEN"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ELEMENT": "Screening",
+            "ETCD": "SCREEN"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "te.xpt",
+      "domain": "TE",
+      "execution_status": "success",
+      "execution_message": "ELEMENT and ETCD do not have a one-to-one relationship.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ELEMENT": "Zanomaline 54 mg",
+            "ETCD": "LOW"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ELEMENT": "Zanomaline 40 mg",
+            "ETCD": "LOW"
+          }
+        }
+      ]
+    }
+  ]
 }

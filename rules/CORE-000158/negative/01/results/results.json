@@ -1,4 +1,22 @@
 {
-  "error": "No result - either the rule or test case data unit-test-coreid-CG0163-negative.xlsx is broken",
-  "exception": "Worksheet named 'Datasets' not found"
+  "datasets": [
+    {
+      "dataset": "co.xpt",
+      "domain": "CO",
+      "execution_status": "success",
+      "execution_message": "IDVAR should not be missing when RDOMAIN is not in (empty, DM).",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "XX-11",
+          "value": {
+            "IDVAR": null,
+            "RDOMAIN": "PE"
+          }
+        }
+      ]
+    }
+  ]
 }

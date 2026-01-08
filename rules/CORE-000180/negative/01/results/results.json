@@ -1,23 +1,6 @@
 {
   "datasets": [
     {
-      "dataset": "ae1.xpt",
-      "domain": "AE",
-      "execution_status": "success",
-      "execution_message": "Domain value length is not equal 2.",
-      "number_errors": 1,
-      "errors": [
-        {
-          "row": null,
-          "SEQ": null,
-          "USUBJID": null,
-          "value": {
-            "DOMAIN": "AE1"
-          }
-        }
-      ]
-    },
-    {
       "dataset": "dmx.xpt",
       "domain": "DM",
       "execution_status": "success",
@@ -30,6 +13,23 @@
           "USUBJID": null,
           "value": {
             "DOMAIN": "DMX"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ae1.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "Domain value length is not equal 2.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "DOMAIN": "AE1"
           }
         }
       ]

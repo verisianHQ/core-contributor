@@ -1,4 +1,21 @@
 {
-  "error": "No result - either the rule or test case data mh.xlsx is broken",
-  "exception": "Worksheet named 'Datasets' not found"
+  "datasets": [
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "MHREASND should not be present in dataset when MHPRESP is not present in dataset",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "MHREASND": "Unknown reason why"
+          }
+        }
+      ]
+    }
+  ]
 }

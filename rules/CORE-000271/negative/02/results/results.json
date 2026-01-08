@@ -1,6 +1,14 @@
 {
   "datasets": [
     {
+      "dataset": "ta.xpt",
+      "domain": "TA",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
@@ -10,6 +18,95 @@
         {
           "row": 3,
           "SEQ": 3,
+          "USUBJID": "123101",
+          "value": {
+            "EPOCH": "TREATMENT I"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "EPOCH is not in TA.EPOCH",
+      "number_errors": 10,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "123101",
+          "value": {
+            "EPOCH": "TREATMENT I"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 7,
+          "USUBJID": "123101",
+          "value": {
+            "EPOCH": "TREATMENT I"
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": 11,
+          "USUBJID": "123101",
+          "value": {
+            "EPOCH": "TREATMENT I"
+          }
+        },
+        {
+          "row": 15,
+          "SEQ": 15,
+          "USUBJID": "123101",
+          "value": {
+            "EPOCH": "TREATMENT I"
+          }
+        },
+        {
+          "row": 24,
+          "SEQ": 24,
+          "USUBJID": "123101",
+          "value": {
+            "EPOCH": "TREATMENT I"
+          }
+        },
+        {
+          "row": 29,
+          "SEQ": 29,
+          "USUBJID": "123101",
+          "value": {
+            "EPOCH": "TREATMENT I"
+          }
+        },
+        {
+          "row": 33,
+          "SEQ": 33,
+          "USUBJID": "123101",
+          "value": {
+            "EPOCH": "TREATMENT I"
+          }
+        },
+        {
+          "row": 37,
+          "SEQ": 37,
+          "USUBJID": "123101",
+          "value": {
+            "EPOCH": "TREATMENT I"
+          }
+        },
+        {
+          "row": 41,
+          "SEQ": 41,
+          "USUBJID": "123101",
+          "value": {
+            "EPOCH": "TREATMENT I"
+          }
+        },
+        {
+          "row": 45,
+          "SEQ": 45,
           "USUBJID": "123101",
           "value": {
             "EPOCH": "TREATMENT I"
@@ -401,103 +498,6 @@
           }
         }
       ]
-    },
-    {
-      "dataset": "lb.xpt",
-      "domain": "LB",
-      "execution_status": "success",
-      "execution_message": "EPOCH is not in TA.EPOCH",
-      "number_errors": 10,
-      "errors": [
-        {
-          "row": 3,
-          "SEQ": 3,
-          "USUBJID": "123101",
-          "value": {
-            "EPOCH": "TREATMENT I"
-          }
-        },
-        {
-          "row": 7,
-          "SEQ": 7,
-          "USUBJID": "123101",
-          "value": {
-            "EPOCH": "TREATMENT I"
-          }
-        },
-        {
-          "row": 11,
-          "SEQ": 11,
-          "USUBJID": "123101",
-          "value": {
-            "EPOCH": "TREATMENT I"
-          }
-        },
-        {
-          "row": 15,
-          "SEQ": 15,
-          "USUBJID": "123101",
-          "value": {
-            "EPOCH": "TREATMENT I"
-          }
-        },
-        {
-          "row": 24,
-          "SEQ": 24,
-          "USUBJID": "123101",
-          "value": {
-            "EPOCH": "TREATMENT I"
-          }
-        },
-        {
-          "row": 29,
-          "SEQ": 29,
-          "USUBJID": "123101",
-          "value": {
-            "EPOCH": "TREATMENT I"
-          }
-        },
-        {
-          "row": 33,
-          "SEQ": 33,
-          "USUBJID": "123101",
-          "value": {
-            "EPOCH": "TREATMENT I"
-          }
-        },
-        {
-          "row": 37,
-          "SEQ": 37,
-          "USUBJID": "123101",
-          "value": {
-            "EPOCH": "TREATMENT I"
-          }
-        },
-        {
-          "row": 41,
-          "SEQ": 41,
-          "USUBJID": "123101",
-          "value": {
-            "EPOCH": "TREATMENT I"
-          }
-        },
-        {
-          "row": 45,
-          "SEQ": 45,
-          "USUBJID": "123101",
-          "value": {
-            "EPOCH": "TREATMENT I"
-          }
-        }
-      ]
-    },
-    {
-      "dataset": "ta.xpt",
-      "domain": "TA",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
     }
   ]
 }

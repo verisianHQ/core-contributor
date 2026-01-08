@@ -1,6 +1,22 @@
 {
   "datasets": [
     {
+      "dataset": "supplb.xpt",
+      "domain": "SUPPLB",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000953, dataset=SUPPLB",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "relrec.xpt",
+      "domain": "RELREC",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000953, dataset=RELREC",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
       "dataset": "co.xpt",
       "domain": "CO",
       "execution_status": "execution_error",
@@ -12,22 +28,6 @@
           "message": "IDVAR"
         }
       ]
-    },
-    {
-      "dataset": "relrec.xpt",
-      "domain": "RELREC",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000953, dataset=RELREC",
-      "number_errors": 0,
-      "errors": []
-    },
-    {
-      "dataset": "supplb.xpt",
-      "domain": "SUPPLB",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000953, dataset=SUPPLB",
-      "number_errors": 0,
-      "errors": []
     },
     {
       "dataset": "lb.xpt",

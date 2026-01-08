@@ -1,6 +1,22 @@
 {
   "datasets": [
     {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
       "dataset": "mhlb.xpt",
       "domain": "MH",
       "execution_status": "success",
@@ -13,30 +29,14 @@
           "USUBJID": "None",
           "value": {
             "$list_dataset_names": [
-              "mhlb",
+              "ex",
               "dm",
-              "ex"
+              "mhlb"
             ],
             "dataset_name": "MHLB"
           }
         }
       ]
-    },
-    {
-      "dataset": "dm.xpt",
-      "domain": "DM",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
-    },
-    {
-      "dataset": "ex.xpt",
-      "domain": "EX",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
     }
   ]
 }

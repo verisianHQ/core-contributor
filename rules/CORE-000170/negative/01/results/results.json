@@ -1,4 +1,123 @@
 {
-  "error": "No result - either the rule or test case data lb.xlsx is broken",
-  "exception": "Worksheet named 'Datasets' not found"
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "Value of LBLOBXFL must be 'Y' or null",
+      "number_errors": 10,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBCAT": "CHEMISTRY",
+            "LBLOBXFL": "n",
+            "LBTEST": "Albumin",
+            "LBTESTCD": "ALB"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBCAT": "CHEMISTRY",
+            "LBLOBXFL": "y",
+            "LBTEST": "Alkaline Phosphatase",
+            "LBTESTCD": "ALP"
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBCAT": "CHEMISTRY",
+            "LBLOBXFL": "0",
+            "LBTEST": "Alanine Aminotransferase",
+            "LBTESTCD": "ALT"
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBCAT": "CHEMISTRY",
+            "LBLOBXFL": "1",
+            "LBTEST": "Aspartate Aminotransferase",
+            "LBTESTCD": "AST"
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBCAT": "HEMATOLOGY",
+            "LBLOBXFL": "!",
+            "LBTEST": "Basophils",
+            "LBTESTCD": "BASO"
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBCAT": "CHEMISTRY",
+            "LBLOBXFL": "  \n  ",
+            "LBTEST": "Bilirubin",
+            "LBTESTCD": "BILI"
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 7,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBCAT": "CHEMISTRY",
+            "LBLOBXFL": "        Y",
+            "LBTEST": "Urea Nitrogen",
+            "LBTESTCD": "UREAN"
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 8,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBCAT": "CHEMISTRY",
+            "LBLOBXFL": "N",
+            "LBTEST": "Calcium",
+            "LBTESTCD": "CA"
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": 9,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBCAT": "CHEMISTRY",
+            "LBLOBXFL": ".",
+            "LBTEST": "Cholesterol",
+            "LBTESTCD": "CHOL"
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": 10,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBCAT": "CHEMISTRY",
+            "LBLOBXFL": "YN",
+            "LBTEST": "Creatine Kinase",
+            "LBTESTCD": "CK"
+          }
+        }
+      ]
+    }
+  ]
 }
