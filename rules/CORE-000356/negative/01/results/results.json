@@ -1,6 +1,135 @@
 {
   "datasets": [
     {
+      "dataset": "ta.xpt",
+      "domain": "TA",
+      "execution_status": "success",
+      "execution_message": "At least one Required variable has a null value",
+      "number_errors": 12,
+      "errors": [
+        {
+          "row": 13,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ARMCD",
+            "variable_value": null
+          },
+          "validated": false
+        },
+        {
+          "row": 14,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ARMCD",
+            "variable_value": null
+          },
+          "validated": false
+        },
+        {
+          "row": 15,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ARMCD",
+            "variable_value": null
+          },
+          "validated": false
+        },
+        {
+          "row": 16,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ARMCD",
+            "variable_value": null
+          },
+          "validated": false
+        },
+        {
+          "row": 17,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ARMCD",
+            "variable_value": null
+          },
+          "validated": false
+        },
+        {
+          "row": 18,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ARMCD",
+            "variable_value": null
+          },
+          "validated": false
+        },
+        {
+          "row": 55,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EPOCH",
+            "variable_value": null
+          },
+          "validated": false
+        },
+        {
+          "row": 56,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EPOCH",
+            "variable_value": null
+          },
+          "validated": false
+        },
+        {
+          "row": 57,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EPOCH",
+            "variable_value": null
+          },
+          "validated": false
+        },
+        {
+          "row": 58,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EPOCH",
+            "variable_value": null
+          },
+          "validated": false
+        },
+        {
+          "row": 59,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EPOCH",
+            "variable_value": null
+          },
+          "validated": false
+        },
+        {
+          "row": 60,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EPOCH",
+            "variable_value": null
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
@@ -14,7 +143,8 @@
           "value": {
             "variable_name": "STUDYID",
             "variable_value": null
-          }
+          },
+          "validated": false
         },
         {
           "row": 8,
@@ -23,88 +153,8 @@
           "value": {
             "variable_name": "USUBJID",
             "variable_value": null
-          }
-        }
-      ]
-    },
-    {
-      "dataset": "ex.xpt",
-      "domain": "EX",
-      "execution_status": "success",
-      "execution_message": "At least one Required variable has a null value",
-      "number_errors": 8,
-      "errors": [
-        {
-          "row": 41,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXTRT",
-            "variable_value": null
-          }
-        },
-        {
-          "row": 42,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXTRT",
-            "variable_value": null
-          }
-        },
-        {
-          "row": 43,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXTRT",
-            "variable_value": null
-          }
-        },
-        {
-          "row": 44,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXTRT",
-            "variable_value": null
-          }
-        },
-        {
-          "row": 45,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXTRT",
-            "variable_value": null
-          }
-        },
-        {
-          "row": 46,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXTRT",
-            "variable_value": null
-          }
-        },
-        {
-          "row": 47,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXTRT",
-            "variable_value": null
-          }
-        },
-        {
-          "row": 48,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXTRT",
-            "variable_value": null
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -122,7 +172,8 @@
           "value": {
             "variable_name": "LBSEQ",
             "variable_value": null
-          }
+          },
+          "validated": false
         },
         {
           "row": 140,
@@ -131,7 +182,8 @@
           "value": {
             "variable_name": "LBSEQ",
             "variable_value": null
-          }
+          },
+          "validated": false
         },
         {
           "row": 141,
@@ -140,7 +192,8 @@
           "value": {
             "variable_name": "LBSEQ",
             "variable_value": null
-          }
+          },
+          "validated": false
         },
         {
           "row": 142,
@@ -149,7 +202,8 @@
           "value": {
             "variable_name": "LBSEQ",
             "variable_value": null
-          }
+          },
+          "validated": false
         },
         {
           "row": 143,
@@ -158,126 +212,236 @@
           "value": {
             "variable_name": "LBSEQ",
             "variable_value": null
-          }
+          },
+          "validated": false
         }
       ]
     },
     {
-      "dataset": "ta.xpt",
-      "domain": "TA",
+      "dataset": "ex.xpt",
+      "domain": "EX",
       "execution_status": "success",
       "execution_message": "At least one Required variable has a null value",
-      "number_errors": 12,
+      "number_errors": 8,
       "errors": [
         {
-          "row": 13,
+          "row": 41,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "variable_name": "ARMCD",
+            "variable_name": "EXTRT",
             "variable_value": null
-          }
+          },
+          "validated": false
         },
         {
-          "row": 14,
+          "row": 42,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "variable_name": "ARMCD",
+            "variable_name": "EXTRT",
             "variable_value": null
-          }
+          },
+          "validated": false
         },
         {
-          "row": 15,
+          "row": 43,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "variable_name": "ARMCD",
+            "variable_name": "EXTRT",
             "variable_value": null
-          }
+          },
+          "validated": false
         },
         {
-          "row": 16,
+          "row": 44,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "variable_name": "ARMCD",
+            "variable_name": "EXTRT",
             "variable_value": null
-          }
+          },
+          "validated": false
         },
         {
-          "row": 17,
+          "row": 45,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "variable_name": "ARMCD",
+            "variable_name": "EXTRT",
             "variable_value": null
-          }
+          },
+          "validated": false
         },
         {
-          "row": 18,
+          "row": 46,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "variable_name": "ARMCD",
+            "variable_name": "EXTRT",
             "variable_value": null
-          }
+          },
+          "validated": false
         },
         {
-          "row": 55,
+          "row": 47,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "variable_name": "EPOCH",
+            "variable_name": "EXTRT",
             "variable_value": null
-          }
+          },
+          "validated": false
         },
         {
-          "row": 56,
+          "row": 48,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "variable_name": "EPOCH",
+            "variable_name": "EXTRT",
             "variable_value": null
-          }
-        },
-        {
-          "row": 57,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EPOCH",
-            "variable_value": null
-          }
-        },
-        {
-          "row": 58,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EPOCH",
-            "variable_value": null
-          }
-        },
-        {
-          "row": 59,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EPOCH",
-            "variable_value": null
-          }
-        },
-        {
-          "row": 60,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EPOCH",
-            "variable_value": null
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ta.xpt",
+      "Row": 5,
+      "Variable": "ARMCD"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 5,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 6,
+      "Variable": "ARMCD"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 6,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 7,
+      "Variable": "ARMCD"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 7,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 8,
+      "Variable": "ARMCD"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 8,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 9,
+      "Variable": "ARMCD"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 9,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 10,
+      "Variable": "ARMCD"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 10,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 5,
+      "Variable": "STUDYID"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 6,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 5,
+      "Variable": "LBSEQ"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 6,
+      "Variable": "LBSEQ"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 7,
+      "Variable": "LBSEQ"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 8,
+      "Variable": "LBSEQ"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 9,
+      "Variable": "LBSEQ"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 5,
+      "Variable": "EXTRT"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 6,
+      "Variable": "EXTRT"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 7,
+      "Variable": "EXTRT"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 8,
+      "Variable": "EXTRT"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 9,
+      "Variable": "EXTRT"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 10,
+      "Variable": "EXTRT"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 11,
+      "Variable": "EXTRT"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 12,
+      "Variable": "EXTRT"
     }
   ]
 }

@@ -13,7 +13,8 @@
           "USUBJID": "015246-300-0004-00002",
           "value": {
             "ARMCD": "NOTASSGN"
-          }
+          },
+          "validated": false
         },
         {
           "row": 7,
@@ -21,9 +22,32 @@
           "USUBJID": "015246-300-0004-00007",
           "value": {
             "ARMCD": "SCRNFAIL"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "dm.xpt",
+      "Row": 6,
+      "Variable": "ARMCD"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 6,
+      "Variable": "ARM"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 11,
+      "Variable": "ARMCD"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 11,
+      "Variable": "ARM"
     }
   ]
 }

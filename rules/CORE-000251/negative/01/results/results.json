@@ -22,9 +22,47 @@
           "value": {
             "$ds_dsdecod": null,
             "SSSTRESC": "DEAD"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ds.xpt",
+      "Row": 11,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 11,
+      "Variable": "DSDECOD"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 16,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 16,
+      "Variable": "DSDECOD"
+    },
+    {
+      "Sheet": "ss.xpt",
+      "Row": 1,
+      "Variable": "SSSTRESC"
+    },
+    {
+      "Sheet": "ss.xpt",
+      "Row": 6,
+      "Variable": "SSSTRESC"
+    },
+    {
+      "Sheet": "ss.xpt",
+      "Row": 8,
+      "Variable": "SSSTRESC"
     }
   ]
 }

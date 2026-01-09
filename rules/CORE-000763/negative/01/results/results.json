@@ -15,7 +15,8 @@
             "CMDTC": "2013-05-20",
             "CMSTRTPT": null,
             "CMSTTPT": "2013-05-20"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -34,7 +35,8 @@
             "MHDTC": "2013-05-20",
             "MHSTRTPT": "ONGOING",
             "MHSTTPT": "2013-05-20"
-          }
+          },
+          "validated": false
         },
         {
           "row": 3,
@@ -44,7 +46,8 @@
             "MHDTC": "2013-05-20",
             "MHSTRTPT": "AFTER",
             "MHSTTPT": "2013-05-20"
-          }
+          },
+          "validated": false
         },
         {
           "row": 6,
@@ -54,7 +57,8 @@
             "MHDTC": "2013-05-20",
             "MHSTRTPT": "ONGOING",
             "MHSTTPT": "2013-05-20"
-          }
+          },
+          "validated": false
         },
         {
           "row": 7,
@@ -64,7 +68,8 @@
             "MHDTC": "2013-05-20",
             "MHSTRTPT": "ONGOING",
             "MHSTTPT": "2013-05-20"
-          }
+          },
+          "validated": false
         },
         {
           "row": 12,
@@ -74,7 +79,8 @@
             "MHDTC": "2013-05-03",
             "MHSTRTPT": "AFTER",
             "MHSTTPT": "2013-05-03"
-          }
+          },
+          "validated": false
         },
         {
           "row": 13,
@@ -84,9 +90,17 @@
             "MHDTC": "2013-05-04",
             "MHSTRTPT": null,
             "MHSTTPT": "2013-05-04"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "cm.xpt",
+      "Row": 10,
+      "Variable": "CMENRTPT"
     }
   ]
 }

@@ -1,31 +1,8 @@
 {
   "datasets": [
     {
-      "dataset": "mhLB.xpt",
-      "domain": "MH",
-      "execution_status": "success",
-      "execution_message": "Split dataset is present but the two-Letter parent domain is missing.",
-      "number_errors": 1,
-      "errors": [
-        {
-          "row": 1,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "$list_dataset_names": [
-              "mhlb",
-              "mh",
-              "dm",
-              "ex"
-            ],
-            "dataset_name": "MHLB"
-          }
-        }
-      ]
-    },
-    {
-      "dataset": "mh.xpt",
-      "domain": "MH",
+      "dataset": "ex.xpt",
+      "domain": "EX",
       "execution_status": "success",
       "execution_message": null,
       "number_errors": 0,
@@ -40,12 +17,35 @@
       "errors": []
     },
     {
-      "dataset": "ex.xpt",
-      "domain": "EX",
+      "dataset": "mh.xpt",
+      "domain": "MH",
       "execution_status": "success",
       "execution_message": null,
       "number_errors": 0,
       "errors": []
+    },
+    {
+      "dataset": "mhLB.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "Split dataset is present but the two-Letter parent domain is missing.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "$list_dataset_names": [
+              "ex",
+              "dm",
+              "mh",
+              "mhlb"
+            ],
+            "dataset_name": "MHLB"
+          }
+        }
+      ]
     }
   ]
 }

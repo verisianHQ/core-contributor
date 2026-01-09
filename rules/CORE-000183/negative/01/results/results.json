@@ -1,30 +1,6 @@
 {
   "datasets": [
     {
-      "dataset": "ae.xpt",
-      "domain": "AE",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000183, dataset=AE",
-      "number_errors": 0,
-      "errors": []
-    },
-    {
-      "dataset": "dm.xpt",
-      "domain": "DM",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000183, dataset=DM",
-      "number_errors": 0,
-      "errors": []
-    },
-    {
-      "dataset": "ft.xpt",
-      "domain": "FT",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000183, dataset=FT",
-      "number_errors": 0,
-      "errors": []
-    },
-    {
       "dataset": "pp.xpt",
       "domain": "PP",
       "execution_status": "success",
@@ -37,9 +13,34 @@
           "USUBJID": null,
           "value": {
             "PP": "pp.xpt"
-          }
+          },
+          "validated": false
         }
       ]
+    },
+    {
+      "dataset": "ft.xpt",
+      "domain": "FT",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000183, dataset=FT",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000183, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000183, dataset=AE",
+      "number_errors": 0,
+      "errors": []
     }
   ]
 }

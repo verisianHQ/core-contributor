@@ -1,4 +1,31 @@
 {
-  "error": "No result - either the rule or test case data unit-test-CG0653-negative.xlsx is broken",
-  "exception": "Worksheet named 'Datasets' not found"
+  "datasets": [
+    {
+      "dataset": "sv.xpt",
+      "domain": "SV",
+      "execution_status": "success",
+      "execution_message": "SVPRESP is not null and not equal to \"Y\". Values should be \"Y\" or null.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 29,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "SVPRESP": "N"
+          },
+          "validated": false
+        },
+        {
+          "row": 59,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-002",
+          "value": {
+            "SVPRESP": "UNK"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
 }

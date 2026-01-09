@@ -1,4 +1,33 @@
 {
-  "error": "No result - either the rule or test case data unit-test-CG0260-negative.xlsx is broken",
-  "exception": "Worksheet named 'Datasets' not found"
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVALNF is not null when TSVAL is populated",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "METFORMIN",
+            "TSVALNF": "UNK"
+          },
+          "validated": false
+        },
+        {
+          "row": 21,
+          "SEQ": 21,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "2",
+            "TSVALNF": "INF"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
 }

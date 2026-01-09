@@ -14,9 +14,32 @@
           "value": {
             "DSDECOD": "ADVERSE EVENT",
             "DSTERM": "COMPLETED"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ds.xpt",
+      "Row": 1,
+      "Variable": "DSTERM"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 1,
+      "Variable": "DSDECOD"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 7,
+      "Variable": "DSTERM"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 7,
+      "Variable": "DSDECOD"
     }
   ]
 }

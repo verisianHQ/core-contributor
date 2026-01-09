@@ -14,7 +14,8 @@
           "value": {
             "DTHDTC": "2018-06-10",
             "DTHFL": null
-          }
+          },
+          "validated": false
         },
         {
           "row": 4,
@@ -23,9 +24,42 @@
           "value": {
             "DTHDTC": "2018-09-04",
             "DTHFL": "N"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "dm.xpt",
+      "Row": 1,
+      "Variable": "DTHDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 1,
+      "Variable": "DTHFL"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 7,
+      "Variable": "DTHDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 7,
+      "Variable": "DTHFL"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 8,
+      "Variable": "DTHDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 8,
+      "Variable": "DTHFL"
     }
   ]
 }

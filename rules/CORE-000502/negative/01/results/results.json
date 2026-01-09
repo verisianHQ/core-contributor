@@ -1,8 +1,8 @@
 {
   "datasets": [
     {
-      "dataset": "co.xpt",
-      "domain": "CO",
+      "dataset": "supplb.xpt",
+      "domain": "SUPPLB",
       "execution_status": "success",
       "execution_message": "RDOMAIN does not represent a dataset present in the study.",
       "number_errors": 1,
@@ -17,8 +17,9 @@
               "RELREC",
               "SUPPLB"
             ],
-            "RDOMAIN": "IS"
-          }
+            "RDOMAIN": "LB"
+          },
+          "validated": false
         }
       ]
     },
@@ -40,13 +41,14 @@
               "SUPPLB"
             ],
             "RDOMAIN": "LB"
-          }
+          },
+          "validated": false
         }
       ]
     },
     {
-      "dataset": "supplb.xpt",
-      "domain": "SUPPLB",
+      "dataset": "co.xpt",
+      "domain": "CO",
       "execution_status": "success",
       "execution_message": "RDOMAIN does not represent a dataset present in the study.",
       "number_errors": 1,
@@ -61,8 +63,9 @@
               "RELREC",
               "SUPPLB"
             ],
-            "RDOMAIN": "LB"
-          }
+            "RDOMAIN": "IS"
+          },
+          "validated": false
         }
       ]
     }

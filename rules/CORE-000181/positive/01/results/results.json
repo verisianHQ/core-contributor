@@ -9,14 +9,6 @@
       "errors": []
     },
     {
-      "dataset": "dm.xpt",
-      "domain": "DM",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000181, dataset=DM",
-      "number_errors": 0,
-      "errors": []
-    },
-    {
       "dataset": "aprelsub.xpt",
       "domain": "AP",
       "execution_status": "success",
@@ -32,6 +24,14 @@
           }
         }
       ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000181, dataset=DM",
+      "number_errors": 0,
+      "errors": []
     },
     {
       "dataset": "apmh.xpt",

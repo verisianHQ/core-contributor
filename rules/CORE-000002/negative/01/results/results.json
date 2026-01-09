@@ -14,7 +14,7 @@
           "value": {
             "SESTDTC": null
           },
-          "highlighted_in_test_case": true
+          "validated": false
         },
         {
           "row": 5,
@@ -23,9 +23,21 @@
           "value": {
             "SESTDTC": null
           },
-          "highlighted_in_test_case": true
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "se.xpt",
+      "Row": 6,
+      "Variable": "SESTDTC"
+    },
+    {
+      "Sheet": "se.xpt",
+      "Row": 9,
+      "Variable": "SESTDTC"
     }
   ]
 }

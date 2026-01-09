@@ -3,13 +3,19 @@
     {
       "dataset": "dm.xpt",
       "domain": "DM",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
+      "execution_status": "success",
+      "execution_message": "DTHFL is not 'Y' when DS.DSDECOD is \"DEATH\"",
       "number_errors": 1,
       "errors": [
         {
-          "error": "An unknown exception has occurred",
-          "message": "'NoneType' object has no attribute 'get_column_hash'"
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "123101",
+          "value": {
+            "DSDECOD": "DEATH",
+            "DTHFL": null
+          },
+          "validated": false
         }
       ]
     },
@@ -26,6 +32,14 @@
       "domain": "DD",
       "execution_status": "skipped",
       "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000252, dataset=DD",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000252, dataset=DS",
       "number_errors": 0,
       "errors": []
     }

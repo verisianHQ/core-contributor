@@ -1,24 +1,6 @@
 {
   "datasets": [
     {
-      "dataset": "aprelsub.xpt",
-      "domain": "AP",
-      "execution_status": "success",
-      "execution_message": "RDEVID must be empty when RSUBJID is populated and RSUBJID must be empty when RDEVID is populated",
-      "number_errors": 1,
-      "errors": [
-        {
-          "row": 1,
-          "SEQ": null,
-          "USUBJID": null,
-          "value": {
-            "RDEVID": "AB0001",
-            "RSUBJID": "HEM021-002"
-          }
-        }
-      ]
-    },
-    {
       "dataset": "aplb.xpt",
       "domain": "AP",
       "execution_status": "success",
@@ -32,7 +14,27 @@
           "value": {
             "RDEVID": "ABCD001",
             "RSUBJID": "GRNMO13"
-          }
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "aprelsub.xpt",
+      "domain": "AP",
+      "execution_status": "success",
+      "execution_message": "RDEVID must be empty when RSUBJID is populated and RSUBJID must be empty when RDEVID is populated",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "RDEVID": "AB0001",
+            "RSUBJID": "HEM021-002"
+          },
+          "validated": false
         }
       ]
     },

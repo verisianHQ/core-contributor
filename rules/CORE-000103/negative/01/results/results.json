@@ -14,7 +14,8 @@
           "value": {
             "AGCAT": null,
             "AGSCAT": "DFAJF"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -32,7 +33,8 @@
           "value": {
             "CMCAT": null,
             "CMSCAT": "PRIOR DMARDS"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -82,7 +84,8 @@
           "value": {
             "SUCAT": null,
             "SUSCAT": "TOBACCO"
-          }
+          },
+          "validated": false
         },
         {
           "row": 2,
@@ -91,7 +94,8 @@
           "value": {
             "SUCAT": null,
             "SUSCAT": "CAFFEINE"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -109,7 +113,8 @@
           "value": {
             "AECAT": null,
             "AESCAT": "NEUROLOGIC"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -167,7 +172,8 @@
           "value": {
             "EGCAT": null,
             "EGSCAT": "INTERVAL"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -185,9 +191,182 @@
           "value": {
             "FACAT": null,
             "FASCAT": "GERD"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ag.xpt",
+      "Row": 1,
+      "Variable": "AGCAT"
+    },
+    {
+      "Sheet": "ag.xpt",
+      "Row": 1,
+      "Variable": "AGSCAT"
+    },
+    {
+      "Sheet": "ag.xpt",
+      "Row": 5,
+      "Variable": "AGCAT"
+    },
+    {
+      "Sheet": "ag.xpt",
+      "Row": 5,
+      "Variable": "AGSCAT"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 1,
+      "Variable": "CMCAT"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 1,
+      "Variable": "CMSCAT"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 5,
+      "Variable": "CMCAT"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 5,
+      "Variable": "CMSCAT"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 1,
+      "Variable": "EXCAT"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 1,
+      "Variable": "EXSCAT"
+    },
+    {
+      "Sheet": "ml.xpt",
+      "Row": 1,
+      "Variable": "MLCAT"
+    },
+    {
+      "Sheet": "ml.xpt",
+      "Row": 1,
+      "Variable": "MLSCAT"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AECAT"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AESCAT"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 6,
+      "Variable": "AECAT"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 6,
+      "Variable": "AESCAT"
+    },
+    {
+      "Sheet": "be.xpt",
+      "Row": 1,
+      "Variable": "BECAT"
+    },
+    {
+      "Sheet": "be.xpt",
+      "Row": 1,
+      "Variable": "BESCAT"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 1,
+      "Variable": "CECAT"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 1,
+      "Variable": "CESCAT"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 1,
+      "Variable": "DSCAT"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 1,
+      "Variable": "DSSCAT"
+    },
+    {
+      "Sheet": "mh.xpt",
+      "Row": 1,
+      "Variable": "MHCAT"
+    },
+    {
+      "Sheet": "mh.xpt",
+      "Row": 1,
+      "Variable": "MHSCAT"
+    },
+    {
+      "Sheet": "da.xpt",
+      "Row": 1,
+      "Variable": "DACAT"
+    },
+    {
+      "Sheet": "da.xpt",
+      "Row": 1,
+      "Variable": "DASCAT"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 1,
+      "Variable": "EGCAT"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 1,
+      "Variable": "EGSCAT"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 6,
+      "Variable": "EGCAT"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 6,
+      "Variable": "EGSCAT"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 1,
+      "Variable": "FACAT"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 1,
+      "Variable": "FASCAT"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 6,
+      "Variable": "FACAT"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 6,
+      "Variable": "FASCAT"
     }
   ]
 }

@@ -15,7 +15,8 @@
             "DSSEQ": 5.0,
             "POOLID": "Not in dataset",
             "USUBJID": "0001"
-          }
+          },
+          "validated": false
         },
         {
           "row": 6,
@@ -25,7 +26,8 @@
             "DSSEQ": 5.0,
             "POOLID": "Not in dataset",
             "USUBJID": "0001"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -52,7 +54,8 @@
             "POOLID": "Not in dataset",
             "SSSEQ": 14.0,
             "USUBJID": "0002"
-          }
+          },
+          "validated": false
         },
         {
           "row": 14,
@@ -62,7 +65,8 @@
             "POOLID": "Not in dataset",
             "SSSEQ": 14.0,
             "USUBJID": "0002"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -81,7 +85,8 @@
             "AESEQ": 1.0,
             "POOLID": "0002",
             "USUBJID": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 9,
@@ -91,7 +96,8 @@
             "AESEQ": 1.0,
             "POOLID": "0002",
             "USUBJID": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 10,
@@ -101,7 +107,8 @@
             "AESEQ": 1.0,
             "POOLID": "0002",
             "USUBJID": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 11,
@@ -111,7 +118,8 @@
             "AESEQ": 1.0,
             "POOLID": "0002",
             "USUBJID": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 12,
@@ -121,7 +129,8 @@
             "AESEQ": 1.0,
             "POOLID": "0002",
             "USUBJID": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 13,
@@ -131,7 +140,8 @@
             "AESEQ": 1.0,
             "POOLID": "0002",
             "USUBJID": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 14,
@@ -141,7 +151,8 @@
             "AESEQ": 1.0,
             "POOLID": "0002",
             "USUBJID": "Not in dataset"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -160,6 +171,143 @@
       "execution_message": null,
       "number_errors": 0,
       "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ds.xpt",
+      "Row": 9,
+      "Variable": "DSSEQ"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 10,
+      "Variable": "DSSEQ"
+    },
+    {
+      "Sheet": "ss1.xpt",
+      "Row": 5,
+      "Variable": "SSSEQ"
+    },
+    {
+      "Sheet": "ss1.xpt",
+      "Row": 6,
+      "Variable": "SSSEQ"
+    },
+    {
+      "Sheet": "ss1.xpt",
+      "Row": 7,
+      "Variable": "SSSEQ"
+    },
+    {
+      "Sheet": "ss1.xpt",
+      "Row": 8,
+      "Variable": "SSSEQ"
+    },
+    {
+      "Sheet": "ss1.xpt",
+      "Row": 9,
+      "Variable": "SSSEQ"
+    },
+    {
+      "Sheet": "ss1.xpt",
+      "Row": 10,
+      "Variable": "SSSEQ"
+    },
+    {
+      "Sheet": "ss1.xpt",
+      "Row": 11,
+      "Variable": "SSSEQ"
+    },
+    {
+      "Sheet": "ss2.xpt",
+      "Row": 5,
+      "Variable": "SSSEQ"
+    },
+    {
+      "Sheet": "ss2.xpt",
+      "Row": 6,
+      "Variable": "SSSEQ"
+    },
+    {
+      "Sheet": "ss2.xpt",
+      "Row": 7,
+      "Variable": "SSSEQ"
+    },
+    {
+      "Sheet": "ss2.xpt",
+      "Row": 8,
+      "Variable": "SSSEQ"
+    },
+    {
+      "Sheet": "ss2.xpt",
+      "Row": 9,
+      "Variable": "SSSEQ"
+    },
+    {
+      "Sheet": "ss2.xpt",
+      "Row": 10,
+      "Variable": "SSSEQ"
+    },
+    {
+      "Sheet": "ss2.xpt",
+      "Row": 11,
+      "Variable": "SSSEQ"
+    },
+    {
+      "Sheet": "ss2.xpt",
+      "Row": 17,
+      "Variable": "SSSEQ"
+    },
+    {
+      "Sheet": "ss2.xpt",
+      "Row": 18,
+      "Variable": "SSSEQ"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 12,
+      "Variable": "AESEQ"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 13,
+      "Variable": "AESEQ"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 14,
+      "Variable": "AESEQ"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 15,
+      "Variable": "AESEQ"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 16,
+      "Variable": "AESEQ"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 17,
+      "Variable": "AESEQ"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 18,
+      "Variable": "AESEQ"
+    },
+    {
+      "Sheet": "lbae.xpt",
+      "Row": 12,
+      "Variable": "LBSEQ"
+    },
+    {
+      "Sheet": "lbds.xpt",
+      "Row": 12,
+      "Variable": "LBSEQ"
     }
   ]
 }

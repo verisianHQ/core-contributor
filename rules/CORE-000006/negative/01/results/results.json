@@ -13,7 +13,8 @@
           "USUBJID": "015246-099-0000-00000",
           "value": {
             "DTHFL": "N"
-          }
+          },
+          "validated": false
         },
         {
           "row": 2,
@@ -21,7 +22,8 @@
           "USUBJID": "015246-099-0000-00001",
           "value": {
             "DTHFL": "U"
-          }
+          },
+          "validated": false
         },
         {
           "row": 4,
@@ -29,9 +31,32 @@
           "USUBJID": "015246-099-0000-00003",
           "value": {
             "DTHFL": "N"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "dm.xpt",
+      "Row": 1,
+      "Variable": "DTHFL"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 5,
+      "Variable": "DTHFL"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 6,
+      "Variable": "DTHFL"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 8,
+      "Variable": "DTHFL"
     }
   ]
 }

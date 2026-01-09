@@ -1,37 +1,6 @@
 {
   "datasets": [
     {
-      "dataset": "zm.xpt",
-      "domain": "ZM",
-      "execution_status": "success",
-      "execution_message": "First 2 characters of prefixed variable within custom domain do not match the DOMAIN value.",
-      "number_errors": 2,
-      "errors": [
-        {
-          "row": 6,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "$domain_list": [
-              "ZM"
-            ],
-            "variable_name": "AEINDC"
-          }
-        },
-        {
-          "row": 7,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "$domain_list": [
-              "ZM"
-            ],
-            "variable_name": "CMDOSE"
-          }
-        }
-      ]
-    },
-    {
       "dataset": "zb.xpt",
       "domain": "ZB",
       "execution_status": "success",
@@ -47,9 +16,55 @@
               "ZB"
             ],
             "variable_name": "LBORRES"
-          }
+          },
+          "validated": false
         }
       ]
+    },
+    {
+      "dataset": "zm.xpt",
+      "domain": "ZM",
+      "execution_status": "success",
+      "execution_message": "First 2 characters of prefixed variable within custom domain do not match the DOMAIN value.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "$domain_list": [
+              "ZM"
+            ],
+            "variable_name": "AEINDC"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "$domain_list": [
+              "ZM"
+            ],
+            "variable_name": "CMDOSE"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "zm.xpt",
+      "Row": 1,
+      "Variable": "AEINDC"
+    },
+    {
+      "Sheet": "zm.xpt",
+      "Row": 1,
+      "Variable": "CMDOSE"
     }
   ]
 }

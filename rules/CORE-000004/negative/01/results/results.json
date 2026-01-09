@@ -14,7 +14,8 @@
           "value": {
             "ECDOSE": 0.0,
             "ECOCCUR": "N"
-          }
+          },
+          "validated": false
         },
         {
           "row": 13,
@@ -23,7 +24,8 @@
           "value": {
             "ECDOSE": 0.0,
             "ECOCCUR": "N"
-          }
+          },
+          "validated": false
         },
         {
           "row": 14,
@@ -32,7 +34,8 @@
           "value": {
             "ECDOSE": 0.0,
             "ECOCCUR": "N"
-          }
+          },
+          "validated": false
         },
         {
           "row": 15,
@@ -41,7 +44,8 @@
           "value": {
             "ECDOSE": 0.0,
             "ECOCCUR": "N"
-          }
+          },
+          "validated": false
         },
         {
           "row": 16,
@@ -50,9 +54,37 @@
           "value": {
             "ECDOSE": 0.0,
             "ECOCCUR": "N"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ec.xpt",
+      "Row": 15,
+      "Variable": "ECDOSE"
+    },
+    {
+      "Sheet": "ec.xpt",
+      "Row": 17,
+      "Variable": "ECDOSE"
+    },
+    {
+      "Sheet": "ec.xpt",
+      "Row": 18,
+      "Variable": "ECDOSE"
+    },
+    {
+      "Sheet": "ec.xpt",
+      "Row": 19,
+      "Variable": "ECDOSE"
+    },
+    {
+      "Sheet": "ec.xpt",
+      "Row": 20,
+      "Variable": "ECDOSE"
     }
   ]
 }
