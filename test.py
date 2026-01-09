@@ -244,6 +244,18 @@ class TestRunner:
         if results_data is None:
             results_data = {"error": "Unknown Error", "exception": "Engine returned None"}
 
+        if results_data.get("error"):
+            results_path = ResultReporter.save_case_results(rule_id, test_type, case_id, results_data)
+            return {
+                "case_id": case_id,
+                "passed": False,
+                "total_errors": None,
+                "expected": expected,
+                "error": results_data["error"],
+                "exception": results_data.get("exception"),
+                "results_path": results_path,
+            }
+
         if test_type == "negative":
             validations = self.get_validation_info(case_info["data_path"])
             results_data, unmatched = self.validate_errors(results_data, validations)
@@ -258,18 +270,6 @@ class TestRunner:
                 results_data["unvalidated_highlights"] = unvalidated_highlights
 
         results_path = ResultReporter.save_case_results(rule_id, test_type, case_id, results_data)
-
-        if "error" in results_data:
-            return {
-                "case_id": case_id,
-                "passed": False,
-                "total_errors": None,
-                "expected": expected,
-                "error": results_data["error"],
-                "exception": results_data.get("exception"),
-                "results_path": results_path,
-            }
-
         total_errors = sum(len(ds.get("errors", [])) for ds in results_data.get("datasets", []))
         passed = (total_errors == 0) if test_type == "positive" else (total_errors > 0)
 
@@ -324,7 +324,7 @@ class TestRunner:
             error_level = entries[0]["Error level"].lower()
             sheet = entries[0]["Sheet"]
             row = entries[0]["Row num"] if entries[0]["Row num"] in [1, "N/A"] else entries[0]["Row num"] - 4
-            values = frozenset((e["Variable"], e["Error value"]) for e in entries)
+            values = {e["Variable"]: e["Error value"] for e in entries}
 
             flat_validation[(sheet, error_level, row)] = values
 
@@ -332,27 +332,28 @@ class TestRunner:
             sheet_name = ds["dataset"]
 
             for error_obj in ds["errors"]:
-                res_values = frozenset(error_obj["value"].items())
+                if not error_obj.get("error"):
+                    res_values = error_obj["value"]
 
-                match_found = False
-                for (v_sheet, v_error_level, v_row), v_values in flat_validation.items():
-                    if v_sheet == sheet_name:
-                        if v_error_level == "record":
-                            if v_values == res_values:
-                                match_found = True
-                        elif v_error_level == "variable" or v_error_level == "dataset":
-                            if frozenset(v[0] for v in v_values if v[1] != "[ABSENT]") == frozenset(
-                                v[0] for v in res_values if v[1] != "[ABSENT]"
-                            ) or not frozenset(v[0] for v in v_values if v[1] != "[ABSENT]"):
-                                match_found = True
+                    match_found = False
+                    for (v_sheet, v_error_level, v_row), v_values in flat_validation.items():
+                        if v_sheet == sheet_name:
+                            if v_error_level == "record":
+                                if v_values == res_values:
+                                    match_found = True
+                            elif v_error_level == "variable" or v_error_level == "dataset":
+                                if frozenset(v[0] for v in v_values if v[1] != "[ABSENT]") == frozenset(
+                                    v[0] for v in list(res_values.items()) if v[1] != "[ABSENT]"
+                                ) or not frozenset(v[0] for v in v_values if v[1] != "[ABSENT]"):
+                                    match_found = True
 
-                        if match_found:
-                            error_obj["validated"] = True
-                            del flat_validation[(v_sheet, v_error_level, v_row)]
-                            break
+                            if match_found:
+                                error_obj["validated"] = True
+                                del flat_validation[(v_sheet, v_error_level, v_row)]
+                                break
 
-                if not match_found:
-                    error_obj["validated"] = False
+                    if not match_found:
+                        error_obj["validated"] = False
 
         for _, values in flat_validation.items():
             unmatched.append({"value": dict(values)})
