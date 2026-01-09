@@ -16,7 +16,8 @@
             "AEENDTC": "2022-03-19",
             "AEENDY": -2.0,
             "RFSTDTC": "2022-03-20"
-          }
+          },
+          "validated": false
         },
         {
           "row": 2,
@@ -27,7 +28,8 @@
             "AEENDTC": "2022-03-20",
             "AEENDY": 0.0,
             "RFSTDTC": "2022-03-20"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -47,7 +49,8 @@
             "CMENDTC": "2013-05-10",
             "CMENDY": null,
             "RFSTDTC": "2013-01-05"
-          }
+          },
+          "validated": false
         },
         {
           "row": 8,
@@ -58,7 +61,8 @@
             "CMENDTC": "2014-05-20",
             "CMENDY": 11.0,
             "RFSTDTC": "2014-05-11"
-          }
+          },
+          "validated": false
         },
         {
           "row": 10,
@@ -69,7 +73,8 @@
             "CMENDTC": "2013-06-05",
             "CMENDY": -107.0,
             "RFSTDTC": "2013-09-21"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -80,6 +85,33 @@
       "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000553, dataset=DM",
       "number_errors": 0,
       "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ae.xpt",
+      "Row": 5,
+      "Variable": "AEENDY"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 6,
+      "Variable": "AEENDY"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 11,
+      "Variable": "CMENDY"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 12,
+      "Variable": "CMENDY"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 14,
+      "Variable": "CMENDY"
     }
   ]
 }

@@ -227,11 +227,6 @@ class Sanitiser:
                 source = old_wb[sheet_name]
                 target = new_wb.create_sheet(title=sheet_name)
 
-                for idx, rd in source.row_dimensions.items():
-                    target.row_dimensions[idx] = copy(rd)
-                for idx, rd in source.column_dimensions.items():
-                    target.column_dimensions[idx] = copy(rd)
-
                 for row in source.iter_rows():
                     for cell in row:
                         new_cell = target.cell(row=cell.row, column=cell.column, value=cell.value)

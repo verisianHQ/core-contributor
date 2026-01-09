@@ -14,7 +14,8 @@
           "value": {
             "ECLOC": "Not in dataset",
             "ECPORTOT": "SINGLE"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -40,7 +41,8 @@
           "value": {
             "AELOC": "Not in dataset",
             "AEPORTOT": "PARTIAL"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -66,9 +68,47 @@
           "value": {
             "TULOC": "Not in dataset",
             "TUPORTOT": "SINGLE"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ec.xpt",
+      "Row": 1,
+      "Variable": "ECPORTOT"
+    },
+    {
+      "Sheet": "pr.xpt",
+      "Row": 1,
+      "Variable": "PRLOC"
+    },
+    {
+      "Sheet": "pr.xpt",
+      "Row": 1,
+      "Variable": "PRPORTOT"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AEPORTOT"
+    },
+    {
+      "Sheet": "oe.xpt",
+      "Row": 1,
+      "Variable": "OELOC"
+    },
+    {
+      "Sheet": "oe.xpt",
+      "Row": 1,
+      "Variable": "OEPORTOT"
+    },
+    {
+      "Sheet": "tu.xpt",
+      "Row": 1,
+      "Variable": "TUPORTOT"
     }
   ]
 }

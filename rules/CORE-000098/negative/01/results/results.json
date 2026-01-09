@@ -14,7 +14,8 @@
           "value": {
             "ECDIR": "UPPER",
             "ECLOC": "Not in dataset"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -40,7 +41,8 @@
           "value": {
             "AEDIR": null,
             "AELOC": "Not in dataset"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -59,6 +61,48 @@
       "execution_message": null,
       "number_errors": 0,
       "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ec.xpt",
+      "Row": 1,
+      "Variable": "ECDIR"
+    },
+    {
+      "Sheet": "pr.xpt",
+      "Row": 1,
+      "Variable": "PRLOC"
+    },
+    {
+      "Sheet": "pr.xpt",
+      "Row": 1,
+      "Variable": "PRDIR"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AEDIR"
+    },
+    {
+      "Sheet": "oe.xpt",
+      "Row": 1,
+      "Variable": "OELOC"
+    },
+    {
+      "Sheet": "oe.xpt",
+      "Row": 1,
+      "Variable": "OEDIR"
+    },
+    {
+      "Sheet": "tu.xpt",
+      "Row": 1,
+      "Variable": "TULOC"
+    },
+    {
+      "Sheet": "tu.xpt",
+      "Row": 1,
+      "Variable": "TUDIR"
     }
   ]
 }

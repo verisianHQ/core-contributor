@@ -1,6 +1,14 @@
 {
   "datasets": [
     {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000236, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
       "dataset": "mh.xpt",
       "domain": "MH",
       "execution_status": "success",
@@ -14,7 +22,8 @@
           "value": {
             "MHSTDTC": "2012-11-20",
             "RFSTDTC": "2012-11-15"
-          }
+          },
+          "validated": false
         },
         {
           "row": 10,
@@ -23,7 +32,8 @@
           "value": {
             "MHSTDTC": "2013-09-25",
             "RFSTDTC": "2013-09-21"
-          }
+          },
+          "validated": false
         },
         {
           "row": 17,
@@ -32,17 +42,27 @@
           "value": {
             "MHSTDTC": "2012-12-20",
             "RFSTDTC": "2012-12-17"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "mh.xpt",
+      "Row": 6,
+      "Variable": "MHSTDTC"
     },
     {
-      "dataset": "dm.xpt",
-      "domain": "DM",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000236, dataset=DM",
-      "number_errors": 0,
-      "errors": []
+      "Sheet": "mh.xpt",
+      "Row": 14,
+      "Variable": "MHSTDTC"
+    },
+    {
+      "Sheet": "mh.xpt",
+      "Row": 21,
+      "Variable": "MHSTDTC"
     }
   ]
 }

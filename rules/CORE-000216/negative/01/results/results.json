@@ -1,6 +1,14 @@
 {
   "datasets": [
     {
+      "dataset": "tm.xpt",
+      "domain": "TM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000216, dataset=TM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
       "dataset": "sm.xpt",
       "domain": "SM",
       "execution_status": "success",
@@ -14,7 +22,8 @@
           "value": {
             "MIDSTYPE": "DIAGNOSIS",
             "TMRPT": "N"
-          }
+          },
+          "validated": false
         },
         {
           "row": 2,
@@ -23,17 +32,10 @@
           "value": {
             "MIDSTYPE": "DIAGNOSIS",
             "TMRPT": "N"
-          }
+          },
+          "validated": false
         }
       ]
-    },
-    {
-      "dataset": "tm.xpt",
-      "domain": "TM",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000216, dataset=TM",
-      "number_errors": 0,
-      "errors": []
     }
   ]
 }

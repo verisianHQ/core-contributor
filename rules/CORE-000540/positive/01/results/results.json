@@ -1,6 +1,14 @@
 {
   "datasets": [
     {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
       "dataset": "facm.xpt",
       "domain": "FA",
       "execution_status": "success",
@@ -13,21 +21,13 @@
           "USUBJID": null,
           "value": {
             "$list_dataset_names": [
-              "facm",
-              "cm"
+              "cm",
+              "facm"
             ],
             "dataset_name": "FACM"
           }
         }
       ]
-    },
-    {
-      "dataset": "cm.xpt",
-      "domain": "CM",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
     }
   ]
 }

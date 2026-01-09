@@ -15,7 +15,8 @@
             "CMDTC": "2013-05-20",
             "CMENRTPT": "AFTER",
             "CMENTPT": "2013-05-20"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -34,7 +35,8 @@
             "MHDTC": "2013-05-20",
             "MHENRTPT": "AFTER",
             "MHENTPT": "2013-05-20"
-          }
+          },
+          "validated": false
         },
         {
           "row": 12,
@@ -44,7 +46,8 @@
             "MHDTC": "2013-05-03",
             "MHENRTPT": "AFTER",
             "MHENTPT": "2013-05-03"
-          }
+          },
+          "validated": false
         },
         {
           "row": 13,
@@ -54,9 +57,17 @@
             "MHDTC": "2013-05-04",
             "MHENRTPT": null,
             "MHENTPT": "2013-05-04"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "cm.xpt",
+      "Row": 10,
+      "Variable": "CMENRTPT"
     }
   ]
 }

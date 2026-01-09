@@ -17,7 +17,8 @@
             "TEDUR": "Not in dataset",
             "TEENRL": "END OF TREATMENT",
             "TESTRL": "FIRST DOSE OF HUMAN INSULIN"
-          }
+          },
+          "validated": false
         },
         {
           "row": 3,
@@ -29,7 +30,8 @@
             "TEDUR": "Not in dataset",
             "TEENRL": "END OF TREATMENT",
             "TESTRL": "FIRST DOSE OF HUMAN INSULIN"
-          }
+          },
+          "validated": false
         },
         {
           "row": 6,
@@ -41,7 +43,8 @@
             "TEDUR": "Not in dataset",
             "TEENRL": null,
             "TESTRL": "INFORMED CONSENT SIGNED2"
-          }
+          },
+          "validated": false
         },
         {
           "row": 7,
@@ -53,7 +56,8 @@
             "TEDUR": "Not in dataset",
             "TEENRL": null,
             "TESTRL": "INFORMED CONSENT SIGNED2"
-          }
+          },
+          "validated": false
         },
         {
           "row": 8,
@@ -65,9 +69,112 @@
             "TEDUR": "Not in dataset",
             "TEENRL": null,
             "TESTRL": "INFORMED CONSENT SIGNED2"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "te.xpt",
+      "Row": 6,
+      "Variable": "ETCD"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 6,
+      "Variable": "ELEMENT"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 6,
+      "Variable": "TESTRL"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 6,
+      "Variable": "TEENRL"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 7,
+      "Variable": "ETCD"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 7,
+      "Variable": "ELEMENT"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 7,
+      "Variable": "TESTRL"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 7,
+      "Variable": "TEENRL"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 10,
+      "Variable": "ETCD"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 10,
+      "Variable": "ELEMENT"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 10,
+      "Variable": "TESTRL"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 10,
+      "Variable": "TEENRL"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 11,
+      "Variable": "ETCD"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 11,
+      "Variable": "ELEMENT"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 11,
+      "Variable": "TESTRL"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 11,
+      "Variable": "TEENRL"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 12,
+      "Variable": "ETCD"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 12,
+      "Variable": "ELEMENT"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 12,
+      "Variable": "TESTRL"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 12,
+      "Variable": "TEENRL"
     }
   ]
 }

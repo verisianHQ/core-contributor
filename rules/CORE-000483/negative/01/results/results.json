@@ -14,9 +14,22 @@
           "value": {
             "TSPARMCD": "PCLAS",
             "TSVCDREF": "MEDRT"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ts.xpt",
+      "Row": 36,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 36,
+      "Variable": "TSVCDREF"
     }
   ]
 }

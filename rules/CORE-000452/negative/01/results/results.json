@@ -15,7 +15,8 @@
             "AGE": 34.0,
             "AGETXT": null,
             "AGEU": null
-          }
+          },
+          "validated": false
         },
         {
           "row": 2,
@@ -25,9 +26,22 @@
             "AGE": null,
             "AGETXT": "31-34",
             "AGEU": null
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "dm.xpt",
+      "Row": 5,
+      "Variable": "AGEU"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 6,
+      "Variable": "AGEU"
     }
   ]
 }

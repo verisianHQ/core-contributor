@@ -1,6 +1,14 @@
 {
   "datasets": [
     {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
@@ -13,7 +21,8 @@
           "USUBJID": "002",
           "value": {
             "USUBJID": "002"
-          }
+          },
+          "validated": false
         },
         {
           "row": 3,
@@ -21,17 +30,22 @@
           "USUBJID": "003",
           "value": {
             "USUBJID": "003"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ae.xpt",
+      "Row": 6,
+      "Variable": "USUBJID"
     },
     {
-      "dataset": "dm.xpt",
-      "domain": "DM",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "Sheet": "ae.xpt",
+      "Row": 7,
+      "Variable": "USUBJID"
     }
   ]
 }

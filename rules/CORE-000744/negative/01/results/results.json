@@ -24,7 +24,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 2,
@@ -35,7 +36,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 3,
@@ -46,7 +48,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 4,
@@ -57,7 +60,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 5,
@@ -68,7 +72,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 6,
@@ -79,7 +84,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 7,
@@ -90,7 +96,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 8,
@@ -101,7 +108,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 9,
@@ -112,7 +120,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 10,
@@ -123,7 +132,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 11,
@@ -134,7 +144,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 12,
@@ -145,7 +156,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 13,
@@ -156,7 +168,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 14,
@@ -167,7 +180,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 15,
@@ -178,7 +192,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 16,
@@ -189,7 +204,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 17,
@@ -200,7 +216,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "validated": false
         },
         {
           "row": 18,
@@ -211,7 +228,8 @@
             "RELREC.**DECOD": "Not in dataset",
             "RELREC.**TERM": "Not in dataset",
             "RELREC.**TRT": "Not in dataset"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -222,6 +240,153 @@
       "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000744, dataset=RELREC",
       "number_errors": 0,
       "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ae.xpt",
+      "Row": 6,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 6,
+      "Variable": "AELNKID"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 6,
+      "Variable": "AETERM"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 11,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 11,
+      "Variable": "AELNKID"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 11,
+      "Variable": "AETERM"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 9,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 9,
+      "Variable": "FALNKGRP"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 9,
+      "Variable": "FAOBJ"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 10,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 10,
+      "Variable": "FALNKGRP"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 10,
+      "Variable": "FAOBJ"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 20,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 20,
+      "Variable": "FALNKGRP"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 20,
+      "Variable": "FAOBJ"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 9,
+      "Variable": "STUDYID"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 9,
+      "Variable": "RDOMAIN"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 9,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 9,
+      "Variable": "IDVAR"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 9,
+      "Variable": "IDVARVAL"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 9,
+      "Variable": "RELTYPE"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 9,
+      "Variable": "RELID"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 10,
+      "Variable": "STUDYID"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 10,
+      "Variable": "RDOMAIN"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 10,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 10,
+      "Variable": "IDVAR"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 10,
+      "Variable": "IDVARVAL"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 10,
+      "Variable": "RELTYPE"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 10,
+      "Variable": "RELID"
     }
   ]
 }

@@ -13,7 +13,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "ADDON"
-          }
+          },
+          "validated": false
         },
         {
           "row": 2,
@@ -21,7 +22,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "AGEMAX"
-          }
+          },
+          "validated": false
         },
         {
           "row": 3,
@@ -29,7 +31,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "AGEMIN"
-          }
+          },
+          "validated": false
         },
         {
           "row": 4,
@@ -37,7 +40,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "LENGTH"
-          }
+          },
+          "validated": false
         },
         {
           "row": 5,
@@ -45,7 +49,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "PLANSUB"
-          }
+          },
+          "validated": false
         },
         {
           "row": 6,
@@ -53,7 +58,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "RANDOM"
-          }
+          },
+          "validated": false
         },
         {
           "row": 7,
@@ -61,7 +67,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "SEXPOP"
-          }
+          },
+          "validated": false
         },
         {
           "row": 8,
@@ -69,7 +76,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "STOPRULE"
-          }
+          },
+          "validated": false
         },
         {
           "row": 9,
@@ -77,7 +85,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "TBLIND"
-          }
+          },
+          "validated": false
         },
         {
           "row": 10,
@@ -85,7 +94,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "TCNTRL"
-          }
+          },
+          "validated": false
         },
         {
           "row": 11,
@@ -93,7 +103,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "TITLE"
-          }
+          },
+          "validated": false
         },
         {
           "row": 12,
@@ -101,7 +112,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "TPHASE"
-          }
+          },
+          "validated": false
         },
         {
           "row": 13,
@@ -109,7 +121,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "TTYPE"
-          }
+          },
+          "validated": false
         },
         {
           "row": 14,
@@ -117,7 +130,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "OBJPRIM"
-          }
+          },
+          "validated": false
         },
         {
           "row": 15,
@@ -125,7 +139,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "SPONSOR"
-          }
+          },
+          "validated": false
         },
         {
           "row": 16,
@@ -133,7 +148,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "REGID"
-          }
+          },
+          "validated": false
         },
         {
           "row": 17,
@@ -141,7 +157,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "OUTMSPRI"
-          }
+          },
+          "validated": false
         },
         {
           "row": 18,
@@ -149,7 +166,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "FCNTRY"
-          }
+          },
+          "validated": false
         },
         {
           "row": 19,
@@ -157,7 +175,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "ADAPT"
-          }
+          },
+          "validated": false
         },
         {
           "row": 20,
@@ -165,7 +184,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "DCUTDTC"
-          }
+          },
+          "validated": false
         },
         {
           "row": 21,
@@ -173,7 +193,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "DCUTDESC"
-          }
+          },
+          "validated": false
         },
         {
           "row": 22,
@@ -181,7 +202,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "NARMS"
-          }
+          },
+          "validated": false
         },
         {
           "row": 23,
@@ -189,7 +211,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "STYPE"
-          }
+          },
+          "validated": false
         },
         {
           "row": 24,
@@ -197,7 +220,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "SSTDTC"
-          }
+          },
+          "validated": false
         },
         {
           "row": 25,
@@ -205,7 +229,8 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "SENDTC"
-          }
+          },
+          "validated": false
         },
         {
           "row": 26,
@@ -213,9 +238,147 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "ACTSUB"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ts.xpt",
+      "Row": 1,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 5,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 6,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 7,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 8,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 9,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 10,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 11,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 12,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 13,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 14,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 15,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 16,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 17,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 18,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 19,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 20,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 21,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 22,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 23,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 24,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 25,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 26,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 27,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 28,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 29,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 30,
+      "Variable": "TSPARMCD"
     }
   ]
 }

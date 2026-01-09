@@ -16,7 +16,8 @@
             "TSGRPID": "1",
             "TSPARMCD": "TDIGRP",
             "TSVAL": "Patients with Probable Mild to Moderate Alzheimers Disease"
-          }
+          },
+          "validated": false
         },
         {
           "row": 51,
@@ -27,7 +28,8 @@
             "TSGRPID": "2",
             "TSPARMCD": "TDIGRP",
             "TSVAL": "HEALTHY"
-          }
+          },
+          "validated": false
         },
         {
           "row": 52,
@@ -38,7 +40,8 @@
             "TSGRPID": null,
             "TSPARMCD": "TDIGRP",
             "TSVAL": "HEALTHY"
-          }
+          },
+          "validated": false
         },
         {
           "row": 53,
@@ -49,7 +52,8 @@
             "TSGRPID": "4",
             "TSPARMCD": "TDIGRP",
             "TSVAL": "HEALTHY"
-          }
+          },
+          "validated": false
         },
         {
           "row": 54,
@@ -60,9 +64,397 @@
             "TSGRPID": "4",
             "TSPARMCD": "TDIGRP",
             "TSVAL": "NOT HEALTHY"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ts.xpt",
+      "Row": 20,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 20,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 20,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 20,
+      "Variable": "TSVALNF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 20,
+      "Variable": "TSVALCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 20,
+      "Variable": "TSVCDREF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 20,
+      "Variable": "TSVCDVER"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 21,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 21,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 21,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 21,
+      "Variable": "TSVALNF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 21,
+      "Variable": "TSVALCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 21,
+      "Variable": "TSVCDREF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 21,
+      "Variable": "TSVCDVER"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 22,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 22,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 22,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 22,
+      "Variable": "TSVALNF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 22,
+      "Variable": "TSVALCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 22,
+      "Variable": "TSVCDREF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 22,
+      "Variable": "TSVCDVER"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 23,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 23,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 23,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 23,
+      "Variable": "TSVALNF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 23,
+      "Variable": "TSVALCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 23,
+      "Variable": "TSVCDREF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 23,
+      "Variable": "TSVCDVER"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 24,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 24,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 24,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 24,
+      "Variable": "TSVALNF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 24,
+      "Variable": "TSVALCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 24,
+      "Variable": "TSVCDREF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 24,
+      "Variable": "TSVCDVER"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 25,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 25,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 25,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 25,
+      "Variable": "TSVALNF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 25,
+      "Variable": "TSVALCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 25,
+      "Variable": "TSVCDREF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 25,
+      "Variable": "TSVCDVER"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 54,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 54,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 54,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 54,
+      "Variable": "TSVALNF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 54,
+      "Variable": "TSVALCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 54,
+      "Variable": "TSVCDREF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 54,
+      "Variable": "TSVCDVER"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 55,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 55,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 55,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 55,
+      "Variable": "TSVALNF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 55,
+      "Variable": "TSVALCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 55,
+      "Variable": "TSVCDREF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 55,
+      "Variable": "TSVCDVER"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 56,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 56,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 56,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 56,
+      "Variable": "TSVALNF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 56,
+      "Variable": "TSVALCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 56,
+      "Variable": "TSVCDREF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 56,
+      "Variable": "TSVCDVER"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 57,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 57,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 57,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 57,
+      "Variable": "TSVALNF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 57,
+      "Variable": "TSVALCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 57,
+      "Variable": "TSVCDREF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 57,
+      "Variable": "TSVCDVER"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 58,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 58,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 58,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 58,
+      "Variable": "TSVALNF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 58,
+      "Variable": "TSVALCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 58,
+      "Variable": "TSVCDREF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 58,
+      "Variable": "TSVCDVER"
     }
   ]
 }

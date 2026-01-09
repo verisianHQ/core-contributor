@@ -1,6 +1,14 @@
 {
   "datasets": [
     {
+      "dataset": "suppdm.xpt",
+      "domain": "SUPPDM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000533, dataset=SUPPDM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
       "dataset": "suppec.xpt",
       "domain": "SUPPEC",
       "execution_status": "success",
@@ -13,17 +21,10 @@
           "USUBJID": null,
           "value": {
             "QNAM": "SAFETY"
-          }
+          },
+          "validated": false
         }
       ]
-    },
-    {
-      "dataset": "suppdm.xpt",
-      "domain": "SUPPDM",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000533, dataset=SUPPDM",
-      "number_errors": 0,
-      "errors": []
     }
   ]
 }

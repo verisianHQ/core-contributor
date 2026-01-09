@@ -1,4 +1,28 @@
 {
-  "error": "No result - either the rule or test case data unit-test-coreid-CG0154-positive.xlsx is broken",
-  "exception": "Worksheet named 'Datasets' not found"
+  "datasets": [
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000132, dataset=SE",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ta.xpt",
+      "domain": "TA",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "te.xpt",
+      "domain": "TE",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
 }

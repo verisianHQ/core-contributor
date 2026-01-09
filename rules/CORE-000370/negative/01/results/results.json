@@ -24,7 +24,8 @@
             "DSDECOD": "INFORMED CONSENT OBTAINED",
             "DSSTDTC": "2018-03-06",
             "RFICDTC": "2018-05-20"
-          }
+          },
+          "validated": false
         },
         {
           "row": 18,
@@ -35,9 +36,57 @@
             "DSDECOD": "INFORMED CONSENT OBTAINED",
             "DSSTDTC": "2018-04-06",
             "RFICDTC": "2019-08-15"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "dm.xpt",
+      "Row": 1,
+      "Variable": "RFICDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 5,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 5,
+      "Variable": "RFICDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 8,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 8,
+      "Variable": "RFICDTC"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 5,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 5,
+      "Variable": "DSSTDTC"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 22,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 22,
+      "Variable": "DSSTDTC"
     }
   ]
 }

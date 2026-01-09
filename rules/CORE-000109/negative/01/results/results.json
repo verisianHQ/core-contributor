@@ -1,4 +1,49 @@
 {
-  "error": "No result - either the rule or test case data unit-test-CG0547-negative.xlsx is broken",
-  "exception": "Worksheet named 'Datasets' not found"
+  "datasets": [
+    {
+      "dataset": "sm.xpt",
+      "domain": "SM",
+      "execution_status": "success",
+      "execution_message": "SMSTDTC is null.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "001",
+          "value": {
+            "SMSTDTC": null
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "001",
+          "value": {
+            "SMSTDTC": null
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "001",
+          "value": {
+            "SMSTDTC": null
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "002",
+          "value": {
+            "SMSTDTC": null
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
 }

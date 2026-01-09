@@ -14,7 +14,8 @@
           "value": {
             "DSDECOD": "Future USE OF SAMPLES INFORMED CONSENT OBTAINED",
             "DSTERM": "FUTURE USE OF SAMPLES INFORMED CONSENT OBTAINED"
-          }
+          },
+          "validated": false
         },
         {
           "row": 2,
@@ -23,7 +24,8 @@
           "value": {
             "DSDECOD": "STUDY INFORMED CONSENT OBTAINE",
             "DSTERM": "STUDY INFORMED CONSENT OBTAINED"
-          }
+          },
+          "validated": false
         },
         {
           "row": 3,
@@ -32,9 +34,52 @@
           "value": {
             "DSDECOD": "ADVERSE EVENT",
             "DSTERM": "COMPLETED"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ds.xpt",
+      "Row": 1,
+      "Variable": "DSTERM"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 1,
+      "Variable": "DSDECOD"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 5,
+      "Variable": "DSTERM"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 5,
+      "Variable": "DSDECOD"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 6,
+      "Variable": "DSTERM"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 6,
+      "Variable": "DSDECOD"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 7,
+      "Variable": "DSTERM"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 7,
+      "Variable": "DSDECOD"
     }
   ]
 }

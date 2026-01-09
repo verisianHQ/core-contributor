@@ -15,7 +15,8 @@
             "LBDRVFL": "Not in dataset",
             "LBORRES": null,
             "LBSTAT": null
-          }
+          },
+          "validated": false
         },
         {
           "row": 3,
@@ -25,9 +26,22 @@
             "LBDRVFL": "Not in dataset",
             "LBORRES": null,
             "LBSTAT": null
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "lb.xpt",
+      "Row": 6,
+      "Variable": "LBSTAT"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 7,
+      "Variable": "LBSTAT"
     }
   ]
 }

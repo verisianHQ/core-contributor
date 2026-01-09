@@ -1,8 +1,8 @@
 {
   "datasets": [
     {
-      "dataset": "ae.xpt",
-      "domain": "AE",
+      "dataset": "ta.xpt",
+      "domain": "TA",
       "execution_status": "execution_error",
       "execution_message": "SQL operator execution error",
       "number_errors": 1,
@@ -14,8 +14,8 @@
       ]
     },
     {
-      "dataset": "ex.xpt",
-      "domain": "EX",
+      "dataset": "ae.xpt",
+      "domain": "AE",
       "execution_status": "execution_error",
       "execution_message": "SQL operator execution error",
       "number_errors": 1,
@@ -40,8 +40,8 @@
       ]
     },
     {
-      "dataset": "ta.xpt",
-      "domain": "TA",
+      "dataset": "ex.xpt",
+      "domain": "EX",
       "execution_status": "execution_error",
       "execution_message": "SQL operator execution error",
       "number_errors": 1,
@@ -53,176 +53,141 @@
       ]
     }
   ],
-  "unmatched_highlights_in_test_case": {
-    "ta.xpt": [
-      {
-        "row": 1,
-        "value": {
-          "ARMCD": null
-        }
-      },
-      {
-        "row": 1,
-        "value": {
-          "EPOCH": null
-        }
-      },
-      {
-        "row": 2,
-        "value": {
-          "ARMCD": null
-        }
-      },
-      {
-        "row": 2,
-        "value": {
-          "EPOCH": null
-        }
-      },
-      {
-        "row": 3,
-        "value": {
-          "ARMCD": null
-        }
-      },
-      {
-        "row": 3,
-        "value": {
-          "EPOCH": null
-        }
-      },
-      {
-        "row": 4,
-        "value": {
-          "ARMCD": null
-        }
-      },
-      {
-        "row": 4,
-        "value": {
-          "EPOCH": null
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "ARMCD": null
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "EPOCH": null
-        }
-      },
-      {
-        "row": 6,
-        "value": {
-          "ARMCD": null
-        }
-      },
-      {
-        "row": 6,
-        "value": {
-          "EPOCH": null
-        }
-      }
-    ],
-    "ae.xpt": [
-      {
-        "row": 1,
-        "value": {
-          "STUDYID": null
-        }
-      },
-      {
-        "row": 2,
-        "value": {
-          "USUBJID": null
-        }
-      }
-    ],
-    "lb.xpt": [
-      {
-        "row": 1,
-        "value": {
-          "LBSEQ": null
-        }
-      },
-      {
-        "row": 2,
-        "value": {
-          "LBSEQ": null
-        }
-      },
-      {
-        "row": 3,
-        "value": {
-          "LBSEQ": null
-        }
-      },
-      {
-        "row": 4,
-        "value": {
-          "LBSEQ": null
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "LBSEQ": null
-        }
-      }
-    ],
-    "ex.xpt": [
-      {
-        "row": 1,
-        "value": {
-          "EXTRT": null
-        }
-      },
-      {
-        "row": 2,
-        "value": {
-          "EXTRT": null
-        }
-      },
-      {
-        "row": 3,
-        "value": {
-          "EXTRT": null
-        }
-      },
-      {
-        "row": 4,
-        "value": {
-          "EXTRT": null
-        }
-      },
-      {
-        "row": 5,
-        "value": {
-          "EXTRT": null
-        }
-      },
-      {
-        "row": 6,
-        "value": {
-          "EXTRT": null
-        }
-      },
-      {
-        "row": 7,
-        "value": {
-          "EXTRT": null
-        }
-      },
-      {
-        "row": 8,
-        "value": {
-          "EXTRT": null
-        }
-      }
-    ]
-  }
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ta.xpt",
+      "Row": 5,
+      "Variable": "ARMCD"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 5,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 6,
+      "Variable": "ARMCD"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 6,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 7,
+      "Variable": "ARMCD"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 7,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 8,
+      "Variable": "ARMCD"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 8,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 9,
+      "Variable": "ARMCD"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 9,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 10,
+      "Variable": "ARMCD"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 10,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 5,
+      "Variable": "STUDYID"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 6,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 5,
+      "Variable": "LBSEQ"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 6,
+      "Variable": "LBSEQ"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 7,
+      "Variable": "LBSEQ"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 8,
+      "Variable": "LBSEQ"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 9,
+      "Variable": "LBSEQ"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 5,
+      "Variable": "EXTRT"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 6,
+      "Variable": "EXTRT"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 7,
+      "Variable": "EXTRT"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 8,
+      "Variable": "EXTRT"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 9,
+      "Variable": "EXTRT"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 10,
+      "Variable": "EXTRT"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 11,
+      "Variable": "EXTRT"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 12,
+      "Variable": "EXTRT"
+    }
+  ]
 }

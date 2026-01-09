@@ -15,9 +15,42 @@
             "TSGRPID": "1",
             "TSPARMCD": "STOPRULE",
             "TSVAL": null
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ts.xpt",
+      "Row": 50,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 50,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 50,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 51,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 51,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 51,
+      "Variable": "TSVAL"
     }
   ]
 }

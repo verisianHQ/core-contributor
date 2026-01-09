@@ -1,4 +1,22 @@
 {
-  "error": "No result - either the rule or test case data unit-test-coreid-CG0056-negative 2.xlsx is broken",
-  "exception": "Worksheet named 'Datasets' not found"
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMSTAT is present when CMPRESP is not present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "CMSTAT": null
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
 }

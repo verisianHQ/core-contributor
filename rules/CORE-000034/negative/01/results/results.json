@@ -23,7 +23,8 @@
             "DSDECOD": "DEATH",
             "DSSTDTC": "2022-02-20",
             "DTHDTC": "2021-02-18"
-          }
+          },
+          "validated": false
         },
         {
           "row": 21,
@@ -33,7 +34,8 @@
             "DSDECOD": "DEATH",
             "DSSTDTC": "2019-01-10",
             "DTHDTC": null
-          }
+          },
+          "validated": false
         },
         {
           "row": 26,
@@ -43,9 +45,77 @@
             "DSDECOD": "DEATH",
             "DSSTDTC": "2021-01-10",
             "DTHDTC": "2021-01"
-          }
+          },
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "dm.xpt",
+      "Row": 1,
+      "Variable": "DTHDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 5,
+      "Variable": "DTHDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 8,
+      "Variable": "DTHDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 9,
+      "Variable": "DTHDTC"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 11,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 11,
+      "Variable": "DSDECOD"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 11,
+      "Variable": "DSSTDTC"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 25,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 25,
+      "Variable": "DSDECOD"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 25,
+      "Variable": "DSSTDTC"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 30,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 30,
+      "Variable": "DSDECOD"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 30,
+      "Variable": "DSSTDTC"
     }
   ]
 }

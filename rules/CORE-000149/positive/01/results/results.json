@@ -1,4 +1,67 @@
 {
-  "error": "No result - either the rule or test case data unit-test-CG0259-psotive.xlsx is broken",
-  "exception": "Worksheet named 'Datasets' not found"
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVALNF is null when TSVAL is null.",
+      "number_errors": 6,
+      "errors": [
+        {
+          "row": 11,
+          "SEQ": 11,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": null,
+            "TSVALNF": null
+          }
+        },
+        {
+          "row": 22,
+          "SEQ": 22,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": null,
+            "TSVALNF": null
+          }
+        },
+        {
+          "row": 28,
+          "SEQ": 28,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": null,
+            "TSVALNF": null
+          }
+        },
+        {
+          "row": 29,
+          "SEQ": 29,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": null,
+            "TSVALNF": null
+          }
+        },
+        {
+          "row": 30,
+          "SEQ": 30,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": null,
+            "TSVALNF": null
+          }
+        },
+        {
+          "row": 37,
+          "SEQ": 37,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": null,
+            "TSVALNF": null
+          }
+        }
+      ]
+    }
+  ]
 }

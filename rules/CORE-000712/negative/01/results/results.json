@@ -1,22 +1,6 @@
 {
   "datasets": [
     {
-      "dataset": "co.xpt",
-      "domain": "CO",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000712, dataset=CO",
-      "number_errors": 0,
-      "errors": []
-    },
-    {
-      "dataset": "relrec.xpt",
-      "domain": "RELREC",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000712, dataset=RELREC",
-      "number_errors": 0,
-      "errors": []
-    },
-    {
       "dataset": "supplb.xpt",
       "domain": "SUPPLB",
       "execution_status": "execution_error",
@@ -30,12 +14,50 @@
       ]
     },
     {
+      "dataset": "relrec.xpt",
+      "domain": "RELREC",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000712, dataset=RELREC",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "co.xpt",
+      "domain": "CO",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000712, dataset=CO",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "skipped",
       "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000712, dataset=LB",
       "number_errors": 0,
       "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "supplb.xpt",
+      "Row": 5,
+      "Variable": "IDVAR"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 5,
+      "Variable": "IDVAR"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 6,
+      "Variable": "IDVAR"
+    },
+    {
+      "Sheet": "co.xpt",
+      "Row": 5,
+      "Variable": "IDVAR"
     }
   ]
 }

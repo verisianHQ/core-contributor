@@ -15,7 +15,8 @@
             "CMDECOD": null,
             "CMTRT": "HYDROCORTISONE, TOPICAL",
             "RELREC.FAOBJ": "ERYTHEMA"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -42,6 +43,83 @@
       "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000757, dataset=RELREC",
       "number_errors": 0,
       "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "cm.xpt",
+      "Row": 7,
+      "Variable": "CMTRT"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 9,
+      "Variable": "STUDYID"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 9,
+      "Variable": "RDOMAIN"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 9,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 9,
+      "Variable": "IDVAR"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 9,
+      "Variable": "IDVARVAL"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 9,
+      "Variable": "RELTYPE"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 9,
+      "Variable": "RELID"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 10,
+      "Variable": "STUDYID"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 10,
+      "Variable": "RDOMAIN"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 10,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 10,
+      "Variable": "IDVAR"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 10,
+      "Variable": "IDVARVAL"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 10,
+      "Variable": "RELTYPE"
+    },
+    {
+      "Sheet": "relrec.xpt",
+      "Row": 10,
+      "Variable": "RELID"
     }
   ]
 }

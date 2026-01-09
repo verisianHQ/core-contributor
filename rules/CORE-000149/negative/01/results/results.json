@@ -1,4 +1,73 @@
 {
-  "error": "No result - either the rule or test case data unit-test-CG0259-negative.xlsx is broken",
-  "exception": "Worksheet named 'Datasets' not found"
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVALNF is null when TSVAL is null.",
+      "number_errors": 6,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 11,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": null,
+            "TSVALNF": null
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 22,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": null,
+            "TSVALNF": null
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 28,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": null,
+            "TSVALNF": null
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 29,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": null,
+            "TSVALNF": null
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": 30,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": null,
+            "TSVALNF": null
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": 37,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": null,
+            "TSVALNF": null
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
 }
