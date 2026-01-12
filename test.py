@@ -342,9 +342,9 @@ class TestRunner:
                                 if v_values == res_values:
                                     match_found = True
                             elif v_error_level == "variable" or v_error_level == "dataset":
-                                if frozenset(v[0] for v in v_values if v[1] != "[ABSENT]") == frozenset(
-                                    v[0] for v in list(res_values.items()) if v[1] != "[ABSENT]"
-                                ) or not frozenset(v[0] for v in v_values if v[1] != "[ABSENT]"):
+                                v_not_absent = set(k for k, v in v_values.items() if v != "[ABSENT]")
+                                res_not_absent = set(k for k, v in res_values.items() if v != "[ABSENT]")
+                                if v_not_absent == res_not_absent or not v_not_absent:
                                     match_found = True
 
                             if match_found:
