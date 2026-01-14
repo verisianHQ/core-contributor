@@ -1,0 +1,83 @@
+# Variable: TSVALCD
+# Condition: TSVCDREF = 'CDISC'
+# Rule: TSVALCD = valid code in the version identified in TSVCDVER
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The version number of the Reference Terminology, if applicable.
+                Document: IG v3.4
+                Item: Specification
+                Section: 7.4.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0288
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The version number of the Reference Terminology, if applicable.
+                Document: IG v3.3
+                Item: Specification
+                Section: 7.4.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0288
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The version number of the Reference Terminology, if applicable.
+                Document: IG v3.2
+                Item: Specification
+                Section: '7.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0288
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+Check:
+  all:
+    - name: TSVCDREF
+      operator: prefix_equal_to
+      prefix: 5
+      value: CDISC
+    - name: TSVALCD
+      operator: is_not_contained_by
+      value: $VALID_TERM_CODES
+Core:
+  Id: CDISC.SDTMIG.CG0288
+  Status: Draft
+  Version: '1'
+Description: Raise an error when TSVCDREF ='CDISC' and TSVALCD is not a valid
+  code in the version identified in TSVCDVER.
+Executability: Fully Executable
+Operations:
+  - ct_attribute: Term CCODE
+    id: $VALID_TERM_CODES
+    name: TSVCDREF
+    operator: get_codelist_attributes
+    target: TSVCDREF
+    version: TSVCDVER
+Outcome:
+  Message: TSVALCD is not a valid code in the CDISC CT version identified in TSVCDVER.
+  Output Variables:
+    - TSVALCD
+    - TSPARMCD
+    - TSVCDVER
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

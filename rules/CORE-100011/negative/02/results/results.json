@@ -1,0 +1,223 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVALCD is not a valid code in the CDISC CT version identified in TSVCDVER.",
+      "number_errors": 18,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "ADAPT",
+            "TSVALCD": "C49487",
+            "TSVCDVER": "2025-09-26"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "ADDON",
+            "TSVALCD": "C00001",
+            "TSVCDVER": "2025-09-26"
+          },
+          "validated": false
+        },
+        {
+          "row": 12,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "DOSFRM",
+            "TSVALCD": "C49487",
+            "TSVCDVER": "2025-09-26"
+          },
+          "validated": false
+        },
+        {
+          "row": 13,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "DOSFRQ",
+            "TSVALCD": "C49487",
+            "TSVCDVER": "2025-09-26"
+          },
+          "validated": false
+        },
+        {
+          "row": 14,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "DOSU",
+            "TSVALCD": "C49487",
+            "TSVCDVER": "2025-09-26"
+          },
+          "validated": false
+        },
+        {
+          "row": 16,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "HLTSUBJI",
+            "TSVALCD": "C49563",
+            "TSVCDVER": "2025-09-26"
+          },
+          "validated": false
+        },
+        {
+          "row": 18,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "INTMODEL",
+            "TSVALCD": "C49487",
+            "TSVCDVER": "2025-09-26"
+          },
+          "validated": false
+        },
+        {
+          "row": 19,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "INTTYPE",
+            "TSVALCD": "C49487",
+            "TSVCDVER": "2025-09-26"
+          },
+          "validated": false
+        },
+        {
+          "row": 31,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "RANDOM",
+            "TSVALCD": "C49488",
+            "TSVCDVER": "2025-09-26"
+          },
+          "validated": false
+        },
+        {
+          "row": 34,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "ROUTE",
+            "TSVALCD": "C49488",
+            "TSVCDVER": "2025-09-26"
+          },
+          "validated": false
+        },
+        {
+          "row": 38,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "SEXPOP",
+            "TSVALCD": "C49488",
+            "TSVCDVER": "2025-09-26"
+          },
+          "validated": false
+        },
+        {
+          "row": 42,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "STYPE",
+            "TSVALCD": "C49488",
+            "TSVCDVER": "2025-09-26"
+          },
+          "validated": false
+        },
+        {
+          "row": 43,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "TBLIND",
+            "TSVALCD": "C49488",
+            "TSVCDVER": "2025-09-26"
+          },
+          "validated": false
+        },
+        {
+          "row": 44,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "TCNTRL",
+            "TSVALCD": "C49488",
+            "TSVCDVER": "2025-09-26"
+          },
+          "validated": false
+        },
+        {
+          "row": 46,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "TINDTP",
+            "TSVALCD": "C49488",
+            "TSVCDVER": "2025-09-26"
+          },
+          "validated": false
+        },
+        {
+          "row": 48,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "TPHASE",
+            "TSVALCD": "C49488",
+            "TSVCDVER": "2025-09-26"
+          },
+          "validated": false
+        },
+        {
+          "row": 50,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "TTYPE",
+            "TSVALCD": "C49488",
+            "TSVCDVER": "2025-09-26"
+          },
+          "validated": false
+        },
+        {
+          "row": 51,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "TTYPE",
+            "TSVALCD": "C49488",
+            "TSVCDVER": "2025-09-26"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "TSVALCD": "C00001"
+      }
+    },
+    {
+      "value": {
+        "TSVALCD": "C49563"
+      }
+    }
+  ]
+}
