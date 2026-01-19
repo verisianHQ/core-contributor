@@ -141,6 +141,12 @@ class TestRunner:
     def __init__(self):
         self._setup_engine_path()
         self.ig_specs = self._init_engine_specs()
+        from engine.cdisc_rules_engine.data_service.postgresql_data_service import (
+            PostgresQLDataService
+        )
+        self.data_service = PostgresQLDataService.instance(
+            use_pgserver=True
+        )
 
     @staticmethod
     def _setup_engine_path():
@@ -221,6 +227,7 @@ class TestRunner:
                 test_case_folder_path=data_path,
                 cur_core_id=rule_id,
                 use_pgserver=True,
+                data_service=self.data_service,
             )
 
             if "results_sql" in regression_errors:
