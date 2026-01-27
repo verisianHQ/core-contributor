@@ -486,13 +486,15 @@ def parse_args():
     parser.add_argument("-all", "--all-rules", action="store_true", help="Run all rules")
     parser.add_argument("-tc", "--test-case", help="Specific case (e.g., positive/01)")
     parser.add_argument("-v", "--verbose", action="store_true", help="Print detailed results")
-    parser.add_argument("-pg", "--use-postgres", action="store_true", help="Use PostgreSQL server instead of pgserver")
+    parser.add_argument(
+        "-pg", "--use-postgres", action="store_true", help="Use standard PostgreSQL instead of pgserver default"
+    )
     return parser.parse_args()
 
 
 def main():
     args = parse_args()
-    use_pgserver = True if not args.use_postgres else False
+    use_pgserver = not args.use_postgres
     runner = TestRunner(use_pgserver=use_pgserver)
     available_rules = runner.get_available_rules()
 
