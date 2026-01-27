@@ -138,15 +138,16 @@ class ResultReporter:
 class TestRunner:
     """Test execution logic."""
 
-    def __init__(self):
+    def __init__(self, use_pgserver: bool = True):
+        from dotenv import load_dotenv
+
+        load_dotenv("engine/.env.example")
         self._setup_engine_path()
         self.ig_specs = self._init_engine_specs()
-        from engine.cdisc_rules_engine.data_service.postgresql_data_service import (
-            PostgresQLDataService
-        )
-        self.data_service = PostgresQLDataService.instance(
-            use_pgserver=True
-        )
+        self.use_pgserver = use_pgserver
+        from engine.cdisc_rules_engine.data_service.postgresql_data_service import PostgresQLDataService
+
+        self.data_service = PostgresQLDataService.instance(use_pgserver=self.use_pgserver)
 
     @staticmethod
     def _setup_engine_path():
@@ -226,7 +227,7 @@ class TestRunner:
                 rule=rule,
                 test_case_folder_path=data_path,
                 cur_core_id=rule_id,
-                use_pgserver=True,
+                use_pgserver=self.use_pgserver,
                 data_service=self.data_service,
             )
 
@@ -485,12 +486,14 @@ def parse_args():
     parser.add_argument("-all", "--all-rules", action="store_true", help="Run all rules")
     parser.add_argument("-tc", "--test-case", help="Specific case (e.g., positive/01)")
     parser.add_argument("-v", "--verbose", action="store_true", help="Print detailed results")
+    parser.add_argument("-pg", "--use-postgres", action="store_true", help="Use PostgreSQL server instead of pgserver")
     return parser.parse_args()
 
 
 def main():
     args = parse_args()
-    runner = TestRunner()
+    use_pgserver = True if not args.use_postgres else False
+    runner = TestRunner(use_pgserver=use_pgserver)
     available_rules = runner.get_available_rules()
 
     if not available_rules:
