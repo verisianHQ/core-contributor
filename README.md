@@ -1,54 +1,70 @@
 # core-contributor
-Contribution framework for rules and test data with automated regression testing. Edit rules and test data, then validate against the PostgreSQL-based CORE engine.
+Contribution framework for rule storage, rule authoring and test data creation with automated regression testing. Create and/or edit rules and test data, then validate against the PostgreSQL-based CORE engine.
 
 **BEFORE CONTRIBUTING, MAKE SURE YOU HAVE GONE THROUGH THE CDISC VOLUNTEERING ONBOARDING PROCESS** \
 https://www.cdisc.org/volunteer
 
+**SUPPLEMENTARY GUIDE** \
+Instructions below will guide you step-by-step through the:
+- First-time Local Setup Steps
+- Rule Authoring and Test Data Creation Process
+  
+These steps should be sufficient to get you started but are very descriptive. If you wish to be guided in a more visual way, steps with print screens are available in the [supplementary guide](https://docs.google.com/document/d/15ydgj4AqtEnFtlXL-J4DLJV32q_Q71gKn0ucu4tYYQw/edit?pli=1&tab=t.0).
+
 # First-time Local Setup Steps
 
-*IMPORTANT NOTE* - you may need your IT support team to install some of the following software for you. In particular, the setup script requires python3.12 to run properly. If you don't have it installed, the script will attempt to install it for you, but this is likely to be blocked by your company settings. If so, you will need to contact IT.
+***IMPORTANT NOTE*** \
+_You may need your IT support team to install some of the following software for you. In particular, the setup script requires python3.12 to run properly. If you don't have it installed, the script will attempt to install it for you, but this is likely to be blocked by your company settings. If so, you will need to contact IT._
 
-1) Create a free github account: https://github.com/signup
-2) Install git, following the instructions here: https://git-scm.com/install/ \
-       - Keep all the default settings throughout the installer \
-       - You DO NOT need to actually run git as a program, so close any pop-ups that appear after the installation
-3) Install VSCode (*not* VSCodeUser), following the instructions here: https://code.visualstudio.com/download
-4) Open VSCode and a terminal within it: \
-       - Top Menu → Terminal → New Terminal (check the three dots in the top menu if you don't see 'Terminal')
-5) Create a new empty directory on your machine for storing the repository and subsequent rule editing, and navigate to it in the terminal using `cd` commands. Avoid OneDrive if possible. \
-       - There is sometimes an AI 'helper' box popup in the terminal - make sure you are typing commands into the command line itself, not the box \
-       - If any of the folder names you are navigating through have spaces (eg 'My Folder'), you will need to wrap the path in quotes, eg: `cd "C:\Users\rich\Documents\Core Contributor Folder"`
-6) Clone this repo into that directory by running the following command (DO NOT RUN MORE THAN ONCE): \
-       `git clone --recurse-submodules https://github.com/verisianHQ/core-contributor.git` \
-       *IMPORTANT NOTE* - unless something goes badly wrong and you need to fully delete the entire directory, you should never need to run this command again. 
-7) In VSCode, select "Open Folder" and select the repository folder you just cloned - it should be called `core-contributor`
-8) This should re-open a new terminal in the repository folder. If this doesn't happen, open a new terminal in VSCode and navigate to the repository folder again.
-9) You will need to setup the python environment, which will take a little bit of time. \
-       - Assuming you are in the core-contributor folder in the VSCode terminal, run one of the following depending on your operating system (ignore messages and warnings): \
-              WINDOWS: `.\setup\windows_setup.bat` \
-              MAC: `./setup/bash_setup.sh` \
-       - Windows might prompt you asking if you want to install python - the answer is yes!
+**Follow steps 1 - 11 carefully.**
 
-*IMPORTANT NOTE* - if you start the setup script and stop it midway through, you may get some strange errors when you try to run rules in the future. If you have any doubts, rerun the setup script, and make sure it completes.
+1) Create a free GitHub account: https://github.com/signup
+2) Install Git, following the instructions here: https://git-scm.com/install
+   - Keep all the default settings throughout the installer 
+   - You DO NOT need to actually run Git as a program, so close any pop-ups that appear after the installation
+3) Install VSCode (***not*** VSCodeUser), following the instructions here: https://code.visualstudio.com/download
+4) Open VSCode and a terminal within it: 
+   - Top Menu → Terminal → New Terminal (check the three dots in the top menu if you don't see 'Terminal')
+5) Create a new empty directory on your machine for storing the repository and subsequent rule authoring and editing. Navigate to it in the terminal using `cd` commands. Avoid OneDrive if possible. 
+   - There is sometimes an AI 'helper' box popup in the terminal - make sure you are typing commands into the command line itself, not the box 
+   - If any of the folder names you are navigating through have spaces (eg 'My Folder'), you will need to wrap the path in quotes,\
+     eg: `cd "C:\Users\rich\Documents\Core Contributor Folder"`
+6) Clone this repo into that directory by running the following command (**DO NOT RUN MORE THAN ONCE**): \
+       `git clone --recurse-submodules https://github.com/verisianHQ/core-contributor.git` 
+   
+   _***IMPORTANT NOTE***\
+   Unless something goes badly wrong and you need to fully delete the entire directory, you should never need to run this command again._
+   
+8) In VSCode, select "Open Folder" and select the repository folder you just cloned - it should be called `core-contributor`
+9) This should re-open a new terminal in the repository folder. If this doesn't happen, open a new terminal in VSCode and navigate to the repository folder again.
+10) You will need to setup the python environment, which will take a little bit of time. 
+    - Assuming you are in the core-contributor folder in the VSCode terminal, run one of the following depending on your operating system (ignore messages and warnings): 
+      - WINDOWS: `.\setup\windows_setup.bat`
+      - MAC: `./setup/bash_setup.sh` 
+    - Windows might prompt you asking if you want to install python - the answer is yes!
+         
+    _***IMPORTANT NOTE***\
+    If you start the setup script and stop it midway through, you may get some strange errors when you try to run rules in the future. If you have any doubts, rerun the setup script, and make sure it completes._
 
-10) Set up the rule authoring auto-completion and real-time schema validation: \
-        - Go to the `Extensions` tab in the VSCode left sidebar \
-        - Search `yaml` and install the Red Hat YAML extension (it should be the top one) \
-        - Once it's installed, search 'yaml schema' using the search bar at the top of the settings: \
-              WINDOWS: File → Preferences → Settings \
-              MAC: Code → Settings → Settings \
-        - Click the `Edit in settings.json` option under Yaml: Schemas \
-        - Paste the following into "yaml.schemas": \
-              `"https://rule-editor.cdisc.org/api/schema": "/*.yml"` \
-        - Save the `settings.json` \
-        - There you go! You should now see schema validation in yaml files. If you don't see this behaviour after a few seconds, try restarting VSCode
+10) Set up the rule authoring auto-completion and real-time schema validation: 
+    - Go to the `Extensions` tab in the VSCode left sidebar 
+    - Search `yaml` and install the Red Hat YAML extension (it should be the top one) 
+    - Once it's installed, search 'yaml schema' using the search bar at the top of the settings: 
+      - WINDOWS: File → Preferences → Settings
+      - MAC: Code → Settings → Settings 
+    - Click the `Edit in settings.json` option under Yaml: Schemas 
+    - Paste the following into "yaml.schemas": 
+              `"https://rule-editor.cdisc.org/api/schema": "/*.yml"` 
+    - Save the `settings.json` 
+    - There you go! You should now see schema validation in yaml files. If you don't see this behaviour after a few seconds, try restarting VSCode
 
-11) Install the XLSX Editor plugin: \
-        - In the VS Code file explorer, locate the `.vsix` file in the root directory of this repository \
-        - Right-click the file and select "Install Extension VSIX"
+11) Install the XLSX Editor plugin: 
+    - In the VS Code file explorer, locate the `.vsix` file in the root directory of this repository 
+    - Right-click the file and select "Install Extension VSIX"
 
+**You are now ready with the setup steps and can start with the rule authoring!**
 
-# Rule and Test Data Editing Process
+# Rule Authoring and Test Data Creation Process
 
 *IMPORTANT NOTE* - For the following section, I have detailed the exact process to follow with relevant git commands to be executed in the terminal. If in doubt, you can always fall back to this process. \
 However, VSCode integrates with git very effectively, and so there are intuitive point-and-click alternatives to all of the following commands with only simple configuration required. \
