@@ -66,12 +66,13 @@ _You may need your IT support team to install some of the following software for
 
 # Rule Authoring and Test Data Creation Process
 
-*IMPORTANT NOTE* - For the following section, I have detailed the exact process to follow with relevant git commands to be executed in the terminal. If in doubt, you can always fall back to this process. \
-However, VSCode integrates with git very effectively, and so there are intuitive point-and-click alternatives to all of the following commands with only simple configuration required. \
-If you'd like to take advantage of this (and I strongly recommend it for at least staging, committing and pushing your changes), please see [this](https://docs.google.com/document/d/15ydgj4AqtEnFtlXL-J4DLJV32q_Q71gKn0ucu4tYYQw/edit?tab=t.0#bookmark=id.v2ehj99lxmyr) supplementary guide, complete with screenshots \
+**_*IMPORTANT NOTE*_**\
+_In the following section, the exact process to follow with relevant Git commands to be executed in the terminal are described. If in doubt, you can always fall back to this process. However, VSCode integrates with Git very effectively, and so there are intuitive point-and-click alternatives to all of the following commands with only simple configuration required._
+
+_If you'd like to take advantage of this (strongly recommended for at least staging, committing and pushing your changes), please see [supplementary guide](https://docs.google.com/document/d/15ydgj4AqtEnFtlXL-J4DLJV32q_Q71gKn0ucu4tYYQw/edit?tab=t.0#bookmark=id.v2ehj99lxmyr) for extra details and screenshots. \
 You'll need to run the following commands to get it working: \
 `git config --global user.email "<your-github-email>"` \
-`git config --global user.name "<your-github-username>"`
+`git config --global user.name "<your-github-username>"`__
 
 ## Command Line Process
 
