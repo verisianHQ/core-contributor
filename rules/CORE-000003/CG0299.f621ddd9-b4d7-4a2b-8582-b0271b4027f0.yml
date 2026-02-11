@@ -65,7 +65,7 @@ Core:
 Description: Raise an error when TRLOC is present.
 Executability: Fully Executable
 Outcome:
-  Message: TRLOC is present when TRLOC is not included in the TR domain.
+  Message: TRLOC is present in the TR dataset.
 Rule Type: Record Data
 Scope:
   Classes:
