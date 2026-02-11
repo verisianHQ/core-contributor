@@ -44,11 +44,7 @@ Check:
   any:
     - name: DOMAIN
       operator: not_matches_regex
-      value: ^AP[A-Z]{2}$
-    - name: DOMAIN
-      operator: suffix_not_equal_to
-      prefix: 2
-      value: $domains
+      value: ^AP(AE|AG|BE|BS|CE|CM|CO|CP|CV|DA|DD|DE|DI|DM|DO|DR|DS|DT|DU|DV|DX|EC|ED|EG|ES|EX|FA|FT|GF|GI|HM|HO|IE|IG|IN|IQ|IS|IT|LB|MB|MH|MI|MK|ML|MS|NV|OE|OI|PC|PD|PE|PP|PR|PT|QS|RE|RP|RS|SA|SC|SE|SM|SR|SS|SU|SV|TA|TD|TE|TI|TM|TO|TR|TS|TU|TV|UR|VS)$
 Core:
   Id: CDISC.SDTMIG.CG0155
   Status: Draft
@@ -56,16 +52,10 @@ Core:
 Description: Raise an error when DOMAIN value begins with AP and length of
   domain variable is not 4 or DOMAIN value doesn't end with a valid SDTM domain.
 Executability: Fully Executable
-Operations:
-  - ct_package_types:
-      - SDTM
-    id: $domains
-    operator: standard_domains
 Outcome:
   Message: AP DOMAIN value should start with 'AP' and end with a valid SDTM domain, and length should be equal to 4.
   Output Variables:
     - DOMAIN
-    - dataset_name
 Rule Type: Record Data
 Scope:
   Classes:
