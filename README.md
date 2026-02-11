@@ -66,65 +66,100 @@ _You may need your IT support team to install some of the following software for
 
 # Rule Authoring and Test Data Creation Process
 
-*IMPORTANT NOTE* - For the following section, I have detailed the exact process to follow with relevant git commands to be executed in the terminal. If in doubt, you can always fall back to this process. \
-However, VSCode integrates with git very effectively, and so there are intuitive point-and-click alternatives to all of the following commands with only simple configuration required. \
-If you'd like to take advantage of this (and I strongly recommend it for at least staging, committing and pushing your changes), please see [this](https://docs.google.com/document/d/15ydgj4AqtEnFtlXL-J4DLJV32q_Q71gKn0ucu4tYYQw/edit?tab=t.0#bookmark=id.v2ehj99lxmyr) supplementary guide, complete with screenshots \
+**_*IMPORTANT NOTE*_**\
+_In the following section, the exact process to follow with relevant Git commands to be executed in the terminal are described. If in doubt, you can always fall back to this process. However, VSCode integrates with Git very effectively, and so there are intuitive point-and-click alternatives to all of the following commands with only simple configuration required._
+
+_If you'd like to take advantage of this (strongly recommended for at least staging, committing and pushing your changes), please see [supplementary guide](https://docs.google.com/document/d/15ydgj4AqtEnFtlXL-J4DLJV32q_Q71gKn0ucu4tYYQw/edit?tab=t.0#bookmark=id.v2ehj99lxmyr) for extra details and screenshots. \
 You'll need to run the following commands to get it working: \
 `git config --global user.email "<your-github-email>"` \
-`git config --global user.name "<your-github-username>"`
+`git config --global user.name "<your-github-username>"`__
+
+_Don't forget that whenever you type a command, that you are in the core-contributor folder that you created during the set-up steps._
 
 ## Command Line Process
 
-1) Make sure you are on the main branch and that it and the engine submodule is up to date. Run the following three commands: \
+**Create a Local Branch.**
+1) Make sure you are on the main branch and that both the main branch and the engine submodule are up to date. To do this, run the following three commands: \
        `git checkout main` \
        `git pull origin main` \
        `git submodule update --remote`
+   
 2) Create a new branch to work on your changes, named as such: `<your-name>/<rule-id>/<change>` (eg `richard/CORE-000001/edit`): \
        `git branch <your-branch-name>`
-3) Switch to your new branch: \
+   
+   _Note that only branch names according to following regex are allowed: **^[a-zA-Z]+/(CORE-[0-9]{6}|CG[0-9]{4})/(edit|create|delete)$**_
+   
+4) Switch to your new branch: \
        `git checkout <your-branch-name>`
-4) Edit a rule and test data as desired \
-       - Ensure that you save any changes (File → Save, or Ctrl/Cmd + S)
-5) When you want to run the rule against test data, make sure you are in the core-contributor folder and run one of the following: \
-              WINDOWS: `.\run\windows_run.bat` \
-              MAC: `./run/bash_run.sh` \
-       - If you haven't run the setup script before, don't worry; it will run automatically when you execute this command \
-       - You will be prompted to select the rule you wish to run, as well as the test case(s)
-6) Check your run results in the `results` folder. Note that there is a separate `results` folder for each test case, which contains only the information relevant to that particular case \
-       - There will be a `results.json` file, with the code-produced rule output, and a `results.txt` file, which will summarise your results in a more human-readable format. Feel free to examine both
+
+**Edit YAML code and test data.**
+
+4) Edit a rule and test data as desired
+   - Ensure that you create negative and positive test data that cover all functionalities of the rule (condition and rule), scope, exceptions,...
+   - Indicate in the negative test data for which records you expect output = setting pre-defined discrepancies
+   - Ensure that you save any changes (File → Save, or Ctrl/Cmd + S)
+   
+**Perform Automated Testing.**
+
+5) Run the rule against the test data 
+    - When you want to run the rule against test data, make sure you are in the core-contributor folder and run one of the following: 
+      - WINDOWS: `.\run\windows_run.bat` 
+      - MAC: `./run/bash_run.sh` 
+    - If you haven't run the setup script before, don't worry; it will run automatically when you execute this command 
+    - You will be prompted to select the rule you wish to run, as well as the test case(s)
+      
+**Check Testing Output.**
+     
+6) Check your run results in the `results` folder.
+    - Note that there is a separate `results` folder for each test case, which contains only the information relevant to that particular case
+    - There will be a `results.json` file, with the code-produced rule output, and a `results.txt` file, which will summarise your results in a more human-readable format.
+    - Feel free to examine both
+      
 7) If you are unhappy with the results of your changes, continue to edit and run the rule until you are satisfied
+
+**Request adding Local Branch to Main Branch.**
+
 8) Create a PR to add your changes to the repository. To do this, run the following commands: \
        `git add .` \
        `git commit -m "your custom message"` \
        `git push origin <your-branch-name>` \
-       - The first time you commit, you may have to log in to github
+   The first time you commit, you may have to log in to github
+   
 9) Go to the online repository and create a pull request (PR) from your newly pushed branch
+    
 10) On the PR page, make sure the information at the top is correct. It should be: \
        `base: main ← compare: <branch-name>`
+    
 11) Name your PR using the format `<rule-id> <fix>` and add a brief description of your changes
+    
 12) On the PR, add reviewers (both the 'Rules Team' and 'Engineers Team' are required) by clicking the cog in the top right corner, and add yourself as an assignee
-13) You're done! Keep an eye on the PR to make sure the automated checks pass, as well as to respond to any comments from reviewers. If you need to edit any changes on the PR, you can simply checkout your branch (`git checkout <your-branch-name>`), make your changes, and commit and push them - the PR will automatically update!
+    
+**You're done! Keep an eye on the PR to make sure the automated checks pass, as well as to respond to any comments from reviewers.**\
+
+13) If you need to edit any changes on the PR, you can simply checkout your branch (`git checkout <your-branch-name>`), make your changes, and commit and push them - the PR will automatically update!
+
 14) If you want to start editing another rule, don't forget to run the below commands on VSCode terminal again: \
        `git checkout main` \
        `git pull origin main`
 
-For further detail on any of these steps or git in general, see [this](https://docs.google.com/document/d/15ydgj4AqtEnFtlXL-J4DLJV32q_Q71gKn0ucu4tYYQw/edit?pli=1&tab=t.0) supplementary guide
+For further detail on any of these steps or git in general, see [supplementary guide](https://docs.google.com/document/d/15ydgj4AqtEnFtlXL-J4DLJV32q_Q71gKn0ucu4tYYQw/edit?pli=1&tab=t.0)
 
 
 # Advanced Usage
 
-We have included some additional functionality in the test script. To take advantage of this, you will need to run the test script directly, rather than using the run script
+Below are some additional functionalities in the test script. To take advantage of this, you will need to run the test script directly, rather than using the run script.
 
 1) In VSCode terminal, in the core-contributor directory, activate the virtual environment by running one of the following: \
-              WINDOWS: `.\venv\Scripts\activate` \
-              MAC: `source ./venv/bin/activate`
-2) You can now run the test script directly with various options: \
-              `python test.py` - Interactive mode (prompts you for rule and test case selection) \
-              `python test.py -r <rule-id>` - Test all cases for a specific rule \
-              `python test.py -r <rule-id> -tc <test-case>` - Test a specific case (eg `positive/01`) \
-              `python test.py -r <rule-id> -v` - Test with verbose output (prints results to terminal) \
-              `python test.py --all-rules` - Test all rules \
-              `python test.py -h` - See all available options
+   - WINDOWS: `.\venv\Scripts\activate` \
+   - MAC: `source ./venv/bin/activate`
+   
+2) You can now run the test script directly with various options:
+   - `python test.py` - Interactive mode (prompts you for rule and test case selection)
+   - `python test.py -r <rule-id>` - Test all cases for a specific rule
+   - `python test.py -r <rule-id> -tc <test-case>` - Test a specific case (eg `positive/01`)
+   - `python test.py -r <rule-id> -v` - Test with verbose output (prints results to terminal)
+   - `python test.py --all-rules` - Test all rules
+   - `python test.py -h` - See all available options
 3) When you're done, you can deactivate the venv by running `deactivate`
 
 
@@ -154,7 +189,8 @@ Otherwise, create a new branch from main which includes your changes and then re
 `git checkout main` \
 `git reset --hard HEAD~1` \
 `git checkout <new-branch-name>` \
-*IMPORTANT NOTE* - if you've committed more than once on main, you'll need to replace `HEAD~1` with `HEAD~n` where `n` is the number of commits you've made \
+
+***IMPORTANT NOTE*** - if you've committed more than once on main, you'll need to replace `HEAD~1` with `HEAD~n` where `n` is the number of commits you've made \
 <br />
 
 > ***I've made some changes that I want to push to the repo and other changes that I don't want to keep***
