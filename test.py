@@ -159,7 +159,13 @@ class TestRunner:
     def get_available_rules() -> List[str]:
         if not RULES_DIR.exists():
             return []
-        return sorted([d.name for d in RULES_DIR.iterdir() if d.is_dir() and d.name.startswith("CORE-")])
+        return sorted(
+            [
+                d.name
+                for d in RULES_DIR.iterdir()
+                if d.is_dir() and (d.name.startswith("CORE-") or d.name.startswith("NEW-RULE"))
+            ]
+        )
 
     @staticmethod
     def get_test_cases(rule_id: str) -> dict:
@@ -482,7 +488,7 @@ class InteractiveHandler:
 
 def parse_args():
     parser = argparse.ArgumentParser(description="CDISC SQL Rules Engine Tester")
-    parser.add_argument("-r", "--rule", help="Rule ID (e.g., CORE-000176)")
+    parser.add_argument("-r", "--rule", help="Rule ID (e.g., CORE-000176 or NEW-RULE)")
     parser.add_argument("-all", "--all-rules", action="store_true", help="Run all rules")
     parser.add_argument("-tc", "--test-case", help="Specific case (e.g., positive/01)")
     parser.add_argument("-v", "--verbose", action="store_true", help="Print detailed results")
