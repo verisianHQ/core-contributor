@@ -1,0 +1,81 @@
+# Variable: DOMAIN
+# Condition: AP Core Domain
+# Rule: Value length = 4 characters beginning with 'AP' and ending with 2 character SDTM domain
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: '[Associated Persons datasets are given a prefix of AP-- to
+                  identify the data as AP data to and distinguish them from
+                  study subject data.][Associated Persons domain codes in the
+                  DOMAIN column of every record are also given a prefix of AP--
+                  to identify the domains as AP domains and to distinguish them
+                  from study subject domains. AP domain codes are therefore four
+                  characters long.]'
+                Document: AP Guide v1.0
+                Section: '2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0155
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: '[Associated Persons datasets are given a prefix of AP-- to
+                  identify the data as AP data to and distinguish them from
+                  study subject data.][Associated Persons domain codes in the
+                  DOMAIN column of every record are also given a prefix of AP--
+                  to identify the domains as AP domains and to distinguish them
+                  from study subject domains. AP domain codes are therefore four
+                  characters long.]'
+                Document: AP Guide v1.0
+                Section: '2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0155
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  any:
+    - name: DOMAIN
+      operator: not_matches_regex
+      value: ^AP[A-Z]{2}$
+    - name: DOMAIN
+      operator: suffix_not_equal_to
+      prefix: 2
+      value: $domains
+Core:
+  Id: CDISC.SDTMIG.CG0155
+  Status: Draft
+  Version: '1'
+Description: Raise an error when DOMAIN value begins with AP and length of
+  domain variable is not 4 or DOMAIN value doesn't end with a valid SDTM domain.
+Executability: Fully Executable
+Operations:
+  - ct_package_types:
+      - SDTM
+    id: $domains
+    operator: standard_domains
+Outcome:
+  Message: AP DOMAIN value should start with 'AP' and end with a valid SDTM domain, and length should be equal to 4.
+  Output Variables:
+    - DOMAIN
+    - dataset_name
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Exclude:
+      - APRELSUB
+      - FA
+      - POOLDEF
+    Include:
+      - AP--
+Sensitivity: Record
