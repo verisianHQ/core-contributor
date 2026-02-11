@@ -1,3 +1,7 @@
+"""
+Script to create a new rule directory with the required structure and blank files for testing.
+"""
+
 import sys
 from pathlib import Path
 import openpyxl
