@@ -47,8 +47,20 @@ def main():
     rule_dir = RULES_DIR / PLACEHOLDER_RULE_ID
 
     if rule_dir.exists():
-        print(f"Error: Rule directory '{rule_dir}' already exists.")
-        sys.exit(1)
+        do_wipe: bool = True if input("Another new rule folder already exists. Would you like to erase it and make a new one? (Y/N)").lower() == "y" else False
+        if not do_wipe:
+            print("Aborting.")
+            sys.exit(0)
+        else:
+            def wipe_directory(path: Path):
+                for item in path.glob("*"):
+                    if item.is_file():
+                        item.unlink()
+                    else: # directory
+                        wipe_directory(item)
+                        item.rmdir()
+
+            wipe_directory(rule_dir)
 
     rule_dir.mkdir(parents=True, exist_ok=True)
 
