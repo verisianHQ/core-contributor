@@ -3,6 +3,7 @@ Script to create a new rule directory with the required structure and blank file
 """
 
 import sys
+import shutil
 from pathlib import Path
 import openpyxl
 
@@ -47,8 +48,11 @@ def main():
     rule_dir = RULES_DIR / PLACEHOLDER_RULE_ID
 
     if rule_dir.exists():
-        print(f"Error: Rule directory '{rule_dir}' already exists.")
-        sys.exit(1)
+        do_wipe: bool = True if input("Another new rule folder already exists. Would you like to erase it and make a new one? (Y/N) ").lower() == "y" else False
+        if not do_wipe:
+            print("Aborting.")
+            sys.exit(0)
+        shutil.rmtree(rule_dir, ignore_errors=False)
 
     rule_dir.mkdir(parents=True, exist_ok=True)
 
