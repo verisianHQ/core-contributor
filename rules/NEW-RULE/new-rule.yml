@@ -1,0 +1,90 @@
+# Variable: PPORRESU
+# Condition: Parameter is non-normalized.
+# Rule: Terminology is for non-normalized parameter (Codelist "PKUNIT")
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: There are separate codelists used for PPORRESU/PPSTRESU where
+                  the choice depends on whether the value of the pharmacokinetic
+                  parameter is normalized. Codelist PKUNIT is used for
+                  non-normalized parameters. Codelists PKUDMG and PKUDUG are
+                  used when parameters are normalized by dose amount in
+                  milligrams or micrograms respectively. Codelists PKUWG and
+                  PKUWKG are used when parameters are normalized by weight in
+                  grams or kilograms respectively. Multiple subset codelists
+                  were created for the unique unit expressions of the same
+                  concept across codelists, this approach allows study-context
+                  appropriate use of unit values for PK analysis subtypes
+                Document: IG v3.4
+                Item: Assumption 3
+                Section: 6.3.5.9.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0555
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: "\tThere are separate codelists used for PPORRESU/PPSTRESU where
+                  the choice depends on whether the value of the pharmacokinetic
+                  parameter is normalized. - Codelist \"PKUNIT\" is used for
+                  non-normalized parameters. - Codelists \"PKUDMG\" and
+                  \"PKUDUG\" are used when parameters are normalized by dose
+                  amount in milligrams or micrograms respectively. - Codelists
+                  \"PKUWG\" and \"PKUWKG\" are used when parameters are
+                  normalized by weight in grams or kilograms respectively.
+                  Multiple subset codelists were created for the unique unit
+                  expressions of the same concept across codelists, this
+                  approach allows study-context appropriate use of unit values
+                  for PK analysis subtypes."
+                Document: IG v3.3
+                Item: Assumption 3
+                Section: 6.3.11.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0555
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: PPTEST
+      operator: not_matches_regex
+      value: (?i)norm|by (BMI|Dose|SA|WT)
+    - name: PPORRESU
+      operator: is_not_contained_by
+      value: $PKUNIT
+Core:
+  Id: CDISC.SDTMIG.CG0555
+  Status: Draft
+  Version: '1'
+Description: Trigger error when parameter is non-normalized and terminology for
+  PPORRESU is not for a non-normalized parameter
+Executability: Fully Executable
+Operations:
+  - ct_attribute: Term Signification
+    id: $PKUNIT
+    operator: get_codelist_attributes
+    version: '2025-03-28'
+    name: PKUNIT
+    ct_conditions:
+      - Codelist Code: C85494
+Outcome:
+  Message: Parameter is non-normalized and terminology for PPORRESU is not for a
+    non-normalized parameter.
+  Output Variables:
+    - PPORRESU
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - PP
+Sensitivity: Record
