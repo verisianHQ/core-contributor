@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "pp.xpt",
+      "domain": "PP",
+      "execution_status": "success",
+      "execution_message": "Parameter is non-normalized and terminology for PPORRESU is not for a non-normalized parameter.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "01-004",
+          "value": {
+            "PPORRESU": "day*ug/mL/mg"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
