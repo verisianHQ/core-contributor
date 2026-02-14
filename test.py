@@ -147,7 +147,7 @@ class TestRunner:
         self.use_pgserver = use_pgserver
         from engine.cdisc_rules_engine.data_service.postgresql_data_service import PostgresQLDataService
 
-        self.data_service = PostgresQLDataService.instance(use_pgserver=self.use_pgserver)
+        self.data_service = PostgresQLDataService.instance(use_pgserver=self.use_pgserver, codelists=["sdtmct-2025-03-28.pkl"], cache_path="resources/cache")
 
     @staticmethod
     def _setup_engine_path():
