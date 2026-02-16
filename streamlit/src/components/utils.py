@@ -8,25 +8,101 @@ import yaml
 class UtilityFunctions:
 
     @staticmethod
-    def yml_folders(rules_dir):
-        folders_with_yml = []
-        for root, dirs, files in os.walk(rules_dir):
-            yml_files = [f for f in files if f.endswith(".yml")]
+    def get_all_yml_data(rules_dir):
+        ymls = []
+        for root, _, files in os.walk(rules_dir):
+            yml_files = [f for f in files if f.endswith((".yml", ".yaml"))]
             if yml_files:
                 folder_name = os.path.relpath(root, rules_dir)
-                folders_with_yml.append({"Core-ID": folder_name})
-        return pd.DataFrame(folders_with_yml)
+                try:
+                    with open(os.path.join(root, yml_files[0]), "r") as f:
+                        rule_data = yaml.safe_load(f)
+
+                    standards = set()
+                    authorities = UtilityFunctions.chain_get(rule_data, ["Authorities"], nv=[])
+                    for auth in authorities:
+                        auth_standards = UtilityFunctions.chain_get(auth, ["Standards"], nv=[])
+                        for std in auth_standards:
+                            name = std.get("Name")
+                            if name:
+                                standards.add(name)
+                    
+                    status = UtilityFunctions.chain_get(rule_data, ["Core", "Status"], nv="No Status")
+                    verification = UtilityFunctions.chain_get(rule_data, ["Verification"], nv="Unverified")
+
+                    ymls.append({
+                        "Core-ID": folder_name,
+                        "Standard": sorted(list(standards)),
+                        "Core-Status": status,
+                        "Verification": verification
+                    })
+                except Exception as e:
+                    print(f"Error processing {folder_name}: {e}")
+
+        if not ymls:
+            return pd.DataFrame(columns=["Core-ID", "Standard", "Core-Status", "Verification"])
+
+        return pd.DataFrame(ymls)
 
     @staticmethod
     def get_csv_cols(filepath, cols=None):
-        df = pd.read_csv(filepath)
-        if not cols:
-            return df
-        else:
-            return df[cols]
+        try:
+            df = pd.read_csv(filepath)
+            if not cols:
+                return df
+            else:
+                return df[cols]
+        except Exception as e:
+            print(f"Error reading CSV {filepath}: {e}")
+            return pd.DataFrame()
+
+    @staticmethod
+    def sort_standards(df):
+        if df.empty or any([col not in df.columns for col in ("Core-ID", "conformance_id")]):
+            return []
+            
+        standards_set = set()
+        
+        for _, row in df.iterrows():
+            core_id = str(row.get("Core-ID", "")).strip()
+            conf_id = str(row.get("conformance_id", "")).strip()
+            
+            standard_name = None
+            
+            # core-id
+            if core_id.startswith("CORE"):
+                if conf_id.startswith("CG"):
+                    standard_name = "SDTMIG"
+                elif conf_id.startswith("AD"):
+                    standard_name = "ADaMIG"
+                elif conf_id.startswith("SE"):
+                    standard_name = "SENDIG"
+            
+            # conformance id
+            elif "." in core_id:
+                parts = core_id.split(".")
+                if len(parts) > 1:
+                    standard_name = parts[1]
+            
+            else:
+                standard_name = core_id
+
+            # typos and non-standards
+            if standard_name:
+                clean_name = standard_name.upper()
+                
+                if clean_name == "ADAMIG":
+                    clean_name = "ADaMIG"
+                
+                if clean_name not in ["", "NAN", "ALL"]:
+                    standards_set.add(clean_name)
+            
+        return sorted(list(standards_set))
 
     @staticmethod
     def filter_standard(df, standard):
+        if df.empty or "Standard Name" not in df.columns:
+            return pd.DataFrame(columns=df.columns)
         filtered_df = df[df["Standard Name"].str.contains(standard, na=False)]
         return filtered_df
 
@@ -138,7 +214,7 @@ class UtilityFunctions:
             return "Partially Completed"
 
         if status in ["DRAFT", "DRAFT - NOT EXECUTABLE"]:
-            return "Unimplemented"
+            return "Incomplete"
 
         if status == "PUBLISHED":
             return "Completed"
@@ -182,6 +258,9 @@ class UtilityFunctions:
 
     @staticmethod
     def extract_issues(test_stats):
+        if test_stats.empty:
+            return pd.DataFrame()
+        
         failed = test_stats[test_stats["Status"] == "Failed"].copy()
         failed["Issue"] = failed["Failure Reason"]
 
