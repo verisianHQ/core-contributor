@@ -1,0 +1,142 @@
+name: Assign CORE ID on Merge
+
+on:
+  pull_request:
+    types: [closed]
+    paths:
+      - 'rules/NEW-RULE/**'
+    branches: [main] 
+
+jobs:
+  assign-new-rule-id:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.base_ref }}
+          token: ${{ secrets.ADMIN_PAT }}
+          
+      - name: Check if NEW-RULE directory exists
+        id: check-dir
+        run: |
+          if [ -d "rules/NEW-RULE" ]; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "Directory rules/NEW-RULE not found. Skipping."
+          fi
+
+      - name: Set up Python 3.12
+        if: steps.check-dir.outputs.exists == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Calculate next ID and rename files
+        if: steps.check-dir.outputs.exists == 'true'
+        run: |
+          python -c "
+          import os
+          import re
+          import shutil
+
+          rules_dir = 'rules'
+          new_rule_dir = os.path.join(rules_dir, 'NEW-RULE')
+
+          if not os.path.exists(new_rule_dir):
+              exit(0)
+
+          existing_ids = []
+          for d in os.listdir(rules_dir):
+              match = re.match(r'CORE-(\d+)', d)
+              if match:
+                  num = int(match.group(1))
+                  if num >= 2000:
+                      existing_ids.append(num)
+          
+          existing_ids.sort()
+          next_id = 2000
+          for num in existing_ids:
+              if num == next_id:
+                  next_id += 1
+              elif num > next_id:
+                  break
+          
+          new_core_id = f'CORE-{next_id:06d}'
+          new_core_id_lower = new_core_id.lower()
+          print(f'Assigning new ID: {new_core_id}')
+
+          target_dir = os.path.join(rules_dir, new_core_id)
+          os.rename(new_rule_dir, target_dir)
+
+          for root, dirs, files in os.walk(target_dir):
+              for file in files:
+                  old_path = os.path.join(root, file)
+                  
+                  if file.endswith(('.yml', '.yaml')):
+                      unique_ids = []
+                      updated_lines = []
+                      in_rule_id_block = False
+                      in_core_block = False
+                      
+                      with open(old_path, 'r', encoding='utf-8') as f:
+                          lines = f.readlines()
+
+                      for line in lines:
+                          stripped = line.strip()
+                          
+                          if stripped.startswith('Rule Identifier:'):
+                              in_rule_id_block = True
+                          elif in_rule_id_block and stripped.startswith('Id:'):
+                              val = stripped.split('Id:', 1)[1].strip().strip('\'\"')
+                              if val and val not in unique_ids:
+                                  unique_ids.append(val)
+                              in_rule_id_block = False
+                          
+                          if stripped == 'Core:':
+                              in_core_block = True
+                          elif in_core_block and stripped.startswith('Id:'):
+                              indent = len(line) - len(line.lstrip())
+                              line = f"{' '*indent}Id: {new_core_id}\n"
+                              in_core_block = False
+                          elif in_core_block and stripped != '' and not line.startswith((' ', '\t')):
+                              in_core_block = False
+
+                          updated_lines.append(line)
+
+                      new_name = ','.join(unique_ids) + '.yml' if unique_ids else file.replace('NEW-RULE', new_core_id)
+                      new_path = os.path.join(root, new_name)
+                      
+                      with open(new_path, 'w', encoding='utf-8') as f:
+                          f.writelines(updated_lines)
+                      
+                      if old_path != new_path:
+                          os.remove(old_path)
+
+                  else:
+                      new_name = file.replace('new-rule', new_core_id.lower()).replace('NEW-RULE', new_core_id)
+                      new_path = os.path.join(root, new_name)
+                      if old_path != new_path:
+                          os.rename(old_path, new_path)
+          "
+
+      - name: Commit and Push Changes
+        if: steps.check-dir.outputs.exists == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          git add rules/
+          
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "bot-chore: assign ${new_core_id} to merged NEW-RULE"
+            git push origin ${{ github.base_ref }}
+          fi
