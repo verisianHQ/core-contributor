@@ -1,5 +1,5 @@
 """
-Script to create a new rule directory with the required structure and blank files for testing.
+Script to create a new rule directory with the required structure and template files for testing.
 """
 
 import sys
@@ -26,7 +26,7 @@ def create_excel_file(filepath: Path, is_negative: bool):
     if is_negative:
         ws_val = wb.create_sheet("Validation")
         ws_val.append(["Error group", "Sheet", "Error level", "Row num", "Variable", "Error value"])
-        ws_val.append(["1", "", "", "", "", ""])
+        ws_val.append(["", "", "", "", "", ""])
 
     wb.save(filepath)
 
@@ -57,7 +57,7 @@ def main():
     rule_dir.mkdir(parents=True, exist_ok=True)
 
     yml_file = rule_dir / f"{PLACEHOLDER_RULE_ID.lower()}.yml"
-    yml_file.touch()
+    shutil.copy("tests/template-rule.yml", yml_file)
 
     n_pos_cases = int(input("Enter the number of positive test cases to create: "))
     n_neg_cases = int(input("Enter the number of negative test cases to create: "))
