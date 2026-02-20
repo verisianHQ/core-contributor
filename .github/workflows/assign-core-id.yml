@@ -79,14 +79,32 @@ jobs:
               for file in files:
                   old_path = os.path.join(root, file)
                   
-                  new_file = file.replace('new-rule', new_core_id_lower).replace('NEW-RULE', new_core_id)
-                  new_path = os.path.join(root, new_file)
-                  
-                  if old_path != new_path:
-                      os.rename(old_path, new_path)
-                      old_path = new_path
+                  if file.endswith(('.yml', '.yaml')):
+                      unique_ids = set()
+                      in_rule_identifier = False
+                      with open(old_path, 'r', encoding='utf-8') as f:
+                          for line in f:
+                              stripped = line.strip()
+                              if stripped.startswith('Rule Identifier:'):
+                                  in_rule_identifier = True
+                              elif in_rule_identifier:
+                                  if stripped.startswith('Id:'):
+                                      val = stripped.split('Id:', 1)[1].strip().strip('\'\"')
+                                      if val:
+                                          unique_ids.add(val)
+                                  in_rule_identifier = False
 
-                  if new_path.endswith(('.yml', '.yaml')):
+                      if unique_ids:
+                          new_file = ','.join(list(sorted(unique_ids))) + '.yaml'
+                      else:
+                          new_file = file.replace('new-rule', new_core_id_lower).replace('NEW-RULE', new_core_id)
+
+                      new_path = os.path.join(root, new_file)
+
+                      if old_path != new_path:
+                          os.rename(old_path, new_path)
+                          old_path = new_path
+
                       with open(new_path, 'r', encoding='utf-8') as f:
                           lines = f.readlines()
                       
@@ -100,11 +118,18 @@ jobs:
                               
                               if in_core_block:
                                   if 'Id:' in line:
-                                      f.write(f"  Id: {new_core_id}\n")
+                                      f.write(f'  Id: {new_core_id}\n')
                                       in_core_block = False 
                                       continue
                                       
                               f.write(line)
+
+                  else:
+                      new_file = file.replace('new-rule', new_core_id_lower).replace('NEW-RULE', new_core_id)
+                      new_path = os.path.join(root, new_file)
+                      
+                      if old_path != new_path:
+                          os.rename(old_path, new_path)
           "
 
       - name: Commit and Push Changes
