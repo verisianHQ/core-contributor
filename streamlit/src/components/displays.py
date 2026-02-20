@@ -1,3 +1,6 @@
+import streamlit as st
+import pandas as pd
+
 from src.components.templates.pie_chart import make_pie
 from src.components.templates.bar_chart import make_horizontal_bar
 from src.components.utils import UtilityFunctions
@@ -5,6 +8,7 @@ from src.components.utils import UtilityFunctions
 
 class Displays:
 
+    @staticmethod
     def sdtm_rule_status_display(completed_rules, sdtm_rules):
         completed_core_ids = set(completed_rules["Core-ID"])
         sdtm_core_ids = set(sdtm_rules["Core-ID"])
@@ -18,6 +22,7 @@ class Displays:
         ]
         make_pie(pie_labels, pie_sizes, "SDTM Rule Implementation Status", color_scheme="set1")
 
+    @staticmethod
     def rule_comment_verification_display(verified_data):
         labels = verified_data.index.tolist()
         values = verified_data.values.tolist()
@@ -27,6 +32,7 @@ class Displays:
 
         make_pie(formatted_labels, values, "Rule Comment Verification", color_scheme="set2")
 
+    @staticmethod
     def core_rule_status_display(core_status_data):
         labels = core_status_data.index.tolist()
         values = core_status_data.values.tolist()
@@ -36,10 +42,8 @@ class Displays:
 
         make_pie(formatted_labels, values, "Core Rule Status", color_scheme="set3")
 
+    @staticmethod
     def conformance_rules_verification_display(completed_rules, els_data):
-        import streamlit as st
-        import pandas as pd
-
         # Els data - just set col 1
         # Henning data, just set col 2? splitting on ; and exploding
         els_verified_cgs = set(els_data["Rule ID"])
@@ -55,8 +59,9 @@ class Displays:
             df.index = df.index + 1  # Start index at 1
             st.dataframe(df, width="stretch", hide_index=False)
 
-    def conformance_rule_completion_display(cg_data):
-        counts = cg_data["Completion"].value_counts()
+    @staticmethod
+    def conformance_rule_completion_display(data: pd.DataFrame):
+        counts = data["Completion"].value_counts()
         completed_count = counts.get("Completed", 0)
         partial_count = counts.get("Partially Completed", 0)
         unimplemented_count = counts.get("Unimplemented", 0)
@@ -78,7 +83,16 @@ class Displays:
         ]
 
         make_pie(pie_labels_cg, pie_sizes_cg, "Conformance Rule Completion", color_scheme="tableau20")
+        with st.expander("View Conformance Rule Id to CORE Id Mapping"):
+            data = data.rename(columns={
+                data.columns[1]: "Version 1",
+                data.columns[2]: "Version 2",
+                data.columns[3]: "Version 3",
+            })
+            data.index = data.index + 1
+            st.dataframe(data, width="stretch", hide_index=False)
 
+    @staticmethod
     def test_results_display(test_stats):
         status_counts = test_stats["Status"].value_counts()
         pie_labels = [f"{status} ({(count / len(test_stats)):.0%})" for status, count in status_counts.items()]
@@ -90,6 +104,7 @@ class Displays:
             show_full_label=True,
         )
 
+    @staticmethod
     def failure_error_display(combined_issues):
         make_horizontal_bar(
             combined_issues,
