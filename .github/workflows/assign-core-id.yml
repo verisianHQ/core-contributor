@@ -80,54 +80,48 @@ jobs:
                   old_path = os.path.join(root, file)
                   
                   if file.endswith(('.yml', '.yaml')):
-                      unique_ids = set()
-                      in_rule_identifier = False
+                      unique_ids = []
+                      updated_lines = []
+                      in_rule_id_block = False
+                      in_core_block = False
+                      
                       with open(old_path, 'r', encoding='utf-8') as f:
-                          for line in f:
-                              stripped = line.strip()
-                              if stripped.startswith('Rule Identifier:'):
-                                  in_rule_identifier = True
-                              elif in_rule_identifier:
-                                  if stripped.startswith('Id:'):
-                                      val = stripped.split('Id:', 1)[1].strip().strip('\'\"')
-                                      if val:
-                                          unique_ids.add(val)
-                                  in_rule_identifier = False
-
-                      if unique_ids:
-                          new_file = ','.join(list(sorted(unique_ids))) + '.yaml'
-                      else:
-                          new_file = file.replace('new-rule', new_core_id_lower).replace('NEW-RULE', new_core_id)
-
-                      new_path = os.path.join(root, new_file)
-
-                      if old_path != new_path:
-                          os.rename(old_path, new_path)
-                          old_path = new_path
-
-                      with open(new_path, 'r', encoding='utf-8') as f:
                           lines = f.readlines()
+
+                      for line in lines:
+                          stripped = line.strip()
+                          
+                          if stripped.startswith('Rule Identifier:'):
+                              in_rule_id_block = True
+                          elif in_rule_id_block and stripped.startswith('Id:'):
+                              val = stripped.split('Id:', 1)[1].strip().strip('\'\"')
+                              if val and val not in unique_ids:
+                                  unique_ids.append(val)
+                              in_rule_id_block = False
+                          
+                          if stripped == 'Core:':
+                              in_core_block = True
+                          elif in_core_block and stripped.startswith('Id:'):
+                              indent = len(line) - len(line.lstrip())
+                              line = f"{' '*indent}Id: {new_core_id}\n"
+                              in_core_block = False
+                          elif in_core_block and stripped != '' and not line.startswith((' ', '\t')):
+                              in_core_block = False
+
+                          updated_lines.append(line)
+
+                      new_name = ','.join(unique_ids) + '.yml' if unique_ids else file.replace('NEW-RULE', new_core_id)
+                      new_path = os.path.join(root, new_name)
                       
                       with open(new_path, 'w', encoding='utf-8') as f:
-                          in_core_block = False
-                          for line in lines:
-                              if line.strip() == 'Core:':
-                                  in_core_block = True
-                                  f.write(line)
-                                  continue
-                              
-                              if in_core_block:
-                                  if 'Id:' in line:
-                                      f.write(f'  Id: {new_core_id}\n')
-                                      in_core_block = False 
-                                      continue
-                                      
-                              f.write(line)
+                          f.writelines(updated_lines)
+                      
+                      if old_path != new_path:
+                          os.remove(old_path)
 
                   else:
-                      new_file = file.replace('new-rule', new_core_id_lower).replace('NEW-RULE', new_core_id)
-                      new_path = os.path.join(root, new_file)
-                      
+                      new_name = file.replace('new-rule', new_core_id.lower()).replace('NEW-RULE', new_core_id)
+                      new_path = os.path.join(root, new_name)
                       if old_path != new_path:
                           os.rename(old_path, new_path)
           "
