@@ -212,13 +212,13 @@ class TestRunner:
         if not excel_files:
             return None, {"error": "Excel data missing", "exception": f"No Excel files in {data_path}"}
 
-        case_define_path = list(data_path_obj.glob("*.xml"))
-        rule_define_path = list(rule_path.glob("*.xml"))
+        case_define_path = data_path_obj / "define.xml"
+        rule_define_path = rule_path / "define.xml"
 
-        if len(case_define_path) > 0:
-            define_xml_path = str(case_define_path[0])
-        elif len(rule_define_path) > 0:
-            define_xml_path = str(rule_define_path[0])
+        if case_define_path.exists():
+            define_xml_path = str(case_define_path)
+        elif rule_define_path.exists():
+            define_xml_path = str(rule_define_path)
         else:
             define_xml_path = None
         
