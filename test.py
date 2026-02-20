@@ -212,6 +212,19 @@ class TestRunner:
         if not excel_files:
             return None, {"error": "Excel data missing", "exception": f"No Excel files in {data_path}"}
 
+        case_define_path = list(data_path_obj.glob("*.xml"))
+        rule_define_path = list(rule_path.glob("*.xml"))
+
+        if len(case_define_path) > 0:
+            define_xml_path = str(case_define_path[0])
+        elif len(rule_define_path) > 0:
+            define_xml_path = str(rule_define_path[0])
+        else:
+            define_xml_path = None
+        
+        if define_xml_path:
+            self.data_service._update_define_xml_path(define_xml_path)
+
         try:
             import yaml
             from engine.tests.rule_regression.regression import (
@@ -227,7 +240,7 @@ class TestRunner:
 
             sql_results, _ = process_test_case_dataset(
                 regression_errors=regression_errors,
-                define_xml_file_path=None,
+                define_xml_file_path=define_xml_path,
                 data_test_datasets=test_datasets,
                 ig_specs=self.ig_specs,
                 rule=rule,
