@@ -104,7 +104,7 @@ _Step 4 is only applicable in case you want to create a rule for which the folde
      - WINDOWS: venv\Scripts\activate
      - MAC: source venv/bin.activate
    - Then run the following command in your terminal: \
-       `python -m new-rule.py`
+       `python -m new-rule`
    - It will prompt you a few times.
      - If the new-rule folder already exists, it will check you definitely want to make a new one. (NOTE: If the empty folder is a leftover from a previous branch, which is likely, you SHOULD run the script and overwrite the folder to make a new one, as this will set-up the template properly for you).
      - You will also be prompted to enter the number of positive and negative test cases you want to create. Don't worry if you realise you need more later. You can easily add more manually.
@@ -121,16 +121,20 @@ _Step 4 is only applicable in case you want to create a rule for which the folde
    - Ensure that negative test data are created (= data issues expected to be flagged for that particular rule).
    - In addition to creating negative test data, predefined discrepancies should be marked in the negative test data. This will ensure that the validation can be automatically tested based on the expected errors you've indicated upfront.
    - To mark predefined discrepancies in the negative test data, a validation sheet in the negative test data should be completed
-     - Do the error process as normal, highlighting cells that result in an error on the data sheet.
-     - Try to be minimal with this - highlight ONLY the cells that are wrong and causing the error (and those that you plan on outputting as errors in the rule 'output' section).
-     - Then go to the validation sheet. Add each error as a new validation group (note that this might not be only a single row - for example if you highlight two cells that will cause a single error, and be outputted as a single error, then you should create TWO rows         in the same validation group (ie both in group '1').
-     - Create groups using sequential numbers for the validation group column.
-     - For the error level column, add 'Record' if it is a normal row error, 'Variable' if it is an error related to an entire column, and 'Dataset' if it is an error related to a whole dataset (ie missing ae.xpt sheet or similar).
-     - Provide the row number (using the row count of the excel sheet - note that any variable names will be row 1 and the first row starts from row 5 due to the metadata rows we always have in the sheets).
-     - Provide the variable name (found in the first row of the column) - with the row number this fully identifies the error cell.
-     - Finally, copy the error value from the highlighted cell into the 'Error value'.
-     - If the highlighted cell has no value, use '[ABSENT]' to indicate this (including the square brackets).
-     - Repeat for all the highlighted error cells (remembering to group using the 'Error group' column where appropriate) .
+     - **Error Group**:
+       - Add each error as a new validation group (note that this might not be only a single row - for example if you highlight two cells that will cause a single error, and be outputted as a single error, then you should create TWO rows in the same validation group (ie both in group '1').
+       - Create groups using sequential numbers for the validation group column.
+      - **Sheet**: Name of the data sheet with the error e.g. cm.xpt
+      - **Error Level**:
+        - Add 'Record' if it is a normal row error
+        - 'Variable' if it is an error related to an entire column
+        - 'Dataset' if it is an error related to a whole dataset (ie missing ae.xpt sheet or similar).
+      - **Row num**: Provide the row number (using tcm.xpthe row count of the excel sheet - note that any variable names will be row 1 and the first row starts from row 5 due to the metadata rows we always have in the sheets).
+      - **Variable**: Provide the variable name (found in the first row of the column) - with the row number this fully identifies the error cell.
+      - **Error Value**:
+        - Finally, copy the error value from the highlighted cell into the 'Error value'.
+        - If the highlighted cell has no value, use '[ABSENT]' to indicate this (including the square brackets).
+   - Repeat for all the highlighted error cells (remembering to group using the 'Error group' column where appropriate) .
    - Ensure that you save any changes (File → Save, or Ctrl/Cmd + S).
   
 **Perform Unit Testing.**
@@ -147,7 +151,7 @@ _Step 4 is only applicable in case you want to create a rule for which the folde
    - Note that there is a separate `results` folder for each test case, which contains only the information relevant to that particular case.
    - There will be a `results.json` file, with the code-produced rule output, and a `results.txt` file, which will summarise your results in a more human-readable format. Feel free to examine both.
    - Once you've run the rule, check to make sure there's nothing mentioned in the rule output - if the highlighting or validation in the validation sheet hasn't been done correctly, you will see notes about 'unvalidated highlights' and 'unhighlighted validations', and     you can correct them.
-   - Ideally you see no notes, and the field 'Fully validated' labelled as 'true'. 
+   - Ideally you see no notes, and the field 'Fully validated' labelled as 'Yes'. 
 
 **_*IMPORTANT NOTE*_**\
 _Note that if the rule or test data is wrong (and you're getting unexpected errors or lacking errors you expect to see), you will almost certainly see some highlight/validation issues. In this case, obviously the priority is to correct the rule and test data before checking the highlights and validation!_
