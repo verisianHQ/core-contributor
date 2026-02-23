@@ -35,9 +35,11 @@ _You may need your IT support team to install some of the following software for
    _***IMPORTANT NOTE***\
    Unless something goes badly wrong and you need to fully delete the entire directory, you should never need to run this command again._
    
-8) In VSCode, select "Open Folder" and select the repository folder you just cloned - it should be called `core-contributor`
-9) This should re-open a new terminal in the repository folder. If this doesn't happen, open a new terminal in VSCode and navigate to the repository folder again.
-10) You will need to setup the python environment, which will take a little bit of time. 
+7) In VSCode, select "Open Folder" and select the repository folder you just cloned - it should be called `core-contributor`
+   
+8) This should re-open a new terminal in the repository folder. If this doesn't happen, open a new terminal in VSCode and navigate to the repository folder again.
+    
+9) You will need to setup the python environment, which will take a little bit of time. 
     - Assuming you are in the core-contributor folder in the VSCode terminal, run one of the following depending on your operating system (ignore messages and warnings): 
         - WINDOWS: `.\setup\windows_setup.bat`
         - MAC: `./setup/bash_setup.sh` 
@@ -162,14 +164,14 @@ _Note that if the rule or test data is wrong (and you're getting unexpected erro
          
 11) Go to the online repository and create a pull request (PR) from your newly pushed branch
     
-13) On the PR page, make sure the information at the top is correct. It should be: \
+12) On the PR page, make sure the information at the top is correct. It should be: \
        `base: main ← compare: <branch-name>`
   
-15) Name your PR using the format `<rule-id> <fix>` and add a brief description of your changes. Or if you are making a new rule with your PR, `<cg-id> create`.
+13) Name your PR using the format `<rule-id> <fix>` and add a brief description of your changes. Or if you are making a new rule with your PR, `<cg-id> create`.
     
-17) On the PR, add reviewers (both the 'Rules Team' and 'Engineers Team' are required) by clicking the cog in the top right corner, and add yourself as an assignee
+14) On the PR, add reviewers (both the 'Rules Team' and 'Engineers Team' are required) by clicking the cog in the top right corner, and add yourself as an assignee
     
-19) You're done!
+15) You're done!
     - Keep an eye on the PR to make sure the automated checks pass, as well as to respond to any comments from reviewers.
     - If you need to edit any changes on the PR, you can simply checkout your branch (`git checkout <your-branch-name>`), make your changes, and commit and push them - the PR will automatically update!
 
@@ -178,6 +180,7 @@ _Note that if the rule or test data is wrong (and you're getting unexpected erro
 16) Once your PR is done, merge your changes to the source code. If you created a new rule in your PR, a new CORE-id will be assigned to it.
 
 **Let's do another rule!**    
+
 17) If you want to start editing another rule, don't forget to run the below commands on VSCode terminal again: \
        `git checkout main` \
        `git pull origin main`
