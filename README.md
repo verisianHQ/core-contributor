@@ -39,8 +39,8 @@ _You may need your IT support team to install some of the following software for
 9) This should re-open a new terminal in the repository folder. If this doesn't happen, open a new terminal in VSCode and navigate to the repository folder again.
 10) You will need to setup the python environment, which will take a little bit of time. 
     - Assuming you are in the core-contributor folder in the VSCode terminal, run one of the following depending on your operating system (ignore messages and warnings): 
-        WINDOWS: `.\setup\windows_setup.bat`
-        MAC: `./setup/bash_setup.sh` 
+        - WINDOWS: `.\setup\windows_setup.bat`
+        - MAC: `./setup/bash_setup.sh` 
     - Windows might prompt you asking if you want to install python - the answer is yes!
          
     _***IMPORTANT NOTE***\
@@ -50,8 +50,8 @@ _You may need your IT support team to install some of the following software for
     - Go to the `Extensions` tab in the VSCode left sidebar 
     - Search `yaml` and install the Red Hat YAML extension (it should be the top one) 
     - Once it's installed, search 'yaml schema' using the search bar at the top of the settings: 
-        WINDOWS: File → Preferences → Settings
-        MAC: Code → Settings → Settings 
+        - WINDOWS: File → Preferences → Settings
+        - MAC: Code → Settings → Settings 
     - Click the `Edit in settings.json` option under Yaml: Schemas 
     - Paste the following into "yaml.schemas": 
               `"https://rule-editor.cdisc.org/api/schema": "/*.yml"` 
@@ -72,7 +72,7 @@ _In the following section, the exact process to follow with relevant Git command
 _If you'd like to take advantage of this (strongly recommended for at least staging, committing and pushing your changes), please see [supplementary guide](https://docs.google.com/document/d/15ydgj4AqtEnFtlXL-J4DLJV32q_Q71gKn0ucu4tYYQw/edit?tab=t.0#bookmark=id.v2ehj99lxmyr) for extra details and screenshots. \
 You'll need to run the following commands to get it working: \
 `git config --global user.email "<your-github-email>"` \
-`git config --global user.name "<your-github-username>"`__
+`git config --global user.name "<your-github-username>"`_
 
 _Don't forget that whenever you type a command, that you are in the core-contributor folder that you created during the set-up steps._
 
@@ -89,36 +89,96 @@ _Don't forget that whenever you type a command, that you are in the core-contrib
    
    _Note that only branch names according to following regex are allowed: **^[a-zA-Z]+/(CORE-[0-9]{6}|CG[0-9]{4})/(edit|create|delete)$**_
    
-4) Switch to your new branch: \
+3) Switch to your new branch: \
        `git checkout <your-branch-name>`
+
+**Set-up Rule Folder.**
+
+**_*IMPORTANT NOTE*_**\
+_Step 4 is only applicable in case you want to create a rule for which the folder does not exist yet in the GitHub repository. It is therefore important to first check if a folder is already present. If no folder is present, you can automatically generate the required folder structure for a new rule including a blank YAML template and template Excel files (negative and positive) for the test data._
+
 4) Initialize your new rule folder structure:
-       - Before you start editing, you can automatically generate the required folders, blank YAML, and template Excel files for a new rule. Run the following command in your terminal: \
-       `python new-rule.py`
-       - You will be prompted to enter the number of positive and negative test cases you want to create. 
-       - This will create a rules/NEW-RULE folder with all necessary subdirectories and boilerplate files.
-5) Edit a rule and test data as desired \
-       - Ensure that you save any changes (File → Save, or Ctrl/Cmd + S)
-6) When you want to run the rule against test data, make sure you are in the core-contributor folder and run one of the following: \
-              WINDOWS: `.\run\windows_run.bat` \
-              MAC: `./run/bash_run.sh` \
-       - If you haven't run the setup script before, don't worry; it will run automatically when you execute this command \
-       - You will be prompted to select the rule you wish to run, as well as the test case(s)
-7) Check your run results in the `results` folder. Note that there is a separate `results` folder for each test case, which contains only the information relevant to that particular case \
-       - There will be a `results.json` file, with the code-produced rule output, and a `results.txt` file, which will summarise your results in a more human-readable format. Feel free to examine both
-8) If you are unhappy with the results of your changes, continue to edit and run the rule until you are satisfied
-9) Create a PR to add your changes to the repository. To do this, run the following commands: \
+   - In the base directory of the project, activate the virtual environment by running:
+     - WINDOWS: venv\Scripts\activate
+     - MAC: source venv/bin.activate
+   - Then run the following command in your terminal: \
+       `python -m new-rule.py`
+   - It will prompt you a few times.
+     - If the new-rule folder already exists, it will check you definitely want to make a new one. (NOTE: If the empty folder is a leftover from a previous branch, which is likely, you SHOULD run the script and overwrite the folder to make a new one, as this will set-up the template properly for you).
+     - You will also be prompted to enter the number of positive and negative test cases you want to create. Don't worry if you realise you need more later. You can easily add more manually.
+   - This will create a rules/NEW-RULE folder with all necessary subdirectories and template files.
+   - The NEW-RULE folder should NOT be renamed. It will receive its final name after the PR has been approved.
+
+**Write or Edit Rule.**
+
+5) Edit a rule as desired:
+   - Ensure that you save any changes (File → Save, or Ctrl/Cmd + S)
+     
+6) Create test data as desired:
+   - Ensure that positive test data are created (= no data issues expected to be flagged for that particular rule).
+   - Ensure that negative test data are created (= data issues expected to be flagged for that particular rule).
+   - In addition to creating negative test data, predefined discrepancies should be marked in the negative test data. This will ensure that the validation can be automatically tested based on the expected errors you've indicated upfront.
+   - To mark predefined discrepancies in the negative test data, a validation sheet in the negative test data should be completed
+     - Do the error process as normal, highlighting cells that result in an error on the data sheet.
+     - Try to be minimal with this - highlight ONLY the cells that are wrong and causing the error (and those that you plan on outputting as errors in the rule 'output' section).
+     - Then go to the validation sheet. Add each error as a new validation group (note that this might not be only a single row - for example if you highlight two cells that will cause a single error, and be outputted as a single error, then you should create TWO rows         in the same validation group (ie both in group '1').
+     - Create groups using sequential numbers for the validation group column.
+     - For the error level column, add 'Record' if it is a normal row error, 'Variable' if it is an error related to an entire column, and 'Dataset' if it is an error related to a whole dataset (ie missing ae.xpt sheet or similar).
+     - Provide the row number (using the row count of the excel sheet - note that any variable names will be row 1 and the first row starts from row 5 due to the metadata rows we always have in the sheets).
+     - Provide the variable name (found in the first row of the column) - with the row number this fully identifies the error cell.
+     - Finally, copy the error value from the highlighted cell into the 'Error value'.
+     - If the highlighted cell has no value, use '[ABSENT]' to indicate this (including the square brackets).
+     - Repeat for all the highlighted error cells (remembering to group using the 'Error group' column where appropriate) .
+   - Ensure that you save any changes (File → Save, or Ctrl/Cmd + S).
+  
+**Perform Unit Testing.**
+     
+7) When you want to run the rule against test data, make sure you are in the core-contributor folder and run one of the following:\
+   WINDOWS: `.\run\windows_run.bat` \
+   MAC: `./run/bash_run.sh` 
+   - If you haven't run the setup script before, don't worry; it will run automatically when you execute this command.
+   - You will be prompted to select the rule you wish to run, as well as the test case(s).
+
+**Verify Results.**
+     
+8) Check your run results in the `results` folder.
+   - Note that there is a separate `results` folder for each test case, which contains only the information relevant to that particular case.
+   - There will be a `results.json` file, with the code-produced rule output, and a `results.txt` file, which will summarise your results in a more human-readable format. Feel free to examine both.
+   - Once you've run the rule, check to make sure there's nothing mentioned in the rule output - if the highlighting or validation in the validation sheet hasn't been done correctly, you will see notes about 'unvalidated highlights' and 'unhighlighted validations', and     you can correct them.
+   - Ideally you see no notes, and the field 'Fully validated' labelled as 'true'. 
+
+**_*IMPORTANT NOTE*_**\
+_Note that if the rule or test data is wrong (and you're getting unexpected errors or lacking errors you expect to see), you will almost certainly see some highlight/validation issues. In this case, obviously the priority is to correct the rule and test data before checking the highlights and validation!_
+
+9) If you are unhappy with the results of your changes, continue to edit and run the rule until you are satisfied.
+
+**Request Review via PR.**
+
+10) Create a PR to add your changes to the repository. To do this, run the following commands: \
        `git add .` \
        `git commit -m "your custom message"` \
-       `git push origin <your-branch-name>` \
+       `git push origin <your-branch-name>` 
        - The first time you commit, you may have to log in to github
-10) Go to the online repository and create a pull request (PR) from your newly pushed branch
-11) On the PR page, make sure the information at the top is correct. It should be: \
+         
+11) Go to the online repository and create a pull request (PR) from your newly pushed branch
+    
+13) On the PR page, make sure the information at the top is correct. It should be: \
        `base: main ← compare: <branch-name>`
-12) Name your PR using the format `<rule-id> <fix>` and add a brief description of your changes. Or if you are making a new rule with your PR, `<cg-id> create`.
-13) On the PR, add reviewers (both the 'Rules Team' and 'Engineers Team' are required) by clicking the cog in the top right corner, and add yourself as an assignee
-14) You're done! Keep an eye on the PR to make sure the automated checks pass, as well as to respond to any comments from reviewers. If you need to edit any changes on the PR, you can simply checkout your branch (`git checkout <your-branch-name>`), make your changes, and commit and push them - the PR will automatically update!
-15) Once your PR is done, your changes will be merged to the source code. If you created a new rule in your PR, a new CORE-id will be assigned to it.
-15) If you want to start editing another rule, don't forget to run the below commands on VSCode terminal again: \
+  
+15) Name your PR using the format `<rule-id> <fix>` and add a brief description of your changes. Or if you are making a new rule with your PR, `<cg-id> create`.
+    
+17) On the PR, add reviewers (both the 'Rules Team' and 'Engineers Team' are required) by clicking the cog in the top right corner, and add yourself as an assignee
+    
+19) You're done!
+    - Keep an eye on the PR to make sure the automated checks pass, as well as to respond to any comments from reviewers.
+    - If you need to edit any changes on the PR, you can simply checkout your branch (`git checkout <your-branch-name>`), make your changes, and commit and push them - the PR will automatically update!
+
+**Approval - Merge PR**
+
+16) Once your PR is done, merge your changes to the source code. If you created a new rule in your PR, a new CORE-id will be assigned to it.
+
+**Let's do another rule!**    
+17) If you want to start editing another rule, don't forget to run the below commands on VSCode terminal again: \
        `git checkout main` \
        `git pull origin main`
 
