@@ -1,8 +1,10 @@
-import pandas as pd
-import os
 import json
-from pathlib import Path
+import os
+import pandas as pd
+import re
 import yaml
+from datetime import datetime
+from pathlib import Path
 
 
 class UtilityFunctions:
@@ -190,3 +192,40 @@ class UtilityFunctions:
 
         combined_issues = pd.concat([failed, errored])
         return combined_issues
+
+    @staticmethod
+    def get_validation_data(rules_dir):
+        rules_path = Path(rules_dir)
+        
+        validation_dates = []
+        unvalidated_count = 0
+
+        if not rules_path.exists():
+            return validation_dates, unvalidated_count
+
+        date_pattern = re.compile(r"#\s*Validation Date:\s*(\d{4}-\d{2}-\d{2})", re.IGNORECASE)
+
+        for rule_folder in rules_path.iterdir():
+            if not rule_folder.is_dir():
+                continue
+
+            yml_files = list(rule_folder.glob("*.yml")) + list(rule_folder.glob("*.yaml"))
+            if not yml_files:
+                continue
+
+            try:
+                with open(yml_files[0], "r", encoding="utf-8") as f:
+                    content = f.read()
+                    
+                    if "# validated: true" in content.lower():
+                        match = date_pattern.search(content)
+                        if match:
+                            validation_dates.append(match.group(1))
+                        else:
+                            validation_dates.append(datetime.now().strftime("%Y-%m-%d"))
+                    else:
+                        unvalidated_count += 1
+            except Exception:
+                pass
+
+        return validation_dates, unvalidated_count
