@@ -112,9 +112,9 @@ class UtilityFunctions:
         return pd.DataFrame(results_data)
 
     @staticmethod
-    def get_xlsx_completion_data(filepath):
+    def get_csv_completion_data(filepath):
         try:
-            df = pd.read_excel(filepath)
+            df = pd.read_csv(filepath)
             df["Completion"] = df.apply(UtilityFunctions.determine_cg_completion, axis=1)
             return df
         except Exception as e:

@@ -1,7 +1,7 @@
 from pathlib import Path
 
 from src.components.utils import UtilityFunctions
-from src.constants import SOT_PATH, RULES_DIR, CG_LIB_PATH, CG_CSV_PATH
+from src.constants import SOT_PATH, RULES_DIR, CG_CSV_PATH
 
 
 def path_extender(path):
@@ -15,7 +15,6 @@ class IngestedData:
     util = UtilityFunctions
 
     rules_path = path_extender(RULES_DIR)
-    cg_path = path_extender(CG_LIB_PATH)
     cg_csv_path = path_extender(CG_CSV_PATH)
 
     completed_rules = util.yml_folders(rules_path)
@@ -24,5 +23,5 @@ class IngestedData:
     sot_rules = util.get_csv_cols(SOT_PATH)
     sdtm_rules = util.filter_standard(sot_rules, "SDTMIG")
     test_stats = util.get_test_execution_stats(rules_path)
-    cg_data = util.get_xlsx_completion_data(cg_path)
+    cg_data = util.get_csv_completion_data(cg_csv_path)
     els_verified_data = util.get_csv_cols(cg_csv_path, cols=["Rule ID"])
