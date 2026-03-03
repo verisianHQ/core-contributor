@@ -38,41 +38,34 @@
       "errors": []
     }
   ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "DTHFL": "[ABSENT]"
+      }
+    },
+    {
+      "value": {
+        "DTHFL": "N"
+      }
+    }
+  ],
+  "unhighlighted_validations": [
+    {
+      "1": [
+        "dm.xpt",
+        "record",
+        5,
+        "DTHFL",
+        "[ABSENT]"
+      ]
+    }
+  ],
   "unvalidated_highlights": [
     {
       "Sheet": "dm.xpt",
-      "Row": 1,
-      "Variable": "DTHFL"
-    },
-    {
-      "Sheet": "dm.xpt",
       "Row": 5,
       "Variable": "DTHFL"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "DTHFL"
-    },
-    {
-      "Sheet": "ss.xpt",
-      "Row": 1,
-      "Variable": "SSSTRESC"
-    },
-    {
-      "Sheet": "ss.xpt",
-      "Row": 5,
-      "Variable": "SSSTRESC"
-    },
-    {
-      "Sheet": "ss.xpt",
-      "Row": 6,
-      "Variable": "SSSTRESC"
-    },
-    {
-      "Sheet": "ss.xpt",
-      "Row": 8,
-      "Variable": "SSSTRESC"
     }
   ]
 }
