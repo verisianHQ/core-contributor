@@ -69,7 +69,6 @@ jobs:
                   break
           
           new_core_id = f'CORE-{next_id:06d}'
-          new_core_id_lower = new_core_id.lower()
           print(f'Assigning new ID: {new_core_id}')
 
           target_dir = os.path.join(rules_dir, new_core_id)
@@ -110,7 +109,7 @@ jobs:
 
                           updated_lines.append(line)
 
-                      new_name = ','.join(unique_ids) + '.yml' if unique_ids else file.replace('NEW-RULE', new_core_id)
+                      new_name = f"{new_core_id}_{','.join(unique_ids)}.yml" if unique_ids else file.replace('NEW-RULE', new_core_id)
                       new_path = os.path.join(root, new_name)
                       
                       with open(new_path, 'w', encoding='utf-8') as f:
@@ -120,7 +119,7 @@ jobs:
                           os.remove(old_path)
 
                   else:
-                      new_name = file.replace('new-rule', new_core_id.lower()).replace('NEW-RULE', new_core_id)
+                      new_name = file.replace('new-rule', new_core_id).replace('NEW-RULE', new_core_id)
                       new_path = os.path.join(root, new_name)
                       if old_path != new_path:
                           os.rename(old_path, new_path)
