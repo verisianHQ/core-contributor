@@ -74,7 +74,7 @@ Core:
 Description: Raise an error when SESTDTC is null.
 Executability: Fully Executable
 Outcome:
-  Message: SESTDTC is required.
+  Message: SESTDTC should be populated.
 Rule Type: Record Data
 Scope:
   Classes:
