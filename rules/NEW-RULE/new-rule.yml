@@ -1,6 +1,7 @@
 # Variable: --DUR
 # Condition: --DUR ^= null
 # Rule: --DUR collected and not derived
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -8,7 +9,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: Used only if collected on the CRF and not derived.
-                Document: SDTM v2.0
+                Document: Model v2.0
                 Section: Timing
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -56,7 +57,7 @@ Core:
   Id: CDISC.SDTMIG.CG0002
   Status: Draft
   Version: '1'
-Description: Trigger error when --DUR exists and is non-null in a dataset but is listed in the define-xml as derived, not collected.
+Description: Raise an error when --DUR exists and is populated in a dataset but is listed in the define-xml as not collected.
 Executability: Fully Executable
 Operations:
   - id: $DUR_COLLECTED
@@ -64,7 +65,7 @@ Operations:
     operator: define_variable_metadata
     attribute_name: 'define_variable_is_collected'
 Outcome:
-  Message: --DUR is non-null but is listed as derived; --DUR should only be used if collected on the CRF
+  Message: --DUR is populated but is listed as not collected; --DUR should only be used if collected on the CRF
   Output Variables:
     - --DUR
 Rule Type: Value Check against Define XML Variable
