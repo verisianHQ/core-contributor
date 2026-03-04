@@ -90,8 +90,13 @@ _Don't forget that whenever you type a command, that you are in the core-contrib
        `git branch <your-branch-name>`
    
    _Note that only branch names according to following regex are allowed: **^[a-zA-Z]+/(CORE-[0-9]{6}|CG[0-9]{4})/(edit|create|delete)$**_
+
+      **_*IMPORTANT NOTE*_**\
+   _Whenever you create a local branch to work on a rule, ensure that you are on the main branch. If you create a new local branch, when you are already on a local branch, the new branch will branch off the
+   local branch and not from main. If you would then want to merge changes from your new local branch, it will merge with the first local branch and not with the main branch. Therefore, ensure to be on the main
+   branch first prior to creating a local branch (git checkout main). Once the local branch exists, you can checkout out to it from any branch._
    
-3) Switch to your new branch: \
+4) Switch to your new branch: \
        `git checkout <your-branch-name>`
 
 **Set-up Rule Folder.**
