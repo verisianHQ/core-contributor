@@ -1,1 +1,65 @@
-{"Conformance_Details": {"Report_Generation": "2026-03-04T19:22:24", "Total_Runtime": "0.2 seconds", "CORE_Engine_Version": "0.15.0", "Issue_Limit_Per_Rule": 10, "Issue_Limit_Per_Dataset": "True", "Issue_Limit_Per_Sheet": null, "Standard": "SDTMIG", "Version": "V3.4", "CT_Version": "", "Define_XML_Version": null}, "Dataset_Details": [{"filename": "LB", "label": "Labotory Results", "path": ".", "modification_date": "2026-03-04T19:21:49.421585", "size_kb": 0.0, "length": 4}], "Issue_Summary": [{"dataset": "lb.xpt", "core_id": "CORE-000289", "message": "LBORRES is not a continuous measurement but LBORNRHI is not empty.", "issues": 2}], "Issue_Details": [{"core_id": "CORE-000289", "message": "LBORRES is not a continuous measurement but LBORNRHI is not empty.", "executability": "fully executable", "dataset": "lb.xpt", "USUBJID": "ALB", "row": 1, "SEQ": 1, "variables": ["LBORRES", "LBORNRHI"], "values": ["NEGATIVE", "30"]}, {"core_id": "CORE-000289", "message": "LBORRES is not a continuous measurement but LBORNRHI is not empty.", "executability": "fully executable", "dataset": "lb.xpt", "USUBJID": "Prot", "row": 2, "SEQ": 2, "variables": ["LBORRES", "LBORNRHI"], "values": ["POSITIVE", "POSITIVE"]}], "Rules_Report": [{"core_id": "CORE-000289", "version": "1", "cdisc_rule_id": "CG0181, TIG0410", "fda_rule_id": "", "message": "LBORRES is not a continuous measurement but LBORNRHI is not empty.", "status": "ISSUE_REPORTED"}]}
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBORRES is not a continuous measurement but LBORNRHI is not empty.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "ALB",
+          "value": {
+            "LBORNRHI": "30",
+            "LBORRES": "NEGATIVE"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "Prot",
+          "value": {
+            "LBORNRHI": "POSITIVE",
+            "LBORRES": "POSITIVE"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "LBORNRHI": "30"
+      }
+    },
+    {
+      "value": {
+        "LBORNRHI": "POSITIVE"
+      }
+    }
+  ],
+  "unhighlighted_validations": [
+    {
+      "1": [
+        "Lb.xpt",
+        "record",
+        5,
+        "LBORNRHI",
+        "30"
+      ]
+    },
+    {
+      "2": [
+        "Lb.xpt",
+        "record",
+        6,
+        "LBORNRHI",
+        "POSITIVE"
+      ]
+    }
+  ]
+}

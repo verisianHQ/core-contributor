@@ -1,1 +1,12 @@
-{"Conformance_Details": {"Report_Generation": "2026-03-04T18:50:36", "Total_Runtime": "0.19 seconds", "CORE_Engine_Version": "0.15.0", "Issue_Limit_Per_Rule": 10, "Issue_Limit_Per_Dataset": "True", "Issue_Limit_Per_Sheet": null, "Standard": "SDTMIG", "Version": "V3.4", "CT_Version": "", "Define_XML_Version": null}, "Dataset_Details": [{"filename": "LB", "label": "Labotory Results", "path": ".", "modification_date": "2026-03-04T18:49:32.170375", "size_kb": 0.0, "length": 4}], "Issue_Summary": [], "Issue_Details": [], "Rules_Report": [{"core_id": "CORE-000289", "version": "1", "cdisc_rule_id": "CG0181, TIG0410", "fda_rule_id": "", "message": "LBORRES is not a continuous measurement but LBORNRHI is not empty.", "status": "SUCCESS"}]}
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}
