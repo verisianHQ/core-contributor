@@ -57,7 +57,7 @@ Core:
   Id: CDISC.SDTMIG.CG0002
   Status: Draft
   Version: '1'
-Description: Raise an error when --DUR exists and is populated in a dataset but is listed in the define-xml as not collected.
+Description: Raise an error when --DUR exists and is populated in the dataset but is not listed as 'Collected' in the define-xml document.
 Executability: Fully Executable
 Operations:
   - id: $DUR_COLLECTED
@@ -65,7 +65,7 @@ Operations:
     operator: define_variable_metadata
     attribute_name: 'define_variable_is_collected'
 Outcome:
-  Message: --DUR is populated but is listed as not collected; --DUR should only be used if collected on the CRF
+  Message: --DUR is populated in the dataset but is not listed as 'Collected' in the define-xml document.
   Output Variables:
     - --DUR
 Rule Type: Value Check against Define XML Variable
