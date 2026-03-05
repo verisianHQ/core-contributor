@@ -50,7 +50,7 @@ Check:
       operator: exists
     - name: --DUR
       operator: non_empty
-    - name: $DUR_COLLECTED
+    - name: $dur_collected
       operator: equal_to
       value: "False"
 Core:
@@ -60,7 +60,7 @@ Core:
 Description: Raise an error when --DUR exists and is populated in the dataset but is not listed as 'Collected' in the define-xml document.
 Executability: Fully Executable
 Operations:
-  - id: $DUR_COLLECTED
+  - id: $dur_collected
     name: --DUR
     operator: define_variable_metadata
     attribute_name: 'define_variable_is_collected'
