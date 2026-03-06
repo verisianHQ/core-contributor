@@ -173,7 +173,7 @@ _Note that if the rule or test data is wrong (and you're getting unexpected erro
   
 13) Name your PR using the format `<rule-id> <fix>` and add a brief description of your changes. Or if you are making a new rule with your PR, `<cg-id> create`.
     
-14) On the PR, reviewers are added automatically (review from 'Rules Team' and 'Engineers Team' are required). There is no need to assign yourself, you will be notified by default.
+14) On the PR, reviewers are added automatically (review from 'Rules Team' and 'Engineers Team' are required). Practically speaking, there is no need to assign yourself as you will be notified by default but it is 'good practice' to do it.
     
 15) You're done!
     - Keep an eye on the PR to make sure the automated checks pass, as well as to respond to any comments from reviewers.
