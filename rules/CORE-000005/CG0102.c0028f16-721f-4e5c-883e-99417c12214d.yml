@@ -1,6 +1,7 @@
 # Variable: EXDOSE
 # Condition: EXTRT = 'PLACEBO'
 # Rule: EXDOSE = 0
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -16,7 +17,7 @@ Authorities:
               - Cited Guidance: Doses of placebo should be represented by EXTRT =
                   "PLACEBO" and EXDOSE = "0" (indicating 0 mg of active ingredient
                   was taken or administered).
-                Document: SDTMIG v3.4
+                Document: IG v3.4
                 Item: Assumption 2b
                 Section: 6.1.3.1
       - Name: SDTMIG
@@ -54,6 +55,7 @@ Check:
     - name: EXTRT
       operator: equal_to
       value: PLACEBO
+      value_is_literal: true
     - name: EXDOSE
       operator: not_equal_to
       value: 0
@@ -61,10 +63,10 @@ Core:
   Id: CORE-000005
   Status: Published
   Version: '1'
-Description: When EXTRT is PLACEBO, EXDOSE must equal 0
+Description: Raise an error when EXTRT = PLACEBO, but EXDOSE is not equal to 0.
 Executability: Fully Executable
 Outcome:
-  Message: EXTRT is PLACEBO, but EXDOSE is not equal to 0.
+  Message: EXDOSE should be 0 when EXTRT = PLACEBO.
   Output Variables:
     - EXTRT
     - EXDOSE
