@@ -108,15 +108,15 @@ Core:
   Id: CORE-000008
   Status: Draft
   Version: '1'
-Description: When survival status is marked as Dead in SS dataset, death flag is
-  populated as Y in DM dataset
+Description: When survival status is completed as 'Dead' in the SS dataset then death flag should be
+  populated as 'Y' in the DM dataset for the corresponding subject.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: SS
 Outcome:
-  Message: DTHFL is not "Y", when SS.SSSTRESC equals "DEAD"
+  Message: DTHFL is not 'Y', when SSSTRESC equals 'DEAD'.
   Output Variables:
     - DTHFL
     - SSSTRESC
