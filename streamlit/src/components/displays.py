@@ -1,8 +1,9 @@
-import streamlit as st
 import pandas as pd
-
+import streamlit as st
+from datetime import datetime, timedelta
 from src.components.templates.pie_chart import make_pie
 from src.components.templates.bar_chart import make_horizontal_bar
+from src.components.templates.area_chart import make_stacked_area
 from src.components.utils import UtilityFunctions
 
 
@@ -111,3 +112,45 @@ class Displays:
             "Failure & Error Details",
             tooltip_cols=["Core-ID", "Case ID", "Test Type", "Status", "Issue"],
         )
+
+    def rule_validation_area_display(sot_rules, rules_dir):
+        validation_dates, unvalidated_current = UtilityFunctions.get_validation_data(rules_dir)
+        sot_total = len(sot_rules)
+        
+        total_in_repo = len(validation_dates) + unvalidated_current
+        missing_current = max(0, sot_total - total_in_repo)
+
+        if total_in_repo == 0:
+            st.info("No rule data found in the repository.")
+            return
+
+        date_counts = pd.Series(validation_dates).value_counts().sort_index()
+        
+        today = pd.to_datetime(datetime.now().strftime("%Y-%m-%d"))
+        if not date_counts.empty:
+            start_date = pd.to_datetime(date_counts.index[0])
+            if start_date == today:
+                start_date = today - timedelta(days=3)
+        else:
+            start_date = today - timedelta(days=7)
+
+        date_range = pd.date_range(start=start_date, end=today, freq='D')
+        
+        date_counts_dict = {pd.to_datetime(d): count for d, count in date_counts.items()}
+
+        data = []
+        cumulative_validated = 0
+
+        for current_date in date_range:
+            if current_date in date_counts_dict:
+                cumulative_validated += date_counts_dict[current_date]
+            
+            unvalidated_for_day = total_in_repo - cumulative_validated
+            
+            date_str = current_date.strftime("%Y-%m-%d")
+            data.append({"Date": date_str, "Category": "Validated Rules", "Count": cumulative_validated, "Order": 1})
+            data.append({"Date": date_str, "Category": "Unvalidated Rules", "Count": unvalidated_for_day, "Order": 2})
+            data.append({"Date": date_str, "Category": "Missing from Repo", "Count": missing_current, "Order": 3})
+
+        df = pd.DataFrame(data)
+        make_stacked_area(df, "Date", "Count", "Category", "Rule Validation Progress")
