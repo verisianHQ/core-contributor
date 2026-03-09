@@ -76,7 +76,7 @@ You'll need to run the following commands to get it working: \
 `git config --global user.email "<your-github-email>"` \
 `git config --global user.name "<your-github-username>"`_
 
-_Don't forget that whenever you type a command, that you are in the core-contributor folder that you created during the set-up steps._
+_Don't forget: whenever you type a command, you should be in the core-contributor folder that you created during the set-up steps._
 
 ## Command Line Process
 
@@ -129,7 +129,7 @@ _Step 4 is only applicable in case you want to create a rule for which the folde
         - Add 'Record' if it is a normal row error
         - 'Variable' if it is an error related to an entire column
         - 'Dataset' if it is an error related to a whole dataset (ie missing ae.xpt sheet or similar).
-      - **Row num**: Provide the row number (using tcm.xpthe row count of the excel sheet - note that any variable names will be row 1 and the first row starts from row 5 due to the metadata rows we always have in the sheets).
+      - **Row num**: Provide the row number (using the row count of the excel sheet - note that any variable names will be row 1 and the first row starts from row 5 due to the metadata rows we always have in the sheets).
       - **Variable**: Provide the variable name (found in the first row of the column) - with the row number this fully identifies the error cell.
       - **Error Value**:
         - Finally, copy the error value from the highlighted cell into the 'Error value'.
@@ -150,8 +150,8 @@ _Step 4 is only applicable in case you want to create a rule for which the folde
 8) Check your run results in the `results` folder.
    - Note that there is a separate `results` folder for each test case, which contains only the information relevant to that particular case.
    - There will be a `results.json` file, with the code-produced rule output, and a `results.txt` file, which will summarise your results in a more human-readable format. Feel free to examine both.
-   - Once you've run the rule, check to make sure there's nothing mentioned in the rule output - if the highlighting or validation in the validation sheet hasn't been done correctly, you will see notes about 'unvalidated highlights' and 'unhighlighted validations', and     you can correct them.
-   - Ideally you see no notes, and the field 'Fully validated' labelled as 'Yes'. 
+   - Once you've run the rule, check to make sure there's nothing mentioned in the rule output - if the highlighting or validation in the validation sheet hasn't been done correctly, you will see notes about 'unvalidated highlights' and 'unhighlighted validations', and you can correct them.
+   - Ideally you see no notes, and `"validated": true` in the results. 
 
 **_*IMPORTANT NOTE*_**\
 _Note that if the rule or test data is wrong (and you're getting unexpected errors or lacking errors you expect to see), you will almost certainly see some highlight/validation issues. In this case, obviously the priority is to correct the rule and test data before checking the highlights and validation!_
