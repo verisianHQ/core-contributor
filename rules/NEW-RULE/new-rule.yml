@@ -1,0 +1,79 @@
+# Variable: --DUR
+# Condition: --DUR ^= null
+# Rule: --DUR collected and not derived
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Used only if collected on the CRF and not derived.
+                Document: Model v2.0
+                Section: Timing
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0002
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Collected duration of an event, intervention, or finding
+                  represented in ISO 8601 character format. Used only if
+                  collected on the CRF and not derived.
+                Document: Model v1.4
+                Section: 2.2.5
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0002
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Collected duration of an event, intervention, or finding. Used
+                  only if collected on the CRF and not derived.  Format=ISO8601
+                Document: Model v1.7
+                Section: 2.2.5
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0002
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: --DUR
+      operator: exists
+    - name: --DUR
+      operator: non_empty
+    - name: $dur_collected
+      operator: equal_to
+      value: "False"
+Core:
+  Id: CDISC.SDTMIG.CG0002
+  Status: Draft
+  Version: '1'
+Description: Raise an error when --DUR exists and is populated in the dataset but is not listed as 'Collected' in the define-xml document.
+Executability: Fully Executable
+Operations:
+  - id: $dur_collected
+    name: --DUR
+    operator: define_variable_metadata
+    attribute_name: 'define_variable_is_collected'
+Outcome:
+  Message: --DUR is populated in the dataset but is not listed as 'Collected' in the define-xml document.
+  Output Variables:
+    - --DUR
+Rule Type: Value Check against Define XML Variable
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record
