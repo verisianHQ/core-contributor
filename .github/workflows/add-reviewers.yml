@@ -2,6 +2,7 @@ name: Add Reviewers
 
 on:
   pull_request:
+    types: [opened, ready_for_review]
 
 jobs:
   build:
@@ -10,7 +11,12 @@ jobs:
     - name: Add Reviewers
       uses: actions/github-script@v7
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        reviewers: verisianHQ/core-verisian,eljanssens
-        re-request-when-approved: true
-        re-request-when-changes-requested: true
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          await github.rest.pulls.requestReviewers({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            pull_number: context.issue.number,
+            reviewers: ['eljanssens'],
+            team_reviewers: ['core-verisian'] // Use just the team slug here
+          });
