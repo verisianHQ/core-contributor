@@ -20,6 +20,5 @@ jobs:
             owner: context.repo.owner,
             repo: context.repo.repo,
             pull_number: context.issue.number,
-            reviewers: ['eljanssens'],
-            // team_reviewers: ['verisianHQ/core-verisian']
+            reviewers: ['rich-verisian', 'YetiGonk', 'eljanssens'],
           });
