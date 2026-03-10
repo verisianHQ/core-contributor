@@ -20,7 +20,8 @@ _You may need your IT support team to install some of the following software for
 
 1) Create a free GitHub account: https://github.com/signup
 2) Install Git, following the instructions here: https://git-scm.com/install
-   - Keep all the default settings throughout the installer 
+   - When prompted, ensure you check the **"Add to PATH"** option (or select **"Git from the command line and also from 3rd-party software"**)
+   - Keep all other default settings throughout the installer
    - You DO NOT need to actually run Git as a program, so close any pop-ups that appear after the installation
 3) Install VSCode (***not*** VSCodeUser), following the instructions here: https://code.visualstudio.com/download
 4) Open VSCode and a terminal within it: 
@@ -31,6 +32,7 @@ _You may need your IT support team to install some of the following software for
      eg: `cd "C:\Users\rich\Documents\Core Contributor Folder"`
 6) Clone this repo into that directory by running the following command (**DO NOT RUN MORE THAN ONCE**): \
        `git clone --recurse-submodules https://github.com/verisianHQ/core-contributor.git` 
+   > **NOTE:** If you encounter `The term 'git' is not recognized as the name of a cmdlet, function, script file, or operable program.`, Git's installation directory has not been added to your system PATH. See [this StackOverflow answer](https://stackoverflow.com/questions/4492979/error-git-is-not-recognized-as-an-internal-or-external-command) for instructions on manually adding Git to your PATH.
    
    _***IMPORTANT NOTE***\
    Unless something goes badly wrong and you need to fully delete the entire directory, you should never need to run this command again._
