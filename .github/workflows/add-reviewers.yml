@@ -15,7 +15,7 @@ jobs:
       - name: Request Reviewers
         uses: actions/github-script@v7
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.ADMIN_PAT }} 
           script: |
             const prAuthor = context.payload.pull_request.user.login;
             
@@ -23,9 +23,9 @@ jobs:
             if (prAuthor !== 'eljanssens') {
               reviewersToAdd.push('eljanssens');
             }
-
+            
             const teamReviewersToAdd = ['core-verisian'];
-
+            
             await github.rest.pulls.requestReviewers({
               owner: context.repo.owner,
               repo: context.repo.repo,
