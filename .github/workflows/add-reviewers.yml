@@ -20,5 +20,5 @@ jobs:
             owner: context.repo.owner,
             repo: context.repo.repo,
             pull_number: context.issue.number,
-            reviewers: ['rich-verisian', 'YetiGonk', 'eljanssens'],
+            reviewers: ['eljanssens'],
           });
