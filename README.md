@@ -197,6 +197,7 @@ For further detail on any of these steps or git in general, see [supplementary g
 # Advanced Usage
 
 Below are some additional functionalities in the test script. To take advantage of this, you will need to run the test script directly, rather than using the run script.
+NOTE: You must still run all First-time Local Setup Steps from above before this.
 
 1) In VSCode terminal, in the core-contributor directory, activate the virtual environment by running one of the following: \
    - WINDOWS: `.\venv\Scripts\activate` \
