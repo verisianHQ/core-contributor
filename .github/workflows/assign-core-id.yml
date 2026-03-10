@@ -41,7 +41,7 @@ jobs:
       - name: Calculate next ID and rename files
         if: steps.check-dir.outputs.exists == 'true'
         run: |
-          python -c "
+          cat << 'EOF' > rename_script.py
           import os
           import re
           import shutil
@@ -70,6 +70,9 @@ jobs:
           
           new_core_id = f'CORE-{next_id:06d}'
           print(f'Assigning new ID: {new_core_id}')
+
+          with open(os.environ['GITHUB_ENV'], 'a') as env_file:
+              env_file.write(f"NEW_CORE_ID={new_core_id}\n")
 
           target_dir = os.path.join(rules_dir, new_core_id)
           os.rename(new_rule_dir, target_dir)
@@ -123,7 +126,9 @@ jobs:
                       new_path = os.path.join(root, new_name)
                       if old_path != new_path:
                           os.rename(old_path, new_path)
-          "
+          EOF
+          
+          python rename_script.py
 
       - name: Commit and Push Changes
         if: steps.check-dir.outputs.exists == 'true'
