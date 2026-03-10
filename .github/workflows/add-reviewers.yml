@@ -1,35 +1,16 @@
-name: Auto Add Reviewers
+name: Add Reviewers
 
 on:
   pull_request:
-    types: [opened, ready_for_review]
-
-permissions:
-  pull-requests: write
 
 jobs:
-  add-reviewers:
+  build:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.draft == false
     steps:
-      - name: Request Reviewers
-        uses: actions/github-script@v7
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const prAuthor = context.payload.pull_request.user.login;
-            
-            const reviewersToAdd = [];
-            if (prAuthor !== 'eljanssens') {
-              reviewersToAdd.push('eljanssens');
-            }
-
-            const teamReviewersToAdd = ['core-verisian'];
-
-            await github.rest.pulls.requestReviewers({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: context.issue.number,
-              reviewers: reviewersToAdd,
-              team_reviewers: teamReviewersToAdd
-            });
+    - name: Add Reviewers
+      uses: actions/github-script@v7
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        reviewers: verisianHQ/core-verisian,eljanssens
+        re-request-when-approved: true
+        re-request-when-changes-requested: true
