@@ -91,7 +91,7 @@ _Don't forget: whenever you type a command, you should be in the core-contributo
 2) Create a new branch to work on your changes, named as such: `<your-name>/<rule-id>/<change>` (eg `richard/CORE-000001/edit`): \
        `git branch <your-branch-name>`
    
-   _Note that only branch names according to following regex are allowed: **^[a-zA-Z]+/(CORE-[0-9]{6}|CG[0-9]{4})/(edit|create|delete)$**_
+   _Note that only branch names according to following regex are allowed: **^[a-zA-Z]+/(CORE-[0-9]{6}|(CG|FB|TRC)[0-9]{4}[a-z]{1})/(edit|create|delete)$**_
    
 3) Switch to your new branch: \
        `git checkout <your-branch-name>`
@@ -173,7 +173,7 @@ _Note that if the rule or test data is wrong (and you're getting unexpected erro
 12) On the PR page, make sure the information at the top is correct. It should be: \
        `base: main ← compare: <branch-name>`
   
-13) Name your PR using the format `<rule-id> <fix>` and add a brief description of your changes. Or if you are making a new rule with your PR, `<cg-id> create`.
+13) Name your PR using the format `<rule-id> <fix>` and add a brief description of your changes. Or if you are making a new rule with your PR, `<conformance-rule-id> create`.
     
 14) On the PR, add reviewers (both the 'Rules Team' and 'Engineers Team' are required) by clicking the cog in the top right corner, and add yourself as an assignee
     
