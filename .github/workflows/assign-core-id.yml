@@ -5,7 +5,7 @@ on:
     types: [closed]
     paths:
       - 'rules/NEW-RULE/**'
-    branches: [main] 
+    branches: [main, maximo/test-rule-id]
 
 jobs:
   assign-new-rule-id:
@@ -20,7 +20,7 @@ jobs:
         with:
           fetch-depth: 0
           ref: ${{ github.base_ref }}
-          token: ${{ secrets.ADMIN_PAT }}
+          token: ${{ secrets.assign-core-id }}
           
       - name: Check if NEW-RULE directory exists
         id: check-dir
@@ -44,7 +44,6 @@ jobs:
           cat << 'EOF' > rename_script.py
           import os
           import re
-          import shutil
 
           rules_dir = 'rules'
           new_rule_dir = os.path.join(rules_dir, 'NEW-RULE')
@@ -59,7 +58,7 @@ jobs:
                   num = int(match.group(1))
                   if num >= 2000:
                       existing_ids.append(num)
-          
+
           existing_ids.sort()
           next_id = 2000
           for num in existing_ids:
@@ -67,7 +66,7 @@ jobs:
                   next_id += 1
               elif num > next_id:
                   break
-          
+
           new_core_id = f'CORE-{next_id:06d}'
           print(f'Assigning new ID: {new_core_id}')
 
@@ -106,13 +105,14 @@ jobs:
                           elif in_core_block and stripped.startswith('Id:'):
                               indent = len(line) - len(line.lstrip())
                               line = f"{' '*indent}Id: {new_core_id}\n"
-                              in_core_block = False
-                          elif in_core_block and stripped != '' and not line.startswith((' ', '\t')):
+                          elif in_core_block and stripped.startswith('Status:'):
+                              indent = len(line) - len(line.lstrip())
+                              line = f"{' '*indent}Status: Published\n"
                               in_core_block = False
 
                           updated_lines.append(line)
 
-                      new_name = f"{new_core_id}_{','.join(unique_ids)}.yml" if unique_ids else file.replace('NEW-RULE', new_core_id)
+                      new_name = f"{new_core_id},{','.join(unique_ids)}.yml" if unique_ids else file.replace('NEW-RULE', new_core_id)
                       new_path = os.path.join(root, new_name)
                       
                       with open(new_path, 'w', encoding='utf-8') as f:
