@@ -29,5 +29,37 @@
         }
       ]
     }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "LBORNRHI": "30"
+      }
+    },
+    {
+      "value": {
+        "LBORNRHI": "POSITIVE"
+      }
+    }
+  ],
+  "unhighlighted_validations": [
+    {
+      "1": [
+        "Lb.xpt",
+        "record",
+        5,
+        "LBORNRHI",
+        "30"
+      ]
+    },
+    {
+      "2": [
+        "Lb.xpt",
+        "record",
+        6,
+        "LBORNRHI",
+        "POSITIVE"
+      ]
+    }
   ]
 }
