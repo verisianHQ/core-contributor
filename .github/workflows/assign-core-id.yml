@@ -7,10 +7,6 @@ on:
       - 'rules/NEW-RULE/**'
     branches: [main, maximo/test-rule-id]
 
-permissions:
-  contents: write
-  pull-requests: write
-
 jobs:
   assign-new-rule-id:
     if: github.event.pull_request.merged == true
@@ -145,6 +141,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "bot-chore: assign ${new_core_id} to merged NEW-RULE"
+            git commit -m "bot-chore: assign ${NEW_CORE_ID} to merged NEW-RULE"
             git push origin ${{ github.base_ref }}
           fi
