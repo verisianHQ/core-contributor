@@ -7,6 +7,10 @@ on:
       - 'rules/NEW-RULE/**'
     branches: [main, maximo/test-rule-id]
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   assign-new-rule-id:
     if: github.event.pull_request.merged == true
