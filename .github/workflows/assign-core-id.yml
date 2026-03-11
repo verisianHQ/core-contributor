@@ -29,7 +29,6 @@ jobs:
             echo "exists=true" >> $GITHUB_OUTPUT
           else
             echo "exists=false" >> $GITHUB_OUTPUT
-            echo "Directory rules/NEW-RULE not found. Skipping."
           fi
 
       - name: Set up Python 3.12
@@ -39,6 +38,7 @@ jobs:
           python-version: '3.12'
 
       - name: Calculate next ID and rename files
+        id: rename_step # Added ID here
         if: steps.check-dir.outputs.exists == 'true'
         run: |
           cat << 'EOF' > rename_script.py
@@ -70,8 +70,13 @@ jobs:
           new_core_id = f'CORE-{next_id:06d}'
           print(f'Assigning new ID: {new_core_id}')
 
-          with open(os.environ['GITHUB_ENV'], 'a') as env_file:
-              env_file.write(f"NEW_CORE_ID={new_core_id}\n")
+          if 'GITHUB_OUTPUT' in os.environ:
+              with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+                  f.write(f"NEW_CORE_ID={new_core_id}\n")
+          
+          if 'GITHUB_ENV' in os.environ:
+              with open(os.environ['GITHUB_ENV'], 'a') as f:
+                  f.write(f"NEW_CORE_ID={new_core_id}\n")
 
           target_dir = os.path.join(rules_dir, new_core_id)
           os.rename(new_rule_dir, target_dir)
@@ -141,6 +146,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "bot-chore: assign ${NEW_CORE_ID} to merged NEW-RULE"
+            git commit -m "bot-chore: assign ${{ steps.rename_step.outputs.NEW_CORE_ID }} to merged NEW-RULE"
             git push origin ${{ github.base_ref }}
           fi
