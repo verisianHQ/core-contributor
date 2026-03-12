@@ -1,0 +1,82 @@
+# Variable: --TERM
+# Condition: Custom domain present in study
+# Rule: --TERM present in custom events dataset
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Include the Topic variable from the identified general
+                  observation class (e.g., --TESTCD for Findings) in the SDTM
+                Document: IG v3.4
+                Item: Assumption 3b
+                Section: '2.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0464
+              Version: '2'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Include the Topic variable from the identified general
+                  observation class (e.g., --TESTCD for Findings)
+                Document: IG v3.2
+                Item: 3.b
+                Section: '2.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0464
+              Version: '2'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Include the topic variable from the identified general
+                  observation class (e.g., --TESTCD for Findings) in the SDTM.
+                Document: IG v3.3
+                Item: 3.b
+                Section: '2.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0464
+              Version: '2'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: $domain_is_custom
+      operator: equal_to
+      value: true
+    - name: define_dataset_class
+      operator: equal_to
+      value: EVENTS
+    - name: --TERM
+      operator: not_exists
+Core:
+  Id: CDISC.SDTMIG.CG0464
+  Status: Draft
+  Version: '1'
+Description: Trigger error when --TERM is not present in custom events dataset
+Executability: Fully Executable
+Operations:
+  - id: $domain_is_custom
+    operator: domain_is_custom
+Outcome:
+  Message: --TERM is not present in custom events dataset
+  Output Variables:
+    - domain
+    - define_dataset_variables
+Rule Type: Dataset Contents Check against Define XML
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset
