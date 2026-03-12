@@ -67,7 +67,7 @@ Operations:
   - id: $domain_is_custom
     operator: domain_is_custom
 Outcome:
-  Message: "--TERM is not present in custom events dataset"
+  Message: --TERM is not present in custom events dataset
   Output Variables:
     - domain
     - define_dataset_variables
