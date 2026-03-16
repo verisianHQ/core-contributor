@@ -86,7 +86,7 @@ _Don't forget: whenever you type a command, you should be in the core-contributo
 1) Make sure you are on the main branch and that both the main branch and the engine submodule are up to date. To do this, run the following three commands: \
        `git checkout main` \
        `git pull origin main` \
-       `git submodule update --remote`
+       `git submodule update --recursive`
    
 2) Create a new branch to work on your changes, named as such: `<your-name>/<rule-id>/<change>` (eg `richard/CORE-000001/edit`): \
        `git branch <your-branch-name>`
