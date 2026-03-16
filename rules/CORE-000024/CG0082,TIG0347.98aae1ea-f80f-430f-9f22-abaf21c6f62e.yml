@@ -1,6 +1,7 @@
 # Variable: --BDSYCD
 # Condition: --BODSYS ^= null
 # Rule: --BDSYCD ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -34,7 +35,7 @@ Authorities:
           - Citations:
               - Cited Guidance: Variable Qualifier of --BODSYS
                 Document: Model v1.4
-                Section: Events
+                Section: 2.2.2
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0082
