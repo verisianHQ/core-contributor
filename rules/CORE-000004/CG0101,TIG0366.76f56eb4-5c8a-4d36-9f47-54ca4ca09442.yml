@@ -119,6 +119,8 @@ Check:
         # which is the same as just LE 0
       operator: less_than_or_equal_to
       value: 0
+    - name: ECDOSE
+      operator: non_empty
 Core:
   Id: CORE-000004
   Status: Published
@@ -127,7 +129,7 @@ Description: When ECOCCUR indicates no dose, then ECDOSE needs to be null or >
   0; it cannot be used to indicate a dose wasn't taken.
 Executability: Fully Executable
 Outcome:
-  Message: ECOCCUR indicates dose was not given, ECDOSE needs to be blank or greater than 0
+  Message: ECOCCUR indicates dose was not given, ECDOSE needs to be blank or greater than 0.
   Output Variables:
     - ECDOSE
     - ECOCCUR
