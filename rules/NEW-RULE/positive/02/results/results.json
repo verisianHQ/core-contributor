@@ -1,0 +1,17 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "execution_error",
+      "execution_message": "SQL execution error",
+      "number_errors": 1,
+      "errors": [
+        {
+          "error": "PostgreSQL Error",
+          "message": "column or relation does not exist"
+        }
+      ]
+    }
+  ]
+}

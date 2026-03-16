@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "zz.xpt",
+      "domain": "ZZ",
+      "execution_status": "success",
+      "execution_message": "ZZTRT is not present in custom interventions dataset",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "define_dataset_variables": "STUDYID,DOMAIN,USUBJID,ZZSEQ",
+            "domain": "ZZ"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
