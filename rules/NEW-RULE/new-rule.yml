@@ -61,16 +61,17 @@ Core:
   Id: CDISC.SDTMIG.CG0464
   Status: Draft
   Version: '1'
-Description: Trigger error when --TERM is not present in custom events dataset
+Description: Raise an error when --TERM is not present in custom events dataset.
 Executability: Fully Executable
 Operations:
   - id: $domain_is_custom
     operator: domain_is_custom
 Outcome:
-  Message: --TERM is not present in custom events dataset
+  Message: --TERM is not present in custom events dataset.
   Output Variables:
     - domain
-    - define_dataset_variables
+    - --TERM
+    - define_dataset_class
 Rule Type: Dataset Contents Check against Define XML
 Scope:
   Classes:

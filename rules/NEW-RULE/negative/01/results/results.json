@@ -4,7 +4,7 @@
       "dataset": "zz.xpt",
       "domain": "ZZ",
       "execution_status": "success",
-      "execution_message": "ZZTERM is not present in custom events dataset",
+      "execution_message": "ZZTERM is not present in custom events dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,7 +12,8 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "define_dataset_variables": "STUDYID,DOMAIN,USUBJID,ZZSEQ",
+            "ZZTERM": "Not in dataset",
+            "define_dataset_class": "EVENTS",
             "domain": "ZZ"
           },
           "validated": true
