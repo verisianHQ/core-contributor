@@ -16,9 +16,12 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
+          const prAuthor = context.payload.pull_request.user.login;
+          const reviewerToAdd = prAuthor === 'eljanssens' ? 'pendingintent' : 'eljanssens';
+
           await github.rest.pulls.requestReviewers({
             owner: context.repo.owner,
             repo: context.repo.repo,
             pull_number: context.issue.number,
-            reviewers: ['eljanssens'],
+            reviewers: [reviewerToAdd],
           });
