@@ -73,6 +73,9 @@ Description: Raise an error when --BODSYS is not empty but --BDSYCD is empty or 
 Executability: Fully Executable
 Outcome:
   Message: --BODSYS is not empty but --BDSYCD is empty or not present in dataset.
+  Output Variables:
+    - --BODSYS
+    - --BDSYCD
 Rule Type: Record Data
 Scope:
   Classes:
