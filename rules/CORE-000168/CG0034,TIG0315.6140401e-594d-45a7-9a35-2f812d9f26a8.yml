@@ -95,7 +95,10 @@ Rule Type: Record Data
 Scope:
   Classes:
     Include:
-      - ALL
+      - EVENTS
+      - FINDINGS
+      - INTERVENTIONS
+      - SPECIAL PURPOSE
   Domains:
     Exclude:
       - SV
