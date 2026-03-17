@@ -60,16 +60,19 @@ Check:
   all:
     - name: --BODSYS
       operator: non_empty
-    - name: --BDSYCD
-      operator: empty
+    - any:
+        - name: --BDSYCD
+          operator: not_exists
+        - name: --BDSYCD
+          operator: empty
 Core:
   Id: CORE-000024
   Status: Published
   Version: '1'
-Description: Raise an error if --BODSYS is not empty, --BDSYCD is empty
+Description: Raise an error when --BODSYS is not empty but --BDSYCD is empty or not present in dataset.
 Executability: Fully Executable
 Outcome:
-  Message: --BODSYS is not empty and --BDSYCD is empty
+  Message: --BODSYS is not empty but --BDSYCD is empty or not present in dataset.
 Rule Type: Record Data
 Scope:
   Classes:
