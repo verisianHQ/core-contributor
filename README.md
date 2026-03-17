@@ -106,7 +106,7 @@ _Step 4 is only applicable in case you want to create a rule for which the folde
      - WINDOWS: venv\Scripts\activate
      - MAC: source venv/bin.activate
    - Then run the following command in your terminal: \
-       `python -m new-rule`
+       `python new-rule.py`
    - It will prompt you a few times.
      - If the new-rule folder already exists, it will check you definitely want to make a new one. (NOTE: If the empty folder is a leftover from a previous branch, which is likely, you SHOULD run the script and overwrite the folder to make a new one, as this will set-up the template properly for you).
      - You will also be prompted to enter the number of positive and negative test cases you want to create. Don't worry if you realise you need more later. You can easily add more manually.
