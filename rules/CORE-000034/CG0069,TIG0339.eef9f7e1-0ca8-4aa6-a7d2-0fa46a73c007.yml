@@ -71,22 +71,23 @@ Check:
     - name: DSDECOD
       operator: equal_to
       value: DEATH
+      value_is_literal: true
     - name: DSSTDTC
-      operator: not_equal_to
+      operator: date_not_equal_to
       value: DTHDTC
 Core:
   Id: CORE-000034
   Status: Published
   Version: '1'
-Description: Raise an error when DSSTDTC is not equal to DM.DTHDTC and DSDECOD
-  is equal to "DEATH"
+Description: Raise an error when DSDECOD equals 'DEATH' but DSSTDTC is not equal
+  to DTHDTC in DM dataset.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: DM
 Outcome:
-  Message: DSSTDTC does not equal DM.DTHDTC, when DSDECOD equals "DEATH".
+  Message: DSDECOD equals 'DEATH' but DSSTDTC is not equal to DTHDTC in DM dataset.
   Output Variables:
     - DSDECOD
     - DSSTDTC
