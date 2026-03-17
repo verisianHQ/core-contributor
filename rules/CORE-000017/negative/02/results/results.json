@@ -5,7 +5,7 @@
       "domain": "CO",
       "execution_status": "success",
       "execution_message": "When IDVARVAL is populated then RDOMAIN should also be populated.",
-      "number_errors": 2,
+      "number_errors": 4,
       "errors": [
         {
           "row": 3,
@@ -18,12 +18,32 @@
           "validated": true
         },
         {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "ZZ-23",
+          "value": {
+            "IDVAR": "EXGRPID",
+            "IDVARVAL": "COMBO1"
+          },
+          "validated": true
+        },
+        {
           "row": 5,
           "SEQ": 5,
           "USUBJID": "AB-99",
           "value": {
             "IDVAR": "VSGRPID",
             "IDVARVAL": "VS2"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "XX-11",
+          "value": {
+            "IDVAR": "VISITNUM",
+            "IDVARVAL": "4"
           },
           "validated": true
         }
