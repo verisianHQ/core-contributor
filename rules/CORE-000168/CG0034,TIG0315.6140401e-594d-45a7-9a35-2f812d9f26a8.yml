@@ -88,7 +88,7 @@ Operations:
     name: VISITNUM
     operator: distinct
 Outcome:
-  Message: VISITNUM is not among VISITNUM in SV domain.
+  Message: VISITNUM does not match the VISITNUM values in the SV dataset.
   Output Variables:
     - VISITNUM
 Rule Type: Record Data
