@@ -1,0 +1,210 @@
+name: Auto Review Rule Formatting
+
+on:
+  pull_request:
+    paths:
+      - 'rules/**'
+    types: [opened, synchronize, reopened]
+
+jobs:
+  validate-format:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Detect changed rules
+        id: changed-files
+        run: |
+          CHANGED_FILES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD | grep -E '^rules/.*\.ya?ml$' || true)
+          
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "No YAML files changed in rules directory."
+            echo "files=" >> $GITHUB_OUTPUT
+          else
+            echo "files=$(echo $CHANGED_FILES | tr '\n' ' ')" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Validate Rule Formatting
+        if: steps.changed-files.outputs.files != ''
+        run: |
+          cat << 'EOF' > validate_format.py
+          import sys
+          import os
+          import json
+
+          changed_files = sys.argv[1].split()
+          comments = []
+
+          for filepath in changed_files:
+              if not os.path.exists(filepath):
+                  continue
+
+              with open(filepath, 'r', encoding='utf-8') as f:
+                  lines = f.readlines()
+
+              core_end_line = 1
+              in_core = False
+              
+              desc_found = False
+              desc_line = -1
+              desc_error = None
+              
+              outcome_found = False
+              outcome_line = -1
+              outcome_error = None
+
+              for i, line in enumerate(lines):
+                  stripped = line.strip()
+                  indent = len(line) - len(line.lstrip('\t '))
+                  current_line_num = i + 1
+
+                  if stripped.startswith('Core:'):
+                      in_core = True
+                      core_end_line = current_line_num
+                  elif in_core:
+                      if indent > 0 or stripped.startswith('-'):
+                          core_end_line = current_line_num
+                      elif stripped != '' and not stripped.startswith('#'):
+                          in_core = False
+
+                  if stripped.startswith('Description:'):
+                      desc_found = True
+                      desc_line = current_line_num
+                      if indent > 0:
+                          desc_error = "Description field should not be indented."
+                      elif stripped in ['Description:', "Description: ''", 'Description: ""']:
+                          desc_error = "Description field cannot be empty."
+
+                  if stripped.startswith('Outcome:'):
+                      outcome_found = True
+                      outcome_line = current_line_num
+                      has_message = False
+                      has_output_vars = False
+                      output_vars_count = 0
+                      
+                      j = i + 1
+                      while j < len(lines):
+                          sub_line = lines[j]
+                          sub_stripped = sub_line.strip()
+                          sub_indent = len(sub_line) - len(sub_line.lstrip('\t '))
+
+                          if sub_stripped == '' or sub_stripped.startswith('#'):
+                              j += 1
+                              continue
+                          if sub_indent == 0:
+                              break # Reached next root level block
+
+                          if sub_stripped.startswith('Message:'):
+                              has_message = True
+                          elif sub_stripped.startswith('Output Variables:'):
+                              has_output_vars = True
+                              k = j + 1
+                              while k < len(lines):
+                                  item_line = lines[k]
+                                  item_stripped = item_line.strip()
+                                  item_indent = len(item_line) - len(item_line.lstrip('\t '))
+                                  
+                                  if item_stripped == '' or item_stripped.startswith('#'):
+                                      k += 1
+                                      continue
+                                  if item_indent <= sub_indent:
+                                      break
+                                  if item_stripped.startswith('-'):
+                                      output_vars_count += 1
+                                  k += 1
+                          j += 1
+                      
+                      if not has_message or not has_output_vars or output_vars_count == 0:
+                          outcome_error = "Outcome must be structured with 'Message' and 'Output Variables' (containing at least one list item)."
+
+              if not desc_found:
+                  comments.append({
+                      "path": filepath,
+                      "line": core_end_line,
+                      "body": "**Missing Description:** A 'Description:' field is required. Please add it here (unindented) without an empty value."
+                  })
+              elif desc_error:
+                  comments.append({
+                      "path": filepath,
+                      "line": desc_line,
+                      "body": f"**Description Error:** {desc_error}"
+                  })
+
+              # Compile Comments for Outcome
+              if not outcome_found:
+                  comments.append({
+                      "path": filepath,
+                      "line": core_end_line,
+                      "body": "**Missing Outcome:** An 'Outcome:' block is required here. It must contain 'Message' and 'Output Variables' with at least one item."
+                  })
+              elif outcome_error:
+                  comments.append({
+                      "path": filepath,
+                      "line": outcome_line,
+                      "body": f"**Outcome Error:** {outcome_error}"
+                  })
+
+          with open('pr_comments.json', 'w') as f:
+              json.dump(comments, f, indent=2)
+          EOF
+
+          python validate_format.py "${{ steps.changed-files.outputs.files }}"
+
+      - name: Post PR Comments
+        if: steps.changed-files.outputs.files != ''
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            if (!fs.existsSync('pr_comments.json')) return;
+            
+            const comments = JSON.parse(fs.readFileSync('pr_comments.json', 'utf8'));
+            if (comments.length === 0) {
+              console.log("All rule formats passed validation!");
+              return;
+            }
+
+            let fallbackBody = "### Rule Formatting Errors\n\nThe following rules have formatting issues that need to be addressed:\n\n";
+            let needsFallback = false;
+
+            for (const comment of comments) {
+              try {
+                await github.rest.pulls.createReviewComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: context.issue.number,
+                  commit_id: context.payload.pull_request.head.sha,
+                  path: comment.path,
+                  line: comment.line,
+                  body: comment.body
+                });
+              } catch (error) {
+                console.warn(`Could not post inline comment for ${comment.path} on line ${comment.line}. Adding to fallback general comment.`);
+                needsFallback = true;
+                fallbackBody += `- **${comment.path}** (Line ${comment.line}): ${comment.body}\n`;
+              }
+            }
+
+            if (needsFallback) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: fallbackBody
+              });
+            }
+
+            core.setFailed("Rule formatting validation failed. Please check the PR comments and correct the issues.");
