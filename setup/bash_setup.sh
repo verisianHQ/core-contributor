@@ -121,21 +121,21 @@ fi
 source venv/bin/activate
 
 echo "Installing dependencies..."
-$PYTHON_CMD -m pip install --upgrade pip --quiet
+pip install --upgrade pip --quiet
 
 if [ ! -f "engine/requirements.txt" ]; then
     echo "requirements.txt not found in engine directory"
     exit 1
 fi
 
-$PYTHON_CMD -m pip install -r engine/requirements.txt --quiet
+pip install -r engine/requirements.txt --quiet
 
 if [ ! -f "engine/requirements-dev.txt" ]; then
     echo "requirements-dev.txt not found in engine directory"
     exit 1
 fi
 
-$PYTHON_CMD -m pip install -r engine/requirements-dev.txt --quiet
+pip install -r engine/requirements-dev.txt --quiet
 
 VENV_PYTHON=$(which python)
 
