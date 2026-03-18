@@ -32,7 +32,7 @@ install_python_mac() {
         echo "Homebrew not found. Installing Homebrew first..."
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     fi
-    
+
     brew install python@3.12
     echo "Python 3.12 installed successfully"
 }
@@ -129,6 +129,8 @@ if [ ! -d "venv" ]; then
     $PYTHON_CMD -m venv venv
 fi
 
+source venv/bin/activate
+
 echo "Installing dependencies..."
 pip install --upgrade pip --quiet
 
@@ -140,8 +142,6 @@ else
     echo "Installing standard requirements..."
     pip install -r engine/requirements-dev.txt --quiet
 fi
-
-source venv/bin/activate
 
 VENV_PYTHON=$(which python)
 
