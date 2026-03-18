@@ -141,7 +141,7 @@ fi
 
 if [ "$INSTALL_BINARY" = true ]; then
     echo "Installing with psycopg2-binary swap..."
-    sed 's/^psycopg2==/psycopg2-binary==/g engine/requirements.txt | pip install --quiet -r /dev/stdin
+    sed 's/^psycopg2==/psycopg2-binary==/g' engine/requirements.txt | pip install --quiet -r /dev/stdin
 else
     echo "Installing standard requirements..."
     pip install -r engine/requirements.txt --quiet
