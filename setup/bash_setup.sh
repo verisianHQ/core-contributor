@@ -32,7 +32,7 @@ install_python_mac() {
         echo "Homebrew not found. Installing Homebrew first..."
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     fi
-    
+
     brew install python@3.12
     echo "Python 3.12 installed successfully"
 }
@@ -121,7 +121,7 @@ fi
 
 echo "Setting up virtual environment..."
 
-if [ -d "venv" ] && [ ! -f "venv/bin/activate" ]; then
+if [ -d "venv" ]; then
     rm -rf venv
 fi
 
@@ -134,25 +134,14 @@ source venv/bin/activate
 echo "Installing dependencies..."
 pip install --upgrade pip --quiet
 
-if [ ! -f "engine/requirements.txt" ]; then
-    echo "requirements.txt not found in engine directory"
-    exit 1
-fi
-
 if [ "$INSTALL_BINARY" = true ]; then
     echo "Installing with psycopg2-binary swap..."
     sed 's/^psycopg2==/psycopg2-binary==/g' engine/requirements.txt | pip install --quiet -r /dev/stdin
+    grep -v "^-r requirements.txt" engine/requirements-dev.txt | pip install --quiet -r /dev/stdin
 else
     echo "Installing standard requirements..."
-    pip install -r engine/requirements.txt --quiet
+    pip install -r engine/requirements-dev.txt --quiet
 fi
-
-if [ ! -f "engine/requirements-dev.txt" ]; then
-    echo "requirements-dev.txt not found in engine directory"
-    exit 1
-fi
-
-pip install -r engine/requirements-dev.txt --quiet
 
 VENV_PYTHON=$(which python)
 
