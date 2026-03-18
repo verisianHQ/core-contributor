@@ -103,8 +103,8 @@ _Step 4 is only applicable in case you want to create a rule for which the folde
 
 4) Initialize your new rule folder structure:
    - In the base directory of the project, activate the virtual environment by running:
-     - WINDOWS: venv\Scripts\activate
-     - MAC: source venv/bin.activate
+     - WINDOWS: `venv\Scripts\activate`
+     - MAC: `source venv/bin/activate`
    - Then run the following command in your terminal: \
        `python new-rule.py`
    - It will prompt you a few times.
@@ -199,8 +199,8 @@ For further detail on any of these steps or git in general, see [supplementary g
 Below are some additional functionalities in the test script. To take advantage of this, you will need to run the test script directly, rather than using the run script.
 NOTE: You must still run all First-time Local Setup Steps from above before this.
 
-1) In VSCode terminal, in the core-contributor directory, activate the virtual environment by running one of the following: \
-   - WINDOWS: `.\venv\Scripts\activate` \
+1) In VSCode terminal, in the core-contributor directory, activate the virtual environment by running one of the following:
+   - WINDOWS: `.\venv\Scripts\activate`
    - MAC: `source ./venv/bin/activate`
    
 2) You can now run the test script directly with various options:
@@ -238,7 +238,7 @@ Otherwise, create a new branch from main which includes your changes and then re
 `git checkout -b <new-branch-name>` \
 `git checkout main` \
 `git reset --hard HEAD~1` \
-`git checkout <new-branch-name>` \
+`git checkout <new-branch-name>`
 
 ***IMPORTANT NOTE*** - if you've committed more than once on main, you'll need to replace `HEAD~1` with `HEAD~n` where `n` is the number of commits you've made \
 <br />
