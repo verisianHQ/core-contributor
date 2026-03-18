@@ -2,6 +2,17 @@
 # Contributor setup script for Mac/Linux
 set -e
 
+INSTALL_BINARY=false
+
+# Parse flags to set INSTALL_BINARY=true if -b or --binary passed
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+        -b|--binary) INSTALL_BINARY=true ;;
+        *) echo "Unknown parameter passed: $1"; exit 1 ;;
+    esac
+    shift
+done
+
 command_exists() {
     command -v "$1" >/dev/null 2>&1
 }
@@ -128,7 +139,13 @@ if [ ! -f "engine/requirements.txt" ]; then
     exit 1
 fi
 
-pip install -r engine/requirements.txt --quiet
+if [ "$INSTALL_BINARY" = true ]; then
+    echo "Installing with psycopg2-binary swap..."
+    sed 's/^psycopg2==/psycopg2-binary==/g engine/requirements.txt | pip install --quiet -r /dev/stdin
+else
+    echo "Installing standard requirements..."
+    pip install -r engine/requirements.txt --quiet
+fi
 
 if [ ! -f "engine/requirements-dev.txt" ]; then
     echo "requirements-dev.txt not found in engine directory"
