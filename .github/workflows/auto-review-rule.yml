@@ -67,20 +67,42 @@ jobs:
           def get_line_number(filepath, error_path):
               if not error_path:
                   return 1
-              
-              search_key = next((p for p in reversed(error_path) if isinstance(p, str)), None)
-              if not search_key:
-                  return 1
-                  
               try:
                   with open(filepath, 'r', encoding='utf-8') as f:
-                      for i, line in enumerate(f):
-                          if f"{search_key}:" in line or f"- {search_key}" in line:
-                              return i + 1
+                      lines = f.readlines()
+                  current_line = 0
+                  for step_idx, path_element in enumerate(error_path):
+                      found = False
+                      if isinstance(path_element, str):
+                          search_key = f"{path_element}:"
+                          if current_line < len(lines) and search_key in lines[current_line].strip():
+                              found = True
+                          else:
+                              while current_line < len(lines):
+                                  stripped = lines[current_line].strip()
+                                  if stripped.startswith(search_key) or f"- {search_key}" in stripped:
+                                      found = True
+                                      break
+                                  current_line += 1
+                      elif isinstance(path_element, int):
+                          if step_idx > 0 and isinstance(error_path[step_idx-1], str):
+                              current_line += 1
+                          list_idx = 0
+                          while current_line < len(lines):
+                              stripped = lines[current_line].strip()
+                              if stripped.startswith('-'):
+                                  if list_idx == path_element:
+                                      found = True
+                                      break
+                                  list_idx += 1
+                              current_line += 1
+                      if not found:
+                          break
+                  if current_line >= len(lines):
+                      current_line = len(lines) - 1
+                  return current_line + 1
               except Exception:
-                  pass
-              
-              return 1
+                  return 1
 
           for filepath in changed_files:
               if not os.path.exists(filepath):
