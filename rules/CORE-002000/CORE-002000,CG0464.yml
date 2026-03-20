@@ -58,8 +58,8 @@ Check:
     - name: --TERM
       operator: not_exists
 Core:
-  Id: CDISC.SDTMIG.CG0464
-  Status: Draft
+  Id: CORE-002000
+  Status: Published
   Version: '1'
 Description: Raise an error when --TERM is not present in custom events dataset.
 Executability: Fully Executable
