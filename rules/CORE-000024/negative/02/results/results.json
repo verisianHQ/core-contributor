@@ -8,32 +8,32 @@
       "number_errors": 3,
       "errors": [
         {
-          "row": 2,
-          "SEQ": 2,
-          "USUBJID": "123101",
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "123201",
           "value": {
-            "AEBDSYCD": null,
-            "AEBODSYS": "Musculoskeletal and connective tissue disorders"
-          },
-          "validated": true
-        },
-        {
-          "row": 4,
-          "SEQ": 4,
-          "USUBJID": "123101",
-          "value": {
-            "AEBDSYCD": null,
+            "AEBDSYCD": "Not in dataset",
             "AEBODSYS": "Nervous system disorders"
           },
           "validated": true
         },
         {
-          "row": 6,
-          "SEQ": 6,
-          "USUBJID": "123101",
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123201",
           "value": {
-            "AEBDSYCD": null,
-            "AEBODSYS": "Vascular disorders"
+            "AEBDSYCD": "Not in dataset",
+            "AEBODSYS": "Gastrointestinal disorders"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "123201",
+          "value": {
+            "AEBDSYCD": "Not in dataset",
+            "AEBODSYS": "Skin and subcutaneous tissue disorders"
           },
           "validated": true
         }
