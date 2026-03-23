@@ -1,6 +1,7 @@
 # Variable: --ENRTPT
 # Condition: --ENTPT present in dataset
 # Rule: --ENRTPT present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -75,10 +76,10 @@ Core:
   Id: CORE-000084
   Status: Published
   Version: '1'
-Description: Raise an error when --ENTPT exists in a dataset and --ENRTPT does not exist.
+Description: Raise an error when --ENTPT is present in dataset and --ENRTPT is not present in dataset.
 Executability: Fully Executable
 Outcome:
-  Message: --ENTPT exists in a dataset, but --ENRTPT does not exist.
+  Message: --ENTPT is present in dataset, but --ENRTPT is not present in dataset.
   Output Variables:
     - --ENTPT
 Rule Type: Record Data
