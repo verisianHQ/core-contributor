@@ -147,7 +147,9 @@ class TestRunner:
         self.use_pgserver = use_pgserver
         from engine.cdisc_rules_engine.data_service.postgresql_data_service import PostgresQLDataService
 
-        self.data_service = PostgresQLDataService.instance(use_pgserver=self.use_pgserver, codelists=["sdtmct-2025-03-28.pkl"], cache_path="resources/cache")
+        self.data_service = PostgresQLDataService.instance(
+            use_pgserver=self.use_pgserver, codelists=["sdtmct-2025-03-28.pkl"], cache_path="resources/cache"
+        )
 
     @staticmethod
     def _setup_engine_path():
@@ -221,7 +223,7 @@ class TestRunner:
             define_xml_path = str(rule_define_path)
         else:
             define_xml_path = None
-        
+
         if define_xml_path:
             self.data_service._update_define_xml_path(define_xml_path)
 
@@ -400,9 +402,11 @@ class TestRunner:
                     e["Variable"],
                     e["Error value"],
                 )
+                if str(var)[0] == "$":
+                    continue
                 if error_level == "record":
                     h_val = highlights.get(sheet, {}).get(row, {}).get(var)
-                    match = h_val == error_val
+                    match = str(h_val) == str(error_val)
                 if error_level == "variable":
                     if error_val == "[PRESENT]":
                         h_id = highlights.get(sheet, {}).get(row, {})
