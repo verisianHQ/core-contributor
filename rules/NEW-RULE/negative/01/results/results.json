@@ -1,0 +1,46 @@
+{
+  "datasets": [
+    {
+      "dataset": "sv.xpt",
+      "domain": "SV",
+      "execution_status": "success",
+      "execution_message": "Variable role specified in the define-xml does not match the variable role in the IG (for domains) or in the model (for custom domains).",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_variable_name": "SVUPDES",
+            "define_variable_role": "Synonym Qualifier",
+            "library_variable_name": "SVUPDES",
+            "library_variable_role": "Record Qualifier"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "xd.xpt",
+      "domain": "XD",
+      "execution_status": "success",
+      "execution_message": "Variable role specified in the define-xml does not match the variable role in the IG (for domains) or in the model (for custom domains).",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 87,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_variable_name": "XDDY",
+            "define_variable_role": "Mismatched Role",
+            "library_variable_name": "XDDY",
+            "library_variable_role": "Timing"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
+}

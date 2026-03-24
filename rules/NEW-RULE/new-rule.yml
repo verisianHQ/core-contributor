@@ -1,0 +1,83 @@
+# Variable: GEN
+# Condition: 
+# Rule: Metadata attribute of Variable Role = IG Role for domains in IG, Metadata attribute of Variable Role = Model Role for custom domains
+
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Each variable can be classified according to its Role. A Role
+                  determines the type of information conveyed by the variable
+                  about each distinct observation and how it can be used.
+                  Variables can be classified into five major roles.
+                Document: IG v3.4
+                Section: '2.1'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0010
+              Version: '2'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: IG v3.2[3.1][Since these roles are predefined for all standard
+                  domains that follow the general observation classes]|Model
+                  v1.4[2][Each variable . . . can be classified according to its
+                  Role]
+                Document: IG v3.2|Model v1.4
+                Section: IG v3.2[3.1]|Model v1.4[2]
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0010
+              Version: '2'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Each variable can be classified according to its Role. A Role
+                  determines the type of information conveyed by the variable
+                  about each distinct observation and how it can be used.
+                  Variables can be classified into five major roles.
+                Document: IG v3.3
+                Section: '2.1'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0010
+              Version: '2'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: define_variable_name
+      operator: non_empty
+    - name: define_variable_role
+      operator: not_equal_to
+      value: library_variable_role
+Core:
+  Id: CG0010
+  Status: Published
+  Version: '1'
+Description: Raise an error when the metadata attribute of variable role does
+  not match the IG role for domain in IG, or model role (for custom domains)
+Executability: Fully Executable
+Outcome:
+  Message: Variable role specified in the define-xml does not match the variable
+    role in the IG (for domains) or in the model (for custom domains).
+  Output Variables:
+    - library_variable_name
+    - library_variable_role
+    - define_variable_name
+    - define_variable_role
+Rule Type: Define Item Metadata Check against Library Metadata
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record
