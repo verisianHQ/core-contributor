@@ -152,7 +152,7 @@ if !errorlevel! neq 0 (
 
 echo.
 echo Installing dependencies...
-python -m pip install --upgrade pip --quiet
+pip install --upgrade pip setuptools wheel --quiet
 
 if not exist "engine/requirements.txt" (
     echo requirements.txt not found in engine directory
