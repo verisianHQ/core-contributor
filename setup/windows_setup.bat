@@ -150,7 +150,7 @@ if !errorlevel! neq 0 (
 
 echo.
 echo Installing dependencies...
-pip install --upgrade pip setuptools wheel --quiet
+python -m pip install --upgrade pip setuptools wheel --quiet
 
 if not exist "engine/requirements.txt" (
     echo requirements.txt not found in engine directory
@@ -159,7 +159,7 @@ if not exist "engine/requirements.txt" (
     exit /b 1
 )
 
-pip install -r engine/requirements.txt --quiet
+python -m pip install -r engine/requirements.txt --quiet
 if !errorlevel! neq 0 (
     echo Failed to install dependencies
     cd ..
@@ -174,7 +174,7 @@ if not exist "engine/requirements-dev.txt" (
     exit /b 1
 )
 
-pip install -r engine/requirements-dev.txt --quiet
+python -m pip install -r engine/requirements-dev.txt --quiet
 if !errorlevel! neq 0 (
     echo Failed to install dependencies
     cd ..
