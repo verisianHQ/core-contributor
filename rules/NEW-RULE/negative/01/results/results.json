@@ -1,0 +1,30 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMTRT is not 'Collected' on CRF or 'Assigned' according to the Define-XML document.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "define_variable_origin_type": "Protocol",
+            "variable_name": "CMTRT"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "variable_name": "CMTRT"
+      }
+    }
+  ]
+}
