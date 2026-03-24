@@ -1,0 +1,55 @@
+{
+  "datasets": [
+    {
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "execution_status": "success",
+      "execution_message": "CETERM or CEDECOD is 'DEATH' in CE dataset, but DTHFL in DM dataset is not 'Y'.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CEDECOD": "LAST CONTACT",
+            "CETERM": "DEATH",
+            "DM.DTHFL": "N"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CEDECOD": "DEATH",
+            "CETERM": "PROGRESSIVE DISEASE",
+            "DM.DTHFL": "N"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "DTHFL": "N"
+      }
+    },
+    {
+      "value": {
+        "DTHFL": "N"
+      }
+    }
+  ]
+}
