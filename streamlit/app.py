@@ -16,28 +16,23 @@ def main():
     st.markdown("---")
     st.subheader("Rule Status")
 
-    col1, col2, col3 = st.columns(3)
-
+    col1, col2 = st.columns(2)
     with col1:
-        dsp.sdtm_rule_status_display(data.completed_rules, data.sdtm_rules)
+        dsp.sdtm_rule_status_display(data.repo_rules, data.sdtm_rules)
 
     with col2:
-        dsp.rule_comment_verification_display(data.verified_data)
-
-    with col3:
         if not data.core_status_data.empty:
             dsp.core_rule_status_display(data.core_status_data)
         else:
             st.info("No YAML status data found.")
 
-    col4, col5 = st.columns(2)
+    col3, col4 = st.columns(2)
+    with col3:
+        dsp.rule_comment_verification_display(data.verified_data)
 
     with col4:
-        dsp.conformance_rules_verification_display(data.sot_rules, data.els_verified_data)
-
-    with col5:
-        if not data.cg_data.empty:
-            dsp.conformance_rule_completion_display(data.cg_data)
+        if not data.cg_data.empty or not data.fda_data.empty:
+            dsp.conformance_rule_completion_display(data.cg_data, data.fda_data)
         else:
             st.info("No Excel data available for Rule ID tracking.")
 
