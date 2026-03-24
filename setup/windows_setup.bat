@@ -122,10 +122,8 @@ echo.
 echo Setting up virtual environment...
 
 if exist "venv\" (
-    if not exist "venv\Scripts\activate.bat" (
-        echo Removing broken virtual environment...
-        rmdir /s /q venv
-    )
+    echo Removing existing virtual environment...
+    rmdir /s /q venv
 )
 
 if not exist "venv\" (
