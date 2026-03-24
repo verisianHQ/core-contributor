@@ -5,7 +5,7 @@ setlocal enabledelayedexpansion
 echo CDISC Rules Engine - Contributor Setup
 echo.
 
-REM Check for Python 3.12+
+REM Check for Python 3.12.x
 set "PYTHON_CMD="
 set "REQUIRED_VERSION=3.12"
 
@@ -21,7 +21,7 @@ where python3 >nul 2>&1
 if !errorlevel! equ 0 (
     for /f "tokens=2" %%v in ('python3 --version 2^>^&1') do set "PYTHON_VERSION=%%v"
     for /f "delims=. tokens=1,2" %%a in ("!PYTHON_VERSION!") do (
-        if %%a GEQ 3 if %%b GEQ 12 (
+        if %%a EQU 3 if %%b EQU 12 (
             echo Found python3: !PYTHON_VERSION!
             set "PYTHON_CMD=python3"
             goto :python_found
@@ -33,7 +33,7 @@ where python >nul 2>&1
 if !errorlevel! equ 0 (
     for /f "tokens=2" %%v in ('python --version 2^>^&1') do set "PYTHON_VERSION=%%v"
     for /f "delims=. tokens=1,2" %%a in ("!PYTHON_VERSION!") do (
-        if %%a GEQ 3 if %%b GEQ 12 (
+        if %%a EQU 3 if %%b EQU 12 (
             echo Found python: !PYTHON_VERSION!
             set "PYTHON_CMD=python"
             goto :python_found
