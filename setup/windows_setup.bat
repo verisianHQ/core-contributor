@@ -51,10 +51,7 @@ if !errorlevel! equ 0 (
     winget install Python.Python.3.12 --silent --accept-source-agreements --accept-package-agreements
     if !errorlevel! equ 0 (
         echo Python 3.12 installed successfully
-        echo Refreshing environment...
-        call refreshenv >nul 2>&1
-        set "PYTHON_CMD=python3.12"
-        goto :python_found
+        goto :refresh_and_verify
     )
 )
 
@@ -65,10 +62,7 @@ if !errorlevel! equ 0 (
     choco install python312 -y
     if !errorlevel! equ 0 (
         echo Python 3.12 installed successfully
-        echo Refreshing environment...
-        call refreshenv >nul 2>&1
-        set "PYTHON_CMD=python3.12"
-        goto :python_found
+        goto :refresh_and_verify
     )
 )
 
@@ -96,6 +90,7 @@ if !errorlevel! neq 0 (
 del "%PYTHON_INSTALLER%"
 echo Python 3.12 installed successfully
 
+:refresh_and_verify
 REM Refresh PATH
 for /f "tokens=2*" %%a in ('reg query "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v Path') do set "NEW_PATH=%%b"
 set "PATH=%NEW_PATH%"
