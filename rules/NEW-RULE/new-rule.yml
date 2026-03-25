@@ -53,12 +53,16 @@ Check:
       value: CMTRT
     # 2026-03-10: CROG decision: also "Assigned" needs to be taken into account
     # i.e. raise an issue when "Source" is NOT "Collected" and is NOT "Assigned"
-    - name: define_variable_origin_type
-      operator: not_equal_to
-      value: Collected
-    - name: define_variable_origin_type
-      operator: not_equal_to
-      value: Assigned
+    - any:
+      - all:
+        - name: define_variable_is_collected
+          operator: equal_to
+          value: false
+        - name: define_variable_origin_type
+          operator: not_equal_to
+          value: 'Assigned'
+      - name: define_variable_origin_type
+        operator: empty
 Core:
   Id: CDISC.SDTMIG.CG0097
   Status: Draft
