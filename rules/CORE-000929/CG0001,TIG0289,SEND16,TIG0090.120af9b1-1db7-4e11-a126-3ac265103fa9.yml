@@ -1,3 +1,7 @@
+# Variable: DOMAIN
+# Condition: Not custom domain
+# Rule: DOMAIN = valid Domain Code published by CDISC
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -6,8 +10,8 @@ Authorities:
           - Citations:
               - Cited Guidance: Using SDTM-specified standard domain names and prefixes where
                   applicable.
-                Document: SDTMIG v3.4
-                Section: 3.2.2
+                Document: IG v3.4
+                Section: '3.2.2'
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0001
@@ -23,7 +27,7 @@ Authorities:
                   CDISC, then the sponsor may select the unique two-character
                   domain code to be used consistently throughout the submission.
                 Document: IG v3.2
-                Item: 3.d
+                Item: '3.d'
                 Section: '2.6'
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -44,7 +48,7 @@ Authorities:
                   The sponsor-selected, two-character domain code should be used
                   consistently throughout the submission.
                 Document: IG v3.3
-                Item: 3.e
+                Item: '3.e'
                 Section: '2.6'
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -61,7 +65,7 @@ Authorities:
                   specifications are only used when data are different in nature
                   and are not in scope for domains in this guide.
                 Document: TIG 1.0
-                Item: Table 2 Num 2
+                Item: 'Table 2 Num 2'
                 Section: '2.5'
             Origin: TIG Conformance Rules
             Rule Identifier:
@@ -76,7 +80,7 @@ Authorities:
               - Cited Guidance: See SEND CT for a list of standard and reserved domain codes
                 Document: SENDIG v3.0
                 Item: Text
-                Section: 4.1.4
+                Section: '4.1.4'
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND16
@@ -89,7 +93,7 @@ Authorities:
               - Cited Guidance: See SEND CT for a list of standard and reserved domain codes
                 Document: SENDIG v3.1
                 Item: Text
-                Section: 4.1.4
+                Section: '4.1.4'
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND16
@@ -102,7 +106,7 @@ Authorities:
               - Cited Guidance: See SEND CT for a list of standard and reserved domain codes
                 Document: SENDIG v3.1.1
                 Item: Text
-                Section: 4.1.4
+                Section: '4.1.4'
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND16
@@ -115,7 +119,7 @@ Authorities:
               - Cited Guidance: See SEND CT for a list of standard and reserved domain codes
                 Document: SENDIG v3.1
                 Item: Text
-                Section: 4.1.4
+                Section: '4.1.4'
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND16
@@ -128,7 +132,7 @@ Authorities:
               - Cited Guidance: See SEND CT for a list of standard and reserved domain codes
                 Document: SENDIG v3.1.1
                 Item: Text
-                Section: 4.1.1
+                Section: '4.1.1'
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND16
@@ -141,7 +145,7 @@ Authorities:
               - Cited Guidance: See SEND CT for a list of standard and reserved domain codes
                 Document: SENDIG v3.1.1
                 Item: Text
-                Section: 4.1.1
+                Section: '4.1.1'
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND16
@@ -156,7 +160,7 @@ Authorities:
                   when applicable.
                 Document: TIG v1.0
                 Item: Standards for Tabulation
-                Section: 2.3.
+                Section: '2.3.'
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0090
@@ -164,9 +168,6 @@ Authorities:
             Version: '1.0'
         Substandard: SEND
         Version: '1.0'
-# Variable: DOMAIN
-# Condition: Not custom domain
-# Rule: DOMAIN = valid Domain Code published by CDISC
 Check:
   all:
     - name: $domain_is_custom
@@ -197,7 +198,7 @@ Operations:
 Outcome:
   Message: DOMAIN Code is not a published DOMAIN Code in CDISC Controlled Terminology.
   Output Variables:
-    - $domain_lib_ccode
+    - DOMAIN
     - define_variable_codelist_coded_codes
 Rule Type: Define Item Metadata Check against Library Metadata
 Scope:
@@ -208,4 +209,4 @@ Scope:
     Include:
       - ALL
   Use Case: INDH, PROD, NONCLIN
-Sensitivity: Record
+Sensitivity: Dataset
