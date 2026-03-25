@@ -1,3 +1,6 @@
+import streamlit as st
+import pandas as pd
+
 from src.components.templates.pie_chart import make_pie
 from src.components.templates.bar_chart import make_horizontal_bar
 from src.components.utils import UtilityFunctions
@@ -5,58 +8,54 @@ from src.components.utils import UtilityFunctions
 
 class Displays:
 
-    def sdtm_rule_status_display(completed_rules, sdtm_rules):
-        completed_core_ids = set(completed_rules["Core-ID"])
-        sdtm_core_ids = set(sdtm_rules["Core-ID"])
-        sdtm_not_completed = sdtm_core_ids - completed_core_ids
+    @staticmethod
+    def sdtm_rule_status_display(repo_rules, sdtm_rules):
+        repo_core_ids = set(repo_rules["Core-ID"])
+        
+        sdtm_core_ids = set(
+            x.strip() for ids in sdtm_rules["CORE-ID"].dropna() 
+            for x in str(ids).split(";") if x.strip() and x.strip() != "/"
+        )
+        
+        sdtm_not_completed = sdtm_core_ids - repo_core_ids
 
-        pie_sizes = [len(completed_core_ids), len(sdtm_not_completed)]
+        pie_sizes = [len(repo_core_ids), len(sdtm_not_completed)]
         comp_perc, non_comp_perc = UtilityFunctions.perc_calc(pie_sizes[0], pie_sizes[1])
         pie_labels = [
-            f"Implemented ({comp_perc:.0%})",
-            f"Missing ({non_comp_perc:.0%})",
+            f"Implemented ({comp_perc:.1%})",
+            f"Missing ({non_comp_perc:.1%})",
         ]
         make_pie(pie_labels, pie_sizes, "SDTM Rule Implementation Status", color_scheme="set1")
 
+    @staticmethod
     def rule_comment_verification_display(verified_data):
-        labels = verified_data.index.tolist()
-        values = verified_data.values.tolist()
+        counts = pd.Series(list(verified_data.values())).value_counts()
+        labels = counts.index.tolist()
+        values = counts.values.tolist()
 
         total = sum(values)
-        formatted_labels = [f"{label} ({(val/total):.0%})" for label, val in zip(labels, values)]
+        formatted_labels = [f"{label} ({(val/total):.1%})" for label, val in zip(labels, values)]
 
         make_pie(formatted_labels, values, "Rule Comment Verification", color_scheme="set2")
+        with st.expander("View Conformance Rules Verification Status"):
+            df = pd.DataFrame(list(verified_data.items()), columns=["Core-ID", "Verification Status"])
+            st.dataframe(df, width="stretch", hide_index=False)
 
+
+    @staticmethod
     def core_rule_status_display(core_status_data):
         labels = core_status_data.index.tolist()
         values = core_status_data.values.tolist()
 
         total = sum(values)
-        formatted_labels = [f"{label} ({(val/total):.0%})" for label, val in zip(labels, values)]
+        formatted_labels = [f"{label} ({(val/total):.1%})" for label, val in zip(labels, values)]
 
         make_pie(formatted_labels, values, "Core Rule Status", color_scheme="set3")
 
-    def conformance_rules_verification_display(completed_rules, els_data):
-        import streamlit as st
-        import pandas as pd
-
-        # Els data - just set col 1
-        # Henning data, just set col 2? splitting on ; and exploding
-        els_verified_cgs = set(els_data["Rule ID"])
-        all_cgs = set(x.strip() for ids in completed_rules["conformance_id"].dropna() for x in ids.split(";"))
-        uncompleted_cgs = all_cgs - els_verified_cgs
-
-        pie_sizes_CG = [len(els_verified_cgs), len(uncompleted_cgs)]
-        comp_perc_CG, non_comp_perc_CG = UtilityFunctions.perc_calc(pie_sizes_CG[0], pie_sizes_CG[1])
-        pie_labels_CG = [f"Verified ({comp_perc_CG:.0%})", f"Unverified ({non_comp_perc_CG:.0%})"]
-        make_pie(pie_labels_CG, pie_sizes_CG, "CDISC Verified Rules", color_scheme="tableau10")
-        with st.expander("View Unverified CG Rules"):
-            df = pd.DataFrame(sorted(uncompleted_cgs), columns=["Unverified CG Rule"])
-            df.index = df.index + 1  # Start index at 1
-            st.dataframe(df, width="stretch", hide_index=False)
-
-    def conformance_rule_completion_display(cg_data):
-        counts = cg_data["Completion"].value_counts()
+    @staticmethod
+    def conformance_rule_completion_display(cg_data: pd.DataFrame, fda_data: pd.DataFrame):
+        combined_data = pd.concat([cg_data, fda_data], ignore_index=True)
+        counts = combined_data["Completion"].value_counts().to_dict()
         completed_count = counts.get("Completed", 0)
         partial_count = counts.get("Partially Completed", 0)
         unimplemented_count = counts.get("Unimplemented", 0)
@@ -69,19 +68,28 @@ class Displays:
         unimpl_perc = unimplemented_count / total if total > 0 else 0
         missing_perc = missing_count / total if total > 0 else 0
 
-        pie_sizes_cg = [completed_count, partial_count, unimplemented_count, missing_count]
-        pie_labels_cg = [
-            f"Completed ({comp_perc:.0%})",
-            f"Partially Completed ({partial_perc:.0%})",
-            f"Unimplemented ({unimpl_perc:.0%})",
-            f"Missing ({missing_perc:.0%})",
+        pie_sizes = [completed_count, partial_count, unimplemented_count, missing_count]
+        pie_labels = [
+            f"Completed ({comp_perc:.1%})",
+            f"Partially Completed ({partial_perc:.1%})",
+            f"Unimplemented ({unimpl_perc:.1%})",
+            f"Missing ({missing_perc:.1%})",
         ]
 
-        make_pie(pie_labels_cg, pie_sizes_cg, "Conformance Rule Completion", color_scheme="tableau20")
+        make_pie(pie_labels, pie_sizes, "Conformance Rule Completion", color_scheme="tableau20")
+        with st.expander("View Conformance Rule Id to CORE Id Mapping"):
+            combined_data = combined_data.rename(columns={
+                combined_data.columns[1]: "Version 1",
+                combined_data.columns[2]: "Version 2",
+                combined_data.columns[3]: "Version 3",
+            })
+            combined_data.index = combined_data.index + 1
+            st.dataframe(combined_data, width="stretch", hide_index=False)
 
+    @staticmethod
     def test_results_display(test_stats):
         status_counts = test_stats["Status"].value_counts()
-        pie_labels = [f"{status} ({(count / len(test_stats)):.0%})" for status, count in status_counts.items()]
+        pie_labels = [f"{status} ({(count / len(test_stats)):.1%})" for status, count in status_counts.items()]
         make_pie(
             pie_labels,
             status_counts.values.tolist(),
@@ -90,6 +98,7 @@ class Displays:
             show_full_label=True,
         )
 
+    @staticmethod
     def failure_error_display(combined_issues):
         make_horizontal_bar(
             combined_issues,

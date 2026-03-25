@@ -147,7 +147,9 @@ class TestRunner:
         self.use_pgserver = use_pgserver
         from engine.cdisc_rules_engine.data_service.postgresql_data_service import PostgresQLDataService
 
-        self.data_service = PostgresQLDataService.instance(use_pgserver=self.use_pgserver)
+        self.data_service = PostgresQLDataService.instance(
+            use_pgserver=self.use_pgserver, codelists=["sdtmct-2025-03-28.pkl"], cache_path="resources/cache"
+        )
 
     @staticmethod
     def _setup_engine_path():
@@ -159,7 +161,13 @@ class TestRunner:
     def get_available_rules() -> List[str]:
         if not RULES_DIR.exists():
             return []
-        return sorted([d.name for d in RULES_DIR.iterdir() if d.is_dir() and d.name.startswith("CORE-")])
+        return sorted(
+            [
+                d.name
+                for d in RULES_DIR.iterdir()
+                if d.is_dir() and (d.name.startswith("CORE-") or d.name.startswith("NEW-RULE"))
+            ]
+        )
 
     @staticmethod
     def get_test_cases(rule_id: str) -> dict:
@@ -206,6 +214,19 @@ class TestRunner:
         if not excel_files:
             return None, {"error": "Excel data missing", "exception": f"No Excel files in {data_path}"}
 
+        case_define_path = data_path_obj / "define.xml"
+        rule_define_path = rule_path / "define.xml"
+
+        if case_define_path.exists():
+            define_xml_path = str(case_define_path)
+        elif rule_define_path.exists():
+            define_xml_path = str(rule_define_path)
+        else:
+            define_xml_path = None
+
+        if define_xml_path:
+            self.data_service._update_define_xml_path(define_xml_path)
+
         try:
             import yaml
             from engine.tests.rule_regression.regression import (
@@ -221,7 +242,7 @@ class TestRunner:
 
             sql_results, _ = process_test_case_dataset(
                 regression_errors=regression_errors,
-                define_xml_file_path=None,
+                define_xml_file_path=define_xml_path,
                 data_test_datasets=test_datasets,
                 ig_specs=self.ig_specs,
                 rule=rule,
@@ -381,9 +402,11 @@ class TestRunner:
                     e["Variable"],
                     e["Error value"],
                 )
+                if str(var)[0] == "$":
+                    continue
                 if error_level == "record":
                     h_val = highlights.get(sheet, {}).get(row, {}).get(var)
-                    match = h_val == error_val
+                    match = str(h_val) == str(error_val)
                 if error_level == "variable":
                     if error_val == "[PRESENT]":
                         h_id = highlights.get(sheet, {}).get(row, {})
@@ -482,7 +505,7 @@ class InteractiveHandler:
 
 def parse_args():
     parser = argparse.ArgumentParser(description="CDISC SQL Rules Engine Tester")
-    parser.add_argument("-r", "--rule", help="Rule ID (e.g., CORE-000176)")
+    parser.add_argument("-r", "--rule", help="Rule ID (e.g., CORE-000176 or NEW-RULE)")
     parser.add_argument("-all", "--all-rules", action="store_true", help="Run all rules")
     parser.add_argument("-tc", "--test-case", help="Specific case (e.g., positive/01)")
     parser.add_argument("-v", "--verbose", action="store_true", help="Print detailed results")

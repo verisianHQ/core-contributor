@@ -5,7 +5,7 @@ setlocal enabledelayedexpansion
 echo CDISC Rules Engine - Contributor Setup
 echo.
 
-REM Check for Python 3.12+
+REM Check for Python 3.12.x
 set "PYTHON_CMD="
 set "REQUIRED_VERSION=3.12"
 
@@ -21,7 +21,7 @@ where python3 >nul 2>&1
 if !errorlevel! equ 0 (
     for /f "tokens=2" %%v in ('python3 --version 2^>^&1') do set "PYTHON_VERSION=%%v"
     for /f "delims=. tokens=1,2" %%a in ("!PYTHON_VERSION!") do (
-        if %%a GEQ 3 if %%b GEQ 12 (
+        if %%a EQU 3 if %%b EQU 12 (
             echo Found python3: !PYTHON_VERSION!
             set "PYTHON_CMD=python3"
             goto :python_found
@@ -33,7 +33,7 @@ where python >nul 2>&1
 if !errorlevel! equ 0 (
     for /f "tokens=2" %%v in ('python --version 2^>^&1') do set "PYTHON_VERSION=%%v"
     for /f "delims=. tokens=1,2" %%a in ("!PYTHON_VERSION!") do (
-        if %%a GEQ 3 if %%b GEQ 12 (
+        if %%a EQU 3 if %%b EQU 12 (
             echo Found python: !PYTHON_VERSION!
             set "PYTHON_CMD=python"
             goto :python_found
@@ -51,10 +51,7 @@ if !errorlevel! equ 0 (
     winget install Python.Python.3.12 --silent --accept-source-agreements --accept-package-agreements
     if !errorlevel! equ 0 (
         echo Python 3.12 installed successfully
-        echo Refreshing environment...
-        call refreshenv >nul 2>&1
-        set "PYTHON_CMD=python3.12"
-        goto :python_found
+        goto :refresh_and_verify
     )
 )
 
@@ -65,10 +62,7 @@ if !errorlevel! equ 0 (
     choco install python312 -y
     if !errorlevel! equ 0 (
         echo Python 3.12 installed successfully
-        echo Refreshing environment...
-        call refreshenv >nul 2>&1
-        set "PYTHON_CMD=python3.12"
-        goto :python_found
+        goto :refresh_and_verify
     )
 )
 
@@ -96,6 +90,7 @@ if !errorlevel! neq 0 (
 del "%PYTHON_INSTALLER%"
 echo Python 3.12 installed successfully
 
+:refresh_and_verify
 REM Refresh PATH
 for /f "tokens=2*" %%a in ('reg query "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v Path') do set "NEW_PATH=%%b"
 set "PATH=%NEW_PATH%"
@@ -122,10 +117,8 @@ echo.
 echo Setting up virtual environment...
 
 if exist "venv\" (
-    if not exist "venv\Scripts\activate.bat" (
-        echo Removing broken virtual environment...
-        rmdir /s /q venv
-    )
+    echo Removing existing virtual environment...
+    rmdir /s /q venv
 )
 
 if not exist "venv\" (
@@ -152,7 +145,7 @@ if !errorlevel! neq 0 (
 
 echo.
 echo Installing dependencies...
-python -m pip install --upgrade pip --quiet
+python -m pip install --upgrade pip setuptools wheel --quiet
 
 if not exist "engine/requirements.txt" (
     echo requirements.txt not found in engine directory
@@ -161,7 +154,7 @@ if not exist "engine/requirements.txt" (
     exit /b 1
 )
 
-pip install -r engine/requirements.txt --quiet
+python -m pip install -r engine/requirements.txt --quiet
 if !errorlevel! neq 0 (
     echo Failed to install dependencies
     cd ..
@@ -176,7 +169,7 @@ if not exist "engine/requirements-dev.txt" (
     exit /b 1
 )
 
-pip install -r engine/requirements-dev.txt --quiet
+python -m pip install -r engine/requirements-dev.txt --quiet
 if !errorlevel! neq 0 (
     echo Failed to install dependencies
     cd ..
