@@ -7,6 +7,10 @@ on:
         description: 'Submodule branch to track'
         required: true
         default: 'main'
+      pr_numbers:
+        description: 'List of PR numbers, comma-separated. Leave empty to update ALL open PRs.'
+        required: false
+        default: ''
 
 jobs:
   sync-engine:
@@ -43,17 +47,30 @@ jobs:
       - name: Sync PR Branches
         env:
           GH_TOKEN: ${{ secrets.ADMIN_PAT }}
+          SELECTED_PRS: ${{ github.event.inputs.pr_numbers }}
         run: |
-          PR_BRANCHES=$(gh pr list --base main --json headRefName --jq '.[].headRefName')
+          if [ -n "$SELECTED_PRS" ]; then
+            echo "Targeted mode: Processing PRs [$SELECTED_PRS]"
+            ITERATE_LIST=$(echo $SELECTED_PRS | tr ',' ' ')
+          else
+            echo "Processing ALL open PRs targeting main"
+            ITERATE_LIST=$(gh pr list --base main --json number --jq '.[].number')
+          fi
 
-          for branch in $PR_BRANCHES; do
-            echo "Processing branch: $branch"
+          for pr_num in $ITERATE_LIST; do
+            echo "Inspecting PR #$pr_num"
+            branch=$(gh pr view $pr_num --json headRefName --jq '.headRefName')
+            
+            if [ -z "$branch" ]; then
+              echo "Error: Could not find branch for PR #$pr_num. Skipping."
+              continue
+            fi
+
+            echo "Switching to branch: $branch"
             git checkout $branch
             
             if ! git diff --quiet main..$branch -- engine; then
-              echo "!!! Submodule change detected in $branch. !!!"
-              echo "Reverting..."
-              
+              echo "Submodule change detected in $branch. Reverting to match main."
               git checkout main -- engine
               git add engine
               git commit -m "fix: revert unauthorized submodule changes to match main"
@@ -61,9 +78,9 @@ jobs:
 
             if git merge main -m "chore: sync with main and update engine"; then
               git push origin $branch
-              echo "Successfully sanitised and updated $branch"
+              echo "Successfully processed #$pr_num ($branch)"
             else
-              echo "Merge conflict in $branch. Skipping..."
+              echo "Merge conflict in #$pr_num ($branch). Skipping..."
               git merge --abort
             fi
           done
