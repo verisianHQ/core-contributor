@@ -1,6 +1,7 @@
 # Variable: GEN
 # Condition: 
 # Rule: Variable label length <= 40
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -50,8 +51,9 @@ Authorities:
           - Citations:
               - Cited Guidance: A descriptive Variable Label, using up to 40 characters, which
                   should be unique for each variable in the dataset.
-                Document: IG v3.1
+                Document: SENDIG v3.1
                 Section: 3.2.2
+                Item: Text
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND3
@@ -63,8 +65,9 @@ Authorities:
           - Citations:
               - Cited Guidance: A descriptive Variable Label, using up to 40 characters, which
                   should be unique for each variable in the dataset.
-                Document: IG v3.1.1
+                Document: SENDIG v3.1.1
                 Section: 3.2.2
+                Item: Text
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND3
@@ -76,8 +79,9 @@ Authorities:
           - Citations:
               - Cited Guidance: A descriptive Variable Label, using up to 40 characters, which
                   should be unique for each variable in the dataset.
-                Document: IG v3.0
+                Document: SENDIG v3.0
                 Section: 3.2.2
+                Item: Text
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND3
@@ -89,8 +93,9 @@ Authorities:
           - Citations:
               - Cited Guidance: A descriptive Variable Label, using up to 40 characters, which
                   should be unique for each variable in the dataset.
-                Document: IG v3.1
+                Document: SENDIG v3.1
                 Section: 3.2.2
+                Item: Text
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND3
@@ -102,8 +107,9 @@ Authorities:
           - Citations:
               - Cited Guidance: A descriptive Variable Label, using up to 40 characters, which
                   should be unique for each variable in the dataset.
-                Document: IG v3.1.1
+                Document: SENDIG v3.1.1
                 Section: 3.2.2
+                Item: Text
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND3
@@ -115,8 +121,9 @@ Authorities:
           - Citations:
               - Cited Guidance: A descriptive Variable Label, using up to 40 characters, which
                   should be unique for each variable in the dataset.
-                Document: IG v3.1.1
+                Document: SENDIG v3.1.1
                 Section: 3.2.2
+                Item: Text
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND3
@@ -164,10 +171,13 @@ Core:
   Id: CORE-000019
   Status: Published
   Version: '1'
-Description: Raise and error if Variable label length > 40 characters
+Description: Raise an error when Variable label length > 40.
 Executability: Fully Executable
 Outcome:
-  Message: Variable label length should be less than or equal to 40 characters
+  Message: Variable label length should <= 40.
+  Output Variables:
+    - variable_name
+    - variable_label
 Rule Type: Variable Metadata Check
 Scope:
   Classes:
@@ -177,4 +187,4 @@ Scope:
     Include:
       - ALL
   Use Case: INDH, PROD, NONCLIN
-Sensitivity: Dataset
+Sensitivity: Record
