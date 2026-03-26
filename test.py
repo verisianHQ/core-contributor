@@ -407,8 +407,6 @@ class TestRunner:
                     continue
                 if error_level == "record":
                     h_val = highlights.get(sheet, {}).get(row, {}).get(var)
-                    print(highlights)
-                    print(h_val, error_val)
                     match = str(h_val) == str(error_val)
                 if error_level == "variable":
                     if error_val == "[PRESENT]":
