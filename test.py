@@ -371,9 +371,10 @@ class TestRunner:
                                 if v_values == res_values:
                                     match_found = True
                             elif v_error_level == "variable" or v_error_level == "dataset":
+                                v_absent = set(k for k, v in v_values.items() if v == "[ABSENT]")
                                 v_not_absent = set(k for k, v in v_values.items() if v != "[ABSENT]")
-                                res_not_absent = set(k for k, v in res_values.items() if v != "[ABSENT]")
-                                if v_not_absent == res_not_absent or not v_not_absent:
+                                res_not_absent = set(k for k, v in res_values.items() if v != "[ABSENT]") - v_absent
+                                if v_not_absent == res_not_absent or not res_not_absent:
                                     match_found = True
 
                             if match_found:
@@ -406,6 +407,8 @@ class TestRunner:
                     continue
                 if error_level == "record":
                     h_val = highlights.get(sheet, {}).get(row, {}).get(var)
+                    print(highlights)
+                    print(h_val, error_val)
                     match = str(h_val) == str(error_val)
                 if error_level == "variable":
                     if error_val == "[PRESENT]":
