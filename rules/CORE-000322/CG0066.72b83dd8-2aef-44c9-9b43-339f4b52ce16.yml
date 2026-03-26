@@ -1,0 +1,51 @@
+# Variable: DSDECOD
+# Condition: DSCAT = 'PROTOCOL MILESTONE'
+# Rule: DSTERM = DSDECOD
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0066
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: d. When DSCAT='PROTOCOL MILESTONE', DSTERM and DSDECOD
+                  will contain the same value drawn from the sponsor's controlled
+                  terminology.
+                Document: IG v3.2
+                Item: Assumption 3d
+                Section: '6.2'
+Check:
+  all:
+    - name: DSCAT
+      operator: equal_to
+      value: PROTOCOL MILESTONE
+      value_is_literal: true
+    - name: DSTERM
+      operator: not_equal_to
+      value: DSDECOD
+Core:
+  Id: CORE-000322
+  Status: Published
+  Version: '1'
+Description: When DSCAT equals PROTOCOL MILESTONE, then DSTERM should be equal to
+  DSDECOD
+Executability: Fully Executable
+Outcome:
+  Message: DSCAT equals PROTOCOL MILESTONE but DSTERM is not equal to DSDECOD
+  Output Variables:
+    - DSTERM
+    - DSDECOD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - DS
+Sensitivity: Record

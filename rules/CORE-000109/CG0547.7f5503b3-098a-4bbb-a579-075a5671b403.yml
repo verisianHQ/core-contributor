@@ -1,0 +1,58 @@
+# Variable: SMSTDTC
+# Condition: 
+# Rule: SMSTDTC ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0547
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The start date/time of the Disease Milestone is the
+                  critical date/time, and must be populated. If the Disease Milestone
+                  is an event, then the meaning of “start date” for the event may
+                  need to be defined.
+                Document: SDTMIG v3.4
+                Section: '5.4'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0547
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The start date/time of the Disease Milestone is the
+                  critical date/time, and must be populated. If the Disease Milestone
+                  is an event, then the meaning of 'start date' for the event may
+                  need to be defined
+                Document: IG v3.3
+                Item: Assumption 3.a
+                Section: '5.5'
+Check:
+  all:
+    - name: SMSTDTC
+      operator: empty
+Core:
+  Id: CORE-000109
+  Status: Published
+  Version: '1'
+Description: Raise an error when SMSTDTC is null.
+Executability: Fully Executable
+Outcome:
+  Message: SMSTDTC is null.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - SM
+Sensitivity: Record

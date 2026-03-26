@@ -1,0 +1,147 @@
+# Variable: VISITNUM
+# Condition: VISITNUM in TV.VISITNUM
+# Rule: VISIT and VISITNUM have a one-to-one relationship
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: There should be a one-to-one relationship between values of
+                  VISIT and VISITNUM.
+                Document: IG v3.4
+                Section: 4.4.5
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0035
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: There should be a one-to-one relationship between values of
+                  VISIT and VISITNUM.
+                Document: IG v3.3
+                Section: 4.4.5
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0035
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: There should be a one-to-one relationship between values of
+                  VISIT and VISITNUM.
+                Document: IG v3.2
+                Section: 4.1.4.5
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0035
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: There will be a one-to-one relationship between values of VISIT
+                  and VISITNUM in TV.
+                Document: TIG 1.0
+                Item: Assumption 6
+                Section: 2.8.10.31
+              - Cited Guidance: Values of VISIT, VISITNUM, and VISITDY will be represented as
+                  defined in the Trial Visits (TV) dataset.
+                Document: TIG 1.0
+                Item: Planned Timing table NUM 1
+                Section: 2.8.7.5
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0316
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0919
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0919
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0919
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: VISITNUM
+      operator: is_contained_by
+      value: $tv_visitnum
+    - name: VISIT
+      operator: is_not_unique_relationship
+      value: VISITNUM
+Core:
+  Id: CORE-000361
+  Status: Published
+  Version: '1'
+Description: Trigger error when VISITNUM is present in TV.VISITNUM and does not
+  have a one-to-one relationship with VISIT
+Executability: Fully Executable
+Operations:
+  - domain: TV
+    id: $tv_visitnum
+    name: VISITNUM
+    operator: distinct
+Outcome:
+  Message: VISIT and VISITNUM do not have a one-to-one relationship
+  Output Variables:
+    - VISITNUM
+    - VISIT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Record

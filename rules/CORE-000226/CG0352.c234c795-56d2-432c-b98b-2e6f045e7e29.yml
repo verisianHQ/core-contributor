@@ -1,0 +1,78 @@
+# Variable: --DTHREL
+# Condition: 
+# Rule: --DTHREL not present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'The following SDTM variables, defined for use in non-clinical
+                  studies (SEND), must  NEVER be used in the submission of
+                  SDTM-based data for human clinical trials: --DTHREL (Findings)
+                  --EXCLFL (Findings) --REASEX (Findings) --DETECT (Findings)'
+                Document: Model v1.4
+                Item: '   '
+                Section: '2.7'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0352
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'The following SDTM variables; defined for use in non-clinical
+                  studies (SEND); must NEVER be used in the submission of
+                  SDTM-based data for human clinical trials: --DTHREL (Findings)
+                  --EXCLFL (Findings) --REASEX (Findings) --DETECT (Findings)'
+                Document: IG v3.2
+                Section: '2.7'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0352
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'The following SDTM variables; defined for use in non-clinical
+                  studies (SEND); must NEVER be used in the submission of
+                  SDTM-based data for human clinical trials: --USCHFL
+                  (Interventions; Events; Findings) --DTHREL (Findings) --EXCLFL
+                  (Findings) --REASEX (Findings) --IMPLBL (Findings) FETUSID
+                  (Identifiers) --DETECT (Timing Variables) --NOMDY (Timing
+                  Variables) --NOMLBL (Timing Variables)'
+                Document: IG v3.3
+                Section: '2.7'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0352
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: --DTHREL
+      operator: exists
+Core:
+  Id: CORE-000226
+  Status: Published
+  Version: '1'
+Description: Verifying presence of SEND variable --DTHREL
+Executability: Fully Executable
+Outcome:
+  Message: --DTHREL must never be used in SDTM-based data for human clinical trials
+  Output Variables:
+    - --DTHREL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset

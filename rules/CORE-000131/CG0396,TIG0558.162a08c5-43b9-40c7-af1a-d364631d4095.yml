@@ -1,0 +1,90 @@
+# Variable: --CONTRT
+# Condition: --CONTRT ^= null
+# Rule: --CONTRT in ('Y','N')
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Valid values are "Y" and "N" and null.
+                Document: Model v2.0
+                Item: --CONTRT
+                Section: Events
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0396
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Was another treatment given because of the occurrence of the
+                  event? Valid values are "Y", "N", and null.
+                Document: Model v1.7
+                Item: --CONTRT
+                Section: 2.2.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0396
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Was another treatment given because of the occurrence of the
+                  event? Valid values are 'Y' and 'N'.
+                Document: Model v1.4
+                Item: ''
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0396
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Valid values are "Y" and "N" and null.
+                Document: SDTM v2.1
+                Item: --CONTRT
+                Section: 3.1.2 The Events Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0558
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: AECONTRT
+      operator: non_empty
+    - name: AECONTRT
+      operator: is_not_contained_by
+      value:
+        - Y
+        - N
+Core:
+  Id: CORE-000131
+  Status: Published
+  Version: '1'
+Description: Raise an error when AECONTRT is completed and value is not 'Y' or 'N'
+Executability: Fully Executable
+Outcome:
+  Message: AECONTRT is completed, but not equal to "N" or "Y"
+  Output Variables:
+    - AECONTRT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - AE
+  Use Case: INDH
+Sensitivity: Record

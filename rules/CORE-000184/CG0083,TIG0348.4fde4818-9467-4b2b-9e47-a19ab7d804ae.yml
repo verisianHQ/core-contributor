@@ -1,0 +1,87 @@
+# Variable: --BDSYCD
+# Condition: 
+# Rule: --BDSYCD and --BODSYS have a one-to-one relationship
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Events[--BODSYSCD][Variable Qualifier of BODSYS]
+                Document: Model v2.0
+                Item: --BODSYS
+                Section: Events
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0083
+              Version: '2'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Variable Qualifier of --BODSYS
+                Document: Model v1.7
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0083
+              Version: '2'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Variable Qualifier of --BODSYS
+                Document: Model v1.4
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0083
+              Version: '2'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Events[--BODSYSCD][Variable Qualifier of BODSYS]
+                Document: SDTM v2.1
+                Item: --BODSYS
+                Section: 3.1.2 The Events Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0348
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --BDSYCD
+      operator: exists
+    - name: --BODSYS
+      operator: exists
+    - name: --BDSYCD
+      operator: is_not_unique_relationship
+      value: --BODSYS
+Core:
+  Id: CORE-000184
+  Status: Published
+  Version: '1'
+Description: There must be a one-to-one relationship between --BDSYSCD and --BODSYS
+Executability: Fully Executable
+Outcome:
+  Message: There is not a one-to-one relationship between --BODSYS and --BDSYSCD
+  Output Variables:
+    - --BODSYS
+    - --BDSYCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Record

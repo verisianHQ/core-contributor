@@ -1,0 +1,109 @@
+# Variable: DVSTDTC
+# Condition: 
+# Rule: DVSTDTC >= DM.RFICDTC
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The intent of the domain model is to capture protocol deviations
+                  that occurred during the course of the study (see ICH E3
+                  Section 10.2 at
+                  http://www.ich.org/fileadmin/Public_Web_Site/ICH_Products/Guidelines/Efficacy/E3/E3_Guideline.pdf).
+                  Usually these are deviations that occur after the subject has
+                  been randomized or received the first treatment.
+                Document: IG v3.4
+                Item: Assumption 1
+                Section: 6.2.7
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0075
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The intent of the domain model is to capture protocol deviations
+                  that occurred during the course of the study (see ICH E3
+                  Section 10.2 at
+                  http://www.ich.org/fileadmin/Public_Web_Site/ICH_Products/Guidelines/Efficacy/E3/E3_Guideline.pdf).
+                  Usually these are deviations that occur after the subject has
+                  been randomized or received the first treatment.
+                Document: IG v3.3
+                Item: Assumption 1
+                Section: 6.2.4
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0075
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The intent of the domain is to capture protocol violations and
+                  deviations during the course of the study and will store only
+                  those criteria violation by or deviated from by the subject
+                  and not a response to each violation or deviation.
+                Document: IG v3.2
+                Item: ''
+                Section: '6.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0075
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: 1. The DV domain is an Events model for collected protocol
+                  deviations and not for derived protocol deviations that are
+                  more likely to be part of analysis. Events typically include
+                  what the event was, captured in --TERM (the topic variable),
+                  and when it happened (captured in its start and/or end dates).
+                  The intent of the domain model is to capture protocol
+                  deviations that occurred during the course of the study (see
+                  ICH E3, Section 10.2[1]).
+                Document: TIG 1.0
+                Item: Assumption 1
+                Section: 2.8.10.19
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0341
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: DVSTDTC
+      operator: date_less_than
+      value: RFICDTC
+Core:
+  Id: CORE-000086
+  Status: Published
+  Version: '1'
+Description: Raise an error when DVSTDTC is earlier than RFICDTC in DM.
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: DM
+Outcome:
+  Message: DVSTDTC is earlier than RFICDTC in DM.
+  Output Variables:
+    - DVSTDTC
+    - RFICDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - DV
+  Use Case: INDH
+Sensitivity: Record

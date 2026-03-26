@@ -1,0 +1,53 @@
+# Variable: RPATHCD
+# Condition: 
+# Rule: RPATHCD not present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0533
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Not in clinical trials.
+                Document: Model v2.0
+                Section: Demographics
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0533
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Not to be used with human clinical trials.
+                Document: Model v1.7
+                Section: Table 2.2.6.1
+Check:
+  all:
+    - name: RPATHCD
+      operator: exists
+Core:
+  Id: CORE-000073
+  Status: Published
+  Version: '1'
+Description: Raise an error when RPATHCD is present.
+Executability: Fully Executable
+Outcome:
+  Message: RPATHCD is present.
+  Output Variables:
+    - RPATHCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Dataset

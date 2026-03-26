@@ -1,6 +1,7 @@
 # Variable: RDOMAIN
 # Condition: IDVARVAL ^= null
 # Rule: RDOMAIN ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -10,7 +11,7 @@ Authorities:
               - Cited Guidance: Two-character abbreviation for the domain of the parent
                   record(s). Null for comments collected on a general comments
                   or additional information CRF page.
-                Document: SDTMIG v3.4
+                Document: IG v3.4
                 Item: Specification
                 Section: '5.1'
             Origin: SDTM and SDTMIG Conformance Rules
@@ -65,25 +66,26 @@ Authorities:
             Version: '1.0'
         Substandard: SDTM
         Version: '1.0'
-
 Check:
   all:
     - name: IDVARVAL
       operator: non_empty
-    - name: RDOMAIN
-      operator: empty
-
+    - any:
+        - name: RDOMAIN
+          operator: empty
+        - name: RDOMAIN
+          operator: not_exists
 Core:
   Id: CORE-000017
   Status: Published
   Version: '1'
-Description: Verify RDOMAIN is not null when IDVARVAL is not null
+Description: Raise an error when IDVARVAL is populated but RDOMAIN is missing.
 Executability: Fully Executable
 Outcome:
-  Message: RDOMAIN has a missing value when IDVARVAL has a non-missing value
+  Message: When IDVARVAL is populated then RDOMAIN should also be populated.
   Output Variables:
-    - RDOMAIN
     - IDVARVAL
+    - IDVAR
 Rule Type: Record Data
 Scope:
   Classes:

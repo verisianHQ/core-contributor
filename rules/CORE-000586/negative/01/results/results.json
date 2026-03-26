@@ -1,0 +1,75 @@
+{
+  "datasets": [
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "Multiple records exist within the same EPOCH for a subject when DSCAT = DISPOSITION EVENT",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "015246-076-0003-00003",
+          "value": {
+            "DSCAT": "DISPOSITION EVENT",
+            "EPOCH": "FU"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "015246-076-0003-00003",
+          "value": {
+            "DSCAT": "DISPOSITION EVENT",
+            "EPOCH": "FU"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ds.xpt",
+      "Row": 8,
+      "Variable": "DSTERM"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 8,
+      "Variable": "DSDECOD"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 8,
+      "Variable": "DSCAT"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 8,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 9,
+      "Variable": "DSTERM"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 9,
+      "Variable": "DSDECOD"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 9,
+      "Variable": "DSCAT"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 9,
+      "Variable": "EPOCH"
+    }
+  ]
+}

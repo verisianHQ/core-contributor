@@ -1,0 +1,76 @@
+# Variable: RSUBJID
+# Condition: RSUBJID ^= null
+# Rule: RSUBJID ^= POOLID
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0364
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Identifier used to identify a related subject or pool
+                  of subjects. RSUBJID will be populated with either the  USUBJID
+                  of the related subject or the POOLID of the related pool.
+                Document: Model v2.0
+                Item: RSUBJID
+                Section: RELSUB
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0364
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Identifier used to identify a related subject or pool
+                  of subjects. RSUBJID will be populated with either the USUBJID of
+                  the related subject or the POOLID of the related pool.
+                Document: Model v1.4
+                Section: 4.1.4
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0364
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Identifier used to identify a related subject or pool
+                  of subjects. RSUBJID will be populated with either the USUBJID of
+                  the related subject or the POOLID of the related pool.
+                Document: Model v1.7
+                Section: Table 4.1.4.1
+Check:
+  all:
+    - name: RSUBJID
+      operator: non_empty
+    - name: RSUBJID
+      operator: equal_to
+      value: POOLID
+Core:
+  Id: CORE-000232
+  Status: Published
+  Version: '1'
+Description: Verify when RSUBJID is populated it does not equal POOLID
+Executability: Fully Executable
+Outcome:
+  Message: When RSUBJID is populated, RUSBJID cannot equal POOLID
+  Output Variables:
+    - RSUBJID
+    - POOLID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - RELSUB
+Sensitivity: Record

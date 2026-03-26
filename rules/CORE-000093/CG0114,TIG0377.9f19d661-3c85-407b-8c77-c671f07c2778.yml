@@ -1,0 +1,96 @@
+# Variable: --DOSU
+# Condition: --DOSE ^= null or --DOSTOT ^= null or --DOSTXT ^= null
+# Rule: --DOSU ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Units for --DOSE, --DOSTOT, or --DOSTXT
+                Document: Model v2.0
+                Item: --DOSU
+                Section: Interventions
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0114
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Units for --DOSE, --DOSTOT, or --DOSTXT (Examples: ng, mg,
+                  mg/kg).'
+                Document: Model v1.4
+                Item: --DOSU Specification
+                Section: 2.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0114
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Units for --DOSE, --DOSTOT, or --DOSTXT. Examples: "ng", "mg",
+                  "mg/kg".'
+                Document: Model v1.7
+                Item: Specification
+                Section: 2.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0114
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Units for --DOSE, --DOSTOT, or --DOSTXT
+                Document: SDTM v2.1
+                Item: --DOSU
+                Section: 3.1.1 The Interventions Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0377
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --DOSU
+      operator: empty
+    - any:
+        - name: --DOSE
+          operator: non_empty
+        - name: --DOSTXT
+          operator: non_empty
+        - name: --DOSTOT
+          operator: non_empty
+Core:
+  Id: CORE-000093
+  Status: Published
+  Version: '1'
+Description: Raise an error when --DOSU = null and (--DOSE ^= null or --DOSTOT
+  ^= null or --DOSTXT ^= null)
+Executability: Fully Executable
+Outcome:
+  Message: Missing value for --DOSU, when --DOSE, --DOSTXT or --DOSTOT is provided
+  Output Variables:
+    - --DOSE
+    - --DOSTXT
+    - --DOSTOT
+    - --DOSU
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Record

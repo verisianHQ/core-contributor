@@ -1,0 +1,69 @@
+# Variable: TSVAL
+# Condition: TSPARMCD = NARMS
+# Rule: TSVAL is integer and > 0
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Further information about the parameters is included below in
+                  Table 1. TSVAL may have controlled terminology depending on
+                  the value of TSPARMCD
+                Document: IG v3.2
+                Item: Assumption 3
+                Section: '7.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0284
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Further information about the parameters is included Appendix
+                  C1, Trial Summary Codes. TSVAL may have controlled terminology
+                  depending on the value of TSPARMCD. Conditions for including
+                  parameters are included in Appendix C1, Trial Summary Codes.
+                Document: IG v3.3
+                Item: Assumption 3
+                Section: '7.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0284
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: TSPARMCD
+      operator: equal_to
+      value: NARMS
+    - any:
+        - name: TSVAL
+          operator: less_than_or_equal_to
+          value: 0
+        - name: TSVAL
+          operator: not_matches_regex
+          value: (-?[1-9]\d*|0)$
+Core:
+  Id: CORE-000587
+  Status: Published
+  Version: '1'
+Description: 'Check that TVAL is an integer > 0 when TSPARMCD is NARMS'
+Executability: Fully Executable
+Outcome:
+  Message: 'TSVAL must be an integer greater than zero when TSPARMCD is NARMS'
+  Output Variables:
+    - TSPARMCD
+    - TSVAL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

@@ -1,0 +1,106 @@
+# Variable: IDVAR
+# Condition: IDVARVAL = null and USUBJID = null
+# Rule: IDVAR ^= --SEQ
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: This example shows how to use the RELREC dataset to represent
+                  related information that is submitted as two datasets that
+                  have a one-to-many relationship. in the example below  all the
+                  records in one domain are being related to all of the records
+                  in the other, so both  USUBJID and IDVARVAL are null.... Since
+                  IDVAR identifies the keys that can be used to
+                  merge/join  records between the datasets, --SEQ cannot be used
+                  because --SEQ only has meaning within a subject within a
+                  dataset, not across datasets.
+                Document: IG v3.4
+                Section: 8.3.1 RELREC Dataset Relationship Example
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0201
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: This example shows how to use the RELREC dataset to represent
+                  related information that is submitted as two datasets that
+                  have a one-to-many relationship. in the example below all the
+                  records in one domain are being related to all of the records
+                  in the other, so both USUBJID and IDVARVAL are null.
+                Document: IG v3.3
+                Section: 8.3.1 RELREC Dataset Relationship Example
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0201
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: This example shows how to use the RELREC dataset to represent
+                  related information that is submitted as two datasets that
+                  have a one-to-many relationship. in the example below all the
+                  records in one domain are being related to all of the records
+                  in the other, so both USUBJID and IDVARVAL are null.
+                Document: IG v3.2
+                Section: 8.3.1 RELREC Dataset Relationship Example
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0201
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Relationships between datasets are specified using the key
+                  variables STUDYID, RDOMAIN, and IDVAR only. The values of
+                  variables USUBJID and IDVARVAL will be null as relationships
+                  between specific subject records will not be identified.
+                Document: TIG 1.0
+                Section: 2.8.5.2
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0422
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: IDVARVAL
+      operator: empty
+    - name: USUBJID
+      operator: empty
+    - name: IDVAR
+      operator: ends_with
+      value: SEQ
+Core:
+  Id: CORE-000136
+  Status: Published
+  Version: '1'
+Description: Raise an error when IDVARVAL and USUBJID are empty and IDVAR = Sequence Number.
+Executability: Fully Executable
+Outcome:
+  Message: IDVARVAL and USUBJID are not completed, but IDVAR equals Sequence Number.
+  Output Variables:
+    - RDOMAIN
+    - IDVAR
+    - IDVARVAL
+    - RELID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - RELREC
+  Use Case: INDH, PROD
+Sensitivity: Record

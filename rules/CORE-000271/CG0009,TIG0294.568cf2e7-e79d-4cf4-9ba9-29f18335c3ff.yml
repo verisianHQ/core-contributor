@@ -1,0 +1,103 @@
+# Variable: EPOCH
+# Condition: 
+# Rule: EPOCH in TA.EPOCH
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: EPOCH may be included as a timing variable as in other
+                  general-observation-class domains. In DS, EPOCH is based on
+                  DSSTDTC. The values of EPOCH are drawn from the Trial Arms(TA)
+                  dataset (Section 7.2.1, Trial Arms).
+                Document: SDTMIG v3.4
+                Item: DS, Assumption 4.c
+                Section: 6.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0009
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: EPOCH may be included as a timing variable as in other
+                  general-observation-class domains. In DS, EPOCH is based on
+                  DSSTDTC. The values of EPOCH are drawn from the Trial Arms
+                  (TA) dataset (Section 7.2.1, Trial Arms).
+                Document: SDTMIG v3.3
+                Item: DS, Assumption 4.c
+                Section: 6.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0009
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: '...EPOCH, as a Timing variable, is the name of the Epoch during
+                  which --STDTC or --DTC falls. The values of EPOCH are drawn
+                  from the Trial Arms domain, Section 7.2 - Experimental Design
+                  Trial Arms (TA)'
+                Document: SDTMIG v3.2
+                Item: DS, Assumption 3.c
+                Section: '6.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0009
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: EPOCH may be included as a timing variable as in other general
+                  observation-class domains. In DS, EPOCH is based on DSSTDTC.
+                  The values of EPOCH are drawn from the Trial Arms (TA)
+                  dataset.
+                Document: TIG 1.0
+                Item: Assumption 4.c
+                Section: 2.8.10.8
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0294
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: EPOCH
+      operator: is_not_contained_by
+      value: $ta_epoch
+    - name: EPOCH
+      operator: non_empty
+Core:
+  Id: CORE-000271
+  Status: Published
+  Version: '1'
+Description: Raise an error when EPOCH is not in TA.EPOCH
+Executability: Fully Executable
+Operations:
+  - domain: TA
+    id: $ta_epoch
+    name: EPOCH
+    operator: distinct
+Outcome:
+  Message: EPOCH is not in TA.EPOCH
+  Output Variables:
+    - EPOCH
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Record

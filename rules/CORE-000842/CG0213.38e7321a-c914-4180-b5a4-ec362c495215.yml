@@ -1,0 +1,73 @@
+# Variable: VISITNUM
+# Condition: SVUPDES = null
+# Rule: VISITNUM in TV.VISITNUM
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: "The method for deriving these values should be consistent with
+                  the visit definitions in the Trial Visits dataset [see Section
+                  '7.3 - Schedule for Assessments: Trial Visits (TV)']."
+                Document: IG v3.2
+                Item: Specification
+                Section: 5 SV
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0213
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The method for deriving these values should be consistent with
+                  the visit definitions in the Trial Visits (TV) dataset
+                  (Section 7.3.1, Trial Visits).
+                Document: IG v3.3
+                Item: Description
+                Section: '5.5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0213
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - any:
+        - name: SVUPDES
+          operator: empty
+        - name: SVUPDES
+          operator: not_exists
+    - name: VISITNUM
+      operator: is_not_contained_by
+      value: $visitnums_in_tv
+Core:
+  Id: CORE-000842
+  Status: Published
+  Version: '1'
+Description: When SVUPDES is not populated, then the VISITNUM should be equal to
+  a VISITNUM in TV
+Executability: Partially Executable - Possible Overreporting
+Operations:
+  - domain: TV
+    id: $visitnums_in_tv
+    name: VISITNUM
+    operator: distinct
+Outcome:
+  Message: SVUPDES is not populated or does not exist, but the VISITNUM does not
+    equal a VISITNUM present in TV
+  Output Variables:
+    - SVUPDES
+    - VISITNUM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - SV
+Sensitivity: Record

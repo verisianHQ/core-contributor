@@ -1,0 +1,59 @@
+# Variable: GEN
+# Condition: DM.ACTARMCD not in ('SCRNFAIL', 'NOTASSGN', 'NOTTRT')
+# Rule: Subject records > 0
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The Disposition dataset provides an accounting for all subjects
+                  who entered the study and may include protocol milestones;
+                  such as randomization; as well as the subject's completion
+                  status or reason for discontinuation for the entire study or
+                  each phase or segment of the study; including screening and
+                  post-treatment follow-up.
+                Document: IG v3.2
+                Item: Assumption 1
+                Section: 6.2 DS
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0412
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+Check:
+  all:
+    - name: ACTARMCD
+      operator: is_not_contained_by
+      value:
+        - SCRNFAIL
+        - NOTASSGN
+        - NOTTRT
+    - name: USUBJID
+      operator: is_not_contained_by
+      value: $ds_usubjid
+Core:
+  Id: CORE-000515
+  Status: Published
+  Version: '1'
+Description: 'Raise an error when DM.ACTARMCD does not equal "SCRNFAIL",
+  "NOTASSGN" or "NOTTRT", and there are no DS records for the same subject'
+Executability: Fully Executable
+Operations:
+  - domain: DS
+    id: $ds_usubjid
+    name: USUBJID
+    operator: distinct
+Outcome:
+  Message: 'DM.ACTARMCD does not equal "SCRNFAIL", "NOTASSGN" or "NOTTRT" but
+    there are no DS records for the same subject'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

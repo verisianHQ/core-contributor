@@ -1,0 +1,53 @@
+{
+  "datasets": [
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "success",
+      "execution_message": "ECOCCUR indicates dose was not given, ECDOSE needs to be blank or greater than 0.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 11,
+          "SEQ": 122,
+          "USUBJID": "CDISC009",
+          "value": {
+            "ECDOSE": 0.0,
+            "ECOCCUR": "N"
+          },
+          "validated": true
+        },
+        {
+          "row": 13,
+          "SEQ": 124,
+          "USUBJID": "CDISC009",
+          "value": {
+            "ECDOSE": 0.0,
+            "ECOCCUR": "N"
+          },
+          "validated": true
+        },
+        {
+          "row": 14,
+          "SEQ": 125,
+          "USUBJID": "CDISC009",
+          "value": {
+            "ECDOSE": 0.0,
+            "ECOCCUR": "N"
+          },
+          "validated": true
+        },
+        {
+          "row": 15,
+          "SEQ": 126,
+          "USUBJID": "CDISC009",
+          "value": {
+            "ECDOSE": -10.0,
+            "ECOCCUR": "N"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

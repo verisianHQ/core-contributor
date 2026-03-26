@@ -1,0 +1,121 @@
+# Variable: TAETORD
+# Condition: ETCD = 'UNPLAN'
+# Rule: TAETORD = null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: TAETORD will not be populated for subject Elements that are not
+                  planned for the Arm to which the subject was assigned. Thus,
+                  TAETORD will not be populated for any Element with an ETCD
+                  value of UNPLAN.
+                Document: IG v3.4
+                Item: Assumption 6
+                Section: '5.3'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0206
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: TAETORD will not be populated for subject Elements that are not
+                  planned for the Arm to which the subject was assigned. Thus,
+                  TAETORD will not be populated for any Element with an ETCD
+                  value of "UNPLAN". TAETORD will also not be populated if a
+                  subject passed through an Element that, although defined in
+                  the TE dataset, was out of place for the Arm to which the
+                  subject was assigned. For example, if a subject in a parallel
+                  study of Drug A vs. Drug B was assigned to receive Drug A, but
+                  received Drug B instead, then TAETORD would be left blank for
+                  the SE record for their Drug B Element. If a subject was
+                  assigned to receive the sequence of Elements A, B, C, D, and
+                  instead received A, D, B, C, then the sponsor would have to
+                  decide for which of these subject Element records TAETORD
+                  should be populated. The rationale for this decision should be
+                  documented in the Comments column of the define.xml.
+                Document: IG v3.2
+                Item: Assumption 8
+                Section: 5 SE
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0206
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: TAETORD will not be populated for subject Elements that are not
+                  planned for the Arm to which the subject was assigned. Thus,
+                  TAETORD will not be populated for any Element with an ETCD
+                  value of "UNPLAN". TAETORD will also not be populated if a
+                  subject passed through an Element that, although defined in
+                  the TE dataset, was out of place for the Arm to which the
+                  subject was assigned. For example, if a subject in a parallel
+                  study of Drug A vs. Drug B was assigned to receive Drug A, but
+                  received Drug B instead, then TAETORD would be left blank for
+                  the SE record for their Drug B Element. If a subject was
+                  assigned to receive the sequence of Elements A, B, C, D, and
+                  instead received A, D, B, C, then the sponsor would have to
+                  decide for which of these subject Element records TAETORD
+                  should be populated. The rationale for this decision should be
+                  documented in the Comments column of the define.xml.
+                Document: IG v3.3
+                Item: Assumption 6
+                Section: '5.3'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0206
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: TAETORD will not be populated for subject Elements that are not
+                  planned for the Arm to which the subject was assigned. Thus,
+                  TAETORD will not be populated for any Element with an ETCD
+                  value of “UNPLAN”.
+                Document: TIG 1.0
+                Item: Assumption  5
+                Section: 2.8.10.24
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0426
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: ETCD
+      operator: equal_to
+      value: UNPLAN
+    - name: TAETORD
+      operator: non_empty
+Core:
+  Id: CORE-000020
+  Status: Published
+  Version: '1'
+Description: Raise an error when ETCD="UNPLAN" and TAETORD is not null.
+Executability: Fully Executable
+Outcome:
+  Message: TAETORD should be null when ETCD = 'UNPLAN'.
+  Output Variables:
+    - ETCD
+    - TAETORD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - SE
+  Use Case: INDH
+Sensitivity: Record

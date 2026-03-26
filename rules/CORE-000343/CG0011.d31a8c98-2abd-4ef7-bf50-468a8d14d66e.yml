@@ -1,0 +1,64 @@
+# Variable: GEN
+# Condition: 
+# Rule: Variable Format = SDTM-specified controlled terminology and format guidelines for variables, when provided
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Following SDTM-specified controlled terminology and format
+                  guidelines for variables, when provided
+                Document: IG v3.4
+                Section: 3.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0011
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Following SDTM-specified controlled terminology and format
+                  guidelines for variables, when provided
+                Document: IG v3.2
+                Section: 3.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0011
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Following SDTM-specified controlled terminology and format
+                  guidelines for variables, when provided
+                Document: IG v3.3
+                Section: 3.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0011
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Core:
+  Id: CORE-000343
+  Status: Draft
+  Version: '1'
+Description: Trigger error when variable format does not match SDTM-specified
+  controlled terminology or format guidelines for variables (when provided)
+Executability: Not Executable
+Outcome:
+  Message: Variable format does not match SDTM-specified controlled terminology or
+    format guidelines for variables (when provided)
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset

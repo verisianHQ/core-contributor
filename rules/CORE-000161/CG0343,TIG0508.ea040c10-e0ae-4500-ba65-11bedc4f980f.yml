@@ -1,0 +1,95 @@
+# Variable: --TERM
+# Condition: 
+# Rule: --TERM ^= 'OTHER'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Events: "Other, Specify" for Events may be handled similarly to
+                  Interventions. --TERM should be populated with the description
+                  of the event found in the specified text and --PRESP could be
+                  used to distinguish between prespecified and free text
+                  responses.'
+                Document: IG v3.4
+                Section: 4.2.7.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0343
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Events: "Other, Specify" for Events may be handled similarly to
+                  Interventions. --TERM should be populated with the description
+                  of the event found in the specified text and --PRESP could be
+                  used to distinguish between prespecified and free text
+                  responses.'
+                Document: IG v3.3
+                Section: 4.2.7.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0343
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Events: "Other, Specify" for Events may be handled similarly to
+                  Interventions. --TERM should be populated with the description
+                  of the event found in the specified text and --PRESP could be
+                  used to distinguish between prespecified and free text
+                  responses.'
+                Document: IG v3.2
+                Section: 4.1.2.7.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0343
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: For Events general observations class domains, each collected
+                  value will be represented in --TERM in its own record.
+                Document: TIG 1.0
+                Item: Num 3
+                Section: 2.8.7.4
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0508
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+
+Check:
+  all:
+    - name: --TERM
+      operator: equal_to
+      value: OTHER
+Core:
+  Id: CORE-000161
+  Status: Published
+  Version: '1'
+Description: Raise an error when --TERM = 'OTHER'
+Executability: Fully Executable
+Outcome:
+  Message: --TERM is equal to 'OTHER'
+  Output Variables:
+    - --TERM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Record

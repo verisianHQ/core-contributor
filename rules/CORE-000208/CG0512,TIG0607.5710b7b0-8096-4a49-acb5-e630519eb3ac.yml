@@ -1,0 +1,91 @@
+# Variable: ACTARMCD
+# Condition: Study does not use multi-stage arm assignments and ACTARMCD ^= null
+# Rule: ACTARMCD in TA.ARMCD
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: With the exception of studies which use multi-stage Arm
+                  assignments, must be a value of ARMCD in the Trial Arms
+                  Dataset. If the subject was not assigned to an Arm or followed
+                  a course not described by any planned Arm, ACTARMCD is null
+                  and ARMNRS is populated.
+                Document: IG v3.4
+                Item: Specification
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0512
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: With the exception of studies which use multi-stage arm
+                  assignments, must be a value of ARMCD in the Trial Arms
+                  Dataset. If the subject was not assigned to an arm or followed
+                  a course not described by any planned arm, ACTARMCD is null
+                  and ARMNRS is populated.
+                Document: IG v3.3
+                Item: Specification
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0512
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: With the exception of studies which use multi-stage Arm
+                  assignments, must be a value of ARMCD in the Trial Arms
+                  Dataset. If the subject was not assigned to an Arm or followed
+                  a course not described by any planned Arm, ACTARMCD is null
+                  and ARMNRS is populated.
+                Document: TIG 1.0
+                Item: Specification:ACTARMCD
+                Section: 2.8.10.4
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0607
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: ACTARMCD
+      operator: non_empty
+    - name: ACTARMCD
+      operator: is_not_contained_by
+      value: $ta_armcd
+Core:
+  Id: CORE-000208
+  Status: Published
+  Version: '1'
+Description: Trigger error when study does not use multi-stage arm assignments
+  and ACTARMCD ^= null, and ACTARMCD is not in TA.ARMCD
+Executability: Partially Executable - Possible Overreporting
+Operations:
+  - domain: TA
+    id: $ta_armcd
+    name: ARMCD
+    operator: distinct
+Outcome:
+  Message: ACTARMCD is not in TA.ARMCD
+  Output Variables:
+    - ACTARMCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+  Use Case: INDH
+Sensitivity: Record

@@ -1,0 +1,55 @@
+# Variable: --BEATNO
+# Condition: 
+# Rule: --BEATNO not present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0542
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: --BEATNO is to be used in the EG domain only.
+                Document: SDTM v2.0
+                Section: Findings
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0542
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The concept of domain-specific variables was first
+                  introduced in SDTM v1.5. These variables are for use only in a specific
+                  domain and will be identified in the appropriate implementation
+                  guide.
+                Document: Model v1.7
+                Item: EGBEATNO
+                Section: Table 2.2.12.1
+Check:
+  all:
+    - name: --BEATNO
+      operator: exists
+Core:
+  Id: CORE-000072
+  Status: Published
+  Version: '1'
+Description: Raise an error when --BEATNO is present.
+Executability: Fully Executable
+Outcome:
+  Message: --BEATNO is present.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Exclude:
+      - EG
+Sensitivity: Dataset

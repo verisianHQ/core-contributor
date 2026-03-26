@@ -1,0 +1,84 @@
+# Variable: EXVAMTU
+# Condition: EC domain is present
+# Rule: EXVAMTU not present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0107
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: "\"When the EC domain is implemented in conjunction\
+                  \ with the EX domain, EXVAMT and EXVAMTU should not be used in EX;\n\
+                  \ collected values instead would be represented in ECDOSE and ECDOSU.\""
+                Document: IG v3.4
+                Item: Assumption 6c
+                Section: 6.1.3.1
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0107
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: When the EC domain (See Section 6.1.2.3) is implemented
+                  in conjunction with the EX domain, EXVAMT and EXVAMTU should not
+                  be used in EX; collected values instead would be represented in
+                  ECDOSE and ECDOSU
+                Document: IG v3.2
+                Item: Assumption 6c
+                Section: '6.1'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0107
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: When the EC domain (See Section 6.1.2.3) is implemented
+                  in conjunction with the EX domain, EXVAMT and EXVAMTU should not
+                  be used in EX; collected values instead would be represented in
+                  ECDOSE and ECDOSU
+                Document: IG v3.3
+                Item: Assumption 6c
+                Section: 6.1.3.1
+Check:
+  all:
+    - name: $EXVAMTU_EXISTS
+      operator: equal_to
+      value: true
+    - name: EC
+      operator: exists
+Core:
+  Id: CORE-000292
+  Status: Published
+  Version: '1'
+Description: When EC exists, EXVAMTU should not be used.
+Executability: Fully Executable
+Operations:
+  - domain: EX
+    id: $EXVAMTU_EXISTS
+    name: EXVAMTU
+    operator: variable_exists
+Outcome:
+  Message: EXVAMTU is present when EC domain exists.
+  Output Variables:
+    - $EXVAMTU_EXISTS
+Rule Type: Domain Presence Check
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - EX
+Sensitivity: Dataset

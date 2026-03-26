@@ -1,0 +1,54 @@
+# Variable: RPPLDY
+# Condition: 
+# Rule: RPPLDY not present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: RPPLDY is not be used in human clinical trials.
+                Document: SDTM v2.0
+                Section: Timing
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0632
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Not in human clinical trials.
+                Document: SDTM v2.1
+                Item: RPPLDY
+                Section: Section 3.1.5 Timing Variables for All Classes
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0673
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: RPPLDY
+      operator: exists
+Core:
+  Id: CORE-000059
+  Status: Published
+  Version: '1'
+Description: Raise an error when RPPLDY is present.
+Executability: Fully Executable
+Outcome:
+  Message: RPPLDY is present.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Dataset

@@ -1,0 +1,39 @@
+{
+  "datasets": [
+    {
+      "dataset": "suppdm.xpt",
+      "domain": "SUPPDM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000846, dataset=SUPPDM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "RACE in DM equals 'MULTIPLE' but multiple races are not collected in SUPPDM.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC008",
+          "value": {
+            "$suppdm_race_count": 0,
+            "RACE": "MULTIPLE"
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "$suppdm_race_count": 0,
+            "RACE": "MULTIPLE"
+          }
+        }
+      ]
+    }
+  ]
+}

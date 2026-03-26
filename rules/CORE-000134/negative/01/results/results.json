@@ -1,0 +1,133 @@
+{
+  "datasets": [
+    {
+      "dataset": "suppae.xpt",
+      "domain": "SUPPAE",
+      "execution_status": "success",
+      "execution_message": "RDOMAIN is not 'DM' but IDVAR is empty.",
+      "number_errors": 10,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": "1",
+            "QNAM": "DICTVER",
+            "RDOMAIN": "AE"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": "10",
+            "QNAM": "DICTVER",
+            "RDOMAIN": "AE"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": "11",
+            "QNAM": "DICTVER",
+            "RDOMAIN": "AE"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": "12",
+            "QNAM": "DICTVER",
+            "RDOMAIN": "AE"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": "13",
+            "QNAM": "DICTVER",
+            "RDOMAIN": "AE"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": "14",
+            "QNAM": "DICTVER",
+            "RDOMAIN": "AE"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": "15",
+            "QNAM": "DICTVER",
+            "RDOMAIN": "AE"
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": "2",
+            "QNAM": "DICTVER",
+            "RDOMAIN": "AE"
+          },
+          "validated": false
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": "3",
+            "QNAM": "DICTVER",
+            "RDOMAIN": "AE"
+          },
+          "validated": false
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": "4",
+            "QNAM": "DICTVER",
+            "RDOMAIN": "AE"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
+}

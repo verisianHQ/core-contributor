@@ -1,0 +1,21 @@
+{
+  "datasets": [
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "success",
+      "execution_message": "ETCD value is greater than 8",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "ETCD": "SCREENING"
+          }
+        }
+      ]
+    }
+  ]
+}

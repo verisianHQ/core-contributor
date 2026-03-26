@@ -1,0 +1,67 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "ARMCD value length should be <= 20.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ARMCD": "ZANOMALINE_DOSE_54_mg"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC003",
+          "value": {
+            "ARMCD": "ZANOMALINE_HIGH_DOSE_81_mg"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ta.xpt",
+      "domain": "TA",
+      "execution_status": "success",
+      "execution_message": "ARMCD value length should be <= 20.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARMCD": "ZANOMALINE_LOW_DOSE_54_mg"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARMCD": "ZANOMALINE_LOW_DOSE_54_mg"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARMCD": "ZANOMALINE_DOSE_81_mg"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

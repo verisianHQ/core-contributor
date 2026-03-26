@@ -1,106 +1,220 @@
 # core-contributor
-Contribution framework for rules and test data with automated regression testing. Edit rules and test data, then validate against the PostgreSQL-based CORE engine.
+Contribution framework for rule storage, rule authoring and test data creation with automated regression testing. Create and/or edit rules and test data, then validate against the PostgreSQL-based CORE engine.
+
+**BEFORE CONTRIBUTING, MAKE SURE YOU HAVE GONE THROUGH THE CDISC VOLUNTEERING ONBOARDING PROCESS** \
+https://www.cdisc.org/volunteer
+
+**SUPPLEMENTARY GUIDE** \
+Instructions below will guide you step-by-step through the:
+- First-time Local Setup Steps
+- Rule Authoring and Test Data Creation Process
+  
+These steps should be sufficient to get you started but are very descriptive. If you wish to be guided in a more visual way, steps with print screens are available in the [supplementary guide](https://docs.google.com/document/d/15ydgj4AqtEnFtlXL-J4DLJV32q_Q71gKn0ucu4tYYQw/edit?pli=1&tab=t.0).
 
 # First-time Local Setup Steps
 
-*IMPORTANT NOTE* - you may need your IT support team to install some of the following software for you. In particular, the setup script requires python3.12 to run properly. If you don't have it installed, the script will attempt to install it for you, but this is likely to be blocked by your company settings. If so, you will need to contact IT.
+***IMPORTANT NOTE*** \
+_You may need your IT support team to install some of the following software for you. In particular, the setup script requires python3.12 to run properly. If you don't have it installed, the script will attempt to install it for you, but this is likely to be blocked by your company settings. If so, you will need to contact IT._
 
-1) Create a free github account: https://github.com/signup
-2) Install git, following the instructions here: https://git-scm.com/install/ \
-       - Keep all the default settings throughout the installer \
-       - You DO NOT need to actually run git as a program, so close any pop-ups that appear after the installation
-3) Install VSCode, following the instructions here: https://code.visualstudio.com/download
-4) Open VSCode and a terminal within it: \
-       - Top Menu → Terminal → New Terminal (check the three dots in the top menu if you don't see 'Terminal')
-5) Create a new empty directory on your machine for storing the repository and subsequent rule editing, and navigate to it in the terminal using `cd` commands. Avoid OneDrive if possible. \
-       - There is sometimes an AI 'helper' box popup in the terminal - make sure you are typing commands into the command line itself, not the box \
-       - If any of the folder names you are navigating through have spaces (eg 'My Folder'), you will need to wrap the path in quotes, eg: `cd "C:\Users\rich\Documents\Core Contributor Folder"`
-6) Clone this repo into that directory by running the following command (DO NOT RUN MORE THAN ONCE): \
-       `git clone --recurse-submodules https://github.com/verisianHQ/core-contributor.git` \
-       *IMPORTANT NOTE* - unless something goes badly wrong and you need to fully delete the entire directory, you should never need to run this command again. 
+**Follow steps 1 - 11 carefully.**
+
+1) Create a free GitHub account: https://github.com/signup
+2) Install Git, following the instructions here: https://git-scm.com/install
+   - When prompted, ensure you check the **"Add to PATH"** option (or select **"Git from the command line and also from 3rd-party software"**)
+   - Keep all other default settings throughout the installer
+   - You DO NOT need to actually run Git as a program, so close any pop-ups that appear after the installation
+3) Install VSCode (***not*** VSCodeUser), following the instructions here: https://code.visualstudio.com/download
+4) Open VSCode and a terminal within it: 
+   - Top Menu → Terminal → New Terminal (check the three dots in the top menu if you don't see 'Terminal')
+5) Create a new empty directory on your machine for storing the repository and subsequent rule authoring and editing. Navigate to it in the terminal using `cd` commands. Avoid OneDrive if possible. 
+   - There is sometimes an AI 'helper' box popup in the terminal - make sure you are typing commands into the command line itself, not the box 
+   - If any of the folder names you are navigating through have spaces (eg 'My Folder'), you will need to wrap the path in quotes,\
+     eg: `cd "C:\Users\rich\Documents\Core Contributor Folder"`
+6) Clone this repo into that directory by running the following command (**DO NOT RUN MORE THAN ONCE**): \
+       `git clone --recurse-submodules https://github.com/verisianHQ/core-contributor.git` 
+   > **NOTE:** If you encounter `The term 'git' is not recognized as the name of a cmdlet, function, script file, or operable program.`, Git's installation directory has not been added to your system PATH. See [this StackOverflow answer](https://stackoverflow.com/questions/4492979/error-git-is-not-recognized-as-an-internal-or-external-command) for instructions on manually adding Git to your PATH.
+   
+   _***IMPORTANT NOTE***\
+   Unless something goes badly wrong and you need to fully delete the entire directory, you should never need to run this command again._
+   
 7) In VSCode, select "Open Folder" and select the repository folder you just cloned - it should be called `core-contributor`
+   
 8) This should re-open a new terminal in the repository folder. If this doesn't happen, open a new terminal in VSCode and navigate to the repository folder again.
-9) You will need to setup the python environment, which will take a little bit of time. \
-       - Assuming you are in the core-contributor folder in the VSCode terminal, run one of the following depending on your operating system (ignore messages and warnings): \
-              WINDOWS: `.\setup\windows_setup.bat` \
-              MAC: `./setup/bash_setup.sh` \
-       - Windows might prompt you asking if you want to install python - the answer is yes!
+    
+9) You will need to setup the python environment, which will take a little bit of time. 
+    - Assuming you are in the core-contributor folder in the VSCode terminal, run one of the following depending on your operating system (ignore messages and warnings): 
+        - WINDOWS: `.\setup\windows_setup.bat`
+        - MAC: `./setup/bash_setup.sh` 
+    - Windows might prompt you asking if you want to install python - the answer is yes!
+         
+    _***IMPORTANT NOTE***\
+    If you start the setup script and stop it midway through, you may get some strange errors when you try to run rules in the future. If you have any doubts, rerun the setup script, and make sure it completes._
 
-*IMPORTANT NOTE* - if you start the setup script and stop it midway through, you may get some strange errors when you try to run rules in the future. If you have any doubts, rerun the setup script, and make sure it completes.
+10) Set up the rule authoring auto-completion and real-time schema validation: 
+    - Go to the `Extensions` tab in the VSCode left sidebar 
+    - Search `yaml` and install the Red Hat YAML extension (it should be the top one) 
+    - Once it's installed, search 'yaml schema' using the search bar at the top of the settings: 
+        - WINDOWS: File → Preferences → Settings
+        - MAC: Code → Settings → Settings 
+    - Click the `Edit in settings.json` option under Yaml: Schemas 
+    - Paste the following into "yaml.schemas": 
+              `"https://rule-editor.cdisc.org/api/schema": "/*.yml"` 
+    - Save the `settings.json` 
+    - There you go! You should now see schema validation in yaml files. If you don't see this behaviour after a few seconds, try restarting VSCode
 
-10) Set up the rule authoring auto-completion and real-time schema validation: \
-        - Go to the `Extensions` tab in the VSCode left sidebar \
-        - Search `yaml` and install the Red Hat YAML extension (it should be the top one) \
-        - Once it's installed, search 'yaml schema' in the settings: \
-              WINDOWS: File → Preferences → Settings \
-              MAC: Code → Settings → Settings \
-        - Click the `Edit in settings.json` option under Yaml: Schemas \
-        - Paste the following into "yaml.schemas": \
-              `"https://rule-editor.cdisc.org/api/schema": "/*.yml"` \
-        - Save the `settings.json` \
-        - There you go! You should now see schema validation in yaml files. If you don't see this behaviour after a few seconds, try restarting VSCode
+11) Install the XLSX Editor plugin: 
+    - In the VS Code file explorer, locate the `.vsix` file in the root directory of this repository 
+    - Right-click the file and select "Install Extension VSIX"
 
+**You are now ready with the setup steps and can start with the rule authoring!**
 
-# Rule and Test Data Editing Process
+# Rule Authoring and Test Data Creation Process
 
-*IMPORTANT NOTE* - For the following section, I have detailed the exact process to follow with relevant git commands to be executed in the terminal. If in doubt, you can always fall back to this process. \
-However, VSCode integrates with git very effectively, and so there are intuitive point-and-click alternatives to all of the following commands with only simple configuration required. \
-If you'd like to take advantage of this (and I strongly recommend it for at least staging, committing and pushing your changes), please see [this](https://docs.google.com/document/d/15ydgj4AqtEnFtlXL-J4DLJV32q_Q71gKn0ucu4tYYQw/edit?pli=1&tab=t.0#bookmark=id.mnk2lsoectvz) supplementary guide, complete with screenshots \
+**_*IMPORTANT NOTE*_**\
+_In the following section, the exact process to follow with relevant Git commands to be executed in the terminal are described. If in doubt, you can always fall back to this process. However, VSCode integrates with Git very effectively, and so there are intuitive point-and-click alternatives to all of the following commands with only simple configuration required._
+
+_If you'd like to take advantage of this (strongly recommended for at least staging, committing and pushing your changes), please see [supplementary guide](https://docs.google.com/document/d/15ydgj4AqtEnFtlXL-J4DLJV32q_Q71gKn0ucu4tYYQw/edit?tab=t.0#bookmark=id.v2ehj99lxmyr) for extra details and screenshots. \
 You'll need to run the following commands to get it working: \
 `git config --global user.email "<your-github-email>"` \
-`git config --global user.name "<your-github-username>"`
+`git config --global user.name "<your-github-username>"`_
+
+_Don't forget: whenever you type a command, you should be in the core-contributor folder that you created during the set-up steps._
 
 ## Command Line Process
 
-1) Make sure you are on the main branch and that it and the engine submodule is up to date. Run the following three commands: \
+**Create a Local Branch.**
+1) Make sure you are on the main branch and that both the main branch and the engine submodule are up to date. To do this, run the following three commands: \
        `git checkout main` \
        `git pull origin main` \
-       `git submodule update --remote`
+       `git submodule update --recursive`
+   
 2) Create a new branch to work on your changes, named as such: `<your-name>/<rule-id>/<change>` (eg `richard/CORE-000001/edit`): \
        `git branch <your-branch-name>`
-3) Switch to your new branch: \
+   
+   _Note that only branch names according to following regex are allowed: **^[a-zA-Z]+/(CORE-[0-9]{6}|(CG|FB|TRC)[0-9]{4}[a-z]{1})/(edit|create|delete)$**_
+
+      **_*IMPORTANT NOTE*_**\
+   _Whenever you create a local branch to work on a rule, ensure that you are on the main branch. If you create a new local branch, when you are already on a local branch, the new branch will branch off the
+   local branch and not from main. If you would then want to merge changes from your new local branch, it will merge with the first local branch and not with the main branch. Therefore, ensure to be on the main
+   branch first prior to creating a local branch (git checkout main). Once the local branch exists, you can checkout out to it from any branch._
+   
+4) Switch to your new branch: \
        `git checkout <your-branch-name>`
-4) Edit a rule and test data as desired \
-       - Ensure that you save any changes (File → Save, or Ctrl/Cmd + S)
-5) When you want to run the rule against test data, make sure you are in the core-contributor folder and run one of the following: \
-              WINDOWS: `.\run\windows_run.bat` \
-              MAC: `./run/bash_run.sh` \
-       - If you haven't run the setup script before, don't worry; it will run automatically when you execute this command \
-       - You will be prompted to select the rule you wish to run, as well as the test case(s)
-6) Check your run results in the `results` folder. Note that there is a separate `results` folder for each test case, which contains only the information relevant to that particular case \
-       - There will be a `results.json` file, with the code-produced rule output, and a `results.txt` file, which will summarise your results in a more human-readable format. Feel free to examine both
-7) If you are unhappy with the results of your changes, continue to edit and run the rule until you are satisfied
-8) Create a PR to add your changes to the repository. To do this, run the following commands: \
+
+**Set-up Rule Folder.**
+
+**_*IMPORTANT NOTE*_**\
+_Step 4 is only applicable in case you want to create a rule for which the folder does not exist yet in the GitHub repository. It is therefore important to first check if a folder is already present. If no folder is present, you can automatically generate the required folder structure for a new rule including a blank YAML template and template Excel files (negative and positive) for the test data._
+
+4) Initialize your new rule folder structure:
+   - In the base directory of the project, activate the virtual environment by running:
+     - WINDOWS: `venv\Scripts\activate`
+     - MAC: `source venv/bin/activate`
+   - Then run the following command in your terminal: \
+       `python new-rule.py`
+   - It will prompt you a few times.
+     - If the new-rule folder already exists, it will check you definitely want to make a new one. (NOTE: If the empty folder is a leftover from a previous branch, which is likely, you SHOULD run the script and overwrite the folder to make a new one, as this will set-up the template properly for you).
+     - You will also be prompted to enter the number of positive and negative test cases you want to create. Don't worry if you realise you need more later. You can easily add more manually.
+   - This will create a rules/NEW-RULE folder with all necessary subdirectories and template files.
+   - The NEW-RULE folder should NOT be renamed. It will receive its final name after the PR has been approved.
+
+**Write or Edit Rule.**
+
+5) Edit a rule as desired:
+   - Ensure that you save any changes (File → Save, or Ctrl/Cmd + S)
+     
+6) Create test data as desired:
+   - Ensure that positive test data are created (= no data issues expected to be flagged for that particular rule).
+   - Ensure that negative test data are created (= data issues expected to be flagged for that particular rule).
+   - In addition to creating negative test data, predefined discrepancies should be marked in the negative test data. This will ensure that the validation can be automatically tested based on the expected errors you've indicated upfront.
+   - To mark predefined discrepancies in the negative test data, a validation sheet in the negative test data should be completed
+     - **Error Group**:
+       - Add each error as a new validation group (note that this might not be only a single row - for example if you highlight two cells that will cause a single error, and be outputted as a single error, then you should create TWO rows in the same validation group (ie both in group '1').
+       - Create groups using sequential numbers for the validation group column.
+      - **Sheet**: Name of the data sheet with the error e.g. cm.xpt
+      - **Error Level**:
+        - Add 'Record' if it is a normal row error
+        - 'Variable' if it is an error related to an entire column
+        - 'Dataset' if it is an error related to a whole dataset (ie missing ae.xpt sheet or similar).
+      - **Row num**: Provide the row number (using the row count of the excel sheet - note that any variable names will be row 1 and the first row starts from row 5 due to the metadata rows we always have in the sheets).
+      - **Variable**: Provide the variable name (found in the first row of the column) - with the row number this fully identifies the error cell.
+      - **Error Value**:
+        - Finally, copy the error value from the highlighted cell into the 'Error value'.
+        - If the highlighted cell has no value, use '[ABSENT]' to indicate this (including the square brackets).
+   - Repeat for all the highlighted error cells (remembering to group using the 'Error group' column where appropriate) .
+   - Ensure that you save any changes (File → Save, or Ctrl/Cmd + S).
+  
+**Perform Unit Testing.**
+     
+7) When you want to run the rule against test data, make sure you are in the core-contributor folder and run one of the following:\
+   WINDOWS: `.\run\windows_run.bat` \
+   MAC: `./run/bash_run.sh` 
+   - If you haven't run the setup script before, don't worry; it will run automatically when you execute this command.
+   - You will be prompted to select the rule you wish to run, as well as the test case(s).
+
+**Verify Results.**
+     
+8) Check your run results in the `results` folder.
+   - Note that there is a separate `results` folder for each test case, which contains only the information relevant to that particular case.
+   - There will be a `results.json` file, with the code-produced rule output, and a `results.txt` file, which will summarise your results in a more human-readable format. Feel free to examine both.
+   - Once you've run the rule, check to make sure there's nothing mentioned in the rule output - if the highlighting or validation in the validation sheet hasn't been done correctly, you will see notes about 'unvalidated highlights' and 'unhighlighted validations', and you can correct them.
+   - Ideally you see no notes, and `"validated": true` in the results. 
+
+**_*IMPORTANT NOTE*_**\
+_Note that if the rule or test data is wrong (and you're getting unexpected errors or lacking errors you expect to see), you will almost certainly see some highlight/validation issues. In this case, obviously the priority is to correct the rule and test data before checking the highlights and validation!_
+
+9) If you are unhappy with the results of your changes, continue to edit and run the rule until you are satisfied.
+
+**Request Review via PR.**
+
+10) Create a PR to add your changes to the repository. To do this, run the following commands: \
        `git add .` \
        `git commit -m "your custom message"` \
-       `git push origin <your-branch-name>` \
-9) Go to the online repository and create a pull request (PR) from your newly pushed branch
-10) On the PR page, make sure the information at the top is correct. It should be: \
+       `git push origin <your-branch-name>` 
+       - The first time you commit, you may have to log in to github
+         
+11) Go to the online repository and create a pull request (PR) from your newly pushed branch
+    
+12) On the PR page, make sure the information at the top is correct. It should be: \
        `base: main ← compare: <branch-name>`
-11) Name your PR using the format `<rule-id> <fix>` and add a brief description of your changes
-12) On the PR, add reviewers (both the 'Rules Team' and 'Engineers Team' are required) by clicking the cog in the top right corner, and add yourself as an assignee
-13) You're done! Keep an eye on the PR to make sure the automated checks pass, as well as to respond to any comments from reviewers. If you need to edit any changes on the PR, you can simply checkout your branch (`git checkout <your-branch-name>`), make your changes, and commit and push them - the PR will automatically update!
-14) If you want to start editing another rule, don't forget to run the below commands on VSCode terminal again: \
+  
+13) Name your PR using the format `<rule-id> <fix>` and add a brief description of your changes. Or if you are making a new rule with your PR, `<conformance-rule-id> create`.
+    
+14) On the PR, reviewers are added automatically (review from 'Rules Team' and 'Engineers Team' are required). Practically speaking, there is no need to assign yourself as you will be notified by default but it is 'good practice' to do it.
+    
+15) You're done!
+    - Keep an eye on the PR to make sure the automated checks pass, as well as to respond to any comments from reviewers.
+    - If you need to edit any changes on the PR, you can simply checkout your branch (`git checkout <your-branch-name>`), make your changes, and commit and push them - the PR will automatically update!
+
+**Approval - Merge PR**
+
+16) Once your PR is done, merge your changes to the source code. If you created a new rule in your PR, a new CORE-id will be assigned to it.
+
+**Let's do another rule!**    
+
+17) If you want to start editing another rule, don't forget to run the below commands on VSCode terminal again: \
        `git checkout main` \
        `git pull origin main`
 
-For further detail on any of these steps or git in general, see [this](https://docs.google.com/document/d/15ydgj4AqtEnFtlXL-J4DLJV32q_Q71gKn0ucu4tYYQw/edit?pli=1&tab=t.0) supplementary guide
+For further detail on any of these steps or git in general, see [supplementary guide](https://docs.google.com/document/d/15ydgj4AqtEnFtlXL-J4DLJV32q_Q71gKn0ucu4tYYQw/edit?pli=1&tab=t.0)
 
 
 # Advanced Usage
 
-We have included some additional functionality in the test script. To take advantage of this, you will need to run the test script directly, rather than using the run script
+Below are some additional functionalities in the test script. To take advantage of this, you will need to run the test script directly, rather than using the run script.
+NOTE: You must still run all First-time Local Setup Steps from above before this.
 
-1) In VSCode terminal, in the core-contributor directory, activate the virtual environment by running one of the following: \
-              WINDOWS: `.\venv\Scripts\activate` \
-              MAC: `source ./venv/bin/activate`
-2) You can now run the test script directly with various options: \
-              `python test.py` - Interactive mode (prompts you for rule and test case selection) \
-              `python test.py -r <rule-id>` - Test all cases for a specific rule \
-              `python test.py -r <rule-id> -tc <test-case>` - Test a specific case (eg `positive/01`) \
-              `python test.py -r <rule-id> -v` - Test with verbose output (prints results to terminal) \
-              `python test.py --all-rules` - Test all rules \
-              `python test.py -h` - See all available options
+1) In VSCode terminal, in the core-contributor directory, activate the virtual environment by running one of the following:
+   - WINDOWS: `.\venv\Scripts\activate`
+   - MAC: `source ./venv/bin/activate`
+   
+2) You can now run the test script directly with various options:
+   - `python test.py` - Interactive mode (prompts you for rule and test case selection)
+   - `python test.py -r <rule-id>` - Test all cases for a specific rule
+   - `python test.py -r <rule-id> -tc <test-case>` - Test a specific case (eg `positive/01`)
+   - `python test.py -r <rule-id> -v` - Test with verbose output (prints results to terminal)
+   - `python test.py --all-rules` - Test all rules
+   - `python test.py -h` - See all available options
 3) When you're done, you can deactivate the venv by running `deactivate`
 
 
@@ -129,8 +243,9 @@ Otherwise, create a new branch from main which includes your changes and then re
 `git checkout -b <new-branch-name>` \
 `git checkout main` \
 `git reset --hard HEAD~1` \
-`git checkout <new-branch-name>` \
-*IMPORTANT NOTE* - if you've committed more than once on main, you'll need to replace `HEAD~1` with `HEAD~n` where `n` is the number of commits you've made \
+`git checkout <new-branch-name>`
+
+***IMPORTANT NOTE*** - if you've committed more than once on main, you'll need to replace `HEAD~1` with `HEAD~n` where `n` is the number of commits you've made \
 <br />
 
 > ***I've made some changes that I want to push to the repo and other changes that I don't want to keep***
@@ -143,5 +258,9 @@ This will completely remove your changes, so make sure you don't want them befor
 > ***I want to work on multiple rules at once!***
 
 You can! You can create multiple branches for different rules and they will all be isolated from each other. \
-Just make sure to use `checkout` commands or the console to switch to the relevant branch before you make changes.
+Just make sure to use `checkout` commands or the console to switch to the relevant branch before you make changes. \
+<br />
 
+> ***The XLSX editor isn't loading or looks strange***
+
+Ensure you have no other Excel-related extensions enabled. There may be conflicts if multiple VSCode extensions try to handle .xlsx files simultaneously. Try disabling other Excel extensions and restarting VSCode to fix this.

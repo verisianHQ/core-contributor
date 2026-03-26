@@ -1,0 +1,73 @@
+# Variable: QNAM
+# Condition: 
+# Rule: ADSL Population flags not in SUPPDM
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The standard Supplemental Qualifiers included in previous
+                  versions of the SDTMIG (COMPLT, FULLSET, ITT, PPROT, and
+                  SAFETY) should not be used. Note that the ADaM subject-level
+                  analysis dataset (ADSL) specifies standard variable names for
+                  the most common populations and requires the inclusion of
+                  these flags when necessary for analysis; consult the ADaM
+                  Implementation Guide for more information about these
+                  variables.
+                Document: IG v3.4
+                Item: Assumption 5
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0528
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The standard Supplemental Qualifiers included in previous
+                  versions of the SDTMIG (COMPLT; FULLSET; ITT; PPROT; and
+                  SAFETY) should not be used. Note that the ADaM subject-level
+                  analysis dataset (ADSL) specifies standard variable names for
+                  the most common populations and requires the inclusion of
+                  these flags when necessary for analysis; consult the ADaM
+                  Implementation Guide for more information about these
+                  variables.
+                Document: IG v3.3
+                Item: Assumption 5
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0528
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: RDOMAIN
+      operator: equal_to_case_insensitive
+      value: DM
+    - name: QNAM
+      operator: matches_regex
+      value: (ENRFL|SAFFL|EFFFL|ITTFL|PPROTFL|COMPLFL|COMPLT|FULLSET|ITT|PPROT|SAFETY)
+Core:
+  Id: CORE-000211
+  Status: Published
+  Version: '1'
+Description: SUPPDM must not include population flags.
+Executability: Fully Executable
+Outcome:
+  Message: Population flag is present in SUPPDM
+  Output Variables:
+    - QNAM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - SUPP--
+Sensitivity: Record

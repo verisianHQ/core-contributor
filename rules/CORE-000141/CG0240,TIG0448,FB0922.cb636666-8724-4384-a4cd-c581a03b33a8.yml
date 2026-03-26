@@ -1,0 +1,157 @@
+# Variable: --TPT
+# Condition: VISITNUM and --TPTREF are not present in dataset
+# Rule: --TPT and --TPTNUM have a one-to-one relationship
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Within the context that defines uniqueness for a time point,
+                  which may include domain, visit, and reference time point,
+                  there must be a one-to-relationship between values of --TPT
+                  and --TPTNUM. in other words, if domain, visit, and reference
+                  time point uniquely identify subject data, then if two
+                  subjects have records with the same values of DOMAIN,
+                  VISITNUM, --TPTREF, and --TPTNUM, then these records may not
+                  have different time point descriptions in --TPT.
+                Document: IG v3.4
+                Section: 4.4.10
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0240
+              Version: '2'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Within the context that defines uniqueness for a time point,
+                  which may include domain, visit, and reference time point,
+                  there must be a one-to-relationship between values of --TPT
+                  and --TPTNUM. in other words, if domain, visit, and reference
+                  time point uniquely identify subject data, then if two
+                  subjects have records with the same values of DOMAIN,
+                  VISITNUM, --TPTREF, and --TPTNUM, then these records may not
+                  have different time point descriptions in --TPT.
+                Document: IG v3.3
+                Section: 4.4.10
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0240
+              Version: '2'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Within the context that defines uniqueness for a time point,
+                  which may include domain, visit, and reference time point,
+                  there must be a one-to-relationship between values of --TPT
+                  and --TPTNUM. in other words, if domain, visit, and reference
+                  time point uniquely identify subject data, then if two
+                  subjects have records with the same values of DOMAIN,
+                  VISITNUM, --TPTREF, and --TPTNUM, then these records may not
+                  have different time point descriptions in --TPT.
+                Document: IG v3.2
+                Section: 4.1.4.10
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0240
+              Version: '2'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Timepoints will be represented using both --TPT and --TPTNUM.
+                  There will be a one-to-one relationship between the values of
+                  --TPT and --TPTNUM.
+                Document: TIG 1.0
+                Item: Sub Section Planned Timing Num 5
+                Section: '2.8.7.5'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0448
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0922
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0922
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0922
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: VISITNUM
+      operator: not_exists
+    - name: --TPTREF
+      operator: not_exists
+    - name: --TPT
+      operator: is_not_unique_relationship
+      value: --TPTNUM
+Core:
+  Id: CORE-000141
+  Status: Published
+  Version: '1'
+Description: Trigger error when VISITNUM and --TPTREF are not present and --TPT
+  and --TPTNUM does not have a one-to-one relationship
+Executability: Fully Executable
+Outcome:
+  Message: --TPT and --TPTNUM do not have a one-to-one relationship
+  Output Variables:
+    - --TPT
+    - --TPTNUM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Record

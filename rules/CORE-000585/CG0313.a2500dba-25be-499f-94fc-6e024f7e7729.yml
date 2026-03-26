@@ -1,0 +1,63 @@
+# Variable: GEN
+# Condition: 
+# Rule: STUDYID, USUBJID or POOLID, DOMAIN, and --SEQ exist
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: STUDYID, DOMAIN, USUBJID (or POOLID), and --SEQ are required in
+                  all domains based on one of the three general observation
+                  classes.
+                Document: Model v1.4
+                Section: 2.2.4
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0313
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+Check:
+  any:
+    - any:
+        - name: STUDYID
+          operator: not_exists
+        - name: --SEQ
+          operator: not_exists
+        - name: DOMAIN
+          operator: not_exists
+    - all:
+        - name: USUBJID
+          operator: not_exists
+        - name: POOLID
+          operator: not_exists
+Core:
+  Id: CORE-000585
+  Status: Published
+  Version: '1'
+Description: Raise an error when one of the following variables; STUDYID,
+  DOMAIN, USUBJID (or POOLID) or --SEQ is not present in the dataset.
+Executability: Fully Executable
+Outcome:
+  Message: One of following variables is not present in the dataset; STUDYID,
+    DOMAIN, USUBJID (or POOLID) or --SEQ.
+  Output Variables:
+    - STUDYID
+    - DOMAIN
+    - USUBJID
+    - POOLID
+    - --SEQ
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      # Correction 2025-04-15: limit to 3 observational classes 
+      # This prevents requiring e.g. DMSEQ, RELREC and SUPPxx datasets
+      - INTERVENTIONS
+      - EVENTS
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset

@@ -1,0 +1,78 @@
+# Variable: GEN
+# Condition: Variable associated with extensible codelist and the use of value 'OTHER' is appropriate to the data being represented
+# Rule: Value in associated codelist or 'OTHER'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Conformance with the SDTMIG Domain Models is minimally indicated
+                  by following SDTM-specified controlled terminology and format
+                  guidelines for variables, when provided
+                Document: IG v3.4
+                Section: 3.2.2
+              - Cited Guidance: When the CRF includes a list of values for a qualifier field
+                  that includes "Other" and the "Other" is supplemented with a
+                  "Specify" free text field
+                Document: IG v3.4
+                Section: 4.2.7.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0021
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 3.2.2[Conformance with the SDTMIG Domain Models is minimally
+                  indicated by following SDTM-specified controlled terminology
+                  and format guidelines for variables, when
+                  provided]|4.1.2.7.1[When the CRF includes a list of values for
+                  a qualifier field that includes "Other" and the "Other" is
+                  supplemented with a "Specify" free text field,]
+                Document: IG v3.2
+                Section: 3.2.2|4.1.2.7.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0021
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 3.2.2[Conformance with the SDTMIG Domain Models is minimally
+                  indicated by following SDTM-specified controlled terminology
+                  and format guidelines for variables, when
+                  provided]|4.2.7.1[When the CRF includes a list of values for a
+                  qualifier field that includes "Other" and the "Other" is
+                  supplemented with a "Specify" free text field,]
+                Document: IG v3.3
+                Section: 3.2.2|4.2.7.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0021
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Core:
+  Id: CORE-000345
+  Status: Draft
+  Version: '1'
+Description: Trigger error if the value of a variable, which is associated with
+  an extensible codelist, is in the associated codelist or equal to 'OTHER'
+Executability: Not Executable
+Outcome:
+  Message: Variable is not equal to value within the extensible codelist, nor
+    equal to OTHER
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

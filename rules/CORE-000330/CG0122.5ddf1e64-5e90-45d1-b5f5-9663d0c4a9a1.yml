@@ -1,0 +1,56 @@
+# Variable: ARM
+# Condition: ARM in ('Screen Failure', 'Not Assigned')
+# Rule: ARM = ACTARM
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Data for screen failure subjects, if submitted, should be
+                  included in the Demographics dataset, with ARMCD = "SCRNFAIL'
+                  and ARM = "Screen Failure". Subjects withdrawn from a trial
+                  before assignment to an Arm, if they are not screen failures,
+                  should have ARMCD ='NOTASSGN' and ARM = 'Not Assigned'.
+                Document: IG v3.2
+                Item: Assumption 4
+                Section: '5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0122
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+Check:
+  all:
+    - name: ARM
+      operator: is_contained_by
+      value:
+        - Screen Failure
+        - Not Assigned
+        - SCREEN FAILURE
+        - NOT ASSIGNED
+    - name: ARM
+      operator: not_equal_to
+      value: ACTARM
+Core:
+  Id: CORE-000330
+  Status: Published
+  Version: '1'
+Description: 'ACTARM value must match ARM value in Demographics when ARM equals
+  "Screen Failure" or "Not Assigned"'
+Executability: Fully Executable
+Outcome:
+  Message: ARM should be equal to ACTARM when ARM is Screen Failure or Not Assigned.
+  Output Variables:
+    - ARM
+    - ACTARM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

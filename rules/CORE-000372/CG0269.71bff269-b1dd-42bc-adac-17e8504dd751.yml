@@ -1,0 +1,69 @@
+# Variable: TSVAL
+# Condition: TSPARMCD = 'ADDON' and TSVAL ^= null
+# Rule: TSVAL in ('N','Y')
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Further information about the parameters is included below in
+                  Table 1. TSVAL may have controlled terminology depending on
+                  the value of TSPARMCD
+                Document: IG v3.2
+                Item: Assumption 3
+                Section: 7.4|Appendix C1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0269
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Further information about the parameters is included Appendix
+                  C1, Trial Summary Codes. TSVAL may have controlled terminology
+                  depending on the value of TSPARMCD. Conditions for including
+                  parameters are included in Appendix C1, Trial Summary Codes.
+                Document: IG v3.3
+                Item: Assumption 3
+                Section: '7.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0269
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: TSPARMCD
+      operator: equal_to
+      value: ADDON
+      value_is_literal: true
+    - name: TSVAL
+      operator: non_empty
+    - name: TSVAL
+      operator: is_not_contained_by
+      value:
+        - N
+        - Y
+Core:
+  Id: CORE-000372
+  Status: Published
+  Version: '1'
+Description: 'For TS.TSPARMCD = "ADDON" records, TS.TSVAL value must equal "N"
+  or "Y" when not missing'
+Executability: Fully Executable
+Outcome:
+  Message: 'For TS.TSPARMCD = "ADDON" records, TS.TSVAL value must equal "N" or
+    "Y" when not missing'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

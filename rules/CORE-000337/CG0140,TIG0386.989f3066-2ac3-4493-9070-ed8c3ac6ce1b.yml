@@ -1,0 +1,109 @@
+# Variable: RACE
+# Condition: Multiple records in SUPPDM where RACE captured
+# Rule: RACE = 'MULTIPLE'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If multiple races are collected then the value of RACE should be
+                  'MULTIPLE' and the additional information will be included in
+                  the Supplemental Qualifiers dataset.
+                Document: IG v3.2
+                Item: Assumption 6
+                Section: '5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0140
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If multiple races are collected then the value of RACE should be
+                  'MULTIPLE' and the additional information will be included in
+                  the Supplemental Qualifiers dataset.
+                Document: IG v3.3
+                Item: Assumption 6
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0140
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If multiple races are collected then the value of RACE should be
+                  'MULTIPLE' and the additional information will be included in
+                  the Supplemental Qualifiers dataset.
+                Document: IG v3.4
+                Item: Assumption 6
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0140
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: If multiple races are collected then the value of RACE should be
+                  'MULTIPLE' and the additional information will be included in
+                  the Supplemental Qualifiers dataset.
+                Document: TIG 1.0
+                Item: Assumption 6
+                Section: 2.8.10.4
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0386
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+
+Check:
+  all:
+    - name: RACE
+      operator: not_equal_to
+      value: MULTIPLE
+    - name: QNAM
+      operator: starts_with
+      value: RACE
+      value_is_literal: true
+    - name: QNAM
+      operator: suffix_matches_regex
+      suffix: 1
+      value: ^[A-Z0-9]
+    - name: QNAM
+      operator: not_suffix_matches_regex
+      suffix: 3
+      value: (OTH)
+Core:
+  Id: CORE-000337
+  Status: Published
+  Version: '1'
+Description: 'Raise an error when multiple races are collected in SUPPDM but
+  RACE in DM does not equal "MULTIPLE".'
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: DM
+Outcome:
+  Message: 'Multiple races are collected in SUPPDM but RACE in DM does not equal
+    "MULTIPLE".'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - SUPPDM
+  Use Case: INDH
+Sensitivity: Record

@@ -1,0 +1,101 @@
+# Variable: --TRT
+# Condition: 
+# Rule: --TRT ^= 'MULTIPLE'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If multiple values are reported for a topic variable (i.e.,
+                  --TRT in an Interventions general-observation-class dataset or
+                  --TERM in an Events general-observation-class dataset), it is
+                  expected that the sponsor will split the values into multiple
+                  records or otherwise resolve the multiplicity per the
+                  sponsor's data management standard operating procedures.
+                Document: IG v3.4
+                Section: 4.2.8.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0345
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If multiple values are reported for a topic variable (i.e.;
+                  --TRT in an Interventions general-observation-class dataset or
+                  --TERM in an Events general-observation-class dataset); it is
+                  assumed that the sponsor will split the values into multiple
+                  records or otherwise resolve the multiplicity as per the
+                  sponsor's standard data management procedures.
+                Document: IG v3.3
+                Section: 4.2.8.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0345
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If multiple values are reported for a topic variable (i.e.;
+                  --TRT in an Interventions general-observation-class dataset or
+                  --TERM in an Events general-observation-class dataset); it is
+                  assumed that the sponsor will split the values into multiple
+                  records or otherwise resolve the multiplicity as per the
+                  sponsor's standard data management procedures.
+                Document: IG v3.2
+                Section: 4.1.2.8.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0345
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: If multiple values are reported for a topic variable (i.e.,
+                  --TRT in an Interventions general-observation-class dataset or
+                  --TERM in an Events general-observation-class dataset), it is
+                  expected that the sponsor will split the values into multiple
+                  records or otherwise resolve the multiplicity per the
+                  sponsor's data management standard operating procedures.
+                Document: TIG 1.0
+                Item: Num 1, Num 2
+                Section: '2.8.7.3'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0510
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --TRT
+      operator: equal_to
+      value: MULTIPLE
+Core:
+  Id: CORE-000163
+  Status: Published
+  Version: '1'
+Description: Raise an error when --TRT = 'MULTIPLE'
+Executability: Fully Executable
+Outcome:
+  Message: --TRT is equal to 'MULTIPLE'
+  Output Variables:
+    - --TRT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Record

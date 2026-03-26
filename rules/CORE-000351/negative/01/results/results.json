@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "USUBJID is not unique within study",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "001",
+          "value": {
+            "USUBJID": "001"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "001",
+          "value": {
+            "USUBJID": "001"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
+}

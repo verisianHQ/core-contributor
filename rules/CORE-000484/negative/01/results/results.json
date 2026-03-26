@@ -1,0 +1,103 @@
+{
+  "datasets": [
+    {
+      "dataset": "relrec.xpt",
+      "domain": "RELREC",
+      "execution_status": "success",
+      "execution_message": "Unique RELID is NOT present on multiple RELREC records within a subject.",
+      "number_errors": 10,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "RELID": "AEDS1"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "RELID": "AEDS2"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "RELID": "AEDD3"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "RELID": "AEDD4"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "RELID": "AEFA5"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "RELID": "AEFA6"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "RELID": "AECM1"
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "RELID": "AECM2"
+          },
+          "validated": false
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "RELID": "AECM3"
+          },
+          "validated": false
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "RELID": "AECM4"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
+}

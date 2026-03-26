@@ -1,0 +1,45 @@
+{
+  "datasets": [
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "More than one record per subject per DSSCAT per EPOCH",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 5,
+          "SEQ": 2,
+          "USUBJID": "CDISC002",
+          "value": {
+            "DSSCAT": "STUDY PARTICIPATION",
+            "EPOCH": "TREATMENT"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": 3,
+          "USUBJID": "CDISC002",
+          "value": {
+            "DSSCAT": "STUDY PARTICIPATION",
+            "EPOCH": "TREATMENT"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ds.xpt",
+      "Row": 9,
+      "Variable": "DSSCAT"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 10,
+      "Variable": "DSSCAT"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+# Variable: --OCCUR
+# Condition: (--PRESP ^= 'Y' and --OCCUR is present in dataset) or (--STAT=NOT DONE)
+# Rule: --OCCUR = null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Events[--PRESP][An indication that the event was prospectively
+                  stated or detailed on the CRF. Values should be "Y" or
+                  null.]|Events|[--OCCUR][An indication as to whether a
+                  prespecified event has occurred.]|Events[--STAT][Used to
+                  indicate when a question about the occurrence of a
+                  prespecified event was not answered. Should be null or have a
+                  value of "NOT DONE".]|Interventions[--PRESP][An indication
+                  that the intervention was prospectively stated or detailed on
+                  the CRF. Values should be "Y" or
+                  null.]|Interventions[--OCCUR][An indication as to whether a
+                  prespecified intervention has
+                  occurred.]|Interventions[--STAT][Used to indicate when a
+                  question about the occurrence of a prespecified intervention
+                  was not answered. Should be null or have a value of "NOT
+                  DONE".]
+                Document: Model v2.0
+                Item: --PRESP|--OCCUR|--STAT
+                Section: Events|Interventions
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0087
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Model v1.4[2.2.1 (Interventions )][--PRESP: Used when a
+                  specific intervention is pre-specified on a CRF. Values should
+                  be "Y" or null.][--OCCUR: Used to record whether a
+                  pre-specified event occurred when information about the
+                  occurrence of a specific event is solicited.][--STAT: Used to
+                  indicate when a question about the occurrence of a
+                  pre-specified event was not answered. Should be null or hav a
+                  value of NOT DONE]|Model v1.4[2.2.2 (Events)][--PRESP: Used to
+                  indicate whether the event describe by --TERM was
+                  pre-specified on a CRF. Value is Y for pre-specified events,
+                  null for spontaneously reported events.][--OCCUR: Used to
+                  record whether a pre-specified event occurred when information
+                  about the occurrence of a specific event is
+                  solicited.][--STAT: Used to indicate when a question about the
+                  occurrence of a pre-specified event was not answered . Should
+                  be null or have a value of NOT DONE]'
+                Document: Model v1.4
+                Section: Model v1.4[2.2.1 (Interventions )]|Model v1.4[2.2.2 (Events)]
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0087
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Model v1.7[2.2.1 (Interventions )][--PRESP: Used when a
+                  specific intervention is pre-specified on a CRF. Values should
+                  be "Y" or null.][--OCCUR: Used to record whether a
+                  pre-specified event occurred when information about the
+                  occurrence of a specific event is solicited.][--STAT: Used to
+                  indicate when a question about the occurrence of a
+                  pre-specified event was not answered. Should be null or hav a
+                  value of NOT DONE]|Model v1.7[2.2.2 (Events)][--PRESP: Used to
+                  indicate whether the event describe by --TERM was
+                  pre-specified on a CRF. Value is Y for pre-specified events,
+                  null for spontaneously reported events.][--OCCUR: Used to
+                  record whether a pre-specified event occurred when information
+                  about the occurrence of a specific event is
+                  solicited.][--STAT: Used to indicate when a question about the
+                  occurrence of a pre-specified event was not answered . Should
+                  be null or have a value of NOT DONE]'
+                Document: Model v1.7
+                Section: Model v1.7[2.2.1 (Interventions )]|Model v1.7[2.2.2 (Events)]
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0087
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Events[--PRESP][An indication that the event was prospectively
+                  stated or detailed on the CRF. Values should be "Y" or
+                  null.]|Events|[--OCCUR][An indication as to whether a
+                  prespecified event has occurred.]|Events[--STAT][Used to
+                  indicate when a question about the occurrence of a
+                  prespecified event was not answered. Should be null or have a
+                  value of "NOT DONE".]|Interventions[--PRESP][An indication
+                  that the intervention was prospectively stated or detailed on
+                  the CRF. Values should be "Y" or
+                  null.]|Interventions[--OCCUR][An indication as to whether a
+                  prespecified intervention has
+                  occurred.]|Interventions[--STAT][Used to indicate when a
+                  question about the occurrence of a prespecified intervention
+                  was not answered. Should be null or have a value of "NOT
+                  DONE".]
+                Document: SDTM v2.1
+                Item: --PRESP|--OCCUR|--STAT
+                Section: Section 3.1.2 The Events Observation Class|Section 3.1.1 The
+                  Interventions Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0352
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - any:
+        - all:
+            - any:
+                - name: --PRESP
+                  operator: not_exists
+                - name: --PRESP
+                  operator: not_equal_to
+                  value: Y
+            - name: --OCCUR
+              operator: exists
+            - name: --OCCUR
+              operator: non_empty
+        - all:
+            - name: --STAT
+              operator: equal_to
+              value: NOT DONE
+    - all:
+        - name: --OCCUR
+          operator: non_empty
+
+Core:
+  Id: CORE-000014
+  Status: Published
+  Version: '1'
+Description: Raise an error when --PRESP is not equals to "Y" and --OCCUR is
+  present in dataset or --STAT is equal to "NOT DONE" and --OCCUR is not blank
+Executability: Fully Executable
+Outcome:
+  Message: --OCCUR should only be provided when --PRESP is equal to "Y".
+  Output Variables:
+    - --PRESP
+    - --OCCUR
+    - --STAT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+      - INTERVENTIONS
+  Domains:
+    Exclude:
+      - AE
+      - DS
+      - DV
+      - EX
+  Use Case: INDH, PROD
+Sensitivity: Record

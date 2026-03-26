@@ -1,0 +1,43 @@
+{
+  "datasets": [
+    {
+      "dataset": "ie.xpt",
+      "domain": "IE",
+      "execution_status": "success",
+      "execution_message": "IESTRESC is not equal to IEORRES",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC015",
+          "value": {
+            "IEORRES": "Y",
+            "IESTRESC": "Yup"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "CDISC016",
+          "value": {
+            "IEORRES": "Yes",
+            "IESTRESC": "Yippy"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC017",
+          "value": {
+            "IEORRES": "Nope",
+            "IESTRESC": "Nah"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
+}

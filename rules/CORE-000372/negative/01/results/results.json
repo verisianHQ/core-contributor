@@ -1,0 +1,125 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "For TS.TSPARMCD = \"ADDON\" records, TS.TSVAL value must equal \"N\" or \"Y\" when not missing",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "ADDON",
+            "TSVAL": "U"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ts.xpt",
+      "Row": 7,
+      "Variable": "STUDYID"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 7,
+      "Variable": "DOMAIN"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 7,
+      "Variable": "TSSEQ"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 7,
+      "Variable": "TSGRPID"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 7,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 7,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 7,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 7,
+      "Variable": "TSVALCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 7,
+      "Variable": "TSVCDREF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 7,
+      "Variable": "TSVCDVER"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 9,
+      "Variable": "STUDYID"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 9,
+      "Variable": "DOMAIN"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 9,
+      "Variable": "TSSEQ"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 9,
+      "Variable": "TSGRPID"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 9,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 9,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 9,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 9,
+      "Variable": "TSVALCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 9,
+      "Variable": "TSVCDREF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 9,
+      "Variable": "TSVCDVER"
+    }
+  ]
+}

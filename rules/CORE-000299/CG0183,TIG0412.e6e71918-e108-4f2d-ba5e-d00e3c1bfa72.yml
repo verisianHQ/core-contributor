@@ -1,0 +1,99 @@
+# Variable: LBSTNRHI
+# Condition: LBORRES ^= continuous measurement
+# Rule: LBSTNRHI = null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Upper end of reference range for continuous measurements in
+                  standardized units. Should be populated only for continuous
+                  results. '
+                Document: SDTMIG v3.4
+                Item: Specification
+                Section: 6.3.5.6
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0183
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Upper end of reference range for continuous measurements in
+                  original units. Should be populated only for continuous
+                  results.
+                Document: IG v3.2
+                Item: Specification
+                Section: '6.3'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0183
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Upper end of reference range for continuous measurements in
+                  original units. Should be populated only for continuous
+                  results.
+                Document: IG v3.3
+                Item: Specification
+                Section: 6.3.6
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0183
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Upper end of reference range for continuous measurements in
+                  standardized units. Should be populated only for continuous
+                  results.
+                Document: TIG 1.0
+                Item: Specification-LBSTNRHI
+                Section: 2.8.10.14
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0412
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  # Changed by Marcelina Hungria on 2025-05-29
+  # Fixed the regex and the LBORRES non-empty condition per revised Description.
+  # Changed to Fully Executable. See Jira ticket: CORERULES-156 (CG0180)
+  all:
+    - name: LBORRES
+      operator: not_matches_regex
+      value: ^-?(\d+(\.\d+)?$)|(\.\d+$)
+    - name: LBSTNRHI
+      operator: non_empty
+    - name: LBORRES
+      operator: non_empty
+Core:
+  Id: CORE-000299
+  Status: Published
+  Version: '1'
+Description: Raise an error when LBORRES is not a continuous measurement and
+  LBSTNRHI is not empty. The interpretation of the guidance is that LBORRES is
+  populated (not null).
+Executability: Fully Executable
+Outcome:
+  Message: LBORRES is not a continuous measurement but LBSTNRHI is not empty.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - LB
+  Use Case: INDH
+Sensitivity: Record

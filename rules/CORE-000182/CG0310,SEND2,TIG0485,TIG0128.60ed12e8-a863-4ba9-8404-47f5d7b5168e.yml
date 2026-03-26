@@ -1,0 +1,175 @@
+# Variable: GEN
+# Condition: 
+# Rule: Variable name length <= 8
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: In some cases, the standard variable name will be shortened to
+                  meet the 8-character variable name requirement...
+                Document: IG v3.4
+                Section: 4.2.8.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0310
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The Variable Name (limited to 8 characters for compatibility
+                  with the SAS Transport format)
+                Document: IG v3.2
+                Section: '2.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0310
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: In some cases, the standard variable name will be shortened to
+                  meet the 8-character variable name requirement...
+                Document: IG v3.3
+                Section: 4.2.8.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0310
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The Variable Name (limited to 8 characters for compatibility
+                  with the SAS v5 Transport format).
+                Document: IG v3.1.1
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND2
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The Variable Name (limited to 8 characters for compatibility
+                  with the SAS v5 Transport format).
+                Document: IG v3.1
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND2
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The Variable Name (limited to 8 characters for compatibility
+                  with the SAS v5 Transport format).
+                Document: IG v3.0
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND2
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The Variable Name (limited to 8 characters for compatibility
+                  with the SAS v5 Transport format).
+                Document: IG v1.1
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND2
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The Variable Name (limited to 8 characters for compatibility
+                  with the SAS v5 Transport format).
+                Document: IG v1.1
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND2
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: The Variable Name (limited to 8 characters for compatibility
+                  with the SAS v5 Transport format).
+                Document: IG v1.1
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND2
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Variable names will be 8 characters or less and upper case.
+                Document: TIG 1.0
+                Item: 'Num 4'
+                Section: '2.6'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0485
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The Variable Name (limited to 8 characters for compatibility
+                  with the SAS v5 Transport format).
+                Document: TIG v1.0
+                Item: Text
+                Section: 2.6 Guidance for Datasets, tabulation table Num 4
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0128
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: variable_name
+      operator: longer_than
+      value: 8
+Core:
+  Id: CORE-000182
+  Status: Published
+  Version: '1'
+Description: Raise an error when variable name length is greater than 8.
+Executability: Fully Executable
+Outcome:
+  Message: Variable name length is greater than 8.
+Rule Type: Variable Metadata Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD, NONCLIN
+Sensitivity: Dataset

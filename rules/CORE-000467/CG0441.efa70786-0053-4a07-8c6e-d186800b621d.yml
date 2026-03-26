@@ -1,0 +1,64 @@
+# Variable: TSVAL
+# Condition: TSPARMCD = 'STOPRULE'
+# Rule: TSVAL ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Further information about the parameters is included below in
+                  Table 1. TSVAL may have controlled terminology depending on
+                  the value of TSPARMCD
+                Document: IG v3.2
+                Item: Assumption 3
+                Section: 7.4|Appendix C1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0441
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Further information about the parameters is included below in
+                  Table 1. TSVAL may have controlled terminology depending on
+                  the value of TSPARMCD
+                Document: IG v3.3
+                Item: Assumption 3
+                Section: '7.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0441
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: TSPARMCD
+      operator: equal_to
+      value: STOPRULE
+    - name: TSVAL
+      operator: empty
+Core:
+  Id: CORE-000467
+  Status: Published
+  Version: '1'
+Description: Raise an error when TSPARMCD = STOPRULE and TSVAL is not completed.
+Executability: Fully Executable
+Outcome:
+  Message: TSVAL is missing when TSPARMCD = STOPRULE.
+  Output Variables:
+    - TSPARMCD
+    - TSVAL
+    - TSGRPID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

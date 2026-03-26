@@ -1,0 +1,87 @@
+# Variable: GEN
+# Condition: Non-Supplemental Qualifier datasets
+# Rule: Split dataset names length > 4 and <= 6
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0650
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Supplemental Qualifier datasets for split domains would also be
+                  split. The nomenclature would include the additional
+                  one-to-two characters used to identify the split dataset.
+                Document: IG v3.4
+                Item: '7'
+                Section: 4.1.7
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0650
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: AP Guide v1.0[2][Associated Persons datasets are given a prefix
+                  of AP-- to identify the data as AP data to and distinguish
+                  them from study subject data.]|IG v3.2[4.1.1.7][Item 6][For
+                  example, if splitting by --CAT, then dataset names would be
+                  the domain name plus up to two additional characters (e.g.,
+                  QS36 for SF-36).]
+                Document: AP Guide v1.0|IG v3.2
+                Item: AP Guide v1.0[Section 2][Bullet 1]|IG v3.2[4.1.1.7][Item 6]
+                Section: 2|4.1.1.7
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0650
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: AP Guide v1.0[2][Associated Persons datasets are given a prefix
+                  of AP-- to identify the data as AP data to and distinguish
+                  them from study subject data.]|IG v3.3[4.1.7][Item 6][For
+                  example, if splitting by --CAT, then dataset names would be
+                  the domain name plus up to two additional characters (e.g.,
+                  QS36 for SF-36).]
+                Document: AP Guide v1.0|IG v3.3
+                Item: AP Guide v1.0[Section 2][Bullet 1]|IG v3.4[4.1.7][Item 6]
+                Section: 2|4.1.7
+Check:
+  any:
+    - name: dataset_name
+      operator: longer_than
+      value: 6
+    - name: dataset_name
+      operator: shorter_than
+      value: 4
+Core:
+  Id: CORE-000778
+  Status: Published
+  Version: '1'
+Description: When an Associated Persons non-supplemental qualifier dataset is
+  associated with a split dataset, the dataset name length must be greater than
+  4 and less than, or equal to, 6.
+Executability: Fully Executable
+Outcome:
+  Message: Associated Persons non-supplemental qualifier dataset associated with a
+    split dataset does not have a dataset name with a length greater than 4 and
+    less than, or equal to, 6.
+Rule Type: Dataset Metadata Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - AP--
+    include_split_datasets: true
+Sensitivity: Dataset

@@ -1,0 +1,372 @@
+{
+  "datasets": [
+    {
+      "dataset": "ag.xpt",
+      "domain": "AG",
+      "execution_status": "success",
+      "execution_message": "AGCAT should not be null when AGSCAT is populated",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "XYZ-001-001",
+          "value": {
+            "AGCAT": null,
+            "AGSCAT": "DFAJF"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMCAT should not be null when CMSCAT is populated",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "ABC-0002",
+          "value": {
+            "CMCAT": null,
+            "CMSCAT": "PRIOR DMARDS"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ml.xpt",
+      "domain": "ML",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "pr.xpt",
+      "domain": "PR",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "su.xpt",
+      "domain": "SU",
+      "execution_status": "success",
+      "execution_message": "SUCAT should not be null when SUSCAT is populated",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "1234005",
+          "value": {
+            "SUCAT": null,
+            "SUSCAT": "TOBACCO"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "1234005",
+          "value": {
+            "SUCAT": null,
+            "SUSCAT": "CAFFEINE"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AECAT should not be null when AESCAT is populated",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "1234005",
+          "value": {
+            "AECAT": null,
+            "AESCAT": "NEUROLOGIC"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "be.xpt",
+      "domain": "BE",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "da.xpt",
+      "domain": "DA",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "eg.xpt",
+      "domain": "EG",
+      "execution_status": "success",
+      "execution_message": "EGCAT should not be null when EGSCAT is populated",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "EGCAT": null,
+            "EGSCAT": "INTERVAL"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "FACAT should not be null when FASCAT is populated",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "FACAT": null,
+            "FASCAT": "GERD"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ag.xpt",
+      "Row": 1,
+      "Variable": "AGCAT"
+    },
+    {
+      "Sheet": "ag.xpt",
+      "Row": 1,
+      "Variable": "AGSCAT"
+    },
+    {
+      "Sheet": "ag.xpt",
+      "Row": 5,
+      "Variable": "AGCAT"
+    },
+    {
+      "Sheet": "ag.xpt",
+      "Row": 5,
+      "Variable": "AGSCAT"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 1,
+      "Variable": "CMCAT"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 1,
+      "Variable": "CMSCAT"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 5,
+      "Variable": "CMCAT"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 5,
+      "Variable": "CMSCAT"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 1,
+      "Variable": "EXCAT"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 1,
+      "Variable": "EXSCAT"
+    },
+    {
+      "Sheet": "ml.xpt",
+      "Row": 1,
+      "Variable": "MLCAT"
+    },
+    {
+      "Sheet": "ml.xpt",
+      "Row": 1,
+      "Variable": "MLSCAT"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AECAT"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AESCAT"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 6,
+      "Variable": "AECAT"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 6,
+      "Variable": "AESCAT"
+    },
+    {
+      "Sheet": "be.xpt",
+      "Row": 1,
+      "Variable": "BECAT"
+    },
+    {
+      "Sheet": "be.xpt",
+      "Row": 1,
+      "Variable": "BESCAT"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 1,
+      "Variable": "CECAT"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 1,
+      "Variable": "CESCAT"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 1,
+      "Variable": "DSCAT"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 1,
+      "Variable": "DSSCAT"
+    },
+    {
+      "Sheet": "mh.xpt",
+      "Row": 1,
+      "Variable": "MHCAT"
+    },
+    {
+      "Sheet": "mh.xpt",
+      "Row": 1,
+      "Variable": "MHSCAT"
+    },
+    {
+      "Sheet": "da.xpt",
+      "Row": 1,
+      "Variable": "DACAT"
+    },
+    {
+      "Sheet": "da.xpt",
+      "Row": 1,
+      "Variable": "DASCAT"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 1,
+      "Variable": "EGCAT"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 1,
+      "Variable": "EGSCAT"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 6,
+      "Variable": "EGCAT"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 6,
+      "Variable": "EGSCAT"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 1,
+      "Variable": "FACAT"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 1,
+      "Variable": "FASCAT"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 6,
+      "Variable": "FACAT"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 6,
+      "Variable": "FASCAT"
+    }
+  ]
+}

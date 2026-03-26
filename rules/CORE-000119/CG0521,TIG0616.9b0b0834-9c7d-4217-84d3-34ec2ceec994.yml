@@ -1,0 +1,76 @@
+# Variable: ARM
+# Condition: ARMCD = null
+# Rule: ARM = null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If ARMCD is null, then ARM must be null and ARMNRS must be
+                  populated with the reason ARMCD is null.
+                Document: IG v3.4
+                Item: Assumption 4
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0521
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If ARMCD is null, then ARM must be null and ARMNRS must be
+                  populated with the reason ARMCD is null.
+                Document: IG v3.3
+                Item: Assumption 4
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0521
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: If ARMCD is null, then ARM must be null and ARMNRS must be
+                  populated with the reason ARMCD is null.
+                Document: TIG 1.0
+                Item: Assumption 4.a.ii
+                Section: 2.8.10.4
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0616
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: ARMCD
+      operator: empty
+    - name: ARM
+      operator: non_empty
+Core:
+  Id: CORE-000119
+  Status: Published
+  Version: '1'
+Description: Raise an error when ARM is not empty, but ARMCD is empty
+Executability: Fully Executable
+Outcome:
+  Message: ARM is populated, when ARMCD is NULL
+  Output Variables:
+    - ARMCD
+    - ARM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+  Use Case: INDH
+Sensitivity: Record

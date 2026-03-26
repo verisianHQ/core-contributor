@@ -1,0 +1,93 @@
+# Variable: VISITNUM
+# Condition: SVUPDES ^= null
+# Rule: VISITNUM not in TV.VISITNUM
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: "Records for unplanned visits should be included in the SV
+                  dataset. For unplanned visits, SVUPDES should be populated
+                  with a description of the reason for the unplanned visit. Some
+                  judgment may be required to determine what constitutes an
+                  unplanned visit. When data are collected outside a planned
+                  visit, that act of collecting data may or may not be described
+                  as a 'visit.' The encounter should generally be treated as a
+                  visit if data from the encounter are included in any domain
+                  for which VISITNUM is included, since a record with a missing
+                  value for VISITNUM is generally less useful than a record with
+                  VISITNUM populated. If the occasion is considered a visit, its
+                  date/times must be included in the SV table and a value of
+                  VISITNUM must be assigned. See Section 4: 4.1.4.5, Clinical
+                  Encounters And Visits for information on the population of
+                  visit variables for unplanned visits."
+                Document: IG v3.2
+                Item: Assumption 3
+                Section: 5 SV
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0214
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Records for unplanned visits should be included in the SV
+                  dataset. For unplanned visits, SVUPDES should be populated
+                  with a description of the reason for the unplanned visit. Some
+                  judgment may be required to determine what constitutes an
+                  unplanned visit. When data are collected outside a planned
+                  visit, that act of collecting data may or may not be described
+                  as a 'visit.' The encounter should generally be treated as a
+                  visit if data from the encounter are included in any domain
+                  for which VISITNUM is included, since a record with a missing
+                  value for VISITNUM is generally less useful than a record with
+                  VISITNUM populated. If the occasion is considered a visit, its
+                  date/times must be included in the SV table and a value of
+                  VISITNUM must be assigned. See Section 4.4.5, Clinical
+                  Encounters And Visits for information on the population of
+                  visit variables for unplanned visits.
+                Document: IG v3.3
+                Item: Assumption 3
+                Section: '5.5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0214
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: SVUPDES
+      operator: non_empty
+    - name: VISITNUM
+      operator: is_contained_by
+      value: $visitnum_in_tv
+Core:
+  Id: CORE-000843
+  Status: Published
+  Version: '1'
+Description: When SVUPDES is populated, then the VISITNUM should not be equal to
+  a VISITNUM in TV
+Executability: Fully Executable
+Operations:
+  - domain: TV
+    id: $visitnum_in_tv
+    name: VISITNUM
+    operator: distinct
+Outcome:
+  Message: SVUPDES is populated, but the VISITNUM equals a VISITNUM present in TV
+  Output Variables:
+    - SVUPDES
+    - VISITNUM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - SV
+Sensitivity: Record

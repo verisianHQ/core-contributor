@@ -1,0 +1,59 @@
+# Variable: GEN
+# Condition: DSCAT = 'DISPOSITION EVENT'
+# Rule: At most one record per subject per epoch
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: "ICH E3: Section 10.1 indicates that 'the specific reason for
+                  discontinuation' should be presented; and that summaries
+                  should be 'grouped by treatment and by major reason.' The
+                  CDISC SDS Team interprets this guidance as requiring one
+                  standardized disposition term (DSDECOD) per disposition event.
+                  If multiple reasons are reported; the sponsor should identify
+                  a primary reason and use that to populate DSTERM and DSDECOD.
+                  Additional reasons should be submitted in SUPPDS."
+                Document: IG v3.2
+                Item: Assumption 5.a
+                Section: 6.2 DS
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0398
+              Version: '2'
+            Version: '2.0'
+        Version: '3.2'
+Check:
+  all:
+    - name: DSCAT
+      operator: equal_to
+      value: DISPOSITION EVENT
+    - name: DSCAT
+      operator: is_not_unique_set
+      value:
+        - USUBJID
+        - EPOCH
+
+Core:
+  Id: CORE-000586
+  Status: Published
+  Version: '1'
+Description: 'Raise an error when DSCAT = DISPOSITION EVENT and there is more
+  than one record per subject for an EPOCH'
+Executability: Fully Executable
+Outcome:
+  Message: 'Multiple records exist within the same EPOCH for a subject when DSCAT
+    = DISPOSITION EVENT'
+  Output Variables:
+    - DSCAT
+    - EPOCH
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - DS
+Sensitivity: Record

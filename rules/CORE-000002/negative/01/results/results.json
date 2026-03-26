@@ -1,0 +1,43 @@
+{
+  "datasets": [
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "success",
+      "execution_message": "SESTDTC should be populated.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "1201001",
+          "value": {
+            "SESTDTC": null
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": 2,
+          "USUBJID": "1201002",
+          "value": {
+            "SESTDTC": null
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "se.xpt",
+      "Row": 6,
+      "Variable": "SESTDTC"
+    },
+    {
+      "Sheet": "se.xpt",
+      "Row": 9,
+      "Variable": "SESTDTC"
+    }
+  ]
+}

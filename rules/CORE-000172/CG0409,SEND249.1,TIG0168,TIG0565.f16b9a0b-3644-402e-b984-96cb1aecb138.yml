@@ -1,0 +1,174 @@
+# Variable: STUDYID
+# Condition: 
+# Rule: STUDYID = DM.STUDYID
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All records with the same STUDYID value are a group of records
+                  that describe that study.
+                Document: IG v3.4
+                Item: 2.B.1
+                Section: 4.2.6
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0409
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All records with the same STUDYID value are a group of records
+                  that describe that study
+                Document: IG v3.3
+                Item: 2.B.1
+                Section: 4.2.6
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0409
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All records with the same STUDYID value are a group of records
+                  that describe that study
+                Document: IG v3.2
+                Item: 2.B.1
+                Section: 4.1.2.6
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0409
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SENDIG
+        # IMPORTANT: Rule is different from SEND249, which is for SENDIG-3.0 ONLY,
+        # and which explicitely requires STUDYID=TS.STUDYID 
+        References:
+          - Citations:
+              - Cited Guidance: The STUDYID in all domains must be the same in all records
+                  across the study.
+                Document: IG v3.1
+                Section: 3.7.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND249.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The STUDYID in all domains must be the same in all records
+                  across the study.
+                Document: IG v3.1.1
+                Section: 3.7.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND249.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The STUDYID in all domains must be the same in all records
+                  across the study.
+                Document: IG v3.1
+                Section: 3.7.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND249.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The STUDYID in all domains must be the same in all records
+                  across the study.
+                Document: IG v3.1.1
+                Section: 3.7.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND249.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: The STUDYID in all domains must be the same in all records
+                  across the study.
+                Document: IG v3.1.1
+                Section: 3.7.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND249.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Unique identifier for a study.
+                Document: TIG v1.0
+                Item: STUDYID CDISC Notes
+                Section: 2.8.9.32, and all domains
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0168
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Unique identifier that describe that study
+                Document: TIG 1.0
+                Item: Specifications STUDYID
+                Section: All Domain Specifications
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0565
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: STUDYID
+      operator: is_not_contained_by
+      value: $dm_studyid
+Core:
+  Id: CORE-000172
+  Status: Published
+  Version: '1'
+Description: Raise an error when STUDYID is not equal to DM.STUDYID. The STUDYID
+  in all domains must be the same in all records across the study.
+Executability: Fully Executable
+Operations:
+  - domain: DM
+    id: $dm_studyid
+    name: STUDYID
+    operator: distinct
+Outcome:
+  Message: STUDYID is not equal to DM.STUDYID
+  Output Variables:
+    - STUDYID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, NONCLIN
+Sensitivity: Record

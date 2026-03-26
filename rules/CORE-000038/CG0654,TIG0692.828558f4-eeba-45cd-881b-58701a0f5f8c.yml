@@ -1,0 +1,70 @@
+# Variable: SVPRESP
+# Condition: SVOCCUR ^= null
+# Rule: SVPRESP = "Y"
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: An indication that the visit is planned. Values should be "Y" or
+                  null.
+                Document: SDTM v2.0
+                Item: SVPRESP
+                Section: Subject Visits
+              - Cited Guidance: An indication as to whether a prespecified (planned) visit has
+                  occurred.
+                Document: SDTM v2.0
+                Item: SVOCCUR
+                Section: Subject Visits
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0654
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Subject Visits[SVPRESP][An indication that the visit is planned.
+                  Values should be "Y" or null.]
+                Document: SDTM v1.0
+                Item: SVPRESP
+                Section: 3.2.3.3 Subject Visits
+              - Cited Guidance: Subject Visits[SVOCCUR][An indication as to whether a
+                  prespecified (planned) visit has occurred.]
+                Document: SDTM v1.0
+                Item: SVOCCUR
+                Section: 3.2.3.3 Subject Visits
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0692
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: SVOCCUR
+      operator: non_empty
+    - name: SVPRESP
+      operator: not_equal_to
+      value: Y
+Core:
+  Id: CORE-000038
+  Status: Published
+  Version: '1'
+Description: Raise an error when SVOCCUR is not null and SVPRESP is not "Y".
+Executability: Fully Executable
+Outcome:
+  Message: SVPRESP is not "Y" when SVOCCUR is populated.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - SV
+  Use Case: INDH
+Sensitivity: Record

@@ -1,0 +1,155 @@
+# Variable: GEN
+# Condition: 
+# Rule: Variable = Model List of Allowed Variables for Observation Class
+#
+# 2025-11-18: SDTMIG-3-3 is implemented in a separate rule, and thus commented out here,
+# as SDTMIG has "domain-specific" variables: 
+# which are NOT in the "SDTM Model"
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Sponsors may not add any variables other than those described in
+                  the preceding three bullets. . . . Standard variables must not
+                  be renamed or modified for novel usage.
+                Document: IG v3.4
+                Section: '2.5'
+              - Cited Guidance: Each observation consists of a series of named variables.
+                Document: Model v2.0
+                Section: Model Concepts and Terms --Variables
+              - Cited Guidance: Domain-specific variables, a concept introduced in SDTM v1.5,
+                  are for use in a limited number of designated domains and will
+                  be identified in the appropriate implementation guide.]
+                Document: Model v2.0
+                Section: The General Observation Classes
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0013
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: IG v3.2[2.5][Sponsors may not add any other variables. . . .
+                  Standard variables must not be renamed or modified for novel
+                  usage. Using SDTM-specified standard variable names.]|Model
+                  v1.4[3.2.22][Each observation can be described by a series of
+                  named variables.]
+                Document: IG v3.2|Model v1.4
+                Section: IG v3.2[2.5]|Model v1.4[3.2.22]
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0013
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      # 2025-11-18: SDTMIG-3-3 is implemented in a separate rule, and thus commented out here,
+      # as SDTMIG has "domain-specific" variables: 
+      # which are NOT in the "SDTM Model"
+      # For SDTMIG-3-2 there are none such "domain-specific" variables
+      # and for SDTMIG-3-4 they are also present in the "SDTM Model".
+      #- Name: SDTMIG
+      #  References:
+      #    - Citations:
+      #        - Cited Guidance: IG v3.3[2.5][Sponsors may not add any other variables. . . .
+      #            Standard variables must not be renamed or modified for novel
+      #            usage]|IG v3.3[2.5][[Using SDTM-specified standard variable
+      #            names]|Model v1.7[3.2.2 2.1][Each observation can be described
+      #            by a series of named variables. Domain-specific variables, a
+      #            concept introduced in SDTM v1.5, are for use in a limited
+      #            number of designated domains and will be identified in the
+      #            appropriate implementation guide.]
+      #          Document: IG v3.3|Model v1.7
+      #          Section: IG v3.3[2.5]|Model v1.7[3.2.2 2.1]
+      #      Origin: SDTM and SDTMIG Conformance Rules
+      #      Rule Identifier:
+      #        Id: CG0013
+      #        Version: '1'
+      #      Version: '2.0'
+      #  Version: '3.3'
+      - Name: 'TIG'
+        References:
+          - Citations:
+              - Cited Guidance: A dataset is created using a domain specification in this guide
+                  when the scientific nature or role of the data is within the
+                  scope of a domain. Domains are extended or custom domain
+                  specifications are only used when data are different in nature
+                  and are not in scope for domains in this guide.
+                Document: TIG 1.0
+                Item: Table 2 Num 2
+                Section: 2.8.5
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0298
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Using SDTM-specified standard variable names
+                Document: IG v3.2
+                Section: 3.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0351
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Using SDTM-specified standard variable names
+                Document: IG v3.2
+                Section: 3.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0351
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      #- Name: SDTMIG
+      #  References:
+      #    - Citations:
+      #        - Cited Guidance: Using SDTM-specified standard variable names
+      #          Document: IG v3.3
+      #          Section: 3.2.2
+      #      Origin: SDTM and SDTMIG Conformance Rules
+      #      Rule Identifier:
+      #        Id: CG0351
+      #        Version: '1'
+      #      Version: '2.0'
+      #  Version: '3.3'
+Check:
+  all:
+    - name: variable_name
+      operator: is_not_contained_by
+      value: $allowed_variables
+Core:
+  Id: CORE-000550
+  Status: Published
+  Version: '1'
+Description: Trigger error when variable is not an allowed variable for an Observation Class
+Executability: Partially Executable - Possible Underreporting
+Operations:
+  - id: $allowed_variables
+    operator: get_model_column_order
+Outcome:
+  Message: Variables not listed in the Model List of Allowed Variables for
+    Observation Class should be in SUPPQUAL.
+Rule Type: Variable Metadata Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Record

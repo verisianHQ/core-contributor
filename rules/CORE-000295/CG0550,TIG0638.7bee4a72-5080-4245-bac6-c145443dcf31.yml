@@ -1,0 +1,76 @@
+# Variable: --STREFN
+# Condition: --STREFC ^= null
+# Rule: --STREFN ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Reference value for continuous or numeric results or findings in
+                  standard format or in standard units. --STREFN uses the same
+                  units as --STRESN, if applicable.
+                Document: SDTM v2.0
+                Item: --STREFN
+                Section: Findings
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0550
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Reference value for continuous or numeric results or findings in
+                  standard format or in standard units. --STREFN uses the same
+                  units as --STRESN, if applicable
+                Document: Model v1.7
+                Item: --STREFN
+                Section: Table 2.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0550
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Reference value for continuous or numeric results or findings in
+                  standard format or in standard units. --STREFN uses the same
+                  units as --STRESN, if applicable.
+                Document: SDTM v2.1
+                Item: --STREFN
+                Section: 3.1.3 The Findings Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0638
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --STREFC
+      operator: non_empty
+    - name: --STREFN
+      operator: empty
+Core:
+  Id: CORE-000295
+  Status: Published
+  Version: '1'
+Description: When --STREFC is populated, --STREFN should also be populated.
+Executability: Fully Executable
+Outcome:
+  Message: --STREFN is null when --STREFC is populated.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Record

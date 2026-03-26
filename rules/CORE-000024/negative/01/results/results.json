@@ -1,0 +1,43 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AEBODSYS is not empty but AEBDSYCD is empty or not present in dataset.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "AEBDSYCD": null,
+            "AEBODSYS": "Musculoskeletal and connective tissue disorders"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "123101",
+          "value": {
+            "AEBDSYCD": null,
+            "AEBODSYS": "Nervous system disorders"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "123101",
+          "value": {
+            "AEBDSYCD": null,
+            "AEBODSYS": "Vascular disorders"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

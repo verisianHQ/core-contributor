@@ -1,0 +1,191 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "A record exists in TS where TSPARMCD = STYPE and TSVAL = INTERVENTIONAL but TSVAL for TSPARMCD = TRT is empty.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 43,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "$STYPE_INTERVENTIONAL": 1,
+            "TSGRPID": "1",
+            "TSPARMCD": "TRT",
+            "TSVAL": null
+          },
+          "validated": false
+        },
+        {
+          "row": 45,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "$STYPE_INTERVENTIONAL": 1,
+            "TSGRPID": "2",
+            "TSPARMCD": "TRT",
+            "TSVAL": null
+          },
+          "validated": false
+        },
+        {
+          "row": 54,
+          "SEQ": 3,
+          "USUBJID": "None",
+          "value": {
+            "$STYPE_INTERVENTIONAL": 2,
+            "TSGRPID": null,
+            "TSPARMCD": "TRT",
+            "TSVAL": null
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ts.xpt",
+      "Row": 46,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 46,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 46,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 46,
+      "Variable": "TSVALNF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 47,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 47,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 47,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 47,
+      "Variable": "TSVALNF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 48,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 48,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 48,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 48,
+      "Variable": "TSVALNF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 49,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 49,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 49,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 49,
+      "Variable": "TSVALNF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 56,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 56,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 56,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 56,
+      "Variable": "TSVALNF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 57,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 57,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 57,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 57,
+      "Variable": "TSVALNF"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 58,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 58,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 58,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 58,
+      "Variable": "TSVALNF"
+    }
+  ]
+}

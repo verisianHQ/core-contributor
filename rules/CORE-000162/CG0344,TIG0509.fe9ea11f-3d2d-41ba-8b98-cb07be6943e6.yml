@@ -1,0 +1,95 @@
+# Variable: --TESTCD
+# Condition: 
+# Rule: --TESTCD ^= 'MULTIPLE'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If multiple result values (--ORRES) are reported for a test in a
+                  Findings class dataset, multiple records should be submitted
+                  for that --TESTCD.
+                Document: IG v3.4
+                Section: 4.2.8.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0344
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If multiple values are reported for a topic variable (i.e.;
+                  --TRT in an Interventions general-observation-class dataset or
+                  --TERM in an Events general-observation-class dataset); it is
+                  assumed that the sponsor will split the values into multiple
+                  records or otherwise resolve the multiplicity as per the
+                  sponsor's standard data management procedures.
+                Document: IG v3.3
+                Section: 4.2.8.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0344
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If multiple values are reported for a topic variable (i.e.;
+                  --TRT in an Interventions general-observation-class dataset or
+                  --TERM in an Events general-observation-class dataset); it is
+                  assumed that the sponsor will split the values into multiple
+                  records or otherwise resolve the multiplicity as per the
+                  sponsor's standard data management procedures.
+                Document: IG v3.2
+                Section: 4.1.2.8.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0344
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: If multiple result values (represented in --ORRES) are collected
+                  for a test, then multiple records will be represented for the
+                  test (represented in --TESTCD)
+                Document: TIG 1.0
+                Item: Num 2
+                Section: 2.8.7.3
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0509
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --TESTCD
+      operator: equal_to
+      value: MULTIPLE
+Core:
+  Id: CORE-000162
+  Status: Published
+  Version: '1'
+Description: Raise an error when --TESTCD = 'MULTIPLE'
+Executability: Fully Executable
+Outcome:
+  Message: --TESTCD is equal to 'MULTIPLE'
+  Output Variables:
+    - --TESTCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Record

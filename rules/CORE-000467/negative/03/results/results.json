@@ -1,0 +1,56 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVAL is missing when TSPARMCD = STOPRULE.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 46,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSGRPID": "2",
+            "TSPARMCD": "STOPRULE",
+            "TSVAL": null
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ts.xpt",
+      "Row": 50,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 50,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 50,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 51,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 51,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 51,
+      "Variable": "TSVAL"
+    }
+  ]
+}

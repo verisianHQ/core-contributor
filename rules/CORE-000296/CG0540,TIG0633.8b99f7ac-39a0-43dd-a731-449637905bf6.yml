@@ -1,0 +1,95 @@
+# Variable: GEN
+# Condition: DM.ACTARMCD not null
+# Rule: DS records present for subject
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The Disposition dataset provides an accounting for all subjects
+                  who entered the study and may include protocol milestones,
+                  such as randomization, as well as the subject's completion
+                  status or reason for discontinuation for the entire study or
+                  each phase or segment of the study, including screening and
+                  post-treatment follow-up.
+                Document: IG v3.4
+                Item: Assumption 1
+                Section: 6.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0540
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The Disposition dataset provides an accounting for all subjects
+                  who entered the study and may include protocol milestones,
+                  such as randomization, as well as the subject's completion
+                  status or reason for discontinuation for the entire study or
+                  each phase or segment of the study, including screening and
+                  post-treatment follow-up.
+                Document: IG v3.3
+                Item: Assumption 1
+                Section: 6.2.3 DS
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0540
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The Disposition (DS) dataset provides an accounting for all
+                  subjects who entered the study and may include protocol
+                  milestones, such as randomization, as well as the subject's
+                  completion status or reason for discontinuation for the entire
+                  study or each phase or segment of the study, including
+                  screening and follow-up. Applicants may choose which
+                  disposition events and milestones to submit for a study in
+                  alignment with regulatory requirements.
+                Document: TIG 1.0
+                Item: Assumption 1
+                Section: 2.8.10.8
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0633
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: ACTARMCD
+      operator: non_empty
+    - name: USUBJID
+      operator: is_not_contained_by
+      value: $ds_usubjid
+Core:
+  Id: CORE-000296
+  Status: Published
+  Version: '1'
+Description: When ACTARMCD is populated, disposition data for subject must be present
+Executability: Fully Executable
+Operations:
+  - domain: DS
+    id: $ds_usubjid
+    name: USUBJID
+    operator: distinct
+Outcome:
+  Message: There are no DS records for subject who was assigned treatment
+  Output Variables:
+    - USUBJID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+  Use Case: INDH
+Sensitivity: Record

@@ -1,0 +1,187 @@
+{
+  "datasets": [
+    {
+      "dataset": "dd.xpt",
+      "domain": "DD",
+      "execution_status": "success",
+      "execution_message": "Missing DDSTRESC value, when DDRESCAT value is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "DDRESCAT": "UNDERTERMINED",
+            "DDSTRESC": null
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "mb.xpt",
+      "domain": "MB",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "mi.xpt",
+      "domain": "MI",
+      "execution_status": "success",
+      "execution_message": "Missing MISTRESC value, when MIRESCAT value is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "ABC-1001",
+          "value": {
+            "MIRESCAT": "NEGATIVE",
+            "MISTRESC": null
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "ms.xpt",
+      "domain": "MS",
+      "execution_status": "success",
+      "execution_message": "Missing MSSTRESC value, when MSRESCAT value is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "123101",
+          "value": {
+            "MSRESCAT": "JDKSAJJDSAKF",
+            "MSSTRESC": null
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "oe.xpt",
+      "domain": "OE",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ur.xpt",
+      "domain": "UR",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "dd.xpt",
+      "Row": 1,
+      "Variable": "DDSTRESC"
+    },
+    {
+      "Sheet": "dd.xpt",
+      "Row": 1,
+      "Variable": "DDRESCAT"
+    },
+    {
+      "Sheet": "dd.xpt",
+      "Row": 6,
+      "Variable": "DDSTRESC"
+    },
+    {
+      "Sheet": "dd.xpt",
+      "Row": 6,
+      "Variable": "DDRESCAT"
+    },
+    {
+      "Sheet": "mb.xpt",
+      "Row": 1,
+      "Variable": "MBSTRESC"
+    },
+    {
+      "Sheet": "mb.xpt",
+      "Row": 1,
+      "Variable": "MBRESCAT"
+    },
+    {
+      "Sheet": "mi.xpt",
+      "Row": 1,
+      "Variable": "MISTRESC"
+    },
+    {
+      "Sheet": "mi.xpt",
+      "Row": 1,
+      "Variable": "MIRESCAT"
+    },
+    {
+      "Sheet": "mi.xpt",
+      "Row": 5,
+      "Variable": "MISTRESC"
+    },
+    {
+      "Sheet": "mi.xpt",
+      "Row": 5,
+      "Variable": "MIRESCAT"
+    },
+    {
+      "Sheet": "ms.xpt",
+      "Row": 1,
+      "Variable": "MSSTRESC"
+    },
+    {
+      "Sheet": "ms.xpt",
+      "Row": 1,
+      "Variable": "MSRESCAT"
+    },
+    {
+      "Sheet": "ms.xpt",
+      "Row": 5,
+      "Variable": "MSSTRESC"
+    },
+    {
+      "Sheet": "ms.xpt",
+      "Row": 5,
+      "Variable": "MSRESCAT"
+    },
+    {
+      "Sheet": "oe.xpt",
+      "Row": 1,
+      "Variable": "OESTRESC"
+    },
+    {
+      "Sheet": "oe.xpt",
+      "Row": 1,
+      "Variable": "OERESCAT"
+    },
+    {
+      "Sheet": "ur.xpt",
+      "Row": 1,
+      "Variable": "URSTRESC"
+    },
+    {
+      "Sheet": "ur.xpt",
+      "Row": 1,
+      "Variable": "URRESCAT"
+    },
+    {
+      "Sheet": "ur.xpt",
+      "Row": 6,
+      "Variable": "URSTRESC"
+    },
+    {
+      "Sheet": "ur.xpt",
+      "Row": 6,
+      "Variable": "URRESCAT"
+    }
+  ]
+}

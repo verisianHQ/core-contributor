@@ -1,0 +1,73 @@
+# Variable: TSVCDREF
+# Condition: TSPARMCD in ('COMPTRT', 'CURTRT', 'TRT')
+# Rule: TSVCDREF = 'UNII'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Further information about the parameters is included below in
+                  Table 1. TSVAL may have     controlled terminology depending
+                  on the value of TSPARMCD'
+                Document: SDTM and SDTMIG Conformance Rules v2.0
+                Item: Assumption 3
+                Section: '7.4'
+            Origin: 'SDTM and SDTMIG Conformance Rules'
+            Rule Identifier:
+              Id: 'CG0444'
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Further information about the parameters is included below in
+                  Table 1. TSVAL may have     controlled terminology depending
+                  on the value of TSPARMCD'
+                Document: SDTM and SDTMIG Conformance Rules v2.0
+                Item: Assumption 3
+                Section: '7.4'
+            Origin: 'SDTM and SDTMIG Conformance Rules'
+            Rule Identifier:
+              Id: 'CG0444'
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - any:
+        - name: TSPARMCD
+          operator: equal_to
+          value: COMPTRT
+        - name: TSPARMCD
+          operator: equal_to
+          value: CURTRT
+        - name: TSPARMCD
+          operator: equal_to
+          value: TRT
+    - name: TSVCDREF
+      operator: not_equal_to
+      value: 'UNII'
+
+Core:
+  Id: CORE-000735
+  Status: Published
+  Version: '1'
+Description: 'When TSPARMCD is equal to COMPTRT, CURTRT or TRT, TSVCDREF should equal UNII'
+Executability: Fully Executable
+Outcome:
+  Message: 'Throw error when TSPARMCD is equal to COMPTRT, CURTRT, or TRT and
+    TSVCDREF ^= UNII'
+  Output Variables:
+    - TSPARMCD
+    - TSVCDREF
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

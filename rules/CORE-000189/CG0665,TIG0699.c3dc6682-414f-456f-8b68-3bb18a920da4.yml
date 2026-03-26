@@ -1,0 +1,62 @@
+# Variable: AGEU
+# Condition: AGE ^= null
+# Rule: AGEU ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: '[AGEU]Variable Qualifier of AGE or AGETXT.|[AGETXT]Not in human
+                  clinical trials.'
+                Document: Model v2.0
+                Item: AGEU|AGETXT
+                Section: Demographics
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0665
+              Version: '2'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: '[AGEU]Variable Qualifier of AGE or AGETXT.|[AGETXT]Not in human
+                  clinical trials.'
+                Document: SDTM v2.1
+                Item: AGEU|AGETXT
+                Section: Section 3.2.1 Demographics
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0699
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: AGE
+      operator: non_empty
+    - name: AGEU
+      operator: empty
+Core:
+  Id: CORE-000189
+  Status: Published
+  Version: '1'
+Description: Raise an error when AGE is not blank and AGEU is blank.
+Executability: Fully Executable
+Outcome:
+  Message: AGEU is missing when AGE is provided.
+  Output Variables:
+    - AGE
+    - AGEU
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+  Use Case: INDH
+Sensitivity: Record

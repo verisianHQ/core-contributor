@@ -1,0 +1,24 @@
+{
+  "datasets": [
+    {
+      "dataset": "co.xpt",
+      "domain": "CO",
+      "execution_status": "success",
+      "execution_message": "CODTC is populated when IDVAR is also populated",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "AB-59",
+          "value": {
+            "CODTC": "2003-11-\n08",
+            "IDVAR": "AESEQ",
+            "USUBJID": "AB-59"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSPARMCD = PCLAS but TSVCDREF does not equal 'MED-RT'.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 32,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "PCLAS",
+            "TSVCDREF": "MEDRT"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ts.xpt",
+      "Row": 36,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 36,
+      "Variable": "TSVCDREF"
+    }
+  ]
+}

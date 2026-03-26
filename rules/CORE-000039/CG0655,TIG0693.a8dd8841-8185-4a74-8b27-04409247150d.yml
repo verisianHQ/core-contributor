@@ -1,0 +1,79 @@
+# Variable: VISITNUM
+# Condition: SVPRESP = 'Y'
+# Rule: VISITNUM in TV.VISITNUM
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Value is "Y" for planned visits, null for unplanned visits.
+                Document: SDTMIG v3.4
+                Item: SVPRESP
+                Section: '5.5'
+              - Cited Guidance: The values of VISITNUM in the TV dataset are the valid values of
+                  VISITNUM for planned Visits.  Any values of VISITNUM that
+                  appear in subject-level datasets that are not in the TV
+                  dataset are assumed to correspond to unplanned Visits.  This
+                  applies, in particular, to the subject-level Subject Visits
+                  (SV) dataset; see SV under Section 5, Models for
+                  Special-Purpose Domains, for additional information about
+                  handling unplanned Visits.
+                Document: SDTMIG v3.4
+                Item: Assumption 6
+                Section: 7.3.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0655
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Specification-SVPRESP  Used to indicate whether the visit was
+                  planned (i.e., visits specified in the TV domain). Value is
+                  "Y" for planned visits, null for unplanned visits. Planned and
+                  unplanned visits with a subject, whether or not they are
+                  physical visits to the site, are represented in this domain.
+                Document: TIG 1.0
+                Item: Specifications
+                Section: 2.8.10.25
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0693
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: SVPRESP
+      operator: equal_to
+      value: Y
+    - name: VISITNUM
+      operator: is_not_contained_by
+      value: $tv_visitnum
+Core:
+  Id: CORE-000039
+  Status: Published
+  Version: '1'
+Description: Raise an error when SVPRESP="Y" and VISITNUM is not in TV.VISITNUM
+Executability: Fully Executable
+Operations:
+  - domain: TV
+    id: $tv_visitnum
+    name: VISITNUM
+    operator: distinct
+Outcome:
+  Message: VISITNUM for planned visit is not in TV.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - SV
+  Use Case: INDH
+Sensitivity: Record

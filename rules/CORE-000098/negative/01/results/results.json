@@ -1,0 +1,108 @@
+{
+  "datasets": [
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "success",
+      "execution_message": "ECDIR variable is present, when ECLOC variable does not exist in a dataset.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "ECDIR": "UPPER",
+            "ECLOC": "Not in dataset"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "pr.xpt",
+      "domain": "PR",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AEDIR variable is present, when AELOC variable does not exist in a dataset.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "AEDIR": null,
+            "AELOC": "Not in dataset"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "oe.xpt",
+      "domain": "OE",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "tu.xpt",
+      "domain": "TU",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ec.xpt",
+      "Row": 1,
+      "Variable": "ECDIR"
+    },
+    {
+      "Sheet": "pr.xpt",
+      "Row": 1,
+      "Variable": "PRLOC"
+    },
+    {
+      "Sheet": "pr.xpt",
+      "Row": 1,
+      "Variable": "PRDIR"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AEDIR"
+    },
+    {
+      "Sheet": "oe.xpt",
+      "Row": 1,
+      "Variable": "OELOC"
+    },
+    {
+      "Sheet": "oe.xpt",
+      "Row": 1,
+      "Variable": "OEDIR"
+    },
+    {
+      "Sheet": "tu.xpt",
+      "Row": 1,
+      "Variable": "TULOC"
+    },
+    {
+      "Sheet": "tu.xpt",
+      "Row": 1,
+      "Variable": "TUDIR"
+    }
+  ]
+}

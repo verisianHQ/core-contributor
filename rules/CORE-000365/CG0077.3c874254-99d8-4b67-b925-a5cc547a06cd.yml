@@ -1,0 +1,89 @@
+# Variable: MHCAT
+# Condition: MHCAT ^= null
+# Rule: MHCAT ^= the same value for all records
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0077
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: This categorization should not group all records (within the MH
+                  Domain) into one generic group such as "Medical History" or
+                  "General Medical History" because this is  redundant
+                  information with the domain code. If no smaller categorization
+                  can be applied, then it is not necessary to include or
+                  populate this variable.
+                Document: IG v3.4
+                Item: Assumptions 3.a.1
+                Section: 6.2.6
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0077
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: This categorization should not group all records (within the MH
+                  Domain) into one generic group such as "Medical History" or
+                  "General Medical History" because this is redundant
+                  information with the domain code. If no smaller categorization
+                  can be applied,then it is not necessary to include or populate
+                  this variable.
+                Document: IG v3.2
+                Item: Assumptions 3.a.i
+                Section: '6.2'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0077
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: This categorization should not group all records (within the MH
+                  Domain) into one generic group such as "Medical History" or
+                  "General Medical History" because this is redundant
+                  information with the domain code. If no smaller categorization
+                  can be applied, then it is not necessary to include or
+                  populate this variable.
+                Document: IG v3.3
+                Item: Assumptions 3.a.1
+                Section: 6.2.6
+Check:
+  all:
+    - name: MHCAT
+      operator: non_empty
+    - name: MHCAT
+      operator: has_same_values
+Core:
+  Id: CORE-000365
+  Status: Published
+  Version: '1'
+Description: MHCAT should not group all records.  If no smaller categorization
+  can be applied, then it is not necessary to include or populate this variable.
+Executability: Fully Executable
+Outcome:
+  Message: MHCAT is grouping all records into one generic group. If no smaller
+    categorization can be applied, then it is not necessary to include or
+    populate this variable.
+  Output Variables:
+    - MHCAT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - MH
+    include_split_datasets: true
+Sensitivity: Record

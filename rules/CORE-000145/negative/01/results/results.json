@@ -1,0 +1,73 @@
+{
+  "datasets": [
+    {
+      "dataset": "ti.xpt",
+      "domain": "TI",
+      "execution_status": "success",
+      "execution_message": "IETESTCD is not unique within TIVERS",
+      "number_errors": 6,
+      "errors": [
+        {
+          "row": 28,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETESTCD": "INCL05",
+            "TIVERS": "ORIGINAL"
+          },
+          "validated": false
+        },
+        {
+          "row": 29,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETESTCD": "INCL05",
+            "TIVERS": "ORIGINAL"
+          },
+          "validated": false
+        },
+        {
+          "row": 44,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETESTCD": "EXCL22",
+            "TIVERS": "AMENDMENT 1"
+          },
+          "validated": false
+        },
+        {
+          "row": 45,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETESTCD": "EXCL22",
+            "TIVERS": "AMENDMENT 1"
+          },
+          "validated": false
+        },
+        {
+          "row": 61,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETESTCD": "INCL08",
+            "TIVERS": "AMENDMENT 1"
+          },
+          "validated": false
+        },
+        {
+          "row": 62,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETESTCD": "INCL08",
+            "TIVERS": "AMENDMENT 1"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+# Variable: SEENDTC
+# Condition: Next ELEMENT present in dataset
+# Rule: SEENDTC = SESTDTC of next ELEMENT
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Since there are, by definition, no gaps between Elements, the
+                  value of SEENDTC for one Element will always be the same as
+                  the value of SESTDTC for the next Element.
+                Document: IG v3.4
+                Item: Assumption 8
+                Section: '5.3'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0207
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Since there are, by definition, no gaps between Elements, the
+                  value of SEENDTC for one Element will always be the same as
+                  the value of SESTDTC for the next Element
+                Document: IG v3.2
+                Item: Assumption 10
+                Section: 5 SE
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0207
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Since there are, by definition, no gaps between Elements, the
+                  value of SEENDTC for one Element will always be the same as
+                  the value of SESTDTC for the next Element
+                Document: IG v3.3
+                Item: Assumption 8
+                Section: '5.3'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0207
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Because there are no time gaps between Elements, the SEENDTC
+                  value for one element will always be the same as the SESTDTC
+                  value for the next Element.
+                Document: IG v3.0
+                Item: Assumption 1
+                Section: 5.3.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND126
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Since there are, by definition, no gaps between Elements, the
+                  value of SEENDTC for one Element will always be the same as
+                  the value of SESTDTC for the next Element. Because there are,
+                  by definition, no gaps between elements, the value of SEENDTC
+                  for one element will always be the same as the value of
+                  SESTDTC for the next element.
+                Document: TIG 1.0
+                Item: Assumption 7
+                Section: 2.8.10.24
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0427
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: SEENDTC
+      operator: does_not_have_next_corresponding_record
+      ordering: SESEQ
+      value: SESTDTC
+      within: USUBJID
+Core:
+  Id: CORE-000352
+  Status: Published
+  Version: '1'
+Description: Trigger error where SEENDTC is not equal to SESTDTC of the next element.
+Executability: Fully Executable
+Outcome:
+  Message: SEENDTC is not equal to SESTDTC of the next element.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - SE
+  Use Case: INDH
+Sensitivity: Record

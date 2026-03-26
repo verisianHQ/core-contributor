@@ -1,0 +1,95 @@
+# Variable: TDSTOFF
+# Condition: 
+# Rule: TDSTOFF = 0 or positive value in ISO 8601 Duration format
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'A fixed offset from the date provided by the variable
+                  referenced in TDANCVAR. This is used when the timing of
+                  planned cycles does not start on the exact day referenced in
+                  the variable indicated in TDANCVAR. The value of this variable
+                  will be either zero or a positive value and will be
+                  represented in ISO 8601 character format.  '
+                Document: IG v3.4
+                Item: Specification
+                Section: 7.3.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0376
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: IG v3.2[7.3][A fixed offset from the date provided by the
+                  variable referenced in TDANCVAR. This is used when the timing
+                  of planned cycles does not start on the exact day referenced
+                  in the variable indicated in TDANCVAR. The value of this
+                  variable will be either zero or a positive value and will be
+                  represented in ISO 8601 character format.]|Model v1.4[3.5.1][A
+                  fixed offset from the date provided by the variable referenced
+                  in TDANCVAR. This is used when the timing of planned cycles
+                  does not start on the exact day referenced in the variable
+                  indicated in TDANCVAR. The value of this variable will be
+                  either zero or a positive value and will be represented in ISO
+                  8601 character format.]
+                Document: IG v3.2|Model v1.4
+                Section: IG v3.2[7.3]|Model v1.4[3.5.1]
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0376
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: IG v3.3[7.3][A fixed offset from the date provided by the
+                  variable referenced in TDANCVAR. This is used when the timing
+                  of planned cycles does not start on the exact day referenced
+                  in the variable indicated in TDANCVAR. The value of this
+                  variable will be either zero or a positive value and will be
+                  represented in ISO 8601 character format.]|Model v1.7[3.4.1][A
+                  fixed offset from the date provided by the variable referenced
+                  in TDANCVAR. This is used when the timing of planned cycles
+                  does not start on the exact day referenced in the variable
+                  indicated in TDANCVAR. The value of this variable will be
+                  either zero or a positive value and will be represented in ISO
+                  8601 character format.]
+                Document: IG v3.3|Model v1.7
+                Section: IG v3.3[7.3]|Model v1.7[3.4.1]
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0376
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: TDSTOFF
+      operator: not_equal_to
+      value: 0
+    - name: TDSTOFF
+      operator: not_matches_regex
+      value: ^P(?=\d+[YMWD])(\d+Y)?(\d+M)?(\d+W)?(\d+D)?(T(?=\d+[HMS])(\d+H)?(\d+M)?(\d+S)?)?$
+Core:
+  Id: CORE-000779
+  Status: Published
+  Version: '1'
+Description: TDSTOFF must be equal to 0 or a positive value in ISO 8601 Duration format
+Executability: Fully Executable
+Outcome:
+  Message: TDSTOFF is not equal to zero or a positive value in ISO 8601 Duration format
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TD
+Sensitivity: Record

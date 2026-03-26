@@ -1,0 +1,103 @@
+{
+  "datasets": [
+    {
+      "dataset": "suppdm.xpt",
+      "domain": "SUPPDM",
+      "execution_status": "success",
+      "execution_message": "Population flag is present in SUPPDM",
+      "number_errors": 10,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "QNAM": "SAFETY"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "QNAM": "ENRFL"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "QNAM": "EFFFL"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "QNAM": "PPROTFL"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "QNAM": "COMPLT"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "QNAM": "FULLSET"
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "QNAM": "ITT"
+          },
+          "validated": false
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "QNAM": "PPROT"
+          },
+          "validated": false
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "QNAM": "ITTFL"
+          },
+          "validated": false
+        },
+        {
+          "row": 11,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "QNAM": "COMPLFL"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
+}

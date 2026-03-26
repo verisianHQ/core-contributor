@@ -1,0 +1,85 @@
+# Variable: ARMNRS
+# Condition: ACTARM = null
+# Rule: ARMNRS^=null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: With the exception of studies which use multi-stage Arm
+                  assignments, must be a value of ARM in the Trial Arms Dataset.
+                  If the subject was not assigned to an Arm or followed a course
+                  not described by any planned Arm, ACTARM is null and ARMNRS is
+                  populated.
+                Document: IG v3.4
+                Item: Specification
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0515
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: With the exception of studies which use multi-stage arm
+                  assignments, must be a value of ARMCD in the Trial Arms
+                  Dataset. If the subject was not assigned to an arm or followed
+                  a course not described by any planned arm, ACTARMCD is null
+                  and ARMNRS is populated.
+                Document: IG v3.3
+                Item: Specification
+                Section: '5.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0515
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: With the exception of studies which use multi-stage Arm
+                  assignments, must be a value of ARMCD in the Trial Arms
+                  Dataset. If the subject was not assigned to an Arm or followed
+                  a course not described by any planned Arm, ACTARMCD is null
+                  and ARMNRS is populated.
+                Document: TIG 1.0
+                Item: Specification:ARMNRS
+                Section: 2.8.10.4
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0610
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: ACTARM
+      operator: empty
+    - name: ARMNRS
+      operator: empty
+Core:
+  Id: CORE-000224
+  Status: Published
+  Version: '1'
+Description: Raise an error when ACTARM is empty and ARMNRS is not completed.
+Executability: Fully Executable
+Outcome:
+  Message: ACTARM is empty, but ARMNRS is not completed.
+  Output Variables:
+    - ACTARM
+    - ARMNRS
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+  Use Case: INDH
+Sensitivity: Record

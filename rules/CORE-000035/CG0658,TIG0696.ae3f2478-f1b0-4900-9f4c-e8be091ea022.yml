@@ -1,0 +1,59 @@
+# Variable: VISITDY
+# Condition: SVPRESP = null
+# Rule: VISITDY = null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: VISITDY is the Planned Study Day of a visit. It should not be
+                  populated for unplanned visits.
+                Document: SDTMIG v3.4
+                Section: '5.5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0658
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The planned study day of visit variable (VISITDY) should not be
+                  populated for unplanned visits.
+                Document: TIG 1.0
+                Item: Assumption 8
+                Section: 2.8.10.25
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0696
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: SVPRESP
+      operator: empty
+    - name: VISITDY
+      operator: non_empty
+Core:
+  Id: CORE-000035
+  Status: Published
+  Version: '1'
+Description: Raise an error when SVPRESP is null and VISITDY is not null.
+Executability: Fully Executable
+Outcome:
+  Message: VISITDY is populated when SVPRESP is null.  VISITDY is the Planned
+    Study Day of a visit. It should not be populated for unplanned visits.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - SV
+  Use Case: INDH
+Sensitivity: Record

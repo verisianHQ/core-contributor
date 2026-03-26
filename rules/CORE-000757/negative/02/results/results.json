@@ -15,7 +15,8 @@
             "CMDECOD": null,
             "CMTRT": "ASPIRIN",
             "RELREC.FAOBJ": "ASPIRINA"
-          }
+          },
+          "validated": false
         },
         {
           "row": 3,
@@ -25,7 +26,8 @@
             "CMDECOD": null,
             "CMTRT": "HYDROCORTISONE, TOPICAL",
             "RELREC.FAOBJ": "ERYTHEMA"
-          }
+          },
+          "validated": false
         }
       ]
     },
@@ -52,6 +54,18 @@
       "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000757, dataset=RELREC",
       "number_errors": 0,
       "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "cm.xpt",
+      "Row": 5,
+      "Variable": "CMTRT"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 7,
+      "Variable": "CMTRT"
     }
   ]
 }

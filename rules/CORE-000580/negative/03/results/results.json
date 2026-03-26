@@ -1,0 +1,180 @@
+{
+  "datasets": [
+    {
+      "dataset": "te.xpt",
+      "domain": "TE",
+      "execution_status": "success",
+      "execution_message": "The combination of TESTRL, TEENRL, and TEDUR is not unique for each ETCD.",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ELEMENT": "HUMAN INSULIN",
+            "ETCD": "E001",
+            "TEDUR": "P26W",
+            "TEENRL": "Not in dataset",
+            "TESTRL": "FIRST DOSE OF HUMAN INSULIN"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ELEMENT": "HUMAN INSULIN",
+            "ETCD": "E002",
+            "TEDUR": "P26W",
+            "TEENRL": "Not in dataset",
+            "TESTRL": "FIRST DOSE OF HUMAN INSULIN"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ELEMENT": "Y",
+            "ETCD": "E006",
+            "TEDUR": "P2W",
+            "TEENRL": "Not in dataset",
+            "TESTRL": "INFORMED CONSENT SIGNED2"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ELEMENT": "Y",
+            "ETCD": "E006",
+            "TEDUR": "P2W",
+            "TEENRL": "Not in dataset",
+            "TESTRL": "INFORMED CONSENT SIGNED2"
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ELEMENT": "Y",
+            "ETCD": "E007",
+            "TEDUR": "P2W",
+            "TEENRL": "Not in dataset",
+            "TESTRL": "INFORMED CONSENT SIGNED2"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "te.xpt",
+      "Row": 6,
+      "Variable": "ETCD"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 6,
+      "Variable": "ELEMENT"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 6,
+      "Variable": "TESTRL"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 6,
+      "Variable": "TEDUR"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 7,
+      "Variable": "ETCD"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 7,
+      "Variable": "ELEMENT"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 7,
+      "Variable": "TESTRL"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 7,
+      "Variable": "TEDUR"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 10,
+      "Variable": "ETCD"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 10,
+      "Variable": "ELEMENT"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 10,
+      "Variable": "TESTRL"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 10,
+      "Variable": "TEDUR"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 11,
+      "Variable": "ETCD"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 11,
+      "Variable": "ELEMENT"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 11,
+      "Variable": "TESTRL"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 11,
+      "Variable": "TEDUR"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 12,
+      "Variable": "ETCD"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 12,
+      "Variable": "ELEMENT"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 12,
+      "Variable": "TESTRL"
+    },
+    {
+      "Sheet": "te.xpt",
+      "Row": 12,
+      "Variable": "TEDUR"
+    }
+  ]
+}
