@@ -147,7 +147,9 @@ class TestRunner:
         self.use_pgserver = use_pgserver
         from engine.cdisc_rules_engine.data_service.postgresql_data_service import PostgresQLDataService
 
-        self.data_service = PostgresQLDataService.instance(use_pgserver=self.use_pgserver, codelists=["sdtmct-2025-03-28.pkl"], cache_path="resources/cache")
+        self.data_service = PostgresQLDataService.instance(
+            use_pgserver=self.use_pgserver, codelists=["sdtmct-2025-03-28.pkl"], cache_path="resources/cache"
+        )
 
     @staticmethod
     def _setup_engine_path():
@@ -221,7 +223,7 @@ class TestRunner:
             define_xml_path = str(rule_define_path)
         else:
             define_xml_path = None
-        
+
         if define_xml_path:
             self.data_service._update_define_xml_path(define_xml_path)
 
@@ -365,14 +367,11 @@ class TestRunner:
                     match_found = False
                     for (v_sheet, v_error_level, v_row), v_values in flat_validation.items():
                         if v_sheet == sheet_name:
-                            if v_error_level == "record":
-                                if v_values == res_values:
-                                    match_found = True
-                            elif v_error_level == "variable" or v_error_level == "dataset":
-                                v_not_absent = set(k for k, v in v_values.items() if v != "[ABSENT]")
-                                res_not_absent = set(k for k, v in res_values.items() if v != "[ABSENT]")
-                                if v_not_absent == res_not_absent or not v_not_absent:
-                                    match_found = True
+                            v_absent = set(k for k, v in v_values.items() if v == "[ABSENT]")
+                            v_not_absent = set(k for k, v in v_values.items() if v != "[ABSENT]")
+                            res_not_absent = set(k for k, v in res_values.items() if v != "[ABSENT]") - v_absent
+                            if v_not_absent == res_not_absent or not res_not_absent:
+                                match_found = True
 
                             if match_found:
                                 error_obj["validated"] = True
@@ -400,9 +399,13 @@ class TestRunner:
                     e["Variable"],
                     e["Error value"],
                 )
+                if str(var)[0] == "$":
+                    continue
                 if error_level == "record":
+                    if error_val == "[ABSENT]":
+                        continue
                     h_val = highlights.get(sheet, {}).get(row, {}).get(var)
-                    match = h_val == error_val
+                    match = str(h_val if h_val else None) == str(error_val)
                 if error_level == "variable":
                     if error_val == "[PRESENT]":
                         h_id = highlights.get(sheet, {}).get(row, {})

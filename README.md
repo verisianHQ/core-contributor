@@ -86,14 +86,19 @@ _Don't forget: whenever you type a command, you should be in the core-contributo
 1) Make sure you are on the main branch and that both the main branch and the engine submodule are up to date. To do this, run the following three commands: \
        `git checkout main` \
        `git pull origin main` \
-       `git submodule update --remote`
+       `git submodule update --recursive`
    
 2) Create a new branch to work on your changes, named as such: `<your-name>/<rule-id>/<change>` (eg `richard/CORE-000001/edit`): \
        `git branch <your-branch-name>`
    
    _Note that only branch names according to following regex are allowed: **^[a-zA-Z]+/(CORE-[0-9]{6}|(CG|FB|TRC)[0-9]{4}[a-z]{1})/(edit|create|delete)$**_
+
+      **_*IMPORTANT NOTE*_**\
+   _Whenever you create a local branch to work on a rule, ensure that you are on the main branch. If you create a new local branch, when you are already on a local branch, the new branch will branch off the
+   local branch and not from main. If you would then want to merge changes from your new local branch, it will merge with the first local branch and not with the main branch. Therefore, ensure to be on the main
+   branch first prior to creating a local branch (git checkout main). Once the local branch exists, you can checkout out to it from any branch._
    
-3) Switch to your new branch: \
+4) Switch to your new branch: \
        `git checkout <your-branch-name>`
 
 **Set-up Rule Folder.**
@@ -103,10 +108,10 @@ _Step 4 is only applicable in case you want to create a rule for which the folde
 
 4) Initialize your new rule folder structure:
    - In the base directory of the project, activate the virtual environment by running:
-     - WINDOWS: venv\Scripts\activate
-     - MAC: source venv/bin.activate
+     - WINDOWS: `venv\Scripts\activate`
+     - MAC: `source venv/bin/activate`
    - Then run the following command in your terminal: \
-       `python -m new-rule`
+       `python new-rule.py`
    - It will prompt you a few times.
      - If the new-rule folder already exists, it will check you definitely want to make a new one. (NOTE: If the empty folder is a leftover from a previous branch, which is likely, you SHOULD run the script and overwrite the folder to make a new one, as this will set-up the template properly for you).
      - You will also be prompted to enter the number of positive and negative test cases you want to create. Don't worry if you realise you need more later. You can easily add more manually.
@@ -199,8 +204,8 @@ For further detail on any of these steps or git in general, see [supplementary g
 Below are some additional functionalities in the test script. To take advantage of this, you will need to run the test script directly, rather than using the run script.
 NOTE: You must still run all First-time Local Setup Steps from above before this.
 
-1) In VSCode terminal, in the core-contributor directory, activate the virtual environment by running one of the following: \
-   - WINDOWS: `.\venv\Scripts\activate` \
+1) In VSCode terminal, in the core-contributor directory, activate the virtual environment by running one of the following:
+   - WINDOWS: `.\venv\Scripts\activate`
    - MAC: `source ./venv/bin/activate`
    
 2) You can now run the test script directly with various options:
@@ -238,7 +243,7 @@ Otherwise, create a new branch from main which includes your changes and then re
 `git checkout -b <new-branch-name>` \
 `git checkout main` \
 `git reset --hard HEAD~1` \
-`git checkout <new-branch-name>` \
+`git checkout <new-branch-name>`
 
 ***IMPORTANT NOTE*** - if you've committed more than once on main, you'll need to replace `HEAD~1` with `HEAD~n` where `n` is the number of commits you've made \
 <br />
