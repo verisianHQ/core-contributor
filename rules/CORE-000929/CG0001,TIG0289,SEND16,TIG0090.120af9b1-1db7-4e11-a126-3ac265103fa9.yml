@@ -190,11 +190,11 @@ Operations:
   - id: $domain_is_custom
     operator: domain_is_custom
   - codelists:
-      - DOMAIN
+    - DOMAIN
     id: $domain_lib_ccode
     level: term
-    operator: codelist_terms
     returntype: code
+    operator: codelist_terms
 Outcome:
   Message: DOMAIN Code is not a published DOMAIN Code in CDISC Controlled Terminology.
   Output Variables:
