@@ -58,10 +58,10 @@ Check:
     - name: --TRT
       operator: not_exists
 Core:
-  Id: CDISC.SDTMIG.CG0464
+  Id: CDISC.SDTMIG.CG0463
   Status: Draft
   Version: '1'
-Description: Trigger error when --TRT is not present in custom interventions dataset
+Description: Raise an error when --TRT is not present in custom interventions dataset
 Executability: Fully Executable
 Operations:
   - id: $domain_is_custom
@@ -70,7 +70,8 @@ Outcome:
   Message: --TRT is not present in custom interventions dataset
   Output Variables:
     - domain
-    - define_dataset_variables
+    - --TRT
+    - define_dataset_class
 Rule Type: Dataset Contents Check against Define XML
 Scope:
   Classes:

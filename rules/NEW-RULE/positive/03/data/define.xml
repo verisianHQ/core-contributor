@@ -2071,6 +2071,19 @@
         <ItemRef ItemOID="IT.CM.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
         <ItemRef ItemOID="IT.CM.USUBJID" Mandatory="Yes" OrderNumber="3" KeySequence="2" Role="Identifier"/>
         <ItemRef ItemOID="IT.CM.CMSEQ" Mandatory="Yes" OrderNumber="4" MethodOID="MT.SEQ" Role="Identifier"/>
+        <ItemRef ItemOID="IT.CM.CMTRT" Mandatory="Yes" OrderNumber="5" KeySequence="4" Role="Topic"/>
+        <ItemRef ItemOID="IT.CM.CMINDC" Mandatory="No" OrderNumber="6" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.CM.CMDOSE" Mandatory="No" OrderNumber="7" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.CM.CMDOSU" Mandatory="No" OrderNumber="8" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.CM.CMDOSFRQ" Mandatory="No" OrderNumber="9" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.CM.CMROUTE" Mandatory="No" OrderNumber="10" Role="Variable Qualifier"/>
+        <ItemRef ItemOID="IT.CM.EPOCH" Mandatory="No" OrderNumber="11" MethodOID="MT.EPOCH" Role="Timing"/>
+        <ItemRef ItemOID="IT.CM.CMSTDTC" Mandatory="No" OrderNumber="12" KeySequence="3" Role="Timing"/>
+        <ItemRef ItemOID="IT.CM.CMENDTC" Mandatory="No" OrderNumber="13" Role="Timing"/>
+        <ItemRef ItemOID="IT.CM.CMSTDY" Mandatory="No" OrderNumber="14" MethodOID="MT.DAYCALC" Role="Timing"/>
+        <ItemRef ItemOID="IT.CM.CMENDY" Mandatory="No" OrderNumber="15" MethodOID="MT.DAYCALC" Role="Timing"/>
+        <ItemRef ItemOID="IT.CM.CMENRTPT" Mandatory="No" OrderNumber="16" Role="Timing"/>
+        <ItemRef ItemOID="IT.CM.CMENTPT" Mandatory="No" OrderNumber="17" MethodOID="MT.CMENTPT" Role="Timing"/>
         <def:Class Name="INTERVENTIONS"/>
         <def:leaf ID="LF.CM" xlink:href="cm.xml">
           <def:title>cm.xml</def:title>
@@ -2155,6 +2168,39 @@
         <ItemRef ItemOID="IT.AE.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
         <ItemRef ItemOID="IT.AE.USUBJID" Mandatory="Yes" OrderNumber="3" KeySequence="2" Role="Identifier"/>
         <ItemRef ItemOID="IT.AE.AESEQ" Mandatory="Yes" OrderNumber="4" MethodOID="MT.SEQ" Role="Identifier"/>
+        <ItemRef ItemOID="IT.AE.AELNKID" Mandatory="No" OrderNumber="5" KeySequence="5" Role="Identifier"/>
+        <ItemRef ItemOID="IT.AE.AETERM" Mandatory="Yes" OrderNumber="6" Role="Topic"/>
+        <ItemRef ItemOID="IT.AE.AELLT" Mandatory="No" OrderNumber="7" Role="Variable Qualifier" def:HasNoData="Yes"/>
+        <ItemRef ItemOID="IT.AE.AELLTCD" Mandatory="No" OrderNumber="8" Role="Variable Qualifier" def:HasNoData="Yes"/>
+        <ItemRef ItemOID="IT.AE.AEDECOD" Mandatory="Yes" OrderNumber="9" KeySequence="3" Role="Synonym Qualifier" def:HasNoData="Yes"/>
+        <ItemRef ItemOID="IT.AE.AEPTCD" Mandatory="No" OrderNumber="10" Role="Variable Qualifier" def:HasNoData="Yes"/>
+        <ItemRef ItemOID="IT.AE.AEHLT" Mandatory="No" OrderNumber="11" Role="Variable Qualifier" def:HasNoData="Yes"/>
+        <ItemRef ItemOID="IT.AE.AEHLTCD" Mandatory="No" OrderNumber="12" Role="Variable Qualifier" def:HasNoData="Yes"/>
+        <ItemRef ItemOID="IT.AE.AEHLGT" Mandatory="No" OrderNumber="13" Role="Variable Qualifier" def:HasNoData="Yes"/>
+        <ItemRef ItemOID="IT.AE.AEHLGTCD" Mandatory="No" OrderNumber="14" Role="Variable Qualifier" def:HasNoData="Yes"/>
+        <ItemRef ItemOID="IT.AE.AEBODSYS" Mandatory="No" OrderNumber="15" Role="Record Qualifier" def:HasNoData="Yes"/>
+        <ItemRef ItemOID="IT.AE.AEBDSYCD" Mandatory="No" OrderNumber="16" Role="Variable Qualifier" def:HasNoData="Yes"/>
+        <ItemRef ItemOID="IT.AE.AESOC" Mandatory="No" OrderNumber="17" Role="Variable Qualifier" def:HasNoData="Yes"/>
+        <ItemRef ItemOID="IT.AE.AESOCCD" Mandatory="No" OrderNumber="18" Role="Variable Qualifier" def:HasNoData="Yes"/>
+        <ItemRef ItemOID="IT.AE.AESEV" Mandatory="No" OrderNumber="19" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.AE.AESER" Mandatory="No" OrderNumber="20" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.AE.AEACN" Mandatory="No" OrderNumber="21" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.AE.AEREL" Mandatory="No" OrderNumber="22" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.AE.AEOUT" Mandatory="No" OrderNumber="23" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.AE.AESCAN" Mandatory="No" OrderNumber="24" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.AE.AESCONG" Mandatory="No" OrderNumber="25" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.AE.AESDISAB" Mandatory="No" OrderNumber="26" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.AE.AESDTH" Mandatory="No" OrderNumber="27" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.AE.AESHOSP" Mandatory="No" OrderNumber="28" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.AE.AESLIFE" Mandatory="No" OrderNumber="29" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.AE.AESOD" Mandatory="No" OrderNumber="30" Role="Record Qualifier"/>
+        <ItemRef ItemOID="IT.AE.EPOCH" Mandatory="No" OrderNumber="31" MethodOID="MT.EPOCH" Role="Timing"/>
+        <ItemRef ItemOID="IT.AE.AESTDTC" Mandatory="No" OrderNumber="32" KeySequence="4" Role="Timing"/>
+        <ItemRef ItemOID="IT.AE.AEENDTC" Mandatory="No" OrderNumber="33" Role="Timing"/>
+        <ItemRef ItemOID="IT.AE.AESTDY" Mandatory="No" OrderNumber="34" MethodOID="MT.DAYCALC" Role="Timing"/>
+        <ItemRef ItemOID="IT.AE.AEENDY" Mandatory="No" OrderNumber="35" MethodOID="MT.DAYCALC" Role="Timing"/>
+        <ItemRef ItemOID="IT.AE.AEENRTPT" Mandatory="No" OrderNumber="36" Role="Timing"/>
+        <ItemRef ItemOID="IT.AE.AEENTPT" Mandatory="No" OrderNumber="37" MethodOID="MT.AEENTPT" Role="Timing"/>
         <def:Class Name="EVENTS"/>
         <def:leaf ID="LF.AE" xlink:href="ae.xml">
           <def:title>ae.xml</def:title>
@@ -2696,7 +2742,6 @@
         <ItemRef ItemOID="IT.ZZ.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
         <ItemRef ItemOID="IT.ZZ.USUBJID" Mandatory="Yes" OrderNumber="3" KeySequence="2" Role="Identifier"/>
         <ItemRef ItemOID="IT.ZZ.ZZSEQ" Mandatory="Yes" OrderNumber="4" MethodOID="MT.SEQ" Role="Identifier"/>
-        <ItemRef ItemOID="IT.ZZ.ZZTERM" Mandatory="Yes" OrderNumber="5" KeySequence="3" Role="Topic"/>
         <def:Class Name="EVENTS"/>
         <def:leaf ID="LF.ZZ" xlink:href="zz.xml">
           <def:title>zz.xml</def:title>
@@ -2733,6 +2778,307 @@
         </Description>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
+      <ItemDef OID="IT.AE.AELNKID" Name="AELNKID" DataType="text" Length="50" SASFieldName="AELNKID">
+        <Description>
+          <TranslatedText xml:lang="en">Link ID</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="22 23" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AETERM" Name="AETERM" DataType="text" Length="200" SASFieldName="AETERM">
+        <Description>
+          <TranslatedText xml:lang="en">Reported Term for the Adverse Event</TranslatedText>
+        </Description>
+        <def:ValueListRef ValueListOID="VL.AETERM"/>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AELLT" Name="AELLT" DataType="text" Length="1" SASFieldName="AELLT"
+        def:CommentOID="COM.AE3">
+        <Description>
+          <TranslatedText xml:lang="en">Lowest Level Term</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.MEDDRA"/>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AELLTCD" Name="AELLTCD" DataType="text" Length="1" SASFieldName="AELLTCD"
+        def:CommentOID="COM.AE3">
+        <Description>
+          <TranslatedText xml:lang="en">Lowest Level Term Code</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.MEDDRA"/>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AEDECOD" Name="AEDECOD" DataType="text" Length="1" SASFieldName="AEDECOD"
+        def:CommentOID="COM.AEDECOD">
+        <Description>
+          <TranslatedText xml:lang="en">Dictionary-Derived Term</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.MEDDRA"/>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AEPTCD" Name="AEPTCD" DataType="text" Length="1" SASFieldName="AEPTCD"
+        def:CommentOID="COM.AE3">
+        <Description>
+          <TranslatedText xml:lang="en">Preferred Term Code</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.MEDDRA"/>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AEHLT" Name="AEHLT" DataType="text" Length="1" SASFieldName="AEHLT"
+        def:CommentOID="COM.AE3">
+        <Description>
+          <TranslatedText xml:lang="en">High Level Term</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.MEDDRA"/>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AEHLTCD" Name="AEHLTCD" DataType="text" Length="1" SASFieldName="AEHLTCD"
+        def:CommentOID="COM.AE3">
+        <Description>
+          <TranslatedText xml:lang="en">High Level Term Code</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.MEDDRA"/>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AEHLGT" Name="AEHLGT" DataType="text" Length="1" SASFieldName="AEHLGT"
+        def:CommentOID="COM.AE3">
+        <Description>
+          <TranslatedText xml:lang="en">High Level Group Term</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.MEDDRA"/>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AEHLGTCD" Name="AEHLGTCD" DataType="text" Length="1" SASFieldName="AEHLGTCD"
+        def:CommentOID="COM.AE3">
+        <Description>
+          <TranslatedText xml:lang="en">High Level Group Term Code</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.MEDDRA"/>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AEBODSYS" Name="AEBODSYS" DataType="text" Length="1" SASFieldName="AEBODSYS"
+        def:CommentOID="COM.AE3">
+        <Description>
+          <TranslatedText xml:lang="en">Body System or Organ Class</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.MEDDRA"/>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AEBDSYCD" Name="AEBDSYCD" DataType="text" Length="1" SASFieldName="AEBDSYCD"
+        def:CommentOID="COM.AE3">
+        <Description>
+          <TranslatedText xml:lang="en">Body System or Organ Class Code</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.MEDDRA"/>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AESOC" Name="AESOC" DataType="text" Length="1" SASFieldName="AESOC"
+        def:CommentOID="COM.AE3">
+        <Description>
+          <TranslatedText xml:lang="en">Primary System Organ Class</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.MEDDRA"/>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AESOCCD" Name="AESOCCD" DataType="text" Length="1" SASFieldName="AESOCCD"
+        def:CommentOID="COM.AE3">
+        <Description>
+          <TranslatedText xml:lang="en">Primary System Organ Class Code</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.MEDDRA"/>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AESEV" Name="AESEV" DataType="text" Length="8" SASFieldName="AESEV">
+        <Description>
+          <TranslatedText xml:lang="en">Severity/Intensity</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.AESEV"/>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="22 23" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AESER" Name="AESER" DataType="text" Length="1" SASFieldName="AESER"
+        def:CommentOID="COM.AESER">
+        <Description>
+          <TranslatedText xml:lang="en">Serious Event</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.NY_NY"/>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="22 23" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AEACN" Name="AEACN" DataType="text" Length="16" SASFieldName="AEACN">
+        <Description>
+          <TranslatedText xml:lang="en">Action Taken with Study Treatment</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.ACN"/>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="22 23" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AEREL" Name="AEREL" DataType="text" Length="16" SASFieldName="AEREL">
+        <Description>
+          <TranslatedText xml:lang="en">Causality</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.AEREL"/>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="22 23" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AEOUT" Name="AEOUT" DataType="text" Length="32" SASFieldName="AEOUT">
+        <Description>
+          <TranslatedText xml:lang="en">Outcome of Adverse Event</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.OUT"/>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="22 23" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AESCAN" Name="AESCAN" DataType="text" Length="1" SASFieldName="AESCAN">
+        <Description>
+          <TranslatedText xml:lang="en">Involves Cancer</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.NY_NY"/>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="22 23" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AESCONG" Name="AESCONG" DataType="text" Length="1" SASFieldName="AESCONG">
+        <Description>
+          <TranslatedText xml:lang="en">Congenital Anomaly or Birth Defect</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.NY_NY"/>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="22 23" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AESDISAB" Name="AESDISAB" DataType="text" Length="1" SASFieldName="AESDISAB">
+        <Description>
+          <TranslatedText xml:lang="en">Persist or Signif Disability/Incapacity</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.NY_NY"/>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="22 23" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AESDTH" Name="AESDTH" DataType="text" Length="1" SASFieldName="AESDTH">
+        <Description>
+          <TranslatedText xml:lang="en">Results in Death</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.NY_NY"/>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="22 23" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AESHOSP" Name="AESHOSP" DataType="text" Length="1" SASFieldName="AESHOSP">
+        <Description>
+          <TranslatedText xml:lang="en">Requires or Prolongs Hospitalization</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.NY_NY"/>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="22 23" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AESLIFE" Name="AESLIFE" DataType="text" Length="1" SASFieldName="AESLIFE">
+        <Description>
+          <TranslatedText xml:lang="en">Is Life Threatening</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.NY_NY"/>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="22 23" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AESOD" Name="AESOD" DataType="text" Length="1" SASFieldName="AESOD">
+        <Description>
+          <TranslatedText xml:lang="en">Occurred with Overdose</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.NY_NY"/>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="22 23" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.AE.EPOCH" Name="EPOCH" DataType="text" Length="9" SASFieldName="EPOCH">
+        <Description>
+          <TranslatedText xml:lang="en">Epoch</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.EPOCH"/>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AESTDTC" Name="AESTDTC" DataType="date" SASFieldName="AESTDTC">
+        <Description>
+          <TranslatedText xml:lang="en">Start Date/Time of Adverse Event</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="22 23" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AEENDTC" Name="AEENDTC" DataType="date" SASFieldName="AEENDTC">
+        <Description>
+          <TranslatedText xml:lang="en">End Date/Time of Adverse Event</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="22 23" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AESTDY" Name="AESTDY" DataType="integer" Length="8" SASFieldName="AESTDY">
+        <Description>
+          <TranslatedText xml:lang="en">Study Day of Start of Adverse Event</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AEENDY" Name="AEENDY" DataType="integer" Length="8" SASFieldName="AEENDY">
+        <Description>
+          <TranslatedText xml:lang="en">Study Day of End of Adverse Event</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AEENRTPT" Name="AEENRTPT" DataType="text" Length="7" SASFieldName="AEENRTPT">
+        <Description>
+          <TranslatedText xml:lang="en">End Relative to Reference Time Point</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.ENRTPT_CM_AE"/>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="22 23" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AEENTPT" Name="AEENTPT" DataType="date" SASFieldName="AEENTPT">
+        <Description>
+          <TranslatedText xml:lang="en">End Reference Time Point</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
       <ItemDef OID="IT.CM.STUDYID" Name="STUDYID" DataType="text" Length="12" SASFieldName="STUDYID">
         <Description>
           <TranslatedText xml:lang="en">Study Identifier</TranslatedText>
@@ -2755,6 +3101,126 @@
       <ItemDef OID="IT.CM.CMSEQ" Name="CMSEQ" DataType="integer" Length="3" SASFieldName="CMSEQ">
         <Description>
           <TranslatedText xml:lang="en">Sequence Number</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.CM.CMTRT" Name="CMTRT" DataType="text" Length="200" SASFieldName="CMTRT">
+        <Description>
+          <TranslatedText xml:lang="en">Reported Name of Drug, Med, or Therapy</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="25" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.CM.CMINDC" Name="CMINDC" DataType="text" Length="200" SASFieldName="CMINDC"
+        def:CommentOID="COM.CMINDC">
+        <Description>
+          <TranslatedText xml:lang="en">Indication</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="25" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.CM.CMDOSE" Name="CMDOSE" DataType="float" Length="5" SignificantDigits="3" SASFieldName="CMDOSE">
+        <Description>
+          <TranslatedText xml:lang="en">Dose per Administration</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="25" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.CM.CMDOSU" Name="CMDOSU" DataType="text" Length="6" SASFieldName="CMDOSU">
+        <Description>
+          <TranslatedText xml:lang="en">Dose Units</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.UNIT_CM"/>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="25" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.CM.CMDOSFRQ" Name="CMDOSFRQ" DataType="text" Length="3" SASFieldName="CMDOSFRQ">
+        <Description>
+          <TranslatedText xml:lang="en">Dosing Frequency per Interval</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.FREQ_CM"/>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="25" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.CM.CMROUTE" Name="CMROUTE" DataType="text" Length="24" SASFieldName="CMROUTE">
+        <Description>
+          <TranslatedText xml:lang="en">Route of Administration</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.ROUTE_CM"/>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="25" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.CM.EPOCH" Name="EPOCH" DataType="text" Length="9" SASFieldName="EPOCH">
+        <Description>
+          <TranslatedText xml:lang="en">Epoch</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.EPOCH"/>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.CM.CMSTDTC" Name="CMSTDTC" DataType="partialDate" SASFieldName="CMSTDTC">
+        <Description>
+          <TranslatedText xml:lang="en">Start Date/Time of Medication</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="25" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.CM.CMENDTC" Name="CMENDTC" DataType="partialDate" SASFieldName="CMENDTC">
+        <Description>
+          <TranslatedText xml:lang="en">End Date/Time of Medication</TranslatedText>
+        </Description>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="25" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.CM.CMSTDY" Name="CMSTDY" DataType="integer" Length="8" SASFieldName="CMSTDY">
+        <Description>
+          <TranslatedText xml:lang="en">Study Day of Start of Medication</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.CM.CMENDY" Name="CMENDY" DataType="integer" Length="8" SASFieldName="CMENDY">
+        <Description>
+          <TranslatedText xml:lang="en">Study Day of End of Medication</TranslatedText>
+        </Description>
+        <def:Origin Type="Derived" Source="Sponsor"/>
+      </ItemDef>
+      <ItemDef OID="IT.CM.CMENRTPT" Name="CMENRTPT" DataType="text" Length="7" SASFieldName="CMENRTPT">
+        <Description>
+          <TranslatedText xml:lang="en">End Relative to Reference Time Point</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.ENRTPT_CM_AE"/>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="25" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.CM.CMENTPT" Name="CMENTPT" DataType="date" SASFieldName="CMENTPT">
+        <Description>
+          <TranslatedText xml:lang="en">End Reference Time Point</TranslatedText>
         </Description>
         <def:Origin Type="Derived" Source="Sponsor"/>
       </ItemDef>
@@ -2803,7 +3269,7 @@
         </Description>
         <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
-            <ItemDef OID="IT.ZZ.STUDYID" Name="STUDYID" DataType="text" Length="12" SASFieldName="STUDYID">
+      <ItemDef OID="IT.ZZ.STUDYID" Name="STUDYID" DataType="text" Length="12" SASFieldName="STUDYID">
         <Description>
           <TranslatedText xml:lang="en">Study Identifier</TranslatedText>
         </Description>
@@ -2826,12 +3292,6 @@
           <TranslatedText xml:lang="en">Sequence Number</TranslatedText>
         </Description>
         <def:Origin Type="Derived" Source="Sponsor"/>
-      </ItemDef>
-      <ItemDef OID="IT.ZZ.ZZTERM" Name="ZZTERM" DataType="text" Length="19" SASFieldName="ZZTERM">
-        <Description>
-          <TranslatedText xml:lang="en">Reported Term for the Medical History</TranslatedText>
-        </Description>
-        <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
       <ItemDef OID="IT.DM.STUDYID" Name="STUDYID" DataType="text" Length="12" SASFieldName="STUDYID">
         <Description>
