@@ -4,16 +4,28 @@
       "dataset": "ie.xpt",
       "domain": "IE",
       "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "execution_message": "IESTRESC should be populated when either IEORRES is provided or IEDRVFL = 'Y'.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC015",
+          "value": {
+            "IEDRVFL": "Not in dataset",
+            "IEORRES": "N",
+            "IESTRESC": null
+          },
+          "validated": true
+        }
+      ]
     },
     {
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "LBSTRESC should not be blank when either LBORRES is provided or LBDRVFL = 'Y' .",
-      "number_errors": 2,
+      "execution_message": "LBSTRESC should be populated when either LBORRES is provided or LBDRVFL = 'Y'.",
+      "number_errors": 3,
       "errors": [
         {
           "row": 2,
@@ -24,7 +36,7 @@
             "LBORRES": "93",
             "LBSTRESC": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -35,7 +47,18 @@
             "LBORRES": null,
             "LBSTRESC": null
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBDRVFL": "Y",
+            "LBORRES": "26",
+            "LBSTRESC": null
+          },
+          "validated": true
         }
       ]
     },
@@ -43,7 +66,7 @@
       "dataset": "vs.xpt",
       "domain": "VS",
       "execution_status": "success",
-      "execution_message": "VSSTRESC should not be blank when either VSORRES is provided or VSDRVFL = 'Y' .",
+      "execution_message": "VSSTRESC should be populated when either VSORRES is provided or VSDRVFL = 'Y'.",
       "number_errors": 2,
       "errors": [
         {
@@ -55,7 +78,7 @@
             "VSORRES": "71",
             "VSSTRESC": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -66,8 +89,19 @@
             "VSORRES": null,
             "VSSTRESC": null
           },
-          "validated": false
+          "validated": true
         }
+      ]
+    }
+  ],
+  "unhighlighted_validations": [
+    {
+      "1": [
+        "ie.xpt",
+        "record",
+        5,
+        "IEDRVFL",
+        "Not in dataset"
       ]
     }
   ]
