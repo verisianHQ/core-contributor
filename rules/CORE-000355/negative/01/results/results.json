@@ -9,7 +9,7 @@
       "errors": [
         {
           "error": "SQL error in not_contains_all operator",
-          "message": "Variable $required_variables is not a constant."
+          "message": "column or relation does not exist"
         }
       ]
     },
@@ -22,7 +22,7 @@
       "errors": [
         {
           "error": "SQL error in not_contains_all operator",
-          "message": "Variable $required_variables is not a constant."
+          "message": "column or relation does not exist"
         }
       ]
     },
@@ -35,7 +35,7 @@
       "errors": [
         {
           "error": "SQL error in not_contains_all operator",
-          "message": "Variable $required_variables is not a constant."
+          "message": "column or relation does not exist"
         }
       ]
     },
@@ -48,146 +48,467 @@
       "errors": [
         {
           "error": "SQL error in not_contains_all operator",
-          "message": "Variable $required_variables is not a constant."
+          "message": "column or relation does not exist"
         }
       ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "STUDYID": "STUDYID",
+        "DOMAIN": "DOMAIN",
+        "ARMCD": "ARMCD",
+        "ARM": "ARM",
+        "TAETORD": "TAETORD",
+        "ETCD": "ETCD",
+        "ELEMENT": "ELEMENT",
+        "TABRANCH": "TABRANCH",
+        "TATRANS": "TATRANS"
+      }
+    },
+    {
+      "value": {
+        "STUDYID": "STUDYID",
+        "DOMAIN": "DOMAIN",
+        "USUBJID": "USUBJID",
+        "AESEQ": "AESEQ",
+        "AETERM": "AETERM",
+        "AEMODIFY": "AEMODIFY",
+        "AEBODSYS": "AEBODSYS",
+        "AESEV": "AESEV",
+        "AESER": "AESER",
+        "AEACN": "AEACN",
+        "AEREL": "AEREL",
+        "AEOUT": "AEOUT",
+        "AESCONG": "AESCONG",
+        "AESDISAB": "AESDISAB",
+        "AESDTH": "AESDTH",
+        "AESHOSP": "AESHOSP",
+        "AESLIFE": "AESLIFE",
+        "EPOCH": "EPOCH",
+        "AESTDTC": "AESTDTC",
+        "AEENDTC": "AEENDTC",
+        "AESTDY": "AESTDY",
+        "AEENDY": "AEENDY",
+        "AEENRF": "AEENRF"
+      }
+    },
+    {
+      "value": {
+        "STUDYID": "STUDYID",
+        "DOMAIN": "DOMAIN",
+        "USUBJID": "USUBJID",
+        "LBSEQ": "LBSEQ",
+        "LBSPID": "LBSPID",
+        "LBTESTCD": "LBTESTCD",
+        "LBCAT": "LBCAT",
+        "LBORRES": "LBORRES",
+        "LBORRESU": "LBORRESU",
+        "LBORNRLO": "LBORNRLO",
+        "LBORNRHI": "LBORNRHI",
+        "LBSTRESC": "LBSTRESC",
+        "LBSTRESN": "LBSTRESN",
+        "LBSTRESU": "LBSTRESU",
+        "LBSTNRLO": "LBSTNRLO",
+        "LBSTNRHI": "LBSTNRHI",
+        "LBNRIND": "LBNRIND",
+        "LBLOINC": "LBLOINC",
+        "LBSPEC": "LBSPEC",
+        "LBBLFL": "LBBLFL",
+        "EPOCH": "EPOCH",
+        "VISITNUM": "VISITNUM",
+        "VISIT": "VISIT",
+        "LBDTC": "LBDTC",
+        "LBDY": "LBDY"
+      }
+    },
+    {
+      "value": {
+        "STUDYID": "STUDYID",
+        "DOMAIN": "DOMAIN",
+        "USUBJID": "USUBJID",
+        "SPDEVID": "SPDEVID",
+        "EXSEQ": "EXSEQ",
+        "EXDOSE": "EXDOSE",
+        "EXDOSU": "EXDOSU",
+        "EXDOSFRM": "EXDOSFRM",
+        "EXDOSFRQ": "EXDOSFRQ",
+        "EXROUTE": "EXROUTE",
+        "EXLOT": "EXLOT",
+        "EPOCH": "EPOCH",
+        "EXSTDTC": "EXSTDTC",
+        "EXENDTC": "EXENDTC",
+        "EXSTDY": "EXSTDY",
+        "EXENDY": "EXENDY"
+      }
     }
   ],
   "unvalidated_highlights": [
     {
       "Sheet": "ta.xpt",
-      "Row": 5,
+      "Row": 1,
+      "Variable": "STUDYID"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 1,
+      "Variable": "DOMAIN"
+    },
+    {
+      "Sheet": "ta.xpt",
+      "Row": 1,
       "Variable": "ARMCD"
     },
     {
       "Sheet": "ta.xpt",
-      "Row": 5,
-      "Variable": "EPOCH"
+      "Row": 1,
+      "Variable": "ARM"
     },
     {
       "Sheet": "ta.xpt",
-      "Row": 6,
-      "Variable": "ARMCD"
+      "Row": 1,
+      "Variable": "TAETORD"
     },
     {
       "Sheet": "ta.xpt",
-      "Row": 6,
-      "Variable": "EPOCH"
+      "Row": 1,
+      "Variable": "ETCD"
     },
     {
       "Sheet": "ta.xpt",
-      "Row": 7,
-      "Variable": "ARMCD"
+      "Row": 1,
+      "Variable": "ELEMENT"
     },
     {
       "Sheet": "ta.xpt",
-      "Row": 7,
-      "Variable": "EPOCH"
+      "Row": 1,
+      "Variable": "TABRANCH"
     },
     {
       "Sheet": "ta.xpt",
-      "Row": 8,
-      "Variable": "ARMCD"
-    },
-    {
-      "Sheet": "ta.xpt",
-      "Row": 8,
-      "Variable": "EPOCH"
-    },
-    {
-      "Sheet": "ta.xpt",
-      "Row": 9,
-      "Variable": "ARMCD"
-    },
-    {
-      "Sheet": "ta.xpt",
-      "Row": 9,
-      "Variable": "EPOCH"
-    },
-    {
-      "Sheet": "ta.xpt",
-      "Row": 10,
-      "Variable": "ARMCD"
-    },
-    {
-      "Sheet": "ta.xpt",
-      "Row": 10,
-      "Variable": "EPOCH"
+      "Row": 1,
+      "Variable": "TATRANS"
     },
     {
       "Sheet": "ae.xpt",
-      "Row": 5,
+      "Row": 1,
       "Variable": "STUDYID"
     },
     {
       "Sheet": "ae.xpt",
-      "Row": 6,
+      "Row": 1,
+      "Variable": "DOMAIN"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AESEQ"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AETERM"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AEMODIFY"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AEBODSYS"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AESEV"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AESER"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AEACN"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AEREL"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AEOUT"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AESCONG"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AESDISAB"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AESDTH"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AESHOSP"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AESLIFE"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AESTDTC"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AEENDTC"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AESTDY"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AEENDY"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 1,
+      "Variable": "AEENRF"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "STUDYID"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "DOMAIN"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
       "Variable": "USUBJID"
     },
     {
       "Sheet": "lb.xpt",
-      "Row": 5,
+      "Row": 1,
       "Variable": "LBSEQ"
     },
     {
       "Sheet": "lb.xpt",
-      "Row": 6,
-      "Variable": "LBSEQ"
+      "Row": 1,
+      "Variable": "LBSPID"
     },
     {
       "Sheet": "lb.xpt",
-      "Row": 7,
-      "Variable": "LBSEQ"
+      "Row": 1,
+      "Variable": "LBTESTCD"
     },
     {
       "Sheet": "lb.xpt",
-      "Row": 8,
-      "Variable": "LBSEQ"
+      "Row": 1,
+      "Variable": "LBCAT"
     },
     {
       "Sheet": "lb.xpt",
-      "Row": 9,
-      "Variable": "LBSEQ"
+      "Row": 1,
+      "Variable": "LBORRES"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "LBORRESU"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "LBORNRLO"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "LBORNRHI"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "LBSTRESC"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "LBSTRESN"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "LBSTRESU"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "LBSTNRLO"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "LBSTNRHI"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "LBNRIND"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "LBLOINC"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "LBSPEC"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "LBBLFL"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "VISITNUM"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "VISIT"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "LBDTC"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "LBDY"
     },
     {
       "Sheet": "ex.xpt",
-      "Row": 5,
-      "Variable": "EXTRT"
+      "Row": 1,
+      "Variable": "STUDYID"
     },
     {
       "Sheet": "ex.xpt",
-      "Row": 6,
-      "Variable": "EXTRT"
+      "Row": 1,
+      "Variable": "DOMAIN"
     },
     {
       "Sheet": "ex.xpt",
-      "Row": 7,
-      "Variable": "EXTRT"
+      "Row": 1,
+      "Variable": "USUBJID"
     },
     {
       "Sheet": "ex.xpt",
-      "Row": 8,
-      "Variable": "EXTRT"
+      "Row": 1,
+      "Variable": "SPDEVID"
     },
     {
       "Sheet": "ex.xpt",
-      "Row": 9,
-      "Variable": "EXTRT"
+      "Row": 1,
+      "Variable": "EXSEQ"
     },
     {
       "Sheet": "ex.xpt",
-      "Row": 10,
-      "Variable": "EXTRT"
+      "Row": 1,
+      "Variable": "EXDOSE"
     },
     {
       "Sheet": "ex.xpt",
-      "Row": 11,
-      "Variable": "EXTRT"
+      "Row": 1,
+      "Variable": "EXDOSU"
     },
     {
       "Sheet": "ex.xpt",
-      "Row": 12,
-      "Variable": "EXTRT"
+      "Row": 1,
+      "Variable": "EXDOSFRM"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 1,
+      "Variable": "EXDOSFRQ"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 1,
+      "Variable": "EXROUTE"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 1,
+      "Variable": "EXLOT"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 1,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 1,
+      "Variable": "EXSTDTC"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 1,
+      "Variable": "EXENDTC"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 1,
+      "Variable": "EXSTDY"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 1,
+      "Variable": "EXENDY"
     }
   ]
 }
