@@ -1,7 +1,7 @@
 # Variable: GEN
 # Condition: 
 # Rule: Metadata attribute of Variable Role = IG Role for domains in IG, Metadata attribute of Variable Role = Model Role for custom domains
-
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -59,7 +59,7 @@ Check:
       value: library_variable_role
 Core:
   Id: CG0010
-  Status: Published
+  Status: Draft
   Version: '1'
 Description: Raise an error when the metadata attribute of variable role does
   not match the IG role for domain in IG, or model role (for custom domains)
