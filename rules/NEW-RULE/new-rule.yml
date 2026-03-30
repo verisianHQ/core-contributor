@@ -1,0 +1,97 @@
+# Variable: GEN
+# Condition: Custom domain present in study
+# Rule: Custom domain is based on one of the observation classes
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: This section describes the overall process for creating a custom
+                  domain, which must be based on one of the three SDTM general
+                  observation classes.
+                Document: IG v3.4
+                Section: '2.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0321
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: This section describes the overall process for creating a custom
+                  domain, which must be based on one of the three SDTM general
+                  observation classes.
+                Document: IG v3.2
+                Section: '2.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0321
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: This section describes the overall process for creating a custom
+                  domain, which must be based on one of the three SDTM general
+                  observation classes.
+                Document: IG v3.3
+                Section: '2.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0321
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: $domain_is_custom
+      operator: equal_to
+      value: true
+    - any:
+      - not:
+          any:
+            - name: --TESTCD
+              operator: exists
+            - name: --TRT
+              operator: exists
+            - name: --TERM
+              operator: exists
+      - not:
+          all:
+            - name: STUDYID
+              operator: exists
+            - name: USUBJID
+              operator: exists
+            - name: DOMAIN
+              operator: exists
+            - name: --SEQ
+              operator: exists
+Core:
+  Id: CDISC.SDTMIG.CG0321
+  Status: Draft
+  Version: '1'
+Description: Trigger error when a custom domain is present and is not based on
+  one of the observation classes
+Executability: Fully Executable
+Operations:
+  - id: $domain_is_custom
+    operator: domain_is_custom
+Outcome:
+  Message: Custom domain is not based on one of the observation classes
+  Output Variables:
+    - dataset_name
+    - $domain_is_custom
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset
