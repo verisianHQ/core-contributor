@@ -14,8 +14,8 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0607
-            Version: 1.5
-        Version: 3.2
+            Version: '1.5'
+        Version: '3.2'
       - Name: SDTMIG
         References:
           - Citations:
@@ -25,8 +25,8 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0607
-            Version: 1.5
-        Version: 3.3
+            Version: '1.5'
+        Version: '3.3'
       - Name: SDTMIG
         References:
           - Citations:
@@ -36,8 +36,8 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0607
-            Version: 1.5
-        Version: 3.4
+            Version: '1.5'
+        Version: '3.4'
 Check:
   all:
     - all:
