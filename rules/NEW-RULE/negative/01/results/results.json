@@ -14,9 +14,9 @@
           "value": {
             "CEDECOD": "LAST CONTACT",
             "CETERM": "DEATH",
-            "DM.DTHFL": "N"
+            "DTHFL": "N"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -25,9 +25,9 @@
           "value": {
             "CEDECOD": "DEATH",
             "CETERM": "PROGRESSIVE DISEASE",
-            "DM.DTHFL": "N"
+            "DTHFL": "N"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -38,18 +38,6 @@
       "execution_message": null,
       "number_errors": 0,
       "errors": []
-    }
-  ],
-  "unmatched_validation": [
-    {
-      "value": {
-        "DTHFL": "N"
-      }
-    },
-    {
-      "value": {
-        "DTHFL": "N"
-      }
     }
   ]
 }
