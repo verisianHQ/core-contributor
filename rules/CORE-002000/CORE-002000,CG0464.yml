@@ -61,7 +61,7 @@ Core:
   Id: CORE-002000
   Status: Published
   Version: '1'
-Description: Raise an error when --TERM is not present in custom events dataset.
+Description: Raise an error when --TERM is not present in custom events dataset. # small edit
 Executability: Fully Executable
 Operations:
   - id: $domain_is_custom
