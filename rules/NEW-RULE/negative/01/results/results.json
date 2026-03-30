@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "DTHFL in DM dataset is 'Y' but a record is missing in DS dataset where DSDECOD = 'DEATH'.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "DSDECOD": "FUTURE USE OF SAMPLES INFORMED CONSENT OBTAINED",
+            "DTHFL": "Y"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=NEW-RULE, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}
