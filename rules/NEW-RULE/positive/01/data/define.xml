@@ -2052,7 +2052,7 @@
         <ItemRef ItemOID="IT.SV.SVENDTC" Mandatory="No" OrderNumber="7" MethodOID="MT.SVENDTC" Role="Timing"/>
         <ItemRef ItemOID="IT.SV.SVSTDY" Mandatory="No" OrderNumber="8" MethodOID="MT.DAYCALC" Role="Timing"/>
         <ItemRef ItemOID="IT.SV.SVENDY" Mandatory="No" OrderNumber="9" MethodOID="MT.DAYCALC" Role="Record Qualifier"/>
-        <ItemRef ItemOID="IT.SV.SVUPDES" Mandatory="No" OrderNumber="10" Role="Topic"/>
+        <ItemRef ItemOID="IT.SV.SVUPDES" Mandatory="No" OrderNumber="10" Role="Topic" def:HasNoData="Yes"/>
         <def:Class Name="SPECIAL PURPOSE"/>
         <def:leaf ID="LF.SV" xlink:href="sv.xpt">
           <def:title>sv.xpt</def:title>
