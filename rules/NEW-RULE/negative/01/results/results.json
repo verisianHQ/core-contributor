@@ -5,11 +5,22 @@
       "domain": "CE",
       "execution_status": "success",
       "execution_message": "CETERM or CEDECOD is 'DEATH' in CE dataset, but DTHFL in DM dataset is not 'Y'.",
-      "number_errors": 2,
+      "number_errors": 3,
       "errors": [
         {
           "row": 1,
           "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CEDECOD": "DEATH",
+            "CETERM": "DEATH",
+            "DTHFL": "N"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
             "CEDECOD": "LAST CONTACT",
@@ -19,8 +30,8 @@
           "validated": true
         },
         {
-          "row": 2,
-          "SEQ": 2,
+          "row": 3,
+          "SEQ": 3,
           "USUBJID": "CDISC002",
           "value": {
             "CEDECOD": "DEATH",

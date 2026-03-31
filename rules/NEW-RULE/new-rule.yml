@@ -40,11 +40,6 @@ Authorities:
         Version: '3.4'
 Check:
   all:
-    - all:
-        - name: DTHFL
-          operator: not_equal_to
-          value: Y
-          value_is_literal: true
     - any:
         - name: CETERM
           operator: equal_to
@@ -53,6 +48,11 @@ Check:
         - name: CEDECOD
           operator: equal_to
           value: DEATH
+          value_is_literal: true
+    - all:
+        - name: DTHFL
+          operator: not_equal_to
+          value: Y
           value_is_literal: true
 Core:
   Id: NEW-RULE
