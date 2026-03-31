@@ -1960,7 +1960,7 @@
         <ItemRef ItemOID="IT.TV.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="1" Role="Identifier"/>
         <ItemRef ItemOID="IT.TV.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
         <ItemRef ItemOID="IT.TV.VISITNUM" Mandatory="Yes" OrderNumber="3" KeySequence="2" Role="Topic"/>
-        <ItemRef ItemOID="IT.TV.VISIT" Mandatory="No" OrderNumber="4" Role="Synonym Qualifier"/>
+        <ItemRef ItemOID="IT.TV.VISIT" Mandatory="No" OrderNumber="4" Role="Synonym Qualifier" def:HasNoData="Yes"/>
         <ItemRef ItemOID="IT.TV.ARMCD" Mandatory="No" OrderNumber="5" KeySequence="3" Role="Record Qualifier"/>
         <ItemRef ItemOID="IT.TV.TVSTRL" Mandatory="Yes" OrderNumber="6" Role="Rule"/>
         <ItemRef ItemOID="IT.TV.TVENRL" Mandatory="No" OrderNumber="7" Role="Rule"/>
@@ -5166,7 +5166,7 @@
         <Description>
           <TranslatedText xml:lang="en">Visit End Rule</TranslatedText>
         </Description>
-        <def:Origin Type="Collected" Source="Sponsor"/>
+        <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
       <ItemDef OID="IT.VS.STUDYID" Name="STUDYID" DataType="text" Length="12" SASFieldName="STUDYID">
         <Description>

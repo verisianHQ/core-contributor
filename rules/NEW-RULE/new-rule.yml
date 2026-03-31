@@ -45,23 +45,20 @@ Authorities:
             Version: '2.0'
         Version: '3.4'
 Check:
-    all:
-    - name: variable_name
-      operator: is_contained_by
-      value: $permissible_variables
-    - name: define_variable_is_collected
+  all:
+    - name: define_variable_name
+      operator: non_empty
+    - name: library_variable_core
       operator: equal_to
-      value: "true"
-      value_is_literal: true
+      value: Perm
+    - name: define_variable_has_no_data
+      operator: empty
     - any:
-      - name: variable_has_empty_values
-        operator: equal_to
-        value: "True"
-        value_is_literal: true
-      - name: define_variable_has_no_data
-        operator: equal_to
-        value: "true"
-        value_is_literal: true
+        - name: variable_name
+          operator: not_exists
+        - name: variable_is_empty
+          operator: equal_to
+          value: true
 Core:
   Id: CDISC.SDTMIG.CG0015
   Status: Draft
@@ -69,17 +66,13 @@ Core:
 Description: Raise an error when a variable is permissible, data is collected
   but variable has no data.
 Executability: Fully Executable
-Operations:
-  - id: $permissible_variables
-    operator: permissible_variables
 Outcome:
   Message: 'Variable is permissible, data is collected but data is missing.'
   Output Variables:
-    - variable_name
-    - $permissible_variables
-    - define_variable_is_collected
-    - variable_has_empty_values
+    - library_variable_core
     - define_variable_has_no_data
+    - variable_name
+    - variable_is_empty
 Rule Type: Variable Metadata Check against Define XML and Library Metadata
 Scope:
   Classes:

@@ -1,176 +1,58 @@
 {
   "datasets": [
     {
-      "dataset": "ae.xpt",
-      "domain": "AE",
+      "dataset": "sv.xpt",
+      "domain": "SV",
       "execution_status": "success",
       "execution_message": "Variable is permissible, data is collected but data is missing.",
-      "number_errors": 3,
+      "number_errors": 2,
       "errors": [
         {
-          "row": 14,
+          "row": 10,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "$permissible_variables": [
-              "SPDEVID",
-              "AEGRPID",
-              "AEREFID",
-              "AESPID",
-              "AEMODIFY",
-              "AECAT",
-              "AESCAT",
-              "AEPRESP",
-              "AELOC",
-              "AESEV",
-              "AEACNOTH",
-              "AEACNDEV",
-              "AERLDEV",
-              "AERELNST",
-              "AEPATT",
-              "AEOUT",
-              "AESCAN",
-              "AESCONG",
-              "AESDISAB",
-              "AESDTH",
-              "AESHOSP",
-              "AESLIFE",
-              "AESOD",
-              "AESMIE",
-              "AESINTV",
-              "AEUNANT",
-              "AERLPRT",
-              "AERLPRC",
-              "AECONTRT",
-              "AETOXGR",
-              "TAETORD",
-              "EPOCH",
-              "AESTDY",
-              "AEENDY",
-              "AEDUR",
-              "AEENRF",
-              "AEENRTPT",
-              "AEENTPT"
-            ],
             "define_variable_has_no_data": null,
-            "define_variable_is_collected": "true",
-            "variable_has_empty_values": "True",
-            "variable_name": "AESCONG"
+            "library_variable_core": "Perm",
+            "variable_is_empty": true,
+            "variable_name": "SVENDY"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 15,
+          "row": 11,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "$permissible_variables": [
-              "SPDEVID",
-              "AEGRPID",
-              "AEREFID",
-              "AESPID",
-              "AEMODIFY",
-              "AECAT",
-              "AESCAT",
-              "AEPRESP",
-              "AELOC",
-              "AESEV",
-              "AEACNOTH",
-              "AEACNDEV",
-              "AERLDEV",
-              "AERELNST",
-              "AEPATT",
-              "AEOUT",
-              "AESCAN",
-              "AESCONG",
-              "AESDISAB",
-              "AESDTH",
-              "AESHOSP",
-              "AESLIFE",
-              "AESOD",
-              "AESMIE",
-              "AESINTV",
-              "AEUNANT",
-              "AERLPRT",
-              "AERLPRC",
-              "AECONTRT",
-              "AETOXGR",
-              "TAETORD",
-              "EPOCH",
-              "AESTDY",
-              "AEENDY",
-              "AEDUR",
-              "AEENRF",
-              "AEENRTPT",
-              "AEENTPT"
-            ],
             "define_variable_has_no_data": null,
-            "define_variable_is_collected": "true",
-            "variable_has_empty_values": "True",
-            "variable_name": "AESDISAB"
-          },
-          "validated": false
-        },
-        {
-          "row": 16,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "$permissible_variables": [
-              "SPDEVID",
-              "AEGRPID",
-              "AEREFID",
-              "AESPID",
-              "AEMODIFY",
-              "AECAT",
-              "AESCAT",
-              "AEPRESP",
-              "AELOC",
-              "AESEV",
-              "AEACNOTH",
-              "AEACNDEV",
-              "AERLDEV",
-              "AERELNST",
-              "AEPATT",
-              "AEOUT",
-              "AESCAN",
-              "AESCONG",
-              "AESDISAB",
-              "AESDTH",
-              "AESHOSP",
-              "AESLIFE",
-              "AESOD",
-              "AESMIE",
-              "AESINTV",
-              "AEUNANT",
-              "AERLPRT",
-              "AERLPRC",
-              "AECONTRT",
-              "AETOXGR",
-              "TAETORD",
-              "EPOCH",
-              "AESTDY",
-              "AEENDY",
-              "AEDUR",
-              "AEENRF",
-              "AEENRTPT",
-              "AEENTPT"
-            ],
-            "define_variable_has_no_data": null,
-            "define_variable_is_collected": "true",
-            "variable_has_empty_values": "True",
-            "variable_name": "AESDTH"
+            "library_variable_core": "Perm",
+            "variable_is_empty": true,
+            "variable_name": "SVUPDES"
           },
           "validated": false
         }
       ]
-    }
-  ],
-  "unmatched_validation": [
+    },
     {
-      "value": {
-        "AESCONG": "AESCONG"
-      }
+      "dataset": "tv.xpt",
+      "domain": "TV",
+      "execution_status": "success",
+      "execution_message": "Variable is permissible, data is collected but data is missing.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_variable_has_no_data": null,
+            "library_variable_core": "Perm",
+            "variable_is_empty": true,
+            "variable_name": "TVENRL"
+          },
+          "validated": true
+        }
+      ]
     }
   ]
 }
