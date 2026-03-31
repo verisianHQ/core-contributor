@@ -54,8 +54,8 @@ Check:
       operator: equal_to
       value: "False"
 Core:
-  Id: CDISC.SDTMIG.CG0002
-  Status: Draft
+  Id: CORE-002001
+  Status: Published
   Version: '1'
 Description: Raise an error when --DUR exists and is populated in the dataset but is not listed as 'Collected' in the define-xml document.
 Executability: Fully Executable
