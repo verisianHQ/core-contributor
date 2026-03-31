@@ -1,6 +1,7 @@
 # Variable: GEN
 # Condition: 
 # Rule: Each record is unique per sponsor defined key variables as documented in the define.xml
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -74,7 +75,7 @@ Core:
   Id: CDISC.SDTMIG.CG0019
   Status: Draft
   Version: '1'
-Description: Trigger error if records are not unique as per sponsor defined key variables as documented in the define.xml.
+Description: Raise an error if records are not unique as per sponsor defined key variables as documented in the define.xml.
 Executability: Fully Executable
 Outcome:
   Message: Records are not unique as per sponsor defined key variables as
