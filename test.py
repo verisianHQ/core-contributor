@@ -337,7 +337,9 @@ class TestRunner:
         for sheet in wb.worksheets:
             for row in sheet.iter_rows():
                 for cell in row:
-                    if cell.fill.start_color.index == "FFFFFF00":
+                    if not cell.fill.fgColor or not isinstance(cell.fill.fgColor.rgb, str):
+                        continue
+                    if cell.fill.fgColor.rgb.lower().endswith("ffff00"):
                         sheet_data = highlighted_cells.setdefault(sheet.title, {})
                         row_data = sheet_data.setdefault(int(cell.row), {})
                         row_data.update({sheet.cell(row=1, column=cell.column).value: cell.value})
