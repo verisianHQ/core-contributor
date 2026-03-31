@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "sm.xpt",
+      "domain": "SM",
+      "execution_status": "success",
+      "execution_message": "Custom domains use the reserved or modelled standard names.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "define_dataset_is_non_standard": "Yes",
+            "define_dataset_name": "SM"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
