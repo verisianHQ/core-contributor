@@ -117,14 +117,14 @@ class UtilityFunctions:
     def get_csv_completion_data(filepath):
         try:
             df = pd.read_csv(filepath)
-            df["Completion"] = df.apply(UtilityFunctions.determine_cg_completion, axis=1)
+            df["Completion"] = df.apply(UtilityFunctions.determine_completion, axis=1)
             return df
         except Exception as e:
             print(f"Error reading Excel file: {e}")
             return pd.DataFrame()
 
     @staticmethod
-    def determine_cg_completion(row):
+    def determine_completion(row):
         core_id = row["CORE-ID"]
         status = row["Status"]
 
@@ -148,23 +148,16 @@ class UtilityFunctions:
         return "Unknown"
 
     @staticmethod
-    def get_yaml_fields(rules_dir, keys, null_value="No Value"):
+    def get_yaml_fields(rules_dir, repo_rules, keys, null_value="No Value"):
         vals = []
-        rules_path = Path(rules_dir)
 
-        if not rules_path.exists():
-            return pd.DataFrame()
-
-        for rule_folder in rules_path.iterdir():
-            if not rule_folder.is_dir():
+        for rule_folder in repo_rules["Core-ID"].to_list():
+            path = Path(rules_dir) / rule_folder
+            yml_file = list(path.glob("*.yml")) + list(path.glob("*.yaml"))
+            if not yml_file or len(yml_file) == 0:
                 continue
-
-            yml_files = list(rule_folder.glob("*.yml")) + list(rule_folder.glob("*.yaml"))
-            if not yml_files:
-                continue
-
             try:
-                with open(yml_files[0], "r") as f:
+                with open(yml_file[0], "r") as f:
                     data = yaml.safe_load(f)
                     output = UtilityFunctions.chain_get(data, keys, nv=null_value)
                     vals.append(output)
@@ -172,6 +165,26 @@ class UtilityFunctions:
                 print(f"Error reading YAML in {rule_folder.name}: {e}")
 
         return pd.Series(vals).value_counts()
+
+    @staticmethod
+    def get_yaml_verified(rules_dir, repo_rules):
+        vals = {}
+
+        for rule_folder in repo_rules["Core-ID"].to_list():
+            path = Path(rules_dir) / rule_folder
+            yml_file = list(path.glob("*.yml")) + list(path.glob("*.yaml"))
+            if not yml_file or len(yml_file) == 0:
+                continue
+            try:
+                with open(yml_file[0], "r") as f:
+                    if any(line.strip() == "# verified" for line in f):
+                        vals[rule_folder] = "Verified"
+                    else:
+                        vals[rule_folder] = "Unverified"
+            except Exception as e:
+                print(f"Error reading YAML in {rule_folder.name}: {e}")
+
+        return vals
 
     @staticmethod
     def chain_get(dct, keys, nv=None):
