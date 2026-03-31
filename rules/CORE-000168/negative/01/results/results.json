@@ -4,7 +4,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "VISITNUM is not among VISITNUM in SV domain.",
+      "execution_message": "VISITNUM does not match the VISITNUM values in the SV dataset.",
       "number_errors": 34,
       "errors": [
         {
@@ -319,7 +319,7 @@
       "dataset": "oe.xpt",
       "domain": "OE",
       "execution_status": "success",
-      "execution_message": "VISITNUM is not among VISITNUM in SV domain.",
+      "execution_message": "VISITNUM does not match the VISITNUM values in the SV dataset.",
       "number_errors": 4,
       "errors": [
         {
@@ -372,7 +372,7 @@
       "dataset": "tv.xpt",
       "domain": "TV",
       "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000168, dataset=TV",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000168, dataset=TV",
       "number_errors": 0,
       "errors": []
     },
@@ -380,7 +380,7 @@
       "dataset": "vs.xpt",
       "domain": "VS",
       "execution_status": "success",
-      "execution_message": "VISITNUM is not among VISITNUM in SV domain.",
+      "execution_message": "VISITNUM does not match the VISITNUM values in the SV dataset.",
       "number_errors": 14,
       "errors": [
         {
