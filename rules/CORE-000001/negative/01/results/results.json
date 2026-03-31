@@ -4,7 +4,7 @@
       "dataset": "ie.xpt",
       "domain": "IE",
       "execution_status": "success",
-      "execution_message": "IEORRES is not equal to 'N' when IECAT equals 'INCLUSION'.",
+      "execution_message": "IECAT equals 'INCLUSION', but IEORRES is not equal to 'N'.",
       "number_errors": 3,
       "errors": [
         {
@@ -13,9 +13,10 @@
           "USUBJID": "CDISC015",
           "value": {
             "IECAT": "INCLUSION",
-            "IEORRES": "Y"
+            "IEORRES": "Y",
+            "IETESTCD": "INCL01"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -23,9 +24,10 @@
           "USUBJID": "CDISC016",
           "value": {
             "IECAT": "INCLUSION",
-            "IEORRES": "Yes"
+            "IEORRES": null,
+            "IETESTCD": "INCL02"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -33,9 +35,10 @@
           "USUBJID": "CDISC017",
           "value": {
             "IECAT": "INCLUSION",
-            "IEORRES": "Nope"
+            "IEORRES": "Nope",
+            "IETESTCD": "INCL03"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
