@@ -1,6 +1,7 @@
 # Variable: VISITNUM
 # Condition: VISITNUM ^= null
 # Rule: VISITNUM in SV.VISITNUM
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -98,5 +99,10 @@ Scope:
   Domains:
     Exclude:
       - SV
+      - TV
+      - TA
+      - TE
+      - TI
+      - TS
   Use Case: INDH
 Sensitivity: Record

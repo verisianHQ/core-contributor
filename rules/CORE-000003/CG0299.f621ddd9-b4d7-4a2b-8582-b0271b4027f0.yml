@@ -1,6 +1,7 @@
 # Variable: TRLOC
 # Condition: 
 # Rule: TRLOC not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -18,8 +19,9 @@ Authorities:
                   would be a duplication of information already represented in TU.
                   The multi-domain approach to representing oncology assessment data
                   was developed largely to reduce duplication of stored information.
-                Document: SDTM v3.4
-                Section: 6.3.12.2
+                Document: IG v3.4
+                Section: '6.3.12.2'
+                Item: TR - Description/Overview
       - Name: SDTMIG
         Version: '3.2'
         References:
@@ -53,7 +55,7 @@ Authorities:
                   data.
                 Document: IG v3.3
                 Item: Specification
-                Section: 6.3.16.2
+                Section: '6.3.16.2'
 Check:
   all:
     - name: TRLOC
@@ -62,10 +64,12 @@ Core:
   Id: CORE-000003
   Status: Published
   Version: '1'
-Description: Raise an error when TRLOC is present.
+Description: Raise an error when TRLOC is present in TR dataset.
 Executability: Fully Executable
 Outcome:
-  Message: TRLOC is present when TRLOC is not included in the TR domain.
+  Message: TRLOC should not be present in TR dataset.
+  Output Variables:
+    - TRLOC
 Rule Type: Record Data
 Scope:
   Classes:
