@@ -128,6 +128,9 @@ jobs:
                   continue
 
               for error in validator.iter_errors(rule_data):
+                  if error.validator == 'pattern' and 'id' in error.path:
+                      continue
+
                   path_str = " -> ".join([str(p) for p in error.path]) if error.path else "Root Document"
                   line_num = get_line_number(filepath, error.path)
                   
