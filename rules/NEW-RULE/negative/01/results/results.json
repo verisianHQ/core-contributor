@@ -3,99 +3,45 @@
     {
       "dataset": "ta.xpt",
       "domain": "TA",
-      "execution_status": "success",
-      "execution_message": "TAETORD should be in the same order as the order of elements in the TA dataset for the Arm to which the subject was assigned.",
-      "number_errors": 8,
+      "execution_status": "execution_error",
+      "execution_message": "SQL operator execution error",
+      "number_errors": 1,
       "errors": [
         {
-          "row": 1,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARM": "Placebo",
-            "ARMCD": "PLACEBO",
-            "TAETORD": 1.0
-          },
-          "validated": true
-        },
-        {
-          "row": 2,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARM": "Placebo",
-            "ARMCD": "PLACEBO",
-            "TAETORD": 2.0
-          },
-          "validated": false
-        },
-        {
-          "row": 3,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARM": "Zanomaline Low Dose (54 mg)",
-            "ARMCD": "ZAN_LOW",
-            "TAETORD": 1.0
-          },
-          "validated": false
-        },
-        {
-          "row": 4,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARM": "Zanomaline Low Dose (54 mg)",
-            "ARMCD": "ZAN_LOW",
-            "TAETORD": 2.0
-          },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARM": "Zanomaline High Dose (81 mg)",
-            "ARMCD": "ZAN_HIGH",
-            "TAETORD": 1.0
-          },
-          "validated": false
-        },
-        {
-          "row": 6,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARM": "Zanomaline High Dose (81 mg)",
-            "ARMCD": "ZAN_HIGH",
-            "TAETORD": 3.0
-          },
-          "validated": false
-        },
-        {
-          "row": 7,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARM": "Zanomaline High Dose (81 mg)",
-            "ARMCD": "ZAN_HIGH",
-            "TAETORD": 2.0
-          },
-          "validated": false
-        },
-        {
-          "row": 8,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARM": "Zanomaline High Dose (81 mg)",
-            "ARMCD": "ZAN_HIGH",
-            "TAETORD": 4.0
-          },
-          "validated": false
+          "error": "SQL error in is_not_ordered_set operator",
+          "message": "column or relation does not exist"
         }
       ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "ARMCD": "ZAN_HIGH",
+        "ARM": "Zanomaline High Dose (81 mg)",
+        "TAETORD": 1
+      }
+    },
+    {
+      "value": {
+        "ARMCD": "ZAN_HIGH",
+        "ARM": "Zanomaline High Dose (81 mg)",
+        "TAETORD": 3
+      }
+    },
+    {
+      "value": {
+        "ARMCD": "ZAN_HIGH",
+        "ARM": "Zanomaline High Dose (81 mg)",
+        "TAETORD": 2
+      }
+    },
+    {
+      "value": {
+        "ARMCD": "ZAN_HIGH",
+        "ARM": "Zanomaline High Dose (81 mg)",
+        "TAETORD": 4
+      }
     }
   ]
 }
