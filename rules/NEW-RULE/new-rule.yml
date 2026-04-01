@@ -53,24 +53,22 @@ Check:
       operator: equal_to
       value: true
     - any:
-      - not:
-          any:
+        - all:
             - name: --TESTCD
-              operator: exists
+              operator: not_exists
             - name: --TRT
-              operator: exists
+              operator: not_exists
             - name: --TERM
-              operator: exists
-      - not:
-          all:
+              operator: not_exists
+        - any:
             - name: STUDYID
-              operator: exists
+              operator: not_exists
             - name: USUBJID
-              operator: exists
+              operator: not_exists
             - name: DOMAIN
-              operator: exists
+              operator: not_exists
             - name: --SEQ
-              operator: exists
+              operator: not_exists
 Core:
   Id: CDISC.SDTMIG.CG0321
   Status: Draft
