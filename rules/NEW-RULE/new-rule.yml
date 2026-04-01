@@ -8,14 +8,13 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Include the Topic variable from the identified general
-                  observation class (e.g., --TESTCD for Findings) in the SDTM
+              - Cited Guidance: For a Findings domain, the topic variable, --TESTCD, should use Controlled Terminology (e.g., "SYSBP" for Systolic Blood Pressure)
                 Document: IG v3.4
-                Item: Assumption 3b
-                Section: '2.6'
+                Item: 3b
+                Section: '4.3.6'
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
-              Id: CG0464
+              Id: CG0320
               Version: '2'
             Version: '2.0'
         Version: '3.4'
@@ -29,7 +28,7 @@ Authorities:
                 Section: '2.6'
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
-              Id: CG0464
+              Id: CG0320
               Version: '2'
             Version: '2.0'
         Version: '3.2'
@@ -59,7 +58,7 @@ Check:
       operator: not_exists
 Core:
   Id: CDISC.SDTMIG.CG0320
-  Status: Published
+  Status: Draft
   Version: '1'
 Description: Raise an error when --TESTCD is not present in custom findings dataset.
 Executability: Fully Executable
