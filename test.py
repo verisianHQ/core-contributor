@@ -349,7 +349,7 @@ class TestRunner:
         unmatched = []
 
         flat_validation = {}
-        for _, entries in validations.items():
+        for idx, entries in validations.items():
             if not entries:
                 continue
             error_level = entries[0]["Error level"].lower()
@@ -357,7 +357,7 @@ class TestRunner:
             row = entries[0]["Row num"] if entries[0]["Row num"] in [1, "N/A"] else entries[0]["Row num"] - 4
             values = {e["Variable"]: e["Error value"] for e in entries}
 
-            flat_validation[(sheet, error_level, row)] = values
+            flat_validation[(sheet, error_level, row, idx)] = values
 
         for ds in results_data["datasets"]:
             sheet_name = ds["dataset"]
@@ -367,7 +367,7 @@ class TestRunner:
                     res_values = error_obj["value"]
 
                     match_found = False
-                    for (v_sheet, v_error_level, v_row), v_values in flat_validation.items():
+                    for (v_sheet, v_error_level, v_row, v_idx), v_values in flat_validation.items():
                         if v_sheet == sheet_name:
                             v_absent = set(k for k, v in v_values.items() if v == "[ABSENT]")
                             v_not_absent = set(k for k, v in v_values.items() if v != "[ABSENT]")
@@ -377,7 +377,7 @@ class TestRunner:
 
                             if match_found:
                                 error_obj["validated"] = True
-                                del flat_validation[(v_sheet, v_error_level, v_row)]
+                                del flat_validation[(v_sheet, v_error_level, v_row, v_idx)]
                                 break
 
                     if not match_found:
