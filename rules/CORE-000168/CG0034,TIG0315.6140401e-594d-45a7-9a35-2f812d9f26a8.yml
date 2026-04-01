@@ -78,7 +78,7 @@ Core:
   Id: CORE-000168
   Status: Published
   Version: '1'
-Description: Raise an error when VISITNUM does not match the VISITNUM values in the SV dataset.
+Description: Raise an error when VISITNUM does not match any of the VISITNUM values in the SV dataset.
 Executability: Fully Executable
 Operations:
   - domain: SV
@@ -88,7 +88,7 @@ Operations:
     name: VISITNUM
     operator: distinct
 Outcome:
-  Message: VISITNUM does not match the VISITNUM values in the SV dataset.
+  Message: VISITNUM does not match any of the VISITNUM values in the SV dataset.
   Output Variables:
     - VISITNUM
 Rule Type: Record Data
