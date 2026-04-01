@@ -1,0 +1,82 @@
+# Variable: --TESTCD
+# Condition: Custom domain present in study
+# Rule: --TESTCD present in custom findings dataset
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: For a Findings domain, the topic variable, --TESTCD, should use Controlled Terminology (e.g., "SYSBP" for Systolic Blood Pressure)
+                Document: IG v3.4
+                Item: 3b
+                Section: '4.3.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0320
+              Version: '2'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Include the Topic variable from the identified general
+                  observation class (e.g., --TESTCD for Findings)
+                Document: IG v3.2
+                Item: 3.b
+                Section: '2.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0320
+              Version: '2'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Include the topic variable from the identified general
+                  observation class (e.g., --TESTCD for Findings) in the SDTM.
+                Document: IG v3.3
+                Item: 3.b
+                Section: '2.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0320
+              Version: '2'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: $domain_is_custom
+      operator: equal_to
+      value: true
+    - name: define_dataset_class
+      operator: equal_to
+      value: FINDINGS
+    - name: --TESTCD
+      operator: not_exists
+Core:
+  Id: CDISC.SDTMIG.CG0320
+  Status: Draft
+  Version: '1'
+Description: Raise an error when --TESTCD is not present in custom findings dataset.
+Executability: Fully Executable
+Operations:
+  - id: $domain_is_custom
+    operator: domain_is_custom
+Outcome:
+  Message: --TESTCD is not present in custom findings dataset.
+  Output Variables:
+    - domain
+    - --TESTCD
+    - define_dataset_class
+Rule Type: Dataset Contents Check against Define XML
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset
