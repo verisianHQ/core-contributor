@@ -1,6 +1,7 @@
 # Variable: AEOCCUR
 # Condition: 
 # Rule: AEOCCUR not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -84,7 +85,7 @@ Core:
 Description: Raise an error when AEOCCUR exists in AE dataset.
 Executability: Fully Executable
 Outcome:
-  Message: AEOCCUR is present in AE dataset.
+  Message: AEOCCUR should not be present in AE dataset.
   Output Variables:
     - AEOCCUR
 Rule Type: Record Data
