@@ -1,0 +1,126 @@
+{
+  "datasets": [
+    {
+      "dataset": "sm.xpt",
+      "domain": "SM",
+      "execution_status": "success",
+      "execution_message": "SMSTDY is greater than SMENDY.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC003",
+          "value": {
+            "SMENDY": 50.0,
+            "SMSTDY": 100.0
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "success",
+      "execution_message": "SESTDY is greater than SEENDY.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SEENDY": 1430.0,
+            "SESTDY": 1435.0
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "sv.xpt",
+      "domain": "SV",
+      "execution_status": "success",
+      "execution_message": "SVSTDY is greater than SVENDY.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVENDY": -28.0,
+            "SVSTDY": -27.0
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AESTDY is greater than AEENDY.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEENDY": 7.0,
+            "AESTDY": 8.0
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMSTDY is greater than CMENDY.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMENDY": 12.0,
+            "CMSTDY": 13.0
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "sm.xpt",
+      "Row": 7,
+      "Variable": "SMSTDY"
+    },
+    {
+      "Sheet": "se.xpt",
+      "Row": 7,
+      "Variable": "SESTDY"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 5,
+      "Variable": "SVSTDY"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 8,
+      "Variable": "AESTDY"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 6,
+      "Variable": "CMSTDY"
+    }
+  ]
+}

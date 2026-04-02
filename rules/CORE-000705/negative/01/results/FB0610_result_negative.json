@@ -1,0 +1,25 @@
+{1 item
+"DM":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"dm.xpt"
+"domain":"DM"
+"variables":[2 items
+0:"DTHDTC"
+1:"DTHFL"
+]
+"message":"The death flag in DM is set to "Y", but death date is not populated on corresponding record"
+"errors":[1 item
+0:{4 items
+"value":{2 items
+"DTHFL":"Y"
+"DTHDTC":""
+}
+"dataset":"dm.xpt"
+"row":3
+"USUBJID":"CDISC003"
+}
+]
+}
+]
+}

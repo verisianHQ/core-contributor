@@ -1,0 +1,830 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "FDA",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB009",
+                                        "Cited_Guidance": "All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB0901",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB009",
+                                        "Cited_Guidance": "All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB0901",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB009",
+                                        "Cited_Guidance": "All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB0901",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB009",
+                                        "Cited_Guidance": "All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB0901",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.0"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB009",
+                                        "Cited_Guidance": "All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB0901",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB009",
+                                        "Cited_Guidance": "All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB0901",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1.1"
+                    },
+                    {
+                        "Name": "SENDIG-GENETOX",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB009",
+                                        "Cited_Guidance": "All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB0901",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.0"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB009",
+                                        "Cited_Guidance": "All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB0901",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.1"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB009",
+                                        "Cited_Guidance": "All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB0901",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.2"
+                    },
+                    {
+                        "Name": "SENDIG-AR",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB009",
+                                        "Cited_Guidance": "All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB0901",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "--TEST",
+                    "operator": "is_not_unique_relationship",
+                    "value": "--TESTCD"
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CORE-000303",
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "--TESTCD and --TEST should have a one-to-one relationship",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "--TESTCD and --TEST do not have a one-to-one relationship",
+            "Output_Variables": [
+                "--TESTCD",
+                "--TEST"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "FINDINGS",
+                    "FINDINGS ABOUT"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "ALL"
+                ]
+            }
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "lb.xpt",
+            "label": "Laboratory Test Results",
+            "domain": "LB",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LBSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBTESTCD",
+                    "label": "Lab Test or Examination Short Name",
+                    "type": "Char",
+                    "length": 7
+                },
+                {
+                    "name": "LBTEST",
+                    "label": "Lab Test or Examination Name",
+                    "type": "Char",
+                    "length": 39
+                },
+                {
+                    "name": "LBCAT",
+                    "label": "Category for Lab Test",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "LBORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 6
+                },
+                {
+                    "name": "LBORRESU",
+                    "label": "Original Units",
+                    "type": "Char",
+                    "length": 7
+                },
+                {
+                    "name": "LBORNRLO",
+                    "label": "Reference Range Lower Limit in Orig Unit",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "LBORNRHI",
+                    "label": "Reference Range Upper Limit in Orig Unit",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "LBSTRESC",
+                    "label": "Character Result/Finding in Std Format",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LBSTRESN",
+                    "label": "Numeric Result/Finding in Standard Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBSTRESU",
+                    "label": "Standard Units",
+                    "type": "Char",
+                    "length": 7
+                },
+                {
+                    "name": "LBSTNRLO",
+                    "label": "Reference Range Lower Limit-Std Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBSTNRHI",
+                    "label": "Reference Range Upper Limit-Std Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBNRIND",
+                    "label": "Reference Range Indicator",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LBLOBXFL",
+                    "label": "Last Observation Before Exposure Flag",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "VISIT",
+                    "label": "Visit Name",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "LBDTC",
+                    "label": "Date/Time of Specimen Collection",
+                    "type": "Char",
+                    "length": 19
+                },
+                {
+                    "name": "LBENDTC",
+                    "label": "End Date/Time of Specimen Collection",
+                    "type": "Char",
+                    "length": 19
+                },
+                {
+                    "name": "LBDY",
+                    "label": "Study Day of Specimen Collection",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001"
+                ],
+                "LBSEQ": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "LBTESTCD": [
+                    "ALB",
+                    "ALP",
+                    "ALB",
+                    "ALP",
+                    "BASO"
+                ],
+                "LBTEST": [
+                    "Albumin",
+                    "Alkaline Phosphatase",
+                    "Albumin",
+                    "Alkaline Phosphatase",
+                    "Basophils"
+                ],
+                "LBCAT": [
+                    "CHEMISTRY",
+                    "CHEMISTRY",
+                    "CHEMISTRY",
+                    "CHEMISTRY",
+                    "HEMATOLOGY"
+                ],
+                "LBORRES": [
+                    "3.9",
+                    "93",
+                    "18",
+                    "26",
+                    "0.03"
+                ],
+                "LBORRESU": [
+                    "g/dL",
+                    "U/L",
+                    "U/L",
+                    "U/L",
+                    "10^9/L"
+                ],
+                "LBORNRLO": [
+                    "3.5",
+                    "35",
+                    "6",
+                    "11",
+                    "0"
+                ],
+                "LBORNRHI": [
+                    "4.6",
+                    "115",
+                    "35",
+                    "36",
+                    "0.2"
+                ],
+                "LBSTRESC": [
+                    "39",
+                    "93",
+                    "18",
+                    "26",
+                    "0.03"
+                ],
+                "LBSTRESN": [
+                    39,
+                    93,
+                    18,
+                    26,
+                    0.03
+                ],
+                "LBSTRESU": [
+                    "g/L",
+                    "U/L",
+                    "U/L",
+                    "U/L",
+                    "10^9/L"
+                ],
+                "LBSTNRLO": [
+                    null,
+                    35,
+                    6,
+                    null,
+                    0
+                ],
+                "LBSTNRHI": [
+                    null,
+                    35,
+                    null,
+                    36,
+                    0.1
+                ],
+                "LBNRIND": [
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL"
+                ],
+                "LBLOBXFL": [
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y"
+                ],
+                "VISITNUM": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "VISIT": [
+                    "SCREENING 1",
+                    "SCREENING 1",
+                    "SCREENING 1",
+                    "SCREENING 1",
+                    "SCREENING 1"
+                ],
+                "EPOCH": [
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING"
+                ],
+                "LBDTC": [
+                    "2012-11-23T11:20",
+                    "2012-11-23T11:20",
+                    "2012-11-23T11:20",
+                    "2012-11-23T11:20",
+                    "2012-11-23T11:20"
+                ],
+                "LBENDTC": [
+                    "2012-11-23T11:19",
+                    "2012-11-23T10:20",
+                    "2012-11-22T11:20",
+                    "2012-10-23T11:20",
+                    "2011-11-23T11:20"
+                ],
+                "LBDY": [
+                    -7,
+                    -7,
+                    -7,
+                    -7,
+                    -7
+                ]
+            }
+        },
+        {
+            "filename": "fa.xpt",
+            "label": "Findings About",
+            "domain": "FA",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "FASEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "FALNKGRP",
+                    "label": "Link Group ID",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FATESTCD",
+                    "label": "Findings About Test Short Name",
+                    "type": "Char",
+                    "length": 5
+                },
+                {
+                    "name": "FATEST",
+                    "label": "Findings About Test Name",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "FAOBJ",
+                    "label": "Object of the Observation",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "FAORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "FASTRESC",
+                    "label": "Character Result/Finding in Std Format",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "FASTNRLO",
+                    "label": "Reference Range Lower Limit-Std Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "FASTNRHI",
+                    "label": "Reference Range Upper Limit-Std Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "FALOC",
+                    "label": "Location of the Finding About",
+                    "type": "Char",
+                    "length": 3
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "FADTC",
+                    "label": "Date/Time of Collection",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "FAENDTC",
+                    "label": "End Date/Time of Collection",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "FADY",
+                    "label": "Study Day of Collection",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001"
+                ],
+                "FASEQ": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "FALNKGRP": [
+                    "1",
+                    "1",
+                    "1",
+                    "1",
+                    "1"
+                ],
+                "FATESTCD": [
+                    "COUNT",
+                    "COUNT",
+                    "COUNT",
+                    "COUNT",
+                    "COUNT"
+                ],
+                "FATEST": [
+                    "Count",
+                    "Count",
+                    "Count",
+                    "Count",
+                    "Count"
+                ],
+                "FAOBJ": [
+                    "MACULES",
+                    "PAPULES",
+                    "VESICLES",
+                    "BLISTERS",
+                    "LESIONS"
+                ],
+                "FAORRES": [
+                    "1",
+                    "2",
+                    "3",
+                    "1",
+                    "2"
+                ],
+                "FASTRESC": [
+                    "1",
+                    "2",
+                    "3",
+                    "1",
+                    "2"
+                ],
+                "FASTNRLO": [
+                    0,
+                    0,
+                    null,
+                    0,
+                    null
+                ],
+                "FASTNRHI": [
+                    1,
+                    0,
+                    null,
+                    null,
+                    0
+                ],
+                "FALOC": [
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM"
+                ],
+                "VISITNUM": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "EPOCH": [
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT"
+                ],
+                "FADTC": [
+                    "2012-12-02",
+                    "2012-12-02",
+                    "2012-12-02",
+                    "2012-12-02",
+                    "2012-12-02"
+                ],
+                "FAENDTC": [
+                    "2012-12-01",
+                    "2012-11-02",
+                    "2011-12-02",
+                    "2012-12-01",
+                    "2012-11-02"
+                ],
+                "FADY": [
+                    3,
+                    3,
+                    3,
+                    3,
+                    3
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sdtmig",
+        "version": "3-2"
+    },
+    "codelists": []
+}

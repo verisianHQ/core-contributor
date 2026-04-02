@@ -1,0 +1,45 @@
+{2 items
+"DS":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"ds.xpt"
+"domain":"DS"
+"variables":[3 items
+0:"DSDECOD"
+1:"DSSTDTC"
+2:"DTHDTC"
+]
+"message":"Disposition date time value for DEATH record in DS domain is not the same as DTHDTC value in DM domain"
+"errors":[2 items
+0:{3 items
+"value":{3 items
+"DSDECOD":"DEATH"
+"DTHDTC":"2006-04-01"
+"DSSTDTC":"2006-08-30"
+}
+"row":5
+"USUBJID":"CDISC001"
+}
+1:{3 items
+"value":{3 items
+"DSDECOD":"DEATH"
+"DTHDTC":"2006-03-26"
+"DSSTDTC":""
+}
+"row":10
+"USUBJID":"CDISC002"
+}
+]
+}
+]
+"DM":[1 item
+0:{6 items
+"executionStatus":"skipped"
+"dataset":NULL
+"domain":"DM"
+"variables":[]0 items
+"message":NULL
+"errors":[]0 items
+}
+]
+}

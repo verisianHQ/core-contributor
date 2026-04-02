@@ -1,0 +1,52 @@
+{2 items
+"LB":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"lb.xpt"
+"domain":"LB"
+"variables":[2 items
+0:"LBELTM"
+1:"LBTPTREF"
+]
+"message":"LBTPTREF must be populated when LBELTM is populated"
+"errors":[2 items
+0:{5 items
+"value":{2 items
+"LBTPTREF":NULL
+"LBELTM":"PT05M"
+}
+"dataset":"lb.xpt"
+"row":2
+"USUBJID":"CDISC001"
+"SEQ":2
+}
+1:{5 items
+"value":{2 items
+"LBTPTREF":NULL
+"LBELTM":"PT05M"
+}
+"dataset":"lb.xpt"
+"row":4
+"USUBJID":"CDISC002"
+"SEQ":2
+}
+]
+}
+]
+"PP":[1 item
+0:{6 items
+"executionStatus":"execution_error"
+"dataset":"pp.xpt"
+"domain":"PP"
+"variables":[]0 items
+"message":"rule execution error"
+"errors":[1 item
+0:{3 items
+"dataset":"pp.xpt"
+"error":"Column not found in data"
+"message":"PPELTM"
+}
+]
+}
+]
+}

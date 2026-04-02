@@ -1,0 +1,21 @@
+{
+  "DM": [
+    {
+      "executionStatus": "success",
+      "domain": "DM",
+      "variables": [
+        "AGE"
+      ],
+      "message": "AGE is lower than zero",
+      "errors": [
+        {
+          "value": {
+            "AGE": -1
+          },
+          "row": 1,
+          "USUBJID": "CDISC001"
+        }
+      ]
+    }
+  ]
+}

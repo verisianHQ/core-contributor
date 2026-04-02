@@ -1,0 +1,120 @@
+{
+    "DM": [
+        {
+            "executionStatus": "skipped",
+            "dataset": null,
+            "domain": "DM",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "CE": [
+        {
+            "executionStatus": "skipped",
+            "dataset": null,
+            "domain": "CE",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "CM": [
+        {
+            "executionStatus": "success",
+            "dataset": "cm.xpt",
+            "domain": "CM",
+            "variables": [
+                "CMCLAS",
+                "CMCLASCD"
+            ],
+            "message": "CMCLASCD and CMCLAS do not have a one-to-one relationship",
+            "errors": [
+                {
+                    "value": {
+                        "CMCLASCD": "C3853540",
+                        "CMCLAS": "NSAID"
+                    },
+                    "dataset": "cm.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "CMCLASCD": "C3853542",
+                        "CMCLAS": "NSAID"
+                    },
+                    "dataset": "cm.xpt",
+                    "row": 2,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "CMCLASCD": "",
+                        "CMCLAS": "NSAID"
+                    },
+                    "dataset": "cm.xpt",
+                    "row": 3,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "CMCLASCD": "C3853545",
+                        "CMCLAS": "NSAID"
+                    },
+                    "dataset": "cm.xpt",
+                    "row": 4,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "CMCLASCD": "C3853545",
+                        "CMCLAS": ""
+                    },
+                    "dataset": "cm.xpt",
+                    "row": 5,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 4
+                }
+            ]
+        }
+    ],
+    "SU": [
+        {
+            "executionStatus": "success",
+            "dataset": "su.xpt",
+            "domain": "SU",
+            "variables": [
+                "SUCLAS",
+                "SUCLASCD"
+            ],
+            "message": "SUCLASCD and SUCLAS do not have a one-to-one relationship",
+            "errors": [
+                {
+                    "value": {
+                        "SUCLAS": "CIGARETTE",
+                        "SUCLASCD": "C42678"
+                    },
+                    "dataset": "su.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "SUCLAS": "CIGARETTE",
+                        "SUCLASCD": "C42679"
+                    },
+                    "dataset": "su.xpt",
+                    "row": 3,
+                    "USUBJID": "CDISC003",
+                    "SEQ": 1
+                }
+            ]
+        }
+    ]
+}

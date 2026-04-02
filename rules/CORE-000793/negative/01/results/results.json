@@ -1,0 +1,148 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "Collection study day (CMDY) is missing when date/time of collection (CMDTC) is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "CMDTC": "2013-01-11"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "execution_status": "success",
+      "execution_message": "Collection study day (CEDY) is missing when date/time of collection (CEDTC) is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "CEDTC": "2013-10-15"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "Collection study day (LBDY) is missing when date/time of collection (LBDTC) is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "LBDTC": "2012-11-23T11:20"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "Collection study day (FADY) is missing when date/time of collection (FADTC) is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "FADTC": "2012-12-02"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "success",
+      "execution_message": "Collection study day (SEDY) is missing when date/time of collection (SEDTC) is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "SEDTC": "2012-11-23"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "sv.xpt",
+      "domain": "SV",
+      "execution_status": "success",
+      "execution_message": "Collection study day (SVDY) is missing when date/time of collection (SVDTC) is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "SVDTC": "2012-11-23"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "sm.xpt",
+      "domain": "SM",
+      "execution_status": "success",
+      "execution_message": "Collection study day (SMDY) is missing when date/time of collection (SMDTC) is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "SMDTC": "2012-11-28"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Collection study day (DMDY) is missing when date/time of collection (DMDTC) is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "DMDTC": "2011-11-23"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
+}

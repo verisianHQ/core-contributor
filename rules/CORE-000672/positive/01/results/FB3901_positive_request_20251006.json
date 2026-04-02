@@ -1,0 +1,805 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "FDA",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB039",
+                                        "Cited_Guidance": "Upper limit of reference range should be greater than lower limit, whenever both are submitted."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3901",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB039",
+                                        "Cited_Guidance": "Upper limit of reference range should be greater than lower limit, whenever both are submitted."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3901",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB039",
+                                        "Cited_Guidance": "Upper limit of reference range should be greater than lower limit, whenever both are submitted."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3901",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB039",
+                                        "Cited_Guidance": "Upper limit of reference range should be greater than lower limit, whenever both are submitted."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3901",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.0"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB039",
+                                        "Cited_Guidance": "Upper limit of reference range should be greater than lower limit, whenever both are submitted."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3901",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB039",
+                                        "Cited_Guidance": "Upper limit of reference range should be greater than lower limit, whenever both are submitted."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3901",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1.1"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB039",
+                                        "Cited_Guidance": "Upper limit of reference range should be greater than lower limit, whenever both are submitted."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3901",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.1"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB039",
+                                        "Cited_Guidance": "Upper limit of reference range should be greater than lower limit, whenever both are submitted."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3901",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.2"
+                    },
+                    {
+                        "Name": "SENDIG-GENETOX",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB039",
+                                        "Cited_Guidance": "Upper limit of reference range should be greater than lower limit, whenever both are submitted."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3901",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.0"
+                    },
+                    {
+                        "Name": "SENDIG-AR",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB039",
+                                        "Cited_Guidance": "Upper limit of reference range should be greater than lower limit, whenever both are submitted."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3901",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "--STNRHI",
+                    "operator": "non_empty"
+                },
+                {
+                    "name": "--STNRLO",
+                    "operator": "non_empty"
+                },
+                {
+                    "name": "--STNRHI",
+                    "operator": "less_than_or_equal_to",
+                    "value": "--STNRLO"
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CORE-000672",
+            "Status": "Published",
+            "Version": "1"
+        },
+        "Description": "--STNRHI should be greater than --STNRLO when both values are completed.",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "The upper limit of the reference range (--STNRHI) is lower than or equal to the lower limit of the reference range (--STNRLO).",
+            "Output_Variables": [
+                "--TESTCD",
+                "--STNRLO",
+                "--STNRHI"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "FINDINGS"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "ALL"
+                ]
+            }
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "lb.xpt",
+            "label": "Laboratory",
+            "domain": "LB",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 14
+                },
+                {
+                    "name": "POOLID",
+                    "label": "Pool Identifier",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "LBSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBSPID",
+                    "label": "Sponsor-Defined Identifier",
+                    "type": "Char",
+                    "length": 4
+                },
+                {
+                    "name": "LBTESTCD",
+                    "label": "Lab Test or Examination Short Name",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LBTEST",
+                    "label": "Lab Test or Examination Name",
+                    "type": "Char",
+                    "length": 25
+                },
+                {
+                    "name": "LBCAT",
+                    "label": "Category for Lab Test",
+                    "type": "Char",
+                    "length": 18
+                },
+                {
+                    "name": "LBORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 6
+                },
+                {
+                    "name": "LBORRESU",
+                    "label": "Original Units",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LBORNRLO",
+                    "label": "Reference Range Lower Limit in Orig Unit",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "LBORNRHI",
+                    "label": "Reference Range Upper Limit in Orig Unit",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "LBSPEC2",
+                    "label": "Specimen",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "LBSTRESC",
+                    "label": "Character Result/Finding in Std Format",
+                    "type": "Char",
+                    "length": 6
+                },
+                {
+                    "name": "LBSTRESN",
+                    "label": "Numeric Result/Finding in Standard Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBSTRESU",
+                    "label": "Standard Units",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LBSTNRLO",
+                    "label": "Reference Range Lower Limit-Std Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBSTNRHI",
+                    "label": "Reference Range Upper Limit-Std Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBNRIND",
+                    "label": "Reference Range Indicator",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "LBLOINC",
+                    "label": "LOINC Code",
+                    "type": "Char",
+                    "length": 7
+                },
+                {
+                    "name": "LBSPEC",
+                    "label": "Specimen Type",
+                    "type": "Char",
+                    "length": 5
+                },
+                {
+                    "name": "LBDRVFL",
+                    "label": "Derived Flag",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "LBBLFL",
+                    "label": "Baseline Flag",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "VISIT",
+                    "label": "Visit Name",
+                    "type": "Char",
+                    "length": 18
+                },
+                {
+                    "name": "LBDTC",
+                    "label": "Date/Time of Specimen Collection",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "LBDY",
+                    "label": "Study Day of Specimen Collection",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST"
+                ],
+                "DOMAIN": [
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB"
+                ],
+                "USUBJID": [
+                    "CDISC-TEST-001",
+                    "CDISC-TEST-001",
+                    "CDISC-TEST-001",
+                    "CDISC-TEST-001",
+                    "CDISC-TEST-001",
+                    "CDISC-TEST-001",
+                    "CDISC-TEST-001",
+                    "CDISC-TEST-001",
+                    "CDISC-TEST-001",
+                    "CDISC-TEST-001"
+                ],
+                "POOLID": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "LBSEQ": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
+                ],
+                "LBSPID": [
+                    "46",
+                    "37",
+                    "21",
+                    "11",
+                    "43",
+                    "34",
+                    "18",
+                    "8",
+                    "39",
+                    "30"
+                ],
+                "LBTESTCD": [
+                    "ALB",
+                    "ALB",
+                    "ALB",
+                    "ALB",
+                    "ALT",
+                    "ALT",
+                    "ALT",
+                    "ALT",
+                    "CHOL",
+                    "CHOL"
+                ],
+                "LBTEST": [
+                    "Albumin",
+                    "Albumin",
+                    "Albumin",
+                    "Albumin",
+                    "Alanine Aminotransferase",
+                    "Alanine Aminotransferase",
+                    "Alanine Aminotransferase",
+                    "Alanine Aminotransferase",
+                    "Cholesterol",
+                    "Cholesterol"
+                ],
+                "LBCAT": [
+                    "BIOCHEMISTRY",
+                    "BIOCHEMISTRY",
+                    "BIOCHEMISTRY",
+                    "BIOCHEMISTRY",
+                    "BIOCHEMISTRY",
+                    "BIOCHEMISTRY",
+                    "BIOCHEMISTRY",
+                    "BIOCHEMISTRY",
+                    "LIPIDS",
+                    "LIPIDS"
+                ],
+                "LBORRES": [
+                    "4.46",
+                    "4.31",
+                    "3.62",
+                    "4.17",
+                    "14.99",
+                    "38.09",
+                    "12.98",
+                    "15.6",
+                    "5.25",
+                    "2.93"
+                ],
+                "LBORRESU": [
+                    "g/dL",
+                    "g/dL",
+                    "g/dL",
+                    "g/dL",
+                    "U/L",
+                    "U/L",
+                    "U/L",
+                    "U/L",
+                    "mmol/L",
+                    "mmol/L"
+                ],
+                "LBORNRLO": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "LBORNRHI": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "LBSPEC2": [
+                    "BLOOD",
+                    "BLOOD",
+                    "BLOOD",
+                    "BLOOD",
+                    "BLOOD",
+                    "BLOOD",
+                    "BLOOD",
+                    "BLOOD",
+                    "BLOOD",
+                    "BLOOD"
+                ],
+                "LBSTRESC": [
+                    "4.46",
+                    "4.31",
+                    "3.62",
+                    "4.17",
+                    "14.99",
+                    "38.09",
+                    "12.98",
+                    "15.6",
+                    "5.25",
+                    "2.93"
+                ],
+                "LBSTRESN": [
+                    4.46,
+                    4.31,
+                    3.62,
+                    4.17,
+                    14.99,
+                    38.09,
+                    12.98,
+                    15.6,
+                    5.25,
+                    2.93
+                ],
+                "LBSTRESU": [
+                    "g/dL",
+                    "g/dL",
+                    "g/dL",
+                    "g/dL",
+                    "U/L",
+                    "U/L",
+                    "U/L",
+                    "U/L",
+                    "mmol/L",
+                    "mmol/L"
+                ],
+                "LBSTNRLO": [
+                    null,
+                    4,
+                    null,
+                    null,
+                    10.5,
+                    1,
+                    null,
+                    null,
+                    null,
+                    1
+                ],
+                "LBSTNRHI": [
+                    null,
+                    8,
+                    null,
+                    null,
+                    21.5,
+                    1.01,
+                    null,
+                    null,
+                    null,
+                    5
+                ],
+                "LBNRIND": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "LBLOINC": [
+                    "1751-7",
+                    "1751-7",
+                    "1751-7",
+                    "1751-7",
+                    "1742-6",
+                    "1742-6",
+                    "1742-6",
+                    "1742-6",
+                    "2093-3",
+                    "2093-3"
+                ],
+                "LBSPEC": [
+                    "SERUM",
+                    "SERUM",
+                    "SERUM",
+                    "SERUM",
+                    "SERUM",
+                    "SERUM",
+                    "SERUM",
+                    "SERUM",
+                    "SERUM",
+                    "SERUM"
+                ],
+                "LBDRVFL": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "LBBLFL": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "EPOCH": [
+                    "SCREENING",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "FOLLOW-UP",
+                    "SCREENING",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "FOLLOW-UP",
+                    "SCREENING",
+                    "TREATMENT"
+                ],
+                "VISITNUM": [
+                    100,
+                    200,
+                    2200,
+                    2900,
+                    100,
+                    200,
+                    2200,
+                    2900,
+                    100,
+                    200
+                ],
+                "VISIT": [
+                    "VISIT 1 (WEEK -2)",
+                    "VISIT 2 (WEEK 0)",
+                    "VISIT 22 (WEEK 20)",
+                    "END OF TRIAL",
+                    "VISIT 1 (WEEK -2)",
+                    "VISIT 2 (WEEK 0)",
+                    "VISIT 22 (WEEK 20)",
+                    "END OF TRIAL",
+                    "VISIT 1 (WEEK -2)",
+                    "VISIT 2 (WEEK 0)"
+                ],
+                "LBDTC": [
+                    "2019-02-25",
+                    "2019-03-12",
+                    "2019-07-30",
+                    "2019-10-10",
+                    "2019-02-25",
+                    "2019-03-12",
+                    "2019-07-30",
+                    "2019-10-10",
+                    "2019-02-25",
+                    "2019-03-12"
+                ],
+                "LBDY": [
+                    -15,
+                    1,
+                    141,
+                    213,
+                    -15,
+                    1,
+                    141,
+                    213,
+                    -15,
+                    1
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sendig",
+        "version": "3-1"
+    },
+    "codelists": []
+}

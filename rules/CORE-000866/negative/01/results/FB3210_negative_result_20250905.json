@@ -1,0 +1,56 @@
+{1 item
+"LB":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"lb.xpt"
+"domain":"LB"
+"variables":[2 items
+0:"LBDTC"
+1:"LBENDTC"
+]
+"message":"LBDTC is greater than LBENDTC"
+"errors":[4 items
+0:{5 items
+"value":{2 items
+"LBDTC":"2018-01-29T07:00:17"
+"LBENDTC":"2018-01-29T07:00:00"
+}
+"dataset":"lb.xpt"
+"row":1
+"USUBJID":"CDISC001"
+"SEQ":1
+}
+1:{5 items
+"value":{2 items
+"LBDTC":"2018-01-30"
+"LBENDTC":"2018-01-29T07:00:00"
+}
+"dataset":"lb.xpt"
+"row":3
+"USUBJID":"CDISC002"
+"SEQ":1
+}
+2:{5 items
+"value":{2 items
+"LBDTC":"2018-03"
+"LBENDTC":"2018-02-20"
+}
+"dataset":"lb.xpt"
+"row":5
+"USUBJID":"CDISC003"
+"SEQ":1
+}
+3:{5 items
+"value":{2 items
+"LBDTC":"2018-11"
+"LBENDTC":"2018"
+}
+"dataset":"lb.xpt"
+"row":6
+"USUBJID":"CDISC003"
+"SEQ":2
+}
+]
+}
+]
+}

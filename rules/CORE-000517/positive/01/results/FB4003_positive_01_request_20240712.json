@@ -1,0 +1,679 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "FDA",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB040",
+                                        "Cited_Guidance": "Values for the following should not be negative: age, dose, and duration of event, exposure or observation."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB4003",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB040",
+                                        "Cited_Guidance": "Values for the following should not be negative: age, dose, and duration of event, exposure or observation."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB4003",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB040",
+                                        "Cited_Guidance": "Values for the following should not be negative: age, dose, and duration of event, exposure or observation."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB4003",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB040",
+                                        "Cited_Guidance": "Values for the following should not be negative: age, dose, and duration of event, exposure or observation."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB4003",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.0"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB040",
+                                        "Cited_Guidance": "Values for the following should not be negative: age, dose, and duration of event, exposure or observation."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB4003",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB040",
+                                        "Cited_Guidance": "Values for the following should not be negative: age, dose, and duration of event, exposure or observation."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB4003",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1.1"
+                    },
+                    {
+                        "Name": "SENDIG-GENETOX",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB040",
+                                        "Cited_Guidance": "Values for the following should not be negative: age, dose, and duration of event, exposure or observation."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB4003",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.0"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB040",
+                                        "Cited_Guidance": "Values for the following should not be negative: age, dose, and duration of event, exposure or observation."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB4003",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.1"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB040",
+                                        "Cited_Guidance": "Values for the following should not be negative: age, dose, and duration of event, exposure or observation."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB4003",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.2"
+                    },
+                    {
+                        "Name": "SENDIG-AR",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB040",
+                                        "Cited_Guidance": "Values for the following should not be negative: age, dose, and duration of event, exposure or observation."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB4003",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "--DOSTOT",
+                    "operator": "non_empty"
+                },
+                {
+                    "name": "--DOSTOT",
+                    "operator": "less_than",
+                    "value": 0
+                }
+            ]
+        },
+        "Core": {
+            "Id": "",
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Value for Total Daily Dose (--DOSTOT) should not be negative",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "--DOSTOT is lower than zero"
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "INTERVENTIONS"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "ALL"
+                ]
+            }
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "cm.xpt",
+            "label": "Concomitant/Prior Medications",
+            "domain": "CM",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CMTRT",
+                    "label": "Reported Name of Drug, Med, or Therapy",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMINDC",
+                    "label": "Indication",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMDOSE",
+                    "label": "Dose per Administration",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CMDOSU",
+                    "label": "Dose Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMDOSTOT",
+                    "label": "Total Daily Dose",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CMDOSFRQ",
+                    "label": "Dosing Frequency per Interval",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMROUTE",
+                    "label": "Route of Administration",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMSTDTC",
+                    "label": "Start Date/Time of Medication",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMENDTC",
+                    "label": "End Date/Time of Medication",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMSTDY",
+                    "label": "Study Day of Start of Medication",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CMENDY",
+                    "label": "Study Day of End of Medication",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CMENRTPT",
+                    "label": "End Relative to Reference Time Point",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMENTPT",
+                    "label": "End Reference Time Point",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "CM",
+                    "CM"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001"
+                ],
+                "CMSEQ": [
+                    2,
+                    6
+                ],
+                "CMTRT": [
+                    "ASPIRIN",
+                    "FEOSOL"
+                ],
+                "CMINDC": [
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE"
+                ],
+                "CMDOSE": [
+                    1,
+                    325
+                ],
+                "CMDOSU": [
+                    "TABLET",
+                    "mg"
+                ],
+                "CMDOSTOT": [
+                    0,
+                    1
+                ],
+                "CMDOSFRQ": [
+                    "PRN",
+                    "Q6H"
+                ],
+                "CMROUTE": [
+                    "ORAL",
+                    "ORAL"
+                ],
+                "EPOCH": [
+                    "SCREENING",
+                    "TREATMENT"
+                ],
+                "CMSTDTC": [
+                    "2012-08",
+                    "2013-04-29"
+                ],
+                "CMENDTC": [
+                    "",
+                    ""
+                ],
+                "CMSTDY": [
+                    null,
+                    151
+                ],
+                "CMENDY": [
+                    null,
+                    null
+                ],
+                "CMENRTPT": [
+                    "ONGOING",
+                    "ONGOING"
+                ],
+                "CMENTPT": [
+                    "2013-05-20",
+                    "2013-05-20"
+                ]
+            }
+        },
+        {
+            "filename": "ex.xpt",
+            "label": "Exposure",
+            "domain": "EX",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SPDEVID",
+                    "label": "Sponsor Device Identifier",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "EXSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "EXTRT",
+                    "label": "Name of Treatment",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EXDOSE",
+                    "label": "Dose",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "EXDOSU",
+                    "label": "Dose Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EXDOSTOT",
+                    "label": "Total Daily Dose",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "EXDOSFRM",
+                    "label": "Dose Form",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EXDOSFRQ",
+                    "label": "Dosing Frequency per Interval",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EXROUTE",
+                    "label": "Route of Administration",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EXLOT",
+                    "label": "Lot Number",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EXSTDTC",
+                    "label": "Start Date/Time of Treatment",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EXENDTC",
+                    "label": "End Date/Time of Treatment",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EXSTDY",
+                    "label": "Study Day of Start of Treatment",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "EXENDY",
+                    "label": "Study Day of End of Treatment",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "EX",
+                    "EX",
+                    "EX",
+                    "EX"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001"
+                ],
+                "SPDEVID": [
+                    "DEV0001",
+                    "DEV0001",
+                    "DEV0001",
+                    "DEV0001"
+                ],
+                "EXSEQ": [
+                    1,
+                    2,
+                    3,
+                    3
+                ],
+                "EXTRT": [
+                    "ZANOMALINE",
+                    "ZANOMALINE",
+                    "ZANOMALINE",
+                    "ZANOMALINE"
+                ],
+                "EXDOSE": [
+                    null,
+                    0,
+                    54,
+                    1
+                ],
+                "EXDOSU": [
+                    "mg",
+                    "mg",
+                    "mg",
+                    "mg"
+                ],
+                "EXDOSTOT": [
+                    1,
+                    0,
+                    2,
+                    3
+                ],
+                "EXDOSFRM": [
+                    "INJECTION",
+                    "INJECTION",
+                    "INJECTION",
+                    "INJECTION"
+                ],
+                "EXDOSFRQ": [
+                    "QD",
+                    "QD",
+                    "QD",
+                    "QD"
+                ],
+                "EXROUTE": [
+                    "SUBCUTANEOUS",
+                    "SUBCUTANEOUS",
+                    "SUBCUTANEOUS",
+                    "SUBCUTANEOUS"
+                ],
+                "EXLOT": [
+                    "SDS580-359",
+                    "SDS580-359",
+                    "SDS580-359",
+                    "SDS580-359"
+                ],
+                "EPOCH": [
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT"
+                ],
+                "EXSTDTC": [
+                    "2012-11-30",
+                    "2012-12-01",
+                    "2012-12-02",
+                    "2012-12-03"
+                ],
+                "EXENDTC": [
+                    "2012-11-30",
+                    "2012-12-01",
+                    "2012-12-02",
+                    "2012-12-03"
+                ],
+                "EXSTDY": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "EXENDY": [
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sdtmig",
+        "version": "3-3"
+    },
+    "codelists": []
+}

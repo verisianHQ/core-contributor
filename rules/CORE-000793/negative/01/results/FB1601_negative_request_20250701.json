@@ -1,0 +1,1978 @@
+{1 3 items
+"datasets":[8 items
+0:{5 items
+"filename":"cm.xpt"
+"label":"Concomitant/Prior Medications"
+"domain":"CM"
+"variables":[20 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":50
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":50
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":50
+}
+3:{4 items
+"name":"CMSEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"CMTRT"
+"label":"Reported Name of Drug, Med, or Therapy"
+"type":"Char"
+"length":50
+}
+5:{4 items
+"name":"CMINDC"
+"label":"Indication"
+"type":"Char"
+"length":50
+}
+6:{4 items
+"name":"CMDOSE"
+"label":"Dose per Administration"
+"type":"Num"
+"length":8
+}
+7:{4 items
+"name":"CMDOSU"
+"label":"Dose Units"
+"type":"Char"
+"length":50
+}
+8:{4 items
+"name":"CMDOSFRQ"
+"label":"Dosing Frequency per Interval"
+"type":"Char"
+"length":50
+}
+9:{4 items
+"name":"CMROUTE"
+"label":"Route of Administration"
+"type":"Char"
+"length":50
+}
+10:{4 items
+"name":"EPOCH"
+"label":"Epoch"
+"type":"Char"
+"length":50
+}
+11:{4 items
+"name":"CMDTC"
+"label":"Date/Time of Collection"
+"type":"Char"
+"length":50
+}
+12:{4 items
+"name":"CMSTDTC"
+"label":"Start Date/Time of Medication"
+"type":"Char"
+"length":50
+}
+13:{4 items
+"name":"CMENDTC"
+"label":"End Date/Time of Medication"
+"type":"Char"
+"length":50
+}
+14:{4 items
+"name":"CMSTDY"
+"label":"Study Day of Start of Medication"
+"type":"Num"
+"length":8
+}
+15:{4 items
+"name":"CMENDY"
+"label":"Study Day of End of Medication"
+"type":"Num"
+"length":8
+}
+16:{4 items
+"name":"CMSTRTPT"
+"label":"Start Relative to Reference Time Point"
+"type":"Char"
+"length":50
+}
+17:{4 items
+"name":"CMSTTPT"
+"label":"Start Reference Time Point"
+"type":"Char"
+"length":50
+}
+18:{4 items
+"name":"CMENRTPT"
+"label":"End Relative to Reference Time Point"
+"type":"Char"
+"length":50
+}
+19:{4 items
+"name":"CMENTPT"
+"label":"End Reference Time Point"
+"type":"Char"
+"length":50
+}
+]
+"records":{20 items
+"STUDYID":[4 items
+0:"CDISCPILOT01"
+1:"CDISCPILOT01"
+2:"CDISCPILOT01"
+3:"CDISCPILOT01"
+]
+"DOMAIN":[4 items
+0:"CM"
+1:"CM"
+2:"CM"
+3:"CM"
+]
+"USUBJID":[4 items
+0:"CDISC001"
+1:"CDISC001"
+2:"CDISC001"
+3:"CDISC001"
+]
+"CMSEQ":[4 items
+0:1
+1:2
+2:3
+3:4
+]
+"CMTRT":[4 items
+0:"ASPIRIN"
+1:"METAMUCIL"
+2:"HYDROCORTISONE, TOPICAL"
+3:"HYTRIN"
+]
+"CMINDC":[4 items
+0:"PROPHYLAXIS OR NON-THERAPEUTIC USE"
+1:"PROPHYLAXIS OR NON-THERAPEUTIC USE"
+2:"PROPHYLAXIS OR NON-THERAPEUTIC USE"
+3:"PROPHYLAXIS OR NON-THERAPEUTIC USE"
+]
+"CMDOSE":[4 items
+0:1
+1:1
+2:1
+3:2
+]
+"CMDOSU":[4 items
+0:"TABLET"
+1:"TABLET"
+2:"TABLET"
+3:"TABLET"
+]
+"CMDOSFRQ":[4 items
+0:"QD"
+1:"PRN"
+2:"BID"
+3:"Q4H"
+]
+"CMROUTE":[4 items
+0:"ORAL"
+1:"ORAL"
+2:"TOPICAL"
+3:"ORAL"
+]
+"EPOCH":[4 items
+0:"SCREENING"
+1:"SCREENING"
+2:"TREATMENT"
+3:"TREATMENT"
+]
+"CMDTC":[4 items
+0:"2011"
+1:"2012-08"
+2:"2013-01-11"
+3:"2013-04-19"
+]
+"CMSTDTC":[4 items
+0:"2011"
+1:"2012-08"
+2:"2013-01-11"
+3:"2013-04-19"
+]
+"CMENDTC":[4 items
+0:"2013-04-29"
+1:""
+2:""
+3:"2013-05-14"
+]
+"CMSTDY":[4 items
+0:NULL
+1:NULL
+2:43
+3:141
+]
+"CMENDY":[4 items
+0:151
+1:NULL
+2:NULL
+3:166
+]
+"CMSTRTPT":[4 items
+0:"BEFORE"
+1:""
+2:"BEFORE"
+3:""
+]
+"CMSTTPT":[4 items
+0:"SCREENING"
+1:""
+2:"SCREENING"
+3:""
+]
+"CMENRTPT":[4 items
+0:""
+1:"ONGOING"
+2:"ONGOING"
+3:""
+]
+"CMENTPT":[4 items
+0:""
+1:""
+2:""
+3:""
+]
+}
+}
+1:{5 items
+"filename":"ce.xpt"
+"label":"Clinical Events"
+"domain":"CE"
+"variables":[17 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":50
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":50
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":50
+}
+3:{4 items
+"name":"CESEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"CEGRPID"
+"label":"Group ID"
+"type":"Char"
+"length":50
+}
+5:{4 items
+"name":"CETERM"
+"label":"Reported Term for the Clinical Event"
+"type":"Char"
+"length":50
+}
+6:{4 items
+"name":"CESEV"
+"label":"Severity/Intensity"
+"type":"Char"
+"length":50
+}
+7:{4 items
+"name":"EPOCH"
+"label":"Epoch"
+"type":"Char"
+"length":50
+}
+8:{4 items
+"name":"CEDTC"
+"label":"Start Date/Time of Event Collection"
+"type":"Char"
+"length":50
+}
+9:{4 items
+"name":"CESTDTC"
+"label":"Start Date/Time of Clinical Event"
+"type":"Char"
+"length":50
+}
+10:{4 items
+"name":"CEENDTC"
+"label":"End Date/Time of Clinical Event"
+"type":"Char"
+"length":50
+}
+11:{4 items
+"name":"CESTDY"
+"label":"Study Day of Start of Event"
+"type":"Num"
+"length":8
+}
+12:{4 items
+"name":"CEENDY"
+"label":"Study Day of End of Event"
+"type":"Num"
+"length":8
+}
+13:{4 items
+"name":"CESTRTPT"
+"label":"Start Relative to Reference Time Point"
+"type":"Char"
+"length":50
+}
+14:{4 items
+"name":"CESTTPT"
+"label":"Start Reference Time Point"
+"type":"Char"
+"length":50
+}
+15:{4 items
+"name":"CEENRTPT"
+"label":"End Relative to Reference Time Point"
+"type":"Char"
+"length":50
+}
+16:{4 items
+"name":"CEENTPT"
+"label":"End Reference Time Point"
+"type":"Char"
+"length":50
+}
+]
+"records":{17 items
+"STUDYID":[14 items
+0:"CDISCPILOT01"
+1:"CDISCPILOT01"
+2:"CDISCPILOT01"
+3:"CDISCPILOT01"
+4:"CDISCPILOT01"
+5:"CDISCPILOT01"
+6:"CDISCPILOT01"
+7:"CDISCPILOT01"
+8:"CDISCPILOT01"
+9:"CDISCPILOT01"
+10:"CDISCPILOT01"
+11:"CDISCPILOT01"
+12:"CDISCPILOT01"
+13:"CDISCPILOT01"
+]
+"DOMAIN":[14 items
+0:"CE"
+1:"CE"
+2:"CE"
+3:"CE"
+4:"CE"
+5:"CE"
+6:"CE"
+7:"CE"
+8:"CE"
+9:"CE"
+10:"CE"
+11:"CE"
+12:"CE"
+13:"CE"
+]
+"USUBJID":[14 items
+0:"CDISC001"
+1:"CDISC002"
+2:"CDISC002"
+3:"CDISC003"
+4:"CDISC005"
+5:"CDISC005"
+6:"CDISC005"
+7:"CDISC005"
+8:"CDISC007"
+9:"CDISC011"
+10:"CDISC011"
+11:"CDISC014"
+12:"CDISC017"
+13:"CDISC018"
+]
+"CESEQ":[14 items
+0:1
+1:1
+2:5
+3:14
+4:1
+5:2
+6:3
+7:4
+8:1
+9:2
+10:4
+11:1
+12:5
+13:8
+]
+"CEGRPID":[14 items
+0:"1"
+1:"1"
+2:"5"
+3:"14"
+4:"1"
+5:"2"
+6:"4"
+7:"5"
+8:"1"
+9:"2"
+10:"4"
+11:"1"
+12:"5"
+13:"8"
+]
+"CETERM":[14 items
+0:"INJECTION SITE REACTION"
+1:"INJECTION SITE REACTION"
+2:"INJECTION SITE REACTION"
+3:"INJECTION SITE REACTION"
+4:"INJECTION SITE REACTION"
+5:"INJECTION SITE REACTION"
+6:"INJECTION SITE REACTION"
+7:"INJECTION SITE REACTION"
+8:"INJECTION SITE REACTION"
+9:"INJECTION SITE REACTION"
+10:"INJECTION SITE REACTION"
+11:"INJECTION SITE REACTION"
+12:"INJECTION SITE REACTION"
+13:"INJECTION SITE REACTION"
+]
+"CESEV":[14 items
+0:"MODERATE"
+1:"MILD"
+2:"MILD"
+3:"MILD"
+4:"MILD"
+5:"MILD"
+6:"MILD"
+7:"MILD"
+8:"MODERATE"
+9:"MILD"
+10:"MILD"
+11:"MODERATE"
+12:"MODERATE"
+13:"MODERATE"
+]
+"EPOCH":[14 items
+0:"TREATMENT"
+1:"TREATMENT"
+2:"TREATMENT"
+3:"TREATMENT"
+4:"TREATMENT"
+5:"TREATMENT"
+6:"TREATMENT"
+7:"TREATMENT"
+8:"TREATMENT"
+9:"TREATMENT"
+10:"TREATMENT"
+11:"TREATMENT"
+12:"TREATMENT"
+13:"TREATMENT"
+]
+"CEDTC":[14 items
+0:""
+1:""
+2:""
+3:"2013-10-15"
+4:"2013-02-07"
+5:"2013-03-23"
+6:"2013-03-23"
+7:"2013-04-12"
+8:"2013-01-19"
+9:"2013-01-12"
+10:"2013-04-10"
+11:"2013-04-16"
+12:"2013-12-29"
+13:"2013-01-27"
+]
+"CESTDTC":[14 items
+0:"2012-12-02"
+1:"2012-11-16"
+2:"2012-11-29"
+3:"2013-10-15"
+4:"2013-02-07"
+5:"2013-03-23"
+6:"2013-03-23"
+7:"2013-04-12"
+8:"2013-01-19"
+9:"2013-01-12"
+10:"2013-04-10"
+11:"2013-04-16"
+12:"2013-12-29"
+13:"2013-01-27"
+]
+"CEENDTC":[14 items
+0:""
+1:""
+2:""
+3:""
+4:"2013-02-07"
+5:""
+6:"2013-03-26"
+7:""
+8:""
+9:"2013-01-12"
+10:"2013-06-05"
+11:"2013-05-02"
+12:"2014-02-19"
+13:"2013-01-28"
+]
+"CESTDY":[14 items
+0:3
+1:2
+2:15
+3:48
+4:4
+5:48
+6:48
+7:68
+8:15
+9:37
+10:125
+11:14
+12:100
+13:42
+]
+"CEENDY":[14 items
+0:NULL
+1:NULL
+2:NULL
+3:NULL
+4:4
+5:NULL
+6:51
+7:NULL
+8:NULL
+9:37
+10:181
+11:30
+12:152
+13:43
+]
+"CESTRTPT":[14 items
+0:""
+1:"AFTER"
+2:""
+3:"COINCIDENT"
+4:""
+5:""
+6:""
+7:""
+8:""
+9:""
+10:"DURING/AFTER"
+11:""
+12:""
+13:""
+]
+"CESTTPT":[14 items
+0:""
+1:"FIRST DOSE"
+2:""
+3:"FIRST DOSE"
+4:""
+5:""
+6:""
+7:""
+8:""
+9:""
+10:"FIRST DOSE"
+11:""
+12:""
+13:""
+]
+"CEENRTPT":[14 items
+0:"ONGOING"
+1:"ONGOING"
+2:"ONGOING"
+3:""
+4:""
+5:"ONGOING"
+6:""
+7:"ONGOING"
+8:"ONGOING"
+9:""
+10:""
+11:""
+12:""
+13:""
+]
+"CEENTPT":[14 items
+0:""
+1:""
+2:""
+3:""
+4:""
+5:""
+6:""
+7:""
+8:""
+9:""
+10:""
+11:""
+12:""
+13:""
+]
+}
+}
+2:{5 items
+"filename":"lb.xpt"
+"label":"Laboratory Test Results"
+"domain":"LB"
+"variables":[25 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":12
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":8
+}
+3:{4 items
+"name":"LBSEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"LBTESTCD"
+"label":"Lab Test or Examination Short Name"
+"type":"Char"
+"length":7
+}
+5:{4 items
+"name":"LBTEST"
+"label":"Lab Test or Examination Name"
+"type":"Char"
+"length":39
+}
+6:{4 items
+"name":"LBCAT"
+"label":"Category for Lab Test"
+"type":"Char"
+"length":10
+}
+7:{4 items
+"name":"LBORRES"
+"label":"Result or Finding in Original Units"
+"type":"Char"
+"length":6
+}
+8:{4 items
+"name":"LBORRESU"
+"label":"Original Units"
+"type":"Char"
+"length":7
+}
+9:{4 items
+"name":"LBORNRLO"
+"label":"Reference Range Lower Limit in Orig Unit"
+"type":"Char"
+"length":200
+}
+10:{4 items
+"name":"LBORNRHI"
+"label":"Reference Range Upper Limit in Orig Unit"
+"type":"Char"
+"length":200
+}
+11:{4 items
+"name":"LBSTRESC"
+"label":"Character Result/Finding in Std Format"
+"type":"Char"
+"length":8
+}
+12:{4 items
+"name":"LBSTRESN"
+"label":"Numeric Result/Finding in Standard Units"
+"type":"Num"
+"length":8
+}
+13:{4 items
+"name":"LBSTRESU"
+"label":"Standard Units"
+"type":"Char"
+"length":7
+}
+14:{4 items
+"name":"LBSTNRLO"
+"label":"Reference Range Lower Limit-Std Units"
+"type":"Num"
+"length":8
+}
+15:{4 items
+"name":"LBSTNRHI"
+"label":"Reference Range Upper Limit-Std Units"
+"type":"Num"
+"length":8
+}
+16:{4 items
+"name":"LBNRIND"
+"label":"Reference Range Indicator"
+"type":"Char"
+"length":8
+}
+17:{4 items
+"name":"LBLOBXFL"
+"label":"Last Observation Before Exposure Flag"
+"type":"Char"
+"length":1
+}
+18:{4 items
+"name":"VISITNUM"
+"label":"Visit Number"
+"type":"Num"
+"length":8
+}
+19:{4 items
+"name":"VISIT"
+"label":"Visit Name"
+"type":"Char"
+"length":200
+}
+20:{4 items
+"name":"EPOCH"
+"label":"Epoch"
+"type":"Char"
+"length":9
+}
+21:{4 items
+"name":"LBDTC"
+"label":"Date/Time of Specimen Collection"
+"type":"Char"
+"length":19
+}
+22:{4 items
+"name":"LBENDTC"
+"label":"End Date/Time of Specimen Collection"
+"type":"Char"
+"length":19
+}
+23:{4 items
+"name":"LBENRTPT"
+"label":"End Relative to Reference Time Point"
+"type":"Char"
+"length":50
+}
+24:{4 items
+"name":"LBENTPT"
+"label":"End Reference Time Point"
+"type":"Char"
+"length":50
+}
+]
+"records":{25 items
+"STUDYID":[5 items
+0:"CDISCPILOT01"
+1:"CDISCPILOT01"
+2:"CDISCPILOT01"
+3:"CDISCPILOT01"
+4:"CDISCPILOT01"
+]
+"DOMAIN":[5 items
+0:"LB"
+1:"LB"
+2:"LB"
+3:"LB"
+4:"LB"
+]
+"USUBJID":[5 items
+0:"CDISC001"
+1:"CDISC001"
+2:"CDISC001"
+3:"CDISC001"
+4:"CDISC001"
+]
+"LBSEQ":[5 items
+0:1
+1:2
+2:3
+3:4
+4:5
+]
+"LBTESTCD":[5 items
+0:"ALB"
+1:"ALP"
+2:"ALB"
+3:"ALP"
+4:"BASO"
+]
+"LBTEST":[5 items
+0:"Albumin"
+1:"Alkaline Phosphatase"
+2:"Albumin"
+3:"Alkaline Phosphatase"
+4:"Basophils"
+]
+"LBCAT":[5 items
+0:"CHEMISTRY"
+1:"CHEMISTRY"
+2:"CHEMISTRY"
+3:"CHEMISTRY"
+4:"HEMATOLOGY"
+]
+"LBORRES":[5 items
+0:"3.9"
+1:"93"
+2:"18"
+3:"26"
+4:"0.03"
+]
+"LBORRESU":[5 items
+0:"g/dL"
+1:"U/L"
+2:"U/L"
+3:"U/L"
+4:"10^9/L"
+]
+"LBORNRLO":[5 items
+0:"3.5"
+1:"35"
+2:"6"
+3:"11"
+4:"0"
+]
+"LBORNRHI":[5 items
+0:"4.6"
+1:"115"
+2:"35"
+3:"36"
+4:"0.2"
+]
+"LBSTRESC":[5 items
+0:"39"
+1:"93"
+2:"18"
+3:"26"
+4:"0.03"
+]
+"LBSTRESN":[5 items
+0:39
+1:93
+2:18
+3:26
+4:0.03
+]
+"LBSTRESU":[5 items
+0:"g/L"
+1:"U/L"
+2:"U/L"
+3:"U/L"
+4:"10^9/L"
+]
+"LBSTNRLO":[5 items
+0:NULL
+1:35
+2:6
+3:NULL
+4:0
+]
+"LBSTNRHI":[5 items
+0:NULL
+1:35
+2:NULL
+3:36
+4:0.1
+]
+"LBNRIND":[5 items
+0:"NORMAL"
+1:"NORMAL"
+2:"NORMAL"
+3:"NORMAL"
+4:"NORMAL"
+]
+"LBLOBXFL":[5 items
+0:"Y"
+1:"Y"
+2:"Y"
+3:"Y"
+4:"Y"
+]
+"VISITNUM":[5 items
+0:1
+1:1
+2:1
+3:1
+4:1
+]
+"VISIT":[5 items
+0:"SCREENING 1"
+1:"SCREENING 1"
+2:"SCREENING 1"
+3:"SCREENING 1"
+4:"SCREENING 1"
+]
+"EPOCH":[5 items
+0:"SCREENING"
+1:"SCREENING"
+2:"SCREENING"
+3:"SCREENING"
+4:"SCREENING"
+]
+"LBDTC":[5 items
+0:"2012-11-23T11:20"
+1:"2012-11-23T11:20"
+2:"2012-11-23T11:20"
+3:"2012-11-23T11:20"
+4:"2012-11-23T11:20"
+]
+"LBENDTC":[5 items
+0:"2012-11-23T11:19"
+1:"2012-11-23T10:20"
+2:"2012-11-22T11:20"
+3:"2012-10-23T11:20"
+4:"2011-11-23T11:20"
+]
+"LBENRTPT":[5 items
+0:"COINCIDENT"
+1:"COINCIDENT"
+2:""
+3:"COINCIDENT"
+4:""
+]
+"LBENTPT":[5 items
+0:""
+1:""
+2:""
+3:""
+4:""
+]
+}
+}
+3:{5 items
+"filename":"fa.xpt"
+"label":"Findings About"
+"domain":"FA"
+"variables":[18 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":12
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":8
+}
+3:{4 items
+"name":"FASEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"FALNKGRP"
+"label":"Link Group ID"
+"type":"Char"
+"length":200
+}
+5:{4 items
+"name":"FATESTCD"
+"label":"Findings About Test Short Name"
+"type":"Char"
+"length":5
+}
+6:{4 items
+"name":"FATEST"
+"label":"Findings About Test Name"
+"type":"Char"
+"length":20
+}
+7:{4 items
+"name":"FAOBJ"
+"label":"Object of the Observation"
+"type":"Char"
+"length":10
+}
+8:{4 items
+"name":"FAORRES"
+"label":"Result or Finding in Original Units"
+"type":"Char"
+"length":8
+}
+9:{4 items
+"name":"FASTRESC"
+"label":"Character Result/Finding in Std Format"
+"type":"Char"
+"length":8
+}
+10:{4 items
+"name":"FASTNRLO"
+"label":"Reference Range Lower Limit-Std Units"
+"type":"Num"
+"length":8
+}
+11:{4 items
+"name":"FASTNRHI"
+"label":"Reference Range Upper Limit-Std Units"
+"type":"Num"
+"length":8
+}
+12:{4 items
+"name":"FALOC"
+"label":"Location of the Finding About"
+"type":"Char"
+"length":3
+}
+13:{4 items
+"name":"VISITNUM"
+"label":"Visit Number"
+"type":"Num"
+"length":8
+}
+14:{4 items
+"name":"EPOCH"
+"label":"Epoch"
+"type":"Char"
+"length":9
+}
+15:{4 items
+"name":"FADTC"
+"label":"Date/Time of Collection"
+"type":"Char"
+"length":10
+}
+16:{4 items
+"name":"FAENRTPT"
+"label":"End Relative to Reference Time Point"
+"type":"Char"
+"length":50
+}
+17:{4 items
+"name":"FAENTPT"
+"label":"End Reference Time Point"
+"type":"Char"
+"length":50
+}
+]
+"records":{18 items
+"STUDYID":[5 items
+0:"CDISCPILOT01"
+1:"CDISCPILOT01"
+2:"CDISCPILOT01"
+3:"CDISCPILOT01"
+4:"CDISCPILOT01"
+]
+"DOMAIN":[5 items
+0:"FA"
+1:"FA"
+2:"FA"
+3:"FA"
+4:"FA"
+]
+"USUBJID":[5 items
+0:"CDISC001"
+1:"CDISC001"
+2:"CDISC001"
+3:"CDISC001"
+4:"CDISC001"
+]
+"FASEQ":[5 items
+0:1
+1:2
+2:3
+3:4
+4:5
+]
+"FALNKGRP":[5 items
+0:"1"
+1:"1"
+2:"1"
+3:"1"
+4:"1"
+]
+"FATESTCD":[5 items
+0:"COUNT"
+1:"COUNT"
+2:"COUNT"
+3:"COUNT"
+4:"COUNT"
+]
+"FATEST":[5 items
+0:"Count"
+1:"Count"
+2:"Count"
+3:"Count"
+4:"Count"
+]
+"FAOBJ":[5 items
+0:"MACULES"
+1:"PAPULES"
+2:"VESICLES"
+3:"BLISTERS"
+4:"LESIONS"
+]
+"FAORRES":[5 items
+0:"1"
+1:"2"
+2:"3"
+3:"1"
+4:"2"
+]
+"FASTRESC":[5 items
+0:"1"
+1:"2"
+2:"3"
+3:"1"
+4:"2"
+]
+"FASTNRLO":[5 items
+0:0
+1:0
+2:NULL
+3:0
+4:NULL
+]
+"FASTNRHI":[5 items
+0:1
+1:0
+2:NULL
+3:NULL
+4:0
+]
+"FALOC":[5 items
+0:"ARM"
+1:"ARM"
+2:"ARM"
+3:"ARM"
+4:"ARM"
+]
+"VISITNUM":[5 items
+0:NULL
+1:NULL
+2:NULL
+3:NULL
+4:NULL
+]
+"EPOCH":[5 items
+0:"TREATMENT"
+1:"TREATMENT"
+2:"TREATMENT"
+3:"TREATMENT"
+4:"TREATMENT"
+]
+"FADTC":[5 items
+0:"2012-12-02"
+1:"2012-12-02"
+2:"2012-12-02"
+3:"2012-12-02"
+4:"2012-12-02"
+]
+"FAENRTPT":[5 items
+0:"AFTER"
+1:""
+2:"AFTER"
+3:""
+4:"AFTER"
+]
+"FAENTPT":[5 items
+0:""
+1:""
+2:""
+3:""
+4:""
+]
+}
+}
+4:{5 items
+"filename":"se.xpt"
+"label":"Subject Elements"
+"domain":"SE"
+"variables":[14 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":12
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":8
+}
+3:{4 items
+"name":"SESEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"ETCD"
+"label":"Element Code"
+"type":"Char"
+"length":7
+}
+5:{4 items
+"name":"ELEMENT"
+"label":"Description of Element"
+"type":"Char"
+"length":26
+}
+6:{4 items
+"name":"EPOCH"
+"label":"Epoch"
+"type":"Char"
+"length":9
+}
+7:{4 items
+"name":"SEDTC"
+"label":"Date/Time of Collection"
+"type":"Char"
+"length":10
+}
+8:{4 items
+"name":"SESTDTC"
+"label":"Start Date/Time of Element"
+"type":"Char"
+"length":10
+}
+9:{4 items
+"name":"SEENDTC"
+"label":"End Date/Time of Element"
+"type":"Char"
+"length":10
+}
+10:{4 items
+"name":"SEENRTPT"
+"label":"End Relative to Reference Time Point"
+"type":"Char"
+"length":50
+}
+11:{4 items
+"name":"SEENTPT"
+"label":"End Reference Time Point"
+"type":"Char"
+"length":50
+}
+12:{4 items
+"name":"SESTDY"
+"label":"Study Day of Start of Element"
+"type":"Num"
+"length":8
+}
+13:{4 items
+"name":"SEENDY"
+"label":"Study Day of End of Element"
+"type":"Num"
+"length":8
+}
+]
+"records":{14 items
+"STUDYID":[1 item
+0:"CDISCPILOT01"
+]
+"DOMAIN":[1 item
+0:"SE"
+]
+"USUBJID":[1 item
+0:"CDISC001"
+]
+"SESEQ":[1 item
+0:1
+]
+"ETCD":[1 item
+0:"SCREEN"
+]
+"ELEMENT":[1 item
+0:"Screening"
+]
+"EPOCH":[1 item
+0:"SCREENING"
+]
+"SEDTC":[1 item
+0:"2012-11-23"
+]
+"SESTDTC":[1 item
+0:"2012-11-23"
+]
+"SEENDTC":[1 item
+0:"2012-11-30"
+]
+"SEENRTPT":[1 item
+0:"BEFORE"
+]
+"SEENTPT":[1 item
+0:""
+]
+"SESTDY":[1 item
+0:-7
+]
+"SEENDY":[1 item
+0:1
+]
+}
+}
+5:{5 items
+"filename":"sv.xpt"
+"label":"Subject Visits"
+"domain":"SV"
+"variables":[13 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":12
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":8
+}
+3:{4 items
+"name":"VISITNUM"
+"label":"Visit Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"VISIT"
+"label":"Visit Name"
+"type":"Char"
+"length":200
+}
+5:{4 items
+"name":"SVDTC"
+"label":"Date/Time of Collection"
+"type":"Char"
+"length":10
+}
+6:{4 items
+"name":"SVSTDTC"
+"label":"Start Date/Time of Visit"
+"type":"Char"
+"length":10
+}
+7:{4 items
+"name":"SVENDTC"
+"label":"End Date/Time of Visit"
+"type":"Char"
+"length":10
+}
+8:{4 items
+"name":"SVSTDY"
+"label":"Study Day of Start of Visit"
+"type":"Num"
+"length":8
+}
+9:{4 items
+"name":"SVENDY"
+"label":"Study Day of End of Visit"
+"type":"Num"
+"length":8
+}
+10:{4 items
+"name":"SVENRTPT"
+"label":"End Relative to Reference Time Point"
+"type":"Char"
+"length":50
+}
+11:{4 items
+"name":"SVENTPT"
+"label":"End Reference Time Point"
+"type":"Char"
+"length":50
+}
+12:{4 items
+"name":"SVUPDES"
+"label":"Description of Unplanned Visit"
+"type":"Char"
+"length":200
+}
+]
+"records":{13 items
+"STUDYID":[10 items
+0:"CDISCPILOT01"
+1:"CDISCPILOT01"
+2:"CDISCPILOT01"
+3:"CDISCPILOT01"
+4:"CDISCPILOT01"
+5:"CDISCPILOT01"
+6:"CDISCPILOT01"
+7:"CDISCPILOT01"
+8:"CDISCPILOT01"
+9:"CDISCPILOT01"
+]
+"DOMAIN":[10 items
+0:"SV"
+1:"SV"
+2:"SV"
+3:"SV"
+4:"SV"
+5:"SV"
+6:"SV"
+7:"SV"
+8:"SV"
+9:"SV"
+]
+"USUBJID":[10 items
+0:"CDISC001"
+1:"CDISC001"
+2:"CDISC001"
+3:"CDISC001"
+4:"CDISC001"
+5:"CDISC001"
+6:"CDISC001"
+7:"CDISC001"
+8:"CDISC001"
+9:"CDISC001"
+]
+"VISITNUM":[10 items
+0:1
+1:2
+2:3
+3:4
+4:5
+5:5.01
+6:7
+7:8
+8:101
+9:201
+]
+"VISIT":[10 items
+0:"SCREENING 1"
+1:"SCREENING 2"
+2:"BASELINE"
+3:"WEEK 2"
+4:"WEEK 4"
+5:"WEEK 4: UNSCHEDULED 01"
+6:"WEEK 6"
+7:"WEEK 8"
+8:"EARLY DISCONTINUATION"
+9:"EARLY DISCONTINUATION RETRIEVAL"
+]
+"SVDTC":[10 items
+0:"2012-11-23"
+1:"2012-11-28"
+2:"2012-11-30"
+3:"2012-12-13"
+4:"2012-12-26"
+5:"2012-12-28"
+6:"2013-01-10"
+7:"2013-01-23"
+8:"2013-02-14"
+9:"2013-05-20"
+]
+"SVSTDTC":[10 items
+0:"2012-11-23"
+1:"2012-11-28"
+2:"2012-11-30"
+3:"2012-12-13"
+4:"2012-12-26"
+5:"2012-12-28"
+6:"2013-01-10"
+7:"2013-01-23"
+8:"2013-02-14"
+9:"2013-05-20"
+]
+"SVENDTC":[10 items
+0:"2012-11-23"
+1:"2012-11-28"
+2:"2012-11-30"
+3:"2012-12-13"
+4:"2012-12-26"
+5:"2012-12-28"
+6:"2013-01-10"
+7:"2013-01-23"
+8:"2013-02-14"
+9:"2013-05-20"
+]
+"SVSTDY":[10 items
+0:-7
+1:-2
+2:1
+3:14
+4:27
+5:29
+6:42
+7:55
+8:77
+9:172
+]
+"SVENDY":[10 items
+0:-7
+1:-2
+2:1
+3:14
+4:27
+5:29
+6:42
+7:55
+8:77
+9:172
+]
+"SVENRTPT":[10 items
+0:""
+1:"AFTER"
+2:""
+3:""
+4:""
+5:""
+6:""
+7:""
+8:""
+9:""
+]
+"SVENTPT":[10 items
+0:""
+1:""
+2:""
+3:""
+4:""
+5:""
+6:""
+7:""
+8:""
+9:""
+]
+"SVUPDES":[10 items
+0:""
+1:""
+2:""
+3:""
+4:""
+5:"UNSCHEDULED LABS"
+6:""
+7:""
+8:""
+9:""
+]
+}
+}
+6:{5 items
+"filename":"sm.xpt"
+"label":"Subject Disease Milestones"
+"domain":"SM"
+"variables":[11 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":12
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":8
+}
+3:{4 items
+"name":"SMSEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"MIDS"
+"label":"Disease Milestone Instance Name"
+"type":"Char"
+"length":200
+}
+5:{4 items
+"name":"MIDSTYPE"
+"label":"Disease Milestone Type"
+"type":"Char"
+"length":200
+}
+6:{4 items
+"name":"SMDTC"
+"label":"Date/Time of Collection"
+"type":"Char"
+"length":10
+}
+7:{4 items
+"name":"SMSTDTC"
+"label":"Start Date/Time of Milestone"
+"type":"Char"
+"length":10
+}
+8:{4 items
+"name":"SMENDTC"
+"label":"End Date/Time of Milestone"
+"type":"Char"
+"length":10
+}
+9:{4 items
+"name":"SMENRTPT"
+"label":"End Relative to Reference Time Point"
+"type":"Char"
+"length":50
+}
+10:{4 items
+"name":"SMENTPT"
+"label":"End Reference Time Point"
+"type":"Char"
+"length":50
+}
+]
+"records":{11 items
+"STUDYID":[3 items
+0:"CDISCPILOT01"
+1:"CDISCPILOT01"
+2:"CDISCPILOT01"
+]
+"DOMAIN":[3 items
+0:"SM"
+1:"SM"
+2:"SM"
+]
+"USUBJID":[3 items
+0:"CDISC001"
+1:"CDISC001"
+2:"CDISC001"
+]
+"SMSEQ":[3 items
+0:1
+1:2
+2:3
+]
+"MIDS":[3 items
+0:"DIAG"
+1:"ISR1"
+2:"ISR2"
+]
+"MIDSTYPE":[3 items
+0:"DIAGNOSIS"
+1:"INJECTION SITE REACTION"
+2:"INJECTION SITE REACTION"
+]
+"SMDTC":[3 items
+0:""
+1:"2012-11-28"
+2:""
+]
+"SMSTDTC":[3 items
+0:"2011-11-23"
+1:"2012-11-28"
+2:"2012-11-30"
+]
+"SMENDTC":[3 items
+0:"2011-11-23"
+1:"2012-11-28"
+2:"2012-11-30"
+]
+"SMENRTPT":[3 items
+0:"BEFORE"
+1:"BEFORE"
+2:"COINCIDENT"
+]
+"SMENTPT":[3 items
+0:""
+1:""
+2:""
+]
+}
+}
+7:{5 items
+"filename":"dm.xpt"
+"label":"Demographics"
+"domain":"DM"
+"variables":[27 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":50
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":50
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":50
+}
+3:{4 items
+"name":"SUBJID"
+"label":"Subject Identifier for the Study"
+"type":"Char"
+"length":50
+}
+4:{4 items
+"name":"RFSTDTC"
+"label":"Subject Reference Start Date/Time"
+"type":"Char"
+"length":50
+}
+5:{4 items
+"name":"RFENDTC"
+"label":"Subject Reference End Date/Time"
+"type":"Char"
+"length":50
+}
+6:{4 items
+"name":"RFXSTDTC"
+"label":"Date/Time of First Study Treatment"
+"type":"Char"
+"length":50
+}
+7:{4 items
+"name":"RFXENDTC"
+"label":"Date/Time of Last Study Treatment"
+"type":"Char"
+"length":50
+}
+8:{4 items
+"name":"RFICDTC"
+"label":"Date/Time of Informed Consent"
+"type":"Char"
+"length":50
+}
+9:{4 items
+"name":"RFPENDTC"
+"label":"Date/Time of End of Participation"
+"type":"Char"
+"length":50
+}
+10:{4 items
+"name":"DTHDTC"
+"label":"Date/Time of Death"
+"type":"Char"
+"length":50
+}
+11:{4 items
+"name":"DTHFL"
+"label":"Subject Death Flag"
+"type":"Char"
+"length":50
+}
+12:{4 items
+"name":"SITEID"
+"label":"Study Site Identifier"
+"type":"Char"
+"length":50
+}
+13:{4 items
+"name":"BRTHDTC"
+"label":"Date/Time of Birth"
+"type":"Char"
+"length":50
+}
+14:{4 items
+"name":"AGE"
+"label":"Age"
+"type":"Num"
+"length":8
+}
+15:{4 items
+"name":"AGEU"
+"label":"Age Units"
+"type":"Char"
+"length":50
+}
+16:{4 items
+"name":"SEX"
+"label":"Sex"
+"type":"Char"
+"length":50
+}
+17:{4 items
+"name":"RACE"
+"label":"Race"
+"type":"Char"
+"length":50
+}
+18:{4 items
+"name":"ETHNIC"
+"label":"Ethnicity"
+"type":"Char"
+"length":50
+}
+19:{4 items
+"name":"ARMCD"
+"label":"Planned Arm Code"
+"type":"Char"
+"length":50
+}
+20:{4 items
+"name":"ARM"
+"label":"Description of Planned Arm"
+"type":"Char"
+"length":50
+}
+21:{4 items
+"name":"ACTARMCD"
+"label":"Actual Arm Code"
+"type":"Char"
+"length":50
+}
+22:{4 items
+"name":"ACTARM"
+"label":"Description of Actual Arm"
+"type":"Char"
+"length":50
+}
+23:{4 items
+"name":"ARMNRS"
+"label":"Reason Arm and/or Actual Arm is Null"
+"type":"Char"
+"length":50
+}
+24:{4 items
+"name":"ACTARMUD"
+"label":"Description of Unplanned Actual Arm"
+"type":"Char"
+"length":50
+}
+25:{4 items
+"name":"COUNTRY"
+"label":"Country"
+"type":"Char"
+"length":50
+}
+26:{4 items
+"name":"DMDTC"
+"label":"Date/Time of Collection"
+"type":"Char"
+"length":10
+}
+]
+"records":{27 items
+"STUDYID":[1 item
+0:"CDISCPILOT01"
+]
+"DOMAIN":[1 item
+0:"DM"
+]
+"USUBJID":[1 item
+0:"CDISC001"
+]
+"SUBJID":[1 item
+0:"1115"
+]
+"RFSTDTC":[1 item
+0:"2012-11-30"
+]
+"RFENDTC":[1 item
+0:"2013-01-23"
+]
+"RFXSTDTC":[1 item
+0:"2012-11-30"
+]
+"RFXENDTC":[1 item
+0:"2013-01-22"
+]
+"RFICDTC":[1 item
+0:"2012-11-23"
+]
+"RFPENDTC":[1 item
+0:"2013-05-20"
+]
+"DTHDTC":[1 item
+0:""
+]
+"DTHFL":[1 item
+0:""
+]
+"SITEID":[1 item
+0:"701"
+]
+"BRTHDTC":[1 item
+0:"1928"
+]
+"AGE":[1 item
+0:84
+]
+"AGEU":[1 item
+0:"YEARS"
+]
+"SEX":[1 item
+0:"M"
+]
+"RACE":[1 item
+0:"WHITE"
+]
+"ETHNIC":[1 item
+0:"NOT HISPANIC OR LATINO"
+]
+"ARMCD":[1 item
+0:"ZAN_LOW"
+]
+"ARM":[1 item
+0:"Zanomaline Low Dose (54 mg)"
+]
+"ACTARMCD":[1 item
+0:"ZAN_LOW"
+]
+"ACTARM":[1 item
+0:"Zanomaline Low Dose (54 mg)"
+]
+"ARMNRS":[1 item
+0:""
+]
+"ACTARMUD":[1 item
+0:""
+]
+"COUNTRY":[1 item
+0:"USA"
+]
+"DMDTC":[1 item
+0:"2011-11-23"
+]
+}
+}
+]
+"standard":{2 items
+"product":"sdtmig"
+"version":"3-4"
+}
+"codelists":[]0 items
+}

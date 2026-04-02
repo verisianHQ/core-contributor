@@ -1,0 +1,57 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Age is missing for a non-screen failure subject.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "CDISC007",
+          "value": {
+            "AGE": null,
+            "ARMCD": "B",
+            "ARMNRS": null
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "CDISC008",
+          "value": {
+            "AGE": null,
+            "ARMCD": "B",
+            "ARMNRS": null
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "dm.xpt",
+      "Row": 11,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 11,
+      "Variable": "AGE"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 12,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 12,
+      "Variable": "AGE"
+    }
+  ]
+}

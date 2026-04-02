@@ -1,0 +1,26 @@
+{
+    "AE": [
+        {
+            "executionStatus": "success",
+            "dataset": "ae.xpt",
+            "domain": "AE",
+            "variables": [
+                "AEENDTC",
+                "AEOUT",
+                "AETERM"
+            ],
+            "message": "AEENDTC is populated, when AEOUT = NOT RECOVERED/NOT RESOLVED",
+            "errors": [
+                {
+                    "value": {
+                        "AEENDTC": "2006-10-20",
+                        "AETERM": "Headache",
+                        "AEOUT": "NOT RECOVERED/NOT RESOLVED"
+                    },
+                    "row": 3,
+                    "USUBJID": "CDISC003"
+                }
+            ]
+        }
+    ]
+}

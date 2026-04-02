@@ -1,0 +1,63 @@
+{
+  "TS": [
+    {
+      "executionStatus": "skipped",
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "variables": [],
+      "message": "Rule skipped - doesn't apply to domain for rule id=CORE-000885, dataset=TS",
+      "errors": []
+    }
+  ],
+  "DM": [
+    {
+      "executionStatus": "success",
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "variables": [
+        "ARMNRS",
+        "TSVAL"
+      ],
+      "message": "A subject has a record in DM but not in EX while participating in an interventional study",
+      "errors": [
+        {
+          "value": {
+            "TSVAL": "INTERVENTIONAL",
+            "ARMNRS": null
+          },
+          "dataset": "dm.xpt",
+          "row": 6,
+          "USUBJID": "YYY100"
+        },
+        {
+          "value": {
+            "TSVAL": "INTERVENTIONAL",
+            "ARMNRS": null
+          },
+          "dataset": "dm.xpt",
+          "row": 7,
+          "USUBJID": "ZZZ200"
+        },
+        {
+          "value": {
+            "TSVAL": "INTERVENTIONAL",
+            "ARMNRS": "UNPLANNED TREATMENT"
+          },
+          "dataset": "dm.xpt",
+          "row": 8,
+          "USUBJID": "SSS900"
+        }
+      ]
+    }
+  ],
+  "EX": [
+    {
+      "executionStatus": "skipped",
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "variables": [],
+      "message": "Rule skipped - doesn't apply to domain for rule id=CORE-000885, dataset=EX",
+      "errors": []
+    }
+  ]
+}

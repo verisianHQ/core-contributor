@@ -1,0 +1,1625 @@
+{3 items
+"datasets":[2 items
+0:{5 items
+"filename":"fa.xpt"
+"label":"Findings About"
+"domain":"FA"
+"variables":[21 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":12
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":8
+}
+3:{4 items
+"name":"FASEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"FALNKGRP"
+"label":"Link Group ID"
+"type":"Char"
+"length":200
+}
+5:{4 items
+"name":"FATESTCD"
+"label":"Findings About Test Short Name"
+"type":"Char"
+"length":5
+}
+6:{4 items
+"name":"FATEST"
+"label":"Findings About Test Name"
+"type":"Char"
+"length":20
+}
+7:{4 items
+"name":"FAOBJ"
+"label":"Object of the Observation"
+"type":"Char"
+"length":10
+}
+8:{4 items
+"name":"FACAT"
+"label":"Category for Findings About"
+"type":"Char"
+"length":23
+}
+9:{4 items
+"name":"FASCAT"
+"label":"Subcategory for Lab Test"
+"type":"Char"
+"length":39
+}
+10:{4 items
+"name":"FAORRES"
+"label":"Result or Finding in Original Units"
+"type":"Char"
+"length":8
+}
+11:{4 items
+"name":"FAORRESU"
+"label":"Original Units"
+"type":"Char"
+"length":8
+}
+12:{4 items
+"name":"FASTRESC"
+"label":"Character Result/Finding in Std Format"
+"type":"Char"
+"length":8
+}
+13:{4 items
+"name":"FASTRESN"
+"label":"Numeric Result/Finding in Standard Units"
+"type":"Num"
+"length":8
+}
+14:{4 items
+"name":"FASTRESU"
+"label":"Standard Units"
+"type":"Char"
+"length":8
+}
+15:{4 items
+"name":"FASTAT"
+"label":"Completion Status"
+"type":"Char"
+"length":8
+}
+16:{4 items
+"name":"FALOC"
+"label":"Location of the Finding About"
+"type":"Char"
+"length":3
+}
+17:{4 items
+"name":"VISITNUM"
+"label":"Visit Number"
+"type":"Num"
+"length":8
+}
+18:{4 items
+"name":"EPOCH"
+"label":"Epoch"
+"type":"Char"
+"length":9
+}
+19:{4 items
+"name":"FADTC"
+"label":"Date/Time of Collection"
+"type":"Char"
+"length":10
+}
+20:{4 items
+"name":"FADY"
+"label":"Study Day of Collection"
+"type":"Num"
+"length":8
+}
+]
+"records":{21 items
+"STUDYID":[22 items
+0:"CDISCPILOT01"
+1:"CDISCPILOT01"
+2:"CDISCPILOT01"
+3:"CDISCPILOT01"
+4:"CDISCPILOT01"
+5:"CDISCPILOT01"
+6:"CDISCPILOT01"
+7:"CDISCPILOT01"
+8:"CDISCPILOT01"
+9:"CDISCPILOT01"
+10:"CDISCPILOT01"
+11:"CDISCPILOT01"
+12:"CDISCPILOT01"
+13:"CDISCPILOT01"
+14:"CDISCPILOT01"
+15:"CDISCPILOT01"
+16:"CDISCPILOT01"
+17:"CDISCPILOT01"
+18:"CDISCPILOT01"
+19:"CDISCPILOT01"
+20:"CDISCPILOT01"
+21:"CDISCPILOT01"
+]
+"DOMAIN":[22 items
+0:"FA"
+1:"FA"
+2:"FA"
+3:"FA"
+4:"FA"
+5:"FA"
+6:"FA"
+7:"FA"
+8:"FA"
+9:"FA"
+10:"FA"
+11:"FA"
+12:"FA"
+13:"FA"
+14:"FA"
+15:"FA"
+16:"FA"
+17:"FA"
+18:"FA"
+19:"FA"
+20:"FA"
+21:"FA"
+]
+"USUBJID":[22 items
+0:"CDISC001"
+1:"CDISC001"
+2:"CDISC002"
+3:"CDISC002"
+4:"CDISC003"
+5:"CDISC003"
+6:"CDISC005"
+7:"CDISC005"
+8:"CDISC005"
+9:"CDISC005"
+10:"CDISC011"
+11:"CDISC011"
+12:"CDISC011"
+13:"CDISC011"
+14:"CDISC014"
+15:"CDISC014"
+16:"CDISC017"
+17:"CDISC017"
+18:"CDISC018"
+19:"CDISC018"
+20:"CDISC019"
+21:"CDISC019"
+]
+"FASEQ":[22 items
+0:1
+1:2
+2:7
+3:8
+4:1
+5:2
+6:13
+7:14
+8:19
+9:20
+10:1
+11:2
+12:10
+13:11
+14:5
+15:6
+16:4
+17:5
+18:4
+19:5
+20:5
+21:6
+]
+"FALNKGRP":[22 items
+0:"1"
+1:"1"
+2:"5"
+3:"5"
+4:"14"
+5:"14"
+6:"4"
+7:"4"
+8:"5"
+9:"5"
+10:"4"
+11:"4"
+12:"2"
+13:"2"
+14:"1"
+15:"1"
+16:"5"
+17:"5"
+18:"8"
+19:"8"
+20:"8"
+21:"9"
+]
+"FATESTCD":[22 items
+0:"LENGTH"
+1:"WIDTH"
+2:"LENGTH"
+3:"WIDTH"
+4:"LENGTH"
+5:"WIDTH"
+6:"LENGTH"
+7:"WIDTH"
+8:"LENGTH"
+9:"WIDTH"
+10:"LENGTH"
+11:"WIDTH"
+12:"LENGTH"
+13:"WIDTH"
+14:"LENGTH"
+15:"WIDTH"
+16:"LENGTH"
+17:"WIDTH"
+18:"LENGTH"
+19:"WIDTH"
+20:"WIDTH"
+21:"WIDTH"
+]
+"FATEST":[22 items
+0:"Length"
+1:"Width"
+2:"Length"
+3:"Width"
+4:"Length"
+5:"Width"
+6:"Length"
+7:"Width"
+8:"Length"
+9:"Width"
+10:"Length"
+11:"Width"
+12:"Length"
+13:"Width"
+14:"Length"
+15:"Width"
+16:"Length"
+17:"Width"
+18:"Length"
+19:"Width"
+20:"Width"
+21:"Width"
+]
+"FAOBJ":[22 items
+0:"ERYTHEMA"
+1:"ERYTHEMA"
+2:"ERYTHEMA"
+3:"ERYTHEMA"
+4:"ERYTHEMA"
+5:"ERYTHEMA"
+6:"ERYTHEMA"
+7:"ERYTHEMA"
+8:"ERYTHEMA"
+9:"ERYTHEMA"
+10:"ERYTHEMA"
+11:"ERYTHEMA"
+12:"PRURITIS"
+13:"PRURITIS"
+14:"PRURITIS"
+15:"PRURITIS"
+16:"PRURITIS"
+17:"PRURITIS"
+18:"PRURITIS"
+19:"PRURITIS"
+20:"PRURITIS"
+21:"PRURITIS"
+]
+"FACAT":[22 items
+0:"INJECTION SITE REACTION"
+1:"INJECTION SITE REACTION"
+2:"INJECTION SITE REACTION"
+3:"INJECTION SITE REACTION"
+4:"INJECTION SITE REACTION"
+5:"INJECTION SITE REACTION"
+6:"INJECTION SITE REACTION"
+7:"INJECTION SITE REACTION"
+8:"INJECTION SITE REACTION"
+9:"INJECTION SITE REACTION"
+10:"REACTION"
+11:"REACTION"
+12:"REACTION"
+13:"REACTION"
+14:"REACTION"
+15:"REACTION"
+16:"REACTION"
+17:"REACTION"
+18:"REACTION"
+19:"REACTION"
+20:"REACTION"
+21:"REACTION"
+]
+"FASCAT":[22 items
+0:"SCAT1"
+1:"SCAT1"
+2:"SCAT1"
+3:"SCAT1"
+4:"SCAT1"
+5:"SCAT1"
+6:"SCAT2"
+7:"SCAT2"
+8:"SCAT2"
+9:"SCAT2"
+10:""
+11:""
+12:""
+13:""
+14:""
+15:""
+16:""
+17:""
+18:""
+19:""
+20:""
+21:""
+]
+"FAORRES":[22 items
+0:"75"
+1:"12.7"
+2:"100"
+3:"100"
+4:"75"
+5:"75"
+6:"100"
+7:"100"
+8:"25"
+9:"50"
+10:"50"
+11:"50"
+12:"40"
+13:"30"
+14:"89"
+15:"76"
+16:"5"
+17:"5"
+18:"4"
+19:"5"
+20:""
+21:""
+]
+"FAORRESU":[22 items
+0:"mm"
+1:"mm"
+2:"mm"
+3:"mm"
+4:"mm"
+5:"mm"
+6:"cm"
+7:"cm"
+8:"cm"
+9:"cm"
+10:"cm"
+11:"cm"
+12:"cm"
+13:"cm"
+14:"cm"
+15:"cm"
+16:"cm"
+17:"cm"
+18:"cm"
+19:"cm"
+20:""
+21:""
+]
+"FASTRESC":[22 items
+0:"75"
+1:"12.7"
+2:"100"
+3:"100"
+4:"75"
+5:"75"
+6:"100"
+7:"100"
+8:"25"
+9:"50"
+10:"50"
+11:"50"
+12:"40"
+13:"30"
+14:"89"
+15:"76"
+16:"5"
+17:"5"
+18:"4"
+19:"5"
+20:""
+21:""
+]
+"FASTRESN":[22 items
+0:75
+1:12.7
+2:100
+3:100
+4:75
+5:75
+6:100
+7:100
+8:25
+9:50
+10:50
+11:50
+12:40
+13:30
+14:89
+15:76
+16:5
+17:5
+18:4
+19:5
+20:NULL
+21:NULL
+]
+"FASTRESU":[22 items
+0:"mm"
+1:"mm"
+2:"mm"
+3:"mm"
+4:"mm"
+5:"mm"
+6:"cm"
+7:"cm"
+8:"cm"
+9:"cm"
+10:"m"
+11:"m"
+12:"m"
+13:"m"
+14:"m"
+15:"m"
+16:"m"
+17:"m"
+18:"m"
+19:"m"
+20:""
+21:""
+]
+"FASTAT":[22 items
+0:""
+1:""
+2:""
+3:""
+4:""
+5:""
+6:""
+7:""
+8:""
+9:""
+10:""
+11:""
+12:""
+13:""
+14:""
+15:""
+16:""
+17:""
+18:""
+19:""
+20:"NOT DONE"
+21:"NOT DONE"
+]
+"FALOC":[22 items
+0:"ARM"
+1:"ARM"
+2:"ARM"
+3:"ARM"
+4:"ARM"
+5:"ARM"
+6:"ARM"
+7:"ARM"
+8:"ARM"
+9:"ARM"
+10:"ARM"
+11:"ARM"
+12:"ARM"
+13:"ARM"
+14:"ARM"
+15:"ARM"
+16:"ARM"
+17:"ARM"
+18:"ARM"
+19:"ARM"
+20:"ARM"
+21:"ARM"
+]
+"VISITNUM":[22 items
+0:NULL
+1:NULL
+2:NULL
+3:NULL
+4:NULL
+5:NULL
+6:NULL
+7:NULL
+8:NULL
+9:NULL
+10:NULL
+11:NULL
+12:NULL
+13:NULL
+14:NULL
+15:NULL
+16:NULL
+17:NULL
+18:NULL
+19:NULL
+20:NULL
+21:NULL
+]
+"EPOCH":[22 items
+0:"TREATMENT"
+1:"TREATMENT"
+2:"TREATMENT"
+3:"TREATMENT"
+4:"TREATMENT"
+5:"TREATMENT"
+6:"TREATMENT"
+7:"TREATMENT"
+8:"TREATMENT"
+9:"TREATMENT"
+10:"TREATMENT"
+11:"TREATMENT"
+12:"TREATMENT"
+13:"TREATMENT"
+14:"TREATMENT"
+15:"TREATMENT"
+16:"TREATMENT"
+17:"TREATMENT"
+18:"TREATMENT"
+19:"TREATMENT"
+20:"TREATMENT"
+21:"TREATMENT"
+]
+"FADTC":[22 items
+0:"2012-12-02"
+1:"2012-12-02"
+2:"2012-11-29"
+3:"2012-11-29"
+4:"2013-10-15"
+5:"2013-10-15"
+6:"2013-03-23"
+7:"2013-03-23"
+8:"2013-04-12"
+9:"2013-04-12"
+10:"2013-04-10"
+11:"2013-04-10"
+12:"2013-01-12"
+13:"2013-01-12"
+14:"2013-04-16"
+15:"2013-04-16"
+16:"2013-12-29"
+17:"2013-12-29"
+18:"2013-01-27"
+19:"2013-01-27"
+20:"2013-01-27"
+21:"2013-01-27"
+]
+"FADY":[22 items
+0:3
+1:3
+2:15
+3:15
+4:48
+5:48
+6:48
+7:48
+8:68
+9:68
+10:125
+11:125
+12:37
+13:37
+14:14
+15:14
+16:100
+17:100
+18:42
+19:42
+20:42
+21:42
+]
+}
+}
+1:{5 items
+"filename":"lb.xpt"
+"label":"Laboratory Test Results"
+"domain":"LB"
+"variables":[22 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":12
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":8
+}
+3:{4 items
+"name":"LBSEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"LBTESTCD"
+"label":"Lab Test or Examination Short Name"
+"type":"Char"
+"length":7
+}
+5:{4 items
+"name":"LBTEST"
+"label":"Lab Test or Examination Name"
+"type":"Char"
+"length":39
+}
+6:{4 items
+"name":"LBCAT"
+"label":"Category for Lab Test"
+"type":"Char"
+"length":10
+}
+7:{4 items
+"name":"LBSCAT"
+"label":"Subcategory for Lab Test"
+"type":"Char"
+"length":39
+}
+8:{4 items
+"name":"LBORRES"
+"label":"Result or Finding in Original Units"
+"type":"Char"
+"length":6
+}
+9:{4 items
+"name":"LBORRESU"
+"label":"Original Units"
+"type":"Char"
+"length":7
+}
+10:{4 items
+"name":"LBSTRESC"
+"label":"Character Result/Finding in Std Format"
+"type":"Char"
+"length":8
+}
+11:{4 items
+"name":"LBSTRESN"
+"label":"Numeric Result/Finding in Standard Units"
+"type":"Num"
+"length":8
+}
+12:{4 items
+"name":"LBSTRESU"
+"label":"Standard Units"
+"type":"Char"
+"length":7
+}
+13:{4 items
+"name":"LBSTAT"
+"label":"Completion Status"
+"type":"Char"
+"length":8
+}
+14:{4 items
+"name":"LBSPEC"
+"label":"Specimen Type"
+"type":"Char"
+"length":8
+}
+15:{4 items
+"name":"LBMETHOD"
+"label":"Method of Test or Examination"
+"type":"Char"
+"length":200
+}
+16:{4 items
+"name":"LBLOBXFL"
+"label":"Last Observation Before Exposure Flag"
+"type":"Char"
+"length":1
+}
+17:{4 items
+"name":"VISITNUM"
+"label":"Visit Number"
+"type":"Num"
+"length":8
+}
+18:{4 items
+"name":"VISIT"
+"label":"Visit Name"
+"type":"Char"
+"length":200
+}
+19:{4 items
+"name":"EPOCH"
+"label":"Epoch"
+"type":"Char"
+"length":9
+}
+20:{4 items
+"name":"LBDTC"
+"label":"Date/Time of Specimen Collection"
+"type":"Char"
+"length":19
+}
+21:{4 items
+"name":"LBDY"
+"label":"Study Day of Specimen Collection"
+"type":"Num"
+"length":8
+}
+]
+"records":{22 items
+"STUDYID":[36 items
+0:"CDISCPILOT01"
+1:"CDISCPILOT01"
+2:"CDISCPILOT01"
+3:"CDISCPILOT01"
+4:"CDISCPILOT01"
+5:"CDISCPILOT01"
+6:"CDISCPILOT01"
+7:"CDISCPILOT01"
+8:"CDISCPILOT01"
+9:"CDISCPILOT01"
+10:"CDISCPILOT01"
+11:"CDISCPILOT01"
+12:"CDISCPILOT01"
+13:"CDISCPILOT01"
+14:"CDISCPILOT01"
+15:"CDISCPILOT01"
+16:"CDISCPILOT01"
+17:"CDISCPILOT01"
+18:"CDISCPILOT01"
+19:"CDISCPILOT01"
+20:"CDISCPILOT01"
+21:"CDISCPILOT01"
+22:"CDISCPILOT01"
+23:"CDISCPILOT01"
+24:"CDISCPILOT01"
+25:"CDISCPILOT01"
+26:"CDISCPILOT01"
+27:"CDISCPILOT01"
+28:"CDISCPILOT01"
+29:"CDISCPILOT01"
+30:"CDISCPILOT01"
+31:"CDISCPILOT01"
+32:"CDISCPILOT01"
+33:"CDISCPILOT01"
+34:"CDISCPILOT01"
+35:"CDISCPILOT01"
+]
+"DOMAIN":[36 items
+0:"LB"
+1:"LB"
+2:"LB"
+3:"LB"
+4:"LB"
+5:"LB"
+6:"LB"
+7:"LB"
+8:"LB"
+9:"LB"
+10:"LB"
+11:"LB"
+12:"LB"
+13:"LB"
+14:"LB"
+15:"LB"
+16:"LB"
+17:"LB"
+18:"LB"
+19:"LB"
+20:"LB"
+21:"LB"
+22:"LB"
+23:"LB"
+24:"LB"
+25:"LB"
+26:"LB"
+27:"LB"
+28:"LB"
+29:"LB"
+30:"LB"
+31:"LB"
+32:"LB"
+33:"LB"
+34:"LB"
+35:"LB"
+]
+"USUBJID":[36 items
+0:"CDISC001"
+1:"CDISC001"
+2:"CDISC001"
+3:"CDISC001"
+4:"CDISC001"
+5:"CDISC001"
+6:"CDISC001"
+7:"CDISC001"
+8:"CDISC001"
+9:"CDISC001"
+10:"CDISC001"
+11:"CDISC002"
+12:"CDISC002"
+13:"CDISC002"
+14:"CDISC002"
+15:"CDISC002"
+16:"CDISC002"
+17:"CDISC002"
+18:"CDISC002"
+19:"CDISC002"
+20:"CDISC002"
+21:"CDISC003"
+22:"CDISC003"
+23:"CDISC003"
+24:"CDISC003"
+25:"CDISC003"
+26:"CDISC003"
+27:"CDISC003"
+28:"CDISC003"
+29:"CDISC003"
+30:"CDISC003"
+31:"CDISC003"
+32:"CDISC003"
+33:"CDISC003"
+34:"CDISC003"
+35:"CDISC004"
+]
+"LBSEQ":[36 items
+0:1
+1:5
+2:38
+3:42
+4:73
+5:77
+6:103
+7:118
+8:122
+9:148
+10:152
+11:1
+12:5
+13:38
+14:42
+15:73
+16:77
+17:103
+18:107
+19:133
+20:137
+21:1
+22:5
+23:38
+24:42
+25:73
+26:77
+27:103
+28:107
+29:133
+30:137
+31:163
+32:167
+33:133
+34:163
+35:38
+]
+"LBTESTCD":[36 items
+0:"ALB"
+1:"BASO"
+2:"ALB"
+3:"BASO"
+4:"ALB"
+5:"BASO"
+6:"ALB"
+7:"ALB"
+8:"BASO"
+9:"ALB"
+10:"BASO"
+11:"ALB"
+12:"BASO"
+13:"ALB"
+14:"BASO"
+15:"ALB"
+16:"BASO"
+17:"ALB"
+18:"BASO"
+19:"ALB"
+20:"BASO"
+21:"ALB"
+22:"BASO"
+23:"ALB"
+24:"BASO"
+25:"ALB"
+26:"BASO"
+27:"ALB"
+28:"BASO"
+29:"ALB"
+30:"BASO"
+31:"ALB"
+32:"BASO"
+33:"ALB"
+34:"ALB"
+35:"ALB"
+]
+"LBTEST":[36 items
+0:"Albumin"
+1:"Basophils"
+2:"Albumin"
+3:"Basophils"
+4:"Albumin"
+5:"Basophils"
+6:"Albumin"
+7:"Albumin"
+8:"Basophils"
+9:"Albumin"
+10:"Basophils"
+11:"Albumin"
+12:"Basophils"
+13:"Albumin"
+14:"Basophils"
+15:"Albumin"
+16:"Basophils"
+17:"Albumin"
+18:"Basophils"
+19:"Albumin"
+20:"Basophils"
+21:"Albumin"
+22:"Basophils"
+23:"Albumin"
+24:"Basophils"
+25:"Albumin"
+26:"Basophils"
+27:"Albumin"
+28:"Basophils"
+29:"Albumin"
+30:"Basophils"
+31:"Albumin"
+32:"Basophils"
+33:"Albumin"
+34:"Albumin"
+35:"Albumin"
+]
+"LBCAT":[36 items
+0:"CHEMISTRY"
+1:"HEMATOLOGY"
+2:"CHEMISTRY"
+3:"HEMATOLOGY"
+4:"CHEMISTRY"
+5:"HEMATOLOGY"
+6:"CHEMISTRY"
+7:"CHEMISTRY"
+8:"HEMATOLOGY"
+9:"CHEMISTRY"
+10:"HEMATOLOGY"
+11:"CHEMISTRY"
+12:"HEMATOLOGY"
+13:"CHEMISTRY"
+14:"HEMATOLOGY"
+15:"CHEMISTRY"
+16:"HEMATOLOGY"
+17:"CHEMISTRY"
+18:"HEMATOLOGY"
+19:"CHEMISTRY"
+20:"HEMATOLOGY"
+21:"CHEMISTRY"
+22:"HEMATOLOGY"
+23:"CHEMISTRY"
+24:"HEMATOLOGY"
+25:"CHEMISTRY"
+26:"HEMATOLOGY"
+27:"CHEMISTRY"
+28:"HEMATOLOGY"
+29:"CHEMISTRY"
+30:"HEMATOLOGY"
+31:"CHEMISTRY"
+32:"HEMATOLOGY"
+33:"URINALYSIS"
+34:"URINALYSIS"
+35:"CHEMISTRY"
+]
+"LBSCAT":[36 items
+0:"ALBCAT1"
+1:""
+2:"ALBCAT2"
+3:""
+4:"ALBCAT1"
+5:""
+6:"ALBCAT2"
+7:"ALBCAT1"
+8:""
+9:"ALBCAT2"
+10:""
+11:"ALBCAT1"
+12:""
+13:"ALBCAT2"
+14:""
+15:"ALBCAT1"
+16:""
+17:"ALBCAT2"
+18:""
+19:"ALBCAT1"
+20:""
+21:"ALBCAT2"
+22:""
+23:"ALBCAT1"
+24:""
+25:"ALBCAT2"
+26:""
+27:"ALBCAT1"
+28:""
+29:"ALBCAT2"
+30:""
+31:"ALBCAT1"
+32:""
+33:""
+34:""
+35:"ALBCAT2"
+]
+"LBORRES":[36 items
+0:"3.9"
+1:"0.03"
+2:"3.6"
+3:"0.04"
+4:"3.5"
+5:"0.05"
+6:"3.7"
+7:"3.7"
+8:"0.03"
+9:"3.9"
+10:"0.04"
+11:"4.2"
+12:"0.10"
+13:"3.4"
+14:"0.03"
+15:"3.6"
+16:"0.04"
+17:"3.3"
+18:"0.04"
+19:"3.3"
+20:"0.02"
+21:"4.3"
+22:"0.07"
+23:"3.6"
+24:"0.05"
+25:"4.0"
+26:"0.06"
+27:"4.1"
+28:"0.06"
+29:"4.1"
+30:"0.04"
+31:"4.1"
+32:"0.05"
+33:"4.1"
+34:"4.1"
+35:""
+]
+"LBORRESU":[36 items
+0:"g/dL"
+1:"10^9/L"
+2:"g/dL"
+3:"10^9/L"
+4:"g/dL"
+5:"10^9/L"
+6:"g/dL"
+7:"g/dL"
+8:"10^9/L"
+9:"g/dL"
+10:"10^9/L"
+11:"g/dL"
+12:"10^9/L"
+13:"g/dL"
+14:"10^9/L"
+15:"g/dL"
+16:"10^9/L"
+17:"g/dL"
+18:"10^9/L"
+19:"g/dL"
+20:"10^9/L"
+21:"g/dL"
+22:"10^9/L"
+23:"g/dL"
+24:"10^9/L"
+25:"g/dL"
+26:"10^9/L"
+27:"g/dL"
+28:"10^9/L"
+29:"g/dL"
+30:"10^9/L"
+31:"g/dL"
+32:"10^9/L"
+33:"g/dL"
+34:"g/dL"
+35:""
+]
+"LBSTRESC":[36 items
+0:"39"
+1:"0.03"
+2:"36"
+3:"0.04"
+4:"35"
+5:"0.05"
+6:"37"
+7:"37"
+8:"0.03"
+9:"39"
+10:"0.04"
+11:"42"
+12:"0.1"
+13:"34"
+14:"0.03"
+15:"36"
+16:"0.04"
+17:"33"
+18:"0.04"
+19:"33"
+20:"0.02"
+21:"43"
+22:"0.07"
+23:"36"
+24:"0.05"
+25:"40"
+26:"0.06"
+27:"41"
+28:"0.06"
+29:"41"
+30:"0.04"
+31:"41"
+32:"0.05"
+33:"41"
+34:"41"
+35:""
+]
+"LBSTRESN":[36 items
+0:39
+1:0.03
+2:36
+3:0.03999999999999999
+4:35
+5:0.05
+6:37
+7:37
+8:0.03
+9:39
+10:0.03999999999999999
+11:42
+12:0.1
+13:34
+14:0.03
+15:36
+16:0.03999999999999999
+17:33
+18:0.03999999999999999
+19:33
+20:0.02
+21:43
+22:0.07
+23:36
+24:0.05
+25:40
+26:0.06
+27:41
+28:0.06
+29:41
+30:0.03999999999999999
+31:41
+32:0.05
+33:41
+34:41
+35:NULL
+]
+"LBSTRESU":[36 items
+0:"g/L"
+1:"10^9/L"
+2:"g/L"
+3:"10^9/L"
+4:"mg/L"
+5:"10^9/L"
+6:"g/L"
+7:"g/L"
+8:"10^9/L"
+9:"g/L"
+10:"10^9/L"
+11:"mg/L"
+12:"10^9/L"
+13:"g/dL"
+14:"10^9/L"
+15:"g/dL"
+16:"10^9/L"
+17:"g/dL"
+18:"10^9/L"
+19:"mg/dL"
+20:"10^9/L"
+21:"g/dL"
+22:"10^9/L"
+23:"g/dL"
+24:"10^9/L"
+25:"g/dL"
+26:"10^9/L"
+27:"mg/dL"
+28:"10^9/L"
+29:"g/dL"
+30:"10^9/L"
+31:"g/dL"
+32:"10^9/L"
+33:"unit"
+34:"unit"
+35:""
+]
+"LBSTAT":[36 items
+0:""
+1:""
+2:""
+3:""
+4:""
+5:""
+6:""
+7:""
+8:""
+9:""
+10:""
+11:""
+12:""
+13:""
+14:""
+15:""
+16:""
+17:""
+18:""
+19:""
+20:""
+21:""
+22:""
+23:""
+24:""
+25:""
+26:""
+27:""
+28:""
+29:""
+30:""
+31:""
+32:""
+33:""
+34:""
+35:"NOT DONE"
+]
+"LBSPEC":[36 items
+0:"SERUM"
+1:""
+2:"SERUM"
+3:""
+4:"SERUM"
+5:""
+6:"SERUM"
+7:"SERUM"
+8:""
+9:"SERUM"
+10:""
+11:"SERUM"
+12:""
+13:"URINE"
+14:""
+15:"URINE"
+16:""
+17:"URINE"
+18:""
+19:"URINE"
+20:""
+21:"URINE"
+22:""
+23:"URINE"
+24:""
+25:"URINE"
+26:""
+27:"URINE"
+28:""
+29:"URINE"
+30:""
+31:"URINE"
+32:""
+33:"URINE"
+34:"URINE"
+35:"SERUM"
+]
+"LBMETHOD":[36 items
+0:"METHOD-A"
+1:"BASOMETHOD"
+2:""
+3:"BASOMETHOD"
+4:"METHOD-B"
+5:"BASOMETHOD"
+6:""
+7:"METHOD-A"
+8:"BASOMETHOD"
+9:""
+10:"BASOMETHOD"
+11:"METHOD-B"
+12:"BASOMETHOD"
+13:""
+14:"BASOMETHOD"
+15:"METHOD-A"
+16:"BASOMETHOD"
+17:""
+18:"BASOMETHOD"
+19:"METHOD-B"
+20:"BASOMETHOD"
+21:""
+22:"BASOMETHOD"
+23:"METHOD-A"
+24:"BASOMETHOD"
+25:""
+26:"BASOMETHOD"
+27:"METHOD-B"
+28:"BASOMETHOD"
+29:""
+30:"BASOMETHOD"
+31:"METHOD-A"
+32:"BASOMETHOD"
+33:""
+34:""
+35:""
+]
+"LBLOBXFL":[36 items
+0:"Y"
+1:"Y"
+2:""
+3:""
+4:""
+5:""
+6:""
+7:""
+8:""
+9:""
+10:""
+11:"Y"
+12:"Y"
+13:""
+14:""
+15:""
+16:""
+17:""
+18:""
+19:""
+20:""
+21:"Y"
+22:"Y"
+23:""
+24:""
+25:""
+26:""
+27:""
+28:""
+29:""
+30:""
+31:""
+32:""
+33:""
+34:""
+35:""
+]
+"VISITNUM":[36 items
+0:1
+1:1
+2:4
+3:4
+4:5
+5:5
+6:5.01
+7:7
+8:7
+9:8
+10:8
+11:1
+12:1
+13:4
+14:4
+15:5
+16:5
+17:7
+18:7
+19:8
+20:8
+21:1
+22:1
+23:4
+24:4
+25:5
+26:5
+27:7
+28:7
+29:8
+30:8
+31:9
+32:9
+33:8
+34:9
+35:4
+]
+"VISIT":[36 items
+0:"SCREENING 1"
+1:"SCREENING 1"
+2:"WEEK 2"
+3:"WEEK 2"
+4:"WEEK 4"
+5:"WEEK 4"
+6:"WEEK 4: UNSCHEDULED 01"
+7:"WEEK 6"
+8:"WEEK 6"
+9:"WEEK 8"
+10:"WEEK 8"
+11:"SCREENING 1"
+12:"SCREENING 1"
+13:"WEEK 2"
+14:"WEEK 2"
+15:"WEEK 4"
+16:"WEEK 4"
+17:"WEEK 6"
+18:"WEEK 6"
+19:"WEEK 8"
+20:"WEEK 8"
+21:"SCREENING 1"
+22:"SCREENING 1"
+23:"WEEK 2"
+24:"WEEK 2"
+25:"WEEK 4"
+26:"WEEK 4"
+27:"WEEK 6"
+28:"WEEK 6"
+29:"WEEK 8"
+30:"WEEK 8"
+31:"WEEK 12"
+32:"WEEK 12"
+33:"WEEK 8"
+34:"WEEK 12"
+35:"WEEK 2"
+]
+"EPOCH":[36 items
+0:"SCREENING"
+1:"SCREENING"
+2:"TREATMENT"
+3:"TREATMENT"
+4:"TREATMENT"
+5:"TREATMENT"
+6:"TREATMENT"
+7:"TREATMENT"
+8:"TREATMENT"
+9:"TREATMENT"
+10:"TREATMENT"
+11:"SCREENING"
+12:"SCREENING"
+13:"TREATMENT"
+14:"TREATMENT"
+15:"TREATMENT"
+16:"TREATMENT"
+17:"TREATMENT"
+18:"TREATMENT"
+19:"TREATMENT"
+20:"TREATMENT"
+21:"SCREENING"
+22:"SCREENING"
+23:"TREATMENT"
+24:"TREATMENT"
+25:"TREATMENT"
+26:"TREATMENT"
+27:"TREATMENT"
+28:"TREATMENT"
+29:"TREATMENT"
+30:"TREATMENT"
+31:"TREATMENT"
+32:"TREATMENT"
+33:"TREATMENT"
+34:"TREATMENT"
+35:"TREATMENT"
+]
+"LBDTC":[36 items
+0:"2012-11-23T11:20"
+1:"2012-11-23T11:20"
+2:"2012-12-13T14:05"
+3:"2012-12-13T14:05"
+4:"2012-12-26T08:44"
+5:"2012-12-26T08:44"
+6:"2012-12-28T09:27"
+7:"2013-01-10T15:20"
+8:"2013-01-10T15:20"
+9:"2013-01-23T12:13"
+10:"2013-01-23T12:13"
+11:"2012-10-30T14:26"
+12:"2012-10-30T14:26"
+13:"2012-11-28T10:00"
+14:"2012-11-28T10:00"
+15:"2012-12-11T12:16"
+16:"2012-12-11T12:16"
+17:"2012-12-25T14:00"
+18:"2012-12-25T14:00"
+19:"2013-01-08T12:13"
+20:"2013-01-08T12:13"
+21:"2013-08-20T12:27"
+22:"2013-08-20T12:27"
+23:"2013-09-15T12:44"
+24:"2013-09-15T12:44"
+25:"2013-09-24T08:16"
+26:"2013-09-24T08:16"
+27:"2013-10-08T15:30"
+28:"2013-10-08T15:30"
+29:"2013-10-22T11:54"
+30:"2013-10-22T11:54"
+31:"2013-11-05T13:54"
+32:"2013-11-05T13:54"
+33:"2013-10-22T11:54"
+34:"2013-11-05T13:54"
+35:"2012-12-13T14:05"
+]
+"LBDY":[36 items
+0:-7
+1:-7
+2:14
+3:14
+4:27
+5:27
+6:29
+7:42
+8:42
+9:55
+10:55
+11:-16
+12:-16
+13:14
+14:14
+15:27
+16:27
+17:41
+18:41
+19:55
+20:55
+21:-9
+22:-9
+23:18
+24:18
+25:27
+26:27
+27:41
+28:41
+29:55
+30:55
+31:69
+32:69
+33:55
+34:69
+35:14
+]
+}
+}
+]
+"standard":{2 items
+"product":"sdtmig"
+"version":"3-3"
+}
+"codelists":[]0 items
+}

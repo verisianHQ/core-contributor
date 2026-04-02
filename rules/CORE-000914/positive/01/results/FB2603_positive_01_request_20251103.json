@@ -1,0 +1,1185 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "FDA",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB026",
+                                        "Cited_Guidance": "Records with a baseline flag should have a corresponding standard result with a standardized unit where available."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB2603",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB026",
+                                        "Cited_Guidance": "Records with a baseline flag should have a corresponding standard result with a standardized unit where available."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB2603",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB026",
+                                        "Cited_Guidance": "Records with a baseline flag should have a corresponding standard result with a standardized unit where available."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB2603",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB026",
+                                        "Cited_Guidance": "Records with a baseline flag should have a corresponding standard result with a standardized unit where available."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB2603",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.0"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB026",
+                                        "Cited_Guidance": "Records with a baseline flag should have a corresponding standard result with a standardized unit where available."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB2603",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB026",
+                                        "Cited_Guidance": "Records with a baseline flag should have a corresponding standard result with a standardized unit where available."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB2603",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1.1"
+                    },
+                    {
+                        "Name": "SENDIG-GENETOX",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB026",
+                                        "Cited_Guidance": "Records with a baseline flag should have a corresponding standard result with a standardized unit where available."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB2603",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.0"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB026",
+                                        "Cited_Guidance": "Records with a baseline flag should have a corresponding standard result with a standardized unit where available."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB2603",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.1"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB026",
+                                        "Cited_Guidance": "Records with a baseline flag should have a corresponding standard result with a standardized unit where available."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB2603",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.2"
+                    },
+                    {
+                        "Name": "SENDIG-AR",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB026",
+                                        "Cited_Guidance": "Records with a baseline flag should have a corresponding standard result with a standardized unit where available."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB2603",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "--STRESC",
+                    "operator": "non_empty"
+                },
+                {
+                    "name": "--BLFL",
+                    "operator": "equal_to",
+                    "value": "Y",
+                    "value_is_literal": true
+                },
+                {
+                    "name": "--BLFL",
+                    "operator": "is_not_unique_set",
+                    "value": [
+                        "--TESTCD",
+                        "--CAT",
+                        "--SCAT",
+                        "--SPEC",
+                        "--METHOD",
+                        "USUBJID"
+                    ]
+                }
+            ]
+        },
+        "Core": {
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "There should be only one record with a baseline flag and non missing character standard result value having the same --TESTCD, --CAT, --SCAT, --SPEC, --METHOD values.",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "There are multiple records per assigned baseline flag (--BLFL).",
+            "Output_Variables": [
+                "--TESTCD",
+                "--CAT",
+                "--SCAT",
+                "--SPEC",
+                "--METHOD",
+                "--BLFL"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "FINDINGS"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "ALL"
+                ]
+            }
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "lb.xpt",
+            "label": "Laboratory Test Results",
+            "domain": "LB",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LBSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBTESTCD",
+                    "label": "Lab Test or Examination Short Name",
+                    "type": "Char",
+                    "length": 7
+                },
+                {
+                    "name": "LBTEST",
+                    "label": "Lab Test or Examination Name",
+                    "type": "Char",
+                    "length": 39
+                },
+                {
+                    "name": "LBCAT",
+                    "label": "Category for Lab Test",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "LBSCAT",
+                    "label": "Subcategory for\r\nLab Test",
+                    "type": "Char",
+                    "length": 39
+                },
+                {
+                    "name": "LBORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 6
+                },
+                {
+                    "name": "LBORRESU",
+                    "label": "Original Units",
+                    "type": "Char",
+                    "length": 7
+                },
+                {
+                    "name": "LBORNRLO",
+                    "label": "Reference Range Lower Limit in Orig Unit",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "LBORNRHI",
+                    "label": "Reference Range Upper Limit in Orig Unit",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "LBSTRESC",
+                    "label": "Character Result/Finding in Std Format",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LBSTRESN",
+                    "label": "Numeric Result/Finding in Standard Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBSTRESU",
+                    "label": "Standard Units",
+                    "type": "Char",
+                    "length": 7
+                },
+                {
+                    "name": "LBSTNRLO",
+                    "label": "Reference Range Lower Limit-Std Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBSTNRHI",
+                    "label": "Reference Range Upper Limit-Std Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBNRIND",
+                    "label": "Reference Range Indicator",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LBSTAT",
+                    "label": "Completion Status",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LBSPEC",
+                    "label": "Specimen Type",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LBMETHOD",
+                    "label": "Method of Test or\r\nExamination",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "LBBLFL",
+                    "label": "Baseline Flag",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "VISIT",
+                    "label": "Visit Name",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "LBDTC",
+                    "label": "Date/Time of Specimen Collection",
+                    "type": "Char",
+                    "length": 19
+                },
+                {
+                    "name": "LBDY",
+                    "label": "Study Day of Specimen Collection",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC001",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC003",
+                    "CDISC003",
+                    "CDISC003",
+                    "CDISC003",
+                    "CDISC003",
+                    "CDISC001",
+                    "CDISC003"
+                ],
+                "LBSEQ": [
+                    1,
+                    5,
+                    38,
+                    42,
+                    73,
+                    77,
+                    41,
+                    103,
+                    118,
+                    122,
+                    152,
+                    1,
+                    5,
+                    42,
+                    73,
+                    77,
+                    107,
+                    137,
+                    5,
+                    42,
+                    77,
+                    107,
+                    137,
+                    163,
+                    167
+                ],
+                "LBTESTCD": [
+                    "ALB",
+                    "BASO",
+                    "ALB",
+                    "BASO",
+                    "ALB",
+                    "BASO",
+                    "ALB",
+                    "ALB",
+                    "ALB",
+                    "BASO",
+                    "BASO",
+                    "ALB",
+                    "BASO",
+                    "BASO",
+                    "ALB",
+                    "BASO",
+                    "BASO",
+                    "BASO",
+                    "BASO",
+                    "BASO2",
+                    "BASO",
+                    "BASO",
+                    "BASO",
+                    "ALB",
+                    "BASO"
+                ],
+                "LBTEST": [
+                    "Albumin",
+                    "Basophils",
+                    "Albumin",
+                    "Basophils",
+                    "Albumin",
+                    "Basophils",
+                    "Albumin",
+                    "Albumin",
+                    "Albumin",
+                    "Basophils",
+                    "Basophils",
+                    "Albumin",
+                    "Basophils",
+                    "Basophils",
+                    "Albumin",
+                    "Basophils",
+                    "Basophils",
+                    "Basophils",
+                    "Basophils",
+                    "Basophils",
+                    "Basophils",
+                    "Basophils",
+                    "Basophils",
+                    "Albumin",
+                    "Basophils"
+                ],
+                "LBCAT": [
+                    "CHEMISTRY",
+                    "HEMATOLOGY",
+                    "CHEMISTRY",
+                    "HEMATOLOGY",
+                    "CHEMISTRY",
+                    "HEMATOLOGY",
+                    "CHEMISTRY",
+                    "CHEMISTRY",
+                    "CHEMISTRY",
+                    "HEMATOLOGY",
+                    "HEMATOLOGY",
+                    "CHEMISTRY",
+                    "HEMATOLOGY",
+                    "HEMATOLOGY",
+                    "CHEMISTRY",
+                    "HEMATOLOGY",
+                    "HEMATOLOGY",
+                    "HEMATOLOGY",
+                    "HEMATOLOGY",
+                    "HEMATOLOGY",
+                    "HEMATOLOGY",
+                    "HEMATOLOGY",
+                    "HEMATOLOGY",
+                    "HEMATOLOGY",
+                    "HEMATOLOGY"
+                ],
+                "LBSCAT": [
+                    "ALBCAT1",
+                    "",
+                    "ALBCAT2",
+                    "",
+                    "ALBCAT1",
+                    "",
+                    "ALBCAT2",
+                    "ALBCAT2",
+                    "ALBCAT1",
+                    "",
+                    "",
+                    "ALBCAT1",
+                    "",
+                    "",
+                    "ALBCAT1",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "ALBCAT1",
+                    ""
+                ],
+                "LBORRES": [
+                    "3.9",
+                    "0.03",
+                    "3.6",
+                    "0.04",
+                    "3.5",
+                    "0.05",
+                    "3.6",
+                    "3.7",
+                    "3.7",
+                    "0.03",
+                    "0.04",
+                    "4.2",
+                    "0.10",
+                    "0.03",
+                    "3.6",
+                    "0.04",
+                    "0.04",
+                    "0.02",
+                    "0.07",
+                    "0.05",
+                    "0.06",
+                    "0.06",
+                    "0.04",
+                    "4.1",
+                    "0.05"
+                ],
+                "LBORRESU": [
+                    "g/dL",
+                    "10^9/L",
+                    "g/dL",
+                    "10^9/L",
+                    "g/dL",
+                    "10^9/L",
+                    "g/dL",
+                    "g/dL",
+                    "g/dL",
+                    "10^9/L",
+                    "10^9/L",
+                    "g/dL",
+                    "10^9/L",
+                    "10^9/L",
+                    "g/dL",
+                    "10^9/L",
+                    "10^9/L",
+                    "10^9/L",
+                    "10^9/L",
+                    "10^9/L",
+                    "10^9/L",
+                    "10^9/L",
+                    "10^9/L",
+                    "g/dL",
+                    "10^9/L"
+                ],
+                "LBORNRLO": [
+                    "3.5",
+                    "0",
+                    "3.5",
+                    "0",
+                    "3.5",
+                    "0",
+                    "3.5",
+                    "3.5",
+                    "3.5",
+                    "0",
+                    "0",
+                    "3.5",
+                    "0",
+                    "0",
+                    "3.5",
+                    "0",
+                    "0",
+                    "0",
+                    "0",
+                    "0",
+                    "0",
+                    "0",
+                    "0",
+                    "3.3",
+                    "0"
+                ],
+                "LBORNRHI": [
+                    "4.6",
+                    "0.2",
+                    "4.6",
+                    "0.2",
+                    "4.6",
+                    "0.2",
+                    "4.6",
+                    "4.6",
+                    "4.6",
+                    "0.2",
+                    "0.2",
+                    "4.6",
+                    "0.2",
+                    "0.2",
+                    "4.6",
+                    "0.2",
+                    "0.2",
+                    "0.2",
+                    "0.2",
+                    "0.2",
+                    "0.2",
+                    "0.2",
+                    "0.2",
+                    "4.9",
+                    "0.2"
+                ],
+                "LBSTRESC": [
+                    "39",
+                    "0.03",
+                    "36",
+                    "0.04",
+                    "35",
+                    "0.05",
+                    "36",
+                    "37",
+                    "37",
+                    "0.03",
+                    "0.04",
+                    "",
+                    "0.1",
+                    "0.03",
+                    "36",
+                    "0.04",
+                    "0.04",
+                    "0.02",
+                    "0.07",
+                    "0.05",
+                    "0.06",
+                    "0.06",
+                    "0.04",
+                    "41",
+                    "0.05"
+                ],
+                "LBSTRESN": [
+                    39,
+                    0.03,
+                    36,
+                    0.03999999999999999,
+                    35,
+                    0.05,
+                    36,
+                    37,
+                    37,
+                    0.03,
+                    0.03999999999999999,
+                    42,
+                    0.1,
+                    0.03,
+                    36,
+                    0.03999999999999999,
+                    0.03999999999999999,
+                    0.02,
+                    0.07,
+                    0.05,
+                    0.06,
+                    0.06,
+                    0.03999999999999999,
+                    41,
+                    0.05
+                ],
+                "LBSTRESU": [
+                    "g/L",
+                    "10^9/L",
+                    "g/L",
+                    "10^9/L",
+                    "mg/L",
+                    "10^6/L",
+                    "g/L",
+                    "g/dL",
+                    "g/dL",
+                    "10^9/L",
+                    "10^9/L",
+                    "g/L",
+                    "10^9/L",
+                    "10^9/L",
+                    "g/dL",
+                    "10^12/L",
+                    "10^9/L",
+                    "10^9/L",
+                    "10^9/L",
+                    "units",
+                    "10^9/L",
+                    "10^9/L",
+                    "10^9/L",
+                    "g/dL",
+                    "10^9/L"
+                ],
+                "LBSTNRLO": [
+                    35,
+                    0,
+                    35,
+                    0,
+                    35,
+                    0,
+                    35,
+                    35,
+                    35,
+                    0,
+                    0,
+                    35,
+                    0,
+                    0,
+                    35,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    33,
+                    0
+                ],
+                "LBSTNRHI": [
+                    46,
+                    0.2,
+                    46,
+                    0.2,
+                    46,
+                    0.2,
+                    46,
+                    46,
+                    46,
+                    0.2,
+                    0.2,
+                    46,
+                    0.2,
+                    0.2,
+                    46,
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2,
+                    49,
+                    0.2
+                ],
+                "LBNRIND": [
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL"
+                ],
+                "LBSTAT": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "LBSPEC": [
+                    "SERUM",
+                    "",
+                    "SERUM",
+                    "TEST",
+                    "SERUM",
+                    "",
+                    "SERUM",
+                    "SERUM",
+                    "SERUM",
+                    "",
+                    "",
+                    "SERUM",
+                    "",
+                    "",
+                    "URINE",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "URINE",
+                    ""
+                ],
+                "LBMETHOD": [
+                    "METHOD-A",
+                    "BASOMETHOD",
+                    "METHOD-A",
+                    "BASOMETHOD",
+                    "METHOD-B",
+                    "BASOMETHOD",
+                    "METHOD-A",
+                    "METHOD-A",
+                    "METHOD-A",
+                    "BASOMETHOD",
+                    "BASOMETHOD",
+                    "METHOD-B",
+                    "BASOMETHOD",
+                    "BASOMETHOD",
+                    "METHOD-A",
+                    "BASOMETHOD",
+                    "BASOMETHOD",
+                    "BASOMETHOD",
+                    "BASOMETHOD",
+                    "BASOMETHOD",
+                    "BASOMETHOD",
+                    "BASOMETHOD",
+                    "BASOMETHOD",
+                    "METHOD-A",
+                    "BASOMETHOD"
+                ],
+                "LBBLFL": [
+                    "",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "",
+                    "",
+                    "",
+                    "Y",
+                    "",
+                    "",
+                    "",
+                    "Y",
+                    "",
+                    "Y",
+                    "",
+                    "",
+                    "",
+                    "Y",
+                    "Y",
+                    "",
+                    "",
+                    "",
+                    "Y",
+                    ""
+                ],
+                "VISITNUM": [
+                    1,
+                    1,
+                    4,
+                    4,
+                    5,
+                    5,
+                    4,
+                    5.01,
+                    7,
+                    7,
+                    8,
+                    1,
+                    1,
+                    4,
+                    5,
+                    5,
+                    7,
+                    8,
+                    1,
+                    4,
+                    5,
+                    7,
+                    8,
+                    9,
+                    9
+                ],
+                "VISIT": [
+                    "SCREENING 1",
+                    "SCREENING 1",
+                    "WEEK 2",
+                    "WEEK 2",
+                    "WEEK 4",
+                    "WEEK 4",
+                    "WEEK 2",
+                    "WEEK 4: UNSCHEDULED 01",
+                    "WEEK 6",
+                    "WEEK 6",
+                    "WEEK 8",
+                    "SCREENING 1",
+                    "SCREENING 1",
+                    "WEEK 2",
+                    "WEEK 4",
+                    "WEEK 4",
+                    "WEEK 6",
+                    "WEEK 8",
+                    "SCREENING 1",
+                    "WEEK 2",
+                    "WEEK 4",
+                    "WEEK 6",
+                    "WEEK 8",
+                    "WEEK 12",
+                    "WEEK 12"
+                ],
+                "EPOCH": [
+                    "SCREENING",
+                    "SCREENING",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "SCREENING",
+                    "SCREENING",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "SCREENING",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT"
+                ],
+                "LBDTC": [
+                    "2012-11-23T11:20",
+                    "2012-11-23T11:20",
+                    "2012-12-13T14:05",
+                    "2012-12-13T14:05",
+                    "2012-12-26T08:44",
+                    "2012-12-26T08:44",
+                    "2012-12-13T14:05",
+                    "2012-12-28T09:27",
+                    "2013-01-10T15:20",
+                    "2013-01-10T15:20",
+                    "2013-01-23T12:13",
+                    "2012-10-30T14:26",
+                    "2012-10-30T14:26",
+                    "2012-11-28T10:00",
+                    "2012-12-11T12:16",
+                    "2012-12-11T12:16",
+                    "2012-12-25T14:00",
+                    "2013-01-08T12:13",
+                    "2013-08-20T12:27",
+                    "2013-09-15T12:44",
+                    "2013-09-24T08:16",
+                    "2013-10-08T15:30",
+                    "2013-10-22T11:54",
+                    "2013-11-05T13:54",
+                    "2013-11-05T13:54"
+                ],
+                "LBDY": [
+                    -7,
+                    -7,
+                    14,
+                    14,
+                    27,
+                    27,
+                    14,
+                    29,
+                    42,
+                    42,
+                    55,
+                    -16,
+                    -16,
+                    14,
+                    27,
+                    27,
+                    41,
+                    55,
+                    -9,
+                    18,
+                    27,
+                    41,
+                    55,
+                    69,
+                    69
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sdtmig",
+        "version": "3-3"
+    },
+    "codelists": []
+}

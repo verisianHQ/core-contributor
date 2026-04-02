@@ -1,0 +1,75 @@
+# Variable: DM.RFSTDTC, DM.RFXSTDTC
+# Condition: DM.RFICTDTC ^= Null and DM.RFXSTDTC ^= Null
+# Rule: DM.RFICDTC <= DM.RFXSTDTC
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Study start and end date/time should include month, day, and
+                  year.
+                Document: FDA
+                Section: FDAB034
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3412
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Study start and end date/time should include month, day, and
+                  year.
+                Document: FDA
+                Section: FDAB034
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3412
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Study start and end date/time should include month, day, and
+                  year.
+                Document: FDA
+                Section: FDAB034
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3412
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: RFICDTC
+      operator: non_empty
+    - name: RFXSTDTC
+      operator: non_empty
+    - name: RFICDTC
+      operator: date_greater_than
+      value: RFXSTDTC
+Core:
+  Id: CORE-000658
+  Status: Published
+  Version: '1'
+Description: Date/Time of Informed Consent (RFICDTC) should be prior or equal to
+  the Date/Time of First Study Treatment (RFXSTDTC).
+Executability: Fully Executable
+Outcome:
+  Message: RFICDTC falls after RFXSTDTC.
+  Output Variables:
+    - RFICDTC
+    - RFXSTDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

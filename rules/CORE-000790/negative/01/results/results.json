@@ -1,0 +1,68 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Subject is assigned to an arm code (randomized) but has no record in EX.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "015246-076-0003-00003",
+          "value": {
+            "ACTARM": "IKd",
+            "ARM": "IKd"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "015246-300-0004-00002",
+          "value": {
+            "ACTARM": "IKd",
+            "ARM": "IKd"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "015246-999-0004-9999",
+          "value": {
+            "ACTARM": "IKd",
+            "ARM": "IKd"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000790, dataset=EX",
+      "number_errors": 0,
+      "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "dm.xpt",
+      "Row": 5,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 6,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 7,
+      "Variable": "USUBJID"
+    }
+  ]
+}

@@ -1,0 +1,590 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "FDA",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB031",
+                                        "Cited_Guidance": "Standardized Result in Numeric Format should be populated whenever it is applicable."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3103",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB031",
+                                        "Cited_Guidance": "Standardized Result in Numeric Format should be populated whenever it is applicable."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3103",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB031",
+                                        "Cited_Guidance": "Standardized Result in Numeric Format should be populated whenever it is applicable."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3103",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB031",
+                                        "Cited_Guidance": "Standardized Result in Numeric Format should be populated whenever it is applicable."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3103",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.0"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB031",
+                                        "Cited_Guidance": "Standardized Result in Numeric Format should be populated whenever it is applicable."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3103",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB031",
+                                        "Cited_Guidance": "Standardized Result in Numeric Format should be populated whenever it is applicable."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3103",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1.1"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB031",
+                                        "Cited_Guidance": "Standardized Result in Numeric Format should be populated whenever it is applicable."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3103",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.1"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB031",
+                                        "Cited_Guidance": "Standardized Result in Numeric Format should be populated whenever it is applicable."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3103",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.2"
+                    },
+                    {
+                        "Name": "SENDIG-AR",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB031",
+                                        "Cited_Guidance": "Standardized Result in Numeric Format should be populated whenever it is applicable."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3103",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.0"
+                    },
+                    {
+                        "Name": "SENDIG-GENETOX",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB031",
+                                        "Cited_Guidance": "Standardized Result in Numeric Format should be populated whenever it is applicable."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3103",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "--STRESC",
+                    "operator": "non_empty"
+                },
+                {
+                    "name": "--STRESC",
+                    "operator": "not_matches_regex",
+                    "value": "^-?(0|[1-9]\\d*)(\\.\\d+)?$"
+                },
+                {
+                    "name": "--STRESN",
+                    "operator": "non_empty"
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CORE-000732",
+            "Status": "Published",
+            "Version": "1"
+        },
+        "Description": "--STRESC is not populated with a numeric value, but --STRESN is not empty.",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "--STRESC is not numeric but --STRESN is not empty",
+            "Output_Variables": [
+                "--STRESC",
+                "--STRESN"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "FINDINGS"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "ALL"
+                ]
+            }
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "eg.xpt",
+            "label": "ECG Test Results",
+            "domain": "EG",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EGSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "EGTESTCD",
+                    "label": "ECG Test or Examination Short Name",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "EGTEST",
+                    "label": "ECG Test or Examination Name",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "EGORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EGORRESU",
+                    "label": "Original Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EGSTRESC",
+                    "label": "Character Result/Finding in Std Format",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EGSTRESN",
+                    "label": "Standardized Result in Numeric Format ",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "EGSTRESU",
+                    "label": "Standard Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EGSTAT",
+                    "label": "Completion Status",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "1234",
+                    "1234",
+                    "1234",
+                    "1234",
+                    "1234"
+                ],
+                "DOMAIN": [
+                    "EG",
+                    "EG",
+                    "EG",
+                    "EG",
+                    "EG"
+                ],
+                "USUBJID": [
+                    "123101",
+                    "123101",
+                    "123102",
+                    "123102",
+                    "123102"
+                ],
+                "EGSEQ": [
+                    1,
+                    2,
+                    1,
+                    2,
+                    2
+                ],
+                "EGTESTCD": [
+                    "EGHRMN",
+                    "PRAG",
+                    "INTP",
+                    "PRAG",
+                    "PRAG"
+                ],
+                "EGTEST": [
+                    "ECG Mean Heart Rate",
+                    "PR Interval, Aggregate",
+                    "Interpretation",
+                    "PR Interval, Aggregate",
+                    "PR Interval, Aggregate"
+                ],
+                "EGORRES": [
+                    "62",
+                    "0.15",
+                    "QT MEAN POSSIBLY ABNORMAL ",
+                    "0.149876",
+                    "1.149876"
+                ],
+                "EGORRESU": [
+                    "beats/min",
+                    "sec",
+                    "",
+                    "sec",
+                    "sec"
+                ],
+                "EGSTRESC": [
+                    "TEST",
+                    "2-5",
+                    "+8",
+                    "positive",
+                    "<5"
+                ],
+                "EGSTRESN": [
+                    10,
+                    2,
+                    8,
+                    15,
+                    5
+                ],
+                "EGSTRESU": [
+                    "beats/min",
+                    "msec",
+                    "",
+                    "msec",
+                    "msec"
+                ],
+                "EGSTAT": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "fa.xpt",
+            "label": "Findings About Events or Interventions",
+            "domain": "FA",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "FASEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "FATESTCD",
+                    "label": "Findings About Test Short Name",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "FATEST",
+                    "label": "Findings About Test Name",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "FAOBJ",
+                    "label": "Object of the Observation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "FAORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "FAORRESU",
+                    "label": "Original Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "FASTRESC",
+                    "label": "Character Result/Finding in Std Format",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "FASTRESN",
+                    "label": "Standardized Result in Numeric Format ",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "FASTRESU",
+                    "label": "Standard Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "FASTAT",
+                    "label": "Completion Status",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "1234",
+                    "1234",
+                    "1234"
+                ],
+                "DOMAIN": [
+                    "FA",
+                    "FA",
+                    "FA"
+                ],
+                "USUBJID": [
+                    "123101",
+                    "123101",
+                    "123101"
+                ],
+                "FASEQ": [
+                    1,
+                    2,
+                    5
+                ],
+                "FATESTCD": [
+                    "SEV",
+                    "OCCUR",
+                    "TSTRES"
+                ],
+                "FATEST": [
+                    "Severity/Intensity",
+                    "Occurrence Indicator",
+                    "Test Result"
+                ],
+                "FAOBJ": [
+                    "Migraine",
+                    "Sensitivity To Light",
+                    "Sensitivity To Light"
+                ],
+                "FAORRES": [
+                    "SEVERE",
+                    "",
+                    "1.236"
+                ],
+                "FAORRESU": [
+                    "",
+                    "",
+                    ""
+                ],
+                "FASTRESC": [
+                    "SEVERE",
+                    "111@",
+                    "<5"
+                ],
+                "FASTRESN": [
+                    9,
+                    250,
+                    1
+                ],
+                "FASTRESU": [
+                    "",
+                    "",
+                    ""
+                ],
+                "FASTAT": [
+                    "",
+                    "NOT DONE",
+                    ""
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sdtmig",
+        "version": "3-4"
+    },
+    "codelists": []
+}

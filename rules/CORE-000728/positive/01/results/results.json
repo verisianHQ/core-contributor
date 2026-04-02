@@ -1,0 +1,112 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVALCD and TSVAL do not have a one-to-one relationship.",
+      "number_errors": 11,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "  ",
+            "TSVALCD": null
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "P18Y ",
+            "TSVALCD": null
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "INTERIM ANALYSIS ",
+            "TSVALCD": null
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "41233",
+            "TSVALCD": null
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "1000",
+            "TSVALCD": null
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "240",
+            "TSVALCD": null
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": 3,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "340",
+            "TSVALCD": null
+          }
+        },
+        {
+          "row": 15,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "P30M ",
+            "TSVALCD": null
+          }
+        },
+        {
+          "row": 16,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "5",
+            "TSVALCD": null
+          }
+        },
+        {
+          "row": 19,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "  ",
+            "TSVALCD": null
+          }
+        },
+        {
+          "row": 22,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "40179",
+            "TSVALCD": null
+          }
+        }
+      ]
+    }
+  ]
+}

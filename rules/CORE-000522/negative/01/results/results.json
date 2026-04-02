@@ -1,0 +1,71 @@
+{
+  "datasets": [
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "Missing DSCAT value for Disposition Event.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "DSCAT": null
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "DSCAT": null
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": 2,
+          "USUBJID": "CDISC002",
+          "value": {
+            "DSCAT": null
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": 3,
+          "USUBJID": "CDISC002",
+          "value": {
+            "DSCAT": null
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ds.xpt",
+      "Row": 5,
+      "Variable": "DSCAT"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 6,
+      "Variable": "DSCAT"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 9,
+      "Variable": "DSCAT"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 10,
+      "Variable": "DSCAT"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBORNRHI is less than or equal to LBORNRLO.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "001",
+          "value": {
+            "LBORNRHI": "29.9",
+            "LBORNRLO": "30",
+            "LBTESTCD": "ALB"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "001",
+          "value": {
+            "LBORNRHI": "1.8",
+            "LBORNRLO": "1.8",
+            "LBTESTCD": "ALP"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "lb.xpt",
+      "Row": 5,
+      "Variable": "LBORNRLO"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 5,
+      "Variable": "LBORNRHI"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 6,
+      "Variable": "LBORNRLO"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 6,
+      "Variable": "LBORNRHI"
+    }
+  ]
+}

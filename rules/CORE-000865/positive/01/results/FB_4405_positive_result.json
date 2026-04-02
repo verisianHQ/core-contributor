@@ -1,0 +1,28 @@
+{
+  "LB": [
+    {
+      "executionStatus": "success",
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "PP": [
+    {
+      "executionStatus": "execution_error",
+      "dataset": "pp.xpt",
+      "domain": "PP",
+      "variables": [],
+      "message": "rule execution error",
+      "errors": [
+        {
+          "dataset": "pp.xpt",
+          "error": "Column not found in data",
+          "message": "PPELTM"
+        }
+      ]
+    }
+  ]
+}

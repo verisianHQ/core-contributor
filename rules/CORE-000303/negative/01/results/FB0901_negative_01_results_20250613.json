@@ -1,0 +1,130 @@
+{
+    "LB": [
+        {
+            "executionStatus": "success",
+            "dataset": "lb.xpt",
+            "domain": "LB",
+            "variables": [
+                "LBTEST",
+                "LBTESTCD"
+            ],
+            "message": "LBTESTCD and LBTEST do not have a one-to-one relationship",
+            "errors": [
+                {
+                    "value": {
+                        "LBTESTCD": "ALB",
+                        "LBTEST": "Albumin"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "LBTESTCD": "ALB",
+                        "LBTEST": "Alkaline Phosphatase"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 2,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "LBTESTCD": "ALB",
+                        "LBTEST": "Aspartate Aminotransferase"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 3,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "LBTESTCD": "BASO",
+                        "LBTEST": "Aspartate Aminotransferase"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 4,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 4
+                },
+                {
+                    "value": {
+                        "LBTESTCD": "BASO",
+                        "LBTEST": "Basophils"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 5,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 5
+                }
+            ]
+        }
+    ],
+    "FA": [
+        {
+            "executionStatus": "success",
+            "dataset": "fa.xpt",
+            "domain": "FA",
+            "variables": [
+                "FATEST",
+                "FATESTCD"
+            ],
+            "message": "FATESTCD and FATEST do not have a one-to-one relationship",
+            "errors": [
+                {
+                    "value": {
+                        "FATEST": "Count",
+                        "FATESTCD": "COUNT"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "FATEST": "Counts",
+                        "FATESTCD": "COUNT"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 2,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "FATEST": "Counting",
+                        "FATESTCD": "COUNT"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 3,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "FATEST": "Counted",
+                        "FATESTCD": "COUNT"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 4,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 4
+                },
+                {
+                    "value": {
+                        "FATEST": "Count",
+                        "FATESTCD": "COUNT"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 5,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 5
+                }
+            ]
+        }
+    ]
+}

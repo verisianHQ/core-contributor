@@ -1,0 +1,65 @@
+{
+  "DM": [
+    {
+      "executionStatus": "execution_error",
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "variables": [],
+      "message": "rule execution error",
+      "errors": [
+        {
+          "dataset": "dm.xpt",
+          "error": "Column not found in data",
+          "message": "DMDTC"
+        }
+      ]
+    }
+  ],
+  "CE": [
+    {
+      "executionStatus": "success",
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "variables": [
+        "CEDTC",
+        "RFPENDTC"
+      ],
+      "message": "CEDTC is greater than RFPENDTC",
+      "errors": [
+        {
+          "value": {
+            "CEDTC": "2022-01-20",
+            "RFPENDTC": "2022-01-19"
+          },
+          "dataset": "ce.xpt",
+          "row": 1,
+          "USUBJID": "CDISC001"
+        }
+      ]
+    }
+  ],
+  "LB": [
+    {
+      "executionStatus": "success",
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "variables": [
+        "LBDTC",
+        "RFPENDTC"
+      ],
+      "message": "LBDTC is greater than RFPENDTC",
+      "errors": [
+        {
+          "value": {
+            "LBDTC": "2022-01-20",
+            "RFPENDTC": "2022-01-19"
+          },
+          "dataset": "lb.xpt",
+          "row": 1,
+          "USUBJID": "CDISC001",
+          "SEQ": 1
+        }
+      ]
+    }
+  ]
+}

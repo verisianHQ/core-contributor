@@ -1,0 +1,61 @@
+{2 items
+"LB":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"lb.xpt"
+"domain":"LB"
+"variables":[1 item
+0:"LBPDUR"
+]
+"message":"Negative value for LBPDUR"
+"errors":[4 items
+0:{5 items
+"value":{1 item
+"LBPDUR":"-PT1H"
+}
+"dataset":"lb.xpt"
+"row":4
+"USUBJID":"CDISC001"
+"SEQ":42
+}
+1:{5 items
+"value":{1 item
+"LBPDUR":"-PT3H"
+}
+"dataset":"lb.xpt"
+"row":5
+"USUBJID":"CDISC001"
+"SEQ":73
+}
+2:{5 items
+"value":{1 item
+"LBPDUR":"-PT5H"
+}
+"dataset":"lb.xpt"
+"row":6
+"USUBJID":"CDISC001"
+"SEQ":77
+}
+3:{5 items
+"value":{1 item
+"LBPDUR":"-PT1H"
+}
+"dataset":"lb.xpt"
+"row":7
+"USUBJID":"CDISC001"
+"SEQ":103
+}
+]
+}
+]
+"AE":[1 item
+0:{6 items
+"executionStatus":"skipped"
+"dataset":"ae.xpt"
+"domain":"AE"
+"variables":[]0 items
+"message":"Rule skipped - doesn't apply to domain for rule id=None, dataset=AE"
+"errors":[]0 items
+}
+]
+}

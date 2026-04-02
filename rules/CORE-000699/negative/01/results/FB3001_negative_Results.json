@@ -1,0 +1,808 @@
+{
+    "FA": [
+        {
+            "executionStatus": "success",
+            "dataset": "fa.xpt",
+            "domain": "FA",
+            "variables": [
+                "FACAT",
+                "FAMETHOD",
+                "FASCAT",
+                "FASPEC",
+                "FASTRESU",
+                "FATESTCD"
+            ],
+            "message": "Standards units are inconsistent within the same test (category, sub-category, specimen and method)",
+            "errors": [
+                {
+                    "value": {
+                        "FACAT": "INJECTION SITE REACTION",
+                        "FASTRESU": "mm",
+                        "FASCAT": "SCAT1",
+                        "FATESTCD": "LENGTH",
+                        "FAMETHOD": "Not in dataset",
+                        "FASPEC": "Not in dataset"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "FACAT": "INJECTION SITE REACTION",
+                        "FASTRESU": "cm",
+                        "FASCAT": "SCAT1",
+                        "FATESTCD": "WIDTH",
+                        "FAMETHOD": "Not in dataset",
+                        "FASPEC": "Not in dataset"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 2,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "FACAT": "INJECTION SITE REACTION",
+                        "FASTRESU": "mm",
+                        "FASCAT": "SCAT1",
+                        "FATESTCD": "LENGTH",
+                        "FAMETHOD": "Not in dataset",
+                        "FASPEC": "Not in dataset"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 3,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 7
+                },
+                {
+                    "value": {
+                        "FACAT": "INJECTION SITE REACTION",
+                        "FASTRESU": "mm",
+                        "FASCAT": "SCAT1",
+                        "FATESTCD": "WIDTH",
+                        "FAMETHOD": "Not in dataset",
+                        "FASPEC": "Not in dataset"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 4,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 8
+                },
+                {
+                    "value": {
+                        "FACAT": "INJECTION SITE REACTION",
+                        "FASTRESU": "cm",
+                        "FASCAT": "SCAT1",
+                        "FATESTCD": "LENGTH",
+                        "FAMETHOD": "Not in dataset",
+                        "FASPEC": "Not in dataset"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 5,
+                    "USUBJID": "CDISC003",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "FACAT": "INJECTION SITE REACTION",
+                        "FASTRESU": "mm",
+                        "FASCAT": "SCAT1",
+                        "FATESTCD": "WIDTH",
+                        "FAMETHOD": "Not in dataset",
+                        "FASPEC": "Not in dataset"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 6,
+                    "USUBJID": "CDISC003",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "FACAT": "INJECTION SITE REACTION",
+                        "FASTRESU": "mm",
+                        "FASCAT": "SCAT2",
+                        "FATESTCD": "LENGTH",
+                        "FAMETHOD": "Not in dataset",
+                        "FASPEC": "Not in dataset"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 7,
+                    "USUBJID": "CDISC005",
+                    "SEQ": 13
+                },
+                {
+                    "value": {
+                        "FACAT": "INJECTION SITE REACTION",
+                        "FASTRESU": "cm",
+                        "FASCAT": "SCAT2",
+                        "FATESTCD": "WIDTH",
+                        "FAMETHOD": "Not in dataset",
+                        "FASPEC": "Not in dataset"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 8,
+                    "USUBJID": "CDISC005",
+                    "SEQ": 14
+                },
+                {
+                    "value": {
+                        "FACAT": "INJECTION SITE REACTION",
+                        "FASTRESU": "cm",
+                        "FASCAT": "SCAT2",
+                        "FATESTCD": "LENGTH",
+                        "FAMETHOD": "Not in dataset",
+                        "FASPEC": "Not in dataset"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 9,
+                    "USUBJID": "CDISC005",
+                    "SEQ": 19
+                },
+                {
+                    "value": {
+                        "FACAT": "INJECTION SITE REACTION",
+                        "FASTRESU": "mm",
+                        "FASCAT": "SCAT2",
+                        "FATESTCD": "WIDTH",
+                        "FAMETHOD": "Not in dataset",
+                        "FASPEC": "Not in dataset"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 10,
+                    "USUBJID": "CDISC005",
+                    "SEQ": 20
+                },
+                {
+                    "value": {
+                        "FACAT": "REACTION",
+                        "FASTRESU": "mm",
+                        "FASCAT": "",
+                        "FATESTCD": "LENGTH",
+                        "FAMETHOD": "Not in dataset",
+                        "FASPEC": "Not in dataset"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 11,
+                    "USUBJID": "CDISC011",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "FACAT": "REACTION",
+                        "FASTRESU": "mm",
+                        "FASCAT": "",
+                        "FATESTCD": "WIDTH",
+                        "FAMETHOD": "Not in dataset",
+                        "FASPEC": "Not in dataset"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 12,
+                    "USUBJID": "CDISC011",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "FACAT": "REACTION",
+                        "FASTRESU": "mm",
+                        "FASCAT": "",
+                        "FATESTCD": "LENGTH",
+                        "FAMETHOD": "Not in dataset",
+                        "FASPEC": "Not in dataset"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 13,
+                    "USUBJID": "CDISC011",
+                    "SEQ": 10
+                },
+                {
+                    "value": {
+                        "FACAT": "REACTION",
+                        "FASTRESU": "mm",
+                        "FASCAT": "",
+                        "FATESTCD": "WIDTH",
+                        "FAMETHOD": "Not in dataset",
+                        "FASPEC": "Not in dataset"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 14,
+                    "USUBJID": "CDISC011",
+                    "SEQ": 11
+                },
+                {
+                    "value": {
+                        "FACAT": "REACTION",
+                        "FASTRESU": "mm",
+                        "FASCAT": "",
+                        "FATESTCD": "LENGTH",
+                        "FAMETHOD": "Not in dataset",
+                        "FASPEC": "Not in dataset"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 15,
+                    "USUBJID": "CDISC014",
+                    "SEQ": 5
+                },
+                {
+                    "value": {
+                        "FACAT": "REACTION",
+                        "FASTRESU": "mm",
+                        "FASCAT": "",
+                        "FATESTCD": "WIDTH",
+                        "FAMETHOD": "Not in dataset",
+                        "FASPEC": "Not in dataset"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 16,
+                    "USUBJID": "CDISC014",
+                    "SEQ": 6
+                },
+                {
+                    "value": {
+                        "FACAT": "REACTION",
+                        "FASTRESU": "cm",
+                        "FASCAT": "",
+                        "FATESTCD": "LENGTH",
+                        "FAMETHOD": "Not in dataset",
+                        "FASPEC": "Not in dataset"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 17,
+                    "USUBJID": "CDISC017",
+                    "SEQ": 4
+                },
+                {
+                    "value": {
+                        "FACAT": "REACTION",
+                        "FASTRESU": "cm",
+                        "FASCAT": "",
+                        "FATESTCD": "WIDTH",
+                        "FAMETHOD": "Not in dataset",
+                        "FASPEC": "Not in dataset"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 18,
+                    "USUBJID": "CDISC017",
+                    "SEQ": 5
+                },
+                {
+                    "value": {
+                        "FACAT": "REACTION",
+                        "FASTRESU": "cm",
+                        "FASCAT": "",
+                        "FATESTCD": "LENGTH",
+                        "FAMETHOD": "Not in dataset",
+                        "FASPEC": "Not in dataset"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 19,
+                    "USUBJID": "CDISC018",
+                    "SEQ": 4
+                },
+                {
+                    "value": {
+                        "FACAT": "REACTION",
+                        "FASTRESU": "cm",
+                        "FASCAT": "",
+                        "FATESTCD": "WIDTH",
+                        "FAMETHOD": "Not in dataset",
+                        "FASPEC": "Not in dataset"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 20,
+                    "USUBJID": "CDISC018",
+                    "SEQ": 5
+                }
+            ]
+        }
+    ],
+    "LB": [
+        {
+            "executionStatus": "success",
+            "dataset": "lb.xpt",
+            "domain": "LB",
+            "variables": [
+                "LBCAT",
+                "LBMETHOD",
+                "LBSCAT",
+                "LBSPEC",
+                "LBSTRESU",
+                "LBTESTCD"
+            ],
+            "message": "Standards units are inconsistent within the same test (category, sub-category, specimen and method)",
+            "errors": [
+                {
+                    "value": {
+                        "LBCAT": "CHEMISTRY",
+                        "LBSTRESU": "g/L",
+                        "LBMETHOD": "METHOD-A",
+                        "LBSPEC": "SERUM",
+                        "LBTESTCD": "ALB",
+                        "LBSCAT": "ALBCAT1"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "LBCAT": "HEMATOLOGY",
+                        "LBSTRESU": "10^9/L",
+                        "LBMETHOD": "BASOMETHOD",
+                        "LBSPEC": "",
+                        "LBTESTCD": "BASO",
+                        "LBSCAT": ""
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 2,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 5
+                },
+                {
+                    "value": {
+                        "LBCAT": "CHEMISTRY",
+                        "LBSTRESU": "g/L",
+                        "LBMETHOD": "",
+                        "LBSPEC": "SERUM",
+                        "LBTESTCD": "ALB",
+                        "LBSCAT": "ALBCAT2"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 3,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 38
+                },
+                {
+                    "value": {
+                        "LBCAT": "HEMATOLOGY",
+                        "LBSTRESU": "10^9/L",
+                        "LBMETHOD": "BASOMETHOD",
+                        "LBSPEC": "",
+                        "LBTESTCD": "BASO",
+                        "LBSCAT": ""
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 4,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 42
+                },
+                {
+                    "value": {
+                        "LBCAT": "CHEMISTRY",
+                        "LBSTRESU": "mg/L",
+                        "LBMETHOD": "METHOD-B",
+                        "LBSPEC": "SERUM",
+                        "LBTESTCD": "ALB",
+                        "LBSCAT": "ALBCAT1"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 5,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 73
+                },
+                {
+                    "value": {
+                        "LBCAT": "HEMATOLOGY",
+                        "LBSTRESU": "10^6/L",
+                        "LBMETHOD": "BASOMETHOD",
+                        "LBSPEC": "",
+                        "LBTESTCD": "BASO",
+                        "LBSCAT": ""
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 6,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 77
+                },
+                {
+                    "value": {
+                        "LBCAT": "CHEMISTRY",
+                        "LBSTRESU": "g/dL",
+                        "LBMETHOD": "",
+                        "LBSPEC": "SERUM",
+                        "LBTESTCD": "ALB",
+                        "LBSCAT": "ALBCAT2"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 7,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 103
+                },
+                {
+                    "value": {
+                        "LBCAT": "CHEMISTRY",
+                        "LBSTRESU": "g/dL",
+                        "LBMETHOD": "METHOD-A",
+                        "LBSPEC": "SERUM",
+                        "LBTESTCD": "ALB",
+                        "LBSCAT": "ALBCAT1"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 8,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 118
+                },
+                {
+                    "value": {
+                        "LBCAT": "HEMATOLOGY",
+                        "LBSTRESU": "10^9/L",
+                        "LBMETHOD": "BASOMETHOD",
+                        "LBSPEC": "",
+                        "LBTESTCD": "BASO",
+                        "LBSCAT": ""
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 9,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 122
+                },
+                {
+                    "value": {
+                        "LBCAT": "CHEMISTRY",
+                        "LBSTRESU": "g/L",
+                        "LBMETHOD": "",
+                        "LBSPEC": "SERUM",
+                        "LBTESTCD": "ALB",
+                        "LBSCAT": "ALBCAT2"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 10,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 148
+                },
+                {
+                    "value": {
+                        "LBCAT": "HEMATOLOGY",
+                        "LBSTRESU": "10^9/L",
+                        "LBMETHOD": "BASOMETHOD",
+                        "LBSPEC": "",
+                        "LBTESTCD": "BASO",
+                        "LBSCAT": ""
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 11,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 152
+                },
+                {
+                    "value": {
+                        "LBCAT": "CHEMISTRY",
+                        "LBSTRESU": "g/L",
+                        "LBMETHOD": "METHOD-B",
+                        "LBSPEC": "SERUM",
+                        "LBTESTCD": "ALB",
+                        "LBSCAT": "ALBCAT1"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 12,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "LBCAT": "HEMATOLOGY",
+                        "LBSTRESU": "10^9/L",
+                        "LBMETHOD": "BASOMETHOD",
+                        "LBSPEC": "",
+                        "LBTESTCD": "BASO",
+                        "LBSCAT": ""
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 13,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 5
+                },
+                {
+                    "value": {
+                        "LBCAT": "CHEMISTRY",
+                        "LBSTRESU": "g/dL",
+                        "LBMETHOD": "",
+                        "LBSPEC": "URINE",
+                        "LBTESTCD": "ALB",
+                        "LBSCAT": "ALBCAT2"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 14,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 38
+                },
+                {
+                    "value": {
+                        "LBCAT": "HEMATOLOGY",
+                        "LBSTRESU": "10^9/L",
+                        "LBMETHOD": "BASOMETHOD",
+                        "LBSPEC": "",
+                        "LBTESTCD": "BASO",
+                        "LBSCAT": ""
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 15,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 42
+                },
+                {
+                    "value": {
+                        "LBCAT": "CHEMISTRY",
+                        "LBSTRESU": "g/dL",
+                        "LBMETHOD": "METHOD-A",
+                        "LBSPEC": "URINE",
+                        "LBTESTCD": "ALB",
+                        "LBSCAT": "ALBCAT1"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 16,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 73
+                },
+                {
+                    "value": {
+                        "LBCAT": "HEMATOLOGY",
+                        "LBSTRESU": "10^12/L",
+                        "LBMETHOD": "BASOMETHOD",
+                        "LBSPEC": "",
+                        "LBTESTCD": "BASO",
+                        "LBSCAT": ""
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 17,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 77
+                },
+                {
+                    "value": {
+                        "LBCAT": "CHEMISTRY",
+                        "LBSTRESU": "g/L",
+                        "LBMETHOD": "",
+                        "LBSPEC": "URINE",
+                        "LBTESTCD": "ALB",
+                        "LBSCAT": "ALBCAT2"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 18,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 103
+                },
+                {
+                    "value": {
+                        "LBCAT": "HEMATOLOGY",
+                        "LBSTRESU": "10^9/L",
+                        "LBMETHOD": "BASOMETHOD",
+                        "LBSPEC": "",
+                        "LBTESTCD": "BASO",
+                        "LBSCAT": ""
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 19,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 107
+                },
+                {
+                    "value": {
+                        "LBCAT": "CHEMISTRY",
+                        "LBSTRESU": "g/dL",
+                        "LBMETHOD": "METHOD-B",
+                        "LBSPEC": "URINE",
+                        "LBTESTCD": "ALB",
+                        "LBSCAT": "ALBCAT1"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 20,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 133
+                },
+                {
+                    "value": {
+                        "LBCAT": "HEMATOLOGY",
+                        "LBSTRESU": "10^9/L",
+                        "LBMETHOD": "BASOMETHOD",
+                        "LBSPEC": "",
+                        "LBTESTCD": "BASO",
+                        "LBSCAT": ""
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 21,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 137
+                },
+                {
+                    "value": {
+                        "LBCAT": "CHEMISTRY",
+                        "LBSTRESU": "mg/dL",
+                        "LBMETHOD": "",
+                        "LBSPEC": "URINE",
+                        "LBTESTCD": "ALB",
+                        "LBSCAT": "ALBCAT2"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 22,
+                    "USUBJID": "CDISC003",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "LBCAT": "HEMATOLOGY",
+                        "LBSTRESU": "10^9/L",
+                        "LBMETHOD": "BASOMETHOD",
+                        "LBSPEC": "",
+                        "LBTESTCD": "BASO",
+                        "LBSCAT": ""
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 23,
+                    "USUBJID": "CDISC003",
+                    "SEQ": 5
+                },
+                {
+                    "value": {
+                        "LBCAT": "CHEMISTRY",
+                        "LBSTRESU": "g/L",
+                        "LBMETHOD": "METHOD-A",
+                        "LBSPEC": "URINE",
+                        "LBTESTCD": "ALB",
+                        "LBSCAT": "ALBCAT1"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 24,
+                    "USUBJID": "CDISC003",
+                    "SEQ": 38
+                },
+                {
+                    "value": {
+                        "LBCAT": "HEMATOLOGY",
+                        "LBSTRESU": "units",
+                        "LBMETHOD": "BASOMETHOD",
+                        "LBSPEC": "",
+                        "LBTESTCD": "BASO",
+                        "LBSCAT": ""
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 25,
+                    "USUBJID": "CDISC003",
+                    "SEQ": 42
+                },
+                {
+                    "value": {
+                        "LBCAT": "CHEMISTRY",
+                        "LBSTRESU": "g/dL",
+                        "LBMETHOD": "",
+                        "LBSPEC": "URINE",
+                        "LBTESTCD": "ALB",
+                        "LBSCAT": "ALBCAT2"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 26,
+                    "USUBJID": "CDISC003",
+                    "SEQ": 73
+                },
+                {
+                    "value": {
+                        "LBCAT": "HEMATOLOGY",
+                        "LBSTRESU": "10^9/L",
+                        "LBMETHOD": "BASOMETHOD",
+                        "LBSPEC": "",
+                        "LBTESTCD": "BASO",
+                        "LBSCAT": ""
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 27,
+                    "USUBJID": "CDISC003",
+                    "SEQ": 77
+                },
+                {
+                    "value": {
+                        "LBCAT": "CHEMISTRY",
+                        "LBSTRESU": "mg/dL",
+                        "LBMETHOD": "METHOD-B",
+                        "LBSPEC": "URINE",
+                        "LBTESTCD": "ALB",
+                        "LBSCAT": "ALBCAT1"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 28,
+                    "USUBJID": "CDISC003",
+                    "SEQ": 103
+                },
+                {
+                    "value": {
+                        "LBCAT": "HEMATOLOGY",
+                        "LBSTRESU": "10^9/L",
+                        "LBMETHOD": "BASOMETHOD",
+                        "LBSPEC": "",
+                        "LBTESTCD": "BASO",
+                        "LBSCAT": ""
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 29,
+                    "USUBJID": "CDISC003",
+                    "SEQ": 107
+                },
+                {
+                    "value": {
+                        "LBCAT": "CHEMISTRY",
+                        "LBSTRESU": "g/dL",
+                        "LBMETHOD": "",
+                        "LBSPEC": "URINE",
+                        "LBTESTCD": "ALB",
+                        "LBSCAT": "ALBCAT2"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 30,
+                    "USUBJID": "CDISC003",
+                    "SEQ": 133
+                },
+                {
+                    "value": {
+                        "LBCAT": "HEMATOLOGY",
+                        "LBSTRESU": "10^9/L",
+                        "LBMETHOD": "BASOMETHOD",
+                        "LBSPEC": "",
+                        "LBTESTCD": "BASO",
+                        "LBSCAT": ""
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 31,
+                    "USUBJID": "CDISC003",
+                    "SEQ": 137
+                },
+                {
+                    "value": {
+                        "LBCAT": "CHEMISTRY",
+                        "LBSTRESU": "g/dL",
+                        "LBMETHOD": "METHOD-A",
+                        "LBSPEC": "URINE",
+                        "LBTESTCD": "ALB",
+                        "LBSCAT": "ALBCAT1"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 32,
+                    "USUBJID": "CDISC003",
+                    "SEQ": 163
+                },
+                {
+                    "value": {
+                        "LBCAT": "HEMATOLOGY",
+                        "LBSTRESU": "10^9/L",
+                        "LBMETHOD": "BASOMETHOD",
+                        "LBSPEC": "",
+                        "LBTESTCD": "BASO",
+                        "LBSCAT": ""
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 33,
+                    "USUBJID": "CDISC003",
+                    "SEQ": 167
+                },
+                {
+                    "value": {
+                        "LBCAT": "URINALYSIS",
+                        "LBSTRESU": "unit",
+                        "LBMETHOD": "",
+                        "LBSPEC": "URINE",
+                        "LBTESTCD": "ALB",
+                        "LBSCAT": ""
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 34,
+                    "USUBJID": "CDISC003",
+                    "SEQ": 133
+                },
+                {
+                    "value": {
+                        "LBCAT": "URINALYSIS",
+                        "LBSTRESU": "units",
+                        "LBMETHOD": "",
+                        "LBSPEC": "URINE",
+                        "LBTESTCD": "ALB",
+                        "LBSCAT": ""
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 35,
+                    "USUBJID": "CDISC003",
+                    "SEQ": 163
+                }
+            ]
+        }
+    ]
+}

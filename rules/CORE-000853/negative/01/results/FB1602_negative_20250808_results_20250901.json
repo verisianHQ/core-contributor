@@ -1,0 +1,418 @@
+{
+    "CM": [
+        {
+            "executionStatus": "success",
+            "dataset": "cm.xpt",
+            "domain": "CM",
+            "variables": [
+                "CMDTC",
+                "CMDY",
+                "RFSTDTC"
+            ],
+            "message": "The Collection study day (CMDY) is not populated when date/time of collection (CMDTC) is populated. ",
+            "errors": [
+                {
+                    "value": {
+                        "CMDTC": "2013-01-11",
+                        "CMDY": null,
+                        "RFSTDTC": "2012-11-30"
+                    },
+                    "dataset": "cm.xpt",
+                    "row": 3,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "CMDTC": "2013-04-19",
+                        "CMDY": null,
+                        "RFSTDTC": "2012-10-31T13:00"
+                    },
+                    "dataset": "cm.xpt",
+                    "row": 4,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 4
+                }
+            ]
+        }
+    ],
+    "CE": [
+        {
+            "executionStatus": "success",
+            "dataset": "ce.xpt",
+            "domain": "CE",
+            "variables": [
+                "CEDTC",
+                "CEDY",
+                "RFSTDTC"
+            ],
+            "message": "The Collection study day (CEDY) is not populated when date/time of collection (CEDTC) is populated. ",
+            "errors": [
+                {
+                    "value": {
+                        "CEDY": null,
+                        "RFSTDTC": "2012-11-30",
+                        "CEDTC": "2013-04-12"
+                    },
+                    "dataset": "ce.xpt",
+                    "row": 8,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 4
+                },
+                {
+                    "value": {
+                        "CEDY": null,
+                        "RFSTDTC": "2012-11-30",
+                        "CEDTC": "2013-01-19"
+                    },
+                    "dataset": "ce.xpt",
+                    "row": 9,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                }
+            ]
+        }
+    ],
+    "LB": [
+        {
+            "executionStatus": "success",
+            "dataset": "lb.xpt",
+            "domain": "LB",
+            "variables": [
+                "LBDTC",
+                "LBDY",
+                "RFSTDTC"
+            ],
+            "message": "The Collection study day (LBDY) is not populated when date/time of collection (LBDTC) is populated. ",
+            "errors": [
+                {
+                    "value": {
+                        "LBDTC": "2012-11-23T11:19",
+                        "RFSTDTC": "2012-11-30",
+                        "LBDY": null
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "LBDTC": "2012-11-23T10:20",
+                        "RFSTDTC": "2012-11-30",
+                        "LBDY": null
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 2,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "LBDTC": "2012-11-22T11:20",
+                        "RFSTDTC": "2012-11-30",
+                        "LBDY": null
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 3,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "LBDTC": "2012-10-23T11:20",
+                        "RFSTDTC": "2012-11-30",
+                        "LBDY": null
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 4,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 4
+                },
+                {
+                    "value": {
+                        "LBDTC": "2011-11-23T11:20",
+                        "RFSTDTC": "2012-11-30",
+                        "LBDY": null
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 5,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 5
+                }
+            ]
+        }
+    ],
+    "FA": [
+        {
+            "executionStatus": "success",
+            "dataset": "fa.xpt",
+            "domain": "FA",
+            "variables": [
+                "FADTC",
+                "FADY",
+                "RFSTDTC"
+            ],
+            "message": "The Collection study day (FADY) is not populated when date/time of collection (FADTC) is populated. ",
+            "errors": [
+                {
+                    "value": {
+                        "FADTC": "2012-12-02",
+                        "RFSTDTC": "2012-11-30",
+                        "FADY": null
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "FADTC": "2012-12-02",
+                        "RFSTDTC": "2012-11-30",
+                        "FADY": null
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 2,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "FADTC": "2012-12-02",
+                        "RFSTDTC": "2012-11-30",
+                        "FADY": null
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 3,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "FADTC": "2012-12-02",
+                        "RFSTDTC": "2012-11-30",
+                        "FADY": null
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 4,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 4
+                },
+                {
+                    "value": {
+                        "FADTC": "2012-12-02",
+                        "RFSTDTC": "2012-11-30",
+                        "FADY": null
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 5,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 5
+                }
+            ]
+        }
+    ],
+    "SE": [
+        {
+            "executionStatus": "success",
+            "dataset": "se.xpt",
+            "domain": "SE",
+            "variables": [
+                "RFSTDTC",
+                "SEDTC",
+                "SEDY"
+            ],
+            "message": "The Collection study day (SEDY) is not populated when date/time of collection (SEDTC) is populated. ",
+            "errors": [
+                {
+                    "value": {
+                        "SEDTC": "2012-11-23",
+                        "SEDY": null,
+                        "RFSTDTC": "2012-11-30"
+                    },
+                    "dataset": "se.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                }
+            ]
+        }
+    ],
+    "SV": [
+        {
+            "executionStatus": "success",
+            "dataset": "sv.xpt",
+            "domain": "SV",
+            "variables": [
+                "RFSTDTC",
+                "SVDTC",
+                "SVDY"
+            ],
+            "message": "The Collection study day (SVDY) is not populated when date/time of collection (SVDTC) is populated. ",
+            "errors": [
+                {
+                    "value": {
+                        "SVDTC": "2012-11-23",
+                        "RFSTDTC": "2012-11-30",
+                        "SVDY": null
+                    },
+                    "dataset": "sv.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001"
+                },
+                {
+                    "value": {
+                        "SVDTC": "2012-11-28",
+                        "RFSTDTC": "2012-11-30",
+                        "SVDY": null
+                    },
+                    "dataset": "sv.xpt",
+                    "row": 2,
+                    "USUBJID": "CDISC001"
+                },
+                {
+                    "value": {
+                        "SVDTC": "2012-11-30",
+                        "RFSTDTC": "2012-11-30",
+                        "SVDY": null
+                    },
+                    "dataset": "sv.xpt",
+                    "row": 3,
+                    "USUBJID": "CDISC001"
+                },
+                {
+                    "value": {
+                        "SVDTC": "2012-12-13",
+                        "RFSTDTC": "2012-11-30",
+                        "SVDY": null
+                    },
+                    "dataset": "sv.xpt",
+                    "row": 4,
+                    "USUBJID": "CDISC001"
+                },
+                {
+                    "value": {
+                        "SVDTC": "2012-12-26",
+                        "RFSTDTC": "2012-11-30",
+                        "SVDY": null
+                    },
+                    "dataset": "sv.xpt",
+                    "row": 5,
+                    "USUBJID": "CDISC001"
+                },
+                {
+                    "value": {
+                        "SVDTC": "2012-12-28",
+                        "RFSTDTC": "2012-11-30",
+                        "SVDY": null
+                    },
+                    "dataset": "sv.xpt",
+                    "row": 6,
+                    "USUBJID": "CDISC001"
+                },
+                {
+                    "value": {
+                        "SVDTC": "2013-01-10",
+                        "RFSTDTC": "2012-11-30",
+                        "SVDY": null
+                    },
+                    "dataset": "sv.xpt",
+                    "row": 7,
+                    "USUBJID": "CDISC001"
+                },
+                {
+                    "value": {
+                        "SVDTC": "2013-01-23",
+                        "RFSTDTC": "2012-11-30",
+                        "SVDY": null
+                    },
+                    "dataset": "sv.xpt",
+                    "row": 8,
+                    "USUBJID": "CDISC001"
+                },
+                {
+                    "value": {
+                        "SVDTC": "2013-02-14",
+                        "RFSTDTC": "2012-11-30",
+                        "SVDY": null
+                    },
+                    "dataset": "sv.xpt",
+                    "row": 9,
+                    "USUBJID": "CDISC001"
+                },
+                {
+                    "value": {
+                        "SVDTC": "2013-05-20",
+                        "RFSTDTC": "2012-11-30",
+                        "SVDY": null
+                    },
+                    "dataset": "sv.xpt",
+                    "row": 10,
+                    "USUBJID": "CDISC001"
+                }
+            ]
+        }
+    ],
+    "SM": [
+        {
+            "executionStatus": "success",
+            "dataset": "sm.xpt",
+            "domain": "SM",
+            "variables": [
+                "RFSTDTC",
+                "SMDTC",
+                "SMDY"
+            ],
+            "message": "The Collection study day (SMDY) is not populated when date/time of collection (SMDTC) is populated. ",
+            "errors": [
+                {
+                    "value": {
+                        "SMDTC": "2012-11-28",
+                        "SMDY": null,
+                        "RFSTDTC": "2012-11-30"
+                    },
+                    "dataset": "sm.xpt",
+                    "row": 2,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 2
+                }
+            ]
+        }
+    ],
+    "DM": [
+        {
+            "executionStatus": "success",
+            "dataset": "dm.xpt",
+            "domain": "DM",
+            "variables": [
+                "DMDTC",
+                "DMDY",
+                "RFSTDTC"
+            ],
+            "message": "The Collection study day (DMDY) is not populated when date/time of collection (DMDTC) is populated. ",
+            "errors": [
+                {
+                    "value": {
+                        "DMDY": null,
+                        "DMDTC": "2011-11-23",
+                        "RFSTDTC": "2012-11-30"
+                    },
+                    "dataset": "dm.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001"
+                },
+                {
+                    "value": {
+                        "DMDY": null,
+                        "DMDTC": "2011-11-24",
+                        "RFSTDTC": "2012-10-31T13:00"
+                    },
+                    "dataset": "dm.xpt",
+                    "row": 2,
+                    "USUBJID": "CDISC002"
+                }
+            ]
+        }
+    ]
+}

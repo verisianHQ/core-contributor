@@ -1,0 +1,62 @@
+{
+    "AE": [
+        {
+            "executionStatus": "success",
+            "dataset": "ae.xpt",
+            "domain": "AE",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "MH": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "mh.xpt",
+            "domain": "MH",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to domain for rule id=None, dataset=MH",
+            "errors": []
+        }
+    ],
+    "CE": [
+        {
+            "executionStatus": "success",
+            "dataset": "ce.xpt",
+            "domain": "CE",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "LB": [
+        {
+            "executionStatus": "success",
+            "dataset": "lb.xpt",
+            "domain": "LB",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "PC": [
+        {
+            "executionStatus": "success",
+            "dataset": "pc.xpt",
+            "domain": "PC",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "PP": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "pp.xpt",
+            "domain": "PP",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to domain for rule id=None, dataset=PP",
+            "errors": []
+        }
+    ]
+}

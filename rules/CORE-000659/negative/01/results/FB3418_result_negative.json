@@ -1,0 +1,30 @@
+{
+  "AE": [
+    {
+      "executionStatus": "success",
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "variables": [
+        "AEDUR",
+        "AEENDTC",
+        "AEOUT",
+        "AETERM"
+      ],
+      "message": "Neither the end date (AEENDTC) nor the collected duration (AEDUR) is populated when AEOUT=RECOVERED/RESOLVED",
+      "errors": [
+        {
+          "value": {
+            "AETERM": "Headache",
+            "AEENDTC": "",
+            "AEOUT": "RECOVERED/RESOLVED",
+            "AEDUR": ""
+          },
+          "row": 3,
+          "USUBJID": "CDISC003"
+        }
+      ]
+    }
+  ]
+}
+
+

@@ -1,0 +1,63 @@
+{
+  "TS": [
+    {
+      "executionStatus": "skipped",
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "variables": [],
+      "message": "Rule skipped - doesn't apply to domain for rule id=None, dataset=TS",
+      "errors": []
+    }
+  ],
+  "DM": [
+    {
+      "executionStatus": "success",
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "variables": [
+        "$STYPE_INTERVENTIONAL",
+        "ARMNRS"
+      ],
+      "message": "A subject has a no record in EX but is not populated ARMNRS while participating in an interventional study",
+      "errors": [
+        {
+          "value": {
+            "$STYPE_INTERVENTIONAL": 6,
+            "ARMNRS": null
+          },
+          "dataset": "dm.xpt",
+          "row": 4,
+          "USUBJID": "XXX100-300003"
+        },
+        {
+          "value": {
+            "$STYPE_INTERVENTIONAL": 6,
+            "ARMNRS": null
+          },
+          "dataset": "dm.xpt",
+          "row": 5,
+          "USUBJID": "XXX200-400002"
+        },
+        {
+          "value": {
+            "$STYPE_INTERVENTIONAL": 6,
+            "ARMNRS": null
+          },
+          "dataset": "dm.xpt",
+          "row": 6,
+          "USUBJID": "XXX300-049999"
+        }
+      ]
+    }
+  ],
+  "EX": [
+    {
+      "executionStatus": "skipped",
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "variables": [],
+      "message": "Rule skipped - doesn't apply to domain for rule id=None, dataset=EX",
+      "errors": []
+    }
+  ]
+}

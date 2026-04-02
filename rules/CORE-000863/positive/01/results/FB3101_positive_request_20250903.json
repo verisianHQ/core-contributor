@@ -1,0 +1,769 @@
+{3 items
+"datasets":[5 items
+0:{5 items
+"filename":"eg.xpt"
+"label":"ECG Test Results"
+"domain":"EG"
+"variables":[12 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":50
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":50
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":50
+}
+3:{4 items
+"name":"EGSEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"EGTESTCD"
+"label":"ECG Test or Examination Short Name"
+"type":"Char"
+"length":8
+}
+5:{4 items
+"name":"EGTEST"
+"label":"ECG Test or Examination Name"
+"type":"Char"
+"length":40
+}
+6:{4 items
+"name":"EGORRES"
+"label":"Result or Finding in Original Units"
+"type":"Char"
+"length":50
+}
+7:{4 items
+"name":"EGORRESU"
+"label":"Original Units"
+"type":"Char"
+"length":50
+}
+8:{4 items
+"name":"EGSTRESC"
+"label":"Character Result/Finding in Std Format"
+"type":"Char"
+"length":50
+}
+9:{4 items
+"name":"EGSTRESN"
+"label":"Standardized Result in Numeric Format "
+"type":"Num"
+"length":8
+}
+10:{4 items
+"name":"EGSTRESU"
+"label":"Standard Units"
+"type":"Char"
+"length":50
+}
+11:{4 items
+"name":"EGSTAT"
+"label":"Completion Status"
+"type":"Char"
+"length":50
+}
+]
+"records":{12 items
+"STUDYID":[4 items
+0:"1234"
+1:"1234"
+2:"1234"
+3:"1234"
+]
+"DOMAIN":[4 items
+0:"EG"
+1:"EG"
+2:"EG"
+3:"EG"
+]
+"USUBJID":[4 items
+0:"123101"
+1:"123101"
+2:"123102"
+3:"123102"
+]
+"EGSEQ":[4 items
+0:1
+1:2
+2:1
+3:2
+]
+"EGTESTCD":[4 items
+0:"EGHRMN"
+1:"PRAG"
+2:"INTP"
+3:"PRAG"
+]
+"EGTEST":[4 items
+0:"ECG Mean Heart Rate"
+1:"PR Interval, Aggregate"
+2:"Interpretation"
+3:"PR Interval, Aggregate"
+]
+"EGORRES":[4 items
+0:"62"
+1:"0.15"
+2:"QT MEAN POSSIBLY ABNORMAL "
+3:"0.149876"
+]
+"EGORRESU":[4 items
+0:"beats/min"
+1:"sec"
+2:""
+3:"sec"
+]
+"EGSTRESC":[4 items
+0:"62"
+1:"150"
+2:"QT MEAN POSSIBLY ABNORMAL "
+3:"149.876"
+]
+"EGSTRESN":[4 items
+0:62
+1:150
+2:NULL
+3:149.876
+]
+"EGSTRESU":[4 items
+0:"beats/min"
+1:"msec"
+2:""
+3:"msec"
+]
+"EGSTAT":[4 items
+0:""
+1:""
+2:""
+3:""
+]
+}
+}
+1:{5 items
+"filename":"fa.xpt"
+"label":"Findings About Events or Interventions"
+"domain":"FA"
+"variables":[13 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":50
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":50
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":50
+}
+3:{4 items
+"name":"FASEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"FATESTCD"
+"label":"Findings About Test Short Name"
+"type":"Char"
+"length":8
+}
+5:{4 items
+"name":"FATEST"
+"label":"Findings About Test Name"
+"type":"Char"
+"length":40
+}
+6:{4 items
+"name":"FAOBJ"
+"label":"Object of the Observation"
+"type":"Char"
+"length":50
+}
+7:{4 items
+"name":"FAORRES"
+"label":"Result or Finding in Original Units"
+"type":"Char"
+"length":50
+}
+8:{4 items
+"name":"FAORRESU"
+"label":"Original Units"
+"type":"Char"
+"length":50
+}
+9:{4 items
+"name":"FASTRESC"
+"label":"Character Result/Finding in Std Format"
+"type":"Char"
+"length":50
+}
+10:{4 items
+"name":"FASTRESN"
+"label":"Standardized Result in Numeric Format "
+"type":"Num"
+"length":8
+}
+11:{4 items
+"name":"FASTRESU"
+"label":"Standard Units"
+"type":"Char"
+"length":50
+}
+12:{4 items
+"name":"FASTAT"
+"label":"Completion Status"
+"type":"Char"
+"length":50
+}
+]
+"records":{13 items
+"STUDYID":[5 items
+0:"1234"
+1:"1234"
+2:"1234"
+3:"1235"
+4:"1236"
+]
+"DOMAIN":[5 items
+0:"FA"
+1:"FA"
+2:"FA"
+3:"FA"
+4:"FA"
+]
+"USUBJID":[5 items
+0:"123101"
+1:"123101"
+2:"123101"
+3:"123101"
+4:"123101"
+]
+"FASEQ":[5 items
+0:1
+1:2
+2:3
+3:4
+4:5
+]
+"FATESTCD":[5 items
+0:"SEV"
+1:"OCCUR"
+2:"TSTRES"
+3:"TSTRES"
+4:"TSTRES"
+]
+"FATEST":[5 items
+0:"Severity/Intensity"
+1:"Occurrence Indicator"
+2:"Test Result"
+3:"Test Result"
+4:"Test Result"
+]
+"FAOBJ":[5 items
+0:"Migraine"
+1:"Sensitivity To Light"
+2:"Sensitivity To Light"
+3:"Sensitivity To Light"
+4:"Sensitivity To Light"
+]
+"FAORRES":[5 items
+0:"SEVERE"
+1:""
+2:"-1.234"
+3:"-1.235"
+4:"1.236"
+]
+"FAORRESU":[5 items
+0:""
+1:""
+2:""
+3:""
+4:""
+]
+"FASTRESC":[5 items
+0:"SEVERE"
+1:""
+2:"-1.234"
+3:"-1.235"
+4:"1.236"
+]
+"FASTRESN":[5 items
+0:NULL
+1:NULL
+2:-1.234
+3:-1.235
+4:1.236
+]
+"FASTRESU":[5 items
+0:""
+1:""
+2:""
+3:""
+4:""
+]
+"FASTAT":[5 items
+0:""
+1:"NOT DONE"
+2:""
+3:""
+4:""
+]
+}
+}
+2:{5 items
+"filename":"mi.xpt"
+"label":"Microscopic Findings"
+"domain":"MI"
+"variables":[15 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":50
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":50
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":50
+}
+3:{4 items
+"name":"MISEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"MITESTCD"
+"label":"Microscopic Examination Short Name"
+"type":"Char"
+"length":8
+}
+5:{4 items
+"name":"MITEST"
+"label":"Microscopic Examination Name"
+"type":"Char"
+"length":50
+}
+6:{4 items
+"name":"MICAT"
+"label":"Category for Microscopic Finding"
+"type":"Char"
+"length":50
+}
+7:{4 items
+"name":"MISCAT"
+"label":"Subcategory for Microscopic Finding"
+"type":"Char"
+"length":50
+}
+8:{4 items
+"name":"MIORRES"
+"label":"Result or Finding in Original Units"
+"type":"Char"
+"length":50
+}
+9:{4 items
+"name":"MIORRESU"
+"label":"Original Units"
+"type":"Char"
+"length":50
+}
+10:{4 items
+"name":"MISTRESC"
+"label":"Character Result/Finding in Std Format"
+"type":"Char"
+"length":50
+}
+11:{4 items
+"name":"MISTRESN"
+"label":"Standardized Result in Numeric Format "
+"type":"Num"
+"length":8
+}
+12:{4 items
+"name":"MISTRESU"
+"label":"Standard Units"
+"type":"Char"
+"length":50
+}
+13:{4 items
+"name":"MIRESCAT"
+"label":"Result Category"
+"type":"Char"
+"length":50
+}
+14:{4 items
+"name":"MISTAT"
+"label":"Completion Status"
+"type":"Char"
+"length":50
+}
+]
+"records":{15 items
+"STUDYID":[2 items
+0:"ABC"
+1:"ABC"
+]
+"DOMAIN":[2 items
+0:"MI"
+1:"MI"
+]
+"USUBJID":[2 items
+0:"ABC-1001"
+1:"ABC-1002"
+]
+"MISEQ":[2 items
+0:1
+1:1
+]
+"MITESTCD":[2 items
+0:"HER2"
+1:"HER2"
+]
+"MITEST":[2 items
+0:"Human Epidermal Growth Factor Receptor 2"
+1:"Human Epidermal Growth Factor Receptor 2"
+]
+"MICAT":[2 items
+0:""
+1:""
+]
+"MISCAT":[2 items
+0:""
+1:""
+]
+"MIORRES":[2 items
+0:"0"
+1:"2+"
+]
+"MIORRESU":[2 items
+0:""
+1:""
+]
+"MISTRESC":[2 items
+0:"0"
+1:"2+"
+]
+"MISTRESN":[2 items
+0:0
+1:NULL
+]
+"MISTRESU":[2 items
+0:""
+1:""
+]
+"MIRESCAT":[2 items
+0:"NEGATIVE"
+1:"POSITIVE"
+]
+"MISTAT":[2 items
+0:""
+1:""
+]
+}
+}
+3:{5 items
+"filename":"lb.xpt"
+"label":"Laboratory Test Results"
+"domain":"LB"
+"variables":[12 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":50
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":50
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":50
+}
+3:{4 items
+"name":"LBSEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"LBTESTCD"
+"label":"Lab Test or Examination Short Name"
+"type":"Char"
+"length":50
+}
+5:{4 items
+"name":"LBTEST"
+"label":"Lab Test or Examination Name"
+"type":"Char"
+"length":50
+}
+6:{4 items
+"name":"LBORRES"
+"label":"Result or Finding in Original Units"
+"type":"Char"
+"length":50
+}
+7:{4 items
+"name":"LBORRESU"
+"label":"Original Units"
+"type":"Char"
+"length":50
+}
+8:{4 items
+"name":"LBSTRESC"
+"label":"Character Result/Finding in Std Format"
+"type":"Char"
+"length":50
+}
+9:{4 items
+"name":"LBSTRESN"
+"label":"Numeric Result/Finding in Standard Units"
+"type":"Num"
+"length":8
+}
+10:{4 items
+"name":"LBSTRESU"
+"label":"Standard Units"
+"type":"Char"
+"length":50
+}
+11:{4 items
+"name":"LBSTAT"
+"label":"Completion Status"
+"type":"Char"
+"length":50
+}
+]
+"records":{12 items
+"STUDYID":[2 items
+0:"1234"
+1:"1234"
+]
+"DOMAIN":[2 items
+0:"LB"
+1:"LB"
+]
+"USUBJID":[2 items
+0:"123101"
+1:"123101"
+]
+"LBSEQ":[2 items
+0:1
+1:1
+]
+"LBTESTCD":[2 items
+0:"ALB"
+1:"Prot"
+]
+"LBTEST":[2 items
+0:"Albumin"
+1:"Protein"
+]
+"LBORRES":[2 items
+0:"30"
+1:"200"
+]
+"LBORRESU":[2 items
+0:"g/L"
+1:"g/L"
+]
+"LBSTRESC":[2 items
+0:"30"
+1:"200"
+]
+"LBSTRESN":[2 items
+0:30
+1:200
+]
+"LBSTRESU":[2 items
+0:"g/L"
+1:"g/L"
+]
+"LBSTAT":[2 items
+0:""
+1:""
+]
+}
+}
+4:{5 items
+"filename":"vs.xpt"
+"label":"Vital Signs"
+"domain":"VS"
+"variables":[12 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":50
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":50
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":50
+}
+3:{4 items
+"name":"VSSEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"VSTESTCD"
+"label":"Vital Signs Test Short Name"
+"type":"Char"
+"length":50
+}
+5:{4 items
+"name":"VSTEST"
+"label":"Vital Signs Test Name"
+"type":"Char"
+"length":50
+}
+6:{4 items
+"name":"VSORRES"
+"label":"Result or Finding in Original Units"
+"type":"Char"
+"length":50
+}
+7:{4 items
+"name":"VSORRESU"
+"label":"Original Units"
+"type":"Char"
+"length":50
+}
+8:{4 items
+"name":"VSSTRESC"
+"label":"Character Result/Finding in Std Format"
+"type":"Char"
+"length":50
+}
+9:{4 items
+"name":"VSSTRESN"
+"label":"Numeric Result/Finding in Standard Units"
+"type":"Num"
+"length":8
+}
+10:{4 items
+"name":"VSSTRESU"
+"label":"Standard Units"
+"type":"Char"
+"length":50
+}
+11:{4 items
+"name":"VSSTAT"
+"label":"Completion Status"
+"type":"Char"
+"length":50
+}
+]
+"records":{12 items
+"STUDYID":[3 items
+0:"1234"
+1:"1234"
+2:"1234"
+]
+"DOMAIN":[3 items
+0:"VS"
+1:"VS"
+2:"VS"
+]
+"USUBJID":[3 items
+0:"123101"
+1:"123101"
+2:"123101"
+]
+"VSSEQ":[3 items
+0:1
+1:2
+2:3
+]
+"VSTESTCD":[3 items
+0:"SYSBP"
+1:"DIABP"
+2:"FRMSIZE"
+]
+"VSTEST":[3 items
+0:"Systolic Blood Pressure"
+1:"Diastolic Blood Pressure"
+2:"Frame Size"
+]
+"VSORRES":[3 items
+0:"154"
+1:"44"
+2:"SMALL"
+]
+"VSORRESU":[3 items
+0:"mmHg"
+1:"mmHg"
+2:""
+]
+"VSSTRESC":[3 items
+0:"154"
+1:"44"
+2:"SMALL"
+]
+"VSSTRESN":[3 items
+0:154
+1:44
+2:NULL
+]
+"VSSTRESU":[3 items
+0:"mmHg"
+1:"mmHg"
+2:""
+]
+"VSSTAT":[3 items
+0:""
+1:""
+2:""
+]
+}
+}
+]
+"standard":{2 items
+"product":"sdtmig"
+"version":"3-4"
+}
+"codelists":[]0 items
+}

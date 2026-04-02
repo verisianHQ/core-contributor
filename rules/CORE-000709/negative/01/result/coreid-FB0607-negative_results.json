@@ -1,0 +1,47 @@
+{
+    "DM": [
+        {
+            "executionStatus": "success",
+            "dataset": "dm.xpt",
+            "domain": "DM",
+            "variables": [
+                "CEDECOD",
+                "CETERM",
+                "DTHFL"
+            ],
+            "message": "DTHFL is not 'Y' when CETERM or CEDECOD  = 'DEATH'.",
+            "errors": [
+                {
+                    "value": {
+                        "CETERM": "DEATH",
+                        "CEDECOD": "",
+                        "DTHFL": ""
+                    },
+                    "dataset": "dm.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001"
+                },
+                {
+                    "value": {
+                        "CETERM": "Dead",
+                        "CEDECOD": "DEATH",
+                        "DTHFL": ""
+                    },
+                    "dataset": "dm.xpt",
+                    "row": 2,
+                    "USUBJID": "CDISC002"
+                }
+            ]
+        }
+    ],
+    "CE": [
+        {
+            "executionStatus": "skipped",
+            "dataset": null,
+            "domain": "CE",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ]
+}

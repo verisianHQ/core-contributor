@@ -1,0 +1,39 @@
+{2 items
+"DS":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"ds.xpt"
+"domain":"DS"
+"variables":[3 items
+0:"$ds_dsdecod"
+1:"DTHFL"
+2:"USUBJID"
+]
+"message":"When the death flag in DM is set to "Y", a record is not present in DS domain with DSDECOD= "DEATH""
+"errors":[1 item
+0:{2 items
+"value":{3 items
+"USUBJID":"CDISC002"
+"DTHFL":"Y"
+"$ds_dsdecod":[3 items
+0:"RANDOMIZED"
+1:"COMPLETED"
+2:"INFORMED CONSENT OBTAINED"
+]
+}
+"dataset":"ds.xpt"
+}
+]
+}
+]
+"DM":[1 item
+0:{6 items
+"executionStatus":"skipped"
+"dataset":NULL
+"domain":"DM"
+"variables":[]0 items
+"message":NULL
+"errors":[]0 items
+}
+]
+}

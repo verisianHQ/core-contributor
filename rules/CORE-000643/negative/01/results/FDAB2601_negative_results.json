@@ -1,0 +1,25 @@
+{
+  "VS": [
+    {
+      "executionStatus": "success",
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "variables": [
+        "VSBLFL",
+        "VSSTRESC"
+      ],
+      "message": "BLFL is set to \"Y\", but no value for STRESC is provided",
+      "errors": [
+        {
+          "value": {
+            "VSSTRESC": "",
+            "VSBLFL": "Y"
+          },
+          "row": 3,
+          "USUBJID": "CDISC001",
+          "SEQ": 3
+        }
+      ]
+    }
+  ]
+}

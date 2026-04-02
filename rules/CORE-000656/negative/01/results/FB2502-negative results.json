@@ -1,0 +1,56 @@
+{
+    "DM": [
+        {
+            "executionStatus": "success",
+            "dataset": "dm.xpt",
+            "domain": "DM",
+            "variables": [
+                "ACTARM",
+                "ARM"
+            ],
+            "message": "Values between ARM and ACTARM are not matching",
+            "errors": [
+                {
+                    "value": {
+                        "ACTARM": "Placebo",
+                        "ARM": "Zanomaline Low Dose (54 mg)"
+                    },
+                    "row": 1,
+                    "USUBJID": "CDISC001"
+                },
+                {
+                    "value": {
+                        "ACTARM": "Zanomaline Low Dose (54 mg)",
+                        "ARM": "Zanomaline High Dose (81 mg)"
+                    },
+                    "row": 3,
+                    "USUBJID": "CDISC003"
+                },
+                {
+                    "value": {
+                        "ACTARM": "Zanomaline High Dose (81 mg",
+                        "ARM": "Zanomaline High Dose (81 mg)"
+                    },
+                    "row": 5,
+                    "USUBJID": "CDISC005"
+                },
+                {
+                    "value": {
+                        "ACTARM": "Zanomaline Low Dose (54 mg)",
+                        "ARM": "Zanomaline Dose (54 mg)"
+                    },
+                    "row": 6,
+                    "USUBJID": "CDISC006"
+                },
+                {
+                    "value": {
+                        "ACTARM": "Zanomaline Low Dose (54 mg)",
+                        "ARM": "Zanomaline Low Dose (54 MG)"
+                    },
+                    "row": 8,
+                    "USUBJID": "CDISC016"
+                }
+            ]
+        }
+    ]
+}

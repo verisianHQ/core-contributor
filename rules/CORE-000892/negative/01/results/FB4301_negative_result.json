@@ -1,0 +1,72 @@
+{
+  "CM": [
+    {
+      "executionStatus": "success",
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "variables": [
+        "CMENDTC",
+        "CMENRF",
+        "CMENRTPT",
+        "CMSTDTC",
+        "CMSTRF",
+        "CMSTRTPT"
+      ],
+      "message": "End timing is provided without any starting information",
+      "errors": [
+        {
+          "value": {
+            "CMENDTC": "2013-04",
+            "CMENRF": null,
+            "CMENRTPT": null,
+            "CMSTRF": null,
+            "CMSTRTPT": null,
+            "CMSTDTC": null
+          },
+          "dataset": "cm.xpt",
+          "row": 1,
+          "USUBJID": "CDISC001",
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "CMENDTC": null,
+            "CMENRF": "DURING",
+            "CMENRTPT": null,
+            "CMSTRF": null,
+            "CMSTRTPT": null,
+            "CMSTDTC": null
+          },
+          "dataset": "cm.xpt",
+          "row": 6,
+          "USUBJID": "CDISC002",
+          "SEQ": 3
+        },
+        {
+          "value": {
+            "CMENDTC": null,
+            "CMENRF": null,
+            "CMENRTPT": "VISIT99",
+            "CMSTRF": null,
+            "CMSTRTPT": null,
+            "CMSTDTC": null
+          },
+          "dataset": "cm.xpt",
+          "row": 8,
+          "USUBJID": "CDISC003",
+          "SEQ": 1
+        }
+      ]
+    }
+  ],
+  "DM": [
+    {
+      "executionStatus": "skipped",
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "variables": [],
+      "message": "Rule skipped - doesn't apply to class for rule id=None, dataset=DM",
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+# Variable: DTHFL
+# Condition: CE record with CETERM or CEDECOD = "DEATH" present for the subject
+# Rule: DTHFL = 'Y'
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0607
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0607
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0607
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - any:
+        - name: CETERM
+          operator: equal_to
+          value: DEATH
+          value_is_literal: true
+        - name: CEDECOD
+          operator: equal_to
+          value: DEATH
+          value_is_literal: true
+    - all:
+        - name: DTHFL
+          operator: not_equal_to
+          value: Y
+          value_is_literal: true
+Core:
+  Id: CORE-000709
+  Status: Published
+  Version: '1'
+Description: When a record is present in the CE dataset where CETERM or
+  CEDECOD  = 'DEATH' then death flag (DTHFL) should be populated as 'Y' in the
+  DM dataset for the corresponding subject.
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: CE
+Outcome:
+  Message: CETERM or CEDECOD is 'DEATH' in CE dataset, but DTHFL in DM dataset is
+    not "Y".
+  Output Variables:
+    - CETERM
+    - CEDECOD
+    - DTHFL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

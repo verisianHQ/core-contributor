@@ -1,0 +1,51 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Ethnicity has been collected but the values is not mapped to \"HISPANIC OR LATINO\" or \"NOT HISPANIC OR LATINO\"",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "CETHNIC": "Not in dataset",
+            "ETHNIC": "HISPANIC"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "S003",
+          "value": {
+            "CETHNIC": "Not in dataset",
+            "ETHNIC": "NOT HISPANIC"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "S004",
+          "value": {
+            "CETHNIC": "Not in dataset",
+            "ETHNIC": "XXXXXXX"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "suppdm.xpt",
+      "domain": "SUPPDM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000726, dataset=SUPPDM",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

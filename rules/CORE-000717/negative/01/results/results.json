@@ -1,0 +1,43 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AESTDTC falls after the last DSSTDTC.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "$max_dsstdtc": "2022-01-19",
+            "AESTDTC": "2022-02-20"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000717, dataset=DS",
+      "number_errors": 0,
+      "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ae.xpt",
+      "Row": 7,
+      "Variable": "AESTDTC"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 9,
+      "Variable": "DSSTDTC"
+    }
+  ]
+}

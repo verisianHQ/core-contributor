@@ -1,0 +1,122 @@
+{
+  "datasets": [
+    {
+      "dataset": "suppdm.xpt",
+      "domain": "SUPPDM",
+      "execution_status": "success",
+      "execution_message": "QNAM and QLABEL do not have a one-to-one relationship.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC008",
+          "value": {
+            "QLABEL": "Race 1",
+            "QNAM": "RACE1"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC008",
+          "value": {
+            "QLABEL": "Race 2",
+            "QNAM": "RACE1"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC008",
+          "value": {
+            "QLABEL": "Race 3",
+            "QNAM": "RACE1"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "suppec.xpt",
+      "domain": "SUPPEC",
+      "execution_status": "success",
+      "execution_message": "QNAM and QLABEL do not have a one-to-one relationship.",
+      "number_errors": 7,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "QLABEL": "Reason for Occur Value",
+            "QNAM": "ECREASOC"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "QLABEL": "Reason Occur Value",
+            "QNAM": "ECREASOC"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "QLABEL": "Reason for Occur",
+            "QNAM": "ECREASOC"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "QLABEL": "Reason Occur",
+            "QNAM": "ECREASOC"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "QLABEL": "Reason Occur Value",
+            "QNAM": "REASOC"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "QLABEL": "Reason for Occur",
+            "QNAM": "REASOC"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "QLABEL": "Reason Occur",
+            "QNAM": "REASOC"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
+}

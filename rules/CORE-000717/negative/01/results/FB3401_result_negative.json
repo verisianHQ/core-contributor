@@ -1,0 +1,36 @@
+{
+  "DS": [
+    {
+      "executionStatus": "skipped",
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "variables": [],
+      "message": "Rule skipped - doesn't apply to domain for rule id=None, dataset=DS",
+      "errors": []
+    }
+  ],
+  "AE": [
+    {
+      "executionStatus": "success",
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "variables": [
+        "$max_dsstdtc",
+        "AESTDTC"
+      ],
+      "message": "AESTDTC is greater than max(DSSTDTC)",
+      "errors": [
+        {
+          "value": {
+            "$max_dsstdtc": "2022-01-19",
+            "AESTDTC": "2022-02-20"
+          },
+          "dataset": "ae.xpt",
+          "row": 3,
+          "USUBJID": "CDISC001",
+          "SEQ": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "SM": [
+    {
+      "executionStatus": "success",
+      "dataset": "sm.xpt",
+      "domain": "SM",
+      "variables": [
+        "SMENDTC",
+        "SMSTDTC"
+      ],
+      "message": "SMSTDTC is greater than SMENDTC",
+      "errors": [
+        {
+          "value": {
+            "SMENDTC": "2018-07-18",
+            "SMSTDTC": "2018-07-18T11:15"
+          },
+          "dataset": "sm.xpt",
+          "row": 3,
+          "USUBJID": "CDISC001",
+          "SEQ": 3
+        },
+        {
+          "value": {
+            "SMENDTC": "2018-04-17T09",
+            "SMSTDTC": "2018-04-17T09:25"
+          },
+          "dataset": "sm.xpt",
+          "row": 5,
+          "USUBJID": "CDISC002",
+          "SEQ": 2
+        }
+      ]
+    }
+  ],
+  "SE": [
+    {
+      "executionStatus": "success",
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "variables": [
+        "SEENDTC",
+        "SESTDTC"
+      ],
+      "message": "SESTDTC is greater than SEENDTC",
+      "errors": [
+        {
+          "value": {
+            "SEENDTC": "2006-03-10",
+            "SESTDTC": "2018-01-24"
+          },
+          "dataset": "se.xpt",
+          "row": 1,
+          "USUBJID": "CDISC001",
+          "SEQ": 1
+        }
+      ]
+    }
+  ],
+  "SV": [
+    {
+      "executionStatus": "success",
+      "dataset": "sv.xpt",
+      "domain": "SV",
+      "variables": [
+        "SVENDTC",
+        "SVSTDTC"
+      ],
+      "message": "SVSTDTC is greater than SVENDTC",
+      "errors": [
+        {
+          "value": {
+            "SVSTDTC": "2018-02-20T16:38",
+            "SVENDTC": "2018-02-20T16:31:00"
+          },
+          "dataset": "sv.xpt",
+          "row": 2,
+          "USUBJID": "CDISC001"
+        }
+      ]
+    }
+  ],
+  "AE": [
+    {
+      "executionStatus": "success",
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "variables": [
+        "AEENDTC",
+        "AESTDTC"
+      ],
+      "message": "AESTDTC is greater than AEENDTC",
+      "errors": [
+        {
+          "value": {
+            "AEENDTC": "2018-06-14",
+            "AESTDTC": "2019"
+          },
+          "dataset": "ae.xpt",
+          "row": 8,
+          "USUBJID": "CDISC003"
+        }
+      ]
+    }
+  ],
+  "CM": [
+    {
+      "executionStatus": "success",
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "variables": [
+        "CMENDTC",
+        "CMSTDTC"
+      ],
+      "message": "CMSTDTC is greater than CMENDTC",
+      "errors": [
+        {
+          "value": {
+            "CMENDTC": "2018-06",
+            "CMSTDTC": "2018-07"
+          },
+          "dataset": "cm.xpt",
+          "row": 3,
+          "USUBJID": "CDISC001",
+          "SEQ": 3
+        }
+      ]
+    }
+  ]
+}

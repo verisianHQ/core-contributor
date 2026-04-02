@@ -1,0 +1,154 @@
+{
+    "CM": [
+        {
+            "executionStatus": "success",
+            "dataset": "cm.xpt",
+            "domain": "CM",
+            "variables": [
+                "CMDTC"
+            ],
+            "message": "The Study Day of Visit/Collection/Exam (CMDY) is not present in the dataset when Date/Time of Collection (CMDTC) is present.",
+            "errors": [
+                {
+                    "value": {
+                        "CMDTC": ""
+                    },
+                    "dataset": "cm.xpt"
+                }
+            ]
+        }
+    ],
+    "CE": [
+        {
+            "executionStatus": "success",
+            "dataset": "ce.xpt",
+            "domain": "CE",
+            "variables": [
+                "CEDTC"
+            ],
+            "message": "The Study Day of Visit/Collection/Exam (CEDY) is not present in the dataset when Date/Time of Collection (CEDTC) is present.",
+            "errors": [
+                {
+                    "value": {
+                        "CEDTC": ""
+                    },
+                    "dataset": "ce.xpt"
+                }
+            ]
+        }
+    ],
+    "LB": [
+        {
+            "executionStatus": "success",
+            "dataset": "lb.xpt",
+            "domain": "LB",
+            "variables": [
+                "LBDTC"
+            ],
+            "message": "The Study Day of Visit/Collection/Exam (LBDY) is not present in the dataset when Date/Time of Collection (LBDTC) is present.",
+            "errors": [
+                {
+                    "value": {
+                        "LBDTC": "2012-11-23T11:20"
+                    },
+                    "dataset": "lb.xpt"
+                }
+            ]
+        }
+    ],
+    "FA": [
+        {
+            "executionStatus": "success",
+            "dataset": "fa.xpt",
+            "domain": "FA",
+            "variables": [
+                "FADTC"
+            ],
+            "message": "The Study Day of Visit/Collection/Exam (FADY) is not present in the dataset when Date/Time of Collection (FADTC) is present.",
+            "errors": [
+                {
+                    "value": {
+                        "FADTC": "2012-12-02"
+                    },
+                    "dataset": "fa.xpt"
+                }
+            ]
+        }
+    ],
+    "SE": [
+        {
+            "executionStatus": "success",
+            "dataset": "se.xpt",
+            "domain": "SE",
+            "variables": [
+                "SEDTC"
+            ],
+            "message": "The Study Day of Visit/Collection/Exam (SEDY) is not present in the dataset when Date/Time of Collection (SEDTC) is present.",
+            "errors": [
+                {
+                    "value": {
+                        "SEDTC": ""
+                    },
+                    "dataset": "se.xpt"
+                }
+            ]
+        }
+    ],
+    "SV": [
+        {
+            "executionStatus": "success",
+            "dataset": "sv.xpt",
+            "domain": "SV",
+            "variables": [
+                "SVDTC"
+            ],
+            "message": "The Study Day of Visit/Collection/Exam (SVDY) is not present in the dataset when Date/Time of Collection (SVDTC) is present.",
+            "errors": [
+                {
+                    "value": {
+                        "SVDTC": ""
+                    },
+                    "dataset": "sv.xpt"
+                }
+            ]
+        }
+    ],
+    "SM": [
+        {
+            "executionStatus": "success",
+            "dataset": "sm.xpt",
+            "domain": "SM",
+            "variables": [
+                "SMDTC"
+            ],
+            "message": "The Study Day of Visit/Collection/Exam (SMDY) is not present in the dataset when Date/Time of Collection (SMDTC) is present.",
+            "errors": [
+                {
+                    "value": {
+                        "SMDTC": ""
+                    },
+                    "dataset": "sm.xpt"
+                }
+            ]
+        }
+    ],
+    "DM": [
+        {
+            "executionStatus": "success",
+            "dataset": "dm.xpt",
+            "domain": "DM",
+            "variables": [
+                "DMDTC"
+            ],
+            "message": "The Study Day of Visit/Collection/Exam (DMDY) is not present in the dataset when Date/Time of Collection (DMDTC) is present.",
+            "errors": [
+                {
+                    "value": {
+                        "DMDTC": ""
+                    },
+                    "dataset": "dm.xpt"
+                }
+            ]
+        }
+    ]
+}

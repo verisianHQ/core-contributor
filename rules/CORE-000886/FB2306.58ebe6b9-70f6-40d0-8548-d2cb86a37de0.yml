@@ -1,0 +1,80 @@
+# Variable: ARMNRS
+# Condition: DM.USUBJID not in EX.USUBJID AND TSVAL = "INTERVENTIONAL" when TSPARMCD = "STYPE"
+# Rule: ARMNRS^=null 
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: For interventional studies all treated subjects should have
+                  exposure data.
+                Document: FDA
+                Section: FDAB023
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB2306
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: For interventional studies all treated subjects should have
+                  exposure data.
+                Document: FDA
+                Section: FDAB023
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB2306
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: ARMNRS
+      operator: empty
+    - name: TSPARMCD
+      operator: equal_to
+      value: "STYPE"
+      value_is_literal: true
+    - name: TSVAL
+      operator: equal_to
+      value: "INTERVENTIONAL"
+      value_is_literal: true
+    - name: USUBJID
+      operator: is_not_contained_by
+      value: $usubjids_in_ex
+Core:
+  Status: Published
+  Version: '1'
+  Id: CORE-000886
+Description: All subjects that have no record in the Exposure domain who are
+  participating in a study that includes an interventional product should have
+  ARMNRS populated.
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - STUDYID
+    Name: TS
+Operations:
+  - domain: EX
+    id: $usubjids_in_ex
+    name: USUBJID
+    operator: distinct
+Outcome:
+  Message: A subject has a no record in EX but is not populated ARMNRS while
+    participating in an interventional study
+  Output Variables:
+    - ARMNRS
+    - TSPARMCD
+    - TSVAL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

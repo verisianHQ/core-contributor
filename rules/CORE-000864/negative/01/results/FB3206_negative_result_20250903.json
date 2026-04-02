@@ -1,0 +1,146 @@
+{9 items
+"CM":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"cm.xpt"
+"domain":"CM"
+"variables":[1 item
+0:"CMENDY"
+]
+"message":"The End Date/Time of Observation (CMENDTC) is not present in the dataset when Study Day of End of Observation (CMENDY) is present."
+"errors":[1 item
+0:{2 items
+"value":{1 item
+"CMENDY":151
+}
+"dataset":"cm.xpt"
+}
+]
+}
+]
+"CE":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"ce.xpt"
+"domain":"CE"
+"variables":[1 item
+0:"CEENDY"
+]
+"message":"The End Date/Time of Observation (CEENDTC) is not present in the dataset when Study Day of End of Observation (CEENDY) is present."
+"errors":[1 item
+0:{2 items
+"value":{1 item
+"CEENDY":NULL
+}
+"dataset":"ce.xpt"
+}
+]
+}
+]
+"LB":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"lb.xpt"
+"domain":"LB"
+"variables":[1 item
+0:"LBENDY"
+]
+"message":"The End Date/Time of Observation (LBENDTC) is not present in the dataset when Study Day of End of Observation (LBENDY) is present."
+"errors":[1 item
+0:{2 items
+"value":{1 item
+"LBENDY":NULL
+}
+"dataset":"lb.xpt"
+}
+]
+}
+]
+"FA":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"fa.xpt"
+"domain":"FA"
+"variables":[1 item
+0:"FAENDY"
+]
+"message":"The End Date/Time of Observation (FAENDTC) is not present in the dataset when Study Day of End of Observation (FAENDY) is present."
+"errors":[1 item
+0:{2 items
+"value":{1 item
+"FAENDY":NULL
+}
+"dataset":"fa.xpt"
+}
+]
+}
+]
+"SE":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"se.xpt"
+"domain":"SE"
+"variables":[1 item
+0:"SEENDY"
+]
+"message":"The End Date/Time of Observation (SEENDTC) is not present in the dataset when Study Day of End of Observation (SEENDY) is present."
+"errors":[1 item
+0:{2 items
+"value":{1 item
+"SEENDY":1
+}
+"dataset":"se.xpt"
+}
+]
+}
+]
+"SV":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"sv.xpt"
+"domain":"SV"
+"variables":[1 item
+0:"SVENDY"
+]
+"message":"The End Date/Time of Observation (SVENDTC) is not present in the dataset when Study Day of End of Observation (SVENDY) is present."
+"errors":[1 item
+0:{2 items
+"value":{1 item
+"SVENDY":-7
+}
+"dataset":"sv.xpt"
+}
+]
+}
+]
+"SM":[1 item
+0:{6 items
+"executionStatus":"skipped"
+"dataset":"sm.xpt"
+"domain":"SM"
+"variables":[]0 items
+"message":"Rule skipped - doesn't apply to class for rule id=FDA.SDTMIG.SD2272, dataset=SM"
+"errors":[]0 items
+}
+]
+"TV":[1 item
+0:{6 items
+"executionStatus":"skipped"
+"dataset":"tv.xpt"
+"domain":"TV"
+"variables":[]0 items
+"message":"Rule skipped - doesn't apply to class for rule id=FDA.SDTMIG.SD2272, dataset=TV"
+"errors":[]0 items
+}
+]
+"DM":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"dm.xpt"
+"domain":"DM"
+"variables":[]0 items
+"message":NULL
+"errors":[]0 items
+}
+]
+}

@@ -1,0 +1,191 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000885, dataset=TS",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "A subject has a record in DM but not in EX while participating in an interventional study",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "YYY100",
+          "value": {
+            "ARMNRS": null,
+            "TSVAL": "INTERVENTIONAL"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "ZZZ200",
+          "value": {
+            "ARMNRS": null,
+            "TSVAL": "INTERVENTIONAL"
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "SSS900",
+          "value": {
+            "ARMNRS": "UNPLANNED TREATMENT",
+            "TSVAL": "INTERVENTIONAL"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000885, dataset=EX",
+      "number_errors": 0,
+      "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ts.xpt",
+      "Row": 14,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 14,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 14,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 1,
+      "Variable": "ARMNRS"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 10,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 10,
+      "Variable": "ARMCD"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 10,
+      "Variable": "ARM"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 10,
+      "Variable": "ACTARMCD"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 10,
+      "Variable": "ACTARM"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 10,
+      "Variable": "ARMNRS"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 11,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 11,
+      "Variable": "ARMCD"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 11,
+      "Variable": "ARM"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 11,
+      "Variable": "ACTARMCD"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 11,
+      "Variable": "ACTARM"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 11,
+      "Variable": "ARMNRS"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 12,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 12,
+      "Variable": "ARMCD"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 12,
+      "Variable": "ARM"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 12,
+      "Variable": "ACTARMCD"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 12,
+      "Variable": "ACTARM"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 12,
+      "Variable": "ARMNRS"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 5,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 6,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 7,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 8,
+      "Variable": "USUBJID"
+    }
+  ]
+}

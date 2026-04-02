@@ -1,0 +1,115 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Values between ARM and ACTARM are not matching",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ACTARM": "Placebo",
+            "ARM": "Zanomaline Low Dose (54 mg)"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC003",
+          "value": {
+            "ACTARM": "Zanomaline Low Dose (54 mg)",
+            "ARM": "Zanomaline High Dose (81 mg)"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "CDISC005",
+          "value": {
+            "ACTARM": "Zanomaline High Dose (81 mg",
+            "ARM": "Zanomaline High Dose (81 mg)"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "CDISC006",
+          "value": {
+            "ACTARM": "Zanomaline Low Dose (54 mg)",
+            "ARM": "Zanomaline Dose (54 mg)"
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "CDISC016",
+          "value": {
+            "ACTARM": "Zanomaline Low Dose (54 mg)",
+            "ARM": "Zanomaline Low Dose (54 MG)"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "dm.xpt",
+      "Row": 5,
+      "Variable": "ARM"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 5,
+      "Variable": "ACTARM"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 7,
+      "Variable": "ARM"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 7,
+      "Variable": "ACTARM"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 9,
+      "Variable": "ARM"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 9,
+      "Variable": "ACTARM"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 10,
+      "Variable": "ARM"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 10,
+      "Variable": "ACTARM"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 12,
+      "Variable": "ARM"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 12,
+      "Variable": "ACTARM"
+    }
+  ]
+}

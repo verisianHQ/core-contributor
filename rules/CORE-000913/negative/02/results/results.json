@@ -1,0 +1,96 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000913, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "DSSTDTC for DEATH record in DS dataset is not equal to DTHDTC in the DM dataset.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 53,
+          "SEQ": null,
+          "USUBJID": "01-701-1211",
+          "value": {
+            "DSDECOD": "DEATH",
+            "DSSTDTC": "2013-01-14",
+            "DTHDTC": "2013-01-15"
+          },
+          "validated": false
+        },
+        {
+          "row": 196,
+          "SEQ": null,
+          "USUBJID": "01-704-1445",
+          "value": {
+            "DSDECOD": "DEATH",
+            "DSSTDTC": "2014-11-01",
+            "DTHDTC": null
+          },
+          "validated": false
+        },
+        {
+          "row": 372,
+          "SEQ": null,
+          "USUBJID": "01-710-1083",
+          "value": {
+            "DSDECOD": "DEATH",
+            "DSSTDTC": "2013-08-99",
+            "DTHDTC": "2013-08-02"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "dm.xpt",
+      "Row": 1,
+      "Variable": "DTHDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 29,
+      "Variable": "DTHDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 100,
+      "Variable": "DTHDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 195,
+      "Variable": "DTHDTC"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 56,
+      "Variable": "DSSTDTC"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 57,
+      "Variable": "DSSTDTC"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 200,
+      "Variable": "DSSTDTC"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 376,
+      "Variable": "DSSTDTC"
+    }
+  ]
+}

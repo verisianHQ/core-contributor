@@ -1,0 +1,161 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "ARMCD and ARM do not have a one-to-one relationship.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ARM": "Zanomaline Low Dose (54 mg)",
+            "ARMCD": "ZAN_LOW"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "ARM": "Zanomaline High Dose (81 mg)",
+            "ARMCD": "ZAN_LOW"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "ta.xpt",
+      "domain": "TA",
+      "execution_status": "success",
+      "execution_message": "ARMCD and ARM do not have a one-to-one relationship.",
+      "number_errors": 7,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARM": "PlaceboA",
+            "ARMCD": "PLACEBO"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARM": "PlaceboB",
+            "ARMCD": "PLACEBO"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARM": "Zanomaline Low Dose (54 mg)1",
+            "ARMCD": "ZAN_LOW"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARM": "Zanomaline Low Dose (54 mg)2",
+            "ARMCD": "ZAN_LOW"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARM": "Zanomaline High Dose (81 mg)1",
+            "ARMCD": "ZAN_HIGH"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARM": "Zanomaline High Dose (81 mg)2",
+            "ARMCD": "ZAN_HIGH"
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARM": "Zanomaline High Dose (81 mg)3",
+            "ARMCD": "ZAN_HIGH"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "tv.xpt",
+      "domain": "TV",
+      "execution_status": "success",
+      "execution_message": "ARMCD and ARM do not have a one-to-one relationship.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARM": "PlaceboA",
+            "ARMCD": "PLACEBO"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARM": "PlaceboB",
+            "ARMCD": "PLACEBO"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARM": "Zanomaline Low Dose (54 mg)1",
+            "ARMCD": "ZAN_LOW"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ARM": "Zanomaline Low Dose (54 mg)2",
+            "ARMCD": "ZAN_LOW"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
+}

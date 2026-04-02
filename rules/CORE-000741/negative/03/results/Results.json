@@ -1,0 +1,171 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "The set  ('INTMODEL\u2019, 'INTTYPE','PCLASS') is not in the list of TSPARAMCD with TSVAL populated.",
+      "number_errors": 11,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "$STYPE_INTERVENTIONAL": 1,
+            "TSPARMCD": "INTMODEL",
+            "TSVAL": "NonEmpty"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "$STYPE_INTERVENTIONAL": 1,
+            "TSPARMCD": "INTTYPE",
+            "TSVAL": "N"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "$STYPE_INTERVENTIONAL": 1,
+            "TSPARMCD": "AGE",
+            "TSVAL": "asdf"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "$STYPE_INTERVENTIONAL": 1,
+            "TSPARMCD": "STYPE",
+            "TSVAL": "INTERVENTIONAL"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "$STYPE_INTERVENTIONAL": 1,
+            "TSPARMCD": "AGE",
+            "TSVAL": "46"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "$STYPE_INTERVENTIONAL": 1,
+            "TSPARMCD": "DCUTDTC",
+            "TSVAL": "2021-12-02 00:00:00"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "$STYPE_INTERVENTIONAL": 1,
+            "TSPARMCD": "DOSE",
+            "TSVAL": "25"
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "$STYPE_INTERVENTIONAL": 1,
+            "TSPARMCD": "DOSE",
+            "TSVAL": "50"
+          },
+          "validated": false
+        },
+        {
+          "row": 9,
+          "SEQ": 3,
+          "USUBJID": "None",
+          "value": {
+            "$STYPE_INTERVENTIONAL": 1,
+            "TSPARMCD": "DOSE",
+            "TSVAL": "10"
+          },
+          "validated": false
+        },
+        {
+          "row": 10,
+          "SEQ": 4,
+          "USUBJID": "None",
+          "value": {
+            "$STYPE_INTERVENTIONAL": 1,
+            "TSPARMCD": "DOSE",
+            "TSVAL": "20"
+          },
+          "validated": false
+        },
+        {
+          "row": 11,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "$STYPE_INTERVENTIONAL": 1,
+            "TSPARMCD": "DOSFRM",
+            "TSVAL": "CAPSULE"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ts.xpt",
+      "Row": 5,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 5,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 6,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 6,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 7,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 8,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 8,
+      "Variable": "TSVAL"
+    }
+  ]
+}

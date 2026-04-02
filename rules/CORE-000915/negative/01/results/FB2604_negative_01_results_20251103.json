@@ -1,0 +1,174 @@
+{
+    "LB": [
+        {
+            "executionStatus": "success",
+            "dataset": "lb.xpt",
+            "domain": "LB",
+            "variables": [
+                "LBCAT",
+                "LBLOBXFL",
+                "LBMETHOD",
+                "LBSCAT",
+                "LBSPEC",
+                "LBTESTCD"
+            ],
+            "message": "There are multiple records per assigned last observation before exposure flag (LBLOBXFL).",
+            "errors": [
+                {
+                    "value": {
+                        "LBSPEC": "SERUM",
+                        "LBSCAT": "ALBCAT1",
+                        "LBMETHOD": "METHOD-A",
+                        "LBTESTCD": "ALB",
+                        "LBCAT": "CHEMISTRY",
+                        "LBLOBXFL": "Y"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "LBSPEC": null,
+                        "LBSCAT": null,
+                        "LBMETHOD": "BASOMETHOD",
+                        "LBTESTCD": "BASO",
+                        "LBCAT": "HEMATOLOGY",
+                        "LBLOBXFL": "Y"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 2,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 5
+                },
+                {
+                    "value": {
+                        "LBSPEC": "SERUM",
+                        "LBSCAT": "ALBCAT2",
+                        "LBMETHOD": "METHOD-A",
+                        "LBTESTCD": "ALB",
+                        "LBCAT": "CHEMISTRY",
+                        "LBLOBXFL": "Y"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 3,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 38
+                },
+                {
+                    "value": {
+                        "LBSPEC": null,
+                        "LBSCAT": null,
+                        "LBMETHOD": "BASOMETHOD",
+                        "LBTESTCD": "BASO",
+                        "LBCAT": "HEMATOLOGY",
+                        "LBLOBXFL": "Y"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 4,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 42
+                },
+                {
+                    "value": {
+                        "LBSPEC": "SERUM",
+                        "LBSCAT": "ALBCAT1",
+                        "LBMETHOD": "METHOD-B",
+                        "LBTESTCD": "ALB",
+                        "LBCAT": "CHEMISTRY",
+                        "LBLOBXFL": "Y"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 5,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 73
+                },
+                {
+                    "value": {
+                        "LBSPEC": "SERUM",
+                        "LBSCAT": "ALBCAT2",
+                        "LBMETHOD": "METHOD-A",
+                        "LBTESTCD": "ALB",
+                        "LBCAT": "CHEMISTRY",
+                        "LBLOBXFL": "Y"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 7,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 38
+                },
+                {
+                    "value": {
+                        "LBSPEC": "SERUM",
+                        "LBSCAT": "ALBCAT2",
+                        "LBMETHOD": "METHOD-A",
+                        "LBTESTCD": "ALB",
+                        "LBCAT": "CHEMISTRY",
+                        "LBLOBXFL": "Y"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 8,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 103
+                },
+                {
+                    "value": {
+                        "LBSPEC": "SERUM",
+                        "LBSCAT": "ALBCAT1",
+                        "LBMETHOD": "METHOD-A",
+                        "LBTESTCD": "ALB",
+                        "LBCAT": "CHEMISTRY",
+                        "LBLOBXFL": "Y"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 9,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 118
+                },
+                {
+                    "value": {
+                        "LBSPEC": "SERUM",
+                        "LBSCAT": "ALBCAT1",
+                        "LBMETHOD": "METHOD-B",
+                        "LBTESTCD": "ALB",
+                        "LBCAT": "CHEMISTRY",
+                        "LBLOBXFL": "Y"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 12,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "LBSPEC": "URINE",
+                        "LBSCAT": "ALBCAT1",
+                        "LBMETHOD": "METHOD-A",
+                        "LBTESTCD": "ALB",
+                        "LBCAT": "CHEMISTRY",
+                        "LBLOBXFL": "Y"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 15,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 73
+                },
+                {
+                    "value": {
+                        "LBSPEC": "URINE",
+                        "LBSCAT": "ALBCAT1",
+                        "LBMETHOD": "METHOD-A",
+                        "LBTESTCD": "ALB",
+                        "LBCAT": "CHEMISTRY",
+                        "LBLOBXFL": "Y"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 24,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 163
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,456 @@
+{
+  "datasets": [
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "FASTAT = NOT DONE, but FAREASND is missing.",
+      "number_errors": 9,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FAREASND": null,
+            "FASTAT": "NOT DONE",
+            "FATESTCD": "WIDTH"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 8,
+          "USUBJID": "CDISC002",
+          "value": {
+            "FAREASND": null,
+            "FASTAT": "NOT DONE",
+            "FATESTCD": "WIDTH"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 2,
+          "USUBJID": "CDISC003",
+          "value": {
+            "FAREASND": null,
+            "FASTAT": "NOT DONE",
+            "FATESTCD": "WIDTH"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 14,
+          "USUBJID": "CDISC005",
+          "value": {
+            "FAREASND": null,
+            "FASTAT": "NOT DONE",
+            "FATESTCD": "WIDTH"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": 20,
+          "USUBJID": "CDISC005",
+          "value": {
+            "FAREASND": null,
+            "FASTAT": "NOT DONE",
+            "FATESTCD": "WIDTH"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": 2,
+          "USUBJID": "CDISC011",
+          "value": {
+            "FAREASND": null,
+            "FASTAT": "NOT DONE",
+            "FATESTCD": "WIDTH"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": 11,
+          "USUBJID": "CDISC011",
+          "value": {
+            "FAREASND": null,
+            "FASTAT": "NOT DONE",
+            "FATESTCD": "WIDTH"
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": 6,
+          "USUBJID": "CDISC014",
+          "value": {
+            "FAREASND": null,
+            "FASTAT": "NOT DONE",
+            "FATESTCD": "WIDTH"
+          },
+          "validated": false
+        },
+        {
+          "row": 9,
+          "SEQ": 4,
+          "USUBJID": "CDISC017",
+          "value": {
+            "FAREASND": null,
+            "FASTAT": "NOT DONE",
+            "FATESTCD": "LENGTH"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBSTAT = NOT DONE, but LBREASND is missing.",
+      "number_errors": 10,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBREASND": null,
+            "LBSTAT": "NOT DONE",
+            "LBTESTCD": "ALB"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 5,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBREASND": null,
+            "LBSTAT": "NOT DONE",
+            "LBTESTCD": "BASO"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 38,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBREASND": null,
+            "LBSTAT": "NOT DONE",
+            "LBTESTCD": "ALB"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 42,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBREASND": null,
+            "LBSTAT": "NOT DONE",
+            "LBTESTCD": "BASO"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": 73,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBREASND": null,
+            "LBSTAT": "NOT DONE",
+            "LBTESTCD": "ALB"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": 77,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBREASND": null,
+            "LBSTAT": "NOT DONE",
+            "LBTESTCD": "BASO"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": 103,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBREASND": null,
+            "LBSTAT": "NOT DONE",
+            "LBTESTCD": "ALB"
+          },
+          "validated": false
+        },
+        {
+          "row": 9,
+          "SEQ": 122,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBREASND": null,
+            "LBSTAT": "NOT DONE",
+            "LBTESTCD": "BASO"
+          },
+          "validated": false
+        },
+        {
+          "row": 10,
+          "SEQ": 148,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBREASND": null,
+            "LBSTAT": "NOT DONE",
+            "LBTESTCD": "ALB"
+          },
+          "validated": false
+        },
+        {
+          "row": 12,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "LBREASND": null,
+            "LBSTAT": "NOT DONE",
+            "LBTESTCD": "ALB"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "execution_status": "success",
+      "execution_message": "VSSTAT = NOT DONE, but VSREASND is missing.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSREASND": "Not in dataset",
+            "VSSTAT": "NOT DONE",
+            "VSTESTCD": "DIABP"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000774, dataset=AE",
+      "number_errors": 0,
+      "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "fa.xpt",
+      "Row": 5,
+      "Variable": "FASTAT"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 5,
+      "Variable": "FAREASND"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 6,
+      "Variable": "FASTAT"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 6,
+      "Variable": "FAREASND"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 7,
+      "Variable": "FASTAT"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 7,
+      "Variable": "FAREASND"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 8,
+      "Variable": "FASTAT"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 8,
+      "Variable": "FAREASND"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 9,
+      "Variable": "FASTAT"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 9,
+      "Variable": "FAREASND"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 10,
+      "Variable": "FASTAT"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 10,
+      "Variable": "FAREASND"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 11,
+      "Variable": "FASTAT"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 11,
+      "Variable": "FAREASND"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 12,
+      "Variable": "FASTAT"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 12,
+      "Variable": "FAREASND"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 13,
+      "Variable": "FASTAT"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 13,
+      "Variable": "FAREASND"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 5,
+      "Variable": "LBSTAT"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 5,
+      "Variable": "LBREASND"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 6,
+      "Variable": "LBSTAT"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 6,
+      "Variable": "LBREASND"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 7,
+      "Variable": "LBSTAT"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 7,
+      "Variable": "LBREASND"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 8,
+      "Variable": "LBSTAT"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 8,
+      "Variable": "LBREASND"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 9,
+      "Variable": "LBSTAT"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 9,
+      "Variable": "LBREASND"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 10,
+      "Variable": "LBSTAT"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 10,
+      "Variable": "LBREASND"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 11,
+      "Variable": "LBSTAT"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 11,
+      "Variable": "LBREASND"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 13,
+      "Variable": "LBSTAT"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 13,
+      "Variable": "LBREASND"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 14,
+      "Variable": "LBSTAT"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 14,
+      "Variable": "LBREASND"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 16,
+      "Variable": "LBSTAT"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 16,
+      "Variable": "LBREASND"
+    },
+    {
+      "Sheet": "vs.xpt",
+      "Row": 5,
+      "Variable": "VSSTAT"
+    }
+  ]
+}

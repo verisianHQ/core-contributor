@@ -1,0 +1,2507 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "FDA",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB032",
+                                        "Cited_Guidance": "Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3204",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB032",
+                                        "Cited_Guidance": "Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3204",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB032",
+                                        "Cited_Guidance": "Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3204",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB032",
+                                        "Cited_Guidance": "Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3204",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.0"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB032",
+                                        "Cited_Guidance": "Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3204",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB032",
+                                        "Cited_Guidance": "Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3204",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1.1"
+                    },
+                    {
+                        "Name": "SENDIG-AR",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB032",
+                                        "Cited_Guidance": "Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3204",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.0"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB032",
+                                        "Cited_Guidance": "Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3204",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.1"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB032",
+                                        "Cited_Guidance": "Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3204",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.2"
+                    },
+                    {
+                        "Name": "SENDIG-GENETOX",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB032",
+                                        "Cited_Guidance": "Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB3204",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "--DY",
+                    "operator": "exists"
+                },
+                {
+                    "name": "--DTC",
+                    "operator": "not_exists"
+                }
+            ]
+        },
+        "Core": {
+            "Id": "FDA.SDTMIG.SD2270",
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Collection Study Date/Time (--DTC) variable should be included into dataset, when Collection Study Day (--DY) variable is present.",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "The Date/Time of Collection (--DTC)  is not present in the dataset when Study Day of Visit/Collection/Exam (--DY) is present."
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "INTERVENTIONS",
+                    "EVENTS",
+                    "FINDINGS",
+                    "FINDINGS ABOUT",
+                    "SPECIAL PURPOSE"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "ALL"
+                ]
+            }
+        },
+        "Sensitivity": "Dataset",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "cm.xpt",
+            "label": "Concomitant/Prior Medications",
+            "domain": "CM",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CMTRT",
+                    "label": "Reported Name of Drug, Med, or Therapy",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMINDC",
+                    "label": "Indication",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMDOSE",
+                    "label": "Dose per Administration",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CMDOSU",
+                    "label": "Dose Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMDOSFRQ",
+                    "label": "Dosing Frequency per Interval",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMROUTE",
+                    "label": "Route of Administration",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMDTC",
+                    "label": "Date/Time of Collection",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMSTDTC",
+                    "label": "Start Date/Time of Medication",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMENDTC",
+                    "label": "End Date/Time of Medication",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMDY",
+                    "label": "Study Day of Collection",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CMSTDY",
+                    "label": "Study Day of Start of Medication",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CMENDY",
+                    "label": "Study Day of End of Medication",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CMSTRTPT",
+                    "label": "Start Relative to Reference Time Point",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMSTTPT",
+                    "label": "Start Reference Time Point",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMENRTPT",
+                    "label": "End Relative to Reference Time Point",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMENTPT",
+                    "label": "End Reference Time Point",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "CM",
+                    "CM",
+                    "CM",
+                    "CM"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001"
+                ],
+                "CMSEQ": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "CMTRT": [
+                    "ASPIRIN",
+                    "METAMUCIL",
+                    "HYDROCORTISONE, TOPICAL",
+                    "HYTRIN"
+                ],
+                "CMINDC": [
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE"
+                ],
+                "CMDOSE": [
+                    1,
+                    1,
+                    1,
+                    2
+                ],
+                "CMDOSU": [
+                    "TABLET",
+                    "TABLET",
+                    "TABLET",
+                    "TABLET"
+                ],
+                "CMDOSFRQ": [
+                    "QD",
+                    "PRN",
+                    "BID",
+                    "Q4H"
+                ],
+                "CMROUTE": [
+                    "ORAL",
+                    "ORAL",
+                    "TOPICAL",
+                    "ORAL"
+                ],
+                "EPOCH": [
+                    "SCREENING",
+                    "SCREENING",
+                    "TREATMENT",
+                    "TREATMENT"
+                ],
+                "CMDTC": [
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "CMSTDTC": [
+                    "2011",
+                    "2012-08",
+                    "2013-01-11",
+                    "2013-04-19"
+                ],
+                "CMENDTC": [
+                    "2013-04-29",
+                    "",
+                    "",
+                    "2013-05-14"
+                ],
+                "CMDY": [
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "CMSTDY": [
+                    null,
+                    null,
+                    43,
+                    141
+                ],
+                "CMENDY": [
+                    151,
+                    null,
+                    null,
+                    166
+                ],
+                "CMSTRTPT": [
+                    "BEFORE",
+                    "",
+                    "BEFORE",
+                    ""
+                ],
+                "CMSTTPT": [
+                    "SCREENING",
+                    "",
+                    "SCREENING",
+                    ""
+                ],
+                "CMENRTPT": [
+                    "",
+                    "ONGOING",
+                    "ONGOING",
+                    ""
+                ],
+                "CMENTPT": [
+                    "",
+                    "2013-05-20",
+                    "2013-05-20",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "ce.xpt",
+            "label": "Clinical Events",
+            "domain": "CE",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CESEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CEGRPID",
+                    "label": "Group ID",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CETERM",
+                    "label": "Reported Term for the Clinical Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CESEV",
+                    "label": "Severity/Intensity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CEDTC",
+                    "label": "Start Date/Time of Event Collection",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CESTDTC",
+                    "label": "Start Date/Time of Clinical Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CEENDTC",
+                    "label": "End Date/Time of Clinical Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CEDY",
+                    "label": "Study Day of Event Collection",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CESTDY",
+                    "label": "Study Day of Start of Event",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CEENDY",
+                    "label": "Study Day of End of Event",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CESTRTPT",
+                    "label": "Start Relative to Reference Time Point",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CESTTPT",
+                    "label": "Start Reference Time Point",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CEENRTPT",
+                    "label": "End Relative to Reference Time Point",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CEENTPT",
+                    "label": "End Reference Time Point",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "CE",
+                    "CE",
+                    "CE",
+                    "CE",
+                    "CE",
+                    "CE",
+                    "CE",
+                    "CE",
+                    "CE",
+                    "CE",
+                    "CE",
+                    "CE",
+                    "CE",
+                    "CE"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC003",
+                    "CDISC005",
+                    "CDISC005",
+                    "CDISC005",
+                    "CDISC005",
+                    "CDISC007",
+                    "CDISC011",
+                    "CDISC011",
+                    "CDISC014",
+                    "CDISC017",
+                    "CDISC018"
+                ],
+                "CESEQ": [
+                    1,
+                    1,
+                    5,
+                    14,
+                    1,
+                    2,
+                    3,
+                    4,
+                    1,
+                    2,
+                    4,
+                    1,
+                    5,
+                    8
+                ],
+                "CEGRPID": [
+                    "1",
+                    "1",
+                    "5",
+                    "14",
+                    "1",
+                    "2",
+                    "4",
+                    "5",
+                    "1",
+                    "2",
+                    "4",
+                    "1",
+                    "5",
+                    "8"
+                ],
+                "CETERM": [
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION"
+                ],
+                "CESEV": [
+                    "MODERATE",
+                    "MILD",
+                    "MILD",
+                    "MILD",
+                    "MILD",
+                    "MILD",
+                    "MILD",
+                    "MILD",
+                    "MODERATE",
+                    "MILD",
+                    "MILD",
+                    "MODERATE",
+                    "MODERATE",
+                    "MODERATE"
+                ],
+                "EPOCH": [
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT"
+                ],
+                "CEDTC": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "CESTDTC": [
+                    "2012-12-02",
+                    "2012-11-16",
+                    "2012-11-29",
+                    "2013-10-15",
+                    "2013-02-07",
+                    "2013-03-23",
+                    "2013-03-23",
+                    "2013-04-12",
+                    "2013-01-19",
+                    "2013-01-12",
+                    "2013-04-10",
+                    "2013-04-16",
+                    "2013-12-29",
+                    "2013-01-27"
+                ],
+                "CEENDTC": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "2013-02-07",
+                    "",
+                    "2013-03-26",
+                    "",
+                    "",
+                    "2013-01-12",
+                    "2013-06-05",
+                    "2013-05-02",
+                    "2014-02-19",
+                    "2013-01-28"
+                ],
+                "CEDY": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "CESTDY": [
+                    3,
+                    2,
+                    15,
+                    48,
+                    4,
+                    48,
+                    48,
+                    68,
+                    15,
+                    37,
+                    125,
+                    14,
+                    100,
+                    42
+                ],
+                "CEENDY": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    4,
+                    null,
+                    51,
+                    null,
+                    null,
+                    37,
+                    181,
+                    30,
+                    152,
+                    43
+                ],
+                "CESTRTPT": [
+                    "",
+                    "AFTER",
+                    "",
+                    "COINCIDENT",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "DURING/AFTER",
+                    "",
+                    "",
+                    ""
+                ],
+                "CESTTPT": [
+                    "",
+                    "FIRST DOSE",
+                    "",
+                    "FIRST DOSE",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "FIRST DOSE",
+                    "",
+                    "",
+                    ""
+                ],
+                "CEENRTPT": [
+                    "ONGOING",
+                    "ONGOING",
+                    "ONGOING",
+                    "",
+                    "",
+                    "ONGOING",
+                    "",
+                    "ONGOING",
+                    "ONGOING",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "CEENTPT": [
+                    "2013-05-20",
+                    "2013-01-14",
+                    "2013-01-14",
+                    "2013-02-13",
+                    "",
+                    "2013-08-06",
+                    "",
+                    "2013-08-06",
+                    "2013-06-20",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "lb.xpt",
+            "label": "Laboratory Test Results",
+            "domain": "LB",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LBSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBTESTCD",
+                    "label": "Lab Test or Examination Short Name",
+                    "type": "Char",
+                    "length": 7
+                },
+                {
+                    "name": "LBTEST",
+                    "label": "Lab Test or Examination Name",
+                    "type": "Char",
+                    "length": 39
+                },
+                {
+                    "name": "LBCAT",
+                    "label": "Category for Lab Test",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "LBORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 6
+                },
+                {
+                    "name": "LBORRESU",
+                    "label": "Original Units",
+                    "type": "Char",
+                    "length": 7
+                },
+                {
+                    "name": "LBORNRLO",
+                    "label": "Reference Range Lower Limit in Orig Unit",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "LBORNRHI",
+                    "label": "Reference Range Upper Limit in Orig Unit",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "LBSTRESC",
+                    "label": "Character Result/Finding in Std Format",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LBSTRESN",
+                    "label": "Numeric Result/Finding in Standard Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBSTRESU",
+                    "label": "Standard Units",
+                    "type": "Char",
+                    "length": 7
+                },
+                {
+                    "name": "LBSTNRLO",
+                    "label": "Reference Range Lower Limit-Std Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBSTNRHI",
+                    "label": "Reference Range Upper Limit-Std Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBNRIND",
+                    "label": "Reference Range Indicator",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LBLOBXFL",
+                    "label": "Last Observation Before Exposure Flag",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "VISIT",
+                    "label": "Visit Name",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "LBDTC",
+                    "label": "Date/Time of Specimen Collection",
+                    "type": "Char",
+                    "length": 19
+                },
+                {
+                    "name": "LBENDTC",
+                    "label": "End Date/Time of Specimen Collection",
+                    "type": "Char",
+                    "length": 19
+                },
+                {
+                    "name": "LBENRTPT",
+                    "label": "End Relative to Reference Time Point",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBENTPT",
+                    "label": "End Reference Time Point",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBDY",
+                    "label": "Study Day of Specimen Collection",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001"
+                ],
+                "LBSEQ": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "LBTESTCD": [
+                    "ALB",
+                    "ALP",
+                    "ALB",
+                    "ALP",
+                    "BASO"
+                ],
+                "LBTEST": [
+                    "Albumin",
+                    "Alkaline Phosphatase",
+                    "Albumin",
+                    "Alkaline Phosphatase",
+                    "Basophils"
+                ],
+                "LBCAT": [
+                    "CHEMISTRY",
+                    "CHEMISTRY",
+                    "CHEMISTRY",
+                    "CHEMISTRY",
+                    "HEMATOLOGY"
+                ],
+                "LBORRES": [
+                    "3.9",
+                    "93",
+                    "18",
+                    "26",
+                    "0.03"
+                ],
+                "LBORRESU": [
+                    "g/dL",
+                    "U/L",
+                    "U/L",
+                    "U/L",
+                    "10^9/L"
+                ],
+                "LBORNRLO": [
+                    "3.5",
+                    "35",
+                    "6",
+                    "11",
+                    "0"
+                ],
+                "LBORNRHI": [
+                    "4.6",
+                    "115",
+                    "35",
+                    "36",
+                    "0.2"
+                ],
+                "LBSTRESC": [
+                    "39",
+                    "93",
+                    "18",
+                    "26",
+                    "0.03"
+                ],
+                "LBSTRESN": [
+                    39,
+                    93,
+                    18,
+                    26,
+                    0.03
+                ],
+                "LBSTRESU": [
+                    "g/L",
+                    "U/L",
+                    "U/L",
+                    "U/L",
+                    "10^9/L"
+                ],
+                "LBSTNRLO": [
+                    null,
+                    35,
+                    6,
+                    null,
+                    0
+                ],
+                "LBSTNRHI": [
+                    null,
+                    35,
+                    null,
+                    36,
+                    0.1
+                ],
+                "LBNRIND": [
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL"
+                ],
+                "LBLOBXFL": [
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y"
+                ],
+                "VISITNUM": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "VISIT": [
+                    "SCREENING 1",
+                    "SCREENING 1",
+                    "SCREENING 1",
+                    "SCREENING 1",
+                    "SCREENING 1"
+                ],
+                "EPOCH": [
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING"
+                ],
+                "LBDTC": [
+                    "2012-11-23T11:20",
+                    "2012-11-23T11:20",
+                    "2012-11-23T11:20",
+                    "2012-11-23T11:20",
+                    "2012-11-23T11:20"
+                ],
+                "LBENDTC": [
+                    "2012-11-23T11:19",
+                    "2012-11-23T10:20",
+                    "2012-11-22T11:20",
+                    "2012-10-23T11:20",
+                    "2011-11-23T11:20"
+                ],
+                "LBENRTPT": [
+                    "COINCIDENT",
+                    "COINCIDENT",
+                    "",
+                    "COINCIDENT",
+                    ""
+                ],
+                "LBENTPT": [
+                    "SCREENING 1",
+                    "SCREENING 1",
+                    "SCREENING 1",
+                    "SCREENING 1",
+                    ""
+                ],
+                "LBDY": [
+                    -7,
+                    -7,
+                    -7,
+                    -7,
+                    -7
+                ]
+            }
+        },
+        {
+            "filename": "fa.xpt",
+            "label": "Findings About",
+            "domain": "FA",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "FASEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "FALNKGRP",
+                    "label": "Link Group ID",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FATESTCD",
+                    "label": "Findings About Test Short Name",
+                    "type": "Char",
+                    "length": 5
+                },
+                {
+                    "name": "FATEST",
+                    "label": "Findings About Test Name",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "FAOBJ",
+                    "label": "Object of the Observation",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "FAORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "FASTRESC",
+                    "label": "Character Result/Finding in Std Format",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "FASTNRLO",
+                    "label": "Reference Range Lower Limit-Std Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "FASTNRHI",
+                    "label": "Reference Range Upper Limit-Std Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "FALOC",
+                    "label": "Location of the Finding About",
+                    "type": "Char",
+                    "length": 3
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "FADTC",
+                    "label": "Date/Time of Collection",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "FAENRTPT",
+                    "label": "End Relative to Reference Time Point",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "FAENTPT",
+                    "label": "End Reference Time Point",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "FADY",
+                    "label": "Study Day of Collection",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001"
+                ],
+                "FASEQ": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "FALNKGRP": [
+                    "1",
+                    "1",
+                    "1",
+                    "1",
+                    "1"
+                ],
+                "FATESTCD": [
+                    "COUNT",
+                    "COUNT",
+                    "COUNT",
+                    "COUNT",
+                    "COUNT"
+                ],
+                "FATEST": [
+                    "Count",
+                    "Count",
+                    "Count",
+                    "Count",
+                    "Count"
+                ],
+                "FAOBJ": [
+                    "MACULES",
+                    "PAPULES",
+                    "VESICLES",
+                    "BLISTERS",
+                    "LESIONS"
+                ],
+                "FAORRES": [
+                    "1",
+                    "2",
+                    "3",
+                    "1",
+                    "2"
+                ],
+                "FASTRESC": [
+                    "1",
+                    "2",
+                    "3",
+                    "1",
+                    "2"
+                ],
+                "FASTNRLO": [
+                    0,
+                    0,
+                    null,
+                    0,
+                    null
+                ],
+                "FASTNRHI": [
+                    1,
+                    0,
+                    null,
+                    null,
+                    0
+                ],
+                "FALOC": [
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM"
+                ],
+                "VISITNUM": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "EPOCH": [
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT"
+                ],
+                "FADTC": [
+                    "2012-12-02",
+                    "2012-12-02",
+                    "2012-12-02",
+                    "2012-12-02",
+                    "2012-12-02"
+                ],
+                "FAENRTPT": [
+                    "AFTER",
+                    "",
+                    "AFTER",
+                    "",
+                    "AFTER"
+                ],
+                "FAENTPT": [
+                    "2012-11-30",
+                    "2012-11-30",
+                    "2012-11-30",
+                    "",
+                    "2012-11-30"
+                ],
+                "FADY": [
+                    3,
+                    3,
+                    3,
+                    3,
+                    3
+                ]
+            }
+        },
+        {
+            "filename": "se.xpt",
+            "label": "Subject Elements",
+            "domain": "SE",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "SESEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "ETCD",
+                    "label": "Element Code",
+                    "type": "Char",
+                    "length": 7
+                },
+                {
+                    "name": "ELEMENT",
+                    "label": "Description of Element",
+                    "type": "Char",
+                    "length": 26
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "SEDTC",
+                    "label": "Date/Time of Collection",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "SESTDTC",
+                    "label": "Start Date/Time of Element",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "SEENDTC",
+                    "label": "End Date/Time of Element",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "SEENRTPT",
+                    "label": "End Relative to Reference Time Point",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SEENTPT",
+                    "label": "End Reference Time Point",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SEDY",
+                    "label": "Study Day of Collection",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "SESTDY",
+                    "label": "Study Day of Start of Element",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "SEENDY",
+                    "label": "Study Day of End of Element",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "SE"
+                ],
+                "USUBJID": [
+                    "CDISC001"
+                ],
+                "SESEQ": [
+                    1
+                ],
+                "ETCD": [
+                    "SCREEN"
+                ],
+                "ELEMENT": [
+                    "Screening"
+                ],
+                "EPOCH": [
+                    "SCREENING"
+                ],
+                "SEDTC": [
+                    ""
+                ],
+                "SESTDTC": [
+                    "2012-11-23"
+                ],
+                "SEENDTC": [
+                    "2012-11-30"
+                ],
+                "SEENRTPT": [
+                    "BEFORE"
+                ],
+                "SEENTPT": [
+                    "TREATMENT"
+                ],
+                "SEDY": [
+                    null
+                ],
+                "SESTDY": [
+                    -7
+                ],
+                "SEENDY": [
+                    1
+                ]
+            }
+        },
+        {
+            "filename": "sv.xpt",
+            "label": "Subject Visits",
+            "domain": "SV",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "VISIT",
+                    "label": "Visit Name",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "SVDTC",
+                    "label": "Date/Time of Collection",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "SVSTDTC",
+                    "label": "Start Date/Time of Visit",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "SVENDTC",
+                    "label": "End Date/Time of Visit",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "SVDY",
+                    "label": "Study Day of Collection",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "SVSTDY",
+                    "label": "Study Day of Start of Visit",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "SVENDY",
+                    "label": "Study Day of End of Visit",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "SVENRTPT",
+                    "label": "End Relative to Reference Time Point",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SVENTPT",
+                    "label": "End Reference Time Point",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SVUPDES",
+                    "label": "Description of Unplanned Visit",
+                    "type": "Char",
+                    "length": 200
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001"
+                ],
+                "VISITNUM": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    5.01,
+                    7,
+                    8,
+                    101,
+                    201
+                ],
+                "VISIT": [
+                    "SCREENING 1",
+                    "SCREENING 2",
+                    "BASELINE",
+                    "WEEK 2",
+                    "WEEK 4",
+                    "WEEK 4: UNSCHEDULED 01",
+                    "WEEK 6",
+                    "WEEK 8",
+                    "EARLY DISCONTINUATION",
+                    "EARLY DISCONTINUATION RETRIEVAL"
+                ],
+                "SVDTC": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "SVSTDTC": [
+                    "2012-11-23",
+                    "2012-11-28",
+                    "2012-11-30",
+                    "2012-12-13",
+                    "2012-12-26",
+                    "2012-12-28",
+                    "2013-01-10",
+                    "2013-01-23",
+                    "2013-02-14",
+                    "2013-05-20"
+                ],
+                "SVENDTC": [
+                    "2012-11-23",
+                    "2012-11-28",
+                    "2012-11-30",
+                    "2012-12-13",
+                    "2012-12-26",
+                    "2012-12-28",
+                    "2013-01-10",
+                    "2013-01-23",
+                    "2013-02-14",
+                    "2013-05-20"
+                ],
+                "SVDY": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "SVSTDY": [
+                    -7,
+                    -2,
+                    1,
+                    14,
+                    27,
+                    29,
+                    42,
+                    55,
+                    77,
+                    172
+                ],
+                "SVENDY": [
+                    -7,
+                    -2,
+                    1,
+                    14,
+                    27,
+                    29,
+                    42,
+                    55,
+                    77,
+                    172
+                ],
+                "SVENRTPT": [
+                    "",
+                    "AFTER",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "SVENTPT": [
+                    "",
+                    "SCREENING1",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "SVUPDES": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "UNSCHEDULED LABS",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "sm.xpt",
+            "label": "Subject Disease Milestones",
+            "domain": "SM",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "SMSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "MIDS",
+                    "label": "Disease Milestone Instance Name",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "MIDSTYPE",
+                    "label": "Disease Milestone Type",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "SMDTC",
+                    "label": "Date/Time of Collection",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "SMSTDTC",
+                    "label": "Start Date/Time of Milestone",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "SMENDTC",
+                    "label": "End Date/Time of Milestone",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "SMENRTPT",
+                    "label": "End Relative to Reference Time Point",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SMENTPT",
+                    "label": "End Reference Time Point",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SMDY",
+                    "label": "Study Day of Collection",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "SM",
+                    "SM",
+                    "SM"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001"
+                ],
+                "SMSEQ": [
+                    1,
+                    2,
+                    3
+                ],
+                "MIDS": [
+                    "DIAG",
+                    "ISR1",
+                    "ISR2"
+                ],
+                "MIDSTYPE": [
+                    "DIAGNOSIS",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION"
+                ],
+                "SMDTC": [
+                    "",
+                    "",
+                    ""
+                ],
+                "SMSTDTC": [
+                    "2011-11-23",
+                    "2012-11-28",
+                    "2012-11-30"
+                ],
+                "SMENDTC": [
+                    "2011-11-23",
+                    "2012-11-28",
+                    "2012-11-30"
+                ],
+                "SMENRTPT": [
+                    "BEFORE",
+                    "BEFORE",
+                    "COINCIDENT"
+                ],
+                "SMENTPT": [
+                    "SCREENING",
+                    "2012-11-30",
+                    "2012-11-30"
+                ],
+                "SMDY": [
+                    null,
+                    null,
+                    null
+                ]
+            }
+        },
+        {
+            "filename": "tv.xpt",
+            "label": "Trial Visits",
+            "domain": "TV",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "VISIT",
+                    "label": "Visit Name",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "ARMCD",
+                    "label": "Planned Arm Code",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "TVSTRL",
+                    "label": "Visit Start Rule",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "TVENRL",
+                    "label": "Visit End Rule",
+                    "type": "Char",
+                    "length": 200
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "TV",
+                    "TV",
+                    "TV",
+                    "TV",
+                    "TV",
+                    "TV",
+                    "TV",
+                    "TV",
+                    "TV",
+                    "TV",
+                    "TV",
+                    "TV",
+                    "TV",
+                    "TV"
+                ],
+                "VISITNUM": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    101,
+                    201
+                ],
+                "VISIT": [
+                    "SCREENING 1",
+                    "SCREENING 2",
+                    "BASELINE",
+                    "WEEK 2",
+                    "WEEK 4",
+                    "WEEK 6",
+                    "WEEK 8",
+                    "WEEK 12",
+                    "WEEK 16",
+                    "WEEK 20",
+                    "WEEK 24",
+                    "WEEK 26",
+                    "EARLY DISCONTINUATION",
+                    "EARLY DISCONTINUATION RETRIEVAL"
+                ],
+                "ARMCD": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "TVSTRL": [
+                    "Informed Consent Obtained",
+                    "Day Before Initial Study Treatment",
+                    "Day of Initial Study Treatment",
+                    "2 Weeks After Start of Study Treatment",
+                    "4 Weeks After Start of Study Treatment",
+                    "6 Weeks After Start of Study Treatment",
+                    "8 Weeks After Start of Study Treatment",
+                    "12 Weeks After Start of Study Treatment",
+                    "16 Weeks After Start of Study Treatment",
+                    "20 Weeks After Start of Study Treatment",
+                    "24 Weeks After Start of Study Treatment",
+                    "26 Weeks After Start of Study Treatment",
+                    "Discontinuation Date Prior to Week 24",
+                    "Approximately 24 Weeks After Start of Study Treatment for Early Discontinuations"
+                ],
+                "TVENRL": [
+                    "Screening Assessments Completed",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "dm.xpt",
+            "label": "Demographics",
+            "domain": "DM",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SUBJID",
+                    "label": "Subject Identifier for the Study",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFSTDTC",
+                    "label": "Subject Reference Start Date/Time",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFENDTC",
+                    "label": "Subject Reference End Date/Time",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFXSTDTC",
+                    "label": "Date/Time of First Study Treatment",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFXENDTC",
+                    "label": "Date/Time of Last Study Treatment",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFICDTC",
+                    "label": "Date/Time of Informed Consent",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFPENDTC",
+                    "label": "Date/Time of End of Participation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DTHDTC",
+                    "label": "Date/Time of Death",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DTHFL",
+                    "label": "Subject Death Flag",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SITEID",
+                    "label": "Study Site Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "BRTHDTC",
+                    "label": "Date/Time of Birth",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AGE",
+                    "label": "Age",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AGEU",
+                    "label": "Age Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SEX",
+                    "label": "Sex",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RACE",
+                    "label": "Race",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ETHNIC",
+                    "label": "Ethnicity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ARMCD",
+                    "label": "Planned Arm Code",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ARM",
+                    "label": "Description of Planned Arm",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ACTARMCD",
+                    "label": "Actual Arm Code",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ACTARM",
+                    "label": "Description of Actual Arm",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ARMNRS",
+                    "label": "Reason Arm and/or Actual Arm is Null",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ACTARMUD",
+                    "label": "Description of Unplanned Actual Arm",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "COUNTRY",
+                    "label": "Country",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DMDTC",
+                    "label": "Date/Time of Collection",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "DMDY",
+                    "label": "Study Day of Collection",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "DM"
+                ],
+                "USUBJID": [
+                    "CDISC001"
+                ],
+                "SUBJID": [
+                    "1115"
+                ],
+                "RFSTDTC": [
+                    "2012-11-30"
+                ],
+                "RFENDTC": [
+                    "2013-01-23"
+                ],
+                "RFXSTDTC": [
+                    "2012-11-30"
+                ],
+                "RFXENDTC": [
+                    "2013-01-22"
+                ],
+                "RFICDTC": [
+                    "2012-11-23"
+                ],
+                "RFPENDTC": [
+                    "2013-05-20"
+                ],
+                "DTHDTC": [
+                    ""
+                ],
+                "DTHFL": [
+                    ""
+                ],
+                "SITEID": [
+                    "701"
+                ],
+                "BRTHDTC": [
+                    "1928"
+                ],
+                "AGE": [
+                    84
+                ],
+                "AGEU": [
+                    "YEARS"
+                ],
+                "SEX": [
+                    "M"
+                ],
+                "RACE": [
+                    "WHITE"
+                ],
+                "ETHNIC": [
+                    "NOT HISPANIC OR LATINO"
+                ],
+                "ARMCD": [
+                    "ZAN_LOW"
+                ],
+                "ARM": [
+                    "Zanomaline Low Dose (54 mg)"
+                ],
+                "ACTARMCD": [
+                    "ZAN_LOW"
+                ],
+                "ACTARM": [
+                    "Zanomaline Low Dose (54 mg)"
+                ],
+                "ARMNRS": [
+                    ""
+                ],
+                "ACTARMUD": [
+                    ""
+                ],
+                "COUNTRY": [
+                    "USA"
+                ],
+                "DMDTC": [
+                    ""
+                ],
+                "DMDY": [
+                    null
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sdtmig",
+        "version": "3-4"
+    },
+    "codelists": []
+}

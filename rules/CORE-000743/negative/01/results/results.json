@@ -1,0 +1,115 @@
+{
+  "datasets": [
+    {
+      "dataset": "ti.xpt",
+      "domain": "TI",
+      "execution_status": "success",
+      "execution_message": "IETESTCD and IETEST do not have a one-to-one relationship.",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETEST": "Has disease under study",
+            "IETESTCD": "INCL01"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETEST": "Age 21 or greater",
+            "IETESTCD": "INCL01"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETEST": "Pregnant or lactating",
+            "IETESTCD": "EXCL01"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETEST": "Has disease under study",
+            "IETESTCD": "INCL01"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETEST": "Pregnant or lactating",
+            "IETESTCD": null
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ti.xpt",
+      "Row": 5,
+      "Variable": "IETESTCD"
+    },
+    {
+      "Sheet": "ti.xpt",
+      "Row": 5,
+      "Variable": "IETEST"
+    },
+    {
+      "Sheet": "ti.xpt",
+      "Row": 6,
+      "Variable": "IETESTCD"
+    },
+    {
+      "Sheet": "ti.xpt",
+      "Row": 6,
+      "Variable": "IETEST"
+    },
+    {
+      "Sheet": "ti.xpt",
+      "Row": 7,
+      "Variable": "IETESTCD"
+    },
+    {
+      "Sheet": "ti.xpt",
+      "Row": 7,
+      "Variable": "IETEST"
+    },
+    {
+      "Sheet": "ti.xpt",
+      "Row": 8,
+      "Variable": "IETESTCD"
+    },
+    {
+      "Sheet": "ti.xpt",
+      "Row": 8,
+      "Variable": "IETEST"
+    },
+    {
+      "Sheet": "ti.xpt",
+      "Row": 10,
+      "Variable": "IETESTCD"
+    },
+    {
+      "Sheet": "ti.xpt",
+      "Row": 10,
+      "Variable": "IETEST"
+    }
+  ]
+}

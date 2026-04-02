@@ -1,0 +1,155 @@
+{9 items
+"CM":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"cm.xpt"
+"domain":"CM"
+"variables":[1 item
+0:"CMSTDY"
+]
+"message":"The Start Date/Time of Observation (CMSTDTC) is not present in the dataset when Study Day of Start of Observation (CMSTDY) is present."
+"errors":[1 item
+0:{2 items
+"value":{1 item
+"CMSTDY":NULL
+}
+"dataset":"cm.xpt"
+}
+]
+}
+]
+"CE":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"ce.xpt"
+"domain":"CE"
+"variables":[1 item
+0:"CESTDY"
+]
+"message":"The Start Date/Time of Observation (CESTDTC) is not present in the dataset when Study Day of Start of Observation (CESTDY) is present."
+"errors":[1 item
+0:{2 items
+"value":{1 item
+"CESTDY":3
+}
+"dataset":"ce.xpt"
+}
+]
+}
+]
+"LB":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"lb.xpt"
+"domain":"LB"
+"variables":[1 item
+0:"LBSTDY"
+]
+"message":"The Start Date/Time of Observation (LBSTDTC) is not present in the dataset when Study Day of Start of Observation (LBSTDY) is present."
+"errors":[1 item
+0:{2 items
+"value":{1 item
+"LBSTDY":-7
+}
+"dataset":"lb.xpt"
+}
+]
+}
+]
+"FA":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"fa.xpt"
+"domain":"FA"
+"variables":[1 item
+0:"FASTDY"
+]
+"message":"The Start Date/Time of Observation (FASTDTC) is not present in the dataset when Study Day of Start of Observation (FASTDY) is present."
+"errors":[1 item
+0:{2 items
+"value":{1 item
+"FASTDY":3
+}
+"dataset":"fa.xpt"
+}
+]
+}
+]
+"SE":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"se.xpt"
+"domain":"SE"
+"variables":[1 item
+0:"SESTDY"
+]
+"message":"The Start Date/Time of Observation (SESTDTC) is not present in the dataset when Study Day of Start of Observation (SESTDY) is present."
+"errors":[1 item
+0:{2 items
+"value":{1 item
+"SESTDY":-7
+}
+"dataset":"se.xpt"
+}
+]
+}
+]
+"SV":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"sv.xpt"
+"domain":"SV"
+"variables":[1 item
+0:"SVSTDY"
+]
+"message":"The Start Date/Time of Observation (SVSTDTC) is not present in the dataset when Study Day of Start of Observation (SVSTDY) is present."
+"errors":[1 item
+0:{2 items
+"value":{1 item
+"SVSTDY":-7
+}
+"dataset":"sv.xpt"
+}
+]
+}
+]
+"SM":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"sm.xpt"
+"domain":"SM"
+"variables":[1 item
+0:"SMSTDY"
+]
+"message":"The Start Date/Time of Observation (SMSTDTC) is not present in the dataset when Study Day of Start of Observation (SMSTDY) is present."
+"errors":[1 item
+0:{2 items
+"value":{1 item
+"SMSTDY":NULL
+}
+"dataset":"sm.xpt"
+}
+]
+}
+]
+"TV":[1 item
+0:{6 items
+"executionStatus":"skipped"
+"dataset":"tv.xpt"
+"domain":"TV"
+"variables":[]0 items
+"message":"Rule skipped - doesn't apply to class for rule id=FDA.SDTMIG.SD2271, dataset=TV"
+"errors":[]0 items
+}
+]
+"DM":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"dm.xpt"
+"domain":"DM"
+"variables":[]0 items
+"message":NULL
+"errors":[]0 items
+}
+]
+}

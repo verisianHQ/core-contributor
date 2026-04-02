@@ -1,0 +1,50 @@
+{
+  "LB": [
+    {
+      "executionStatus": "success",
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "variables": [
+        "LBENINT",
+        "LBTPTREF"
+      ],
+      "message": "LBTPTREF must be populated when LBENINT is populated",
+      "errors": [
+        {
+          "value": {
+            "LBENINT": "PT08M",
+            "LBTPTREF": ""
+          },
+          "row": 2,
+          "USUBJID": "CDISC001",
+          "SEQ": 2
+        },
+        {
+          "value": {
+            "LBENINT": "PT08M",
+            "LBTPTREF": ""
+          },
+          "row": 4,
+          "USUBJID": "CDISC002",
+          "SEQ": 2
+        }
+      ]
+    }
+  ],
+  "PP": [
+    {
+      "executionStatus": "execution_error",
+      "dataset": "pp.xpt",
+      "domain": "PP",
+      "variables": [],
+      "message": "rule execution error",
+      "errors": [
+        {
+          "dataset": "pp.xpt",
+          "error": "Column not found in data",
+          "message": "PPENINT"
+        }
+      ]
+    }
+  ]
+}

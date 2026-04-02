@@ -1,0 +1,25 @@
+{
+  "VS": [
+    {
+      "executionStatus": "success",
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "variables": [
+        "VSLOBXFL",
+        "VSSTRESC"
+      ],
+      "message": "LOBXFL is set to \"Y\", but no value for STRESC is provided",
+      "errors": [
+        {
+          "value": {
+            "VSLOBXFL": "Y",
+            "VSSTRESC": ""
+          },
+          "row": 3,
+          "USUBJID": "CDISC001",
+          "SEQ": 3
+        }
+      ]
+    }
+  ]
+}

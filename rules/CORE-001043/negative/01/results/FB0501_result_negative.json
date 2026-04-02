@@ -1,0 +1,37 @@
+{
+  "DM": [
+    {
+      "executionStatus": "success",
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "variables": [
+        "AGE",
+        "ARMCD",
+        "ARMNRS"
+      ],
+      "message": "Age is missing for a non-screen failure subject",
+      "errors": [
+        {
+          "value": {
+            "ARMNRS": null,
+            "AGE": null,
+            "ARMCD": "B"
+          },
+          "dataset": "dm.xpt",
+          "row": 7,
+          "USUBJID": "CDISC007"
+        },
+        {
+          "value": {
+            "ARMNRS": null,
+            "AGE": null,
+            "ARMCD": "B"
+          },
+          "dataset": "dm.xpt",
+          "row": 8,
+          "USUBJID": "CDISC008"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBENINT is populated, but LBTPTREF is missing.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBENINT": "PT08M",
+            "LBTPTREF": null
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 2,
+          "USUBJID": "CDISC002",
+          "value": {
+            "LBENINT": "PT08M",
+            "LBTPTREF": null
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "pp.xpt",
+      "domain": "PP",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

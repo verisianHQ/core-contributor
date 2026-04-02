@@ -1,0 +1,47 @@
+{3 items
+"TS":[1 item
+0:{6 items
+"executionStatus":"skipped"
+"dataset":"ts.xpt"
+"domain":"TS"
+"variables":[]0 items
+"message":"Rule skipped - doesn't apply to domain for rule id=None, dataset=TS"
+"errors":[]0 items
+}
+]
+"DM":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"dm.xpt"
+"domain":"DM"
+"variables":[3 items
+0:"ACTARMCD"
+1:"TSPARMCD"
+2:"TSVAL"
+]
+"message":"Subject has a no record in EX but is assigned to a treatment while participating in an interventional study"
+"errors":[1 item
+0:{4 items
+"value":{3 items
+"TSPARMCD":"STYPE"
+"TSVAL":"INTERVENTIONAL"
+"ACTARMCD":"YYY"
+}
+"dataset":"dm.xpt"
+"row":4
+"USUBJID":"XXX100-88888"
+}
+]
+}
+]
+"EX":[1 item
+0:{6 items
+"executionStatus":"skipped"
+"dataset":"ex.xpt"
+"domain":"EX"
+"variables":[]0 items
+"message":"Rule skipped - doesn't apply to domain for rule id=None, dataset=EX"
+"errors":[]0 items
+}
+]
+}

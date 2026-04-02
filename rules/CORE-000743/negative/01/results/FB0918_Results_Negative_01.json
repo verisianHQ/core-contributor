@@ -1,0 +1,56 @@
+{
+    "TI": [
+        {
+            "executionStatus": "success",
+            "dataset": "ti.xpt",
+            "domain": "TI",
+            "variables": [
+                "IETEST",
+                "IETESTCD"
+            ],
+            "message": "IETESTCD and IETEST do not have a one-to-one relationship",
+            "errors": [
+                {
+                    "value": {
+                        "IETESTCD": "INCL01",
+                        "IETEST": "Has disease under study"
+                    },
+                    "dataset": "ti.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "IETESTCD": "INCL01",
+                        "IETEST": "Age 21 or greater"
+                    },
+                    "dataset": "ti.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "IETESTCD": "EXCL01",
+                        "IETEST": "Pregnant or lactating"
+                    },
+                    "dataset": "ti.xpt",
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "IETESTCD": "INCL01",
+                        "IETEST": "Has disease under study"
+                    },
+                    "dataset": "ti.xpt",
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "IETESTCD": "",
+                        "IETEST": "Pregnant or lactating"
+                    },
+                    "dataset": "ti.xpt",
+                    "row": 6
+                }
+            ]
+        }
+    ]
+}

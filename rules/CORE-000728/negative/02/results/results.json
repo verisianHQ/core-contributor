@@ -1,0 +1,205 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVALCD and TSVAL do not have a one-to-one relationship.",
+      "number_errors": 14,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "N",
+            "TSVALCD": "C49488 "
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "P18Y ",
+            "TSVALCD": null
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "INTERIM ANALYSIS ",
+            "TSVALCD": null
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "41233",
+            "TSVALCD": null
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "1000",
+            "TSVALCD": null
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "240",
+            "TSVALCD": null
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": 3,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "340",
+            "TSVALCD": null
+          },
+          "validated": false
+        },
+        {
+          "row": 10,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "Y ",
+            "TSVALCD": null
+          },
+          "validated": false
+        },
+        {
+          "row": 11,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "Adenocarcinom a of pancreas ",
+            "TSVALCD": null
+          },
+          "validated": false
+        },
+        {
+          "row": 14,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "P30M ",
+            "TSVALCD": null
+          },
+          "validated": false
+        },
+        {
+          "row": 15,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "5",
+            "TSVALCD": null
+          },
+          "validated": false
+        },
+        {
+          "row": 17,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "Y ",
+            "TSVALCD": "C49488 "
+          },
+          "validated": false
+        },
+        {
+          "row": 20,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "40179",
+            "TSVALCD": null
+          },
+          "validated": false
+        },
+        {
+          "row": 24,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "Adenocarcinom a of pancreas ",
+            "TSVALCD": "700423003"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ts.xpt",
+      "Row": 5,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 5,
+      "Variable": "TSVALCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 14,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 14,
+      "Variable": "TSVALCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 15,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 15,
+      "Variable": "TSVALCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 21,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 21,
+      "Variable": "TSVALCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 28,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 28,
+      "Variable": "TSVALCD"
+    }
+  ]
+}

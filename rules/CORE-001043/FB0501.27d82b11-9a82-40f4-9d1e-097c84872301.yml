@@ -1,0 +1,87 @@
+# Variable: AGE
+# Condition: Subject is not a screen failure
+# Rule: AGE ^= null
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Age should be provided for all subjects, except where not
+                  collected for screen failures.
+                Document: FDA
+                Section: FDAB005
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0501
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Age should be provided for all subjects, except where not
+                  collected for screen failures.
+                Document: FDA
+                Section: FDAB005
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0501
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Age should be provided for all subjects, except where not
+                  collected for screen failures.
+                Document: FDA
+                Section: FDAB005
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0501
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: AGE
+      operator: empty
+    - any:
+        - all:
+            - name: ARMCD
+              operator: non_empty
+            - name: ARMCD
+              operator: not_equal_to
+              value: SCRNFAIL
+        - all:
+            - name: ARMNRS
+              operator: non_empty
+            - name: ARMNRS
+              operator: not_equal_to
+              value: SCREEN FAILURE
+            - name: ARMNRS
+              operator: not_equal_to
+              value: Screen Failure
+Core:
+  Id: CORE-001043
+  Status: Published
+  Version: '1'
+Description: Age should be provided for all subjects, except where not collected
+  for screen failures.
+Executability: Fully Executable
+Outcome:
+  Message: Age is missing for a non-screen failure subject.
+  Output Variables:
+    - ARMNRS
+    - ARMCD
+    - AGE
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

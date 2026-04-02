@@ -1,0 +1,556 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "FDA",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB040",
+                                        "Cited_Guidance": "Values for the following should not be negative: age, dose, and duration of event, exposure or observation."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB4001",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB040",
+                                        "Cited_Guidance": "Values for the following should not be negative: age, dose, and duration of event, exposure or observation."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB4001",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB040",
+                                        "Cited_Guidance": "Values for the following should not be negative: age, dose, and duration of event, exposure or observation."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB4001",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB040",
+                                        "Cited_Guidance": "Values for the following should not be negative: age, dose, and duration of event, exposure or observation."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB4001",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.0"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB040",
+                                        "Cited_Guidance": "Values for the following should not be negative: age, dose, and duration of event, exposure or observation."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB4001",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB040",
+                                        "Cited_Guidance": "Values for the following should not be negative: age, dose, and duration of event, exposure or observation."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB4001",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1.1"
+                    },
+                    {
+                        "Name": "SENDIG-GENETOX",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB040",
+                                        "Cited_Guidance": "Values for the following should not be negative: age, dose, and duration of event, exposure or observation."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB4001",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.0"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB040",
+                                        "Cited_Guidance": "Values for the following should not be negative: age, dose, and duration of event, exposure or observation."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB4001",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.1"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB040",
+                                        "Cited_Guidance": "Values for the following should not be negative: age, dose, and duration of event, exposure or observation."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB4001",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.2"
+                    },
+                    {
+                        "Name": "SENDIG-AR",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB040",
+                                        "Cited_Guidance": "Values for the following should not be negative: age, dose, and duration of event, exposure or observation."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB4001",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "AGE",
+                    "operator": "less_than",
+                    "value": 0
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CORE-000310",
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Value for AGE should not be negative",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "AGE is lower than zero"
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "SPECIAL PURPOSE"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "DM"
+                ]
+            }
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "dm.xpt",
+            "label": "Demographics",
+            "domain": "DM",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SUBJID",
+                    "label": "Subject Identifier for the Study",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFSTDTC",
+                    "label": "Subject Reference Start Date/Time",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFENDTC",
+                    "label": "Subject Reference End Date/Time",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFXSTDTC",
+                    "label": "Date/Time of First Study Treatment",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFXENDTC",
+                    "label": "Date/Time of Last Study Treatment",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFICDTC",
+                    "label": "Date/Time of Informed Consent",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFPENDTC",
+                    "label": "Date/Time of End of Participation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DTHDTC",
+                    "label": "Date/Time of Death",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DTHFL",
+                    "label": "Subject Death Flag",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SITEID",
+                    "label": "Study Site Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "BRTHDTC",
+                    "label": "Date/Time of Birth",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AGE",
+                    "label": "Age",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AGEU",
+                    "label": "Age Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SEX",
+                    "label": "Sex",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RACE",
+                    "label": "Race",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ETHNIC",
+                    "label": "Ethnicity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ARMCD",
+                    "label": "Planned Arm Code",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ARM",
+                    "label": "Description of Planned Arm",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ACTARMCD",
+                    "label": "Actual Arm Code",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ACTARM",
+                    "label": "Description of Actual Arm",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ARMNRS",
+                    "label": "Reason Arm and/or Actual Arm is Null",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ACTARMUD",
+                    "label": "Description of Unplanned Actual Arm",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "COUNTRY",
+                    "label": "Country",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "DM",
+                    "DM",
+                    "DM"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC002",
+                    "CDISC003"
+                ],
+                "SUBJID": [
+                    "1115",
+                    "1116",
+                    "1117"
+                ],
+                "RFSTDTC": [
+                    "2012-11-30",
+                    "2012-11-30",
+                    "2012-11-30"
+                ],
+                "RFENDTC": [
+                    "2013-01-23",
+                    "2013-01-23",
+                    "2013-01-23"
+                ],
+                "RFXSTDTC": [
+                    "2012-11-29",
+                    "2012-11-29",
+                    "2012-11-29"
+                ],
+                "RFXENDTC": [
+                    "2013-01-23",
+                    "2013-01-23",
+                    "2013-01-23"
+                ],
+                "RFICDTC": [
+                    "2012-11-23",
+                    "2012-11-23",
+                    "2012-11-23"
+                ],
+                "RFPENDTC": [
+                    "2013-05-20",
+                    "2013-05-20",
+                    "2013-05-20"
+                ],
+                "DTHDTC": [
+                    "",
+                    "",
+                    ""
+                ],
+                "DTHFL": [
+                    "",
+                    "",
+                    ""
+                ],
+                "SITEID": [
+                    "701",
+                    "701",
+                    "701"
+                ],
+                "BRTHDTC": [
+                    "2013",
+                    "1928",
+                    "1928"
+                ],
+                "AGE": [
+                    1,
+                    null,
+                    80
+                ],
+                "AGEU": [
+                    "YEARS",
+                    "YEARS",
+                    "YEARS"
+                ],
+                "SEX": [
+                    "M",
+                    "M",
+                    "M"
+                ],
+                "RACE": [
+                    "WHITE",
+                    "WHITE",
+                    "WHITE"
+                ],
+                "ETHNIC": [
+                    "NOT HISPANIC OR LATINO",
+                    "NOT HISPANIC OR LATINO",
+                    "NOT HISPANIC OR LATINO"
+                ],
+                "ARMCD": [
+                    "ZAN_LOW",
+                    "ZAN_LOW",
+                    "ZAN_LOW"
+                ],
+                "ARM": [
+                    "Zanomaline Low Dose (54 mg)",
+                    "Zanomaline Low Dose (54 mg)",
+                    "Zanomaline Low Dose (54 mg)"
+                ],
+                "ACTARMCD": [
+                    "ZAN_LOW",
+                    "ZAN_LOW",
+                    "ZAN_LOW"
+                ],
+                "ACTARM": [
+                    "Zanomaline Low Dose (54 mg)",
+                    "Zanomaline Low Dose (54 mg)",
+                    "Zanomaline Low Dose (54 mg)"
+                ],
+                "ARMNRS": [
+                    "",
+                    "",
+                    ""
+                ],
+                "ACTARMUD": [
+                    "",
+                    "",
+                    ""
+                ],
+                "COUNTRY": [
+                    "USA",
+                    "USA",
+                    "USA"
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sdtmig",
+        "version": "3-3"
+    },
+    "codelists": []
+}

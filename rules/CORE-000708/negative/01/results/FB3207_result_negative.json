@@ -1,0 +1,120 @@
+{5 items
+"SM":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"sm.xpt"
+"domain":"SM"
+"variables":[2 items
+0:"SMENDY"
+1:"SMSTDY"
+]
+"message":"SMSTDY is greater than SMENDY"
+"errors":[1 item
+0:{5 items
+"value":{2 items
+"SMSTDY":100
+"SMENDY":50
+}
+"dataset":"sm.xpt"
+"row":3
+"USUBJID":"CDISC003"
+"SEQ":3
+}
+]
+}
+]
+"SE":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"se.xpt"
+"domain":"SE"
+"variables":[2 items
+0:"SEENDY"
+1:"SESTDY"
+]
+"message":"SESTDY is greater than SEENDY"
+"errors":[1 item
+0:{5 items
+"value":{2 items
+"SEENDY":1430
+"SESTDY":1435
+}
+"dataset":"se.xpt"
+"row":3
+"USUBJID":"CDISC001"
+"SEQ":3
+}
+]
+}
+]
+"SV":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"sv.xpt"
+"domain":"SV"
+"variables":[2 items
+0:"SVENDY"
+1:"SVSTDY"
+]
+"message":"SVSTDY is greater than SVENDY"
+"errors":[1 item
+0:{4 items
+"value":{2 items
+"SVSTDY":-27
+"SVENDY":-28
+}
+"dataset":"sv.xpt"
+"row":1
+"USUBJID":"CDISC001"
+}
+]
+}
+]
+"AE":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"ae.xpt"
+"domain":"AE"
+"variables":[2 items
+0:"AEENDY"
+1:"AESTDY"
+]
+"message":"AESTDY is greater than AEENDY"
+"errors":[1 item
+0:{4 items
+"value":{2 items
+"AESTDY":8
+"AEENDY":7
+}
+"dataset":"ae.xpt"
+"row":4
+"USUBJID":"CDISC002"
+}
+]
+}
+]
+"CM":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"cm.xpt"
+"domain":"CM"
+"variables":[2 items
+0:"CMENDY"
+1:"CMSTDY"
+]
+"message":"CMSTDY is greater than CMENDY"
+"errors":[1 item
+0:{5 items
+"value":{2 items
+"CMSTDY":13
+"CMENDY":12
+}
+"dataset":"cm.xpt"
+"row":2
+"USUBJID":"CDISC001"
+"SEQ":2
+}
+]
+}
+]
+}

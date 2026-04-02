@@ -1,0 +1,58 @@
+{
+    "CM": [
+        {
+            "executionStatus": "success",
+            "domain": "CM",
+            "variables": [
+                "CMVAMT"
+            ],
+            "message": "CMVAMT is lower than zero",
+            "errors": [
+                {
+                    "value": {
+                        "CMVAMT": -1
+                    },
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "CMVAMT": -325
+                    },
+                    "row": 2,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 6
+                }
+            ]
+        }
+    ],
+    "EX": [
+        {
+            "executionStatus": "success",
+            "domain": "EX",
+            "variables": [
+                "EXVAMT"
+            ],
+            "message": "EXVAMT is lower than zero",
+            "errors": [
+                {
+                    "value": {
+                        "EXVAMT": -1
+                    },
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "EXVAMT": -2
+                    },
+                    "row": 2,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 3
+                }
+            ]
+        }
+    ]
+}

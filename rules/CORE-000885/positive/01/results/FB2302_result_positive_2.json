@@ -1,0 +1,32 @@
+{
+  "TS": [
+    {
+      "executionStatus": "skipped",
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "variables": [],
+      "message": "Rule skipped - doesn't apply to domain for rule id=CORE-000885, dataset=TS",
+      "errors": []
+    }
+  ],
+  "DM": [
+    {
+      "executionStatus": "success",
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "EX": [
+    {
+      "executionStatus": "skipped",
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "variables": [],
+      "message": "Rule skipped - doesn't apply to domain for rule id=CORE-000885, dataset=EX",
+      "errors": []
+    }
+  ]
+}

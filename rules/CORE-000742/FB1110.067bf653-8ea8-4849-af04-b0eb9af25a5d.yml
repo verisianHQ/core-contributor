@@ -1,0 +1,81 @@
+Authorities:
+  - Organization: 'FDA'
+    Standards:
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1110'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1110'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1110'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: '$HLTSUBJI'
+      operator: equal_to
+      value: 1
+    - name: $INDIC
+      operator: not_equal_to
+      value: 1
+Core:
+  Status: Published
+  Version: '1'
+  Id: CORE-000742
+Description: 'TSVALNF is not equal to NA when TSPARAMCD=INDIC'
+Executability: Fully Executable
+Operations:
+  - filter:
+      TSPARMCD: INDIC
+      TSVALNF: NA
+    id: $INDIC
+    operator: record_count
+  - filter:
+      TSPARMCD: HLTSUBJI
+      TSVAL: Y
+    id: $HLTSUBJI
+    operator: record_count
+Outcome:
+  Message: 'TSVALNF is not equal to NA when TSPARAMCD=INDIC'
+  Output Variables:
+    - TSPARMCD
+    - TSVAL
+    - TSVALNF
+    - $INDIC
+    - $HLTSUBJI
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

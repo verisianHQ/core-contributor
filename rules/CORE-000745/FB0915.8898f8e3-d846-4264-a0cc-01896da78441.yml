@@ -1,0 +1,80 @@
+# Variable: OIPARM, OIPARMCD
+# Condition:
+# Rule: OIPARMCD and OIPARM have a one-to-one relationship 
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0915
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0915
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0915
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: OIPARM
+      operator: exists
+    - name: OIPARMCD
+      operator: exists
+    - name: OIPARM
+      operator: is_not_unique_relationship
+      value: OIPARMCD
+Core:
+  Id: CORE-000745
+  Status: Published
+  Version: '1'
+Description: OIPARMCD and OIPARM should have a one-to-one relationship.
+Executability: Fully Executable
+Outcome:
+  Message: OIPARMCD and OIPARM do not have a one-to-one relationship.
+  Output Variables:
+    - OIPARM
+    - OIPARMCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - STUDY REFERENCE
+  Domains:
+    Include:
+      - OI
+Sensitivity: Record

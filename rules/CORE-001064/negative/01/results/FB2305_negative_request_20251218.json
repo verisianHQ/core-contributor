@@ -1,0 +1,981 @@
+{4 items
+"rule":{11 items
+"Authorities":[1 item
+0:{2 items
+"Organization":"FDA"
+"Standards":[1 item
+0:{3 items
+"Name":"SDTMIG"
+"References":[1 item
+0:{4 items
+"Citations":[1 item
+0:{3 items
+"Document":"FDA"
+"Section":"FDAB023"
+"Cited_Guidance":"For interventional studies all treated subjects should have exposure data."
+}
+]
+"Origin":"FDA Business Rules"
+"Version":"1.5"
+"Rule_Identifier":{2 items
+"Id":"FB2305"
+"Version":"1"
+}
+}
+]
+"Version":"3.2"
+}
+]
+}
+]
+"Check":{1 item
+"all":[4 items
+0:{3 items
+"name":"ACTARMCD"
+"operator":"is_not_contained_by_case_insensitive"
+"value":[3 items
+0:"SCRNFAIL"
+1:"NOTASSGN"
+2:"NOTTRT"
+]
+}
+1:{4 items
+"name":"TSPARMCD"
+"operator":"equal_to"
+"value":"STYPE"
+"value_is_literal":true
+}
+2:{4 items
+"name":"TSVAL"
+"operator":"equal_to"
+"value":"INTERVENTIONAL"
+"value_is_literal":true
+}
+3:{3 items
+"name":"USUBJID"
+"operator":"is_not_contained_by"
+"value":"$usubjids_in_ex"
+}
+]
+}
+"Core":{3 items
+"Id":NULL
+"Status":"Draft"
+"Version":"1"
+}
+"Description":"All subjects that have no record in the Exposure domain who are participating in a study that includes an interventional product should not be assigned to a treatment."
+"Executability":"Fully Executable"
+"Operations":[1 item
+0:{4 items
+"domain":"EX"
+"id":"$usubjids_in_ex"
+"name":"USUBJID"
+"operator":"distinct"
+}
+]
+"Outcome":{2 items
+"Message":"Subject has a no record in EX but is assigned to a treatment while participating in an interventional study"
+"Output_Variables":[3 items
+0:"ACTARMCD"
+1:"TSPARMCD"
+2:"TSVAL"
+]
+}
+"Scope":{2 items
+"Classes":{1 item
+"Include":[1 item
+0:"SPECIAL PURPOSE"
+]
+}
+"Domains":{1 item
+"Include":[1 item
+0:"DM"
+]
+}
+}
+"Sensitivity":"Record"
+"Match_Datasets":[1 item
+0:{2 items
+"Keys":[1 item
+0:"STUDYID"
+]
+"Name":"TS"
+}
+]
+"Rule_Type":"Record Data"
+}
+"datasets":[3 items
+0:{5 items
+"filename":"ts.xpt"
+"label":"Trial Summary"
+"domain":"TS"
+"variables":[11 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":12
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"TSSEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+3:{4 items
+"name":"TSGRPID"
+"label":"Group ID"
+"type":"Char"
+"length":50
+}
+4:{4 items
+"name":"TSPARMCD"
+"label":"Trial Summary Parameter Short Name"
+"type":"Char"
+"length":50
+}
+5:{4 items
+"name":"TSPARM"
+"label":"Trial Summary Parameter"
+"type":"Char"
+"length":50
+}
+6:{4 items
+"name":"TSVAL"
+"label":"Parameter Value"
+"type":"Char"
+"length":50
+}
+7:{4 items
+"name":"TSVALNF"
+"label":"Parameter Value Null Flavor"
+"type":"Char"
+"length":50
+}
+8:{4 items
+"name":"TSVALCD"
+"label":"Parameter Value Code"
+"type":"Char"
+"length":50
+}
+9:{4 items
+"name":"TSVCDREF"
+"label":"Name of the Reference Terminology"
+"type":"Char"
+"length":50
+}
+10:{4 items
+"name":"TSVCDVER"
+"label":"Version of the Reference Terminology"
+"type":"Char"
+"length":50
+}
+]
+"records":{11 items
+"STUDYID":[13 items
+0:"ABC"
+1:"ABC"
+2:"ABC"
+3:"ABC"
+4:"ABC"
+5:"ABC"
+6:"ABC"
+7:"ABC"
+8:"ABC"
+9:"ABC"
+10:"ABC"
+11:"ABC"
+12:"ABC"
+]
+"DOMAIN":[13 items
+0:"TS"
+1:"TS"
+2:"TS"
+3:"TS"
+4:"TS"
+5:"TS"
+6:"TS"
+7:"TS"
+8:"TS"
+9:"TS"
+10:"TS"
+11:"TS"
+12:"TS"
+]
+"TSSEQ":[13 items
+0:1
+1:1
+2:1
+3:NULL
+4:NULL
+5:1
+6:2
+7:1
+8:2
+9:1
+10:1
+11:1
+12:1
+]
+"TSGRPID":[13 items
+0:""
+1:""
+2:""
+3:""
+4:""
+5:"CARX"
+6:"DEX"
+7:"CARX"
+8:"CARX"
+9:""
+10:""
+11:""
+12:""
+]
+"TSPARMCD":[13 items
+0:"ACTSUB"
+1:"ADAPT"
+2:"ADDON"
+3:"AGEMAX"
+4:"AGEMIN"
+5:"CURTRT"
+6:"CURTRT"
+7:"DOSE"
+8:"DOSE"
+9:"STYPE"
+10:"TBLIND"
+11:"TCNTRL"
+12:"TDIGRP"
+]
+"TSPARM":[13 items
+0:"Actual Number of Subjects"
+1:"Adaptive Design"
+2:"Added on to Existing Treatments"
+3:"Planned Maximum Age of Subjects"
+4:"Planned Minimum Age of Subjects"
+5:"Current Therapy or Treatment"
+6:"Current Therapy or Treatment"
+7:"Dose per Administration"
+8:"Dose per Administration"
+9:"Study Type"
+10:"Trial Blinding Schema"
+11:"Control Type"
+12:"Diagnosis Group"
+]
+"TSVAL":[13 items
+0:"341"
+1:"N"
+2:"Y"
+3:""
+4:"P18Y"
+5:"CARX"
+6:"DEX"
+7:"20"
+8:"56"
+9:"INTERVENTIONAL"
+10:"OPEN LABEL"
+11:"ACTIVE"
+12:"Relapse multiple myeloma"
+]
+"TSVALNF":[13 items
+0:""
+1:""
+2:""
+3:"PINF"
+4:""
+5:""
+6:""
+7:""
+8:""
+9:""
+10:""
+11:""
+12:""
+]
+"TSVALCD":[13 items
+0:""
+1:"C49487"
+2:"C49488"
+3:"ISO 21090"
+4:"ISO 8601"
+5:"72X6E3J5AR"
+6:"7S5I7G3JQL"
+7:""
+8:""
+9:"C98388"
+10:"C49659"
+11:"C49649"
+12:"452291000124109"
+]
+"TSVCDREF":[13 items
+0:""
+1:"CDISC"
+2:"CDISC"
+3:""
+4:""
+5:"UNII"
+6:"UNII"
+7:""
+8:""
+9:"CDISC"
+10:"CDISC"
+11:"CDISC"
+12:"SNOMED"
+]
+"TSVCDVER":[13 items
+0:""
+1:"2015-03-27"
+2:"2015-03-27"
+3:""
+4:""
+5:"2021-12-13"
+6:"2021-12-13"
+7:""
+8:""
+9:"2015-03-27"
+10:"2015-03-27"
+11:"2015-03-27"
+12:"2020-03-01"
+]
+}
+}
+1:{5 items
+"filename":"dm.xpt"
+"label":"Demographics"
+"domain":"DM"
+"variables":[25 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":12
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":20
+}
+3:{4 items
+"name":"SUBJID"
+"label":"Subject Identifier for the Study"
+"type":"Char"
+"length":12
+}
+4:{4 items
+"name":"RFSTDTC"
+"label":"Subject Reference Start Date/Time"
+"type":"Char"
+"length":19
+}
+5:{4 items
+"name":"RFENDTC"
+"label":"Subject Reference End Date/Time"
+"type":"Char"
+"length":19
+}
+6:{4 items
+"name":"RFXSTDTC"
+"label":"Date/Time of First Study Treatment"
+"type":"Char"
+"length":19
+}
+7:{4 items
+"name":"RFXENDTC"
+"label":"Date/Time of Last Study Treatment"
+"type":"Char"
+"length":19
+}
+8:{4 items
+"name":"RFICDTC"
+"label":"Date/Time of Informed Consent"
+"type":"Char"
+"length":19
+}
+9:{4 items
+"name":"RFPENDTC"
+"label":"Date/Time of End of Participation"
+"type":"Char"
+"length":19
+}
+10:{4 items
+"name":"DTHDTC"
+"label":"Date/Time of Death"
+"type":"Char"
+"length":19
+}
+11:{4 items
+"name":"DTHFL"
+"label":"Subject Death Flag"
+"type":"Char"
+"length":1
+}
+12:{4 items
+"name":"SITEID"
+"label":"Study Site Identifier"
+"type":"Char"
+"length":3
+}
+13:{4 items
+"name":"BRTHDTC"
+"label":"Date/Time of Birth"
+"type":"Char"
+"length":19
+}
+14:{4 items
+"name":"AGE"
+"label":"Age"
+"type":"Num"
+"length":8
+}
+15:{4 items
+"name":"AGETXT"
+"label":"Age Text"
+"type":"Char"
+"length":5
+}
+16:{4 items
+"name":"AGEU"
+"label":"Age Units"
+"type":"Char"
+"length":5
+}
+17:{4 items
+"name":"SEX"
+"label":"Sex"
+"type":"Char"
+"length":1
+}
+18:{4 items
+"name":"RACE"
+"label":"Race"
+"type":"Char"
+"length":41
+}
+19:{4 items
+"name":"ETHNIC"
+"label":"Ethnicity"
+"type":"Char"
+"length":22
+}
+20:{4 items
+"name":"ARMCD"
+"label":"Planned Arm Code"
+"type":"Char"
+"length":8
+}
+21:{4 items
+"name":"ARM"
+"label":"Description of Planned Arm"
+"type":"Char"
+"length":28
+}
+22:{4 items
+"name":"ACTARMCD"
+"label":"Actual Arm Code"
+"type":"Char"
+"length":8
+}
+23:{4 items
+"name":"ACTARM"
+"label":"Description of Actual Arm"
+"type":"Char"
+"length":28
+}
+24:{4 items
+"name":"COUNTRY"
+"label":"Country"
+"type":"Char"
+"length":3
+}
+]
+"records":{25 items
+"STUDYID":[7 items
+0:"ABC"
+1:"ABC"
+2:"ABC"
+3:"ABC"
+4:"ABC"
+5:"ABC"
+6:"ABC"
+]
+"DOMAIN":[7 items
+0:"DM"
+1:"DM"
+2:"DM"
+3:"DM"
+4:"DM"
+5:"DM"
+6:"DM"
+]
+"USUBJID":[7 items
+0:"ABC123"
+1:"ABC345"
+2:"ZZZ100"
+3:"XXX100-88888"
+4:"XXX200-99999"
+5:"XXX300-33333"
+6:"XXX500-55555"
+]
+"SUBJID":[7 items
+0:"076000300003"
+1:"300000400002"
+2:"88800088888"
+3:"10000088888"
+4:"20000099999"
+5:"90000033333"
+6:"50000055555"
+]
+"RFSTDTC":[7 items
+0:"2018-04-02T11:32"
+1:"2018-05-08T11:20"
+2:"2018-05-08T11:20"
+3:"2018-05-08T11:20"
+4:"2018-05-08T11:20"
+5:"2018-05-08T11:20"
+6:"2018-05-08T11:20"
+]
+"RFENDTC":[7 items
+0:"2019-02-19T10:55"
+1:"2018-08-29T10:35"
+2:"2018-08-29T10:35"
+3:"2018-08-29T10:35"
+4:"2018-08-29T10:35"
+5:"2018-08-29T10:35"
+6:"2018-08-29T10:35"
+]
+"RFXSTDTC":[7 items
+0:"2018-04-02T11:32"
+1:"2018-05-08T11:20"
+2:"2018-05-08T11:20"
+3:"2018-05-08T11:20"
+4:"2018-05-08T11:20"
+5:"2018-05-08T11:20"
+6:"2018-05-08T11:20"
+]
+"RFXENDTC":[7 items
+0:"2019-02-19T10:55"
+1:"2018-08-29T10:35"
+2:"2018-08-29T10:35"
+3:"2018-08-29T10:35"
+4:"2018-08-29T10:35"
+5:"2018-08-29T10:35"
+6:"2018-08-29T10:35"
+]
+"RFICDTC":[7 items
+0:"2018-03-06"
+1:"2018-04-17"
+2:"2018-04-17"
+3:"2018-04-17"
+4:"2018-04-17"
+5:"2018-04-17"
+6:"2018-04-17"
+]
+"RFPENDTC":[7 items
+0:"2021-02-18"
+1:"2018-09-04"
+2:"2018-09-04"
+3:"2018-09-04"
+4:"2018-09-04"
+5:"2018-09-04"
+6:"2018-09-04"
+]
+"DTHDTC":[7 items
+0:"2021-02-18"
+1:"2018-09-04"
+2:"2019-11-18"
+3:"2019-11-18"
+4:"2019-11-18"
+5:"2019-11-18"
+6:"2019-11-18"
+]
+"DTHFL":[7 items
+0:""
+1:"N"
+2:"Y"
+3:"Y"
+4:"Y"
+5:"Y"
+6:"Y"
+]
+"SITEID":[7 items
+0:"0760003"
+1:"3000004"
+2:"3000004"
+3:"3000004"
+4:"3000004"
+5:"3000004"
+6:"3000004"
+]
+"BRTHDTC":[7 items
+0:"1940-01-14"
+1:"1947-12-23"
+2:"1947-12-23"
+3:"1947-12-23"
+4:"1947-12-23"
+5:"1947-12-23"
+6:"1947-12-23"
+]
+"AGE":[7 items
+0:78
+1:70
+2:71
+3:71
+4:71
+5:71
+6:71
+]
+"AGETXT":[7 items
+0:""
+1:""
+2:""
+3:""
+4:""
+5:""
+6:""
+]
+"AGEU":[7 items
+0:"YEARS"
+1:"YEARS"
+2:"YEARS"
+3:"YEARS"
+4:"YEARS"
+5:"YEARS"
+6:"YEARS"
+]
+"SEX":[7 items
+0:"F"
+1:"F"
+2:"M"
+3:"M"
+4:"M"
+5:"M"
+6:"M"
+]
+"RACE":[7 items
+0:"WHITE"
+1:"WHITE"
+2:"WHITE"
+3:"WHITE"
+4:"WHITE"
+5:"WHITE"
+6:"WHITE"
+]
+"ETHNIC":[7 items
+0:"HISPANIC OR LATINO"
+1:"NOT HISPANIC OR LATINO"
+2:"NOT HISPANIC OR LATINO"
+3:"NOT HISPANIC OR LATINO"
+4:"NOT HISPANIC OR LATINO"
+5:"NOT HISPANIC OR LATINO"
+6:"NOT HISPANIC OR LATINO"
+]
+"ARMCD":[7 items
+0:"IKD"
+1:"IKD"
+2:"XYZ"
+3:"YYY"
+4:"SCRNFAIL"
+5:"NOTASSGN"
+6:"IKD"
+]
+"ARM":[7 items
+0:"IKd"
+1:"IKd"
+2:"XYZ"
+3:"YYY"
+4:"Screen Failure"
+5:"Not Assigned"
+6:"IKd"
+]
+"ACTARMCD":[7 items
+0:"IKD"
+1:"IKD"
+2:"XYZ"
+3:"YYY"
+4:"SCRNFAIL"
+5:"NOTASSGN"
+6:"NOTTRT"
+]
+"ACTARM":[7 items
+0:"IKd"
+1:"IKd"
+2:"XYZ"
+3:"YYY"
+4:"Screen Failure"
+5:"Not Assigned"
+6:"Not Treated"
+]
+"COUNTRY":[7 items
+0:"BRA"
+1:"GRC"
+2:"USA"
+3:"USA"
+4:"USA"
+5:"USA"
+6:"USA"
+]
+}
+}
+2:{5 items
+"filename":"ex.xpt"
+"label":"Exposure"
+"domain":"EX"
+"variables":[18 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":12
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":20
+}
+3:{4 items
+"name":"EXSEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"EXLNKID"
+"label":"Link ID"
+"type":"Char"
+"length":50
+}
+5:{4 items
+"name":"EXTRT"
+"label":"Name of Treatment"
+"type":"Char"
+"length":50
+}
+6:{4 items
+"name":"EXDOSE"
+"label":"Dose"
+"type":"Num"
+"length":8
+}
+7:{4 items
+"name":"EXDOSTXT"
+"label":"Dose Description"
+"type":"Char"
+"length":50
+}
+8:{4 items
+"name":"EXDOSU"
+"label":"Dose Units"
+"type":"Char"
+"length":50
+}
+9:{4 items
+"name":"EXDOSFRM"
+"label":"Dose Form"
+"type":"Char"
+"length":50
+}
+10:{4 items
+"name":"EXDOSFRQ"
+"label":"Dosing Frequency per Interval"
+"type":"Char"
+"length":50
+}
+11:{4 items
+"name":"EXROUTE"
+"label":"Route of Administration"
+"type":"Char"
+"length":50
+}
+12:{4 items
+"name":"EXVAMT"
+"label":"Dose"
+"type":"Num"
+"length":8
+}
+13:{4 items
+"name":"EXVAMTU"
+"label":"Dose Units"
+"type":"Char"
+"length":50
+}
+14:{4 items
+"name":"EXSTDTC"
+"label":"Start Date/Time of Treatment"
+"type":"Char"
+"length":19
+}
+15:{4 items
+"name":"EXENDTC"
+"label":"End Date/Time of Treatment"
+"type":"Char"
+"length":19
+}
+16:{4 items
+"name":"EXSTDY"
+"label":"Study Day of Start of Treatment"
+"type":"Num"
+"length":8
+}
+17:{4 items
+"name":"EXENDY"
+"label":"Study Day of End of Treatment"
+"type":"Num"
+"length":8
+}
+]
+"records":{18 items
+"STUDYID":[5 items
+0:"ABC"
+1:"ABC"
+2:"ABC"
+3:"ABC"
+4:"ABC"
+]
+"DOMAIN":[5 items
+0:"EX"
+1:"EX"
+2:"EX"
+3:"EX"
+4:"EX"
+]
+"USUBJID":[5 items
+0:"ABC123"
+1:"ABC123"
+2:"ABC345"
+3:"ABC345"
+4:"ZZZ100"
+]
+"EXSEQ":[5 items
+0:1
+1:2
+2:1
+3:2
+4:1
+]
+"EXLNKID":[5 items
+0:"A2-10110114"
+1:"A2-10110114"
+2:"A2-20110114"
+3:"A2-20110125"
+4:""
+]
+"EXTRT":[5 items
+0:"DRUG X"
+1:"DRUG Y"
+2:"DRUG Z"
+3:"DRUG Z"
+4:"XYZ"
+]
+"EXDOSE":[5 items
+0:3
+1:3
+2:500
+3:500
+4:100
+]
+"EXDOSTXT":[5 items
+0:""
+1:""
+2:""
+3:""
+4:""
+]
+"EXDOSU":[5 items
+0:"mg/kg"
+1:"mg/kg"
+2:"mg"
+3:"mg"
+4:"mg"
+]
+"EXDOSFRM":[5 items
+0:"INJECTION"
+1:"INJECTION"
+2:"TABLET"
+3:"TABLET"
+4:"TABLET"
+]
+"EXDOSFRQ":[5 items
+0:"ONCE"
+1:"ONCE"
+2:"QD"
+3:"QD"
+4:"QD"
+]
+"EXROUTE":[5 items
+0:"SUBCUTANEOUS"
+1:"SUBCUTANEOUS"
+2:"ORAL"
+3:"ORAL"
+4:"ORAL"
+]
+"EXVAMT":[5 items
+0:0.1
+1:0.1
+2:NULL
+3:NULL
+4:NULL
+]
+"EXVAMTU":[5 items
+0:"mL"
+1:"mL"
+2:""
+3:""
+4:""
+]
+"EXSTDTC":[5 items
+0:"40557"
+1:"40557"
+2:"40557"
+3:"40568"
+4:"2018-05-08T11:20"
+]
+"EXENDTC":[5 items
+0:"40571"
+1:"40571"
+2:"40566"
+3:"40571"
+4:"2018-08-29T10:35"
+]
+"EXSTDY":[5 items
+0:1
+1:1
+2:1
+3:12
+4:12
+]
+"EXENDY":[5 items
+0:15
+1:15
+2:10
+3:15
+4:15
+]
+}
+}
+]
+"standard":{2 items
+"product":"sdtmig"
+"version":"3-2"
+}
+"codelists":[]0 items
+}

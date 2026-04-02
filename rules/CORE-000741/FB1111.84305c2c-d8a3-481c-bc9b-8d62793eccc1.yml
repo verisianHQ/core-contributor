@@ -1,0 +1,98 @@
+Authorities:
+  - Organization: 'FDA'
+    Standards:
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1111'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1111'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1111'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  any:
+    - name: TSPARMCD
+      operator: not_contains_all
+      value:
+        - INTMODEL
+        - INTTYPE
+        - PCLASS
+    - any:
+        - all:
+            - name: TSPARMCD
+              operator: equal_to
+              value: INTMODEL
+            - name: TSVAL
+              operator: empty
+        - all:
+            - name: TSPARMCD
+              operator: equal_to
+              value: INTTYPE
+            - name: TSVAL
+              operator: empty
+        - all:
+            - name: TSPARMCD
+              operator: equal_to
+              value: PCLASS
+            - name: TSVAL
+              operator: empty
+    - name: $STYPE_INTERVENTIONAL
+      operator: not_equal_to
+      value: 1
+Core:
+  Status: Published
+  Version: '1'
+  Id: CORE-000741
+Description: The set  ('INTMODEL’, 'INTTYPE','PCLASS') is not in the list of
+  TSPARAMCD with TSVAL populated.
+Executability: Fully Executable
+Operations:
+  - filter:
+      TSPARMCD: STYPE
+      TSVAL: INTERVENTIONAL
+    id: $STYPE_INTERVENTIONAL
+    operator: record_count
+Outcome:
+  Message: The set  ('INTMODEL’, 'INTTYPE','PCLASS') is not in the list of
+    TSPARAMCD with TSVAL populated.
+  Output Variables:
+    - TSPARMCD
+    - TSVAL
+    - $STYPE_INTERVENTIONAL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

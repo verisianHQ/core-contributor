@@ -1,0 +1,110 @@
+{
+    "EG": [
+        {
+            "executionStatus": "success",
+            "dataset": "eg.xpt",
+            "domain": "EG",
+            "variables": [
+                "EGSTRESC",
+                "EGSTRESN"
+            ],
+            "message": "EGSTRESC is not numeric but EGSTRESN is not empty",
+            "errors": [
+                {
+                    "value": {
+                        "EGSTRESN": 10,
+                        "EGSTRESC": "TEST"
+                    },
+                    "dataset": "eg.xpt",
+                    "row": 1,
+                    "USUBJID": "123101",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "EGSTRESN": 2,
+                        "EGSTRESC": "2-5"
+                    },
+                    "dataset": "eg.xpt",
+                    "row": 2,
+                    "USUBJID": "123101",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "EGSTRESN": 8,
+                        "EGSTRESC": "+8"
+                    },
+                    "dataset": "eg.xpt",
+                    "row": 3,
+                    "USUBJID": "123102",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "EGSTRESN": 15,
+                        "EGSTRESC": "positive"
+                    },
+                    "dataset": "eg.xpt",
+                    "row": 4,
+                    "USUBJID": "123102",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "EGSTRESN": 5,
+                        "EGSTRESC": "<5"
+                    },
+                    "dataset": "eg.xpt",
+                    "row": 5,
+                    "USUBJID": "123102",
+                    "SEQ": 2
+                }
+            ]
+        }
+    ],
+    "FA": [
+        {
+            "executionStatus": "success",
+            "dataset": "fa.xpt",
+            "domain": "FA",
+            "variables": [
+                "FASTRESC",
+                "FASTRESN"
+            ],
+            "message": "FASTRESC is not numeric but FASTRESN is not empty",
+            "errors": [
+                {
+                    "value": {
+                        "FASTRESN": 9,
+                        "FASTRESC": "SEVERE"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 1,
+                    "USUBJID": "123101",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "FASTRESN": 250,
+                        "FASTRESC": "111@"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 2,
+                    "USUBJID": "123101",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "FASTRESN": 1,
+                        "FASTRESC": "<5"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 3,
+                    "USUBJID": "123101",
+                    "SEQ": 5
+                }
+            ]
+        }
+    ]
+}
