@@ -337,7 +337,9 @@ class TestRunner:
         for sheet in wb.worksheets:
             for row in sheet.iter_rows():
                 for cell in row:
-                    if cell.fill.start_color.index == "FFFFFF00":
+                    if not cell.fill.fgColor or not isinstance(cell.fill.fgColor.rgb, str):
+                        continue
+                    if cell.fill.fgColor.rgb.lower().endswith("ffff00"):
                         sheet_data = highlighted_cells.setdefault(sheet.title, {})
                         row_data = sheet_data.setdefault(int(cell.row), {})
                         row_data.update({sheet.cell(row=1, column=cell.column).value: cell.value})
@@ -347,7 +349,7 @@ class TestRunner:
         unmatched = []
 
         flat_validation = {}
-        for _, entries in validations.items():
+        for idx, entries in validations.items():
             if not entries:
                 continue
             error_level = entries[0]["Error level"].lower()
@@ -355,7 +357,7 @@ class TestRunner:
             row = entries[0]["Row num"] if entries[0]["Row num"] in [1, "N/A"] else entries[0]["Row num"] - 4
             values = {e["Variable"]: e["Error value"] for e in entries}
 
-            flat_validation[(sheet, error_level, row)] = values
+            flat_validation[(sheet, error_level, row, idx)] = values
 
         for ds in results_data["datasets"]:
             sheet_name = ds["dataset"]
@@ -365,20 +367,17 @@ class TestRunner:
                     res_values = error_obj["value"]
 
                     match_found = False
-                    for (v_sheet, v_error_level, v_row), v_values in flat_validation.items():
+                    for (v_sheet, v_error_level, v_row, v_idx), v_values in flat_validation.items():
                         if v_sheet == sheet_name:
-                            if v_error_level == "record":
-                                if v_values == res_values:
-                                    match_found = True
-                            elif v_error_level == "variable" or v_error_level == "dataset":
-                                v_not_absent = set(k for k, v in v_values.items() if v != "[ABSENT]")
-                                res_not_absent = set(k for k, v in res_values.items() if v != "[ABSENT]")
-                                if v_not_absent == res_not_absent or not v_not_absent:
-                                    match_found = True
+                            v_absent = set(k for k, v in v_values.items() if v == "[ABSENT]")
+                            v_not_absent = set(k for k, v in v_values.items() if v != "[ABSENT]")
+                            res_not_absent = set(k for k, v in res_values.items() if v != "[ABSENT]") - v_absent
+                            if v_not_absent == res_not_absent or not res_not_absent:
+                                match_found = True
 
                             if match_found:
                                 error_obj["validated"] = True
-                                del flat_validation[(v_sheet, v_error_level, v_row)]
+                                del flat_validation[(v_sheet, v_error_level, v_row, v_idx)]
                                 break
 
                     if not match_found:
@@ -405,8 +404,10 @@ class TestRunner:
                 if str(var)[0] == "$":
                     continue
                 if error_level == "record":
+                    if error_val == "[ABSENT]":
+                        continue
                     h_val = highlights.get(sheet, {}).get(row, {}).get(var)
-                    match = str(h_val) == str(error_val)
+                    match = str(h_val if h_val else None) == str(error_val)
                 if error_level == "variable":
                     if error_val == "[PRESENT]":
                         h_id = highlights.get(sheet, {}).get(row, {})

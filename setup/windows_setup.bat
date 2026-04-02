@@ -5,6 +5,19 @@ setlocal enabledelayedexpansion
 echo CDISC Rules Engine - Contributor Setup
 echo.
 
+REM Warn if not running as admin
+net session >nul 2>&1
+if %errorLevel% neq 0 (
+    echo Requesting Administrative privileges...
+    powershell -Command "Start-Process -FilePath '%0' -Verb RunAs"
+    exit /b
+)
+
+if exist "C:\ProgramData\chocolatey\lib-bad" (
+    echo Cleaning up corrupted Chocolatey folders...
+    rmdir /s /q "C:\ProgramData\chocolatey\lib-bad" >nul 2>&1
+)
+
 REM Check for Python 3.12.x
 set "PYTHON_CMD="
 set "REQUIRED_VERSION=3.12"
@@ -14,7 +27,7 @@ if !errorlevel! equ 0 (
     for /f "tokens=2" %%v in ('python3.12 --version 2^>^&1') do set "PYTHON_VERSION=%%v"
     echo Found python3.12: !PYTHON_VERSION!
     set "PYTHON_CMD=python3.12"
-    goto :python_found
+    goto :setup_venv
 )
 
 where python3 >nul 2>&1
@@ -24,7 +37,7 @@ if !errorlevel! equ 0 (
         if %%a EQU 3 if %%b EQU 12 (
             echo Found python3: !PYTHON_VERSION!
             set "PYTHON_CMD=python3"
-            goto :python_found
+            goto :setup_venv
         )
     )
 )
@@ -36,146 +49,55 @@ if !errorlevel! equ 0 (
         if %%a EQU 3 if %%b EQU 12 (
             echo Found python: !PYTHON_VERSION!
             set "PYTHON_CMD=python"
-            goto :python_found
+            goto :setup_venv
         )
     )
 )
 
-echo Python 3.12 not found. Installing automatically...
+echo Python 3.12 not found. Attempting automatic installation...
 echo.
 
 REM Try winget first (Windows 10 1809+ and Windows 11)
 where winget >nul 2>&1
 if !errorlevel! equ 0 (
     echo Installing Python 3.12 via winget...
-    winget install Python.Python.3.12 --silent --accept-source-agreements --accept-package-agreements
-    if !errorlevel! equ 0 (
-        echo Python 3.12 installed successfully
-        goto :refresh_and_verify
-    )
+    winget install Python.Python.3.12 --silent --accept-source-agreements
+    if !errorlevel! equ 0 goto :refresh_and_verify
 )
 
-REM Try chocolatey if available
+REM Try chocolatey
 where choco >nul 2>&1
 if !errorlevel! equ 0 (
     echo Installing Python 3.12 via Chocolatey...
     choco install python312 -y
-    if !errorlevel! equ 0 (
-        echo Python 3.12 installed successfully
-        goto :refresh_and_verify
-    )
+    if !errorlevel! equ 0 goto :refresh_and_verify
 )
 
 REM Direct download and install as last resort
 echo Downloading Python 3.12 installer...
-set "PYTHON_INSTALLER=%TEMP%\python-3.12-installer.exe"
-powershell -Command "Invoke-WebRequest -Uri 'https://www.python.org/ftp/python/3.12.8/python-3.12.8-amd64.exe' -OutFile '%PYTHON_INSTALLER%'"
-
-if !errorlevel! neq 0 (
-    echo Failed to download Python installer
-    echo Please install Python 3.12 manually from: https://www.python.org/downloads/
-    pause
-    exit /b 1
-)
-
-echo Installing Python 3.12...
-%PYTHON_INSTALLER% /quiet InstallAllUsers=1 PrependPath=1 Include_test=0
-if !errorlevel! neq 0 (
-    echo Python installation failed
-    del "%PYTHON_INSTALLER%"
-    pause
-    exit /b 1
-)
-
-del "%PYTHON_INSTALLER%"
-echo Python 3.12 installed successfully
+powershell -Command "Invoke-WebRequest -Uri 'https://www.python.org/ftp/python/3.12.8/python-3.12.8-amd64.exe' -OutFile '%TEMP%\py312.exe'"
+%TEMP%\py312.exe /quiet InstallAllUsers=1 PrependPath=1
+del "%TEMP%\py312.exe"
 
 :refresh_and_verify
-REM Refresh PATH
-for /f "tokens=2*" %%a in ('reg query "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v Path') do set "NEW_PATH=%%b"
-set "PATH=%NEW_PATH%"
+REM Combine system and user paths for the current session
+for /f "tokens=2*" %%a in ('reg query "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v Path 2^>nul') do set "SYS_PATH=%%b"
+for /f "tokens=2*" %%a in ('reg query "HKCU\Environment" /v Path 2^>nul') do set "USR_PATH=%%b"
+set "PATH=%SYS_PATH%;%USR_PATH%"
 
-REM Try to find Python again
-where python3.12 >nul 2>&1
-if !errorlevel! equ 0 (
-    set "PYTHON_CMD=python3.12"
-) else (
-    where python >nul 2>&1
-    if !errorlevel! equ 0 (
-        set "PYTHON_CMD=python"
-    ) else (
-        echo Python installation succeeded but command not found in PATH
-        echo Please restart your terminal and run this script again
-        pause
-        exit /b 1
-    )
-)
+set "PYTHON_CMD=python"
 
-:python_found
-
+:setup_venv
 echo.
 echo Setting up virtual environment...
-
-if exist "venv\" (
-    echo Removing existing virtual environment...
-    rmdir /s /q venv
-)
-
-if not exist "venv\" (
-    echo Creating virtual environment...
-    %PYTHON_CMD% -m venv venv
-    if !errorlevel! neq 0 (
-        echo Failed to create virtual environment
-        cd ..
-        pause
-        exit /b 1
-    )
-) else (
-    echo Virtual environment already exists
-)
-
-echo Activating virtual environment...
+if exist "venv\" rmdir /s /q venv
+!PYTHON_CMD! -m venv venv
 call venv\Scripts\activate.bat
-if !errorlevel! neq 0 (
-    echo Failed to activate virtual environment
-    cd ..
-    pause
-    exit /b 1
-)
 
-echo.
 echo Installing dependencies...
 python -m pip install --upgrade pip setuptools wheel --quiet
-
-if not exist "engine/requirements.txt" (
-    echo requirements.txt not found in engine directory
-    cd ..
-    pause
-    exit /b 1
-)
-
-python -m pip install -r engine/requirements.txt --quiet
-if !errorlevel! neq 0 (
-    echo Failed to install dependencies
-    cd ..
-    pause
-    exit /b 1
-)
-
-if not exist "engine/requirements-dev.txt" (
-    echo requirements-dev.txt not found in engine directory
-    cd ..
-    pause
-    exit /b 1
-)
-
-python -m pip install -r engine/requirements-dev.txt --quiet
-if !errorlevel! neq 0 (
-    echo Failed to install dependencies
-    cd ..
-    pause
-    exit /b 1
-)
+python -m pip install -r engine\requirements.txt --quiet
+python -m pip install -r engine\requirements-dev.txt --quiet
 
 echo.
 echo Setup completed successfully!
