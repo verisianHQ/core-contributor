@@ -1,6 +1,7 @@
 # Variable: --DY
 # Condition: The date portion of --DTC ^= complete date or the date portion of DM.RFSTDTC ^= complete date
 # Rule: --DY = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -12,7 +13,7 @@ Authorities:
                   respective date/time variables (--DTC, --STDTC, and --ENDTC)
                   to the date portion of the Subject Reference Start Date
                   (RFSTDTC from the Demographics domain)
-                Document: SDTMIG v3.4
+                Document: IG v3.4
                 Section: 4.4.4
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -28,7 +29,7 @@ Authorities:
                   respective date/time variables (--DTC, --STDTC, and --ENDTC)
                   to the date portion of the Subject Reference Start Date
                   (RFSTDTC from the Demographics domain).
-                Document: SDTMIG v3.3
+                Document: IG v3.3
                 Section: 4.4.4
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -44,7 +45,7 @@ Authorities:
                   respective date/time variables (--DTC, --STDTC, and --ENDTC)
                   to the date portion of the Subject Reference Start Date
                   (RFSTDTC from the Demographics domain).
-                Document: SDTMIG v3.2
+                Document: IG v3.2
                 Section: 4.1.4.4
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -73,27 +74,26 @@ Authorities:
         Version: '1.0'
 Check:
   all:
-    - name: --DY
-      operator: non_empty
     - any:
         - name: --DTC
           operator: is_incomplete_date
         - name: RFSTDTC
           operator: is_incomplete_date
+    - name: --DY
+      operator: non_empty
 Core:
   Id: CORE-000354
   Status: Published
   Version: '1'
 Description: Raise an error when the date portion of --DTC is an incomplete date
-  or the date portion of DM.RFSTDTC is an incomplete date, but --DY is not empty
+  or the date portion of DM.RFSTDTC is an incomplete date, but --DY is not empty.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: DM
 Outcome:
-  Message: The date portion of --DTC is not complete date or the date portion of
-    DM.RFSTDTC is not complete date, but --DY is not empty
+  Message: The date portion of --DTC or RFSTDTC is incomplete, but --DY is not empty.
   Output Variables:
     - --DY
     - --DTC

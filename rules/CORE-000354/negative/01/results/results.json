@@ -12,145 +12,193 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "The date portion of LBDTC is not complete date or the date portion of DM.RFSTDTC is not complete date, but LBDY is not empty",
-      "number_errors": 7,
+      "execution_message": "The date portion of LBDTC or RFSTDTC is incomplete, but LBDY is not empty.",
+      "number_errors": 5,
       "errors": [
         {
           "row": 1,
+          "SEQ": 6,
+          "USUBJID": "123101",
+          "value": {
+            "LBDTC": null,
+            "LBDY": 1.0,
+            "RFSTDTC": "2005-10-13T10:15"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 7,
+          "USUBJID": "123101",
+          "value": {
+            "LBDTC": null,
+            "LBDY": 141.0,
+            "RFSTDTC": "2005-10-13T10:15"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
           "SEQ": 1,
           "USUBJID": "123102",
           "value": {
             "LBDTC": "2005-09-28",
             "LBDY": -15.0,
+            "RFSTDTC": "2005-10"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 5,
+          "USUBJID": "123102",
+          "value": {
+            "LBDTC": "2005-09-28",
+            "LBDY": -20.0,
             "RFSTDTC": "2005-10"
           },
           "validated": false
         },
         {
           "row": 5,
-          "SEQ": 5,
-          "USUBJID": "123102",
-          "value": {
-            "LBDTC": "2005-09-28",
-            "LBDY": -15.0,
-            "RFSTDTC": "2005-10"
-          },
-          "validated": false
-        },
-        {
-          "row": 6,
           "SEQ": 6,
-          "USUBJID": "123102",
-          "value": {
-            "LBDTC": null,
-            "LBDY": 1.0,
-            "RFSTDTC": "2005-10"
-          },
-          "validated": false
-        },
-        {
-          "row": 7,
-          "SEQ": 7,
-          "USUBJID": "123102",
-          "value": {
-            "LBDTC": null,
-            "LBDY": 141.0,
-            "RFSTDTC": "2005-10"
-          },
-          "validated": false
-        },
-        {
-          "row": 9,
-          "SEQ": 1,
-          "USUBJID": "123101",
+          "USUBJID": "123103",
           "value": {
             "LBDTC": "2005-09",
-            "LBDY": -15.0,
-            "RFSTDTC": "2005-10-13T10:15"
-          },
-          "validated": false
-        },
-        {
-          "row": 11,
-          "SEQ": 3,
-          "USUBJID": "123101",
-          "value": {
-            "LBDTC": null,
-            "LBDY": 141.0,
-            "RFSTDTC": "2005-10-13T10:15"
-          },
-          "validated": false
-        },
-        {
-          "row": 12,
-          "SEQ": 4,
-          "USUBJID": "123101",
-          "value": {
-            "LBDTC": "2006-05",
-            "LBDY": 213.0,
-            "RFSTDTC": "2005-10-13T10:15"
+            "LBDY": -21.0,
+            "RFSTDTC": null
           },
           "validated": false
         }
       ]
     },
     {
-      "dataset": "ae.xpt",
-      "domain": "AE",
+      "dataset": "ce.xpt",
+      "domain": "CE",
       "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "execution_message": "The date portion of CEDTC or RFSTDTC is incomplete, but CEDY is not empty.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "123101",
+          "value": {
+            "CEDTC": "2014-10",
+            "CEDY": 174.0,
+            "RFSTDTC": "2005-10-13T10:15"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "123102",
+          "value": {
+            "CEDTC": "2014-10-31",
+            "CEDY": 174.0,
+            "RFSTDTC": "2005-10"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "RFSTDTC": "2005-10-13T10:15",
+        "LBDTC": null,
+        "LBDY": 1
+      }
     },
     {
-      "dataset": "ex.xpt",
-      "domain": "EX",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "value": {
+        "RFSTDTC": "2005-10-13T10:15",
+        "LBDTC": null,
+        "LBDY": 141
+      }
+    },
+    {
+      "value": {
+        "RFSTDTC": "2005-10",
+        "LBDTC": "2005-09-28",
+        "LBDY": -15
+      }
+    },
+    {
+      "value": {
+        "RFSTDTC": "2005-10",
+        "LBDTC": "2005-09-28",
+        "LBDY": -20
+      }
+    },
+    {
+      "value": {
+        "RFSTDTC": null,
+        "LBDTC": "2005-09",
+        "LBDY": 21
+      }
+    },
+    {
+      "value": {
+        "RFSTDTC": "2005-10-13T10:15",
+        "CEDTC": "2014-10",
+        "CEDY": 74
+      }
+    },
+    {
+      "value": {
+        "RFSTDTC": "2005-10",
+        "CEDTC": "2014-10-31",
+        "CEDY": 74
+      }
+    }
+  ],
+  "unhighlighted_validations": [
+    {
+      "5": [
+        "lb.xpt",
+        "record",
+        9,
+        "LBDY",
+        21
+      ]
+    },
+    {
+      "6": [
+        "ce.xpt",
+        "record",
+        5,
+        "CEDY",
+        74
+      ]
+    },
+    {
+      "7": [
+        "ce.xpt",
+        "record",
+        6,
+        "CEDY",
+        74
+      ]
     }
   ],
   "unvalidated_highlights": [
-    {
-      "Sheet": "lb.xpt",
-      "Row": 5,
-      "Variable": "LBDY"
-    },
     {
       "Sheet": "lb.xpt",
       "Row": 9,
       "Variable": "LBDY"
     },
     {
-      "Sheet": "lb.xpt",
-      "Row": 10,
-      "Variable": "LBDY"
+      "Sheet": "ce.xpt",
+      "Row": 5,
+      "Variable": "CEDY"
     },
     {
-      "Sheet": "lb.xpt",
-      "Row": 11,
-      "Variable": "LBDY"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 13,
-      "Variable": "LBDY"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 14,
-      "Variable": "LBDY"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 15,
-      "Variable": "LBDY"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 16,
-      "Variable": "LBDY"
+      "Sheet": "ce.xpt",
+      "Row": 6,
+      "Variable": "CEDY"
     }
   ]
 }
