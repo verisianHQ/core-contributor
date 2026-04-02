@@ -168,6 +168,8 @@ jobs:
                 TEMP_OUTPUT="/tmp/validator_${TEST_TYPE}_${CASE_ID}.txt"
                 
                 # Run validator and capture output
+                cat "$COMMITTED_RESULTS" > "$TEMP_OUTPUT"
+                cat "$GENERATED_RESULTS" >> "$TEMP_OUTPUT"
                 $PYTHON_CMD tests/validator.py "$COMMITTED_RESULTS" "$GENERATED_RESULTS" "$TEST_TYPE" "$CASE_ID" 2>&1 | tee "$TEMP_OUTPUT"
                 VALIDATOR_EXIT_CODE=${PIPESTATUS[0]}
                 
