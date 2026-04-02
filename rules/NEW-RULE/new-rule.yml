@@ -1,0 +1,83 @@
+# Variable: GEN
+# Condition: 
+# Rule: Variable Type = IG Type for domains in IG, Type = Model Type for custom domains
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Using SDTM-specified data types for all variables
+                Document: IG v3.4
+                Section: 3.2.2
+              - Cited Guidance: Note that the SDTM type specified in this document is either
+                  character or numeric, as these are the only types supported by
+                  SAS v.5 transport files.]
+                Document: Model v2.0
+                Section: '2.1'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0012
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: IG v3.2[3.2.2][Using SDTM-specified data types for all
+                  variables]|Model v1.4[2][The data Type (e.g., whether the
+                  variable value is a character or numeric)]
+                Document: IG v3.2|Model v1.4
+                Section: IG v3.2[3.2.2]|Model v1.4[2]
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0012
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: IG v3.3[3.2.2][Using SDTM-specified data types for all
+                  variables]|Model v1.7[2.1][The SDTM describes the name, label,
+                  role, and type for the standard variables. Note that the SDTM
+                  type specified in this document is either character or
+                  numeric, as these are the only types supported by SAS v.5
+                  transport files.]
+                Document: IG v3.3|Model v1.7
+                Section: IG v3.3[3.2.2]|Model v1.7[2.1]
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0012
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: variable_data_type
+      operator: not_equal_to
+      value: library_variable_data_type
+Core:
+  Id: CORE-001082
+  Status: Published
+  Version: '1'
+Description: Raise an error when the variable type does not match IG Type (for
+  domains in IG) or Model Type (custom domains)
+Executability: Fully Executable
+Outcome:
+  Message: Variable data type specified in the dataset does not match the variable
+    data type in the IG or the Model.
+  Output Variables:
+    - variable_name
+    - variable_data_type
+    - library_variable_data_type
+Rule Type: Variable Metadata Check against Library Metadata
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

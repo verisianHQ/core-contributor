@@ -1,0 +1,119 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Variable data type specified in the dataset does not match the variable data type in the IG or the Model.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "library_variable_data_type": "Char",
+            "variable_data_type": "Num",
+            "variable_name": "SUBJID"
+          },
+          "validated": true
+        },
+        {
+          "row": 13,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "library_variable_data_type": "Char",
+            "variable_data_type": "Num",
+            "variable_name": "SITEID"
+          },
+          "validated": true
+        },
+        {
+          "row": 17,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "library_variable_data_type": "Char",
+            "variable_data_type": "Num",
+            "variable_name": "RACE"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "Variable data type specified in the dataset does not match the variable data type in the IG or the Model.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "library_variable_data_type": "Char",
+            "variable_data_type": "Num",
+            "variable_name": "LBORRES"
+          },
+          "validated": true
+        },
+        {
+          "row": 13,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "library_variable_data_type": "Num",
+            "variable_data_type": "Char",
+            "variable_name": "LBCHENDY"
+          },
+          "validated": true
+        },
+        {
+          "row": 14,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "library_variable_data_type": null,
+            "variable_data_type": "Char",
+            "variable_name": "LBDURATION"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "xy.xpt",
+      "domain": "XY",
+      "execution_status": "success",
+      "execution_message": "Variable data type specified in the dataset does not match the variable data type in the IG or the Model.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "library_variable_data_type": "Num",
+            "variable_data_type": "Char",
+            "variable_name": "XYSEQ"
+          },
+          "validated": true
+        },
+        {
+          "row": 12,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "library_variable_data_type": "Num",
+            "variable_data_type": "Char",
+            "variable_name": "XYDY"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
