@@ -74,13 +74,13 @@ Core:
   Status: Draft
   Version: '1'
 Description: Trigger error when a custom domain is present and is not based on
-  one of the observation classes
+  one of the observation classes.
 Executability: Fully Executable
 Operations:
   - id: $domain_is_custom
     operator: domain_is_custom
 Outcome:
-  Message: Custom domain is not based on one of the observation classes
+  Message: Custom domain is not based on one of the observation classes.
   Output Variables:
     - dataset_name
     - $domain_is_custom
