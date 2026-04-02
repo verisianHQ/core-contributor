@@ -1,6 +1,7 @@
 # Variable: --TPTNUM
 # Condition: --TPT present in dataset
 # Rule: --TPTNUM present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -83,10 +84,12 @@ Core:
   Id: CORE-000026
   Status: Published
   Version: '1'
-Description: When --TPT is present in a dataset, --TPTNUM must also be present.
+Description: Raise an error when --TPT is present in a dataset, but --TPTNUM is not present in the dataset.
 Executability: Fully Executable
 Outcome:
-  Message: The --TPTNUM variable does not exist when --TPT does exist.
+  Message: --TPTNUM should be present when --TPT is present.
+  Output Variables:
+    - --TPT
 Rule Type: Record Data
 Scope:
   Classes:
