@@ -15,7 +15,7 @@ Authorities:
                 Section: '2.6'
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
-              Id: CG0464
+              Id: CG0463
               Version: '2'
             Version: '2.0'
         Version: '3.4'
@@ -25,11 +25,10 @@ Authorities:
               - Cited Guidance: Include the Topic variable from the identified general
                   observation class (e.g., --TESTCD for Findings)
                 Document: IG v3.2
-                Item: 3.b
                 Section: '2.6'
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
-              Id: CG0464
+              Id: CG0463
               Version: '2'
             Version: '2.0'
         Version: '3.2'
@@ -43,7 +42,7 @@ Authorities:
                 Section: '2.6'
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
-              Id: CG0464
+              Id: CG0463
               Version: '2'
             Version: '2.0'
         Version: '3.3'
@@ -61,13 +60,13 @@ Core:
   Id: CDISC.SDTMIG.CG0463
   Status: Draft
   Version: '1'
-Description: Raise an error when --TRT is not present in custom interventions dataset
+Description: Raise an error when --TRT is not present in custom interventions dataset.
 Executability: Fully Executable
 Operations:
   - id: $domain_is_custom
     operator: domain_is_custom
 Outcome:
-  Message: --TRT is not present in custom interventions dataset
+  Message: --TRT is not present in custom interventions dataset.
   Output Variables:
     - domain
     - --TRT
