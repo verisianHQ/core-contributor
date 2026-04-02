@@ -78,7 +78,7 @@ Core:
   Id: CORE-000168
   Status: Published
   Version: '1'
-Description: If VISITNUM is not null then VISITNUM should be among SV.VISITNUM
+Description: Raise an error when VISITNUM does not match any of the VISITNUM values in the SV dataset.
 Executability: Fully Executable
 Operations:
   - domain: SV
@@ -88,21 +88,19 @@ Operations:
     name: VISITNUM
     operator: distinct
 Outcome:
-  Message: VISITNUM is not among VISITNUM in SV domain.
+  Message: VISITNUM does not match any of the VISITNUM values in the SV dataset.
   Output Variables:
     - VISITNUM
 Rule Type: Record Data
 Scope:
   Classes:
     Include:
-      - ALL
+      - EVENTS
+      - FINDINGS
+      - INTERVENTIONS
+      - SPECIAL PURPOSE
   Domains:
     Exclude:
       - SV
-      - TV
-      - TA
-      - TE
-      - TI
-      - TS
   Use Case: INDH
 Sensitivity: Record
