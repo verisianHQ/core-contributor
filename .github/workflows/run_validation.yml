@@ -164,14 +164,16 @@ jobs:
                   continue
                 fi
                 
-                # Create unique temp file for this case
                 TEMP_OUTPUT="/tmp/validator_${TEST_TYPE}_${CASE_ID}.txt"
                 
-                # Run validator and capture output
-                cat "$COMMITTED_RESULTS" > "$TEMP_OUTPUT"
-                cat "$GENERATED_RESULTS" >> "$TEMP_OUTPUT"
-                $PYTHON_CMD tests/validator.py "$COMMITTED_RESULTS" "$GENERATED_RESULTS" "$TEST_TYPE" "$CASE_ID" 2>&1 | tee -a "$TEMP_OUTPUT"
-                VALIDATOR_EXIT_CODE=${PIPESTATUS[0]}
+                if ! diff -q <(jq --sort-keys . "$COMMITTED_RESULTS") <(jq --sort-keys . "$GENERATED_RESULTS") > /dev/null 2>&1; then
+                  echo "Results differ for $TEST_TYPE/$CASE_ID, showing diff:" > "$TEMP_OUTPUT"
+                  diff <(jq --sort-keys . "$COMMITTED_RESULTS") <(jq --sort-keys . "$GENERATED_RESULTS") >> "$TEMP_OUTPUT"                  
+                  VALIDATOR_EXIT_CODE=1
+                else
+                  echo "Results match for $TEST_TYPE/$CASE_ID" > "$TEMP_OUTPUT"
+                  VALIDATOR_EXIT_CODE=0
+                fi
                 
                 if [ $VALIDATOR_EXIT_CODE -ne 0 ]; then
                   echo "\`$TEST_TYPE/$CASE_ID\`: Validation failed" >> $REPORT_FILE
@@ -182,12 +184,12 @@ jobs:
                   PASSED_COUNT=$((PASSED_COUNT + 1))
                 fi
                 
-                # Add validator output details
                 if [ -f "$TEMP_OUTPUT" ] && [ -s "$TEMP_OUTPUT" ]; then
                   echo "<details><summary>View details</summary>" >> $REPORT_FILE
                   echo "" >> $REPORT_FILE
                   echo '```' >> $REPORT_FILE
                   cat "$TEMP_OUTPUT" >> $REPORT_FILE
+                  echo "" >> $REPORT_FILE
                   echo '```' >> $REPORT_FILE
                   echo "</details>" >> $REPORT_FILE
                 fi
