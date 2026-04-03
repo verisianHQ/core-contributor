@@ -138,13 +138,13 @@ jobs:
                 if ! diff -q <(jq --sort-keys . "$COMMITTED_RESULTS") <(jq --sort-keys . "$GENERATED_RESULTS") > /dev/null 2>&1; then
                   echo "Results differ for $TEST_TYPE/$CASE_ID, showing diff:" > "$TEMP_OUTPUT"
                   diff <(jq --sort-keys . "$COMMITTED_RESULTS") <(jq --sort-keys . "$GENERATED_RESULTS") >> "$TEMP_OUTPUT" || true
-                  echo "\`$TEST_TYPE/$CASE_ID\`: ❌ Validation failed" >> $REPORT_FILE
+                  echo "\`$TEST_TYPE/$CASE_ID\`: Validation failed" >> $REPORT_FILE
                   RULE_PASSED=false
                   FAILED_COUNT=$((FAILED_COUNT + 1))
                   OVERALL_SUCCESS=false
                 else
                   echo "Results match for $TEST_TYPE/$CASE_ID" > "$TEMP_OUTPUT"
-                  echo "\`$TEST_TYPE/$CASE_ID\`: ✅ Passed" >> $REPORT_FILE
+                  echo "\`$TEST_TYPE/$CASE_ID\`: Passed" >> $REPORT_FILE
                   PASSED_COUNT=$((PASSED_COUNT + 1))
                 fi
                 
