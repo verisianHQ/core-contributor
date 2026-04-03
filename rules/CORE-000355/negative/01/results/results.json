@@ -3,52 +3,684 @@
     {
       "dataset": "ta.xpt",
       "domain": "TA",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
-      "number_errors": 1,
+      "execution_status": "success",
+      "execution_message": "Required variable is missing from the dataset.",
+      "number_errors": 9,
       "errors": [
         {
-          "error": "Validation error",
-          "message": "Operation name must be in  ['codelist_extensible', 'codelist_terms', 'dataset_names', 'define_extensible_codelists', 'distinct', 'dy', 'extract_metadata', 'get_column_order_from_dataset', 'get_column_order_from_library', 'get_codelist_attributes', 'get_model_column_order', 'get_model_filtered_variables', 'get_parent_model_column_order', 'map', 'max', 'max_date', 'mean', 'min', 'min_date', 'record_count', 'valid_meddra_code_references', 'whodrug_code_hierarchy', 'valid_meddra_term_references', 'valid_meddra_code_term_pairs', 'variable_exists', 'variable_names', 'variable_library_metadata', 'variable_value_count', 'variable_count', 'variable_is_null', 'domain_is_custom', 'domain_label', 'required_variables', 'expected_variables', 'permissible_variables', 'study_domains', 'valid_codelist_dates', 'label_referenced_variable_metadata', 'name_referenced_variable_metadata', 'define_variable_metadata', 'valid_external_dictionary_value', 'valid_external_dictionary_code', 'valid_external_dictionary_code_term_pair', 'valid_define_external_dictionary_version', 'get_dataset_filtered_variables'], given operation name is minus"
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "STUDYID"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "DOMAIN"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ARMCD"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ARM"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "TAETORD"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ETCD"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ELEMENT"
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "TABRANCH"
+          },
+          "validated": false
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "TATRANS"
+          },
+          "validated": false
         }
       ]
     },
     {
       "dataset": "ae.xpt",
       "domain": "AE",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
-      "number_errors": 1,
+      "execution_status": "success",
+      "execution_message": "Required variable is missing from the dataset.",
+      "number_errors": 22,
       "errors": [
         {
-          "error": "Validation error",
-          "message": "Operation name must be in  ['codelist_extensible', 'codelist_terms', 'dataset_names', 'define_extensible_codelists', 'distinct', 'dy', 'extract_metadata', 'get_column_order_from_dataset', 'get_column_order_from_library', 'get_codelist_attributes', 'get_model_column_order', 'get_model_filtered_variables', 'get_parent_model_column_order', 'map', 'max', 'max_date', 'mean', 'min', 'min_date', 'record_count', 'valid_meddra_code_references', 'whodrug_code_hierarchy', 'valid_meddra_term_references', 'valid_meddra_code_term_pairs', 'variable_exists', 'variable_names', 'variable_library_metadata', 'variable_value_count', 'variable_count', 'variable_is_null', 'domain_is_custom', 'domain_label', 'required_variables', 'expected_variables', 'permissible_variables', 'study_domains', 'valid_codelist_dates', 'label_referenced_variable_metadata', 'name_referenced_variable_metadata', 'define_variable_metadata', 'valid_external_dictionary_value', 'valid_external_dictionary_code', 'valid_external_dictionary_code_term_pair', 'valid_define_external_dictionary_version', 'get_dataset_filtered_variables'], given operation name is minus"
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "STUDYID"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "DOMAIN"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "USUBJID"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AETERM"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AEMODIFY"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AEBODSYS"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AESEV"
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AESER"
+          },
+          "validated": false
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AEACN"
+          },
+          "validated": false
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AEREL"
+          },
+          "validated": false
+        },
+        {
+          "row": 11,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AEOUT"
+          },
+          "validated": false
+        },
+        {
+          "row": 12,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AESCONG"
+          },
+          "validated": false
+        },
+        {
+          "row": 13,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AESDISAB"
+          },
+          "validated": false
+        },
+        {
+          "row": 14,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AESDTH"
+          },
+          "validated": false
+        },
+        {
+          "row": 15,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AESHOSP"
+          },
+          "validated": false
+        },
+        {
+          "row": 16,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AESLIFE"
+          },
+          "validated": false
+        },
+        {
+          "row": 17,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EPOCH"
+          },
+          "validated": false
+        },
+        {
+          "row": 18,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AESTDTC"
+          },
+          "validated": false
+        },
+        {
+          "row": 19,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AEENDTC"
+          },
+          "validated": false
+        },
+        {
+          "row": 20,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AESTDY"
+          },
+          "validated": false
+        },
+        {
+          "row": 21,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AEENDY"
+          },
+          "validated": false
+        },
+        {
+          "row": 22,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AEENRF"
+          },
+          "validated": false
         }
       ]
     },
     {
       "dataset": "lb.xpt",
       "domain": "LB",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
-      "number_errors": 1,
+      "execution_status": "success",
+      "execution_message": "Required variable is missing from the dataset.",
+      "number_errors": 25,
       "errors": [
         {
-          "error": "Validation error",
-          "message": "Operation name must be in  ['codelist_extensible', 'codelist_terms', 'dataset_names', 'define_extensible_codelists', 'distinct', 'dy', 'extract_metadata', 'get_column_order_from_dataset', 'get_column_order_from_library', 'get_codelist_attributes', 'get_model_column_order', 'get_model_filtered_variables', 'get_parent_model_column_order', 'map', 'max', 'max_date', 'mean', 'min', 'min_date', 'record_count', 'valid_meddra_code_references', 'whodrug_code_hierarchy', 'valid_meddra_term_references', 'valid_meddra_code_term_pairs', 'variable_exists', 'variable_names', 'variable_library_metadata', 'variable_value_count', 'variable_count', 'variable_is_null', 'domain_is_custom', 'domain_label', 'required_variables', 'expected_variables', 'permissible_variables', 'study_domains', 'valid_codelist_dates', 'label_referenced_variable_metadata', 'name_referenced_variable_metadata', 'define_variable_metadata', 'valid_external_dictionary_value', 'valid_external_dictionary_code', 'valid_external_dictionary_code_term_pair', 'valid_define_external_dictionary_version', 'get_dataset_filtered_variables'], given operation name is minus"
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "STUDYID"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "DOMAIN"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "USUBJID"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBSEQ"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBSPID"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBTESTCD"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBCAT"
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBORRES"
+          },
+          "validated": false
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBORRESU"
+          },
+          "validated": false
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBORNRLO"
+          },
+          "validated": false
+        },
+        {
+          "row": 11,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBORNRHI"
+          },
+          "validated": false
+        },
+        {
+          "row": 12,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBSTRESC"
+          },
+          "validated": false
+        },
+        {
+          "row": 13,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBSTRESN"
+          },
+          "validated": false
+        },
+        {
+          "row": 14,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBSTRESU"
+          },
+          "validated": false
+        },
+        {
+          "row": 15,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBSTNRLO"
+          },
+          "validated": false
+        },
+        {
+          "row": 16,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBSTNRHI"
+          },
+          "validated": false
+        },
+        {
+          "row": 17,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBNRIND"
+          },
+          "validated": false
+        },
+        {
+          "row": 18,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBLOINC"
+          },
+          "validated": false
+        },
+        {
+          "row": 19,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBSPEC"
+          },
+          "validated": false
+        },
+        {
+          "row": 20,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBBLFL"
+          },
+          "validated": false
+        },
+        {
+          "row": 21,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EPOCH"
+          },
+          "validated": false
+        },
+        {
+          "row": 22,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "VISITNUM"
+          },
+          "validated": false
+        },
+        {
+          "row": 23,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "VISIT"
+          },
+          "validated": false
+        },
+        {
+          "row": 24,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBDTC"
+          },
+          "validated": false
+        },
+        {
+          "row": 25,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBDY"
+          },
+          "validated": false
         }
       ]
     },
     {
       "dataset": "ex.xpt",
       "domain": "EX",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
-      "number_errors": 1,
+      "execution_status": "success",
+      "execution_message": "Required variable is missing from the dataset.",
+      "number_errors": 16,
       "errors": [
         {
-          "error": "Validation error",
-          "message": "Operation name must be in  ['codelist_extensible', 'codelist_terms', 'dataset_names', 'define_extensible_codelists', 'distinct', 'dy', 'extract_metadata', 'get_column_order_from_dataset', 'get_column_order_from_library', 'get_codelist_attributes', 'get_model_column_order', 'get_model_filtered_variables', 'get_parent_model_column_order', 'map', 'max', 'max_date', 'mean', 'min', 'min_date', 'record_count', 'valid_meddra_code_references', 'whodrug_code_hierarchy', 'valid_meddra_term_references', 'valid_meddra_code_term_pairs', 'variable_exists', 'variable_names', 'variable_library_metadata', 'variable_value_count', 'variable_count', 'variable_is_null', 'domain_is_custom', 'domain_label', 'required_variables', 'expected_variables', 'permissible_variables', 'study_domains', 'valid_codelist_dates', 'label_referenced_variable_metadata', 'name_referenced_variable_metadata', 'define_variable_metadata', 'valid_external_dictionary_value', 'valid_external_dictionary_code', 'valid_external_dictionary_code_term_pair', 'valid_define_external_dictionary_version', 'get_dataset_filtered_variables'], given operation name is minus"
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "STUDYID"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "DOMAIN"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "USUBJID"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "SPDEVID"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EXSEQ"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EXDOSE"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EXDOSU"
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EXDOSFRM"
+          },
+          "validated": false
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EXDOSFRQ"
+          },
+          "validated": false
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EXROUTE"
+          },
+          "validated": false
+        },
+        {
+          "row": 11,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EXLOT"
+          },
+          "validated": false
+        },
+        {
+          "row": 12,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EPOCH"
+          },
+          "validated": false
+        },
+        {
+          "row": 13,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EXSTDTC"
+          },
+          "validated": false
+        },
+        {
+          "row": 14,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EXENDTC"
+          },
+          "validated": false
+        },
+        {
+          "row": 15,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EXSTDY"
+          },
+          "validated": false
+        },
+        {
+          "row": 16,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EXENDY"
+          },
+          "validated": false
         }
       ]
     }

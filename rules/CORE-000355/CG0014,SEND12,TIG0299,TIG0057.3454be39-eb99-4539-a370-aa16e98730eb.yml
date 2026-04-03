@@ -184,7 +184,7 @@ Operations:
     operator: required_variables
   - id: $dataset_variables
     operator: get_column_order_from_dataset
-  - id: $missing_required_variable
+  - id: $missing_required_variables
     name: $required_variables
     operator: minus
     subtract: $dataset_variables
