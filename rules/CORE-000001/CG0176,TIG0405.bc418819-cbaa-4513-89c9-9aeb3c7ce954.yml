@@ -84,7 +84,7 @@ Description: Raise an error when IECAT equals 'INCLUSION' but IEORRES does
   not equal 'N'.
 Executability: Fully Executable
 Outcome:
-  Message: IECAT equals 'INCLUSION', but IEORRES is not equal to 'N'.
+  Message: IECAT equals 'INCLUSION', but IEORRES is not equal to 'N'
   Output Variables:
     - IETESTCD
     - IECAT
