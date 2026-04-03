@@ -4,64 +4,53 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "execution_message": "DMDY is not calculated correctly even though the date portion of DMDTC is complete, the date portion of RFSTDTC is complete, and DMDY is not empty.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC011",
+          "value": {
+            "$value_dy_algorithm": 1,
+            "DMDTC": "2022-03-20",
+            "DMDY": 0.0,
+            "RFSTDTC": "2022-03-20"
+          },
+          "validated": true
+        }
+      ]
     },
     {
       "dataset": "fa.xpt",
       "domain": "FA",
       "execution_status": "success",
-      "execution_message": "FADY is not calculated correctly even though the date portion of FADTC is complete, the date portion of DM.RFSTDTC is a complete date, and FADY is not empty.",
-      "number_errors": 4,
+      "execution_message": "FADY is not calculated correctly even though the date portion of FADTC is complete, the date portion of RFSTDTC is complete, and FADY is not empty.",
+      "number_errors": 2,
       "errors": [
         {
           "row": 1,
           "SEQ": 1,
           "USUBJID": "CDISC002",
           "value": {
-            "$val_dy": 18,
+            "$value_dy_algorithm": 18,
             "FADTC": "2012-12-02",
             "FADY": 35.0,
             "RFSTDTC": "2012-11-15"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
-          "SEQ": 2,
-          "USUBJID": "CDISC004",
-          "value": {
-            "$val_dy": 5,
-            "FADTC": "2013-10-12",
-            "FADY": 3.0,
-            "RFSTDTC": "2013-10-08"
-          },
-          "validated": false
-        },
-        {
-          "row": 4,
           "SEQ": 4,
           "USUBJID": "CDISC007",
           "value": {
-            "$val_dy": -34,
+            "$value_dy_algorithm": -34,
             "FADTC": "2012-12-02",
             "FADY": -30.0,
             "RFSTDTC": "2013-01-05"
           },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": 5,
-          "USUBJID": "CDISC008",
-          "value": {
-            "$val_dy": 206,
-            "FADTC": "2014-12-02",
-            "FADY": 230.0,
-            "RFSTDTC": "2014-05-11"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -69,20 +58,20 @@
       "dataset": "ie.xpt",
       "domain": "IE",
       "execution_status": "success",
-      "execution_message": "IEDY is not calculated correctly even though the date portion of IEDTC is complete, the date portion of DM.RFSTDTC is a complete date, and IEDY is not empty.",
+      "execution_message": "IEDY is not calculated correctly even though the date portion of IEDTC is complete, the date portion of RFSTDTC is complete, and IEDY is not empty.",
       "number_errors": 1,
       "errors": [
         {
           "row": 1,
           "SEQ": 1,
-          "USUBJID": "CDISC-TEST-001",
+          "USUBJID": "CDISC011",
           "value": {
-            "$val_dy": -3,
+            "$value_dy_algorithm": -3,
             "IEDTC": "2022-03-17",
             "IEDY": -4.0,
             "RFSTDTC": "2022-03-20"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -90,59 +79,22 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "LBDY is not calculated correctly even though the date portion of LBDTC is complete, the date portion of DM.RFSTDTC is a complete date, and LBDY is not empty.",
+      "execution_message": "LBDY is not calculated correctly even though the date portion of LBDTC is complete, the date portion of RFSTDTC is complete, and LBDY is not empty.",
       "number_errors": 1,
       "errors": [
         {
           "row": 1,
           "SEQ": 1,
-          "USUBJID": "CDISC-TEST-001",
+          "USUBJID": "CDISC004",
           "value": {
-            "$val_dy": 11,
-            "LBDTC": "2022-03-30",
-            "LBDY": 2.0,
-            "RFSTDTC": "2022-03-20"
+            "$value_dy_algorithm": 3,
+            "LBDTC": "2013-10-10",
+            "LBDY": 4.0,
+            "RFSTDTC": "2013-10-08T05:34"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "DMDY"
-    },
-    {
-      "Sheet": "fa.xpt",
-      "Row": 5,
-      "Variable": "FADY"
-    },
-    {
-      "Sheet": "fa.xpt",
-      "Row": 6,
-      "Variable": "FADY"
-    },
-    {
-      "Sheet": "fa.xpt",
-      "Row": 8,
-      "Variable": "FADY"
-    },
-    {
-      "Sheet": "fa.xpt",
-      "Row": 9,
-      "Variable": "FADY"
-    },
-    {
-      "Sheet": "ie.xpt",
-      "Row": 5,
-      "Variable": "IEDY"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 5,
-      "Variable": "LBDY"
     }
   ]
 }
