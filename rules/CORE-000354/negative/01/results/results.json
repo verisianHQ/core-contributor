@@ -24,7 +24,7 @@
             "LBDY": 1.0,
             "RFSTDTC": "2005-10-13T10:15"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -35,7 +35,7 @@
             "LBDY": 141.0,
             "RFSTDTC": "2005-10-13T10:15"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -46,7 +46,7 @@
             "LBDY": -15.0,
             "RFSTDTC": "2005-10"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -57,7 +57,7 @@
             "LBDY": -20.0,
             "RFSTDTC": "2005-10"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 5,
@@ -68,7 +68,7 @@
             "LBDY": -21.0,
             "RFSTDTC": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -85,10 +85,10 @@
           "USUBJID": "123101",
           "value": {
             "CEDTC": "2014-10",
-            "CEDY": 174.0,
+            "CEDY": 74.0,
             "RFSTDTC": "2005-10-13T10:15"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -96,109 +96,12 @@
           "USUBJID": "123102",
           "value": {
             "CEDTC": "2014-10-31",
-            "CEDY": 174.0,
+            "CEDY": 74.0,
             "RFSTDTC": "2005-10"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unmatched_validation": [
-    {
-      "value": {
-        "RFSTDTC": "2005-10-13T10:15",
-        "LBDTC": null,
-        "LBDY": 1
-      }
-    },
-    {
-      "value": {
-        "RFSTDTC": "2005-10-13T10:15",
-        "LBDTC": null,
-        "LBDY": 141
-      }
-    },
-    {
-      "value": {
-        "RFSTDTC": "2005-10",
-        "LBDTC": "2005-09-28",
-        "LBDY": -15
-      }
-    },
-    {
-      "value": {
-        "RFSTDTC": "2005-10",
-        "LBDTC": "2005-09-28",
-        "LBDY": -20
-      }
-    },
-    {
-      "value": {
-        "RFSTDTC": null,
-        "LBDTC": "2005-09",
-        "LBDY": 21
-      }
-    },
-    {
-      "value": {
-        "RFSTDTC": "2005-10-13T10:15",
-        "CEDTC": "2014-10",
-        "CEDY": 74
-      }
-    },
-    {
-      "value": {
-        "RFSTDTC": "2005-10",
-        "CEDTC": "2014-10-31",
-        "CEDY": 74
-      }
-    }
-  ],
-  "unhighlighted_validations": [
-    {
-      "5": [
-        "lb.xpt",
-        "record",
-        9,
-        "LBDY",
-        21
-      ]
-    },
-    {
-      "6": [
-        "ce.xpt",
-        "record",
-        5,
-        "CEDY",
-        74
-      ]
-    },
-    {
-      "7": [
-        "ce.xpt",
-        "record",
-        6,
-        "CEDY",
-        74
-      ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "lb.xpt",
-      "Row": 9,
-      "Variable": "LBDY"
-    },
-    {
-      "Sheet": "ce.xpt",
-      "Row": 5,
-      "Variable": "CEDY"
-    },
-    {
-      "Sheet": "ce.xpt",
-      "Row": 6,
-      "Variable": "CEDY"
     }
   ]
 }

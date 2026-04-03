@@ -95,9 +95,9 @@ Match Datasets:
 Outcome:
   Message: The date portion of --DTC or RFSTDTC is incomplete, but --DY is not empty.
   Output Variables:
-    - --DY
-    - --DTC
     - RFSTDTC
+    - --DTC
+    - --DY
 Rule Type: Record Data
 Scope:
   Classes:
