@@ -70,7 +70,6 @@ jobs:
           PYTHON_CMD="./venv/bin/python"
           RULES='${{ steps.changed-rules.outputs.rules }}'
           
-          # Initialize report file
           REPORT_FILE="validation_report.md"
           echo "# Rule Validation Report" > $REPORT_FILE
           echo "" >> $REPORT_FILE
@@ -80,16 +79,12 @@ jobs:
           OVERALL_SUCCESS=true
           
           while read -r RULE_ID; do
-            echo ""
             echo "Validating $RULE_ID"
             echo "## Rule: $RULE_ID" >> $REPORT_FILE
             echo "" >> $REPORT_FILE
 
-            YML_COUNT=$(find "rules/$RULE_ID" -maxdepth 1 -name "*.yml" | wc -l)
-            if [ "$YML_COUNT" -eq 0 ]; then
-              echo "ERROR: No YAML file found in rules/$RULE_ID/"
-              echo "**ERROR:** No YAML file found in rules/$RULE_ID/" >> $REPORT_FILE
-              echo "" >> $REPORT_FILE
+            if [ ! -d "rules/$RULE_ID" ]; then
+              echo "**ERROR:** Directory rules/$RULE_ID not found" >> $REPORT_FILE
               OVERALL_SUCCESS=false
               continue
             fi
@@ -109,23 +104,13 @@ jobs:
               fi
             done
             
-            # Generate fresh results
             echo ""
             echo "Generating fresh results..."
-            
-            $PYTHON_CMD -c "from test import generate_rule_results; generate_rule_results('$RULE_ID')"
-            
-            if [ $? -ne 0 ]; then
-              echo "ERROR: Failed to generate results for $RULE_ID"
+            $PYTHON_CMD -c "from test import generate_rule_results; generate_rule_results('$RULE_ID')" || {
               echo "**ERROR:** Failed to generate results" >> $REPORT_FILE
-              echo "" >> $REPORT_FILE
               OVERALL_SUCCESS=false
               continue
-            fi
-            
-            # Compare results
-            echo ""
-            echo "Comparing generated vs committed results..."
+            }
             
             RULE_PASSED=true
             CASE_COUNT=0
@@ -136,81 +121,49 @@ jobs:
               TEST_PATH="rules/$RULE_ID/$TEST_TYPE"
               
               if [ ! -d "$TEST_PATH" ]; then
+                echo "  (No $TEST_TYPE cases found in $TEST_PATH)"
                 continue
               fi
               
               for CASE_DIR in "$TEST_PATH"/*; do
-                if [ ! -d "$CASE_DIR" ]; then
-                  continue
-                fi
+                if [ ! -d "$CASE_DIR" ]; then continue; fi
                 
                 CASE_ID=$(basename "$CASE_DIR")
                 COMMITTED_RESULTS="$CASE_DIR/results/results.json.committed"
                 GENERATED_RESULTS="$CASE_DIR/results/results.json"
-                
                 CASE_COUNT=$((CASE_COUNT + 1))
-                
-                if [ ! -f "$COMMITTED_RESULTS" ]; then
-                  echo "  $TEST_TYPE/$CASE_ID: No committed results found"
-                  echo "\`$TEST_TYPE/$CASE_ID\`: No committed results found" >> $REPORT_FILE
-                  continue
-                fi
-                
-                if [ ! -f "$GENERATED_RESULTS" ]; then
-                  echo "  $TEST_TYPE/$CASE_ID: Failed to generate results"
-                  echo "\`$TEST_TYPE/$CASE_ID\`: Failed to generate results" >> $REPORT_FILE
-                  RULE_PASSED=false
-                  FAILED_COUNT=$((FAILED_COUNT + 1))
-                  continue
-                fi
                 
                 TEMP_OUTPUT="/tmp/validator_${TEST_TYPE}_${CASE_ID}.txt"
                 
                 if ! diff -q <(jq --sort-keys . "$COMMITTED_RESULTS") <(jq --sort-keys . "$GENERATED_RESULTS") > /dev/null 2>&1; then
                   echo "Results differ for $TEST_TYPE/$CASE_ID, showing diff:" > "$TEMP_OUTPUT"
-                  diff <(jq --sort-keys . "$COMMITTED_RESULTS") <(jq --sort-keys . "$GENERATED_RESULTS") >> "$TEMP_OUTPUT"                  
-                  VALIDATOR_EXIT_CODE=1
-                else
-                  echo "Results match for $TEST_TYPE/$CASE_ID" > "$TEMP_OUTPUT"
-                  VALIDATOR_EXIT_CODE=0
-                fi
-                
-                if [ $VALIDATOR_EXIT_CODE -ne 0 ]; then
-                  echo "\`$TEST_TYPE/$CASE_ID\`: Validation failed" >> $REPORT_FILE
+                  diff <(jq --sort-keys . "$COMMITTED_RESULTS") <(jq --sort-keys . "$GENERATED_RESULTS") >> "$TEMP_OUTPUT" || true
+                  echo "\`$TEST_TYPE/$CASE_ID\`: ❌ Validation failed" >> $REPORT_FILE
                   RULE_PASSED=false
                   FAILED_COUNT=$((FAILED_COUNT + 1))
+                  OVERALL_SUCCESS=false
                 else
-                  echo "\`$TEST_TYPE/$CASE_ID\`: Passed" >> $REPORT_FILE
+                  echo "Results match for $TEST_TYPE/$CASE_ID" > "$TEMP_OUTPUT"
+                  echo "\`$TEST_TYPE/$CASE_ID\`: ✅ Passed" >> $REPORT_FILE
                   PASSED_COUNT=$((PASSED_COUNT + 1))
                 fi
                 
-                if [ -f "$TEMP_OUTPUT" ] && [ -s "$TEMP_OUTPUT" ]; then
-                  echo "<details><summary>View details</summary>" >> $REPORT_FILE
-                  echo "" >> $REPORT_FILE
-                  echo '```' >> $REPORT_FILE
-                  cat "$TEMP_OUTPUT" >> $REPORT_FILE
-                  echo "" >> $REPORT_FILE
-                  echo '```' >> $REPORT_FILE
-                  echo "</details>" >> $REPORT_FILE
-                fi
+                echo "<details><summary>View details</summary>" >> $REPORT_FILE
+                echo "" >> $REPORT_FILE
+                echo '```diff' >> $REPORT_FILE
+                cat "$TEMP_OUTPUT" >> $REPORT_FILE
+                echo "" >> $REPORT_FILE
+                echo '```' >> $REPORT_FILE
+                echo "</details>" >> $REPORT_FILE
                 echo "" >> $REPORT_FILE
               done
             done
             
-            echo "" >> $REPORT_FILE
             echo "**Summary:** $PASSED_COUNT passed, $FAILED_COUNT failed (Total: $CASE_COUNT test cases)" >> $REPORT_FILE
-            echo "" >> $REPORT_FILE
-            
-            if [ "$RULE_PASSED" = false ]; then
-              echo "Validation failed for $RULE_ID"
-              OVERALL_SUCCESS=false
-            else
-              echo "All validations passed for $RULE_ID"
-            fi
+            echo "---" >> $REPORT_FILE
             
           done <<< "$(echo "$RULES" | jq -r '.[]')"
           
-          # Exit with appropriate code
           if [ "$OVERALL_SUCCESS" = false ]; then
             exit 1
           fi
