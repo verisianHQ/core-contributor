@@ -1,6 +1,7 @@
 # Variable: --OCCUR
 # Condition: --PRESP = 'Y' and --STAT = null and --OCCUR is present in dataset
 # Rule: --OCCUR ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
