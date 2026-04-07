@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "DTHFL is not \"Y\" or null",
+      "execution_message": "DTHFL is not \"Y\" or null.",
       "number_errors": 3,
       "errors": [
         {
@@ -14,7 +14,7 @@
           "value": {
             "DTHFL": "N"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -23,7 +23,7 @@
           "value": {
             "DTHFL": "U"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -32,31 +32,9 @@
           "value": {
             "DTHFL": "N"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 1,
-      "Variable": "DTHFL"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "DTHFL"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "DTHFL"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 8,
-      "Variable": "DTHFL"
     }
   ]
 }

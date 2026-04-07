@@ -1,13 +1,14 @@
 # Variable: DTHFL
-# Condition: 
+# Condition:
 # Rule: DTHFL in ('Y',null)
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Should be "Y" or null
+              - Cited Guidance: Should be "Y" or null.
                 Document: Model v2.0
                 Item: DTHFL
                 Section: Demographics
@@ -61,16 +62,17 @@ Check:
     - name: DTHFL
       operator: not_equal_to
       value: Y
+      value_is_literal: true
     - name: DTHFL
       operator: non_empty
 Core:
   Id: CORE-000006
   Status: Published
   Version: '1'
-Description: Raise an error when DTHFL ^= "Y" and not null
+Description: Raise an error when DTHFL ^= "Y" and not null.
 Executability: Fully Executable
 Outcome:
-  Message: DTHFL is not "Y" or null
+  Message: DTHFL is not "Y" or null.
   Output Variables:
     - DTHFL
 Rule Type: Record Data
