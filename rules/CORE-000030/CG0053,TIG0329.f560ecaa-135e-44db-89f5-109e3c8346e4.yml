@@ -1,6 +1,7 @@
 # Variable: --REASND
 # Condition: --PRESP not present in dataset
 # Rule: --REASND not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -83,11 +84,11 @@ Core:
   Id: CORE-000030
   Status: Published
   Version: '1'
-Description: Raise and error when --REASND is present in dataset and --PRESP is
+Description: Raise an error when --REASND is present in dataset and --PRESP is
   not present in dataset
 Executability: Fully Executable
 Outcome:
-  Message: --REASND should not be present in dataset when --PRESP is not present
+  Message: --REASND should not be present in dataset, when --PRESP is not present
     in dataset
 Rule Type: Record Data
 Scope:
