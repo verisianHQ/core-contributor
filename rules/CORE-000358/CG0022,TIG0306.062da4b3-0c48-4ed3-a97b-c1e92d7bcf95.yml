@@ -83,8 +83,7 @@ Core:
   Id: CORE-000358
   Status: Published
   Version: '1'
-Description: Verify that when --LNKGRP is present in one domain it is also
-  present in another domain.
+Description: Raise an error when --LNKGRP is present in one domain but not in another domain.
 Executability: Fully Executable
 Operations:
   - id: $VARIABLE_COUNT
