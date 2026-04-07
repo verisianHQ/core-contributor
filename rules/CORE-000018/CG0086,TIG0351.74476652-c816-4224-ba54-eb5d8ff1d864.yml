@@ -120,6 +120,7 @@ Check:
     - name: --PRESP
       operator: equal_to
       value: Y
+      value_is_literal: true
     - name: --STAT
       operator: empty
     - name: --OCCUR
@@ -131,7 +132,7 @@ Core:
   Status: Published
   Version: '1'
 Description: Raise an error when --PRESP is equal to "Y", --STAT is blank,
-  --OCCUR is present in dataset and --OCCUR is blank
+  --OCCUR is present in dataset and --OCCUR is blank.
 Executability: Fully Executable
 Outcome:
   Message: --OCCUR is blank when --PRESP is equal to "Y" and --STAT is not provided.
