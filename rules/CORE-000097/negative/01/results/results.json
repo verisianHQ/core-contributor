@@ -12,8 +12,8 @@
       "dataset": "sv.xpt",
       "domain": "SV",
       "execution_status": "success",
-      "execution_message": "EPOCH values don't match between Subject Visits (SV) and Subject Elements (SE) datasets.",
-      "number_errors": 1,
+      "execution_message": "EPOCH value in the SV dataset doesn't match the corresponding EPOCH value in the SE dataset.",
+      "number_errors": 7,
       "errors": [
         {
           "row": 5,
@@ -21,12 +21,186 @@
           "USUBJID": "1201001",
           "value": {
             "EPOCH": "SCREENING",
-            "SESTDTC": "2018-08-13",
-            "SVSTDTC": "2018-08-20"
+            "SE.EPOCH": "TREATMENT",
+            "SEENDTC": "2024-06-01T08:00",
+            "SESTDTC": "2024-05-15T12:25",
+            "SVSTDTC": "2024-05-21",
+            "VISIT": "CYCLE1DAY9"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "1201001",
+          "value": {
+            "EPOCH": "FOLLOW-UP1",
+            "SE.EPOCH": "TREATMENT",
+            "SEENDTC": "2024-06-01T08:00",
+            "SESTDTC": "2024-05-15T12:25",
+            "SVSTDTC": "2024-06-01",
+            "VISIT": "FOLLOW-UP"
+          },
+          "validated": true
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "1201002",
+          "value": {
+            "EPOCH": "TREATMENT",
+            "SE.EPOCH": "SCREENING",
+            "SEENDTC": "2025-06-17T09:52",
+            "SESTDTC": "2025-06-10",
+            "SVSTDTC": "2025-06-10",
+            "VISIT": "SCREENING"
+          },
+          "validated": true
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "1201002",
+          "value": {
+            "EPOCH": "FOLLOW-UP",
+            "SE.EPOCH": "SCREENING",
+            "SEENDTC": "2025-06-17T09:52",
+            "SESTDTC": "2025-06-10",
+            "SVSTDTC": "2025-06-15",
+            "VISIT": "CYCLE1DAY1"
+          },
+          "validated": true
+        },
+        {
+          "row": 11,
+          "SEQ": null,
+          "USUBJID": "1201002",
+          "value": {
+            "EPOCH": "TREATMENT",
+            "SE.EPOCH": "SCREENING",
+            "SEENDTC": "2025-06-17T09:52",
+            "SESTDTC": "2025-06-10",
+            "SVSTDTC": "2025-06-17",
+            "VISIT": "CYCLE1DAY2"
+          },
+          "validated": true
+        },
+        {
+          "row": 14,
+          "SEQ": null,
+          "USUBJID": "1201002",
+          "value": {
+            "EPOCH": "TREATMENT1",
+            "SE.EPOCH": "TREATMENT",
+            "SEENDTC": "2025-12-18T04:22",
+            "SESTDTC": "2025-06-17T09:52",
+            "SVSTDTC": "2025-06-20",
+            "VISIT": "CYCLE1DAY15"
+          },
+          "validated": true
+        },
+        {
+          "row": 17,
+          "SEQ": null,
+          "USUBJID": "1201003",
+          "value": {
+            "EPOCH": "FOLLOW-UP5",
+            "SE.EPOCH": "FOLLOW-UP",
+            "SEENDTC": "2024-05-15",
+            "SESTDTC": "2023-12-22T10:38",
+            "SVSTDTC": "2024-05-15",
+            "VISIT": "SCREENING"
+          },
+          "validated": true
         }
       ]
+    }
+  ],
+  "unhighlighted_validations": [
+    {
+      "1": [
+        "se.xpt",
+        "record",
+        6,
+        "SE.EPOCH",
+        "TREATMENT"
+      ]
+    },
+    {
+      "2": [
+        "se.xpt",
+        "record",
+        6,
+        "SE.EPOCH",
+        "TREATMENT"
+      ]
+    },
+    {
+      "3": [
+        "se.xpt",
+        "record",
+        8,
+        "SE.EPOCH",
+        "SCREENING"
+      ]
+    },
+    {
+      "4": [
+        "se.xpt",
+        "record",
+        8,
+        "SE.EPOCH",
+        "SCREENING"
+      ]
+    },
+    {
+      "5": [
+        "se.xpt",
+        "record",
+        9,
+        "SE.EPOCH",
+        "TREATMENT"
+      ]
+    },
+    {
+      "6": [
+        "se.xpt",
+        "record",
+        9,
+        "SE.EPOCH",
+        "TREATMENT"
+      ]
+    },
+    {
+      "7": [
+        "se.xpt",
+        "record",
+        13,
+        "SE.EPOCH",
+        "FOLLOW-UP"
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "se.xpt",
+      "Row": 6,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "se.xpt",
+      "Row": 8,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "se.xpt",
+      "Row": 9,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "se.xpt",
+      "Row": 13,
+      "Variable": "EPOCH"
     }
   ]
 }
