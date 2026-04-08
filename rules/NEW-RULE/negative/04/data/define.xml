@@ -3090,7 +3090,7 @@
         <Description>
           <TranslatedText xml:lang="en">Reported Name of Drug, Med, or Therapy</TranslatedText>
         </Description>
-        <def:Origin Type="Assigned" Source="Sponsor"/>
+        <def:Origin Type="Collected" Source="Sponsor"/>
       </ItemDef>
       <ItemDef OID="IT.CM.CMINDC" Name="CMINDC" DataType="text" Length="200" SASFieldName="CMINDC"
         def:CommentOID="COM.CMINDC">
