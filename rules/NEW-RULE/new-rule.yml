@@ -1,0 +1,75 @@
+# Variable: --DECOD
+# Condition: --DECOD ^= null
+# Rule: --DECOD = MedDRA preferred TERM
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Equivalent to the Preferred Term (PT in MedDRA).
+                Document: Model v2.0
+                Item: --DECOD
+                Section: Events
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0379
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Dictionary or sponsor-defined derived text description of the
+                  topic variable; --TERM; or the modified topic variable
+                  (--MODIFY); if applicable. Equivalent to the Preferred Term
+                  (PT in MedDRA).
+                Document: Model v1.7
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0379
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Dictionary or sponsor-defined derived text description of the
+                  topic variable; --TERM; or the modified topic variable
+                  (--MODIFY); if applicable. Equivalent to the Preferred Term
+                  (PT in MedDRA).
+                Document: Model v1.4
+                Section: 2.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0379
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+Check:
+  all:
+    - name: --DECOD
+      operator: non_empty
+    - name: --DECOD
+      operator: is_not_valid_meddra_term_reference
+Core:
+  Id: CDISC.SDTMIG.CG0379
+  Status: Draft
+  Version: '1'
+Description: Raise an error when --DECOD is completed but is not a valid MedDRA
+  preferred TERM.
+Executability: Fully Executable
+Outcome:
+  Message: --DECOD is completed but value is not a valid MedDRA preferred TERM.
+  Output Variables:
+    - --DECOD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - AE
+Sensitivity: Record
