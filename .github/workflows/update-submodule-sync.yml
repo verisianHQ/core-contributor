@@ -8,7 +8,7 @@ on:
         required: true
         default: 'main'
       pr_numbers:
-        description: 'List of PR numbers, comma-separated. Leave empty to update ALL open PRs.'
+        description: 'List of PR numbers, comma-separated. Leave empty to not update any open PRs. Use "all" to update all open PRs.'
         required: false
         default: ''
 
@@ -52,9 +52,12 @@ jobs:
           if [ -n "$SELECTED_PRS" ]; then
             echo "Targeted mode: Processing PRs [$SELECTED_PRS]"
             ITERATE_LIST=$(echo $SELECTED_PRS | tr ',' ' ')
-          else
+          elif [ "$SELECTED_PRS" = "all" ]; then
             echo "Processing ALL open PRs targeting main"
             ITERATE_LIST=$(gh pr list --base main --json number --jq '.[].number')
+          else
+            echo "No PR numbers provided. Skipping PR synchronization."
+            exit 0
           fi
 
           for pr_num in $ITERATE_LIST; do

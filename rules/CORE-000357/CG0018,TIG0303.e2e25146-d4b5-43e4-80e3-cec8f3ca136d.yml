@@ -1,6 +1,7 @@
 # Variable: GEN
 # Condition: Supplemental Qualifier datasets
 # Rule: Split dataset names length <= 8
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -75,12 +76,13 @@ Core:
   Id: CORE-000357
   Status: Published
   Version: '1'
-Description: When a supplemental qualifier dataset is associated with a split
-  dataset, the dataset name length must not be greater than 8 characters.
+Description: Raise an error when a supplemental qualifier dataset is associated with a split
+  dataset, but the dataset name length is greater than 8 characters.
 Executability: Fully Executable
 Outcome:
-  Message: Supplemental qualifier dataset associated with a split dataset is
-    greater than 8 characters in length
+  Message: Split dataset name length of -- dataset > 8.
+  Output Variables:
+    - dataset_name
 Rule Type: Dataset Metadata Check
 Scope:
   Classes:
@@ -91,4 +93,4 @@ Scope:
       - SUPP--
     include_split_datasets: true
   Use Case: INDH, PROD
-Sensitivity: Record
+Sensitivity: Dataset
