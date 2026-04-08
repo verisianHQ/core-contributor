@@ -1,6 +1,7 @@
 # Variable: --STRESC
 # Condition: --ORRES ^= null or --DRVFL = 'Y'
 # Rule: --STRESC ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -105,7 +106,8 @@ Check:
           operator: non_empty
         - name: --DRVFL
           operator: equal_to
-          value: Y
+          value: 'Y'
+          value_is_literal: true
     - all:
         - name: --STRESC
           operator: empty
@@ -113,11 +115,11 @@ Core:
   Id: CORE-000021
   Status: Published
   Version: '1'
-Description: Raise an error when the value for --STRESC is null.
+Description: Raise an error when either --ORRES is populated or --DRVFL = 'Y' but --STRESC is empty.
 Executability: Fully Executable
 Outcome:
-  Message: --STRESC should not be blank when either --ORRES is provided or --DRVFL
-    = 'Y' .
+  Message: --STRESC should be populated when either --ORRES is provided or --DRVFL
+    = 'Y'.
   Output Variables:
     - --ORRES
     - --DRVFL

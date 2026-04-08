@@ -4,7 +4,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "The LBTPTNUM variable does not exist when LBTPT does exist.",
+      "execution_message": "LBTPTNUM should be present when LBTPT is present.",
       "number_errors": 1,
       "errors": [
         {
@@ -14,7 +14,25 @@
           "value": {
             "LBTPT": "A"
           },
-          "validated": false
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ft.xpt",
+      "domain": "FT",
+      "execution_status": "success",
+      "execution_message": "FTTPTNUM should be present when FTTPT is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "FTTPT": null
+          },
+          "validated": true
         }
       ]
     }

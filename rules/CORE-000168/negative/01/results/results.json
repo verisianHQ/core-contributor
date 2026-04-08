@@ -4,8 +4,8 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "VISITNUM is not among VISITNUM in SV domain.",
-      "number_errors": 32,
+      "execution_message": "VISITNUM does not match any of the VISITNUM values in the SV dataset.",
+      "number_errors": 34,
       "errors": [
         {
           "row": 4,
@@ -14,7 +14,7 @@
           "value": {
             "VISITNUM": 45.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 10,
@@ -23,7 +23,16 @@
           "value": {
             "VISITNUM": 64.0
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 145,
+          "SEQ": 145,
+          "USUBJID": "CDISC004",
+          "value": {
+            "VISITNUM": 88.0
+          },
+          "validated": true
         },
         {
           "row": 395,
@@ -32,7 +41,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 396,
@@ -41,7 +50,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 397,
@@ -50,7 +59,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 398,
@@ -59,7 +68,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 399,
@@ -68,7 +77,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 400,
@@ -77,7 +86,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 401,
@@ -86,7 +95,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 402,
@@ -95,7 +104,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 403,
@@ -104,7 +113,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 404,
@@ -113,7 +122,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 405,
@@ -122,7 +131,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 406,
@@ -131,7 +140,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 407,
@@ -140,7 +149,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 408,
@@ -149,7 +158,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 409,
@@ -158,7 +167,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 410,
@@ -167,7 +176,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 411,
@@ -176,7 +185,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 412,
@@ -185,7 +194,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 413,
@@ -194,7 +203,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 414,
@@ -203,7 +212,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 415,
@@ -212,7 +221,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 416,
@@ -221,7 +230,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 417,
@@ -230,7 +239,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 418,
@@ -239,7 +248,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 419,
@@ -248,7 +257,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 420,
@@ -257,7 +266,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 421,
@@ -266,7 +275,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 422,
@@ -275,7 +284,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 423,
@@ -284,7 +293,7 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 424,
@@ -293,7 +302,16 @@
           "value": {
             "VISITNUM": 7.0
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 432,
+          "SEQ": 140,
+          "USUBJID": "CDISC005",
+          "value": {
+            "VISITNUM": 88.0
+          },
+          "validated": true
         }
       ]
     },
@@ -301,7 +319,7 @@
       "dataset": "oe.xpt",
       "domain": "OE",
       "execution_status": "success",
-      "execution_message": "VISITNUM is not among VISITNUM in SV domain.",
+      "execution_message": "VISITNUM does not match any of the VISITNUM values in the SV dataset.",
       "number_errors": 4,
       "errors": [
         {
@@ -311,7 +329,7 @@
           "value": {
             "VISITNUM": 500.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 11,
@@ -320,7 +338,7 @@
           "value": {
             "VISITNUM": 500.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 12,
@@ -329,7 +347,7 @@
           "value": {
             "VISITNUM": 500.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 66,
@@ -338,7 +356,7 @@
           "value": {
             "VISITNUM": 123.0
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -353,143 +371,16 @@
     {
       "dataset": "tv.xpt",
       "domain": "TV",
-      "execution_status": "success",
-      "execution_message": "VISITNUM is not among VISITNUM in SV domain.",
-      "number_errors": 14,
-      "errors": [
-        {
-          "row": 1,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "VISITNUM": 1.0
-          },
-          "validated": false
-        },
-        {
-          "row": 2,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "VISITNUM": 2.0
-          },
-          "validated": false
-        },
-        {
-          "row": 3,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "VISITNUM": 3.0
-          },
-          "validated": false
-        },
-        {
-          "row": 4,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "VISITNUM": 4.0
-          },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "VISITNUM": 5.0
-          },
-          "validated": false
-        },
-        {
-          "row": 6,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "VISITNUM": 7.0
-          },
-          "validated": false
-        },
-        {
-          "row": 7,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "VISITNUM": 8.0
-          },
-          "validated": false
-        },
-        {
-          "row": 8,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "VISITNUM": 9.0
-          },
-          "validated": false
-        },
-        {
-          "row": 9,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "VISITNUM": 10.0
-          },
-          "validated": false
-        },
-        {
-          "row": 10,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "VISITNUM": 11.0
-          },
-          "validated": false
-        },
-        {
-          "row": 11,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "VISITNUM": 12.0
-          },
-          "validated": false
-        },
-        {
-          "row": 12,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "VISITNUM": 13.0
-          },
-          "validated": false
-        },
-        {
-          "row": 13,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "VISITNUM": 101.0
-          },
-          "validated": false
-        },
-        {
-          "row": 14,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "VISITNUM": 201.0
-          },
-          "validated": false
-        }
-      ]
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000168, dataset=TV",
+      "number_errors": 0,
+      "errors": []
     },
     {
       "dataset": "vs.xpt",
       "domain": "VS",
       "execution_status": "success",
-      "execution_message": "VISITNUM is not among VISITNUM in SV domain.",
+      "execution_message": "VISITNUM does not match any of the VISITNUM values in the SV dataset.",
       "number_errors": 14,
       "errors": [
         {
@@ -499,7 +390,7 @@
           "value": {
             "VISITNUM": 6.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 17,
@@ -508,7 +399,7 @@
           "value": {
             "VISITNUM": 6.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 18,
@@ -517,365 +408,108 @@
           "value": {
             "VISITNUM": 6.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 137,
           "SEQ": 16,
           "USUBJID": "CDISC005",
           "value": {
-            "VISITNUM": 7.0
+            "VISITNUM": 77.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 138,
           "SEQ": 17,
           "USUBJID": "CDISC005",
           "value": {
-            "VISITNUM": 7.0
+            "VISITNUM": 77.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 139,
           "SEQ": 18,
           "USUBJID": "CDISC005",
           "value": {
-            "VISITNUM": 7.0
+            "VISITNUM": 77.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 174,
           "SEQ": 53,
           "USUBJID": "CDISC005",
           "value": {
-            "VISITNUM": 7.0
+            "VISITNUM": 77.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 175,
           "SEQ": 54,
           "USUBJID": "CDISC005",
           "value": {
-            "VISITNUM": 7.0
+            "VISITNUM": 77.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 176,
           "SEQ": 55,
           "USUBJID": "CDISC005",
           "value": {
-            "VISITNUM": 7.0
+            "VISITNUM": 77.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 210,
           "SEQ": 89,
           "USUBJID": "CDISC005",
           "value": {
-            "VISITNUM": 7.0
+            "VISITNUM": 77.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 211,
           "SEQ": 90,
           "USUBJID": "CDISC005",
           "value": {
-            "VISITNUM": 7.0
+            "VISITNUM": 77.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 212,
           "SEQ": 91,
           "USUBJID": "CDISC005",
           "value": {
-            "VISITNUM": 7.0
+            "VISITNUM": 77.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 236,
           "SEQ": 115,
           "USUBJID": "CDISC005",
           "value": {
-            "VISITNUM": 7.0
+            "VISITNUM": 77.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 247,
           "SEQ": 126,
           "USUBJID": "CDISC005",
           "value": {
-            "VISITNUM": 7.0
+            "VISITNUM": 77.0
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "lb.xpt",
-      "Row": 8,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 14,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 399,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 400,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 401,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 402,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 403,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 404,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 405,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 406,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 407,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 408,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 409,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 410,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 411,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 412,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 413,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 414,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 415,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 416,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 417,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 418,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 419,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 420,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 421,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 422,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 423,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 424,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 425,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 426,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 427,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 428,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "oe.xpt",
-      "Row": 14,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "oe.xpt",
-      "Row": 15,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "oe.xpt",
-      "Row": 16,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "oe.xpt",
-      "Row": 70,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "sv.xpt",
-      "Row": 21,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 20,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 21,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 22,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 141,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 142,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 143,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 178,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 179,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 180,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 214,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 215,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 216,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 240,
-      "Variable": "VISITNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 251,
-      "Variable": "VISITNUM"
     }
   ]
 }
