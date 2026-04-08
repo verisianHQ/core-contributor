@@ -131,7 +131,7 @@ Core:
   Id: CORE-000018
   Status: Published
   Version: '1'
-Description: Raise an error when --PRESP is equal to "Y", --STAT is blank,
+Description: Raise an error when --PRESP is equal to 'Y', --STAT is not populated and
   --OCCUR is present in dataset and --OCCUR is blank.
 Executability: Fully Executable
 Outcome:
