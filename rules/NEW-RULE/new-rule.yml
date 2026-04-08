@@ -1,0 +1,69 @@
+# Variable: --LLTCD
+# Condition: 
+# Rule: --LLTCD = MedDRA lowest level code
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The lowest-level term code assigned to the event from MedDRA.
+                Document: Model v2.0
+                Item: --LLTCD
+                Section: Events
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0378
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: MedDRA Lowest Level Term.
+                Document: Model v1.7
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0378
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: MedDRA Lowest Level Term.
+                Document: Model v1.4
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0378
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+Check:
+  all:
+    - name: --LLTCD
+      operator: is_not_valid_meddra_code_reference
+Core:
+  Id: CDISC.SDTMIG.CG0378
+  Status: Draft
+  Version: '1'
+Description: Raise an error when --LLTCD is not a valid MedDRA lowest level code.
+Executability: Fully Executable
+Outcome:
+  Message: --LLTCD is not a valid MedDRA lowest level code.
+  Output Variables:
+    - --LLTCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - AE
+      - MH
+      - CE
+Sensitivity: Record
