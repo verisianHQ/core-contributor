@@ -138,17 +138,27 @@ class ResultReporter:
 class TestRunner:
     """Test execution logic."""
 
-    def __init__(self, use_pgserver: bool = True):
+    def __init__(self, use_pgserver: bool = True, meddra_path: Optional[str] = None):
         from dotenv import load_dotenv
 
         load_dotenv("engine/.env.example")
         self._setup_engine_path()
         self.ig_specs = self._init_engine_specs()
         self.use_pgserver = use_pgserver
+        from engine.cdisc_rules_engine.models.sql_external_dictionaries_container import (
+            SqlExternalDictionariesContainer,
+        )
+
+        ext_dicts = SqlExternalDictionariesContainer(
+            dictionary_path_mapping={"meddra": meddra_path} if meddra_path else {}
+        )
         from engine.cdisc_rules_engine.data_service.postgresql_data_service import PostgresQLDataService
 
         self.data_service = PostgresQLDataService.instance(
-            use_pgserver=self.use_pgserver, codelists=["sdtmct-2025-03-28.pkl"], cache_path="resources/cache"
+            use_pgserver=self.use_pgserver,
+            codelists=["sdtmct-2025-03-28.pkl"],
+            cache_path="resources/cache",
+            external_dictionaries=ext_dicts,
         )
 
     @staticmethod
@@ -513,13 +523,14 @@ def parse_args():
     parser.add_argument(
         "-pg", "--use-postgres", action="store_true", help="Use standard PostgreSQL instead of pgserver default"
     )
+    parser.add_argument("-md", "--meddra", help="Provide path to MedDRA files")
     return parser.parse_args()
 
 
 def main():
     args = parse_args()
     use_pgserver = not args.use_postgres
-    runner = TestRunner(use_pgserver=use_pgserver)
+    runner = TestRunner(use_pgserver=use_pgserver, meddra_path=args.meddra)
     available_rules = runner.get_available_rules()
 
     if not available_rules:
