@@ -356,6 +356,7 @@ class TestRunner:
         return highlighted_cells
 
     def validate_errors(self, results_data: dict, validations: dict):
+        print(results_data)
         unmatched = []
 
         flat_validation = {}
@@ -378,6 +379,7 @@ class TestRunner:
 
                     match_found = False
                     for (v_sheet, v_error_level, v_row, v_idx), v_values in flat_validation.items():
+                        print(v_sheet, v_error_level, v_row, v_idx, v_values, res_values)
                         if v_sheet == sheet_name:
                             v_absent = set(k for k, v in v_values.items() if v == "[ABSENT]")
                             v_not_absent = set(k for k, v in v_values.items() if v != "[ABSENT]")

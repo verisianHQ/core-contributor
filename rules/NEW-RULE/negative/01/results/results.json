@@ -5,8 +5,17 @@
       "domain": "MH",
       "execution_status": "success",
       "execution_message": "MHLLTCD is not a valid MedDRA lowest level code.",
-      "number_errors": 1,
+      "number_errors": 2,
       "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC010",
+          "value": {
+            "MHLLTCD": 1004966300.0
+          },
+          "validated": true
+        },
         {
           "row": 4,
           "SEQ": 1,
@@ -23,8 +32,17 @@
       "domain": "AE",
       "execution_status": "success",
       "execution_message": "AELLTCD is not a valid MedDRA lowest level code.",
-      "number_errors": 3,
+      "number_errors": 4,
       "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "AELLTCD": "1004631800"
+          },
+          "validated": true
+        },
         {
           "row": 2,
           "SEQ": 2,
@@ -53,36 +71,6 @@
           "validated": true
         }
       ]
-    }
-  ],
-  "unmatched_validation": [
-    {
-      "value": {
-        "MHLLTCD": null
-      }
-    },
-    {
-      "value": {
-        "AELLTCD": "6666666666666"
-      }
-    }
-  ],
-  "unhighlighted_validations": [
-    {
-      "5": [
-        "ae.xpt",
-        "record",
-        8,
-        "AELLTCD",
-        "1000398888888880"
-      ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ae.xpt",
-      "Row": 8,
-      "Variable": "AELLTCD"
     }
   ]
 }
