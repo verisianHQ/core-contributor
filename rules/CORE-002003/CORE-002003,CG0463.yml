@@ -57,8 +57,8 @@ Check:
     - name: --TRT
       operator: not_exists
 Core:
-  Id: CDISC.SDTMIG.CG0463
-  Status: Draft
+  Id: CORE-002003
+  Status: Published
   Version: '1'
 Description: Raise an error when --TRT is not present in custom interventions dataset.
 Executability: Fully Executable
