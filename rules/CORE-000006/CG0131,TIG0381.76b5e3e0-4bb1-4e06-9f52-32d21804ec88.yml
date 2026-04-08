@@ -69,7 +69,7 @@ Core:
   Id: CORE-000006
   Status: Published
   Version: '1'
-Description: Raise an error when DTHFL ^= "Y" and not null.
+Description: Raise an error when DTHFL ^= 'Y' or not empty.
 Executability: Fully Executable
 Outcome:
   Message: DTHFL is not "Y" or null.
