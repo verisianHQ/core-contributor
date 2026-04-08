@@ -132,7 +132,7 @@ Core:
   Status: Published
   Version: '1'
 Description: Raise an error when --PRESP is equal to 'Y', --STAT is not populated and
-  --OCCUR is present in dataset and --OCCUR is blank.
+  --OCCUR is present in dataset but not populated.
 Executability: Fully Executable
 Outcome:
   Message: --OCCUR is blank when --PRESP is equal to "Y" and --STAT is not provided.
