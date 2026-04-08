@@ -1,0 +1,76 @@
+{
+  "datasets": [
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "MHLLT is not a valid MedDRA lowest level TERM.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC010",
+          "value": {
+            "MHLLT": "Knee surgery Not correct"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "CDISC012",
+          "value": {
+            "MHLLT": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AELLT is not a valid MedDRA lowest level TERM.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "AELLT": "Incorrect LLT"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "AELLT": null
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "AELLT": "Back pain twice"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "AELLT": "Headache1"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
