@@ -1,0 +1,69 @@
+# Variable: --SOC
+# Condition: 
+# Rule: --SOC = MedDRA primary system organ class
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: MedDRA primary System Organ Class associated with the event.
+                Document: Model v1.4
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0436
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: MedDRA primary System Organ Class associated with the event.
+                Document: Model v1.7
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0436
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: MedDRA primary System Organ Class associated with the event.
+                Document: Model v2.0
+                Item: --SOC
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0436
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+Check:
+  all:
+    - name: --SOC
+      operator: is_not_valid_meddra_term_reference
+Core:
+  Id: NEW-RULE
+  Status: Draft
+  Version: '1'
+Description: Trigger error when --SOC is not a valid MedDRA primary system organ class.
+Executability: Fully Executable
+Outcome:
+  Message: --SOC is not a valid MedDRA primary system organ class.
+  Output Variables:
+    - --SOC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - AE
+      - MH
+      - CE
+Sensitivity: Record
