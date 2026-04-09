@@ -2729,22 +2729,22 @@
           <def:title>di.xml</def:title>
         </def:leaf>
       </ItemGroupDef>
-      <!-- Dataset Definition (SM) -->
-      <ItemGroupDef OID="IG.SM" Name="SM" Domain="SM"
-        Repeating="No" IsReferenceData="Yes" SASDatasetName="SM"
+      <!-- Dataset Definition (ZZ) -->
+      <ItemGroupDef OID="IG.ZZ" Name="ZZ" Domain="ZZ"
+        Repeating="No" IsReferenceData="Yes" SASDatasetName="ZZ"
         def:Structure="Custom Domain Testing"
         Purpose="Tabulation" def:IsNonStandard="Yes"
- def:ArchiveLocationID="LF.SM">
+ def:ArchiveLocationID="LF.ZZ">
         <Description>
           <TranslatedText xml:lang="en">Custom Domain Testing</TranslatedText>
         </Description>
-        <ItemRef ItemOID="IT.SM.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="1" Role="Identifier"/>
-        <ItemRef ItemOID="IT.SM.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
-        <ItemRef ItemOID="IT.SM.USUBJID" Mandatory="Yes" OrderNumber="3" KeySequence="2" Role="Identifier"/>
-        <ItemRef ItemOID="IT.SM.SMSEQ" Mandatory="Yes" OrderNumber="4" MethodOID="MT.SEQ" Role="Identifier"/>
+        <ItemRef ItemOID="IT.ZZ.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="1" Role="Identifier"/>
+        <ItemRef ItemOID="IT.ZZ.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
+        <ItemRef ItemOID="IT.ZZ.USUBJID" Mandatory="Yes" OrderNumber="3" KeySequence="2" Role="Identifier"/>
+        <ItemRef ItemOID="IT.ZZ.ZZSEQ" Mandatory="Yes" OrderNumber="4" MethodOID="MT.SEQ" Role="Identifier"/>
         <def:Class Name="EVENTS"/>
-        <def:leaf ID="LF.SM" xlink:href="sm.xml">
-          <def:title>sm.xml</def:title>
+        <def:leaf ID="LF.ZZ" xlink:href="zz.xml">
+          <def:title>zz.xml</def:title>
         </def:leaf>
       </ItemGroupDef>
       <!-- Dataset Definition (GF) -->
@@ -3287,25 +3287,25 @@
         </Description>
         <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.SM.STUDYID" Name="STUDYID" DataType="text" Length="12" SASFieldName="STUDYID">
+      <ItemDef OID="IT.ZZ.STUDYID" Name="STUDYID" DataType="text" Length="12" SASFieldName="STUDYID">
         <Description>
           <TranslatedText xml:lang="en">Study Identifier</TranslatedText>
         </Description>
         <def:Origin Type="Protocol" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.SM.DOMAIN" Name="DOMAIN" DataType="text" Length="2" SASFieldName="DOMAIN">
+      <ItemDef OID="IT.ZZ.DOMAIN" Name="DOMAIN" DataType="text" Length="2" SASFieldName="DOMAIN">
         <Description>
           <TranslatedText xml:lang="en">Domain Abbreviation</TranslatedText>
         </Description>
         <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.SM.USUBJID" Name="USUBJID" DataType="text" Length="8" SASFieldName="USUBJID">
+      <ItemDef OID="IT.ZZ.USUBJID" Name="USUBJID" DataType="text" Length="8" SASFieldName="USUBJID">
         <Description>
           <TranslatedText xml:lang="en">Unique Subject Identifier</TranslatedText>
         </Description>
         <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.SM.SMSEQ" Name="SMSEQ" DataType="integer" Length="3" SASFieldName="SMSEQ">
+      <ItemDef OID="IT.ZZ.ZZSEQ" Name="ZZSEQ" DataType="integer" Length="3" SASFieldName="ZZSEQ">
         <Description>
           <TranslatedText xml:lang="en">Sequence Number</TranslatedText>
         </Description>
