@@ -1,0 +1,49 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AEPTCD  is not a valid MedDRA preferred term code.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "AEPTCD": 1000005900.0
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "AEPTCD": 1e+18
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "AEPTCD": 10012735.7
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "AEPTCD": 1.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
