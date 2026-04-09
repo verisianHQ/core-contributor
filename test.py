@@ -359,7 +359,7 @@ class TestRunner:
         xl_path = list(Path(data_path).glob("[!~]*.xls*"))[0]
         highlighted_cells = {}
         
-        YELLOW_INDICES = (5, 11, 13, 34)
+        YELLOW_INDICES = (5, 11, 13, 14, 34)
 
         wb = op.load_workbook(xl_path, data_only=True)
         for sheet in wb.worksheets:
