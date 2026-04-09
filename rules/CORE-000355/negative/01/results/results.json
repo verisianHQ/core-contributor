@@ -5,88 +5,18 @@
       "domain": "TA",
       "execution_status": "success",
       "execution_message": "Required variable is missing from the dataset.",
-      "number_errors": 9,
+      "number_errors": 1,
       "errors": [
         {
-          "row": 1,
+          "row": null,
           "SEQ": null,
-          "USUBJID": "None",
+          "USUBJID": null,
           "value": {
-            "variable_name": "STUDYID"
+            "$missing_required_variables": [
+              "EPOCH"
+            ]
           },
-          "validated": false
-        },
-        {
-          "row": 2,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "DOMAIN"
-          },
-          "validated": false
-        },
-        {
-          "row": 3,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "ARMCD"
-          },
-          "validated": false
-        },
-        {
-          "row": 4,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "ARM"
-          },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "TAETORD"
-          },
-          "validated": false
-        },
-        {
-          "row": 6,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "ETCD"
-          },
-          "validated": false
-        },
-        {
-          "row": 7,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "ELEMENT"
-          },
-          "validated": false
-        },
-        {
-          "row": 8,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "TABRANCH"
-          },
-          "validated": false
-        },
-        {
-          "row": 9,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "TATRANS"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -95,205 +25,19 @@
       "domain": "AE",
       "execution_status": "success",
       "execution_message": "Required variable is missing from the dataset.",
-      "number_errors": 22,
+      "number_errors": 1,
       "errors": [
         {
-          "row": 1,
+          "row": null,
           "SEQ": null,
-          "USUBJID": "None",
+          "USUBJID": null,
           "value": {
-            "variable_name": "STUDYID"
+            "$missing_required_variables": [
+              "AEDECOD",
+              "AESEQ"
+            ]
           },
-          "validated": false
-        },
-        {
-          "row": 2,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "DOMAIN"
-          },
-          "validated": false
-        },
-        {
-          "row": 3,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "USUBJID"
-          },
-          "validated": false
-        },
-        {
-          "row": 4,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "AETERM"
-          },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "AEMODIFY"
-          },
-          "validated": false
-        },
-        {
-          "row": 6,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "AEBODSYS"
-          },
-          "validated": false
-        },
-        {
-          "row": 7,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "AESEV"
-          },
-          "validated": false
-        },
-        {
-          "row": 8,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "AESER"
-          },
-          "validated": false
-        },
-        {
-          "row": 9,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "AEACN"
-          },
-          "validated": false
-        },
-        {
-          "row": 10,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "AEREL"
-          },
-          "validated": false
-        },
-        {
-          "row": 11,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "AEOUT"
-          },
-          "validated": false
-        },
-        {
-          "row": 12,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "AESCONG"
-          },
-          "validated": false
-        },
-        {
-          "row": 13,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "AESDISAB"
-          },
-          "validated": false
-        },
-        {
-          "row": 14,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "AESDTH"
-          },
-          "validated": false
-        },
-        {
-          "row": 15,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "AESHOSP"
-          },
-          "validated": false
-        },
-        {
-          "row": 16,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "AESLIFE"
-          },
-          "validated": false
-        },
-        {
-          "row": 17,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EPOCH"
-          },
-          "validated": false
-        },
-        {
-          "row": 18,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "AESTDTC"
-          },
-          "validated": false
-        },
-        {
-          "row": 19,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "AEENDTC"
-          },
-          "validated": false
-        },
-        {
-          "row": 20,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "AESTDY"
-          },
-          "validated": false
-        },
-        {
-          "row": 21,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "AEENDY"
-          },
-          "validated": false
-        },
-        {
-          "row": 22,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "AEENRF"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -302,232 +46,18 @@
       "domain": "LB",
       "execution_status": "success",
       "execution_message": "Required variable is missing from the dataset.",
-      "number_errors": 25,
+      "number_errors": 1,
       "errors": [
         {
-          "row": 1,
+          "row": null,
           "SEQ": null,
-          "USUBJID": "None",
+          "USUBJID": null,
           "value": {
-            "variable_name": "STUDYID"
+            "$missing_required_variables": [
+              "LBTEST"
+            ]
           },
-          "validated": false
-        },
-        {
-          "row": 2,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "DOMAIN"
-          },
-          "validated": false
-        },
-        {
-          "row": 3,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "USUBJID"
-          },
-          "validated": false
-        },
-        {
-          "row": 4,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBSEQ"
-          },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBSPID"
-          },
-          "validated": false
-        },
-        {
-          "row": 6,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBTESTCD"
-          },
-          "validated": false
-        },
-        {
-          "row": 7,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBCAT"
-          },
-          "validated": false
-        },
-        {
-          "row": 8,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBORRES"
-          },
-          "validated": false
-        },
-        {
-          "row": 9,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBORRESU"
-          },
-          "validated": false
-        },
-        {
-          "row": 10,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBORNRLO"
-          },
-          "validated": false
-        },
-        {
-          "row": 11,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBORNRHI"
-          },
-          "validated": false
-        },
-        {
-          "row": 12,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBSTRESC"
-          },
-          "validated": false
-        },
-        {
-          "row": 13,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBSTRESN"
-          },
-          "validated": false
-        },
-        {
-          "row": 14,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBSTRESU"
-          },
-          "validated": false
-        },
-        {
-          "row": 15,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBSTNRLO"
-          },
-          "validated": false
-        },
-        {
-          "row": 16,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBSTNRHI"
-          },
-          "validated": false
-        },
-        {
-          "row": 17,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBNRIND"
-          },
-          "validated": false
-        },
-        {
-          "row": 18,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBLOINC"
-          },
-          "validated": false
-        },
-        {
-          "row": 19,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBSPEC"
-          },
-          "validated": false
-        },
-        {
-          "row": 20,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBBLFL"
-          },
-          "validated": false
-        },
-        {
-          "row": 21,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EPOCH"
-          },
-          "validated": false
-        },
-        {
-          "row": 22,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "VISITNUM"
-          },
-          "validated": false
-        },
-        {
-          "row": 23,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "VISIT"
-          },
-          "validated": false
-        },
-        {
-          "row": 24,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBDTC"
-          },
-          "validated": false
-        },
-        {
-          "row": 25,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBDY"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -536,175 +66,20 @@
       "domain": "EX",
       "execution_status": "success",
       "execution_message": "Required variable is missing from the dataset.",
-      "number_errors": 16,
+      "number_errors": 1,
       "errors": [
         {
-          "row": 1,
+          "row": null,
           "SEQ": null,
-          "USUBJID": "None",
+          "USUBJID": null,
           "value": {
-            "variable_name": "STUDYID"
+            "$missing_required_variables": [
+              "EXTRT"
+            ]
           },
-          "validated": false
-        },
-        {
-          "row": 2,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "DOMAIN"
-          },
-          "validated": false
-        },
-        {
-          "row": 3,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "USUBJID"
-          },
-          "validated": false
-        },
-        {
-          "row": 4,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "SPDEVID"
-          },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXSEQ"
-          },
-          "validated": false
-        },
-        {
-          "row": 6,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXDOSE"
-          },
-          "validated": false
-        },
-        {
-          "row": 7,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXDOSU"
-          },
-          "validated": false
-        },
-        {
-          "row": 8,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXDOSFRM"
-          },
-          "validated": false
-        },
-        {
-          "row": 9,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXDOSFRQ"
-          },
-          "validated": false
-        },
-        {
-          "row": 10,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXROUTE"
-          },
-          "validated": false
-        },
-        {
-          "row": 11,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXLOT"
-          },
-          "validated": false
-        },
-        {
-          "row": 12,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EPOCH"
-          },
-          "validated": false
-        },
-        {
-          "row": 13,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXSTDTC"
-          },
-          "validated": false
-        },
-        {
-          "row": 14,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXENDTC"
-          },
-          "validated": false
-        },
-        {
-          "row": 15,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXSTDY"
-          },
-          "validated": false
-        },
-        {
-          "row": 16,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXENDY"
-          },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unmatched_validation": [
-    {
-      "value": {
-        "$missing_required_variables": "EPOCH"
-      }
-    },
-    {
-      "value": {
-        "$missing_required_variables": "AESEQ; AEDECOD "
-      }
-    },
-    {
-      "value": {
-        "$missing_required_variables": "LBTEST"
-      }
-    },
-    {
-      "value": {
-        "$missing_required_variables": "EXTRT"
-      }
     }
   ]
 }
