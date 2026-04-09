@@ -91,8 +91,8 @@ Check:
     # 2026-03-10: CROG decision: also "Assigned" needs to be taken into account
     # i.e. raise an issue when "Source" is NOT "Collected" and is NOT "Assigned"
 Core:
-  Id: CDISC.SDTMIG.CG0097
-  Status: Draft
+  Id: CORE-002004
+  Status: Published
   Version: '1'
 Description: Raise an error when CMTRT is not collected or pre-printed on the CRF as indicated in the Define-XML document.
 Executability: Fully Executable
