@@ -1,17 +1,18 @@
 # Variable: GEN
 # Condition: Variable Core Status = Expected
 # Rule: Variable present in dataset
+# Verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: "When the study does not include the data item for an expected
+              - Cited Guidance: When the study does not include the data item for an expected
                   variable, however, a null column must still be included in the
                   dataset, and a comment must be included in the Define-XML
                   document to state that the study does not include the data
-                  item."
+                  item.
                 Document: SDTM v1.4
                 Section: 4.1.5
             Origin: SDTM and SDTMIG Conformance Rules
@@ -23,10 +24,10 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: "When no data has been collected for an expected variable,
+              - Cited Guidance: When no data has been collected for an expected variable,
                   however, a null column must still be included in the dataset,
                   and a comment must be included in the define.xml to state that
-                  data was not collected."
+                  data was not collected.
                 Document: IG v3.3
                 Section: 4.1.5
             Origin: SDTM and SDTMIG Conformance Rules
@@ -38,10 +39,10 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: "When no data has been collected for an expected variable
+              - Cited Guidance: When no data has been collected for an expected variable
                   however, a null column must still be included in the dataset,
                   and a comment must be included in the define.xml to state that
-                  data was not collected."
+                  data was not collected.
                 Document: IG v3.2
                 Section: 4.1.1.5
             Origin: SDTM and SDTMIG Conformance Rules
@@ -194,8 +195,7 @@ Check:
   all:
     - name: variable_name
       operator: not_contains_all
-      value:
-        - $expected_variables
+      value: $expected_variables
 Core:
   Id: CORE-000334
   Status: Published
@@ -207,11 +207,14 @@ Operations:
     operator: expected_variables
   - id: $dataset_variables
     operator: get_column_order_from_dataset
+  - id: $missing_expected_variables
+    name: $expected_variables
+    operator: minus
+    subtract: $dataset_variables
 Outcome:
   Message: At least one expected variable is missing from dataset
   Output Variables:
-    - $dataset_variables
-    - $expected_variables
+    - $missing_expected_variables
 Rule Type: Variable Metadata Check
 Scope:
   Classes:
