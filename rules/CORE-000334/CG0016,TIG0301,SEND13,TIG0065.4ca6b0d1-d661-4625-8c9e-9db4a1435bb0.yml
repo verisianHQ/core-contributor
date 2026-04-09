@@ -212,7 +212,7 @@ Operations:
     operator: minus
     subtract: $dataset_variables
 Outcome:
-  Message: At least one expected variable is missing from dataset
+  Message: Expected variable is missing from the dataset.
   Output Variables:
     - $missing_expected_variables
 Rule Type: Variable Metadata Check
