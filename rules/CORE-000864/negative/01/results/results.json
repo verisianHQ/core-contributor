@@ -111,20 +111,10 @@
     {
       "dataset": "sm.xpt",
       "domain": "SM",
-      "execution_status": "success",
-      "execution_message": "End Date/Time of Observation (SMENDTC) variable is missing when Study Day of End of Observation (SMENDY) is present.",
-      "number_errors": 1,
-      "errors": [
-        {
-          "row": null,
-          "SEQ": null,
-          "USUBJID": null,
-          "value": {
-            "SMENDY": null
-          },
-          "validated": false
-        }
-      ]
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000864, dataset=SM",
+      "number_errors": 0,
+      "errors": []
     },
     {
       "dataset": "dm.xpt",
