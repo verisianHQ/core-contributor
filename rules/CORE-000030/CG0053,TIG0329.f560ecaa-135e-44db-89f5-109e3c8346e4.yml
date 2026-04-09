@@ -85,11 +85,11 @@ Core:
   Status: Published
   Version: '1'
 Description: Raise an error when --REASND is present in dataset and --PRESP is
-  not present in dataset
+  not present in dataset.
 Executability: Fully Executable
 Outcome:
   Message: --REASND should not be present in dataset, when --PRESP is not present
-    in dataset
+    in dataset.
 Rule Type: Record Data
 Scope:
   Classes:
