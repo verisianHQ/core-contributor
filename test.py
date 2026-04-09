@@ -358,17 +358,29 @@ class TestRunner:
     def get_excel_highlights(self, data_path: str):
         xl_path = list(Path(data_path).glob("[!~]*.xls*"))[0]
         highlighted_cells = {}
+        
+        YELLOW_INDICES = (5, 11, 13, 34)
 
         wb = op.load_workbook(xl_path, data_only=True)
         for sheet in wb.worksheets:
             for row in sheet.iter_rows():
                 for cell in row:
-                    if not cell.fill.fgColor or not isinstance(cell.fill.fgColor.rgb, str):
+                    fg = cell.fill.fgColor
+                    if not fg:
                         continue
-                    if cell.fill.fgColor.rgb.lower().endswith("ffff00"):
+                    
+                    is_yellow = False
+                    
+                    if isinstance(fg.rgb, str) and fg.rgb.lower().endswith("ffff00"):
+                        is_yellow = True
+                    elif isinstance(fg.indexed, int) and fg.indexed in YELLOW_INDICES:
+                        is_yellow = True
+
+                    if is_yellow:
                         sheet_data = highlighted_cells.setdefault(sheet.title, {})
                         row_data = sheet_data.setdefault(int(cell.row), {})
                         row_data.update({sheet.cell(row=1, column=cell.column).value: cell.value})
+                        
         return highlighted_cells
 
     def validate_errors(self, results_data: dict, validations: dict):
