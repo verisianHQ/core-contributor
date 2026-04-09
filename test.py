@@ -143,7 +143,6 @@ class TestRunner:
 
         load_dotenv("engine/.env.example")
         self._setup_engine_path()
-        self.ig_specs = self._init_engine_specs()
         self.use_pgserver = use_pgserver
         from engine.cdisc_rules_engine.models.sql_external_dictionaries_container import (
             SqlExternalDictionariesContainer,
@@ -195,13 +194,27 @@ class TestRunner:
                             cases[test_type].append({"case_id": case_dir.name, "data_path": str(data_dir)})
         return cases
 
-    def _init_engine_specs(self):
-        """Initialises and returns IG Specifications."""
+    @staticmethod
+    def _read_library_specs(excel_path: str) -> Tuple[str, str]:
+        """Reads the standard and version from the Library sheet of a test Excel file."""
+        wb = op.load_workbook(excel_path, data_only=True, read_only=True)
+        ws = wb["Library"]
+        rows = list(ws.iter_rows(min_row=2, max_row=2, values_only=True))
+        wb.close()
+        if not rows or rows[0][0] is None:
+            raise ValueError(f"Library sheet in {excel_path} is missing standard/version data")
+        standard = str(rows[0][0]).strip()
+        version = str(rows[0][1]).strip().replace("-", ".")
+        return standard, version
+
+    @staticmethod
+    def _init_engine_specs(standard: str, standard_version: str):
+        """Builds an IGSpecification for the given standard and version."""
         try:
             from engine.cdisc_rules_engine.utilities.ig_specification import IGSpecification
 
             return IGSpecification(
-                standard="sdtmig", standard_version="3.4", standard_substandard=None, define_xml_version=None
+                standard=standard, standard_version=standard_version, standard_substandard=None, define_xml_version=None
             )
         except ImportError:
             print("Error: Could not import engine modules. Is the submodule initialised?")
@@ -247,6 +260,9 @@ class TestRunner:
             with open(rule_ymls[0], "r") as f:
                 rule = yaml.safe_load(f)
 
+            standard, standard_version = self._read_library_specs(str(excel_files[0]))
+            ig_specs = self._init_engine_specs(standard, standard_version)
+
             test_datasets = sharepoint_xlsx_to_test_datasets(str(excel_files[0]))
             regression_errors = {}
 
@@ -254,7 +270,7 @@ class TestRunner:
                 regression_errors=regression_errors,
                 define_xml_file_path=define_xml_path,
                 data_test_datasets=test_datasets,
-                ig_specs=self.ig_specs,
+                ig_specs=ig_specs,
                 rule=rule,
                 test_case_folder_path=data_path,
                 cur_core_id=rule_id,

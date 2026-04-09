@@ -4,7 +4,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMREASND should not be present in dataset, when CMPRESP is not present in dataset.",
+      "execution_message": "CMTRT is not collected or pre-printed on the CRF according to the Define-XML document.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,7 +12,9 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "CMREASND": null
+            "variable_name": "CMTRT",
+            "define_variable_origin_type": "Collected",
+            "define_variable_source_type": "Sponsor"
           },
           "validated": true
         }
