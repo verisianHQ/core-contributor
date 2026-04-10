@@ -1,6 +1,7 @@
 # Variable: VISIT
 # Condition: VISIT ^= null and is planned
 # Rule: VISIT in TV.VISIT
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -23,7 +24,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: For planned visits, values of VISIT, VISITNUM, and VISITDY must
-                  be those defined in    the Trial Visits dataset,
+                  be those defined in the Trial Visits dataset,
                 Document: IG v3.3
                 Item: ''
                 Section: 4.4.5
