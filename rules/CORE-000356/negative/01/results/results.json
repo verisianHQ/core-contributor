@@ -4,128 +4,68 @@
       "dataset": "ta.xpt",
       "domain": "TA",
       "execution_status": "success",
-      "execution_message": "At least one Required variable has a null value",
-      "number_errors": 12,
+      "execution_message": "Required variable has a missing value.",
+      "number_errors": 6,
       "errors": [
         {
-          "row": 13,
+          "row": 7,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
             "variable_name": "ARMCD",
             "variable_value": null
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 14,
+          "row": 8,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
             "variable_name": "ARMCD",
             "variable_value": null
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 15,
+          "row": 9,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
             "variable_name": "ARMCD",
             "variable_value": null
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 16,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "ARMCD",
-            "variable_value": null
-          },
-          "validated": false
-        },
-        {
-          "row": 17,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "ARMCD",
-            "variable_value": null
-          },
-          "validated": false
-        },
-        {
-          "row": 18,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "ARMCD",
-            "variable_value": null
-          },
-          "validated": false
-        },
-        {
-          "row": 55,
+          "row": 28,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
             "variable_name": "EPOCH",
             "variable_value": null
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 56,
+          "row": 29,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
             "variable_name": "EPOCH",
             "variable_value": null
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 57,
+          "row": 30,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
             "variable_name": "EPOCH",
             "variable_value": null
           },
-          "validated": false
-        },
-        {
-          "row": 58,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EPOCH",
-            "variable_value": null
-          },
-          "validated": false
-        },
-        {
-          "row": 59,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EPOCH",
-            "variable_value": null
-          },
-          "validated": false
-        },
-        {
-          "row": 60,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EPOCH",
-            "variable_value": null
-          },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -133,7 +73,7 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "At least one Required variable has a null value",
+      "execution_message": "Required variable has a missing value.",
       "number_errors": 2,
       "errors": [
         {
@@ -144,7 +84,7 @@
             "variable_name": "STUDYID",
             "variable_value": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 8,
@@ -154,7 +94,7 @@
             "variable_name": "USUBJID",
             "variable_value": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -162,58 +102,38 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "At least one Required variable has a null value",
-      "number_errors": 5,
+      "execution_message": "Required variable has a missing value.",
+      "number_errors": 3,
       "errors": [
         {
-          "row": 139,
+          "row": 10,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
             "variable_name": "LBSEQ",
             "variable_value": null
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 140,
+          "row": 11,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
             "variable_name": "LBSEQ",
             "variable_value": null
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 141,
+          "row": 12,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
             "variable_name": "LBSEQ",
             "variable_value": null
           },
-          "validated": false
-        },
-        {
-          "row": 142,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBSEQ",
-            "variable_value": null
-          },
-          "validated": false
-        },
-        {
-          "row": 143,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "LBSEQ",
-            "variable_value": null
-          },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -221,227 +141,40 @@
       "dataset": "ex.xpt",
       "domain": "EX",
       "execution_status": "success",
-      "execution_message": "At least one Required variable has a null value",
-      "number_errors": 8,
+      "execution_message": "Required variable has a missing value.",
+      "number_errors": 3,
       "errors": [
         {
-          "row": 41,
+          "row": 16,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
             "variable_name": "EXTRT",
             "variable_value": null
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 42,
+          "row": 17,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
             "variable_name": "EXTRT",
             "variable_value": null
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 43,
+          "row": 18,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
             "variable_name": "EXTRT",
             "variable_value": null
           },
-          "validated": false
-        },
-        {
-          "row": 44,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXTRT",
-            "variable_value": null
-          },
-          "validated": false
-        },
-        {
-          "row": 45,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXTRT",
-            "variable_value": null
-          },
-          "validated": false
-        },
-        {
-          "row": 46,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXTRT",
-            "variable_value": null
-          },
-          "validated": false
-        },
-        {
-          "row": 47,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXTRT",
-            "variable_value": null
-          },
-          "validated": false
-        },
-        {
-          "row": 48,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EXTRT",
-            "variable_value": null
-          },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ta.xpt",
-      "Row": 5,
-      "Variable": "ARMCD"
-    },
-    {
-      "Sheet": "ta.xpt",
-      "Row": 5,
-      "Variable": "EPOCH"
-    },
-    {
-      "Sheet": "ta.xpt",
-      "Row": 6,
-      "Variable": "ARMCD"
-    },
-    {
-      "Sheet": "ta.xpt",
-      "Row": 6,
-      "Variable": "EPOCH"
-    },
-    {
-      "Sheet": "ta.xpt",
-      "Row": 7,
-      "Variable": "ARMCD"
-    },
-    {
-      "Sheet": "ta.xpt",
-      "Row": 7,
-      "Variable": "EPOCH"
-    },
-    {
-      "Sheet": "ta.xpt",
-      "Row": 8,
-      "Variable": "ARMCD"
-    },
-    {
-      "Sheet": "ta.xpt",
-      "Row": 8,
-      "Variable": "EPOCH"
-    },
-    {
-      "Sheet": "ta.xpt",
-      "Row": 9,
-      "Variable": "ARMCD"
-    },
-    {
-      "Sheet": "ta.xpt",
-      "Row": 9,
-      "Variable": "EPOCH"
-    },
-    {
-      "Sheet": "ta.xpt",
-      "Row": 10,
-      "Variable": "ARMCD"
-    },
-    {
-      "Sheet": "ta.xpt",
-      "Row": 10,
-      "Variable": "EPOCH"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 5,
-      "Variable": "STUDYID"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 6,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 5,
-      "Variable": "LBSEQ"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 6,
-      "Variable": "LBSEQ"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 7,
-      "Variable": "LBSEQ"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 8,
-      "Variable": "LBSEQ"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 9,
-      "Variable": "LBSEQ"
-    },
-    {
-      "Sheet": "ex.xpt",
-      "Row": 5,
-      "Variable": "EXTRT"
-    },
-    {
-      "Sheet": "ex.xpt",
-      "Row": 6,
-      "Variable": "EXTRT"
-    },
-    {
-      "Sheet": "ex.xpt",
-      "Row": 7,
-      "Variable": "EXTRT"
-    },
-    {
-      "Sheet": "ex.xpt",
-      "Row": 8,
-      "Variable": "EXTRT"
-    },
-    {
-      "Sheet": "ex.xpt",
-      "Row": 9,
-      "Variable": "EXTRT"
-    },
-    {
-      "Sheet": "ex.xpt",
-      "Row": 10,
-      "Variable": "EXTRT"
-    },
-    {
-      "Sheet": "ex.xpt",
-      "Row": 11,
-      "Variable": "EXTRT"
-    },
-    {
-      "Sheet": "ex.xpt",
-      "Row": 12,
-      "Variable": "EXTRT"
     }
   ]
 }
