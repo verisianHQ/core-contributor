@@ -1,0 +1,76 @@
+# Variable: DOMAIN
+# Condition: Custom domain present in study
+# Rule: DOMAIN not in reserved or modeled standard
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: "'A custom domain may only be created if the data are different
+                  in nature and do not fit into an existing published domain.'"
+                Document: IG v3.4
+                Section: '2.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0312
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A custom domain may only be created if the data are different in nature and do not fit into an existing published domain.
+                Document: IG v3.2
+                Section: '2.5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0312
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A custom domain may only be created if the data are different in
+                  nature and do not fit into an existing published domain.
+                Document: IG v3.3
+                Section: '2.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0312
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: define_dataset_is_non_standard
+      operator: equal_to
+      value: "Yes"
+    - name: DOMAIN
+      operator: is_contained_by
+      value: $valid_domain_names
+Core:
+  Id: CDISC.SDTMIG.CG0312
+  Status: Draft
+  Version: '1'
+Description: Raise an error when a custom domain uses the reserved or modeled standard names as DOMAIN value.
+Executability: Fully Executable
+Operations:
+  - id: $valid_domain_names
+    operator: standard_domains
+Outcome:
+  Message: Custom domain is using a reserved or modeled standard name as DOMAIN value.
+  Output Variables:
+    - DOMAIN
+    - define_dataset_is_non_standard
+Rule Type: Dataset Contents Check against Define XML
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset
