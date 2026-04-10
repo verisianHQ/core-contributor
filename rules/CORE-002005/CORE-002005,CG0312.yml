@@ -52,8 +52,8 @@ Check:
       operator: is_contained_by
       value: $valid_domain_names
 Core:
-  Id: CDISC.SDTMIG.CG0312
-  Status: Draft
+  Id: CORE-002005
+  Status: Published
   Version: '1'
 Description: Raise an error when a custom domain uses the reserved or modeled standard names as DOMAIN value.
 Executability: Fully Executable
