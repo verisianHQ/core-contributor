@@ -1,0 +1,62 @@
+# Variable: TSVAL
+# Condition: TSPARMCD = 'CURTRT'
+# Rule: TSVAL is a valid preferred term from FDA Substance Registration System (SRS)
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Further information about the parameters is included below in
+                  Table 1. TSVAL may have controlled terminology depending on
+                  the value of TSPARMCD
+                Document: IG v3.2
+                Section: 7.4|Appendix C1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0442
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Further information about the parameters is included below in
+                  Table 1. TSVAL may have controlled terminology depending on
+                  the value of TSPARMCD
+                Document: IG v3.3
+                Section: '7.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0442
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: TSPARMCD
+      operator: equal_to
+      value: CURTRT
+      value_is_literal: true
+    - name: TSVAL
+      operator: is_not_valid_unii_term_reference
+Core:
+  Id: NEW-RULE
+  Status: Draft
+  Version: '1'
+Description: Raise an error if TSVAL is not a valid preferred term from FDA Substance Registration System (SRS) when TSPARMCD is 'CURTRT'.
+Executability: Fully Executable
+Outcome:
+  Message: TSVAL is not a valid preferred term from FDA Substance Registration System (SRS).
+  Output Variables:
+    - TSPARMCD
+    - TSVAL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record
