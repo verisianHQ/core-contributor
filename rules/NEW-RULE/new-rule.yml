@@ -53,11 +53,10 @@ Core:
   Id: CDISC.SDTMIG.CG0384
   Status: Draft
   Version: '1'
-Description: Trigger error when --HLGTCD  is not a valid MedDRA high level group term
-  code.
+Description: Raise an error when --HLGTCD is not a valid MedDRA high level group term code.
 Executability: Fully Executable
 Outcome:
-  Message: --HLGTCD  is not a valid MedDRA high level group term code.
+  Message: --HLGTCD is not a valid MedDRA high level group term code.
 Rule Type: Record Data
 Scope:
   Classes:
