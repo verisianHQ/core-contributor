@@ -4,7 +4,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "LBORRES cannot be null when LBSTAT is null or LBDRVFL not equal to 'Y'",
+      "execution_message": "LBSTAT is not populated and LBDRVFL is not equal to 'Y', but LBORRES is not populated.",
       "number_errors": 2,
       "errors": [
         {
@@ -12,22 +12,22 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
+            "LBSTAT": "Not in dataset",
             "LBDRVFL": null,
-            "LBORRES": null,
-            "LBSTAT": "Not in dataset"
+            "LBORRES": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
+            "LBSTAT": "Not in dataset",
             "LBDRVFL": "N",
-            "LBORRES": null,
-            "LBSTAT": "Not in dataset"
+            "LBORRES": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

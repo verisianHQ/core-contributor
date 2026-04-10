@@ -1,6 +1,7 @@
 # Variable: GEN
 # Condition: Variable Core Status = Required
 # Rule: Variable present in dataset and ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -156,8 +157,6 @@ Authorities:
         Version: '1.0'
 Check:
   all:
-    - name: $required_variables
-      operator: exists
     - name: variable_name
       operator: is_contained_by
       value: $required_variables
@@ -173,7 +172,7 @@ Operations:
   - id: $required_variables
     operator: required_variables
 Outcome:
-  Message: At least one Required variable has a null value
+  Message: Required variable has a missing value.
   Output Variables:
     - variable_name
     - variable_value
