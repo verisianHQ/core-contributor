@@ -1,5 +1,5 @@
 # Variable: TSVAL
-# Condition: TSPARMCD = 'CURTRT'
+# Condition: TSPARMCD = 'COMPTRT'
 # Rule: TSVAL is a valid preferred term from FDA Substance Registration System (SRS)
 # verified
 Authorities:
@@ -15,7 +15,7 @@ Authorities:
                 Section: 7.4|Appendix C1
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
-              Id: CG0442
+              Id: CG0445
               Version: '1'
             Version: '2.0'
         Version: '3.2'
@@ -29,7 +29,7 @@ Authorities:
                 Section: '7.4'
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
-              Id: CG0442
+              Id: CG0445
               Version: '1'
             Version: '2.0'
         Version: '3.3'
@@ -37,7 +37,7 @@ Check:
   all:
     - name: TSPARMCD
       operator: equal_to
-      value: CURTRT
+      value: COMPTRT
       value_is_literal: true
     - name: TSVAL
       operator: is_not_valid_unii_term_reference
@@ -45,7 +45,7 @@ Core:
   Id: NEW-RULE
   Status: Draft
   Version: '1'
-Description: Raise an error if TSVAL is not a valid preferred term from FDA Substance Registration System (SRS) when TSPARMCD is 'CURTRT'.
+Description: Raise an error if TSVAL is not a valid preferred term from FDA Substance Registration System (SRS) when TSPARMCD is 'COMPTRT'.
 Executability: Fully Executable
 Outcome:
   Message: TSVAL is not a valid preferred term from FDA Substance Registration System (SRS).
