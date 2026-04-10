@@ -1,6 +1,7 @@
 # Variable: TSVAL
 # Condition: TSPARMCD = 'CURTRT'
 # Rule: TSVAL is a valid preferred term from FDA Substance Registration System (SRS)
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
