@@ -1,0 +1,71 @@
+# Variable: --HLGTCD
+# Condition: 
+# Rule: --HLGTCD = MedDRA high level group TERM code
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0384
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The high-level group term code from the primary hierarchy
+                  assigned to the event from MedDRA.
+                Document: Model v2.0
+                Item: --HLGTCD
+                Section: Events
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0384
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: MedDRA High Level Group Term code from the primary
+                  path.
+                Document: Model v1.4
+                Section: 2.2.2
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0384
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: MedDRA High Level Group Term code from the primary
+                  path.
+                Document: Model v1.7
+                Section: 2.2.2
+Check:
+  all:
+    - name: --HLGTCD
+      operator: is_not_valid_meddra_code_reference
+Core:
+  Id: CDISC.SDTMIG.CG0384
+  Status: Draft
+  Version: '1'
+Description: Trigger error when --HLGTCD  is not a valid MedDRA high level group term
+  code.
+Executability: Fully Executable
+Outcome:
+  Message: --HLGTCD  is not a valid MedDRA high level group term code.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - AE
+      - MH
+      - CE
+Sensitivity: Record

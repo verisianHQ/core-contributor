@@ -1,0 +1,49 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AEHLGTCD  is not a valid MedDRA high level group term code.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "AEHLGTCD": 10018012123.0
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "AEHLGTCD": 10028393.551
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "AEHLGTCD": 0.0
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "AEHLGTCD": -25.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
