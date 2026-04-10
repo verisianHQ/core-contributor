@@ -4,9 +4,19 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "execution_message": "TSVAL is not a valid preferred term from FDA Substance Registration System (SRS).",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "COMPTRT",
+            "TSVAL": "UNIITERM1"
+          }
+        }
+      ]
     }
   ]
 }
