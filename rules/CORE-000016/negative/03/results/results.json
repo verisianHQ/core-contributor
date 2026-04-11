@@ -4,7 +4,7 @@
       "dataset": "ag.xpt",
       "domain": "AG",
       "execution_status": "success",
-      "execution_message": "AGPRESP should be populated as \"Y\" when AGOCCUR is provided.",
+      "execution_message": "AGPRESP should be populated as 'Y' when AGOCCUR is provided.",
       "number_errors": 3,
       "errors": [
         {
@@ -15,7 +15,7 @@
             "AGOCCUR": "Y",
             "AGPRESP": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -25,7 +25,7 @@
             "AGOCCUR": "N",
             "AGPRESP": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -35,7 +35,7 @@
             "AGOCCUR": "Y",
             "AGPRESP": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -43,7 +43,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMPRESP should be populated as \"Y\" when CMOCCUR is provided.",
+      "execution_message": "CMPRESP should be populated as 'Y' when CMOCCUR is provided.",
       "number_errors": 1,
       "errors": [
         {
@@ -54,7 +54,7 @@
             "CMOCCUR": "Y",
             "CMPRESP": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -62,7 +62,7 @@
       "dataset": "ec.xpt",
       "domain": "EC",
       "execution_status": "success",
-      "execution_message": "ECPRESP should be populated as \"Y\" when ECOCCUR is provided.",
+      "execution_message": "ECPRESP should be populated as 'Y' when ECOCCUR is provided.",
       "number_errors": 3,
       "errors": [
         {
@@ -73,7 +73,7 @@
             "ECOCCUR": "Y",
             "ECPRESP": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -83,7 +83,7 @@
             "ECOCCUR": "N",
             "ECPRESP": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -93,7 +93,7 @@
             "ECOCCUR": "Y",
             "ECPRESP": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -109,7 +109,7 @@
       "dataset": "ml.xpt",
       "domain": "ML",
       "execution_status": "success",
-      "execution_message": "MLPRESP should be populated as \"Y\" when MLOCCUR is provided.",
+      "execution_message": "MLPRESP should be populated as 'Y' when MLOCCUR is provided.",
       "number_errors": 3,
       "errors": [
         {
@@ -120,7 +120,7 @@
             "MLOCCUR": "Y",
             "MLPRESP": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -130,7 +130,7 @@
             "MLOCCUR": "N",
             "MLPRESP": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -140,7 +140,7 @@
             "MLOCCUR": "Y",
             "MLPRESP": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -148,7 +148,7 @@
       "dataset": "pr.xpt",
       "domain": "PR",
       "execution_status": "success",
-      "execution_message": "PRPRESP should be populated as \"Y\" when PROCCUR is provided.",
+      "execution_message": "PRPRESP should be populated as 'Y' when PROCCUR is provided.",
       "number_errors": 3,
       "errors": [
         {
@@ -159,7 +159,7 @@
             "PROCCUR": "Y",
             "PRPRESP": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -169,7 +169,7 @@
             "PROCCUR": "N",
             "PRPRESP": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -179,7 +179,7 @@
             "PROCCUR": "Y",
             "PRPRESP": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -187,7 +187,7 @@
       "dataset": "su.xpt",
       "domain": "SU",
       "execution_status": "success",
-      "execution_message": "SUPRESP should be populated as \"Y\" when SUOCCUR is provided.",
+      "execution_message": "SUPRESP should be populated as 'Y' when SUOCCUR is provided.",
       "number_errors": 3,
       "errors": [
         {
@@ -198,7 +198,7 @@
             "SUOCCUR": "Y",
             "SUPRESP": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -208,7 +208,7 @@
             "SUOCCUR": "N",
             "SUPRESP": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -218,7 +218,7 @@
             "SUOCCUR": "N",
             "SUPRESP": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -234,7 +234,7 @@
       "dataset": "be.xpt",
       "domain": "BE",
       "execution_status": "success",
-      "execution_message": "BEPRESP should be populated as \"Y\" when BEOCCUR is provided.",
+      "execution_message": "BEPRESP should be populated as 'Y' when BEOCCUR is provided.",
       "number_errors": 4,
       "errors": [
         {
@@ -245,7 +245,7 @@
             "BEOCCUR": "Y",
             "BEPRESP": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -255,7 +255,7 @@
             "BEOCCUR": "N",
             "BEPRESP": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -265,7 +265,7 @@
             "BEOCCUR": "Y",
             "BEPRESP": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -275,7 +275,7 @@
             "BEOCCUR": "N",
             "BEPRESP": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -283,7 +283,7 @@
       "dataset": "ce.xpt",
       "domain": "CE",
       "execution_status": "success",
-      "execution_message": "CEPRESP should be populated as \"Y\" when CEOCCUR is provided.",
+      "execution_message": "CEPRESP should be populated as 'Y' when CEOCCUR is provided.",
       "number_errors": 4,
       "errors": [
         {
@@ -294,7 +294,7 @@
             "CEOCCUR": "Y",
             "CEPRESP": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -304,7 +304,7 @@
             "CEOCCUR": "Y",
             "CEPRESP": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -314,7 +314,7 @@
             "CEOCCUR": "Y",
             "CEPRESP": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -324,7 +324,7 @@
             "CEOCCUR": "N",
             "CEPRESP": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -348,7 +348,7 @@
       "dataset": "ho.xpt",
       "domain": "HO",
       "execution_status": "success",
-      "execution_message": "HOPRESP should be populated as \"Y\" when HOOCCUR is provided.",
+      "execution_message": "HOPRESP should be populated as 'Y' when HOOCCUR is provided.",
       "number_errors": 4,
       "errors": [
         {
@@ -359,7 +359,7 @@
             "HOOCCUR": "Y",
             "HOPRESP": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -369,7 +369,7 @@
             "HOOCCUR": "Y",
             "HOPRESP": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -379,7 +379,7 @@
             "HOOCCUR": "Y",
             "HOPRESP": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -389,7 +389,7 @@
             "HOOCCUR": "N",
             "HOPRESP": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -397,7 +397,7 @@
       "dataset": "mh.xpt",
       "domain": "MH",
       "execution_status": "success",
-      "execution_message": "MHPRESP should be populated as \"Y\" when MHOCCUR is provided.",
+      "execution_message": "MHPRESP should be populated as 'Y' when MHOCCUR is provided.",
       "number_errors": 4,
       "errors": [
         {
@@ -408,7 +408,7 @@
             "MHOCCUR": "Y",
             "MHPRESP": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -418,7 +418,7 @@
             "MHOCCUR": "Y",
             "MHPRESP": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -428,7 +428,7 @@
             "MHOCCUR": "Y",
             "MHPRESP": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -438,8 +438,37 @@
             "MHOCCUR": "N",
             "MHPRESP": null
           },
-          "validated": false
+          "validated": true
         }
+      ]
+    }
+  ],
+  "unhighlighted_validations": [
+    {
+      "1": [
+        "ag.xpt",
+        "record",
+        5,
+        "AGPRESP",
+        "Not in dataset"
+      ]
+    },
+    {
+      "2": [
+        "ag.xpt",
+        "record",
+        6,
+        "AGPRESP",
+        "Not in dataset"
+      ]
+    },
+    {
+      "3": [
+        "ag.xpt",
+        "record",
+        7,
+        "AGPRESP",
+        "Not in dataset"
       ]
     }
   ]
