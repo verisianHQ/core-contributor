@@ -1,6 +1,7 @@
 # Variable: DSDECOD
 # Condition: DSTERM = 'COMPLETED'
 # Rule: DSDECOD = 'COMPLETED'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -9,7 +10,7 @@ Authorities:
           - Citations:
               - Cited Guidance: When DSTERM = "COMPLETED", DSDECOD is the term "COMPLETED" from
                   the controlled terminology codelist NCOMPLT.
-                Document: SDTMIG v3.4
+                Document: IG v3.4
                 Item: Assumption 3.b.i.
                 Section: 6.2.3
             Origin: SDTM and SDTMIG Conformance Rules
@@ -22,7 +23,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: b. When DSTERM = 'COMPLETED', DSDECOD = 'COMPLETED'.
-                Document: SDTMIG v3.3
+                Document: IG v3.3
                 Item: Assumption 3b
                 Section: 6.2.3
             Origin: SDTM and SDTMIG Conformance Rules
@@ -35,7 +36,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: b. When DSTERM = 'COMPLETED', DSDECOD = 'COMPLETED'.
-                Document: SDTMIG v3.2
+                Document: IG v3.2
                 Item: Assumption 3b
                 Section: '6.2'
             Origin: SDTM and SDTMIG Conformance Rules
@@ -64,17 +65,19 @@ Check:
     - name: DSTERM
       operator: equal_to
       value: COMPLETED
+      value_is_literal: true
     - name: DSDECOD
       operator: not_equal_to
       value: COMPLETED
+      value_is_literal: true
 Core:
   Id: CORE-000033
   Status: Published
   Version: '1'
-Description: Raise an error when DSTERM = "COMPLETED" and DSDECOD not equal to "COMPLETED".
+Description: Raise an error when DSTERM = 'COMPLETED' and DSDECOD is not equal to 'COMPLETED'.
 Executability: Fully Executable
 Outcome:
-  Message: DSDECOD is not equal to "COMPLETED" when DSTERM equals "COMPLETED".
+  Message: DSDECOD is not equal to 'COMPLETED' when DSTERM equals 'COMPLETED'.
   Output Variables:
     - DSTERM
     - DSDECOD
