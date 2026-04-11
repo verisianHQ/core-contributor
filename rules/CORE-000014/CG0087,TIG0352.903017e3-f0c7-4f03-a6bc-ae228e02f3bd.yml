@@ -1,6 +1,7 @@
 # Variable: --OCCUR
 # Condition: (--PRESP ^= 'Y' and --OCCUR is present in dataset) or (--STAT=NOT DONE)
 # Rule: --OCCUR = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -124,6 +125,7 @@ Check:
                 - name: --PRESP
                   operator: not_equal_to
                   value: Y
+                  value_is_literal: true
             - name: --OCCUR
               operator: exists
             - name: --OCCUR
@@ -132,6 +134,7 @@ Check:
             - name: --STAT
               operator: equal_to
               value: NOT DONE
+              value_is_literal: true
     - all:
         - name: --OCCUR
           operator: non_empty
@@ -140,11 +143,11 @@ Core:
   Id: CORE-000014
   Status: Published
   Version: '1'
-Description: Raise an error when --PRESP is not equals to "Y" and --OCCUR is
-  present in dataset or --STAT is equal to "NOT DONE" and --OCCUR is not blank
+Description: Raise an error when --PRESP is not equal to 'Y' and --OCCUR is
+  present in dataset, or --STAT is equal to 'NOT DONE' and --OCCUR is not empty.
 Executability: Fully Executable
 Outcome:
-  Message: --OCCUR should only be provided when --PRESP is equal to "Y".
+  Message: --OCCUR should only be provided when --PRESP is equal to 'Y'.
   Output Variables:
     - --PRESP
     - --OCCUR
