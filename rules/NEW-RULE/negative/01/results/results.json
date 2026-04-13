@@ -4,7 +4,7 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSVAL is not a valid term from SNOMED CT.",
+      "execution_message": "TSVALCD is not a valid concept identifier from SNOMED CT.",
       "number_errors": 2,
       "errors": [
         {
@@ -13,7 +13,7 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "INDIC",
-            "TSVAL": "FAKESNOMEDTERM"
+            "TSVALCD": "N9999999999"
           },
           "validated": true
         },
@@ -23,7 +23,7 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "TDIGRP",
-            "TSVAL": "FAKESNOMEDTERM"
+            "TSVALCD": "N9999999998"
           },
           "validated": true
         }
