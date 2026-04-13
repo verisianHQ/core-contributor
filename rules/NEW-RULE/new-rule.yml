@@ -1,5 +1,5 @@
 # Variable: TSVALCD
-# Condition: TSPARMCD = 'CURTRT'
+# Condition: TSPARMCD = 'COMPTRT'
 # Rule: TSVALCD is a valid unique ingredient identifier from FDA Substance Registration System (SRS)
 # verified
 Authorities:
@@ -37,7 +37,7 @@ Check:
   all:
     - name: TSPARMCD
       operator: equal_to
-      value: CURTRT
+      value: COMPTRT
       value_is_literal: true
     - name: TSVALCD
       operator: is_not_valid_unii_code_reference
@@ -45,7 +45,7 @@ Core:
   Id: NEW-RULE
   Status: Draft
   Version: '1'
-Description: Raise an error if TSVALCD is not a valid unique ingredient identifier from FDA Substance Registration System (SRS) when TSPARMCD is 'CURTRT'.
+Description: Raise an error if TSVALCD is not a valid unique ingredient identifier from FDA Substance Registration System (SRS) when TSPARMCD is 'COMPTRT'.
 Executability: Fully Executable
 Outcome:
   Message: TSVALCD is not a valid unique ingredient identifier from FDA Substance Registration System (SRS).
