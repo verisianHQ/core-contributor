@@ -1,6 +1,6 @@
 # Variable: TSVALCD
-# Condition: TSPARMCD in ('INDIC', 'TDIGRP')
-# Rule: TSVALCD is a valid concept identifier from SNOMED CT
+# Condition: TSPARMCD = 'PCLAS'
+# Rule: TSVALCD is a valid code from NDF-RT
 # verified
 Authorities:
   - Organization: CDISC
@@ -15,7 +15,7 @@ Authorities:
                 Section: 7.4|Appendix C1
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
-              Id: CG0449
+              Id: CG0454
               Version: '1'
             Version: '2.0'
         Version: '3.2'
@@ -29,17 +29,15 @@ Authorities:
                 Section: '7.4'
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
-              Id: CG0449
+              Id: CG0454
               Version: '1'
             Version: '2.0'
         Version: '3.3'
 Check:
   all:
     - name: TSPARMCD
-      operator: is_contained_by
-      value:
-        - INDIC
-        - TDIGRP
+      operator: equal_to
+      value: PCLAS
       value_is_literal: true
     - name: TSVALCD
       operator: is_not_valid_medrt_code_reference
@@ -47,10 +45,10 @@ Core:
   Id: NEW-RULE
   Status: Draft
   Version: '1'
-Description: Raise an error if TSVALCD is not a valid concept identifier from SNOMED CT when TSPARMCD is in ('INDIC', 'TDIGRP').
+Description: Raise an error if TSVALCD is not a valid code from NDF-RT when TSPARMCD = 'PCLAS'.
 Executability: Fully Executable
 Outcome:
-  Message: TSVALCD is not a valid concept identifier from SNOMED CT.
+  Message: TSVALCD is not a valid code from NDF-RT.
   Output Variables:
     - TSPARMCD
     - TSVALCD

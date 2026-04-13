@@ -4,26 +4,16 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSVALCD is not a valid concept identifier from SNOMED CT.",
-      "number_errors": 2,
+      "execution_message": "TSVALCD is not a valid code from NDF-RT.",
+      "number_errors": 1,
       "errors": [
         {
           "row": 1,
           "SEQ": 1,
           "USUBJID": "None",
           "value": {
-            "TSPARMCD": "INDIC",
+            "TSPARMCD": "PCLAS",
             "TSVALCD": "N9999999999"
-          },
-          "validated": true
-        },
-        {
-          "row": 2,
-          "SEQ": 2,
-          "USUBJID": "None",
-          "value": {
-            "TSPARMCD": "TDIGRP",
-            "TSVALCD": "N9999999998"
           },
           "validated": true
         }
