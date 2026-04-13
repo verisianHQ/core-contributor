@@ -138,7 +138,7 @@ class ResultReporter:
 class TestRunner:
     """Test execution logic."""
 
-    def __init__(self, use_pgserver: bool = True, meddra_path: Optional[str] = None):
+    def __init__(self, use_pgserver: bool = True, meddra_path: Optional[str] = None, unii_path: Optional[str] = None, medrt_path: Optional[str] = None):
         from dotenv import load_dotenv
 
         load_dotenv("engine/.env.example")
@@ -149,7 +149,11 @@ class TestRunner:
         )
 
         ext_dicts = SqlExternalDictionariesContainer(
-            dictionary_path_mapping={"meddra": meddra_path} if meddra_path else {}
+            dictionary_path_mapping={
+                "meddra": meddra_path,
+                "unii": unii_path,
+                "medrt": medrt_path
+            } if meddra_path or unii_path or medrt_path else {}
         )
         from engine.cdisc_rules_engine.data_service.postgresql_data_service import PostgresQLDataService
 
@@ -359,16 +363,28 @@ class TestRunner:
         xl_path = list(Path(data_path).glob("[!~]*.xls*"))[0]
         highlighted_cells = {}
 
+        YELLOW_INDICES = (5, 11, 13, 14, 34)
+
         wb = op.load_workbook(xl_path, data_only=True)
         for sheet in wb.worksheets:
             for row in sheet.iter_rows():
                 for cell in row:
-                    if not cell.fill.fgColor or not isinstance(cell.fill.fgColor.rgb, str):
+                    fg = cell.fill.fgColor
+                    if not fg:
                         continue
-                    if cell.fill.fgColor.rgb.lower().endswith("ffff00"):
+
+                    is_yellow = False
+
+                    if isinstance(fg.rgb, str) and fg.rgb.lower().endswith("ffff00"):
+                        is_yellow = True
+                    elif isinstance(fg.indexed, int) and fg.indexed in YELLOW_INDICES:
+                        is_yellow = True
+
+                    if is_yellow:
                         sheet_data = highlighted_cells.setdefault(sheet.title, {})
                         row_data = sheet_data.setdefault(int(cell.row), {})
                         row_data.update({sheet.cell(row=1, column=cell.column).value: cell.value})
+
         return highlighted_cells
 
     def validate_errors(self, results_data: dict, validations: dict):
@@ -429,6 +445,7 @@ class TestRunner:
                 )
                 if str(var)[0] == "$":
                     continue
+                var = var.split(".")[-1] if "." in str(var) else var
                 if error_level == "record":
                     if error_val == "[ABSENT]":
                         continue
@@ -540,13 +557,15 @@ def parse_args():
         "-pg", "--use-postgres", action="store_true", help="Use standard PostgreSQL instead of pgserver default"
     )
     parser.add_argument("-md", "--meddra", help="Provide path to MedDRA files")
+    parser.add_argument("-u", "--unii", help="Provide path to UNII files")
+    parser.add_argument("-mrt", "--medrt", help="Provide path to Med-RT files")
     return parser.parse_args()
 
 
 def main():
     args = parse_args()
     use_pgserver = not args.use_postgres
-    runner = TestRunner(use_pgserver=use_pgserver, meddra_path=args.meddra)
+    runner = TestRunner(use_pgserver=use_pgserver, meddra_path=args.meddra, unii_path=args.unii, medrt_path=args.medrt)
     available_rules = runner.get_available_rules()
 
     if not available_rules:

@@ -4,44 +4,32 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "LBORRES cannot be null when LBSTAT is null or LBDRVFL not equal to 'Y'",
+      "execution_message": "LBSTAT is not populated and LBDRVFL is not equal to 'Y', but LBORRES is not populated.",
       "number_errors": 2,
       "errors": [
         {
-          "row": 2,
+          "row": 1,
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
+            "LBSTAT": null,
             "LBDRVFL": "Not in dataset",
-            "LBORRES": null,
-            "LBSTAT": null
+            "LBORRES": null
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 3,
+          "row": 2,
           "SEQ": 3,
           "USUBJID": "CDISC001",
           "value": {
+            "LBSTAT": null,
             "LBDRVFL": "Not in dataset",
-            "LBORRES": null,
-            "LBSTAT": null
+            "LBORRES": null
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "lb.xpt",
-      "Row": 6,
-      "Variable": "LBSTAT"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 7,
-      "Variable": "LBSTAT"
     }
   ]
 }
