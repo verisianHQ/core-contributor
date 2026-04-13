@@ -143,7 +143,8 @@ class TestRunner:
         whodrug_path: Optional[str] = None,
         meddra_path: Optional[str] = None,
         unii_path: Optional[str] = None,
-        medrt_path: Optional[str] = None
+        medrt_path: Optional[str] = None,
+        loinc_path: Optional[str] = None
     ):
         from dotenv import load_dotenv
 
@@ -160,6 +161,7 @@ class TestRunner:
                 "meddra": meddra_path or "dummy_ex_dicts/meddra",
                 "unii": unii_path or "dummy_ex_dicts/unii",
                 "medrt": medrt_path or "dummy_ex_dicts/medrt",
+                "loinc": loinc_path or "dummy_ex_dicts/loinc",
             }
         )
         from engine.cdisc_rules_engine.data_service.postgresql_data_service import PostgresQLDataService
@@ -565,8 +567,9 @@ def parse_args():
     )
     parser.add_argument("-wd", "--whodrug", help="Provide path to WHODrug files")
     parser.add_argument("-md", "--meddra", help="Provide path to MedDRA files")
-    parser.add_argument("-u", "--unii", help="Provide path to UNII files")
+    parser.add_argument("-un", "--unii", help="Provide path to UNII files")
     parser.add_argument("-mrt", "--medrt", help="Provide path to Med-RT files")
+    parser.add_argument("-lo", "--loinc", help="Provide path to LOINC files")
     return parser.parse_args()
 
 
@@ -578,7 +581,8 @@ def main():
         whodrug_path=args.whodrug,
         meddra_path=args.meddra,
         unii_path=args.unii,
-        medrt_path=args.medrt
+        medrt_path=args.medrt,
+        loinc_path=args.loinc
     )
     available_rules = runner.get_available_rules()
 
