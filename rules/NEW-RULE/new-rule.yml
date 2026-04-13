@@ -1,0 +1,74 @@
+# Variable: --BDSYCD
+# Condition: 
+# Rule: --BDSYCD = MedDRA system organ class code
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A standardized or dictionary derived short sequence of
+                  characters used to represent the body system or organ class.
+                  MedDRA System Organ Class code corresponding to --BODSYS
+                  assigned for analysis.
+                Document: Model v2.0
+                Item: --BDSYCD
+                Section: Events
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0386
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: MedDRA System Organ Class code corresponding to -BODSYS assigned
+                  for analysis.
+                Document: Model v1.4
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0386
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: MedDRA System Organ Class code corresponding to -BODSYS assigned
+                  for analysis.
+                Document: Model v1.7
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0386
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: --BDSYCD
+      operator: is_not_valid_meddra_code_reference
+Core:
+  Id: CDISC.SDTMIG.CG0386
+  Status: Draft
+  Version: '1'
+Description: Raise an error when --BDSYCD is not a valid MedDRA system organ class code.
+Executability: Fully Executable
+Outcome:
+  Message: --BDSYCD is not a valid MedDRA system organ class code.
+  Output Variables:
+    - --BDSYCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - AE
+      - MH
+      - CE
+Sensitivity: Record
