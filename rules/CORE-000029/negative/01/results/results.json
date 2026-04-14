@@ -1,10 +1,10 @@
 {
   "datasets": [
     {
-      "dataset": "vs.xpt",
-      "domain": "VS",
+      "dataset": "lb.xpt",
+      "domain": "LB",
       "execution_status": "success",
-      "execution_message": "VSTPTNUM exists in a dataset, but VSTPT does not exist. When time points are represented in SDTMIG domains, both VSTPT and VSTPTNUM must be used.",
+      "execution_message": "LBTPT should be present when LBTPTNUM is present.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,9 +12,27 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "VSTPTNUM": 1.0
+            "LBTPTNUM": 1.0
           },
-          "validated": false
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ft.xpt",
+      "domain": "FT",
+      "execution_status": "success",
+      "execution_message": "FTTPT should be present when FTTPTNUM is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "FTTPTNUM": null
+          },
+          "validated": true
         }
       ]
     }
