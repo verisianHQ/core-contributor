@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "ARMNRS value is missing when ARMCD value is missing",
+      "execution_message": "ARMNRS should be populated when ARMCD is not populated.",
       "number_errors": 2,
       "errors": [
         {
@@ -15,17 +15,17 @@
             "ARMCD": null,
             "ARMNRS": null
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 11,
+          "row": 2,
           "SEQ": null,
           "USUBJID": "CDISC011",
           "value": {
             "ARMCD": null,
             "ARMNRS": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

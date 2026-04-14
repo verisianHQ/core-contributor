@@ -1,6 +1,7 @@
 # Variable: ARMNRS
 # Condition: ARMCD = null
 # Rule: ARMNRS^=null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -64,10 +65,10 @@ Core:
   Id: CORE-000045
   Status: Published
   Version: '1'
-Description: Verify ARMNRS is not null when ARMCD is null
+Description: Raise an error when ARMCD is not populated and ARMNRS is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: ARMNRS value is missing when ARMCD value is missing
+  Message: ARMNRS should be populated when ARMCD is not populated.
   Output Variables:
     - ARMCD
     - ARMNRS
