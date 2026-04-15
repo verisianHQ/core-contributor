@@ -1,0 +1,76 @@
+# Variable: --LOINC
+# Condition: 
+# Rule: --LOINC = valid code in the version of the LOINC dictionary specified in define.xml
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0400
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Logical Observation Identifiers Names and Codes (LOINC)
+                  code for the topic variable such as a lab test.
+                Document: Model v1.4
+                Section: 2.2.3
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0400
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Logical Observation Identifiers Names and Codes (LOINC)
+                  code for the topic variable such as a lab test.
+                Document: Model v1.7
+                Section: 2.2.3
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0400
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: A short sequence of characters used to represent laboratory
+                  and clinical tests within the Logical Observation Identifiers Names
+                  and Codes (LOINC) database.
+                Document: Model v2.0
+                Item: --LOINC
+                Section: Findings
+Check:
+  all:
+    - name: --LOINC
+      operator: is_valid_loinc_code_reference
+    - name: --LOINC
+      operator: something_idk_yet
+Core:
+  Id: CDISC.SDTMIG.CG0400
+  Status: Draft
+  Version: '1'
+Description: Raise error when --LOINC is not a valid code in the version of the
+  LOINC dictionary specified in define.xml
+Executability: Fully Executable
+Operations:
+  - id: $version
+    operator: get_define_external_dictionary_version
+    external_dictionary_type: loinc
+Outcome:
+  Message: --LOINC is not a valid code in the version of the LOINC dictionary specified
+    in define.xml
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record
