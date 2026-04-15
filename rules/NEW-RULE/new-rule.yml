@@ -1,6 +1,7 @@
 # Variable: --LOINC
 # Condition: 
 # Rule: --LOINC = valid code in the version of the LOINC dictionary specified in define.xml
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -49,8 +50,8 @@ Check:
   all:
     - name: --LOINC
       operator: is_valid_loinc_code_reference
-    - name: --LOINC
-      operator: something_idk_yet
+      filter_attribute: version
+      filter_value: $define_loinc_version
 Core:
   Id: CDISC.SDTMIG.CG0400
   Status: Draft
@@ -59,12 +60,15 @@ Description: Raise error when --LOINC is not a valid code in the version of the
   LOINC dictionary specified in define.xml
 Executability: Fully Executable
 Operations:
-  - id: $version
+  - id: $define_loinc_version
     operator: get_define_external_dictionary_version
     external_dictionary_type: loinc
 Outcome:
   Message: --LOINC is not a valid code in the version of the LOINC dictionary specified
     in define.xml
+  Output Variables:
+    - --LOINC
+    - $define_loinc_version
 Rule Type: Record Data
 Scope:
   Classes:

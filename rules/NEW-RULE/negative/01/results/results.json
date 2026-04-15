@@ -1,0 +1,30 @@
+{
+  "datasets": [
+    {
+      "dataset": "ie.xpt",
+      "domain": "IE",
+      "execution_status": "success",
+      "execution_message": "IELOINC is not a valid code in the version of the LOINC dictionary specified in define.xml",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC01",
+          "value": {
+            "IELOINC": "100002-5",
+            "$define_loinc_version": "2.74"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "IELOINC": "100002-5"
+      }
+    }
+  ]
+}
