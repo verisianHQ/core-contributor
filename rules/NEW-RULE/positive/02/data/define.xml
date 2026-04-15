@@ -2034,6 +2034,24 @@
           <def:title>se.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
+      <!-- Dataset Definition (CE) -->
+      <ItemGroupDef OID="IG.CE" Name="CE" Domain="CE"
+        Repeating="Yes" IsReferenceData="No" SASDatasetName="CE"
+        def:Structure="One record per actual Element per subject"
+        Purpose="Tabulation" def:StandardOID="STD.1"
+ def:ArchiveLocationID="LF.CE" def:HasNoData="Yes">
+        <Description>
+          <TranslatedText xml:lang="en">Clinical Events</TranslatedText>
+        </Description>
+        <ItemRef ItemOID="IT.CE.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="1" Role="Identifier"/>
+        <ItemRef ItemOID="IT.CE.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
+        <ItemRef ItemOID="IT.CE.USUBJID" Mandatory="Yes" OrderNumber="3" KeySequence="2" Role="Identifier"/>
+        <ItemRef ItemOID="IT.CE.CESEQ" Mandatory="Yes" OrderNumber="4" MethodOID="MT.SEQ" Role="Identifier"/>
+        <def:Class Name="EVENTS"/>
+        <def:leaf ID="LF.CE" xlink:href="ce.xpt">
+          <def:title>ce.xpt</def:title>
+        </def:leaf>
+      </ItemGroupDef>
       <!-- Dataset Definition (SV) -->
       <ItemGroupDef OID="IG.SV" Name="SV" Domain="SV"
         Repeating="Yes" IsReferenceData="No" SASDatasetName="SV"
@@ -2160,7 +2178,7 @@
         Repeating="Yes" IsReferenceData="No" SASDatasetName="AE"
         def:Structure="One record per adverse event per subject"
         Purpose="Tabulation" def:StandardOID="STD.1"
- def:ArchiveLocationID="LF.AE" def:HasNoData="Yes">
+ def:ArchiveLocationID="LF.AE">
         <Description>
           <TranslatedText xml:lang="en">Adverse Events</TranslatedText>
         </Description>
