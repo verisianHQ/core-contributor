@@ -2160,7 +2160,7 @@
         Repeating="Yes" IsReferenceData="No" SASDatasetName="AE"
         def:Structure="One record per adverse event per subject"
         Purpose="Tabulation" def:StandardOID="STD.1"
- def:ArchiveLocationID="LF.AE" def:HasNoData="Yes">
+ def:ArchiveLocationID="LF.AE">
         <Description>
           <TranslatedText xml:lang="en">Adverse Events</TranslatedText>
         </Description>
@@ -2237,7 +2237,7 @@
         Repeating="Yes" IsReferenceData="No" SASDatasetName="MH"
         def:Structure="One record per medical history event per subject"
         Purpose="Tabulation" def:StandardOID="STD.1"
- def:ArchiveLocationID="LF.MH">
+ def:ArchiveLocationID="LF.MH" def:HasNoData="Yes">
         <Description>
           <TranslatedText xml:lang="en">Medical History</TranslatedText>
         </Description>
