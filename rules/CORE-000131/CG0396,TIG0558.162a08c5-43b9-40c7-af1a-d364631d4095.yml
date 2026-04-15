@@ -1,6 +1,7 @@
 # Variable: --CONTRT
 # Condition: --CONTRT ^= null
 # Rule: --CONTRT in ('Y','N')
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -72,10 +73,10 @@ Core:
   Id: CORE-000131
   Status: Published
   Version: '1'
-Description: Raise an error when AECONTRT is completed and value is not 'Y' or 'N'
+Description: Raise an error when AECONTRT is completed and value is not 'Y' or 'N'.
 Executability: Fully Executable
 Outcome:
-  Message: AECONTRT is completed, but not equal to "N" or "Y"
+  Message: AECONTRT is completed, but not equal to 'N' or 'Y'.
   Output Variables:
     - AECONTRT
 Rule Type: Record Data
