@@ -1,6 +1,7 @@
 # Variable: --SHOSP
 # Condition: --SHOSP ^= null
 # Rule: --SHOSP in ('Y','N')
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -50,7 +51,7 @@ Authorities:
               - Cited Guidance: Valid values are "Y" and "N" and null.
                 Document: SDTM v2.1
                 Item: --SHOSP
-                Section: 3.1.2  The Events Observation Class
+                Section: 3.1.2 The Events Observation Class
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0554
@@ -71,10 +72,10 @@ Core:
   Id: CORE-000127
   Status: Published
   Version: '1'
-Description: Raise an error when AESHOSP is completed and value is not 'Y' or 'N'
+Description: Raise an error when AESHOSP is completed and value is not 'Y' or 'N'.
 Executability: Fully Executable
 Outcome:
-  Message: AESHOSP is completed, but not equal to "N" or "Y"
+  Message: AESHOSP is completed, but not equal to 'N' or 'Y'.
   Output Variables:
     - AESHOSP
 Rule Type: Record Data
