@@ -157,8 +157,8 @@ class TestRunner:
 
         ext_dicts = SqlExternalDictionariesContainer(
             dictionary_path_mapping={
-                "whodrug": whodrug_path or "dummy_ex_dicts/whodrug",
-                "meddra": meddra_path or "dummy_ex_dicts/meddra",
+                "whodrug": whodrug_path,
+                "meddra": meddra_path,
                 "unii": unii_path or "dummy_ex_dicts/unii",
                 "medrt": medrt_path or "dummy_ex_dicts/medrt",
                 "loinc": loinc_path or "dummy_ex_dicts/loinc",
