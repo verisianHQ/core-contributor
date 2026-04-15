@@ -2014,7 +2014,7 @@
         Repeating="Yes" IsReferenceData="No" SASDatasetName="SE"
         def:Structure="One record per actual Element per subject"
         Purpose="Tabulation" def:StandardOID="STD.1"
- def:ArchiveLocationID="LF.SE">
+ def:ArchiveLocationID="LF.SE" def:HasNoData="Yes">
         <Description>
           <TranslatedText xml:lang="en">Subject Elements</TranslatedText>
         </Description>
@@ -2347,7 +2347,7 @@
         Repeating="Yes" IsReferenceData="No" SASDatasetName="LB"
         def:Structure="One record per analyte per visit per subject"
         Purpose="Tabulation" def:StandardOID="STD.1"
- def:ArchiveLocationID="LF.LB" def:HasNoData="Yes">
+ def:ArchiveLocationID="LF.LB">
         <Description>
           <TranslatedText xml:lang="en">Laboratory Test Results</TranslatedText>
         </Description>
