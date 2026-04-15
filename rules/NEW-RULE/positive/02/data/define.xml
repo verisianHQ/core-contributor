@@ -2063,7 +2063,7 @@
         Repeating="Yes" IsReferenceData="No" SASDatasetName="CM"
         def:Structure="One record per recorded medication occurrence or constant-dosing interval per subject"
         Purpose="Tabulation" def:StandardOID="STD.1"
- def:ArchiveLocationID="LF.CM">
+ def:ArchiveLocationID="LF.CM" def:HasNoData="Yes">
         <Description>
           <TranslatedText xml:lang="en">Concomitant Medications</TranslatedText>
         </Description>
@@ -2160,7 +2160,7 @@
         Repeating="Yes" IsReferenceData="No" SASDatasetName="AE"
         def:Structure="One record per adverse event per subject"
         Purpose="Tabulation" def:StandardOID="STD.1"
- def:ArchiveLocationID="LF.AE" def:HasNoData="Yes">
+ def:ArchiveLocationID="LF.AE">
         <Description>
           <TranslatedText xml:lang="en">Adverse Events</TranslatedText>
         </Description>
