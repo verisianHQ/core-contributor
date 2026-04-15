@@ -138,7 +138,14 @@ class ResultReporter:
 class TestRunner:
     """Test execution logic."""
 
-    def __init__(self, use_pgserver: bool = True, meddra_path: Optional[str] = None, unii_path: Optional[str] = None, medrt_path: Optional[str] = None):
+    def __init__(self, 
+        use_pgserver: bool = True,
+        whodrug_path: Optional[str] = None,
+        meddra_path: Optional[str] = None,
+        unii_path: Optional[str] = None,
+        medrt_path: Optional[str] = None,
+        loinc_path: Optional[str] = None
+    ):
         from dotenv import load_dotenv
 
         load_dotenv("engine/.env.example")
@@ -150,10 +157,12 @@ class TestRunner:
 
         ext_dicts = SqlExternalDictionariesContainer(
             dictionary_path_mapping={
-                "meddra": meddra_path,
-                "unii": unii_path,
-                "medrt": medrt_path
-            } if meddra_path or unii_path or medrt_path else {}
+                "whodrug": whodrug_path or "dummy_ex_dicts/whodrug",
+                "meddra": meddra_path or "dummy_ex_dicts/meddra",
+                "unii": unii_path or "dummy_ex_dicts/unii",
+                "medrt": medrt_path or "dummy_ex_dicts/medrt",
+                "loinc": loinc_path or "dummy_ex_dicts/loinc",
+            }
         )
         from engine.cdisc_rules_engine.data_service.postgresql_data_service import PostgresQLDataService
 
@@ -556,16 +565,25 @@ def parse_args():
     parser.add_argument(
         "-pg", "--use-postgres", action="store_true", help="Use standard PostgreSQL instead of pgserver default"
     )
+    parser.add_argument("-wd", "--whodrug", help="Provide path to WHODrug files")
     parser.add_argument("-md", "--meddra", help="Provide path to MedDRA files")
-    parser.add_argument("-u", "--unii", help="Provide path to UNII files")
+    parser.add_argument("-un", "--unii", help="Provide path to UNII files")
     parser.add_argument("-mrt", "--medrt", help="Provide path to Med-RT files")
+    parser.add_argument("-lo", "--loinc", help="Provide path to LOINC files")
     return parser.parse_args()
 
 
 def main():
     args = parse_args()
     use_pgserver = not args.use_postgres
-    runner = TestRunner(use_pgserver=use_pgserver, meddra_path=args.meddra, unii_path=args.unii, medrt_path=args.medrt)
+    runner = TestRunner(
+        use_pgserver=use_pgserver,
+        whodrug_path=args.whodrug,
+        meddra_path=args.meddra,
+        unii_path=args.unii,
+        medrt_path=args.medrt,
+        loinc_path=args.loinc
+    )
     available_rules = runner.get_available_rules()
 
     if not available_rules:
