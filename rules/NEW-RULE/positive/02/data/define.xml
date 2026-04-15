@@ -2160,7 +2160,7 @@
         Repeating="Yes" IsReferenceData="No" SASDatasetName="AE"
         def:Structure="One record per adverse event per subject"
         Purpose="Tabulation" def:StandardOID="STD.1"
- def:ArchiveLocationID="LF.AE" def:HasNoData="Yes">
+ def:ArchiveLocationID="LF.AE">
         <Description>
           <TranslatedText xml:lang="en">Adverse Events</TranslatedText>
         </Description>
@@ -2211,7 +2211,7 @@
         Repeating="Yes" IsReferenceData="No" SASDatasetName="DS"
         def:Structure="One record per disposition status or protocol milestone per subject"
         Purpose="Tabulation" def:StandardOID="STD.1"
- def:ArchiveLocationID="LF.DS">
+ def:ArchiveLocationID="LF.DS" def:HasNoData="Yes"> 
         <Description>
           <TranslatedText xml:lang="en">Disposition</TranslatedText>
         </Description>
