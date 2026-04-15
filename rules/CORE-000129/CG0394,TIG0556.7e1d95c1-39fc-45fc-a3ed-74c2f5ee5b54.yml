@@ -1,6 +1,7 @@
 # Variable: --SOD
 # Condition: --SOD ^= null
 # Rule: --SOD in ('Y','N')
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -50,7 +51,7 @@ Authorities:
               - Cited Guidance: Valid values are "Y" and "N" and null.
                 Document: SDTM v2.1
                 Item: --SOD
-                Section: 3.1.2  The Events Observation Class
+                Section: 3.1.2 The Events Observation Class
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0556
@@ -71,10 +72,10 @@ Core:
   Id: CORE-000129
   Status: Published
   Version: '1'
-Description: Raise an error when AESOD is completed and value is not 'Y' or 'N'
+Description: Raise an error when AESOD is completed and value is not 'Y' or 'N'.
 Executability: Fully Executable
 Outcome:
-  Message: AESOD is completed, but not equal to "N" or "Y"
+  Message: AESOD is completed, but not equal to 'N' or 'Y'.
   Output Variables:
     - AESOD
 Rule Type: Record Data
