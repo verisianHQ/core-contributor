@@ -2034,6 +2034,24 @@
           <def:title>se.xpt</def:title>
         </def:leaf>
       </ItemGroupDef>
+      <!-- Dataset Definition (EG) -->
+      <ItemGroupDef OID="IG.EG" Name="EG" Domain="EG"
+        Repeating="Yes" IsReferenceData="No" SASDatasetName="EG"
+        def:Structure="One record per actual Element per subject"
+        Purpose="Tabulation" def:StandardOID="STD.1"
+ def:ArchiveLocationID="LF.EG">
+        <Description>
+          <TranslatedText xml:lang="en">Subject Elements</TranslatedText>
+        </Description>
+        <ItemRef ItemOID="IT.EG.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="1" Role="Identifier"/>
+        <ItemRef ItemOID="IT.EG.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
+        <ItemRef ItemOID="IT.EG.USUBJID" Mandatory="Yes" OrderNumber="3" KeySequence="2" Role="Identifier"/>
+        <ItemRef ItemOID="IT.EG.EGSEQ" Mandatory="Yes" OrderNumber="4" MethodOID="MT.SEQ" Role="Identifier"/>
+        <def:Class Name="FINDINGS"/>
+        <def:leaf ID="LF.EG" xlink:href="eg.xpt">
+          <def:title>eg.xpt</def:title>
+        </def:leaf>
+      </ItemGroupDef>
       <!-- Dataset Definition (SV) -->
       <ItemGroupDef OID="IG.SV" Name="SV" Domain="SV"
         Repeating="Yes" IsReferenceData="No" SASDatasetName="SV"
