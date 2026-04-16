@@ -2039,7 +2039,7 @@
         Repeating="Yes" IsReferenceData="No" SASDatasetName="SV"
         def:Structure="One record per actual visit per subject"
         Purpose="Tabulation" def:StandardOID="STD.1"
- def:ArchiveLocationID="LF.SV">
+ def:ArchiveLocationID="LF.SV" def:HasNoData="Yes">
         <Description>
           <TranslatedText xml:lang="en">Subject Visits</TranslatedText>
         </Description>
@@ -2160,7 +2160,7 @@
         Repeating="Yes" IsReferenceData="No" SASDatasetName="AE"
         def:Structure="One record per adverse event per subject"
         Purpose="Tabulation" def:StandardOID="STD.1"
- def:ArchiveLocationID="LF.AE" def:HasNoData="Yes">
+ def:ArchiveLocationID="LF.AE">
         <Description>
           <TranslatedText xml:lang="en">Adverse Events</TranslatedText>
         </Description>

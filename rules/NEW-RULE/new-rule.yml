@@ -11,7 +11,7 @@ Authorities:
                 Section: 'FDAB004'
             Origin: 'FDA Business Rules'
             Rule Identifier:
-              Id: 'FB0402'
+              Id: 'FB0413'
             Version: '1.5'
         Version: '3.2'
       - Name: 'SDTMIG'
@@ -23,7 +23,7 @@ Authorities:
                 Section: 'FDAB004'
             Origin: 'FDA Business Rules'
             Rule Identifier:
-              Id: 'FB0402'
+              Id: 'FB0413'
             Version: '1.5'
         Version: '3.3'
       - Name: 'SDTMIG'
@@ -35,27 +35,27 @@ Authorities:
                 Section: 'FDAB004'
             Origin: 'FDA Business Rules'
             Rule Identifier:
-              Id: 'FB0402'
+              Id: 'FB0413'
             Version: '1.5'
         Version: '3.4'
 Check:
   all:
     - name: define_dataset_name
       operator: equal_to
-      value: AE
+      value: SV
     - name: define_dataset_has_no_data
       operator: equal_to
       value: false
     - name: filename
       operator: empty
 Core:
-  Id: FDA.SDTMIG.FB0402
+  Id: FDA.SDTMIG.FB0413
   Status: Draft
   Version: '1'
-Description: AE dataset should be present in the submission when related data is collected.
+Description: SV dataset should be present in the submission when related data is collected.
 Executability: Fully Executable
 Outcome:
-  Message: Missing AE dataset.
+  Message: Missing SV dataset.
   Output Variables:
     - define_dataset_name
     - define_dataset_has_no_data
