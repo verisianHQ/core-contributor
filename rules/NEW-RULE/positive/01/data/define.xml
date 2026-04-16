@@ -2402,6 +2402,20 @@
         <ItemRef ItemOID="IT.NV.NVDY" Mandatory="No" OrderNumber="12" MethodOID="MT.DAYCALC" Role="Timing"/>
         <def:Class Name="FINDINGS"/>
       </ItemGroupDef>
+      <!-- Dataset Definition (PP) -->
+      <ItemGroupDef OID="IG.PP" Name="PP" Domain="PP"
+        Repeating="Yes" IsReferenceData="No" SASDatasetName="PP"
+        def:Structure="One record per finding per visit per subject"
+        Purpose="Tabulation" def:StandardOID="STD.1">
+        <Description>
+          <TranslatedText xml:lang="en">Pharmacokinetics Parameters</TranslatedText>
+        </Description>
+        <ItemRef ItemOID="IT.PP.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="1" Role="Identifier"/>
+        <ItemRef ItemOID="IT.PP.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
+        <ItemRef ItemOID="IT.PP.USUBJID" Mandatory="Yes" OrderNumber="3" KeySequence="2" Role="Identifier"/>
+        <ItemRef ItemOID="IT.PP.PPSEQ" Mandatory="Yes" OrderNumber="4" MethodOID="MT.SEQ" Role="Identifier"/>
+        <def:Class Name="FINDINGS"/>
+      </ItemGroupDef>
       <!-- Dataset Definition (OE) -->
       <ItemGroupDef OID="IG.OE" Name="OE" Domain="OE"
         Repeating="Yes" IsReferenceData="No" SASDatasetName="OE"
