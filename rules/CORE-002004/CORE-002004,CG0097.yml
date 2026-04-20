@@ -1,0 +1,113 @@
+# Variable: CMTRT
+# Condition: 
+# Rule: CMTRT = collected on CRF
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Verbatim medication name that is either pre-printed or collected
+                  on a CRF.
+                Document: IG v3.4
+                Item: Specification
+                Section: 6.1.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0097
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Verbatim medication name that is either pre-printed or collected
+                  on a CRF.
+                Document: IG v3.2
+                Item: Specification
+                Section: '6.1'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0097
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Verbatim medication name that is either pre-printed or collected
+                  on a CRF.
+                Document: IG v3.3
+                Item: Specification
+                Section: 6.1.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0097
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  any: 
+    - all:
+      - name: variable_name
+        operator: equal_to
+        value: CMTRT
+      - name: define_variable_origin_type
+        operator: not_equal_to
+        value: 'CRF'
+      - name: define_variable_origin_type
+        operator: not_equal_to
+        value: 'Collected'
+      - name: define_variable_origin_type
+        operator: not_equal_to
+        value: 'Assigned'
+    - all:
+      - name: variable_name
+        operator: equal_to
+        value: CMTRT
+      - name: define_variable_origin_type
+        operator: empty
+    - all:
+      - name: variable_name
+        operator: equal_to
+        value: CMTRT
+      - name: define_variable_origin_type
+        operator: equal_to
+        value: 'Assigned'
+      - name: define_variable_source_type
+        operator: not_equal_to
+        value: 'Sponsor'
+    - all:
+      - name: variable_name
+        operator: equal_to
+        value: CMTRT
+      - name: define_variable_origin_type
+        operator: equal_to
+        value: 'Collected'
+      - name: define_variable_source_type
+        operator: not_equal_to
+        value: 'Investigator'
+    # 2026-03-10: CROG decision: also "Assigned" needs to be taken into account
+    # i.e. raise an issue when "Source" is NOT "Collected" and is NOT "Assigned"
+Core:
+  Id: CORE-002004
+  Status: Published
+  Version: '1'
+Description: Raise an error when CMTRT is not collected or pre-printed on the CRF as indicated in the Define-XML document.
+Executability: Fully Executable
+Outcome:
+  Message: CMTRT is not collected or pre-printed on the CRF according to the Define-XML document.
+  Output Variables:
+    - variable_name
+    - define_variable_origin_type
+    - define_variable_source_type
+Rule Type: Variable Metadata Check against Define XML
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - CM
+Sensitivity: Dataset

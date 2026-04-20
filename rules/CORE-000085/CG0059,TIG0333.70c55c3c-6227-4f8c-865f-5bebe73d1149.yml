@@ -1,6 +1,7 @@
 # Variable: --STRTPT
 # Condition: --STTPT ^= null
 # Rule: --STRTPT ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -26,8 +27,8 @@ Authorities:
                   the sponsor-defined reference time point defined by variable
                   --STTPT.
                 Document: Model v1.7
-                Item: Table 2.2.5.1, --STRTPT
-                Section: 2.2.5. Timing Variables for All Classes
+                Item: 'Table 2.2.5.1: --STRTPT'
+                Section: 2.2.5 Timing Variables for All Classes
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0059
@@ -75,10 +76,10 @@ Core:
   Id: CORE-000085
   Status: Published
   Version: '1'
-Description: Raise an error when --STTPT is completed and --STRTPT is empty
+Description: Raise an error when --STTPT is completed and --STRTPT is not completed.
 Executability: Fully Executable
 Outcome:
-  Message: --STTPT is completed and --STRTPT is empty
+  Message: --STTPT is completed, but --STRTPT is not completed.
   Output Variables:
     - --STTPT
     - --STRTPT
