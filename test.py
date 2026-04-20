@@ -138,19 +138,31 @@ class ResultReporter:
 class TestRunner:
     """Test execution logic."""
 
-    def __init__(self, use_pgserver: bool = True, meddra_path: Optional[str] = None):
+    def __init__(self, 
+        use_pgserver: bool = True,
+        whodrug_path: Optional[str] = None,
+        meddra_path: Optional[str] = None,
+        unii_path: Optional[str] = None,
+        medrt_path: Optional[str] = None,
+        loinc_path: Optional[str] = None
+    ):
         from dotenv import load_dotenv
 
         load_dotenv("engine/.env.example")
         self._setup_engine_path()
-        self.ig_specs = self._init_engine_specs()
         self.use_pgserver = use_pgserver
         from engine.cdisc_rules_engine.models.sql_external_dictionaries_container import (
             SqlExternalDictionariesContainer,
         )
 
         ext_dicts = SqlExternalDictionariesContainer(
-            dictionary_path_mapping={"meddra": meddra_path} if meddra_path else {}
+            dictionary_path_mapping={
+                "whodrug": whodrug_path,
+                "meddra": meddra_path,
+                "unii": unii_path or "dummy_ex_dicts/unii",
+                "medrt": medrt_path or "dummy_ex_dicts/medrt",
+                "loinc": loinc_path or "dummy_ex_dicts/loinc",
+            }
         )
         from engine.cdisc_rules_engine.data_service.postgresql_data_service import PostgresQLDataService
 
@@ -195,13 +207,27 @@ class TestRunner:
                             cases[test_type].append({"case_id": case_dir.name, "data_path": str(data_dir)})
         return cases
 
-    def _init_engine_specs(self):
-        """Initialises and returns IG Specifications."""
+    @staticmethod
+    def _read_library_specs(excel_path: str) -> Tuple[str, str]:
+        """Reads the standard and version from the Library sheet of a test Excel file."""
+        wb = op.load_workbook(excel_path, data_only=True, read_only=True)
+        ws = wb["Library"]
+        rows = list(ws.iter_rows(min_row=2, max_row=2, values_only=True))
+        wb.close()
+        if not rows or rows[0][0] is None:
+            raise ValueError(f"Library sheet in {excel_path} is missing standard/version data")
+        standard = str(rows[0][0]).strip()
+        version = str(rows[0][1]).strip().replace("-", ".")
+        return standard, version
+
+    @staticmethod
+    def _init_engine_specs(standard: str, standard_version: str):
+        """Builds an IGSpecification for the given standard and version."""
         try:
             from engine.cdisc_rules_engine.utilities.ig_specification import IGSpecification
 
             return IGSpecification(
-                standard="sdtmig", standard_version="3.4", standard_substandard=None, define_xml_version=None
+                standard=standard, standard_version=standard_version, standard_substandard=None, define_xml_version=None
             )
         except ImportError:
             print("Error: Could not import engine modules. Is the submodule initialised?")
@@ -247,6 +273,9 @@ class TestRunner:
             with open(rule_ymls[0], "r") as f:
                 rule = yaml.safe_load(f)
 
+            standard, standard_version = self._read_library_specs(str(excel_files[0]))
+            ig_specs = self._init_engine_specs(standard, standard_version)
+
             test_datasets = sharepoint_xlsx_to_test_datasets(str(excel_files[0]))
             regression_errors = {}
 
@@ -254,7 +283,7 @@ class TestRunner:
                 regression_errors=regression_errors,
                 define_xml_file_path=define_xml_path,
                 data_test_datasets=test_datasets,
-                ig_specs=self.ig_specs,
+                ig_specs=ig_specs,
                 rule=rule,
                 test_case_folder_path=data_path,
                 cur_core_id=rule_id,
@@ -343,16 +372,28 @@ class TestRunner:
         xl_path = list(Path(data_path).glob("[!~]*.xls*"))[0]
         highlighted_cells = {}
 
+        YELLOW_INDICES = (5, 11, 13, 14, 34)
+
         wb = op.load_workbook(xl_path, data_only=True)
         for sheet in wb.worksheets:
             for row in sheet.iter_rows():
                 for cell in row:
-                    if not cell.fill.fgColor or not isinstance(cell.fill.fgColor.rgb, str):
+                    fg = cell.fill.fgColor
+                    if not fg:
                         continue
-                    if cell.fill.fgColor.rgb.lower().endswith("ffff00"):
+
+                    is_yellow = False
+
+                    if isinstance(fg.rgb, str) and fg.rgb.lower().endswith("ffff00"):
+                        is_yellow = True
+                    elif isinstance(fg.indexed, int) and fg.indexed in YELLOW_INDICES:
+                        is_yellow = True
+
+                    if is_yellow:
                         sheet_data = highlighted_cells.setdefault(sheet.title, {})
                         row_data = sheet_data.setdefault(int(cell.row), {})
                         row_data.update({sheet.cell(row=1, column=cell.column).value: cell.value})
+
         return highlighted_cells
 
     def validate_errors(self, results_data: dict, validations: dict):
@@ -413,6 +454,7 @@ class TestRunner:
                 )
                 if str(var)[0] == "$":
                     continue
+                var = var.split(".")[-1] if "." in str(var) else var
                 if error_level == "record":
                     if error_val == "[ABSENT]":
                         continue
@@ -523,14 +565,25 @@ def parse_args():
     parser.add_argument(
         "-pg", "--use-postgres", action="store_true", help="Use standard PostgreSQL instead of pgserver default"
     )
+    parser.add_argument("-wd", "--whodrug", help="Provide path to WHODrug files")
     parser.add_argument("-md", "--meddra", help="Provide path to MedDRA files")
+    parser.add_argument("-un", "--unii", help="Provide path to UNII files")
+    parser.add_argument("-mrt", "--medrt", help="Provide path to Med-RT files")
+    parser.add_argument("-lo", "--loinc", help="Provide path to LOINC files")
     return parser.parse_args()
 
 
 def main():
     args = parse_args()
     use_pgserver = not args.use_postgres
-    runner = TestRunner(use_pgserver=use_pgserver, meddra_path=args.meddra)
+    runner = TestRunner(
+        use_pgserver=use_pgserver,
+        whodrug_path=args.whodrug,
+        meddra_path=args.meddra,
+        unii_path=args.unii,
+        medrt_path=args.medrt,
+        loinc_path=args.loinc
+    )
     available_rules = runner.get_available_rules()
 
     if not available_rules:
