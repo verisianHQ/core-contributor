@@ -5,21 +5,8 @@
       "domain": "SV",
       "execution_status": "success",
       "execution_message": "Variable is permissible and data is collected as per define-xml document but variable is not present in the dataset or variable has no data.",
-      "number_errors": 3,
+      "number_errors": 1,
       "errors": [
-        {
-          "row": 5,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "define_variable_name": "VISIT",
-            "define_variable_has_no_data": null,
-            "library_variable_core": "Perm",
-            "variable_name": null,
-            "variable_is_empty": true
-          },
-          "validated": true
-        },
         {
           "row": 9,
           "SEQ": null,
@@ -29,19 +16,6 @@
             "define_variable_has_no_data": null,
             "library_variable_core": "Perm",
             "variable_name": "SVENDY",
-            "variable_is_empty": true
-          },
-          "validated": true
-        },
-        {
-          "row": 10,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "define_variable_name": "SVUPDES",
-            "define_variable_has_no_data": null,
-            "library_variable_core": "Perm",
-            "variable_name": "SVUPDES",
             "variable_is_empty": true
           },
           "validated": true
@@ -63,7 +37,7 @@
             "define_variable_name": "TVENRL",
             "define_variable_has_no_data": null,
             "library_variable_core": "Perm",
-            "variable_name": "TVENRL",
+            "variable_name": null,
             "variable_is_empty": true
           },
           "validated": true

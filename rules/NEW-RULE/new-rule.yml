@@ -63,14 +63,14 @@ Core:
   Id: CDISC.SDTMIG.CG0015
   Status: Draft
   Version: '1'
-Description: Raise an error when a variable is permissible, data is collected
-  but variable has no data.
+Description: Raise an error when a variable is permissible, data is collected as per define-xml document but variable is not present in the dataset or has no data.
 Executability: Fully Executable
 Outcome:
-  Message: 'Variable is permissible, data is collected but data is missing.'
+  Message: Variable is permissible and data is collected as per define-xml document but variable is not present in the dataset or variable has no data.
   Output Variables:
-    - library_variable_core
+    - define_variable_name
     - define_variable_has_no_data
+    - library_variable_core
     - variable_name
     - variable_is_empty
 Rule Type: Variable Metadata Check against Define XML and Library Metadata
