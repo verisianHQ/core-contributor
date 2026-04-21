@@ -73,7 +73,7 @@ Core:
   Id: CORE-000131
   Status: Published
   Version: '1'
-Description: Raise an error when AECONTRT is completed and value is not 'Y' or 'N'.
+Description: Raise an error when AECONTRT is populated and value is not 'Y' or 'N'.
 Executability: Fully Executable
 Outcome:
   Message: AECONTRT is populated, but not equal to 'N' or 'Y'.
