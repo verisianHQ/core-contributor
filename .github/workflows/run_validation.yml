@@ -4,7 +4,7 @@ on:
   pull_request:
     paths:
       - 'rules/**'
-    types: [opened, synchronize, reopened]
+    types: [opened, synchronize, reopened, edited]
 
 jobs:
   validate-rules:
@@ -67,12 +67,9 @@ jobs:
         id: validate
         continue-on-error: true
         run: |
-          # Define the python path at the TOP of this step so it's easy to reuse
           PYTHON_CMD="./venv/bin/python"
-          
           RULES='${{ steps.changed-rules.outputs.rules }}'
           
-          # Initialize report file
           REPORT_FILE="validation_report.md"
           echo "# Rule Validation Report" > $REPORT_FILE
           echo "" >> $REPORT_FILE
@@ -81,17 +78,13 @@ jobs:
           
           OVERALL_SUCCESS=true
           
-          echo "$RULES" | jq -r '.[]' | while read -r RULE_ID; do
-            echo ""
+          while read -r RULE_ID; do
             echo "Validating $RULE_ID"
             echo "## Rule: $RULE_ID" >> $REPORT_FILE
             echo "" >> $REPORT_FILE
 
-            YML_COUNT=$(find "rules/$RULE_ID" -maxdepth 1 -name "*.yml" | wc -l)
-            if [ "$YML_COUNT" -eq 0 ]; then
-              echo "ERROR: No YAML file found in rules/$RULE_ID/"
-              echo "**ERROR:** No YAML file found in rules/$RULE_ID/" >> $REPORT_FILE
-              echo "" >> $REPORT_FILE
+            if [ ! -d "rules/$RULE_ID" ]; then
+              echo "**ERROR:** Directory rules/$RULE_ID not found" >> $REPORT_FILE
               OVERALL_SUCCESS=false
               continue
             fi
@@ -111,23 +104,13 @@ jobs:
               fi
             done
             
-            # Generate fresh results
             echo ""
             echo "Generating fresh results..."
-            
-            $PYTHON_CMD -c "from test import generate_rule_results; generate_rule_results('$RULE_ID')"
-            
-            if [ $? -ne 0 ]; then
-              echo "ERROR: Failed to generate results for $RULE_ID"
+            $PYTHON_CMD -c "from test import generate_rule_results; generate_rule_results('$RULE_ID')" || {
               echo "**ERROR:** Failed to generate results" >> $REPORT_FILE
-              echo "" >> $REPORT_FILE
               OVERALL_SUCCESS=false
               continue
-            fi
-            
-            # Compare results
-            echo ""
-            echo "Comparing generated vs committed results..."
+            }
             
             RULE_PASSED=true
             CASE_COUNT=0
@@ -138,76 +121,49 @@ jobs:
               TEST_PATH="rules/$RULE_ID/$TEST_TYPE"
               
               if [ ! -d "$TEST_PATH" ]; then
+                echo "  (No $TEST_TYPE cases found in $TEST_PATH)"
                 continue
               fi
               
               for CASE_DIR in "$TEST_PATH"/*; do
-                if [ ! -d "$CASE_DIR" ]; then
-                  continue
-                fi
+                if [ ! -d "$CASE_DIR" ]; then continue; fi
                 
                 CASE_ID=$(basename "$CASE_DIR")
                 COMMITTED_RESULTS="$CASE_DIR/results/results.json.committed"
                 GENERATED_RESULTS="$CASE_DIR/results/results.json"
-                
                 CASE_COUNT=$((CASE_COUNT + 1))
                 
-                if [ ! -f "$COMMITTED_RESULTS" ]; then
-                  echo "  $TEST_TYPE/$CASE_ID: No committed results found"
-                  echo "\`$TEST_TYPE/$CASE_ID\`: No committed results found" >> $REPORT_FILE
-                  continue
-                fi
-                
-                if [ ! -f "$GENERATED_RESULTS" ]; then
-                  echo "  $TEST_TYPE/$CASE_ID: Failed to generate results"
-                  echo "\`$TEST_TYPE/$CASE_ID\`: Failed to generate results" >> $REPORT_FILE
-                  RULE_PASSED=false
-                  FAILED_COUNT=$((FAILED_COUNT + 1))
-                  continue
-                fi
-                
-                # Create unique temp file for this case
                 TEMP_OUTPUT="/tmp/validator_${TEST_TYPE}_${CASE_ID}.txt"
                 
-                # Run validator and capture output (tee sends to both stdout and file)
-                $PYTHON_CMD tests/validator.py "$COMMITTED_RESULTS" "$GENERATED_RESULTS" "$TEST_TYPE" "$CASE_ID" 2>&1 | tee "$TEMP_OUTPUT"
-                VALIDATOR_EXIT_CODE=${PIPESTATUS[0]}
-                
-                if [ $VALIDATOR_EXIT_CODE -ne 0 ]; then
+                if ! diff -q <(jq --sort-keys . "$COMMITTED_RESULTS") <(jq --sort-keys . "$GENERATED_RESULTS") > /dev/null 2>&1; then
+                  echo "Results differ for $TEST_TYPE/$CASE_ID, showing diff:" > "$TEMP_OUTPUT"
+                  diff <(jq --sort-keys . "$COMMITTED_RESULTS") <(jq --sort-keys . "$GENERATED_RESULTS") >> "$TEMP_OUTPUT" || true
                   echo "\`$TEST_TYPE/$CASE_ID\`: Validation failed" >> $REPORT_FILE
                   RULE_PASSED=false
                   FAILED_COUNT=$((FAILED_COUNT + 1))
+                  OVERALL_SUCCESS=false
                 else
+                  echo "Results match for $TEST_TYPE/$CASE_ID" > "$TEMP_OUTPUT"
                   echo "\`$TEST_TYPE/$CASE_ID\`: Passed" >> $REPORT_FILE
                   PASSED_COUNT=$((PASSED_COUNT + 1))
                 fi
                 
-                # Add validator output details for ALL cases (passed or failed)
-                if [ -f "$TEMP_OUTPUT" ] && [ -s "$TEMP_OUTPUT" ]; then
-                  echo "<details><summary>View details</summary>" >> $REPORT_FILE
-                  echo "" >> $REPORT_FILE
-                  echo '```' >> $REPORT_FILE
-                  cat "$TEMP_OUTPUT" >> $REPORT_FILE
-                  echo '```' >> $REPORT_FILE
-                  echo "</details>" >> $REPORT_FILE
-                fi
+                echo "<details><summary>View details</summary>" >> $REPORT_FILE
+                echo "" >> $REPORT_FILE
+                echo '```diff' >> $REPORT_FILE
+                cat "$TEMP_OUTPUT" >> $REPORT_FILE
+                echo "" >> $REPORT_FILE
+                echo '```' >> $REPORT_FILE
+                echo "</details>" >> $REPORT_FILE
                 echo "" >> $REPORT_FILE
               done
             done
             
-            echo "" >> $REPORT_FILE
             echo "**Summary:** $PASSED_COUNT passed, $FAILED_COUNT failed (Total: $CASE_COUNT test cases)" >> $REPORT_FILE
-            echo "" >> $REPORT_FILE
+            echo "---" >> $REPORT_FILE
             
-            if [ "$RULE_PASSED" = false ]; then
-              echo "Validation failed for $RULE_ID"
-              OVERALL_SUCCESS=false
-            else
-              echo "All validations passed for $RULE_ID"
-            fi
-          done
+          done <<< "$(echo "$RULES" | jq -r '.[]')"
           
-          # Exit with appropriate code
           if [ "$OVERALL_SUCCESS" = false ]; then
             exit 1
           fi
@@ -221,48 +177,74 @@ jobs:
             const fs = require('fs');
             const reportPath = 'validation_report.md';
             
-            let reportBody = '## Rule Validation Results\n\n';
             let detailedContent = 'No validation report generated.';
-            
             if (fs.existsSync(reportPath)) {
               detailedContent = fs.readFileSync(reportPath, 'utf8');
             }
             
-            reportBody += '<details>\n';
-            reportBody += '<summary><strong>Click to expand full report</strong></summary>\n\n';
-            reportBody += detailedContent;
-            reportBody += '\n</details>';
-            reportBody += '\n\n---\n';
-            reportBody += `[View workflow run](${context.payload.repository.html_url}/actions/runs/${context.runId})`;
+            const newReportBody = `## Rule Validation Results (Run ${context.runId})\n\n<details>\n<summary><strong>Click to expand full report</strong></summary>\n\n${detailedContent}\n</details>\n\n---\n[View workflow run](${context.payload.repository.html_url}/actions/runs/${context.runId})`;
             
-            // Find existing comment
+            // Find existing comments
             const { data: comments } = await github.rest.issues.listComments({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
             });
             
-            const botComment = comments.find(comment => 
+            const botComments = comments.filter(comment => 
               comment.user.type === 'Bot' && 
-              comment.body.includes('Rule Validation Results')
+              (comment.body.includes('## Rule Validation Results') || comment.body.includes('Previous validation run superseded'))
             );
             
-            // Create or update comment
-            if (botComment) {
-              await github.rest.issues.updateComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                comment_id: botComment.id,
-                body: reportBody
-              });
-            } else {
-              await github.rest.issues.createComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: context.issue.number,
-                body: reportBody
-              });
+            // Shrink down all older comments
+            for (const comment of botComments) {
+              if (comment.body.includes('<details>')) {
+                let shrinkText = `_Previous validation run superseded. [View latest run](${context.payload.repository.html_url}/actions/runs/${context.runId})_\n\n`;
+                
+                // Keep the old Run ID in the summary title
+                const titleMatch = comment.body.match(/## Rule Validation Results \(Run \d+\)/);
+                if (titleMatch) {
+                  shrinkText += `**${titleMatch[0].replace('## ', '')}**\n`;
+                } else {
+                  shrinkText += `**Previous Validation Results**\n`;
+                }
+                
+                // Extract rules and their summaries by splitting on the header format generated in the bash step
+                const parts = comment.body.split('## Rule: ');
+                for (let i = 1; i < parts.length; i++) {
+                  const lines = parts[i].split('\n');
+                  const ruleName = lines[0].trim();
+                  
+                  const summaryLine = lines.find(line => line.startsWith('**Summary:**'));
+                  const errorLine = lines.find(line => line.startsWith('**ERROR:**')); // Fallback if a rule errored out entirely
+                  
+                  if (summaryLine) {
+                    const cleanSummary = summaryLine.replace('**Summary:**', '').trim();
+                    shrinkText += `- **${ruleName}**: ${cleanSummary}\n`;
+                  } else if (errorLine) {
+                    const cleanError = errorLine.replace('**ERROR:**', '').trim();
+                    shrinkText += `- **${ruleName}**: ❌ ${cleanError}\n`;
+                  } else {
+                    shrinkText += `- **${ruleName}**: Failed to complete validation\n`;
+                  }
+                }
+                
+                await github.rest.issues.updateComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  comment_id: comment.id,
+                  body: shrinkText
+                });
+              }
             }
+            
+            // Post the new report comment at the bottom
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: newReportBody
+            });
 
       - name: Check validation status
         if: steps.validate.outcome == 'failure'
