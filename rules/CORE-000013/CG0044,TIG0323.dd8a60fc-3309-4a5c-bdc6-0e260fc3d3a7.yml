@@ -87,7 +87,7 @@ Core:
 Description: Raise an error when AESTAT is present in AE dataset.
 Executability: Fully Executable
 Outcome:
-  Message: AESTAT variable is present in AE dataset.
+  Message: AESTAT must not be present in AE dataset.
   Output Variables:
     - AESTAT
 Rule Type: Record Data
