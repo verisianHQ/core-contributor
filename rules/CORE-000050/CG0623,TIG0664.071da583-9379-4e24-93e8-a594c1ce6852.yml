@@ -1,6 +1,7 @@
 # Variable: --RSTIND
 # Condition: 
 # Rule: --RSTIND not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -43,6 +44,8 @@ Description: Raise an error when --RSTIND is present.
 Executability: Fully Executable
 Outcome:
   Message: --RSTIND is present.
+  Output Variables:
+    - --RSTIND
 Rule Type: Record Data
 Scope:
   Classes:
