@@ -1,6 +1,7 @@
 # Variable: --RSTMOD
 # Condition: 
 # Rule: --RSTMOD not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -43,6 +44,8 @@ Description: Raise an error when --RSTMOD is present.
 Executability: Fully Executable
 Outcome:
   Message: --RSTMOD is present.
+  Output Variables:
+    - --RSTMOD
 Rule Type: Record Data
 Scope:
   Classes:
