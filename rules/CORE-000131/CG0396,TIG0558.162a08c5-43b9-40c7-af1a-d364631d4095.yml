@@ -76,7 +76,7 @@ Core:
 Description: Raise an error when AECONTRT is completed and value is not 'Y' or 'N'.
 Executability: Fully Executable
 Outcome:
-  Message: AECONTRT is completed, but not equal to 'N' or 'Y'.
+  Message: AECONTRT is populated, but not equal to 'N' or 'Y'.
   Output Variables:
     - AECONTRT
 Rule Type: Record Data
