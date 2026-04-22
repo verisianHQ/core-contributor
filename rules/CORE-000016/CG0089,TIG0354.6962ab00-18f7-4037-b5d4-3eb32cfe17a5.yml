@@ -110,10 +110,10 @@ Core:
   Id: CORE-000016
   Status: Published
   Version: '1'
-Description: Raise an error when --OCCUR is not empty and --PRESP is not equal to 'Y'.
+Description: Raise an error when --OCCUR is populated but --PRESP is not equal to 'Y'.
 Executability: Fully Executable
 Outcome:
-  Message: --PRESP should be populated as 'Y' when --OCCUR is provided.
+  Message: --PRESP should be populated as 'Y' when --OCCUR is populated.
   Output Variables:
     - --PRESP
     - --OCCUR
