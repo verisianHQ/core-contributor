@@ -75,7 +75,7 @@ Core:
 Description: Raise an error when AESCAN is populated and value is not 'Y' or 'N'
 Executability: Fully Executable
 Outcome:
-  Message: AESCAN is populated, but not equal to "N" or "Y"
+  Message: AESCAN is populated, but not equal to 'N' or 'Y'.
   Output Variables:
     - AESCAN
 Rule Type: Record Data
