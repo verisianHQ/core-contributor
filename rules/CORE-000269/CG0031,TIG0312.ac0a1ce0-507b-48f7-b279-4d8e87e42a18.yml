@@ -101,7 +101,7 @@ Operations:
     name: VISIT
     operator: distinct
 Outcome:
-  Message: For a planned visit (SVPRESP = 'Y'), non-missing VISIT value must be
+  Message: Visit is planned (SVPRESP = 'Y') but VISIT value does not match any VISIT value in the TV dataset.
     among those present in TV.VISIT.
   Output Variables:
     - VISIT
