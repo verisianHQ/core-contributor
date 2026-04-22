@@ -72,10 +72,10 @@ Core:
   Id: CORE-000124
   Status: Published
   Version: '1'
-Description: Raise an error when AESCONG is completed and value is not 'Y' or 'N'.
+Description: Raise an error when AESCONG is populated and value is not 'Y' or 'N'.
 Executability: Fully Executable
 Outcome:
-  Message: AESCONG is completed, but not equal to 'Y' or 'N'.
+  Message: AESCONG is populated, but not equal to 'Y' or 'N'.
   Output Variables:
     - AESCONG
 Rule Type: Record Data
