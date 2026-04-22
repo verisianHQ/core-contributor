@@ -87,7 +87,7 @@ Core:
   Id: CORE-000269
   Status: Published
   Version: '1'
-Description: Verify when VISIT is not null in any given domain and VISIT is
+Description: Raise an error when planned VISIT is populated
   planned (SVPRESP = 'Y'), then VISIT should be among TV.VISIT.
 Executability: Fully Executable
 Match Datasets:
