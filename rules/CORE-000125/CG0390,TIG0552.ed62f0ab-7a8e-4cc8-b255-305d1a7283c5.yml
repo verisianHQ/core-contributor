@@ -72,10 +72,10 @@ Core:
   Id: CORE-000125
   Status: Published
   Version: '1'
-Description: Raise an error when AESDISAB is completed and value is not 'Y' or 'N'.
+Description: Raise an error when AESDISAB is populated and value is not 'Y' or 'N'.
 Executability: Fully Executable
 Outcome:
-  Message: AESDISAB is completed, but not equal to 'N' or 'Y'.
+  Message: AESDISAB is populated, but not equal to 'N' or 'Y'.
   Output Variables:
     - AESDISAB
 Rule Type: Record Data
