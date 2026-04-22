@@ -72,10 +72,10 @@ Core:
   Id: CORE-000128
   Status: Published
   Version: '1'
-Description: Raise an error when AESLIFE is completed and value is not 'Y' or 'N'
+Description: Raise an error when AESLIFE is populated and value is not 'Y' or 'N'
 Executability: Fully Executable
 Outcome:
-  Message: AESLIFE is completed, but not equal to "N" or "Y"
+  Message: AESLIFE is populated, but not equal to "N" or "Y"
   Output Variables:
     - AESLIFE
 Rule Type: Record Data
