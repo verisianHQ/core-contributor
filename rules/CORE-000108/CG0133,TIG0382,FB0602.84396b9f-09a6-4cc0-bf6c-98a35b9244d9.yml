@@ -1,6 +1,7 @@
 # Variable: DTHFL
 # Condition: DD record present for subject
 # Rule: DTHFL = 'Y'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -139,7 +140,6 @@ Outcome:
   Message: DD record present for subject, but DTHFL is not equal to "Y".
   Output Variables:
     - DTHFL
-    - USUBJID
 Rule Type: Record Data
 Scope:
   Classes:
@@ -149,4 +149,4 @@ Scope:
     Include:
       - DM
   Use Case: INDH
-Sensitivity: Dataset
+Sensitivity: Record
