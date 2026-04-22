@@ -88,7 +88,7 @@ Core:
   Status: Published
   Version: '1'
 Description: Raise an error when planned VISIT is populated
-  planned (SVPRESP = 'Y'), then VISIT should be among TV.VISIT.
+  , but VISIT value does not match any VISIT value in the TV dataset.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
