@@ -4,7 +4,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "LBTPT should be present when LBTPTNUM is present.",
+      "execution_message": "LBTPT must be present when LBTPTNUM is present.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,7 +12,8 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "LBTPTNUM": 1.0
+            "LBTPTNUM": 1.0,
+            "LBTPT": "Not in dataset"
           },
           "validated": true
         }
@@ -22,7 +23,7 @@
       "dataset": "ft.xpt",
       "domain": "FT",
       "execution_status": "success",
-      "execution_message": "FTTPT should be present when FTTPTNUM is present.",
+      "execution_message": "FTTPT must be present when FTTPTNUM is present.",
       "number_errors": 1,
       "errors": [
         {
@@ -30,7 +31,8 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "FTTPTNUM": null
+            "FTTPTNUM": null,
+            "FTTPT": "Not in dataset"
           },
           "validated": true
         }

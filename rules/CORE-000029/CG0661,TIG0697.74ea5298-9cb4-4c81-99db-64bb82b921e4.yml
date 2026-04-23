@@ -47,9 +47,10 @@ Core:
 Description: Raise an error when --TPTNUM is present in a dataset, but --TPT is not present in the dataset.
 Executability: Fully Executable
 Outcome:
-  Message: --TPT should be present when --TPTNUM is present.
+  Message: --TPT must be present when --TPTNUM is present.
   Output Variables:
     - --TPTNUM
+    - --TPT
 Rule Type: Record Data
 Scope:
   Classes:
