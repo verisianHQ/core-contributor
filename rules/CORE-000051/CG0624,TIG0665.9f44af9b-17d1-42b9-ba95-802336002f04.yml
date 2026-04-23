@@ -43,7 +43,7 @@ Core:
 Description: Raise an error when --RSTMOD is present.
 Executability: Fully Executable
 Outcome:
-  Message: --RSTMOD is present.
+  Message: --RSTMOD must not be present.
   Output Variables:
     - --RSTMOD
 Rule Type: Record Data
