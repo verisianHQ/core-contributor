@@ -99,7 +99,7 @@ Core:
 Description: Raise an error when --USCHFL is present.
 Executability: Fully Executable
 Outcome:
-  Message: --USCHFL is present.
+  Message: --USCHFL must not be present.
   Output Variables:
     - --USCHFL
 Rule Type: Record Data
