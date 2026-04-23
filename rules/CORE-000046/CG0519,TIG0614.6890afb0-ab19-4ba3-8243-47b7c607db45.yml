@@ -69,7 +69,7 @@ Core:
 Description: Raise an error when ARM is not populated and ARMNRS is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: ARMNRS should be populated when ARM is not populated.
+  Message: ARMNRS must be populated when ARM is not populated.
   Output Variables:
     - ARM
     - ARMNRS
