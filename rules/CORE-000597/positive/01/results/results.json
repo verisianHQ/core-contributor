@@ -3,81 +3,13 @@
     {
       "dataset": "ae.xpt",
       "domain": "AE",
-      "execution_status": "success",
-      "execution_message": "Missing AESMIE=Y where SUPPAE.QNAM=AESOSP",
-      "number_errors": 8,
+      "execution_status": "execution_error",
+      "execution_message": "rule execution error",
+      "number_errors": 1,
       "errors": [
         {
-          "row": 2,
-          "SEQ": 2,
-          "USUBJID": "CDISC-TEST-001",
-          "value": {
-            "AESMIE": "N",
-            "QNAM": "AESOSP"
-          }
-        },
-        {
-          "row": 3,
-          "SEQ": 4,
-          "USUBJID": "CDISC-TEST-001",
-          "value": {
-            "AESMIE": "N",
-            "QNAM": "AESOSP"
-          }
-        },
-        {
-          "row": 4,
-          "SEQ": 5,
-          "USUBJID": "CDISC-TEST-001",
-          "value": {
-            "AESMIE": "N",
-            "QNAM": "AESOSP"
-          }
-        },
-        {
-          "row": 5,
-          "SEQ": 18,
-          "USUBJID": "CDISC-TEST-002",
-          "value": {
-            "AESMIE": "N",
-            "QNAM": "AESOSP"
-          }
-        },
-        {
-          "row": 6,
-          "SEQ": 19,
-          "USUBJID": "CDISC-TEST-002",
-          "value": {
-            "AESMIE": "N",
-            "QNAM": "AESOSP"
-          }
-        },
-        {
-          "row": 7,
-          "SEQ": 20,
-          "USUBJID": "CDISC-TEST-002",
-          "value": {
-            "AESMIE": "N",
-            "QNAM": "AESOSP"
-          }
-        },
-        {
-          "row": 12,
-          "SEQ": 1,
-          "USUBJID": "CDISC-TEST-011",
-          "value": {
-            "AESMIE": null,
-            "QNAM": "AESOSP"
-          }
-        },
-        {
-          "row": 13,
-          "SEQ": 4,
-          "USUBJID": "CDISC-TEST-011",
-          "value": {
-            "AESMIE": "N",
-            "QNAM": "AESOSP"
-          }
+          "error": "Column not found in data",
+          "message": "IDVAR"
         }
       ]
     },
