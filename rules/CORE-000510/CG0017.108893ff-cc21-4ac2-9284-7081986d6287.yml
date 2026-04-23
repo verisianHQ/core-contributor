@@ -77,7 +77,7 @@ Core:
 Description: Raise an error when split datasets (excluding supplemental qualifiers) have a length other than 3 or 4 characters.
 Executability: Fully Executable
 Outcome:
-  Message: Split dataset name is not 3 or 4 characters in length
+  Message: Split dataset name is not 3 or 4 characters in length.
 Rule Type: Dataset Metadata Check
 Scope:
   Classes:
