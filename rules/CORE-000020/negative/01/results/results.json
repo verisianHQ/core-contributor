@@ -1,23 +1,4 @@
 {
-  "datasets": [
-    {
-      "dataset": "se.xpt",
-      "domain": "SE",
-      "execution_status": "success",
-      "execution_message": "TAETORD should be null when ETCD = 'UNPLAN'.",
-      "number_errors": 1,
-      "errors": [
-        {
-          "row": 5,
-          "SEQ": 3,
-          "USUBJID": "456",
-          "value": {
-            "ETCD": "UNPLAN",
-            "TAETORD": 3.0
-          },
-          "validated": false
-        }
-      ]
-    }
-  ]
+  "error": "No result - either the rule or test case data unit-test-coreid-CG0206-negative.xlsx is broken",
+  "exception": "'charmap' codec can't decode byte 0x9d in position 4270: character maps to <undefined>"
 }
