@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "ACTARM is not in TA.ARM, but ACTARM in DM does not equal Screen Failure, Not Assigned, Not Treated, or Unplanned Treatment.",
+      "execution_message": "Raise an error when an ACTARM value is not in TA.ARM, but DM.ACTARM in DM does not equal 'Screen Failure', 'Not Assigned', 'Not Treated', or 'Unplanned Treatment'.",
       "number_errors": 5,
       "errors": [
         {
@@ -61,28 +61,6 @@
       "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000367, dataset=TA",
       "number_errors": 0,
       "errors": []
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "ACTARM"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "ACTARM"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 7,
-      "Variable": "ACTARM"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 9,
-      "Variable": "ACTARM"
     }
   ]
 }
