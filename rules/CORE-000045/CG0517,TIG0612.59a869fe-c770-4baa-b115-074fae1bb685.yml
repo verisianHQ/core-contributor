@@ -68,7 +68,7 @@ Core:
 Description: Raise an error when ARMCD is not populated and ARMNRS is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: ARMNRS should be populated when ARMCD is not populated.
+  Message: ARMNRS must be populated when ARMCD is not populated.
   Output Variables:
     - ARMCD
     - ARMNRS
