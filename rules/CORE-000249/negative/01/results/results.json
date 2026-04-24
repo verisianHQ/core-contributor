@@ -4,7 +4,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "Visit Day cannot be found in Trial Visit (TV) domain",
+      "execution_message": "VISITDY does not match the VISITDY defined in TV for the given VISITNUM.",
       "number_errors": 1,
       "errors": [
         {
@@ -15,7 +15,7 @@
             "VISITDY": -15.0,
             "VISITNUM": 100.0
           },
-          "validated": false
+          "validated": true
         }
       ]
     },

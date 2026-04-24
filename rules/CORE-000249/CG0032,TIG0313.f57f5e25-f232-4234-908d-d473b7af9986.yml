@@ -1,6 +1,7 @@
 # Variable: VISITDY
 # Condition: VISITNUM is in TV.VISITNUM
 # Rule: VISITDY = TV.VISITDY
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -87,7 +88,7 @@ Core:
   Id: CORE-000249
   Status: Published
   Version: '1'
-Description: Verify that visitdy is planned and exists in TV
+Description: Verify that for planned visits, VISITDY matches the VISITDY defined in TV for the given VISITNUM.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
@@ -99,7 +100,7 @@ Operations:
     name: VISITNUM
     operator: distinct
 Outcome:
-  Message: Visit Day cannot be found in Trial Visit (TV) domain
+  Message: VISITDY does not match the VISITDY defined in TV for the given VISITNUM.
   Output Variables:
     - VISITDY
     - VISITNUM
