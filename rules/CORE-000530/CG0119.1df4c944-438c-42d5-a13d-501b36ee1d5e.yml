@@ -39,7 +39,7 @@ Description: Raise an error when DM.ACTARM is 'Screen Failure' or 'Not Assigned'
   the value in DM.ACTARM does not equal DM.ARM.
 Executability: Fully Executable
 Outcome:
-  Message: The value in DM.ACTARM should equal that in DM.ARM when DM.ACTARM is 'Screen Failure' or 'Not Assigned'.
+  Message: DM.ACTARM should equal to DM.ARM when DM.ACTARM is 'Screen Failure' or 'Not Assigned'.
   Output Variables:
     - ACTARM
     - ARM

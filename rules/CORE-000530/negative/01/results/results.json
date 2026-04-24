@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "ACTARM should be equal to ARM when ACTARM is Screen Failure or Not Assigned.",
+      "execution_message": "DM.ACTARM should equal to DM.ARM when DM.ACTARM is 'Screen Failure' or 'Not Assigned'.",
       "number_errors": 3,
       "errors": [
         {
@@ -38,38 +38,6 @@
           "validated": false
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "ACTARMCD"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "ACTARM"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "ACTARMCD"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "ACTARM"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 7,
-      "Variable": "ACTARMCD"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 7,
-      "Variable": "ACTARM"
     }
   ]
 }
