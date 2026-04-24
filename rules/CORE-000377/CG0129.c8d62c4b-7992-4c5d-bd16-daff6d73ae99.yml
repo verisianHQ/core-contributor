@@ -1,6 +1,7 @@
 # Variable: ARMCD
 # Condition: ARMCD in ('SCRNFAIL', 'NOTASSGN')
 # Rule: ARMCD = ACTARMCD
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -32,12 +33,12 @@ Core:
   Id: CORE-000377
   Status: Published
   Version: '1'
-Description: 'ARMCD value must match ACTARMCD value in Demographics when ARMCD
-  equals "SCRFNFAIL" or "NOTASSGN"'
+Description: Raise an error when ARMCD value is not equal to ACTARMCD value
+  in Demographics when ARMCD equals 'SCRNFAIL' or 'NOTASSGN'
 Executability: Fully Executable
 Outcome:
-  Message: 'DM.ARMCD must equal DM.ACTARMCD when subject is either a screen
-    failure or not assigned to treatment'
+  Message: ARMCD must be equal to ACTARMCD in Demographics when subject is
+    either a screen failure or not assigned to treatment
 Rule Type: Record Data
 Scope:
   Classes:
