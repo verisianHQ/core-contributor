@@ -39,7 +39,7 @@ Description: Raise an error when ACTARM is 'Screen Failure' or 'Not Assigned' an
   the value in ACTARM does not equal ARM.
 Executability: Fully Executable
 Outcome:
-  Message: ACTARM should equal to ARM in DM when ACTARM is 'Screen Failure' or 'Not Assigned'.
+  Message: ACTARM must equal to ARM in DM when ACTARM is 'Screen Failure' or 'Not Assigned'.
   Output Variables:
     - ACTARM
     - ARM
