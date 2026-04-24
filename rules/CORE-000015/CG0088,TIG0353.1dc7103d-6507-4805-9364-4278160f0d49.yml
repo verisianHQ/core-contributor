@@ -1,6 +1,7 @@
 # Variable: --OCCUR
 # Condition: --PRESP not present in dataset
 # Rule: --OCCUR not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -23,6 +24,7 @@ Authorities:
                   was not answered. Should be null or have a value of "NOT
                   DONE".]
                 Document: Model v2.0
+                Item: --PRESP|--OCCUR|--STAT
                 Section: Events|Interventions
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -113,10 +115,10 @@ Core:
   Id: CORE-000015
   Status: Published
   Version: '1'
-Description: Raise an error when --PRESP does not exists in a dataset and --OCCUR exist.
+Description: Raise an error when --PRESP is not present in dataset and --OCCUR is present in dataset.
 Executability: Fully Executable
 Outcome:
-  Message: --PRESP is missing in dataset when --OCCUR is present.
+  Message: --PRESP is not present in dataset when --OCCUR is present in dataset.
   Output Variables:
     - --PRESP
     - --OCCUR
