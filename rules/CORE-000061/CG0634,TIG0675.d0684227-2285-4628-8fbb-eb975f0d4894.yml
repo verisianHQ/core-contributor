@@ -10,7 +10,7 @@ Authorities:
           - Citations:
               - Cited Guidance: Not in human clinical trials.
                 Document: Model v2.0
-                Item: RPLENDY
+                Item: RPPLENDY
                 Section: Timing
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -23,7 +23,7 @@ Authorities:
           - Citations:
               - Cited Guidance: Not in human clinical trials.
                 Document: SDTM v2.1
-                Item: RPLENDY
+                Item: RPPLENDY
                 Section: Section 3.1.5 Timing Variables for All Classes
             Origin: TIG Conformance Rules
             Rule Identifier:
@@ -34,18 +34,18 @@ Authorities:
         Version: '1.0'
 Check:
   all:
-    - name: RPLENDY
+    - name: RPPLENDY
       operator: exists
 Core:
   Id: CORE-000061
   Status: Published
   Version: '1'
-Description: Raise an error when RPLENDY is present.
+Description: Raise an error when RPPLENDY is present.
 Executability: Fully Executable
 Outcome:
-  Message: RPLENDY must not be present.
+  Message: RPPLENDY must not be present.
   Output Variables:
-    - RPLENDY
+    - RPPLENDY
 Rule Type: Record Data
 Scope:
   Classes:
