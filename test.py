@@ -234,7 +234,7 @@ class TestRunner:
                 process_test_case_dataset,
             )
 
-            with open(rule_ymls[0], "r") as f:
+            with open(rule_ymls[0], "r", encoding="utf8") as f:
                 rule = yaml.safe_load(f)
 
             test_datasets = sharepoint_xlsx_to_test_datasets(str(excel_files[0]))
