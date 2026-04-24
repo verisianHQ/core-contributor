@@ -1,6 +1,7 @@
 # Variable: ARM
 # Condition: Study does not use multi-stage arm assignments and ACTARM ^= null
 # Rule: ARM in TA.ARM
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -11,9 +12,9 @@ Authorities:
                   assignments, must be a value of ARM in the Trial Arms Dataset.
                   If the subject was not assigned to an Arm or followed a course
                   not described by any planned arm, ARM is null and ARMNRS is
-                  populated."
+                  populated.
                 Document: SDTMIG v3.4
-                Item: Specification and ACTARM CDISC Notes
+                Item: Specification|ACTARM CDISC Notes
                 Section: '5.2'
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -69,11 +70,7 @@ Core:
   Id: CORE-000047
   Status: Published
   Version: '1'
-Description: When study does not use multi-stage arm assignments and ARM is
-  populated, ARM must be present in TA.ARM. This rule has been executed to
-  identify all cases when ARM is not present in TA.ARM and therefore
-  acknowledges that false positives may be recorded when multi-stage arm
-  assignments are in use.
+Description: Raise an error when ARM value in DM dataset does not match any ARM value in TA dataset.
 Executability: Partially Executable - Possible Overreporting
 Operations:
   - domain: TA
@@ -81,9 +78,7 @@ Operations:
     name: ARM
     operator: distinct
 Outcome:
-  Message: ARM value in DM dataset is not among the values of ARM variable in TA
-    dataset. This is allowed only in a multistage study with incomplete ARM
-    assignment. Please confirm if your study is a multistage assignment study
+  Message: ARM value in DM dataset does not match any ARM value in TA dataset. This is only acceptable for multi-stage studies with incomplete ARM assignments.
   Output Variables:
     - ARM
 Rule Type: Record Data
