@@ -20,6 +20,7 @@
           "SEQ": null,
           "USUBJID": "CDISC001",
           "value": {
+            "QNAM": "AESEV",
             "$model_variables": [
               "STUDYID",
               "DOMAIN",
@@ -141,8 +142,7 @@
               "AEDETECT",
               "AEPTFL",
               "AEPDUR"
-            ],
-            "QNAM": "AESEV"
+            ]
           },
           "validated": false
         },
@@ -151,6 +151,7 @@
           "SEQ": null,
           "USUBJID": "CDISC002",
           "value": {
+            "QNAM": "AEPRESP",
             "$model_variables": [
               "STUDYID",
               "DOMAIN",
@@ -272,8 +273,7 @@
               "AEDETECT",
               "AEPTFL",
               "AEPDUR"
-            ],
-            "QNAM": "AEPRESP"
+            ]
           },
           "validated": false
         }
@@ -291,6 +291,7 @@
           "SEQ": null,
           "USUBJID": "S001",
           "value": {
+            "QNAM": "LBCLSIG",
             "$model_variables": [
               "STUDYID",
               "DOMAIN",
@@ -456,8 +457,7 @@
               "LBDETECT",
               "LBPTFL",
               "LBPDUR"
-            ],
-            "QNAM": "LBCLSIG"
+            ]
           },
           "validated": false
         },
@@ -466,6 +466,7 @@
           "SEQ": null,
           "USUBJID": "S001",
           "value": {
+            "QNAM": "LBSTAT",
             "$model_variables": [
               "STUDYID",
               "DOMAIN",
@@ -631,8 +632,7 @@
               "LBDETECT",
               "LBPTFL",
               "LBPDUR"
-            ],
-            "QNAM": "LBSTAT"
+            ]
           },
           "validated": false
         }
