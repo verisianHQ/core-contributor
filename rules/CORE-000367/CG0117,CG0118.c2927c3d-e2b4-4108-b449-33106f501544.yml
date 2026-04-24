@@ -73,7 +73,7 @@ Operations:
     name: ARM
     operator: distinct
 Outcome:
-  Message: Raise an error when an ACTARM value is not in TA.ARM, but DM.ACTARM in DM 
+  Message: ACTARM value is not in TA, but ACTARM in DM 
     does not equal 'Screen Failure', 'Not Assigned', 'Not Treated', or 'Unplanned 
     Treatment'.
   Output Variables:

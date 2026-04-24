@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "Raise an error when an ACTARM value is not in TA.ARM, but DM.ACTARM in DM does not equal 'Screen Failure', 'Not Assigned', 'Not Treated', or 'Unplanned Treatment'.",
+      "execution_message": "ACTARM value is not in TA, but ACTARM in DM does not equal 'Screen Failure', 'Not Assigned', 'Not Treated', or 'Unplanned Treatment'.",
       "number_errors": 4,
       "errors": [
         {
@@ -14,7 +14,7 @@
           "value": {
             "ACTARM": "ACME Low Dose"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -23,7 +23,7 @@
           "value": {
             "ACTARM": "ACME Low Dose"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -32,7 +32,7 @@
           "value": {
             "ACTARM": "ACME High Dose"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 15,
@@ -41,7 +41,7 @@
           "value": {
             "ACTARM": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
