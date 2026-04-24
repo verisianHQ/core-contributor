@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "ARM is not in TA.ARM, but ARM in DM does not equal Screen Failure or Not Assigned.",
+      "execution_message": "ARM is not in TA.ARM, but ARM in DM does not equal 'Screen Failure' or 'Not Assigned'.",
       "number_errors": 2,
       "errors": [
         {
@@ -14,7 +14,7 @@
           "value": {
             "ARM": "Placebo2"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 5,
@@ -23,7 +23,7 @@
           "value": {
             "ARM": "Zanomaline Low Dose"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -34,18 +34,6 @@
       "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000368, dataset=TA",
       "number_errors": 0,
       "errors": []
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 8,
-      "Variable": "ARM"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 9,
-      "Variable": "ARM"
     }
   ]
 }

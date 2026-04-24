@@ -43,8 +43,8 @@ Core:
   Id: CORE-000368
   Status: Published
   Version: '1'
-Description: 'ARM values in Demographics are restricted to ARM values in Trial
-  Arms when not equal to "Screen Failure" or "Not Assigned"'
+Description:  Raise an error when ARM values in Demographics are not restricted to ARM values in 
+  TA when not equal to 'Screen Failure' or 'Not Assigned'.
 Executability: Fully Executable
 Operations:
   - domain: TA
@@ -52,8 +52,8 @@ Operations:
     name: ARM
     operator: distinct
 Outcome:
-  Message: ARM is not in TA.ARM, but ARM in DM does not equal Screen Failure or
-    Not Assigned.
+  Message: ARM is not in TA.ARM, but ARM in DM does not equal 'Screen Failure' or
+    'Not Assigned'.
   Output Variables:
     - ARM
 Rule Type: Record Data
