@@ -35,11 +35,11 @@ Core:
   Id: CORE-000530
   Status: Published
   Version: '1'
-Description: Raise an error when DM.ACTARM is 'Screen Failure' or 'Not Assigned' and
-  the value in DM.ACTARM does not equal DM.ARM.
+Description: Raise an error when ACTARM is 'Screen Failure' or 'Not Assigned' and
+  the value in ACTARM does not equal ARM.
 Executability: Fully Executable
 Outcome:
-  Message: DM.ACTARM should equal to DM.ARM when DM.ACTARM is 'Screen Failure' or 'Not Assigned'.
+  Message: ACTARM should equal to ARM in DM when ACTARM is 'Screen Failure' or 'Not Assigned'.
   Output Variables:
     - ACTARM
     - ARM
