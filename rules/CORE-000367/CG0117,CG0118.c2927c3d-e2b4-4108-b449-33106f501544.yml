@@ -1,6 +1,7 @@
 # Variable: ACTARM
 # Condition: ACTARM not in TA.ARM
 # Rule: ACTARM in ('Screen Failure', 'Not Assigned', 'Not Treated', 'Unplanned Treatment')
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -63,8 +64,8 @@ Core:
   Status: Published
   Version: '1'
 Description: Raise an error when no TA.ARM exists for ACTARM in DM and ACTARM
-  does not equal Screen Failure, Not Assigned, Not Treated, or Unplanned
-  Treatment in DM
+  does not equal 'Screen Failure', 'Not Assigned', 'Not Treated', or 'Unplanned
+  Treatment' in DM.
 Executability: Fully Executable
 Operations:
   - domain: TA
@@ -72,8 +73,8 @@ Operations:
     name: ARM
     operator: distinct
 Outcome:
-  Message: ACTARM is not in TA.ARM, but ACTARM in DM does not equal Screen
-    Failure, Not Assigned, Not Treated, or Unplanned Treatment.
+  Message: ACTARM is not in TA, but ACTARM in DM does not equal 'Screen
+    Failure', 'Not Assigned', 'Not Treated', or 'Unplanned Treatment'.
   Output Variables:
     - ACTARM
 Rule Type: Record Data
