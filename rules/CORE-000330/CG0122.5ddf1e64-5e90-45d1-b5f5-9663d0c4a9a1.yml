@@ -1,6 +1,7 @@
 # Variable: ARM
 # Condition: ARM in ('Screen Failure', 'Not Assigned')
 # Rule: ARM = ACTARM
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -37,11 +38,11 @@ Core:
   Id: CORE-000330
   Status: Published
   Version: '1'
-Description: 'ACTARM value must match ARM value in Demographics when ARM equals
-  "Screen Failure" or "Not Assigned"'
+Description: Raise an error when ACTARM value does not match ARM value in
+  Demographics when ARM equals 'Screen Failure' or 'Not Assigned'
 Executability: Fully Executable
 Outcome:
-  Message: ARM should be equal to ACTARM when ARM is Screen Failure or Not Assigned.
+  Message: ARM must equal ACTARM when ARM is 'Screen Failure' or 'Not Assigned'.
   Output Variables:
     - ARM
     - ACTARM
