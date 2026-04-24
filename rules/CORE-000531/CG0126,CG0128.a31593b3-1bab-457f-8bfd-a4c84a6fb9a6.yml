@@ -1,6 +1,7 @@
 # Variable: ARMCD
 # Condition: ARMCD not in ('SCRNFAIL', 'NOTASSGN')
 # Rule: ARMCD in TA.ARMCD
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -49,8 +50,9 @@ Core:
   Id: CORE-000531
   Status: Published
   Version: '1'
-Description: 'ARMCD values in Demographics are restricted to ARMCD values
-  in  Trial Arms when DM.ARMCD is not equal to "SCRNFAIL" or "NOTASSGN"'
+Description: Raise an error when ARMCD values in Demographics are not 
+  restricted to ARMCD values in Trial Arms when DM.ARMCD is not equal
+  to 'SCRNFAIL' or 'NOTASSGN'
 Executability: Fully Executable
 Operations:
   - domain: TA
@@ -58,8 +60,8 @@ Operations:
     name: ARMCD
     operator: distinct
 Outcome:
-  Message: 'DM.ARMCD must equal SCRNFAIL or NOTASSGN if the value is not present
-    in TA.ARMCD'
+  Message: DM.ARMCD must equal 'SCRNFAIL' or 'NOTASSGN' if the value is not present
+    in TA.ARMCD
 Rule Type: Record Data
 Scope:
   Classes:
