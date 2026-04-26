@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "ARMNRS must be populated when ARMCD is not populated.",
+      "execution_message": "ARMNRS must be populated when ARM is not populated.",
       "number_errors": 2,
       "errors": [
         {
@@ -12,8 +12,8 @@
           "SEQ": null,
           "USUBJID": "CDISC001",
           "value": {
-            "ARMCD": null,
-            "ARMNRS": null
+            "ARM": null,
+            "ARMNRS": "Not in dataset"
           },
           "validated": true
         },
@@ -22,8 +22,8 @@
           "SEQ": null,
           "USUBJID": "CDISC011",
           "value": {
-            "ARMCD": null,
-            "ARMNRS": null
+            "ARM": null,
+            "ARMNRS": "Not in dataset"
           },
           "validated": true
         }
