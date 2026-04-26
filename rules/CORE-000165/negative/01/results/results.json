@@ -4,7 +4,7 @@
       "dataset": "vs.xpt",
       "domain": "VS",
       "execution_status": "success",
-      "execution_message": "VSTPTREF is not present when VSRFTDTC is present in a dataset",
+      "execution_message": "VSTPTREF is not present in dataset when VSRFTDTC is present in dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -15,7 +15,7 @@
             "VSRFTDTC": "2012-12-01T08:00",
             "VSTPTREF": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
