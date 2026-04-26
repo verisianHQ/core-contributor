@@ -4,8 +4,8 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "AESMIE is completed, but not equal to \"N\" or \"Y\"",
-      "number_errors": 1,
+      "execution_message": "AESMIE is populated, but not equal to 'N' or 'Y'.",
+      "number_errors": 2,
       "errors": [
         {
           "row": 1,
@@ -14,7 +14,16 @@
           "value": {
             "AESMIE": "A"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC009",
+          "value": {
+            "AESMIE": "MAYBE"
+          },
+          "validated": true
         }
       ]
     }

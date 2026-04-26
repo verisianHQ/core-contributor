@@ -1,4 +1,12 @@
 {
-  "error": "No result - either the rule or test case data unit-test-coreid-CG0390-positive.xlsx is broken",
-  "exception": "Error converting column 'AESTDY' in table 'ae.xpt' to numeric: could not convert string to float: '2013-08-30'"
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
 }
