@@ -271,7 +271,7 @@ class TestRunner:
                 process_test_case_dataset,
             )
 
-            with open(rule_ymls[0], "r", encoding="utf8") as f:
+            with open(rule_ymls[0], "r", encoding="utf-8") as f:
                 rule = yaml.safe_load(f)
 
             standard, standard_version = self._read_library_specs(str(excel_files[0]))
