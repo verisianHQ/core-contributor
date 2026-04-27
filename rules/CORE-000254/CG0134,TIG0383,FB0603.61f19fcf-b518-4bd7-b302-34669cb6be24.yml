@@ -1,6 +1,7 @@
 # Variable: DTHFL
 # Condition: AE record with AEOUT= "FATAL" present for the subject
 # Rule: DTHFL = 'Y'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -117,14 +118,15 @@ Core:
   Id: CORE-000254
   Status: Published
   Version: '1'
-Description: When AE.AEOUT is 'FATAL', DTHFL must be 'Y'
+Description: Raise an error when AE.AEOUT is equal to 'FATAL'
+  and DTHFL is not equal to 'Y'
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: AE
 Outcome:
-  Message: DTHFL is not 'Y' when AE.AEOUT is 'FATAL'.
+  Message: DTHFL is not equal to 'Y' when AE.AEOUT is equal to 'FATAL'.
   Output Variables:
     - DTHFL
     - AEOUT
