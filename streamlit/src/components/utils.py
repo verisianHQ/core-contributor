@@ -65,7 +65,7 @@ class UtilityFunctions:
                         continue
 
                     try:
-                        with open(result_file, "r") as f:
+                        with open(result_file, "r", encoding="utf-8") as f:
                             data = json.load(f)
 
                         status = "Unknown"
@@ -155,7 +155,7 @@ class UtilityFunctions:
             if not yml_file or len(yml_file) == 0:
                 continue
             try:
-                with open(yml_file[0], "r") as f:
+                with open(yml_file[0], "r", encoding="utf-8") as f:
                     data = yaml.safe_load(f)
                     output = UtilityFunctions.chain_get(data, keys, nv=null_value)
                     vals.append(output)
@@ -174,7 +174,7 @@ class UtilityFunctions:
             if not yml_file or len(yml_file) == 0:
                 continue
             try:
-                with open(yml_file[0], "r") as f:
+                with open(yml_file[0], "r", encoding="utf-8") as f:
                     if any(line.strip() == "# verified" for line in f):
                         vals[rule_folder] = "Verified"
                     else:

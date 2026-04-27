@@ -4,17 +4,17 @@
       "dataset": "suppqscqi.xpt",
       "domain": "SUPPQS",
       "execution_status": "success",
-      "execution_message": "Supplemental qualifier dataset associated with a split dataset is greater than 8 characters in length",
+      "execution_message": "Split dataset name length of SUPPQS dataset > 8.",
       "number_errors": 1,
       "errors": [
         {
-          "row": 1,
+          "row": null,
           "SEQ": null,
-          "USUBJID": "None",
+          "USUBJID": null,
           "value": {
             "dataset_name": "SUPPQSCQI"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -22,17 +22,17 @@
       "dataset": "suppqsswls.xpt",
       "domain": "SUPPQS",
       "execution_status": "success",
-      "execution_message": "Supplemental qualifier dataset associated with a split dataset is greater than 8 characters in length",
+      "execution_message": "Split dataset name length of SUPPQS dataset > 8.",
       "number_errors": 1,
       "errors": [
         {
-          "row": 1,
+          "row": null,
           "SEQ": null,
-          "USUBJID": "None",
+          "USUBJID": null,
           "value": {
             "dataset_name": "SUPPQSSWLS"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
