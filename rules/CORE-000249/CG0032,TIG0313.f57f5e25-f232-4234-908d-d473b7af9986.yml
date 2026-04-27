@@ -88,7 +88,7 @@ Core:
   Id: CORE-000249
   Status: Published
   Version: '1'
-Description: Verify that for planned visits, VISITDY matches the VISITDY defined in TV for the given VISITNUM.
+Description: Raise an error when a visit is planned (VISITNUM value matches a VISITNUM value in TV dataset) but the VISITDY does not match the VISITDY of the corresponding VISITNUM in the TV dataset.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
