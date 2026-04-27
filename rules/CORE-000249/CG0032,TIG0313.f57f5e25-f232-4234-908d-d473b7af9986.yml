@@ -100,7 +100,7 @@ Operations:
     name: VISITNUM
     operator: distinct
 Outcome:
-  Message: VISITDY does not match the VISITDY defined in TV for the given VISITNUM.
+  Message: VISITDY does not match the VISITDY in the TV dataset for the corresponding VISITNUM.
   Output Variables:
     - VISITDY
     - VISITNUM
