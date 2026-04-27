@@ -1,14 +1,16 @@
 # Variable: --REASEX
 # Condition: 
 # Rule: --REASEX not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: --REASEX is not be used in human clinical trials.
-                Document: SDTM v2.0
+              - Cited Guidance: Not in human clinical trials.
+                Document: Model v2.0
+                Item: --REASEX
                 Section: Findings
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -41,7 +43,9 @@ Core:
 Description: Raise an error when --REASEX is present.
 Executability: Fully Executable
 Outcome:
-  Message: --REASEX is present.
+  Message: --REASEX must not be present.
+  Output Variables:
+    - --REASEX
 Rule Type: Record Data
 Scope:
   Classes:
