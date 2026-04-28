@@ -1,10 +1,37 @@
 {
   "datasets": [
     {
+      "dataset": "ta.xpt",
+      "domain": "TA",
+      "execution_status": "success",
+      "execution_message": "ETCD length is greater than 8 characters.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ETCD": "SCREENINGS"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "ETCD": "PLACEBOSE"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
       "dataset": "te.xpt",
       "domain": "TE",
       "execution_status": "success",
-      "execution_message": "ETCD value is greater than 8",
+      "execution_message": "ETCD length is greater than 8 characters.",
       "number_errors": 5,
       "errors": [
         {
@@ -14,7 +41,7 @@
           "value": {
             "ETCD": "SCREENING1"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -23,7 +50,7 @@
           "value": {
             "ETCD": "PLACEBOOS"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -32,7 +59,7 @@
           "value": {
             "ETCD": "LOWERPART"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -41,7 +68,7 @@
           "value": {
             "ETCD": "TITRATION"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 5,
@@ -50,7 +77,52 @@
           "value": {
             "ETCD": "HIGHERPART"
           },
-          "validated": false
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "success",
+      "execution_message": "ETCD length is greater than 8 characters.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ETCD": "SCREENPERIOD"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ETCD": "LOWERDOSE"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "ETCD": "SCREENINGS"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 2,
+          "USUBJID": "CDISC002",
+          "value": {
+            "ETCD": "HIGHESTDOSE"
+          },
+          "validated": true
         }
       ]
     }
