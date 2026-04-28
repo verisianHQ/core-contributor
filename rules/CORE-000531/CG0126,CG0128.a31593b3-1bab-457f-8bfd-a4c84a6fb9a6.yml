@@ -50,9 +50,8 @@ Core:
   Id: CORE-000531
   Status: Published
   Version: '1'
-Description: Raise an error when ARMCD values in Demographics are not 
-  restricted to ARMCD values in Trial Arms when DM.ARMCD is not equal to
-  'SCRNFAIL' or 'NOTASSGN'.
+Description: Raise an error when ARMCD value in the DM dataset does not 
+  match any of the ARMCD values in the TA dataset.
 Executability: Fully Executable
 Operations:
   - domain: TA
@@ -60,8 +59,10 @@ Operations:
     name: ARMCD
     operator: distinct
 Outcome:
-  Message: DM.ARMCD must equal 'SCRNFAIL' or 'NOTASSGN' if the value 
-    is not present in TA.ARMCD.
+  Message: ARMCD in the DM dataset must equal 'SCRNFAIL' or 'NOTASSGN' if the value 
+    does not exist in any ARMCD in the TA dataset.
+  Output Variables:
+    - ARMCD
 Rule Type: Record Data
 Scope:
   Classes:
