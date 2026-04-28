@@ -52,7 +52,6 @@ Core:
   Version: '1'
 Description: Raise an error when ARMCD values in Demographics are not 
   restricted to ARMCD values in Trial Arms when DM.ARMCD is not equal
-  to 'SCRNFAIL' or 'NOTASSGN'
 Executability: Fully Executable
 Operations:
   - domain: TA
