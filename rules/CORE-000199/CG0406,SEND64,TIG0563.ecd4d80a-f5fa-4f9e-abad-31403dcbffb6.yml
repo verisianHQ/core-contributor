@@ -1,6 +1,7 @@
 # Variable: --TEST
-# Condition: 
+# Condition:
 # Rule: --TEST length <= 40
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -27,12 +28,16 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The length of --TEST is normally limited to 40 characters to
-                  conform to the limitations of the SAS V5 Transport format
-                  currently used for submission datasets. IETEST values in IE
-                  and TI are exceptions to the above 40-character rule and are
-                  limited to 200 characters since they are not expected to be
-                  transformed to a column labels.
+              - Cited Guidance: Sponsors may have test descriptions (--TEST) longer than 40
+                  characters in their operational database. Since the --TEST
+                  variable is meant to serve as a label for a --TESTCD when a
+                  Findings dataset is transposed to a more horizontal format;
+                  the length of --TEST is limited to 40 characters (except as
+                  noted below) to conform to the limitations of the SAS v5
+                  Transport format currently used for submission datasets.
+                  IETEST values in IE and TI are exceptions to the above
+                  40-character rule and are limited to 200 characters since
+                  they are not expected to be transformed to a column labels.
                 Document: IG v3.3
                 Section: 4.5.3.1
             Origin: SDTM and SDTMIG Conformance Rules
