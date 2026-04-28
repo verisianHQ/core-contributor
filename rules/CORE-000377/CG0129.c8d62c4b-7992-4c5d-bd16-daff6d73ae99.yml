@@ -34,7 +34,7 @@ Core:
   Status: Published
   Version: '1'
 Description: Raise an error when ARMCD value is not equal to ACTARMCD value
-  in Demographics when ARMCD equals 'SCRNFAIL' or 'NOTASSGN'
+  when ARMCD equals 'SCRNFAIL' or 'NOTASSGN'
 Executability: Fully Executable
 Outcome:
   Message: ARMCD must be equal to ACTARMCD in DM dataset when subject is
