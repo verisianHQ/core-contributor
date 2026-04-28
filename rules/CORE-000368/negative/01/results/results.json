@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "ARM is not in TA.ARM, but ARM in DM does not equal 'Screen Failure' or 'Not Assigned'.",
+      "execution_message": "ARM value in the DM dataset must equal 'Screen Failure' or 'Not Assigned' if the value does not match an ARM value in the TA dataset.",
       "number_errors": 2,
       "errors": [
         {
