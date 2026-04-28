@@ -4,7 +4,7 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "Length of TSPARMCD is greater than 8",
+      "execution_message": "Length of TSPARMCD is greater than 8.",
       "number_errors": 3,
       "errors": [
         {
@@ -15,7 +15,7 @@
             "TSPARM": "Actual Number of Subjects",
             "TSPARMCD": "A12345678"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -25,7 +25,7 @@
             "TSPARM": "Adaptive Design",
             "TSPARMCD": "12345678A"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -35,7 +35,7 @@
             "TSPARM": "Added on to Existing Treatments",
             "TSPARMCD": "A B C D E F G"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
