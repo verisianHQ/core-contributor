@@ -5,29 +5,18 @@
       "domain": "SUPPAE",
       "execution_status": "success",
       "execution_message": "QLABEL > 40 chars.",
-      "number_errors": 10,
+      "number_errors": 3,
       "errors": [
-        {
-          "row": 1,
-          "SEQ": null,
-          "USUBJID": "CDISC-TEST-001",
-          "value": {
-            "IDVAR": "AESPID",
-            "IDVARVAL": "1",
-            "QLABEL": "This is the wrongly used Dictionary Version in this Study"
-          },
-          "validated": false
-        },
         {
           "row": 2,
           "SEQ": null,
           "USUBJID": "CDISC-TEST-001",
           "value": {
             "IDVAR": "AESPID",
-            "IDVARVAL": "10",
-            "QLABEL": "This is the wrongly used Dictionary Version in this Study"
+            "IDVARVAL": "2",
+            "QLABEL": "This is a wrongly long QLABEL value used in this dataset"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -35,21 +24,10 @@
           "USUBJID": "CDISC-TEST-001",
           "value": {
             "IDVAR": "AESPID",
-            "IDVARVAL": "11",
-            "QLABEL": "This is the wrongly used Dictionary Version in this Study"
+            "IDVARVAL": "3",
+            "QLABEL": "Another QLABEL that exceeds the 40-character limit"
           },
-          "validated": false
-        },
-        {
-          "row": 4,
-          "SEQ": null,
-          "USUBJID": "CDISC-TEST-001",
-          "value": {
-            "IDVAR": "AESPID",
-            "IDVARVAL": "12",
-            "QLABEL": "This is the wrongly used Dictionary Version in this Study"
-          },
-          "validated": false
+          "validated": true
         },
         {
           "row": 5,
@@ -57,65 +35,41 @@
           "USUBJID": "CDISC-TEST-001",
           "value": {
             "IDVAR": "AESPID",
-            "IDVARVAL": "13",
-            "QLABEL": "This is the wrongly used Dictionary Version in this Study"
+            "IDVARVAL": "5",
+            "QLABEL": "A QLABEL value with forty-one characters!"
           },
-          "validated": false
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "suppdm.xpt",
+      "domain": "SUPPDM",
+      "execution_status": "success",
+      "execution_message": "QLABEL > 40 chars.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC008",
+          "value": {
+            "IDVAR": null,
+            "IDVARVAL": null,
+            "QLABEL": "Race1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "validated": true
         },
         {
-          "row": 6,
+          "row": 3,
           "SEQ": null,
-          "USUBJID": "CDISC-TEST-001",
+          "USUBJID": "CDISC008",
           "value": {
-            "IDVAR": "AESPID",
-            "IDVARVAL": "14",
-            "QLABEL": "This is the wrongly used Dictionary Version in this Study"
+            "IDVAR": null,
+            "IDVARVAL": null,
+            "QLABEL": "A label longer than the maximum forty character limit"
           },
-          "validated": false
-        },
-        {
-          "row": 7,
-          "SEQ": null,
-          "USUBJID": "CDISC-TEST-001",
-          "value": {
-            "IDVAR": "AESPID",
-            "IDVARVAL": "15",
-            "QLABEL": "This is the wrongly used Dictionary Version in this Study"
-          },
-          "validated": false
-        },
-        {
-          "row": 8,
-          "SEQ": null,
-          "USUBJID": "CDISC-TEST-001",
-          "value": {
-            "IDVAR": "AESPID",
-            "IDVARVAL": "2",
-            "QLABEL": "This is the wrongly used Dictionary Version in this Study"
-          },
-          "validated": false
-        },
-        {
-          "row": 9,
-          "SEQ": null,
-          "USUBJID": "CDISC-TEST-001",
-          "value": {
-            "IDVAR": "AESPID",
-            "IDVARVAL": "3",
-            "QLABEL": "This is the wrongly used Dictionary Version in this Study"
-          },
-          "validated": false
-        },
-        {
-          "row": 10,
-          "SEQ": null,
-          "USUBJID": "CDISC-TEST-001",
-          "value": {
-            "IDVAR": "AESPID",
-            "IDVARVAL": "4",
-            "QLABEL": "This is the wrongly used Dictionary Version in this Study"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     }
