@@ -1,18 +1,19 @@
 # Variable: --TPTREF
 # Condition: --RFTDTC present in dataset
 # Rule: --TPTREF present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: '"The actual date or date and time of a time point that acts as
+              - Cited Guidance: The actual date or date and time of a time point that acts as
                   a fixed reference for a series of planned time points,
                   represented in a standardized character format. The fixed
-                  reference point is in --TPTREF"'
+                  reference point is in --TPTREF.
                 Document: Model v2.0
-                Item: RFTDTC
+                Item: --RFTDTC
                 Section: Timing
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -23,10 +24,9 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: '"Date/time for a fixed reference time point defined by
-                  --TPTREF."'
+              - Cited Guidance: Date/time for a fixed reference time point defined by --TPTREF.
                 Document: Model v1.7
-                Item: Table 2.2.5.1 --RFTDTC
+                Item: 'Table 2.2.5.1: --RFTDTC'
                 Section: 2.2.5 Timing Variables for All Classes
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -211,7 +211,7 @@ Description: Raise an error when --TPTREF is not present in dataset when
   --RFTDTC is present.
 Executability: Fully Executable
 Outcome:
-  Message: --TPTREF is not present when --RFTDTC is present in a dataset
+  Message: --TPTREF is not present in dataset when --RFTDTC is present in dataset.
   Output Variables:
     - --RFTDTC
     - --TPTREF
