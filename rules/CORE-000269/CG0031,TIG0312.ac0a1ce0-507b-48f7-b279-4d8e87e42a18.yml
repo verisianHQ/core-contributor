@@ -74,21 +74,33 @@ Authorities:
         Substandard: SDTM
         Version: '1.0'
 Check:
-  all:
-    - name: VISIT
-      operator: non_empty
-    - name: SVPRESP
-      operator: equal_to
-      value: Y
-    - name: VISIT
-      operator: is_not_contained_by
-      value: $tv_visit
+  any:
+    - all:
+      - name: SVPRESP
+        operator: exists
+      - name: VISIT
+        operator: non_empty
+      - name: SVPRESP
+        operator: equal_to
+        value: Y
+      - name: VISIT
+        operator: is_not_contained_by
+        value: $tv_visit
+    - all:
+      - name: SVPRESP
+        operator: not_exists
+      - name: VISIT
+        operator: non_empty
+      - name: VISIT
+        operator: is_not_contained_by
+        value: $tv_visit
 Core:
   Id: CORE-000269
   Status: Published
   Version: '1'
 Description: Raise an error when planned VISIT is populated
-  , but VISIT value does not match any VISIT value in the TV dataset.
+  , but VISIT value does not match any VISIT value in the TV dataset. 
+    If SVPRESP is not present, all non-missing VISIT values are checked against TV.VISIT.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
@@ -101,8 +113,8 @@ Operations:
     name: VISIT
     operator: distinct
 Outcome:
-  Message: Visit is planned (SVPRESP = 'Y') but VISIT value does not match any VISIT value in the TV dataset.
-    among those present in TV.VISIT.
+  Message: VISIT value does not match any VISIT value in TV.VISIT for a planned visit.
+    If SVPRESP is not present, all non-missing VISIT values are checked.
   Output Variables:
     - VISIT
     - VISITNUM

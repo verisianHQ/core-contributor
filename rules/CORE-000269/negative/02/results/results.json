@@ -5,7 +5,7 @@
       "domain": "LB",
       "execution_status": "success",
       "execution_message": "VISIT value does not match any VISIT value in TV.VISIT for a planned visit. If SVPRESP is not present, all non-missing VISIT values are checked.",
-      "number_errors": 30,
+      "number_errors": 43,
       "errors": [
         {
           "row": 585,
@@ -306,6 +306,136 @@
             "VISITNUM": 13.0
           },
           "validated": true
+        },
+        {
+          "row": 652,
+          "SEQ": 38,
+          "USUBJID": "CDISC008",
+          "value": {
+            "VISIT": "SCREENING 1: UNSCHEDULED 01",
+            "VISITNUM": 1.01
+          },
+          "validated": true
+        },
+        {
+          "row": 653,
+          "SEQ": 39,
+          "USUBJID": "CDISC008",
+          "value": {
+            "VISIT": "SCREENING 1: UNSCHEDULED 01",
+            "VISITNUM": 1.01
+          },
+          "validated": true
+        },
+        {
+          "row": 654,
+          "SEQ": 40,
+          "USUBJID": "CDISC008",
+          "value": {
+            "VISIT": "SCREENING 1: UNSCHEDULED 01",
+            "VISITNUM": 1.01
+          },
+          "validated": true
+        },
+        {
+          "row": 655,
+          "SEQ": 41,
+          "USUBJID": "CDISC008",
+          "value": {
+            "VISIT": "SCREENING 1: UNSCHEDULED 01",
+            "VISITNUM": 1.01
+          },
+          "validated": true
+        },
+        {
+          "row": 656,
+          "SEQ": 42,
+          "USUBJID": "CDISC008",
+          "value": {
+            "VISIT": "SCREENING 1: UNSCHEDULED 01",
+            "VISITNUM": 1.01
+          },
+          "validated": true
+        },
+        {
+          "row": 657,
+          "SEQ": 43,
+          "USUBJID": "CDISC008",
+          "value": {
+            "VISIT": "SCREENING 1: UNSCHEDULED 01",
+            "VISITNUM": 1.01
+          },
+          "validated": true
+        },
+        {
+          "row": 658,
+          "SEQ": 44,
+          "USUBJID": "CDISC008",
+          "value": {
+            "VISIT": "SCREENING 1: UNSCHEDULED 01",
+            "VISITNUM": 1.01
+          },
+          "validated": true
+        },
+        {
+          "row": 659,
+          "SEQ": 45,
+          "USUBJID": "CDISC008",
+          "value": {
+            "VISIT": "SCREENING 1: UNSCHEDULED 01",
+            "VISITNUM": 1.01
+          },
+          "validated": true
+        },
+        {
+          "row": 660,
+          "SEQ": 46,
+          "USUBJID": "CDISC008",
+          "value": {
+            "VISIT": "SCREENING 1: UNSCHEDULED 01",
+            "VISITNUM": 1.01
+          },
+          "validated": true
+        },
+        {
+          "row": 661,
+          "SEQ": 47,
+          "USUBJID": "CDISC008",
+          "value": {
+            "VISIT": "SCREENING 1: UNSCHEDULED 01",
+            "VISITNUM": 1.01
+          },
+          "validated": true
+        },
+        {
+          "row": 662,
+          "SEQ": 48,
+          "USUBJID": "CDISC008",
+          "value": {
+            "VISIT": "SCREENING 1: UNSCHEDULED 01",
+            "VISITNUM": 1.01
+          },
+          "validated": true
+        },
+        {
+          "row": 663,
+          "SEQ": 49,
+          "USUBJID": "CDISC008",
+          "value": {
+            "VISIT": "SCREENING 1: UNSCHEDULED 01",
+            "VISITNUM": 1.01
+          },
+          "validated": true
+        },
+        {
+          "row": 664,
+          "SEQ": 50,
+          "USUBJID": "CDISC008",
+          "value": {
+            "VISIT": "SCREENING 1: UNSCHEDULED 01",
+            "VISITNUM": 1.01
+          },
+          "validated": true
         }
       ]
     },
@@ -343,7 +473,7 @@
       "domain": "SV",
       "execution_status": "success",
       "execution_message": "VISIT value does not match any VISIT value in TV.VISIT for a planned visit. If SVPRESP is not present, all non-missing VISIT values are checked.",
-      "number_errors": 1,
+      "number_errors": 2,
       "errors": [
         {
           "row": 23,
@@ -352,6 +482,16 @@
           "value": {
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
+          },
+          "validated": true
+        },
+        {
+          "row": 25,
+          "SEQ": null,
+          "USUBJID": "CDISC008",
+          "value": {
+            "VISIT": "SCREENING 1: UNSCHEDULED 01",
+            "VISITNUM": 1.01
           },
           "validated": true
         }
