@@ -118,15 +118,16 @@ Core:
   Id: CORE-000254
   Status: Published
   Version: '1'
-Description: Raise an error when AE.AEOUT is equal to 'FATAL'
-  and DTHFL is not equal to 'Y'
+Description: Raise an error when AEOUT is equal to 'FATAL'
+  but DTHFL is not equal to 'Y'
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: AE
 Outcome:
-  Message: DTHFL is not equal to 'Y' when AE.AEOUT is equal to 'FATAL'.
+  Message: DTHFL is not equal to 'Y' when AEOUT in AE Dataset
+    is equal to 'FATAL'.
   Output Variables:
     - DTHFL
     - AEOUT
