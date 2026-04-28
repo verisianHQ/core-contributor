@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "DTHFL is not 'Y' when DS.DSDECOD is \"DEATH\"",
+      "execution_message": "DTHFL is not equal to 'Y' when DS.DSDECOD is equal to 'DEATH'",
       "number_errors": 1,
       "errors": [
         {
@@ -15,7 +15,7 @@
             "DSDECOD": "DEATH",
             "DTHFL": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },

@@ -1,6 +1,7 @@
 # Variable: DTHFL
 # Condition: DS record with DSDECOD= "DEATH" present for the subject
 # Rule: DTHFL = 'Y'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -117,14 +118,15 @@ Core:
   Id: CORE-000252
   Status: Published
   Version: '1'
-Description: When DS.DSDECOD is 'DEATH', DTHFL must be 'Y'
+Description: Raise an error when DS.DSDECOD is equal to 'DEATH'
+  and DTHFL is not equal to 'Y'
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: DS
 Outcome:
-  Message: DTHFL is not 'Y' when DS.DSDECOD is "DEATH"
+  Message: DTHFL is not equal to 'Y' when DS.DSDECOD is equal to 'DEATH'
 Rule Type: Record Data
 Scope:
   Classes:
