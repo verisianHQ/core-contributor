@@ -75,7 +75,7 @@ Core:
 Description: Raise an error when AESLIFE is populated and value is not 'Y' or 'N'
 Executability: Fully Executable
 Outcome:
-  Message: AESLIFE is populated, but not equal to "N" or "Y"
+  Message: AESLIFE is populated, but not equal to 'N' or 'Y'.
   Output Variables:
     - AESLIFE
 Rule Type: Record Data
