@@ -1,6 +1,7 @@
 # Variable: --SMIE
 # Condition: --SMIE ^= null
 # Rule: --SMIE in ('Y','N')
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -36,7 +37,6 @@ Authorities:
               - Cited Guidance: Do additional categories for seriousness apply? Valid values are
                   'Y' and 'N'.
                 Document: Model v1.4
-                Item: ''
                 Section: 2.2.2
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -50,7 +50,7 @@ Authorities:
               - Cited Guidance: Valid values are "Y" and "N" and null.
                 Document: SDTM v2.1
                 Item: --SMIE
-                Section: 3.1.2  The Events Observation Class
+                Section: 3.1.2 The Events Observation Class
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0557
@@ -71,10 +71,10 @@ Core:
   Id: CORE-000130
   Status: Published
   Version: '1'
-Description: Raise an error when AESMIE is completed and value is not 'Y' or 'N'
+Description: Raise an error when AESMIE is populated and value is not 'Y' or 'N'.
 Executability: Fully Executable
 Outcome:
-  Message: AESMIE is completed, but not equal to "N" or "Y"
+  Message: AESMIE is populated, but not equal to 'N' or 'Y'.
   Output Variables:
     - AESMIE
 Rule Type: Record Data
