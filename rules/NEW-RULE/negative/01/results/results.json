@@ -1,0 +1,38 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "Value for CMCLASCD is not found in the WHODrug dictionary.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "STUDY001-SUBJ0001",
+          "value": {
+            "CMCLASCD": "B01ACA"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "STUDY001-SUBJ0001",
+          "value": {
+            "CMCLASCD": "Platelet aggregation inhibitors excl. heparin"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ],
+  "dictionary_versions": {
+    "whodrug": {
+      "product_type": "GLOBAL",
+      "format": "C3",
+      "version_date": "20220301"
+    }
+  }
+}
