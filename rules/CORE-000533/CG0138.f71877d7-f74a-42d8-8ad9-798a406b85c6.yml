@@ -1,6 +1,7 @@
 # Variable: QNAM
 # Condition: Population flags included in submission
 # Rule: Population flags in SUPPDM
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -37,11 +38,12 @@ Core:
   Id: CORE-000533
   Status: Published
   Version: '1'
-Description: ''
+Description: Raise an error when a SUPP domain other than SUPPDM contains
+              population flags (name fragments reserved
 Executability: Fully Executable
 Outcome:
-  Message: 'A SUPP domain other than SUPPDM contains population flags (name
-    fragments reserved)'
+  Message: A SUPP domain other than SUPPDM contains population flags (name
+    fragments reserved)
 Rule Type: Record Data
 Scope:
   Classes:
