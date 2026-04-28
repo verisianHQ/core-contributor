@@ -1,24 +1,17 @@
 # Variable: ETCD
-# Condition: 
+# Condition:
 # Rule: ETCD value length <= 8
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: ETCD (the companion to ELEMENT) is limited to 8 characters
+              - Cited Guidance: ETCD (the companion to ELEMENT) is limited to 8 characters.
                 Document: IG v3.4
                 Item: Specification
-                Section: '5.3'
-              - Cited Guidance: ETCD (the companion to ELEMENT) is limited to 8 characters
-                Document: IG v3.4
-                Item: Specification
-                Section: 7.2.1
-              - Cited Guidance: ETCD (the companion to ELEMENT) is limited to 8 characters
-                Document: IG v3.4
-                Item: Specification
-                Section: 7.2.2
+                Section: 5.3|7.2.1|7.2.2
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0246
@@ -28,14 +21,10 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: ETCD (the companion to ELEMENT) is limited to 8 characters
+              - Cited Guidance: ETCD (the companion to ELEMENT) is limited to 8 characters.
                 Document: IG v3.3
                 Item: Specification
-                Section: '5.2'
-              - Cited Guidance: ETCD (the companion to ELEMENT) is limited to 8 characters
-                Document: IG v3.3
-                Item: Specification
-                Section: '7.2'
+                Section: 5.2|7.2
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0246
@@ -45,14 +34,10 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: ETCD (the companion to ELEMENT) is limited to 8 characters
+              - Cited Guidance: ETCD (the companion to ELEMENT) is limited to 8 characters.
                 Document: IG v3.2
                 Item: Specification
-                Section: '5'
-              - Cited Guidance: ETCD (the companion to ELEMENT) is limited to 8 characters
-                Document: IG v3.2
-                Item: Specification
-                Section: '7.2'
+                Section: 5|7.2
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0246
@@ -64,7 +49,7 @@ Authorities:
           - Citations:
               - Cited Guidance: ETCD (the companion to ELEMENT), SETCD (the short name of a
                   specific Trial Set), and TSPARMCD (the companion to TSPARM)
-                  are limited to 8 characters
+                  are limited to 8 characters.
                 Document: IG v3.0
                 Item: Specification
                 Section: 4.2.1
@@ -79,7 +64,7 @@ Authorities:
           - Citations:
               - Cited Guidance: ETCD (the companion to ELEMENT), SETCD (the short name of a
                   specific Trial Set), and TSPARMCD (the companion to TSPARM)
-                  are limited to 8 characters
+                  are limited to 8 characters.
                 Document: IG v3.1
                 Item: Specification
                 Section: 4.2.1
@@ -94,7 +79,7 @@ Authorities:
           - Citations:
               - Cited Guidance: ETCD (the companion to ELEMENT), SETCD (the short name of a
                   specific Trial Set), and TSPARMCD (the companion to TSPARM)
-                  are limited to 8 characters
+                  are limited to 8 characters.
                 Document: IG v3.1.1
                 Item: Specification
                 Section: 4.2.1
@@ -109,7 +94,7 @@ Authorities:
           - Citations:
               - Cited Guidance: ETCD (the companion to ELEMENT), SETCD (the short name of a
                   specific Trial Set), and TSPARMCD (the companion to TSPARM)
-                  are limited to 8 characters
+                  are limited to 8 characters.
                 Document: IG v3.1
                 Item: Specification
                 Section: 4.2.1
@@ -124,7 +109,7 @@ Authorities:
           - Citations:
               - Cited Guidance: ETCD (the companion to ELEMENT), SETCD (the short name of a
                   specific Trial Set), and TSPARMCD (the companion to TSPARM)
-                  are limited to 8 characters
+                  are limited to 8 characters.
                 Document: IG v3.1
                 Item: Specification
                 Section: 4.2.1
@@ -139,7 +124,7 @@ Authorities:
           - Citations:
               - Cited Guidance: ETCD (the companion to ELEMENT), SETCD (the short name of a
                   specific Trial Set), and TSPARMCD (the companion to TSPARM)
-                  are limited to 8 characters
+                  are limited to 8 characters.
                 Document: IG v3.1
                 Item: Specification
                 Section: 4.2.1
@@ -157,7 +142,7 @@ Authorities:
                   should be short for ease of use in programming, but it is not
                   expected that ETCD will need to serve as a variable name.
                 Document: TIG 1.0
-                Item: Specification:ECTD
+                Item: Specification:ETCD
                 Section: 2.8.10.24|2.8.10.29|2.8.10.30
             Origin: TIG Conformance Rules
             Rule Identifier:
@@ -190,10 +175,10 @@ Core:
   Id: CORE-000143
   Status: Published
   Version: '1'
-Description: The length of ETCD should be no greater than 8
+Description: The length of ETCD must be no greater than 8 characters.
 Executability: Fully Executable
 Outcome:
-  Message: ETCD value is greater than 8
+  Message: ETCD length is greater than 8 characters.
   Output Variables:
     - ETCD
 Rule Type: Record Data
