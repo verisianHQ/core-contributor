@@ -1,6 +1,7 @@
 # Variable: SETCD
-# Condition: 
+# Condition:
 # Rule: SETCD value length <= 8
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -169,16 +170,16 @@ Authorities:
 Check:
   all:
     - name: SETCD
-      operator: matches_regex
-      value: ^(.){9,}$
+      operator: longer_than
+      value: 8
 Core:
   Id: CORE-000088
   Status: Published
   Version: '1'
-Description: Verify that the length of value in SETCD variable is <= 8
+Description: The length of SETCD should be no greater than 8.
 Executability: Fully Executable
 Outcome:
-  Message: SETCD value length is greater than 8
+  Message: SETCD value length is greater than 8.
   Output Variables:
     - SETCD
 Rule Type: Record Data
