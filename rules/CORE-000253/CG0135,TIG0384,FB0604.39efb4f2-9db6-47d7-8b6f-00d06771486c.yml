@@ -118,14 +118,15 @@ Core:
   Id: CORE-000253
   Status: Published
   Version: '1'
-Description: When AE.AESDTH is 'Y', DTHFL must be 'Y'
+Description: Riase an error when AE.AESDTH is equal to 'Y'
+  and DTHFL is not equal to 'Y'
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: AE
 Outcome:
-  Message: DTHFL is not 'Y' when AE.AESDTH is 'Y'.
+  Message: DTHFL is not equal to 'Y' when AE.AESDTH is equal to 'Y'.
 Rule Type: Record Data
 Scope:
   Classes:
