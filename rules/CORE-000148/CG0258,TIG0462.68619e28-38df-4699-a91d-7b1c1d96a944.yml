@@ -55,8 +55,9 @@ Authorities:
         Substandard: SDTM
         Version: '1.0'
 # Variable: TSPARM
-# Condition: 
+# Condition:
 # Rule: TSPARM value length <= 40
+# verified
 Check:
   all:
     - name: TSPARM
@@ -66,10 +67,10 @@ Core:
   Id: CORE-000148
   Status: Published
   Version: '1'
-Description: Trigger error when length of TSPARM value is greater than 40
+Description: The length of TSPARM value is greater than 40.
 Executability: Fully Executable
 Outcome:
-  Message: Length of TSPARM is greater than 40
+  Message: Length of TSPARM is greater than 40.
   Output Variables:
     - TSPARM
     - TSPARMCD
