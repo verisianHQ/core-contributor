@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "SETCD value length is greater than 8",
+      "execution_message": "SETCD value length is greater than 8.",
       "number_errors": 4,
       "errors": [
         {
@@ -14,7 +14,7 @@
           "value": {
             "SETCD": "DRUG_A_SMOKER"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -23,7 +23,7 @@
           "value": {
             "SETCD": "DRUG_B_SMOKER"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 6,
@@ -32,7 +32,7 @@
           "value": {
             "SETCD": "DRUG_A_NON_SMOKER"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 7,
@@ -41,7 +41,7 @@
           "value": {
             "SETCD": "DRUG_B_NON_SMOKER"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
