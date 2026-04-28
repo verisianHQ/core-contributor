@@ -169,8 +169,9 @@ Authorities:
         Substandard: SDTM
         Version: '1.0'
 # Variable: TSPARMCD
-# Condition: 
+# Condition:
 # Rule: TSPARMCD value length <= 8
+# verified
 Check:
   all:
     - name: TSPARMCD
@@ -180,10 +181,10 @@ Core:
   Id: CORE-000147
   Status: Published
   Version: '1'
-Description: Trigger error when length of TSPARMCD is greater than 8
+Description: The length of TSPARMCD value is greater than 8.
 Executability: Fully Executable
 Outcome:
-  Message: Length of TSPARMCD is greater than 8
+  Message: Length of TSPARMCD is greater than 8.
   Output Variables:
     - TSPARM
     - TSPARMCD
