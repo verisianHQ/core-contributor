@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "ACTARMCD must equal 'SCRNFAIL', 'NOTASSGN', 'NOTTRT', or 'UNPLAN' in DM if the value is not present in TA.ARMCD",
+      "execution_message": "ACTARMCD value in the DM dataset must equal 'SCRNFAIL', 'NOTASSGN', 'NOTTRT', or 'UNPLAN' if the value does not match an ARMCD value in the TA dataset.",
       "number_errors": 3,
       "errors": [
         {

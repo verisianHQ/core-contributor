@@ -54,9 +54,9 @@ Core:
   Id: CORE-000331
   Status: Published
   Version: '1'
-Description: Raise an error when ACTARMCD values in Demographics are not 
-  restricted to ARMCD values in Trial Arms when ACTARMCD is not equal to
-  'SCRNFAIL', 'NOTASSGN', 'NOTTRT', or 'UNPLAN'
+Description: Raise an error when ACTARMCD value in the DM dataset, except
+  'SCRNFAIL', 'NOTASSGN', 'NOTTRT', or 'UNPLAN', does not match any of the
+  ARMCD values in the TA dataset.  
 Executability: Fully Executable
 Operations:
   - domain: TA
@@ -64,8 +64,9 @@ Operations:
     name: ARMCD
     operator: distinct
 Outcome:
-  Message: ACTARMCD must equal 'SCRNFAIL', 'NOTASSGN', 'NOTTRT', or 'UNPLAN'
-    in DM if the value is not present in TA.ARMCD
+  Message: ACTARMCD value in the DM dataset must equal 'SCRNFAIL', 
+    'NOTASSGN', 'NOTTRT', or 'UNPLAN' if the value does not match
+    an ARMCD value in the TA dataset.
   Output Variables:
     - ACTARMCD
     - ACTARM
