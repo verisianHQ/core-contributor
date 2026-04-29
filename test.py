@@ -93,13 +93,16 @@ class ResultReporter:
                 f.write("\n".join(", ".join(ids[i : i + 2]) for i in range(0, len(ids), 2)))  # noqa
 
     @classmethod
-    def save_case_results(cls, rule_id: str, test_type: str, case_id: str, results: dict):
+    def save_case_results(
+        cls, rule_id: str, test_type: str, case_id: str, results: dict, version_info: Optional[dict] = None
+    ):
         """Saves JSON and TXT results to the file system."""
         results_path = RULES_DIR / rule_id / test_type / case_id / "results"
         results_path.mkdir(parents=True, exist_ok=True)
 
+        output = {**results, "dictionary_versions": version_info} if version_info else results
         with (results_path / "results.json").open("w") as f:
-            json.dump(results, f, indent=2)
+            json.dump(output, f, indent=2)
 
         cls.json_to_readable(results, results_path / "results.txt")
         return str(results_path)
@@ -160,11 +163,14 @@ class TestRunner:
             dictionary_path_mapping={
                 "whodrug": whodrug_path,
                 "meddra": meddra_path,
-                "unii": unii_path or "dummy_ex_dicts/unii",
-                "medrt": medrt_path or "dummy_ex_dicts/medrt",
-                "loinc": loinc_path or "dummy_ex_dicts/loinc",
+                "unii": unii_path if unii_path != "default" else "dummy_ex_dicts/unii",
+                "medrt": medrt_path if medrt_path != "default" else "dummy_ex_dicts/medrt",
+                "loinc": loinc_path if loinc_path != "default" else "dummy_ex_dicts/loinc",
             }
         )
+
+        self.version_info = self.get_ext_dict_versions(ext_dicts) if ext_dicts else {}
+
         from engine.cdisc_rules_engine.data_service.postgresql_data_service import PostgresQLDataService
 
         self.data_service = PostgresQLDataService.instance(
@@ -179,6 +185,33 @@ class TestRunner:
         """Ensures the engine submodule is in sys.path."""
         if str(ENGINE_DIR) not in sys.path:
             sys.path.insert(0, str(ENGINE_DIR))
+
+    @staticmethod
+    def get_ext_dict_versions(ext_dicts):
+        import importlib
+        import dataclasses
+
+        READER_MAP = {
+            "meddra": ("engine.cdisc_rules_engine.readers.external_dictionary_readers.meddra_reader", "MeddraReader"),
+            "whodrug": (
+                "engine.cdisc_rules_engine.readers.external_dictionary_readers.whodrug_reader",
+                "WhoDrugReader",
+            ),
+            "loinc": ("engine.cdisc_rules_engine.readers.external_dictionary_readers.loinc_reader", "LoincReader"),
+            "unii": ("engine.cdisc_rules_engine.readers.external_dictionary_readers.unii_reader", "UniiReader"),
+            "medrt": ("engine.cdisc_rules_engine.readers.external_dictionary_readers.medrt_reader", "MedRTReader"),
+        }
+
+        version_info = {}
+
+        for dict_type, path in ext_dicts.dictionary_path_mapping.items():
+            if path and dict_type in READER_MAP:
+                module_path, class_name = READER_MAP[dict_type]
+                reader_cls = getattr(importlib.import_module(module_path), class_name)
+                reader = reader_cls(pgi=None, dictionary_path=path)
+                version_info[dict_type] = dataclasses.asdict(reader._extract_version_metadata())
+
+        return version_info
 
     @staticmethod
     def get_available_rules() -> List[str]:
@@ -314,7 +347,9 @@ class TestRunner:
             results_data = {"error": "Unknown Error", "exception": "Engine returned None"}
 
         if results_data.get("error"):
-            results_path = ResultReporter.save_case_results(rule_id, test_type, case_id, results_data)
+            results_path = ResultReporter.save_case_results(
+                rule_id, test_type, case_id, results_data, self.version_info
+            )  # noqa
             return {
                 "case_id": case_id,
                 "passed": False,
@@ -338,7 +373,7 @@ class TestRunner:
             if unvalidated_highlights:
                 results_data["unvalidated_highlights"] = unvalidated_highlights
 
-        results_path = ResultReporter.save_case_results(rule_id, test_type, case_id, results_data)
+        results_path = ResultReporter.save_case_results(rule_id, test_type, case_id, results_data, self.version_info)
         total_errors = sum(len(ds.get("errors", [])) for ds in results_data.get("datasets", []))
         passed = (total_errors == 0) if test_type == "positive" else (total_errors > 0)
 
