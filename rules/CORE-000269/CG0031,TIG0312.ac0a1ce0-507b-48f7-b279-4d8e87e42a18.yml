@@ -1,6 +1,7 @@
 # Variable: VISIT
 # Condition: VISIT ^= null and is planned
 # Rule: VISIT in TV.VISIT
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -23,9 +24,8 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: For planned visits, values of VISIT, VISITNUM, and VISITDY must
-                  be those defined in    the Trial Visits dataset,
+                  be those defined in the Trial Visits dataset,
                 Document: IG v3.3
-                Item: ''
                 Section: 4.4.5
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -74,21 +74,33 @@ Authorities:
         Substandard: SDTM
         Version: '1.0'
 Check:
-  all:
-    - name: VISIT
-      operator: non_empty
-    - name: SVPRESP
-      operator: equal_to
-      value: Y
-    - name: VISIT
-      operator: is_not_contained_by
-      value: $tv_visit
+  any:
+    - all:
+      - name: SVPRESP
+        operator: exists
+      - name: VISIT
+        operator: non_empty
+      - name: SVPRESP
+        operator: equal_to
+        value: Y
+      - name: VISIT
+        operator: is_not_contained_by
+        value: $tv_visit
+    - all:
+      - name: SVPRESP
+        operator: not_exists
+      - name: VISIT
+        operator: non_empty
+      - name: VISIT
+        operator: is_not_contained_by
+        value: $tv_visit
 Core:
   Id: CORE-000269
   Status: Published
   Version: '1'
-Description: Verify when VISIT is not null in any given domain and VISIT is
-  planned (SVPRESP = 'Y'), then VISIT should be among TV.VISIT.
+Description: Raise an error when planned VISIT is populated
+  , but VISIT value does not match any VISIT value in the TV dataset. 
+    If SVPRESP is not present, all non-missing VISIT values are checked against TV.VISIT.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
@@ -101,8 +113,8 @@ Operations:
     name: VISIT
     operator: distinct
 Outcome:
-  Message: For a planned visit (SVPRESP = 'Y'), non-missing VISIT value must be
-    among those present in TV.VISIT.
+  Message: VISIT value does not match any VISIT value in TV.VISIT for a planned visit.
+    If SVPRESP is not present, all non-missing VISIT values are checked.
   Output Variables:
     - VISIT
     - VISITNUM
