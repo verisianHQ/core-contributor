@@ -12,7 +12,7 @@
       "dataset": "ds.xpt",
       "domain": "DS",
       "execution_status": "success",
-      "execution_message": "DM.RFICDTC is not equal to the earliest DSSTDTC, when DSTERM indicates Informed consent obtained.",
+      "execution_message": "RFICDTC in the DM dataset is not equal to the earliest DSSTDTC value in the DS dataset, when DSTERM is equal to 'INFORMED CONSENT OBTAINED'.",
       "number_errors": 2,
       "errors": [
         {
@@ -20,73 +20,26 @@
           "SEQ": 1,
           "USUBJID": "015246-076-0003-00003",
           "value": {
-            "$min_ds_dsstdtc": "2018-03-06",
-            "DSDECOD": "INFORMED CONSENT OBTAINED",
+            "DSTERM": "INFORMED CONSENT OBTAINED",
+            "RFICDTC": "2018-05-20",
             "DSSTDTC": "2018-03-06",
-            "RFICDTC": "2018-05-20"
+            "$min_ds_dsstdtc": "2018-03-06"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 18,
           "SEQ": 1,
           "USUBJID": "015246-888-0008-08888",
           "value": {
-            "$min_ds_dsstdtc": "2018-04-06",
-            "DSDECOD": "INFORMED CONSENT OBTAINED",
+            "DSTERM": "INFORMED CONSENT OBTAINED",
+            "RFICDTC": "2019-08-15",
             "DSSTDTC": "2018-04-06",
-            "RFICDTC": "2019-08-15"
+            "$min_ds_dsstdtc": "2018-04-06"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 1,
-      "Variable": "RFICDTC"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "RFICDTC"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 8,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 8,
-      "Variable": "RFICDTC"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 5,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 5,
-      "Variable": "DSSTDTC"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 22,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 22,
-      "Variable": "DSSTDTC"
     }
   ]
 }

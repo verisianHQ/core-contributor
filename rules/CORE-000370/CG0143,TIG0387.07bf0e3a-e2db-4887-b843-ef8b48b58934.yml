@@ -1,3 +1,7 @@
+# Variable: RFICDTC
+# Condition: DS.DSTERM indicates informed consent obtained
+# Rule: RFICDTC = earliest DS.DSSTDTC
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -86,9 +90,6 @@ Authorities:
             Version: '1.0'
         Substandard: SDTM
         Version: '1.0'
-# Variable: RFICDTC
-# Condition: DS.DSTERM indicates informed consent obtained
-# Rule: RFICDTC = earliest DS.DSSTDTC
 Check:
   all:
     - name: DSTERM
@@ -104,8 +105,9 @@ Core:
   Id: CORE-000370
   Status: Published
   Version: '1'
-Description: DM.RFICDTC must equal the earliest DS.DSSTDTC when DSTERM indicates
-  informed consent obtained.
+Description: Raise an error when RFICDTC in the DM dataset is not equal to
+  the earliest DSSTDTC value in the DS dataset when DSTERM is equal to 
+  'INFORMED CONSENT OBTAINED'.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
@@ -119,10 +121,10 @@ Operations:
     name: DSSTDTC
     operator: min_date
 Outcome:
-  Message: DM.RFICDTC is not equal to the earliest DSSTDTC, when DSTERM indicates
-    Informed consent obtained.
+  Message: RFICDTC in the DM dataset is not equal to the earliest DSSTDTC 
+    value in the DS dataset, when DSTERM is equal to 'INFORMED CONSENT OBTAINED'.
   Output Variables:
-    - DSDECOD
+    - DSTERM
     - RFICDTC
     - DSSTDTC
     - $min_ds_dsstdtc
