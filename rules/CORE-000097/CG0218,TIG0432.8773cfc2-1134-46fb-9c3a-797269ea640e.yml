@@ -1,6 +1,7 @@
 # Variable: EPOCH
 # Condition: EPOCH present in dataset and SESTDTC <= SVSTDTC and SVSTDTC <= SEENDTC
 # Rule: EPOCH = SE.EPOCH
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -84,7 +85,7 @@ Core:
   Id: CORE-000097
   Status: Published
   Version: '1'
-Description: Raise an error when variable EPOCH values don't match between
+Description: Raise an error when the EPOCH values don't match between
   Subject Visits (SV) and Subject Elements (SE) datasets.
 Executability: Partially Executable - Possible Overreporting
 Match Datasets:
@@ -92,8 +93,14 @@ Match Datasets:
       - USUBJID
     Name: SE
 Outcome:
-  Message: EPOCH values don't match between Subject Visits (SV) and Subject
-    Elements (SE) datasets.
+  Message: EPOCH value in the SV dataset doesn't match the corresponding EPOCH value in the SE dataset.
+  Output Variables:
+    - VISIT
+    - EPOCH
+    - SVSTDTC
+    - SESTDTC
+    - SEENDTC
+    - SE.EPOCH
 Rule Type: Record Data
 Scope:
   Classes:
