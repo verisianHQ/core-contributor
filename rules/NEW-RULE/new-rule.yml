@@ -46,6 +46,8 @@ Check:
   all:
     - name: --LLTCD
       operator: is_not_valid_meddra_code_reference
+      filter_attribute: term_type
+      filter_value: LLT
 Core:
   Id: CDISC.SDTMIG.CG0378
   Status: Draft
@@ -56,6 +58,7 @@ Outcome:
   Message: --LLTCD is not a valid MedDRA lowest level code.
   Output Variables:
     - --LLTCD
+    - --TERM
 Rule Type: Record Data
 Scope:
   Classes:

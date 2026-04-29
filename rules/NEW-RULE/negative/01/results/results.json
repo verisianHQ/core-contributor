@@ -5,14 +5,15 @@
       "domain": "MH",
       "execution_status": "success",
       "execution_message": "MHLLTCD is not a valid MedDRA lowest level code.",
-      "number_errors": 2,
+      "number_errors": 3,
       "errors": [
         {
           "row": 1,
           "SEQ": 1,
           "USUBJID": "CDISC010",
           "value": {
-            "MHLLTCD": 1004966300.0
+            "MHLLTCD": 1004966300.0,
+            "MHTERM": "KNEE SURGERY NOS"
           },
           "validated": true
         },
@@ -21,7 +22,18 @@
           "SEQ": 1,
           "USUBJID": "CDISC012",
           "value": {
-            "MHLLTCD": null
+            "MHLLTCD": null,
+            "MHTERM": "NICKEL ALLERGY"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 1,
+          "USUBJID": "CDISC012",
+          "value": {
+            "MHLLTCD": 10013993.0,
+            "MHTERM": "SHOULDER DISLOCATION"
           },
           "validated": true
         }
@@ -39,7 +51,8 @@
           "SEQ": 1,
           "USUBJID": "CDISC-TEST-001",
           "value": {
-            "AELLTCD": "1004631800"
+            "AELLTCD": "1004631800",
+            "AETERM": "UPSET STOMACH"
           },
           "validated": true
         },
@@ -48,7 +61,8 @@
           "SEQ": 2,
           "USUBJID": "CDISC-TEST-001",
           "value": {
-            "AELLTCD": null
+            "AELLTCD": null,
+            "AETERM": "UPSET STOMACH"
           },
           "validated": true
         },
@@ -57,7 +71,8 @@
           "SEQ": 4,
           "USUBJID": "CDISC-TEST-001",
           "value": {
-            "AELLTCD": "1000398888888888"
+            "AELLTCD": "1000398888888888",
+            "AETERM": "BACK PAIN"
           },
           "validated": true
         },
@@ -66,11 +81,18 @@
           "SEQ": 6,
           "USUBJID": "CDISC-TEST-001",
           "value": {
-            "AELLTCD": "6666666666666"
+            "AELLTCD": "6666666666666",
+            "AETERM": "HEADACHE"
           },
           "validated": true
         }
       ]
     }
-  ]
+  ],
+  "dictionary_versions": {
+    "meddra": {
+      "version": "29.0",
+      "language": "English"
+    }
+  }
 }
