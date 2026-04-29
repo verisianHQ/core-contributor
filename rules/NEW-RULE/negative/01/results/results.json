@@ -1,0 +1,43 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "Based on the key variables defined in the define-xml document, duplicate records are present in the dataset.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 2,
+          "USUBJID": "001",
+          "value": {
+            "define_dataset_key_sequence": "STUDYID,USUBJID,AEDECOD",
+            "define_key_sequence_is_unique": false
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "001",
+          "value": {
+            "define_dataset_key_sequence": "STUDYID,USUBJID,AEDECOD",
+            "define_key_sequence_is_unique": false
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "001",
+          "value": {
+            "define_dataset_key_sequence": "STUDYID,USUBJID,AEDECOD",
+            "define_key_sequence_is_unique": false
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
