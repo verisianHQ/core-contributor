@@ -1,6 +1,7 @@
 # Variable: SUBJID
 # Condition: 
 # Rule: SUBJID unique within a study
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -67,10 +68,10 @@ Core:
   Id: CORE-000186
   Status: Published
   Version: '1'
-Description: Trigger error if SUBJID is not unique
+Description: Raise an error when SUBJID is not unique in the DM dataset.
 Executability: Fully Executable
 Outcome:
-  Message: SUBJID is not unique within study
+  Message: SUBJID is not unique within study.
   Output Variables:
     - SUBJID
 Rule Type: Record Data
