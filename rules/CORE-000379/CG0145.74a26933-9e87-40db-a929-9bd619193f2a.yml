@@ -1,6 +1,7 @@
 # Variable: RFSTDTC
 # Condition: Milestone associated with RFSTDTC is start of treatment and ACTARM in ('Screen Failure' 'Not Assigned' 'Not Treated')
 # Rule: RFSTDTC = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -34,12 +35,15 @@ Core:
   Id: CORE-000379
   Status: Published
   Version: '1'
-Description: 'Raise an error when RFSTDTC is not null, but ACTARM is either
-  Screen Failure, Not Assigned, or Not Treated'
+Description: Raise an error when RFSTDTC is populated, but ACTARM is either
+  'Screen Failure', 'Not Assigned', or 'Not Treated'.
 Executability: Partially Executable
 Outcome:
-  Message: RFSTDTC must be null when ACTARM in (Screen failure, Not Assigned, Not
-    Treated).
+  Message: RFSTDTC must be null when ACTARM is equal to any of the values
+    'Screen Failure', 'Not Assigned', or 'Not Treated'.
+  Output Variables:
+    - RFSTDTC
+    - ACTARM
 Rule Type: Record Data
 Scope:
   Classes:
