@@ -1,10 +1,109 @@
 {
   "datasets": [
     {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMENRTPT is not populated when CMENTPT is populated.",
+      "number_errors": 9,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC003",
+          "value": {
+            "CMENTPT": "2014-02-13",
+            "CMENRTPT": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC003",
+          "value": {
+            "CMENTPT": "2014-02-13",
+            "CMENRTPT": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC003",
+          "value": {
+            "CMENTPT": "2014-02-13",
+            "CMENRTPT": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC003",
+          "value": {
+            "CMENTPT": "2014-02-13",
+            "CMENRTPT": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 7,
+          "SEQ": 1,
+          "USUBJID": "CDISC005",
+          "value": {
+            "CMENTPT": "2013-08-06",
+            "CMENRTPT": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 8,
+          "SEQ": 4,
+          "USUBJID": "CDISC005",
+          "value": {
+            "CMENTPT": "2013-08-06",
+            "CMENRTPT": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 9,
+          "SEQ": 1,
+          "USUBJID": "CDISC017",
+          "value": {
+            "CMENTPT": "2014-03-08",
+            "CMENRTPT": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 10,
+          "SEQ": 2,
+          "USUBJID": "CDISC017",
+          "value": {
+            "CMENTPT": "2014-03-08",
+            "CMENRTPT": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 11,
+          "SEQ": 3,
+          "USUBJID": "CDISC017",
+          "value": {
+            "CMENTPT": "2014-03-08",
+            "CMENRTPT": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
       "dataset": "mh.xpt",
       "domain": "MH",
       "execution_status": "success",
-      "execution_message": "MHENTPT is completed, but MHENRTPT is not completed.",
+      "execution_message": "MHENRTPT is not populated when MHENTPT is populated.",
       "number_errors": 8,
       "errors": [
         {
@@ -12,80 +111,80 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "MHENRTPT": null,
-            "MHENTPT": "2021-05-01"
+            "MHENTPT": "2021-05-01",
+            "MHENRTPT": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": 1,
           "USUBJID": "CDISC002",
           "value": {
-            "MHENRTPT": null,
-            "MHENTPT": "2021-02-15"
+            "MHENTPT": "2021-02-15",
+            "MHENRTPT": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": 1,
           "USUBJID": "CDISC003",
           "value": {
-            "MHENRTPT": null,
-            "MHENTPT": "2015-05-09"
+            "MHENTPT": "2015-05-09",
+            "MHENRTPT": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
           "SEQ": 1,
           "USUBJID": "CDISC004",
           "value": {
-            "MHENRTPT": null,
-            "MHENTPT": "2011-06-11"
+            "MHENTPT": "2011-06-11",
+            "MHENRTPT": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 5,
           "SEQ": 1,
           "USUBJID": "CDISC005",
           "value": {
-            "MHENRTPT": null,
-            "MHENTPT": "2000-06-11"
+            "MHENTPT": "2000-06-11",
+            "MHENRTPT": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 6,
           "SEQ": 1,
           "USUBJID": "CDISC006",
           "value": {
-            "MHENRTPT": null,
-            "MHENTPT": "2021-05-01"
+            "MHENTPT": "2021-05-01",
+            "MHENRTPT": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 7,
           "SEQ": 1,
           "USUBJID": "CDISC007",
           "value": {
-            "MHENRTPT": null,
-            "MHENTPT": "2021-05-02"
+            "MHENTPT": "2021-05-02",
+            "MHENRTPT": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 8,
           "SEQ": 1,
           "USUBJID": "CDISC008",
           "value": {
-            "MHENRTPT": null,
-            "MHENTPT": "2021-11-23"
+            "MHENTPT": "2021-11-23",
+            "MHENRTPT": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

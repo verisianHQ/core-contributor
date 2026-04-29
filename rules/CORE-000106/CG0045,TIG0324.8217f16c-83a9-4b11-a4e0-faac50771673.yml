@@ -1,6 +1,7 @@
 # Variable: --ENRTPT
 # Condition: --ENTPT ^= null
 # Rule: --ENRTPT ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -27,7 +28,7 @@ Authorities:
                   the sponsor-defined reference time point defined by variable
                   --ENTPT.
                 Document: Model v1.7
-                Item: Table 2.2.5.1 --ENTPT
+                Item: 'Table 2.2.5.1: --ENRTPT'
                 Section: 2.2.5 Timing Variables for All Classes
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -56,7 +57,7 @@ Authorities:
               - Cited Guidance: The description or date and/or time of a time point that acts as
                   a fixed reference for characterizing the end of an
                   observation. This is the sponsor-defined reference point
-                  referred to by --ENRTPT
+                  referred to by --ENRTPT.
                 Document: SDTM v2.1
                 Item: --ENTPT
                 Section: Section 3.1.5 Timing Variables for All Classes
@@ -71,19 +72,22 @@ Check:
   all:
     - name: --ENTPT
       operator: non_empty
-    - name: --ENRTPT
-      operator: empty
+    - any:
+        - name: --ENRTPT
+          operator: not_exists
+        - name: --ENRTPT
+          operator: empty
 Core:
   Id: CORE-000106
   Status: Published
   Version: '1'
-Description: Raise an error when --ENTPT is completed and --ENRTPT is not completed.
+Description: Raise an error when --ENTPT is populated but --ENRTPT is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: --ENTPT is completed, but --ENRTPT is not completed.
+  Message: --ENRTPT is not populated when --ENTPT is populated.
   Output Variables:
-    - --ENRTPT
     - --ENTPT
+    - --ENRTPT
 Rule Type: Record Data
 Scope:
   Classes:
