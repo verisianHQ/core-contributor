@@ -100,7 +100,7 @@ class ResultReporter:
         results_path = RULES_DIR / rule_id / test_type / case_id / "results"
         results_path.mkdir(parents=True, exist_ok=True)
 
-        output = {**results, "dictionary_versions": version_info or {}}
+        output = {**results, "dictionary_versions": version_info} if version_info else results
         with (results_path / "results.json").open("w") as f:
             json.dump(output, f, indent=2)
 
