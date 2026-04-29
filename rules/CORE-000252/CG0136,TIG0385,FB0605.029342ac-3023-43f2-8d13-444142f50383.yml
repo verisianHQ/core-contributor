@@ -118,15 +118,18 @@ Core:
   Id: CORE-000252
   Status: Published
   Version: '1'
-Description: Raise an error when DS.DSDECOD is equal to 'DEATH'
-  and DTHFL is not equal to 'Y'
+Description: Raise an error when DSDECOD is equal to 'DEATH'
+  and DTHFL is not equal to 'Y'.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: DS
 Outcome:
-  Message: DTHFL is not equal to 'Y' when DS.DSDECOD is equal to 'DEATH'
+  Message: DTHFL is not equal to 'Y' but DSDECOD is equal to 'DEATH'.
+  Output Variables:
+    - DTHFL
+    - DSDECOD
 Rule Type: Record Data
 Scope:
   Classes:
