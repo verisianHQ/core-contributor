@@ -3,10 +3,15 @@
     {
       "dataset": "ae.xpt",
       "domain": "AE",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "execution_status": "execution_error",
+      "execution_message": "SQL execution error",
+      "number_errors": 1,
+      "errors": [
+        {
+          "error": "PostgreSQL Error",
+          "message": "column \"vvz7fj8p2xveafhgwd3qilc9ubdunwgaweykiw54zc\" is of type boolean but expression is of type text\nLINE 1: ...6zprmtz95nauambk5umhumbzwry9blr3dqvzjsleose, CAST('False' AS...\n                                                             ^\nHINT:  You will need to rewrite or cast the expression.\n"
+        }
+      ]
     }
   ]
 }

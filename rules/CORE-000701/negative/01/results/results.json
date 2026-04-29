@@ -1,0 +1,146 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "EPOCH is missing for clinical subject-level observation.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "EPOCH": null
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000701, dataset=MH",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "execution_status": "success",
+      "execution_message": "EPOCH is missing for clinical subject-level observation.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "EPOCH": null
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "eg.xpt",
+      "domain": "EG",
+      "execution_status": "success",
+      "execution_message": "EPOCH is missing for clinical subject-level observation.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "123101",
+          "value": {
+            "EPOCH": "Not in dataset"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "EPOCH": "Not in dataset"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "EPOCH is missing for clinical subject-level observation.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "EPOCH": null
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "pc.xpt",
+      "domain": "PC",
+      "execution_status": "success",
+      "execution_message": "EPOCH is missing for clinical subject-level observation.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "EPOCH": null
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "pp.xpt",
+      "domain": "PP",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000701, dataset=PP",
+      "number_errors": 0,
+      "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ae.xpt",
+      "Row": 6,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "mh.xpt",
+      "Row": 5,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 6,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 6,
+      "Variable": "EPOCH"
+    },
+    {
+      "Sheet": "pc.xpt",
+      "Row": 6,
+      "Variable": "EPOCH"
+    }
+  ]
+}

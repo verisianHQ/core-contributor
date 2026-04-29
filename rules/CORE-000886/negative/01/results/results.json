@@ -1,0 +1,109 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000886, dataset=TS",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "A subject has a no record in EX but is not populated ARMNRS while participating in an interventional study",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "XXX100-300003",
+          "value": {
+            "ARMNRS": null,
+            "TSPARMCD": "STYPE",
+            "TSVAL": "INTERVENTIONAL"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "XXX200-400002",
+          "value": {
+            "ARMNRS": null,
+            "TSPARMCD": "STYPE",
+            "TSVAL": "INTERVENTIONAL"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "XXX300-049999",
+          "value": {
+            "ARMNRS": null,
+            "TSPARMCD": "STYPE",
+            "TSVAL": "INTERVENTIONAL"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000886, dataset=EX",
+      "number_errors": 0,
+      "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ts.xpt",
+      "Row": 14,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 14,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 14,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 8,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 8,
+      "Variable": "ARMNRS"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 9,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 9,
+      "Variable": "ARMNRS"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 10,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 10,
+      "Variable": "ARMNRS"
+    }
+  ]
+}

@@ -12,11 +12,11 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "DOMAIN": "EC",
-            "ECSEQ": 1.0,
-            "POOLID": "Not in dataset",
             "STUDYID": "Not in dataset",
-            "USUBJID": "CDISC001"
+            "DOMAIN": "EC",
+            "USUBJID": "CDISC001",
+            "POOLID": "Not in dataset",
+            "ECSEQ": 1.0
           },
           "validated": false
         }
@@ -34,11 +34,11 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "AESEQ": 2.0,
-            "DOMAIN": "Not in dataset",
-            "POOLID": "Not in dataset",
             "STUDYID": "TEST",
-            "USUBJID": "001"
+            "DOMAIN": "Not in dataset",
+            "USUBJID": "001",
+            "POOLID": "Not in dataset",
+            "AESEQ": 2.0
           },
           "validated": false
         }
@@ -56,11 +56,11 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "DOMAIN": "LB",
-            "LBSEQ": 1.0,
-            "POOLID": "Not in dataset",
             "STUDYID": "ABC123",
-            "USUBJID": "Not in dataset"
+            "DOMAIN": "LB",
+            "USUBJID": "Not in dataset",
+            "POOLID": "Not in dataset",
+            "LBSEQ": 1.0
           },
           "validated": false
         }
@@ -78,11 +78,11 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "DOMAIN": "FA",
-            "FASEQ": "Not in dataset",
-            "POOLID": "ABC123-0201",
             "STUDYID": "ABC123",
-            "USUBJID": "Not in dataset"
+            "DOMAIN": "FA",
+            "USUBJID": "Not in dataset",
+            "POOLID": "ABC123-0201",
+            "FASEQ": "Not in dataset"
           },
           "validated": false
         }

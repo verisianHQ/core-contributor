@@ -1,0 +1,162 @@
+Authorities:
+  - Organization: 'FDA'
+    Standards:
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Standardized Result in Numeric Format should be populated
+                  whenever it is applicable.'
+                Document: 'FDA'
+                Section: 'FDAB031'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB3101'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Standardized Result in Numeric Format should be populated
+                  whenever it is applicable.'
+                Document: 'FDA'
+                Section: 'FDAB031'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB3101'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Standardized Result in Numeric Format should be populated
+                  whenever it is applicable.'
+                Document: 'FDA'
+                Section: 'FDAB031'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB3101'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Standardized Result in Numeric Format should be populated
+                  whenever it is applicable.'
+                Document: 'FDA'
+                Section: 'FDAB031'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB3101'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Standardized Result in Numeric Format should be populated
+                  whenever it is applicable.'
+                Document: 'FDA'
+                Section: 'FDAB031'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB3101'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Standardized Result in Numeric Format should be populated
+                  whenever it is applicable.'
+                Document: 'FDA'
+                Section: 'FDAB031'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB3101'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'Standardized Result in Numeric Format should be populated
+                  whenever it is applicable.'
+                Document: 'FDA'
+                Section: 'FDAB031'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB3101'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'Standardized Result in Numeric Format should be populated
+                  whenever it is applicable.'
+                Document: 'FDA'
+                Section: 'FDAB031'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB3101'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: 'SENDIG-AR'
+        References:
+          - Citations:
+              - Cited Guidance: 'Standardized Result in Numeric Format should be populated
+                  whenever it is applicable.'
+                Document: 'FDA'
+                Section: 'FDAB031'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB3101'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: 'SENDIG-GENETOX'
+        References:
+          - Citations:
+              - Cited Guidance: 'Standardized Result in Numeric Format should be populated
+                  whenever it is applicable.'
+                Document: 'FDA'
+                Section: 'FDAB031'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB3101'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  all:
+    - name: --STRESC
+      operator: non_empty
+    - name: --STRESC
+      operator: matches_regex
+      value: ^-?(0|[1-9]\d*)(\.\d+)?$
+    - name: --STRESN
+      operator: empty
+Core:
+  Id: CORE-000863
+  Status: Published
+  Version: '1'
+Description: When --STRESC is populated with a numeric value, --STRESN should be populated.
+Executability: Fully Executable
+Outcome:
+  Message: --STRESC is populated with a numeric value, but --STRESN is not populated.
+  Output Variables:
+    - --STRESC
+    - --STRESN
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

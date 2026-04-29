@@ -1,0 +1,75 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBDTC falls after LBENDTC.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBDTC": "2018-01-29T07:00:17",
+            "LBENDTC": "2018-01-29T07:00:00"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "LBDTC": "2018-01-30",
+            "LBENDTC": "2018-01-29T07:00:00"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": 1,
+          "USUBJID": "CDISC003",
+          "value": {
+            "LBDTC": "2018-03",
+            "LBENDTC": "2018-02-20"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": 2,
+          "USUBJID": "CDISC003",
+          "value": {
+            "LBDTC": "2018-11",
+            "LBENDTC": "2018"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "lb.xpt",
+      "Row": 5,
+      "Variable": "LBDTC"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 7,
+      "Variable": "LBDTC"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 9,
+      "Variable": "LBDTC"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 10,
+      "Variable": "LBDTC"
+    }
+  ]
+}

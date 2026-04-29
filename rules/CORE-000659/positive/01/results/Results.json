@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AEENDTC is missing, when AEOUT = RECOVERED/RESOLVED.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AETERM": "Vomiting",
+            "AEOUT": "RECOVERED/RESOLVED",
+            "AEENDTC": null
+          }
+        }
+      ]
+    }
+  ]
+}

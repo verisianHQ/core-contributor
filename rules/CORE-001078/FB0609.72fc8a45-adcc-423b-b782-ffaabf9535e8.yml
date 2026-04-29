@@ -1,0 +1,111 @@
+# Variable: AEOUT, AESDTH
+# Condition: DTHFL = "Y"
+# Rule: Record present in AE where AESDTH = "Y" AND AEOUT= "FATAL"
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0609
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0609
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0609
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: DTHFL
+      operator: equal_to
+      value: 'Y'
+      value_is_literal: true
+    - name: $ae_aeout
+      operator: does_not_contain
+      value: 'FATAL'
+      value_is_literal: true
+    - name: $ae_aesdth
+      operator: does_not_contain
+      value: 'Y'
+      value_is_literal: true
+Core:
+  Status: Published
+  Version: '1'
+  Id: CORE-001078
+Description: When Death flag (DTHFL) in the DM dataset is populated as 'Y' then
+  a record should be present in the AE dataset where AEOUT = 'FATAL' and AESDTH
+  = 'Y' for the corresponding subject.
+Executability: Fully Executable
+Grouping_Variables:
+  - USUBJID
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: DM
+  - Keys:
+      - USUBJID
+    Name: AE
+# We make a list of the distinct values of aeout and aesdth within usubjid
+Operations:
+  - domain: AE
+    group:
+      - USUBJID
+    id: $ae_aeout
+    name: AEOUT
+    operator: distinct
+  - domain: AE
+    group:
+      - USUBJID
+    id: $ae_aesdth
+    name: AESDTH
+    operator: distinct
+Outcome:
+  Message: DTHFL in DM dataset is "Y" but a record is missing in AE dataset where
+    AESDTH = "Y" and AEOUT = "FATAL".
+  Output Variables:
+    - $ae_aeout
+    - $ae_aesdth
+    - DTHFL
+    - USUBJID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - AE
+Sensitivity: Group
+
+# When "Dataset" is taken for "Sensitivity", only the first violation is reported
+# When "Record" is taken for "Sensitivity", a violation is reported for each row in the group that violates the rule
+# Used "Group" sensitivity to outcome issue at subject level.

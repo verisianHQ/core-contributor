@@ -1,0 +1,105 @@
+{
+  "datasets": [
+    {
+      "dataset": "oi.xpt",
+      "domain": "OI",
+      "execution_status": "success",
+      "execution_message": "OIPARMCD and OIPARM do not have a one-to-one relationship.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "OIPARM": "Genotype",
+            "OIPARMCD": null
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "None",
+          "value": {
+            "OIPARM": "Genotype",
+            "OIPARMCD": "GENTYPE"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "None",
+          "value": {
+            "OIPARM": null,
+            "OIPARMCD": "SUBTYPE"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "None",
+          "value": {
+            "OIPARM": "Subtype",
+            "OIPARMCD": "SUBTYPE"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "oi.xpt",
+      "Row": 5,
+      "Variable": "OIPARMCD"
+    },
+    {
+      "Sheet": "oi.xpt",
+      "Row": 5,
+      "Variable": "OIPARM"
+    },
+    {
+      "Sheet": "oi.xpt",
+      "Row": 6,
+      "Variable": "OIPARMCD"
+    },
+    {
+      "Sheet": "oi.xpt",
+      "Row": 6,
+      "Variable": "OIPARM"
+    },
+    {
+      "Sheet": "oi.xpt",
+      "Row": 7,
+      "Variable": "OIPARMCD"
+    },
+    {
+      "Sheet": "oi.xpt",
+      "Row": 7,
+      "Variable": "OIPARM"
+    },
+    {
+      "Sheet": "oi.xpt",
+      "Row": 8,
+      "Variable": "OIPARMCD"
+    },
+    {
+      "Sheet": "oi.xpt",
+      "Row": 8,
+      "Variable": "OIPARM"
+    },
+    {
+      "Sheet": "oi.xpt",
+      "Row": 9,
+      "Variable": "OIPARMCD"
+    },
+    {
+      "Sheet": "oi.xpt",
+      "Row": 9,
+      "Variable": "OIPARM"
+    }
+  ]
+}
