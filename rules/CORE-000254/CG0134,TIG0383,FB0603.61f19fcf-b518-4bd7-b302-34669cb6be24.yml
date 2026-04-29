@@ -126,11 +126,13 @@ Match Datasets:
       - USUBJID
     Name: AE
 Outcome:
-  Message: DTHFL is not equal to 'Y' but AEOUT in AE Dataset
+  Message: DTHFL is not equal to 'Y' but AEOUT in AE dataset
     is equal to 'FATAL'.
   Output Variables:
     - DTHFL
     - AEOUT
+    - AETERM
+    - AESTDTC
 Rule Type: Record Data
 Scope:
   Classes:

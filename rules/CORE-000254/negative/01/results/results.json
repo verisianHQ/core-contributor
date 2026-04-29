@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "DTHFL is not equal to 'Y' but AEOUT in AE Dataset is equal to 'FATAL'.",
+      "execution_message": "DTHFL is not equal to 'Y' but AEOUT in AE dataset is equal to 'FATAL'.",
       "number_errors": 1,
       "errors": [
         {
@@ -13,7 +13,9 @@
           "USUBJID": "123101",
           "value": {
             "DTHFL": null,
-            "AEOUT": "FATAL"
+            "AEOUT": "FATAL",
+            "AETERM": "SUDDEN CARDIAC DEATH",
+            "AESTDTC": "Not in dataset"
           },
           "validated": true
         }
