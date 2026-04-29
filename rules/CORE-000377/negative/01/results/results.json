@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "DM.ARMCD must equal DM.ACTARMCD when subject is either a screen failure or not assigned to treatment",
+      "execution_message": "ARMCD must be equal to ACTARMCD in DM dataset when subject is either a screen failure or not assigned to treatment.",
       "number_errors": 2,
       "errors": [
         {
@@ -14,7 +14,7 @@
           "value": {
             "ARMCD": "NOTASSGN"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 7,
@@ -23,31 +23,9 @@
           "value": {
             "ARMCD": "SCRNFAIL"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "ARMCD"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "ARM"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 11,
-      "Variable": "ARMCD"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 11,
-      "Variable": "ARM"
     }
   ]
 }

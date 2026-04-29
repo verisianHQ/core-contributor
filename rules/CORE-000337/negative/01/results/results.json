@@ -4,7 +4,7 @@
       "dataset": "suppdm.xpt",
       "domain": "SUPPDM",
       "execution_status": "success",
-      "execution_message": "Multiple races are collected in SUPPDM but RACE in DM does not equal \"MULTIPLE\".",
+      "execution_message": "Multiple races are populated in SUPPDM but RACE in the DM dataset does not equal 'MULTIPLE'.",
       "number_errors": 5,
       "errors": [
         {
@@ -12,50 +12,50 @@
           "SEQ": null,
           "USUBJID": "CDISC008",
           "value": {
-            "QNAM": "RACE1",
-            "RACE": "WHITE"
+            "RACE": "WHITE",
+            "QNAM": "RACE1"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": null,
           "USUBJID": "CDISC008",
           "value": {
-            "QNAM": "RACE11",
-            "RACE": "WHITE"
+            "RACE": "WHITE",
+            "QNAM": "RACE11"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": null,
           "USUBJID": "CDISC008",
           "value": {
-            "QNAM": "RACE10",
-            "RACE": "WHITE"
+            "RACE": "WHITE",
+            "QNAM": "RACE10"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
           "SEQ": null,
           "USUBJID": "CDISC009",
           "value": {
-            "QNAM": "RACEA",
-            "RACE": "WHITE"
+            "RACE": "WHITE",
+            "QNAM": "RACEA"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 5,
           "SEQ": null,
           "USUBJID": "CDISC010",
           "value": {
-            "QNAM": "RACEBL",
-            "RACE": "BLACK"
+            "RACE": "BLACK",
+            "QNAM": "RACEBL"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
