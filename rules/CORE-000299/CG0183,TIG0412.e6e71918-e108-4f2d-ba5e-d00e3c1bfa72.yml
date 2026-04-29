@@ -68,7 +68,7 @@ Authorities:
         Version: '1.0'
 Check:
   # Changed by Marcelina Hungria on 2025-05-29 and revised on 2026-04-15.
-  # Fixed the regex and the LBORRES non-empty condition per revised Description.
+  # Fixed the regex and the LBORRES non-empty condition per revised description.
   # Changed to Fully Executable. See Jira ticket: CORERULES-156 (CG0180) and SDTMIGRULE-288.
   all:
     - name: LBORRES
