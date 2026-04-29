@@ -41,7 +41,7 @@ Executability: Fully Executable
 Outcome:
   Message: RFSTDTC must be populated when ACTARM is not equal to 
     'Screen Failure', 'Not Assigned', 'Not Treated'.
-  Outcome Variables: 
+  Output Variables: 
     - RFSTDTC
     - ACTARM
 Rule Type: Record Data
