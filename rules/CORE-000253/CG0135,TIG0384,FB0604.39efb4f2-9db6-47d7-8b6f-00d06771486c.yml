@@ -118,7 +118,7 @@ Core:
   Id: CORE-000253
   Status: Published
   Version: '1'
-Description: Riase an error when AE.AESDTH is equal to 'Y'
+Description: Raise an error when AESDTH in the AE dataset is equal to 'Y'
   and DTHFL is not equal to 'Y'
 Executability: Fully Executable
 Match Datasets:
@@ -126,7 +126,13 @@ Match Datasets:
       - USUBJID
     Name: AE
 Outcome:
-  Message: DTHFL is not equal to 'Y' when AE.AESDTH is equal to 'Y'.
+  Message: DTHFL is not equal to 'Y' but AESDTH in the AE dataset 
+    is equal to 'Y'.
+  Output Variables:
+    - DTHFL
+    - AESDTH
+    - AETERM
+    - AESTDTC
 Rule Type: Record Data
 Scope:
   Classes:

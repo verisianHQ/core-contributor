@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "DTHFL is not equal to 'Y' when AE.AESDTH is equal to 'Y'.",
+      "execution_message": "DTHFL is not equal to 'Y' but AESDTH in the AE dataset is equal to 'Y'.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,10 +12,12 @@
           "SEQ": null,
           "USUBJID": "123101",
           "value": {
+            "DTHFL": null,
             "AESDTH": "Y",
-            "DTHFL": null
+            "AETERM": "SUDDEN CARDIAC DEATH",
+            "AESTDTC": "Not in dataset"
           },
-          "validated": true
+          "validated": false
         }
       ]
     },
@@ -34,6 +36,14 @@
       "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000253, dataset=DD",
       "number_errors": 0,
       "errors": []
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "DTHFL": null,
+        "AESDTH": "Y"
+      }
     }
   ]
 }
