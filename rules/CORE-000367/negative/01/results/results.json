@@ -4,8 +4,8 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "ACTARM is not in TA.ARM, but ACTARM in DM does not equal 'Screen Failure', 'Not Assigned', 'Not Treated', or 'Unplanned Treatment'.",
-      "number_errors": 4,
+      "execution_message": "ACTARM value in the DM dataset must equal 'Screen Failure', 'Not Assigned', 'Not Treated', or 'Unplanned Treatment' if the value does not match an ACTARM value in the TA dataset.",
+      "number_errors": 5,
       "errors": [
         {
           "row": 1,
@@ -31,6 +31,15 @@
           "USUBJID": "CDISC003",
           "value": {
             "ACTARM": "ACME High Dose"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "CDISC005",
+          "value": {
+            "ACTARM": "ScreEN failURE"
           },
           "validated": true
         },
