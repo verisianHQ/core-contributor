@@ -38,8 +38,8 @@ Core:
   Id: CORE-000330
   Status: Published
   Version: '1'
-Description: Raise an error when ACTARM value does not match ARM value in
-  Demographics when ARM equals 'Screen Failure' or 'Not Assigned'
+Description: Raise an error when ARM value is 'Screen Failure' or 
+  'Not Assigned' and the value in ARM does not equal ACTARM.
 Executability: Fully Executable
 Outcome:
   Message: ARM must equal ACTARM when ARM is 'Screen Failure' or 'Not Assigned'.
