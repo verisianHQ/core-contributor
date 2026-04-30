@@ -5,14 +5,15 @@
       "domain": "AE",
       "execution_status": "success",
       "execution_message": "AEHLTCD is not a valid MedDRA high level term code.",
-      "number_errors": 4,
+      "number_errors": 5,
       "errors": [
         {
           "row": 1,
           "SEQ": 1,
           "USUBJID": "CDISC-TEST-001",
           "value": {
-            "AEHLTCD": 10027678000.0
+            "AEHLTCD": 10027678000.0,
+            "AETERM": "UPSET STOMACH"
           },
           "validated": true
         },
@@ -21,7 +22,18 @@
           "SEQ": 3,
           "USUBJID": "CDISC-TEST-001",
           "value": {
-            "AEHLTCD": 10068757.5
+            "AEHLTCD": 10068757.5,
+            "AETERM": "BACK PAIN"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "AEHLTCD": 10046318.0,
+            "AETERM": "BACK PAIN"
           },
           "validated": true
         },
@@ -30,7 +42,8 @@
           "SEQ": 5,
           "USUBJID": "CDISC-TEST-001",
           "value": {
-            "AEHLTCD": 9999.0
+            "AEHLTCD": 9999.0,
+            "AETERM": "DIARRHOEA"
           },
           "validated": true
         },
@@ -39,11 +52,18 @@
           "SEQ": 6,
           "USUBJID": "CDISC-TEST-001",
           "value": {
-            "AEHLTCD": 1.0
+            "AEHLTCD": 1.0,
+            "AETERM": "HEADACHE"
           },
           "validated": true
         }
       ]
     }
-  ]
+  ],
+  "dictionary_versions": {
+    "meddra": {
+      "version": "29.0",
+      "language": "English"
+    }
+  }
 }

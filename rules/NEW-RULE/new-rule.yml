@@ -47,6 +47,8 @@ Check:
   all:
     - name: --HLTCD
       operator: is_not_valid_meddra_code_reference
+      filter_attribute: term_type
+      filter_value: HLT
 Core:
   Id: CDISC.SDTMIG.CG0382
   Status: Draft
@@ -55,6 +57,9 @@ Description: Raise an error when --HLTCD is not a valid MedDRA high level term c
 Executability: Fully Executable
 Outcome:
   Message: --HLTCD is not a valid MedDRA high level term code.
+  Output Variables:
+    - --HLTCD
+    - --TERM
 Rule Type: Record Data
 Scope:
   Classes:
