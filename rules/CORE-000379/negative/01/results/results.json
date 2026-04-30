@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "RFSTDTC must be null when ACTARM is equal to any of the values 'Screen Failure', 'Not Assigned', or 'Not Treated'.",
+      "execution_message": "RFSTDTC must not be populated when ACTARM is equal to any of the values 'Screen Failure', 'Not Assigned', or 'Not Treated'.",
       "number_errors": 2,
       "errors": [
         {

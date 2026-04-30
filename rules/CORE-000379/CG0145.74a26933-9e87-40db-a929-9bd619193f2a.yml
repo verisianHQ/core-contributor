@@ -39,8 +39,8 @@ Description: Raise an error when RFSTDTC is populated, but ACTARM is either
   'Screen Failure', 'Not Assigned', or 'Not Treated'.
 Executability: Partially Executable
 Outcome:
-  Message: RFSTDTC must be null when ACTARM is equal to any of the values
-    'Screen Failure', 'Not Assigned', or 'Not Treated'.
+  Message: RFSTDTC must not be populated when ACTARM is equal to any of the
+    values 'Screen Failure', 'Not Assigned', or 'Not Treated'.
   Output Variables:
     - RFSTDTC
     - ACTARM
