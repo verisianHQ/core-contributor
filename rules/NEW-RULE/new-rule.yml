@@ -47,6 +47,8 @@ Check:
   all:
     - name: --PTCD
       operator: is_not_valid_meddra_code_reference
+      filter_attribute: term_type
+      filter_value: PT
 Core:
   Id: CDISC.SDTMIG.CG0380
   Status: Draft
@@ -55,6 +57,9 @@ Description: Raise an error when --PTCD is not a valid MedDRA preferred term cod
 Executability: Fully Executable
 Outcome:
   Message: --PTCD  is not a valid MedDRA preferred term code.
+  Output Variables:
+    - --PTCD
+    - --TERM
 Rule Type: Record Data
 Scope:
   Classes:
