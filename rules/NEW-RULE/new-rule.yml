@@ -47,6 +47,8 @@ Check:
   all:
     - name: --HLGT
       operator: is_not_valid_meddra_term_reference
+      filter_attribute: term_type
+      filter_value: HLGT
 Core:
   Id: CDISC.SDTMIG.CG0383
   Status: Draft
@@ -55,6 +57,9 @@ Description: Raise an error when --HLGT is not a valid MedDRA high level group t
 Executability: Fully Executable
 Outcome:
   Message: --HLGT is not a valid MedDRA high level group term.
+  Output Variables:
+    - --HLGT
+    - --TERM
 Rule Type: Record Data
 Scope:
   Classes:
