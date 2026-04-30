@@ -53,6 +53,8 @@ Check:
   all:
     - name: --BODSYS
       operator: is_not_valid_meddra_term_reference
+      filter_attribute: term_type
+      filter_value: SOC
 Core:
   Id: CDISC.SDTMIG.CG0385
   Status: Draft
@@ -61,6 +63,9 @@ Description: Raise an error when --BODSYS is not a valid MedDRA system organ cla
 Executability: Fully Executable
 Outcome:
   Message: --BODSYS is not a valid MedDRA system organ class.
+  Output Variables:
+    - --BODSYS
+    - --TERM
 Rule Type: Record Data
 Scope:
   Classes:

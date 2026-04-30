@@ -5,14 +5,15 @@
       "domain": "AE",
       "execution_status": "success",
       "execution_message": "AEBODSYS is not a valid MedDRA system organ class.",
-      "number_errors": 4,
+      "number_errors": 5,
       "errors": [
         {
           "row": 1,
           "SEQ": 1,
           "USUBJID": "CDISC-TEST-001",
           "value": {
-            "AEBODSYS": "Gastrointestinal orders"
+            "AEBODSYS": "Gastrointestinal orders",
+            "AETERM": "UPSET STOMACH"
           },
           "validated": true
         },
@@ -21,7 +22,18 @@
           "SEQ": 3,
           "USUBJID": "CDISC-TEST-001",
           "value": {
-            "AEBODSYS": "Connective tissue disorders"
+            "AEBODSYS": "Connective tissue disorders",
+            "AETERM": "BACK PAIN"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "AEBODSYS": "Allergic conditions",
+            "AETERM": "BACK PAIN"
           },
           "validated": true
         },
@@ -30,7 +42,8 @@
           "SEQ": 5,
           "USUBJID": "CDISC-TEST-001",
           "value": {
-            "AEBODSYS": "10017947"
+            "AEBODSYS": "10017947",
+            "AETERM": "DIARRHOEA"
           },
           "validated": true
         },
@@ -39,11 +52,18 @@
           "SEQ": 6,
           "USUBJID": "CDISC-TEST-001",
           "value": {
-            "AEBODSYS": "NVD"
+            "AEBODSYS": "NVD",
+            "AETERM": "HEADACHE"
           },
           "validated": true
         }
       ]
     }
-  ]
+  ],
+  "dictionary_versions": {
+    "meddra": {
+      "version": "29.0",
+      "language": "English"
+    }
+  }
 }
