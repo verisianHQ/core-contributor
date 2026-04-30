@@ -3,18 +3,38 @@
     {
       "dataset": "qscgi2.xpt",
       "domain": "QS",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000510, dataset=QSCGI2",
-      "number_errors": 0,
-      "errors": []
+      "execution_status": "success",
+      "execution_message": "Split dataset name is not 3 or 4 characters in length.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "dataset_name": "QSCGI2"
+          },
+          "validated": true
+        }
+      ]
     },
     {
       "dataset": "qscgi.xpt",
       "domain": "QS",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000510, dataset=QSCGI",
-      "number_errors": 0,
-      "errors": []
+      "execution_status": "success",
+      "execution_message": "Split dataset name is not 3 or 4 characters in length.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "dataset_name": "QSCGI"
+          },
+          "validated": true
+        }
+      ]
     }
   ]
 }

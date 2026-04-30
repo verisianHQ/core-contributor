@@ -1,0 +1,77 @@
+# Variable: GEN
+# Condition: 
+# Rule: Each record is unique per sponsor defined key variables as documented in the define.xml
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Note that the key variables shown in this table are examples only. A sponsor's actual key structure may be different.
+                Document: IG v3.4
+                Section: Table 3.2.1
+              - Cited Guidance: Since the purpose of this column is to aid reviewers in understanding the structure of a dataset, sponsors should list all of the natural keys (see definition below) for the dataset. These keys should define uniqueness for records within a dataset, and may define a record sort order. The identified keys for each dataset should be consistent with the description of the dataset structure as described in the Define-XML document.]
+                Document: IG v3.4
+                Section: 3.2.1.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0019
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Note that the key variables shown in this table are examples only. A sponsor's actual key structure may be different.
+                Document: IG v3.3
+                Section: Table 3.2.1
+              - Cited Guidance: Since the purpose of this column is to aid reviewers in understanding the structure of a dataset, sponsors should list all of the natural keys (see definition below) for the dataset. These keys should define uniqueness for records within a dataset, and may define a record sort order.
+                Document: IG v3.3
+                Section: 3.2.1.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0019
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Note that the key variables shown in this table are examples only. A sponsor's actual key structure may be different.
+                Document: IG v3.2
+                Section: Table 3.2.1
+              - Cited Guidance: Since the purpose of this column is to aid reviewers in understanding the structure of a dataset, sponsors should list all of the natural keys (see definition below) for the dataset. These keys should define uniqueness for records within a dataset, and may define a record sort order.
+                Document: IG v3.2
+                Section: 3.2.1.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0019
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+Check:
+  all:
+    - name: define_key_sequence_is_unique
+      operator: equal_to
+      value: false
+Core:
+  Id: CORE-002007
+  Status: Published
+  Version: '1'
+Description: Raise an error when records are not unique as per sponsor defined key variables described in the define-xml document.
+Executability: Fully Executable
+Outcome:
+  Message: Based on the key variables defined in the define-xml document, duplicate records are present in the dataset.
+  Output Variables:
+    - define_dataset_key_sequence
+    - define_key_sequence_is_unique
+Rule Type: Dataset Contents Check against Define XML
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record
