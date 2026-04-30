@@ -54,6 +54,8 @@ Check:
       operator: non_empty
     - name: --DECOD
       operator: is_not_valid_meddra_term_reference
+      filter_attribute: term_type
+      filter_value: PT
 Core:
   Id: CDISC.SDTMIG.CG0379
   Status: Draft
@@ -65,6 +67,7 @@ Outcome:
   Message: --DECOD is completed but value is not a valid MedDRA preferred TERM.
   Output Variables:
     - --DECOD
+    - --TERM
 Rule Type: Record Data
 Scope:
   Classes:
