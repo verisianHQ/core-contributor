@@ -4,7 +4,7 @@
       "dataset": "ag.xpt",
       "domain": "AG",
       "execution_status": "success",
-      "execution_message": "AGPRESP should be populated as \"Y\" when AGOCCUR is provided.",
+      "execution_message": "AGPRESP should be populated as 'Y' when AGOCCUR is populated.",
       "number_errors": 3,
       "errors": [
         {
@@ -12,30 +12,30 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "AGOCCUR": "Y",
-            "AGPRESP": "Not in dataset"
+            "AGPRESP": "Not in dataset",
+            "AGOCCUR": "Y"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "AGOCCUR": "N",
-            "AGPRESP": "Not in dataset"
+            "AGPRESP": "Not in dataset",
+            "AGOCCUR": "N"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": 3,
           "USUBJID": "CDISC001",
           "value": {
-            "AGOCCUR": "Y",
-            "AGPRESP": "Not in dataset"
+            "AGPRESP": "Not in dataset",
+            "AGOCCUR": "Y"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -43,7 +43,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMPRESP should be populated as \"Y\" when CMOCCUR is provided.",
+      "execution_message": "CMPRESP should be populated as 'Y' when CMOCCUR is populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -51,10 +51,10 @@
           "SEQ": 3,
           "USUBJID": "CDISC001",
           "value": {
-            "CMOCCUR": "Y",
-            "CMPRESP": null
+            "CMPRESP": null,
+            "CMOCCUR": "Y"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -62,7 +62,7 @@
       "dataset": "ec.xpt",
       "domain": "EC",
       "execution_status": "success",
-      "execution_message": "ECPRESP should be populated as \"Y\" when ECOCCUR is provided.",
+      "execution_message": "ECPRESP should be populated as 'Y' when ECOCCUR is populated.",
       "number_errors": 3,
       "errors": [
         {
@@ -70,30 +70,30 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "ECOCCUR": "Y",
-            "ECPRESP": null
+            "ECPRESP": null,
+            "ECOCCUR": "Y"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "ECOCCUR": "N",
-            "ECPRESP": null
+            "ECPRESP": null,
+            "ECOCCUR": "N"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": 3,
           "USUBJID": "CDISC001",
           "value": {
-            "ECOCCUR": "Y",
-            "ECPRESP": null
+            "ECPRESP": null,
+            "ECOCCUR": "Y"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -109,7 +109,7 @@
       "dataset": "ml.xpt",
       "domain": "ML",
       "execution_status": "success",
-      "execution_message": "MLPRESP should be populated as \"Y\" when MLOCCUR is provided.",
+      "execution_message": "MLPRESP should be populated as 'Y' when MLOCCUR is populated.",
       "number_errors": 3,
       "errors": [
         {
@@ -117,30 +117,30 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "MLOCCUR": "Y",
-            "MLPRESP": null
+            "MLPRESP": null,
+            "MLOCCUR": "Y"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "MLOCCUR": "N",
-            "MLPRESP": null
+            "MLPRESP": null,
+            "MLOCCUR": "N"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": 3,
           "USUBJID": "CDISC001",
           "value": {
-            "MLOCCUR": "Y",
-            "MLPRESP": null
+            "MLPRESP": null,
+            "MLOCCUR": "Y"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -148,7 +148,7 @@
       "dataset": "pr.xpt",
       "domain": "PR",
       "execution_status": "success",
-      "execution_message": "PRPRESP should be populated as \"Y\" when PROCCUR is provided.",
+      "execution_message": "PRPRESP should be populated as 'Y' when PROCCUR is populated.",
       "number_errors": 3,
       "errors": [
         {
@@ -156,30 +156,30 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "PROCCUR": "Y",
-            "PRPRESP": null
+            "PRPRESP": null,
+            "PROCCUR": "Y"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "PROCCUR": "N",
-            "PRPRESP": null
+            "PRPRESP": null,
+            "PROCCUR": "N"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": 3,
           "USUBJID": "CDISC001",
           "value": {
-            "PROCCUR": "Y",
-            "PRPRESP": null
+            "PRPRESP": null,
+            "PROCCUR": "Y"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -187,7 +187,7 @@
       "dataset": "su.xpt",
       "domain": "SU",
       "execution_status": "success",
-      "execution_message": "SUPRESP should be populated as \"Y\" when SUOCCUR is provided.",
+      "execution_message": "SUPRESP should be populated as 'Y' when SUOCCUR is populated.",
       "number_errors": 3,
       "errors": [
         {
@@ -195,30 +195,30 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "SUOCCUR": "Y",
-            "SUPRESP": null
+            "SUPRESP": null,
+            "SUOCCUR": "Y"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "SUOCCUR": "N",
-            "SUPRESP": null
+            "SUPRESP": null,
+            "SUOCCUR": "N"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": 3,
           "USUBJID": "CDISC001",
           "value": {
-            "SUOCCUR": "N",
-            "SUPRESP": null
+            "SUPRESP": null,
+            "SUOCCUR": "N"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -234,7 +234,7 @@
       "dataset": "be.xpt",
       "domain": "BE",
       "execution_status": "success",
-      "execution_message": "BEPRESP should be populated as \"Y\" when BEOCCUR is provided.",
+      "execution_message": "BEPRESP should be populated as 'Y' when BEOCCUR is populated.",
       "number_errors": 4,
       "errors": [
         {
@@ -242,40 +242,40 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "BEOCCUR": "Y",
-            "BEPRESP": null
+            "BEPRESP": null,
+            "BEOCCUR": "Y"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "BEOCCUR": "N",
-            "BEPRESP": null
+            "BEPRESP": null,
+            "BEOCCUR": "N"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": 3,
           "USUBJID": "CDISC001",
           "value": {
-            "BEOCCUR": "Y",
-            "BEPRESP": null
+            "BEPRESP": null,
+            "BEOCCUR": "Y"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
           "SEQ": 4,
           "USUBJID": "CDISC001",
           "value": {
-            "BEOCCUR": "N",
-            "BEPRESP": null
+            "BEPRESP": null,
+            "BEOCCUR": "N"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -283,7 +283,7 @@
       "dataset": "ce.xpt",
       "domain": "CE",
       "execution_status": "success",
-      "execution_message": "CEPRESP should be populated as \"Y\" when CEOCCUR is provided.",
+      "execution_message": "CEPRESP should be populated as 'Y' when CEOCCUR is populated.",
       "number_errors": 4,
       "errors": [
         {
@@ -291,40 +291,40 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "CEOCCUR": "Y",
-            "CEPRESP": null
+            "CEPRESP": null,
+            "CEOCCUR": "Y"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "CEOCCUR": "Y",
-            "CEPRESP": null
+            "CEPRESP": null,
+            "CEOCCUR": "Y"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": 3,
           "USUBJID": "CDISC001",
           "value": {
-            "CEOCCUR": "Y",
-            "CEPRESP": null
+            "CEPRESP": null,
+            "CEOCCUR": "Y"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
           "SEQ": 4,
           "USUBJID": "CDISC001",
           "value": {
-            "CEOCCUR": "N",
-            "CEPRESP": null
+            "CEPRESP": null,
+            "CEOCCUR": "N"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -348,7 +348,7 @@
       "dataset": "ho.xpt",
       "domain": "HO",
       "execution_status": "success",
-      "execution_message": "HOPRESP should be populated as \"Y\" when HOOCCUR is provided.",
+      "execution_message": "HOPRESP should be populated as 'Y' when HOOCCUR is populated.",
       "number_errors": 4,
       "errors": [
         {
@@ -356,40 +356,40 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "HOOCCUR": "Y",
-            "HOPRESP": null
+            "HOPRESP": null,
+            "HOOCCUR": "Y"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "HOOCCUR": "Y",
-            "HOPRESP": null
+            "HOPRESP": null,
+            "HOOCCUR": "Y"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": 3,
           "USUBJID": "CDISC001",
           "value": {
-            "HOOCCUR": "Y",
-            "HOPRESP": null
+            "HOPRESP": null,
+            "HOOCCUR": "Y"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
           "SEQ": 1,
           "USUBJID": "CDISC002",
           "value": {
-            "HOOCCUR": "N",
-            "HOPRESP": null
+            "HOPRESP": null,
+            "HOOCCUR": "N"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -397,7 +397,7 @@
       "dataset": "mh.xpt",
       "domain": "MH",
       "execution_status": "success",
-      "execution_message": "MHPRESP should be populated as \"Y\" when MHOCCUR is provided.",
+      "execution_message": "MHPRESP should be populated as 'Y' when MHOCCUR is populated.",
       "number_errors": 4,
       "errors": [
         {
@@ -405,40 +405,40 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "MHOCCUR": "Y",
-            "MHPRESP": null
+            "MHPRESP": null,
+            "MHOCCUR": "Y"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "MHOCCUR": "Y",
-            "MHPRESP": null
+            "MHPRESP": null,
+            "MHOCCUR": "Y"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": 3,
           "USUBJID": "CDISC001",
           "value": {
-            "MHOCCUR": "Y",
-            "MHPRESP": null
+            "MHPRESP": null,
+            "MHOCCUR": "Y"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
           "SEQ": 1,
           "USUBJID": "CDISC002",
           "value": {
-            "MHOCCUR": "N",
-            "MHPRESP": null
+            "MHPRESP": null,
+            "MHOCCUR": "N"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
