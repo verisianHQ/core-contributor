@@ -12,11 +12,33 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "The date portion of LBDTC is not complete date or the date portion of DM.RFSTDTC is not complete date, but LBDY is not empty",
-      "number_errors": 7,
+      "execution_message": "The date portion of LBDTC or RFSTDTC is incomplete, but LBDY is not empty.",
+      "number_errors": 5,
       "errors": [
         {
           "row": 1,
+          "SEQ": 6,
+          "USUBJID": "123101",
+          "value": {
+            "LBDTC": null,
+            "LBDY": 1.0,
+            "RFSTDTC": "2005-10-13T10:15"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 7,
+          "USUBJID": "123101",
+          "value": {
+            "LBDTC": null,
+            "LBDY": 141.0,
+            "RFSTDTC": "2005-10-13T10:15"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
           "SEQ": 1,
           "USUBJID": "123102",
           "value": {
@@ -24,133 +46,62 @@
             "LBDY": -15.0,
             "RFSTDTC": "2005-10"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 5,
+          "row": 4,
           "SEQ": 5,
           "USUBJID": "123102",
           "value": {
             "LBDTC": "2005-09-28",
-            "LBDY": -15.0,
+            "LBDY": -20.0,
             "RFSTDTC": "2005-10"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 6,
+          "row": 5,
           "SEQ": 6,
-          "USUBJID": "123102",
-          "value": {
-            "LBDTC": null,
-            "LBDY": 1.0,
-            "RFSTDTC": "2005-10"
-          },
-          "validated": false
-        },
-        {
-          "row": 7,
-          "SEQ": 7,
-          "USUBJID": "123102",
-          "value": {
-            "LBDTC": null,
-            "LBDY": 141.0,
-            "RFSTDTC": "2005-10"
-          },
-          "validated": false
-        },
-        {
-          "row": 9,
-          "SEQ": 1,
-          "USUBJID": "123101",
+          "USUBJID": "123103",
           "value": {
             "LBDTC": "2005-09",
-            "LBDY": -15.0,
-            "RFSTDTC": "2005-10-13T10:15"
+            "LBDY": -21.0,
+            "RFSTDTC": null
           },
-          "validated": false
-        },
-        {
-          "row": 11,
-          "SEQ": 3,
-          "USUBJID": "123101",
-          "value": {
-            "LBDTC": null,
-            "LBDY": 141.0,
-            "RFSTDTC": "2005-10-13T10:15"
-          },
-          "validated": false
-        },
-        {
-          "row": 12,
-          "SEQ": 4,
-          "USUBJID": "123101",
-          "value": {
-            "LBDTC": "2006-05",
-            "LBDY": 213.0,
-            "RFSTDTC": "2005-10-13T10:15"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     },
     {
-      "dataset": "ae.xpt",
-      "domain": "AE",
+      "dataset": "ce.xpt",
+      "domain": "CE",
       "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
-    },
-    {
-      "dataset": "ex.xpt",
-      "domain": "EX",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "lb.xpt",
-      "Row": 5,
-      "Variable": "LBDY"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 9,
-      "Variable": "LBDY"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 10,
-      "Variable": "LBDY"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 11,
-      "Variable": "LBDY"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 13,
-      "Variable": "LBDY"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 14,
-      "Variable": "LBDY"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 15,
-      "Variable": "LBDY"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 16,
-      "Variable": "LBDY"
+      "execution_message": "The date portion of CEDTC or RFSTDTC is incomplete, but CEDY is not empty.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "123101",
+          "value": {
+            "CEDTC": "2014-10",
+            "CEDY": 74.0,
+            "RFSTDTC": "2005-10-13T10:15"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "123102",
+          "value": {
+            "CEDTC": "2014-10-31",
+            "CEDY": 74.0,
+            "RFSTDTC": "2005-10"
+          },
+          "validated": true
+        }
+      ]
     }
   ]
 }
