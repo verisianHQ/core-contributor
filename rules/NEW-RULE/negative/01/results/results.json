@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVAL is not a valid term from SNOMED CT.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "INDIC",
+            "TSVAL": "FAKESNOMEDTERM"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "TDIGRP",
+            "TSVAL": "FAKESNOMEDTERM"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
