@@ -1,0 +1,72 @@
+# Variable: --LLT
+# Condition: 
+# Rule: --LLT = MedDRA lowest level TERM
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The lowest-level term assigned to the event from MedDRA.
+                Document: Model v2.0
+                Item: --LLT
+                Section: Events
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0377
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: MedDRA Lowest Level Term.
+                Document: Model v1.7
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0377
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: MedDRA Lowest Level Term.
+                Document: Model v1.4
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0377
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+Check:
+  all:
+    - name: --LLT
+      operator: is_not_valid_meddra_term_reference
+      filter_attribute: term_type
+      filter_value: LLT
+Core:
+  Id: CDISC.SDTMIG.CG0377
+  Status: Draft
+  Version: '1'
+Description: Raise an error when --LLT is not a valid MedDRA lowest level TERM.
+Executability: Fully Executable
+Outcome:
+  Message: --LLT is not a valid MedDRA lowest level TERM.
+  Output Variables:
+    - --LLT
+    - --TERM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - AE
+      - MH
+      - CE
+Sensitivity: Record
