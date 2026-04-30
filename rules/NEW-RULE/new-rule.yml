@@ -51,6 +51,8 @@ Check:
   all:
     - name: --BDSYCD
       operator: is_not_valid_meddra_code_reference
+      filter_attribute: term_type
+      filter_value: SOC
 Core:
   Id: CDISC.SDTMIG.CG0386
   Status: Draft
@@ -61,6 +63,7 @@ Outcome:
   Message: --BDSYCD is not a valid MedDRA system organ class code.
   Output Variables:
     - --BDSYCD
+    - --TERM
 Rule Type: Record Data
 Scope:
   Classes:
