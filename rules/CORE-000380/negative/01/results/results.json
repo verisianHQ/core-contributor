@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "RFSTDTC must not be null when ACTARM is not in (Screen Failure, Not Assigned, Not Treated.",
+      "execution_message": "RFSTDTC must be populated when ACTARM is not equal to 'Screen Failure', 'Not Assigned', 'Not Treated'.",
       "number_errors": 1,
       "errors": [
         {
@@ -15,41 +15,9 @@
             "ACTARM": "Placebo",
             "RFSTDTC": null
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "RFSTDTC"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "RFENDTC"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "RFSTDTC"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "RFENDTC"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 7,
-      "Variable": "RFSTDTC"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 7,
-      "Variable": "RFENDTC"
     }
   ]
 }
