@@ -47,6 +47,8 @@ Check:
   all:
     - name: --HLT
       operator: is_not_valid_meddra_term_reference
+      filter_attribute: term_type
+      filter_value: HLT
 Core:
   Id: CDISC.SDTMIG.CG0381
   Status: Draft
@@ -55,6 +57,9 @@ Description: Raise an error when --HLT is not a valid MedDRA high level term.
 Executability: Fully Executable
 Outcome:
   Message: --HLT is not a valid MedDRA high level term.
+  Output Variables:
+    - --HLT
+    - --TERM
 Rule Type: Record Data
 Scope:
   Classes:

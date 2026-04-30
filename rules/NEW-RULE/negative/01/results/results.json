@@ -5,14 +5,25 @@
       "domain": "AE",
       "execution_status": "success",
       "execution_message": "AEHLT is not a valid MedDRA high level term.",
-      "number_errors": 4,
+      "number_errors": 5,
       "errors": [
         {
           "row": 2,
           "SEQ": 2,
           "USUBJID": "CDISC-TEST-001",
           "value": {
-            "AEHLT": "Gastrointestinal signs and symptoms"
+            "AEHLT": "Gastrointestinal signs and symptoms",
+            "AETERM": "UPSET STOMACH"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "AEHLT": "Cardiac disorders",
+            "AETERM": "BACK PAIN"
           },
           "validated": true
         },
@@ -21,7 +32,8 @@
           "SEQ": 4,
           "USUBJID": "CDISC-TEST-001",
           "value": {
-            "AEHLT": "Wrong value"
+            "AEHLT": "Wrong value",
+            "AETERM": "BACK PAIN"
           },
           "validated": true
         },
@@ -30,7 +42,8 @@
           "SEQ": 5,
           "USUBJID": "CDISC-TEST-001",
           "value": {
-            "AEHLT": "10012735"
+            "AEHLT": "10012735",
+            "AETERM": "DIARRHOEA"
           },
           "validated": true
         },
@@ -39,11 +52,18 @@
           "SEQ": 6,
           "USUBJID": "CDISC-TEST-001",
           "value": {
-            "AEHLT": "Head pain"
+            "AEHLT": "Head pain",
+            "AETERM": "HEADACHE"
           },
           "validated": true
         }
       ]
     }
-  ]
+  ],
+  "dictionary_versions": {
+    "meddra": {
+      "version": "29.0",
+      "language": "English"
+    }
+  }
 }
