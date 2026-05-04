@@ -1,17 +1,18 @@
 # Variable: ELEMENT
 # Condition: ETCD = 'UNPLAN'
 # Rule: ELEMENT = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The name of the Element. If ETCD has a value of 'UNPLAN' then
+              - Cited Guidance: The name of the Element. If ETCD has a value of "UNPLAN" then
                   ELEMENT should be null.
-                Document: SDTMIG v3.4
+                Document: IG v3.4
                 Item: Specification
-                Section: 5.3 Specification
+                Section: '5.3'
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0152
@@ -171,7 +172,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: For unplanned Elements, ETCD should be populated with “UNPLAN”,
+              - Cited Guidance: For unplanned Elements, ETCD should be populated with "UNPLAN",
                   ELEMENT should be left blank, and SEUPDES should be populated
                   with a description of the unplanned Element.
                 Document: TIG v1.0
@@ -189,6 +190,7 @@ Check:
     - name: ETCD
       operator: equal_to
       value: UNPLAN
+      value_is_literal: true
     - name: ELEMENT
       operator: non_empty
 Core:

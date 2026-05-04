@@ -4,8 +4,8 @@
       "dataset": "ex.xpt",
       "domain": "EX",
       "execution_status": "success",
-      "execution_message": "EXTRT is PLACEBO, but EXDOSE is not equal to 0.",
-      "number_errors": 2,
+      "execution_message": "EXDOSE should be 0 when EXTRT = PLACEBO.",
+      "number_errors": 3,
       "errors": [
         {
           "row": 6,
@@ -15,7 +15,7 @@
             "EXDOSE": 1.0,
             "EXTRT": "PLACEBO"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 8,
@@ -25,7 +25,17 @@
             "EXDOSE": 12.0,
             "EXTRT": "PLACEBO"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 9,
+          "SEQ": 5,
+          "USUBJID": "CDISC004",
+          "value": {
+            "EXDOSE": null,
+            "EXTRT": "PLACEBO"
+          },
+          "validated": true
         }
       ]
     }

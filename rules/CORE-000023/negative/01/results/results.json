@@ -4,7 +4,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "LBTOX present in dataset even though LBTOXGR is not",
+      "execution_message": "LBTOX should not be present when LBTOXGR is not present.",
       "number_errors": 1,
       "errors": [
         {
@@ -14,7 +14,25 @@
           "value": {
             "LBTOX": null
           },
-          "validated": false
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AETOX should not be present when AETOXGR is not present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "AETOX": null
+          },
+          "validated": true
         }
       ]
     }

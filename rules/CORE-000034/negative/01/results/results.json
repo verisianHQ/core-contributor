@@ -12,8 +12,8 @@
       "dataset": "ds.xpt",
       "domain": "DS",
       "execution_status": "success",
-      "execution_message": "DSSTDTC does not equal DM.DTHDTC, when DSDECOD equals \"DEATH\".",
-      "number_errors": 3,
+      "execution_message": "DSDECOD equals 'DEATH' but DSSTDTC is not equal to DTHDTC in DM dataset.",
+      "number_errors": 2,
       "errors": [
         {
           "row": 7,
@@ -24,18 +24,7 @@
             "DSSTDTC": "2022-02-20",
             "DTHDTC": "2021-02-18"
           },
-          "validated": false
-        },
-        {
-          "row": 21,
-          "SEQ": 4,
-          "USUBJID": "015246-888-0008-08888",
-          "value": {
-            "DSDECOD": "DEATH",
-            "DSSTDTC": "2019-01-10",
-            "DTHDTC": null
-          },
-          "validated": false
+          "validated": true
         },
         {
           "row": 26,
@@ -46,76 +35,9 @@
             "DSSTDTC": "2021-01-10",
             "DTHDTC": "2021-01"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 1,
-      "Variable": "DTHDTC"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "DTHDTC"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 8,
-      "Variable": "DTHDTC"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 9,
-      "Variable": "DTHDTC"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 11,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 11,
-      "Variable": "DSDECOD"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 11,
-      "Variable": "DSSTDTC"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 25,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 25,
-      "Variable": "DSDECOD"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 25,
-      "Variable": "DSSTDTC"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 30,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 30,
-      "Variable": "DSDECOD"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 30,
-      "Variable": "DSSTDTC"
     }
   ]
 }

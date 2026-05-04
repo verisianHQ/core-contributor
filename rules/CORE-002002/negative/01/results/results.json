@@ -1,0 +1,24 @@
+{
+  "datasets": [
+    {
+      "dataset": "zz.xpt",
+      "domain": "ZZ",
+      "execution_status": "success",
+      "execution_message": "ZZTESTCD is not present in custom findings dataset.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "ZZTESTCD": "Not in dataset",
+            "define_dataset_class": "FINDINGS",
+            "domain": "ZZ"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

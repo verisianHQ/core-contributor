@@ -4,7 +4,7 @@
       "dataset": "ds.xpt",
       "domain": "DS",
       "execution_status": "success",
-      "execution_message": "DSDECOD is not equal to \"COMPLETED\" when DSTERM equals \"COMPLETED\".",
+      "execution_message": "DSDECOD is not equal to 'COMPLETED' when DSTERM equals 'COMPLETED'.",
       "number_errors": 1,
       "errors": [
         {
@@ -15,31 +15,9 @@
             "DSDECOD": "ADVERSE EVENT",
             "DSTERM": "COMPLETED"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ds.xpt",
-      "Row": 1,
-      "Variable": "DSTERM"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 1,
-      "Variable": "DSDECOD"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 7,
-      "Variable": "DSTERM"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 7,
-      "Variable": "DSDECOD"
     }
   ]
 }

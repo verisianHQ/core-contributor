@@ -4,7 +4,7 @@
       "dataset": "ce.xpt",
       "domain": "CE",
       "execution_status": "success",
-      "execution_message": "CESTTPT is completed and CESTRTPT is empty",
+      "execution_message": "CESTTPT is completed, but CESTRTPT is not completed.",
       "number_errors": 3,
       "errors": [
         {
@@ -15,7 +15,7 @@
             "CESTRTPT": null,
             "CESTTPT": "FIRST DOSE"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -25,7 +25,7 @@
             "CESTRTPT": null,
             "CESTTPT": "FIRST DOSE"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 11,
@@ -35,7 +35,7 @@
             "CESTRTPT": null,
             "CESTTPT": "FIRST DOSE"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
