@@ -1,6 +1,7 @@
 # Variable: IESTRESC
 # Condition: 
 # Rule: IESTRESC = IEORRES
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -9,7 +10,7 @@ Authorities:
           - Citations:
               - Cited Guidance: Response to Inclusion/Exclusion criterion result in standard
                   format
-                Document: SDTMIG v3.4
+                Document: IG v3.4
                 Item: ''
                 Section: 6.3.4
             Origin: SDTM and SDTMIG Conformance Rules
@@ -70,7 +71,7 @@ Core:
   Id: CORE-000025
   Status: Published
   Version: '1'
-Description: IESTRESC is not equal to IEORRES
+Description: Raise an error when IESTRESC is not equal to IEORRES
 Executability: Fully Executable
 Outcome:
   Message: IESTRESC is not equal to IEORRES
