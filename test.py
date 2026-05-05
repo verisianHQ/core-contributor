@@ -138,13 +138,14 @@ class ResultReporter:
 class TestRunner:
     """Test execution logic."""
 
-    def __init__(self, 
+    def __init__(
+        self,
         use_pgserver: bool = True,
         whodrug_path: Optional[str] = None,
         meddra_path: Optional[str] = None,
         unii_path: Optional[str] = None,
         medrt_path: Optional[str] = None,
-        loinc_path: Optional[str] = None
+        loinc_path: Optional[str] = None,
     ):
         from dotenv import load_dotenv
 
@@ -270,7 +271,7 @@ class TestRunner:
                 process_test_case_dataset,
             )
 
-            with open(rule_ymls[0], "r") as f:
+            with open(rule_ymls[0], "r", encoding="utf-8") as f:
                 rule = yaml.safe_load(f)
 
             standard, standard_version = self._read_library_specs(str(excel_files[0]))
@@ -582,7 +583,7 @@ def main():
         meddra_path=args.meddra,
         unii_path=args.unii,
         medrt_path=args.medrt,
-        loinc_path=args.loinc
+        loinc_path=args.loinc,
     )
     available_rules = runner.get_available_rules()
 
