@@ -61,7 +61,7 @@ Core:
   Version: '1'
 Description: Raise an error when collected data fits a Qualifier variable listed
   in specified SDTM Sections and are represented in the Findings About domain,
-  and the name of the variable is used as FATEST
+  and the name of the variable is used as FATEST.
 Executability: Fully Executable
 Operations:
   - id: $fatest_roles
@@ -71,9 +71,10 @@ Operations:
 Outcome:
   Message: Collected data does not fit a Qualifier variable listed in specified SDTM
     Sections and are represented in the Findings About domain, and the name of
-    the variable is used as FATESTCD
+    the variable is used as FATEST.
   Output Variables:
     - FATEST
+    - FATESTCD
 Rule Type: Record Data
 Scope:
   Classes:
