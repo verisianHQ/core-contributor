@@ -1,6 +1,7 @@
 # Variable: CODTC
 # Condition: IDVAR ^= null
 # Rule: CODTC = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -115,12 +116,11 @@ Core:
   Id: CORE-000187
   Status: Published
   Version: '1'
-Description: Trigger error when IDVAR is not null and CODTC is not null
+Description: Raise an error when IDVAR is not null and CODTC is not null
 Executability: Fully Executable
 Outcome:
-  Message: CODTC is populated when IDVAR is also populated
+  Message: CODTC is not null, but IDVAR is not null.
   Output Variables:
-    - USUBJID
     - IDVAR
     - CODTC
 Rule Type: Record Data
