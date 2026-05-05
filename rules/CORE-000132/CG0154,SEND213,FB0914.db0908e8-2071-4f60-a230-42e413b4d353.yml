@@ -1,6 +1,7 @@
 # Variable: ETCD
 # Condition: ELEMENT present in dataset and ETCD present in dataset
 # Rule: ELEMENT and ETCD have a one-to-one relationship
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -305,8 +306,8 @@ Core:
   Id: CORE-000132
   Status: Published
   Version: '1'
-Description: When ETCD and ELEMENTCD are present, ETCD and  ELEMENT should have
-  a one-to-one relationship.
+Description: Raise an error when ETCD and ELEMENTCD are present, but
+  ETCD and ELEMENT do not have a one-to-one relationship.
 Executability: Fully Executable
 Outcome:
   Message: ELEMENT and ETCD do not have a one-to-one relationship.
