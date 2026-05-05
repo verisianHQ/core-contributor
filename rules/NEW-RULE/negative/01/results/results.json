@@ -1,19 +1,46 @@
 {
   "datasets": [
     {
-      "dataset": "ie.xpt",
-      "domain": "IE",
+      "dataset": "lb.xpt",
+      "domain": "LB",
       "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
-    }
-  ],
-  "unmatched_validation": [
-    {
-      "value": {
-        "IELOINC": "100002-5"
-      }
+      "execution_message": "LBLOINC is not a valid code in the version of the LOINC dictionary specified in the define.xml document.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBLOINC": "999999-9",
+            "LBTESTCD": "ALB",
+            "$define_loinc_version": "2.74"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBLOINC": "Health informatics pioneer and the father of LOINC",
+            "LBTESTCD": "ALP",
+            "$define_loinc_version": "2.74"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBLOINC": "100002-5",
+            "LBTESTCD": "ALT",
+            "$define_loinc_version": "2.74"
+          },
+          "validated": true
+        }
+      ]
     }
   ]
 }

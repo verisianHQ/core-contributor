@@ -57,7 +57,7 @@ Core:
   Status: Draft
   Version: '1'
 Description: Raise error when --LOINC is not a valid code in the version of the
-  LOINC dictionary specified in define.xml
+  LOINC dictionary specified in the define.xml document.
 Executability: Fully Executable
 Operations:
   - id: $define_loinc_version
@@ -65,9 +65,10 @@ Operations:
     external_dictionary_type: loinc
 Outcome:
   Message: --LOINC is not a valid code in the version of the LOINC dictionary specified
-    in define.xml
+    in the define.xml document.
   Output Variables:
     - --LOINC
+    - --TESTCD
     - $define_loinc_version
 Rule Type: Record Data
 Scope:
