@@ -1,6 +1,7 @@
 # Variable: IDVAR
 # Condition: Comment related to Domain Records and RDOMAIN not in (null, 'DM')
 # Rule: IDVAR ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -85,10 +86,12 @@ Core:
   Id: CORE-000158
   Status: Published
   Version: '1'
-Description: IDVAR must be specified.
+Description: Raise an error when IDVAR is not specified if RDOMAIN is not 
+  null or RDOMAIN is equal to 'DM'.
 Executability: Fully Executable
 Outcome:
-  Message: IDVAR should not be missing when RDOMAIN is not in (empty, DM).
+  Message: IDVAR must not be null when RDOMAIN is not null or RDOMAIN 
+    is equal to 'DM'.
   Output Variables:
     - RDOMAIN
     - IDVAR

@@ -4,7 +4,7 @@
       "dataset": "co.xpt",
       "domain": "CO",
       "execution_status": "success",
-      "execution_message": "IDVAR should not be missing when RDOMAIN is not in (empty, DM).",
+      "execution_message": "IDVAR must not be missing when RDOMAIN is not null or equal to 'DM'.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,10 +12,10 @@
           "SEQ": 2,
           "USUBJID": "XX-11",
           "value": {
-            "IDVAR": null,
-            "RDOMAIN": "PE"
+            "RDOMAIN": "PE",
+            "IDVAR": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
