@@ -4,7 +4,7 @@
       "dataset": "co.xpt",
       "domain": "CO",
       "execution_status": "success",
-      "execution_message": "IDVAR must not be missing when RDOMAIN is not null or equal to 'DM'.",
+      "execution_message": "IDVAR must not be null when RDOMAIN is not null or RDOMAIN is equal to 'DM'.",
       "number_errors": 1,
       "errors": [
         {
