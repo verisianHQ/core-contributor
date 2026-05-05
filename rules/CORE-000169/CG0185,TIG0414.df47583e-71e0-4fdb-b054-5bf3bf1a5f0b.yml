@@ -1,6 +1,7 @@
 # Variable: LBTOXGR
 # Condition: Numeric scale used
 # Rule: LBTOXGR is a numeric value
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -74,13 +75,14 @@ Core:
   Id: CORE-000169
   Status: Published
   Version: '1'
-Description: Raise a warning when LBTOXGR is not numeric
+Description: Raise an error when LBTOXGR is not from a numeric scale and represented only by 
+    a number.
 Executability: Fully Executable
 Outcome:
-  Message: Verify that LBTOXGR value is not from a numeric scale
+  Message: LBTOXGR value is not from a numeric scale and represented only by 
+    a number.
   Output Variables:
     - LBTOXGR
-    - LBTOX
 Rule Type: Record Data
 Scope:
   Classes:
