@@ -149,6 +149,7 @@ class TestRunner:
         unii_path: Optional[str] = None,
         medrt_path: Optional[str] = None,
         loinc_path: Optional[str] = None,
+        ct: Optional[str] = None,
     ):
         from dotenv import load_dotenv
 
@@ -176,6 +177,7 @@ class TestRunner:
         self.data_service = PostgresQLDataService.instance(
             use_pgserver=self.use_pgserver,
             codelists=["sdtmct-2025-03-28.pkl"],
+            provided_codelists=ct,
             cache_path="resources/cache",
             external_dictionaries=ext_dicts,
         )
@@ -242,17 +244,45 @@ class TestRunner:
         return cases
 
     @staticmethod
-    def _read_library_specs(excel_path: str) -> Tuple[str, str]:
-        """Reads the standard and version from the Library sheet of a test Excel file."""
+    def _read_library_specs(excel_path: str) -> Tuple[str, str, List[str]]:
+        """Reads the standard, version, and ct list from the Library sheet."""
+
         wb = op.load_workbook(excel_path, data_only=True, read_only=True)
-        ws = wb["Library"]
-        rows = list(ws.iter_rows(min_row=2, max_row=2, values_only=True))
-        wb.close()
-        if not rows or rows[0][0] is None:
-            raise ValueError(f"Library sheet in {excel_path} is missing standard/version data")
-        standard = str(rows[0][0]).strip()
-        version = str(rows[0][1]).strip().replace("-", ".")
-        return standard, version
+
+        try:
+            if "Library" not in wb.sheetnames:
+                raise ValueError(f"Sheet 'Library' not found in {excel_path}")
+
+            ws = wb["Library"]
+            row_iter = ws.iter_rows(min_row=2, max_col=2, values_only=True)
+
+            try:
+                first_row = next(row_iter)
+            except StopIteration:
+                raise ValueError(f"Library sheet in {excel_path} is empty")
+
+            if not first_row or first_row[0] is None:
+                raise ValueError(f"Missing standard/version data in {excel_path}")
+
+            standard = str(first_row[0]).strip()
+            version = str(first_row[1]).strip().replace("-", ".")
+
+            ct_list = []
+            for row_data in row_iter:
+                col_a = row_data[0]
+                col_b = row_data[1]
+
+                if col_a and str(col_a).strip().lower().endswith("ct"):
+                    ct_name = str(col_a).strip()
+                    if not col_b:
+                        raise ValueError(f"Missing version for codelist {ct_name} in {excel_path}")
+                    ct_ver = str(col_b).strip()
+                    ct_list.append(f"{ct_name}-{ct_ver}")
+
+            return standard, version, ct_list
+
+        finally:
+            wb.close()
 
     @staticmethod
     def _init_engine_specs(standard: str, standard_version: str):
@@ -307,8 +337,11 @@ class TestRunner:
             with open(rule_ymls[0], "r", encoding="utf-8") as f:
                 rule = yaml.safe_load(f)
 
-            standard, standard_version = self._read_library_specs(str(excel_files[0]))
+            standard, standard_version, provided_codelists = self._read_library_specs(str(excel_files[0]))
             ig_specs = self._init_engine_specs(standard, standard_version)
+
+            if provided_codelists:
+                self.data_service._update_provided_codelists(provided_codelists)
 
             test_datasets = sharepoint_xlsx_to_test_datasets(str(excel_files[0]))
             regression_errors = {}
