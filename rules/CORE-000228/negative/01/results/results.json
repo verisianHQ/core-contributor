@@ -4,7 +4,7 @@
       "dataset": "ie.xpt",
       "domain": "IE",
       "execution_status": "success",
-      "execution_message": "IETESTCD from IE domain does not exist in IETESTCD of TI domain.",
+      "execution_message": "IETESTCD from IE dataset does not exist in IETESTCD of TI dataset.",
       "number_errors": 2,
       "errors": [
         {
@@ -14,7 +14,7 @@
           "value": {
             "IETESTCD": "INCL06"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -23,7 +23,7 @@
           "value": {
             "IETESTCD": "EXCL04"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },

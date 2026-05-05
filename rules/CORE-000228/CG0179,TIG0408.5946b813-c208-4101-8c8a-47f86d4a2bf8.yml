@@ -1,6 +1,7 @@
 # Variable: IETESTCD
 # Condition: 
 # Rule: IETESTCD in TI.IETESTCD
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -76,7 +77,8 @@ Core:
   Id: CORE-000228
   Status: Published
   Version: '1'
-Description: Check if IETESTCD is present in TI.IETESTCD
+Description: Raise an error when IETESTCD does not exist in IETESTCD
+  in the TI dataset.
 Executability: Fully Executable
 Operations:
   - domain: TI
@@ -84,7 +86,7 @@ Operations:
     name: IETESTCD
     operator: distinct
 Outcome:
-  Message: IETESTCD from IE domain does not exist in IETESTCD of TI domain.
+  Message: IETESTCD from IE dataset does not exist in IETESTCD of TI dataset.
   Output Variables:
     - IETESTCD
 Rule Type: Record Data
