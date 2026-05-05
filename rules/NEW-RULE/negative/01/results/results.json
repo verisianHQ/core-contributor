@@ -1,0 +1,30 @@
+{
+  "datasets": [
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "Collected data does not fit a Qualifier variable listed in specified SDTM Sections and are represented in the Findings About domain, and the name of the variable is used as FATESTCD",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FATEST": "Epoch",
+            "$fatest_roles": null
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "FATEST": "Epoch"
+      }
+    }
+  ]
+}
