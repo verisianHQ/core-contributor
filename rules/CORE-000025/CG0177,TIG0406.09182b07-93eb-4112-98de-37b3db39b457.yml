@@ -11,7 +11,7 @@ Authorities:
               - Cited Guidance: Response to Inclusion/Exclusion criterion result in standard
                   format
                 Document: IG v3.4
-                Item: ''
+                Item: 'Specification'
                 Section: 6.3.4
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -74,10 +74,11 @@ Core:
 Description: Raise an error when IESTRESC is not equal to IEORRES
 Executability: Fully Executable
 Outcome:
-  Message: IESTRESC is not equal to IEORRES
+  Message: IESTRESC is not equal to IEORRES.
   Output Variables:
     - IEORRES
     - IESTRESC
+    - IETESTCD
 Rule Type: Record Data
 Scope:
   Classes:
