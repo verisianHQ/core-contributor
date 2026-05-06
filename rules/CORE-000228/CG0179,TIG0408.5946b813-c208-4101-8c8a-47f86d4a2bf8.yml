@@ -13,7 +13,7 @@ Authorities:
                   described in Section 7.4.1, Trial Inclusion/Exclusion
                   Criteria.
                 Document: IG v3.4
-                Item: Specification
+                Item: Assumption 1
                 Section: 6.3.4
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -86,7 +86,8 @@ Operations:
     name: IETESTCD
     operator: distinct
 Outcome:
-  Message: IETESTCD from IE dataset does not exist in IETESTCD of TI dataset.
+  Message: IETESTCD value does not match any IETESTCD value in the TI 
+    dataset.
   Output Variables:
     - IETESTCD
 Rule Type: Record Data
