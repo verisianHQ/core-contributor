@@ -5,7 +5,7 @@
       "domain": "AP",
       "execution_status": "success",
       "execution_message": "AP DOMAIN value should start with 'AP' and length should be equal to 4.",
-      "number_errors": 5,
+      "number_errors": 7,
       "errors": [
         {
           "row": 1,
@@ -49,6 +49,24 @@
           "USUBJID": "None",
           "value": {
             "DOMAIN": "APXXLB"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "AP1B"
+          },
+          "validated": true
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "APAP"
           },
           "validated": true
         }
