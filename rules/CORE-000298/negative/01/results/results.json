@@ -4,18 +4,74 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "LBORRES is not a continuous measurment but LBSTNRLO is not empty.",
-      "number_errors": 1,
+      "execution_message": "LBSTNRLO is populated when LBORRES is not a quantitative value.",
+      "number_errors": 6,
       "errors": [
         {
-          "row": 2,
-          "SEQ": null,
-          "USUBJID": "CDISC-TEST-001",
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "Xyz01",
           "value": {
-            "LBORRES": "CHAR RESULT",
-            "LBSTNRLO": 2.0
+            "LBTESTCD": "ALB",
+            "LBORRES": "NEGATIVE",
+            "LBSTNRLO": 30.0
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "Xyz01",
+          "value": {
+            "LBTESTCD": "ALP",
+            "LBORRES": "POSITIVE",
+            "LBSTNRLO": 30.0
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "Xyz01",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBORRES": "< + 30",
+            "LBSTNRLO": 30.0
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "Xyz01",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBORRES": "+30",
+            "LBSTNRLO": 30.0
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "Xyz01",
+          "value": {
+            "LBTESTCD": "ALP",
+            "LBORRES": " - > 35.55",
+            "LBSTNRLO": 40.0
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "Xyz01",
+          "value": {
+            "LBTESTCD": "ALP",
+            "LBORRES": " -35.55",
+            "LBSTNRLO": 40.0
+          },
+          "validated": true
         }
       ]
     }

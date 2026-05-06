@@ -1,8 +1,9 @@
 """
-Script to create a new rule directory with the required structure and blank files for testing.
+Script to create a new rule directory with the required structure and template files for testing.
 """
 
 import sys
+import shutil
 from pathlib import Path
 import openpyxl
 
@@ -25,7 +26,7 @@ def create_excel_file(filepath: Path, is_negative: bool):
     if is_negative:
         ws_val = wb.create_sheet("Validation")
         ws_val.append(["Error group", "Sheet", "Error level", "Row num", "Variable", "Error value"])
-        ws_val.append(["1", "", "", "", "", ""])
+        ws_val.append(["", "", "", "", "", ""])
 
     wb.save(filepath)
 
@@ -47,13 +48,16 @@ def main():
     rule_dir = RULES_DIR / PLACEHOLDER_RULE_ID
 
     if rule_dir.exists():
-        print(f"Error: Rule directory '{rule_dir}' already exists.")
-        sys.exit(1)
+        do_wipe: bool = True if input("Another new rule folder already exists. Would you like to erase it and make a new one? (Y/N) ").lower() == "y" else False
+        if not do_wipe:
+            print("Aborting.")
+            sys.exit(0)
+        shutil.rmtree(rule_dir, ignore_errors=False)
 
     rule_dir.mkdir(parents=True, exist_ok=True)
 
     yml_file = rule_dir / f"{PLACEHOLDER_RULE_ID.lower()}.yml"
-    yml_file.touch()
+    shutil.copy("tests/template-rule.yml", yml_file)
 
     n_pos_cases = int(input("Enter the number of positive test cases to create: "))
     n_neg_cases = int(input("Enter the number of negative test cases to create: "))

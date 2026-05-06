@@ -4,7 +4,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMSTTPT is completed and CMSTRTPT is empty",
+      "execution_message": "CMSTTPT is completed, but CMSTRTPT is not completed.",
       "number_errors": 2,
       "errors": [
         {
@@ -15,7 +15,7 @@
             "CMSTRTPT": null,
             "CMSTTPT": "SCREENING"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -25,7 +25,7 @@
             "CMSTRTPT": null,
             "CMSTTPT": "SCREENING"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

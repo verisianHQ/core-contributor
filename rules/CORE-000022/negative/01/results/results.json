@@ -4,7 +4,7 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "At least one of the Seriousness criteria (AESCAN, AESCONG, AESDISAB, AESDTH, AESHOSP, AESLIFE, AESOD or AESMIE)  = 'Y', but AESER = 'N' or empty.",
+      "execution_message": "At least one of the Seriousness criteria (AESCAN, AESCONG, AESDISAB, AESDTH, AESHOSP, AESLIFE, AESOD or AESMIE) = 'Y', but AESER = 'N' or empty.",
       "number_errors": 11,
       "errors": [
         {
@@ -24,7 +24,7 @@
             "AESTDTC": "2019-03-24",
             "AETERM": "UPSET STOMACH"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -43,7 +43,7 @@
             "AESTDTC": "2019-04-29",
             "AETERM": "HEADACHE"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -62,7 +62,7 @@
             "AESTDTC": "2019-03-09",
             "AETERM": "HEADACHE"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -81,7 +81,7 @@
             "AESTDTC": "2019-03-15",
             "AETERM": "HEADACHE"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 5,
@@ -100,7 +100,7 @@
             "AESTDTC": "2019-05-08",
             "AETERM": "HEADACHE"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 6,
@@ -119,7 +119,7 @@
             "AESTDTC": "2019-03-30",
             "AETERM": "HYPERTENSION"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 7,
@@ -138,7 +138,7 @@
             "AESTDTC": "2019-07-10",
             "AETERM": "HYPERTENSION"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 8,
@@ -157,7 +157,7 @@
             "AESTDTC": "2019-03-26",
             "AETERM": "HYPOGLYCAEMIA"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 9,
@@ -176,7 +176,7 @@
             "AESTDTC": "2019-08-31",
             "AETERM": "CARDIAC ARREST"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 10,
@@ -195,7 +195,7 @@
             "AESTDTC": "2019-04-18",
             "AETERM": "DIARRHOEA"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 11,
@@ -214,7 +214,7 @@
             "AESTDTC": "2019-03-21",
             "AETERM": "PNEUMONIA"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

@@ -93,13 +93,16 @@ class ResultReporter:
                 f.write("\n".join(", ".join(ids[i : i + 2]) for i in range(0, len(ids), 2)))  # noqa
 
     @classmethod
-    def save_case_results(cls, rule_id: str, test_type: str, case_id: str, results: dict):
+    def save_case_results(
+        cls, rule_id: str, test_type: str, case_id: str, results: dict, version_info: Optional[dict] = None
+    ):
         """Saves JSON and TXT results to the file system."""
         results_path = RULES_DIR / rule_id / test_type / case_id / "results"
         results_path.mkdir(parents=True, exist_ok=True)
 
+        output = {**results, "dictionary_versions": version_info} if version_info else results
         with (results_path / "results.json").open("w") as f:
-            json.dump(results, f, indent=2)
+            json.dump(output, f, indent=2)
 
         cls.json_to_readable(results, results_path / "results.txt")
         return str(results_path)
@@ -138,16 +141,46 @@ class ResultReporter:
 class TestRunner:
     """Test execution logic."""
 
-    def __init__(self, use_pgserver: bool = True):
+    def __init__(
+        self,
+        use_pgserver: bool = True,
+        whodrug_path: Optional[str] = None,
+        meddra_path: Optional[str] = None,
+        unii_path: Optional[str] = None,
+        medrt_path: Optional[str] = None,
+        loinc_path: Optional[str] = None,
+        ct: Optional[str] = None,
+    ):
         from dotenv import load_dotenv
 
         load_dotenv("engine/.env.example")
         self._setup_engine_path()
-        self.ig_specs = self._init_engine_specs()
         self.use_pgserver = use_pgserver
+        from engine.cdisc_rules_engine.models.sql_external_dictionaries_container import (
+            SqlExternalDictionariesContainer,
+        )
+
+        ext_dicts = SqlExternalDictionariesContainer(
+            dictionary_path_mapping={
+                "whodrug": whodrug_path,
+                "meddra": meddra_path,
+                "unii": unii_path if unii_path != "default" else "dummy_ex_dicts/unii",
+                "medrt": medrt_path if medrt_path != "default" else "dummy_ex_dicts/medrt",
+                "loinc": loinc_path if loinc_path != "default" else "dummy_ex_dicts/loinc",
+            }
+        )
+
+        self.version_info = self.get_ext_dict_versions(ext_dicts) if ext_dicts else {}
+
         from engine.cdisc_rules_engine.data_service.postgresql_data_service import PostgresQLDataService
 
-        self.data_service = PostgresQLDataService.instance(use_pgserver=self.use_pgserver)
+        self.data_service = PostgresQLDataService.instance(
+            use_pgserver=self.use_pgserver,
+            codelists=["sdtmct-2025-03-28.pkl"],
+            provided_codelists=ct,
+            cache_path="resources/cache",
+            external_dictionaries=ext_dicts,
+        )
 
     @staticmethod
     def _setup_engine_path():
@@ -156,10 +189,43 @@ class TestRunner:
             sys.path.insert(0, str(ENGINE_DIR))
 
     @staticmethod
+    def get_ext_dict_versions(ext_dicts):
+        import importlib
+        import dataclasses
+
+        READER_MAP = {
+            "meddra": ("engine.cdisc_rules_engine.readers.external_dictionary_readers.meddra_reader", "MeddraReader"),
+            "whodrug": (
+                "engine.cdisc_rules_engine.readers.external_dictionary_readers.whodrug_reader",
+                "WhoDrugReader",
+            ),
+            "loinc": ("engine.cdisc_rules_engine.readers.external_dictionary_readers.loinc_reader", "LoincReader"),
+            "unii": ("engine.cdisc_rules_engine.readers.external_dictionary_readers.unii_reader", "UniiReader"),
+            "medrt": ("engine.cdisc_rules_engine.readers.external_dictionary_readers.medrt_reader", "MedRTReader"),
+        }
+
+        version_info = {}
+
+        for dict_type, path in ext_dicts.dictionary_path_mapping.items():
+            if path and dict_type in READER_MAP:
+                module_path, class_name = READER_MAP[dict_type]
+                reader_cls = getattr(importlib.import_module(module_path), class_name)
+                reader = reader_cls(pgi=None, dictionary_path=path)
+                version_info[dict_type] = dataclasses.asdict(reader._extract_version_metadata())
+
+        return version_info
+
+    @staticmethod
     def get_available_rules() -> List[str]:
         if not RULES_DIR.exists():
             return []
-        return sorted([d.name for d in RULES_DIR.iterdir() if d.is_dir() and d.name.startswith("CORE-")])
+        return sorted(
+            [
+                d.name
+                for d in RULES_DIR.iterdir()
+                if d.is_dir() and (d.name.startswith("CORE-") or d.name.startswith("NEW-RULE"))
+            ]
+        )
 
     @staticmethod
     def get_test_cases(rule_id: str) -> dict:
@@ -177,13 +243,55 @@ class TestRunner:
                             cases[test_type].append({"case_id": case_dir.name, "data_path": str(data_dir)})
         return cases
 
-    def _init_engine_specs(self):
-        """Initialises and returns IG Specifications."""
+    @staticmethod
+    def _read_library_specs(excel_path: str) -> Tuple[str, str, List[str]]:
+        """Reads the standard, version, and ct list from the Library sheet."""
+
+        wb = op.load_workbook(excel_path, data_only=True, read_only=True)
+
+        try:
+            if "Library" not in wb.sheetnames:
+                raise ValueError(f"Sheet 'Library' not found in {excel_path}")
+
+            ws = wb["Library"]
+            row_iter = ws.iter_rows(min_row=2, max_col=2, values_only=True)
+
+            try:
+                first_row = next(row_iter)
+            except StopIteration:
+                raise ValueError(f"Library sheet in {excel_path} is empty")
+
+            if not first_row or first_row[0] is None:
+                raise ValueError(f"Missing standard/version data in {excel_path}")
+
+            standard = str(first_row[0]).strip()
+            version = str(first_row[1]).strip().replace("-", ".")
+
+            ct_list = []
+            for row_data in row_iter:
+                col_a = row_data[0]
+                col_b = row_data[1]
+
+                if col_a and str(col_a).strip().lower().endswith("ct"):
+                    ct_name = str(col_a).strip()
+                    if not col_b:
+                        raise ValueError(f"Missing version for codelist {ct_name} in {excel_path}")
+                    ct_ver = str(col_b).strip()
+                    ct_list.append(f"{ct_name}-{ct_ver}")
+
+            return standard, version, ct_list
+
+        finally:
+            wb.close()
+
+    @staticmethod
+    def _init_engine_specs(standard: str, standard_version: str):
+        """Builds an IGSpecification for the given standard and version."""
         try:
             from engine.cdisc_rules_engine.utilities.ig_specification import IGSpecification
 
             return IGSpecification(
-                standard="sdtmig", standard_version="3.4", standard_substandard=None, define_xml_version=None
+                standard=standard, standard_version=standard_version, standard_substandard=None, define_xml_version=None
             )
         except ImportError:
             print("Error: Could not import engine modules. Is the submodule initialised?")
@@ -206,6 +314,19 @@ class TestRunner:
         if not excel_files:
             return None, {"error": "Excel data missing", "exception": f"No Excel files in {data_path}"}
 
+        case_define_path = data_path_obj / "define.xml"
+        rule_define_path = rule_path / "define.xml"
+
+        if case_define_path.exists():
+            define_xml_path = str(case_define_path)
+        elif rule_define_path.exists():
+            define_xml_path = str(rule_define_path)
+        else:
+            define_xml_path = None
+
+        if define_xml_path:
+            self.data_service._update_define_xml_path(define_xml_path)
+
         try:
             import yaml
             from engine.tests.rule_regression.regression import (
@@ -213,17 +334,23 @@ class TestRunner:
                 process_test_case_dataset,
             )
 
-            with open(rule_ymls[0], "r") as f:
+            with open(rule_ymls[0], "r", encoding="utf-8") as f:
                 rule = yaml.safe_load(f)
+
+            standard, standard_version, provided_codelists = self._read_library_specs(str(excel_files[0]))
+            ig_specs = self._init_engine_specs(standard, standard_version)
+
+            if provided_codelists:
+                self.data_service._update_provided_codelists(provided_codelists)
 
             test_datasets = sharepoint_xlsx_to_test_datasets(str(excel_files[0]))
             regression_errors = {}
 
             sql_results, _ = process_test_case_dataset(
                 regression_errors=regression_errors,
-                define_xml_file_path=None,
+                define_xml_file_path=define_xml_path,
                 data_test_datasets=test_datasets,
-                ig_specs=self.ig_specs,
+                ig_specs=ig_specs,
                 rule=rule,
                 test_case_folder_path=data_path,
                 cur_core_id=rule_id,
@@ -253,7 +380,9 @@ class TestRunner:
             results_data = {"error": "Unknown Error", "exception": "Engine returned None"}
 
         if results_data.get("error"):
-            results_path = ResultReporter.save_case_results(rule_id, test_type, case_id, results_data)
+            results_path = ResultReporter.save_case_results(
+                rule_id, test_type, case_id, results_data, self.version_info
+            )  # noqa
             return {
                 "case_id": case_id,
                 "passed": False,
@@ -277,7 +406,7 @@ class TestRunner:
             if unvalidated_highlights:
                 results_data["unvalidated_highlights"] = unvalidated_highlights
 
-        results_path = ResultReporter.save_case_results(rule_id, test_type, case_id, results_data)
+        results_path = ResultReporter.save_case_results(rule_id, test_type, case_id, results_data, self.version_info)
         total_errors = sum(len(ds.get("errors", [])) for ds in results_data.get("datasets", []))
         passed = (total_errors == 0) if test_type == "positive" else (total_errors > 0)
 
@@ -312,21 +441,35 @@ class TestRunner:
         xl_path = list(Path(data_path).glob("[!~]*.xls*"))[0]
         highlighted_cells = {}
 
+        YELLOW_INDICES = (5, 11, 13, 14, 34)
+
         wb = op.load_workbook(xl_path, data_only=True)
         for sheet in wb.worksheets:
             for row in sheet.iter_rows():
                 for cell in row:
-                    if cell.fill.start_color.index == "FFFFFF00":
+                    fg = cell.fill.fgColor
+                    if not fg:
+                        continue
+
+                    is_yellow = False
+
+                    if isinstance(fg.rgb, str) and fg.rgb.lower().endswith("ffff00"):
+                        is_yellow = True
+                    elif isinstance(fg.indexed, int) and fg.indexed in YELLOW_INDICES:
+                        is_yellow = True
+
+                    if is_yellow:
                         sheet_data = highlighted_cells.setdefault(sheet.title, {})
                         row_data = sheet_data.setdefault(int(cell.row), {})
                         row_data.update({sheet.cell(row=1, column=cell.column).value: cell.value})
+
         return highlighted_cells
 
     def validate_errors(self, results_data: dict, validations: dict):
         unmatched = []
 
         flat_validation = {}
-        for _, entries in validations.items():
+        for idx, entries in validations.items():
             if not entries:
                 continue
             error_level = entries[0]["Error level"].lower()
@@ -334,7 +477,7 @@ class TestRunner:
             row = entries[0]["Row num"] if entries[0]["Row num"] in [1, "N/A"] else entries[0]["Row num"] - 4
             values = {e["Variable"]: e["Error value"] for e in entries}
 
-            flat_validation[(sheet, error_level, row)] = values
+            flat_validation[(sheet, error_level, row, idx)] = values
 
         for ds in results_data["datasets"]:
             sheet_name = ds["dataset"]
@@ -344,20 +487,17 @@ class TestRunner:
                     res_values = error_obj["value"]
 
                     match_found = False
-                    for (v_sheet, v_error_level, v_row), v_values in flat_validation.items():
+                    for (v_sheet, v_error_level, v_row, v_idx), v_values in flat_validation.items():
                         if v_sheet == sheet_name:
-                            if v_error_level == "record":
-                                if v_values == res_values:
-                                    match_found = True
-                            elif v_error_level == "variable" or v_error_level == "dataset":
-                                v_not_absent = set(k for k, v in v_values.items() if v != "[ABSENT]")
-                                res_not_absent = set(k for k, v in res_values.items() if v != "[ABSENT]")
-                                if v_not_absent == res_not_absent or not v_not_absent:
-                                    match_found = True
+                            v_absent = set(k for k, v in v_values.items() if v == "[ABSENT]")
+                            v_not_absent = set(k for k, v in v_values.items() if v != "[ABSENT]")
+                            res_not_absent = set(k for k, v in res_values.items() if v != "[ABSENT]") - v_absent
+                            if v_not_absent == res_not_absent or not res_not_absent:
+                                match_found = True
 
                             if match_found:
                                 error_obj["validated"] = True
-                                del flat_validation[(v_sheet, v_error_level, v_row)]
+                                del flat_validation[(v_sheet, v_error_level, v_row, v_idx)]
                                 break
 
                     if not match_found:
@@ -381,9 +521,14 @@ class TestRunner:
                     e["Variable"],
                     e["Error value"],
                 )
+                if str(var)[0] == "$":
+                    continue
+                var = var.split(".")[-1] if "." in str(var) else var
                 if error_level == "record":
+                    if error_val == "[ABSENT]":
+                        continue
                     h_val = highlights.get(sheet, {}).get(row, {}).get(var)
-                    match = h_val == error_val
+                    match = str(h_val if h_val else None) == str(error_val)
                 if error_level == "variable":
                     if error_val == "[PRESENT]":
                         h_id = highlights.get(sheet, {}).get(row, {})
@@ -482,20 +627,32 @@ class InteractiveHandler:
 
 def parse_args():
     parser = argparse.ArgumentParser(description="CDISC SQL Rules Engine Tester")
-    parser.add_argument("-r", "--rule", help="Rule ID (e.g., CORE-000176)")
+    parser.add_argument("-r", "--rule", help="Rule ID (e.g., CORE-000176 or NEW-RULE)")
     parser.add_argument("-all", "--all-rules", action="store_true", help="Run all rules")
     parser.add_argument("-tc", "--test-case", help="Specific case (e.g., positive/01)")
     parser.add_argument("-v", "--verbose", action="store_true", help="Print detailed results")
     parser.add_argument(
         "-pg", "--use-postgres", action="store_true", help="Use standard PostgreSQL instead of pgserver default"
     )
+    parser.add_argument("-wd", "--whodrug", help="Provide path to WHODrug files")
+    parser.add_argument("-md", "--meddra", help="Provide path to MedDRA files")
+    parser.add_argument("-un", "--unii", help="Provide path to UNII files")
+    parser.add_argument("-mrt", "--medrt", help="Provide path to Med-RT files")
+    parser.add_argument("-lo", "--loinc", help="Provide path to LOINC files")
     return parser.parse_args()
 
 
 def main():
     args = parse_args()
     use_pgserver = not args.use_postgres
-    runner = TestRunner(use_pgserver=use_pgserver)
+    runner = TestRunner(
+        use_pgserver=use_pgserver,
+        whodrug_path=args.whodrug,
+        meddra_path=args.meddra,
+        unii_path=args.unii,
+        medrt_path=args.medrt,
+        loinc_path=args.loinc,
+    )
     available_rules = runner.get_available_rules()
 
     if not available_rules:

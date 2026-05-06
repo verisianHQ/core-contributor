@@ -1,6 +1,7 @@
 # Variable: --RFTDTC
 # Condition: --TPTREF = null
 # Rule: --RFTDTC = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -57,9 +58,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND63
-              Version: "1"
-            Version: "5.0"
-        Version: "3.0"
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
       - Name: SENDIG
         References:
           - Citations:
@@ -71,9 +72,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND63
-              Version: "1"
-            Version: "5.0"
-        Version: "3.1"
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
       - Name: SENDIG
         References:
           - Citations:
@@ -85,9 +86,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND63
-              Version: "1"
-            Version: "5.0"
-        Version: 3.1.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
       - Name: SENDIG-DART
         References:
           - Citations:
@@ -99,9 +100,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND63
-              Version: "1"
-            Version: "5.0"
-        Version: "1.1"
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
       - Name: SENDIG-DART
         References:
           - Citations:
@@ -113,9 +114,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND63
-              Version: "1"
-            Version: "5.0"
-        Version: "1.2"
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
       - Name: SENDIG-GENETOX
         References:
           - Citations:
@@ -127,9 +128,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND63
-              Version: "1"
-            Version: "5.0"
-        Version: "1.0"
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
       - Name: TIG
         References:
           - Citations:
@@ -145,10 +146,10 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0265
-              Version: "1"
-            Version: "1.0"
+              Version: '1'
+            Version: '1.0'
         Substandard: SEND
-        Version: "1.0"
+        Version: '1.0'
       - Name: TIG
         References:
           - Citations:
@@ -162,10 +163,10 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0308
-              Version: "1"
-            Version: "1.0"
+              Version: '1'
+            Version: '1.0'
         Substandard: SDTM
-        Version: "1.0"
+        Version: '1.0'
   - Organization: FDA
     Standards:
       - Name: SDTMIG
@@ -310,10 +311,13 @@ Core:
   Id: CORE-000248
   Status: Published
   Version: '1'
-Description: Trigger error when --TPTREF = null and --RFTDTC is populated
+Description: Raise an error when --TPTREF is not populated but --RFTDTC is populated.
 Executability: Fully Executable
 Outcome:
-  Message: --RFTDTC is populated when --TPTREF is null
+  Message: When --TPTREF is not populated, then --RFTDTC should also be not populated.
+  Output Variables:
+    - --TPTREF
+    - --RFTDTC
 Rule Type: Record Data
 Scope:
   Classes:

@@ -1,0 +1,89 @@
+name: Update Submodule and Sync PR Branches
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch_name:
+        description: 'Submodule branch to track'
+        required: true
+        default: 'main'
+      pr_numbers:
+        description: 'List of PR numbers, comma-separated. Leave empty to not update any open PRs. Use "all" to update all open PRs.'
+        required: false
+        default: ''
+
+jobs:
+  sync-engine:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.ADMIN_PAT }}
+
+      - name: Configure Git
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+      - name: Update Submodule on Main
+        run: |
+          git checkout main
+          git submodule update --init --remote engine
+          
+          if git diff --quiet engine; then
+            echo "Main is already up to date with the latest engine."
+          else
+            git add engine
+            git commit -m "chore: update engine submodule to latest"
+            git push origin main
+          fi
+
+      - name: Sync PR Branches
+        env:
+          GH_TOKEN: ${{ secrets.ADMIN_PAT }}
+          SELECTED_PRS: ${{ github.event.inputs.pr_numbers }}
+        run: |
+          if [ -n "$SELECTED_PRS" ]; then
+            echo "Targeted mode: Processing PRs [$SELECTED_PRS]"
+            ITERATE_LIST=$(echo $SELECTED_PRS | tr ',' ' ')
+          elif [ "$SELECTED_PRS" = "all" ]; then
+            echo "Processing ALL open PRs targeting main"
+            ITERATE_LIST=$(gh pr list --base main --json number --jq '.[].number')
+          else
+            echo "No PR numbers provided. Skipping PR synchronization."
+            exit 0
+          fi
+
+          for pr_num in $ITERATE_LIST; do
+            echo "Inspecting PR #$pr_num"
+            branch=$(gh pr view $pr_num --json headRefName --jq '.headRefName')
+            
+            if [ -z "$branch" ]; then
+              echo "Error: Could not find branch for PR #$pr_num. Skipping."
+              continue
+            fi
+
+            echo "Switching to branch: $branch"
+            git checkout $branch
+            
+            if ! git diff --quiet main..$branch -- engine; then
+              echo "Submodule change detected in $branch. Reverting to match main."
+              git checkout main -- engine
+              git add engine
+              git commit -m "fix: revert unauthorized submodule changes to match main"
+            fi
+
+            if git merge main -m "chore: sync with main and update engine"; then
+              git push origin $branch
+              echo "Successfully processed #$pr_num ($branch)"
+            else
+              echo "Merge conflict in #$pr_num ($branch). Skipping..."
+              git merge --abort
+            fi
+          done

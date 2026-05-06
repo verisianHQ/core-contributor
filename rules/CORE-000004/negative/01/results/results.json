@@ -4,8 +4,8 @@
       "dataset": "ec.xpt",
       "domain": "EC",
       "execution_status": "success",
-      "execution_message": "ECOCCUR indicates dose was not given, but ECDOSE is not blank or has a value less than or equal to 0",
-      "number_errors": 5,
+      "execution_message": "ECOCCUR indicates dose was not given, ECDOSE needs to be blank or greater than 0.",
+      "number_errors": 4,
       "errors": [
         {
           "row": 11,
@@ -15,7 +15,7 @@
             "ECDOSE": 0.0,
             "ECOCCUR": "N"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 13,
@@ -25,7 +25,7 @@
             "ECDOSE": 0.0,
             "ECOCCUR": "N"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 14,
@@ -35,56 +35,19 @@
             "ECDOSE": 0.0,
             "ECOCCUR": "N"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 15,
           "SEQ": 126,
           "USUBJID": "CDISC009",
           "value": {
-            "ECDOSE": 0.0,
+            "ECDOSE": -10.0,
             "ECOCCUR": "N"
           },
-          "validated": false
-        },
-        {
-          "row": 16,
-          "SEQ": 127,
-          "USUBJID": "CDISC009",
-          "value": {
-            "ECDOSE": 0.0,
-            "ECOCCUR": "N"
-          },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ec.xpt",
-      "Row": 15,
-      "Variable": "ECDOSE"
-    },
-    {
-      "Sheet": "ec.xpt",
-      "Row": 17,
-      "Variable": "ECDOSE"
-    },
-    {
-      "Sheet": "ec.xpt",
-      "Row": 18,
-      "Variable": "ECDOSE"
-    },
-    {
-      "Sheet": "ec.xpt",
-      "Row": 19,
-      "Variable": "ECDOSE"
-    },
-    {
-      "Sheet": "ec.xpt",
-      "Row": 20,
-      "Variable": "ECDOSE"
     }
   ]
 }
