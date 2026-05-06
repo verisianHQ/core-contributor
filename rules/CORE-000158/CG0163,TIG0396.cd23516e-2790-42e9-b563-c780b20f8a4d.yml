@@ -86,12 +86,12 @@ Core:
   Id: CORE-000158
   Status: Published
   Version: '1'
-Description: Raise an error when IDVAR is not specified if RDOMAIN is not 
-  null or RDOMAIN is equal to 'DM'.
+Description: Raise an error when RDOMAIN is populated and is not 
+  equal to 'DM' but IDVAR is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: IDVAR must not be null when RDOMAIN is not null or RDOMAIN 
-    is equal to 'DM'.
+  Message: IDVAR must be populated when RDOMAIN is populated and
+    is not equal to 'DM'.
   Output Variables:
     - RDOMAIN
     - IDVAR
