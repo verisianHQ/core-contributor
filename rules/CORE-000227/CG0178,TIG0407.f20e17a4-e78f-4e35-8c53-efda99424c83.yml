@@ -13,7 +13,7 @@ Authorities:
                   described in Section 7.4.1, Trial Inclusion/Exclusion
                   Criteria.
                 Document: IG v3.4
-                Item: Specification
+                Item: Assumption 1
                 Section: 6.3.4
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -86,7 +86,9 @@ Operations:
     name: IETEST
     operator: distinct
 Outcome:
-  Message: IETEST is not in IETEST of the TI dataset.
+  Message: IETEST does not match any IETEST value in the TI dataset.
+  Output Variables:
+    - IETEST
 Rule Type: Record Data
 Scope:
   Classes:
