@@ -4,7 +4,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "LBTOXGR value is not from a numeric scale and represented only by a number.",
+      "execution_message": "LBTOXGR uses non-numeric values, which is not allowed when a numeric scale is used.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,6 +12,7 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
+            "LBTOX": "Grade 2",
             "LBTOXGR": "Grade 2"
           },
           "validated": true

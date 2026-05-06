@@ -75,13 +75,14 @@ Core:
   Id: CORE-000169
   Status: Published
   Version: '1'
-Description: Raise an error when LBTOXGR is not from a numeric scale and represented only by 
-    a number.
+Description: Raise an error when LBTOXGR uses a numeric scale but contains 
+    non-numeric values.
 Executability: Fully Executable
 Outcome:
-  Message: LBTOXGR value is not from a numeric scale and represented only by 
-    a number.
+  Message: LBTOXGR uses non-numeric values, which is not allowed when a 
+    numeric scale is used.
   Output Variables:
+    - LBTOX
     - LBTOXGR
 Rule Type: Record Data
 Scope:
