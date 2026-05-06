@@ -120,16 +120,16 @@ Core:
   Id: CORE-000259
   Status: Published
   Version: '1'
-Description: Raise an error when SSDTC in the SS dataset, where SSSTRESC is equal
-  to 'DEAD', is not on or after DTHDTC in the DM dataset.
+Description: Raise an error when SSDTC in the SS dataset, where SSSTRESC is 
+  equal to 'DEAD', is not on or after DTHDTC in the DM dataset.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: DM
 Outcome:
-  Message: SSDTC in the SS dataset, where SSSTRESC is equal to 'DEAD', is not 
-    on or after DTHDTC in the DM dataset.
+  Message: SSDTC in the SS dataset, where SSSTRESC is equal to 'DEAD', is 
+    equal to or after DTHDTC in the DM dataset.
   Output Variables:
     - SSSTRESC
     - SSDTC
