@@ -4,7 +4,7 @@
       "dataset": "co.xpt",
       "domain": "CO",
       "execution_status": "success",
-      "execution_message": "CODTC is not null, but IDVAR is not null.",
+      "execution_message": "CODTC must be null when IDVAR is not null.",
       "number_errors": 1,
       "errors": [
         {
