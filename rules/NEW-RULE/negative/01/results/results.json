@@ -4,8 +4,8 @@
       "dataset": "aplb.xpt",
       "domain": "AP",
       "execution_status": "success",
-      "execution_message": "AP DOMAIN value should start with 'AP' and end with a valid SDTM domain, and length should be equal to 4.",
-      "number_errors": 4,
+      "execution_message": "AP DOMAIN value should start with 'AP' and length should be equal to 4.",
+      "number_errors": 5,
       "errors": [
         {
           "row": 1,
@@ -40,6 +40,15 @@
           "USUBJID": "None",
           "value": {
             "DOMAIN": "APXX"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "APXXLB"
           },
           "validated": true
         }
