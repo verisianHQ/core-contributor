@@ -1,0 +1,92 @@
+# Variable: GEN
+# Condition: Variable Core Status = Expected and data collected
+# Rule: Variable value ^= null
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: When the study does not include the data item for an expected
+                  variable, however, a null column must still be included in the
+                  dataset, and a comment must be included in the Define-XML
+                  document to state that the study does not include the data
+                  item.
+                Document: IG v3.4
+                Section: 4.1.5
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0431
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: When no data has been collected for an expected variable;
+                  however; a null column must still be included in the dataset;
+                  and a comment must be included in the define.xml to state that
+                  data was not collected.
+                Document: IG v3.2
+                Section: 4.1.1.5
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0431
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: When the study does not include the data item for an expected
+                  variable; however; a null column must still be included in the
+                  dataset; and a comment must be included in the Define-XML
+                  document to state that the study does not include the data
+                  item.
+                Document: IG v3.3
+                Section: 4.1.5
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0431
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: define_variable_name
+      operator: non_empty
+    - name: library_variable_core
+      operator: equal_to
+      value: Exp
+    - name: define_variable_has_no_data
+      operator: empty
+    - any:
+        - name: variable_name
+          operator: not_exists
+        - name: variable_is_empty
+          operator: equal_to
+          value: true
+Core:
+  Id: CDISC.SDTMIG.CG0431
+  Status: Draft
+  Version: '1'
+Description: Raise an error when a variable is expected, data is collected as per define-xml document but variable is not present in the dataset or has no data.
+Executability: Fully Executable
+Outcome:
+  Message: Variable is expected and data is collected as per define-xml document but variable is not present in the dataset or variable has no data.
+  Output Variables:
+    - define_variable_name
+    - define_variable_has_no_data
+    - library_variable_core
+    - variable_name
+    - variable_is_empty
+Rule Type: Variable Metadata Check against Define XML and Library Metadata
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record
