@@ -1,6 +1,7 @@
 # Variable: PPORRESU
 # Condition: Parameter is normalized by dose amount
 # Rule: Terminology is for a parameter normalized by dose amount (Codelist "PKUDMG" or "PKUDUG")
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -73,14 +74,12 @@ Operations:
   - ct_attribute: Term Signification
     id: $PKUDMG
     operator: get_codelist_attributes
-    version: '2025-03-28'
     name: PKUDMG
     ct_conditions:
       - Codelist Code: C128685
   - ct_attribute: Term Signification
     id: $PKUDUG
     operator: get_codelist_attributes
-    version: '2025-03-28'
     name: PKUDUG
     ct_conditions:
       - Codelist Code: C128686
