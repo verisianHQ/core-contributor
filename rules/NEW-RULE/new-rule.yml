@@ -1,0 +1,94 @@
+# Variable: MIDS
+# Condition: SM.MIDSTYPE = TM.MIDSTYPE and TM.TMRPT = 'Y'
+# Rule: SM.MIDS is suffixed with a sequence number in consistent chronological order
+# Assumption: OK to use SMSTDTC to cross-check consistent chronological order..
+# Author: Marcelina Hungria
+# Progress Date: 2025-10-23
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: For types of Disease Milestones that can occur multiple times,
+                  MIDS will usually be an abbreviated version of MIDSTYPE and
+                  will always end with a sequence number. Sequence numbers
+                  should start with one and indicate the chronological order of
+                  the instances of this type of Disease Milestone.
+                Document: IG v3.4
+                Item: Assumption 2.b
+                Section: '5.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0546
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: For types of Disease Milestones that can occur multiple times,
+                  MIDS will usually be an abbreviated version of MIDSTYPE and
+                  will always end with a sequence number. Sequence numbers
+                  should start with one and indicate the chronological order of
+                  the instances of this type of Disease Milestone.
+                Document: IG v3.3
+                Item: Assumption 2.b
+                Section: '5.5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0546
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: TMRPT
+      operator: equal_to
+      value: Y
+    - name: SMSTDTC
+      operator: exists
+    - name: SMSTDTC
+      operator: non_empty
+    - any:
+      - name: MIDS
+        operator: not_matches_regex
+        value: .*?(\d+$)
+      - name: MIDS
+        operator: target_is_not_sorted_by
+        regex: .*?(\d+$)
+        value:
+          - name: SMSTDTC
+            null_position: first
+            sort_order: asc
+        within: 
+          - USUBJID
+          - MIDSTYPE
+Core:
+  Id: CDISC.SDTMIG.CG0546
+  Status: Draft
+  Version: '1'
+Description: Trigger error when MIDSTYPE=TM.MIDSTYPE and TM.TMRPT=Y and MIDS is
+  not suffixed with a sequence number in consistent chronological order
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - MIDSTYPE
+    Name: TM
+Outcome:
+  Message: MIDS is not suffixed with a sequence number in consistent chronological
+    order with SMSTDTC.
+  Output Variables:
+    - MIDS
+    - MIDSTYPE
+    - TMRPT
+    - SMSTDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - SM
+Sensitivity: Record
