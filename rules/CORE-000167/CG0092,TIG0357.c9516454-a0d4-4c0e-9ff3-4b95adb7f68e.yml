@@ -1,6 +1,7 @@
 # Variable: --TPTREF
 # Condition: --ELTM present in dataset
 # Rule: --TPTREF present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -9,9 +10,10 @@ Authorities:
           - Citations:
               - Cited Guidance: The description of a time point that acts as a fixed reference
                   for a series of planned time points, used for study data
-                  tabulation. Description of the fixed  reference point referred
+                  tabulation. Description of the fixed reference point referred
                   to by --ELTM, --TPTNUM, --TPT, --STINT, and --ENINT.
                 Document: Model v2.0
+                Item: --TPTREF
                 Section: Timing
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -95,7 +97,7 @@ Core:
   Id: CORE-000167
   Status: Published
   Version: '1'
-Description: Raise an error when--ELTM is present but --TPTREF is not present in dataset.
+Description: Raise an error when --ELTM is present but --TPTREF is not present in dataset.
 Executability: Fully Executable
 Outcome:
   Message: --TPTREF must be present when --ELTM is present in a dataset

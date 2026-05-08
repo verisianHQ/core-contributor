@@ -1,6 +1,7 @@
 # Variable: LBORNRLO
 # Condition: LBORRES ^= continuous measurement
 # Rule: LBORNRLO = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -67,13 +68,14 @@ Authorities:
         Version: '1.0'
 
 Check:
-  # Changed by Marcelina Hungria on 2025-05-29
+  # Changed by Marcelina Hungria on 2025-05-29 and revised on 2026-04-15.
   # Fixed the regex and the LBORRES non-empty condition per revised Description.
-  # Changed to Fully Executable. See Jira ticket: CORERULES-156 (CG0180)
+  # Changed to Fully Executable. See Jira ticket: CORERULES-156 (CG0180) and SDTMIGRULE-288.
   all:
     - name: LBORRES
       operator: not_matches_regex
-      value: ^-?(\d+(\.\d+)?$)|(\.\d+$)
+      #value: ^-?(\d+(\.\d+)?$)|(\.\d+$)
+      value: ^(<|>|< |> )?(-?((\d+(\.\d+)?)|(\.\d+)))$
     - name: LBORNRLO
       operator: non_empty
     - name: LBORRES
@@ -82,12 +84,17 @@ Core:
   Id: CORE-000290
   Status: Published
   Version: '1'
-Description: Raise an error when LBORRES ^= continuous measurement and LBORNRLO
-  is not empty. The interpretation of the guidance is that LBORRES is populated
-  (not null).
+Description: >-
+  Raise an error when LBORRES is not a quantitative value and LBORNRLO is populated.
+  The interpretation of the guidance is that the rule applies when LBORRES is populated (not null).
+  Note: the rule logic applies until such time there is availability of reliable metadata to verify if the test is quantitative or not.
 Executability: Fully Executable
 Outcome:
-  Message: LBORRES is not a continuous measurement but LBORNRLO is not empty.
+  Message: LBORNRLO is populated when LBORRES is not a quantitative value.
+  Output Variables:
+    - LBTESTCD
+    - LBORRES
+    - LBORNRLO
 Rule Type: Record Data
 Scope:
   Classes:
