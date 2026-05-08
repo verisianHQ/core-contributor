@@ -1,6 +1,7 @@
 # Variable: RFENDTC
 # Condition: Milestone associated with RFENDTC is end of treatment and ACTARM not in (‘Screen Failure’, ‘Not Assigned’, ‘Not Treated’)
 # Rule: RFENDTC ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -49,12 +50,15 @@ Core:
   Id: CORE-000378
   Status: Published
   Version: '1'
-Description: 'Raise an error when RFENDTC is null, but ACTARM is not Screen
-  Failure, Not Assigned, or Not Treated'
+Description: Raise an error when RFENDTC is not populated, but ACTARM is not 'Screen
+  Failure', 'Not Assigned', or 'Not Treated'.
 Executability: Fully Executable
 Outcome:
-  Message: RFENDTC must not be null when ACTARM is a value other than Screen
-    Failure, Not Assigned, or Not Treated.
+  Message: RFENDTC must be populated when ACTARM is any value other than 'Screen
+    Failure', 'Not Assigned', or 'Not Treated'.
+  Output Variables:
+    - RFENDTC
+    - ACTARM
 Rule Type: Record Data
 Scope:
   Classes:

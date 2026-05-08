@@ -1,0 +1,176 @@
+name: Auto Review Rule Formatting
+
+on:
+  pull_request:
+    paths:
+      - 'rules/**'
+    types: [opened, synchronize, reopened]
+
+jobs:
+  validate-format:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Dependencies
+        run: pip install requests pyyaml jsonschema
+
+      - name: Detect changed rules
+        id: changed-files
+        run: |
+          CHANGED_FILES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD | grep -E '^rules/.*\.ya?ml$' || true)
+          
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "No YAML files changed in rules directory."
+            echo "files=" >> $GITHUB_OUTPUT
+          else
+            echo "files=$(echo $CHANGED_FILES | tr '\n' ' ')" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Validate Rule Formatting
+        if: steps.changed-files.outputs.files != ''
+        run: |
+          cat << 'EOF' > validate_schema.py
+          import sys
+          import os
+          import json
+          import requests
+          import yaml
+          from jsonschema import Draft202012Validator
+
+          SCHEMA_URL = "https://rule-editor.cdisc.org/api/schema"
+
+          try:
+              response = requests.get(SCHEMA_URL, timeout=10)
+              response.raise_for_status()
+              schema = response.json()
+              validator = Draft202012Validator(schema)
+          except Exception as e:
+              print(f"Failed to fetch or parse schema: {e}")
+              sys.exit(1)
+
+          changed_files = sys.argv[1].split()
+          comments = []
+
+          def get_line_number(filepath, error_path):
+              if not error_path:
+                  return 1
+              try:
+                  with open(filepath, 'r', encoding='utf-8') as f:
+                      lines = f.readlines()
+                  current_line = 0
+                  for step_idx, path_element in enumerate(error_path):
+                      found = False
+                      if isinstance(path_element, str):
+                          search_key = f"{path_element}:"
+                          if current_line < len(lines) and search_key in lines[current_line].strip():
+                              found = True
+                          else:
+                              while current_line < len(lines):
+                                  stripped = lines[current_line].strip()
+                                  if stripped.startswith(search_key) or f"- {search_key}" in stripped:
+                                      found = True
+                                      break
+                                  current_line += 1
+                      elif isinstance(path_element, int):
+                          if step_idx > 0 and isinstance(error_path[step_idx-1], str):
+                              current_line += 1
+                          list_idx = 0
+                          while current_line < len(lines):
+                              stripped = lines[current_line].strip()
+                              if stripped.startswith('-'):
+                                  if list_idx == path_element:
+                                      found = True
+                                      break
+                                  list_idx += 1
+                              current_line += 1
+                      if not found:
+                          break
+                  if current_line >= len(lines):
+                      current_line = len(lines) - 1
+                  return current_line + 1
+              except Exception:
+                  return 1
+
+          for filepath in changed_files:
+              if not os.path.exists(filepath):
+                  continue
+
+              try:
+                  with open(filepath, 'r', encoding='utf-8') as f:
+                      rule_data = yaml.safe_load(f)
+              except yaml.YAMLError as exc:
+                  comments.append({
+                      "path": filepath,
+                      "line": 1,
+                      "body": f"**YAML Parsing Error:**\n```\n{exc}\n```"
+                  })
+                  continue
+
+              if rule_data is None:
+                  comments.append({
+                      "path": filepath,
+                      "line": 1,
+                      "body": "**Validation Error:** File is empty or contains invalid YAML structure."
+                  })
+                  continue
+
+              for error in validator.iter_errors(rule_data):
+                  if error.validator == 'pattern' and 'id' in error.path:
+                      continue
+
+                  path_str = " -> ".join([str(p) for p in error.path]) if error.path else "Root Document"
+                  line_num = get_line_number(filepath, error.path)
+                  
+                  comments.append({
+                      "path": filepath,
+                      "line": line_num,
+                      "body": f"**Schema Validation Error at `{path_str}`:**\n{error.message}"
+                  })
+
+          with open('pr_comments.json', 'w') as f:
+              json.dump(comments, f, indent=2)
+          EOF
+
+          python validate_schema.py "${{ steps.changed-files.outputs.files }}"
+
+      - name: Post PR Comments
+        if: steps.changed-files.outputs.files != ''
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            if (!fs.existsSync('pr_comments.json')) return;
+            
+            const comments = JSON.parse(fs.readFileSync('pr_comments.json', 'utf8'));
+            if (comments.length === 0) {
+              console.log("All rule formats passed validation against the schema!");
+              return;
+            }
+
+            for (const comment of comments) {
+              await github.rest.pulls.createReviewComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.issue.number,
+                commit_id: context.payload.pull_request.head.sha,
+                path: comment.path,
+                line: comment.line,
+                body: comment.body
+              });
+            }
+
+            core.setFailed("Schema validation failed. Please check the PR comments and correct the issues.");

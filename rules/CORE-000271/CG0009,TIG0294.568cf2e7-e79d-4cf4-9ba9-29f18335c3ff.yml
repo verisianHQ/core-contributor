@@ -1,6 +1,7 @@
 # Variable: EPOCH
 # Condition: 
 # Rule: EPOCH in TA.EPOCH
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -11,7 +12,7 @@ Authorities:
                   general-observation-class domains. In DS, EPOCH is based on
                   DSSTDTC. The values of EPOCH are drawn from the Trial Arms(TA)
                   dataset (Section 7.2.1, Trial Arms).
-                Document: SDTMIG v3.4
+                Document: IG v3.4
                 Item: DS, Assumption 4.c
                 Section: 6.2.3
             Origin: SDTM and SDTMIG Conformance Rules
@@ -27,7 +28,7 @@ Authorities:
                   general-observation-class domains. In DS, EPOCH is based on
                   DSSTDTC. The values of EPOCH are drawn from the Trial Arms
                   (TA) dataset (Section 7.2.1, Trial Arms).
-                Document: SDTMIG v3.3
+                Document: IG v3.3
                 Item: DS, Assumption 4.c
                 Section: 6.2.3
             Origin: SDTM and SDTMIG Conformance Rules
@@ -43,7 +44,7 @@ Authorities:
                   which --STDTC or --DTC falls. The values of EPOCH are drawn
                   from the Trial Arms domain, Section 7.2 - Experimental Design
                   Trial Arms (TA)'
-                Document: SDTMIG v3.2
+                Document: IG v3.2
                 Item: DS, Assumption 3.c
                 Section: '6.2'
             Origin: SDTM and SDTMIG Conformance Rules

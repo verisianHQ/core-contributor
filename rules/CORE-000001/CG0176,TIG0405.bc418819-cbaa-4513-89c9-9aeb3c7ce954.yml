@@ -1,6 +1,7 @@
 # Variable: IEORRES
 # Condition: IECAT = 'INCLUSION'
 # Rule: IEORRES = 'N'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -10,8 +11,9 @@ Authorities:
               - Cited Guidance: The intent of the domain model is to collect responses to only
                   those criteria that the subject did not meet, and not the
                   responses to all criteria.
-                Document: SDTM v3.4
-                Section: 6.3.4
+                Document: IG v3.4
+                Item: Assumption 1
+                Section: '6.3.4'
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0176
@@ -41,7 +43,7 @@ Authorities:
                   responses to all criteria.
                 Document: IG v3.3
                 Item: Assumption 1
-                Section: 6.3.4
+                Section: '6.3.4'
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0176
@@ -68,21 +70,25 @@ Check:
   all:
     - name: IECAT
       operator: equal_to
-      value: INCLUSION
+      value: 'INCLUSION'
       value_is_literal: true
     - name: IEORRES
       operator: not_equal_to
-      value: N
+      value: 'N'
       value_is_literal: true
 Core:
   Id: CORE-000001
   Status: Published
   Version: '1'
-Description: Raise an error when IECAT is equal to 'INCLUSION' and IEORRES is
-  not equal to 'N'.
+Description: Raise an error when IECAT equals 'INCLUSION' but IEORRES does
+  not equal 'N'.
 Executability: Fully Executable
 Outcome:
-  Message: IEORRES is not equal to 'N' when IECAT equals 'INCLUSION'.
+  Message: IECAT equals 'INCLUSION', but IEORRES is not equal to 'N'.
+  Output Variables:
+    - IETESTCD
+    - IECAT
+    - IEORRES
 Rule Type: Record Data
 Scope:
   Classes:
