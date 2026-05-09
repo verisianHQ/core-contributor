@@ -114,7 +114,6 @@ Operations:
     operator: distinct
 Outcome:
   Message: VISIT value for planned visit does not match any VISIT value in the TV dataset.
-    If SVPRESP is not present, all non-missing VISIT values are checked.
   Output Variables:
     - VISIT
     - VISITNUM
