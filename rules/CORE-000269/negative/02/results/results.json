@@ -4,7 +4,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "VISIT value does not match any VISIT value in TV.VISIT for a planned visit. If SVPRESP is not present, all non-missing VISIT values are checked.",
+      "execution_message": "VISIT value for planned visit does not match any VISIT value in the TV dataset.",
       "number_errors": 43,
       "errors": [
         {
@@ -443,7 +443,7 @@
       "dataset": "oe.xpt",
       "domain": "OE",
       "execution_status": "success",
-      "execution_message": "VISIT value does not match any VISIT value in TV.VISIT for a planned visit. If SVPRESP is not present, all non-missing VISIT values are checked.",
+      "execution_message": "VISIT value for planned visit does not match any VISIT value in the TV dataset.",
       "number_errors": 2,
       "errors": [
         {
@@ -472,7 +472,7 @@
       "dataset": "sv.xpt",
       "domain": "SV",
       "execution_status": "success",
-      "execution_message": "VISIT value does not match any VISIT value in TV.VISIT for a planned visit. If SVPRESP is not present, all non-missing VISIT values are checked.",
+      "execution_message": "VISIT value for planned visit does not match any VISIT value in the TV dataset.",
       "number_errors": 2,
       "errors": [
         {
@@ -509,7 +509,7 @@
       "dataset": "vs.xpt",
       "domain": "VS",
       "execution_status": "success",
-      "execution_message": "VISIT value does not match any VISIT value in TV.VISIT for a planned visit. If SVPRESP is not present, all non-missing VISIT values are checked.",
+      "execution_message": "VISIT value for planned visit does not match any VISIT value in the TV dataset.",
       "number_errors": 11,
       "errors": [
         {
