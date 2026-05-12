@@ -4,7 +4,7 @@
       "dataset": "ag.xpt",
       "domain": "AG",
       "execution_status": "success",
-      "execution_message": "AGOCCUR should only be provided when AGPRESP is equal to 'Y'.",
+      "execution_message": "AGOCCUR must be null when AGPRESP is not equal to 'Y' or when AGSTAT is 'NOT DONE'.",
       "number_errors": 2,
       "errors": [
         {
@@ -12,8 +12,8 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "AGOCCUR": "Y",
             "AGPRESP": null,
+            "AGOCCUR": "Y",
             "AGSTAT": null
           },
           "validated": true
@@ -23,8 +23,8 @@
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "AGOCCUR": "Y",
             "AGPRESP": null,
+            "AGOCCUR": "Y",
             "AGSTAT": "NOT DONE"
           },
           "validated": true
@@ -35,7 +35,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMOCCUR should only be provided when CMPRESP is equal to 'Y'.",
+      "execution_message": "CMOCCUR must be null when CMPRESP is not equal to 'Y' or when CMSTAT is 'NOT DONE'.",
       "number_errors": 2,
       "errors": [
         {
@@ -43,8 +43,8 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "CMOCCUR": "Y",
             "CMPRESP": null,
+            "CMOCCUR": "Y",
             "CMSTAT": null
           },
           "validated": true
@@ -54,8 +54,8 @@
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "CMOCCUR": "Y",
             "CMPRESP": null,
+            "CMOCCUR": "Y",
             "CMSTAT": "NOT DONE"
           },
           "validated": true
@@ -66,7 +66,7 @@
       "dataset": "ec.xpt",
       "domain": "EC",
       "execution_status": "success",
-      "execution_message": "ECOCCUR should only be provided when ECPRESP is equal to 'Y'.",
+      "execution_message": "ECOCCUR must be null when ECPRESP is not equal to 'Y' or when ECSTAT is 'NOT DONE'.",
       "number_errors": 3,
       "errors": [
         {
@@ -74,8 +74,8 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "ECOCCUR": "Y",
             "ECPRESP": null,
+            "ECOCCUR": "Y",
             "ECSTAT": null
           },
           "validated": true
@@ -85,8 +85,8 @@
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "ECOCCUR": "Y",
             "ECPRESP": null,
+            "ECOCCUR": "Y",
             "ECSTAT": "NOT DONE"
           },
           "validated": true
@@ -96,8 +96,8 @@
           "SEQ": 3,
           "USUBJID": "CDISC001",
           "value": {
-            "ECOCCUR": "N",
             "ECPRESP": null,
+            "ECOCCUR": "N",
             "ECSTAT": null
           },
           "validated": true
@@ -116,7 +116,7 @@
       "dataset": "ml.xpt",
       "domain": "ML",
       "execution_status": "success",
-      "execution_message": "MLOCCUR should only be provided when MLPRESP is equal to 'Y'.",
+      "execution_message": "MLOCCUR must be null when MLPRESP is not equal to 'Y' or when MLSTAT is 'NOT DONE'.",
       "number_errors": 2,
       "errors": [
         {
@@ -124,8 +124,8 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "MLOCCUR": "Y",
             "MLPRESP": null,
+            "MLOCCUR": "Y",
             "MLSTAT": null
           },
           "validated": true
@@ -135,8 +135,8 @@
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "MLOCCUR": "Y",
             "MLPRESP": null,
+            "MLOCCUR": "Y",
             "MLSTAT": "NOT DONE"
           },
           "validated": true
@@ -147,7 +147,7 @@
       "dataset": "pr.xpt",
       "domain": "PR",
       "execution_status": "success",
-      "execution_message": "PROCCUR should only be provided when PRPRESP is equal to 'Y'.",
+      "execution_message": "PROCCUR must be null when PRPRESP is not equal to 'Y' or when PRSTAT is 'NOT DONE'.",
       "number_errors": 2,
       "errors": [
         {
@@ -155,8 +155,8 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "PROCCUR": "Y",
             "PRPRESP": null,
+            "PROCCUR": "Y",
             "PRSTAT": null
           },
           "validated": true
@@ -166,8 +166,8 @@
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "PROCCUR": "Y",
             "PRPRESP": null,
+            "PROCCUR": "Y",
             "PRSTAT": "NOT DONE"
           },
           "validated": true
@@ -178,7 +178,7 @@
       "dataset": "su.xpt",
       "domain": "SU",
       "execution_status": "success",
-      "execution_message": "SUOCCUR should only be provided when SUPRESP is equal to 'Y'.",
+      "execution_message": "SUOCCUR must be null when SUPRESP is not equal to 'Y' or when SUSTAT is 'NOT DONE'.",
       "number_errors": 2,
       "errors": [
         {
@@ -186,8 +186,8 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "SUOCCUR": "Y",
             "SUPRESP": null,
+            "SUOCCUR": "Y",
             "SUSTAT": null
           },
           "validated": true
@@ -197,8 +197,8 @@
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "SUOCCUR": "Y",
             "SUPRESP": null,
+            "SUOCCUR": "Y",
             "SUSTAT": "NOT DONE"
           },
           "validated": true
@@ -217,7 +217,7 @@
       "dataset": "be.xpt",
       "domain": "BE",
       "execution_status": "success",
-      "execution_message": "BEOCCUR should only be provided when BEPRESP is equal to 'Y'.",
+      "execution_message": "BEOCCUR must be null when BEPRESP is not equal to 'Y' or when BESTAT is 'NOT DONE'.",
       "number_errors": 3,
       "errors": [
         {
@@ -225,8 +225,8 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "BEOCCUR": "Y",
             "BEPRESP": null,
+            "BEOCCUR": "Y",
             "BESTAT": null
           },
           "validated": true
@@ -236,8 +236,8 @@
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "BEOCCUR": "Y",
             "BEPRESP": null,
+            "BEOCCUR": "Y",
             "BESTAT": "NOT DONE"
           },
           "validated": true
@@ -247,8 +247,8 @@
           "SEQ": 3,
           "USUBJID": "CDISC001",
           "value": {
-            "BEOCCUR": "N",
             "BEPRESP": null,
+            "BEOCCUR": "N",
             "BESTAT": null
           },
           "validated": true
@@ -259,7 +259,7 @@
       "dataset": "ce.xpt",
       "domain": "CE",
       "execution_status": "success",
-      "execution_message": "CEOCCUR should only be provided when CEPRESP is equal to 'Y'.",
+      "execution_message": "CEOCCUR must be null when CEPRESP is not equal to 'Y' or when CESTAT is 'NOT DONE'.",
       "number_errors": 3,
       "errors": [
         {
@@ -267,8 +267,8 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "CEOCCUR": "Y",
             "CEPRESP": null,
+            "CEOCCUR": "Y",
             "CESTAT": null
           },
           "validated": true
@@ -278,8 +278,8 @@
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "CEOCCUR": "Y",
             "CEPRESP": null,
+            "CEOCCUR": "Y",
             "CESTAT": "NOT DONE"
           },
           "validated": true
@@ -289,8 +289,8 @@
           "SEQ": 3,
           "USUBJID": "CDISC001",
           "value": {
-            "CEOCCUR": "N",
             "CEPRESP": null,
+            "CEOCCUR": "N",
             "CESTAT": null
           },
           "validated": true
@@ -317,7 +317,7 @@
       "dataset": "ho.xpt",
       "domain": "HO",
       "execution_status": "success",
-      "execution_message": "HOOCCUR should only be provided when HOPRESP is equal to 'Y'.",
+      "execution_message": "HOOCCUR must be null when HOPRESP is not equal to 'Y' or when HOSTAT is 'NOT DONE'.",
       "number_errors": 3,
       "errors": [
         {
@@ -325,8 +325,8 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "HOOCCUR": "Y",
             "HOPRESP": null,
+            "HOOCCUR": "Y",
             "HOSTAT": null
           },
           "validated": true
@@ -336,8 +336,8 @@
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "HOOCCUR": "Y",
             "HOPRESP": null,
+            "HOOCCUR": "Y",
             "HOSTAT": "NOT DONE"
           },
           "validated": true
@@ -347,8 +347,8 @@
           "SEQ": 3,
           "USUBJID": "CDISC001",
           "value": {
-            "HOOCCUR": "N",
             "HOPRESP": null,
+            "HOOCCUR": "N",
             "HOSTAT": null
           },
           "validated": true
@@ -359,7 +359,7 @@
       "dataset": "mh.xpt",
       "domain": "MH",
       "execution_status": "success",
-      "execution_message": "MHOCCUR should only be provided when MHPRESP is equal to 'Y'.",
+      "execution_message": "MHOCCUR must be null when MHPRESP is not equal to 'Y' or when MHSTAT is 'NOT DONE'.",
       "number_errors": 3,
       "errors": [
         {
@@ -367,8 +367,8 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "MHOCCUR": "Y",
             "MHPRESP": null,
+            "MHOCCUR": "Y",
             "MHSTAT": null
           },
           "validated": true
@@ -378,8 +378,8 @@
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "MHOCCUR": "Y",
             "MHPRESP": null,
+            "MHOCCUR": "Y",
             "MHSTAT": "NOT DONE"
           },
           "validated": true
@@ -389,8 +389,8 @@
           "SEQ": 3,
           "USUBJID": "CDISC001",
           "value": {
-            "MHOCCUR": "N",
             "MHPRESP": null,
+            "MHOCCUR": "N",
             "MHSTAT": null
           },
           "validated": true

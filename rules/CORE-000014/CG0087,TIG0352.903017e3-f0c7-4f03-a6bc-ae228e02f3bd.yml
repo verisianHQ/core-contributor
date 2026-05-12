@@ -147,7 +147,7 @@ Description: Raise an error when --PRESP is not equal to 'Y' and --OCCUR is
   present in dataset, or --STAT is equal to 'NOT DONE' and --OCCUR is not empty.
 Executability: Fully Executable
 Outcome:
-  Message: --OCCUR should only be provided when --PRESP is equal to 'Y'.
+  Message: --OCCUR must be null when --PRESP is not equal to 'Y' or when --STAT is 'NOT DONE'.
   Output Variables:
     - --PRESP
     - --OCCUR
