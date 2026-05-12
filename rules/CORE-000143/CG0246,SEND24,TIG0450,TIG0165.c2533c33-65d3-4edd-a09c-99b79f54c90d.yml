@@ -175,7 +175,7 @@ Core:
   Id: CORE-000143
   Status: Published
   Version: '1'
-Description: The length of ETCD must be no greater than 8 characters.
+Description: Raise an error when the length of ETCD is greater than 8 characters.
 Executability: Fully Executable
 Outcome:
   Message: ETCD length is greater than 8 characters.
