@@ -4,7 +4,7 @@
       "dataset": "se.xpt",
       "domain": "SE",
       "execution_status": "success",
-      "execution_message": "SESTDTC should be populated.",
+      "execution_message": "SESTDTC is not populated.",
       "number_errors": 2,
       "errors": [
         {
@@ -14,7 +14,7 @@
           "value": {
             "SESTDTC": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 5,
@@ -23,21 +23,9 @@
           "value": {
             "SESTDTC": null
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "se.xpt",
-      "Row": 6,
-      "Variable": "SESTDTC"
-    },
-    {
-      "Sheet": "se.xpt",
-      "Row": 9,
-      "Variable": "SESTDTC"
     }
   ]
 }
