@@ -74,7 +74,7 @@ Core:
 Description: Raise an error when the length of ARMCD is greater than 20 characters.
 Executability: Fully Executable
 Outcome:
-  Message: Length of ARMCD is greater than 20.
+  Message: ARMCD value length is greater than 20 characters.
   Output Variables:
     - ARMCD
 Rule Type: Record Data
