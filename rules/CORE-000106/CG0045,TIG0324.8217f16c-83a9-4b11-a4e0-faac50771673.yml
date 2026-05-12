@@ -74,8 +74,6 @@ Check:
       operator: non_empty
     - any:
         - name: --ENRTPT
-          operator: not_exists
-        - name: --ENRTPT
           operator: empty
 Core:
   Id: CORE-000106
