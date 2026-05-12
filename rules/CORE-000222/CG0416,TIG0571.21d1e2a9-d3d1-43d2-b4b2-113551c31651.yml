@@ -76,7 +76,7 @@ Core:
 Description: Raise an error when the length of QLABEL is greater than 40 characters.
 Executability: Fully Executable
 Outcome:
-  Message: QLABEL > 40 chars.
+  Message: QLABEL value length is greater than 40 characters.
   Output Variables:
     - IDVAR
     - IDVARVAL
