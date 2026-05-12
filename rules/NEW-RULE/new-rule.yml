@@ -44,10 +44,10 @@ Core:
   Id: CDISC.SDTMIG.CG0651
   Status: Published
   Version: '1'
-Description: Raise an error when a variable is permissible, data is collected as per define-xml document but variable is not present in the dataset or has no data.
+Description: Raise an error when a variable is permissible, data is collected as per define-xml document but variable is not present in the dataset.
 Executability: Fully Executable
 Outcome:
-  Message: Variable is permissible and data is collected as per define-xml document but variable is not present in the dataset or variable has no data.
+  Message: Variable is permissible and data is collected as per define-xml document but variable is not present in the dataset.
   Output Variables:
     - define_variable_name
     - define_variable_has_no_data
