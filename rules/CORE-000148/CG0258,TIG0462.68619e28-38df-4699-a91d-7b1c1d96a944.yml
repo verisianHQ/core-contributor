@@ -70,7 +70,7 @@ Core:
 Description: Raise an error when the length of TSPARM value is greater than 40 characters.
 Executability: Fully Executable
 Outcome:
-  Message: Length of TSPARM is greater than 40.
+  Message: TSPARM value length is greater than 40 characters.
   Output Variables:
     - TSPARM
     - TSPARMCD
