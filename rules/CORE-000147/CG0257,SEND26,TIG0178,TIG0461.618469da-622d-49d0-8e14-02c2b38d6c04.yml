@@ -181,7 +181,7 @@ Core:
   Id: CORE-000147
   Status: Published
   Version: '1'
-Description: The length of TSPARMCD value is greater than 8.
+Description: Raise an error when the length of TSPARMCD value is greater than 8 characters.
 Executability: Fully Executable
 Outcome:
   Message: Length of TSPARMCD is greater than 8.
