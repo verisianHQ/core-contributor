@@ -1,18 +1,19 @@
 # Variable: DVSTDTC
-# Condition: 
+# Condition:
 # Rule: DVSTDTC >= DM.RFICDTC
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The intent of the domain model is to capture protocol deviations
-                  that occurred during the course of the study (see ICH E3
+              - Cited Guidance: 'The intent of the domain model is to capture protocol deviations
+                  that occurred during the course of the study (see ICH E3:
                   Section 10.2 at
                   http://www.ich.org/fileadmin/Public_Web_Site/ICH_Products/Guidelines/Efficacy/E3/E3_Guideline.pdf).
                   Usually these are deviations that occur after the subject has
-                  been randomized or received the first treatment.
+                  been randomized or received the first treatment.'
                 Document: IG v3.4
                 Item: Assumption 1
                 Section: 6.2.7
@@ -25,12 +26,12 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The intent of the domain model is to capture protocol deviations
-                  that occurred during the course of the study (see ICH E3
+              - Cited Guidance: 'The intent of the domain model is to capture protocol deviations
+                  that occurred during the course of the study (see ICH E3:
                   Section 10.2 at
                   http://www.ich.org/fileadmin/Public_Web_Site/ICH_Products/Guidelines/Efficacy/E3/E3_Guideline.pdf).
                   Usually these are deviations that occur after the subject has
-                  been randomized or received the first treatment.
+                  been randomized or received the first treatment.'
                 Document: IG v3.3
                 Item: Assumption 1
                 Section: 6.2.4
@@ -79,6 +80,8 @@ Authorities:
         Version: '1.0'
 Check:
   all:
+    - name: DVSTDTC
+      operator: non_empty
     - name: DVSTDTC
       operator: date_less_than
       value: RFICDTC
