@@ -184,7 +184,7 @@ Core:
 Description: Raise an error when the length of TSPARMCD value is greater than 8 characters.
 Executability: Fully Executable
 Outcome:
-  Message: Length of TSPARMCD is greater than 8.
+  Message: TSPARMCD value length is greater than 8 characters.
   Output Variables:
     - TSPARM
     - TSPARMCD
