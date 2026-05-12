@@ -176,7 +176,7 @@ Core:
   Id: CORE-000088
   Status: Published
   Version: '1'
-Description: The length of SETCD should be no greater than 8.
+Description: Raise an error when the length of SETCD is greater than 8 characters.
 Executability: Fully Executable
 Outcome:
   Message: SETCD value length is greater than 8.
