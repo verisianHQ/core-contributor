@@ -175,7 +175,7 @@ Core:
   Id: CORE-000199
   Status: Published
   Version: '1'
-Description: Raise an error when length of --TEST > 40.
+Description: Raise an error when the length of --TEST is greater than 40 characters.
 Executability: Fully Executable
 Outcome:
   Message: Value length of --TEST > 40.
