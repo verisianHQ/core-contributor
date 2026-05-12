@@ -71,7 +71,7 @@ Core:
   Id: CORE-000157
   Status: Published
   Version: '1'
-Description: The length of ARMCD is limited to 20 characters.
+Description: Raise an error when the length of ARMCD is greater than 20 characters.
 Executability: Fully Executable
 Outcome:
   Message: Length of ARMCD is greater than 20.
