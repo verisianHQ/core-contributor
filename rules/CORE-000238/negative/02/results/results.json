@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "RFXENDTC does not equal the latest value of EX.EXSTDTC or EX.EXENDTC",
+      "execution_message": "RFXENDTC does not equal the latest value of EXSTDTC or EXENDTC in the EX dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,11 +12,11 @@
           "SEQ": null,
           "USUBJID": "CDISC001",
           "value": {
-            "$max_ex_exendtc": "2013-01-22",
+            "RFXENDTC": "2013-01-24",
             "$max_ex_exstdtc": "2013-01-23",
-            "RFXENDTC": "2013-01-24"
+            "$max_ex_exendtc": "2013-01-22"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
