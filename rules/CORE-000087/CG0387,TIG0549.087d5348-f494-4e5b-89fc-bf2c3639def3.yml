@@ -1,6 +1,7 @@
 # Variable: --SER
 # Condition: --SER ^= null
 # Rule: --SER in ('Y','N')
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -70,11 +71,12 @@ Core:
   Id: CORE-000087
   Status: Published
   Version: '1'
-Description: Raise an error when AESER is completed and value is not 'Y' or 'N'
+Description: Raise an error when AESER is populated and value is not 'Y' or 'N'.
 Executability: Fully Executable
 Outcome:
-  Message: AESER is completed, but not equal to "N" or "Y"
+  Message: AESER is populated, but not equal to 'N' or 'Y'.
   Output Variables:
+    - AETERM
     - AESER
 Rule Type: Record Data
 Scope:
