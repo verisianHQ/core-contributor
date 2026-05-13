@@ -43,6 +43,47 @@ Authorities:
               - Cited Guidance: MedDRA High Level Term from the primary path.
                 Document: Model v1.7
                 Section: 2.2.2
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+                  label, etc.
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1708
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+                  label, etc.
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1708
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+                  label, etc.
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1708
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
 Check:
   all:
     - name: --HLT
