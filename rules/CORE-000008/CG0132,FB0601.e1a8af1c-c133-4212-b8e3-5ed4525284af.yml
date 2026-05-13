@@ -1,7 +1,7 @@
 # Variable: DTHFL
 # Condition: SS.SSSTRESC = 'DEAD'
 # Rule: DTHFL = 'Y'
-# Verified
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -108,8 +108,9 @@ Core:
   Id: CORE-000008
   Status: Draft
   Version: '1'
-Description: When survival status is completed as 'Dead' in the SS dataset then death flag should be
-  populated as 'Y' in the DM dataset for the corresponding subject.
+Description: Raise error when survival status is equal to 'DEAD' 
+  in the SS dataset and death flag is not equal to 'Y' in the DM dataset
+  for the corresponding subject.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
