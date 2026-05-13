@@ -49,8 +49,8 @@ Authorities:
               - Cited Guidance: ETCD (the companion to ELEMENT), SETCD (the short name of a
                   specific Trial Set), and TSPARMCD (the companion to TSPARM)
                   are limited to 8 characters, but do not have special character
-                  restrictions
-                Document: IG v3.0
+                  restrictions.
+                Document: SENDIG v3.0
                 Item: Specification
                 Section: 4.2.1
             Origin: SEND Conformance Rules
@@ -65,8 +65,8 @@ Authorities:
               - Cited Guidance: ETCD (the companion to ELEMENT), SETCD (the short name of a
                   specific Trial Set), and TSPARMCD (the companion to TSPARM)
                   are limited to 8 characters, but do not have special character
-                  restrictions
-                Document: IG v3.1
+                  restrictions.
+                Document: SENDIG v3.1
                 Item: Specification
                 Section: 4.2.1
             Origin: SEND Conformance Rules
@@ -81,8 +81,8 @@ Authorities:
               - Cited Guidance: ETCD (the companion to ELEMENT), SETCD (the short name of a
                   specific Trial Set), and TSPARMCD (the companion to TSPARM)
                   are limited to 8 characters, but do not have special character
-                  restrictions
-                Document: IG v3.1.1
+                  restrictions.
+                Document: SENDIG v3.1.1
                 Item: Specification
                 Section: 4.2.1
             Origin: SEND Conformance Rules
@@ -97,8 +97,8 @@ Authorities:
               - Cited Guidance: ETCD (the companion to ELEMENT), SETCD (the short name of a
                   specific Trial Set), and TSPARMCD (the companion to TSPARM)
                   are limited to 8 characters, but do not have special character
-                  restrictions
-                Document: IG v3.1
+                  restrictions.
+                Document: SENDIG v3.1
                 Item: Specification
                 Section: 4.2.1
             Origin: SEND Conformance Rules
@@ -113,8 +113,8 @@ Authorities:
               - Cited Guidance: ETCD (the companion to ELEMENT), SETCD (the short name of a
                   specific Trial Set), and TSPARMCD (the companion to TSPARM)
                   are limited to 8 characters, but do not have special character
-                  restrictions
-                Document: IG v3.1
+                  restrictions.
+                Document: SENDIG v3.1
                 Item: Specification
                 Section: 4.2.1
             Origin: SEND Conformance Rules
@@ -129,8 +129,8 @@ Authorities:
               - Cited Guidance: ETCD (the companion to ELEMENT), SETCD (the short name of a
                   specific Trial Set), and TSPARMCD (the companion to TSPARM)
                   are limited to 8 characters, but do not have special character
-                  restrictions
-                Document: IG v3.1
+                  restrictions.
+                Document: SENDIG v3.1
                 Item: Specification
                 Section: 4.2.1
             Origin: SEND Conformance Rules
@@ -169,8 +169,9 @@ Authorities:
         Substandard: SDTM
         Version: '1.0'
 # Variable: TSPARMCD
-# Condition: 
+# Condition:
 # Rule: TSPARMCD value length <= 8
+# verified
 Check:
   all:
     - name: TSPARMCD
@@ -180,10 +181,10 @@ Core:
   Id: CORE-000147
   Status: Published
   Version: '1'
-Description: Trigger error when length of TSPARMCD is greater than 8
+Description: Raise an error when the length of TSPARMCD value is greater than 8 characters.
 Executability: Fully Executable
 Outcome:
-  Message: Length of TSPARMCD is greater than 8
+  Message: TSPARMCD value length is greater than 8 characters.
   Output Variables:
     - TSPARM
     - TSPARMCD
