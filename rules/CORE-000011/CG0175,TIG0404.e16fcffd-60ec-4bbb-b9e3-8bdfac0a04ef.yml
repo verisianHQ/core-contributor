@@ -1,6 +1,7 @@
 # Variable: IEORRES
 # Condition: IECAT = 'EXCLUSION'
 # Rule: IEORRES = 'Y'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -10,7 +11,7 @@ Authorities:
               - Cited Guidance: The intent of the domain model is to collect responses to only
                   those criteria that the subject did not meet, and not the
                   responses to all criteria. 
-                Document: SDTMIG v3.4
+                Document: IG v3.4
                 Item: Assumption 1
                 Section: 6.3.4
             Origin: SDTM and SDTMIG Conformance Rules
@@ -83,7 +84,7 @@ Description: Raise an error when IECAT is equal to 'EXCLUSION' and IEORRES is
   not equal to 'Y'.
 Executability: Fully Executable
 Outcome:
-  Message: IEORRES is not equal to 'Y' when IECAT equals 'EXCLUSION'.
+  Message: IEORRES is not equal to 'Y', but IECAT is equal to 'EXCLUSION'.
   Output Variables:
     - IECAT
     - IEORRES
