@@ -4,8 +4,8 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "ACTARM is not in TA.ARM, but ACTARM in DM does not equal Screen Failure, Not Assigned, Not Treated, or Unplanned Treatment.",
-      "number_errors": 4,
+      "execution_message": "ACTARM value in the DM dataset must equal 'Screen Failure', 'Not Assigned', 'Not Treated', or 'Unplanned Treatment' if the value does not match an ACTARM value in the TA dataset.",
+      "number_errors": 5,
       "errors": [
         {
           "row": 1,
@@ -14,7 +14,7 @@
           "value": {
             "ACTARM": "ACME Low Dose"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -23,7 +23,7 @@
           "value": {
             "ACTARM": "ACME Low Dose"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -32,7 +32,16 @@
           "value": {
             "ACTARM": "ACME High Dose"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "CDISC005",
+          "value": {
+            "ACTARM": "ScreEN failURE"
+          },
+          "validated": true
         },
         {
           "row": 15,
@@ -41,7 +50,7 @@
           "value": {
             "ACTARM": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -52,38 +61,6 @@
       "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000367, dataset=TA",
       "number_errors": 0,
       "errors": []
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "ACTARMCD"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "ACTARM"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "ACTARMCD"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "ACTARM"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 7,
-      "Variable": "ACTARMCD"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 7,
-      "Variable": "ACTARM"
     }
   ]
 }

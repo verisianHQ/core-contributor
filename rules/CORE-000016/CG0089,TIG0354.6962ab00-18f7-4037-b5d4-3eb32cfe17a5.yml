@@ -1,6 +1,7 @@
 # Variable: --PRESP
 # Condition: --OCCUR ^= null
 # Rule: --PRESP = 'Y'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -12,6 +13,7 @@ Authorities:
                   null.]|Events|[--OCCUR][An indication as to whether a
                   prespecified event has occurred.]
                 Document: Model v2.0
+                Item: '--PRESP|--OCCUR'
                 Section: Events
               - Cited Guidance: Interventions[--PRESP][An indication that the intervention was
                   prospectively stated or detailed on the CRF. Values should be
@@ -108,10 +110,10 @@ Core:
   Id: CORE-000016
   Status: Published
   Version: '1'
-Description: Raise an error when --OCCUR is not empty and --PRESP is not equal to "Y".
+Description: Raise an error when --OCCUR is populated but --PRESP is not equal to 'Y'.
 Executability: Fully Executable
 Outcome:
-  Message: --PRESP should be populated as "Y" when --OCCUR is provided.
+  Message: --PRESP should be populated as 'Y' when --OCCUR is populated.
   Output Variables:
     - --PRESP
     - --OCCUR
