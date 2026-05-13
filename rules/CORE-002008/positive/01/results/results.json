@@ -1,20 +1,26 @@
 {
   "datasets": [
     {
-      "dataset": "oe.xpt",
-      "domain": "OE",
+      "dataset": "mh.xpt",
+      "domain": "MH",
       "execution_status": "success",
       "execution_message": null,
       "number_errors": 0,
       "errors": []
     },
     {
-      "dataset": "vs.xpt",
-      "domain": "VS",
+      "dataset": "ae.xpt",
+      "domain": "AE",
       "execution_status": "success",
       "execution_message": null,
       "number_errors": 0,
       "errors": []
     }
-  ]
+  ],
+  "dictionary_versions": {
+    "meddra": {
+      "version": "29.0",
+      "language": "English"
+    }
+  }
 }
