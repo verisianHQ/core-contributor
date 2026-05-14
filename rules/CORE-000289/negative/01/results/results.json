@@ -4,28 +4,74 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "LBORRES is not a continuous measurement but LBORNRHI is not empty.",
-      "number_errors": 2,
+      "execution_message": "LBORNRHI is populated when LBORRES is not a quantitative value.",
+      "number_errors": 6,
       "errors": [
         {
           "row": 1,
           "SEQ": 1,
-          "USUBJID": "ALB",
+          "USUBJID": "Xyz01",
           "value": {
-            "LBORNRHI": "30",
-            "LBORRES": "NEGATIVE"
+            "LBTESTCD": "ALB",
+            "LBORRES": "NEGATIVE",
+            "LBORNRHI": "30"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": 2,
-          "USUBJID": "Prot",
+          "USUBJID": "Xyz01",
           "value": {
-            "LBORNRHI": "POSITIVE",
-            "LBORRES": "POSITIVE"
+            "LBTESTCD": "ALP",
+            "LBORRES": "POSITIVE",
+            "LBORNRHI": "POSITIVE"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "Xyz01",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBORRES": "< + 30",
+            "LBORNRHI": "30"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "Xyz01",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBORRES": "+30",
+            "LBORNRHI": "30"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "Xyz01",
+          "value": {
+            "LBTESTCD": "ALP",
+            "LBORRES": " - > 35.55",
+            "LBORNRHI": "POSITIVE"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "Xyz01",
+          "value": {
+            "LBTESTCD": "ALP",
+            "LBORRES": " -35.55",
+            "LBORNRHI": "POSITIVE"
+          },
+          "validated": true
         }
       ]
     }
