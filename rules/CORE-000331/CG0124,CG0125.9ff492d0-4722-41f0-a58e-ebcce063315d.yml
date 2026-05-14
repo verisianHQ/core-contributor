@@ -1,6 +1,7 @@
 # Variable: ACTARMCD
 # Condition: ACTARMCD not in TA.ARMCD
 # Rule: ACTARMCD in ('SCRNFAIL', 'NOTASSGN', 'NOTTRT', 'UNPLAN')
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -53,9 +54,9 @@ Core:
   Id: CORE-000331
   Status: Published
   Version: '1'
-Description: 'ACTARMCD values in Demographics are restricted to ARMCD values in
-  Trial Arms when ACTARMCD is not equal to "SCRNFAIL", "NOTASSGN", "NOTTRT", or
-  "UNPLAN"'
+Description: Raise an error when ACTARMCD value in the DM dataset, except
+  'SCRNFAIL', 'NOTASSGN', 'NOTTRT', or 'UNPLAN', does not match any of the
+  ARMCD values in the TA dataset.  
 Executability: Fully Executable
 Operations:
   - domain: TA
@@ -63,11 +64,12 @@ Operations:
     name: ARMCD
     operator: distinct
 Outcome:
-  Message: 'DM.ACTARMCD must equal SCRNFAIL, NOTASSGN, NOTTRT, or UNPLAN if the
-    value is not present in TA.ARMCD'
+  Message: ACTARMCD value in the DM dataset must equal 'SCRNFAIL', 
+    'NOTASSGN', 'NOTTRT', or 'UNPLAN' if the value does not match
+    an ARMCD value in the TA dataset.
   Output Variables:
     - ACTARMCD
-    #- $armcd_list
+    - ACTARM
 Rule Type: Record Data
 Scope:
   Classes:
