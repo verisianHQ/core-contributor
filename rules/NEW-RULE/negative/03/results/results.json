@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "No occurrence of TSPARAMCD='CURTRT' is included in TS or TSVAL is null.The count of occurrences of TSPARAMCD = <value> not in the set ('FCNTRY', 'OBJPRIM', 'OBJSEC', 'OUTMSPRI', .'OUTMSSEC', 'RANDQT', 'REGID', 'TITLE', 'TTYPE') included in the list of TSPARAMCD with TSVAL populated is gt 1.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "AGEMIN",
+            "TSVAL": "18"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "AGEMIN",
+            "TSVAL": "\n"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
