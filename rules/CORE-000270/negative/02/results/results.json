@@ -1,19 +1,6 @@
 {
   "datasets": [
     {
-      "dataset": "ae.xpt",
-      "domain": "AE",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
-      "number_errors": 1,
-      "errors": [
-        {
-          "error": "Column not found in data",
-          "message": "VISITNUM"
-        }
-      ]
-    },
-    {
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
@@ -33,7 +20,7 @@
       "dataset": "sv.xpt",
       "domain": "SV",
       "execution_status": "success",
-      "execution_message": "For a planned visit (SVPRESP = 'Y'), non-missing VISITNUM value must be among those present in TV.VISITNUM. in TV.VISITNUM",
+      "execution_message": "VISITNUM value for planned visit does not match any VISITNUM value in the TV dataset.",
       "number_errors": 4,
       "errors": [
         {
@@ -41,40 +28,36 @@
           "SEQ": null,
           "USUBJID": "CDISC004",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 22,
           "SEQ": null,
           "USUBJID": "CDISC005",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 23,
           "SEQ": null,
           "USUBJID": "CDISC005",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 35,
           "SEQ": null,
           "USUBJID": "CDISC008",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -90,7 +73,7 @@
       "dataset": "vs.xpt",
       "domain": "VS",
       "execution_status": "success",
-      "execution_message": "For a planned visit (SVPRESP = 'Y'), non-missing VISITNUM value must be among those present in TV.VISITNUM. in TV.VISITNUM",
+      "execution_message": "VISITNUM value for planned visit does not match any VISITNUM value in the TV dataset.",
       "number_errors": 22,
       "errors": [
         {
@@ -98,220 +81,198 @@
           "SEQ": 31,
           "USUBJID": "CDISC004",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 32,
           "SEQ": 32,
           "USUBJID": "CDISC004",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 33,
           "SEQ": 33,
           "USUBJID": "CDISC004",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 65,
           "SEQ": 65,
           "USUBJID": "CDISC004",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 66,
           "SEQ": 66,
           "USUBJID": "CDISC004",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 67,
           "SEQ": 67,
           "USUBJID": "CDISC004",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 98,
           "SEQ": 98,
           "USUBJID": "CDISC004",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 99,
           "SEQ": 99,
           "USUBJID": "CDISC004",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 100,
           "SEQ": 100,
           "USUBJID": "CDISC004",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 111,
           "SEQ": 111,
           "USUBJID": "CDISC004",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 121,
           "SEQ": 121,
           "USUBJID": "CDISC004",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 152,
           "SEQ": 31,
           "USUBJID": "CDISC005",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 153,
           "SEQ": 32,
           "USUBJID": "CDISC005",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 154,
           "SEQ": 33,
           "USUBJID": "CDISC005",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 186,
           "SEQ": 68,
           "USUBJID": "CDISC005",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 187,
           "SEQ": 69,
           "USUBJID": "CDISC005",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 188,
           "SEQ": 70,
           "USUBJID": "CDISC005",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 219,
           "SEQ": 104,
           "USUBJID": "CDISC005",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 220,
           "SEQ": 105,
           "USUBJID": "CDISC005",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 221,
           "SEQ": 106,
           "USUBJID": "CDISC005",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 232,
           "SEQ": 120,
           "USUBJID": "CDISC005",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 242,
           "SEQ": 131,
           "USUBJID": "CDISC005",
           "value": {
-            "SVPRESP": "Y",
             "VISITNUM": 12.0
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
