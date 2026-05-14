@@ -1,0 +1,42 @@
+{
+  "datasets": [
+    {
+      "dataset": "sm.xpt",
+      "domain": "SM",
+      "execution_status": "success",
+      "execution_message": "Custom domain is using a reserved or modeled standard name as DOMAIN value.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "DOMAIN": "SM",
+            "define_dataset_is_non_standard": "Yes"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "gf.xpt",
+      "domain": "GF",
+      "execution_status": "success",
+      "execution_message": "Custom domain is using a reserved or modeled standard name as DOMAIN value.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "DOMAIN": "GF",
+            "define_dataset_is_non_standard": "Yes"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
