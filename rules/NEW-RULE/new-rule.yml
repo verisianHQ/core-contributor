@@ -1,0 +1,73 @@
+# Variable: --PTCD
+# Condition: 
+# Rule: --PTCD = MedDRA preferred TERM code
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0380
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The preferred term code assigned to the event from
+                  MedDRA.
+                Document: Model v2.0
+                Item: --PTCD
+                Section: Events
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0380
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: MedDRA Preferred Term code.
+                Document: Model v1.4
+                Section: 2.2.2
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0380
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: MedDRA Preferred Term code.
+                Document: Model v1.7
+                Section: 2.2.2
+Check:
+  all:
+    - name: --PTCD
+      operator: is_not_valid_meddra_code_reference
+      filter_attribute: term_type
+      filter_value: PT
+Core:
+  Id: CDISC.SDTMIG.CG0380
+  Status: Draft
+  Version: '1'
+Description: Raise an error when --PTCD is not a valid MedDRA preferred term code.
+Executability: Fully Executable
+Outcome:
+  Message: --PTCD  is not a valid MedDRA preferred term code.
+  Output Variables:
+    - --PTCD
+    - --TERM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - AE
+      - MH
+      - CE
+Sensitivity: Record
