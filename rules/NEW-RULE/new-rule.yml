@@ -42,7 +42,7 @@ Check:
         - TDIGRP
       value_is_literal: true
     - name: TSVAL
-      operator: is_not_valid_medrt_term_reference
+      operator: is_not_valid_snomed_term_reference
 Core:
   Id: NEW-RULE
   Status: Draft
