@@ -46,6 +46,8 @@ Check:
   all:
     - name: --SOC
       operator: is_not_valid_meddra_term_reference
+      filter_attribute: term_type
+      filter_value: SOC
 Core:
   Id: NEW-RULE
   Status: Draft
