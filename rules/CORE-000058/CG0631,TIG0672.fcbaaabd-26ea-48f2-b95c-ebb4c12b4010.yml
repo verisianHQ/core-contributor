@@ -1,14 +1,16 @@
 # Variable: RPHASE
 # Condition: 
 # Rule: RPHASE not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: RPHASE is not be used in human clinical trials.
-                Document: SDTM v2.0
+              - Cited Guidance: Not in human clinical trials.
+                Document: Model v2.0
+                Item: RPHASE
                 Section: Timing
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -41,7 +43,9 @@ Core:
 Description: Raise an error when RPHASE is present.
 Executability: Fully Executable
 Outcome:
-  Message: RPHASE is present.
+  Message: RPHASE must not be present.
+  Output Variables:
+    - RPHASE
 Rule Type: Record Data
 Scope:
   Classes:
