@@ -59,7 +59,7 @@ Check:
     - name: TSPARMCD
       operator: is_not_unique_set
 Core:
-  Id:
+  Id: NEW-RULE
   Status: Draft
   Version: '1'
 Description: The count of occurrences of TSPARAMCD = <value> not in the set
