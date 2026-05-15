@@ -5,7 +5,7 @@
       "domain": "TS",
       "execution_status": "success",
       "execution_message": "TSVALCD is not a valid code from NDF-RT.",
-      "number_errors": 1,
+      "number_errors": 2,
       "errors": [
         {
           "row": 1,
@@ -16,8 +16,23 @@
             "TSVALCD": "N9999999999"
           },
           "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "PCLAS",
+            "TSVALCD": "Acetylcholine Activity Alteration"
+          },
+          "validated": true
         }
       ]
     }
-  ]
+  ],
+  "dictionary_versions": {
+    "medrt": {
+      "version": "April 2026"
+    }
+  }
 }
