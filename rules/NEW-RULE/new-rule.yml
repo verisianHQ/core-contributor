@@ -48,7 +48,7 @@ Core:
 Description: Raise an error when TSPARMCD = 'PCLAS' but TSVAL is not a valid term from MED-RT.
 Executability: Fully Executable
 Outcome:
-  Message: TSVAL is not a valid term from NDF-RT.
+  Message: TSVAL is not a valid term from MED-RT.
   Output Variables:
     - TSPARMCD
     - TSVAL
