@@ -170,18 +170,18 @@ jobs:
               return;
             }
 
-            const { data: existingComments } = await github.rest.pulls.listReviewComments({
+            const { data: existingReviewComments } = await github.rest.pulls.listReviewComments({
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: context.issue.number,
               per_page: 100
             });
 
-            const botComments = existingComments.filter(comment => 
+            const botReviewComments = existingReviewComments.filter(comment => 
               comment.body.includes('')
             );
 
-            for (const comment of botComments) {
+            for (const comment of botReviewComments) {
               await github.rest.pulls.deleteReviewComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
@@ -189,16 +189,47 @@ jobs:
               });
             }
 
-            for (const comment of comments) {
-              await github.rest.pulls.createReviewComment({
+            const { data: existingIssueComments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              per_page: 100
+            });
+
+            const botIssueComments = existingIssueComments.filter(comment => 
+              comment.body.includes('')
+            );
+
+            for (const comment of botIssueComments) {
+              await github.rest.issues.deleteComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                pull_number: context.issue.number,
-                commit_id: context.payload.pull_request.head.sha,
-                path: comment.path,
-                line: comment.line,
-                body: comment.body
+                comment_id: comment.id,
               });
+            }
+
+            for (const comment of comments) {
+              try {
+                await github.rest.pulls.createReviewComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: context.issue.number,
+                  commit_id: context.payload.pull_request.head.sha,
+                  path: comment.path,
+                  line: comment.line,
+                  body: comment.body
+                });
+              } catch (error) {
+                console.log(`Could not post inline comment on ${comment.path} line ${comment.line}. Falling back to general PR comment.`);
+                const fallbackBody = `**Schema Error in \`${comment.path}\` (Line ${comment.line}):**\n\n${comment.body}`;
+                
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.issue.number,
+                  body: fallbackBody
+                });
+              }
             }
 
             core.setFailed("Schema validation failed. Please check the PR comments and correct the issues.");
