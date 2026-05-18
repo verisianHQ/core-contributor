@@ -757,12 +757,23 @@ def main():
 
 def generate_rule_results(rule_id: str) -> dict:
     """Function run by the pr comment bot github action run_validation."""
+    
+    rule_path = RULES_DIR / rule_id
+    rule_yml = list(rule_path.glob("[!~]*.yml"))[0]
+    with rule_yml.open("r", encoding="utf-8") as f:
+        content = f.read().lower()
+        unii_path = "dummy_ex_dicts/unii" if "unii" in content else None
+        medrt_path = "dummy_ex_dicts/medrt" if "medrt" in content else None
+        loinc_path = "dummy_ex_dicts/loinc" if "loinc" in content else None
+        snomed_path = "dummy_ex_dicts/snomed" if "snomed" in content else None
+
     runner = TestRunner(
-        unii_path="default",
-        medrt_path="default",
-        loinc_path="default",
-        snomed_path="default"
+        unii_path=unii_path,
+        medrt_path=medrt_path,
+        loinc_path=loinc_path,
+        snomed_path=snomed_path,
     )
+
     return runner.run_rule_suite(rule_id)
 
 
