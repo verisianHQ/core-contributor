@@ -45,7 +45,7 @@ Core:
   Id: NEW-RULE
   Status: Draft
   Version: '1'
-Description: Raise an error if TSVAL is not a valid preferred term from FDA Substance Registration System (SRS) when TSPARMCD is 'CURTRT'.
+Description: Raise an error when TSPARMCD = 'CURTRT' but value for TSVAL is not a valid preferred term from the FDA Substance Registration System (SRS).
 Executability: Fully Executable
 Outcome:
   Message: TSVAL is not a valid preferred term from FDA Substance Registration System (SRS).
