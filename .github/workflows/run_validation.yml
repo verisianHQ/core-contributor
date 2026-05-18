@@ -193,12 +193,12 @@ jobs:
             
             let historyComment = comments.find(comment => 
               comment.user.type === 'Bot' && 
-              comment.body.includes('## Rule Validation History')
+              comment.body.includes('Rule Validation History')
             );
             
             let latestComment = comments.find(comment => 
               comment.user.type === 'Bot' && 
-              comment.body.includes('## Rule Validation Results (Run')
+              comment.body.includes('Rule Validation Results (Run')
             );
             
             if (!historyComment) {
