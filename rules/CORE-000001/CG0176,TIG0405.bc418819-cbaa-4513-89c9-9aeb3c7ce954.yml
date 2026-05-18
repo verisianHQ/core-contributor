@@ -64,7 +64,7 @@ Authorities:
               Id: TIG0405
               Version: '1'
             Version: '1.0'
-        Substandard: SDTM
+        Substandard: test addition to trigger schema
         Version: '1.0'
 Check:
   all:
@@ -84,7 +84,7 @@ Description: Raise an error when IECAT equals 'INCLUSION' but IEORRES does
   not equal 'N'.
 Executability: Fully Executable
 Outcome:
-  Message: IECAT equals 'INCLUSION', but IEORRES is not equal to 'N'.
+  Message: IECAT equals 'INCLUSION', but IEORRES is not equal to 'N' - test addition to trigger diff.
   Output Variables:
     - IETESTCD
     - IECAT
