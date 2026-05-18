@@ -84,12 +84,12 @@ Description: Raise an error when IECAT equals 'INCLUSION' but IEORRES does
   not equal 'N'.
 Executability: Fully Executable
 Outcome:
-  Message: IECAT equals 'INCLUSION', but IEORRES is not equal to 'N'.
+  Message: IECAT equals 'INCLUSION', but IEORRES is not equal to 'N' 1.
   Output Variables:
     - IETESTCD
     - IECAT
     - IEORRES
-Rule Type: Record Data
+Rule Type: Record Data1
 Scope:
   Classes:
     Include:
