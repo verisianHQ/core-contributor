@@ -184,31 +184,24 @@ jobs:
             
             const newReportBody = `## Rule Validation Results (Run ${context.runId})\n\n<details>\n<summary><strong>Click to expand full report</strong></summary>\n\n${detailedContent}\n</details>\n\n---\n[View workflow run](${context.payload.repository.html_url}/actions/runs/${context.runId})`;
             
-            const { data: comments } = await github.rest.issues.listComments({
+            const comments = await github.paginate(github.rest.issues.listComments, {
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              per_page: 100
             });
             
-            let historyComment = comments.find(comment => 
-              comment.user.type === 'Bot' && 
-              comment.body.includes('Rule Validation History')
-            );
-            
-            let latestComment = comments.find(comment => 
-              comment.user.type === 'Bot' && 
-              comment.body.includes('Rule Validation Results (Run')
-            );
+            let historyComment = comments.find(comment => comment.body.includes('## Rule Validation History'));
+            let latestComment = comments.find(comment => comment.body.includes('## Rule Validation Results (Run'));
             
             if (!historyComment) {
               const initialHistoryBody = `## Rule Validation History\n\n<details>\n<summary><strong>Click to expand history</strong></summary>\n\n_No previous validation runs recorded yet._\n</details>\n`;
-              historyComment = await github.rest.issues.createComment({
+              const response = await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: context.issue.number,
                 body: initialHistoryBody
               });
+              historyComment = response.data;
             }
             
             if (latestComment) {
