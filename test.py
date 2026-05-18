@@ -758,8 +758,6 @@ def main():
 def generate_rule_results(rule_id: str) -> dict:
     """Function run by the pr comment bot github action run_validation."""
     runner = TestRunner(
-        whodrug_path="default",
-        meddra_path="default",
         unii_path="default",
         medrt_path="default",
         loinc_path="default",
