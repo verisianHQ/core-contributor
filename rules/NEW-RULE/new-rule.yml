@@ -45,7 +45,7 @@ Core:
   Id: NEW-RULE
   Status: Draft
   Version: '1'
-Description: Raise an error if TSVAL is not a valid term from NDF-RT when TSPARMCD is 'PCLAS'.
+Description: Raise an error when TSPARMCD = 'PCLAS' but TSVAL is not a valid term from MED-RT.
 Executability: Fully Executable
 Outcome:
   Message: TSVAL is not a valid term from NDF-RT.
