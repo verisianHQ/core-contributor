@@ -184,14 +184,29 @@ jobs:
             
             const newReportBody = `## Rule Validation Results (Run ${context.runId})\n\n<details>\n<summary><strong>Click to expand full report</strong></summary>\n\n${detailedContent}\n</details>\n\n---\n[View workflow run](${context.payload.repository.html_url}/actions/runs/${context.runId})`;
             
-            const comments = await github.paginate(github.rest.issues.listComments, {
+            const { data: comments } = await github.rest.issues.listComments({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
             });
             
-            let historyComment = comments.find(comment => comment.body.includes('## Rule Validation History'));
-            let latestComment = comments.find(comment => comment.body.includes('## Rule Validation Results (Run'));
+            const botComments = comments.filter(c => c.user && c.user.type === 'Bot' && c.body);
+            
+            botComments.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+            
+            let historyComment = botComments.find(c => c.body.includes('## Rule Validation History'));
+            let latestComment = botComments.find(c => c.body.includes('## Rule Validation Results (Run'));
+            
+            const allHistoryComments = botComments.filter(c => c.body.includes('## Rule Validation History'));
+            if (allHistoryComments.length > 1) {
+              for (let i = 1; i < allHistoryComments.length; i++) {
+                 await github.rest.issues.deleteComment({
+                   owner: context.repo.owner,
+                   repo: context.repo.repo,
+                   comment_id: allHistoryComments[i].id
+                 });
+              }
+            }
             
             if (!historyComment) {
               const initialHistoryBody = `## Rule Validation History\n\n<details>\n<summary><strong>Click to expand history</strong></summary>\n\n_No previous validation runs recorded yet._\n</details>\n`;
@@ -250,11 +265,14 @@ jobs:
                 });
               }
               
-              await github.rest.issues.deleteComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                comment_id: latestComment.id
-              });
+              const allLatestComments = botComments.filter(c => c.body.includes('## Rule Validation Results (Run'));
+              for (const oldLatest of allLatestComments) {
+                await github.rest.issues.deleteComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  comment_id: oldLatest.id
+                });
+              }
             }
             
             // Post the new report comment at the bottom
