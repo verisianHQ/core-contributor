@@ -44,6 +44,8 @@ Description: Raise an error when --RPENDY is present.
 Executability: Fully Executable
 Outcome:
   Message: --RPENDY must not be present.
+  Output Variables:
+    - --RPENDY
 Rule Type: Record Data
 Scope:
   Classes:
