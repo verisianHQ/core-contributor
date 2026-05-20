@@ -4,7 +4,7 @@
       "dataset": "co.xpt",
       "domain": "CO",
       "execution_status": "success",
-      "execution_message": "RDOMAIN has a missing value but IDVAR has a non-missing value",
+      "execution_message": "RDOMAIN is not populated but IDVAR is populated.",
       "number_errors": 2,
       "errors": [
         {
@@ -15,7 +15,7 @@
             "RDOMAIN": null,
             "IDVAR": "AESEQ"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 5,
@@ -25,7 +25,7 @@
             "RDOMAIN": null,
             "IDVAR": "VSGRPID"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
