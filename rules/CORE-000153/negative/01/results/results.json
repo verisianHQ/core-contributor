@@ -5,7 +5,7 @@
       "domain": "TS",
       "execution_status": "success",
       "execution_message": "TSVCDREF is not populated when TSVCDVER is populated.",
-      "number_errors": 4,
+      "number_errors": 2,
       "errors": [
         {
           "row": 2,
@@ -19,26 +19,6 @@
         },
         {
           "row": 3,
-          "SEQ": 1,
-          "USUBJID": "None",
-          "value": {
-            "TSVCDVER": "2020-03-27",
-            "TSVCDREF": null
-          },
-          "validated": true
-        },
-        {
-          "row": 17,
-          "SEQ": 1,
-          "USUBJID": "None",
-          "value": {
-            "TSVCDVER": "2019-03-01",
-            "TSVCDREF": null
-          },
-          "validated": true
-        },
-        {
-          "row": 42,
           "SEQ": 1,
           "USUBJID": "None",
           "value": {
