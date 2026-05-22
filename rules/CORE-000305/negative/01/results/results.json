@@ -1,0 +1,193 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "Negative value for AEDUR.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "AEDUR": "P-1DT2H"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "Negative value for CMDUR.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMDUR": "-P9M"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 6,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMDUR": "P-100D"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "rp.xpt",
+      "domain": "RP",
+      "execution_status": "success",
+      "execution_message": "Negative value for RPDUR.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "2324-P0002",
+          "value": {
+            "RPDUR": "-P3Y"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "Negative value for FADUR.",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FADUR": "-P10D"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FADUR": "-P10D"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FADUR": "-P11D"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FADUR": "-P12D"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FADUR": "P-10D"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "success",
+      "execution_message": "Negative value for SEDUR.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SEDUR": "-P14D"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "te.xpt",
+      "domain": "TE",
+      "execution_status": "success",
+      "execution_message": "Negative value for TEDUR.",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "TEDUR": "-P14D"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "TEDUR": "P-26W"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "TEDUR": "-P182D"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "TEDUR": "-P14D"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "TEDUR": "-P154D"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
+}
