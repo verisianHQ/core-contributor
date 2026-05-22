@@ -3,20 +3,22 @@
     {
       "dataset": "ae.xpt",
       "domain": "AE",
-      "execution_status": "success",
-      "execution_message": "AEDUR is populated in the dataset but is not listed as 'Collected' in the define-xml document.",
+      "execution_status": "execution_error",
+      "execution_message": "SQL execution error",
       "number_errors": 1,
       "errors": [
         {
-          "row": 1,
-          "SEQ": 1,
-          "USUBJID": "CDISC01.100008",
-          "value": {
-            "AEDUR": "P1DT2H"
-          },
-          "validated": true
+          "error": "PostgreSQL Error",
+          "message": "column \"vvz7fj8p2xveafhgwd3qilc9ubdunwgaweykiw54zc\" is of type boolean but expression is of type text\nLINE 1: ...6zprmtz95nauambk5umhumbzwry9blr3dqvzjsleose, CAST('False' AS...\n                                                             ^\nHINT:  You will need to rewrite or cast the expression.\n"
         }
       ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "AEDUR": "P1DT2H"
+      }
     }
   ]
 }

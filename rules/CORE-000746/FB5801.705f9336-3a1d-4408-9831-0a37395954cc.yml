@@ -1,0 +1,90 @@
+# Variable: ETHNIC, CETHNIC
+# Condition: SUPPDM CETHNIC = "SPANISH ORIGIN"
+# Rule: DM.ETHNIC = "HISPANIC OR LATINO"
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The term "Spanish origin" can be used to collect ethnicity data.
+                  If the term "Spanish origin" is collected, it should be mapped
+                  to the controlled terminology "HISPANIC OR LATINO" for
+                  submission.
+                Document: FDA
+                Section: FDAB058
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5801
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The term "Spanish origin" can be used to collect ethnicity data.
+                  If the term "Spanish origin" is collected, it should be mapped
+                  to the controlled terminology "HISPANIC OR LATINO" for
+                  submission.
+                Document: FDA
+                Section: FDAB058
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5801
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The term "Spanish origin" can be used to collect ethnicity data.
+                  If the term "Spanish origin" is collected, it should be mapped
+                  to the controlled terminology "HISPANIC OR LATINO" for
+                  submission.
+                Document: FDA
+                Section: FDAB058
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5801
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: ETHNIC
+      operator: non_empty
+    - name: ETHNIC
+      operator: not_equal_to
+      value: 'HISPANIC OR LATINO'
+    - name: QNAM
+      operator: equal_to
+      value: CETHNIC
+    - name: QVAL
+      operator: equal_to
+      value: 'SPANISH ORIGIN'
+Core:
+  Id: CORE-000746
+  Status: Published
+  Version: '1'
+Description: When ethnicity term 'Spanish origin' is collected (SUPPDM.CETHNIC),
+  it should be mapped to Ethnicity (ETHNIC) 'HISPANIC OR LATINO' in the DM
+  dataset
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: SUPPDM
+Outcome:
+  Message: Ethnicity Term 'Spanish origin' (SUPPDM.CETHNIC) is collected but is
+    not mapped as ETHNIC = HISPANIC OR LATINO.
+  Output Variables:
+    - ETHNIC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record
