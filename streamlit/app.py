@@ -14,16 +14,15 @@ def main():
     util = UtilityFunctions
 
     st.sidebar.title("Filters")
-    standard_filter = st.sidebar.selectbox("Standard", ["SDTM"])
-    substandard_filter = st.sidebar.selectbox("Substandard", ["All", "SDTMIG", "FDA"])
+    standard_filter = st.sidebar.selectbox("Standard", ["All", "SDTMIG", "FDA"])
 
-    if substandard_filter == "SDTMIG":
+    if standard_filter == "SDTMIG":
         filtered_sdtm_rules = data.cg_raw
         filtered_cg_data = data.cg_data
-        filtered_fda_data = pd.DataFrame()
-    elif substandard_filter == "FDA":
+        filtered_fda_data = pd.DataFrame(columns=data.fda_data.columns) 
+    elif standard_filter == "FDA":
         filtered_sdtm_rules = data.fda_raw
-        filtered_cg_data = pd.DataFrame()
+        filtered_cg_data = pd.DataFrame(columns=data.cg_data.columns)
         filtered_fda_data = data.fda_data
     else:
         filtered_sdtm_rules = data.sdtm_rules
@@ -56,7 +55,7 @@ def main():
         filtered_test_stats = pd.DataFrame()
 
     st.title("Rules Contributor Dashboard")
-    st.markdown(f"**Viewing:** {standard_filter} ➔ {substandard_filter}")
+    st.markdown(f"**Viewing:** {standard_filter}")
     st.markdown("---")
     
     st.subheader("Rule Status")
