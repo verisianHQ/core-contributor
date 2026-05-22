@@ -44,6 +44,8 @@ Description: Raise an error when SPECIES is present.
 Executability: Fully Executable
 Outcome:
   Message: SPECIES must not be present.
+  Output Variables:
+    - SPECIES
 Rule Type: Record Data
 Scope:
   Classes:
