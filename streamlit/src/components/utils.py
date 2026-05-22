@@ -122,7 +122,7 @@ class UtilityFunctions:
             if len(df.columns) > 0 and df.columns[0].endswith("Rule ID"):
                 df = df.rename(columns={df.columns[0]: "Rule ID"})
                 
-            if standard == "FDA":                
+            if standard == "FDA":
                 sdtm_cols = df.columns[2:5]
                 
                 mask = df[sdtm_cols].apply(lambda col: col.astype(str).str.contains('x', case=False, na=False)).any(axis=1)
