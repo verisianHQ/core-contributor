@@ -1,0 +1,89 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "ACTARMCD and ACTARM do not have a one-to-one relationship.",
+      "number_errors": 6,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ACTARM": "Zanomaline Low Dose (54 mg)",
+            "ACTARMCD": "ZAN_LOW"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "ACTARM": "Zanomaline High Dose (81 mg)1",
+            "ACTARMCD": "ZAN_HIGH"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC003",
+          "value": {
+            "ACTARM": "Zanomaline High Dose (81 mg)",
+            "ACTARMCD": "ZAN_HIGH"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "CDISC004",
+          "value": {
+            "ACTARM": "PlaceboA",
+            "ACTARMCD": "PLACEBO"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "CDISC005",
+          "value": {
+            "ACTARM": "Zanomaline Low Dose (81 mg)",
+            "ACTARMCD": "ZAN_LOW"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "CDISC015",
+          "value": {
+            "ACTARM": "PlaceboB",
+            "ACTARMCD": "PLACEBO"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "ta.xpt",
+      "domain": "TA",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000791, dataset=TA",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "tv.xpt",
+      "domain": "TV",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000791, dataset=TV",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}
