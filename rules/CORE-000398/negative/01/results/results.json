@@ -3,39 +3,60 @@
     {
       "dataset": "ec.xpt",
       "domain": "EC",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
+      "execution_status": "success",
+      "execution_message": "The label of the variable does not correspond to the label in the IG",
       "number_errors": 1,
       "errors": [
         {
-          "error": "Column not found in data",
-          "message": "ordinal"
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "variable_name": "ECROUTE",
+            "variable_label": "Route of Something",
+            "library_variable_label": "Route of Administration"
+          },
+          "validated": false
         }
       ]
     },
     {
       "dataset": "ae.xpt",
       "domain": "AE",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
+      "execution_status": "success",
+      "execution_message": "The label of the variable does not correspond to the label in the IG",
       "number_errors": 1,
       "errors": [
         {
-          "error": "Column not found in data",
-          "message": "ordinal"
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "variable_name": "AESDTH",
+            "variable_label": "Death",
+            "library_variable_label": "Results in Death"
+          },
+          "validated": false
         }
       ]
     },
     {
       "dataset": "lb.xpt",
       "domain": "LB",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
+      "execution_status": "success",
+      "execution_message": "The label of the variable does not correspond to the label in the IG",
       "number_errors": 1,
       "errors": [
         {
-          "error": "Column not found in data",
-          "message": "ordinal"
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "variable_name": "LBMETHOD",
+            "variable_label": "Metho of Test or Examination",
+            "library_variable_label": "Method of Test or Examination"
+          },
+          "validated": false
         }
       ]
     }

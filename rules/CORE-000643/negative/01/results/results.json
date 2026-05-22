@@ -1,0 +1,30 @@
+{
+  "datasets": [
+    {
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "execution_status": "success",
+      "execution_message": "BLFL is set to \"Y\", but no value for STRESC is provided",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSBLFL": "Y",
+            "VSSTRESC": null
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "vs.xpt",
+      "Row": 7,
+      "Variable": "VSSTRESC"
+    }
+  ]
+}
