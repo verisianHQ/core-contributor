@@ -69,7 +69,9 @@ Operations:
 Outcome:
   Message: --DUR is populated in the dataset but is not listed as 'Collected' in the define-xml document.
   Output Variables:
-    - --DUR
+    - variable_name
+    - variable_value
+    - define_variable_is_collected
 Rule Type: Value Check against Define XML Variable
 Scope:
   Classes:
