@@ -18,8 +18,8 @@ class IngestedData:
     cg_csv_path = path_extender(CG_CSV_PATH)
     fda_csv_path = path_extender(FDA_CSV_PATH)
 
-    cg_raw = util.load_and_filter_csv(cg_csv_path, is_fda=False)
-    fda_raw = util.load_and_filter_csv(fda_csv_path, is_fda=True)
+    cg_raw = util.load_and_filter_csv(cg_csv_path, standard="SDTMIG")
+    fda_raw = util.load_and_filter_csv(fda_csv_path, standard="FDA")
     
     repo_rules = util.yml_folders(rules_path)
     core_status_data = util.get_yaml_fields(rules_path, repo_rules, keys=["Core", "Status"])

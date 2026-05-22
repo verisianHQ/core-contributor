@@ -112,7 +112,7 @@ class UtilityFunctions:
         return pd.DataFrame(results_data)
 
     @staticmethod
-    def load_and_filter_csv(filepath, is_fda=False):
+    def load_and_filter_csv(filepath, standard=None):
         try:
             try:
                 df = pd.read_csv(filepath, encoding="utf-8-sig")
@@ -122,7 +122,7 @@ class UtilityFunctions:
             if len(df.columns) > 0 and df.columns[0].endswith("Rule ID"):
                 df = df.rename(columns={df.columns[0]: "Rule ID"})
                 
-            if is_fda:                
+            if standard == "FDA":                
                 sdtm_cols = df.columns[2:5]
                 
                 mask = df[sdtm_cols].apply(lambda col: col.astype(str).str.contains('x', case=False, na=False)).any(axis=1)
@@ -133,7 +133,7 @@ class UtilityFunctions:
                     df.columns[3]: "SDTMIG Version 3.3",
                     df.columns[4]: "SDTMIG Version 3.4"
                 })
-            else:
+            elif standard == "SDTMIG":
                 sdtm_cols = df.columns[1:4]
                 mask = df[sdtm_cols].any(axis=1)
                 df = df[mask].copy()
@@ -143,6 +143,8 @@ class UtilityFunctions:
                     df.columns[2]: "SDTMIG Version 3.3",
                     df.columns[3]: "SDTMIG Version 3.4"
                 })
+            else:
+                pass
             return df
         except Exception as e:
             print(f"Error reading CSV file: {e}")
