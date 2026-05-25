@@ -1,0 +1,34 @@
+{
+  "DM": [
+    {
+      "executionStatus": "success",
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "variables": [
+        "RFCENDTC",
+        "RFCSTDTC"
+      ],
+      "message": "RFCSTDTC is greater than RFCENDTC",
+      "errors": [
+        {
+          "value": {
+            "RFCENDTC": "2019-04-20T10:38",
+            "RFCSTDTC": "2020-04-20T09:40"
+          },
+          "dataset": "dm.xpt",
+          "row": 1,
+          "USUBJID": "CDISC001"
+        },
+        {
+          "value": {
+            "RFCENDTC": "2018-07-18",
+            "RFCSTDTC": "2018-08-18"
+          },
+          "dataset": "dm.xpt",
+          "row": 3,
+          "USUBJID": "CDISC003"
+        }
+      ]
+    }
+  ]
+}
