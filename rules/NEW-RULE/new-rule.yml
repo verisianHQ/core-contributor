@@ -1,0 +1,68 @@
+# Variable: CMCLAS
+# Condition: CMCLAS has a decode value in the dictionary
+# Rule: CMCLAS ^= null
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1711
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1711
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1711
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: CMCLASCD
+      operator: non_empty
+    - name: CMCLASCD
+      operator: is_not_valid_whodrug_code_reference
+Core:
+  Id: FB1711
+  Status: Draft
+  Version: '1'
+Description: Raise an error when CMCLASCD is populated with a value not found in the WHODrug dictionary.
+Executability: Fully Executable
+Outcome:
+  Message: Value for CMCLASCD is not found in the WHODrug dictionary.
+  Output Variables:
+    - CMCLASCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - CM
+Sensitivity: Record
