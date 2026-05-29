@@ -1,0 +1,72 @@
+# verified
+Authorities:
+  - Organization: 'FDA'
+    Standards:
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'AE, CE, CM, DS, EG, EX, LB, MH, PC, PP, SE, SV, and VS should
+                  be submitted if collected.'
+                Document: 'FDA'
+                Section: 'FDAB004'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB0410'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'AE, CE, CM, DS, EG, EX, LB, MH, PC, PP, SE, SV, and VS should
+                  be submitted if collected.'
+                Document: 'FDA'
+                Section: 'FDAB004'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB0410'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'AE, CE, CM, DS, EG, EX, LB, MH, PC, PP, SE, SV, and VS should
+                  be submitted if collected.'
+                Document: 'FDA'
+                Section: 'FDAB004'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB0410'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: define_dataset_name
+      operator: equal_to
+      value: MH
+    - name: define_dataset_has_no_data
+      operator: equal_to
+      value: false
+    - name: filename
+      operator: empty
+Core:
+  Id: FDA.SDTMIG.FB0410
+  Status: Draft
+  Version: '1'
+Description: MH dataset should be present in the submission when related data is collected.
+Executability: Fully Executable
+Outcome:
+  Message: Missing MH dataset.
+  Output Variables:
+    - define_dataset_name
+    - define_dataset_has_no_data
+    - filename
+    - domain
+Rule Type: Domain Presence Check against Define XML
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record
