@@ -5,17 +5,25 @@
       "domain": "DM",
       "execution_status": "success",
       "execution_message": "DD record present for subject, but DTHFL is not equal to \"Y\".",
-      "number_errors": 1,
+      "number_errors": 2,
       "errors": [
         {
-          "row": null,
+          "row": 1,
           "SEQ": null,
-          "USUBJID": null,
+          "USUBJID": "123101",
           "value": {
-            "DTHFL": null,
-            "USUBJID": "123101"
+            "DTHFL": null
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "999999",
+          "value": {
+            "DTHFL": "N"
+          },
+          "validated": true
         }
       ]
     },
