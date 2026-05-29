@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "pp.xpt",
+      "domain": "PP",
+      "execution_status": "success",
+      "execution_message": "Parameter is normalized by weight and terminology for PPSTRESU is not for a parameter normalized by weight",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "01-004",
+          "value": {
+            "PPSTRESU": "day*ug/mL/mg",
+            "PPTEST": "AUC Infinity Obs Norm by WT"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
