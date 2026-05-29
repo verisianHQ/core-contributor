@@ -1,0 +1,46 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Missing AE dataset.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 12,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_dataset_name": "AE",
+            "define_dataset_has_no_data": false,
+            "filename": null,
+            "domain": "AE"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "mb.xpt",
+      "domain": "MB",
+      "execution_status": "success",
+      "execution_message": "Missing AE dataset.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 12,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_dataset_name": "AE",
+            "define_dataset_has_no_data": false,
+            "filename": null,
+            "domain": "AE"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
