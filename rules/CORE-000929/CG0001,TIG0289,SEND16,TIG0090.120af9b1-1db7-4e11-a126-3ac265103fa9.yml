@@ -189,12 +189,12 @@ Executability: Fully Executable
 Operations:
   - id: $domain_is_custom
     operator: domain_is_custom
-  - codelists:
-    - DOMAIN
-    id: $domain_lib_ccode
-    level: term
-    returntype: code
-    operator: codelist_terms
+  - id: $domain_lib_ccode
+    operator: get_codelist_attributes
+    name: DOMAIN
+    ct_attribute: Term CCODE
+    ct_conditions:
+      - Codelist Code: C66734
 Outcome:
   Message: DOMAIN Code is not a published DOMAIN Code in CDISC Controlled Terminology.
   Output Variables:
