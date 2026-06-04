@@ -1,0 +1,76 @@
+# Variable: --STRESC, --LOBXFL, --STRESU
+# Condition: --LOBXFL="Y" and --STRESC ^= Null
+# Rule: Only one --LOBXFL per record having the same --TESTCD, --CAT, --SCAT, --SPEC, --METHOD values
+Authorities:
+  - Organization: 'FDA'
+    Standards:
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: Records with a baseline flag should have a corresponding
+                  standard result with a standardized unit where available.
+                Document: 'FDA'
+                Section: 'FDAB026'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB2604'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: Records with a baseline flag should have a corresponding
+                  standard result with a standardized unit where available.
+                Document: 'FDA'
+                Section: 'FDAB026'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB2604'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: --STRESC
+      operator: non_empty
+    - name: --LOBXFL
+      operator: equal_to
+      value: 'Y'
+      value_is_literal: true
+    - name: --LOBXFL
+      operator: is_not_unique_set
+      value:
+        - --TESTCD
+        - --CAT
+        - --SCAT
+        - --SPEC
+        - --METHOD
+        - USUBJID
+Core:
+  Status: Published
+  Version: '1'
+  Id: CORE-000915
+Description: There should be only one record with a last observation before
+  exposure flag and non missing character standard result value having the same
+  --TESTCD, --CAT, --SCAT, --SPEC, --METHOD values.
+Executability: Fully Executable
+Outcome:
+  Message: There are multiple records per assigned last observation before
+    exposure flag (--LOBXFL).
+  Output Variables:
+    - --TESTCD
+    - --CAT
+    - --SCAT
+    - --SPEC
+    - --METHOD
+    - --LOBXFL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record
