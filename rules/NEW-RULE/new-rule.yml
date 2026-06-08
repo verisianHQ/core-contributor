@@ -45,7 +45,7 @@ Operations:
     ct_conditions:
       - Codelist Code: C66734
 Outcome:
-  Message: AP DOMAIN value should start with 'AP' and end with a valid SDTM domain, and length should be equal to 4.
+  Message: AP DOMAIN value must start with 'AP', end with a valid SDTM domain, and length must be equal to 4.
   Output Variables:
     - DOMAIN
 Rule Type: Record Data
