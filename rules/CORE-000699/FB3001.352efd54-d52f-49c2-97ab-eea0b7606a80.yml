@@ -1,0 +1,191 @@
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Standard units should be consistent within the same assessment
+                  (having the same --TESTCD, --CAT, --SCAT, --SPEC, --METHOD
+                  values).
+                Document: FDA
+                Section: FDAB030
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3001
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Standard units should be consistent within the same assessment
+                  (having the same --TESTCD, --CAT, --SCAT, --SPEC, --METHOD
+                  values).
+                Document: FDA
+                Section: FDAB030
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3001
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Standard units should be consistent within the same assessment
+                  (having the same --TESTCD, --CAT, --SCAT, --SPEC, --METHOD
+                  values).
+                Document: FDA
+                Section: FDAB030
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3001
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Standard units should be consistent within the same assessment
+                  (having the same --TESTCD, --CAT, --SCAT, --SPEC, --METHOD
+                  values).
+                Document: FDA
+                Section: FDAB030
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3001
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Standard units should be consistent within the same assessment
+                  (having the same --TESTCD, --CAT, --SCAT, --SPEC, --METHOD
+                  values).
+                Document: FDA
+                Section: FDAB030
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3001
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Standard units should be consistent within the same assessment
+                  (having the same --TESTCD, --CAT, --SCAT, --SPEC, --METHOD
+                  values).
+                Document: FDA
+                Section: FDAB030
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3001
+              Version: '1'
+            Version: '1.5'
+        Version: 3.1.1
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Standard units should be consistent within the same assessment
+                  (having the same --TESTCD, --CAT, --SCAT, --SPEC, --METHOD
+                  values).
+                Document: FDA
+                Section: FDAB030
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3001
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Standard units should be consistent within the same assessment
+                  (having the same --TESTCD, --CAT, --SCAT, --SPEC, --METHOD
+                  values).
+                Document: FDA
+                Section: FDAB030
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3001
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Standard units should be consistent within the same assessment
+                  (having the same --TESTCD, --CAT, --SCAT, --SPEC, --METHOD
+                  values).
+                Document: FDA
+                Section: FDAB030
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3001
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: SENDIG-AR
+        References:
+          - Citations:
+              - Cited Guidance: Standard units should be consistent within the same assessment
+                  (having the same --TESTCD, --CAT, --SCAT, --SPEC, --METHOD
+                  values).
+                Document: FDA
+                Section: FDAB030
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3001
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  all:
+    - name: --STRESU
+      operator: is_inconsistent_across_dataset
+      value:
+        - --TESTCD
+        - --CAT
+        - --SCAT
+        - --SPEC
+        - --METHOD
+        - --STAT
+Core:
+  Id: CORE-000699
+  Status: Published
+  Version: '1'
+Description: Standard units should be consistent within the same assessment
+  (having the same --TESTCD, --CAT, --SCAT, --SPEC, --METHOD values)
+Executability: Fully Executable
+Grouping_Variables:
+  #MWYC 20260309: wildcard does not work
+  - --TESTCD
+  - --CAT
+  - --SCAT
+  - --SPEC
+  - --METHOD
+Outcome:
+  Message: Standards units are inconsistent within the same test (category,
+    sub-category, specimen and method)
+  Output Variables:
+    - --STRESU
+    - --TESTCD
+    - --CAT
+    - --SCAT
+    - --SPEC
+    - --METHOD
+    - --STAT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+      - FINDINGS ABOUT
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Group
+
+#Sensitivity: Record

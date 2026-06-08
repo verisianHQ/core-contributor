@@ -1,0 +1,82 @@
+# Variable: DSSTDTC
+# Condition: DS.DSDECOD= "DEATH"
+# Rule: DS.DSSTDTC = DM.DTHDTC
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0611
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0611
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0611
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: DSDECOD
+      operator: equal_to
+      value: 'DEATH'
+      value_is_literal: true
+    - name: DSSTDTC
+      operator: not_equal_to
+      value: DTHDTC
+Core:
+  Id: CORE-000913
+  Status: Published
+  Version: '1'
+Description: Disposition date time (DSSTDTC) for DEATH record in the DS dataset
+  should be equal to the Date of Death (DTHDTC) in the DM dataset for the
+  corresponding subject.
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: DM
+Outcome:
+  Message: DSSTDTC for DEATH record in DS dataset is not equal to DTHDTC in the DM
+    dataset.
+  Output Variables:
+    - DSDECOD
+    - DSSTDTC
+    - DTHDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - DS
+Sensitivity: Record
