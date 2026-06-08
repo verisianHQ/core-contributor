@@ -1,0 +1,86 @@
+# Variable: GEN
+# Condition: 
+# Rule: Variable = Model List of Allowed Variables for Observation Class
+# 2025-11-18: SDTMIG-3-3 is implemented as a separate rule, and thus commented out here, as SDTMIG has "domain-specific" variables: which are NOT in the "SDTM Model"
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: IG v3.3[2.5][Sponsors may not add any other variables. . . .
+                  Standard variables must not be renamed or modified for novel
+                  usage]|IG v3.3[2.5][[Using SDTM-specified standard variable
+                  names]|Model v1.7[3.2.2 2.1][Each observation can be described
+                  by a series of named variables. Domain-specific variables, a
+                  concept introduced in SDTM v1.5, are for use in a limited
+                  number of designated domains and will be identified in the
+                  appropriate implementation guide.]
+                Document: IG v3.3|Model v1.7
+                Section: IG v3.3[2.5]|Model v1.7[3.2.2 2.1]
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0013
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Using SDTM-specified standard variable names
+                Document: IG v3.3
+                Section: 3.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0351
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+  # 2025-11-17: exclude EXMETHOD, EGBEATNO, ICIMPLBL, MSAGENT, MSCONC, MSCONCU due to not incorporated in Model 1.7
+    - name: variable_name
+      operator: not_equal_to
+      value: EXMETHOD
+    - name: variable_name
+      operator: not_equal_to
+      value: EGBEATNO
+    - name: variable_name
+      operator: not_equal_to
+      value: ICIMPLBL
+    - name: variable_name
+      operator: not_equal_to
+      value: MSAGENT
+    - name: variable_name
+      operator: not_equal_to
+      value: MSCONC
+    - name: variable_name
+      operator: not_equal_to
+      value: MSCONCU
+    - name: variable_name
+      operator: is_not_contained_by
+      value: $allowed_variables
+Core:
+  Id: CDISC.SDTMIG.CG0013.CG0351
+  Status: Draft
+  Version: '1'
+Description: Raise an error when a variable is not an allowed variable for an Observation Class.
+Executability: Partially Executable - Possible Underreporting
+Operations:
+  - id: $allowed_variables
+    operator: get_model_column_order
+Outcome:
+  Message: Variable is not listed in the Model List of Allowed Variables for the
+    Observation Class and should be in supplemental qualifiers.
+  Output Variables:
+    - variable_name
+Rule Type: Variable Metadata Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

@@ -1,0 +1,186 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "Variable is not listed in the Model List of Allowed Variables for the Observation Class and should be in supplemental qualifiers.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AETRT"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "execution_error",
+      "execution_message": "SQL operation execution error",
+      "number_errors": 1,
+      "errors": [
+        {
+          "error": "SQL error in sqlgetmodelcolumnorder operation",
+          "message": "Metadata retrieval failed due to error: Class metadata is not found in CDISC Library. class=SPECIAL-PURPOSE DATASETS"
+        }
+      ]
+    },
+    {
+      "dataset": "eg.xpt",
+      "domain": "EG",
+      "execution_status": "success",
+      "execution_message": "Variable is not listed in the Model List of Allowed Variables for the Observation Class and should be in supplemental qualifiers.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "XEGBEATNO"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "Variable is not listed in the Model List of Allowed Variables for the Observation Class and should be in supplemental qualifiers.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBSPIDXX"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "apeg.xpt",
+      "domain": "AP",
+      "execution_status": "success",
+      "execution_message": "Variable is not listed in the Model List of Allowed Variables for the Observation Class and should be in supplemental qualifiers.",
+      "number_errors": 11,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "STUDYID"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "DOMAIN"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "APID"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EGSEQ"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "RSUBJID"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "SREL"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EGTESTCD"
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EGTEST"
+          },
+          "validated": false
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "XEGBEATNO"
+          },
+          "validated": false
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EGORRES"
+          },
+          "validated": false
+        },
+        {
+          "row": 11,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "EGORRESU"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "variable_name": "ARMCDXX"
+      }
+    }
+  ]
+}
