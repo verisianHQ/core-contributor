@@ -1,6 +1,7 @@
 # Variable: --SEQ
 # Condition: Variable is not TS.TSSEQ
 # Rule: --SEQ is a unique number per USUBJID per domain, or a unique number per POOLID per domain, including when the domain is split into multiple files
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -78,14 +79,17 @@ Core:
   Id: CORE-000544
   Status: Published
   Version: '1'
-Description: Excluding TS.TSSEQ, raise an error when --SEQ is not a unique
+Description: Raise an error when --SEQ is not TSSEQ but --SEQ is not a unique
   number per USUBJID per domain, or not a unique number per POOLID per domain,
   including when the domain is split into multiple files.
 Executability: Fully Executable
 Outcome:
   Message: --SEQ is not a unique number per USUBJID per domain, nor a unique
     number per POOLID per domain, including when the domain is split into
-    multiple files
+    multiple files.
+  Output Variables:
+    - DOMAIN
+    - POOLID
 Rule Type: Record Data
 Scope:
   Classes:
