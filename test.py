@@ -149,6 +149,7 @@ class TestRunner:
         unii_path: Optional[str] = None,
         medrt_path: Optional[str] = None,
         loinc_path: Optional[str] = None,
+        snomed_path: Optional[str] = None,
         ct: Optional[str] = None,
     ):
         from dotenv import load_dotenv
@@ -167,6 +168,7 @@ class TestRunner:
                 "unii": unii_path if unii_path != "default" else "dummy_ex_dicts/unii",
                 "medrt": medrt_path if medrt_path != "default" else "dummy_ex_dicts/medrt",
                 "loinc": loinc_path if loinc_path != "default" else "dummy_ex_dicts/loinc",
+                "snomed": snomed_path if snomed_path != "default" else "dummy_ex_dicts/snomed",
             }
         )
 
@@ -202,6 +204,7 @@ class TestRunner:
             "loinc": ("engine.cdisc_rules_engine.readers.external_dictionary_readers.loinc_reader", "LoincReader"),
             "unii": ("engine.cdisc_rules_engine.readers.external_dictionary_readers.unii_reader", "UniiReader"),
             "medrt": ("engine.cdisc_rules_engine.readers.external_dictionary_readers.medrt_reader", "MedRTReader"),
+            "snomed": ("engine.cdisc_rules_engine.readers.external_dictionary_readers.snomed_reader", "SnomedReader"),
         }
 
         version_info = {}
@@ -639,6 +642,7 @@ def parse_args():
     parser.add_argument("-un", "--unii", help="Provide path to UNII files")
     parser.add_argument("-mrt", "--medrt", help="Provide path to Med-RT files")
     parser.add_argument("-lo", "--loinc", help="Provide path to LOINC files")
+    parser.add_argument("-sno", "--snomed", help="Provide path to SNOMED files")
     return parser.parse_args()
 
 
@@ -652,6 +656,7 @@ def main():
         unii_path=args.unii,
         medrt_path=args.medrt,
         loinc_path=args.loinc,
+        snomed_path=args.snomed,
     )
     available_rules = runner.get_available_rules()
 
@@ -752,7 +757,23 @@ def main():
 
 def generate_rule_results(rule_id: str) -> dict:
     """Function run by the pr comment bot github action run_validation."""
-    runner = TestRunner()
+    
+    rule_path = RULES_DIR / rule_id
+    rule_yml = list(rule_path.glob("[!~]*.yml"))[0]
+    with rule_yml.open("r", encoding="utf-8") as f:
+        content = f.read().lower()
+        unii_path = "dummy_ex_dicts/unii" if "unii" in content else None
+        medrt_path = "dummy_ex_dicts/medrt" if "medrt" in content else None
+        loinc_path = "dummy_ex_dicts/loinc" if "loinc" in content else None
+        snomed_path = "dummy_ex_dicts/snomed" if "snomed" in content else None
+
+    runner = TestRunner(
+        unii_path=unii_path,
+        medrt_path=medrt_path,
+        loinc_path=loinc_path,
+        snomed_path=snomed_path,
+    )
+
     return runner.run_rule_suite(rule_id)
 
 

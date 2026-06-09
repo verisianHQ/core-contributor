@@ -1,0 +1,39 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Race Term 'Haitian' or 'Negro' is collected (SUPPDM.CRACE) but is not mapped to RACE = BLACK OR AFRICAN AMERICAN in DM dataset.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "S002",
+          "value": {
+            "RACE": "WHITE"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "S003",
+          "value": {
+            "RACE": "BLACK OR\nAFRICAN"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "suppdm.xpt",
+      "domain": "SUPPDM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000747, dataset=SUPPDM",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}
