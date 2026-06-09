@@ -57,6 +57,7 @@ Check:
       - name: MIDS
         operator: target_is_not_sorted_by
         regex: .*?(\d+$)
+        strict_incremental_ordering: true
         value:
           - name: SMSTDTC
             null_position: first
@@ -68,16 +69,14 @@ Core:
   Id: CDISC.SDTMIG.CG0546
   Status: Draft
   Version: '1'
-Description: Trigger error when MIDSTYPE=TM.MIDSTYPE and TM.TMRPT=Y and MIDS is
-  not suffixed with a sequence number in consistent chronological order
+Description: Raise an error when, for records where MIDSTYPE = TM.MIDSTYPE and TM.TMRPT = 'Y', the corresponding MIDS values are not suffixed with a sequence number that reflects a consistent chronological order. 
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - MIDSTYPE
     Name: TM
 Outcome:
-  Message: MIDS is not suffixed with a sequence number in consistent chronological
-    order with SMSTDTC.
+  Message: MIDS value is not correctly sequenced chronologically per SMSTDTC for the corresponding MIDSTYPE in the TM dataset where TMRPT = 'Y'.
   Output Variables:
     - MIDS
     - MIDSTYPE

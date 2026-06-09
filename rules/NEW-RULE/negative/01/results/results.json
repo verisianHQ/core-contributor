@@ -4,8 +4,8 @@
       "dataset": "sm.xpt",
       "domain": "SM",
       "execution_status": "success",
-      "execution_message": "MIDS is not suffixed with a sequence number in consistent chronological order with SMSTDTC.",
-      "number_errors": 9,
+      "execution_message": "MIDS value is not correctly sequenced chronologically per SMSTDTC for the corresponding MIDSTYPE in the TM dataset where TMRPT = 'Y'.",
+      "number_errors": 11,
       "errors": [
         {
           "row": 2,
@@ -20,6 +20,18 @@
           "validated": true
         },
         {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "001",
+          "value": {
+            "MIDS": "DKA4",
+            "MIDSTYPE": "DKA Event",
+            "TMRPT": "Y",
+            "SMSTDTC": "2007-10-03"
+          },
+          "validated": true
+        },
+        {
           "row": 4,
           "SEQ": 4,
           "USUBJID": "001",
@@ -28,18 +40,6 @@
             "MIDSTYPE": "DKA Event",
             "TMRPT": "Y",
             "SMSTDTC": "2007-10-04"
-          },
-          "validated": true
-        },
-        {
-          "row": 5,
-          "SEQ": 5,
-          "USUBJID": "001",
-          "value": {
-            "MIDS": "DKA5",
-            "MIDSTYPE": "DKA Event",
-            "TMRPT": "Y",
-            "SMSTDTC": "2007-10-05"
           },
           "validated": true
         },
@@ -64,18 +64,6 @@
             "MIDSTYPE": "DKA Event",
             "TMRPT": "Y",
             "SMSTDTC": "2025-01-01"
-          },
-          "validated": true
-        },
-        {
-          "row": 8,
-          "SEQ": 6,
-          "USUBJID": "002",
-          "value": {
-            "MIDS": "DKA002",
-            "MIDSTYPE": "DKA Event",
-            "TMRPT": "Y",
-            "SMSTDTC": "2007-10-11"
           },
           "validated": true
         },
@@ -112,6 +100,42 @@
             "MIDSTYPE": "DKA Event",
             "TMRPT": "Y",
             "SMSTDTC": "2024-06-02"
+          },
+          "validated": true
+        },
+        {
+          "row": 13,
+          "SEQ": 2,
+          "USUBJID": "005",
+          "value": {
+            "MIDS": "HYPO",
+            "MIDSTYPE": "HYPOGLYCEMIC EVENT",
+            "TMRPT": "Y",
+            "SMSTDTC": "2008-01-02"
+          },
+          "validated": true
+        },
+        {
+          "row": 15,
+          "SEQ": 1,
+          "USUBJID": "006",
+          "value": {
+            "MIDS": "HYPO1",
+            "MIDSTYPE": "HYPOGLYCEMIC EVENT",
+            "TMRPT": "Y",
+            "SMSTDTC": "2008-01-03"
+          },
+          "validated": true
+        },
+        {
+          "row": 17,
+          "SEQ": 3,
+          "USUBJID": "006",
+          "value": {
+            "MIDS": "HYPO3",
+            "MIDSTYPE": "HYPOGLYCEMIC EVENT",
+            "TMRPT": "Y",
+            "SMSTDTC": "2008-01-01"
           },
           "validated": true
         }
