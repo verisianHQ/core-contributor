@@ -1,0 +1,43 @@
+{
+  "DM": [
+    {
+      "executionStatus": "success",
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "variables": [
+        "RFXENDTC",
+        "RFXSTDTC"
+      ],
+      "message": "RFXSTDTC is greater than RFXENDTC",
+      "errors": [
+        {
+          "value": {
+            "RFXSTDTC": "2019-02-20T11:50",
+            "RFXENDTC": "2019-02-20T10:38"
+          },
+          "dataset": "dm.xpt",
+          "row": 1,
+          "USUBJID": "CDISC001"
+        },
+        {
+          "value": {
+            "RFXSTDTC": "2018-08-18T09:30",
+            "RFXENDTC": "2018-07-18T11:15"
+          },
+          "dataset": "dm.xpt",
+          "row": 3,
+          "USUBJID": "CDISC003"
+        },
+        {
+          "value": {
+            "RFXSTDTC": "2018-04-17",
+            "RFXENDTC": "2018-04"
+          },
+          "dataset": "dm.xpt",
+          "row": 6,
+          "USUBJID": "CDISC006"
+        }
+      ]
+    }
+  ]
+}

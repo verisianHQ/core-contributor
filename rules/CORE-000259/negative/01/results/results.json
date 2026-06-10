@@ -12,7 +12,7 @@
       "dataset": "ss.xpt",
       "domain": "SS",
       "execution_status": "success",
-      "execution_message": "Date time of collection of subject status in SS domain, where survival status is marked as DEAD, is not on or after the date time of death populated in DM domain.",
+      "execution_message": "SSDTC in the SS dataset, where SSSTRESC is equal to 'DEAD', is equal to or after DTHDTC in the DM dataset.",
       "number_errors": 4,
       "errors": [
         {
@@ -20,44 +20,44 @@
           "SEQ": null,
           "USUBJID": "CDISC002",
           "value": {
-            "DTHDTC": "2013-01-14",
+            "SSSTRESC": "DEAD",
             "SSDTC": "2013-01-13",
-            "SSSTRESC": "DEAD"
+            "DTHDTC": "2013-01-14"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
           "SEQ": null,
           "USUBJID": "CDISC004",
           "value": {
-            "DTHDTC": "2021-05-01",
+            "SSSTRESC": "DEAD",
             "SSDTC": "2021-04-30",
-            "SSSTRESC": "DEAD"
+            "DTHDTC": "2021-05-01"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 7,
           "SEQ": null,
           "USUBJID": "CDISC007",
           "value": {
-            "DTHDTC": "2021-07-02",
+            "SSSTRESC": "DEAD",
             "SSDTC": "2021-05-02",
-            "SSSTRESC": "DEAD"
+            "DTHDTC": "2021-07-02"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 9,
           "SEQ": null,
           "USUBJID": "CDISC009",
           "value": {
-            "DTHDTC": "2021-08-13",
+            "SSSTRESC": "DEAD",
             "SSDTC": "2021-08-12",
-            "SSSTRESC": "DEAD"
+            "DTHDTC": "2021-08-13"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "DM.ACTARMCD must equal SCRNFAIL, NOTASSGN, NOTTRT, or UNPLAN if the value is not present in TA.ARMCD",
+      "execution_message": "ACTARMCD value in the DM dataset must equal 'SCRNFAIL', 'NOTASSGN', 'NOTTRT', or 'UNPLAN' if the value does not match an ARMCD value in the TA dataset.",
       "number_errors": 3,
       "errors": [
         {
@@ -12,27 +12,30 @@
           "SEQ": null,
           "USUBJID": "015246-300-0004-00010",
           "value": {
-            "ACTARMCD": "ZAN_MED"
+            "ACTARMCD": "ZAN_MED",
+            "ACTARM": "Zanomaline Medium Dose (66 mg)"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 11,
           "SEQ": null,
           "USUBJID": "015246-300-0004-00011",
           "value": {
-            "ACTARMCD": "ZAN_UNK"
+            "ACTARMCD": "ZAN_UNK",
+            "ACTARM": "Zanomaline Unknown Dose (Unk mg)"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 12,
           "SEQ": null,
           "USUBJID": "015246-300-0004-00012",
           "value": {
-            "ACTARMCD": null
+            "ACTARMCD": null,
+            "ACTARM": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
