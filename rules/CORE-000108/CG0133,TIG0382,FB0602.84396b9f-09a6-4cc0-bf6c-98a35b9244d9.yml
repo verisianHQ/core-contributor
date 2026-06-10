@@ -1,6 +1,7 @@
 # Variable: DTHFL
 # Condition: DD record present for subject
 # Rule: DTHFL = 'Y'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -26,12 +27,15 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Specification[Indicates the subject died. Should be Y or null.
-                  Should be populated even when the death date is unknown.]|DD
-                  Assumption 1[This domain captures information pertaining to
-                  the death of a subject, including the causes of death.]
+              - Cited Guidance: Indicates the subject died. Should be Y or null.
+                  Should be populated even when the death date is unknown.
                 Document: IG v3.2
-                Item: Specification|DD Assumption 1
+                Item: Specification
+                Section: '5'
+              - Cited Guidance: This domain captures information pertaining to
+                  the death of a subject, including the causes of death.
+                Document: IG v3.2
+                Item: DD Assumption 1
                 Section: '5'
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -42,12 +46,14 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: IG v3.3[5.2][Indicates the subject died. Should be Y or null.
-                  Should be populated even when the death date is unknown.]||IG
-                  v3.3[6.3.2][A findings domain that contains the diagnosis of
-                  the cause of death for a subject]
+              - Cited Guidance: Indicates the subject died. Should be Y or null.
+                  Should be populated even when the death date is unknown.
                 Document: IG v3.3
-                Section: IG v3.3[5.2]|IG v3.3[6.3.2]
+                Section: '5.2'
+              - Cited Guidance: A findings domain that contains the diagnosis of
+                  the cause of death for a subject
+                Document: IG v3.3
+                Section: 6.3.2
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0133
@@ -123,23 +129,18 @@ Core:
   Id: CORE-000108
   Status: Published
   Version: '1'
-Description: When a record is present in DD domain for a subject, death flag is
-  populated as Y in DM dataset for corresponding subject
+Description: Raise an error when a record is present in the DD dataset but death flag is
+  populated as 'Y' in the DM dataset for corresponding subject.
 Executability: Fully Executable
-Match Datasets:
-  - Keys:
-      - USUBJID
-    Name: DD
 Operations:
   - domain: DD
     id: $usubjids_in_dd
     name: USUBJID
     operator: distinct
 Outcome:
-  Message: DD record present for subject, but DTHFL is not equal to "Y".
+  Message: A DD record is present, but DTHFL is not equal to 'Y'.
   Output Variables:
     - DTHFL
-    - USUBJID
 Rule Type: Record Data
 Scope:
   Classes:
@@ -149,4 +150,4 @@ Scope:
     Include:
       - DM
   Use Case: INDH
-Sensitivity: Dataset
+Sensitivity: Record
