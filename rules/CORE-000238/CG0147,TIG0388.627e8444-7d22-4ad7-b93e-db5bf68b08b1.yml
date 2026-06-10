@@ -1,6 +1,7 @@
 # Variable: RFXENDTC
 # Condition: EX records present for subject
 # Rule: RFXENDTC = latest value of EX.EXSTDTC or EX.EXENDTC
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -77,8 +78,9 @@ Core:
   Id: CORE-000238
   Status: Published
   Version: '1'
-Description: Raise an error when EX records are present for subject but RFXENDTC
-  does not equal the latest value of EX.EXSTDTC or EX.EXENDTC
+Description: Raise an error when EX records are present for subject, but 
+  RFXENDTC in the DM dataset does not equal the latest value of 
+  EXSTDTC or EXENDTC in the EX dataset.
 Executability: Fully Executable
 Operations:
   - domain: EX
@@ -98,7 +100,8 @@ Operations:
     name: EXENDTC
     operator: max_date
 Outcome:
-  Message: RFXENDTC does not equal the latest value of EX.EXSTDTC or EX.EXENDTC
+  Message: RFXENDTC does not equal the latest value of EXSTDTC or EXENDTC
+    in the EX dataset.
   Output Variables:
     - RFXENDTC
     - $max_ex_exstdtc
