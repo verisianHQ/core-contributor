@@ -1,0 +1,60 @@
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Category for Disposition Event (DSCAT) should be populated.
+                Document: FDA
+                Section: FDAB014
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1401
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Category for Disposition Event (DSCAT) should be populated.
+                Document: FDA
+                Section: FDAB014
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1401
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Category for Disposition Event (DSCAT) should be populated.
+                Document: FDA
+                Section: FDAB014
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1401
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: DSCAT
+      operator: empty
+Core:
+  Id: CORE-000522
+  Status: Published
+  Version: '1'
+Description: Category for Disposition Event (DSCAT) should be populated.
+Executability: Fully Executable
+Outcome:
+  Message: Missing DSCAT value for Disposition Event.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - DS
+Sensitivity: Record

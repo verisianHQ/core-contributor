@@ -1,0 +1,82 @@
+# Variable: --DTC, RFPENDTC
+# Condition: --DTC ^= Null and DM.RFPENDTC ^= Null
+# Rule: --DTC <= DM.RFPENDTC
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Study start and end date/time should include month, day, and
+                  year.
+                Document: FDA
+                Section: FDAB034
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3406
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Study start and end date/time should include month, day, and
+                  year.
+                Document: FDA
+                Section: FDAB034
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3406
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Study start and end date/time should include month, day, and
+                  year.
+                Document: FDA
+                Section: FDAB034
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3406
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: --DTC
+      operator: non_empty
+    - name: RFPENDTC
+      operator: non_empty
+    - name: --DTC
+      operator: date_greater_than
+      value: RFPENDTC
+Core:
+  Id: CORE-000720
+  Status: Published
+  Version: '1'
+Description: Date/Time of Collection (--DTC) variable value should be prior or
+  equal to Date/Time of End of Participation (RFPENDTC).
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: DM
+Outcome:
+  Message: --DTC falls after RFPENDTC.
+  Output Variables:
+    - --DTC
+    - RFPENDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+      - EVENTS
+      - FINDINGS
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record
