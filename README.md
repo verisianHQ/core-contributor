@@ -20,7 +20,8 @@ _You may need your IT support team to install some of the following software for
 
 1) Create a free GitHub account: https://github.com/signup
 2) Install Git, following the instructions here: https://git-scm.com/install
-   - Keep all the default settings throughout the installer 
+   - When prompted, ensure you check the **"Add to PATH"** option (or select **"Git from the command line and also from 3rd-party software"**)
+   - Keep all other default settings throughout the installer
    - You DO NOT need to actually run Git as a program, so close any pop-ups that appear after the installation
 3) Install VSCode (***not*** VSCodeUser), following the instructions here: https://code.visualstudio.com/download
 4) Open VSCode and a terminal within it: 
@@ -31,6 +32,7 @@ _You may need your IT support team to install some of the following software for
      eg: `cd "C:\Users\rich\Documents\Core Contributor Folder"`
 6) Clone this repo into that directory by running the following command (**DO NOT RUN MORE THAN ONCE**): \
        `git clone --recurse-submodules https://github.com/verisianHQ/core-contributor.git` 
+   > **NOTE:** If you encounter `The term 'git' is not recognized as the name of a cmdlet, function, script file, or operable program.`, Git's installation directory has not been added to your system PATH. See [this StackOverflow answer](https://stackoverflow.com/questions/4492979/error-git-is-not-recognized-as-an-internal-or-external-command) for instructions on manually adding Git to your PATH.
    
    _***IMPORTANT NOTE***\
    Unless something goes badly wrong and you need to fully delete the entire directory, you should never need to run this command again._
@@ -76,7 +78,7 @@ You'll need to run the following commands to get it working: \
 `git config --global user.email "<your-github-email>"` \
 `git config --global user.name "<your-github-username>"`_
 
-_Don't forget that whenever you type a command, that you are in the core-contributor folder that you created during the set-up steps._
+_Don't forget: whenever you type a command, you should be in the core-contributor folder that you created during the set-up steps._
 
 ## Command Line Process
 
@@ -84,14 +86,19 @@ _Don't forget that whenever you type a command, that you are in the core-contrib
 1) Make sure you are on the main branch and that both the main branch and the engine submodule are up to date. To do this, run the following three commands: \
        `git checkout main` \
        `git pull origin main` \
-       `git submodule update --remote`
+       `git submodule update --recursive`
    
 2) Create a new branch to work on your changes, named as such: `<your-name>/<rule-id>/<change>` (eg `richard/CORE-000001/edit`): \
        `git branch <your-branch-name>`
    
-   _Note that only branch names according to following regex are allowed: **^[a-zA-Z]+/(CORE-[0-9]{6}|CG[0-9]{4})/(edit|create|delete)$**_
+   _Note that only branch names according to following regex are allowed: **^[a-zA-Z]+/(CORE-[0-9]{6}|(CG|FB|TRC)[0-9]{4}[a-z]{1})/(edit|create|delete)$**_
+
+      **_*IMPORTANT NOTE*_**\
+   _Whenever you create a local branch to work on a rule, ensure that you are on the main branch. If you create a new local branch, when you are already on a local branch, the new branch will branch off the
+   local branch and not from main. If you would then want to merge changes from your new local branch, it will merge with the first local branch and not with the main branch. Therefore, ensure to be on the main
+   branch first prior to creating a local branch (git checkout main). Once the local branch exists, you can checkout out to it from any branch._
    
-3) Switch to your new branch: \
+4) Switch to your new branch: \
        `git checkout <your-branch-name>`
 
 **Set-up Rule Folder.**
@@ -101,10 +108,10 @@ _Step 4 is only applicable in case you want to create a rule for which the folde
 
 4) Initialize your new rule folder structure:
    - In the base directory of the project, activate the virtual environment by running:
-     - WINDOWS: venv\Scripts\activate
-     - MAC: source venv/bin.activate
+     - WINDOWS: `venv\Scripts\activate`
+     - MAC: `source venv/bin/activate`
    - Then run the following command in your terminal: \
-       `python -m new-rule`
+       `python new-rule.py`
    - It will prompt you a few times.
      - If the new-rule folder already exists, it will check you definitely want to make a new one. (NOTE: If the empty folder is a leftover from a previous branch, which is likely, you SHOULD run the script and overwrite the folder to make a new one, as this will set-up the template properly for you).
      - You will also be prompted to enter the number of positive and negative test cases you want to create. Don't worry if you realise you need more later. You can easily add more manually.
@@ -129,7 +136,7 @@ _Step 4 is only applicable in case you want to create a rule for which the folde
         - Add 'Record' if it is a normal row error
         - 'Variable' if it is an error related to an entire column
         - 'Dataset' if it is an error related to a whole dataset (ie missing ae.xpt sheet or similar).
-      - **Row num**: Provide the row number (using tcm.xpthe row count of the excel sheet - note that any variable names will be row 1 and the first row starts from row 5 due to the metadata rows we always have in the sheets).
+      - **Row num**: Provide the row number (using the row count of the excel sheet - note that any variable names will be row 1 and the first row starts from row 5 due to the metadata rows we always have in the sheets).
       - **Variable**: Provide the variable name (found in the first row of the column) - with the row number this fully identifies the error cell.
       - **Error Value**:
         - Finally, copy the error value from the highlighted cell into the 'Error value'.
@@ -150,8 +157,8 @@ _Step 4 is only applicable in case you want to create a rule for which the folde
 8) Check your run results in the `results` folder.
    - Note that there is a separate `results` folder for each test case, which contains only the information relevant to that particular case.
    - There will be a `results.json` file, with the code-produced rule output, and a `results.txt` file, which will summarise your results in a more human-readable format. Feel free to examine both.
-   - Once you've run the rule, check to make sure there's nothing mentioned in the rule output - if the highlighting or validation in the validation sheet hasn't been done correctly, you will see notes about 'unvalidated highlights' and 'unhighlighted validations', and     you can correct them.
-   - Ideally you see no notes, and the field 'Fully validated' labelled as 'Yes'. 
+   - Once you've run the rule, check to make sure there's nothing mentioned in the rule output - if the highlighting or validation in the validation sheet hasn't been done correctly, you will see notes about 'unvalidated highlights' and 'unhighlighted validations', and you can correct them.
+   - Ideally you see no notes, and `"validated": true` in the results. 
 
 **_*IMPORTANT NOTE*_**\
 _Note that if the rule or test data is wrong (and you're getting unexpected errors or lacking errors you expect to see), you will almost certainly see some highlight/validation issues. In this case, obviously the priority is to correct the rule and test data before checking the highlights and validation!_
@@ -171,9 +178,9 @@ _Note that if the rule or test data is wrong (and you're getting unexpected erro
 12) On the PR page, make sure the information at the top is correct. It should be: \
        `base: main ← compare: <branch-name>`
   
-13) Name your PR using the format `<rule-id> <fix>` and add a brief description of your changes. Or if you are making a new rule with your PR, `<cg-id> create`.
+13) Name your PR using the format `<rule-id> <fix>` and add a brief description of your changes. Or if you are making a new rule with your PR, `<conformance-rule-id> create`.
     
-14) On the PR, add reviewers (both the 'Rules Team' and 'Engineers Team' are required) by clicking the cog in the top right corner, and add yourself as an assignee
+14) On the PR, reviewers are added automatically (review from 'Rules Team' and 'Engineers Team' are required). Practically speaking, there is no need to assign yourself as you will be notified by default but it is 'good practice' to do it.
     
 15) You're done!
     - Keep an eye on the PR to make sure the automated checks pass, as well as to respond to any comments from reviewers.
@@ -195,9 +202,10 @@ For further detail on any of these steps or git in general, see [supplementary g
 # Advanced Usage
 
 Below are some additional functionalities in the test script. To take advantage of this, you will need to run the test script directly, rather than using the run script.
+NOTE: You must still run all First-time Local Setup Steps from above before this.
 
-1) In VSCode terminal, in the core-contributor directory, activate the virtual environment by running one of the following: \
-   - WINDOWS: `.\venv\Scripts\activate` \
+1) In VSCode terminal, in the core-contributor directory, activate the virtual environment by running one of the following:
+   - WINDOWS: `.\venv\Scripts\activate`
    - MAC: `source ./venv/bin/activate`
    
 2) You can now run the test script directly with various options:
@@ -235,7 +243,7 @@ Otherwise, create a new branch from main which includes your changes and then re
 `git checkout -b <new-branch-name>` \
 `git checkout main` \
 `git reset --hard HEAD~1` \
-`git checkout <new-branch-name>` \
+`git checkout <new-branch-name>`
 
 ***IMPORTANT NOTE*** - if you've committed more than once on main, you'll need to replace `HEAD~1` with `HEAD~n` where `n` is the number of commits you've made \
 <br />

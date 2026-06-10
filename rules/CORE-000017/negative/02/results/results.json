@@ -1,0 +1,53 @@
+{
+  "datasets": [
+    {
+      "dataset": "co.xpt",
+      "domain": "CO",
+      "execution_status": "success",
+      "execution_message": "When IDVARVAL is populated then RDOMAIN should also be populated.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "YY-20",
+          "value": {
+            "IDVARVAL": "7",
+            "IDVAR": "AESEQ"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "ZZ-23",
+          "value": {
+            "IDVARVAL": "COMBO1",
+            "IDVAR": "EXGRPID"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "AB-99",
+          "value": {
+            "IDVARVAL": "VS2",
+            "IDVAR": "VSGRPID"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "XX-11",
+          "value": {
+            "IDVARVAL": "4",
+            "IDVAR": "VISITNUM"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

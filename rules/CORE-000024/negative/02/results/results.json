@@ -1,0 +1,43 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AEBODSYS is not empty but AEBDSYCD is empty or not present in dataset.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "123201",
+          "value": {
+            "AEBODSYS": "Nervous system disorders",
+            "AEBDSYCD": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123201",
+          "value": {
+            "AEBODSYS": "Gastrointestinal disorders",
+            "AEBDSYCD": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "123201",
+          "value": {
+            "AEBODSYS": "Skin and subcutaneous tissue disorders",
+            "AEBDSYCD": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

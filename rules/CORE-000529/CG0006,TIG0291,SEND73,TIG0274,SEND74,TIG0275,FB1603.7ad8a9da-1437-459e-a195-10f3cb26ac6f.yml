@@ -1,3 +1,4 @@
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -13,7 +14,7 @@ Authorities:
                   = (date portion of --DTC) - (date portion of RFSTDTC) if --DTC
                   precedes RFSTDTC. This algorithm should be used across all
                   domains.
-                Document: SDTMIG v3.4
+                Document: IG v3.4
                 Section: 4.4.4
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -176,9 +177,9 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: "All Study Day values are integers. Thus, to calculate Study
-                  Day: --DY = (date portion of --DTC) - (date portion of
-                  RFSTDTC) + 1 if --DTC is on or after RFSTDTC"
+              - Cited Guidance: All Study Day values are integers. Thus, to calculate Study
+                  Day; --DY = (date portion of --DTC) - (date portion of
+                  RFSTDTC) + 1 if --DTC is on or after RFSTDTC
                 Document: TIG v1.0
                 Item: Text
                 Section: 2.8.7.6
@@ -437,30 +438,29 @@ Check:
       operator: is_complete_date
     - name: --DY # checking failure criteria
       operator: not_equal_to
-      value: $val_dy # this is created in the operations statement that follows
+      value: $value_dy_algorithm # this is created in the operations statement that follows
 Core:
   Id: CORE-000529
   Status: Published
   Version: '1'
-Description: Raise an error when --DY is not calculated as per the study day
-  algorithm as a non-zero integer value when the date portion of --DTC is
-  complete and the date portion of DM.RFSTDTC is a complete date AND --DY is not
-  empty
+Description: Raise an error when the collection study day (--DY) is not correctly calculated as per the study day
+  algorithm as a non-zero integer value when the date portion of --DTC is complete and the date portion of RFSTDTC is a complete date and --DY is not
+  empty.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: DM
 Operations:
-  - id: $val_dy # ex in devops 2538 used -- but that threw an error
+  - id: $value_dy_algorithm
     name: --DTC
-    operator: dy # does dy op take into acct +1?
+    operator: dy
 Outcome:
   Message: --DY is not calculated correctly even though the date portion of --DTC
-    is complete, the date portion of DM.RFSTDTC is a complete date, and --DY is
+    is complete, the date portion of RFSTDTC is complete, and --DY is
     not empty.
   Output Variables:
-    - $val_dy
+    - $value_dy_algorithm
     - --DY
     - --DTC
     - RFSTDTC
