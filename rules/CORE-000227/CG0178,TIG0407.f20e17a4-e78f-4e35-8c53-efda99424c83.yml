@@ -1,6 +1,7 @@
 # Variable: IETEST
 # Condition: 
 # Rule: IETEST in TI.IETEST
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -8,11 +9,11 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: The complete list of Inclusion/Exclusion criteria can be found
-                  in the Trial Inclusion/Exclusion Criteria (TI) dataset
-                  described in Section 7.4.1, Trial Inclusion/Exclusion
+                  in the Trial Inclusion/Exclusion Criteria (TI) dataset
+                  described in Section 7.4.1, Trial Inclusion/Exclusion
                   Criteria.
                 Document: IG v3.4
-                Item: Specification
+                Item: Assumption 1
                 Section: 6.3.4
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -76,7 +77,8 @@ Core:
   Id: CORE-000227
   Status: Published
   Version: '1'
-Description: Check if IETEST is not in TI.IETEST
+Description: Raise an error when IETEST is not in IETEST
+  in the TI dataset.
 Executability: Fully Executable
 Operations:
   - domain: TI
@@ -84,7 +86,9 @@ Operations:
     name: IETEST
     operator: distinct
 Outcome:
-  Message: IETEST is not in TI.IETEST
+  Message: IETEST does not match any IETEST value in the TI dataset.
+  Output Variables:
+    - IETEST
 Rule Type: Record Data
 Scope:
   Classes:
