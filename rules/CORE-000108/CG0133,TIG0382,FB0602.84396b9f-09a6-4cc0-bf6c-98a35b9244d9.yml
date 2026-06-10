@@ -129,7 +129,7 @@ Core:
   Id: CORE-000108
   Status: Published
   Version: '1'
-Description: Raise an error when a record is present in the DD dataset but death flag is
+Description: Raise an error when a record is present in the DD dataset but death flag is not
   populated as 'Y' in the DM dataset for corresponding subject.
 Executability: Fully Executable
 Operations:
