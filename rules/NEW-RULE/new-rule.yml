@@ -1,0 +1,83 @@
+# Variable: 
+# Condition: MedDRA is used for medical coding.
+# Rule: MedDRA release date used to code the AE < study start (TSVAL where TSPARM = 'Study Start Date') and one or more MedDRA releases between the release date for the MedRA version selected to code the AE.
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: FDA Business Rules v1.5
+            Rule Identifier:
+              Id: FDAB003
+            Citations:
+              - Cited Guidance: Adverse events should be coded using the most current version released by MedDRA at the study start.
+                Document: FDA Business Rules v1.5
+                Item: FDAB003
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: FDA Business Rules v1.5
+            Rule Identifier:
+              Id: FDAB003
+            Citations:
+              - Cited Guidance: Adverse events should be coded using the most current version released by MedDRA at the study start.
+                Document: FDA Business Rules v1.5
+                Item: FDAB003
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: FDA Business Rules v1.5
+            Rule Identifier:
+              Id: FDAB003
+            Citations:
+              - Cited Guidance: Adverse events should be coded using the most current version released by MedDRA at the study start.
+                Document: FDA Business Rules v1.5
+                Item: FDAB003
+Check:
+  all:
+    - any:
+      - name: $tsval_study_start_date
+        operator: date_less_than
+        value: $tsval_study_start_date
+      - name: $user_meddra_version_date
+        operator: date_less_than
+        value: '2026-03-01'
+        value_is_literal: true
+    - name: $user_meddra_version_date
+      operator: less_than_or_equal_to
+      value: $tsval_study_start_date
+Core:
+  Id: FDA.SDTMIG.FB0301
+  Status: Published
+  Version: '1'
+Description: Raise an error when Adverse Events are not coded using the most current version release by MedDRA before the study start date.
+Executability: Fully Executable
+Operations:
+  - id: $user_meddra_version_date
+    operator: max_date
+    domain: ex_meddra
+    name: date
+  - id: $tsval_study_start_date
+    operator: disti
+    domain: ts
+    name: TSVAL
+    where:
+      - name: TSPARMCD
+        operator: equals
+        value: 'STSTDTC'
+Outcome:
+  Message: Adverse events are not coded using the most current or version released by MedDRA at the study start or higher.
+  Output Variables:
+    - TSPARMCD
+    - TSVAL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record
