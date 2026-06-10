@@ -37,14 +37,18 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 4.5.8[4. If the subject's survival status is "dead", the
+              - Cited Guidance: 4. If the subject's survival status is "dead", the
                   Demographics (DM) variables DTHDTC and DTHFL must be
-                  appropriately populated.]|6.3.11[For example, if a subject's
-                  survival status is "DEAD", the date of death must be stored in
-                  DM and within a final disposition record in DS.].
+                  appropriately populated.
                 Document: IG v3.4
-                Item: Accounting for Long-Term Follow-up|Assumption 1
-                Section: 4.5.8|6.3.11
+                Item: Accounting for Long-Term Follow-up
+                Section: 4.5.8
+              - Cited Guidance: For example, if a subject's
+                  survival status is "DEAD", the date of death must be stored in
+                  DM and within a final disposition record in DS.
+                Document: IG v3.4
+                Item: Assumption 1
+                Section: 6.3.11
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0132
@@ -105,19 +109,19 @@ Check:
       value_is_literal: true
 Core:
   Id: CORE-000008
-  Status: Draft
+  Status: Published
   Version: '1'
-Description: When survival status is marked as Dead in SS dataset, death flag is
-  populated as Y in DM dataset
+Description: Raise an error when survival status (SSSTRESC) is equal to 'DEAD' in the SS dataset, but death flag (DTHFL) is not equal to 'Y' in the DM dataset for the corresponding subject.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: SS
 Outcome:
-  Message: DTHFL is not "Y", when SS.SSSTRESC equals "DEAD"
+  Message: SSSTRESC in the SS dataset is 'DEAD', but DTHFL in the DM dataset is not equal to 'Y'.
   Output Variables:
     - DTHFL
+    - SSTESTCD
     - SSSTRESC
 Rule Type: Record Data
 Scope:
