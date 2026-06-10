@@ -1,14 +1,16 @@
 # Variable: --DETECT
 # Condition: 
 # Rule: --DETECT not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: --DETECT is not be used in human clinical trials.
-                Document: SDTM v2.0
+              - Cited Guidance: Not in human clinical trials.
+                Document: Model v2.0
+                Item: --DETECT
                 Section: Timing
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -41,7 +43,9 @@ Core:
 Description: Raise an error when --DETECT is present.
 Executability: Fully Executable
 Outcome:
-  Message: --DETECT is present.
+  Message: --DETECT must not be present.
+  Output Variables:
+    - --DETECT
 Rule Type: Record Data
 Scope:
   Classes:

@@ -1,0 +1,194 @@
+{
+  "datasets": [
+    {
+      "dataset": "eg.xpt",
+      "domain": "EG",
+      "execution_status": "success",
+      "execution_message": "EGSTRESC is not numeric but EGSTRESN is not empty",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "123101",
+          "value": {
+            "EGSTRESC": "TEST",
+            "EGSTRESN": 10.0
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "EGSTRESC": "2-5",
+            "EGSTRESN": 2.0
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "123102",
+          "value": {
+            "EGSTRESC": "+8",
+            "EGSTRESN": 8.0
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 2,
+          "USUBJID": "123102",
+          "value": {
+            "EGSTRESC": "positive",
+            "EGSTRESN": 15.0
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": 2,
+          "USUBJID": "123102",
+          "value": {
+            "EGSTRESC": "<5",
+            "EGSTRESN": 5.0
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "FASTRESC is not numeric but FASTRESN is not empty",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "123101",
+          "value": {
+            "FASTRESC": "SEVERE",
+            "FASTRESN": 9.0
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "FASTRESC": "111@",
+            "FASTRESN": 250.0
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 5,
+          "USUBJID": "123101",
+          "value": {
+            "FASTRESC": "<5",
+            "FASTRESN": 1.0
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "eg.xpt",
+      "Row": 5,
+      "Variable": "EGSTRESC"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 5,
+      "Variable": "EGSTRESN"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 6,
+      "Variable": "EGSTRESC"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 6,
+      "Variable": "EGSTRESN"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 7,
+      "Variable": "EGSTRESC"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 7,
+      "Variable": "EGSTRESN"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 8,
+      "Variable": "EGSTRESC"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 8,
+      "Variable": "EGSTRESN"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 9,
+      "Variable": "EGSTRESC"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 9,
+      "Variable": "EGSTRESN"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 1,
+      "Variable": "FASTRESC"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 1,
+      "Variable": "FASTRESN"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 5,
+      "Variable": "FASTRESC"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 5,
+      "Variable": "FASTRESN"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 6,
+      "Variable": "FASTRESC"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 6,
+      "Variable": "FASTRESN"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 7,
+      "Variable": "FASTRESC"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 7,
+      "Variable": "FASTRESN"
+    }
+  ]
+}

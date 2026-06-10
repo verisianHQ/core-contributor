@@ -4,7 +4,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMMETHOD is present in an interventions domain.",
+      "execution_message": "CMMETHOD must not be present.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,18 +12,19 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "CMMETHOD": null
+            "CMMETHOD": "THIS IS A FORBIDDEN VARIABLE"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
+    },
     {
-      "Sheet": "cm.xpt",
-      "Row": 1,
-      "Variable": "CMMETHOD"
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000048, dataset=AE",
+      "number_errors": 0,
+      "errors": []
     }
   ]
 }

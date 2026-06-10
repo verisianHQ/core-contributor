@@ -1,6 +1,7 @@
 # Variable: --USCHFL
 # Condition: 
 # Rule: --USCHFL not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -9,7 +10,7 @@ Authorities:
           - Citations:
               - Cited Guidance: The following SDTM variables, defined for use in non-clinical
                   studies (SEND), must NEVER be used in the submission of
-                  SDTM-based data for human clinical trials, --USCHFL
+                  SDTM-based data for human clinical trials; --USCHFL
                   (Interventions, Events, Findings), --DTHREL (Findings),
                   --EXCLFL (Findings), --REASEX (Findings), --IMPLBL (Findings),
                   FETUSID (Identifiers), --DETECT (Timing Variables), --NOMDY
@@ -39,13 +40,13 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'The following SDTM variables; defined for use in non-clinical
+              - Cited Guidance: The following SDTM variables; defined for use in non-clinical
                   studies (SEND); must NEVER be used in the submission of
-                  SDTM-based data for human clinical trials: --USCHFL
+                  SDTM-based data for human clinical trials; --USCHFL
                   (Interventions, Events, Findings), --DTHREL (Findings),
                   --EXCLFL (Findings), --REASEX (Findings), --IMPLBL (Findings),
                   --FETUSID (Identifiers), --DETECT (Timing Variables), --NOMDY
-                  (Timing Variables), --NOMLBL (Timing Variables)'
+                  (Timing Variables), --NOMLBL (Timing Variables)
                 Document: IG v3.3
                 Section: '2.7'
             Origin: SDTM and SDTMIG Conformance Rules
@@ -98,7 +99,9 @@ Core:
 Description: Raise an error when --USCHFL is present.
 Executability: Fully Executable
 Outcome:
-  Message: --USCHFL is present.
+  Message: --USCHFL must not be present.
+  Output Variables:
+    - --USCHFL
 Rule Type: Record Data
 Scope:
   Classes:

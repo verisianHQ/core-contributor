@@ -81,7 +81,7 @@ Core:
   Id: CORE-000271
   Status: Published
   Version: '1'
-Description: Raise an error when EPOCH is not in TA.EPOCH
+Description: Raise an error when EPOCH value does not match any of the EPOCH values in the TA dataset.
 Executability: Fully Executable
 Operations:
   - domain: TA
@@ -89,7 +89,7 @@ Operations:
     name: EPOCH
     operator: distinct
 Outcome:
-  Message: EPOCH is not in TA.EPOCH
+  Message: EPOCH value does not match any of the EPOCH values in the TA dataset.
   Output Variables:
     - EPOCH
 Rule Type: Record Data
