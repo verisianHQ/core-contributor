@@ -1,6 +1,7 @@
 # Variable: FAOBJ
 # Condition: Related record present in parent domain dataset
 # Rule: FAOBJ in (--TERM, --TRT, --DECOD)
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -92,7 +93,7 @@ Match Datasets:
   - Name: RELREC
 Outcome:
   Message: Related record is present in the parent domain dataset but FAOBJ is not
-    equal to the "TERM", "TRT" or "DECOD" of the parent domain.
+    equal to the 'TERM', 'TRT' or 'DECOD' of the parent domain.
   Output Variables:
     - FAOBJ
     - RELREC.**TERM
