@@ -1,0 +1,65 @@
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Randomized subjects are expected to receive a study treatment.
+                Document: FDA
+                Section: FDAB025
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB2501
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Randomized subjects are expected to receive a study treatment.
+                Document: FDA
+                Section: FDAB025
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB2501
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Randomized subjects are expected to receive a study treatment.
+                Document: FDA
+                Section: FDAB025
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB2501
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: ARMCD
+      operator: non_empty
+    - name: ACTARMCD
+      operator: non_empty
+    - name: ACTARMCD
+      operator: not_equal_to
+      value: ARMCD
+Core:
+  Id: CORE-000655
+  Status: Published
+  Version: '1'
+Description: Values in ARMCD and ACTARMCD should match
+Executability: Fully Executable
+Outcome:
+  Message: Values between ARMCD and ACTARMCD are not matching
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record
