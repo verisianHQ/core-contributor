@@ -12,9 +12,9 @@
           "SEQ": 2,
           "USUBJID": "001",
           "value": {
-            "$val_endy": -1,
-            "AEENDTC": "2022-03-19",
             "AEENDY": -2.0,
+            "AEENDTC": "2022-03-19",
+            "$val_endy": -1,
             "RFSTDTC": "2022-03-20"
           },
           "validated": false
@@ -24,9 +24,9 @@
           "SEQ": 1,
           "USUBJID": "001",
           "value": {
-            "$val_endy": 1,
-            "AEENDTC": "2022-03-20",
             "AEENDY": 0.0,
+            "AEENDTC": "2022-03-20",
+            "$val_endy": 1,
             "RFSTDTC": "2022-03-20"
           },
           "validated": false
@@ -45,9 +45,9 @@
           "SEQ": 5,
           "USUBJID": "CDISC007",
           "value": {
-            "$val_endy": 126,
-            "CMENDTC": "2013-05-10",
             "CMENDY": null,
+            "CMENDTC": "2013-05-10",
+            "$val_endy": 126,
             "RFSTDTC": "2013-01-05"
           },
           "validated": false
@@ -57,9 +57,9 @@
           "SEQ": 6,
           "USUBJID": "CDISC008",
           "value": {
-            "$val_endy": 10,
-            "CMENDTC": "2014-05-20",
             "CMENDY": 11.0,
+            "CMENDTC": "2014-05-20",
+            "$val_endy": 10,
             "RFSTDTC": "2014-05-11"
           },
           "validated": false
@@ -69,9 +69,9 @@
           "SEQ": 2,
           "USUBJID": "CDISC010",
           "value": {
-            "$val_endy": -108,
-            "CMENDTC": "2013-06-05",
             "CMENDY": -107.0,
+            "CMENDTC": "2013-06-05",
+            "$val_endy": -108,
             "RFSTDTC": "2013-09-21"
           },
           "validated": false

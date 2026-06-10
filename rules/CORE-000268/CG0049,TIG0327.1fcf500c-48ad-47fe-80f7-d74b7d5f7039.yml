@@ -1,6 +1,7 @@
 # Variable: --PTCD
 # Condition: 
 # Rule: --DECOD and --PTCD have a one-to-one relationship
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -89,10 +90,10 @@ Core:
   Id: CORE-000268
   Status: Published
   Version: '1'
-Description: Trigger error when --DECOD and --PTCD do not have a one-to-one relationship
+Description: Raise an error when --DECOD and --PTCD do not have a one-to-one relationship.
 Executability: Fully Executable
 Outcome:
-  Message: --DECOD and --PTCD do not have a one-to-one relationship
+  Message: --DECOD and --PTCD do not have a one-to-one relationship.
   Output Variables:
     - --PTCD
     - --DECOD
