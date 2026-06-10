@@ -1,6 +1,7 @@
 # Variable: RACE
 # Condition: Multiple records in SUPPDM where RACE captured
 # Rule: RACE = 'MULTIPLE'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -87,16 +88,16 @@ Core:
   Id: CORE-000337
   Status: Published
   Version: '1'
-Description: 'Raise an error when multiple races are collected in SUPPDM but
-  RACE in DM does not equal "MULTIPLE".'
+Description: Raise an error when multiple races are populated in SUPPDM but
+  RACE in the DM dataset does not equal 'MULTIPLE'.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: DM
 Outcome:
-  Message: 'Multiple races are collected in SUPPDM but RACE in DM does not equal
-    "MULTIPLE".'
+  Message: Multiple races are populated in SUPPDM but RACE in the DM dataset 
+    does not equal 'MULTIPLE'.
 Rule Type: Record Data
 Scope:
   Classes:
