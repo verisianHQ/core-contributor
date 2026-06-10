@@ -1,0 +1,67 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "Negative value for CMDOSE.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMDOSE": -1.0
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 6,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMDOSE": -325.0
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "success",
+      "execution_message": "Negative value for EXDOSE.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "EXDOSE": -2.0
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "EXDOSE": -54.0
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "EXDOSE": -1.0
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
+}

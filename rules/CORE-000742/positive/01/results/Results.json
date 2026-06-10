@@ -1,0 +1,145 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVALNF is not equal to NA when TSPARAMCD=INDIC",
+      "number_errors": 11,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "HLTSUBJI",
+            "TSVAL": "Y",
+            "TSVALNF": null,
+            "$INDIC": 0,
+            "$HLTSUBJI": 1
+          }
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "INDIC",
+            "TSVAL": null,
+            "TSVALNF": null,
+            "$INDIC": 0,
+            "$HLTSUBJI": 1
+          }
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "ADDON",
+            "TSVAL": "N",
+            "TSVALNF": null,
+            "$INDIC": 0,
+            "$HLTSUBJI": 1
+          }
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "AGEMAX",
+            "TSVAL": "P75Y",
+            "TSVALNF": null,
+            "$INDIC": 0,
+            "$HLTSUBJI": 1
+          }
+        },
+        {
+          "row": 5,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "DCUTDESC",
+            "TSVAL": "Database Lock",
+            "TSVALNF": null,
+            "$INDIC": 0,
+            "$HLTSUBJI": 1
+          }
+        },
+        {
+          "row": 6,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "DCUTDTC",
+            "TSVAL": "2021-12-02 00:00:00",
+            "TSVALNF": null,
+            "$INDIC": 0,
+            "$HLTSUBJI": 1
+          }
+        },
+        {
+          "row": 7,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "DOSE",
+            "TSVAL": "25",
+            "TSVALNF": null,
+            "$INDIC": 0,
+            "$HLTSUBJI": 1
+          }
+        },
+        {
+          "row": 8,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "DOSE",
+            "TSVAL": "50",
+            "TSVALNF": null,
+            "$INDIC": 0,
+            "$HLTSUBJI": 1
+          }
+        },
+        {
+          "row": 9,
+          "SEQ": 3,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "DOSE",
+            "TSVAL": "10",
+            "TSVALNF": null,
+            "$INDIC": 0,
+            "$HLTSUBJI": 1
+          }
+        },
+        {
+          "row": 10,
+          "SEQ": 4,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "DOSE",
+            "TSVAL": "20",
+            "TSVALNF": null,
+            "$INDIC": 0,
+            "$HLTSUBJI": 1
+          }
+        },
+        {
+          "row": 11,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "DOSFRM",
+            "TSVAL": "CAPSULE",
+            "TSVALNF": null,
+            "$INDIC": 0,
+            "$HLTSUBJI": 1
+          }
+        }
+      ]
+    }
+  ]
+}
