@@ -52,7 +52,7 @@ Core:
   Id: FDA.SDTMIG.FB0406
   Status: Draft
   Version: '1'
-Description: VS dataset should be present in the submission when related data is collected.
+Description: Raise an error when VS dataset is not present in the submission when related data is collected.
 Executability: Fully Executable
 Outcome:
   Message: Missing VS dataset.
@@ -60,7 +60,6 @@ Outcome:
     - define_dataset_name
     - define_dataset_has_no_data
     - filename
-    - domain
 Rule Type: Domain Presence Check against Define XML
 Scope:
   Classes:
