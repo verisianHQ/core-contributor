@@ -37,17 +37,19 @@ Authorities:
                 Item: FDAB003
 Check:
   all:
+    - name: TSPARMCD
+      operator: equal_to
+      value: SSTDTC
+      value_is_literal: true
     - any:
-      - name: $tsval_study_start_date
-        operator: date_less_than
-        value: $tsval_study_start_date
-      - name: $user_meddra_version_date
+      - name: TSVAL
+        operator: date_greater_than_or_equal_to
+        value: '2026-03-01'
+        value_is_literal: true
+      - name: $define_meddra_version
         operator: date_less_than
         value: '2026-03-01'
         value_is_literal: true
-    - name: $user_meddra_version_date
-      operator: less_than_or_equal_to
-      value: $tsval_study_start_date
 Core:
   Id: FDA.SDTMIG.FB0301
   Status: Published
@@ -55,23 +57,15 @@ Core:
 Description: Raise an error when Adverse Events are not coded using the most current version release by MedDRA before the study start date.
 Executability: Fully Executable
 Operations:
-  - id: $user_meddra_version_date
-    operator: max_date
-    domain: ex_meddra
-    name: date
-  - id: $tsval_study_start_date
-    operator: disti
-    domain: ts
-    name: TSVAL
-    where:
-      - name: TSPARMCD
-        operator: equals
-        value: 'STSTDTC'
+  - id: $define_meddra_version
+    operator: get_define_external_dictionary_version
+    external_dictionary_type: meddra
 Outcome:
   Message: Adverse events are not coded using the most current or version released by MedDRA at the study start or higher.
   Output Variables:
     - TSPARMCD
     - TSVAL
+    - $define_meddra_version
 Rule Type: Record Data
 Scope:
   Classes:
