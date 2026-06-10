@@ -52,7 +52,7 @@ Core:
   Id: FDA.SDTMIG.FB0404
   Status: Draft
   Version: '1'
-Description: EX dataset should be present in the submission when related data is collected.
+Description: Raise an error when EX dataset is not present in the submission when related data is collected.
 Executability: Fully Executable
 Outcome:
   Message: Missing EX dataset.
@@ -60,7 +60,6 @@ Outcome:
     - define_dataset_name
     - define_dataset_has_no_data
     - filename
-    - domain
 Rule Type: Domain Presence Check against Define XML
 Scope:
   Classes:
