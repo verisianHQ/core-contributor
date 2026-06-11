@@ -73,7 +73,7 @@ Core:
   Id: CDISC.SDTMIG.CG0321
   Status: Draft
   Version: '1'
-Description: Trigger error when a custom domain is present and is not based on
+Description: Raise an error when a custom domain is present but the domain is not based on
   one of the observation classes.
 Executability: Fully Executable
 Operations:
