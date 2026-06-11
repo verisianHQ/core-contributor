@@ -49,8 +49,8 @@ Check:
     - name: filename
       operator: empty
 Core:
-  Id: FDA.SDTMIG.FB0401
-  Status: Draft
+  Id: CORE-002017
+  Status: Published
   Version: '1'
 Description: Raise an error when SE dataset is not present in the submission when related data is collected.
 Executability: Fully Executable
