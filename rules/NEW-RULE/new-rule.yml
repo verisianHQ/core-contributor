@@ -56,7 +56,7 @@ Check:
   all:
     - name: PPTEST
       operator: not_matches_regex
-      value: (?i)norm|by (BMI|Dose|SA|WT)
+      value: (?i)norm|by
     - name: PPSTRESU
       operator: is_not_contained_by
       value: $PKUNIT
@@ -64,8 +64,7 @@ Core:
   Id: CDISC.SDTMIG.CG0558
   Status: Draft
   Version: '1'
-Description: Trigger error when parameter is non-normalized and terminology for
-  PPSTRESU is not for a non-normalized parameter
+Description: Raise an error when a parameter is non-normalized but PPSTRESU does not contain a valid non-normalized unit (value not in PKUNIT codelist).
 Executability: Fully Executable
 Operations:
   - ct_attribute: Term Signification
@@ -75,11 +74,11 @@ Operations:
     ct_conditions:
       - Codelist Code: C85494
 Outcome:
-  Message: Parameter is non-normalized and terminology for PPSTRESU is not for a
-    non-normalized parameter.
+  Message: Parameter is non-normalized but PPSTRESU does not contain a valid non-normalized unit (value not in PKUNIT codelist).
   Output Variables:
     - PPSTRESU
     - PPTEST
+    - PPTESTCD
 Rule Type: Record Data
 Scope:
   Classes:
