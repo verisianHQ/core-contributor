@@ -12,40 +12,73 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "USUBJID is not found in DM.USUBJID",
-      "number_errors": 2,
+      "execution_message": "USUBJID value is missing in the DM dataset.",
+      "number_errors": 3,
       "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC-TEST-005",
+          "value": {
+            "USUBJID": "CDISC-TEST-005"
+          },
+          "validated": true
+        },
         {
           "row": 2,
           "SEQ": 2,
-          "USUBJID": "002",
+          "USUBJID": "CDISC-TEST-006",
           "value": {
-            "USUBJID": "002"
+            "USUBJID": "CDISC-TEST-006"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": 3,
-          "USUBJID": "003",
+          "USUBJID": "CDISC-TEST-007",
           "value": {
-            "USUBJID": "003"
+            "USUBJID": "CDISC-TEST-007"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ae.xpt",
-      "Row": 6,
-      "Variable": "USUBJID"
     },
     {
-      "Sheet": "ae.xpt",
-      "Row": 7,
-      "Variable": "USUBJID"
+      "dataset": "relrec.xpt",
+      "domain": "RELREC",
+      "execution_status": "success",
+      "execution_message": "USUBJID value is missing in the DM dataset.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "005",
+          "value": {
+            "USUBJID": "005"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "006",
+          "value": {
+            "USUBJID": "006"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "007",
+          "value": {
+            "USUBJID": "007"
+          },
+          "validated": true
+        }
+      ]
     }
   ]
 }

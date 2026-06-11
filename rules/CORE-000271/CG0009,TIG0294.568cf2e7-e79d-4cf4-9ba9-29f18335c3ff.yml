@@ -1,6 +1,7 @@
 # Variable: EPOCH
 # Condition: 
 # Rule: EPOCH in TA.EPOCH
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -11,7 +12,7 @@ Authorities:
                   general-observation-class domains. In DS, EPOCH is based on
                   DSSTDTC. The values of EPOCH are drawn from the Trial Arms(TA)
                   dataset (Section 7.2.1, Trial Arms).
-                Document: SDTMIG v3.4
+                Document: IG v3.4
                 Item: DS, Assumption 4.c
                 Section: 6.2.3
             Origin: SDTM and SDTMIG Conformance Rules
@@ -27,7 +28,7 @@ Authorities:
                   general-observation-class domains. In DS, EPOCH is based on
                   DSSTDTC. The values of EPOCH are drawn from the Trial Arms
                   (TA) dataset (Section 7.2.1, Trial Arms).
-                Document: SDTMIG v3.3
+                Document: IG v3.3
                 Item: DS, Assumption 4.c
                 Section: 6.2.3
             Origin: SDTM and SDTMIG Conformance Rules
@@ -43,7 +44,7 @@ Authorities:
                   which --STDTC or --DTC falls. The values of EPOCH are drawn
                   from the Trial Arms domain, Section 7.2 - Experimental Design
                   Trial Arms (TA)'
-                Document: SDTMIG v3.2
+                Document: IG v3.2
                 Item: DS, Assumption 3.c
                 Section: '6.2'
             Origin: SDTM and SDTMIG Conformance Rules
@@ -80,7 +81,7 @@ Core:
   Id: CORE-000271
   Status: Published
   Version: '1'
-Description: Raise an error when EPOCH is not in TA.EPOCH
+Description: Raise an error when EPOCH value does not match any of the EPOCH values in the TA dataset.
 Executability: Fully Executable
 Operations:
   - domain: TA
@@ -88,7 +89,7 @@ Operations:
     name: EPOCH
     operator: distinct
 Outcome:
-  Message: EPOCH is not in TA.EPOCH
+  Message: EPOCH value does not match any of the EPOCH values in the TA dataset.
   Output Variables:
     - EPOCH
 Rule Type: Record Data

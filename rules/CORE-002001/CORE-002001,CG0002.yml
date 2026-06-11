@@ -46,9 +46,11 @@ Authorities:
         Version: '3.3'
 Check:
   all:
-    - name: --DUR
-      operator: exists
-    - name: --DUR
+    - name: variable_name
+      operator: suffix_equal_to
+      suffix: 3
+      value: DUR
+    - name: variable_value
       operator: non_empty
     - name: $dur_collected
       operator: equal_to
@@ -67,7 +69,9 @@ Operations:
 Outcome:
   Message: --DUR is populated in the dataset but is not listed as 'Collected' in the define-xml document.
   Output Variables:
-    - --DUR
+    - variable_name
+    - variable_value
+    - define_variable_is_collected
 Rule Type: Value Check against Define XML Variable
 Scope:
   Classes:
