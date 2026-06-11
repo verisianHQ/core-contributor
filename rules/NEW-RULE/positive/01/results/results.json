@@ -4,26 +4,9 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "Adverse events are not coded using the most current or version released by MedDRA at the study start or higher.",
-      "number_errors": 1,
-      "errors": [
-        {
-          "row": 1,
-          "SEQ": 1,
-          "USUBJID": "None",
-          "value": {
-            "TSPARMCD": "SSTDTC",
-            "TSVAL": "2026-03-01",
-            "$define_meddra_version": "2026-03-01"
-          }
-        }
-      ]
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     }
-  ],
-  "dictionary_versions": {
-    "meddra": {
-      "version": "29.0",
-      "language": "English"
-    }
-  }
+  ]
 }
