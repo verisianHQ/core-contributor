@@ -18,7 +18,7 @@ Authorities:
                   grams or kilograms respectively. Multiple subset codelists
                   were created for the unique unit expressions of the same
                   concept across codelists, this approach allows study-context
-                  appropriate use of unit values for PK analysis subtypes
+                  appropriate use of unit values for PK analysis subtypes.
                 Document: IG v3.4
                 Item: Assumption 3
                 Section: 6.3.5.9.2
@@ -31,18 +31,18 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: "\tThere are separate codelists used for PPORRESU/PPSTRESU where
+              - Cited Guidance: There are separate codelists used for PPORRESU/PPSTRESU where
                   the choice depends on whether the value of the pharmacokinetic
-                  parameter is normalized. - Codelist \"PKUNIT\" is used for
-                  non-normalized parameters. - Codelists \"PKUDMG\" and
-                  \"PKUDUG\" are used when parameters are normalized by dose
+                  parameter is normalized. - Codelist PKUNIT is used for
+                  non-normalized parameters. - Codelists PKUDMG and
+                  PKUDUG are used when parameters are normalized by dose
                   amount in milligrams or micrograms respectively. - Codelists
-                  \"PKUWG\" and \"PKUWKG\" are used when parameters are
+                  PKUWG and PKUWKG are used when parameters are
                   normalized by weight in grams or kilograms respectively.
                   Multiple subset codelists were created for the unique unit
                   expressions of the same concept across codelists, this
                   approach allows study-context appropriate use of unit values
-                  for PK analysis subtypes."
+                  for PK analysis subtypes.
                 Document: IG v3.3
                 Item: Assumption 3
                 Section: 6.3.11.2
@@ -54,9 +54,9 @@ Authorities:
         Version: '3.3'
 Check:
   all:
-    - name: PPTEST
+    - name: PPTESTCD
       operator: matches_regex
-      value: (?i)by WT
+      value: W$
     - name: PPSTRESU
       operator: is_not_contained_by
       value: $PKUWG
@@ -67,7 +67,7 @@ Core:
   Id: CDISC.SDTMIG.CG0560
   Status: Draft
   Version: '1'
-Description: Trigger error when parameter is normalized by weight and terminology for PPSTRESU is not for a parameter normalized by weight
+Description: Raise an error when a parameter is normalized by weight but PPSTRESU does not contain a valid weight-normalized unit (value not in PKUWG or PKUWKG codelists).
 Executability: Fully Executable
 Operations:
   - ct_attribute: Term Signification
@@ -83,10 +83,11 @@ Operations:
     ct_conditions:
       - Codelist Code: C128683
 Outcome:
-  Message: Parameter is normalized by weight and terminology for PPSTRESU is not for a parameter normalized by weight
+  Message: Parameter is normalized by weight but PPSTRESU does not contain a valid weight-normalized unit (value not in PKUWG or PKUWKG codelists).
   Output Variables:
-    - PPSTRESU
+    - PPTESTCD
     - PPTEST
+    - PPSTRESU
 Rule Type: Record Data
 Scope:
   Classes:
