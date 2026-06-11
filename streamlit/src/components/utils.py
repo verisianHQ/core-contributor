@@ -112,37 +112,76 @@ class UtilityFunctions:
         return pd.DataFrame(results_data)
 
     @staticmethod
-    def get_csv_completion_data(filepath):
+    def load_and_filter_csv(filepath, standard=None):
         try:
-            df = pd.read_csv(filepath)
-            df["Completion"] = df.apply(UtilityFunctions.determine_completion, axis=1)
+            try:
+                df = pd.read_csv(filepath, encoding="utf-8-sig")
+            except UnicodeDecodeError:
+                df = pd.read_csv(filepath, encoding="cp1252")
+
+            if len(df.columns) > 0 and df.columns[0].endswith("Rule ID"):
+                df = df.rename(columns={df.columns[0]: "Rule ID"})
+                
+            if standard == "FDA":
+                sdtm_cols = df.columns[2:5]
+                
+                mask = df[sdtm_cols].apply(lambda col: col.astype(str).str.contains('x', case=False, na=False)).any(axis=1)
+                df = df[mask].copy()
+                
+                df = df.rename(columns={
+                    df.columns[2]: "SDTMIG Version 3.2",
+                    df.columns[3]: "SDTMIG Version 3.3",
+                    df.columns[4]: "SDTMIG Version 3.4"
+                })
+            elif standard == "SDTMIG":
+                sdtm_cols = df.columns[1:4]
+                mask = df[sdtm_cols].any(axis=1)
+                df = df[mask].copy()
+                
+                df = df.rename(columns={
+                    df.columns[1]: "SDTMIG Version 3.2",
+                    df.columns[2]: "SDTMIG Version 3.3",
+                    df.columns[3]: "SDTMIG Version 3.4"
+                })
+            else:
+                pass
             return df
         except Exception as e:
-            print(f"Error reading Excel file: {e}")
-            return pd.DataFrame()
+            print(f"Error reading CSV file: {e}")
+            return pd.DataFrame(columns=["Rule ID", "CORE-ID", "Status", "Status Rule", "SDTMIG Version 3.2", "SDTMIG Version 3.3", "SDTMIG Version 3.4"])
+
+    @staticmethod
+    def get_csv_completion_data(df):
+        if df.empty:
+            return df
+        df = df.copy()
+        df["Completion"] = df.apply(UtilityFunctions.determine_completion, axis=1)
+        return df
 
     @staticmethod
     def determine_completion(row):
-        core_id = row["CORE-ID"]
-        status = row["Status"]
+        core_id = row.get("CORE-ID")
+        status = row.get("Status")
+        status_rule = row.get("Status Rule")
 
-        if pd.isna(core_id) or core_id == "":
+        if pd.isna(core_id) or str(core_id).strip() in ["", "/", "nan"]:
             return "Missing"
 
-        if pd.isna(status):
-            status = ""
-        else:
-            status = str(status)
-
-        if "DRAFT" in status and "PUBLISHED" in status:
-            return "Partially Completed"
-
-        if status in ["DRAFT", "DRAFT - NOT EXECUTABLE"]:
-            return "Unimplemented"
+        status = str(status).strip().upper()
+        status_rule = str(status_rule).strip().upper()
 
         if status == "PUBLISHED":
-            return "Completed"
+            if status_rule == "MERGED":
+                return "Completed"
+            else:
+                return "Partially Completed"
 
+        if status in ["DRAFT", "DRAFT - NOT EXECUTABLE", "OPEN"]:
+            return "Unimplemented"
+            
+        if status == "NOT EXECUTABLE":
+            return "Not Executable"
+            
         return "Unknown"
 
     @staticmethod
