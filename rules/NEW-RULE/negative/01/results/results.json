@@ -4,7 +4,7 @@
       "dataset": "pp.xpt",
       "domain": "PP",
       "execution_status": "success",
-      "execution_message": "Parameter is normalized by dose amount and terminology for PPORRESU is not for a parameter normalized by dose amount",
+      "execution_message": "Parameter is normalized by dose amount but PPORRESU does not contain a valid dose amount-normalized unit (value not in PKUDMG or PKUDUG codelists).",
       "number_errors": 1,
       "errors": [
         {
@@ -13,7 +13,8 @@
           "USUBJID": "01-004",
           "value": {
             "PPORRESU": "pgEq/mL",
-            "PPTEST": "AURC Infinity Obs Norm by Dose"
+            "PPTEST": "AURC Infinity Obs Norm by Dose",
+            "PPTESTCD": "AUCIFP"
           },
           "validated": true
         }
