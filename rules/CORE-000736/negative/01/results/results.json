@@ -1,0 +1,37 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "AGE and AGETXT are in the list of TSPARAMCDs with TSVAL populated.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "AGE",
+            "TSVAL": "NonEmpty",
+            "$age_count": 1,
+            "$agetxt_count": 1
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "AGETXT",
+            "TSVAL": "NonEmpty",
+            "$age_count": 1,
+            "$agetxt_count": 1
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
+}
