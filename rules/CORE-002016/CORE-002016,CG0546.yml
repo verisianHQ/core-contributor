@@ -66,8 +66,8 @@ Check:
           - USUBJID
           - MIDSTYPE
 Core:
-  Id: CDISC.SDTMIG.CG0546
-  Status: Draft
+  Id: CORE-002016
+  Status: Published
   Version: '1'
 Description: Raise an error when, for records where MIDSTYPE = TM.MIDSTYPE and TM.TMRPT = 'Y', the corresponding MIDS values are not suffixed with a sequence number that reflects a consistent chronological order. 
 Executability: Fully Executable
