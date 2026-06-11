@@ -51,11 +51,14 @@ Core:
   Id: FB1711
   Status: Draft
   Version: '1'
-Description: Raise an error when CMCLASCD is populated with a value not found in the WHODrug dictionary.
+Description: Raise an error when CMCLASCD is populated but not a valid WHODrug dictionary medication class code.
 Executability: Fully Executable
 Outcome:
-  Message: Value for CMCLASCD is not found in the WHODrug dictionary.
+  Message: CMCLASCD is not a valid WHODrug dictionary medication class code.
   Output Variables:
+    - CMTRT
+    - CMDECOD
+    - CMCLAS
     - CMCLASCD
 Rule Type: Record Data
 Scope:
