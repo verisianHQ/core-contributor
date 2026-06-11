@@ -64,7 +64,7 @@ Core:
   Id: CDISC.SDTMIG.CG0555
   Status: Draft
   Version: '1'
-Description: Raise an error when a parameter is non-normalized but PPSTRESU does not contain a valid non-normalized unit (value not in PKUNIT codelist).
+Description: Raise an error when a parameter is non-normalized but PPORRESU does not contain a valid non-normalized unit (value not in PKUNIT codelist).
 Executability: Fully Executable
 Operations:
   - ct_attribute: Term Signification
@@ -74,7 +74,7 @@ Operations:
     ct_conditions:
       - Codelist Code: C85494
 Outcome:
-  Message: Parameter is non-normalized but PPSTRESU does not contain a valid non-normalized unit (value not in PKUNIT codelist).
+  Message: Parameter is non-normalized but PPORRESU does not contain a valid non-normalized unit (value not in PKUNIT codelist).
   Output Variables:
     - PPORRESU
     - PPTEST
