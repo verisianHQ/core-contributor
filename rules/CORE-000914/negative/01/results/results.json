@@ -1,0 +1,167 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "There are multiple records per assigned baseline flag (LBBLFL).",
+      "number_errors": 11,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBCAT": "CHEMISTRY",
+            "LBSCAT": "ALBCAT1",
+            "LBSPEC": "SERUM",
+            "LBMETHOD": "METHOD-A",
+            "LBBLFL": "Y"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 5,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "BASO",
+            "LBCAT": "HEMATOLOGY",
+            "LBSCAT": null,
+            "LBSPEC": null,
+            "LBMETHOD": "BASOMETHOD",
+            "LBBLFL": "Y"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 38,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBCAT": "CHEMISTRY",
+            "LBSCAT": "ALBCAT2",
+            "LBSPEC": "SERUM",
+            "LBMETHOD": "METHOD-A",
+            "LBBLFL": "Y"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 42,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "BASO",
+            "LBCAT": "HEMATOLOGY",
+            "LBSCAT": null,
+            "LBSPEC": null,
+            "LBMETHOD": "BASOMETHOD",
+            "LBBLFL": "Y"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": 73,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBCAT": "CHEMISTRY",
+            "LBSCAT": "ALBCAT1",
+            "LBSPEC": "SERUM",
+            "LBMETHOD": "METHOD-B",
+            "LBBLFL": "Y"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": 38,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBCAT": "CHEMISTRY",
+            "LBSCAT": "ALBCAT2",
+            "LBSPEC": "SERUM",
+            "LBMETHOD": "METHOD-A",
+            "LBBLFL": "Y"
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": 103,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBCAT": "CHEMISTRY",
+            "LBSCAT": "ALBCAT2",
+            "LBSPEC": "SERUM",
+            "LBMETHOD": "METHOD-A",
+            "LBBLFL": "Y"
+          },
+          "validated": false
+        },
+        {
+          "row": 9,
+          "SEQ": 118,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBCAT": "CHEMISTRY",
+            "LBSCAT": "ALBCAT1",
+            "LBSPEC": "SERUM",
+            "LBMETHOD": "METHOD-A",
+            "LBBLFL": "Y"
+          },
+          "validated": false
+        },
+        {
+          "row": 12,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBCAT": "CHEMISTRY",
+            "LBSCAT": "ALBCAT1",
+            "LBSPEC": "SERUM",
+            "LBMETHOD": "METHOD-B",
+            "LBBLFL": "Y"
+          },
+          "validated": false
+        },
+        {
+          "row": 15,
+          "SEQ": 73,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBCAT": "CHEMISTRY",
+            "LBSCAT": "ALBCAT1",
+            "LBSPEC": "URINE",
+            "LBMETHOD": "METHOD-A",
+            "LBBLFL": "Y"
+          },
+          "validated": false
+        },
+        {
+          "row": 24,
+          "SEQ": 163,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBCAT": "CHEMISTRY",
+            "LBSCAT": "ALBCAT1",
+            "LBSPEC": "URINE",
+            "LBMETHOD": "METHOD-A",
+            "LBBLFL": "Y"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
+}

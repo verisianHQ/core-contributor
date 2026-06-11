@@ -1,0 +1,122 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBTESTCD and LBTEST do not have a one-to-one relationship.",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBTEST": "Albumin"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBTEST": "Alkaline Phosphatase"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBTEST": "Aspartate Aminotransferase"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "BASO",
+            "LBTEST": "Aspartate Aminotransferase"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "BASO",
+            "LBTEST": "Basophils"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "FATESTCD and FATEST do not have a one-to-one relationship.",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FATESTCD": "COUNT",
+            "FATEST": "Count"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FATESTCD": "COUNT",
+            "FATEST": "Counts"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FATESTCD": "COUNT",
+            "FATEST": "Counting"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FATESTCD": "COUNT",
+            "FATEST": "Counted"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FATESTCD": "COUNT",
+            "FATEST": "Count"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
+}
