@@ -1,0 +1,37 @@
+{
+  "datasets": [
+    {
+      "dataset": "mb.xpt",
+      "domain": "MB",
+      "execution_status": "success",
+      "execution_message": "For records with MBTESTCD = 'ORGANISM', MBRESCAT must be populated when MBSTRESC is not equal to 'NO GROWTH' and MBMETHOD is not equal to 'GRAM STAIN'.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "ABC-001-002",
+          "value": {
+            "MBTESTCD": "ORGANISM",
+            "MBSTRESC": "NOT NO GROWTH",
+            "MBMETHOD": "Not Gram stain",
+            "MBRESCAT": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "ABC-001-002",
+          "value": {
+            "MBTESTCD": "ORGANISM",
+            "MBSTRESC": "NOT NO growth",
+            "MBMETHOD": "NOT GRAM STAIN",
+            "MBRESCAT": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

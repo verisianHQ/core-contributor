@@ -12,10 +12,10 @@
           "SEQ": 1,
           "USUBJID": "None",
           "value": {
-            "$STYPE_INTERVENTIONAL": 2,
             "TSGRPID": null,
             "TSPARMCD": "INTMODEL",
-            "TSVAL": null
+            "TSVAL": null,
+            "$STYPE_INTERVENTIONAL": 2
           },
           "validated": false
         },
@@ -24,10 +24,10 @@
           "SEQ": 1,
           "USUBJID": "None",
           "value": {
-            "$STYPE_INTERVENTIONAL": 1,
             "TSGRPID": "1",
             "TSPARMCD": "INTMODEL",
-            "TSVAL": null
+            "TSVAL": null,
+            "$STYPE_INTERVENTIONAL": 1
           },
           "validated": false
         },
@@ -36,10 +36,10 @@
           "SEQ": 2,
           "USUBJID": "None",
           "value": {
-            "$STYPE_INTERVENTIONAL": 1,
             "TSGRPID": "2",
             "TSPARMCD": "INTMODEL",
-            "TSVAL": null
+            "TSVAL": null,
+            "$STYPE_INTERVENTIONAL": 1
           },
           "validated": false
         },
@@ -48,10 +48,10 @@
           "SEQ": 2,
           "USUBJID": "None",
           "value": {
-            "$STYPE_INTERVENTIONAL": 2,
             "TSGRPID": null,
             "TSPARMCD": "INTMODEL",
-            "TSVAL": null
+            "TSVAL": null,
+            "$STYPE_INTERVENTIONAL": 2
           },
           "validated": false
         }
