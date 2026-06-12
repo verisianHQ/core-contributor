@@ -1,6 +1,7 @@
 # Variable: GEN
 # Condition: Variable Core Status = Permissible and data is collected
 # Rule: Variable present in dataset and ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -55,7 +56,7 @@ Check:
       operator: empty
     - any:
         - name: variable_name
-          operator: not_exists
+          operator: empty
         - name: variable_is_empty
           operator: equal_to
           value: true
