@@ -1,0 +1,65 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "success",
+      "execution_message": "ECSTDTC does not fall on or between RFXSTDTC and RFXENDTC.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ECSTDTC": "2012-11-28",
+            "RFXSTDTC": "2012-11-30",
+            "RFXENDTC": "2013-01-23"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ECSTDTC": "2012-11-29",
+            "RFXSTDTC": "2012-11-30",
+            "RFXENDTC": "2013-01-23"
+          },
+          "validated": true
+        },
+        {
+          "row": 15,
+          "SEQ": 126,
+          "USUBJID": "CDISC009",
+          "value": {
+            "ECSTDTC": "2013-04-29",
+            "RFXSTDTC": "2012-10-22",
+            "RFXENDTC": "2013-04-28"
+          },
+          "validated": true
+        },
+        {
+          "row": 16,
+          "SEQ": 127,
+          "USUBJID": "CDISC009",
+          "value": {
+            "ECSTDTC": "2013-04-30",
+            "RFXSTDTC": "2012-10-22",
+            "RFXENDTC": "2013-04-28"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

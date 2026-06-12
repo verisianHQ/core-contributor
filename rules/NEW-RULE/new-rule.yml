@@ -128,6 +128,10 @@ Core:
   Version: '1'
 Description: Treatment exposure start date/time (--STDTC) should fall on or between first (RFXSTDTC) and last (RFXENDTC) study treatment date/time in the DM dataset.
 Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: DM
 Outcome:
   Message: --STDTC does not fall on or between RFXSTDTC and RFXENDTC.
   Output Variables:
