@@ -62,7 +62,7 @@ Core:
 Description: Raise an error when collected data fits a Qualifier variable listed
   in specified SDTM Sections and are represented in the Findings About domain,
   and the name of the variable is used as FATEST.
-Executability: Fully Executable
+Executability: Partially Executable
 Operations:
   - id: $fatest_roles
     operator: label_referenced_variable_metadata
