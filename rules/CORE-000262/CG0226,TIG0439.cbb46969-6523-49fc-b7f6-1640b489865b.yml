@@ -85,7 +85,7 @@ Core:
   Id: CORE-000262
   Status: Published
   Version: '1'
-Description: Raise an error when RFSTDTC in DM is empty and --STRF is not empty.
+Description: Raise an error when RFSTDTC in the DM dataset is not populated but --STRF is populated.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
