@@ -15,7 +15,7 @@
             "VISITNUM": 100.0,
             "VISIT": "VISIT 1 (WEEK -2)"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -25,7 +25,7 @@
             "VISITNUM": 200.0,
             "VISIT": "VISIT 2 (WEEK 0)"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -35,7 +35,7 @@
             "VISITNUM": 300.0,
             "VISIT": "VISIT 3 (WEEK 1)"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 30,
@@ -73,30 +73,97 @@
       "dataset": "tv.xpt",
       "domain": "TV",
       "execution_status": "success",
-      "execution_message": "VISIT and VISITNUM do not have a one-to-one relationship",
-      "number_errors": 2,
-      "errors": [
-        {
-          "row": 7,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "VISITNUM": 700.0,
-            "VISIT": "VISIT 7 (WEEK 5)"
-          },
-          "validated": false
-        },
-        {
-          "row": 8,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "VISITNUM": 700.0,
-            "VISIT": "VISIT 8 (WEEK 6)"
-          },
-          "validated": false
-        }
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ],
+  "unhighlighted_validations": [
+    {
+      "1": [
+        "sv.xpt",
+        "record",
+        34,
+        "VISIT",
+        100
       ]
+    },
+    {
+      "1": [
+        "sv.xpt",
+        "record",
+        34,
+        "VISITNUM",
+        "VISIT 1"
+      ]
+    },
+    {
+      "2": [
+        "sv.xpt",
+        "record",
+        35,
+        "VISIT",
+        200
+      ]
+    },
+    {
+      "2": [
+        "sv.xpt",
+        "record",
+        35,
+        "VISITNUM",
+        "VISIT 2"
+      ]
+    },
+    {
+      "3": [
+        "sv.xpt",
+        "record",
+        36,
+        "VISIT",
+        300
+      ]
+    },
+    {
+      "3": [
+        "sv.xpt",
+        "record",
+        36,
+        "VISITNUM",
+        "VISIT 3"
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "sv.xpt",
+      "Row": 34,
+      "Variable": "VISITNUM"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 34,
+      "Variable": "VISIT"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 35,
+      "Variable": "VISITNUM"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 35,
+      "Variable": "VISIT"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 36,
+      "Variable": "VISITNUM"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 36,
+      "Variable": "VISIT"
     }
   ]
 }
