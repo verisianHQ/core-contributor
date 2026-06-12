@@ -127,7 +127,7 @@ Core:
   Id: ''
   Status: Draft
   Version: '1'
-Description: Treatment exposure start date/time (--STDTC) should fall on or between first (RFXSTDTC) and last (RFXENDTC) study treatment date/time in the DM dataset.
+Description: Raise an error when treatment exposure start date/time (--STDTC) falls outside first (RFXSTDTC) and last (RFXENDTC) study treatment date/time in the DM dataset.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
