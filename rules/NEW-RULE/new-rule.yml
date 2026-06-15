@@ -1,0 +1,53 @@
+# Variable: ARMCD
+# Condition: ARMCD ^= (SCRNFAIL, NOTASSGN) DM.ARMCD ^= (SCRNFAIL, NOTASSGN)
+# Rule: DM.USUBJID in EX.USUBJID
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Randomized subjects are expected to receive a study treatment.
+                Document: FDA
+                Section: FDAB025
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB2503
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+Check:
+  all:
+    - name: ARMCD
+      operator: is_not_contained_by_case_insensitive
+      value:
+        - SCRNFAIL
+        - NOTASSGN
+    - name: USUBJID
+      operator: is_not_contained_by
+      value: $usubjids_in_ex
+Core:
+  Id: FDA.SDTMIG.FB2503
+  Status: Draft
+  Version: '1'
+Description: If a subject is assigned to an arm, the subject should have a record in EX.
+Executability: Partially Executable
+Operations:
+  - domain: EX
+    id: $usubjids_in_ex
+    name: USUBJID
+    operator: distinct
+Outcome:
+  Message: Subject is assigned to an arm code (randomized) but has no record in EX.
+  Output Variables:
+    - ARMCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record
