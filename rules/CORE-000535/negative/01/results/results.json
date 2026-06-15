@@ -1,0 +1,102 @@
+{
+  "datasets": [
+    {
+      "dataset": "sm.xpt",
+      "domain": "SM",
+      "execution_status": "success",
+      "execution_message": "SMSEQ must be chronological (based on SMSTDTC) within USUBJID.",
+      "number_errors": 6,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "001",
+          "value": {
+            "SMSEQ": 1.0,
+            "SMSTDTC": "2005-10"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "001",
+          "value": {
+            "SMSEQ": 2.0,
+            "SMSTDTC": "2005-10-08"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "001",
+          "value": {
+            "SMSEQ": 3.0,
+            "SMSTDTC": "2005-10-06"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 3,
+          "USUBJID": "003",
+          "value": {
+            "SMSEQ": 3.0,
+            "SMSTDTC": "2005-12-02"
+          },
+          "validated": true
+        },
+        {
+          "row": 7,
+          "SEQ": 4,
+          "USUBJID": "003",
+          "value": {
+            "SMSEQ": 4.0,
+            "SMSTDTC": "2006-01-01"
+          },
+          "validated": true
+        },
+        {
+          "row": 8,
+          "SEQ": 2,
+          "USUBJID": "003",
+          "value": {
+            "SMSEQ": 2.0,
+            "SMSTDTC": "2006-01-02"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "success",
+      "execution_message": "SESEQ must be chronological (based on SESTDTC) within USUBJID.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SESEQ": 2.0,
+            "SESTDTC": "2005-12-02"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SESEQ": 1.0,
+            "SESTDTC": "2006-01-01"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "datasets": [
+    {
+      "dataset": "sm.xpt",
+      "domain": "SM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000535, dataset=SM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "success",
+      "execution_message": "SESEQ must be chronological (based on SESTDTC) within USUBJID.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SESEQ": 2.0,
+            "SESTDTC": "2005-12-02"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SESEQ": 1.0,
+            "SESTDTC": "2006-01-01"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

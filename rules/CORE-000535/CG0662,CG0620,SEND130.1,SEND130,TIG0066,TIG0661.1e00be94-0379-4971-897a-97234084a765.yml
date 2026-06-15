@@ -59,8 +59,8 @@ Authorities:
               - Cited Guidance: The values of SESTDTC provide the chronological order of the
                   actual subject Elements.  SESEQ should be assigned to be
                   consistent with the chronological order.
-                Document: IG v3.1
-                Item: Specification
+                Document: SENDIG v3.1
+                Item: Assumption 7
                 Section: 5.3.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -74,8 +74,8 @@ Authorities:
               - Cited Guidance: The values of SESTDTC provide the chronological order of the
                   actual subject Elements.  SESEQ should be assigned to be
                   consistent with the chronological order.
-                Document: IG v3.1
-                Item: Specification
+                Document: SENDIG v3.0
+                Item: Assumption 6
                 Section: 5.3.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -89,8 +89,8 @@ Authorities:
               - Cited Guidance: The values of SESTDTC provide the chronological order of the
                   actual subject Elements.  SESEQ should be assigned to be
                   consistent with the chronological order.
-                Document: IG v3.1.1
-                Item: Specification
+                Document: SENDIG v3.1.1
+                Item: Assumption 7
                 Section: 5.3.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -104,8 +104,8 @@ Authorities:
               - Cited Guidance: The values of SESTDTC provide the chronological order of the
                   actual subject Elements.  SESEQ should be assigned to be
                   consistent with the chronological order.
-                Document: IG v3.1
-                Item: Specification
+                Document: SENDIG v3.1
+                Item: Assumption 7
                 Section: 5.3.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -119,8 +119,8 @@ Authorities:
               - Cited Guidance: The values of SESTDTC provide the chronological order of the
                   actual subject Elements.  SESEQ should be assigned to be
                   consistent with the chronological order.
-                Document: IG v3.1.1
-                Item: Specification
+                Document: SENDIG v3.1.1
+                Item: Assumption 7
                 Section: 5.3.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -134,8 +134,8 @@ Authorities:
               - Cited Guidance: The values of SESTDTC provide the chronological order of the
                   actual subject Elements.  SESEQ should be assigned to be
                   consistent with the chronological order.
-                Document: IG v3.1.1
-                Item: Specification
+                Document: SENDIG v3.1.1
+                Item: Assumption 7
                 Section: 5.3.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -188,11 +188,11 @@ Core:
   Id: CORE-000535
   Status: Published
   Version: '1'
-Description: Trigger error when the order of --SEQ is not chronological (based
-  on --STDTC) within USUBJID
+Description: Raise an error when the order of --SEQ is not chronological (based
+  on --STDTC) within USUBJID.
 Executability: Fully Executable
 Outcome:
-  Message: --SEQ is not chronological (based on --STDTC) within USUBJID
+  Message: --SEQ must be chronological (based on --STDTC) within USUBJID.
   Output Variables:
     - --SEQ
     - --STDTC
