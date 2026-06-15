@@ -1,0 +1,78 @@
+# Variable: BESTDY
+# Condition: BESTDY ^= Null and BEDY ^= Null
+# Rule: BESTDY <= BEDY
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if
+                  collected, and study day of observation (--DY) should be
+                  submitted.
+                Document: FDA
+                Section: FDAB032
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3213
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if
+                  collected, and study day of observation (--DY) should be
+                  submitted.
+                Document: FDA
+                Section: FDAB032
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3213
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if
+                  collected, and study day of observation (--DY) should be
+                  submitted.
+                Document: FDA
+                Section: FDAB032
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3213
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: BESTDY
+      operator: non_empty
+    - name: BEDY
+      operator: non_empty
+    - name: BESTDY
+      operator: greater_than
+      value: BEDY
+Core:
+  Id: FDA.SDTMIG.FB3213
+  Status: Draft
+  Version: '1'
+Description: Study Day of Start of Observation (BESTDY) is less than or equal to Study Day of Visit/Collection/Exam (BEDY).
+Executability: Fully Executable
+Outcome:
+  Message: BESTDY is greater than BEDY.
+  Output Variables:
+    - BESTDY
+    - BEDY
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - BE
+Sensitivity: Record
