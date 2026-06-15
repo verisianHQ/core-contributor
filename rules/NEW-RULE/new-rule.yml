@@ -32,7 +32,7 @@ Core:
   Status: Draft
   Version: '1'
 Description: Raise an error when a subject is assigned to an arm code (randomized) but the subject has no record in the EX dataset.
-Executability: Partially Executable
+Executability: Partially Executable - Possible Overreporting
 Operations:
   - domain: EX
     id: $usubjids_in_ex
