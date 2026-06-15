@@ -1,0 +1,20 @@
+{
+  "datasets": [
+    {
+      "dataset": "be.xpt",
+      "domain": "BE",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=FDA.SDTMIG.FB3211, dataset=DS",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}
