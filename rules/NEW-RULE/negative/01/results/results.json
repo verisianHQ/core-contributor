@@ -1,0 +1,81 @@
+{
+  "datasets": [
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "DSSTDTC falls after DSDTC.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "CDISC001",
+          "value": {
+            "DSSTDTC": "2003-11-15",
+            "DSDTC": "2003-11-14"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "CDISC001",
+          "value": {
+            "DSSTDTC": "2003-12",
+            "DSDTC": "2003-11-14"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "MHSTDTC falls after MHDTC.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "MHSTDTC": "2014",
+            "MHDTC": "2013-08-06"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ml.xpt",
+      "domain": "ML",
+      "execution_status": "success",
+      "execution_message": "MLSTDTC falls after MLDTC.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "MLSTDTC": "2015-12-27",
+            "MLDTC": "2015-12"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "MLSTDTC": "2015-12-27",
+            "MLDTC": "2015-11"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
