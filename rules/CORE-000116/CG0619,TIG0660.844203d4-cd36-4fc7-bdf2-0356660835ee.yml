@@ -41,6 +41,7 @@ Check:
     - name: --SPCUFL
       operator: not_equal_to
       value: N
+      value_is_literal: true
     - name: --SPCUFL
       operator: non_empty
 Core:
