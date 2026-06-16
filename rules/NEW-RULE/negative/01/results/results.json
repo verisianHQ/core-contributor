@@ -1,0 +1,41 @@
+{
+  "datasets": [
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000717, dataset=DS",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "success",
+      "execution_message": "EXSTDTC falls after the last DSSTDTC.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "EXSTDTC": "2025-12-01",
+            "$max_dsstdtc": "2022-01-19"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 2,
+          "USUBJID": "CDISC002",
+          "value": {
+            "EXSTDTC": "2019-03-14T10:00:00",
+            "$max_dsstdtc": "2019-03-13"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
