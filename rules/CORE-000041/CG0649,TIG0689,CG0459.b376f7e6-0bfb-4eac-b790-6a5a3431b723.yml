@@ -1,6 +1,7 @@
 # Variable: TSVALNF
 # Condition: TSVAL not populated with values or synonyms of values in the ISO 21090 null flavor codelist (or other terms that can be represented as null flavors), unless the term is included in published terminology.
 # Rule: TSVALNF = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -89,24 +90,21 @@ Check:
       operator: non_empty
     - name: TSVAL
       operator: not_matches_regex
-      value: (?i:^(NI|No information|INV|Invalid|OTH|Other|PINF|Positive
-        infinity|NINF|Negative
-        infinity|UNC|Unencoded|DER|Derived|UNK|Unknown|ASKU|Asked but
-        unknown|NAV|Temporarily unavailable|NASK|Not
-        asked|TRC|Trace|MSK|Masked|QS|Sufficient Quantity)$)
+      value: (?i)^(NI|No information|INV|Invalid|OTH|Other|PINF|Positive infinity|NINF|Negative infinity|UNC|Unencoded|DER|Derived|UNK|Unknown|ASKU|Asked but unknown|NAV|Temporarily unavailable|NASK|Not asked|TRC|Trace|MSK|Masked|QS|Sufficient Quantity)$
     - name: TSVALNF
       operator: non_empty
 Core:
   Id: CORE-000041
   Status: Published
   Version: '1'
-Description: Raise and error when TSVAL is not populated TSVAL is populated with
-  values or synonyms of values in the ISO 21090 null flavor codelist (or other
-  terms that can be represented as null flavors) but TSVALNF is completed.
+Description: Raise an error when TSVAL is populated with values or synonyms of values in the ISO 21090 null flavor codelist (or other terms that can be represented as null flavors) but TSVALNF is completed.
 Executability: Fully Executable
 Outcome:
   Message: TSVAL is not populated with an ISO 21090 null flavor or null flavor
     description but TSVALNF is populated.
+  Output Variables:
+    - TSVAL
+    - TSVALNF
 Rule Type: Record Data
 Scope:
   Classes:
