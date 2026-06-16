@@ -4,7 +4,7 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSVAL is not in ISO 8601 format",
+      "execution_message": "TSPARMCD = 'AGEMAX' but TSVAL is not null and not in ISO 8601 format.",
       "number_errors": 1,
       "errors": [
         {
@@ -15,7 +15,7 @@
             "TSPARMCD": "AGEMAX",
             "TSVAL": "6 months"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

@@ -1,6 +1,7 @@
 # Variable: TSVAL
 # Condition: TSPARMCD = 'AGEMAX' and TSVAL ^= null
 # Rule: TSVAL conforms to ISO 8601
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -80,11 +81,14 @@ Core:
   Id: CORE-000294
   Status: Published
   Version: '1'
-Description: Trigger error when TSPARMCD = 'AGEMAX' and TSVAL ^= null and TSVAL
-  does not conform to ISO 8601
+Description: Raise an error when TSPARMCD = 'AGEMAX' but TSVAL is not null 
+  and TSVAL does not conform to ISO 8601 standard
 Executability: Fully Executable
 Outcome:
-  Message: TSVAL is not in ISO 8601 format
+  Message: TSPARMCD = 'AGEMAX' but TSVAL is not null and not in ISO 8601 format.
+  Output Variables:
+    - TSPARMCD
+    - TSVAL
 Rule Type: Record Data
 Scope:
   Classes:
