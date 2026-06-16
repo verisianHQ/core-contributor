@@ -1,6 +1,7 @@
 # Variable: TSSEQ
 # Condition: TSPARMCD not unique
 # Rule: TSSEQ is unique for each distinct value of TSPARMCD
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -193,10 +194,10 @@ Core:
   Id: CORE-000154
   Status: Published
   Version: '1'
-Description: TSSEQ must be unique within TSPARMCD
+Description: Raise an error when TSSEQ is not unique within TSPARMCD
 Executability: Fully Executable
 Outcome:
-  Message: TSSEQ is not unique within TSPARMCD
+  Message: TSSEQ is not unique within TSPARMCD.
   Output Variables:
     - TSSEQ
     - TSPARMCD
