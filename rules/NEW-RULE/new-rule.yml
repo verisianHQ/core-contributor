@@ -14,7 +14,7 @@ Authorities:
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB3401
+              Id: FB3402
               Version: '1'
             Version: '1.5'
         Version: '3.2'
@@ -27,7 +27,7 @@ Authorities:
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB3401
+              Id: FB3402
               Version: '1'
             Version: '1.5'
         Version: '3.3'
@@ -40,7 +40,7 @@ Authorities:
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB3401
+              Id: FB3402
               Version: '1'
             Version: '1.5'
         Version: '3.4'
@@ -53,7 +53,7 @@ Authorities:
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB3404
+              Id: FB3402
               Version: '1'
             Version: '1.5'
         Version: '3.0'
@@ -66,7 +66,7 @@ Authorities:
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB3404
+              Id: FB3402
               Version: '1'
             Version: '1.5'
         Version: '3.1'
@@ -79,7 +79,7 @@ Authorities:
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB3404
+              Id: FB3402
               Version: '1'
             Version: '1.5'
         Version: '3.1.1'
@@ -92,7 +92,7 @@ Authorities:
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB3404
+              Id: FB3402
               Version: '1'
             Version: '1.5'
         Version: '1.0'
@@ -105,7 +105,7 @@ Authorities:
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB3404
+              Id: FB3402
               Version: '1'
             Version: '1.5'
         Version: '1.1'
@@ -118,7 +118,7 @@ Authorities:
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB3404
+              Id: FB3402
               Version: '1'
             Version: '1.5'
         Version: '1.2'
@@ -131,7 +131,7 @@ Authorities:
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB3404
+              Id: FB3402
               Version: '1'
             Version: '1.5'
         Version: '1.0'
@@ -146,8 +146,7 @@ Core:
   Id: FDA.SDTMIG.FB3402
   Status: Published
   Version: '1'
-Description: Start Date/Time of Adverse Event (EXSTDTC) should be prior or equal
-  to the Start Date/Time of the latest Disposition Event (DSSTDTC).
+Description: Raise an error when Start Date/Time of Treatment (EXSTDTC) is after the Start Date/Time of the latest Disposition Event (DSSTDTC).
 Executability: Fully Executable
 Operations:
   - domain: DS
@@ -157,7 +156,7 @@ Operations:
     name: DSSTDTC
     operator: max
 Outcome:
-  Message: EXSTDTC falls after the last DSSTDTC.
+  Message: EXSTDTC falls after the latest DSSTDTC.
   Output Variables:
     - EXSTDTC
     - $max_dsstdtc
