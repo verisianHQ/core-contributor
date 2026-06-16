@@ -180,6 +180,7 @@ Check:
   all:
     - name: --SEQ
       operator: target_is_not_sorted_by
+      strict_incremental_ordering: true
       value:
         - name: --STDTC
           null_position: last
@@ -189,11 +190,11 @@ Core:
   Id: CORE-000535
   Status: Published
   Version: '1'
-Description: Raise an error when the order of --SEQ is not chronological (based
+Description: Raise an error when the order of --SEQ is not consistent chronological (based
   on --STDTC) within USUBJID.
 Executability: Fully Executable
 Outcome:
-  Message: --SEQ must be chronological (based on --STDTC) within USUBJID.
+  Message: --SEQ must be in consistent chronological order (based on --STDTC) within USUBJID.
   Output Variables:
     - --SEQ
     - --STDTC

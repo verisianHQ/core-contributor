@@ -4,19 +4,9 @@
       "dataset": "sm.xpt",
       "domain": "SM",
       "execution_status": "success",
-      "execution_message": "SMSEQ must be chronological (based on SMSTDTC) within USUBJID.",
+      "execution_message": "SMSEQ must be in consistent chronological order (based on SMSTDTC) within USUBJID.",
       "number_errors": 6,
       "errors": [
-        {
-          "row": 1,
-          "SEQ": 1,
-          "USUBJID": "001",
-          "value": {
-            "SMSEQ": 1.0,
-            "SMSTDTC": "2005-10"
-          },
-          "validated": true
-        },
         {
           "row": 2,
           "SEQ": 2,
@@ -34,6 +24,16 @@
           "value": {
             "SMSEQ": 3.0,
             "SMSTDTC": "2005-10-06"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 5,
+          "USUBJID": "001",
+          "value": {
+            "SMSEQ": 5.0,
+            "SMSTDTC": "2005-11"
           },
           "validated": true
         },
@@ -73,7 +73,7 @@
       "dataset": "se.xpt",
       "domain": "SE",
       "execution_status": "success",
-      "execution_message": "SESEQ must be chronological (based on SESTDTC) within USUBJID.",
+      "execution_message": "SESEQ must be in consistent chronological order (based on SESTDTC) within USUBJID.",
       "number_errors": 2,
       "errors": [
         {
@@ -97,6 +97,14 @@
           "validated": true
         }
       ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "SMSEQ": 2,
+        "SMSTDTC": "2006-01-02"
+      }
     }
   ]
 }
