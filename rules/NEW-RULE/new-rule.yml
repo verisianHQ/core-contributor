@@ -51,14 +51,14 @@ Core:
   Id: FDA.SDTMIG.FB0101
   Status: Draft
   Version: '1'
-Description: Treatment-emergent flag should be present in SUPPAE for each Adverse Event.
+Description: Raise an error when treatment-emergent flag is not present in SUPPAE for the Adverse Event.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: SUPPAE
 Outcome:
-  Message: Missing treatment-emergent flag (AETRTEM) for Adverse Event.
+  Message: Missing treatment-emergent flag (AETRTEM) for the Adverse Event.
   Output Variables:
     - AETERM
     - AESTDTC
