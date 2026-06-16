@@ -12,7 +12,7 @@
       "dataset": "ss.xpt",
       "domain": "SS",
       "execution_status": "success",
-      "execution_message": "DSDECOD is not \"DEATH\", When SS.SSSTRESC = \"DEAD\".",
+      "execution_message": "DSDECOD must be equal to 'DEATH' in the DS dataset when SSSTRESC is equal to 'DEAD' in the SS dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -20,16 +20,7 @@
           "SEQ": 2,
           "USUBJID": "015246-076-0003-00003",
           "value": {
-            "SSSTRESC": "DEAD",
-            "$ds_dsdecod": [
-              "",
-              "ADVERSE EVENT",
-              "COMPLETED",
-              "INFORMED CONSENT OBTAINED",
-              "LAST CONTACT",
-              "PROGRESSIVE DISEASE",
-              "RANDOMIZED"
-            ]
+            "SSSTRESC": "DEAD"
           },
           "validated": true
         }
