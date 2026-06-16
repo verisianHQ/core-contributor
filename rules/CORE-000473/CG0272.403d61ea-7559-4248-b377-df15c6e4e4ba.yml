@@ -1,6 +1,7 @@
 # Variable: TSVAL
 # Condition: TSPARMCD = 'TDIGRP' and record exists where TSPARMCD = 'HLTSUBJI' and TSVAL = 'Y'
 # Rule: TSVAL = null or 'HEALTHY SUBJECTS'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -67,27 +68,25 @@ Core:
   Id: CORE-000473
   Status: Published
   Version: '1'
-Description: 'Raise an error when a record exists in TS where TSPARMCD =
-  HLTSUBJI and TSVAL = Y but TSVAL for TSPARMCD = TDIGRP is not empty or does
-  not equal HEALTHY SUBJECTS.'
+Description: Raise an error when a record exists where TSPARMCD =
+  'HLTSUBJI' and TSVAL = 'Y' but TSVAL is not empty or does
+  not equal 'HEALTHY SUBJECTS' where TSPARMCD = 'TDIGRP' 
 Executability: Fully Executable
 Operations:
   - filter:
       TSPARMCD: HLTSUBJI
-      TSVAL: "Y"
+      TSVAL: 'Y'
     group:
       - TSGRPID
     id: $HLTSUBJI_Y
     operator: record_count
 Outcome:
-  Message: 'A record exists in TS where TSPARMCD = HLTSUBJI and TSVAL = Y but
-    TSVAL for TSPARMCD = TDIGRP is not empty or does not equal HEALTHY
-    SUBJECTS.'
+  Message: A record exists where TSPARMCD = 'HLTSUBJI' and TSVAL = 'Y' but
+    TSVAL is not empty or does not equal 'HEALTHY SUBJECTS' where 
+    TSPARMCD = 'TDIGRP'.
   Output Variables:
-    - TSGRPID
     - TSPARMCD
     - TSVAL
-    - $HLTSUBJI_Y
 Rule Type: Record Data
 Scope:
   Classes:

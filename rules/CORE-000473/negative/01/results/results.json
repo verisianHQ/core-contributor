@@ -4,94 +4,20 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "A record exists in TS where TSPARMCD = HLTSUBJI and TSVAL = Y but TSVAL for TSPARMCD = TDIGRP is not empty or does not equal HEALTHY SUBJECTS.",
+      "execution_message": "A record exists where TSPARMCD = 'HLTSUBJI' and TSVAL = 'Y' but TSVAL is not empty or does not equal 'HEALTHY SUBJECTS' where TSPARMCD = 'TDIGRP'.",
       "number_errors": 1,
       "errors": [
         {
-          "row": 45,
+          "row": 2,
           "SEQ": 1,
           "USUBJID": "None",
           "value": {
-            "TSGRPID": null,
             "TSPARMCD": "TDIGRP",
-            "TSVAL": "Patients with Probable Mild to Moderate Alzheimers Disease",
-            "$HLTSUBJI_Y": 1
+            "TSVAL": "Patients with Probable Mild to Moderate Alzheimers Disease"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ts.xpt",
-      "Row": 20,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 20,
-      "Variable": "TSPARM"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 20,
-      "Variable": "TSVAL"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 20,
-      "Variable": "TSVALNF"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 20,
-      "Variable": "TSVALCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 20,
-      "Variable": "TSVCDREF"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 20,
-      "Variable": "TSVCDVER"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 49,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 49,
-      "Variable": "TSPARM"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 49,
-      "Variable": "TSVAL"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 49,
-      "Variable": "TSVALNF"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 49,
-      "Variable": "TSVALCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 49,
-      "Variable": "TSVCDREF"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 49,
-      "Variable": "TSVCDVER"
     }
   ]
 }
