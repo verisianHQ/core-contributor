@@ -158,8 +158,8 @@ Core:
   Id: FDA.SDTMIG.FB3211
   Status: Draft
   Version: '1'
-Description: Start Date/Time of Observation (--STDTC) is prior or equal to
-  Date/Time of Collection (--DTC)
+Description: Raise an error when Start Date/Time of Observation (--STDTC) is after the
+  Date/Time of Collection (--DTC).
 Executability: Fully Executable
 Outcome:
   Message: --STDTC falls after --DTC.

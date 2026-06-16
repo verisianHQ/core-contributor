@@ -5,8 +5,18 @@
       "domain": "DS",
       "execution_status": "success",
       "execution_message": "DSSTDTC falls after DSDTC.",
-      "number_errors": 2,
+      "number_errors": 3,
       "errors": [
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "DSSTDTC": "2003-11-14T11:14",
+            "DSDTC": "2003-11-14T11:13"
+          },
+          "validated": true
+        },
         {
           "row": 5,
           "SEQ": 5,
