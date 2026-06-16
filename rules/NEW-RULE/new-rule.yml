@@ -15,7 +15,7 @@ Authorities:
                 Section: FDAB032
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB3213
+              Id: FB3214
               Version: '1'
             Version: '1.5'
         Version: '3.2'
@@ -29,7 +29,7 @@ Authorities:
                 Section: FDAB032
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB3213
+              Id: FB3214
               Version: '1'
             Version: '1.5'
         Version: '3.3'
@@ -43,7 +43,7 @@ Authorities:
                 Section: FDAB032
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB3213
+              Id: FB3214
               Version: '1'
             Version: '1.5'
         Version: '3.4'
@@ -53,17 +53,17 @@ Check:
       operator: non_empty
     - name: BEDY
       operator: non_empty
-    - name: BESTDY
+    - name: BEDY
       operator: greater_than
-      value: BEDY
+      value: BESTDY
 Core:
-  Id: FDA.SDTMIG.FB3213
+  Id: FDA.SDTMIG.FB3214
   Status: Draft
   Version: '1'
 Description: Study Day of Start of Observation (BESTDY) is less than or equal to Study Day of Visit/Collection/Exam (BEDY).
 Executability: Fully Executable
 Outcome:
-  Message: BESTDY is greater than BEDY.
+  Message: BEDY is greater than BESTDY.
   Output Variables:
     - BESTDY
     - BEDY

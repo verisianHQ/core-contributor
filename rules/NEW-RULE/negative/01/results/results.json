@@ -4,7 +4,7 @@
       "dataset": "be.xpt",
       "domain": "BE",
       "execution_status": "success",
-      "execution_message": "BESTDY is greater than BEDY.",
+      "execution_message": "BEDY is greater than BESTDY.",
       "number_errors": 4,
       "errors": [
         {
@@ -12,8 +12,8 @@
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "BESTDY": 1.0,
-            "BEDY": 0.1
+            "BESTDY": 0.1,
+            "BEDY": 1.0
           },
           "validated": true
         },
@@ -22,8 +22,8 @@
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "BESTDY": 3.0,
-            "BEDY": 2.9
+            "BESTDY": 2.9,
+            "BEDY": 3.0
           },
           "validated": true
         },
@@ -32,8 +32,8 @@
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "BESTDY": 5.0,
-            "BEDY": -20.0
+            "BESTDY": -20.0,
+            "BEDY": 5.0
           },
           "validated": true
         },
@@ -42,8 +42,8 @@
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "BESTDY": 200000.0,
-            "BEDY": 2000.0
+            "BESTDY": 2000.0,
+            "BEDY": 200000.0
           },
           "validated": true
         }
