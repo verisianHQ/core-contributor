@@ -4,7 +4,7 @@
       "dataset": "be.xpt",
       "domain": "BE",
       "execution_status": "success",
-      "execution_message": "BESTDTC falls after BEDTC.",
+      "execution_message": "BEDTC falls after BESTDTC.",
       "number_errors": 5,
       "errors": [
         {
@@ -12,8 +12,8 @@
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "BESTDTC": "2005-03-22T15:07",
-            "BEDTC": "2005-03-22"
+            "BESTDTC": "2005-03-22",
+            "BEDTC": "2005-03-22T15:07"
           },
           "validated": true
         },
@@ -22,8 +22,8 @@
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "BESTDTC": "2005-03-25T15:07",
-            "BEDTC": "2005-03-22"
+            "BESTDTC": "2005-03-22",
+            "BEDTC": "2005-03-25T15:07"
           },
           "validated": true
         },
@@ -32,8 +32,8 @@
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "BESTDTC": "2005-03-22T10:29",
-            "BEDTC": "2005-03-22T09:00"
+            "BESTDTC": "2005-03-22T09:00",
+            "BEDTC": "2005-03-22T10:29"
           },
           "validated": true
         },
@@ -42,8 +42,8 @@
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "BESTDTC": "2007-01-12T10:30",
-            "BEDTC": "2007-01-11"
+            "BESTDTC": "2007-01-11",
+            "BEDTC": "2007-01-12T10:30"
           },
           "validated": true
         },
@@ -52,8 +52,8 @@
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "BESTDTC": "2007-01-11T10:35",
-            "BEDTC": "2007-01-11"
+            "BESTDTC": "2007-01-11",
+            "BEDTC": "2007-01-11T10:35"
           },
           "validated": true
         }

@@ -1,6 +1,6 @@
 # Variable: BESTDTC
 # Condition: BESTDTC ^= Null and BEDTC ^= Null
-# Rule: BESTDTC <= BEDTC
+# Rule: BEDTC <= BESTDTC
 # verified
 Authorities:
   - Organization: FDA
@@ -15,7 +15,7 @@ Authorities:
                 Section: FDAB032
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB3211
+              Id: FB3212
               Version: '1'
             Version: '1.5'
         Version: '3.2'
@@ -29,7 +29,7 @@ Authorities:
                 Section: FDAB032
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB3211
+              Id: FB3212
               Version: '1'
             Version: '1.5'
         Version: '3.3'
@@ -43,7 +43,7 @@ Authorities:
                 Section: FDAB032
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB3211
+              Id: FB3212
               Version: '1'
             Version: '1.5'
         Version: '3.4'
@@ -53,18 +53,18 @@ Check:
       operator: non_empty
     - name: BEDTC
       operator: non_empty
-    - name: BESTDTC
+    - name: BEDTC
       operator: date_greater_than
-      value: BEDTC
+      value: BESTDTC
 Core:
-  Id: FDA.SDTMIG.FB3211
+  Id: FDA.SDTMIG.FB3212
   Status: Draft
   Version: '1'
-Description: Start Date/Time of Observation (BESTDTC) is prior or equal to
-  Date/Time of Collection (BEDTC)
+Description: Raise an error when Date/Time of Specimen Collection (BEDTC) is after
+  Start Date/Time of Biospecimen Event (BESTDTC).
 Executability: Fully Executable
 Outcome:
-  Message: BESTDTC falls after BEDTC.
+  Message: BEDTC falls after BESTDTC.
   Output Variables:
     - BESTDTC
     - BEDTC
