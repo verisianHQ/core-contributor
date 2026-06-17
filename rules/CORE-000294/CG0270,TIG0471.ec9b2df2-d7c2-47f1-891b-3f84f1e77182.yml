@@ -86,7 +86,8 @@ Description: Raise an error when TSPARMCD = 'AGEMAX' but TSVAL is not null
   and TSVAL does not conform to ISO 8601 standard
 Executability: Fully Executable
 Outcome:
-  Message: TSPARMCD = 'AGEMAX' but TSVAL is not null and not in ISO 8601 format.
+  Message: TSVAL for TSPARMCD = 'AGEMAX' is populated but value is not ISO 
+    8601 format.
   Output Variables:
     - TSPARMCD
     - TSVAL
