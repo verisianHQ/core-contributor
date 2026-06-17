@@ -1,0 +1,50 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "Variable length is different between datasets and/or is longer than the maximum length of the actual data contained by the variable.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "dataset_name": "CM",
+            "variable_name": "STUDYID",
+            "variable_size": 50.0,
+            "variable_value_length": 12.0,
+            "$max_data_length": 12.0,
+            "$global_min_size": 12.0,
+            "$global_max_size": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Variable length is different between datasets and/or is longer than the maximum length of the actual data contained by the variable.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "dataset_name": "CM",
+            "variable_name": "STUDYID",
+            "variable_size": 50.0,
+            "variable_value_length": 12.0,
+            "$max_data_length": 12.0,
+            "$global_min_size": 12.0,
+            "$global_max_size": 50.0
+          }
+        }
+      ]
+    }
+  ]
+}
