@@ -12,7 +12,7 @@
       "dataset": "ss.xpt",
       "domain": "SS",
       "execution_status": "success",
-      "execution_message": "DSDECOD must be equal to 'DEATH' in the DS dataset when SSSTRESC is equal to 'DEAD' in the SS dataset.",
+      "execution_message": "SSSTRESC in the SS dataset is 'DEAD', but a record is missing in the DS dataset where DSDECOD = 'DEATH'.",
       "number_errors": 1,
       "errors": [
         {
