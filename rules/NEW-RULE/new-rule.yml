@@ -1,0 +1,165 @@
+# Variable: ALL
+# Condition: 
+# Rule: Variable length > maximum value length
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: SUPPQUAL variable length should be no longer than the maximum
+                  length of the actual data within the dataset.
+                Document: FDA
+                Section: FDAB019
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1901
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: SUPPQUAL variable length should be no longer than the maximum
+                  length of the actual data within the dataset.
+                Document: FDA
+                Section: FDAB019
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1901
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: SUPPQUAL variable length should be no longer than the maximum
+                  length of the actual data within the dataset.
+                Document: FDA
+                Section: FDAB019
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1901
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: SUPPQUAL variable length should be no longer than the maximum
+                  length of the actual data within the dataset.
+                Document: FDA
+                Section: FDAB019
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1901
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: SUPPQUAL variable length should be no longer than the maximum
+                  length of the actual data within the dataset.
+                Document: FDA
+                Section: FDAB019
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1901
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: SUPPQUAL variable length should be no longer than the maximum
+                  length of the actual data within the dataset.
+                Document: FDA
+                Section: FDAB019
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1901
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: SUPPQUAL variable length should be no longer than the maximum
+                  length of the actual data within the dataset.
+                Document: FDA
+                Section: FDAB019
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1901
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: SUPPQUAL variable length should be no longer than the maximum
+                  length of the actual data within the dataset.
+                Document: FDA
+                Section: FDAB019
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1901
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: SUPPQUAL variable length should be no longer than the maximum
+                  length of the actual data within the dataset.
+                Document: FDA
+                Section: FDAB019
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1901
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: SENDIG-AR
+        References:
+          - Citations:
+              - Cited Guidance: SUPPQUAL variable length should be no longer than the maximum
+                  length of the actual data within the dataset.
+                Document: FDA
+                Section: FDAB019
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1901
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  all:
+    - name: variable_value_length
+      operator: greater_than
+      value: variable_size
+Core:
+  Id: FDA.SDTMIG.FB1901
+  Status: Draft
+  Version: '1'
+Description: All values in each variable in each of the SUPPQUAL and RELREC datasets is shorter or equal to that variable's length.
+Executability: Fully Executable
+Outcome:
+  Message: Variable length is longer than the maximum length of the actual data contained by the variable.
+  Output Variables:
+    - variable_name
+    - variable_value
+    - variable_size
+    - variable_value_length
+Rule Type: Value Check with Variable Metadata
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - SUPP--
+      - RELREC
+Sensitivity: Record
