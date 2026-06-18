@@ -97,8 +97,8 @@ Core:
   Id: CORE-000041
   Status: Published
   Version: '1'
-Description: Raise an error when TSVAL is populated with values or synonyms of values in the ISO 21090 null flavor codelist (or other terms that can be represented as null flavors) but TSVALNF is completed.
-Executability: Fully Executable
+Description: Raise an error when TSVAL is not populated with values or synonyms of values in the ISO 21090 null flavor codelist (or other terms that can be represented as null flavors) but TSVALNF is populated.
+Executability: Partially Executable - Possible Underreporting
 Outcome:
   Message: TSVAL is not populated with an ISO 21090 null flavor or null flavor
     description but TSVALNF is populated.
