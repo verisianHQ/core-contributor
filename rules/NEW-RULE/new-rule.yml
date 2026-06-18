@@ -165,8 +165,7 @@ Core:
   Id: FDA.TRC1734b
   Status: Draft
   Version: '1'
-Description: FDA desired parameter Study Start Date (SSTDTC) should be present
-  in the TS domain.
+Description: Raise an error when FDA Desired Trial Summary Parameter Study Start Date (SSTDTC) is not present in the TS dataset.
 Executability: Fully Executable
 Operations:
   - domain: TS
@@ -176,7 +175,7 @@ Operations:
     name: TSPARMCD
     operator: distinct
 Outcome:
-  Message: Missing TSPARMCD = SSTDTC record in TS dataset.
+  Message: FDA Desired TSPARMCD = SSTDTC is missing in the TS dataset.
   Output Variables:
     - STUDYID
 Rule Type: Record Data
