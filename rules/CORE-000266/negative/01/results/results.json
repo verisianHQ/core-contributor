@@ -4,14 +4,15 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "If AESER = \"N\" then none of the seriousness criteria (AESCAN, AESCONG, AESDISAB, AESDTH, AESHOSP, AESLIFE, AESOD, AESMIE) could be equal to \"Y\".",
-      "number_errors": 12,
+      "execution_message": "AESER is not equal to 'N', but none of the seriousness events categories (AESCAN, AESCONG, AESDISAB, AESDTH, AESHOSP, AESLIFE, AESOD, AESMIE) are flagged as 'Y'.",
+      "number_errors": 15,
       "errors": [
         {
-          "row": 10,
+          "row": 1,
           "SEQ": 882,
           "USUBJID": "CDISC-TEST-055",
           "value": {
+            "AETERM": "DIARRHOEA",
             "AESER": null,
             "AESCAN": "N",
             "AESCONG": null,
@@ -22,30 +23,50 @@
             "AESOD": null,
             "AESMIE": null
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 12,
+          "row": 2,
           "SEQ": 897,
           "USUBJID": "CDISC-TEST-055",
           "value": {
+            "AETERM": "PNEUMONIA",
             "AESER": null,
             "AESCAN": null,
             "AESCONG": null,
             "AESDISAB": null,
-            "AESDTH": " ",
+            "AESDTH": null,
             "AESHOSP": null,
             "AESLIFE": null,
             "AESOD": null,
             "AESMIE": null
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 13,
+          "row": 3,
+          "SEQ": 897,
+          "USUBJID": "CDISC-TEST-055",
+          "value": {
+            "AETERM": "PNEUMONIA",
+            "AESER": null,
+            "AESCAN": null,
+            "AESCONG": null,
+            "AESDISAB": null,
+            "AESDTH": null,
+            "AESHOSP": null,
+            "AESLIFE": null,
+            "AESOD": null,
+            "AESMIE": null
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
           "SEQ": 899,
           "USUBJID": "CDISC-TEST-055",
           "value": {
+            "AETERM": "DIARRHOEA",
             "AESER": "Y",
             "AESCAN": "N",
             "AESCONG": "N",
@@ -56,16 +77,17 @@
             "AESOD": "N",
             "AESMIE": "N"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 14,
+          "row": 5,
           "SEQ": 727,
           "USUBJID": "CDISC-TEST-056",
           "value": {
+            "AETERM": "UPSET STOMACH",
             "AESER": "Y",
             "AESCAN": null,
-            "AESCONG": " ",
+            "AESCONG": null,
             "AESDISAB": "N",
             "AESDTH": "N",
             "AESHOSP": "N",
@@ -73,13 +95,14 @@
             "AESOD": "N",
             "AESMIE": "N"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 15,
+          "row": 6,
           "SEQ": 735,
           "USUBJID": "CDISC-TEST-056",
           "value": {
+            "AETERM": "HEADACHE",
             "AESER": "Y",
             "AESCAN": "N",
             "AESCONG": null,
@@ -88,15 +111,16 @@
             "AESHOSP": "N",
             "AESLIFE": "N",
             "AESOD": "N",
-            "AESMIE": " "
+            "AESMIE": null
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 16,
+          "row": 7,
           "SEQ": 782,
           "USUBJID": "CDISC-TEST-149",
           "value": {
+            "AETERM": "HEADACHE",
             "AESER": "Y",
             "AESCAN": "N",
             "AESCONG": "N",
@@ -107,16 +131,17 @@
             "AESOD": "N",
             "AESMIE": "N"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 17,
+          "row": 8,
           "SEQ": 783,
           "USUBJID": "CDISC-TEST-149",
           "value": {
+            "AETERM": "HEADACHE",
             "AESER": "Y",
             "AESCAN": "N",
-            "AESCONG": " ",
+            "AESCONG": null,
             "AESDISAB": "N",
             "AESDTH": null,
             "AESHOSP": "N",
@@ -124,13 +149,14 @@
             "AESOD": "N",
             "AESMIE": "N"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 18,
+          "row": 9,
           "SEQ": 839,
           "USUBJID": "CDISC-TEST-152",
           "value": {
+            "AETERM": "HEADACHE",
             "AESER": "Y",
             "AESCAN": "N",
             "AESCONG": "N",
@@ -141,13 +167,14 @@
             "AESOD": "N",
             "AESMIE": "N"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 19,
+          "row": 10,
           "SEQ": 840,
           "USUBJID": "CDISC-TEST-152",
           "value": {
+            "AETERM": "HYPERTENSION",
             "AESER": "Y",
             "AESCAN": "N",
             "AESCONG": "N",
@@ -158,13 +185,14 @@
             "AESOD": "N",
             "AESMIE": "N"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 20,
+          "row": 11,
           "SEQ": 843,
           "USUBJID": "CDISC-TEST-152",
           "value": {
+            "AETERM": "HYPERTENSION",
             "AESER": "Y",
             "AESCAN": "N",
             "AESCONG": "N",
@@ -173,15 +201,16 @@
             "AESHOSP": "N",
             "AESLIFE": "N",
             "AESOD": null,
-            "AESMIE": " "
+            "AESMIE": null
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 21,
+          "row": 12,
           "SEQ": 844,
           "USUBJID": "CDISC-TEST-152",
           "value": {
+            "AETERM": "HYPOGLYCAEMIA",
             "AESER": "Y",
             "AESCAN": "N",
             "AESCONG": "N",
@@ -192,24 +221,61 @@
             "AESOD": "N",
             "AESMIE": null
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 25,
+          "row": 13,
+          "SEQ": 881,
+          "USUBJID": "CDISC-TEST-155",
+          "value": {
+            "AETERM": "CARDIAC ARREST",
+            "AESER": null,
+            "AESCAN": "N",
+            "AESCONG": "N",
+            "AESDISAB": "N",
+            "AESDTH": "N",
+            "AESHOSP": "N",
+            "AESLIFE": "N",
+            "AESOD": "N",
+            "AESMIE": "N"
+          },
+          "validated": true
+        },
+        {
+          "row": 14,
+          "SEQ": 882,
+          "USUBJID": "CDISC-TEST-155",
+          "value": {
+            "AETERM": "DIARRHOEA",
+            "AESER": "Y",
+            "AESCAN": "N",
+            "AESCONG": null,
+            "AESDISAB": null,
+            "AESDTH": null,
+            "AESHOSP": null,
+            "AESLIFE": null,
+            "AESOD": null,
+            "AESMIE": null
+          },
+          "validated": true
+        },
+        {
+          "row": 15,
           "SEQ": 897,
           "USUBJID": "CDISC-TEST-155",
           "value": {
+            "AETERM": "PNEUMONIA",
             "AESER": null,
             "AESCAN": null,
             "AESCONG": null,
             "AESDISAB": null,
-            "AESDTH": " ",
+            "AESDTH": null,
             "AESHOSP": null,
             "AESLIFE": null,
             "AESOD": null,
             "AESMIE": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
