@@ -1,0 +1,54 @@
+{
+  "datasets": [
+    {
+      "dataset": "te.xpt",
+      "domain": "TE",
+      "execution_status": "execution_error",
+      "execution_message": "rule execution error",
+      "number_errors": 1,
+      "errors": [
+        {
+          "error": "Validation error",
+          "message": "Invalid sensitivity value: Study"
+        }
+      ]
+    },
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "execution_error",
+      "execution_message": "rule execution error",
+      "number_errors": 1,
+      "errors": [
+        {
+          "error": "Validation error",
+          "message": "Invalid sensitivity value: Study"
+        }
+      ]
+    },
+    {
+      "dataset": "tv.xpt",
+      "domain": "TV",
+      "execution_status": "execution_error",
+      "execution_message": "rule execution error",
+      "number_errors": 1,
+      "errors": [
+        {
+          "error": "Validation error",
+          "message": "Invalid sensitivity value: Study"
+        }
+      ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "TA": "[ABSENT]",
+        "TE": "te.xpt",
+        "TI": "[ABSENT]",
+        "TS": "ts.xpt",
+        "TV": "tv.xpt"
+      }
+    }
+  ]
+}
