@@ -88,7 +88,7 @@ Core:
   Status: Published
   Version: '1'
 Description: Raise an error when VISITNUM is populated for a planned visit, but VISITNUM value does not match any VISITNUM value in the TV dataset.
-  If SVPRESP is not present, all non-missing VISITNUM values are checked against TV.VISITNUM.
+  If SVPRESP isn't present, all non-missing VISITNUM values are checked against TV.VISITNUM.
 Executability: Partially Executable - Possible Overreporting
 Match Datasets:
   - Keys:
