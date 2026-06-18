@@ -3,15 +3,24 @@
     {
       "dataset": "ts.xpt",
       "domain": "TS",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=FDA.SDTMIG.FB0301, dataset=TS",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
       "execution_status": "success",
-      "execution_message": "Adverse events are not coded using the most current or version released by MedDRA at the study start or higher.",
+      "execution_message": "Adverse Events are not coded using the most current or version released by MedDRA at the study start or higher.",
       "number_errors": 1,
       "errors": [
         {
           "row": 1,
           "SEQ": 1,
-          "USUBJID": "None",
+          "USUBJID": "CDISC001",
           "value": {
+            "STUDYID": "CDISCPILOT01",
             "TSPARMCD": "SSTDTC",
             "TSVAL": "2026-03-02",
             "$define_meddra_version": "28.1"

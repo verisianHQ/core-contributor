@@ -52,15 +52,20 @@ Core:
   Id: FDA.SDTMIG.FB0301
   Status: Published
   Version: '1'
-Description: Raise an error when Adverse Events are not coded using the most current version release by MedDRA before the study start date.
+Description: Raise an error when Adverse Event are not coded using the most current version release by MedDRA before the study start date or higher.
 Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - STUDYID
+    Name: TS
 Operations:
   - id: $define_meddra_version
     operator: get_define_external_dictionary_version
     external_dictionary_type: meddra
 Outcome:
-  Message: Adverse events are not coded using the most current or version released by MedDRA at the study start or higher.
+  Message: Adverse Events are not coded using the most current or version released by MedDRA at the study start or higher.
   Output Variables:
+    - STUDYID
     - TSPARMCD
     - TSVAL
     - $define_meddra_version
@@ -68,8 +73,8 @@ Rule Type: Record Data
 Scope:
   Classes:
     Include:
-      - TRIAL DESIGN
+      - EVENTS
   Domains:
     Include:
-      - TS
+      - AE
 Sensitivity: Record
