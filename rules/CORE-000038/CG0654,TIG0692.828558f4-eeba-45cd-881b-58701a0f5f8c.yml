@@ -60,6 +60,9 @@ Description: Raise an error when SVOCCUR is not null and SVPRESP is not equal to
 Executability: Fully Executable
 Outcome:
   Message: SVOCCUR is populated but SVPRESP is not equal to 'Y'.
+  Output Variables:
+    - SVPRESP
+    - SVOCCUR
 Rule Type: Record Data
 Scope:
   Classes:
