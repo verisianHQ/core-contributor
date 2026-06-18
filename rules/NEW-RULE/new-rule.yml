@@ -160,7 +160,7 @@ Core:
   Id: FDA.TRC1734a
   Status: Draft
   Version: '1'
-Description: TS dataset is present in the submission.
+Description: Raise an error when TS dataset is not present in the submission.
 Executability: Fully Executable
 Outcome:
   Message: Missing TS dataset.
@@ -172,4 +172,4 @@ Scope:
   Domains:
     Include:
       - ALL
-Sensitivity: Dataset
+Sensitivity: Study
