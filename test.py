@@ -327,8 +327,7 @@ class TestRunner:
         else:
             define_xml_path = None
 
-        if define_xml_path:
-            self.data_service._update_define_xml_path(define_xml_path)
+        self.data_service._update_define_xml_path(define_xml_path)
 
         try:
             import yaml
@@ -757,7 +756,7 @@ def main():
 
 def generate_rule_results(rule_id: str) -> dict:
     """Function run by the pr comment bot github action run_validation."""
-    
+
     rule_path = RULES_DIR / rule_id
     rule_yml = list(rule_path.glob("[!~]*.yml"))[0]
     with rule_yml.open("r", encoding="utf-8") as f:
