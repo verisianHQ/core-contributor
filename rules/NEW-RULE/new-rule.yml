@@ -137,18 +137,18 @@ Authorities:
         Version: '1.0'
 Check:
   any:
-    - name: variable_size
+    - name: variable_length
       operator: not_equal_to
       value: $max_data_length
-    - name: $global_max_size
+    - name: $global_max_length
       operator: not_equal_to
-      value: $global_min_size
-    - name: variable_size
+      value: $global_min_length
+    - name: variable_length
       operator: not_equal_to
-      value: $global_max_size
-    - name: variable_size
+      value: $global_max_length
+    - name: variable_length
       operator: not_equal_to
-      value: $global_min_size
+      value: $global_min_length
 Core:
   Id: FDA.SDTMIG.FB1801
   Status: Draft
@@ -165,28 +165,28 @@ Operations:
     group:
       - dataset_name
       - variable_name
-  - id: $global_max_size
-    domain: global_value_check
-    name: variable_size
-    operator: max
-    group:
-      - variable_name
-  - id: $global_min_size
-    domain: global_value_check
-    name: variable_size
-    operator: min
-    group:
-      - variable_name
+  # - id: $global_max_length
+  #   domain: global_value_check
+  #   name: variable_length
+  #   operator: max
+  #   group:
+  #     - variable_name
+  # - id: $global_min_length
+  #   domain: global_value_check
+  #   name: variable_length
+  #   operator: min
+  #   group:
+  #     - variable_name
 Outcome:
   Message: Variable length is different between datasets and/or is longer than the maximum length of the actual data contained by the variable.
   Output Variables:
     - dataset_name
     - variable_name
-    - variable_size
+    - variable_length
     - variable_value_length
     - $max_data_length
-    - $global_min_size
-    - $global_max_size
+    - $global_min_length
+    - $global_max_length
 Rule Type: Global Value Check with Variable Metadata
 Scope:
   Classes:
