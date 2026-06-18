@@ -42,6 +42,8 @@ Description: Raise an error when TP dataset is present.
 Executability: Fully Executable
 Outcome:
   Message: TP dataset must not be present.
+  Output Variables:
+    - TP
 Rule Type: Domain Presence Check
 Scope:
   Classes:
