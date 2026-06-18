@@ -4,7 +4,7 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "AEDECOD should be populated when AEPTCD is populated",
+      "execution_message": "AEDECOD should be populated when AEPTCD is populated.",
       "number_errors": 4,
       "errors": [
         {
@@ -12,44 +12,44 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "AEDECOD": null,
+            "AETERM": "INJECTION SITE REACTION",
             "AEPTCD": "INJECTION SITE REACTION",
-            "AETERM": "INJECTION SITE REACTION"
+            "AEDECOD": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "AEDECOD": null,
+            "AETERM": "FATIGUE",
             "AEPTCD": "FATIGUE",
-            "AETERM": "FATIGUE"
+            "AEDECOD": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": 1,
           "USUBJID": "CDISC002",
           "value": {
-            "AEDECOD": null,
+            "AETERM": "INJECTION SITE REACTION",
             "AEPTCD": "INJECTION SITE REACTION",
-            "AETERM": "INJECTION SITE REACTION"
+            "AEDECOD": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 6,
           "SEQ": 4,
           "USUBJID": "CDISC002",
           "value": {
-            "AEDECOD": null,
+            "AETERM": "INCONTINENCE",
             "AEPTCD": "%^!",
-            "AETERM": "INCONTINENCE"
+            "AEDECOD": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
