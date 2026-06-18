@@ -1,0 +1,70 @@
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: For Study Data Tabulation Model (SDTM) data, a DM dataset and
+                  define.xml must be submitted in Module 5, sections 5.3.1.1,
+                  5.3.1.2, 5.3.3.1, 5.3.3.2, 5.3.3.3, 5.3.3.4, 5.3.4, 5.3.5.1,
+                  5.3.5.2
+                Document: FDA
+                Section: TRC1736
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1736b
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: For Study Data Tabulation Model (SDTM) data, a DM dataset and
+                  define.xml must be submitted in Module 5, sections 5.3.1.1,
+                  5.3.1.2, 5.3.3.1, 5.3.3.2, 5.3.3.3, 5.3.3.4, 5.3.4, 5.3.5.1,
+                  5.3.5.2
+                Document: FDA
+                Section: TRC1736
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1736b
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: For Study Data Tabulation Model (SDTM) data, a DM dataset and
+                  define.xml must be submitted in Module 5, sections 5.3.1.1,
+                  5.3.1.2, 5.3.3.1, 5.3.3.2, 5.3.3.3, 5.3.3.4, 5.3.4, 5.3.5.1,
+                  5.3.5.2
+                Document: FDA
+                Section: TRC1736
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1736b
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: define.xml
+      operator: not_exists
+Core:
+  Id: ''
+  Status: Draft
+  Version: '1'
+Description: Define-XML document is present in the submission.
+Executability: Fully Executable
+Outcome:
+  Message: Missing Define-XML document - Define-XML document is required for SDTM datasets.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset
