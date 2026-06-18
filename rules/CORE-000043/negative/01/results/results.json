@@ -52,7 +52,7 @@
       "dataset": "tp.xpt",
       "domain": "TP",
       "execution_status": "success",
-      "execution_message": "TP dataset is present.",
+      "execution_message": "TP dataset must not be present.",
       "number_errors": 1,
       "errors": [
         {
@@ -62,7 +62,7 @@
           "value": {
             "TP": "tp.xpt"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
