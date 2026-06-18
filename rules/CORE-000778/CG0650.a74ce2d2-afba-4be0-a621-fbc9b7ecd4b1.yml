@@ -66,14 +66,13 @@ Core:
   Id: CORE-000778
   Status: Published
   Version: '1'
-Description: When an Associated Persons non-supplemental qualifier dataset is
-  associated with a split dataset, the dataset name length must be greater than
-  4 and less than, or equal to, 6.
+Description: Raise an error when an Associated Persons non-supplemental qualifier dataset is
+  associated with a split dataset, but the dataset name length is shorter than or equal to
+  4 or greater than 6.
 Executability: Fully Executable
 Outcome:
-  Message: Associated Persons non-supplemental qualifier dataset associated with a
-    split dataset does not have a dataset name with a length greater than 4 and
-    less than, or equal to, 6.
+  Message: Split dataset name length of Associated Persons non-supplemental qualifier dataset is
+    shorter than or equal to 4 or greater than 6.
   Output Variables:
     - dataset_name
 Rule Type: Dataset Metadata Check
