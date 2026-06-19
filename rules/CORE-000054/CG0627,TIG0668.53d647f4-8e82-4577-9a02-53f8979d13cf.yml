@@ -39,7 +39,7 @@ Core:
   Id: CORE-000054
   Status: Published
   Version: '1'
-Description: Raise an error when --DTHREL is present in data for human clinical trials
+Description: Raise an error when --DTHREL is present in the dataset.
 Executability: Fully Executable
 Outcome:
   Message: --DTHREL must not be present.
