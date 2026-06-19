@@ -137,21 +137,27 @@ Authorities:
         Version: '1.0'
 Check:
   all:
-    - name: variable_value_length
+    - name: $max_variable_value_length
       operator: greater_than
-      value: variable_size
+      value: variable_length
 Core:
   Id: FDA.SDTMIG.FB1901
   Status: Draft
   Version: '1'
-Description: All values in each variable in each of the SUPPQUAL and RELREC datasets is shorter or equal to that variable's length.
+Description: Raise an error when variable length is longer than the maximum length of the actual data contained by the variable.
 Executability: Fully Executable
+Operations:
+  - id: $max_variable_value_length
+    name: variable_value_length
+    operator: max
+    group:
+      - variable_name
 Outcome:
   Message: Variable length is longer than the maximum length of the actual data contained by the variable.
   Output Variables:
     - variable_name
     - variable_value
-    - variable_size
+    - variable_length
     - variable_value_length
 Rule Type: Value Check with Variable Metadata
 Scope:
