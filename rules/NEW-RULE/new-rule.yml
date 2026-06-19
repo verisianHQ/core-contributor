@@ -1,0 +1,76 @@
+# Variable: TSPARMCD
+# Condition:
+# Rule: TSVAL when TSPARMCD = FCNTRY is a valid 3-letter country code.
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1713
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1713
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1713
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: TSPARMCD
+      operator: equal_to
+      value: FCNTRY
+      value_is_literal: true
+    - name: $alpha_3_country_codes
+      operator: does_not_contain
+      value: TSVAL
+Core:
+  Id: FDA.SDTMIG.FB1713
+  Status: Draft
+  Version: '1'
+Description: Raise an error if TSVAL is not found in ISO 3166 or GENC standard when TSPARMCD = FCNTRY.
+Executability: Fully Executable
+Operations:
+  - id: $alpha_3_country_codes
+    operator: get_countries
+    attribute_name: alpha_3
+Outcome:
+  Message: TSVAL when TSPARMCD = FCNTRY is not found in ISO 3166 or GENC standard.
+  Output Variables:
+    - TSPARMCD
+    - TSVAL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

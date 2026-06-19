@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVAL when TSPARMCD = FCNTRY is not found in ISO 3166 or GENC standard.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "FCNTRY",
+            "TSVAL": "ZZZ"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
