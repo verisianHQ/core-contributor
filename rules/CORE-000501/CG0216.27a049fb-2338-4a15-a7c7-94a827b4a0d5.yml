@@ -1,6 +1,7 @@
 # Variable: VISITDY
 # Condition: SVUPDES ^= null
 # Rule: VISITDY = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -32,7 +33,6 @@ Authorities:
               Version: '1'
             Version: '2.0'
         Version: '3.3'
-
 Check:
   all:
     - name: SVUPDES
@@ -43,12 +43,11 @@ Core:
   Id: CORE-000501
   Status: Published
   Version: '1'
-Description: 'Raise an error if SVUPDES is not null when VISITDY is populated.'
+Description: Raise an error when SVUPDES is populated and VISITDY is populated.
 Executability: Fully Executable
 Outcome:
-  Message: 'VISITDY is populated when SVUPDES is also populated.'
+  Message: VISITDY is populated when SVUPDES is also populated.
   Output Variables:
-    - USUBJID
     - SVUPDES
     - VISITDY
 Rule Type: Record Data
