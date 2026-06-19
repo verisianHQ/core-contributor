@@ -1,6 +1,7 @@
 # Variable: ETCD
 # Condition: SEUPDES = null
 # Rule: ETCD ^= 'UNPLAN'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -195,10 +196,10 @@ Core:
   Id: CORE-000256
   Status: Published
   Version: '1'
-Description: Raise an error when ETCD = 'UNPLAN', SEUPDES = null
+Description: Raise an error when ETCD = 'UNPLAN' and SEUPDES is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: Missing value for SEUPDES, when ETCD='UNPLAN'
+  Message: Missing value for SEUPDES, when ETCD = 'UNPLAN'.
 Rule Type: Record Data
 Scope:
   Classes:
