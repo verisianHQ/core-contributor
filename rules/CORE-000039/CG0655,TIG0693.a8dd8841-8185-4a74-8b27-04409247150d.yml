@@ -60,20 +60,15 @@ Core:
   Id: CORE-000039
   Status: Published
   Version: '1'
-Description: Raise an error when SVPRESP = 'Y' and VISITNUM is not in TV.VISITNUM.
+Description: Raise an error when a visit is planned (SVPRESP = 'Y') but VISITNUM value does not match any VISITNUM value in the TV dataset.
 Executability: Fully Executable
-Match Datasets:
-  - Name: SV
-    Keys:
-      - USUBJID
-      - VISITNUM
 Operations:
   - domain: TV
     id: $tv_visitnum
     name: VISITNUM
     operator: distinct
 Outcome:
-  Message: VISITNUM for planned visit must be in the TV dataset.
+  Message: VISITNUM value for planned visit does not match any VISITNUM value in the TV dataset.
   Output Variables:
     - VISITNUM
     - VISIT
