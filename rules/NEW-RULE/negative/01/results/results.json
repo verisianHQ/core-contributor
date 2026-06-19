@@ -1,0 +1,143 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "Timing variable has data collected as per define-xml document but variable is not present in the dataset or variable has no data.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 33,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_variable_name": "AEENDTC",
+            "define_variable_has_no_data": null,
+            "define_variable_is_collected": true,
+            "library_variable_role": "Timing",
+            "variable_name": null,
+            "variable_is_empty": true
+          },
+          "validated": true
+        },
+        {
+          "row": 36,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_variable_name": "AEENRTPT",
+            "define_variable_has_no_data": null,
+            "define_variable_is_collected": true,
+            "library_variable_role": "Timing",
+            "variable_name": null,
+            "variable_is_empty": true
+          },
+          "validated": true
+        },
+        {
+          "row": 38,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_variable_name": "AEDUR",
+            "define_variable_has_no_data": null,
+            "define_variable_is_collected": true,
+            "library_variable_role": "Timing",
+            "variable_name": null,
+            "variable_is_empty": true
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "Timing variable has data collected as per define-xml document but variable is not present in the dataset or variable has no data.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_variable_name": "MHSTDTC",
+            "define_variable_has_no_data": null,
+            "define_variable_is_collected": true,
+            "library_variable_role": "Timing",
+            "variable_name": null,
+            "variable_is_empty": true
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "Timing variable has data collected as per define-xml document but variable is not present in the dataset or variable has no data.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 19,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_variable_name": "VISITNUM",
+            "define_variable_has_no_data": null,
+            "define_variable_is_collected": true,
+            "library_variable_role": "Timing",
+            "variable_name": null,
+            "variable_is_empty": true
+          },
+          "validated": true
+        },
+        {
+          "row": 20,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_variable_name": "VISIT",
+            "define_variable_has_no_data": null,
+            "define_variable_is_collected": true,
+            "library_variable_role": "Timing",
+            "variable_name": null,
+            "variable_is_empty": true
+          },
+          "validated": true
+        },
+        {
+          "row": 21,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_variable_name": "EPOCH",
+            "define_variable_has_no_data": null,
+            "define_variable_is_collected": true,
+            "library_variable_role": "Timing",
+            "variable_name": "EPOCH",
+            "variable_is_empty": true
+          },
+          "validated": true
+        },
+        {
+          "row": 22,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_variable_name": "LBDTC",
+            "define_variable_has_no_data": null,
+            "define_variable_is_collected": true,
+            "library_variable_role": "Timing",
+            "variable_name": null,
+            "variable_is_empty": true
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
