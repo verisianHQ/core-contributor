@@ -50,10 +50,6 @@ Authorities:
 Check:
   all:
     - name: --DECOD
-      operator: exists
-    - name: --DECOD
-      operator: non_empty
-    - name: --DECOD
       operator: is_inconsistent_across_dataset
       value: --TERM
 Core:

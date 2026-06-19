@@ -5,7 +5,7 @@
       "domain": "AE",
       "execution_status": "success",
       "execution_message": "AEDECOD is not consistent for records with identical AETERM values.",
-      "number_errors": 12,
+      "number_errors": 14,
       "errors": [
         {
           "row": 3,
@@ -34,6 +34,16 @@
           "value": {
             "AEDECOD": "Back pain",
             "AETERM": "BACK PAIN"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 19,
+          "USUBJID": "CDISC-TEST-002",
+          "value": {
+            "AEDECOD": "Bronchitis",
+            "AETERM": "BRONCHITIS"
           },
           "validated": true
         },
@@ -94,6 +104,16 @@
           "value": {
             "AEDECOD": "Bad back",
             "AETERM": "BACK PAIN"
+          },
+          "validated": true
+        },
+        {
+          "row": 16,
+          "SEQ": 19,
+          "USUBJID": "CDISC-TEST-022",
+          "value": {
+            "AEDECOD": null,
+            "AETERM": "BRONCHITIS"
           },
           "validated": true
         },
