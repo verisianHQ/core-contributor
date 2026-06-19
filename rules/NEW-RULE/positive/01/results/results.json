@@ -3,28 +3,18 @@
     {
       "dataset": "sv.xpt",
       "domain": "SV",
-      "execution_status": "execution_error",
-      "execution_message": "SQL operation execution error",
-      "number_errors": 1,
-      "errors": [
-        {
-          "error": "SQL error in sqlnumericoperation operation",
-          "message": "{'ig_codelists': <cdisc_rules_engine.models.sql.table_schema.SqlTableSchema object at 0x12dd2c770>, 'sv': <cdisc_rules_engine.models.sql.table_schema.SqlTableSchema object at 0x139acbec0>, 'tv': <cdisc_rules_engine.models.sql.table_schema.SqlTableSchema object at 0x139acb020>}"
-        }
-      ]
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     },
     {
       "dataset": "tv.xpt",
       "domain": "TV",
-      "execution_status": "execution_error",
-      "execution_message": "SQL operation execution error",
-      "number_errors": 1,
-      "errors": [
-        {
-          "error": "SQL error in sqlnumericoperation operation",
-          "message": "{'ig_codelists': <cdisc_rules_engine.models.sql.table_schema.SqlTableSchema object at 0x12dd2c770>, 'sv': <cdisc_rules_engine.models.sql.table_schema.SqlTableSchema object at 0x139acbec0>, 'tv': <cdisc_rules_engine.models.sql.table_schema.SqlTableSchema object at 0x139acb020>}"
-        }
-      ]
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     }
   ]
 }

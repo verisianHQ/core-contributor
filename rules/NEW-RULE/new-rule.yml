@@ -163,20 +163,19 @@ Operations:
     name: variable_value_length
     operator: max
     group:
-      - dataset_name
       - variable_name
-  # - id: $global_max_length
-  #   domain: global_value_check
-  #   name: variable_length
-  #   operator: max
-  #   group:
-  #     - variable_name
-  # - id: $global_min_length
-  #   domain: global_value_check
-  #   name: variable_length
-  #   operator: min
-  #   group:
-  #     - variable_name
+  - id: $global_max_length
+    domain: global_value_check
+    name: variable_length
+    operator: max
+    group:
+      - variable_name
+  - id: $global_min_length
+    domain: global_value_check
+    name: variable_length
+    operator: min
+    group:
+      - variable_name
 Outcome:
   Message: Variable length is different between datasets and/or is longer than the maximum length of the actual data contained by the variable.
   Output Variables:
