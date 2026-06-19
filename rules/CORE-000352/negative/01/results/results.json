@@ -12,18 +12,22 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "SEENDTC": "2012-11-30"
+            "SEENDTC": "2012-11-30",
+            "SESTDTC": "2012-11-23",
+            "ETCD": "SCREEN"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": 1,
           "USUBJID": "CDISC002",
           "value": {
-            "SEENDTC": "2012-11-15"
+            "SEENDTC": "2012-11-15",
+            "SESTDTC": "2012-10-30",
+            "ETCD": "SCREEN"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

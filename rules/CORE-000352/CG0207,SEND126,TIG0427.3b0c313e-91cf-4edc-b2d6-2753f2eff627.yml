@@ -1,6 +1,7 @@
 # Variable: SEENDTC
 # Condition: Next ELEMENT present in dataset
 # Rule: SEENDTC = SESTDTC of next ELEMENT
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -94,10 +95,14 @@ Core:
   Id: CORE-000352
   Status: Published
   Version: '1'
-Description: Trigger error where SEENDTC is not equal to SESTDTC of the next element.
+Description: Raise an error when SEENDTC is not equal to SESTDTC of the next element.
 Executability: Fully Executable
 Outcome:
   Message: SEENDTC is not equal to SESTDTC of the next element.
+  Output Variables:
+    - SEENDTC
+    - SESTDTC
+    - ETCD
 Rule Type: Record Data
 Scope:
   Classes:
