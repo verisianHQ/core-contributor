@@ -12,7 +12,7 @@
       "dataset": "mh.xpt",
       "domain": "MH",
       "execution_status": "success",
-      "execution_message": "MHENDTC ^= null and MHENDTC is on or after the DM.RFSTDTC. The medical history dataset should include the subject's prior history at the start of the trial.",
+      "execution_message": "MHENDTC is populated and MHENDTC is on or after RFSTDTC on the DM dataset.",
       "number_errors": 4,
       "errors": [
         {
@@ -23,7 +23,7 @@
             "MHENDTC": "2013-10-08",
             "RFSTDTC": "2013-10-08"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 6,
@@ -33,7 +33,7 @@
             "MHENDTC": "2013-03-20",
             "RFSTDTC": "2013-03-19"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 13,
@@ -43,7 +43,7 @@
             "MHENDTC": "2013-08-22",
             "RFSTDTC": "2013-07-22"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 14,
@@ -53,31 +53,9 @@
             "MHENDTC": "2013-04-03",
             "RFSTDTC": "2013-04-03"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "mh.xpt",
-      "Row": 8,
-      "Variable": "MHENDTC"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 10,
-      "Variable": "MHENDTC"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 17,
-      "Variable": "MHENDTC"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 18,
-      "Variable": "MHENDTC"
     }
   ]
 }

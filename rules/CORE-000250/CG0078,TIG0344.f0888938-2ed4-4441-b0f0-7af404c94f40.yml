@@ -1,6 +1,7 @@
 # Variable: MHENDTC
 # Condition: MHENDTC ^= null
 # Rule: MHENDTC < DM.RFSTDTC
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -255,16 +256,15 @@ Core:
   Id: CORE-000250
   Status: Published
   Version: '1'
-Description: Raise an issue if MHENDTC has a non-empty date that is on or after DM.RFSTDTC
+Description: Raise an error when MHENDTC is populated and the date is on or 
+  after RFSTDTC in the DM dataset.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: DM
 Outcome:
-  Message: MHENDTC ^= null and MHENDTC is on or after the DM.RFSTDTC. The medical
-    history dataset should include the subject's prior history at the start of
-    the trial.
+  Message: MHENDTC is populated and MHENDTC is on or after RFSTDTC in the DM dataset. 
   Output Variables:
     - MHENDTC
     - RFSTDTC
