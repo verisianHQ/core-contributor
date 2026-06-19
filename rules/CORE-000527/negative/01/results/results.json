@@ -4,7 +4,7 @@
       "dataset": "se.xpt",
       "domain": "SE",
       "execution_status": "success",
-      "execution_message": "SEENDTC is null when element is not the last.",
+      "execution_message": "SEENDTC is not populated when element is not the last.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,19 +12,11 @@
           "SEQ": 3,
           "USUBJID": "CDISC005",
           "value": {
-            "SESTDTC": "2013-02-19",
             "SEENDTC": null
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "se.xpt",
-      "Row": 16,
-      "Variable": "SEENDTC"
     }
   ]
 }

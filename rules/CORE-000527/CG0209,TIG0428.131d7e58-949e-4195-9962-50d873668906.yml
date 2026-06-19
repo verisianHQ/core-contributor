@@ -1,6 +1,7 @@
 # Variable: SEENDTC
 # Condition: Not last record
 # Rule: SEENDTC ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -119,12 +120,12 @@ Core:
   Id: CORE-000527
   Status: Published
   Version: '1'
-Description: Trigger error where element is not the last element and SEENDTC is null.
+Description: Raise an error when SEENDTC is not populated and the element is
+  not the last.
 Executability: Fully Executable
 Outcome:
-  Message: SEENDTC is null when element is not the last.
+  Message: SEENDTC is not populated when element is not the last.
   Output Variables:
-    - SESTDTC
     - SEENDTC
 Rule Type: Record Data
 Scope:
