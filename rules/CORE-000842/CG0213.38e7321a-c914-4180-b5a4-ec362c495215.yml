@@ -1,6 +1,7 @@
 # Variable: VISITNUM
 # Condition: SVUPDES = null
 # Rule: VISITNUM in TV.VISITNUM
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -48,17 +49,17 @@ Core:
   Id: CORE-000842
   Status: Published
   Version: '1'
-Description: When SVUPDES is not populated, then the VISITNUM should be equal to
-  a VISITNUM in TV
-Executability: Partially Executable - Possible Overreporting
+Description: Raise an error when SVUPDES is not populated and the VISITNUM 
+  does not equal a VISITNUM in the TV dataset.
+Executability: Fully Executable
 Operations:
   - domain: TV
     id: $visitnums_in_tv
     name: VISITNUM
     operator: distinct
 Outcome:
-  Message: SVUPDES is not populated or does not exist, but the VISITNUM does not
-    equal a VISITNUM present in TV
+  Message: SVUPDES is not populated or does not exist, but the VISITNUM does 
+    not equal a VISITNUM present in the TV dataset.
   Output Variables:
     - SVUPDES
     - VISITNUM
