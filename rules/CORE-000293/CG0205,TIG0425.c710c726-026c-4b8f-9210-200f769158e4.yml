@@ -1,6 +1,7 @@
 # Variable: GEN
 # Condition: 
 # Rule: Suppqual dataset names <= 8 characters
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -91,10 +92,11 @@ Core:
   Id: CORE-000293
   Status: Published
   Version: '1'
-Description: Trigger error if length of dataset name is greater than 8
+Description: Raise an error when length of SUPP-- dataset name is greater than
+  8 characters.
 Executability: Fully Executable
 Outcome:
-  Message: Length of dataset name of SUPP-- dataset is greater than 8.
+  Message: Length of SUPP-- dataset name is greater than 8 characters.
 Rule Type: Dataset Metadata Check
 Scope:
   Classes:
