@@ -3,52 +3,50 @@
     {
       "dataset": "te.xpt",
       "domain": "TE",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
+      "execution_status": "success",
+      "execution_message": "All trial design datasets as listed in the corresponding IG should have been submitted.",
       "number_errors": 1,
       "errors": [
         {
-          "error": "Validation error",
-          "message": "Invalid sensitivity value: Study"
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {},
+          "validated": true
         }
       ]
     },
     {
       "dataset": "ts.xpt",
       "domain": "TS",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
+      "execution_status": "success",
+      "execution_message": "All trial design datasets as listed in the corresponding IG should have been submitted.",
       "number_errors": 1,
       "errors": [
         {
-          "error": "Validation error",
-          "message": "Invalid sensitivity value: Study"
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {},
+          "validated": true
         }
       ]
     },
     {
       "dataset": "tv.xpt",
       "domain": "TV",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
+      "execution_status": "success",
+      "execution_message": "All trial design datasets as listed in the corresponding IG should have been submitted.",
       "number_errors": 1,
       "errors": [
         {
-          "error": "Validation error",
-          "message": "Invalid sensitivity value: Study"
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {},
+          "validated": true
         }
       ]
-    }
-  ],
-  "unmatched_validation": [
-    {
-      "value": {
-        "TA": "[ABSENT]",
-        "TE": "te.xpt",
-        "TI": "[ABSENT]",
-        "TS": "ts.xpt",
-        "TV": "tv.xpt"
-      }
     }
   ]
 }
