@@ -1,19 +1,6 @@
 {
   "datasets": [
     {
-      "dataset": "ae.xpt",
-      "domain": "AE",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
-      "number_errors": 1,
-      "errors": [
-        {
-          "error": "Column not found in data",
-          "message": "VISITNUM"
-        }
-      ]
-    },
-    {
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
@@ -33,7 +20,7 @@
       "dataset": "sv.xpt",
       "domain": "SV",
       "execution_status": "success",
-      "execution_message": "For a planned visit (SVPRESP = 'Y'), non-missing VISITNUM value must be among those present in TV.VISITNUM. in TV.VISITNUM",
+      "execution_message": "VISITNUM value for planned visit does not match any VISITNUM value in the TV dataset.",
       "number_errors": 4,
       "errors": [
         {
@@ -42,9 +29,9 @@
           "USUBJID": "CDISC004",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 22,
@@ -52,9 +39,9 @@
           "USUBJID": "CDISC005",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 23,
@@ -62,9 +49,9 @@
           "USUBJID": "CDISC005",
           "value": {
             "VISITNUM": 13.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 26"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 35,
@@ -72,9 +59,9 @@
           "USUBJID": "CDISC008",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -90,7 +77,7 @@
       "dataset": "vs.xpt",
       "domain": "VS",
       "execution_status": "success",
-      "execution_message": "For a planned visit (SVPRESP = 'Y'), non-missing VISITNUM value must be among those present in TV.VISITNUM. in TV.VISITNUM",
+      "execution_message": "VISITNUM value for planned visit does not match any VISITNUM value in the TV dataset.",
       "number_errors": 22,
       "errors": [
         {
@@ -99,9 +86,9 @@
           "USUBJID": "CDISC004",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 32,
@@ -109,9 +96,9 @@
           "USUBJID": "CDISC004",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 33,
@@ -119,9 +106,9 @@
           "USUBJID": "CDISC004",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 65,
@@ -129,9 +116,9 @@
           "USUBJID": "CDISC004",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 66,
@@ -139,9 +126,9 @@
           "USUBJID": "CDISC004",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 67,
@@ -149,9 +136,9 @@
           "USUBJID": "CDISC004",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 98,
@@ -159,9 +146,9 @@
           "USUBJID": "CDISC004",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 99,
@@ -169,9 +156,9 @@
           "USUBJID": "CDISC004",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 100,
@@ -179,9 +166,9 @@
           "USUBJID": "CDISC004",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 111,
@@ -189,9 +176,9 @@
           "USUBJID": "CDISC004",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 121,
@@ -199,9 +186,9 @@
           "USUBJID": "CDISC004",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 152,
@@ -209,9 +196,9 @@
           "USUBJID": "CDISC005",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 153,
@@ -219,9 +206,9 @@
           "USUBJID": "CDISC005",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 154,
@@ -229,9 +216,9 @@
           "USUBJID": "CDISC005",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 186,
@@ -239,9 +226,9 @@
           "USUBJID": "CDISC005",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 187,
@@ -249,9 +236,9 @@
           "USUBJID": "CDISC005",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 188,
@@ -259,9 +246,9 @@
           "USUBJID": "CDISC005",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 219,
@@ -269,9 +256,9 @@
           "USUBJID": "CDISC005",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 220,
@@ -279,9 +266,9 @@
           "USUBJID": "CDISC005",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 221,
@@ -289,9 +276,9 @@
           "USUBJID": "CDISC005",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 232,
@@ -299,9 +286,9 @@
           "USUBJID": "CDISC005",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 242,
@@ -309,9 +296,9 @@
           "USUBJID": "CDISC005",
           "value": {
             "VISITNUM": 12.0,
-            "SVPRESP": "Y"
+            "VISIT": "WEEK 24"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
