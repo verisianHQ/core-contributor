@@ -1,0 +1,90 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "success",
+      "execution_message": "Negative value of Study Day variable.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ECSTDY": -1.0,
+            "ECENDY": 1.0
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ECSTDY": -3.0,
+            "ECENDY": 3.0
+          },
+          "validated": true
+        },
+        {
+          "row": 11,
+          "SEQ": 122,
+          "USUBJID": "CDISC009",
+          "value": {
+            "ECSTDY": 122.0,
+            "ECENDY": -999.0
+          },
+          "validated": true
+        },
+        {
+          "row": 13,
+          "SEQ": 124,
+          "USUBJID": "CDISC009",
+          "value": {
+            "ECSTDY": 124.0,
+            "ECENDY": -999.0
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "success",
+      "execution_message": "Negative value of Study Day variable.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "EXSTDY": -1.0,
+            "EXENDY": 15.0
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 2,
+          "USUBJID": "CDISC003",
+          "value": {
+            "EXSTDY": 12.0,
+            "EXENDY": -999.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
