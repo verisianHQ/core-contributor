@@ -21,12 +21,12 @@ Authorities:
                   differences being when the event started relative to the study
                   start and whether the event is considered a
                   regulatory-reportable adverse event in the study.
-                Document: SDTMIG v3.4
-                Item: 3a
-                Section: 4.2.6
+                Document: IG v3.4
+                Item: '3a'
+                Section: '4.2.6'
               - Cited Guidance: An events domain that contains data that includes the subject's
                   prior medical history at the start of the trial.
-                Document: SDTMIG v3.4
+                Document: IG v3.4
                 Section: '6.2'
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -116,15 +116,15 @@ Core:
   Id: CORE-000236
   Status: Published
   Version: '1'
-Description: Raise an error when MHSTDTC is populated and the value is the 
-  same or later than RFSTDTC in the DM dataset.
+Description: Raise an error when MHSTDTC is populated and the value is  
+  equal to or after RFSTDTC in the DM dataset.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: DM
 Outcome:
-  Message: MHSTDTC is populated and is the same or later than RFSTDTC in the
+  Message: MHSTDTC is populated but falls on or after RFSTDTC in the
     DM dataset. 
   Output Variables:
     - MHSTDTC
