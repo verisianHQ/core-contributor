@@ -124,8 +124,8 @@ Check:
         operator: date_greater_than
         value: RFXENDTC
 Core:
-  Id: ''
-  Status: Draft
+  Id: CORE-002033
+  Status: Published
   Version: '1'
 Description: Raise an error when treatment exposure end date/time (--ENDTC) falls outside first (RFXSTDTC) and last (RFXENDTC) study treatment date/time in the DM dataset.
 Executability: Fully Executable
