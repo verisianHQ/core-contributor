@@ -13,8 +13,18 @@
       "domain": "MH",
       "execution_status": "success",
       "execution_message": "MHSTDTC is populated but falls on or after RFSTDTC in the DM dataset.",
-      "number_errors": 3,
+      "number_errors": 5,
       "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "MHSTDTC": "2004-05-28",
+            "RFSTDTC": "2004-05-28"
+          },
+          "validated": true
+        },
         {
           "row": 2,
           "SEQ": 1,
@@ -22,6 +32,16 @@
           "value": {
             "MHSTDTC": "2012-11-20",
             "RFSTDTC": "2012-11-15"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 1,
+          "USUBJID": "CDISC005",
+          "value": {
+            "MHSTDTC": "2006-08-20T10:30",
+            "RFSTDTC": "2006-08-20T10:00"
           },
           "validated": true
         },
