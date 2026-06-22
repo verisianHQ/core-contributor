@@ -5,31 +5,14 @@
       "domain": "MH",
       "execution_status": "success",
       "execution_message": "MHCAT is populated with the same value for all records.",
-      "number_errors": 3,
+      "number_errors": 1,
       "errors": [
         {
-          "row": 1,
-          "SEQ": 1,
-          "USUBJID": "CDISC010",
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
           "value": {
-            "MHCAT": "GENERAL"
-          },
-          "validated": true
-        },
-        {
-          "row": 2,
-          "SEQ": 1,
-          "USUBJID": "CDISC011",
-          "value": {
-            "MHCAT": "GENERAL"
-          },
-          "validated": true
-        },
-        {
-          "row": 3,
-          "SEQ": 1,
-          "USUBJID": "CDISC012",
-          "value": {
+            "USUBJID": "CDISC010",
             "MHCAT": "GENERAL"
           },
           "validated": true

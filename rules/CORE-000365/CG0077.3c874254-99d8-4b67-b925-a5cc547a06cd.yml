@@ -74,6 +74,7 @@ Executability: Fully Executable
 Outcome:
   Message: MHCAT is populated with the same value for all records.
   Output Variables:
+    - USUBJID
     - MHCAT
 Rule Type: Record Data
 Scope:
@@ -83,5 +84,4 @@ Scope:
   Domains:
     Include:
       - MH
-    include_split_datasets: true
-Sensitivity: Record
+Sensitivity: Dataset
