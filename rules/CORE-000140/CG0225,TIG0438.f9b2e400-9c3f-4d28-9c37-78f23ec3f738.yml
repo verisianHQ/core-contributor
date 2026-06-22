@@ -78,8 +78,8 @@ Core:
   Id: CORE-000140
   Status: Published
   Version: '1'
-Description: Raise an error when VISITDY is populated but VISITNUM is not in
-  the TV dataset.
+Description: Raise an error when a visit is unplanned (VISITNUM does not match
+  a VISITNUM value in TV dataset) but VISITDY is populated.
 Executability: Fully Executable
 Operations:
   - domain: TV
@@ -87,8 +87,10 @@ Operations:
     name: VISITNUM
     operator: distinct
 Outcome:
-  Message: VISITDY is populated but VISITNUM is not in the TV dataset.
+  Message: VISITNUM does not match any of the VISITNUM values in the TV
+    dataset but VISITDY is populated.
   Output Variables:
+    - VISIT
     - VISITNUM
     - VISITDY
 Rule Type: Record Data

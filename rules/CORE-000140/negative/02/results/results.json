@@ -12,7 +12,7 @@
       "dataset": "ft.xpt",
       "domain": "FT",
       "execution_status": "success",
-      "execution_message": "VISITDY is populated but VISITNUM is not in the TV dataset.",
+      "execution_message": "VISITNUM does not match any of the VISITNUM values in the TV dataset but VISITDY is populated.",
       "number_errors": 2,
       "errors": [
         {
@@ -20,6 +20,7 @@
           "SEQ": 137,
           "USUBJID": "CDISC001",
           "value": {
+            "VISIT": "WEEK 8",
             "VISITNUM": 300.0,
             "VISITDY": 56.0
           },
@@ -30,6 +31,7 @@
           "SEQ": 138,
           "USUBJID": "CDISC001",
           "value": {
+            "VISIT": "WEEK 8",
             "VISITNUM": 300.0,
             "VISITDY": 56.0
           },
