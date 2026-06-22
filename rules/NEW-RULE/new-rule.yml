@@ -1,7 +1,6 @@
 # Variable: TSVAL
-# Condition: TSPARMCD = 'CTAUG'
-# Rule: TSVAL is not an FDA supported Therapeutic Area and matches value in the CDISC Controlled Terminology CTAUGRS codelist (C160925)
-#    or TSVAL is an FDA supported Therapeutic Area and does not match a value in the CDISC Controlled Terminology CTAUGRS codelist (C160925).
+# Condition: TSPARMCD = 'FDATCHSP'
+# Rule: TSVAL matches a value of the CDISC Controlled Terminology FDATSRS codelist (C160926).
 # verified
 Authorities:
   - Organization: FDA
@@ -14,7 +13,7 @@ Authorities:
                 Section: FDAB011
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB1103
+              Id: FB1104
               Version: '1'
             Version: '1.5'
         Version: '3.2'
@@ -26,7 +25,7 @@ Authorities:
                 Section: FDAB011
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB1103
+              Id: FB1104
               Version: '1'
             Version: '1.5'
         Version: '3.3'
@@ -38,7 +37,7 @@ Authorities:
                 Section: FDAB011
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB1103
+              Id: FB1104
               Version: '1'
             Version: '1.5'
         Version: '3.4'
@@ -46,41 +45,25 @@ Check:
   all:
     - name: TSPARMCD
       operator: equal_to
-      value: CTAUG
+      value: FDATCHSP
       value_is_literal: true
-    - any:
-        - all:
-            - name: TSVAL
-              operator: is_contained_by
-              value: $fda_guides
-            - name: TSVAL
-              operator: is_not_contained_by
-              value: $codelist_guides
-        - all:
-            - name: TSVAL
-              operator: is_not_contained_by
-              value: $fda_guides
-            - name: TSVAL
-              operator: is_contained_by
-              value: $codelist_guides
+    - name: TSVAL
+      operator: is_not_contained_by
+      value: $codelist_guides
 Core:
-  Id: FDA.SDTMIG.FB1103
+  Id: FDA.SDTMIG.FB1104
   Status: Draft
   Version: '1'
-Description: Raise an error if TSVAL is not an FDA supported Therapeutic Area and matches value in the CDISC Controlled Terminology CTAUGRS codelist (C160925) or TSVAL is an FDA supported Therapeutic Area and does not match a value in the CDISC Controlled Terminology CTAUGRS codelist (C160925).
+Description: Raise an error if TSVAL does not match a value as listed on the study data standards resources website for technical specification documents (CDISC Controlled Terminology FDATSRS codelist (C160926)).
 Executability: Fully Executable
 Operations:
-  - id: $fda_guides
-    operator: distinct
-    domain: cg_taugs
-    name: fda_guides
   - id: $codelist_guides
     operator: get_codelist_attributes
     ct_attribute: Term Signification
     ct_conditions:
-      - Codelist Code: C160925
+      - Codelist Code: C160926
 Outcome:
-  Message: TSVAL is not an FDA supported Therapeutic Area or does not match a value in the CDISC Controlled Terminology CTAUGRS codelist (C160925).
+  Message: TSVAL does not match a value as listed on the study data standards resources website for technical specification documents (CDISC Controlled Terminology FDATSRS codelist (C160926)).
   Output Variables:
     - TSPARMCD
     - TSVAL
