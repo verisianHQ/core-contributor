@@ -1,4 +1,33 @@
 {
-  "error": "No result - either the rule or test case data new-rule-negative-01.xlsx is broken",
-  "exception": "'NoneType' object has no attribute 'split'"
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVAL does not match a value as listed on the study data standards resources website for technical specification documents (CDISC Controlled Terminology FDATSRS codelist (C160926)).",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "FDATCHSP",
+            "TSVAL": "Study Data Technical Conformance Guide v4.2.0"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "FDATCHSP",
+            "TSVAL": "Fake Guide Doc"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
 }
