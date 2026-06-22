@@ -4,7 +4,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMCLASCD is not a valid WHODrug dictionary medication class code.",
+      "execution_message": "CMCLAS is not a valid WHODrug dictionary medication class term.",
       "number_errors": 2,
       "errors": [
         {
@@ -14,8 +14,8 @@
           "value": {
             "CMTRT": "Aspirin",
             "CMDECOD": "Aspirin",
-            "CMCLAS": "Platelet aggregation inhibitors excl. heparin",
-            "CMCLASCD": "B01ACA"
+            "CMCLAS": "Platelet aggregation inhibitors excl. nothing",
+            "CMCLASCD": "B01AC"
           },
           "validated": true
         },
@@ -26,8 +26,8 @@
           "value": {
             "CMTRT": "Aspirin",
             "CMDECOD": "Aspirin",
-            "CMCLAS": "Platelet aggregation inhibitors excl. heparin",
-            "CMCLASCD": "Platelet aggregation inhibitors excl. heparin"
+            "CMCLAS": "B01AC",
+            "CMCLASCD": "B01AC"
           },
           "validated": true
         }

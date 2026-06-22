@@ -43,18 +43,18 @@ Authorities:
         Version: '3.4'
 Check:
   all:
-    - name: CMCLASCD
+    - name: CMCLAS
       operator: non_empty
-    - name: CMCLASCD
-      operator: is_not_valid_whodrug_code_reference
+    - name: CMCLAS
+      operator: is_not_valid_whodrug_level_reference
 Core:
   Id: FB1711
   Status: Draft
   Version: '1'
-Description: Raise an error when CMCLASCD is populated but not a valid WHODrug dictionary medication class code.
+Description: Raise an error when CMCLAS is populated but not a valid WHODrug dictionary medication class term.
 Executability: Fully Executable
 Outcome:
-  Message: CMCLASCD is not a valid WHODrug dictionary medication class code.
+  Message: CMCLAS is not a valid WHODrug dictionary medication class term.
   Output Variables:
     - CMTRT
     - CMDECOD
