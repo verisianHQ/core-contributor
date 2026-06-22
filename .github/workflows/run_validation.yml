@@ -200,7 +200,7 @@ jobs:
               page++;
             }
             
-            const validComments = comments.filter(c => c && c.body);
+            const validComments = comments.filter(c => c && c.body && c.user && c.user.login === 'github-actions[bot]');
             const historyComments = validComments.filter(c => c.body.includes('## Rule Validation History'));
             const latestComments = validComments.filter(c => c.body.includes('## Rule Validation Results (Run'));
             

@@ -4,92 +4,56 @@
       "dataset": "relrec.xpt",
       "domain": "RELREC",
       "execution_status": "success",
-      "execution_message": "IDVARVAL and USUBJID are not completed, but IDVAR equals Sequence Number.",
-      "number_errors": 7,
+      "execution_message": "IDVARVAL and USUBJID are not completed, but IDVAR is populated with SEQ.",
+      "number_errors": 4,
       "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "RDOMAIN": "AE",
+            "IDVAR": "AESEQ",
+            "IDVARVAL": null,
+            "RELID": "AEDS"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "RDOMAIN": "DS",
+            "IDVAR": "DSSEQ",
+            "IDVARVAL": null,
+            "RELID": "AEDS"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "RDOMAIN": "AE",
+            "IDVAR": "AESEQ",
+            "IDVARVAL": null,
+            "RELID": "AECM1"
+          },
+          "validated": true
+        },
         {
           "row": 4,
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "RDOMAIN": "DD",
-            "IDVAR": "DDSEQ",
-            "IDVARVAL": null,
-            "RELID": "AEDD"
-          },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": null,
-          "USUBJID": null,
-          "value": {
-            "RDOMAIN": "AE",
-            "IDVAR": "AESEQ",
-            "IDVARVAL": null,
-            "RELID": "AEFA"
-          },
-          "validated": false
-        },
-        {
-          "row": 6,
-          "SEQ": null,
-          "USUBJID": null,
-          "value": {
-            "RDOMAIN": "FA",
-            "IDVAR": "FASEQ",
-            "IDVARVAL": null,
-            "RELID": "AEFA"
-          },
-          "validated": false
-        },
-        {
-          "row": 7,
-          "SEQ": null,
-          "USUBJID": null,
-          "value": {
-            "RDOMAIN": "AE",
-            "IDVAR": "AESEQ",
-            "IDVARVAL": null,
-            "RELID": "AECM1"
-          },
-          "validated": false
-        },
-        {
-          "row": 8,
-          "SEQ": null,
-          "USUBJID": null,
-          "value": {
-            "RDOMAIN": "AE",
+            "RDOMAIN": "CM",
             "IDVAR": "CMSEQ",
             "IDVARVAL": null,
             "RELID": "AECM1"
           },
-          "validated": false
-        },
-        {
-          "row": 9,
-          "SEQ": null,
-          "USUBJID": null,
-          "value": {
-            "RDOMAIN": "AE",
-            "IDVAR": "AESEQ",
-            "IDVARVAL": null,
-            "RELID": "AEMH1"
-          },
-          "validated": false
-        },
-        {
-          "row": 10,
-          "SEQ": null,
-          "USUBJID": null,
-          "value": {
-            "RDOMAIN": "AE",
-            "IDVAR": "MHSEQ",
-            "IDVARVAL": null,
-            "RELID": "AEMH1"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     }
