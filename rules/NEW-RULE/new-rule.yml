@@ -61,7 +61,7 @@ Operations:
     operator: get_countries
     attribute_name: alpha_3
 Outcome:
-  Message: TSVAL when TSPARMCD = FCNTRY is not found in ISO 3166 or GENC standard.
+  Message: TSVAL is not a valid ISO 3166 or GENC country short name.
   Output Variables:
     - TSPARMCD
     - TSVAL
