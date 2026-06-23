@@ -74,7 +74,7 @@ Core:
 Description: Raise an error when --PTCD is populated and --DECOD is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: --DECOD should be populated when --PTCD is populated.
+  Message: --DECOD must be populated when --PTCD is populated.
   Output Variables:
     - --TERM
     - --PTCD
