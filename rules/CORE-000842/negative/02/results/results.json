@@ -4,7 +4,7 @@
       "dataset": "sv.xpt",
       "domain": "SV",
       "execution_status": "success",
-      "execution_message": "SVUPDES is not populated or does not exist, but the VISITNUM does not equal a VISITNUM present in the TV dataset.",
+      "execution_message": "SVUPDES is not populated or does not exist, but the VISITNUM value does not match any VISITNUM value present in the TV dataset.",
       "number_errors": 3,
       "errors": [
         {
@@ -13,7 +13,8 @@
           "USUBJID": "CDISC001",
           "value": {
             "SVUPDES": "Not in dataset",
-            "VISITNUM": 5.01
+            "VISITNUM": 5.01,
+            "VISIT": "WEEK 4: UNSCHEDULED 01"
           },
           "validated": true
         },
@@ -23,7 +24,8 @@
           "USUBJID": "CDISC001",
           "value": {
             "SVUPDES": "Not in dataset",
-            "VISITNUM": 101.0
+            "VISITNUM": 101.0,
+            "VISIT": "EARLY DISCONTINUATION"
           },
           "validated": true
         },
@@ -33,7 +35,8 @@
           "USUBJID": "CDISC001",
           "value": {
             "SVUPDES": "Not in dataset",
-            "VISITNUM": 201.0
+            "VISITNUM": 201.0,
+            "VISIT": "EARLY DISCONTINUATION RETRIEVAL"
           },
           "validated": true
         }

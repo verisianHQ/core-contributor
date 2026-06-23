@@ -49,8 +49,8 @@ Core:
   Id: CORE-000842
   Status: Published
   Version: '1'
-Description: Raise an error when SVUPDES is not populated and the VISITNUM 
-  does not equal a VISITNUM in the TV dataset.
+Description: Raise an error when SVUPDES is not populated but the VISITNUM 
+  value does not match any VISITNUM value in the TV dataset.
 Executability: Fully Executable
 Operations:
   - domain: TV
@@ -58,11 +58,12 @@ Operations:
     name: VISITNUM
     operator: distinct
 Outcome:
-  Message: SVUPDES is not populated or does not exist, but the VISITNUM does 
-    not equal a VISITNUM present in the TV dataset.
+  Message: SVUPDES is not populated or does not exist, but the VISITNUM 
+    value does not match any VISITNUM value present in the TV dataset.
   Output Variables:
     - SVUPDES
     - VISITNUM
+    - VISIT
 Rule Type: Record Data
 Scope:
   Classes:
