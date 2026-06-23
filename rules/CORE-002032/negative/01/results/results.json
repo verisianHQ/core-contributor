@@ -1,0 +1,96 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "success",
+      "execution_message": "ECSTDTC does not fall on or between RFXSTDTC and RFXENDTC.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ECSTDTC": "2012-11-28T15:59:00",
+            "RFXSTDTC": "2012-11-30T15:59:00",
+            "RFXENDTC": "2013-01-23T15:59:00"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ECSTDTC": "2012-11-29T15:59:00",
+            "RFXSTDTC": "2012-11-30T15:59:00",
+            "RFXENDTC": "2013-01-23T15:59:00"
+          },
+          "validated": true
+        },
+        {
+          "row": 15,
+          "SEQ": 126,
+          "USUBJID": "CDISC009",
+          "value": {
+            "ECSTDTC": "2013-04-29T15:59:00",
+            "RFXSTDTC": "2012-10-22T15:59:00",
+            "RFXENDTC": "2013-04-28T15:59:00"
+          },
+          "validated": true
+        },
+        {
+          "row": 16,
+          "SEQ": 127,
+          "USUBJID": "CDISC009",
+          "value": {
+            "ECSTDTC": "2013-04-30T15:59:00",
+            "RFXSTDTC": "2012-10-22T15:59:00",
+            "RFXENDTC": "2013-04-28T15:59:00"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "success",
+      "execution_message": "EXSTDTC does not fall on or between RFXSTDTC and RFXENDTC.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "EXSTDTC": "2010-11-30T15:59:00",
+            "RFXSTDTC": "2012-11-30T15:59:00",
+            "RFXENDTC": "2013-01-23T15:59:00"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 2,
+          "USUBJID": "CDISC003",
+          "value": {
+            "EXSTDTC": "2014-01-25T15:59:00",
+            "RFXSTDTC": "2013-08-29T15:59:00",
+            "RFXENDTC": "2013-11-05T15:59:00"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
