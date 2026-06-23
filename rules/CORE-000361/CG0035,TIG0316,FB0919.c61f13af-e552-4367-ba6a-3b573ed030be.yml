@@ -122,7 +122,7 @@ Core:
   Id: CORE-000361
   Status: Published
   Version: '1'
-Description: Raise error when VISITNUM is present in TV.VISITNUM and does not
+Description: Raise an error when VISITNUM is present in TV.VISITNUM and does not
   have a one-to-one relationship with VISIT
 Executability: Fully Executable
 Operations:
