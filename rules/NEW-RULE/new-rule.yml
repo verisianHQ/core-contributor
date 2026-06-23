@@ -1,6 +1,6 @@
-# Variable: --RFSTDTC
-# Condition: --RFENDTC ^= null
-# Rule: --RFSTDTC ^= null
+# Variable: RFSTDTC
+# Condition: RFENDTC ^= null
+# Rule: RFSTDTC ^= null
 # verified
 Authorities:
   - Organization: FDA
@@ -127,9 +127,9 @@ Authorities:
         Version: '1.0'
 Check:
   all:
-    - name: --RFENDTC
+    - name: RFENDTC
       operator: non_empty
-    - name: --RFSTDTC
+    - name: RFSTDTC
       operator: empty
 Core:
   Id: ''
@@ -138,10 +138,10 @@ Core:
 Description: Raise an error when subject reference end date/time (RFENDTC) is populated and subject reference start date/time (RFSTDTC) is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: --RFENDTC is populated, but --RFSTDTC is not populated.
+  Message: RFENDTC is populated, but RFSTDTC is not populated.
   Output Variables:
-    - --RFENDTC
-    - --RFSTDTC
+    - RFENDTC
+    - RFSTDTC
 Rule Type: Record Data
 Scope:
   Classes:
