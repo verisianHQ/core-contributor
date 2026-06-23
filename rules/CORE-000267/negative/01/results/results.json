@@ -4,7 +4,7 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "AEDECOD should be populated when AEPTCD is populated",
+      "execution_message": "AEDECOD should be populated when AEPTCD is populated.",
       "number_errors": 4,
       "errors": [
         {
@@ -16,7 +16,7 @@
             "AEPTCD": "INJECTION SITE REACTION",
             "AEDECOD": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -27,7 +27,7 @@
             "AEPTCD": "FATIGUE",
             "AEDECOD": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -38,7 +38,7 @@
             "AEPTCD": "INJECTION SITE REACTION",
             "AEDECOD": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 6,
@@ -49,7 +49,7 @@
             "AEPTCD": "%^!",
             "AEDECOD": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
