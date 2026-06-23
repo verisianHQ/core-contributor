@@ -15,63 +15,17 @@ Authorities:
                   of regulatory reporting needs.
                 Document: IG v3.4
                 Section: '2.6'
-              - Cited Guidance: Adverse Events (AE), Medical History (MH), and Clinical Events
+              - Cited Guidance: (Discussion of --CAT/--SCAT); Adverse Events (AE), Medical History (MH), and Clinical Events
                   (CE), for example, are conceptually the same data, the only
                   differences being when the event started relative to the study
                   start and whether the event is considered a
                   regulatory-reportable adverse event in the study.
                 Document: IG v3.4
-                Item: 2.B.3.a.
-                Section: '4.2.6'
-              - Cited Guidance: MH Description The medical history dataset includes the
-                  subject's prior history at the start of the trial.
+                Item: Assumption 2.B.3.a
+                Section: 4.2.6
+              - Cited Guidance: An events domain that contains data that includes the subject's
+                  prior medical history at the start of the trial.
                 Document: IG v3.4
-                Section: '6.2'
-              - Cited Guidance: Do not create separate domains based on time; rather, represent
-                  both prior and current observations in a domain (e.g., CM for
-                  all non-study medications). Note that AE and MH are an
-                  exception to this best practice because of regulatory
-                  reporting needs
-                Document: IG v3.3
-                Section: '2.6'
-              - Cited Guidance: (Discussion of --CAT/--SCAT) Adverse Events (AE), Medical
-                  History (MH), and Clinical Events (CE), for example, are
-                  conceptually the same data, the only differences being when
-                  the event started relative to the study start and whether the
-                  event is considered a regulatory reportable adverse event in
-                  the study.
-                Document: IG v3.3
-                Item: '3a'
-                Section: '4.2.6'
-              - Cited Guidance: The medical history dataset includes the subject's prior history
-                  at the start of the trial.][MH The medical history dataset
-                  includes the subject's prior history at the start of the
-                  trial.
-                Document: IG v3.3
-                Section: '6.2'
-              - Cited Guidance: Do not create separate domains based on time, rather represent
-                  both prior and current observations in a domain (e.g., CM for
-                  all non-study medications). Note that AE and MH are an
-                  exception to this best practice because of regulatory
-                  reporting needs.
-                Document: IG v3.2
-                Section: '2.6'
-              - Cited Guidance: Discussion of --CAT/--SCAT) Adverse Events (AE), Medical History
-                  (MH) and Clinical Events (CE), for example, are conceptually
-                  the same data, the only differences being when the event
-                  started relative to the study start and whether the event is
-                  considered a regulatory reportable adverse event in the study.
-                Document: IG v3.2
-                Item: 2.B.3.a.
-                Section: 4.1.2.6
-              - Cited Guidance: The medical history dataset includes the subject's prior history
-                  at the start of the trial.][MH The medical history dataset
-                  includes the subject's prior history at the start of the
-                  trial.][Assumption 1:The Medical History dataset generally
-                  includes the subject's prior and concomitant conditions at the
-                  start of the trial.]
-                Document: IG v3.2
-                Item: Domain Code Table | Assumption 1
                 Section: '6.2'
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -87,65 +41,21 @@ Authorities:
                   all non-study medications). Note that Adverse Events and
                   Medical History are an exception to this best practice because
                   of regulatory reporting needs.
-                Document: IG v3.4
+                Document: IG v3.3
                 Section: '2.6'
-              - Cited Guidance: Adverse Events (AE), Medical History (MH), and Clinical Events
+              - Cited Guidance: (Discussion of --CAT/--SCAT); Adverse Events (AE), Medical History (MH), and Clinical Events
                   (CE), for example, are conceptually the same data, the only
                   differences being when the event started relative to the study
                   start and whether the event is considered a
                   regulatory-reportable adverse event in the study.
-                Document: IG v3.4
-                Item: 2.B.3.a.
+                Document: IG v3.3
+                Item: 2.B.3.A
                 Section: 4.2.6
-              - Cited Guidance: MH Description The medical history dataset includes the
-                  subject's prior history at the start of the trial.
-                Document: IG v3.4
-                Section: '6.2'
-              - Cited Guidance: Do not create separate domains based on time; rather, represent
-                  both prior and current observations in a domain (e.g., CM for
-                  all non-study medications). Note that AE and MH are an
-                  exception to this best practice because of regulatory
-                  reporting needs
+              - Cited Guidance: "[Domain Code Table: The medical history dataset includes
+                  the subject's prior history at the start of the trial.][MH: The medical
+                  history dataset includes the subject's prior history at the start of 
+                  the trial.]"
                 Document: IG v3.3
-                Section: '2.6'
-              - Cited Guidance: (Discussion of --CAT/--SCAT) Adverse Events (AE), Medical
-                  History (MH), and Clinical Events (CE), for example, are
-                  conceptually the same data, the only differences being when
-                  the event started relative to the study start and whether the
-                  event is considered a regulatory reportable adverse event in
-                  the study.
-                Document: IG v3.3
-                Item: 2.B.3.a.
-                Section: 4.2.6
-              - Cited Guidance: The medical history dataset includes the subject's prior history
-                  at the start of the trial.][MH The medical history dataset
-                  includes the subject's prior history at the start of the
-                  trial.
-                Document: IG v3.3
-                Section: '6.2'
-              - Cited Guidance: Do not create separate domains based on time, rather represent
-                  both prior and current observations in a domain (e.g., CM for
-                  all non-study medications). Note that AE and MH are an
-                  exception to this best practice because of regulatory
-                  reporting needs.
-                Document: IG v3.2
-                Section: '2.6'
-              - Cited Guidance: Discussion of --CAT/--SCAT) Adverse Events (AE), Medical History
-                  (MH) and Clinical Events (CE), for example, are conceptually
-                  the same data, the only differences being when the event
-                  started relative to the study start and whether the event is
-                  considered a regulatory reportable adverse event in the study.
-                Document: IG v3.2
-                Item: 2.B.3.a.
-                Section: 4.1.2.6
-              - Cited Guidance: The medical history dataset includes the subject's prior history
-                  at the start of the trial.][MH The medical history dataset
-                  includes the subject's prior history at the start of the
-                  trial.][Assumption 1:The Medical History dataset generally
-                  includes the subject's prior and concomitant conditions at the
-                  start of the trial.]
-                Document: IG v3.2
-                Item: Domain Code Table | Assumption 1
                 Section: '6.2'
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -161,65 +71,23 @@ Authorities:
                   all non-study medications). Note that Adverse Events and
                   Medical History are an exception to this best practice because
                   of regulatory reporting needs.
-                Document: IG v3.4
+                Document: IG v3.2
                 Section: '2.6'
-              - Cited Guidance: Adverse Events (AE), Medical History (MH), and Clinical Events
+              - Cited Guidance: (Discussion of --CAT/--SCAT); Adverse Events (AE), Medical History 
+                  (MH), and Clinical Events
                   (CE), for example, are conceptually the same data, the only
                   differences being when the event started relative to the study
                   start and whether the event is considered a
                   regulatory-reportable adverse event in the study.
-                Document: IG v3.4
-                Item: 2.B.3.a.
-                Section: 4.2.6
-              - Cited Guidance: MH Description The medical history dataset includes the
-                  subject's prior history at the start of the trial.
-                Document: IG v3.4
-                Section: '6.2'
-              - Cited Guidance: Do not create separate domains based on time; rather, represent
-                  both prior and current observations in a domain (e.g., CM for
-                  all non-study medications). Note that AE and MH are an
-                  exception to this best practice because of regulatory
-                  reporting needs
-                Document: IG v3.3
-                Section: '2.6'
-              - Cited Guidance: (Discussion of --CAT/--SCAT) Adverse Events (AE), Medical
-                  History (MH), and Clinical Events (CE), for example, are
-                  conceptually the same data, the only differences being when
-                  the event started relative to the study start and whether the
-                  event is considered a regulatory reportable adverse event in
-                  the study.
-                Document: IG v3.3
-                Item: 2.B.3.a.
-                Section: 4.2.6
-              - Cited Guidance: The medical history dataset includes the subject's prior history
-                  at the start of the trial.][MH The medical history dataset
-                  includes the subject's prior history at the start of the
-                  trial.
-                Document: IG v3.3
-                Section: '6.2'
-              - Cited Guidance: Do not create separate domains based on time, rather represent
-                  both prior and current observations in a domain (e.g., CM for
-                  all non-study medications). Note that AE and MH are an
-                  exception to this best practice because of regulatory
-                  reporting needs.
                 Document: IG v3.2
-                Section: '2.6'
-              - Cited Guidance: Discussion of --CAT/--SCAT) Adverse Events (AE), Medical History
-                  (MH) and Clinical Events (CE), for example, are conceptually
-                  the same data, the only differences being when the event
-                  started relative to the study start and whether the event is
-                  considered a regulatory reportable adverse event in the study.
-                Document: IG v3.2
-                Item: 2.B.3.a.
+                Item: 2.B.3.A
                 Section: 4.1.2.6
-              - Cited Guidance: The medical history dataset includes the subject's prior history
-                  at the start of the trial.][MH The medical history dataset
-                  includes the subject's prior history at the start of the
-                  trial.][Assumption 1:The Medical History dataset generally
-                  includes the subject's prior and concomitant conditions at the
-                  start of the trial.]
+              - Cited Guidance: "[Domain Code Table: The medical history dataset includes the 
+                  subject's prior history at the start of the trial.][MH: The medical history 
+                  dataset includes the subject's prior history at the start of the trial.]
+                  [Assumption 1:The Medical History dataset generally includes the subject's 
+                  prior and concomitant conditions at the start of the trial.]"
                 Document: IG v3.2
-                Item: Domain Code Table | Assumption 1
                 Section: '6.2'
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -264,7 +132,7 @@ Match Datasets:
       - USUBJID
     Name: DM
 Outcome:
-  Message: MHENDTC is populated and MHENDTC is on or after RFSTDTC in the DM dataset. 
+  Message: MHENDTC is populated but falls on or after RFSTDTC in the DM dataset. 
   Output Variables:
     - MHENDTC
     - RFSTDTC
