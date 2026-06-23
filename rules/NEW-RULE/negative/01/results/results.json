@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "RFENDTC is populated, but RFSTDTC is not populated.",
+      "execution_message": "RFXENDTC is populated, but RFXSTDTC is not populated.",
       "number_errors": 4,
       "errors": [
         {
@@ -12,8 +12,8 @@
           "SEQ": null,
           "USUBJID": "CDISC002",
           "value": {
-            "RFENDTC": "2013-01-14",
-            "RFSTDTC": null
+            "RFXENDTC": "2013-01-12T15:59:00",
+            "RFXSTDTC": null
           },
           "validated": true
         },
@@ -22,8 +22,8 @@
           "SEQ": null,
           "USUBJID": "CDISC004",
           "value": {
-            "RFENDTC": "2014-03-18",
-            "RFSTDTC": null
+            "RFXENDTC": "2014-03-18T15:59:00",
+            "RFXSTDTC": null
           },
           "validated": true
         },
@@ -32,8 +32,8 @@
           "SEQ": null,
           "USUBJID": "CDISC006",
           "value": {
-            "RFENDTC": "2013-04-30",
-            "RFSTDTC": null
+            "RFXENDTC": "2013-04-30T15:59:00",
+            "RFXSTDTC": null
           },
           "validated": true
         },
@@ -42,8 +42,8 @@
           "SEQ": null,
           "USUBJID": "CDISC009",
           "value": {
-            "RFENDTC": "2013-04-28",
-            "RFSTDTC": null
+            "RFXENDTC": "2013-04-28T15:59:00",
+            "RFXSTDTC": null
           },
           "validated": true
         }

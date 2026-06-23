@@ -1,6 +1,6 @@
-# Variable: RFSTDTC
-# Condition: RFENDTC ^= null
-# Rule: RFSTDTC ^= null
+# Variable: RFXSTDTC
+# Condition: RFXENDTC ^= null
+# Rule: RFXSTDTC ^= null
 # verified
 Authorities:
   - Organization: FDA
@@ -13,7 +13,7 @@ Authorities:
                 Section: FDAB043
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB4303
+              Id: FB4304
               Version: '1'
             Version: '1.5'
         Version: '3.2'
@@ -25,7 +25,7 @@ Authorities:
                 Section: FDAB043
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB4303
+              Id: FB4304
               Version: '1'
             Version: '1.5'
         Version: '3.3'
@@ -37,7 +37,7 @@ Authorities:
                 Section: FDAB043
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB4303
+              Id: FB4304
               Version: '1'
             Version: '1.5'
         Version: '3.4'
@@ -49,7 +49,7 @@ Authorities:
                 Section: FDAB043
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB4303
+              Id: FB4304
               Version: '1'
             Version: '1.5'
         Version: '3.0'
@@ -61,7 +61,7 @@ Authorities:
                 Section: FDAB043
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB4303
+              Id: FB4304
               Version: '1'
             Version: '1.5'
         Version: '3.1'
@@ -73,7 +73,7 @@ Authorities:
                 Section: FDAB043
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB4303
+              Id: FB4304
               Version: '1'
             Version: '1.5'
         Version: '3.1.1'
@@ -85,7 +85,7 @@ Authorities:
                 Section: FDAB043
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB4303
+              Id: FB4304
               Version: '1'
             Version: '1.5'
         Version: '1.1'
@@ -97,7 +97,7 @@ Authorities:
                 Section: FDAB043
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB4303
+              Id: FB4304
               Version: '1'
             Version: '1.5'
         Version: '1.2'
@@ -109,7 +109,7 @@ Authorities:
                 Section: FDAB043
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB4303
+              Id: FB4304
               Version: '1'
             Version: '1.5'
         Version: '1.0'
@@ -121,27 +121,27 @@ Authorities:
                 Section: FDAB043
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB4303
+              Id: FB4304
               Version: '1'
             Version: '1.5'
         Version: '1.0'
 Check:
   all:
-    - name: RFENDTC
+    - name: RFXENDTC
       operator: non_empty
-    - name: RFSTDTC
+    - name: RFXSTDTC
       operator: empty
 Core:
   Id: ''
   Status: Draft
   Version: '1'
-Description: Raise an error when subject reference end date/time (RFENDTC) is populated and subject reference start date/time (RFSTDTC) is not populated.
+Description: Raise an error when date/time of last study treatment (RFXENDTC) is populated and date/time of first study treatment (RFXSTDTC) is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: RFENDTC is populated, but RFSTDTC is not populated.
+  Message: RFXENDTC is populated, but RFXSTDTC is not populated.
   Output Variables:
-    - RFENDTC
-    - RFSTDTC
+    - RFXENDTC
+    - RFXSTDTC
 Rule Type: Record Data
 Scope:
   Classes:
