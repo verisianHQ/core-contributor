@@ -4,7 +4,7 @@
       "dataset": "suppdmmmm.xpt",
       "domain": "SUPPDM",
       "execution_status": "success",
-      "execution_message": "Length of dataset name of SUPPSUPPDM dataset is greater than 8.",
+      "execution_message": "Length of SUPPSUPPDM dataset name is greater than 8 characters.",
       "number_errors": 1,
       "errors": [
         {
@@ -14,7 +14,7 @@
           "value": {
             "dataset_name": "SUPPDMMMM"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
