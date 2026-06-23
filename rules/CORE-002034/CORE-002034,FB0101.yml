@@ -48,8 +48,8 @@ Check:
       - name: AETRTEM  
         operator: empty
 Core:
-  Id: FDA.SDTMIG.FB0101
-  Status: Draft
+  Id: CORE-002034
+  Status: Published
   Version: '1'
 Description: Raise an error when treatment-emergent flag is not present in SUPPAE for the Adverse Event.
 Executability: Fully Executable
