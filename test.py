@@ -327,14 +327,13 @@ class TestRunner:
         else:
             define_xml_path = None
 
-        if define_xml_path:
-            self.data_service._update_define_xml_path(define_xml_path)
+        self.data_service._update_define_xml_path(define_xml_path)
 
         try:
             import yaml
             from engine.tests.rule_regression.regression import (
                 sharepoint_xlsx_to_test_datasets,
-                process_test_case_dataset,
+                process_test_case_dataset_sql,
             )
 
             with open(rule_ymls[0], "r", encoding="utf-8") as f:
@@ -347,22 +346,19 @@ class TestRunner:
                 self.data_service._update_provided_codelists(provided_codelists)
 
             test_datasets = sharepoint_xlsx_to_test_datasets(str(excel_files[0]))
-            regression_errors = {}
 
-            sql_results, _ = process_test_case_dataset(
-                regression_errors=regression_errors,
+            sql_results, sql_regression = process_test_case_dataset_sql(
+                regression_errors={},
                 define_xml_file_path=define_xml_path,
                 data_test_datasets=test_datasets,
                 ig_specs=ig_specs,
                 rule=rule,
-                test_case_folder_path=data_path,
-                cur_core_id=rule_id,
                 use_pgserver=self.use_pgserver,
                 data_service=self.data_service,
             )
 
-            if "results_sql" in regression_errors:
-                return sql_results, {"datasets": regression_errors["results_sql"]}
+            if sql_regression:
+                return sql_results, {"datasets": sql_regression}
 
             return sql_results, {"datasets": []}
 
@@ -757,7 +753,7 @@ def main():
 
 def generate_rule_results(rule_id: str) -> dict:
     """Function run by the pr comment bot github action run_validation."""
-    
+
     rule_path = RULES_DIR / rule_id
     rule_yml = list(rule_path.glob("[!~]*.yml"))[0]
     with rule_yml.open("r", encoding="utf-8") as f:
