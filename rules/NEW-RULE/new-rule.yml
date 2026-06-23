@@ -139,38 +139,36 @@ Check:
   any:
     - name: variable_length
       operator: not_equal_to
-      value: $max_data_length
-    - name: $global_max_length
+      value: $max_variable_value_length
+    - name: $global_max_variable_length
       operator: not_equal_to
-      value: $global_min_length
+      value: $global_min_variable_length
     - name: variable_length
       operator: not_equal_to
-      value: $global_max_length
+      value: $global_max_variable_length
     - name: variable_length
       operator: not_equal_to
-      value: $global_min_length
+      value: $global_min_variable_length
 Core:
   Id: FDA.SDTMIG.FB1801
   Status: Draft
   Version: '1'
-Description: The length of each variable cannot be different between datasets
-  and should not be longer than the maximum length of the data contained by the
-  variable.
+Description: Raise an error when the variable length is not equal between datasets and/or is longer than the maximum length of the actual data contained by the variable.
 Executability: Fully Executable
 Operations:
-  - id: $max_data_length
+  - id: $max_variable_value_length
     domain: global_value_check
     name: variable_value_length
     operator: max
     group:
       - variable_name
-  - id: $global_max_length
+  - id: $global_max_variable_length
     domain: global_value_check
     name: variable_length
     operator: max
     group:
       - variable_name
-  - id: $global_min_length
+  - id: $global_min_variable_length
     domain: global_value_check
     name: variable_length
     operator: min
@@ -183,9 +181,9 @@ Outcome:
     - variable_name
     - variable_length
     - variable_value_length
-    - $max_data_length
-    - $global_min_length
-    - $global_max_length
+    - $max_variable_value_length
+    - $global_min_variable_length
+    - $global_max_variable_length
 Rule Type: Global Value Check with Variable Metadata
 Scope:
   Classes:
