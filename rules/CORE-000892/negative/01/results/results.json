@@ -1,0 +1,110 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "End timepoint is populated but start timepoint is missing.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMSTDTC": null,
+            "CMSTRF": null,
+            "CMSTRTPT": null,
+            "CMENDTC": "2013-04",
+            "CMENRF": null,
+            "CMENRTPT": null
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": 3,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CMSTDTC": null,
+            "CMSTRF": null,
+            "CMSTRTPT": null,
+            "CMENDTC": null,
+            "CMENRF": "DURING",
+            "CMENRTPT": null
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": 1,
+          "USUBJID": "CDISC003",
+          "value": {
+            "CMSTDTC": null,
+            "CMSTRF": null,
+            "CMSTRTPT": null,
+            "CMENDTC": null,
+            "CMENRF": null,
+            "CMENRTPT": "VISIT99"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000892, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "cm.xpt",
+      "Row": 5,
+      "Variable": "CMSTDTC"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 5,
+      "Variable": "CMSTRF"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 5,
+      "Variable": "CMSTRTPT"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 10,
+      "Variable": "CMSTDTC"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 10,
+      "Variable": "CMSTRF"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 10,
+      "Variable": "CMSTRTPT"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 12,
+      "Variable": "CMSTDTC"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 12,
+      "Variable": "CMSTRF"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 12,
+      "Variable": "CMSTRTPT"
+    }
+  ]
+}

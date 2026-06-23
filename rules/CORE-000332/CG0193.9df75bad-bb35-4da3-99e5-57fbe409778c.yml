@@ -1,7 +1,7 @@
 # Variable: MBRESCAT
 # Condition: MBTESTCD = 'ORGANISM' and MBSTRESC ^= 'NO GROWTH' and MBMETHOD ^= 'GRAM STAIN'
 # Rule: MBRESCAT ^= null
-# This rule is ONLY applicable to SDTMIG-3.2
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -12,7 +12,7 @@ Authorities:
                   been identified to differentiate between colonizing organisms
                   and the one(s) that are causing the infection. It is not
                   expected when there is 'No growth' or when the results are
-                  from a gram stain
+                  from a gram stain.
                 Document: IG v3.2
                 Item: Assumption 6
                 Section: '6.3'
@@ -22,32 +22,40 @@ Authorities:
               Version: '2'
             Version: '2.0'
         Version: '3.2'
-# IMPLEMENTATION: WHEN: MBTESTCD = 'ORGANISM' and MBSTRESC != 'NO GROWTH' and MBMETHOD != 'GRAM STAIN'
-# THEN:
 Check:
   all:
     - name: MBTESTCD
       operator: equal_to
       value: 'ORGANISM'
+      value_is_literal: true
     - name: MBSTRESC
       operator: not_equal_to_case_insensitive
       value: 'NO GROWTH'
+      value_is_literal: true
     - name: MBMETHOD
       operator: not_equal_to_case_insensitive
       value: 'GRAM STAIN'
-    - name: MBRESCAT
-      operator: empty
+      value_is_literal: true
+    - any:
+        - name: MBRESCAT
+          operator: empty
+        - name: MBRESCAT
+          operator: not_exists
 
 Core:
   Id: CORE-000332
   Status: Published
   Version: '1'
-Description: Raise an error when MBTESTCD=ORGANISM, MSSTRESC!='NO GROWTH',
-  MBMETHOD!='GRAM STAIN' and MBRESCAT is empty
+Description: Raise an error when MBTESTCD is equal to 'ORGANISM', MBSTRESC not equal to 'NO GROWTH',
+  MBMETHOD not equal to'GRAM STAIN' but MBRESCAT is not present or not populated.
 Executability: Fully Executable
 Outcome:
-  Message: MBRESCAT is expected when MBTESTCD='ORGANISM', MSSTRESC!='NO GROWTH',
-    MBMETHOD!='GRAM STAIN'
+  Message: For records with MBTESTCD = 'ORGANISM', MBRESCAT must be populated when MBSTRESC is not equal to 'NO GROWTH' and MBMETHOD is not equal to 'GRAM STAIN'.
+  Output Variables:
+    - MBTESTCD
+    - MBSTRESC
+    - MBMETHOD
+    - MBRESCAT
 Rule Type: Record Data
 Scope:
   Classes:
