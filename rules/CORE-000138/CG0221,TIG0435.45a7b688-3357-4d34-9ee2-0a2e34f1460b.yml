@@ -101,17 +101,14 @@ Authorities:
         Substandard: SDTM
         Version: '1.0'
 Check:
-  any:
-    - all:
+  all:
+    - name: --STDY
+      operator: non_empty
+    - any:
         - name: --STDTC
           operator: is_incomplete_date
-        - name: --STDY
-          operator: non_empty
-    - all:
         - name: RFSTDTC
           operator: is_incomplete_date
-        - name: --STDY
-          operator: non_empty
 Core:
   Id: CORE-000138
   Status: Published
