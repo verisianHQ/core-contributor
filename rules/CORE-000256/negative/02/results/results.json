@@ -5,14 +5,24 @@
       "domain": "SE",
       "execution_status": "success",
       "execution_message": "SEUPDES is not populated but ETCD is equal to 'UNPLAN'.",
-      "number_errors": 1,
+      "number_errors": 2,
       "errors": [
         {
           "row": 3,
           "SEQ": 3,
           "USUBJID": "1201001",
           "value": {
-            "SEUPDES": null,
+            "SEUPDES": "Not in dataset",
+            "ETCD": "UNPLAN"
+          },
+          "validated": true
+        },
+        {
+          "row": 8,
+          "SEQ": 3,
+          "USUBJID": "1201003",
+          "value": {
+            "SEUPDES": "Not in dataset",
             "ETCD": "UNPLAN"
           },
           "validated": true
