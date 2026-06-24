@@ -163,6 +163,8 @@ Operations:
     operator: distinct
     domain: fda_submission_standards
     name: property_version
+    filter:
+      standard: SDTM
 Outcome:
   Message: SDTM IG Version or SDTM Version do not match a value in the CDISC Controlled Terminology or do not exist in the FDA Data Standards Catalog.
   Output Variables:
