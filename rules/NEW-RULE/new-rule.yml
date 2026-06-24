@@ -1,0 +1,77 @@
+# Variable: TAETORD
+# Condition: 
+# Rule: TAETORD order of elements match order in TA within ARM of the Subject
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Number that gives the planned order of the Element within the
+                  Arm (see Trial Arms; Section 3.2.2 ).
+                Document: Model v1.4
+                Section: 2.2.5
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0418
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Number that gives the planned order of the Element within the
+                  Arm (see Section 3.1.2; Trial Arms).
+                Document: Model v1.7
+                Section: 2.2.5
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0418
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: An assigned numeric identifier that gives the planned order of
+                  the element within the trial arm of the study.
+                Document: Model v2.0
+                Item: TAETORD
+                Section: Timing
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0418
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+Check:
+  all:
+    - name: TAETORD
+      operator: exists
+    - name: TAETORD
+      operator: is_not_ordered_set
+      value:
+        - ARM
+        - ARMCD
+Core:
+  Id: NEW-RULE
+  Status: Draft
+  Version: '1'
+Description: Raise error when TAETORD is not in the same order as the order of elements in the TA dataset for the Arm to which the subject was assigned.
+Executability: Fully Executable
+Outcome:
+  Message: TAETORD should be in the same order as the order of elements in the TA dataset for the Arm to which the subject was assigned.
+  Output Variables:
+    - TAETORD
+    - ARM
+    - ARMCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record
