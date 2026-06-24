@@ -1,3 +1,7 @@
+# Variable: TAETORD
+# Condition: 
+# Rule: TAETORD is an integer
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -140,9 +144,6 @@ Authorities:
             Version: '1.0'
         Substandard: SEND
         Version: '1.0'
-# Variable: TAETORD
-# Condition: 
-# Rule: TAETORD is an integer
 Check:
   all:
     - name: TAETORD
@@ -152,10 +153,10 @@ Core:
   Id: CORE-000534
   Status: Published
   Version: '1'
-Description: TAETORD must be an integer
+Description: Raise an error when TAETORD is not an integer.
 Executability: Fully Executable
 Outcome:
-  Message: TAETORD is not an integer
+  Message: TAETORD must be an integer.
   Output Variables:
     - TAETORD
 Rule Type: Record Data
