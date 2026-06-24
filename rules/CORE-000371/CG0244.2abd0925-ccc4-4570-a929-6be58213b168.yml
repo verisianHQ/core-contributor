@@ -27,14 +27,18 @@ Check:
         - Not Assigned
         - Unplanned Treatment
         - Not Treated
+        - SCREEN FAILURE
+        - NOT ASSIGNED
+        - UNPLANNED TREATMENT
+        - NOT TREATED
 Core:
   Id: CORE-000371
   Status: Published
   Version: '1'
-Description: 'Raise an error when ARM is "Screen Failure", "Not Assigned", "Unplanned Treatment" or "Not Treated".'
+Description: Raise an error when ARM is 'Screen Failure', 'Not Assigned', 'Unplanned Treatment' or 'Not Treated'.
 Executability: Fully Executable
 Outcome:
-  Message: 'ARM is "Screen Failure", "Not Assigned", "Unplanned Treatment" or "Not Treated".'
+  Message: ARM value must not be equal to 'Screen Failure', 'Not Assigned', 'Unplanned Treatment' or 'Not Treated'.
 Rule Type: Record Data
 Scope:
   Classes:
