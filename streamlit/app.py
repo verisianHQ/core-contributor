@@ -84,6 +84,10 @@ def main():
             st.info("No Excel data available for Rule ID tracking for this filter.")
 
     st.markdown("---")
+    st.subheader("Validation Trends")
+    dsp.rule_validation_area_display(data.sot_rules, data.rules_path)
+
+    st.markdown("---")
     st.subheader("Test Execution Health")
 
     if filtered_test_stats.empty:
