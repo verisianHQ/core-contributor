@@ -61,17 +61,22 @@ Check:
       operator: exists
     - name: --BODSYS
       operator: exists
-    - name: --BDSYCD
-      operator: is_not_unique_relationship
-      value: --BODSYS
+    - any:
+        - name: --BDSYCD
+          operator: is_not_unique_relationship
+          value: --BODSYS
+        - name: --BODSYS
+          operator: is_not_unique_relationship
+          value: --BDSYCD
 Core:
   Id: CORE-000184
   Status: Published
   Version: '1'
-Description: There must be a one-to-one relationship between --BDSYSCD and --BODSYS
+Description: Raise an error when --BDSYCD and --BODSYS are present, but
+  --BDSYCD and --BODSYS do not have a one-to-one relationship.
 Executability: Fully Executable
 Outcome:
-  Message: There is not a one-to-one relationship between --BODSYS and --BDSYSCD
+  Message: --BDSYCD and -BODSYS do not have a one-to-one relationship.
   Output Variables:
     - --BODSYS
     - --BDSYCD
