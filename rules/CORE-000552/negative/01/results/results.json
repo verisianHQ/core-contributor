@@ -12,7 +12,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMSTDY is not properly calculated per study day algorithm",
+      "execution_message": "CMSTDY is not properly calculated per study day algorithm.",
       "number_errors": 3,
       "errors": [
         {
@@ -22,10 +22,9 @@
           "value": {
             "CMSTDY": null,
             "CMSTDTC": "2013-02-18",
-            "$val_stdy": 45,
             "RFSTDTC": "2013-01-05"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 8,
@@ -34,10 +33,9 @@
           "value": {
             "CMSTDY": 45.0,
             "CMSTDTC": "2013-02-18",
-            "$val_stdy": -447,
             "RFSTDTC": "2014-05-11"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 10,
@@ -46,29 +44,11 @@
           "value": {
             "CMSTDY": -511.0,
             "CMSTDTC": "2011-07-15",
-            "$val_stdy": -799,
             "RFSTDTC": "2013-09-21"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "cm.xpt",
-      "Row": 11,
-      "Variable": "CMSTDY"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 12,
-      "Variable": "CMSTDY"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 14,
-      "Variable": "CMSTDY"
     }
   ]
 }
