@@ -5,7 +5,7 @@
       "domain": "AG",
       "execution_status": "success",
       "execution_message": "AGTRTV is not populated when AGVAMT is populated.",
-      "number_errors": 2,
+      "number_errors": 1,
       "errors": [
         {
           "row": 2,
@@ -13,19 +13,8 @@
           "USUBJID": "XYZ-001-002",
           "value": {
             "AGTRT": "Tuberculin PPD-S",
-            "AGTRTV": null,
+            "AGTRTV": "Not in dataset",
             "AGVAMT": "0.1"
-          },
-          "validated": true
-        },
-        {
-          "row": 3,
-          "SEQ": 1,
-          "USUBJID": "XYZ-001-003",
-          "value": {
-            "AGTRT": "Tuberculin PPD-S",
-            "AGTRTV": null,
-            "AGVAMT": "2"
           },
           "validated": true
         }
