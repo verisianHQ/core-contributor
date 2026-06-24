@@ -49,7 +49,6 @@ Check:
     - name: --SOCCD
       operator: not_equal_to
       value: --BDSYCD
-      round_values: true
 Core:
   Id: CORE-000362
   Status: Published
@@ -60,6 +59,7 @@ Outcome:
   Message: --SOCCD must be equal to --BDSYCD when primary SOC is used for analysis.
   Output Variables:
     - --TERM
+    - --DECOD
     - --BDSYCD
     - --SOCCD
 Rule Type: Record Data
