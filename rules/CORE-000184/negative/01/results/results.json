@@ -4,14 +4,15 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "AEBDSYCD and -BODSYS do not have a one-to-one relationship.",
-      "number_errors": 7,
+      "execution_message": "AEBDSYCD and AEBODSYS do not have a one-to-one relationship.",
+      "number_errors": 10,
       "errors": [
         {
           "row": 1,
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
+            "AEDECOD": "INJECTION SITE REACTION",
             "AEBODSYS": "Apple",
             "AEBDSYCD": "A"
           },
@@ -22,6 +23,7 @@
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
+            "AEDECOD": "FATIGUE",
             "AEBODSYS": "Apple",
             "AEBDSYCD": null
           },
@@ -32,6 +34,7 @@
           "SEQ": 1,
           "USUBJID": "CDISC003",
           "value": {
+            "AEDECOD": "HYPERHIDROSIS",
             "AEBODSYS": "Blue",
             "AEBDSYCD": "B"
           },
@@ -42,6 +45,7 @@
           "SEQ": 2,
           "USUBJID": "CDISC003",
           "value": {
+            "AEDECOD": "STOMACH DISCOMFORT",
             "AEBODSYS": "Blue",
             "AEBDSYCD": "B"
           },
@@ -52,6 +56,7 @@
           "SEQ": 1,
           "USUBJID": "CDISC007",
           "value": {
+            "AEDECOD": "INJECTION SITE REACTION",
             "AEBODSYS": "Carrot",
             "AEBDSYCD": "C"
           },
@@ -62,6 +67,7 @@
           "SEQ": 2,
           "USUBJID": "CDISC007",
           "value": {
+            "AEDECOD": "SALIVARY HYPERSECRETION",
             "AEBODSYS": "Carrot",
             "AEBDSYCD": "C"
           },
@@ -72,8 +78,42 @@
           "SEQ": 3,
           "USUBJID": "CDISC007",
           "value": {
+            "AEDECOD": "PARAESTHESIA",
             "AEBODSYS": "Carrot",
             "AEBDSYCD": "B"
+          },
+          "validated": true
+        },
+        {
+          "row": 11,
+          "SEQ": 1,
+          "USUBJID": "CDISC010",
+          "value": {
+            "AEDECOD": "DIZZINESS",
+            "AEBODSYS": null,
+            "AEBDSYCD": null
+          },
+          "validated": true
+        },
+        {
+          "row": 12,
+          "SEQ": 2,
+          "USUBJID": "CDISC010",
+          "value": {
+            "AEDECOD": "NAUSEA",
+            "AEBODSYS": null,
+            "AEBDSYCD": "F"
+          },
+          "validated": true
+        },
+        {
+          "row": 13,
+          "SEQ": 3,
+          "USUBJID": "CDISC010",
+          "value": {
+            "AEDECOD": "HEADACHE",
+            "AEBODSYS": "Fanta",
+            "AEBDSYCD": null
           },
           "validated": true
         }
