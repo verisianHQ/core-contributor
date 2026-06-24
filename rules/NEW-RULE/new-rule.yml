@@ -115,7 +115,6 @@ Authorities:
         Version: '1.0'
 Check:
   any:
-    # Scenario 1: It's an SDTIGVER parameter, but fails one of the two checks
     - all:
         - name: TSPARMCD
           operator: equal_to
@@ -128,8 +127,6 @@ Check:
             - name: TSVAL
               operator: is_not_contained_by
               value: $fda_standards
-    
-    # Scenario 2: It's an SDTMVER parameter, but fails one of the two checks
     - all:
         - name: TSPARMCD
           operator: equal_to
@@ -170,6 +167,7 @@ Outcome:
   Output Variables:
     - TSPARMCD
     - TSVAL
+    - TSVALCD
 Rule Type: Record Data
 Scope:
   Classes:
