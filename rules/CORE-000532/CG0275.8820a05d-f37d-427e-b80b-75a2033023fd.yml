@@ -1,6 +1,7 @@
 # Variable: TSVAL
 # Condition: TSPARMCD = 'CURTRT' and record exists where TSPARMCD = 'ADDON' and TSVAL = 'Y'
 # Rule: TSVAL ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -52,25 +53,24 @@ Core:
   Id: CORE-000532
   Status: Published
   Version: '1'
-Description: 'Raise an error when a record exists in TS where TSPARMCD = ADDON
-  and TSVAL = Y but TSVAL for TSPARMCD = CURTRT is empty.'
+Description: Raise an error when a record exists where TSPARMCD = 'ADDON'
+  and TSVAL = 'Y' but TSVAL where TSPARMCD = 'CURTRT' is not populated
 Executability: Fully Executable
 Operations:
   - filter:
       TSPARMCD: ADDON
-      TSVAL: "Y"
+      TSVAL: 'Y'
     group:
       - TSGRPID
     id: $ADDON_Y
     operator: record_count
 Outcome:
-  Message: 'A record exists in TS where TSPARMCD = ADDON and TSVAL = Y but TSVAL
-    for TSPARMCD = CURTRT is empty.'
+  Message: A record exists where TSPARMCD = 'ADDON' and TSVAL = 'Y' but TSVAL
+    where TSPARMCD = 'CURTRT' is not populated.
   Output Variables:
     - TSGRPID
     - TSPARMCD
     - TSVAL
-    - $ADDON_Y
 Rule Type: Record Data
 Scope:
   Classes:
