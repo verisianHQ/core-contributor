@@ -4,8 +4,8 @@
       "dataset": "ta.xpt",
       "domain": "TA",
       "execution_status": "success",
-      "execution_message": "ARM is \"Screen Failure\", \"Not Assigned\", \"Unplanned Treatment\" or \"Not Treated\"",
-      "number_errors": 8,
+      "execution_message": "ARM is \"Screen Failure\", \"Not Assigned\", \"Unplanned Treatment\" or \"Not Treated\".",
+      "number_errors": 4,
       "errors": [
         {
           "row": 1,
@@ -14,70 +14,34 @@
           "value": {
             "ARM": "Screen Failure"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "ARM": "Screen Failure"
+            "ARM": "Unplanned Treatment"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "ARM": "Unplanned Treatment"
+            "ARM": "Not Assigned"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "ARM": "Unplanned Treatment"
-          },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARM": "Not Assigned"
-          },
-          "validated": false
-        },
-        {
-          "row": 6,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARM": "Not Assigned"
-          },
-          "validated": false
-        },
-        {
-          "row": 7,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
             "ARM": "Not Treated"
           },
-          "validated": false
-        },
-        {
-          "row": 8,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARM": "Not Treated"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -85,7 +49,7 @@
       "dataset": "tv.xpt",
       "domain": "TV",
       "execution_status": "success",
-      "execution_message": "ARM is \"Screen Failure\", \"Not Assigned\", \"Unplanned Treatment\" or \"Not Treated\"",
+      "execution_message": "ARM is \"Screen Failure\", \"Not Assigned\", \"Unplanned Treatment\" or \"Not Treated\".",
       "number_errors": 4,
       "errors": [
         {
@@ -95,25 +59,25 @@
           "value": {
             "ARM": "Screen Failure"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 11,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "ARM": "Not Assigned"
+            "ARM": "Unplanned Treatment"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 12,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "ARM": "Unplanned Treatment"
+            "ARM": "Not Assigned"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 13,
@@ -122,7 +86,7 @@
           "value": {
             "ARM": "Not Treated"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

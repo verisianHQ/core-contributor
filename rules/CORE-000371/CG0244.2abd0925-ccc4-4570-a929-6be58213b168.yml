@@ -1,6 +1,7 @@
 # Variable: ARM
 # Condition: 
 # Rule: ARM not in ('Screen Failure', 'Not Assigned', 'Unplanned Treatment', 'Not Treated')
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -30,12 +31,10 @@ Core:
   Id: CORE-000371
   Status: Published
   Version: '1'
-Description: 'Raise an error when ARM is "Screen Failure", "Not Assigned",
-  "Unplanned Treatment" or "Not Treated"'
+Description: 'Raise an error when ARM is "Screen Failure", "Not Assigned", "Unplanned Treatment" or "Not Treated".'
 Executability: Fully Executable
 Outcome:
-  Message: 'ARM is "Screen Failure", "Not Assigned", "Unplanned Treatment" or "Not
-    Treated"'
+  Message: 'ARM is "Screen Failure", "Not Assigned", "Unplanned Treatment" or "Not Treated".'
 Rule Type: Record Data
 Scope:
   Classes:
