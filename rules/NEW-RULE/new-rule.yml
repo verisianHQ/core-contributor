@@ -1,0 +1,63 @@
+# Variable: TSVALCD
+# Condition: TSPARMCD = 'PCLAS'
+# Rule: TSVALCD is a valid code from NDF-RT
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Further information about the parameters is included below in
+                  Table 1. TSVAL may have controlled terminology depending on
+                  the value of TSPARMCD
+                Document: IG v3.2
+                Section: 7.4|Appendix C1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0454
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Further information about the parameters is included below in
+                  Table 1. TSVAL may have controlled terminology depending on
+                  the value of TSPARMCD
+                Document: IG v3.3
+                Section: '7.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0454
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: TSPARMCD
+      operator: equal_to
+      value: PCLAS
+      value_is_literal: true
+    - name: TSVALCD
+      operator: is_not_valid_medrt_code_reference
+Core:
+  Id: NEW-RULE
+  Status: Draft
+  Version: '1'
+Description: Raise an error if TSVALCD is not a valid code from NDF-RT when TSPARMCD = 'PCLAS'.
+Executability: Fully Executable
+Outcome:
+  Message: TSVALCD is not a valid code from NDF-RT.
+  Output Variables:
+    - TSPARMCD
+    - TSVALCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record
