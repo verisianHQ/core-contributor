@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBENINT is populated, but LBSTINT is not populated.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBENINT": "PT08M",
+            "LBSTINT": null
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 2,
+          "USUBJID": "CDISC002",
+          "value": {
+            "LBENINT": "PT08M",
+            "LBSTINT": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
