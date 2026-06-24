@@ -5,7 +5,7 @@
       "domain": "TS",
       "execution_status": "success",
       "execution_message": "TSVAL is not a valid ISO 3166 or GENC country short name.",
-      "number_errors": 1,
+      "number_errors": 3,
       "errors": [
         {
           "row": 1,
@@ -13,7 +13,33 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "FCNTRY",
-            "TSVAL": "ZZZ"
+            "TSVAL": "Atlantis",
+            "TSVALCD": "atlantis-code",
+            "TSVCDREF": "GENC"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "FCNTRY",
+            "TSVAL": "Curacao",
+            "TSVALCD": "curacao-code",
+            "TSVCDREF": "ISO 3166"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "FCNTRY",
+            "TSVAL": "Bahamas",
+            "TSVALCD": "bahamas-code",
+            "TSVCDREF": "GENC"
           },
           "validated": true
         }
