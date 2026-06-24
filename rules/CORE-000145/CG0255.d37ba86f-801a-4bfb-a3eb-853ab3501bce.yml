@@ -60,11 +60,10 @@ Core:
   Id: CORE-000145
   Status: Published
   Version: '1'
-Description: Trigger error when TIVERS is present and IETESTCD is not unique within
-  TIVERS
+Description: Raise error when TIVERS is present and IETESTCD is not unique within TIVERS.
 Executability: Fully Executable
 Outcome:
-  Message: IETESTCD is not unique within TIVERS
+  Message: IETESTCD must be unique within TIVERS.
   Output Variables:
     - IETESTCD
     - TIVERS
