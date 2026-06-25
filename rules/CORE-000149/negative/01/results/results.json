@@ -4,8 +4,8 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSVALNF is null when TSVAL is null.",
-      "number_errors": 6,
+      "execution_message": "TSVALNF must not be null when TSVAL is null.",
+      "number_errors": 3,
       "errors": [
         {
           "row": 1,
@@ -15,7 +15,7 @@
             "TSVAL": null,
             "TSVALNF": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -25,7 +25,7 @@
             "TSVAL": null,
             "TSVALNF": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -35,37 +35,7 @@
             "TSVAL": null,
             "TSVALNF": null
           },
-          "validated": false
-        },
-        {
-          "row": 4,
-          "SEQ": 29,
-          "USUBJID": "None",
-          "value": {
-            "TSVAL": null,
-            "TSVALNF": null
-          },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": 30,
-          "USUBJID": "None",
-          "value": {
-            "TSVAL": null,
-            "TSVALNF": null
-          },
-          "validated": false
-        },
-        {
-          "row": 6,
-          "SEQ": 37,
-          "USUBJID": "None",
-          "value": {
-            "TSVAL": null,
-            "TSVALNF": null
-          },
-          "validated": false
+          "validated": true
         }
       ]
     }
