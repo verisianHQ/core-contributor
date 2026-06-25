@@ -54,11 +54,12 @@ Core:
   Id: CORE-000149
   Status: Published
   Version: '1'
-Description: Raise an error when TSVAL is null and TSVALNF is null.
+Description: Raise an error when TSVAL is not populated and TSVALNF is also not populated.
 Executability: Fully Executable
 Outcome:
-  Message: TSVALNF must not be null when TSVAL is null.
+  Message: TSVALNF must be populated when TSVAL is not populated.
   Output Variables:
+    - TSPARMCD
     - TSVAL
     - TSVALNF
 Rule Type: Record Data
