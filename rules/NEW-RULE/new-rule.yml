@@ -24,7 +24,7 @@ Check:
     - name: RFCSTDTC
       operator: empty
 Core:
-  Id: ''
+  Id: FDA.SDTMIG.FB4305
   Status: Draft
   Version: '1'
 Description: Raise an error when date/time of last challenge agent admin (RFCENDTC) is populated and date/time of first challenge agent admin (RFCSTDTC) is not populated.
