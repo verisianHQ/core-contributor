@@ -43,21 +43,22 @@ Authorities:
         Version: '3.4'
 Check:
   all:
-    - name: $alpha_3_country_codes
+    - name: $alpha_3_genc_country_codes
       operator: does_not_contain
       value: COUNTRY
 Core:
   Id: FDA.SDTMIG.FB1703
   Status: Draft
   Version: '1'
-Description: Raise an error when value for COUNTRY in DM dataset is not populated with a valid 3-letter country code found in ISO 3166 or GENC standard.
+Description: Raise an error when value for COUNTRY in DM dataset is not populated with a valid 3-letter country code found in GENC standard.
 Executability: Fully Executable
 Operations:
-  - id: $alpha_3_country_codes
+  - id: $alpha_3_genc_country_codes
     operator: get_countries
     attribute_name: alpha_3
+    codelist: GENC
 Outcome:
-  Message: Value for COUNTRY is not found in ISO 3166 or GENC standard.
+  Message: Value for COUNTRY is not found in GENC standard.
   Output Variables:
     - COUNTRY
 Rule Type: Record Data
