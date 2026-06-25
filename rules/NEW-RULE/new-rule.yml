@@ -1,0 +1,86 @@
+# Variable: TSVALNF
+# Condition: TSPARMCD = 'INDIC' and record exists where TSPARMCD = 'HLTSUBJI' and TSVAL = 'Y'
+# Rule: TSVALNF = 'NA'
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1108
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1108
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1108
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: $HLTSUBJI_Y
+      operator: greater_than_or_equal_to
+      value: 1
+    - name: TSPARMCD
+      operator: equal_to
+      value: INDIC
+    - name: TSVALNF
+      operator: not_equal_to
+      value: 'NA'
+Core:
+  Id: FDA.SDTMIG.FB1108
+  Status: Draft
+  Version: '1'
+Description: Raise an error when a record exists in TS where TSPARMCD = HLTSUBJI
+  and TSVAL = Y but TSVALNF for TSPARMCD = INDIC is not equal to 'NA'.
+Executability: Fully Executable
+Operations:
+  - filter:
+      TSPARMCD: HLTSUBJI
+      TSVAL: "Y"
+    group:
+      - TSGRPID
+    id: $HLTSUBJI_Y
+    operator: record_count
+Outcome:
+  Message: A record exists in TS where TSPARMCD = HLTSUBJI and TSVAL = Y but TSVALNF
+    for TSPARMCD = INDIC is not equal to 'NA'.
+  Output Variables:
+    - TSGRPID
+    - TSPARMCD
+    - TSVAL
+    - TSVALNF
+    - $HLTSUBJI_Y
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record
