@@ -1,6 +1,7 @@
 # Variable: VISITNUM
 # Condition: SVUPDES ^= null
 # Rule: VISITNUM not in TV.VISITNUM
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -69,8 +70,8 @@ Core:
   Id: CORE-000843
   Status: Published
   Version: '1'
-Description: When SVUPDES is populated, then the VISITNUM should not be equal to
-  a VISITNUM in TV
+Description: Raise and error when SVUPDES is populated but the VISITNUM
+  value matches a VISITNUM value in the TV dataset.
 Executability: Fully Executable
 Operations:
   - domain: TV
@@ -78,10 +79,12 @@ Operations:
     name: VISITNUM
     operator: distinct
 Outcome:
-  Message: SVUPDES is populated, but the VISITNUM equals a VISITNUM present in TV
+  Message: SVUPDES is populated but the VISITNUM value matches a VISITNUM
+    value present in the TV dataset.
   Output Variables:
     - SVUPDES
     - VISITNUM
+    - VISIT
 Rule Type: Record Data
 Scope:
   Classes:
