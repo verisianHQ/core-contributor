@@ -132,7 +132,7 @@ Check:
     - name: --DTC
       operator: empty
 Core:
-  Id: ''
+  Id: FDA.SDTMIG.FB4302
   Status: Draft
   Version: '1'
 Description: Raise an error when end date/time of observation (--ENDTC) is populated and related date/time of collection (--DTC) is not populated.
