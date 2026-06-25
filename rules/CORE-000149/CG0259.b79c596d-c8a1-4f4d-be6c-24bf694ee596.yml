@@ -54,7 +54,7 @@ Core:
   Id: CORE-000149
   Status: Published
   Version: '1'
-Description: Raise error when TSVAL is null and TSVALNF is null.
+Description: Raise an error when TSVAL is null and TSVALNF is null.
 Executability: Fully Executable
 Outcome:
   Message: TSVALNF must not be null when TSVAL is null.
