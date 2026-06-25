@@ -178,7 +178,7 @@ jobs:
             });
 
             const botReviewComments = existingReviewComments.filter(comment => 
-              comment.body.includes('')
+              comment.user && comment.user.login === 'github-actions[bot]'
             );
 
             for (const comment of botReviewComments) {
@@ -197,7 +197,7 @@ jobs:
             });
 
             const botIssueComments = existingIssueComments.filter(comment => 
-              comment.body.includes('')
+              comment.user && comment.user.login === 'github-actions[bot]'
             );
 
             for (const comment of botIssueComments) {
