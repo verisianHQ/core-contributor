@@ -1,6 +1,7 @@
 # Variable: TSVALNF
 # Condition: TSVAL ^= null
 # Rule: TSVALNF = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -56,10 +57,13 @@ Core:
   Id: CORE-000150
   Status: Published
   Version: '1'
-Description: Trigger error when TSVAL is populated and TSVALNF is also populated.
+Description: Raise an error when TSVAL is populated and TSVALNF is also populated.
 Executability: Fully Executable
 Outcome:
-  Message: TSVALNF is not null when TSVAL is populated
+  Message: TSVALNF must be null when TSVAL is populated.
+  Output Variables:
+    - TSVAL
+    - TSVALNF
 Rule Type: Record Data
 Scope:
   Classes:
