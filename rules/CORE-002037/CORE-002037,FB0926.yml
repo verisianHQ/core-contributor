@@ -53,7 +53,7 @@ Check:
       operator: is_inconsistent_across_dataset
       value: --TERM
 Core:
-  Id: FDA.SDTMIG.FB0926
+  Id: CORE-002037
   Status: Published
   Version: '1'
 Description: Raise an error when --DECOD is not consistent for records with identical --TERM values.
