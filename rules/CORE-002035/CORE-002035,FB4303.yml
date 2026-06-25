@@ -132,8 +132,8 @@ Check:
     - name: RFSTDTC
       operator: empty
 Core:
-  Id: ''
-  Status: Draft
+  Id: CORE-002035
+  Status: Published
   Version: '1'
 Description: Raise an error when subject reference end date/time (RFENDTC) is populated and subject reference start date/time (RFSTDTC) is not populated.
 Executability: Fully Executable
