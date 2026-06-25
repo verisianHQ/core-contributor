@@ -21,8 +21,11 @@ Check:
   all:
     - name: RFCENDTC
       operator: non_empty
-    - name: RFCSTDTC
-      operator: empty
+    - any:
+      - name: RFCSTDTC
+        operator: empty
+      - name: RFCSTDTC
+        operator: not_exists
 Core:
   Id: FDA.SDTMIG.FB4305
   Status: Draft
