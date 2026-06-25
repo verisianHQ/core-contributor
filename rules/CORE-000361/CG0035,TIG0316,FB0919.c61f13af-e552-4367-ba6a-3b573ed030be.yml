@@ -124,7 +124,7 @@ Core:
   Status: Published
   Version: '1'
 Description: Raise an error when VISITNUM value matches a VISITNUM value in the TV dataset but VISIT and VISITNUM do not
-  have a one-to-one relationship with VISIT
+  have a one-to-one relationship.
 Executability: Fully Executable
 Operations:
   - domain: TV
