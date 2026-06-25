@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to class for rule id=, dataset=DM",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=FDA.SDTMIG.FB4302, dataset=DM",
       "number_errors": 0,
       "errors": []
     },
@@ -13,7 +13,7 @@
       "domain": "LB",
       "execution_status": "success",
       "execution_message": "LBENDTC is populated, but LBDTC is not populated.",
-      "number_errors": 3,
+      "number_errors": 5,
       "errors": [
         {
           "row": 1,
@@ -22,7 +22,7 @@
           "value": {
             "LBTESTCD": "ALB",
             "LBENDTC": "2012-11-23",
-            "LBDTC": null
+            "LBDTC": "Not in dataset"
           },
           "validated": true
         },
@@ -33,7 +33,18 @@
           "value": {
             "LBTESTCD": "ALP",
             "LBENDTC": "2012-11-24",
-            "LBDTC": null
+            "LBDTC": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC002",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBENDTC": "2012-11-24",
+            "LBDTC": "Not in dataset"
           },
           "validated": true
         },
@@ -44,7 +55,18 @@
           "value": {
             "LBTESTCD": "ALP",
             "LBENDTC": "2012-11-24",
-            "LBDTC": null
+            "LBDTC": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "CDISC003",
+          "value": {
+            "LBTESTCD": "BASO",
+            "LBENDTC": "2012-11-23",
+            "LBDTC": "Not in dataset"
           },
           "validated": true
         }

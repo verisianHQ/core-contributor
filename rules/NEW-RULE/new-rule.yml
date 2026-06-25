@@ -129,8 +129,11 @@ Check:
   all:
     - name: --ENDTC
       operator: non_empty
-    - name: --DTC
-      operator: empty
+    - any:
+        - name: --DTC
+          operator: empty
+        - name: --DTC
+          operator: not_exists
 Core:
   Id: FDA.SDTMIG.FB4302
   Status: Draft
