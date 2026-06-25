@@ -4,8 +4,8 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSVALCD is not a valid ISO 3166 or GENC 3-letter country code.",
-      "number_errors": 3,
+      "execution_message": "TSVAL is not a valid GENC 3-letter country code.",
+      "number_errors": 2,
       "errors": [
         {
           "row": 1,
@@ -22,18 +22,6 @@
         {
           "row": 2,
           "SEQ": 2,
-          "USUBJID": "None",
-          "value": {
-            "TSPARMCD": "FCNTRY",
-            "TSVAL": "Akrotiri",
-            "TSVALCD": "XQZ",
-            "TSVCDREF": "ISO 3166"
-          },
-          "validated": true
-        },
-        {
-          "row": 3,
-          "SEQ": 3,
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "FCNTRY",
