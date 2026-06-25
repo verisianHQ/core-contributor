@@ -132,7 +132,7 @@ Check:
     - name: --STINT
       operator: empty
 Core:
-  Id: ''
+  Id: FDA.SDTMIG.FB4306
   Status: Draft
   Version: '1'
 Description: Raise an error when planned end of assessment interval (--ENINT) is populated and planned start of assessment interval (--STINT) is not populated.
