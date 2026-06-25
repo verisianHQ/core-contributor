@@ -1,0 +1,153 @@
+# Variable: RFXSTDTC
+# Condition: RFXENDTC ^= null
+# Rule: RFXSTDTC ^= null
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: When end timepoint is provided, then a related start timepoint should also be provided.
+                Document: FDA
+                Section: FDAB043
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4304
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: When end timepoint is provided, then a related start timepoint should also be provided.
+                Document: FDA
+                Section: FDAB043
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4304
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: When end timepoint is provided, then a related start timepoint should also be provided.
+                Document: FDA
+                Section: FDAB043
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4304
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: When end timepoint is provided, then a related start timepoint should also be provided.
+                Document: FDA
+                Section: FDAB043
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4304
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: When end timepoint is provided, then a related start timepoint should also be provided.
+                Document: FDA
+                Section: FDAB043
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4304
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: When end timepoint is provided, then a related start timepoint should also be provided.
+                Document: FDA
+                Section: FDAB043
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4304
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: When end timepoint is provided, then a related start timepoint should also be provided.
+                Document: FDA
+                Section: FDAB043
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4304
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: When end timepoint is provided, then a related start timepoint should also be provided.
+                Document: FDA
+                Section: FDAB043
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4304
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: 'SENDIG-AR'
+        References:
+          - Citations:
+              - Cited Guidance: When end timepoint is provided, then a related start timepoint should also be provided.
+                Document: FDA
+                Section: FDAB043
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4304
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: 'SENDIG-GENETOX'
+        References:
+          - Citations:
+              - Cited Guidance: When end timepoint is provided, then a related start timepoint should also be provided.
+                Document: FDA
+                Section: FDAB043
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4304
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  all:
+    - name: RFXENDTC
+      operator: non_empty
+    - name: RFXSTDTC
+      operator: empty
+Core:
+  Id: ''
+  Status: Draft
+  Version: '1'
+Description: Raise an error when date/time of last study treatment (RFXENDTC) is populated and date/time of first study treatment (RFXSTDTC) is not populated.
+Executability: Fully Executable
+Outcome:
+  Message: RFXENDTC is populated, but RFXSTDTC is not populated.
+  Output Variables:
+    - RFXENDTC
+    - RFXSTDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record
