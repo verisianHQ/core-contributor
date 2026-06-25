@@ -1,6 +1,7 @@
 # Variable: TSVALCD
 # Condition: TSVAL ^= null and TSVALCD ^= null
 # Rule: TSVALCD and TSVAL have a one-to-one relationship.
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -70,11 +71,11 @@ Core:
   Id: CORE-000152
   Status: Published
   Version: '1'
-Description: When TSVAL and TSVALCD are populated, there must be a one-to-one
-  relationship between TSVALCD and TSVAL
+Description: Raise an error when TSVAL and TSVALCD are populated and there is not a one-to-one
+  relationship between TSVALCD and TSVAL.
 Executability: Fully Executable
 Outcome:
-  Message: There is not a one-to-one relationship between TSVAL and TSVALCD
+  Message: There must be a one-to-one relationship between TSVAL and TSVALCD.
   Output Variables:
     - TSVAL
     - TSVALCD
