@@ -9,7 +9,7 @@
       "errors": []
     },
     {
-      "dataset": "lb.xpt",
+      "dataset": "lb1.xpt",
       "domain": "LB",
       "execution_status": "success",
       "execution_message": "LBENDTC is populated, but LBDTC is not populated.",
@@ -67,6 +67,37 @@
             "LBTESTCD": "BASO",
             "LBENDTC": "2012-11-23",
             "LBDTC": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "lb2.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBENDTC is populated, but LBDTC is not populated.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "ALP",
+            "LBENDTC": "2012-11-24T15:39:00",
+            "LBDTC": null
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "CDISC003",
+          "value": {
+            "LBTESTCD": "BASO",
+            "LBENDTC": "2012-11-23T15:39:00",
+            "LBDTC": null
           },
           "validated": true
         }
