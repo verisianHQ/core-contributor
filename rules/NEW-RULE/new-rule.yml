@@ -1,6 +1,6 @@
-# Variable: TSPARMCD
-# Condition:
-# Rule: TSVALCD when TSPARMCD = FCNTRY is a valid 3-letter country code.
+# Variable: COUNTRY
+# Condition: 
+# Rule: COUNTRY value is a valid 3-letter country code.
 # verified
 Authorities:
   - Organization: FDA
@@ -13,7 +13,7 @@ Authorities:
                 Section: FDAB017
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB1713
+              Id: FB1703
               Version: '1'
             Version: '1.5'
         Version: '3.2'
@@ -25,7 +25,7 @@ Authorities:
                 Section: FDAB017
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB1713
+              Id: FB1703
               Version: '1'
             Version: '1.5'
         Version: '3.3'
@@ -37,61 +37,35 @@ Authorities:
                 Section: FDAB017
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB1713
+              Id: FB1703
               Version: '1'
             Version: '1.5'
         Version: '3.4'
 Check:
   all:
-    - name: TSPARMCD
-      operator: equal_to
-      value: FCNTRY
-      value_is_literal: true
-    - any:
-      - all:
-        - name: TSVCDREF
-          operator: equal_to
-          value: 'ISO 3166'
-          value_is_literal: true
-        - name: $alpha_3_iso_country_codes
-          operator: does_not_contain
-          value: TSVALCD
-      - all:
-        - name: TSVCDREF
-          operator: equal_to
-          value: 'GENC'
-          value_is_literal: true
-        - name: $alpha_3_genc_country_codes
-          operator: does_not_contain
-          value: TSVALCD
+    - name: $alpha_3_country_codes
+      operator: does_not_contain
+      value: COUNTRY
 Core:
-  Id: FDA.SDTMIG.FB1713
+  Id: FDA.SDTMIG.FB1703
   Status: Draft
   Version: '1'
-Description: Raise an error when value for Planned Country of Investigational Sites (TSPARMCD = FCNTRY) is not populated with a valid 3-letter country code found in ISO 3166 or GENC standard.
+Description: Raise an error when value for COUNTRY in DM dataset is not populated with a valid 3-letter country code found in ISO 3166 or GENC standard.
 Executability: Fully Executable
 Operations:
-  - id: $alpha_3_iso_country_codes
+  - id: $alpha_3_country_codes
     operator: get_countries
     attribute_name: alpha_3
-    codelist: 'ISO 3166'
-  - id: $alpha_3_genc_country_codes
-    operator: get_countries
-    attribute_name: alpha_3
-    codelist: 'GENC'
 Outcome:
-  Message: TSVALCD is not a valid ISO 3166 or GENC 3-letter country code.
+  Message: Value for COUNTRY is not found in ISO 3166 or GENC standard.
   Output Variables:
-    - TSPARMCD
-    - TSVAL
-    - TSVALCD
-    - TSVCDREF
+    - COUNTRY
 Rule Type: Record Data
 Scope:
   Classes:
     Include:
-      - TRIAL DESIGN
+      - SPECIAL PURPOSE
   Domains:
     Include:
-      - TS
+      - DM
 Sensitivity: Record

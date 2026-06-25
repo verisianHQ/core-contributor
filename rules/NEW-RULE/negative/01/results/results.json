@@ -1,45 +1,27 @@
 {
   "datasets": [
     {
-      "dataset": "ts.xpt",
-      "domain": "TS",
+      "dataset": "dm.xpt",
+      "domain": "DM",
       "execution_status": "success",
-      "execution_message": "TSVALCD is not a valid ISO 3166 or GENC 3-letter country code.",
-      "number_errors": 3,
+      "execution_message": "Value for COUNTRY is not found in ISO 3166 or GENC standard.",
+      "number_errors": 2,
       "errors": [
         {
           "row": 1,
-          "SEQ": 1,
-          "USUBJID": "None",
+          "SEQ": null,
+          "USUBJID": "CDISC001",
           "value": {
-            "TSPARMCD": "FCNTRY",
-            "TSVAL": "Atlantis",
-            "TSVALCD": "ATL",
-            "TSVCDREF": "GENC"
+            "COUNTRY": "ZZZ"
           },
           "validated": true
         },
         {
           "row": 2,
-          "SEQ": 2,
-          "USUBJID": "None",
+          "SEQ": null,
+          "USUBJID": "CDISC002",
           "value": {
-            "TSPARMCD": "FCNTRY",
-            "TSVAL": "Akrotiri",
-            "TSVALCD": "XQZ",
-            "TSVCDREF": "ISO 3166"
-          },
-          "validated": true
-        },
-        {
-          "row": 3,
-          "SEQ": 3,
-          "USUBJID": "None",
-          "value": {
-            "TSPARMCD": "FCNTRY",
-            "TSVAL": "\u00c5land Islands",
-            "TSVALCD": "ALA",
-            "TSVCDREF": "GENC"
+            "COUNTRY": null
           },
           "validated": true
         }
