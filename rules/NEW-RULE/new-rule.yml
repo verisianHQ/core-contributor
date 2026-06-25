@@ -129,8 +129,11 @@ Check:
   all:
     - name: --ENINT
       operator: non_empty
-    - name: --STINT
-      operator: empty
+    - any:
+        - name: --STINT
+          operator: empty
+        - name: --STINT
+          operator: not_exists
 Core:
   Id: FDA.SDTMIG.FB4306
   Status: Draft
