@@ -60,7 +60,7 @@ Core:
   Id: FDA.SDTMIG.FB3214
   Status: Draft
   Version: '1'
-Description: Study Day of Start of Observation (BESTDY) is less than or equal to Study Day of Visit/Collection/Exam (BEDY).
+Description: Raise an error when Study Day of Specimen Collection (BEDY) is greater than Study Day of Start of Biospecimen Event (BESTDY).
 Executability: Fully Executable
 Outcome:
   Message: BEDY is greater than BESTDY.
