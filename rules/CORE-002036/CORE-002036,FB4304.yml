@@ -132,8 +132,8 @@ Check:
     - name: RFXSTDTC
       operator: empty
 Core:
-  Id: ''
-  Status: Draft
+  Id: CORE-002036
+  Status: Published
   Version: '1'
 Description: Raise an error when date/time of last study treatment (RFXENDTC) is populated and date/time of first study treatment (RFXSTDTC) is not populated.
 Executability: Fully Executable
