@@ -41,8 +41,8 @@ Check:
       operator: is_not_contained_by
       value: $usubjids_in_ex
 Core:
-  Id: CORE-000748
-  Status: Draft
+  Id: CORE-002039
+  Status: Published
   Version: '1'
 Description: Raise an error when a subject is assigned to an arm code (randomized) but the subject has no record in the EX dataset.
 Executability: Partially Executable - Possible Overreporting
