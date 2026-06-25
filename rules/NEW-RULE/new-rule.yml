@@ -1,0 +1,82 @@
+# Variable: ETHNIC, CETHNIC
+# Condition: ETHNIC ^= null or SUPPDM.CETHNIC ^= null
+# Rule: ETHNIC or ETHNICC codelist in the Define-XML document contains at least: 'HISPANIC OR LATINO' or 'NOT HISPANIC OR LATINO'.
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'When collecting ethnicity demographic data from clinical trial participants, the following two minimum choices should be offered: ''HISPANIC OR LATINO'' or ''NOT HISPANIC OR LATINO''.'
+                Document: FDA
+                Section: FDAB057
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5701
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'When collecting ethnicity demographic data from clinical trial participants, the following two minimum choices should be offered: ''HISPANIC OR LATINO'' or ''NOT HISPANIC OR LATINO''.'
+                Document: FDA
+                Section: FDAB057
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5701
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'When collecting ethnicity demographic data from clinical trial participants, the following two minimum choices should be offered: ''HISPANIC OR LATINO'' or ''NOT HISPANIC OR LATINO''.'
+                Document: FDA
+                Section: FDAB057
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5701
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - any:
+      - name: define_variable_name
+        operator: equal_to
+        value: ETHNIC
+      - name: define_variable_name
+        operator: equal_to
+        value: ETHNICC
+    - name: define_variable_codelist_coded_values
+      operator: not_equal_to
+      value: 'HISPANIC OR LATINO,NOT HISPANIC OR LATINO'
+      value_is_literal: true
+    - name: define_variable_codelist_coded_values
+      operator: not_equal_to
+      value: 'NOT HISPANIC OR LATINO,HISPANIC OR LATINO'
+      value_is_literal: true
+Core:
+  Id: FDA.SDTMIG.FB5701
+  Status: Draft
+  Version: '1'
+Description: Raise an error when ethnicity is collected but 'HISPANIC OR LATINO' or 'NOT HISPANIC OR LATINO' are not offered options as per Define-XML document.
+Executability: Fully Executable
+Outcome:
+  Message: Ethnicity is collected but 'HISPANIC OR LATINO' or 'NOT HISPANIC OR LATINO' are not offered options as per Define-XML document.
+  Output Variables:
+    - define_variable_name
+    - define_variable_codelist_coded_values
+Rule Type: Define Item Metadata Check
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+      - SUPPDM
+Sensitivity: Record
