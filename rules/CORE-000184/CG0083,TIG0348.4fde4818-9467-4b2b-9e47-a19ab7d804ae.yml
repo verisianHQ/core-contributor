@@ -112,7 +112,7 @@ Core:
   Id: CORE-000184
   Status: Published
   Version: '1'
-Description: Raise an error when --BDSYCD and --BODSYS are present do not have a one-to-one relationship.
+Description: Raise an error when --BDSYCD and --BODSYS are present, but do not have a one-to-one relationship.
 Executability: Fully Executable
 Outcome:
   Message: --BDSYCD and --BODSYS do not have a one-to-one relationship.
