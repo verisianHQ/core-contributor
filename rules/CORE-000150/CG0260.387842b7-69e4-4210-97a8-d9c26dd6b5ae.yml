@@ -60,8 +60,9 @@ Core:
 Description: Raise an error when TSVAL is populated and TSVALNF is also populated.
 Executability: Fully Executable
 Outcome:
-  Message: TSVALNF must be null when TSVAL is populated.
+  Message: TSVALNF must not be populated when TSVAL is populated.
   Output Variables:
+    - TSPARMCD
     - TSVAL
     - TSVALNF
 Rule Type: Record Data
