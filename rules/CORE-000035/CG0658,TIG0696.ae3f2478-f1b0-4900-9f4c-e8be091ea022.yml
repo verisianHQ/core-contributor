@@ -1,6 +1,7 @@
 # Variable: VISITDY
 # Condition: SVPRESP = null
 # Rule: VISITDY = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -42,11 +43,15 @@ Core:
   Id: CORE-000035
   Status: Published
   Version: '1'
-Description: Raise an error when SVPRESP is null and VISITDY is not null.
+Description: Raise an error when a visit is unplanned (SVPRESP is null) but VISITDY is populated.
 Executability: Fully Executable
 Outcome:
-  Message: VISITDY is populated when SVPRESP is null.  VISITDY is the Planned
-    Study Day of a visit. It should not be populated for unplanned visits.
+  Message: Visit is unplanned but VISITDY is populated.
+  Output Variables:
+    - VISITNUM
+    - VISIT
+    - VISITDY
+    - SVPRESP
 Rule Type: Record Data
 Scope:
   Classes:
