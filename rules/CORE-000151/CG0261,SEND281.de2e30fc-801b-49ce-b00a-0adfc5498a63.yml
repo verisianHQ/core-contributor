@@ -148,11 +148,12 @@ Core:
   Id: CORE-000151
   Status: Published
   Version: '1'
-Description: Raise an error when TSVAL1 is populated and TSVAL is null.
+Description: Raise an error when TSVAL1 is populated and TSVAL is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: TSVAL must be null when TSVAL1 is populated.
+  Message: TSVAL must not be populated when TSVAL1 is populated.
   Output Variables:
+    - TSPARMCD
     - TSVAL1
     - TSVAL
 Rule Type: Record Data
