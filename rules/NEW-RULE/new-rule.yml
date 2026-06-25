@@ -1,0 +1,68 @@
+# Variable: ARMNRS
+# Condition: ARMNRS ^= ("SCREEN FAILURE", "NOT ASSIGNED", "ASSIGNED, NOT TREATED")
+# Rule: Value is present for subject in EX
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Randomized subjects are expected to receive a study treatment.
+                Document: FDA
+                Section: FDAB025
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB2504
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Randomized subjects are expected to receive a study treatment.
+                Document: FDA
+                Section: FDAB025
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB2504
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: ARMNRS
+      operator: is_not_contained_by_case_insensitive
+      value:
+        - "SCREEN FAILURE"
+        - "NOT ASSIGNED"
+        - "ASSIGNED, NOT TREATED"
+    - name: USUBJID
+      operator: is_not_contained_by
+      value: $usubjids_in_ex
+Core:
+  Id: CORE-000748
+  Status: Draft
+  Version: '1'
+Description: Raise an error when a subject is assigned to an arm code (randomized) but the subject has no record in the EX dataset.
+Executability: Partially Executable - Possible Overreporting
+Operations:
+  - domain: EX
+    id: $usubjids_in_ex
+    name: USUBJID
+    operator: distinct
+Outcome:
+  Message: Subject is assigned to an arm code (randomized) but has no record in the EX dataset.
+  Output Variables:
+    - ARMNRS
+    - ARMCD
+    - ACTARMCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record
