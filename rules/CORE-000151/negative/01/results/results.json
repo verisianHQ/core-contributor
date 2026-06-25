@@ -4,18 +4,18 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSVAL is null when TSVAL1 is populated.",
+      "execution_message": "TSVAL must be null when TSVAL1 is populated.",
       "number_errors": 1,
       "errors": [
         {
-          "row": 24,
+          "row": 4,
           "SEQ": 1,
           "USUBJID": "None",
           "value": {
             "TSVAL1": "test 123",
             "TSVAL": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
