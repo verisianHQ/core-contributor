@@ -20,6 +20,7 @@
           "SEQ": 2,
           "USUBJID": "ABC-0002",
           "value": {
+            "CMTRT": "ASPIRIN",
             "CMDOSTXT": "100"
           },
           "validated": true
@@ -29,6 +30,7 @@
           "SEQ": 1,
           "USUBJID": "ABC-0003",
           "value": {
+            "CMTRT": "ASPIRIN",
             "CMDOSTXT": "2.5"
           },
           "validated": true
@@ -55,6 +57,7 @@
           "SEQ": 1,
           "USUBJID": "ABC2001",
           "value": {
+            "EXTRT": "DRUG Z",
             "EXDOSTXT": "500"
           },
           "validated": true
@@ -89,6 +92,7 @@
           "SEQ": 2,
           "USUBJID": "1234005",
           "value": {
+            "SUTRT": "COFFEE",
             "SUDOSTXT": "3"
           },
           "validated": true

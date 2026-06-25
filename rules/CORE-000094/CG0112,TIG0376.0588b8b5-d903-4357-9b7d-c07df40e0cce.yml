@@ -79,6 +79,9 @@ Description: Raise an error when --DOSTXT value is numeric.
 Executability: Fully Executable
 Outcome:
   Message: --DOSTXT value is numeric.
+  Output Variables:
+    - --TRT
+    - --DOSTXT
 Rule Type: Record Data
 Scope:
   Classes:
