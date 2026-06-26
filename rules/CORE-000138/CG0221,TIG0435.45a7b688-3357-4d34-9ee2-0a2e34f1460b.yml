@@ -104,6 +104,8 @@ Check:
   all:
     - name: --STDY
       operator: non_empty
+    - name: --STDY
+      operator: exists
     - any:
         - name: --STDTC
           operator: is_incomplete_date
