@@ -59,7 +59,7 @@ Core:
 Description: Raise an error when --AGENT is present in a dataset other than the MS dataset.
 Executability: Fully Executable
 Outcome:
-  Message: --AGENT must not be present in a dataset other than the MS dataset.
+  Message: --AGENT must not be present.
   Output Variables:
     - --AGENT
 Rule Type: Record Data
