@@ -4,8 +4,8 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSVAL must be either Y or N when TSPARMCD is ADAPT",
-      "number_errors": 1,
+      "execution_message": "TSVAL must be either 'Y' or 'N' when TSPARMCD is ADAPT.",
+      "number_errors": 4,
       "errors": [
         {
           "row": 2,
@@ -15,7 +15,37 @@
             "TSPARMCD": "ADAPT",
             "TSVAL": "redacted"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "ADAPT",
+            "TSVAL": null
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 3,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "ADAPT",
+            "TSVAL": "y"
+          },
+          "validated": true
+        },
+        {
+          "row": 7,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "ADAPT",
+            "TSVAL": "n"
+          },
+          "validated": true
         }
       ]
     }
