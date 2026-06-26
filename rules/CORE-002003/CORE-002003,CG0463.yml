@@ -1,0 +1,82 @@
+# Variable: --TRT
+# Condition: Custom domain present in study
+# Rule: --TRT present in custom interventions dataset
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Include the Topic variable from the identified general
+                  observation class (e.g., --TESTCD for Findings) in the SDTM
+                Document: IG v3.4
+                Item: Assumption 3b
+                Section: '2.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0463
+              Version: '2'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Include the Topic variable from the identified general
+                  observation class (e.g., --TESTCD for Findings)
+                Document: IG v3.2
+                Section: '2.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0463
+              Version: '2'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Include the topic variable from the identified general
+                  observation class (e.g., --TESTCD for Findings) in the SDTM.
+                Document: IG v3.3
+                Item: 3.b
+                Section: '2.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0463
+              Version: '2'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: $domain_is_custom
+      operator: equal_to
+      value: true
+    - name: define_dataset_class
+      operator: equal_to
+      value: INTERVENTIONS
+    - name: --TRT
+      operator: not_exists
+Core:
+  Id: CORE-002003
+  Status: Published
+  Version: '1'
+Description: Raise an error when --TRT is not present in custom interventions dataset.
+Executability: Fully Executable
+Operations:
+  - id: $domain_is_custom
+    operator: domain_is_custom
+Outcome:
+  Message: --TRT is not present in custom interventions dataset.
+  Output Variables:
+    - domain
+    - --TRT
+    - define_dataset_class
+Rule Type: Dataset Contents Check against Define XML
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset

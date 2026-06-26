@@ -4,7 +4,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMSTTPT is completed and CMSTRTPT is empty",
+      "execution_message": "CMSTTPT is completed, but CMSTRTPT is not completed.",
       "number_errors": 2,
       "errors": [
         {
@@ -12,20 +12,20 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "CMSTRTPT": null,
-            "CMSTTPT": "SCREENING"
+            "CMSTTPT": "SCREENING",
+            "CMSTRTPT": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": 3,
           "USUBJID": "CDISC001",
           "value": {
-            "CMSTRTPT": null,
-            "CMSTTPT": "SCREENING"
+            "CMSTTPT": "SCREENING",
+            "CMSTRTPT": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
