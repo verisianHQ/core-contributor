@@ -58,7 +58,7 @@ Operations:
     attribute_name: alpha_3
     codelist: GENC
 Outcome:
-  Message: Value for COUNTRY is not found in GENC standard.
+  Message: COUNTRY value is not a valid GENC 3-letter country code.
   Output Variables:
     - COUNTRY
 Rule Type: Record Data
