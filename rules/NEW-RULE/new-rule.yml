@@ -1,0 +1,88 @@
+# Variable: TSPARMCD
+# Condition: record exists where TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL'
+# Rule: TSPARMCD = 'TRT' is present
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1112
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1112
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1112
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: $STYPE_INTERVENTIONAL
+      operator: greater_than_or_equal_to
+      value: 1
+    - name: $ts_tsparmcd
+      operator: does_not_contain
+      value: TRT
+      value_is_literal: true
+Core:
+  Id: FDA.SDTMIG.FB1112
+  Status: Draft
+  Version: '1'
+Description: Raise an error when a record exists in TS where TSPARMCD = STYPE and TSVAL = INTERVENTIONAL
+  but TSPARMCD = 'TRT' is not present.
+Executability: Fully Executable
+Operations:
+  - filter:
+      TSPARMCD: STYPE
+      TSVAL: INTERVENTIONAL
+    group:
+      - TSGRPID
+    id: $STYPE_INTERVENTIONAL
+    operator: record_count
+  - domain: TS
+    group:
+      - STUDYID
+    id: $ts_tsparmcd
+    name: TSPARMCD
+    operator: distinct
+Outcome:
+  Message: A record exists in TS where TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL' but TSPARMCD = 'TRT' is not present.
+  Output Variables:
+    - STUDYID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Group
+Grouping_Variables:
+  - STUDYID
