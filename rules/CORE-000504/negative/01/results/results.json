@@ -5,7 +5,7 @@
       "domain": "TS",
       "execution_status": "success",
       "execution_message": "TSVAL when TSPARMCD = DCUTDTC must be a valid date/time.",
-      "number_errors": 4,
+      "number_errors": 6,
       "errors": [
         {
           "row": 1,
@@ -44,6 +44,26 @@
           "value": {
             "TSPARMCD": "DCUTDTC",
             "TSVAL": "2023-00-00"
+          },
+          "validated": true
+        },
+        {
+          "row": 7,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "DCUTDTC",
+            "TSVAL": "2023"
+          },
+          "validated": true
+        },
+        {
+          "row": 8,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "DCUTDTC",
+            "TSVAL": "TEST"
           },
           "validated": true
         }

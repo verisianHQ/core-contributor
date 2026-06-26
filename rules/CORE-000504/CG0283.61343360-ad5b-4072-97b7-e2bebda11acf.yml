@@ -36,8 +36,11 @@ Check:
     - name: TSPARMCD
       operator: equal_to
       value: DCUTDTC
-    - name: TSVAL
-      operator: invalid_date
+    - any:
+      - name: TSVAL
+        operator: is_incomplete_date
+      - name: TSVAL
+        operator: invalid_date
 Core:
   Id: CORE-000504
   Status: Published
