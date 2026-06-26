@@ -1,6 +1,7 @@
 # Variable: --EVAL
 # Condition: Domain in ('QS', 'FT') or (Domain = 'RS' and it's the Clinical Classification Use Case)
 # Rule: --EVAL not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -34,22 +35,29 @@ Check:
       operator: exists
     - name: FTEVAL
       operator: exists
-#    - all:
-#        - name: RSEVAL
-#          operator: exists
-#        - name: RSCAT
-#          operator: "references_correct_codelist"
-#          value: "CCCAT"
+    - all:
+        - name: RSEVAL
+          operator: exists
+        - name: RSCAT
+          operator: is_contained_by
+          value: $cccat_terms
+Operations:
+  - id: $cccat_terms
+    operator: codelist_terms
+    codelists:
+      - CCCAT
+    level: term
+    returntype: value
 Core:
   Id: CORE-000031
   Status: Published
   Version: '1'
-Description: --EVAL must not be used to model QRS data.   This includes the 'QS' and
+Description: Raise an error when --EVAL is present in the QS or FT dataset, or in the RS dataset for the Clinical Classification Use Case.    This includes the 'QS' and
   'FT' domains as well as the 'RS' domain when the record pertains to a Clinical Classification
   Use Case). This rule has been fully executed for the QS and FT domains only.
 Executability: Fully Executable
 Outcome:
-  Message: --EVAL is present.  --EVAL must not be used to model QRS data.
+  Message: --EVAL must not be present.  --EVAL must not be used to model QRS data.
 Rule Type: Record Data
 Scope:
   Classes:

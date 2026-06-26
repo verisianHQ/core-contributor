@@ -3,21 +3,22 @@
     {
       "dataset": "qs.xpt",
       "domain": "QS",
-      "execution_status": "success",
-      "execution_message": "QSEVAL is present.  QSEVAL must not be used to model QRS data.",
+      "execution_status": "execution_error",
+      "execution_message": "rule execution error",
       "number_errors": 1,
       "errors": [
         {
-          "row": null,
-          "SEQ": null,
-          "USUBJID": null,
-          "value": {
-            "QSEVAL": "PERSON A",
-            "FTEVAL": "Not in dataset"
-          },
-          "validated": false
+          "error": "An unknown exception has occurred",
+          "message": "Operation codelist_terms is not implemented"
         }
       ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "QSEVAL": "[PRESENT]"
+      }
     }
   ]
 }

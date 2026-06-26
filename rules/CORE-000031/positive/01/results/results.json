@@ -3,26 +3,41 @@
     {
       "dataset": "ft.xpt",
       "domain": "FT",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "execution_status": "execution_error",
+      "execution_message": "rule execution error",
+      "number_errors": 1,
+      "errors": [
+        {
+          "error": "An unknown exception has occurred",
+          "message": "Operation codelist_terms is not implemented"
+        }
+      ]
     },
     {
       "dataset": "rs.xpt",
       "domain": "RS",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "execution_status": "execution_error",
+      "execution_message": "rule execution error",
+      "number_errors": 1,
+      "errors": [
+        {
+          "error": "An unknown exception has occurred",
+          "message": "Operation codelist_terms is not implemented"
+        }
+      ]
     },
     {
       "dataset": "qs.xpt",
       "domain": "QS",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "execution_status": "execution_error",
+      "execution_message": "rule execution error",
+      "number_errors": 1,
+      "errors": [
+        {
+          "error": "An unknown exception has occurred",
+          "message": "Operation codelist_terms is not implemented"
+        }
+      ]
     }
   ]
 }

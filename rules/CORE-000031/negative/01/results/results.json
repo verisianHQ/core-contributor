@@ -3,21 +3,40 @@
     {
       "dataset": "ft.xpt",
       "domain": "FT",
-      "execution_status": "success",
-      "execution_message": "FTEVAL is present.  FTEVAL must not be used to model QRS data.",
+      "execution_status": "execution_error",
+      "execution_message": "rule execution error",
       "number_errors": 1,
       "errors": [
         {
-          "row": null,
-          "SEQ": null,
-          "USUBJID": null,
-          "value": {
-            "QSEVAL": "Not in dataset",
-            "FTEVAL": "PERSON A"
-          },
-          "validated": false
+          "error": "An unknown exception has occurred",
+          "message": "Operation codelist_terms is not implemented"
         }
       ]
+    },
+    {
+      "dataset": "rs.xpt",
+      "domain": "RS",
+      "execution_status": "execution_error",
+      "execution_message": "rule execution error",
+      "number_errors": 1,
+      "errors": [
+        {
+          "error": "An unknown exception has occurred",
+          "message": "Operation codelist_terms is not implemented"
+        }
+      ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "FTEVAL": "[PRESENT]"
+      }
+    },
+    {
+      "value": {
+        "RSEVAL": "[PRESENT]"
+      }
     }
   ]
 }
