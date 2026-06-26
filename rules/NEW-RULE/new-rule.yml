@@ -1,6 +1,7 @@
 # Variable: TSPARMCD
 # Condition: record exists where TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL'
 # Rule: TSPARMCD = 'INTMODEL' and TSPARMCD = 'INTTYPE' are present
+# verified
 Authorities:
   - Organization: FDA
     Standards:
