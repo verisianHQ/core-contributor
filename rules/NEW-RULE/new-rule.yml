@@ -1,0 +1,68 @@
+# Variable: ARMNRS
+# Condition: ARMNRS ^= ("SCREEN FAILURE", "NOT ASSIGNED", "ASSIGNED, NOT TREATED")
+# Rule: Value is present for subject in EX
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The correct STF file-tags must be used for all standardized datasets and corresponding define.xml files in Module 4, sections 4.2.3.1, 4.2.3.2, 4.2.3.4, and in Module 5, sections 5.3.1.1, 5.3.1.2, 5.3.3.1, 5.3.3.2, 5.3.3.3, 5.3.3.4, 5.3.4, 5.3.5.1, 5.3.5.2.
+                Document: FDA
+                Section: TRC1735
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1735
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The correct STF file-tags must be used for all standardized datasets and corresponding define.xml files in Module 4, sections 4.2.3.1, 4.2.3.2, 4.2.3.4, and in Module 5, sections 5.3.1.1, 5.3.1.2, 5.3.3.1, 5.3.3.2, 5.3.3.3, 5.3.3.4, 5.3.4, 5.3.5.1, 5.3.5.2.
+                Document: FDA
+                Section: TRC1735
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1735
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The correct STF file-tags must be used for all standardized datasets and corresponding define.xml files in Module 4, sections 4.2.3.1, 4.2.3.2, 4.2.3.4, and in Module 5, sections 5.3.1.1, 5.3.1.2, 5.3.3.1, 5.3.3.2, 5.3.3.3, 5.3.3.4, 5.3.4, 5.3.5.1, 5.3.5.2.
+                Document: FDA
+                Section: TRC1735
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: TRC1735
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+Check:
+  all:
+    - name: file_tag_name
+      operator: not_contains_all
+      value: 
+        - "data-tabulation-dataset-sdtm"
+Core:
+  Id: CORE-002039
+  Status: Published
+  Version: '1'
+Description: Raise an error when the STF file tag 'data-tabulation-dataset-sdtm' is not present.
+Executability: Partially Executable - Possible Overreporting
+Outcome:
+  Message: File tag 'data-tabulation-dataset-sdtm' is not present in the STF file tag.
+  Output Variables:
+    - study_id
+Rule Type: STF Metadata Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Study
