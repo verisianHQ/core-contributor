@@ -70,8 +70,8 @@ Check:
             - name: --SEQ
               operator: not_exists
 Core:
-  Id: CDISC.SDTMIG.CG0321
-  Status: Draft
+  Id: CORE-002040
+  Status: Published
   Version: '1'
 Description: Raise an error when a custom domain is present but the domain is not based on
   one of the observation classes.
