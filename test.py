@@ -317,17 +317,23 @@ class TestRunner:
         if not excel_files:
             return None, {"error": "Excel data missing", "exception": f"No Excel files in {data_path}"}
 
-        case_define_path = data_path_obj / "define.xml"
-        rule_define_path = rule_path / "define.xml"
+        for file in ["define.xml", "stf.xml"]:
+            case_define_path = data_path_obj / file
+            rule_define_path = rule_path / file
 
-        if case_define_path.exists():
-            define_xml_path = str(case_define_path)
-        elif rule_define_path.exists():
-            define_xml_path = str(rule_define_path)
-        else:
-            define_xml_path = None
+            if case_define_path.exists():
+                file_path = str(case_define_path)
+            elif rule_define_path.exists():
+                file_path = str(rule_define_path)
+            else:
+                file_path = None
 
-        self.data_service._update_define_xml_path(define_xml_path)
+            if file == "define.xml":
+                define_xml_path = file_path
+                self.data_service._update_define_xml_path(define_xml_path)
+            elif file == "stf.xml":
+                stf_file_path = file_path
+                self.data_service._update_stf_file_path(stf_file_path)
 
         try:
             import yaml
