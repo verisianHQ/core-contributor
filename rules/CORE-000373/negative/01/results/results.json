@@ -4,8 +4,8 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSPARMCD = 'RANDOM' but TSVAL is not null and not equal to 'N' or 'Y'.",
-      "number_errors": 1,
+      "execution_message": "TSVAL is populated when TSPARMCD = 'RANDOM' but TSVAL is not equal to 'N' or 'Y'.",
+      "number_errors": 2,
       "errors": [
         {
           "row": 3,
@@ -16,16 +16,18 @@
             "TSVAL": "U"
           },
           "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "RANDOM",
+            "TSVAL": "NA"
+          },
+          "validated": true
         }
       ]
-    }
-  ],
-  "unmatched_validation": [
-    {
-      "value": {
-        "TSPARMCD": "RANDOM",
-        "TSVAL": "NA"
-      }
     }
   ]
 }

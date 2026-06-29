@@ -53,11 +53,11 @@ Core:
   Id: CORE-000373
   Status: Published
   Version: '1'
-Description: Raise an error when TSPARMCD = 'RANDOM' but TSVAL is not null 
-  and is not equal to 'N' or 'Y'
+Description: Raise an error when TSVAL is populated when TSPARMCD = 'RANDOM'
+  but TSVAL is not equal to 'N' or 'Y'.
 Executability: Fully Executable
 Outcome:
-  Message: TSPARMCD = 'RANDOM' but TSVAL is not null and not 
+  Message: TSVAL is populated when TSPARMCD = 'RANDOM' but TSVAL is not 
     equal to 'N' or 'Y'.
   Output Variables:
     - TSPARMCD
