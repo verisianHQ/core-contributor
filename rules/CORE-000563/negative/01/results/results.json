@@ -4,7 +4,7 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSVAL must be either 'Y' or 'N' when TSPARMCD is ADAPT.",
+      "execution_message": "TSVAL when TSPARMCD = 'ADAPT' is not equal to 'Y' or 'N'.",
       "number_errors": 4,
       "errors": [
         {

@@ -36,20 +36,21 @@ Check:
     - name: TSPARMCD
       operator: equal_to
       value: ADAPT
+      value_is_literal: true
     - name: TSVAL
       operator: is_not_contained_by
       value:
-        - Y
-        - N
+        - 'Y'
+        - 'N'
 
 Core:
   Id: CORE-000563
   Status: Published
   Version: '1'
-Description: Raise an error when TSVAL is neither 'Y' nor 'N' when TSPARMCD is ADAPT.
+Description: Raise an error when TSPARMCD = 'ADAPT' but TSVAL value is not equal to 'Y' or 'N'.
 Executability: Fully Executable
 Outcome:
-  Message: TSVAL must be either 'Y' or 'N' when TSPARMCD is ADAPT.
+  Message: TSVAL when TSPARMCD = 'ADAPT' is not equal to 'Y' or 'N'.
   Output Variables:
     - TSPARMCD
     - TSVAL
