@@ -49,7 +49,7 @@ Check:
         value: ETHNIC
       - name: define_variable_name
         operator: equal_to
-        value: ETHNICC
+        value: CETHNIC
     - name: define_variable_codelist_coded_values
       operator: not_equal_to
       value: 'HISPANIC OR LATINO,NOT HISPANIC OR LATINO'

@@ -22,21 +22,23 @@
     {
       "dataset": "suppdm.xpt",
       "domain": "SUPPDM",
-      "execution_status": "success",
-      "execution_message": "Ethnicity is collected but 'HISPANIC OR LATINO' or 'NOT HISPANIC OR LATINO' are not offered options as per Define-XML document.",
+      "execution_status": "execution_error",
+      "execution_message": "rule execution error",
       "number_errors": 1,
       "errors": [
         {
-          "row": 11,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "define_variable_name": "ETHNICC",
-            "define_variable_codelist_coded_values": "HISPANIC OR LATINO"
-          },
-          "validated": true
+          "error": "An unknown exception has occurred",
+          "message": "DM"
         }
       ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "define_variable_name": "CETHNIC",
+        "define_variable_codelist_coded_values": "HISPANIC OR LATINO"
+      }
     }
   ]
 }

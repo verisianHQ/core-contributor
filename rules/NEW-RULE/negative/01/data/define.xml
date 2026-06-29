@@ -2634,7 +2634,7 @@
         <ItemRef ItemOID="IT.SUPPDM.QVAL" Mandatory="Yes" OrderNumber="8" Role="Result Qualifier"/>
         <ItemRef ItemOID="IT.SUPPDM.QORIG" Mandatory="Yes" OrderNumber="9" Role="Record Qualifier"/>
         <ItemRef ItemOID="IT.SUPPDM.QEVAL" Mandatory="No" OrderNumber="10" Role="Record Qualifier"/>
-        <ItemRef ItemOID="IT.SUPPDM.ETHNICC" Mandatory="No" OrderNumber="11" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.SUPPDM.CETHNIC" Mandatory="No" OrderNumber="11" Role="Result Qualifier"/>
         <Alias Context="DomainDescription" Name="Demographics"/>
         <def:Class Name="RELATIONSHIP"/>
         <def:leaf ID="LF.SUPPDM" xlink:href="suppdm.xpt">
@@ -3507,7 +3507,7 @@
         </Description>
         <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.SUPPDM.ETHNICC" Name="ETHNICC" DataType="text" Length="12" SASFieldName="ETHNICC">
+      <ItemDef OID="IT.SUPPDM.CETHNIC" Name="CETHNIC" DataType="text" Length="12" SASFieldName="CETHNIC">
         <Description>
           <TranslatedText xml:lang="en">Ethnicity</TranslatedText>
         </Description>
