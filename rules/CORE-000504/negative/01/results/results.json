@@ -5,7 +5,7 @@
       "domain": "TS",
       "execution_status": "success",
       "execution_message": "TSVAL when TSPARMCD = 'DCUTDTC' is not a valid ISO 8601 date.",
-      "number_errors": 4,
+      "number_errors": 5,
       "errors": [
         {
           "row": 1,
@@ -44,6 +44,16 @@
           "value": {
             "TSPARMCD": "DCUTDTC",
             "TSVAL": "2023-00-00"
+          },
+          "validated": true
+        },
+        {
+          "row": 7,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "DCUTDTC",
+            "TSVAL": "DATE"
           },
           "validated": true
         }
