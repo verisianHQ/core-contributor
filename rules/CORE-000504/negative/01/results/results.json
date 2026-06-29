@@ -4,8 +4,8 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSVAL when TSPARMCD = DCUTDTC must be a valid date/time.",
-      "number_errors": 6,
+      "execution_message": "TSVAL when TSPARMCD = 'DCUTDTC' is not a valid ISO 8601 date.",
+      "number_errors": 5,
       "errors": [
         {
           "row": 1,
@@ -48,16 +48,6 @@
           "validated": true
         },
         {
-          "row": 7,
-          "SEQ": 1,
-          "USUBJID": "None",
-          "value": {
-            "TSPARMCD": "DCUTDTC",
-            "TSVAL": "2023"
-          },
-          "validated": true
-        },
-        {
           "row": 8,
           "SEQ": 1,
           "USUBJID": "None",
@@ -65,7 +55,7 @@
             "TSPARMCD": "DCUTDTC",
             "TSVAL": "TEST"
           },
-          "validated": true
+          "validated": false
         }
       ]
     }

@@ -36,19 +36,17 @@ Check:
     - name: TSPARMCD
       operator: equal_to
       value: DCUTDTC
-    - any:
-      - name: TSVAL
-        operator: is_incomplete_date
-      - name: TSVAL
-        operator: invalid_date
+      value_is_literal: true
+    - name: TSVAL
+      operator: invalid_date
 Core:
   Id: CORE-000504
   Status: Published
   Version: '1'
-Description: Raise an error when TSPARMCD = DCUTDTC and TSVAL has an invalid date/time.
+Description: Raise an error when TSPARMCD = 'DCUTDTC' but TSVAL is not a valid ISO 8601 date.
 Executability: Fully Executable
 Outcome:
-  Message: TSVAL when TSPARMCD = DCUTDTC must be a valid date/time.
+  Message: TSVAL when TSPARMCD = 'DCUTDTC' is not a valid ISO 8601 date.
   Output Variables:
     - TSPARMCD
     - TSVAL
