@@ -1,6 +1,7 @@
 # Variable: --ENDY
 # Condition: --ENDTC or DM.RFSTDTC does not contain complete values in their date portion
 # Rule: --ENDY = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -114,20 +115,20 @@ Core:
   Id: CORE-000139
   Status: Published
   Version: '1'
-Description: Trigger error if --ENDTC or DM.RFSTDTC does not contain complete
-  values in their date portion, and --ENDY is not null.
+Description: Raise an error when --ENDTC or RFSTDTC in the DM dataset does
+  not contain complete date portion value and --ENDY is populated.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: DM
 Outcome:
-  Message: --ENDY is not null when either --ENDTC or DM.RFSTDTC do not contain
-    complete values in their date portion
+  Message: --ENDY is populated but either --ENDTC or RFSTDTC in the DM dataset
+    do not contain complete values in the date portion.
   Output Variables:
+    - --ENDY
     - --ENDTC
     - RFSTDTC
-    - --ENDY
 Rule Type: Record Data
 Scope:
   Classes:
