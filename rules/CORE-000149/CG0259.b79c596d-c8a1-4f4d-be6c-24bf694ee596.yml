@@ -48,8 +48,11 @@ Check:
   all:
     - name: TSVAL
       operator: empty
-    - name: TSVALNF
-      operator: empty
+    - any:
+      - name: TSVALNF
+        operator: not_exists
+      - name: TSVALNF
+        operator: empty
 Core:
   Id: CORE-000149
   Status: Published
