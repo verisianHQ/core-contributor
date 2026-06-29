@@ -54,11 +54,11 @@ Core:
   Status: Published
   Version: '1'
 Description: Raise an error when TSPARMCD = 'ADDON' but TSVAL value does
-  not equal 'N' or 'Y' when not null
+  not equal 'N' or 'Y'.
 Executability: Fully Executable
 Outcome:
   Message: TSPARMCD = 'ADDON' but TSVAL does not equal 'N' or
-    'Y' and is not null in the TS dataset.
+    'Y'.
   Output Variables:
     - TSPARMCD
     - TSVAL

@@ -4,8 +4,8 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSPARMCD = 'ADDON' but TSVAL does not equal 'N' or 'Y' and is not null in the TS dataset.",
-      "number_errors": 1,
+      "execution_message": "TSPARMCD = 'ADDON' but TSVAL does not equal 'N' or 'Y'.",
+      "number_errors": 2,
       "errors": [
         {
           "row": 3,
@@ -16,16 +16,18 @@
             "TSVAL": "U"
           },
           "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "ADDON",
+            "TSVAL": "NA"
+          },
+          "validated": true
         }
       ]
-    }
-  ],
-  "unmatched_validation": [
-    {
-      "value": {
-        "TSPARMCD": "ADDON",
-        "TSVAL": "NA"
-      }
     }
   ]
 }
