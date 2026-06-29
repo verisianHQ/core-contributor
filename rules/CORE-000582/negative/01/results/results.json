@@ -14,9 +14,9 @@
           "value": {
             "TSGRPID": "EFFICACY",
             "TSPARMCD": "OBJPRIM",
-            "TSVAL*": "Not in dataset"
+            "TSVAL": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 13,
@@ -25,9 +25,9 @@
           "value": {
             "TSGRPID": "EFFICACY",
             "TSPARMCD": "OUTMSPRI",
-            "TSVAL*": "Not in dataset"
+            "TSVAL": "To assess the dose-dependent improvement in subject depression. Improved scores on the Patient Health Questionnaire(PHQ-9) and the Hamilton Depression Rating Scale(HAMD 17) will indicate improvements,"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 14,
@@ -36,9 +36,9 @@
           "value": {
             "TSGRPID": "EFFICACY",
             "TSPARMCD": "OUTMSPRI",
-            "TSVAL*": "Not in dataset"
+            "TSVAL": "To assess the dose-dependent improvements in satisfaction with subjects' lives as a whole. Improved scores on the Satisfaction With Life Survery (SWLS) will indicate improvements."
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 15,
@@ -47,49 +47,11 @@
           "value": {
             "TSGRPID": "EFFICACY",
             "TSPARMCD": "OUTMSPRI",
-            "TSVAL*": "Not in dataset"
+            "TSVAL": "To assess the dose-dependent improvements in subject memory and learning. Improved scores on the Auditory Verbal Learning Test (AVLT-REY) will indicate improvements."
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unmatched_validation": [
-    {
-      "value": {
-        "TSGRPID": "EFFICACY",
-        "TSPARMCD": "OBJPRIM",
-        "TSVAL": null,
-        "TSVAL1": "To document the efficacy profile of Zanomaline.",
-        "TSVAL2": null
-      }
-    },
-    {
-      "value": {
-        "TSGRPID": "EFFICACY",
-        "TSPARMCD": "OUTMSPRI",
-        "TSVAL": "To assess the dose-dependent improvement in subject depression. Improved scores on the Patient Health Questionnaire(PHQ-9) and the Hamilton Depression Rating Scale(HAMD 17) will indicate improvements,",
-        "TSVAL1": null,
-        "TSVAL2": "and blah blah blah"
-      }
-    },
-    {
-      "value": {
-        "TSGRPID": "EFFICACY",
-        "TSPARMCD": "OUTMSPRI",
-        "TSVAL": "To assess the dose-dependent improvements in satisfaction with subjects' lives as a whole. Improved scores on the Satisfaction With Life Survery (SWLS) will indicate improvements.",
-        "TSVAL1": null,
-        "TSVAL2": "blablabli"
-      }
-    },
-    {
-      "value": {
-        "TSGRPID": "EFFICACY",
-        "TSPARMCD": "OUTMSPRI",
-        "TSVAL": "To assess the dose-dependent improvements in subject memory and learning. Improved scores on the Auditory Verbal Learning Test (AVLT-REY) will indicate improvements.",
-        "TSVAL1": null,
-        "TSVAL2": "blablabla"
-      }
     }
   ]
 }
