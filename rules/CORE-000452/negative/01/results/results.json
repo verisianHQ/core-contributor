@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "Missing value for AGEU, when AGE or AGETXT is provided",
+      "execution_message": "Missing value for AGEU, when AGE or AGETXT is provided.",
       "number_errors": 2,
       "errors": [
         {
@@ -16,7 +16,7 @@
             "AGEU": null,
             "AGETXT": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -27,21 +27,9 @@
             "AGEU": null,
             "AGETXT": "31-34"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "AGEU"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "AGEU"
     }
   ]
 }

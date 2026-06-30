@@ -1,6 +1,7 @@
 # Variable: AGEU
 # Condition: AGE ^= null or AGETXT ^= null
 # Rule: AGEU ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -47,7 +48,7 @@ Core:
 Description: Raise an error when AGEU is empty, but AGE or AGETXT is not empty.
 Executability: Fully Executable
 Outcome:
-  Message: Missing value for AGEU, when AGE or AGETXT is provided
+  Message: Missing value for AGEU, when AGE or AGETXT is provided.
   Output Variables:
     - AGE
     - AGEU
