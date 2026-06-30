@@ -1,4 +1,158 @@
 {
-  "error": "No result - either the rule or test case data unit-test-coreid-CG0114-negative.xlsx is broken",
-  "exception": "cannot unpack non-iterable NoneType object"
+  "datasets": [
+    {
+      "dataset": "ag.xpt",
+      "domain": "AG",
+      "execution_status": "success",
+      "execution_message": "AGDOSU is not populated but AGDOSE, AGDOSTOT, or AGDOSTXT is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "XYZ-001-001",
+          "value": {
+            "AGTRT": "GRASS",
+            "AGDOSE": 250.0,
+            "AGDOSTXT": null,
+            "AGDOSTOT": "Not in dataset",
+            "AGDOSU": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMDOSU is not populated but CMDOSE, CMDOSTOT, or CMDOSTXT is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "ABC-0002",
+          "value": {
+            "CMTRT": "ASPIRIN",
+            "CMDOSE": 100.0,
+            "CMDOSTXT": null,
+            "CMDOSTOT": 200.0,
+            "CMDOSU": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "success",
+      "execution_message": "ECDOSU is not populated but ECDOSE, ECDOSTOT, or ECDOSTXT is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "ABC2001",
+          "value": {
+            "ECTRT": "BOTTLE A",
+            "ECDOSE": 2.0,
+            "ECDOSTXT": null,
+            "ECDOSTOT": "Not in dataset",
+            "ECDOSU": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "success",
+      "execution_message": "EXDOSU is not populated but EXDOSE, EXDOSTOT, or EXDOSTXT is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "ABC1001",
+          "value": {
+            "EXTRT": "DRUG X",
+            "EXDOSE": 1000.0,
+            "EXDOSTXT": null,
+            "EXDOSTOT": "Not in dataset",
+            "EXDOSU": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ml.xpt",
+      "domain": "ML",
+      "execution_status": "success",
+      "execution_message": "MLDOSU is not populated but MLDOSE, MLDOSTOT, or MLDOSTXT is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "XYZ-001-001",
+          "value": {
+            "MLTRT": "SNACK",
+            "MLDOSE": null,
+            "MLDOSTXT": "2",
+            "MLDOSTOT": "Not in dataset",
+            "MLDOSU": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "pr.xpt",
+      "domain": "PR",
+      "execution_status": "success",
+      "execution_message": "PRDOSU is not populated but PRDOSE, PRDOSTOT, or PRDOSTXT is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "ABC123-1001",
+          "value": {
+            "PRTRT": "External beam radiation therapy",
+            "PRDOSE": 70.0,
+            "PRDOSTXT": null,
+            "PRDOSTOT": "Not in dataset",
+            "PRDOSU": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "su.xpt",
+      "domain": "SU",
+      "execution_status": "success",
+      "execution_message": "SUDOSU is not populated but SUDOSE, SUDOSTOT, or SUDOSTXT is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "1234005",
+          "value": {
+            "SUTRT": "COFFEE",
+            "SUDOSE": null,
+            "SUDOSTXT": null,
+            "SUDOSTOT": 3.0,
+            "SUDOSU": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
 }
