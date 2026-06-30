@@ -1,6 +1,7 @@
 # Variable: TSVAL
 # Condition: TSPARMCD = 'TDIGRP' and record exists where TSPARMCD = 'HLTSUBJI' and TSVAL = 'N'
 # Rule: TSVAL ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -62,8 +63,9 @@ Core:
   Id: CORE-000562
   Status: Published
   Version: '1'
-Description: 'Raise an error when a record exists in TS where TSPARMCD =
-  HLTSUBJI and TSVAL = N but TSVAL for TSPARMCD = TDIGRP is empty.'
+Description: Raise an error when a record exists where TSPARMCD =
+  'HLTSUBJI' and TSVAL = 'N' but where TSPARMCD = 'TDIGRP' TSVAL is
+  not populated
 Executability: Fully Executable
 Operations:
   - filter:
@@ -74,13 +76,12 @@ Operations:
     id: $HLTSUBJI_N
     operator: record_count
 Outcome:
-  Message: 'A record exists in TS where TSPARMCD = HLTSUBJI and TSVAL = N but
-    TSVAL for TSPARMCD = TDIGRP is empty.'
+  Message: A record exists where TSPARMCD = 'HLTSUBJI' and TSVAL = 'N' but
+    where TSPARMCD = 'TDIGRP' TSVAL is not populated.
   Output Variables:
     - TSGRPID
     - TSPARMCD
     - TSVAL
-    - $HLTSUBJI_N
 Rule Type: Record Data
 Scope:
   Classes:

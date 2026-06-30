@@ -4,94 +4,21 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "A record exists in TS where TSPARMCD = HLTSUBJI and TSVAL = N but TSVAL for TSPARMCD = TDIGRP is empty.",
+      "execution_message": "A record exists where TSPARMCD = 'HLTSUBJI' and TSVAL = 'N' but where TSPARMCD = 'TDIGRP' TSVAL is not populated.",
       "number_errors": 1,
       "errors": [
         {
-          "row": 45,
+          "row": 2,
           "SEQ": 1,
           "USUBJID": "None",
           "value": {
             "TSGRPID": null,
             "TSPARMCD": "TDIGRP",
-            "TSVAL": null,
-            "$HLTSUBJI_N": 1
+            "TSVAL": null
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ts.xpt",
-      "Row": 20,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 20,
-      "Variable": "TSPARM"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 20,
-      "Variable": "TSVAL"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 20,
-      "Variable": "TSVALNF"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 20,
-      "Variable": "TSVALCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 20,
-      "Variable": "TSVCDREF"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 20,
-      "Variable": "TSVCDVER"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 49,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 49,
-      "Variable": "TSPARM"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 49,
-      "Variable": "TSVAL"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 49,
-      "Variable": "TSVALNF"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 49,
-      "Variable": "TSVALCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 49,
-      "Variable": "TSVCDREF"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 49,
-      "Variable": "TSVCDVER"
     }
   ]
 }
