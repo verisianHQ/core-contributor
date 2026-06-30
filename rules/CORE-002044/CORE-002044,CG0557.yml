@@ -64,8 +64,8 @@ Check:
       operator: is_not_contained_by
       value: $PKUWKG
 Core:
-  Id: CDISC.SDTMIG.CG0557
-  Status: Draft
+  Id: CORE-002044
+  Status: Published
   Version: '1'
 Description: Raise an error when a parameter is normalized by weight but PPORRESU does not contain a valid weight-normalized unit (value not in PKUWG or PKUWKG codelists).
 Executability: Fully Executable
