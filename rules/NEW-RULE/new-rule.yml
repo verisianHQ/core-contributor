@@ -1,0 +1,155 @@
+# Variable: --TESTCD, --STRESU
+# Condition: 
+# Rule: --STRESU is unique per --TESTCD
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: Standardized units should be consistent for a given drug or metabolite across pharmacokinetic datasets within a submission. 
+                Document: FDA
+                Section: FDAB070
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB7001
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: Standardized units should be consistent for a given drug or metabolite across pharmacokinetic datasets within a submission. 
+                Document: FDA
+                Section: FDAB070
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB7001
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: Standardized units should be consistent for a given drug or metabolite across pharmacokinetic datasets within a submission. 
+                Document: FDA
+                Section: FDAB070
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB7001
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: Standardized units should be consistent for a given drug or metabolite across pharmacokinetic datasets within a submission. 
+                Document: FDA
+                Section: FDAB070
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB7001
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: Standardized units should be consistent for a given drug or metabolite across pharmacokinetic datasets within a submission. 
+                Document: FDA
+                Section: FDAB070
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB7001
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: Standardized units should be consistent for a given drug or metabolite across pharmacokinetic datasets within a submission. 
+                Document: FDA
+                Section: FDAB070
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB7001
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: Standardized units should be consistent for a given drug or metabolite across pharmacokinetic datasets within a submission. 
+                Document: FDA
+                Section: FDAB070
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB7001
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: Standardized units should be consistent for a given drug or metabolite across pharmacokinetic datasets within a submission. 
+                Document: FDA
+                Section: FDAB070
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB7001
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: 'SENDIG-AR'
+        References:
+          - Citations:
+              - Cited Guidance: Standardized units should be consistent for a given drug or metabolite across pharmacokinetic datasets within a submission. 
+                Document: FDA
+                Section: FDAB070
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB7001
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: 'SENDIG-GENETOX'
+        References:
+          - Citations:
+              - Cited Guidance: Standardized units should be consistent for a given drug or metabolite across pharmacokinetic datasets within a submission. 
+                Document: FDA
+                Section: FDAB070
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB7001
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  any:
+    - name: --STRESU
+      operator: not_exists
+    - name: --STRESU
+      operator: is_inconsistent_across_dataset
+      value: --TESTCD
+Core:
+  Id: FDA.SDTMIG.FB7001
+  Status: Draft
+  Version: '1'
+Description: Raise an error when --STRESU is not consistent for records with identical --TESTCD values.
+Executability: Fully Executable
+Outcome:
+  Message: --STRESU is not consistent per --TESTCD.
+  Output Variables:
+    - --TESTCD
+    - --STRESU
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - PC
+      - PP
+Sensitivity: Record
