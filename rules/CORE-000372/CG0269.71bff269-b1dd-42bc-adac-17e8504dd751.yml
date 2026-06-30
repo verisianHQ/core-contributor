@@ -1,6 +1,7 @@
 # Variable: TSVAL
 # Condition: TSPARMCD = 'ADDON' and TSVAL ^= null
 # Rule: TSVAL in ('N','Y')
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -46,18 +47,21 @@ Check:
     - name: TSVAL
       operator: is_not_contained_by
       value:
-        - N
-        - Y
+        - 'N'
+        - 'Y'
 Core:
   Id: CORE-000372
   Status: Published
   Version: '1'
-Description: 'For TS.TSPARMCD = "ADDON" records, TS.TSVAL value must equal "N"
-  or "Y" when not missing'
+Description: Raise an error when TSPARMCD = 'ADDON' but TSVAL value does
+  not equal 'N' or 'Y'.
 Executability: Fully Executable
 Outcome:
-  Message: 'For TS.TSPARMCD = "ADDON" records, TS.TSVAL value must equal "N" or
-    "Y" when not missing'
+  Message: TSPARMCD = 'ADDON' but TSVAL does not equal 'N' or
+    'Y'.
+  Output Variables:
+    - TSPARMCD
+    - TSVAL
 Rule Type: Record Data
 Scope:
   Classes:
