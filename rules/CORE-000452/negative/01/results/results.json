@@ -4,8 +4,8 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "Missing value for AGEU, when AGE or AGETXT is provided.",
-      "number_errors": 2,
+      "execution_message": "AGEU must be populated when AGE or AGETXT is populated.",
+      "number_errors": 3,
       "errors": [
         {
           "row": 1,
@@ -13,8 +13,8 @@
           "USUBJID": "CDISC-TEST-002",
           "value": {
             "AGE": 34.0,
-            "AGEU": null,
-            "AGETXT": null
+            "AGETXT": null,
+            "AGEU": null
           },
           "validated": true
         },
@@ -24,8 +24,19 @@
           "USUBJID": "CDISC-TEST-004",
           "value": {
             "AGE": null,
-            "AGEU": null,
-            "AGETXT": "31-34"
+            "AGETXT": "31-34",
+            "AGEU": null
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-006",
+          "value": {
+            "AGE": 34.0,
+            "AGETXT": "31-34",
+            "AGEU": null
           },
           "validated": true
         }
