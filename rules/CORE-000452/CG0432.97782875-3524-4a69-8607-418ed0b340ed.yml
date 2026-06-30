@@ -45,7 +45,7 @@ Core:
   Id: CORE-000452
   Status: Published
   Version: '1'
-Description: Raise an error when AGEU is empty, but AGE or AGETXT is not empty.
+Description: Raise an error when AGE or AGETXT is populated, but AGEU is not populated.
 Executability: Fully Executable
 Outcome:
   Message: Missing value for AGEU, when AGE or AGETXT is provided.
