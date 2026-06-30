@@ -1,3 +1,25 @@
 {
-  "datasets": []
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "A new term has been added to an extensible code list that is a duplicate, a synonym or a subset of an existing submission value.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "$extended_values": [
+              "ABDETAIL",
+              "INTP"
+            ]
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
 }

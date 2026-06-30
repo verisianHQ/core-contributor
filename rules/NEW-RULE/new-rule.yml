@@ -126,10 +126,16 @@ Authorities:
             Version: '1.5'
         Version: '1.0'
 Check:
-  all:
-    - operator: ''
-      name: ''
-      value: ''
+  any:
+    - name: $extended_values
+      operator: is_contained_by
+      value: $standard_values
+    - name: $extended_values
+      operator: is_substring_of
+      value: $standard_synonyms
+    - name: $extended_values
+      operator: is_substring_of
+      value: $standard_values
 Core:
   Id: FDA.SDTMIG.FB1702
   Status: Draft
@@ -137,20 +143,26 @@ Core:
 Description: Raise an error when a new term has been added to an extensible code list that is a duplicate, a synonym or a subset of an existing submission value.
 Executability: Fully Executable
 Operations:
-  - id: $ct_synonyms
+  - id: $standard_values
+    operator: get_codelist_attributes
+    ct_attribute: Term Signification
+    ct_conditions:
+      - Standard Type: 'sdtm'
+  - id: $standard_synonyms
     operator: get_codelist_attributes
     ct_attribute: Synonyms
     ct_conditions:
-      - Extensible: 'Yes'
-  - id: $ct_terms
+      - Standard Type: 'sdtm'
+  - id: $extended_values
     operator: get_codelist_attributes
-    ct_attribute: Term
+    ct_attribute: Term Signification
     ct_conditions:
+      - Standard Type: null
       - Extensible: 'Yes'
 Outcome:
   Message: A new term has been added to an extensible code list that is a duplicate, a synonym or a subset of an existing submission value.
   Output Variables:
-    - ''
+    - $extended_values
 Rule Type: Record Data
 Scope:
   Classes:
