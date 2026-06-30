@@ -331,6 +331,11 @@ class TestRunner:
             if file == "define.xml":
                 define_xml_path = file_path
                 self.data_service._update_define_xml_path(define_xml_path)
+                if define_xml_path:
+                    from engine.cdisc_rules_engine.services.define_xml.define_xml_reader_factory import DefineXMLReaderFactory
+                    define_xml_reader = DefineXMLReaderFactory.from_filename(define_xml_path)
+                    extensible_terms = define_xml_reader.get_extensible_codelist_mappings()
+                    self.data_service._add_extensible_ct_terms(extensible_terms)
             elif file == "stf.xml":
                 stf_file_path = file_path
                 self.data_service._update_stf_file_path(stf_file_path)
