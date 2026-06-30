@@ -4,7 +4,7 @@
       "dataset": "ta.xpt",
       "domain": "TA",
       "execution_status": "success",
-      "execution_message": "TAETORD is not an integer",
+      "execution_message": "TAETORD must be an integer.",
       "number_errors": 4,
       "errors": [
         {
@@ -14,7 +14,7 @@
           "value": {
             "TAETORD": 1.1
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -23,7 +23,7 @@
           "value": {
             "TAETORD": 1.2
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -32,7 +32,7 @@
           "value": {
             "TAETORD": 1.1
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -41,7 +41,7 @@
           "value": {
             "TAETORD": 1.2
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
