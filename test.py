@@ -332,7 +332,10 @@ class TestRunner:
                 define_xml_path = file_path
                 self.data_service._update_define_xml_path(define_xml_path)
                 if define_xml_path:
-                    from engine.cdisc_rules_engine.services.define_xml.define_xml_reader_factory import DefineXMLReaderFactory
+                    from engine.cdisc_rules_engine.services.define_xml.define_xml_reader_factory import (
+                        DefineXMLReaderFactory,
+                    )  # noqa
+
                     define_xml_reader = DefineXMLReaderFactory.from_filename(define_xml_path)
                     extensible_terms = define_xml_reader.get_extensible_codelist_mappings()
                     self.data_service._add_extensible_ct_terms(extensible_terms)
