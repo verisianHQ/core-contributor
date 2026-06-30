@@ -64,8 +64,8 @@ Check:
       operator: is_not_contained_by
       value: $PKUDUG
 Core:
-  Id: CDISC.SDTMIG.CG0559
-  Status: Draft
+  Id: CORE-002046
+  Status: Published
   Version: '1'
 Description: Raise an error when a parameter is normalized by dose amount but PPSTRESU does not contain a valid dose amount-normalized unit (value not in PKUDMG or PKUDUG codelists).
 Executability: Fully Executable
