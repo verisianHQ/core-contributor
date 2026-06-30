@@ -48,7 +48,7 @@ Core:
 Description: Raise an error when AGE or AGETXT is populated, but AGEU is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: Missing value for AGEU, when AGE or AGETXT is provided.
+  Message: AGEU must be populated when AGE or AGETXT is populated.
   Output Variables:
     - AGE
     - AGEU
