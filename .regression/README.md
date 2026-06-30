@@ -1,4 +1,4 @@
-Run isolated regression snapshot/compare without writing to `rules/*/results`:
+Run isolated regression snapshot/compare without writing to `rules/*/results`:  
     - Create baseline outputs in a separate folder:
        - `python regression_results.py snapshot --baseline-dir .regression/baseline --clean`
     - Snapshot writes only `results.json` files (no `results.txt`) plus `baseline_run_summary.json` in baseline directory.
