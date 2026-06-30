@@ -61,8 +61,8 @@ Check:
       operator: is_not_contained_by
       value: $PKUNIT
 Core:
-  Id: CDISC.SDTMIG.CG0558
-  Status: Draft
+  Id: CORE-002045
+  Status: Published
   Version: '1'
 Description: Raise an error when a parameter is non-normalized but PPSTRESU does not contain a valid non-normalized unit (value not in PKUNIT codelist).
 Executability: Fully Executable
