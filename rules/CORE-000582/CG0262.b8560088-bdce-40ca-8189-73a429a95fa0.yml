@@ -49,7 +49,7 @@ Authorities:
         Version: '3.3'
 Check:
   all:
-    - name: --VAL
+    - name: TSVAL
       operator: inconsistent_enumerated_columns
 Core:
   Id: CORE-000582
