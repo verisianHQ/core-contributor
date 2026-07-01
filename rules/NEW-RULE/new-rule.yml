@@ -1,0 +1,165 @@
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1702
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1702
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1702
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1702
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1702
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1702
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1702
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1702
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1702
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: SENDIG-AR
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1702
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  all:
+    - name: library_variable_ccode_values
+      operator: non_empty
+    # - name: library_variable_ccode
+    #   operator: is_contained_by
+    #   value: $library_variable_ccode
+    - name: variable_value
+      operator: non_empty
+    - name: variable_value
+      operator: is_not_substring_of
+      value: library_variable_ccode_values
+Core:
+  Id: FDA.SDTMIG.FB1702
+  Status: Draft
+  Version: '1'
+Description: Raise an error when a new term has been added to an extensible code list that is a duplicate, a synonym or a subset of an existing submission value.
+Executability: Fully Executable
+Operations:
+  - id: $non_extensible_codelist_codes
+    name: $non_extensible_codelist_codes
+    operator: get_codelist_attributes
+    ct_attribute: Codelist Code
+    ct_conditions:
+      - Standard Type: 'sdtm'
+Outcome:
+  Message: A new term has been added to an extensible code list that is a duplicate, a synonym or a subset of an existing submission value.
+  Output Variables:
+    - variable_name
+    - variable_value
+    - library_variable_ccode
+    - $non_extensible_codelist_codes
+Rule Type: Value Check against Library Metadata
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

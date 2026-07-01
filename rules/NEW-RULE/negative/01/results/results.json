@@ -1,0 +1,57 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "A new term has been added to an extensible code list that is a duplicate, a synonym or a subset of an existing submission value.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 109,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AESEV",
+            "variable_value": "MAJOR",
+            "library_variable_ccode": "C66769",
+            "$non_extensible_codelist_codes": "Query error: column \"none\" does not exist\nLINE 4:          WHERE None = 'sdtm'\n                       ^\nHINT:  Perhaps you meant to reference the column \"ig_codelists.name\".\n"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "AEBODSYS": "Gastrointestinal orders",
+        "AETERM": "UPSET STOMACH"
+      }
+    },
+    {
+      "value": {
+        "AEBODSYS": "Connective tissue disorders",
+        "AETERM": "BACK PAIN"
+      }
+    },
+    {
+      "value": {
+        "AEBODSYS": "Allergic conditions",
+        "AETERM": "BACK PAIN"
+      }
+    },
+    {
+      "value": {
+        "AEBODSYS": 10017947,
+        "AETERM": "DIARRHOEA"
+      }
+    },
+    {
+      "value": {
+        "AEBODSYS": "NVD",
+        "AETERM": "HEADACHE"
+      }
+    }
+  ]
+}
