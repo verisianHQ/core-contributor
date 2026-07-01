@@ -149,7 +149,7 @@ Operations:
       - Extensible: 'No'
       - Standard Type: 'sdtm'
 Outcome:
-  Message: A new term has been added to a non-extensible code list.
+  Message: A new term has been added to a non-extensible code list, or a term that is not in the codelist has been used.
   Output Variables:
     - variable_name
     - variable_value
