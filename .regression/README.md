@@ -1,21 +1,21 @@
-Run isolated regression snapshot/compare without writing to `rules/*/results`:
-    - Create baseline outputs in a separate folder:
-       - `python regression_results.py snapshot --baseline-dir .regression/baseline --clean`
-    - Snapshot writes only `results.json` files (no `results.txt`) plus `baseline_run_summary.json` in baseline directory.
-    - Compare baseline to a new isolated current run:
-       - `python regression_results.py compare --baseline-dir .regression/baseline --comparison-dir .regression/comparison --clean`
-      - Current run output is generated in a temporary folder and automatically removed.
-      - Regression summary files written to `--comparison-dir` are:
-        - `regression_diff_summary.md` — all rules
-        - `regression_diff_summary_verified.md` — verified rules only (rules with `# verified` at the top of their YAML)
-    - Compare baseline against existing real outputs already in `rules/*/results`:
-       - `python regression_results.py compare --baseline-dir .regression/baseline --current-source rules --summary-file .regression/comparison/regression_diff_summary.md`
-    - Pass external dictionary paths using a config file:
-       - `python regression_results.py snapshot --dictionary-paths-file dictionary_paths`
-       - `python regression_results.py compare --dictionary-paths-file dictionary_paths`
-    - `dictionary_paths` file can be either JSON or key/value text. Supported keys:
-       - `whodrug`, `meddra`, `unii`, `medrt`, `loinc`, `snomed`, `ct`
-    - Diff behavior:
-       - `dictionary_versions` is ignored
-       - `validated` is included
-       - Row-only differences are excluded from the main changed list and shown under `Trivial Diffs`
+Run isolated regression snapshot/compare without writing to `rules/*/results`:  
+    - Create baseline outputs in a separate folder:  
+       - `python regression_results.py snapshot --baseline-dir .regression/baseline --clean`  
+    - Snapshot writes only `results.json` files (no `results.txt`) plus `baseline_run_summary.json` in baseline directory.  
+    - Compare baseline to a new isolated current run:  
+       - `python regression_results.py compare --baseline-dir .regression/baseline --comparison-dir .regression/comparison --clean`  
+      - Current run output is generated in a temporary folder and automatically removed.  
+      - Regression summary files written to `--comparison-dir` are:  
+        - `regression_diff_summary.md` — all rules  
+        - `regression_diff_summary_verified.md` — verified rules only (rules with `# verified` at the top of their YAML)  
+    - Compare baseline against existing real outputs already in `rules/*/results`:  
+       - `python regression_results.py compare --baseline-dir .regression/baseline --current-source rules --summary-file .regression/comparison/regression_diff_summary.md`  
+    - Pass external dictionary paths using a config file:  
+       - `python regression_results.py snapshot --dictionary-paths-file dictionary_paths`  
+       - `python regression_results.py compare --dictionary-paths-file dictionary_paths`  
+    - `dictionary_paths` file can be either JSON or key/value text. Supported keys:  
+       - `whodrug`, `meddra`, `unii`, `medrt`, `loinc`, `snomed`, `ct`  
+    - Diff behavior:  
+       - `dictionary_versions` is ignored  
+       - `validated` is included  
+       - Row-only differences are excluded from the main changed list and shown under `Trivial Diffs`  
