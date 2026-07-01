@@ -1,0 +1,78 @@
+# Variable: RACE, CRACE
+# Condition: RACE ^= null or SUPPDM.CRACE ^= null
+# Rule: Race is collected and at least 'AMERICAN INDIAN OR ALASKA NATIVE', 'ASIAN', 'BLACK OR AFRICAN AMERICAN', 'NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER', and 'WHITE' are offered options.
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'When collecting racial demographic data from clinical trial participants, the following five minimum choices should be offered: American Indian or Alaska Native, Asian, Black or African American, Native Hawaiian or Other Pacific Islander, and White.'
+                Document: FDA
+                Section: FDAB059
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5901
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'When collecting racial demographic data from clinical trial participants, the following five minimum choices should be offered: American Indian or Alaska Native, Asian, Black or African American, Native Hawaiian or Other Pacific Islander, and White.'
+                Document: FDA
+                Section: FDAB059
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5901
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'When collecting racial demographic data from clinical trial participants, the following five minimum choices should be offered: American Indian or Alaska Native, Asian, Black or African American, Native Hawaiian or Other Pacific Islander, and White.'
+                Document: FDA
+                Section: FDAB059
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5901
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - any:
+      - name: define_variable_name
+        operator: equal_to
+        value: RACE
+      - name: define_variable_name
+        operator: equal_to
+        value: CRACE
+    - name: define_variable_codelist_coded_values
+      operator: not_equal_to
+      value: 'AMERICAN INDIAN OR ALASKA NATIVE,ASIAN,BLACK OR AFRICAN AMERICAN,NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER,WHITE'
+      value_is_literal: true
+Core:
+  Id: FDA.SDTMIG.FB5901
+  Status: Draft
+  Version: '1'
+Description: Raise an error when race is collected but at least 'AMERICAN INDIAN OR ALASKA NATIVE', 'ASIAN', 'BLACK OR AFRICAN AMERICAN', 'NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER', and 'WHITE' are not offered options.
+Executability: Fully Executable
+Outcome:
+  Message: RACE is collected but AMERICAN INDIAN OR ALASKA NATIVE, ASIAN, BLACK OR AFRICAN AMERICAN, 'NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER or WHITE  are not offered options as per Define-XML document.
+  Output Variables:
+    - define_variable_name
+    - define_variable_codelist_coded_values
+Rule Type: Define Item Metadata Check
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+      - SUPPDM
+Sensitivity: Record
