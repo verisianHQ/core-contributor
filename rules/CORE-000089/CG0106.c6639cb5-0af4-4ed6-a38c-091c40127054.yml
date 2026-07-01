@@ -52,11 +52,12 @@ Core:
   Id: CORE-000089
   Status: Published
   Version: '1'
-Description: Raise an error when TRTV is empty and VAMT is not empty.
+Description: Raise an error when --TRTV is not populated but --VAMT is populated.
 Executability: Fully Executable
 Outcome:
-  Message: VAMT must be populated when TRTV is empty.
+  Message: --VAMT must not be populated when --TRTV is not populated.
   Output Variables:
+    - --TRT
     - --TRTV
     - --VAMT
 Rule Type: Record Data
