@@ -1,0 +1,57 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "SDTM IG Version or SDTM Version do not match a value in the CDISC Controlled Terminology or do not exist in the FDA Data Standards Catalog.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "SDTIGVER",
+            "TSVAL": "1.1",
+            "TSVALCD": "C160924"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "SDTIGVER",
+            "TSVAL": "9.9",
+            "TSVALCD": "C160924"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "SDTMVER",
+            "TSVAL": "3.1.1",
+            "TSVALCD": "C160923"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "SDTMVER",
+            "TSVAL": "9.9",
+            "TSVALCD": "C160923"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
