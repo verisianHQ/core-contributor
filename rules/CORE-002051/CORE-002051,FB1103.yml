@@ -60,8 +60,8 @@ Check:
               operator: is_not_contained_by
               value: $fda_guides
 Core:
-  Id: FDA.SDTMIG.FB1103
-  Status: Draft
+  Id: CORE-002051
+  Status: Published
   Version: '1'
 Description: Raise an error when value for Trial Summary Parameter 'CDISC Therapeutic Area User Guide (TSPARMCD = 'CTAUG') in the TS dataset is not an FDA supported Therapeutic Area User Guide or is an FDA supported Therapeutic Area User Guide but value does not match the CDISC Controlled Terminology CTAUGRS codelist (C160925).
 Executability: Fully Executable
