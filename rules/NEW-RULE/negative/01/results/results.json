@@ -4,16 +4,16 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "Ethnicity is collected but 'HISPANIC OR LATINO' or 'NOT HISPANIC OR LATINO' are not offered options as per Define-XML document.",
+      "execution_message": "RACE is collected but AMERICAN INDIAN OR ALASKA NATIVE, ASIAN, BLACK OR AFRICAN AMERICAN, 'NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER or WHITE  are not offered options as per Define-XML document.",
       "number_errors": 1,
       "errors": [
         {
-          "row": 19,
+          "row": 18,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "define_variable_name": "ETHNIC",
-            "define_variable_codelist_coded_values": "HISPANIC OR LATINO"
+            "define_variable_name": "RACE",
+            "define_variable_codelist_coded_values": "ASIAN,BLACK OR AFRICAN AMERICAN,NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER,WHITE"
           },
           "validated": true
         }
@@ -22,23 +22,21 @@
     {
       "dataset": "suppdm.xpt",
       "domain": "SUPPDM",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
+      "execution_status": "success",
+      "execution_message": "RACE is collected but AMERICAN INDIAN OR ALASKA NATIVE, ASIAN, BLACK OR AFRICAN AMERICAN, 'NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER or WHITE  are not offered options as per Define-XML document.",
       "number_errors": 1,
       "errors": [
         {
-          "error": "An unknown exception has occurred",
-          "message": "DM"
+          "row": 12,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_variable_name": "CRACE",
+            "define_variable_codelist_coded_values": "ASIAN,BLACK OR AFRICAN AMERICAN,NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER,WHITE"
+          },
+          "validated": true
         }
       ]
-    }
-  ],
-  "unmatched_validation": [
-    {
-      "value": {
-        "define_variable_name": "CETHNIC",
-        "define_variable_codelist_coded_values": "HISPANIC OR LATINO"
-      }
     }
   ]
 }

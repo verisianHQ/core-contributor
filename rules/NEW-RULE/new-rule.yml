@@ -1,6 +1,6 @@
-# Variable: ETHNIC, CETHNIC
-# Condition: ETHNIC ^= null or SUPPDM.CETHNIC ^= null
-# Rule: ETHNIC or ETHNICC codelist in the Define-XML document contains at least: 'HISPANIC OR LATINO' or 'NOT HISPANIC OR LATINO'.
+# Variable: RACE, CRACE
+# Condition: RACE ^= null or SUPPDM.CRACE ^= null
+# Rule: Race is collected and at least 'AMERICAN INDIAN OR ALASKA NATIVE', 'ASIAN', 'BLACK OR AFRICAN AMERICAN', 'NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER', and 'WHITE' are offered options.
 # verified
 Authorities:
   - Organization: FDA
@@ -46,26 +46,22 @@ Check:
     - any:
       - name: define_variable_name
         operator: equal_to
-        value: ETHNIC
+        value: RACE
       - name: define_variable_name
         operator: equal_to
-        value: CETHNIC
+        value: CRACE
     - name: define_variable_codelist_coded_values
       operator: not_equal_to
-      value: 'HISPANIC OR LATINO,NOT HISPANIC OR LATINO'
-      value_is_literal: true
-    - name: define_variable_codelist_coded_values
-      operator: not_equal_to
-      value: 'NOT HISPANIC OR LATINO,HISPANIC OR LATINO'
+      value: 'AMERICAN INDIAN OR ALASKA NATIVE,ASIAN,BLACK OR AFRICAN AMERICAN,NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER,WHITE'
       value_is_literal: true
 Core:
-  Id: FDA.SDTMIG.FB5701
+  Id: FDA.SDTMIG.FB5901
   Status: Draft
   Version: '1'
-Description: Raise an error when ethnicity is collected but 'HISPANIC OR LATINO' or 'NOT HISPANIC OR LATINO' are not offered options as per Define-XML document.
+Description: Raise an error when race is collected but at least 'AMERICAN INDIAN OR ALASKA NATIVE', 'ASIAN', 'BLACK OR AFRICAN AMERICAN', 'NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER', and 'WHITE' are not offered options.
 Executability: Fully Executable
 Outcome:
-  Message: Ethnicity is collected but 'HISPANIC OR LATINO' or 'NOT HISPANIC OR LATINO' are not offered options as per Define-XML document.
+  Message: RACE is collected but AMERICAN INDIAN OR ALASKA NATIVE, ASIAN, BLACK OR AFRICAN AMERICAN, 'NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER or WHITE  are not offered options as per Define-XML document.
   Output Variables:
     - define_variable_name
     - define_variable_codelist_coded_values

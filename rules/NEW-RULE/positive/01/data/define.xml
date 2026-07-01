@@ -440,7 +440,7 @@
         </ItemRef>
       </def:ValueListDef>
       <def:ValueListDef OID="VL.RACE">
-        <ItemRef ItemOID="IT.DM.RACE.1" OrderNumber="1" Mandatory="Yes">
+        <ItemRef ItemOID="IT.DM.RACE" OrderNumber="1" Mandatory="Yes">
           <def:WhereClauseRef WhereClauseOID="WC.RACE"/>
         </ItemRef>
         <ItemRef ItemOID="IT.DM.RACE.2" OrderNumber="2" Mandatory="Yes">
@@ -2634,7 +2634,8 @@
         <ItemRef ItemOID="IT.SUPPDM.QVAL" Mandatory="Yes" OrderNumber="8" Role="Result Qualifier"/>
         <ItemRef ItemOID="IT.SUPPDM.QORIG" Mandatory="Yes" OrderNumber="9" Role="Record Qualifier"/>
         <ItemRef ItemOID="IT.SUPPDM.QEVAL" Mandatory="No" OrderNumber="10" Role="Record Qualifier"/>
-        <ItemRef ItemOID="IT.SUPPDM.ETHNICC" Mandatory="No" OrderNumber="11" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.SUPPDM.CETHNIC" Mandatory="No" OrderNumber="11" Role="Result Qualifier"/>
+        <ItemRef ItemOID="IT.SUPPDM.CRACE" Mandatory="No" OrderNumber="12" Role="Result Qualifier"/>
         <Alias Context="DomainDescription" Name="Demographics"/>
         <def:Class Name="RELATIONSHIP"/>
         <def:leaf ID="LF.SUPPDM" xlink:href="suppdm.xpt">
@@ -3384,7 +3385,12 @@
         <Description>
           <TranslatedText xml:lang="en">Race</TranslatedText>
         </Description>
-        <def:ValueListRef ValueListOID="VL.RACE"/>
+        <CodeListRef CodeListOID="CL.RACE"/>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="5" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
       </ItemDef>
       <ItemDef OID="IT.DM.ETHNIC" Name="ETHNIC" DataType="text" Length="22" SASFieldName="ETHNIC">
         <Description>
@@ -3507,11 +3513,22 @@
         </Description>
         <def:Origin Type="Assigned" Source="Sponsor"/>
       </ItemDef>
-      <ItemDef OID="IT.SUPPDM.ETHNICC" Name="ETHNICC" DataType="text" Length="12" SASFieldName="ETHNICC">
+      <ItemDef OID="IT.SUPPDM.CETHNIC" Name="CETHNIC" DataType="text" Length="12" SASFieldName="CETHNIC">
         <Description>
           <TranslatedText xml:lang="en">Ethnicity</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.ETHNIC"/>
+        <def:Origin Type="Collected" Source="Investigator">
+          <def:DocumentRef leafID="LF.acrf">
+            <def:PDFPageRef PageRefs="5" Type="PhysicalRef"/>
+          </def:DocumentRef>
+        </def:Origin>
+      </ItemDef>
+      <ItemDef OID="IT.SUPPDM.CRACE" Name="CRACE" DataType="text" Length="12" SASFieldName="CRACE">
+        <Description>
+          <TranslatedText xml:lang="en">Race</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.RACE"/>
         <def:Origin Type="Collected" Source="Investigator">
           <def:DocumentRef leafID="LF.acrf">
             <def:PDFPageRef PageRefs="5" Type="PhysicalRef"/>
@@ -6705,23 +6722,12 @@
           </def:DocumentRef>
         </def:Origin>
       </ItemDef>
-      <ItemDef OID="IT.DM.RACE.1" Name="RACE" DataType="text" Length="41" SASFieldName="RACE">
+      <ItemDef OID="IT.DM.RACE" Name="RACE" DataType="text" Length="41" SASFieldName="RACE">
         <Description>
           <TranslatedText xml:lang="en">Race</TranslatedText>
         </Description>
         <CodeListRef CodeListOID="CL.RACE"/>
         <def:Origin Type="Collected" Source="Investigator">
-          <def:DocumentRef leafID="LF.acrf">
-            <def:PDFPageRef PageRefs="5" Type="PhysicalRef"/>
-          </def:DocumentRef>
-        </def:Origin>
-      </ItemDef>
-      <ItemDef OID="IT.DM.RACE.2" Name="RACE" DataType="text" Length="8" SASFieldName="RACE">
-        <Description>
-          <TranslatedText xml:lang="en">Race</TranslatedText>
-        </Description>
-        <CodeListRef CodeListOID="CL.RACEMULT"/>
-        <def:Origin Type="Assigned" Source="Sponsor">
           <def:DocumentRef leafID="LF.acrf">
             <def:PDFPageRef PageRefs="5" Type="PhysicalRef"/>
           </def:DocumentRef>
@@ -8383,12 +8389,6 @@
             <TranslatedText xml:lang="en">Hispanic or Latino</TranslatedText>
           </Decode>
           <Alias Context="nci:ExtCodeID" Name="C17459"/>
-        </CodeListItem>
-        <CodeListItem CodedValue="NOT HISPANIC OR LATINO" OrderNumber="2">
-          <Decode>
-            <TranslatedText xml:lang="en">Not Hispanic or Latino</TranslatedText>
-          </Decode>
-          <Alias Context="nci:ExtCodeID" Name="C41222"/>
         </CodeListItem>
         <Alias Context="nci:ExtCodeID" Name="C66790"/>
       </CodeList>
