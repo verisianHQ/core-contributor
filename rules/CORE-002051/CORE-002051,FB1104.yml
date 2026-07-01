@@ -51,7 +51,7 @@ Check:
       operator: is_not_contained_by
       value: $codelist_guides
 Core:
-  Id: CORE-002050
+  Id: CORE-002051
   Status: Published
   Version: '1'
 Description: Raise an error when value for Trial Summary Parameter 'FDA Tech Spec' (TSPARMCD = 'FDATCHSP') does not match a value as listed on the study data standards resources website for technical specification documents (CDISC Controlled Terminology FDATSRS codelist (C160926)).
