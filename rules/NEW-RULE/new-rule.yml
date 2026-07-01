@@ -66,7 +66,7 @@ Core:
   Id: FDA.SDTMIG.FB1103
   Status: Draft
   Version: '1'
-Description: Raise an error if TSVAL is not an FDA supported Therapeutic Area and matches value in the CDISC Controlled Terminology CTAUGRS codelist (C160925) or TSVAL is an FDA supported Therapeutic Area and does not match a value in the CDISC Controlled Terminology CTAUGRS codelist (C160925).
+Description: Raise an error when value for Trial Summary Parameter 'CDISC Therapeutic Area User Guide (TSPARMCD = 'CTAUG') in the TS dataset is not an FDA supported Therapeutic Area User Guide or is an FDA supported Therapeutic Area User Guide but value does not match the CDISC Controlled Terminology CTAUGRS codelist (C160925).
 Executability: Fully Executable
 Operations:
   - id: $fda_guides
