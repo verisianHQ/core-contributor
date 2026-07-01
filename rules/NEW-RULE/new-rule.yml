@@ -79,7 +79,7 @@ Operations:
     ct_conditions:
       - Codelist Code: C160925
 Outcome:
-  Message: TSVAL is not an FDA supported Therapeutic Area or does not match a value in the CDISC Controlled Terminology CTAUGRS codelist (C160925).
+  Message: TSVAL is not an FDA supported TAUG, or TSVAL is an FDA supported TAUG but does not match a value in the CDISC Controlled Terminology CTAUGRS codelist (C160925).
   Output Variables:
     - TSPARMCD
     - TSVAL
