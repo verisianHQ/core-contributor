@@ -59,9 +59,6 @@ Check:
             - name: TSVAL
               operator: is_not_contained_by
               value: $fda_guides
-            - name: TSVAL
-              operator: is_contained_by
-              value: $codelist_guides
 Core:
   Id: FDA.SDTMIG.FB1103
   Status: Draft

@@ -4,7 +4,7 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSVAL is not an FDA supported Therapeutic Area or does not match a value in the CDISC Controlled Terminology CTAUGRS codelist (C160925).",
+      "execution_message": "TSVAL is not an FDA supported TAUG, or TSVAL is an FDA supported TAUG but does not match a value in the CDISC Controlled Terminology CTAUGRS codelist (C160925).",
       "number_errors": 2,
       "errors": [
         {
