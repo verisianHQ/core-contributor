@@ -10,7 +10,7 @@ Authorities:
                 Section: FDAB017
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB1702
+              Id: FB1701
               Version: '1'
             Version: '1.5'
         Version: '3.2'
@@ -22,7 +22,7 @@ Authorities:
                 Section: FDAB017
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB1702
+              Id: FB1701
               Version: '1'
             Version: '1.5'
         Version: '3.3'
@@ -34,7 +34,7 @@ Authorities:
                 Section: FDAB017
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB1702
+              Id: FB1701
               Version: '1'
             Version: '1.5'
         Version: '3.4'
@@ -46,7 +46,7 @@ Authorities:
                 Section: FDAB017
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB1702
+              Id: FB1701
               Version: '1'
             Version: '1.5'
         Version: '3.0'
@@ -58,7 +58,7 @@ Authorities:
                 Section: FDAB017
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB1702
+              Id: FB1701
               Version: '1'
             Version: '1.5'
         Version: '3.1'
@@ -70,7 +70,7 @@ Authorities:
                 Section: FDAB017
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB1702
+              Id: FB1701
               Version: '1'
             Version: '1.5'
         Version: '3.1.1'
@@ -82,7 +82,7 @@ Authorities:
                 Section: FDAB017
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB1702
+              Id: FB1701
               Version: '1'
             Version: '1.5'
         Version: '1.0'
@@ -94,7 +94,7 @@ Authorities:
                 Section: FDAB017
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB1702
+              Id: FB1701
               Version: '1'
             Version: '1.5'
         Version: '1.1'
@@ -106,7 +106,7 @@ Authorities:
                 Section: FDAB017
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB1702
+              Id: FB1701
               Version: '1'
             Version: '1.5'
         Version: '1.2'
@@ -118,7 +118,7 @@ Authorities:
                 Section: FDAB017
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB1702
+              Id: FB1701
               Version: '1'
             Version: '1.5'
         Version: '1.0'
@@ -126,19 +126,19 @@ Check:
   all:
     - name: library_variable_ccode_values
       operator: non_empty
-    # - name: library_variable_ccode
-    #   operator: is_contained_by
-    #   value: $library_variable_ccode
+    - name: library_variable_ccode
+      operator: is_contained_by
+      value: $non_extensible_codelist_codes
     - name: variable_value
       operator: non_empty
     - name: variable_value
       operator: is_not_substring_of
       value: library_variable_ccode_values
 Core:
-  Id: FDA.SDTMIG.FB1702
+  Id: FDA.SDTMIG.FB1701
   Status: Draft
   Version: '1'
-Description: Raise an error when a new term has been added to an extensible code list that is a duplicate, a synonym or a subset of an existing submission value.
+Description: Raise an error when CDISC published Controlled Terminology indicates codelist is non-extensible and a new term not in the codelist is used.
 Executability: Fully Executable
 Operations:
   - id: $non_extensible_codelist_codes
@@ -146,14 +146,14 @@ Operations:
     operator: get_codelist_attributes
     ct_attribute: Codelist Code
     ct_conditions:
+      - Extensible: 'No'
       - Standard Type: 'sdtm'
 Outcome:
-  Message: A new term has been added to an extensible code list that is a duplicate, a synonym or a subset of an existing submission value.
+  Message: A new term has been added to a non-extensible code list.
   Output Variables:
     - variable_name
     - variable_value
     - library_variable_ccode
-    - $non_extensible_codelist_codes
 Rule Type: Value Check against Library Metadata
 Scope:
   Classes:
