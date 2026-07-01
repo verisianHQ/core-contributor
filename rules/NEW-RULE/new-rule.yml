@@ -1,6 +1,6 @@
 # Variable: TSVAL
 # Condition: TSPARMCD = 'CTAUG'
-# Rule: TSVAL is not an FDA supported Therapeutic Area and matches value in the CDISC Controlled Terminology CTAUGRS codelist (C160925)
+# Rule: TSVAL is an FDA supported Therapeutic Area User Guide and matches a value in the CDISC Controlled Terminology CTAUGRS codelist (C160925).
 #    or TSVAL is an FDA supported Therapeutic Area and does not match a value in the CDISC Controlled Terminology CTAUGRS codelist (C160925).
 # verified
 Authorities:
