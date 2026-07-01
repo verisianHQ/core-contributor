@@ -13,7 +13,9 @@ Authorities:
               Version: '1'
             Version: '2.0'
             Citations:
-              - Cited Guidance: '--TRTV[A carrier or inert medium in which a medicinally active agent is administered.]|--VAMT[Amount of the prepared product (treatment plus vehicle) administered.]'
+              - Cited Guidance: '"--TRTV[A carrier or inert medium in which a medicinally
+                  active agent is administered.]| --VAMT[Amount of the prepared product
+                  (treatment plus vehicle) administered.]"'
                 Document: Model v2.0
                 Item: --TRTV|--VAMT
                 Section: Interventions
@@ -26,7 +28,12 @@ Authorities:
               Version: '1'
             Version: '2.0'
             Citations:
-              - Cited Guidance: '[--TRTV:Vehicle for administration of treatment, such as a liquid in which the treatment drug is dissolved. Example: SALINE.][--VAMT: Amount of the prepared product (treatment + vehicle) administered or given. Note: should not be diluent amount alone.][--VAMTU: Units for the prepared product (treatment + vehicle). Examples: mL, mg.]'
+              - Cited Guidance: '[--TRTV:Vehicle for administration of treatment,
+                  such as a liquid in which the treatment drug is dissolved. Example:
+                  SALINE.][--VAMT: Amount of the prepared product (treatment + vehicle)
+                  administered or given. Note: should not be diluent amount alone.][--VAMTU:
+                  Units for the prepared product (treatment + vehicle). Examples:
+                  mL, mg.]'
                 Document: Model v1.4
                 Section: 2.2.1
       - Name: SDTMIG
@@ -38,7 +45,12 @@ Authorities:
               Version: '1'
             Version: '2.0'
             Citations:
-              - Cited Guidance: '[--TRTV:Vehicle for administration of treatment, such as a liquid in which the treatment drug is dissolved. Example: SALINE.][--VAMT: Amount of the prepared product (treatment + vehicle) administered or given. Note: should not be diluent amount alone.][--VAMTU: Units for the prepared product (treatment + vehicle). Examples: mL, mg.]'
+              - Cited Guidance: '[--TRTV:Vehicle for administration of treatment,
+                  such as a liquid in which the treatment drug is dissolved. Example:
+                  SALINE.][--VAMT: Amount of the prepared product (treatment + vehicle)
+                  administered or given. Note: should not be diluent amount alone.][--VAMTU:
+                  Units for the prepared product (treatment + vehicle). Examples:
+                  mL, mg.]'
                 Document: Model v1.7
                 Section: 2.2.1
 Check:
@@ -51,10 +63,10 @@ Core:
   Id: CORE-000089
   Status: Published
   Version: '1'
-Description: Raise an error when --TRTV is empty and --VAMT is not empty.
+Description: Raise an error when --TRTV is empty, --VAMT is not empty
 Executability: Fully Executable
 Outcome:
-  Message: VAMT is populated, when --TRTV is NULL.
+  Message: Value for --VAMT is populated, when --TRTV is NULL.
   Output Variables:
     - --TRTV
     - --VAMT
