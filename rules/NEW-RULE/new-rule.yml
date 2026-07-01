@@ -54,7 +54,7 @@ Core:
   Id: FDA.SDTMIG.FB1104
   Status: Draft
   Version: '1'
-Description: Raise an error if TSVAL does not match a value as listed on the study data standards resources website for technical specification documents (CDISC Controlled Terminology FDATSRS codelist (C160926)).
+Description: Raise an error when value for Trial Summary Parameter 'FDA Tech Spec' (TSPARMCD = 'FDATCHSP') does not match a value as listed on the study data standards resources website for technical specification documents (CDISC Controlled Terminology FDATSRS codelist (C160926)).
 Executability: Fully Executable
 Operations:
   - id: $codelist_guides
