@@ -4,8 +4,8 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "For TS.TSPARMCD = \"RANDOM\" records, TS.TSVAL value must equal \"N\" or \"Y\" when not missing",
-      "number_errors": 1,
+      "execution_message": "TSVAL is populated when TSPARMCD = 'RANDOM' but TSVAL is not equal to 'N' or 'Y'.",
+      "number_errors": 2,
       "errors": [
         {
           "row": 3,
@@ -15,111 +15,19 @@
             "TSPARMCD": "RANDOM",
             "TSVAL": "U"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "RANDOM",
+            "TSVAL": "NA"
+          },
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ts.xpt",
-      "Row": 7,
-      "Variable": "STUDYID"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 7,
-      "Variable": "DOMAIN"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 7,
-      "Variable": "TSSEQ"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 7,
-      "Variable": "TSGRPID"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 7,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 7,
-      "Variable": "TSPARM"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 7,
-      "Variable": "TSVAL"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 7,
-      "Variable": "TSVALCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 7,
-      "Variable": "TSVCDREF"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 7,
-      "Variable": "TSVCDVER"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 9,
-      "Variable": "STUDYID"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 9,
-      "Variable": "DOMAIN"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 9,
-      "Variable": "TSSEQ"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 9,
-      "Variable": "TSGRPID"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 9,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 9,
-      "Variable": "TSPARM"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 9,
-      "Variable": "TSVAL"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 9,
-      "Variable": "TSVALCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 9,
-      "Variable": "TSVCDREF"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 9,
-      "Variable": "TSVCDVER"
     }
   ]
 }
