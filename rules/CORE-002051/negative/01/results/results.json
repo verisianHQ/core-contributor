@@ -4,7 +4,7 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSVAL is not an FDA supported TAUG, or TSVAL is an FDA supported TAUG but does not match a value in the CDISC Controlled Terminology CTAUGRS codelist (C160925).",
+      "execution_message": "TSVAL does not match a value as listed on the study data standards resources website for technical specification documents (CDISC Controlled Terminology FDATSRS codelist (C160926)).",
       "number_errors": 2,
       "errors": [
         {
@@ -12,8 +12,8 @@
           "SEQ": 1,
           "USUBJID": "None",
           "value": {
-            "TSPARMCD": "CTAUG",
-            "TSVAL": "Influenza Therapeutic Area User Guide v1.0"
+            "TSPARMCD": "FDATCHSP",
+            "TSVAL": "Study Data Technical Conformance Guide v4.2.0"
           },
           "validated": true
         },
@@ -22,8 +22,8 @@
           "SEQ": 2,
           "USUBJID": "None",
           "value": {
-            "TSPARMCD": "CTAUG",
-            "TSVAL": "Dyslipidemia Therapeutic Area User Guide v1"
+            "TSPARMCD": "FDATCHSP",
+            "TSVAL": "Fake Guide Doc"
           },
           "validated": true
         }
