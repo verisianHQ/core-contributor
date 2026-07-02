@@ -1,0 +1,61 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "RFENDTC is populated, but RFSTDTC is not populated.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "RFENDTC": "2013-01-14",
+            "RFSTDTC": null
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "CDISC004",
+          "value": {
+            "RFENDTC": "2014-03-18",
+            "RFSTDTC": null
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "CDISC006",
+          "value": {
+            "RFENDTC": "2013-04-30",
+            "RFSTDTC": null
+          },
+          "validated": true
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "RFENDTC": "2013-04-28",
+            "RFSTDTC": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=, dataset=EC",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}
