@@ -145,6 +145,12 @@ Description: Raise an error when not all trial design model datasets as listed i
 Executability: Fully Executable
 Outcome:
   Message: At least one Trial Design Dataset is missing.
+  Output Variables:
+    - TA
+    - TE
+    - TI
+    - TS
+    - TV
 Rule Type: Domain Presence Check
 Scope:
   Classes:
