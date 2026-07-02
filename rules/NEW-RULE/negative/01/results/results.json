@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "FDA Conditional Desired TSPARMCD for QTc evaluations is missing in the TS dataset.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "CTAUG",
+            "TSVAL": "QT Studies"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
