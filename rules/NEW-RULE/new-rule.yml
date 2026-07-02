@@ -1,0 +1,88 @@
+# Variable: TSPARMCD
+# Condition: record exists where TSPARMCD = 'HLTSUBJI' and TSVAL = 'N'
+# Rule: TSPARMCD = 'TDIGRP' is present
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1111
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1111
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1111
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: $HLTSUBJI_N
+      operator: greater_than_or_equal_to
+      value: 1
+    - name: $ts_tsparmcd
+      operator: does_not_contain
+      value: TDIGRP
+      value_is_literal: true
+Core:
+  Id: FDA.SDTMIG.FB1111
+  Status: Draft
+  Version: '1'
+Description: Raise an error when a record exists in TS where TSPARMCD = 'HLTSUBJI' and TSVAL = 'N'
+  but TSPARMCD = 'TDIGRP' is not present.
+Executability: Fully Executable
+Operations:
+  - filter:
+      TSPARMCD: HLTSUBJI
+      TSVAL: N
+    group:
+      - TSGRPID
+    id: $HLTSUBJI_N
+    operator: record_count
+  - domain: TS
+    group:
+      - STUDYID
+    id: $ts_tsparmcd
+    name: TSPARMCD
+    operator: distinct
+Outcome:
+  Message: A record exists in TS where TSPARMCD = 'HLTSUBJI' and TSVAL = 'N' but TSPARMCD = 'TDIGRP' is not present.
+  Output Variables:
+    - STUDYID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Group
+Grouping_Variables:
+  - STUDYID
