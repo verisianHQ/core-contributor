@@ -1,6 +1,6 @@
 # Variable: TSVALNF
 # Condition: TSPARMCD = 'HLTSUBJI' and TSVAL = 'Y'
-# Rule: TSVALNF = 'NA'
+# Rule: TSVALNF = 'NA' when TSPARMCD = ’INDIC’
 # verified
 Authorities:
   - Organization: FDA
