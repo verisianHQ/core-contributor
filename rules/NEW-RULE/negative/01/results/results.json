@@ -4,7 +4,7 @@
       "dataset": "ds.xpt",
       "domain": "DS",
       "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to domain for rule id=FDA.SDTMIG.FB3403, dataset=DS",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=FDA.SDTMIG.FB3403, dataset=DS",
       "number_errors": 0,
       "errors": []
     },
@@ -12,7 +12,7 @@
       "dataset": "ex.xpt",
       "domain": "EX",
       "execution_status": "success",
-      "execution_message": "EXENDTC falls after the last DSSTDTC.",
+      "execution_message": "EXENDTC falls after the latest DSSTDTC.",
       "number_errors": 2,
       "errors": [
         {
