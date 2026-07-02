@@ -1,3 +1,7 @@
+# Variable: TAETORD
+# Condition: 
+# Rule: TAETORD is an integer
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -44,7 +48,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: TAETORD value should be an integer.
-                Document: IG v3.0
+                Document: SENDIG v3.0
                 Section: 7.3.1
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -55,8 +59,8 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: TAETORD value should be an integer.
-                Document: IG v3.1
+              - Cited Guidance: This value should be an integer.
+                Document: SENDIG v3.1
                 Section: 7.3.1
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -67,8 +71,8 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: TAETORD value should be an integer.
-                Document: IG v3.1.1
+              - Cited Guidance: This value should be an integer.
+                Document: SENDIG v3.1.1
                 Section: 7.3.1
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -79,8 +83,8 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: TAETORD value should be an integer.
-                Document: IG v3.1
+              - Cited Guidance: This value should be an integer.
+                Document: SENDIG v3.1
                 Section: 7.3.1
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -91,8 +95,8 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: TAETORD value should be an integer.
-                Document: IG v3.1.1
+              - Cited Guidance: This value should be an integer.
+                Document: SENDIG v3.1.1
                 Section: 7.3.1
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -103,8 +107,8 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: TAETORD value should be an integer.
-                Document: IG v3.1.1
+              - Cited Guidance: This value should be an integer.
+                Document: SENDIG v3.1.1
                 Section: 7.3.1
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -140,9 +144,6 @@ Authorities:
             Version: '1.0'
         Substandard: SEND
         Version: '1.0'
-# Variable: TAETORD
-# Condition: 
-# Rule: TAETORD is an integer
 Check:
   all:
     - name: TAETORD
@@ -152,10 +153,10 @@ Core:
   Id: CORE-000534
   Status: Published
   Version: '1'
-Description: TAETORD must be an integer
+Description: Raise an error when TAETORD is not an integer.
 Executability: Fully Executable
 Outcome:
-  Message: TAETORD is not an integer
+  Message: TAETORD must be an integer.
   Output Variables:
     - TAETORD
 Rule Type: Record Data
