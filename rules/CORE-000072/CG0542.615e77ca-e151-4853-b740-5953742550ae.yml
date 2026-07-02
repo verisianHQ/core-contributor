@@ -58,7 +58,7 @@ Core:
 Description: Raise an error when --BEATNO is present.
 Executability: Fully Executable
 Outcome:
-  Message: --BEATNO is present.
+  Message: --BEATNO must not be present.
 Rule Type: Record Data
 Scope:
   Classes:
