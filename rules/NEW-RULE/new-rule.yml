@@ -46,8 +46,6 @@ Authorities:
 Check:
   all:
     - name: RFICDTC
-      operator: exists
-    - name: RFICDTC
       operator: empty
 Core:
   Id: FB3414
