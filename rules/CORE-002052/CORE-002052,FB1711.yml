@@ -50,8 +50,8 @@ Check:
     - name: CMCLAS
       operator: is_not_valid_whodrug_level_reference
 Core:
-  Id: FB1711
-  Status: Draft
+  Id: CORE-002052
+  Status: Published
   Version: '1'
 Description: Raise an error when CMCLAS is populated but not a valid WHODrug dictionary medication class term.
 Executability: Fully Executable
