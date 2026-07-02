@@ -3,13 +3,49 @@
     {
       "dataset": "ts.xpt",
       "domain": "TS",
-      "execution_status": "execution_error",
-      "execution_message": "SQL operator execution error",
-      "number_errors": 1,
+      "execution_status": "success",
+      "execution_message": "TSVAL is not populated with an ISO 21090 null flavor or null flavor description but TSVALNF is populated.",
+      "number_errors": 4,
       "errors": [
         {
-          "error": "SQL error in not_matches_regex operator",
-          "message": "invalid regular expression: invalid embedded option\n"
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "18",
+            "TSVALNF": "NINF"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "Others",
+            "TSVALNF": "UNK"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "SOMETHING",
+            "TSVALNF": "TEST"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "XXX",
+            "TSVALNF": "PINF"
+          },
+          "validated": true
         }
       ]
     }
