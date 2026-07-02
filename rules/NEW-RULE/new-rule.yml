@@ -43,21 +43,23 @@ Check:
     - name: CETHNIC
       operator: equal_to_case_insensitive
       value: Spanish origin
+      value_is_literal: true
     - name: ETHNIC
       operator: not_equal_to
       value: HISPANIC OR LATINO
+      value_is_literal: true
 Core:
   Id: FB5801
   Status: Draft
   Version: '1'
-Description: Raise an error when Ethnicity Term 'Spanish origin' (SUPPDM.CETHNIC) is collected and is not mapped to Ethnicity (ETHNIC) 'HISPANIC OR LATINO' in the DM dataset
+Description: Raise an error when Ethnicity Term 'Spanish origin' (SUPPDM.CETHNIC) is collected and is not mapped to Ethnicity (ETHNIC) 'HISPANIC OR LATINO' in the DM dataset.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: SUPPDM
 Outcome:
-  Message: Ethnicity 'Spanish origin' is collected (CETHNIC) but is not mapped as ETHNIC = HISPANIC OR LATINO in the DM dataset.
+  Message: Ethnicity 'Spanish origin' is collected (CETHNIC) but is not mapped as ETHNIC = 'HISPANIC OR LATINO' in the DM dataset.
   Output Variables:
     - CETHNIC
     - ETHNIC
