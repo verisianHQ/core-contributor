@@ -55,7 +55,7 @@ Core:
 Description: Raise an error when RPATHCD is present.
 Executability: Fully Executable
 Outcome:
-  Message: RPATHCD is present.
+  Message: RPATHCD must not be present.
 Rule Type: Record Data
 Scope:
   Classes:
