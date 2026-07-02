@@ -157,7 +157,7 @@ Core:
 Description: Raise an error when a timing variable has data collected as per define-xml document but variable is not present in the dataset or has no data.
 Executability: Fully Executable
 Outcome:
-  Message: Timing variable has data collected as per define-xml document but variable is not present in the dataset or variable has no data.
+  Message: Timing variable has data collected as per Define-XML document but variable is not present in the dataset or variable has no data.
   Output Variables:
     - define_variable_name
     - define_variable_has_no_data
