@@ -144,7 +144,7 @@ Check:
       value: $max_dsstdtc
 Core:
   Id: FDA.SDTMIG.FB3402
-  Status: Published
+  Status: Draft
   Version: '1'
 Description: Raise an error when Start Date/Time of Treatment (EXSTDTC) is after the Start Date/Time of the latest Disposition Event (DSSTDTC).
 Executability: Fully Executable
