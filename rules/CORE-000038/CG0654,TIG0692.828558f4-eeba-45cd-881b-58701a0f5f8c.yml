@@ -1,6 +1,7 @@
 # Variable: SVPRESP
 # Condition: SVOCCUR ^= null
 # Rule: SVPRESP = "Y"
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -9,12 +10,12 @@ Authorities:
           - Citations:
               - Cited Guidance: An indication that the visit is planned. Values should be "Y" or
                   null.
-                Document: SDTM v2.0
+                Document: Model v2.0
                 Item: SVPRESP
                 Section: Subject Visits
               - Cited Guidance: An indication as to whether a prespecified (planned) visit has
                   occurred.
-                Document: SDTM v2.0
+                Document: Model v2.0
                 Item: SVOCCUR
                 Section: Subject Visits
             Origin: SDTM and SDTMIG Conformance Rules
@@ -28,12 +29,12 @@ Authorities:
           - Citations:
               - Cited Guidance: Subject Visits[SVPRESP][An indication that the visit is planned.
                   Values should be "Y" or null.]
-                Document: SDTM v1.0
+                Document: SDTM v2.1
                 Item: SVPRESP
                 Section: 3.2.3.3 Subject Visits
               - Cited Guidance: Subject Visits[SVOCCUR][An indication as to whether a
                   prespecified (planned) visit has occurred.]
-                Document: SDTM v1.0
+                Document: SDTM v2.1
                 Item: SVOCCUR
                 Section: 3.2.3.3 Subject Visits
             Origin: TIG Conformance Rules
@@ -50,14 +51,18 @@ Check:
     - name: SVPRESP
       operator: not_equal_to
       value: Y
+      value_is_literal: true
 Core:
   Id: CORE-000038
   Status: Published
   Version: '1'
-Description: Raise an error when SVOCCUR is not null and SVPRESP is not "Y".
+Description: Raise an error when SVOCCUR is not null and SVPRESP is not equal to 'Y'.
 Executability: Fully Executable
 Outcome:
-  Message: SVPRESP is not "Y" when SVOCCUR is populated.
+  Message: SVOCCUR is populated but SVPRESP is not equal to 'Y'.
+  Output Variables:
+    - SVPRESP
+    - SVOCCUR
 Rule Type: Record Data
 Scope:
   Classes:
