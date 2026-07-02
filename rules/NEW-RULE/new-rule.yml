@@ -41,8 +41,7 @@ Core:
   Status: Draft
   Version: '1'
   Id: FB2303
-Description: All subjects in the Exposure domain who are participating in a
-  study that includes an interventional product must be assigned to an ARM.
+Description: Raise an error when subject participating in an interventional study and assigned to an actual treatment, has no record in the EX dataset.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
@@ -54,8 +53,7 @@ Operations:
     name: USUBJID
     operator: distinct
 Outcome:
-  Message: Raise an error when a subject has a record in EX but is not assigned to a treatment while
-    participating in an interventional study
+  Message: Subject in interventional study with exposure records in the EX dataset is not assigned to an actual treatment.
   Output Variables:
     - ACTARMCD
     - TSPARMCD
