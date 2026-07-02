@@ -13,8 +13,9 @@ Authorities:
               Version: '1'
             Version: '2.0'
             Citations:
-              - Cited Guidance: --BEATNO is to be used in the EG domain only.
-                Document: SDTM v2.0
+              - Cited Guidance: EG domain only.
+                Document: Model v2.0
+                Item: --BEATNO
                 Section: Findings
       - Name: SDTMIG
         Version: '3.3'
@@ -32,6 +33,20 @@ Authorities:
                 Document: Model v1.7
                 Item: EGBEATNO
                 Section: Table 2.2.12.1
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: EG Domain only
+                Document: SDTM v2.1
+                Item: Specification --BEATNO
+                Section: 3.1.4 Identifiers for All classes
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0635
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
 Check:
   all:
     - name: --BEATNO
