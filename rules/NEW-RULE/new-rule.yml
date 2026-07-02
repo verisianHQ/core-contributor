@@ -141,7 +141,7 @@ Core:
   Id: FDA.SDTMIG.FB1101
   Status: Draft
   Version: '1'
-Description: Raise an error when trial design dataset is missing
+Description: Raise an error when not all trial design model datasets as listed in the corresponding IG are present in the submission.
 Executability: Fully Executable
 Outcome:
   Message: All trial design datasets as listed in the corresponding IG should have been submitted.
