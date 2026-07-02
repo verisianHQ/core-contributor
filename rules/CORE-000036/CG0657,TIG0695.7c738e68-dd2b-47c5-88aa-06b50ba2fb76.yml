@@ -1,6 +1,7 @@
 # Variable: VISIT
 # Condition: SVPRESP = 'Y'
 # Rule: VISIT in TV.VISIT
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -56,6 +57,7 @@ Check:
     - name: SVPRESP
       operator: equal_to
       value: Y
+      value_is_literal: true
     - name: VISIT
       operator: is_not_contained_by
       value: $tv_visit
@@ -63,7 +65,7 @@ Core:
   Id: CORE-000036
   Status: Published
   Version: '1'
-Description: Raise an error when SVPRESP is "Y" and VISIT is not present in TV.VISIT.
+Description: Raise an error when a visit is planned (SVPRESP = 'Y') but VISIT value does not match any VISIT value in the TV dataset.
 Executability: Fully Executable
 Operations:
   - domain: TV
@@ -71,7 +73,11 @@ Operations:
     name: VISIT
     operator: distinct
 Outcome:
-  Message: Planned visit is not found in TV.
+  Message: VISIT value for planned visit does not match any VISIT value in the TV dataset.
+  Output Variables:
+    - VISITNUM
+    - VISIT
+    - SVPRESP
 Rule Type: Record Data
 Scope:
   Classes:
