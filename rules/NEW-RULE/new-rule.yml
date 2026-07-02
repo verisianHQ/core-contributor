@@ -1,0 +1,69 @@
+# Variable: ACTARMCD
+# Condition: DM.USUBJID in EX.USUBJID AND TSVAL = "INTERVENTIONAL" when TSPARMCD = "STYPE"
+# Rule: DM.ACTARMCD not in ('SCRNFAIL', 'NOTASSGN', 'NOTTRT')
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: For interventional studies all treated subjects should have
+                  exposure data.
+                Document: FDA
+                Section: FDAB023
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB2303
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+Check:
+  all:
+    - name: ACTARMCD
+      operator: is_contained_by_case_insensitive
+      value:
+        - SCRNFAIL
+        - NOTASSGN
+        - NOTTRT
+    - name: TSPARMCD
+      operator: equal_to
+      value: "STYPE"
+      value_is_literal: true
+    - name: TSVAL
+      operator: equal_to
+      value: "INTERVENTIONAL"
+      value_is_literal: true
+    - name: USUBJID
+      operator: is_contained_by
+      value: $usubjids_in_ex
+Core:
+  Status: Draft
+  Version: '1'
+  Id: FB2303
+Description: Raise an error when subject participating in an interventional study and assigned to an actual treatment, has no record in the EX dataset.
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - STUDYID
+    Name: TS
+Operations:
+  - domain: EX
+    id: $usubjids_in_ex
+    name: USUBJID
+    operator: distinct
+Outcome:
+  Message: Subject in interventional study with exposure records in the EX dataset is not assigned to an actual treatment.
+  Output Variables:
+    - ACTARMCD
+    - TSPARMCD
+    - TSVAL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record
