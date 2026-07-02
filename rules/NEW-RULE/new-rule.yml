@@ -68,7 +68,7 @@ Operations:
     id: $HLTSUBJI_Y
     operator: record_count
 Outcome:
-  Message: A record exists in TS where TSPARMCD = HLTSUBJI and TSVAL = Y but TSVALNF
+  Message: TSVALNF for TSPARMCD = 'INDIC' is not equal to 'NA' when TSPARMCD = 'HLTSUBJI' and TSVAL = 'Y'.
     for TSPARMCD = INDIC is not equal to 'NA'.
   Output Variables:
     - TSGRPID
