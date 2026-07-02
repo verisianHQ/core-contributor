@@ -57,7 +57,6 @@ Core:
   Status: Draft
   Version: '1'
 Description: Raise an error when TSVALNF for TSPARMCD = 'INDIC' is not equal to 'NA' when study is a healthy volunteer study (TSPARMCD = 'HLTSUBJI' and TSVAL = 'Y').
-  and TSVAL = Y but TSVALNF for TSPARMCD = INDIC is not equal to 'NA'.
 Executability: Fully Executable
 Operations:
   - filter:
