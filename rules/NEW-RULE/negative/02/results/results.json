@@ -1,0 +1,48 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "At least one Trial Design Dataset is missing.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "TA": "Not in dataset",
+            "TE": "Not in dataset",
+            "TI": "Not in dataset",
+            "TS": "ts.xpt",
+            "TV": "tv.xpt"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "tv.xpt",
+      "domain": "TV",
+      "execution_status": "success",
+      "execution_message": "At least one Trial Design Dataset is missing.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "TA": "Not in dataset",
+            "TE": "Not in dataset",
+            "TI": "Not in dataset",
+            "TS": "ts.xpt",
+            "TV": "tv.xpt"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
