@@ -69,9 +69,7 @@ Core:
 Description: Raise an error when --IMPLBL is present.
 Executability: Fully Executable
 Outcome:
-  Message: --IMPLBL is present.
-  Output Variables:
-    - --IMPLBL
+  Message: --IMPLBL must not be present.
 Rule Type: Record Data
 Scope:
   Classes:
