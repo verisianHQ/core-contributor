@@ -1,0 +1,92 @@
+{
+  "datasets": [
+    {
+      "dataset": "pc.xpt",
+      "domain": "PC",
+      "execution_status": "success",
+      "execution_message": "PCSTRESU is not consistent per PCTESTCD.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "123101",
+          "value": {
+            "PCTESTCD": "DRUG X",
+            "PCSTRESU": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "PCTESTCD": "DRUG X",
+            "PCSTRESU": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "123102",
+          "value": {
+            "PCTESTCD": "DRUG Y",
+            "PCSTRESU": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 2,
+          "USUBJID": "123102",
+          "value": {
+            "PCTESTCD": "DRUG Y",
+            "PCSTRESU": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "pp.xpt",
+      "domain": "PP",
+      "execution_status": "success",
+      "execution_message": "PPSTRESU is not consistent per PPTESTCD.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "01-004",
+          "value": {
+            "PPTESTCD": "AUCIFP",
+            "PPSTRESU": "h*ng/mL"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "01-005",
+          "value": {
+            "PPTESTCD": "AUCIFP",
+            "PPSTRESU": "h*ug/mL"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "01-006",
+          "value": {
+            "PPTESTCD": "AUCIFP",
+            "PPSTRESU": "h*ug/mL"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
