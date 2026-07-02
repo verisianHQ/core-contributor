@@ -1,6 +1,7 @@
 # Variable: --ORRES
 # Condition: --LOBXFL = 'Y' and --DRVFL = null
 # Rule: --ORRES ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -56,22 +57,21 @@ Check:
     - name: --LOBXFL
       operator: equal_to
       value: Y
+      value_is_literal: true
     - any:
         - name: --DRVFL
           operator: not_exists
         - name: --DRVFL
-          operator: not_equal_to
-          value: Y
+          operator: empty
 Core:
   Id: CORE-000083
   Status: Published
   Version: '1'
-Description: Verify that --ORRES is not null when --LOBXFL = Y and --DRVFL= null
-  or --DRVFL is not present in the dataset
+Description: Raise an error when --LOBXFL = 'Y' and --DRVFL is either not populated or not present in the dataset, but --ORRES is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: --ORRES is missing even though --LOBXFL= "Y" and either --DRVFL is not
-    present in dataset or is not equal to "Y"
+  Message: --ORRES must be populated when --LOBXFL = 'Y' and either --DRVFL is not
+    present in dataset or is not populated.
   Output Variables:
     - --ORRES
     - --LOBXFL
