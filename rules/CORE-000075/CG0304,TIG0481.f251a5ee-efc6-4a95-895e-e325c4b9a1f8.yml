@@ -86,7 +86,7 @@ Core:
 Description: Raise an error when AEREASND is present.
 Executability: Fully Executable
 Outcome:
-  Message: AEREASND is present.
+  Message: AEREASND must not be present.
 Rule Type: Record Data
 Scope:
   Classes:
