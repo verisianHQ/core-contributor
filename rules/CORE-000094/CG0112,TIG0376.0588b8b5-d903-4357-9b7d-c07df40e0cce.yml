@@ -68,7 +68,7 @@ Check:
   all:
     - name: --DOSTXT
       operator: matches_regex
-      value: ^\d*\.?\d*$
+      value: ^-?\d*\.?\d*$
     - name: --DOSTXT
       operator: non_empty
 Core:

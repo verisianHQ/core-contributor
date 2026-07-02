@@ -13,7 +13,7 @@
       "domain": "CM",
       "execution_status": "success",
       "execution_message": "CMDOSTXT value is numeric.",
-      "number_errors": 2,
+      "number_errors": 3,
       "errors": [
         {
           "row": 2,
@@ -32,6 +32,16 @@
           "value": {
             "CMTRT": "ASPIRIN",
             "CMDOSTXT": "2.5"
+          },
+          "validated": true
+        },
+        {
+          "row": 7,
+          "SEQ": 1,
+          "USUBJID": "ABC-0005",
+          "value": {
+            "CMTRT": "ASPIRIN",
+            "CMDOSTXT": "-5"
           },
           "validated": true
         }
