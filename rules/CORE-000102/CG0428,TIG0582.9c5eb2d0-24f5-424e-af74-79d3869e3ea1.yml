@@ -1,6 +1,7 @@
 # Variable: --TOXGR
 # Condition: --TOX ^= null
 # Rule: --TOXGR ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -69,17 +70,23 @@ Check:
   all:
     - name: --TOX
       operator: non_empty
-    - name: --TOXGR
-      operator: empty
+    - any:
+        - name: --TOXGR
+          operator: not_exists
+        - name: --TOXGR
+          operator: empty
 Core:
   Id: CORE-000102
   Status: Published
   Version: '1'
-Description: Raise an error when --TOX is not empty, but --TOXGR is empty.
+Description: Raise an error when --TOXGR is not populated and --TOX is populated.
 Executability: Fully Executable
 Outcome:
-  Message: --TOXGR should not be null when --TOX is populated.
+  Message: --TOXGR is not populated when --TOX is populated.
   Output Variables:
+    - --TERM
+    - --TESTCD
+    - --TEST
     - --TOX
     - --TOXGR
 Rule Type: Record Data
