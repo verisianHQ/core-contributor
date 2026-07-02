@@ -1,6 +1,7 @@
 # Variable: TSVALNF
 # Condition: TSVAL = null
 # Rule: TSVALNF ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -47,16 +48,23 @@ Check:
   all:
     - name: TSVAL
       operator: empty
-    - name: TSVALNF
-      operator: empty
+    - any:
+      - name: TSVALNF
+        operator: not_exists
+      - name: TSVALNF
+        operator: empty
 Core:
   Id: CORE-000149
   Status: Published
   Version: '1'
-Description: Trigger error when TSVAL is null and TSVALNF is null
+Description: Raise an error when TSVAL is not populated and TSVALNF is also not populated.
 Executability: Fully Executable
 Outcome:
-  Message: TSVALNF is null when TSVAL is null.
+  Message: TSVALNF must be populated when TSVAL is not populated.
+  Output Variables:
+    - TSPARMCD
+    - TSVAL
+    - TSVALNF
 Rule Type: Record Data
 Scope:
   Classes:

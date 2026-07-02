@@ -4,8 +4,8 @@
       "dataset": "suppec.xpt",
       "domain": "SUPPEC",
       "execution_status": "success",
-      "execution_message": "IDVAR is not empty but IDVARVAL is empty.",
-      "number_errors": 7,
+      "execution_message": "IDVAR is populated but IDVARVAL is not populated.",
+      "number_errors": 3,
       "errors": [
         {
           "row": 1,
@@ -16,7 +16,7 @@
             "IDVARVAL": null,
             "QNAM": "ECREASOC"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -27,7 +27,7 @@
             "IDVARVAL": null,
             "QNAM": "ECREASOC"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -38,51 +38,7 @@
             "IDVARVAL": null,
             "QNAM": "ECREASOC"
           },
-          "validated": false
-        },
-        {
-          "row": 4,
-          "SEQ": null,
-          "USUBJID": "CDISC009",
-          "value": {
-            "IDVAR": "ECSEQ",
-            "IDVARVAL": null,
-            "QNAM": "ECREASOC"
-          },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": null,
-          "USUBJID": "CDISC009",
-          "value": {
-            "IDVAR": "ECSEQ",
-            "IDVARVAL": null,
-            "QNAM": "ECREASOC"
-          },
-          "validated": false
-        },
-        {
-          "row": 6,
-          "SEQ": null,
-          "USUBJID": "CDISC009",
-          "value": {
-            "IDVAR": "ECSEQ",
-            "IDVARVAL": null,
-            "QNAM": "ECREASOC"
-          },
-          "validated": false
-        },
-        {
-          "row": 7,
-          "SEQ": null,
-          "USUBJID": "CDISC009",
-          "value": {
-            "IDVAR": "ECSEQ",
-            "IDVARVAL": null,
-            "QNAM": "ECREASOC"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     }
