@@ -1,6 +1,7 @@
 # Variable: ARM
 # Condition: 
 # Rule: ARM not in ('Screen Failure', 'Not Assigned', 'Unplanned Treatment', 'Not Treated')
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -15,16 +16,9 @@ Authorities:
             Citations:
               - Cited Guidance: The trial arms table describes each planned arm in
                   the trial.
-                Document: SDTMIG v3.4
-                Section: '7.2'
-              - Cited Guidance: The trial arms table describes each planned arm in
-                  the trial.
-                Document: SDTMIG v3.4
-                Section: 7.3.1
-              - Cited Guidance: The trial arms table describes each planned arm in
-                  the trial.
-                Document: SDTMIG v3.4
-                Section: '5.2'
+                Document: IG v3.4
+                Item: Specification
+                Section: 7.2.1|7.3.1|5.2
       - Name: SDTMIG
         Version: '3.3'
         References:
@@ -52,12 +46,14 @@ Core:
   Id: CORE-000115
   Status: Published
   Version: '1'
-Description: Raise an error when ARM is 'Screen Failure', 'Not Assigned', 'Unplanned
-  Treatment', 'Not Treated'
+Description: Raise an error when ARM is equal to'Screen Failure', 'Not Assigned', 'Unplanned
+  Treatment' or 'Not Treated'.
 Executability: Fully Executable
 Outcome:
-  Message: ARM cannot be equal to 'Screen Failure', 'Not Assigned', 'Unplanned Treatment'
+  Message: ARM must not be equal to 'Screen Failure', 'Not Assigned', 'Unplanned Treatment'
     or 'Not Treated'.
+  Output Variables:
+    - ARM
 Rule Type: Record Data
 Scope:
   Classes:

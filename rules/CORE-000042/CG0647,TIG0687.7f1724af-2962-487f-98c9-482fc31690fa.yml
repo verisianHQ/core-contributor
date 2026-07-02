@@ -1,14 +1,15 @@
 # Variable: 
 # Condition: 
 # Rule: TJ dataset not present
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The TT dataset must not be used in human clinical trials.
-                Document: SDTM v2.0
+              - Cited Guidance: Not in human clinical trials.
+                Document: Model v2.0
                 Section: Trial Repro Stages
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -40,7 +41,9 @@ Core:
 Description: Raise an error when TT dataset is present.
 Executability: Fully Executable
 Outcome:
-  Message: TT dataset is present.
+  Message: TT dataset must not be present.
+  Output Variables:
+    - TT
 Rule Type: Domain Presence Check
 Scope:
   Classes:
