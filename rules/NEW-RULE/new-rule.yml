@@ -1,0 +1,72 @@
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The term 'Haitian' can be used collect race data. If the term 'Haitian' is collected, it should be mapped to the controlled terminology 'BLACK OR AFRICAN AMERICAN' for submission.
+                Document: FDA
+                Section: FDAB058
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5801
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The term 'Haitian' can be used collect race data. If the term 'Haitian' is collected, it should be mapped to the controlled terminology 'BLACK OR AFRICAN AMERICAN' for submission.
+                Document: FDA
+                Section: FDAB058
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5801
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The term 'Haitian' can be used collect race data. If the term 'Haitian' is collected, it should be mapped to the controlled terminology 'BLACK OR AFRICAN AMERICAN' for submission.
+                Document: FDA
+                Section: FDAB058
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5801
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: CRACE
+      operator: equal_to_case_insensitive
+      value: Haitian
+    - name: RACE
+      operator: not_equal_to
+      value: BLACK OR AFRICAN AMERICAN
+Core:
+  Id: FB5801
+  Status: Draft
+  Version: '1'
+Description: Raise an error when Race Term 'Haitian' (SUPPDM.CRACE) is collected and is not mapped to Race (RACE) 'BLACK OR AFRICAN AMERICAN' in the DM dataset
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: SUPPDM
+Outcome:
+  Message: Race 'Haitian' is collected (CRACE) but is not mapped as RACE = 'BLACK OR AFRICAN AMERICAN' in the DM dataset.
+  Output Variables:
+    - CRACE
+    - RACE
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record
