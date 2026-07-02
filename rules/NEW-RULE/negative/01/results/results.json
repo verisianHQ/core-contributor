@@ -12,7 +12,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "Raise an error when a subject has a record in EX but is not assigned to a treatment while participating in an interventional study",
+      "execution_message": "Subject in interventional study with exposure records in the EX dataset is not assigned to an actual treatment.",
       "number_errors": 2,
       "errors": [
         {
