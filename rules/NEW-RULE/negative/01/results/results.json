@@ -1,0 +1,28 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AESOC is not a valid MedDRA primary system organ class.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "AESOC": "FAKESOCTERM"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ],
+  "dictionary_versions": {
+    "meddra": {
+      "version": "29.0",
+      "language": "English"
+    }
+  }
+}
