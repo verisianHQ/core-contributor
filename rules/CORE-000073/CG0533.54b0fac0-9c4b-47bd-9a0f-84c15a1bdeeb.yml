@@ -13,8 +13,9 @@ Authorities:
               Version: '1'
             Version: '2.0'
             Citations:
-              - Cited Guidance: Not in clinical trials.
+              - Cited Guidance: Not in human clinical trials.
                 Document: Model v2.0
+                Item: RPATHCD
                 Section: Demographics
       - Name: SDTMIG
         Version: '3.3'
@@ -27,7 +28,22 @@ Authorities:
             Citations:
               - Cited Guidance: Not to be used with human clinical trials.
                 Document: Model v1.7
+                Item: RPATHCD
                 Section: Table 2.2.6.1
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Not in human clinical trials
+                Document: SDTM v2.1
+                Item: 'Specification: RPATHCD'
+                Section: Section 3.2.1 Demographics
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0626
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
 Check:
   all:
     - name: RPATHCD
@@ -40,8 +56,6 @@ Description: Raise an error when RPATHCD is present.
 Executability: Fully Executable
 Outcome:
   Message: RPATHCD is present.
-  Output Variables:
-    - RPATHCD
 Rule Type: Record Data
 Scope:
   Classes:
