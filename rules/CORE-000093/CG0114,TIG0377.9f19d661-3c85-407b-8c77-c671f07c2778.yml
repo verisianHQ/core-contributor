@@ -75,11 +75,11 @@ Core:
   Id: CORE-000093
   Status: Published
   Version: '1'
-Description: Raise an error when --DOSU is not populated and at least one of --DOSE,
-  --DOSTOT, or --DOSTXT is populated.
+Description: Raise an error when --DOSE, --DOSTOT, or --DOSTXT is populated but --DOSU
+  is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: --DOSU is not populated but --DOSE, --DOSTOT, or --DOSTXT is populated.
+  Message: --DOSE, --DOSTOT, or --DOSTXT is populated but --DOSU is not populated.
   Output Variables:
     - --TRT
     - --DOSE

@@ -4,7 +4,7 @@
       "dataset": "ag.xpt",
       "domain": "AG",
       "execution_status": "success",
-      "execution_message": "AGDOSU is not populated but AGDOSE, AGDOSTOT, or AGDOSTXT is populated.",
+      "execution_message": "AGDOSE, AGDOSTOT, or AGDOSTXT is populated but AGDOSU is not populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -26,7 +26,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMDOSU is not populated but CMDOSE, CMDOSTOT, or CMDOSTXT is populated.",
+      "execution_message": "CMDOSE, CMDOSTOT, or CMDOSTXT is populated but CMDOSU is not populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -48,9 +48,22 @@
       "dataset": "ec.xpt",
       "domain": "EC",
       "execution_status": "success",
-      "execution_message": "ECDOSU is not populated but ECDOSE, ECDOSTOT, or ECDOSTXT is populated.",
-      "number_errors": 1,
+      "execution_message": "ECDOSE, ECDOSTOT, or ECDOSTXT is populated but ECDOSU is not populated.",
+      "number_errors": 3,
       "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "ABC1001",
+          "value": {
+            "ECTRT": "BOTTLE A",
+            "ECDOSE": 2.0,
+            "ECDOSTXT": null,
+            "ECDOSTOT": "Not in dataset",
+            "ECDOSU": "Not in dataset"
+          },
+          "validated": true
+        },
         {
           "row": 2,
           "SEQ": 1,
@@ -60,7 +73,20 @@
             "ECDOSE": 2.0,
             "ECDOSTXT": null,
             "ECDOSTOT": "Not in dataset",
-            "ECDOSU": null
+            "ECDOSU": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 3,
+          "USUBJID": "ABC2001",
+          "value": {
+            "ECTRT": "BOTTLE A",
+            "ECDOSE": 2.0,
+            "ECDOSTXT": null,
+            "ECDOSTOT": "Not in dataset",
+            "ECDOSU": "Not in dataset"
           },
           "validated": true
         }
@@ -70,7 +96,7 @@
       "dataset": "ex.xpt",
       "domain": "EX",
       "execution_status": "success",
-      "execution_message": "EXDOSU is not populated but EXDOSE, EXDOSTOT, or EXDOSTXT is populated.",
+      "execution_message": "EXDOSE, EXDOSTOT, or EXDOSTXT is populated but EXDOSU is not populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -92,7 +118,7 @@
       "dataset": "ml.xpt",
       "domain": "ML",
       "execution_status": "success",
-      "execution_message": "MLDOSU is not populated but MLDOSE, MLDOSTOT, or MLDOSTXT is populated.",
+      "execution_message": "MLDOSE, MLDOSTOT, or MLDOSTXT is populated but MLDOSU is not populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -114,7 +140,7 @@
       "dataset": "pr.xpt",
       "domain": "PR",
       "execution_status": "success",
-      "execution_message": "PRDOSU is not populated but PRDOSE, PRDOSTOT, or PRDOSTXT is populated.",
+      "execution_message": "PRDOSE, PRDOSTOT, or PRDOSTXT is populated but PRDOSU is not populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -136,7 +162,7 @@
       "dataset": "su.xpt",
       "domain": "SU",
       "execution_status": "success",
-      "execution_message": "SUDOSU is not populated but SUDOSE, SUDOSTOT, or SUDOSTXT is populated.",
+      "execution_message": "SUDOSE, SUDOSTOT, or SUDOSTXT is populated but SUDOSU is not populated.",
       "number_errors": 1,
       "errors": [
         {
