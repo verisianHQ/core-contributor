@@ -74,8 +74,6 @@ Outcome:
   Message: FDA Conditionally Desired TSPARMCD = 'TDIGRP' is missing in the TS dataset when TSPARMCD = 'HLTSUBJI' and TSVAL = 'N'.
   Output Variables:
     - TSGRPID
-    - TSPARMCD
-    - TSVAL
     - $HLTSUBJI_N
 Rule Type: Record Data
 Scope:
