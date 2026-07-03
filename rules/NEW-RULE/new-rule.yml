@@ -67,14 +67,17 @@ Operations:
     operator: record_count
   - domain: TS
     group:
-      - STUDYID
+      - TSGRPID
     id: $ts_tsparmcd
     name: TSPARMCD
     operator: distinct
 Outcome:
   Message: A record exists in TS where TSPARMCD = 'HLTSUBJI' and TSVAL = 'N' but TSPARMCD = 'TDIGRP' is not present.
   Output Variables:
-    - STUDYID
+    - TSGRPID
+    - TSPARMCD
+    - TSVAL
+    - $HLTSUBJI_N
 Rule Type: Record Data
 Scope:
   Classes:
