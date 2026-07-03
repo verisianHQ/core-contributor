@@ -76,7 +76,7 @@ Operations:
     name: TSPARMCD
     operator: distinct
 Outcome:
-  Message: A record exists in TS where TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL' but either TSPARMCD = 'INTMODEL' or TSPARMCD = 'INTTYPE' is not present.
+  Message: FDA Conditionally Desired TSPARMCD = 'INTMODEL' or 'INTTYPE' is missing in the TS dataset when TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL'.
   Output Variables:
     - STUDYID
 Rule Type: Record Data
