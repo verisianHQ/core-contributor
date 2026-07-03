@@ -78,7 +78,10 @@ Operations:
 Outcome:
   Message: FDA Conditionally Desired TSPARMCD = 'INTMODEL' or 'INTTYPE' is missing in the TS dataset when TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL'.
   Output Variables:
-    - STUDYID
+    - TSGRPID
+    - TSPARMCD
+    - TSVAL
+    - $STYPE_INTERVENTIONAL
 Rule Type: Record Data
 Scope:
   Classes:

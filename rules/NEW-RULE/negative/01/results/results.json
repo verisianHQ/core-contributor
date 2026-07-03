@@ -8,11 +8,14 @@
       "number_errors": 1,
       "errors": [
         {
-          "row": 1,
+          "row": 43,
           "SEQ": 1,
           "USUBJID": "None",
           "value": {
-            "STUDYID": "CDISCPILOT01"
+            "TSGRPID": "STYPE1",
+            "TSPARMCD": "STYPE",
+            "TSVAL": "INTERVENTIONAL",
+            "$STYPE_INTERVENTIONAL": 1
           },
           "validated": true
         }
