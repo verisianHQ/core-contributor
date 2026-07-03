@@ -126,17 +126,9 @@ Authorities:
             Version: '1.5'
         Version: '1.0'
 Check:
-  any:
-    - name: TA
-      operator: not_exists
-    - name: TE
-      operator: not_exists
-    - name: TI
-      operator: not_exists
-    - name: TS
-      operator: not_exists
-    - name: TV
-      operator: not_exists
+  all:
+    - name: $missing_trial_design_domains
+      operator: non_empty
 Core:
   Id: FDA.SDTMIG.FB1101
   Status: Draft
@@ -146,12 +138,19 @@ Executability: Fully Executable
 Outcome:
   Message: At least one Trial Design Dataset is missing.
   Output Variables:
-    - TA
-    - TE
-    - TI
-    - TS
-    - TV
-Rule Type: Domain Presence Check
+    - $missing_trial_design_domains
+Rule Type: Record Data
+Operations: 
+  - operator: standard_domains
+    id: $trial_design_domains
+    domain_class: "TRIAL DESIGN"
+  - operator: dataset_names
+    id: $dataset_names
+  - operator: minus
+    id: $missing_trial_design_domains
+    name: $trial_design_domains
+    subtract: $dataset_names
+    case_sensitive: False
 Scope:
   Classes:
     Include:
@@ -159,4 +158,4 @@ Scope:
   Domains:
     Include:
       - ALL
-Sensitivity: Dataset
+Sensitivity: Study
