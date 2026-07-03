@@ -54,7 +54,7 @@ Core:
   Id: FDA.SDTMIG.FB1110
   Status: Draft
   Version: '1'
-Description: Raise an error when a record exists in TS where TSPARMCD = STYPE and TSVAL = INTERVENTIONAL
+Description: Raise an error when FDA Conditionally Desired Trial Summary (TS) Parameter for Pharmalogical Class (TSPARMCD = 'PCLAS') is not present in the TS dataset when Study Type (TSPARMCD = 'STYPE') is interventional.
   but TSPARMCD = 'PCLAS' is not present.
 Executability: Fully Executable
 Operations:
