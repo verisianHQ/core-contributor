@@ -54,8 +54,7 @@ Core:
   Id: FDA.SDTMIG.FB1112
   Status: Draft
   Version: '1'
-Description: Raise an error when a record exists in TS where TSPARMCD = STYPE and TSVAL = INTERVENTIONAL
-  but TSPARMCD = 'TRT' is not present.
+Description: Raise an error when FDA Conditionally Desired Trial Summary (TS) Parameter for Interventional Model TSPARMCD = 'TRT' is not present in the TS dataset when Study Type (TSPARMCD = 'STYPE') is interventional.
 Executability: Fully Executable
 Operations:
   - filter:
@@ -72,7 +71,7 @@ Operations:
     name: TSPARMCD
     operator: distinct
 Outcome:
-  Message: A record exists in TS where TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL' but TSPARMCD = 'TRT' is not present.
+  Message: FDA Conditionally Desired TSPARMCD = 'TRT' is missing in the TS dataset when TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL'.
   Output Variables:
     - TSGRPID
     - TSPARMCD
