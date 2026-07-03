@@ -7,10 +7,10 @@ Authorities:
           - Citations:
               - Cited Guidance: The term 'Haitian' can be used collect race data. If the term 'Haitian' is collected, it should be mapped to the controlled terminology 'BLACK OR AFRICAN AMERICAN' for submission.
                 Document: FDA
-                Section: FDAB058
+                Section: FDAB060
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB5801
+              Id: FB6001
               Version: '1'
             Version: '1.5'
         Version: '3.2'
@@ -19,10 +19,10 @@ Authorities:
           - Citations:
               - Cited Guidance: The term 'Haitian' can be used collect race data. If the term 'Haitian' is collected, it should be mapped to the controlled terminology 'BLACK OR AFRICAN AMERICAN' for submission.
                 Document: FDA
-                Section: FDAB058
+                Section: FDAB060
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB5801
+              Id: FB6001
               Version: '1'
             Version: '1.5'
         Version: '3.3'
@@ -31,10 +31,10 @@ Authorities:
           - Citations:
               - Cited Guidance: The term 'Haitian' can be used collect race data. If the term 'Haitian' is collected, it should be mapped to the controlled terminology 'BLACK OR AFRICAN AMERICAN' for submission.
                 Document: FDA
-                Section: FDAB058
+                Section: FDAB060
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB5801
+              Id: FB6001
               Version: '1'
             Version: '1.5'
         Version: '3.4'
@@ -46,11 +46,12 @@ Check:
     - name: RACE
       operator: not_equal_to
       value: BLACK OR AFRICAN AMERICAN
+      value_is_literal: true
 Core:
-  Id: FB5801
+  Id: FB6001
   Status: Draft
   Version: '1'
-Description: Raise an error when Race Term 'Haitian' (SUPPDM.CRACE) is collected and is not mapped to Race (RACE) 'BLACK OR AFRICAN AMERICAN' in the DM dataset
+Description: Raise an error when Race Term 'Haitian' (SUPPDM.CRACE) is collected and is not mapped to Race (RACE) 'BLACK OR AFRICAN AMERICAN' in the DM dataset.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
