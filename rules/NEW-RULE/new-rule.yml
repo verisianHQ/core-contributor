@@ -43,10 +43,25 @@ Check:
     - name: CRACE
       operator: equal_to_case_insensitive
       value: Haitian
-    - name: RACE
-      operator: not_equal_to
-      value: BLACK OR AFRICAN AMERICAN
-      value_is_literal: true
+    - any:
+      - all:
+        - name: RACE
+          operator: not_equal_to
+          value: BLACK OR AFRICAN AMERICAN
+          value_is_literal: true
+        - name: RACE
+          operator: not_equal_to
+          value: MULTIPLE
+      - all:
+        - name: RACE
+          operator: equal_to
+          value: MULTIPLE
+          value_is_literal: true
+        - name: RACE
+          operator: not_in_enumerated_columns
+          value: BLACK OR AFRICAN AMERICAN
+          value_is_literal: true
+          regex: ^RACE
 Core:
   Id: FB6001
   Status: Draft
