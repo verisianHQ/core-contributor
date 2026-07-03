@@ -54,7 +54,7 @@ Core:
   Id: FDA.SDTMIG.FB1111
   Status: Draft
   Version: '1'
-Description: Raise an error when FDA Conditionally Desired Trial Summary (TS) Parameter TSPARMCD = 'TDIGRP' is not present in the TS dataset when study is not a healthy volunteer study (TSPARMCD = 'HLTSUBJI' and TSVAL = 'N').
+Description: Raise an error when FDA Conditionally Desired Trial Summary (TS) Parameter TSPARMCD = 'TDIGRP' is not present in the TS dataset when Healthy Subject Indicator (TSPARMCD = 'HLTSUBJI') is equal to 'N'.
 Executability: Fully Executable
 Operations:
   - filter:
