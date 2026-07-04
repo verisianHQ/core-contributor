@@ -4,28 +4,30 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSVALNF is not null when TSVAL is populated",
+      "execution_message": "TSVALNF must not be populated when TSVAL is populated.",
       "number_errors": 2,
       "errors": [
         {
-          "row": 6,
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "ACTSUB",
+            "TSVAL": "100",
+            "TSVALNF": "NA"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
           "SEQ": 6,
           "USUBJID": "None",
           "value": {
+            "TSPARMCD": "COMPTRT",
             "TSVAL": "METFORMIN",
             "TSVALNF": "UNK"
           },
-          "validated": false
-        },
-        {
-          "row": 21,
-          "SEQ": 21,
-          "USUBJID": "None",
-          "value": {
-            "TSVAL": "2",
-            "TSVALNF": "INF"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     }
