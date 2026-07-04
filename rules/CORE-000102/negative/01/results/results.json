@@ -4,7 +4,7 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "AETOXGR is not populated when AETOX is populated.",
+      "execution_message": "AETOXGR must be populated when AETOX is populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,9 +12,6 @@
           "SEQ": 1,
           "USUBJID": "123101",
           "value": {
-            "AETERM": "NAUSEA",
-            "AETESTCD": "Not in dataset",
-            "AETEST": "Not in dataset",
             "AETOX": "CTCAE 4.03",
             "AETOXGR": null
           },
@@ -26,7 +23,7 @@
       "dataset": "mh.xpt",
       "domain": "MH",
       "execution_status": "success",
-      "execution_message": "MHTOXGR is not populated when MHTOX is populated.",
+      "execution_message": "MHTOXGR must be populated when MHTOX is populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -34,9 +31,6 @@
           "SEQ": 1,
           "USUBJID": "123101",
           "value": {
-            "MHTERM": "Fracture",
-            "MHTESTCD": "Not in dataset",
-            "MHTEST": "Not in dataset",
             "MHTOX": "CTCAE 4.03",
             "MHTOXGR": null
           },
@@ -48,7 +42,7 @@
       "dataset": "ce.xpt",
       "domain": "CE",
       "execution_status": "success",
-      "execution_message": "CETOXGR is not populated when CETOX is populated.",
+      "execution_message": "CETOXGR must be populated when CETOX is populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -56,9 +50,6 @@
           "SEQ": 1,
           "USUBJID": "123101",
           "value": {
-            "CETERM": "Migraine",
-            "CETESTCD": "Not in dataset",
-            "CETEST": "Not in dataset",
             "CETOX": "CTCAE 4.03",
             "CETOXGR": null
           },
@@ -70,7 +61,7 @@
       "dataset": "eg.xpt",
       "domain": "EG",
       "execution_status": "success",
-      "execution_message": "EGTOXGR is not populated when EGTOX is populated.",
+      "execution_message": "EGTOXGR must be populated when EGTOX is populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -78,9 +69,6 @@
           "SEQ": 1,
           "USUBJID": "123101",
           "value": {
-            "EGTERM": "Not in dataset",
-            "EGTESTCD": "QRSAG",
-            "EGTEST": "PR Interval, Aggregate",
             "EGTOX": "CTCAE 4.03",
             "EGTOXGR": null
           },
@@ -92,7 +80,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "LBTOXGR is not populated when LBTOX is populated.",
+      "execution_message": "LBTOXGR must be populated when LBTOX is populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -100,9 +88,6 @@
           "SEQ": 1,
           "USUBJID": "123101",
           "value": {
-            "LBTERM": "Not in dataset",
-            "LBTESTCD": "HGFR",
-            "LBTEST": "Hepatocyte Growth Factor Receptor",
             "LBTOX": "CTCAE 4.03",
             "LBTOXGR": null
           },
@@ -114,7 +99,7 @@
       "dataset": "pc.xpt",
       "domain": "PC",
       "execution_status": "success",
-      "execution_message": "PCTOXGR is not populated when PCTOX is populated.",
+      "execution_message": "PCTOXGR must be populated when PCTOX is populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -122,9 +107,6 @@
           "SEQ": 1,
           "USUBJID": "123101",
           "value": {
-            "PCTERM": "Not in dataset",
-            "PCTESTCD": "DRUG X",
-            "PCTEST": "STUDYDRUG",
             "PCTOX": "NCI 4.03",
             "PCTOXGR": null
           },
@@ -136,7 +118,7 @@
       "dataset": "pp.xpt",
       "domain": "PP",
       "execution_status": "success",
-      "execution_message": "PPTOXGR is not populated when PPTOX is populated.",
+      "execution_message": "PPTOXGR must be populated when PPTOX is populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -144,9 +126,6 @@
           "SEQ": 1,
           "USUBJID": "123101",
           "value": {
-            "PPTERM": "Not in dataset",
-            "PPTESTCD": "TMAX",
-            "PPTEST": "Time of CMAX",
             "PPTOX": "NCI 4.03",
             "PPTOXGR": null
           },

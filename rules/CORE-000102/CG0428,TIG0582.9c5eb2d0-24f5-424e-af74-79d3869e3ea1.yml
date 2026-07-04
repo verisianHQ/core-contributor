@@ -65,7 +65,6 @@ Authorities:
             Version: '1.0'
         Substandard: SDTM
         Version: '1.0'
-
 Check:
   all:
     - name: --TOX
@@ -79,14 +78,11 @@ Core:
   Id: CORE-000102
   Status: Published
   Version: '1'
-Description: Raise an error when --TOX is populated but --TOX is not populated.
+Description: Raise an error when --TOX is populated but --TOXGR is not populated.
 Executability: Fully Executable
 Outcome:
   Message: --TOXGR must be populated when --TOX is populated.
   Output Variables:
-    - --TERM
-    - --TESTCD
-    - --TEST
     - --TOX
     - --TOXGR
 Rule Type: Record Data
