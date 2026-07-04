@@ -79,7 +79,7 @@ Core:
   Id: CORE-000102
   Status: Published
   Version: '1'
-Description: Raise an error when --TOXGR is not populated and --TOX is populated.
+Description: Raise an error when --TOX is populated but --TOX is not populated.
 Executability: Fully Executable
 Outcome:
   Message: --TOXGR is not populated when --TOX is populated.
