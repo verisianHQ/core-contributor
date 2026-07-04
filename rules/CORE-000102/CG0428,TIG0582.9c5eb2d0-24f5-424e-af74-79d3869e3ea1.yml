@@ -82,7 +82,7 @@ Core:
 Description: Raise an error when --TOX is populated but --TOX is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: --TOXGR is not populated when --TOX is populated.
+  Message: --TOXGR must be populated when --TOX is populated.
   Output Variables:
     - --TERM
     - --TESTCD
