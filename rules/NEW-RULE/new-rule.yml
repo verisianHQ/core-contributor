@@ -41,7 +41,7 @@ Core:
   Status: Draft
   Version: '1'
   Id: FB2303
-Description: Raise an error when subject participating in an interventional study and assigned to an actual treatment, has no record in the EX dataset.
+Description: Raise an error when subject participating in an interventional study with at least one record in the EX dataset, is not assigned to an actual treatment.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
