@@ -56,7 +56,7 @@ Check:
       operator: empty
     - any:
         - name: variable_name
-          operator: not_exists
+          operator: empty
         - name: variable_is_empty
           operator: equal_to
           value: true

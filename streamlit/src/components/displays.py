@@ -60,29 +60,22 @@ class Displays:
         partial_count = counts.get("Partially Completed", 0)
         unimplemented_count = counts.get("Unimplemented", 0)
         missing_count = counts.get("Missing", 0)
+        not_exec_count = counts.get("Not Executable", 0)
 
-        total = completed_count + partial_count + unimplemented_count + missing_count
+        total = completed_count + partial_count + unimplemented_count + missing_count + not_exec_count
 
-        comp_perc = completed_count / total if total > 0 else 0
-        partial_perc = partial_count / total if total > 0 else 0
-        unimpl_perc = unimplemented_count / total if total > 0 else 0
-        missing_perc = missing_count / total if total > 0 else 0
+        pie_sizes = [completed_count, partial_count, unimplemented_count, missing_count, not_exec_count]
+        labels_base = ["Completed", "Partially Completed", "Unimplemented", "Missing", "Not Executable"]
+        
+        filtered_sizes = []
+        filtered_labels = []
+        for label, size in zip(labels_base, pie_sizes):
+            perc = size / total if total > 0 else 0
+            filtered_sizes.append(size)
+            filtered_labels.append(f"{label} ({perc:.1%})")
 
-        pie_sizes = [completed_count, partial_count, unimplemented_count, missing_count]
-        pie_labels = [
-            f"Completed ({comp_perc:.1%})",
-            f"Partially Completed ({partial_perc:.1%})",
-            f"Unimplemented ({unimpl_perc:.1%})",
-            f"Missing ({missing_perc:.1%})",
-        ]
-
-        make_pie(pie_labels, pie_sizes, "Conformance Rule Completion", color_scheme="tableau20")
+        make_pie(filtered_labels, filtered_sizes, "Conformance Rule Completion", color_scheme="tableau20")
         with st.expander("View Conformance Rule Id to CORE Id Mapping"):
-            combined_data = combined_data.rename(columns={
-                combined_data.columns[1]: "Version 1",
-                combined_data.columns[2]: "Version 2",
-                combined_data.columns[3]: "Version 3",
-            })
             combined_data.index = combined_data.index + 1
             st.dataframe(combined_data, width="stretch", hide_index=False)
 

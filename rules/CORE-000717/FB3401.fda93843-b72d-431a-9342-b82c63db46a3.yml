@@ -1,0 +1,80 @@
+# Variable: AESTDTC, DSENDTC
+# Condition: AESTDTC ^= Null and Max(DSSTDTC) ^= Null
+# Rule: AESTDTC <= Max(DSSTDTC)
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Study start and end date/time should include month, day, and
+                  year.
+                Document: FDA
+                Section: FDAB034
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3401
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Study start and end date/time should include month, day, and
+                  year.
+                Document: FDA
+                Section: FDAB034
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3401
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Study start and end date/time should include month, day, and
+                  year.
+                Document: FDA
+                Section: FDAB034
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3401
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: AESTDTC
+      operator: non_empty
+    - name: AESTDTC
+      operator: date_greater_than
+      value: $max_dsstdtc
+Core:
+  Id: CORE-000717
+  Status: Published
+  Version: '1'
+Description: Start Date/Time of Adverse Event (AESTDTC) should be prior or equal
+  to the Start Date/Time of the latest Disposition Event (DSSTDTC).
+Executability: Fully Executable
+Operations:
+  - domain: DS
+    group:
+      - USUBJID
+    id: $max_dsstdtc
+    name: DSSTDTC
+    operator: max
+Outcome:
+  Message: AESTDTC falls after the last DSSTDTC.
+  Output Variables:
+    - AESTDTC
+    - $max_dsstdtc
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - AE
+Sensitivity: Record
