@@ -4,132 +4,40 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "AESCAT is equal to AEDECOD.",
-      "number_errors": 8,
+      "execution_message": "AESCAT must not be equal to AEDECOD.",
+      "number_errors": 3,
       "errors": [
         {
           "row": 1,
           "SEQ": 1,
           "USUBJID": "CDISC005",
           "value": {
-            "AEDECOD": "INJECTION SITE REACTION",
-            "AESCAT": "INJECTION SITE REACTION"
+            "AEDECOD": "SAME TEXT CASE",
+            "AESCAT": "SAME TEXT CASE"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
-          "SEQ": 4,
+          "SEQ": 2,
           "USUBJID": "CDISC005",
           "value": {
-            "AEDECOD": "INJECTION SITE REACTION",
-            "AESCAT": "Injection Site Reaction"
+            "AEDECOD": "123456789",
+            "AESCAT": "123456789"
           },
-          "validated": false
-        },
-        {
-          "row": 3,
-          "SEQ": 5,
-          "USUBJID": "CDISC005",
-          "value": {
-            "AEDECOD": "CHEST DISCOMFORT",
-            "AESCAT": "CHEST DISCOMFORT"
-          },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
-          "SEQ": 6,
-          "USUBJID": "CDISC005",
-          "value": {
-            "AEDECOD": "HEADACHE",
-            "AESCAT": "Headache"
-          },
-          "validated": false
-        },
-        {
-          "row": 6,
-          "SEQ": 1,
-          "USUBJID": "CDISC013",
-          "value": {
-            "AEDECOD": "MYOCARDIAL INFARCTION",
-            "AESCAT": "MYOCARDIAL INFARCTION"
-          },
-          "validated": false
-        },
-        {
-          "row": 7,
-          "SEQ": 1,
-          "USUBJID": "CDISC016",
-          "value": {
-            "AEDECOD": "PARAESTHESIA ORAL",
-            "AESCAT": "PARAESTHESIA ORAL"
-          },
-          "validated": false
-        },
-        {
-          "row": 8,
-          "SEQ": 2,
-          "USUBJID": "CDISC016",
-          "value": {
-            "AEDECOD": "NASOPHARYNGITIS",
-            "AESCAT": "NASOPHARYNGITIS"
-          },
-          "validated": false
-        },
-        {
-          "row": 9,
           "SEQ": 3,
           "USUBJID": "CDISC016",
           "value": {
-            "AEDECOD": "SUPRAVENTRICULAR EXTRASYSTOLES",
-            "AESCAT": "Supraventricular Extrasystoles"
+            "AEDECOD": "DIFFERENT TEXT CASE",
+            "AESCAT": "Different Text Case"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unmatched_validation": [
-    {
-      "value": {
-        "AESCAT": "INJECTION SITE REACTION"
-      }
-    },
-    {
-      "value": {
-        "AESCAT": "Injection Site Reaction"
-      }
-    },
-    {
-      "value": {
-        "AESCAT": "CHEST DISCOMFORT"
-      }
-    },
-    {
-      "value": {
-        "AESCAT": "Headache"
-      }
-    },
-    {
-      "value": {
-        "AESCAT": "MYOCARDIAL INFARCTION"
-      }
-    },
-    {
-      "value": {
-        "AESCAT": "PARAESTHESIA ORAL"
-      }
-    },
-    {
-      "value": {
-        "AESCAT": "NASOPHARYNGITIS"
-      }
-    },
-    {
-      "value": {
-        "AESCAT": "Supraventricular Extrasystoles"
-      }
     }
   ]
 }
