@@ -69,7 +69,7 @@ Core:
 Description: Raise an error when not all FDA Conditionally Desired Trial Summary (TS) Parameters (TSPARMCDs) for QTc evaluations are present in the TS dataset.
 Executability: Fully Executable
 Outcome:
-  Message: FDA Conditional Desired TSPARMCD for QTc evaluations is missing in the TS dataset.
+  Message: At least one FDA Conditional Desired TSPARMCD for QTc evaluations is missing in the TS dataset.
   Output Variables:
     - TSPARMCD
     - TSVAL
