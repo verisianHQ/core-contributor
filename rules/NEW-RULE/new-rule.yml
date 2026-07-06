@@ -146,7 +146,7 @@ Core:
   Id: FDA.SDTMIG.FB3601
   Status: Draft
   Version: '1'
-Description: Study Day of Start of Treatment (--STDY) and Study Day of End of Treatment (--ENDY) should not be negative for exposure treatments.
+Description: Raise an error when Study Day of Start of Treatment (--STDY) and/or Study Day of End of Treatment (--ENDY) are negative for exposure treatments.
 Executability: Fully Executable
 Outcome:
   Message: Negative value of Study Day variable.
