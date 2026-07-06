@@ -1,14 +1,16 @@
 # Variable: SVPRESP
 # Condition: 
 # Rule: SVPRESP in ("Y", null)
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Values should be "Y" or null.
-                Document: SDTM v2.0
+              - Cited Guidance: Subject Visits[SVPRESP][Values should be "Y" or null.]
+                Document: Model v2.0
+                Item: SVPRESP
                 Section: Subject Visits
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -35,16 +37,17 @@ Check:
     - name: SVPRESP
       operator: not_equal_to
       value: Y
+      value_is_literal: true
     - name: SVPRESP
       operator: non_empty
 Core:
   Id: CORE-000037
   Status: Published
   Version: '1'
-Description: Raise an error when SVPRESP not "Y" or null.
+Description: Raise an error when SVPRESP is not null or equal to 'Y'.
 Executability: Fully Executable
 Outcome:
-  Message: SVPRESP is not null and not equal to "Y". Values should be "Y" or null.
+  Message: SVPRESP must be 'Y' or null.
 Rule Type: Record Data
 Scope:
   Classes:

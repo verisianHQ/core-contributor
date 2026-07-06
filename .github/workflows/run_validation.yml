@@ -184,61 +184,108 @@ jobs:
             
             const newReportBody = `## Rule Validation Results (Run ${context.runId})\n\n<details>\n<summary><strong>Click to expand full report</strong></summary>\n\n${detailedContent}\n</details>\n\n---\n[View workflow run](${context.payload.repository.html_url}/actions/runs/${context.runId})`;
             
-            // Find existing comments
-            const { data: comments } = await github.rest.issues.listComments({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-            });
+            let comments = [];
+            let page = 1;
+            while (true) {
+              const { data: pageComments } = await github.rest.issues.listComments({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                per_page: 100,
+                page: page
+              });
+              if (pageComments.length === 0) break;
+              comments = comments.concat(pageComments);
+              if (pageComments.length < 100) break;
+              page++;
+            }
             
-            const botComments = comments.filter(comment => 
-              comment.user.type === 'Bot' && 
-              (comment.body.includes('## Rule Validation Results') || comment.body.includes('Previous validation run superseded'))
-            );
+            const validComments = comments.filter(c => c && c.body && c.user && c.user.login === 'github-actions[bot]');
+            const historyComments = validComments.filter(c => c.body.includes('## Rule Validation History'));
+            const latestComments = validComments.filter(c => c.body.includes('## Rule Validation Results (Run'));
             
-            // Shrink down all older comments
-            for (const comment of botComments) {
-              if (comment.body.includes('<details>')) {
-                let shrinkText = `_Previous validation run superseded. [View latest run](${context.payload.repository.html_url}/actions/runs/${context.runId})_\n\n`;
-                
-                // Keep the old Run ID in the summary title
-                const titleMatch = comment.body.match(/## Rule Validation Results \(Run \d+\)/);
-                if (titleMatch) {
-                  shrinkText += `**${titleMatch[0].replace('## ', '')}**\n`;
-                } else {
-                  shrinkText += `**Previous Validation Results**\n`;
-                }
-                
-                // Extract rules and their summaries by splitting on the header format generated in the bash step
-                const parts = comment.body.split('## Rule: ');
-                for (let i = 1; i < parts.length; i++) {
-                  const lines = parts[i].split('\n');
-                  const ruleName = lines[0].trim();
-                  
-                  const summaryLine = lines.find(line => line.startsWith('**Summary:**'));
-                  const errorLine = lines.find(line => line.startsWith('**ERROR:**')); // Fallback if a rule errored out entirely
-                  
-                  if (summaryLine) {
-                    const cleanSummary = summaryLine.replace('**Summary:**', '').trim();
-                    shrinkText += `- **${ruleName}**: ${cleanSummary}\n`;
-                  } else if (errorLine) {
-                    const cleanError = errorLine.replace('**ERROR:**', '').trim();
-                    shrinkText += `- **${ruleName}**: ❌ ${cleanError}\n`;
-                  } else {
-                    shrinkText += `- **${ruleName}**: Failed to complete validation\n`;
-                  }
-                }
-                
-                await github.rest.issues.updateComment({
+            let historyComment = historyComments[0];
+            
+            if (historyComments.length > 1) {
+              console.log(`Found ${historyComments.length} history comments. Cleaning up duplicates...`);
+              for (let i = 1; i < historyComments.length; i++) {
+                await github.rest.issues.deleteComment({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
-                  comment_id: comment.id,
-                  body: shrinkText
+                  comment_id: historyComments[i].id
                 });
               }
             }
             
-            // Post the new report comment at the bottom
+            if (!historyComment) {
+              const initialHistoryBody = `## Rule Validation History\n\n<details>\n<summary><strong>Click to expand history</strong></summary>\n\n_No previous validation runs recorded yet._\n</details>\n`;
+              const response = await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: initialHistoryBody
+              });
+              historyComment = response.data;
+            }
+            
+            let latestComment = latestComments[latestComments.length - 1];
+            
+            if (latestComment) {
+              const titleMatch = latestComment.body.match(/## Rule Validation Results \(Run (\d+)\)/);
+              const oldRunId = titleMatch ? titleMatch[1] : 'Unknown';
+              
+              let shrinkText = `### Run ${oldRunId} ([View Run](${context.payload.repository.html_url}/actions/runs/${oldRunId}))\n`;
+              
+              const parts = latestComment.body.split('## Rule: ');
+              for (let i = 1; i < parts.length; i++) {
+                const lines = parts[i].split('\n');
+                const ruleName = lines[0].trim();
+                
+                const summaryLine = lines.find(line => line.startsWith('**Summary:**'));
+                const errorLine = lines.find(line => line.startsWith('**ERROR:**'));
+                
+                if (summaryLine) {
+                  const cleanSummary = summaryLine.replace('**Summary:**', '').trim();
+                  shrinkText += `- **${ruleName}**: ${cleanSummary}\n`;
+                } else if (errorLine) {
+                  const cleanError = errorLine.replace('**ERROR:**', '').trim();
+                  shrinkText += `- **${ruleName}**: ${cleanError}\n`;
+                } else {
+                  shrinkText += `- **${ruleName}**: Failed to complete validation\n`;
+                }
+              }
+              shrinkText += `\n`;
+              
+              let currentHistoryBody = historyComment.body;
+              if (currentHistoryBody.includes('_No previous validation runs recorded yet._\n')) {
+                currentHistoryBody = currentHistoryBody.replace('_No previous validation runs recorded yet._\n', '');
+              } else if (currentHistoryBody.includes('_No previous validation runs recorded yet._')) {
+                currentHistoryBody = currentHistoryBody.replace('_No previous validation runs recorded yet._', '');
+              }
+              
+              const lastDetailsIdx = currentHistoryBody.lastIndexOf('</details>');
+              if (lastDetailsIdx !== -1) {
+                const updatedHistoryBody = currentHistoryBody.substring(0, lastDetailsIdx) + 
+                    shrinkText + currentHistoryBody.substring(lastDetailsIdx);
+                
+                await github.rest.issues.updateComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  comment_id: historyComment.id,
+                  body: updatedHistoryBody
+                });
+              }
+              
+              console.log(`Cleaning up ${latestComments.length} old report comments...`);
+              for (const oldLatest of latestComments) {
+                await github.rest.issues.deleteComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  comment_id: oldLatest.id
+                });
+              }
+            }
+            
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,

@@ -1,0 +1,307 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "Text variable contains leading spaces.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_value": " CDISC001",
+            "variable_name": "USUBJID"
+          },
+          "validated": false
+        },
+        {
+          "row": 20,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_value": "       HYTRIN",
+            "variable_name": "CMTRT"
+          },
+          "validated": false
+        },
+        {
+          "row": 30,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_value": " TABLET",
+            "variable_name": "CMDOSU"
+          },
+          "validated": false
+        },
+        {
+          "row": 47,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_value": " 2013-01-11",
+            "variable_name": "CMSTDTC"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "execution_status": "success",
+      "execution_message": "Text variable contains leading spaces.",
+      "number_errors": 11,
+      "errors": [
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_value": " CDISCPILOT01",
+            "variable_name": "STUDYID"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_value": " CDISCPILOT01",
+            "variable_name": "STUDYID"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_value": " CDISCPILOT01",
+            "variable_name": "STUDYID"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_value": " CDISCPILOT01",
+            "variable_name": "STUDYID"
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_value": " CDISCPILOT01",
+            "variable_name": "STUDYID"
+          },
+          "validated": false
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_value": " CDISCPILOT01",
+            "variable_name": "STUDYID"
+          },
+          "validated": false
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_value": " CDISCPILOT01",
+            "variable_name": "STUDYID"
+          },
+          "validated": false
+        },
+        {
+          "row": 11,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_value": " CDISCPILOT01",
+            "variable_name": "STUDYID"
+          },
+          "validated": false
+        },
+        {
+          "row": 12,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_value": " CDISCPILOT01",
+            "variable_name": "STUDYID"
+          },
+          "validated": false
+        },
+        {
+          "row": 13,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_value": " CDISCPILOT01",
+            "variable_name": "STUDYID"
+          },
+          "validated": false
+        },
+        {
+          "row": 14,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_value": " CDISCPILOT01",
+            "variable_name": "STUDYID"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "Text variable contains leading spaces.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 116,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_value": " COINCIDENT",
+            "variable_name": "LBENRTPT"
+          },
+          "validated": false
+        },
+        {
+          "row": 118,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_value": "     ",
+            "variable_name": "LBENRTPT"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "success",
+      "execution_message": "Text variable contains leading spaces.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_value": " SCREEN",
+            "variable_name": "ETCD"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "cm.xpt",
+      "Row": 5,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 6,
+      "Variable": "CMDOSU"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 7,
+      "Variable": "CMSTDTC"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 8,
+      "Variable": "CMTRT"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 8,
+      "Variable": "STUDYID"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 9,
+      "Variable": "STUDYID"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 10,
+      "Variable": "STUDYID"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 11,
+      "Variable": "STUDYID"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 12,
+      "Variable": "STUDYID"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 13,
+      "Variable": "STUDYID"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 14,
+      "Variable": "STUDYID"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 15,
+      "Variable": "STUDYID"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 16,
+      "Variable": "STUDYID"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 17,
+      "Variable": "STUDYID"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 18,
+      "Variable": "STUDYID"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 5,
+      "Variable": "LBENRTPT"
+    },
+    {
+      "Sheet": "se.xpt",
+      "Row": 5,
+      "Variable": "ETCD"
+    }
+  ]
+}

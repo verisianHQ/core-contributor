@@ -12,7 +12,7 @@
       "dataset": "ss.xpt",
       "domain": "SS",
       "execution_status": "success",
-      "execution_message": "DSDECOD is not \"DEATH\", When SS.SSSTRESC = \"DEAD\".",
+      "execution_message": "SSSTRESC in the SS dataset is 'DEAD', but a record is missing in the DS dataset where DSDECOD = 'DEATH'.",
       "number_errors": 1,
       "errors": [
         {
@@ -20,49 +20,11 @@
           "SEQ": 2,
           "USUBJID": "015246-076-0003-00003",
           "value": {
-            "$ds_dsdecod": null,
             "SSSTRESC": "DEAD"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ds.xpt",
-      "Row": 11,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 11,
-      "Variable": "DSDECOD"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 16,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 16,
-      "Variable": "DSDECOD"
-    },
-    {
-      "Sheet": "ss.xpt",
-      "Row": 1,
-      "Variable": "SSSTRESC"
-    },
-    {
-      "Sheet": "ss.xpt",
-      "Row": 6,
-      "Variable": "SSSTRESC"
-    },
-    {
-      "Sheet": "ss.xpt",
-      "Row": 8,
-      "Variable": "SSSTRESC"
     }
   ]
 }
