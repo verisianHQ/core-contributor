@@ -80,8 +80,11 @@ Check:
           operator: not_equal_to
           value: DM
           value_is_literal: true
-        - name: IDVAR
-          operator: empty
+        - any:
+            - name: IDVAR
+              operator: empty
+            - name: IDVAR
+              operator: not_exists
 Core:
   Id: CORE-000158
   Status: Published
