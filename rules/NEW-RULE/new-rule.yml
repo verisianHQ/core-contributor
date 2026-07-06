@@ -136,7 +136,7 @@ Core:
   Id: FDA.SDTMIG.FB7001
   Status: Draft
   Version: '1'
-Description: Raise an error when --STRESU is not consistent for records with identical --TESTCD values.
+Description: Raise an error when standard unit (--STRESU) is not consistent per test (--TESTCD) for a given drug or metabolite across pharmacokinetic datasets within a submission. 
 Executability: Fully Executable
 Outcome:
   Message: Standard unit (--STRESU) is not consistent per test (--TESTCD).
