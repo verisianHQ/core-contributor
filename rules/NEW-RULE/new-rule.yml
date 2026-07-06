@@ -44,6 +44,8 @@ Authorities:
 Check:
   all:
     - name: CMCLASCD
+      operator: exists
+    - name: CMCLASCD
       operator: non_empty
     - name: CMCLASCD
       operator: is_not_valid_whodrug_code_reference
