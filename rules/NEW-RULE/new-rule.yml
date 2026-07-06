@@ -54,7 +54,7 @@ Core:
 Description: Raise an error when Date/Time of Informed Consent (RFICDTC) is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: RFICDTC is not populated.
+  Message: Missing RFICDTC.
   Output Variables:
     - RFICDTC
 Rule Type: Record Data
