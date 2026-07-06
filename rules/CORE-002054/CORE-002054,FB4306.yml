@@ -135,8 +135,8 @@ Check:
         - name: --STINT
           operator: not_exists
 Core:
-  Id: FDA.SDTMIG.FB4306
-  Status: Draft
+  Id: CORE-002054
+  Status: Published
   Version: '1'
 Description: Raise an error when planned end of assessment interval (--ENINT) is populated and planned start of assessment interval (--STINT) is not populated.
 Executability: Fully Executable
