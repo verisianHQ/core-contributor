@@ -66,7 +66,7 @@ Core:
   Id: FDA.SDTMIG.FB1107
   Status: Draft
   Version: '1'
-Description: Raise an error when the desired TSPARMCDs for QTc evaluations are missing in the TS dataset.
+Description: Raise an error when not all FDA Conditionally Desired Trial Summary (TS) Parameters (TSPARMCDs) for QTc evaluations are present in the TS dataset.
 Executability: Fully Executable
 Outcome:
   Message: FDA Conditional Desired TSPARMCD for QTc evaluations is missing in the TS dataset.
