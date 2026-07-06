@@ -27,8 +27,8 @@ Check:
       - name: RFCSTDTC
         operator: not_exists
 Core:
-  Id: FDA.SDTMIG.FB4305
-  Status: Draft
+  Id: CORE-002053
+  Status: Published
   Version: '1'
 Description: Raise an error when date/time of last challenge agent admin (RFCENDTC) is populated and date/time of first challenge agent admin (RFCSTDTC) is not populated.
 Executability: Fully Executable
