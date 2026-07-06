@@ -12,7 +12,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMSTDY is not properly calculated per study day algorithm.",
+      "execution_message": "CMSTDY is not calculated correctly even though the date portion of CMSTDTC is complete and the date portion of RFSTDTC is complete.",
       "number_errors": 3,
       "errors": [
         {
@@ -22,6 +22,7 @@
           "value": {
             "CMSTDY": null,
             "CMSTDTC": "2013-02-18",
+            "$val_stdy": 45,
             "RFSTDTC": "2013-01-05"
           },
           "validated": true
@@ -33,6 +34,7 @@
           "value": {
             "CMSTDY": 45.0,
             "CMSTDTC": "2013-02-18",
+            "$val_stdy": -447,
             "RFSTDTC": "2014-05-11"
           },
           "validated": true
@@ -44,6 +46,7 @@
           "value": {
             "CMSTDY": -511.0,
             "CMSTDTC": "2011-07-15",
+            "$val_stdy": -799,
             "RFSTDTC": "2013-09-21"
           },
           "validated": true

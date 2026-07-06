@@ -112,8 +112,10 @@ Core:
   Id: CORE-000552
   Status: Published
   Version: '1'
-Description: Raise an error when --STDY is not calculated using the correct 
-  algorithm.
+Description: Raise an error when the Study Day of Start of Observation 
+  (--STDY) is not correctly calculated as per the study day algorithm 
+  as a non-zero integer value when the date portion of --STDTC is complete
+  and the date portion of RFSTDTC is a complete date.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
@@ -124,10 +126,12 @@ Operations:
     name: --STDTC
     operator: dy
 Outcome:
-  Message: --STDY is not properly calculated per study day algorithm.
+  Message: --STDY is not calculated correctly even though the date portion 
+    of --STDTC is complete and the date portion of RFSTDTC is complete.
   Output Variables:
     - --STDY
     - --STDTC
+    - $val_stdy
     - RFSTDTC
 Rule Type: Record Data
 Scope:
