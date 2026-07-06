@@ -137,7 +137,7 @@ Core:
   Id: FDA.SDTMIG.FB7101
   Status: Draft
   Version: '1'
-Description: Raise an error when specimen type PCSPEC does not equal PPSPEC for the same drug or metabolite (PCTEST = PPCAT). 
+Description: Raise an error when for the same drug or metabolite (PCTEST = PCCAT), specimen type (--SPEC) is not consistent across pharmacokinetic datasets within a submission. 
 Executability: Partially Executable
 Match Datasets:
   - Name: RELREC
