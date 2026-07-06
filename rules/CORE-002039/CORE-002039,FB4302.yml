@@ -135,8 +135,8 @@ Check:
         - name: --DTC
           operator: not_exists
 Core:
-  Id: FDA.SDTMIG.FB4302
-  Status: Draft
+  Id: CORE-002039
+  Status: Published
   Version: '1'
 Description: Raise an error when end date/time of observation (--ENDTC) is populated and related date/time of collection (--DTC) is not populated.
 Executability: Fully Executable
