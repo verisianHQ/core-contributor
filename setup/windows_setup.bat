@@ -1,6 +1,7 @@
 @echo off
 REM Contributor setup script for Windows
 setlocal enabledelayedexpansion
+cd /d "%~dp0"
 
 echo CDISC Rules Engine - Contributor Setup
 echo.
@@ -9,7 +10,7 @@ REM Warn if not running as admin [cite: 2]
 net session >nul 2>&1
 if %errorLevel% neq 0 (
     echo Requesting Administrative privileges...
-    powershell -Command "Start-Process -FilePath '%0' -Verb RunAs"
+    powershell -Command "Start-Process -FilePath '%~f0' -WorkingDirectory '%~dp0' -Verb RunAs"
     exit /b
 )
 
