@@ -1,0 +1,48 @@
+# Variable: RFCSTDTC
+# Condition: RFCENDTC ^= null
+# Rule: RFCSTDTC ^= null
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: When end timepoint is provided, then a related start timepoint should also be provided.
+                Document: FDA
+                Section: FDAB043
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4305
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: RFCENDTC
+      operator: non_empty
+    - any:
+      - name: RFCSTDTC
+        operator: empty
+      - name: RFCSTDTC
+        operator: not_exists
+Core:
+  Id: CORE-002053
+  Status: Published
+  Version: '1'
+Description: Raise an error when date/time of last challenge agent admin (RFCENDTC) is populated and date/time of first challenge agent admin (RFCSTDTC) is not populated.
+Executability: Fully Executable
+Outcome:
+  Message: RFCENDTC is populated, but RFCSTDTC is not populated.
+  Output Variables:
+    - RFCENDTC
+    - RFCSTDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

@@ -4,23 +4,11 @@
       "dataset": "ft.xpt",
       "domain": "FT",
       "execution_status": "success",
-      "execution_message": "FTTPT and FTTPTNUM do not have a one-to-one relationship per unique combination of VISITNUM and FTTPTREF values",
-      "number_errors": 32,
+      "execution_message": "FTTPT and FTTPTNUM do not have a one-to-one relationship per unique combination of VISITNUM and FTTPTREF values.",
+      "number_errors": 12,
       "errors": [
         {
           "row": 1,
-          "SEQ": 120,
-          "USUBJID": "CDISC001",
-          "value": {
-            "VISITNUM": 2.0,
-            "FTTPTREF": "REF1",
-            "FTTPT": "30 MIN POST",
-            "FTTPTNUM": 10.0
-          },
-          "validated": false
-        },
-        {
-          "row": 2,
           "SEQ": 121,
           "USUBJID": "CDISC001",
           "value": {
@@ -29,10 +17,10 @@
             "FTTPT": "30 MIN POST1",
             "FTTPTNUM": 10.0
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 3,
+          "row": 2,
           "SEQ": 122,
           "USUBJID": "CDISC001",
           "value": {
@@ -41,34 +29,10 @@
             "FTTPT": "30 MIN POST",
             "FTTPTNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 4,
-          "SEQ": 123,
-          "USUBJID": "CDISC001",
-          "value": {
-            "VISITNUM": 2.0,
-            "FTTPTREF": "REF1",
-            "FTTPT": "30 MIN POST",
-            "FTTPTNUM": 10.0
-          },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": 256,
-          "USUBJID": "CDISC001",
-          "value": {
-            "VISITNUM": 8.0,
-            "FTTPTREF": "REF3",
-            "FTTPT": "30 MIN POST",
-            "FTTPTNUM": 20.0
-          },
-          "validated": false
-        },
-        {
-          "row": 6,
+          "row": 3,
           "SEQ": 257,
           "USUBJID": "CDISC001",
           "value": {
@@ -77,10 +41,10 @@
             "FTTPT": "30 MIN POST",
             "FTTPTNUM": 20.0
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 7,
+          "row": 4,
           "SEQ": 258,
           "USUBJID": "CDISC001",
           "value": {
@@ -89,10 +53,10 @@
             "FTTPT": "30 MIN POST",
             "FTTPTNUM": 29.0
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 8,
+          "row": 5,
           "SEQ": 259,
           "USUBJID": "CDISC001",
           "value": {
@@ -101,58 +65,10 @@
             "FTTPT": "30 MIN POST",
             "FTTPTNUM": 21.0
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 9,
-          "SEQ": 392,
-          "USUBJID": "CDISC001",
-          "value": {
-            "VISITNUM": 201.0,
-            "FTTPTREF": "REF5",
-            "FTTPT": "30 MIN POST2",
-            "FTTPTNUM": 30.0
-          },
-          "validated": false
-        },
-        {
-          "row": 10,
-          "SEQ": 393,
-          "USUBJID": "CDISC001",
-          "value": {
-            "VISITNUM": 201.0,
-            "FTTPTREF": "REF5",
-            "FTTPT": "30 MIN POST",
-            "FTTPTNUM": 30.0
-          },
-          "validated": false
-        },
-        {
-          "row": 11,
-          "SEQ": 394,
-          "USUBJID": "CDISC001",
-          "value": {
-            "VISITNUM": 201.0,
-            "FTTPTREF": "REF5",
-            "FTTPT": "30 MIN POST",
-            "FTTPTNUM": 35.0
-          },
-          "validated": false
-        },
-        {
-          "row": 12,
-          "SEQ": 395,
-          "USUBJID": "CDISC001",
-          "value": {
-            "VISITNUM": 201.0,
-            "FTTPTREF": "REF5",
-            "FTTPT": "30 MIN POST",
-            "FTTPTNUM": 30.0
-          },
-          "validated": false
-        },
-        {
-          "row": 13,
+          "row": 6,
           "SEQ": 120,
           "USUBJID": "CDISC002",
           "value": {
@@ -161,10 +77,10 @@
             "FTTPT": "30 MIN POST2",
             "FTTPTNUM": 11.0
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 14,
+          "row": 7,
           "SEQ": 121,
           "USUBJID": "CDISC002",
           "value": {
@@ -173,22 +89,10 @@
             "FTTPT": "30 MIN POST",
             "FTTPTNUM": 11.0
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 15,
-          "SEQ": 122,
-          "USUBJID": "CDISC002",
-          "value": {
-            "VISITNUM": 2.0,
-            "FTTPTREF": "REF2",
-            "FTTPT": "30 MIN POST",
-            "FTTPTNUM": 11.0
-          },
-          "validated": false
-        },
-        {
-          "row": 16,
+          "row": 8,
           "SEQ": 123,
           "USUBJID": "CDISC002",
           "value": {
@@ -197,10 +101,10 @@
             "FTTPT": "30 MIN POST",
             "FTTPTNUM": 15.0
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 17,
+          "row": 9,
           "SEQ": 256,
           "USUBJID": "CDISC002",
           "value": {
@@ -209,46 +113,10 @@
             "FTTPT": "30 MIN POST",
             "FTTPTNUM": 27.0
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 18,
-          "SEQ": 257,
-          "USUBJID": "CDISC002",
-          "value": {
-            "VISITNUM": 8.0,
-            "FTTPTREF": "REF4",
-            "FTTPT": "30 MIN POST",
-            "FTTPTNUM": 21.0
-          },
-          "validated": false
-        },
-        {
-          "row": 19,
-          "SEQ": 258,
-          "USUBJID": "CDISC002",
-          "value": {
-            "VISITNUM": 8.0,
-            "FTTPTREF": "REF1",
-            "FTTPT": "30 MIN POST",
-            "FTTPTNUM": 22.0
-          },
-          "validated": false
-        },
-        {
-          "row": 20,
-          "SEQ": 259,
-          "USUBJID": "CDISC002",
-          "value": {
-            "VISITNUM": 8.0,
-            "FTTPTREF": "REF1",
-            "FTTPT": "30 MIN POST",
-            "FTTPTNUM": 25.0
-          },
-          "validated": false
-        },
-        {
-          "row": 21,
+          "row": 10,
           "SEQ": 120,
           "USUBJID": "CDISC003",
           "value": {
@@ -257,22 +125,10 @@
             "FTTPT": "30 MIN POST",
             "FTTPTNUM": 10.0
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 22,
-          "SEQ": 121,
-          "USUBJID": "CDISC003",
-          "value": {
-            "VISITNUM": 2.0,
-            "FTTPTREF": "REF1",
-            "FTTPT": "30 MIN POST",
-            "FTTPTNUM": 10.0
-          },
-          "validated": false
-        },
-        {
-          "row": 23,
+          "row": 11,
           "SEQ": 122,
           "USUBJID": "CDISC003",
           "value": {
@@ -281,10 +137,10 @@
             "FTTPT": "30 MIN POST",
             "FTTPTNUM": 12.0
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 24,
+          "row": 12,
           "SEQ": 123,
           "USUBJID": "CDISC003",
           "value": {
@@ -293,103 +149,7 @@
             "FTTPT": "30 MIN POST",
             "FTTPTNUM": 16.0
           },
-          "validated": false
-        },
-        {
-          "row": 25,
-          "SEQ": 256,
-          "USUBJID": "CDISC003",
-          "value": {
-            "VISITNUM": 8.0,
-            "FTTPTREF": "REF1",
-            "FTTPT": "30 MIN POST",
-            "FTTPTNUM": 22.0
-          },
-          "validated": false
-        },
-        {
-          "row": 26,
-          "SEQ": 257,
-          "USUBJID": "CDISC003",
-          "value": {
-            "VISITNUM": 8.0,
-            "FTTPTREF": "REF2",
-            "FTTPT": "30 MIN POST",
-            "FTTPTNUM": 28.0
-          },
-          "validated": false
-        },
-        {
-          "row": 27,
-          "SEQ": 258,
-          "USUBJID": "CDISC003",
-          "value": {
-            "VISITNUM": 8.0,
-            "FTTPTREF": "REF2",
-            "FTTPT": "30 MIN POST",
-            "FTTPTNUM": 23.0
-          },
-          "validated": false
-        },
-        {
-          "row": 28,
-          "SEQ": 259,
-          "USUBJID": "CDISC003",
-          "value": {
-            "VISITNUM": 8.0,
-            "FTTPTREF": "REF2",
-            "FTTPT": "30 MIN POST",
-            "FTTPTNUM": 23.0
-          },
-          "validated": false
-        },
-        {
-          "row": 29,
-          "SEQ": 528,
-          "USUBJID": "CDISC003",
-          "value": {
-            "VISITNUM": 201.0,
-            "FTTPTREF": "REF6",
-            "FTTPT": "30 MIN POST",
-            "FTTPTNUM": 31.0
-          },
-          "validated": false
-        },
-        {
-          "row": 30,
-          "SEQ": 529,
-          "USUBJID": "CDISC003",
-          "value": {
-            "VISITNUM": 201.0,
-            "FTTPTREF": "REF6",
-            "FTTPT": "30 MIN POST",
-            "FTTPTNUM": 36.0
-          },
-          "validated": false
-        },
-        {
-          "row": 31,
-          "SEQ": 530,
-          "USUBJID": "CDISC003",
-          "value": {
-            "VISITNUM": 201.0,
-            "FTTPTREF": "REF6",
-            "FTTPT": "30 MIN POST",
-            "FTTPTNUM": 31.0
-          },
-          "validated": false
-        },
-        {
-          "row": 32,
-          "SEQ": 531,
-          "USUBJID": "CDISC003",
-          "value": {
-            "VISITNUM": 201.0,
-            "FTTPTREF": "REF6",
-            "FTTPT": "30 MIN POST3",
-            "FTTPTNUM": 31.0
-          },
-          "validated": false
+          "validated": true
         }
       ]
     }
