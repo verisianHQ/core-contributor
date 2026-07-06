@@ -1,6 +1,7 @@
 # Variable: --BDSYCD
 # Condition: 
 # Rule: --BDSYCD and --BODSYS have a one-to-one relationship
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -55,12 +56,55 @@ Authorities:
             Version: '1.0'
         Substandard: SDTM
         Version: '1.0'
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0910
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0910
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0910
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
 Check:
   all:
-    - name: --BDSYCD
-      operator: exists
-    - name: --BODSYS
-      operator: exists
     - name: --BDSYCD
       operator: is_not_unique_relationship
       value: --BODSYS
@@ -68,11 +112,12 @@ Core:
   Id: CORE-000184
   Status: Published
   Version: '1'
-Description: There must be a one-to-one relationship between --BDSYSCD and --BODSYS
+Description: Raise an error when --BDSYCD and --BODSYS are present, but do not have a one-to-one relationship.
 Executability: Fully Executable
 Outcome:
-  Message: There is not a one-to-one relationship between --BODSYS and --BDSYSCD
+  Message: --BDSYCD and --BODSYS do not have a one-to-one relationship.
   Output Variables:
+    - --DECOD
     - --BODSYS
     - --BDSYCD
 Rule Type: Record Data
