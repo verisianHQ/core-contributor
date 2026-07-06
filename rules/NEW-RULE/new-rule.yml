@@ -139,7 +139,7 @@ Core:
 Description: Raise an error when --STRESU is not consistent for records with identical --TESTCD values.
 Executability: Fully Executable
 Outcome:
-  Message: --STRESU is not consistent per --TESTCD.
+  Message: Standard unit (--STRESU) is not consistent per test (--TESTCD).
   Output Variables:
     - --TESTCD
     - --STRESU
