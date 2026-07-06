@@ -137,18 +137,22 @@ Authorities:
         Version: '1.0'
 Check:
   any:
-    - name: variable_length
-      operator: not_equal_to
-      value: $max_variable_value_length
-    - name: $global_max_variable_length
-      operator: not_equal_to
-      value: $global_min_variable_length
-    - name: variable_length
-      operator: not_equal_to
-      value: $global_max_variable_length
-    - name: variable_length
-      operator: not_equal_to
-      value: $global_min_variable_length
+    - name: dataset_name
+      operator: equal_to
+      value: $domain_label
+    - any:
+      - name: variable_length
+        operator: not_equal_to
+        value: $max_variable_value_length
+      - name: $global_max_variable_length
+        operator: not_equal_to
+        value: $global_min_variable_length
+      - name: variable_length
+        operator: not_equal_to
+        value: $global_max_variable_length
+      - name: variable_length
+        operator: not_equal_to
+        value: $global_min_variable_length
 Core:
   Id: FDA.SDTMIG.FB1801
   Status: Draft
@@ -174,6 +178,9 @@ Operations:
     operator: min
     group:
       - variable_name
+  - id: $domain_label
+    name: domain_label
+    operator: domain_label
 Outcome:
   Message: Variable length is different between datasets and/or is longer than the maximum length of the actual data contained by the variable.
   Output Variables:
@@ -192,4 +199,6 @@ Scope:
   Domains:
     Exclude:
       - SUPP--
-Sensitivity: Study
+Sensitivity: Group
+Grouping_Variables:
+  - variable_name

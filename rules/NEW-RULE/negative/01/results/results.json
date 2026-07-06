@@ -5,12 +5,12 @@
       "domain": "SV",
       "execution_status": "success",
       "execution_message": "Variable length is different between datasets and/or is longer than the maximum length of the actual data contained by the variable.",
-      "number_errors": 1,
+      "number_errors": 3,
       "errors": [
         {
-          "row": null,
+          "row": 3,
           "SEQ": null,
-          "USUBJID": null,
+          "USUBJID": "None",
           "value": {
             "dataset_name": "SV",
             "variable_name": "DOMAIN",
@@ -21,6 +21,36 @@
             "$global_max_variable_length": 3.0
           },
           "validated": true
+        },
+        {
+          "row": 21,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "dataset_name": "SV",
+            "variable_name": "SVENDY",
+            "variable_length": 1.0,
+            "variable_value_length": 1.0,
+            "$max_variable_value_length": 2.0,
+            "$global_min_variable_length": 1.0,
+            "$global_max_variable_length": 1.0
+          },
+          "validated": false
+        },
+        {
+          "row": 37,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "dataset_name": "TV",
+            "variable_name": "TVENRL",
+            "variable_length": 2.0,
+            "variable_value_length": 1.0,
+            "$max_variable_value_length": 1.0,
+            "$global_min_variable_length": 2.0,
+            "$global_max_variable_length": 2.0
+          },
+          "validated": false
         }
       ]
     },
@@ -28,9 +58,55 @@
       "dataset": "tv.xpt",
       "domain": "TV",
       "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "execution_message": "Variable length is different between datasets and/or is longer than the maximum length of the actual data contained by the variable.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "dataset_name": "SV",
+            "variable_name": "DOMAIN",
+            "variable_length": 2.0,
+            "variable_value_length": 2.0,
+            "$max_variable_value_length": 2.0,
+            "$global_min_variable_length": 2.0,
+            "$global_max_variable_length": 3.0
+          },
+          "validated": false
+        },
+        {
+          "row": 21,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "dataset_name": "SV",
+            "variable_name": "SVENDY",
+            "variable_length": 1.0,
+            "variable_value_length": 1.0,
+            "$max_variable_value_length": 2.0,
+            "$global_min_variable_length": 1.0,
+            "$global_max_variable_length": 1.0
+          },
+          "validated": false
+        },
+        {
+          "row": 37,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "dataset_name": "TV",
+            "variable_name": "TVENRL",
+            "variable_length": 2.0,
+            "variable_value_length": 1.0,
+            "$max_variable_value_length": 1.0,
+            "$global_min_variable_length": 2.0,
+            "$global_max_variable_length": 2.0
+          },
+          "validated": false
+        }
+      ]
     }
   ]
 }
