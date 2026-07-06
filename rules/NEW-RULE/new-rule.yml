@@ -137,9 +137,9 @@ Authorities:
         Version: '1.0'
 Check:
   all:
-    - name: $max_variable_value_length
+    - name: variable_length
       operator: greater_than
-      value: variable_length
+      value: $max_variable_value_length
 Core:
   Id: FDA.SDTMIG.FB1901
   Status: Draft
@@ -152,13 +152,13 @@ Operations:
     operator: max
     group:
       - variable_name
+    use_rule_type_table: true
 Outcome:
   Message: Variable length is longer than the maximum length of the actual data contained by the variable.
   Output Variables:
     - variable_name
-    - variable_value
+    - $max_variable_value_length
     - variable_length
-    - variable_value_length
 Rule Type: Value Check with Variable Metadata
 Scope:
   Classes:
@@ -168,4 +168,6 @@ Scope:
     Include:
       - SUPP--
       - RELREC
-Sensitivity: Record
+Sensitivity: Group
+Grouping_Variables:
+  - variable_name

@@ -5,29 +5,16 @@
       "domain": "RELREC",
       "execution_status": "success",
       "execution_message": "Variable length is longer than the maximum length of the actual data contained by the variable.",
-      "number_errors": 2,
+      "number_errors": 1,
       "errors": [
         {
-          "row": 5,
+          "row": 11,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "variable_name": "USUBJID",
-            "variable_value": "CDISC0001",
-            "variable_length": 8.0,
-            "variable_value_length": 9.0
-          },
-          "validated": true
-        },
-        {
-          "row": 6,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "USUBJID",
-            "variable_value": "CDISC001",
-            "variable_length": 8.0,
-            "variable_value_length": 8.0
+            "variable_name": "RELTYPE",
+            "$max_variable_value_length": 3.0,
+            "variable_length": 33.0
           },
           "validated": true
         }
@@ -41,26 +28,24 @@
       "number_errors": 2,
       "errors": [
         {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "IDVARVAL",
+            "$max_variable_value_length": 2.0,
+            "variable_length": 3.0
+          },
+          "validated": true
+        },
+        {
           "row": 15,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
             "variable_name": "QVAL",
-            "variable_value": "TWENTYCHARACTERVALUE",
-            "variable_length": 19.0,
-            "variable_value_length": 20.0
-          },
-          "validated": true
-        },
-        {
-          "row": 16,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "QVAL",
-            "variable_value": "MEDDRA VERSION 22.0",
-            "variable_length": 19.0,
-            "variable_value_length": 19.0
+            "$max_variable_value_length": 20.0,
+            "variable_length": 21.0
           },
           "validated": true
         }
