@@ -53,11 +53,11 @@ Core:
   Id: CORE-000372
   Status: Published
   Version: '1'
-Description: Raise an error when TSPARMCD = 'ADDON' but TSVAL value does
-  not equal 'N' or 'Y'.
+Description: Raise an error when TSVAL for TSPARMCD = 'ADDON' is populated 
+  but TSVAL is not equal to 'N' or 'Y'.
 Executability: Fully Executable
 Outcome:
-  Message: TSPARMCD = 'ADDON' but TSVAL does not equal 'N' or
+  Message: TSVAL when TSPARMCD = 'ADDON' is populated but is not equal 'N' or
     'Y'.
   Output Variables:
     - TSPARMCD
