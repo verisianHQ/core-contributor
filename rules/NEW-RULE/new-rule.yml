@@ -68,11 +68,29 @@ Core:
   Version: '1'
 Description: Raise an error when not all FDA Conditionally Desired Trial Summary (TS) Parameters (TSPARMCDs) for QTc evaluations are present in the TS dataset.
 Executability: Fully Executable
+Operations:
+  - id: $distinct_tsparmcds
+    name: TSPARMCD
+    operator: distinct
+  - id: $missing_tsparmcds
+    name: 
+      - EGBLIND
+      - EGCTMON
+      - EGLEADPR
+      - EGLEADSM
+      - EGRDMETH
+      - EGREPLBL
+      - EGREPLTR
+      - EGTWVALG
+    operator: minus
+    subtract: $distinct_tsparmcds
+
 Outcome:
   Message: At least one FDA Conditional Desired TSPARMCD for QTc evaluations is missing in the TS dataset.
   Output Variables:
     - TSPARMCD
     - TSVAL
+    - $missing_tsparmcds
 Rule Type: Record Data
 Scope:
   Classes:
