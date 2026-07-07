@@ -4,7 +4,7 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "SDTM IG Version or SDTM Version do not match a value in the CDISC Controlled Terminology or do not exist in the FDA Data Standards Catalog.",
+      "execution_message": "SDTM IG Version or SDTM Version do not exist in the FDA Data Standards Catalog or do exist, but do not match a value in the CDISC Controlled Terminology SDTMIGRS codelist (C160924) or SDTMVRS codelist (C160923), respectively.",
       "number_errors": 4,
       "errors": [
         {
@@ -13,8 +13,7 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "SDTIGVER",
-            "TSVAL": "1.1",
-            "TSVALCD": "C160924"
+            "TSVAL": "1.1"
           },
           "validated": true
         },
@@ -24,8 +23,7 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "SDTIGVER",
-            "TSVAL": "9.9",
-            "TSVALCD": "C160924"
+            "TSVAL": "9.9"
           },
           "validated": true
         },
@@ -35,8 +33,7 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "SDTMVER",
-            "TSVAL": "3.1.1",
-            "TSVALCD": "C160923"
+            "TSVAL": "3.1.1"
           },
           "validated": true
         },
@@ -46,8 +43,7 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "SDTMVER",
-            "TSVAL": "9.9",
-            "TSVALCD": "C160923"
+            "TSVAL": "9.9"
           },
           "validated": true
         }

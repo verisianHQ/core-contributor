@@ -10,10 +10,10 @@ Authorities:
           - Citations:
               - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
                 Document: FDA
-                Section: FDAB008
+                Section: FDAB011
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: FB0802
+              Id: FB1105
               Version: '1'
             Version: '1.5'
         Version: '3.2'
@@ -143,7 +143,7 @@ Core:
   Id: FDA.SDTMIG.FB1105
   Status: Draft
   Version: '1'
-Description: Raise an error if SDTM IG Version or SDTM Version do not match a value in the CDISC Controlled Terminology or do not exist in the FDA Data Standards Catalog.
+Description: Raise an error when values for Trial Summary Parameters 'SDTM IG Version' or 'SDTM Version' (TSPARMCD = 'SDTIGVER' and 'SDTMVER') do not match a value in the CDISC Controlled Terminology SDTMIGRS codelist (C160924) or SDTMVRS codelist (C160923) respectively or do not exists in the FDA Standards Catalog.
 Executability: Fully Executable
 Operations:
   - id: $SDTMVRS
@@ -163,11 +163,10 @@ Operations:
     filter:
       standard: SDTM
 Outcome:
-  Message: SDTM IG Version or SDTM Version do not match a value in the CDISC Controlled Terminology or do not exist in the FDA Data Standards Catalog.
+  Message: SDTM IG Version or SDTM Version do not exist in the FDA Data Standards Catalog or do exist, but do not match a value in the CDISC Controlled Terminology SDTMIGRS codelist (C160924) or SDTMVRS codelist (C160923), respectively.
   Output Variables:
     - TSPARMCD
     - TSVAL
-    - TSVALCD
 Rule Type: Record Data
 Scope:
   Classes:
