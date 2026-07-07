@@ -1,0 +1,133 @@
+{
+  "datasets": [
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "DSSCAT is equal to DSDECOD.",
+      "number_errors": 12,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "DSDECOD": "INFORMED CONSENT OBTAINED",
+            "DSSCAT": "INFORMED CONSENT OBTAINED"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC002",
+          "value": {
+            "DSDECOD": "ADVERSE EVENT",
+            "DSSCAT": "Adverse Event"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC002",
+          "value": {
+            "DSDECOD": "DEATH",
+            "DSSCAT": "DEATH"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "CDISC006",
+          "value": {
+            "DSDECOD": "STUDY TREATMENT",
+            "DSSCAT": "STUDY TREATMENT"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": 2,
+          "USUBJID": "CDISC006",
+          "value": {
+            "DSDECOD": "WITHDRAWAL BY SUBJECT",
+            "DSSCAT": "WITHDRAWAL BY SUBJECT"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": 3,
+          "USUBJID": "CDISC006",
+          "value": {
+            "DSDECOD": "WITHDRAWAL BY SUBJECT",
+            "DSSCAT": "WITHDRAWAL BY SUBJECT"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": 1,
+          "USUBJID": "CDISC010",
+          "value": {
+            "DSDECOD": "INFORMED CONSENT OBTAINED",
+            "DSSCAT": "INFORMED CONSENT OBTAINED"
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": 2,
+          "USUBJID": "CDISC010",
+          "value": {
+            "DSDECOD": "WITHDRAWAL BY SUBJECT",
+            "DSSCAT": "WITHDRAWAL BY SUBJECT"
+          },
+          "validated": false
+        },
+        {
+          "row": 9,
+          "SEQ": 3,
+          "USUBJID": "CDISC010",
+          "value": {
+            "DSDECOD": "WITHDRAWAL BY SUBJECT",
+            "DSSCAT": "WITHDRAWAL BY SUBJECT"
+          },
+          "validated": false
+        },
+        {
+          "row": 10,
+          "SEQ": 1,
+          "USUBJID": "CDISC013",
+          "value": {
+            "DSDECOD": "INFORMED CONSENT OBTAINED",
+            "DSSCAT": "INFORMED CONSENT OBTAINED"
+          },
+          "validated": false
+        },
+        {
+          "row": 11,
+          "SEQ": 2,
+          "USUBJID": "CDISC013",
+          "value": {
+            "DSDECOD": "Death",
+            "DSSCAT": "DEATH"
+          },
+          "validated": false
+        },
+        {
+          "row": 12,
+          "SEQ": 3,
+          "USUBJID": "CDISC013",
+          "value": {
+            "DSDECOD": "DEATH",
+            "DSSCAT": "DEATH"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
+}
