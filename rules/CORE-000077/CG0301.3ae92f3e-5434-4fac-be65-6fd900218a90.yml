@@ -18,8 +18,9 @@ Authorities:
                   would be a duplication of information already represented in TU.
                   The multi-domain approach to representing oncology assessment data
                   was developed largely to reduce duplication of stored information.
-                Document: SDTMIG v3.4
+                Document: IG v3.4
                 Section: 6.3.12.2
+                Item: TR – Description/Overview
       - Name: SDTMIG
         Version: '3.2'
         References:
@@ -65,7 +66,9 @@ Core:
 Description: Raise an error when TRDIR is present.
 Executability: Fully Executable
 Outcome:
-  Message: TRDIR is present.
+  Message: TRDIR must not be present.
+  Output Variables:
+    - TRDIR
 Rule Type: Record Data
 Scope:
   Classes:
