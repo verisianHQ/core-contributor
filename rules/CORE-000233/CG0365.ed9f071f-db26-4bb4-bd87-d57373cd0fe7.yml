@@ -1,6 +1,7 @@
 # Variable: RDEVID
 # Condition: RSUBJID ^= null
 # Rule: RDEVID = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -17,7 +18,6 @@ Authorities:
                   subjects who can be associated with a study, a particular study
                   subject, or a device used in the study.
                 Document: Model v2.0
-                Item: ' '
                 Section: Associated Persons
       - Name: SDTMIG
         Version: '3.2'
@@ -46,7 +46,7 @@ Authorities:
                   with a study; a particular study subject or a device used in the
                   study.
                 Document: Model v1.7
-                Section: '6.1'
+                Section: 6.1
 Check:
   all:
     - name: RSUBJID
@@ -57,12 +57,11 @@ Core:
   Id: CORE-000233
   Status: Published
   Version: '1'
-Description: Related Device Identifier (RDEVID) and Related Subject or Pool Identifier
-  (RSUBJID) should not both be populated for the same record.
+Description: Raise an error when RDEVID is populated and RSUBJID is populated
+  for the same record.
 Executability: Fully Executable
 Outcome:
-  Message: RDEVID must be empty when RSUBJID is populated and RSUBJID must be empty
-    when RDEVID is populated
+  Message: RSUBJID must not be populated when RDEVID is populated.
   Output Variables:
     - RSUBJID
     - RDEVID
