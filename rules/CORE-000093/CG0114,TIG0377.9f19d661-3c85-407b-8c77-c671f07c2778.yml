@@ -62,8 +62,11 @@ Authorities:
         Version: '1.0'
 Check:
   all:
-    - name: --DOSU
-      operator: empty
+    - any:
+        - name: --DOSU
+          operator: not_exists
+        - name: --DOSU
+          operator: empty
     - any:
         - name: --DOSE
           operator: non_empty
