@@ -1,6 +1,7 @@
 # Variable: EXMETHOD
 # Condition: 
 # Rule: EXMETHOD not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -26,10 +27,10 @@ Core:
   Id: CORE-000326
   Status: Published
   Version: '1'
-Description: Trigger error when EXMETHOD exists in the EX dataset for human clinical trials
+Description: Raise an error when EXMETHOD is present.
 Executability: Fully Executable
 Outcome:
-  Message: EXMETHOD is not to be used with human clinical trials
+  Message: EXMETHOD must not be present.
 Rule Type: Record Data
 Scope:
   Classes:
@@ -38,4 +39,4 @@ Scope:
   Domains:
     Include:
       - EX
-Sensitivity: Record
+Sensitivity: Dataset

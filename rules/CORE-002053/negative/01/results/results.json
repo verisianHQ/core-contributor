@@ -1,0 +1,102 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm1.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "RFCENDTC is populated, but RFCSTDTC is not populated.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "RFCENDTC": "2013-01-12T15:59:00",
+            "RFCSTDTC": null
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "CDISC004",
+          "value": {
+            "RFCENDTC": "2014-03-18T15:59:00",
+            "RFCSTDTC": null
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "CDISC006",
+          "value": {
+            "RFCENDTC": "2013-04-30T15:59:00",
+            "RFCSTDTC": null
+          },
+          "validated": true
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "RFCENDTC": "2013-04-28T15:59:00",
+            "RFCSTDTC": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "dm2.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "RFCENDTC is populated, but RFCSTDTC is not populated.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "RFCENDTC": "2013-01-23T15:59:00",
+            "RFCSTDTC": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "RFCENDTC": "2013-01-12T15:59:00",
+            "RFCSTDTC": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC003",
+          "value": {
+            "RFCENDTC": "2013-11-05T15:59:00",
+            "RFCSTDTC": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "CDISC004",
+          "value": {
+            "RFCENDTC": "2014-03-18T15:59:00",
+            "RFCSTDTC": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
