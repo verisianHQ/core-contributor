@@ -180,10 +180,7 @@ Operations:
 Outcome:
   Message: Variable length is different between datasets and/or is longer than the maximum length of the actual data contained by the variable.
   Output Variables:
-    - dataset_name
     - variable_name
-    - variable_length
-    - variable_value_length
     - $max_variable_value_length
     - $global_min_variable_length
     - $global_max_variable_length
@@ -198,3 +195,5 @@ Scope:
 Sensitivity: Group
 Grouping_Variables:
   - variable_name
+  - dataset_name
+  - filter_by_dataset
