@@ -61,7 +61,7 @@ Core:
 Description: Raise an error when race is collected but 'AMERICAN INDIAN OR ALASKA NATIVE', 'ASIAN', 'BLACK OR AFRICAN AMERICAN', 'NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER', and 'WHITE' are not offered options.
 Executability: Fully Executable
 Outcome:
-  Message: Race is collected, but one or more of the following race options are not offered: AMERICAN INDIAN OR ALASKA NATIVE, ASIAN, BLACK OR AFRICAN AMERICAN, NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER, or WHITE.
+  Message: Race is collected, but one or more of the following race options are not offered - AMERICAN INDIAN OR ALASKA NATIVE, ASIAN, BLACK OR AFRICAN AMERICAN, NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER, or WHITE.
   Output Variables:
     - define_variable_name
     - define_variable_codelist_coded_values
