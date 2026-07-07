@@ -1,6 +1,7 @@
 # Variable: AEREASND
 # Condition: 
 # Rule: AEREASND not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -87,6 +88,8 @@ Description: Raise an error when AEREASND is present.
 Executability: Fully Executable
 Outcome:
   Message: AEREASND must not be present.
+  Output Variables:
+    - AEREASND
 Rule Type: Record Data
 Scope:
   Classes:
