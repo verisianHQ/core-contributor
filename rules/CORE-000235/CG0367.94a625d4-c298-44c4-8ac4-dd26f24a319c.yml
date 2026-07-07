@@ -1,6 +1,7 @@
 # Variable: RSUBJID
 # Condition: RSUBJID ^=null and RSUBJID ^= POOLID
 # Rule: RSUBJID = DM.USUBJID
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -14,8 +15,8 @@ Authorities:
                   about associated persons who are related to the study but not
                   to any of the study subjects.
                 Document: Model v2.0
-                Item: RSUBJID
                 Section: Associated Persons
+                Item: RSUBJID
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0367
@@ -69,8 +70,8 @@ Core:
   Id: CORE-000235
   Status: Published
   Version: '1'
-Description: Verify that RSUBJID=DM.USUBJID when RSUBJID is populated and
-  RSUBJID is not equal to POOLID
+Description: Raise an error when RSUBJID is poplulated and not equal to 
+  POOLID but RSUBJID is not equal to USUBJID in the DM dataset.
 Executability: Fully Executable
 Operations:
   - domain: DM
@@ -78,8 +79,8 @@ Operations:
     name: USUBJID
     operator: distinct
 Outcome:
-  Message: RSUBJID must equal DM.USUBJID when RSUBJID is populated and RSUBJID
-    does not equal POOLID
+  Message: RSUBJID must be equal to USUBJID in the DM dataset when 
+    RSUBJID is populated and RSUBJID is not equal to POOLID.
   Output Variables:
     - USUBJID
     - RSUBJID
