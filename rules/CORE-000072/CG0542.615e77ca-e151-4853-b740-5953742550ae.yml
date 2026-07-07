@@ -34,14 +34,6 @@ Authorities:
                 Document: Model v1.7
                 Item: EGBEATNO
                 Section: Table 2.2.12.1
-      - Name: TIG
-        References:
-              - Cited Guidance: EG Domain only
-                Document: SDTM v2.1
-                Item: Specification --BEATNO
-                Section: 3.1.4 Identifiers for All classes
-            Origin: TIG Conformance Rules
-            Rule Identifier:
 Check:
   all:
     - name: --BEATNO
@@ -54,6 +46,8 @@ Description: Raise an error when --BEATNO is present.
 Executability: Fully Executable
 Outcome:
   Message: --BEATNO must not be present.
+  Output Variables:
+    - --BEATNO
 Rule Type: Record Data
 Scope:
   Classes:
