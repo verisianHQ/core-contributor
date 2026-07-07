@@ -1,6 +1,7 @@
 # Variable: RDOMAIN
 # Condition: RDOMAIN ^= null
 # Rule: RDOMAIN is dataset in study
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -89,7 +90,7 @@ Core:
   Status: Published
   Version: '1'
 Description: Raise an error when RDOMAIN is populated but the referenced RDOMAIN
-  doesn't exist as a dataset in the present study
+  does not exist as a dataset in the present study.
 Executability: Fully Executable
 Operations:
   - id: $study_domains
