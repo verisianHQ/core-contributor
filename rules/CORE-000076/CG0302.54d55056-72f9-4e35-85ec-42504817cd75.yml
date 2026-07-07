@@ -1,6 +1,7 @@
 # Variable: TRPORTOT
 # Condition: 
 # Rule: TRPORTOT not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -67,6 +68,8 @@ Description: Raise an error when TRPORTOT is present.
 Executability: Fully Executable
 Outcome:
   Message: TRPORTOT must not be present.
+  Output Variables:
+    - TRPORTOT
 Rule Type: Record Data
 Scope:
   Classes:
