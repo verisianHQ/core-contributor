@@ -30,20 +30,6 @@ Authorities:
                 Document: Model v1.7
                 Item: RPATHCD
                 Section: Table 2.2.6.1
-      - Name: TIG
-        References:
-          - Citations:
-              - Cited Guidance: Not in human clinical trials
-                Document: SDTM v2.1
-                Item: 'Specification: RPATHCD'
-                Section: Section 3.2.1 Demographics
-            Origin: TIG Conformance Rules
-            Rule Identifier:
-              Id: TIG0626
-              Version: '1'
-            Version: '1.0'
-        Substandard: SDTM
-        Version: '1.0'
 Check:
   all:
     - name: RPATHCD
