@@ -47,13 +47,9 @@ Check:
       operator: equal_to
       value: FCNTRY
       value_is_literal: true
-    - name: TSVCDREF
-      operator: equal_to
-      value: 'GENC'
-      value_is_literal: true
     - name: $alpha_3_genc_country_codes
       operator: does_not_contain
-      value: TSVALCD
+      value: TSVAL
 Core:
   Id: FDA.SDTMIG.FB1713
   Status: Draft
@@ -70,7 +66,6 @@ Outcome:
   Output Variables:
     - TSPARMCD
     - TSVAL
-    - TSVALCD
     - TSVCDREF
 Rule Type: Record Data
 Scope:
