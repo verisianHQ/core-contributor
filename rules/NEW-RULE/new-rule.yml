@@ -65,7 +65,7 @@ Core:
 Description: Raise an error when ethnicity is collected but 'HISPANIC OR LATINO' or 'NOT HISPANIC OR LATINO' are not offered options as per Define-XML document.
 Executability: Fully Executable
 Outcome:
-  Message: Ethnicity is collected, but one of the following ethnicity options are not offered: 'HISPANIC OR LATINO' or 'NOT HISPANIC OR LATINO'.
+  Message: Ethnicity is collected, but one of the following ethnicity options are not offered - 'HISPANIC OR LATINO' or 'NOT HISPANIC OR LATINO'.
   Output Variables:
     - define_variable_name
     - define_variable_codelist_coded_values
