@@ -149,20 +149,21 @@ Check:
   all:
     - name: --CAT
       operator: equal_to_case_insensitive
-      value: $domain_label
+      value: $domain_name
 Core:
   Id: CORE-000272
   Status: Published
   Version: '1'
-Description: Raise an error when --CAT = DOMAIN.
+Description: Raise an error when --CAT is equal to the domain name.
 Executability: Fully Executable
 Operations:
-  - id: $domain_label
+  - id: $domain_name
     operator: domain_label
 Outcome:
-  Message: --CAT is equal to DOMAIN.
+  Message: --CAT must not be equal to the domain name.
   Output Variables:
     - --CAT
+    - $domain_name
 Rule Type: Record Data
 Scope:
   Classes:

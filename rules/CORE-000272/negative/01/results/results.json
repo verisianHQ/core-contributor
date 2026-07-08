@@ -4,98 +4,28 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "LBCAT is equal to DOMAIN.",
-      "number_errors": 10,
+      "execution_message": "LBCAT must not be equal to the domain name.",
+      "number_errors": 2,
       "errors": [
         {
           "row": 1,
           "SEQ": 70,
           "USUBJID": "CDISC002",
           "value": {
-            "LBCAT": "Laboratory Test Results"
+            "LBCAT": "Laboratory Test Results",
+            "$domain_name": "Laboratory Test Results"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": 71,
           "USUBJID": "CDISC002",
           "value": {
-            "LBCAT": "Laboratory Test Results"
+            "LBCAT": "LABORATORY TEST RESULTS",
+            "$domain_name": "Laboratory Test Results"
           },
-          "validated": false
-        },
-        {
-          "row": 3,
-          "SEQ": 72,
-          "USUBJID": "CDISC002",
-          "value": {
-            "LBCAT": "Laboratory Test Results"
-          },
-          "validated": false
-        },
-        {
-          "row": 4,
-          "SEQ": 73,
-          "USUBJID": "CDISC002",
-          "value": {
-            "LBCAT": "Laboratory Test Results"
-          },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": 74,
-          "USUBJID": "CDISC002",
-          "value": {
-            "LBCAT": "Laboratory Test Results"
-          },
-          "validated": false
-        },
-        {
-          "row": 6,
-          "SEQ": 75,
-          "USUBJID": "CDISC002",
-          "value": {
-            "LBCAT": "LABORATORY TEST RESULTS"
-          },
-          "validated": false
-        },
-        {
-          "row": 7,
-          "SEQ": 76,
-          "USUBJID": "CDISC002",
-          "value": {
-            "LBCAT": "LABORATORY TEST RESULTS"
-          },
-          "validated": false
-        },
-        {
-          "row": 8,
-          "SEQ": 77,
-          "USUBJID": "CDISC002",
-          "value": {
-            "LBCAT": "LABORATORY TEST RESULTS"
-          },
-          "validated": false
-        },
-        {
-          "row": 9,
-          "SEQ": 78,
-          "USUBJID": "CDISC002",
-          "value": {
-            "LBCAT": "LABORATORY TEST RESULTS"
-          },
-          "validated": false
-        },
-        {
-          "row": 10,
-          "SEQ": 79,
-          "USUBJID": "CDISC002",
-          "value": {
-            "LBCAT": "LABORATORY TEST RESULTS"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     }
