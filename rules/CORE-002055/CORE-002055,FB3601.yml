@@ -143,8 +143,8 @@ Check:
       operator: less_than
       value: 0
 Core:
-  Id: FDA.SDTMIG.FB3601
-  Status: Draft
+  Id: CORE-002055
+  Status: Published
   Version: '1'
 Description: Raise an error when Study Day of Start of Treatment (--STDY) and/or Study Day of End of Treatment (--ENDY) are negative for exposure treatments.
 Executability: Fully Executable
