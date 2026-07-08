@@ -4,7 +4,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "An appropriate identifier is not present; USUBJID, APID, SPDEVID, SPTOBID, POOLID, SPTOBID, STOCONID should be present.",
+      "execution_message": "Either USUBJID, APID, SPDEVID, POOLID, SPTOBID or STOCONID must be present.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,11 +12,14 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "DOMAIN": "LB",
-            "STUDYID": "XYZ",
-            "LBSEQ": 1.0
+            "APID": "Not in dataset",
+            "USUBJID": "Not in dataset",
+            "SPDEVID": "Not in dataset",
+            "POOLID": "Not in dataset",
+            "SPTOBID": "Not in dataset",
+            "STOCONID": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
