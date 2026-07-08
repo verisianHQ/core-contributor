@@ -97,9 +97,6 @@ Operations:
     operator: study_domains
 Outcome:
   Message: RDOMAIN does not represent a dataset in the study.
-  Output Variables:
-    - RDOMAIN
-    - $study_domains
 Rule Type: Record Data
 Scope:
   Classes:
