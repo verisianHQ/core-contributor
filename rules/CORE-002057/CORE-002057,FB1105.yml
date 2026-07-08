@@ -140,8 +140,8 @@ Check:
               operator: is_not_contained_by
               value: $fda_standards
 Core:
-  Id: FDA.SDTMIG.FB1105
-  Status: Draft
+  Id: CORE-002057
+  Status: Published
   Version: '1'
 Description: Raise an error when values for Trial Summary Parameters 'SDTM IG Version' or 'SDTM Version' (TSPARMCD = 'SDTIGVER' and 'SDTMVER') do not match a value in the CDISC Controlled Terminology SDTMIGRS codelist (C160924) or SDTMVRS codelist (C160923) respectively or do not exists in the FDA Standards Catalog.
 Executability: Fully Executable
