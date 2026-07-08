@@ -1,6 +1,7 @@
 # Variable: RSUBJID
 # Condition: RSUBJID ^= null
 # Rule: RSUBJID ^= POOLID
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -14,7 +15,7 @@ Authorities:
             Version: '2.0'
             Citations:
               - Cited Guidance: Identifier used to identify a related subject or pool
-                  of subjects. RSUBJID will be populated with either the  USUBJID
+                  of subjects. RSUBJID will be populated with either the USUBJID
                   of the related subject or the POOLID of the related pool.
                 Document: Model v2.0
                 Item: RSUBJID
@@ -58,10 +59,10 @@ Core:
   Id: CORE-000232
   Status: Published
   Version: '1'
-Description: Verify when RSUBJID is populated it does not equal POOLID
+Description: Raise an error when RSUBJID is populated and is equal to POOLID.
 Executability: Fully Executable
 Outcome:
-  Message: When RSUBJID is populated, RUSBJID cannot equal POOLID
+  Message: When RSUBJID is populated, RSUBJID cannot be equal to POOLID.
   Output Variables:
     - RSUBJID
     - POOLID
