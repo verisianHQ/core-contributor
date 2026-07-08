@@ -58,7 +58,7 @@ Core:
   Id: NEW-RULE
   Status: Draft
   Version: '1'
-Description: Raise error when TAETORD is not in the same order as the order of elements in the TA dataset for the Arm to which the subject was assigned.
+Description: Raise an error when TAETORD order of elements in the dataset is not in the same order as the order of elements in the TA dataset for the Arm to which the subject was assigned.
 Executability: Fully Executable
 Outcome:
   Message: TAETORD should be in the same order as the order of elements in the TA dataset for the Arm to which the subject was assigned.
