@@ -53,8 +53,8 @@ Check:
       operator: not_equal_to
       value: 'NA'
 Core:
-  Id: FDA.SDTMIG.FB1108
-  Status: Draft
+  Id: CORE-002059
+  Status: Published
   Version: '1'
 Description: Raise an error when TSVALNF for TSPARMCD = 'INDIC' is not equal to 'NA' when study is a healthy volunteer study (TSPARMCD = 'HLTSUBJI' and TSVAL = 'Y').
 Executability: Fully Executable
