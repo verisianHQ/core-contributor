@@ -61,8 +61,8 @@ Check:
     - name: RSUBJID
       operator: non_empty
     - name: RSUBJID
-      operator: not_equal_to
-      value: POOLID
+      operator: is_not_contained_by
+      value: $pooldef_poolid
     - name: RSUBJID
       operator: is_not_contained_by
       value: $dm_usubjid
@@ -74,6 +74,10 @@ Description: Raise an error when RSUBJID is poplulated and not equal to
   POOLID but RSUBJID is not equal to USUBJID in the DM dataset.
 Executability: Fully Executable
 Operations:
+  - domain: POOLDEF
+    id: $pooldef_poolid
+    name: POOLID
+    operator: distinct
   - domain: DM
     id: $dm_usubjid
     name: USUBJID
@@ -82,9 +86,7 @@ Outcome:
   Message: RSUBJID must be equal to USUBJID in the DM dataset when 
     RSUBJID is populated and RSUBJID is not equal to POOLID.
   Output Variables:
-    - USUBJID
     - RSUBJID
-    - POOLID
 Rule Type: Record Data
 Scope:
   Classes:
