@@ -53,7 +53,7 @@ Authorities:
               - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the
                   domain or dictionary classification provided by --DECOD and
                   --BODSYS.
-                Document: IG v.3.0
+                Document: SENDIG v.3.0
                 Section: 4.2.6
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -67,7 +67,7 @@ Authorities:
               - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the
                   domain or dictionary classification provided by --DECOD and
                   --BODSYS.
-                Document: IG v.3.1
+                Document: SENDIG v.3.1
                 Section: 4.2.6
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -81,7 +81,7 @@ Authorities:
               - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the
                   domain or dictionary classification provided by --DECOD and
                   --BODSYS.
-                Document: IG v.3.1.1
+                Document: SENDIG v.3.1.1
                 Section: 4.2.6
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -95,7 +95,7 @@ Authorities:
               - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the
                   domain or dictionary classification provided by --DECOD and
                   --BODSYS.
-                Document: IG v.3.1.1
+                Document: SENDIG v.3.1.1
                 Section: 4.2.6
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -109,7 +109,7 @@ Authorities:
               - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the
                   domain or dictionary classification provided by --DECOD and
                   --BODSYS.
-                Document: IG v.3.1
+                Document: SENDIG v.3.1
                 Section: 4.2.6
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -123,7 +123,7 @@ Authorities:
               - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the
                   domain or dictionary classification provided by --DECOD and
                   --BODSYS.
-                Document: IG v.3.1.1
+                Document: SENDIG v.3.1.1
                 Section: 4.2.6
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -155,13 +155,15 @@ Core:
   Id: CORE-000219
   Status: Published
   Version: '1'
-Description: Raise an error when --SCAT is equal to domain dataset label.
+Description: Raise an error when --SCAT is equal to the domain name of the 
+Parameters:
+  dataset.
 Executability: Fully Executable
 Operations:
   - id: $domain_label
     operator: domain_label
 Outcome:
-  Message: --SCAT must not be equal to domain dataset label.
+  Message: --SCAT must not be equal to the domain name of the dataset.
   Output Variables:
     - --SCAT
     - $domain_label
