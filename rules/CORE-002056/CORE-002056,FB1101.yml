@@ -130,8 +130,8 @@ Check:
     - name: $missing_trial_design_domains
       operator: non_empty
 Core:
-  Id: FDA.SDTMIG.FB1101
-  Status: Draft
+  Id: CORE-002056
+  Status: Published
   Version: '1'
 Description: Raise an error when not all trial design model datasets as listed in the corresponding IG are present in the submission.
 Executability: Fully Executable
