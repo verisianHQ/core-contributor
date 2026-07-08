@@ -4,7 +4,7 @@
       "dataset": "supplb.xpt",
       "domain": "SUPPLB",
       "execution_status": "success",
-      "execution_message": "RDOMAIN does not represent a dataset present in the study.",
+      "execution_message": "RDOMAIN does not represent a dataset in the study.",
       "number_errors": 1,
       "errors": [
         {
@@ -14,9 +14,9 @@
           "value": {
             "RDOMAIN": "LB",
             "$study_domains": [
-              "CO",
               "SUPPLB",
-              "RELREC"
+              "RELREC",
+              "CO"
             ]
           },
           "validated": true
@@ -27,7 +27,7 @@
       "dataset": "relrec.xpt",
       "domain": "RELREC",
       "execution_status": "success",
-      "execution_message": "RDOMAIN does not represent a dataset present in the study.",
+      "execution_message": "RDOMAIN does not represent a dataset in the study.",
       "number_errors": 1,
       "errors": [
         {
@@ -37,9 +37,9 @@
           "value": {
             "RDOMAIN": "LB",
             "$study_domains": [
-              "CO",
               "SUPPLB",
-              "RELREC"
+              "RELREC",
+              "CO"
             ]
           },
           "validated": true
@@ -50,7 +50,7 @@
       "dataset": "co.xpt",
       "domain": "CO",
       "execution_status": "success",
-      "execution_message": "RDOMAIN does not represent a dataset present in the study.",
+      "execution_message": "RDOMAIN does not represent a dataset in the study.",
       "number_errors": 1,
       "errors": [
         {
@@ -60,9 +60,9 @@
           "value": {
             "RDOMAIN": "IS",
             "$study_domains": [
-              "CO",
               "SUPPLB",
-              "RELREC"
+              "RELREC",
+              "CO"
             ]
           },
           "validated": true

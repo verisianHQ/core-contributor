@@ -96,7 +96,7 @@ Operations:
   - id: $study_domains
     operator: study_domains
 Outcome:
-  Message: RDOMAIN does not represent a dataset present in the study.
+  Message: RDOMAIN does not represent a dataset in the study.
   Output Variables:
     - RDOMAIN
     - $study_domains
