@@ -1,0 +1,161 @@
+# Variable:
+# Condition:
+# Rule: TA, TE, TI, TS or TV dataset is not present
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1101
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1101
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1101
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1101
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1101
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1101
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1101
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1101
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1101
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: SENDIG-AR
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1101
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  all:
+    - name: $missing_trial_design_domains
+      operator: non_empty
+Core:
+  Id: FDA.SDTMIG.FB1101
+  Status: Draft
+  Version: '1'
+Description: Raise an error when not all trial design model datasets as listed in the corresponding IG are present in the submission.
+Executability: Fully Executable
+Outcome:
+  Message: At least one Trial Design Dataset is missing.
+  Output Variables:
+    - $missing_trial_design_domains
+Rule Type: Record Data
+Operations: 
+  - operator: standard_domains
+    id: $trial_design_domains
+    domain_class: "TRIAL DESIGN"
+  - operator: dataset_names
+    id: $dataset_names
+  - operator: minus
+    id: $missing_trial_design_domains
+    name: $trial_design_domains
+    subtract: $dataset_names
+    case_sensitive: False
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Study
