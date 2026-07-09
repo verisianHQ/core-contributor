@@ -49,7 +49,7 @@ Core:
   Id: NEW-RULE
   Status: Draft
   Version: '1'
-Description: Raise an error when TSPARMCD is 'INDIC' or 'TDIGRP' but value for TSVAL is not a valid term from SNOMED CT.
+Description: Raise an error when TSVAL for TSPARMCD = 'INDIC' or 'TDIGRP' is not a valid SNOMED CT term.
 Executability: Fully Executable
 Outcome:
   Message: TSVAL is not a valid term from SNOMED CT.
