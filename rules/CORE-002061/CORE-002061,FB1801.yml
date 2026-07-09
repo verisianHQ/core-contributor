@@ -150,8 +150,8 @@ Check:
       operator: not_equal_to
       value: $global_min_variable_length
 Core:
-  Id: FDA.SDTMIG.FB1801
-  Status: Draft
+  Id: CORE-002061
+  Status: Published
   Version: '1'
 Description: Raise an error when the variable length is not equal between datasets and/or is longer than the maximum length of the actual data contained by the variable.
 Executability: Fully Executable
