@@ -50,10 +50,22 @@ Check:
       - name: define_variable_name
         operator: equal_to
         value: CRACE
-    - name: define_variable_codelist_coded_values
-      operator: not_equal_to
-      value: 'AMERICAN INDIAN OR ALASKA NATIVE,ASIAN,BLACK OR AFRICAN AMERICAN,NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER,WHITE'
-      value_is_literal: true
+    - any:
+      - name: define_variable_codelist_coded_values
+        operator: not_matches_regex
+        value: AMERICAN INDIAN OR ALASKA NATIVE
+      - name: define_variable_codelist_coded_values
+        operator: not_matches_regex
+        value: ASIAN
+      - name: define_variable_codelist_coded_values
+        operator: not_matches_regex
+        value: BLACK OR AFRICAN AMERICAN
+      - name: define_variable_codelist_coded_values
+        operator: not_matches_regex
+        value: NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER
+      - name: define_variable_codelist_coded_values
+        operator: not_matches_regex
+        value: WHITE
 Core:
   Id: FDA.SDTMIG.FB5901
   Status: Draft
