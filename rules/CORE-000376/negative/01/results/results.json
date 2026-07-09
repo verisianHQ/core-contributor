@@ -17,7 +17,7 @@
             ],
             "variable_name": "LBORRES"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -38,7 +38,7 @@
             ],
             "variable_name": "AEINDC"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 7,
@@ -50,21 +50,9 @@
             ],
             "variable_name": "CMDOSE"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "zm.xpt",
-      "Row": 1,
-      "Variable": "AEINDC"
-    },
-    {
-      "Sheet": "zm.xpt",
-      "Row": 1,
-      "Variable": "CMDOSE"
     }
   ]
 }
