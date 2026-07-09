@@ -44,8 +44,8 @@ Check:
     - name: TSVAL
       operator: is_not_valid_unii_term_reference
 Core:
-  Id: NEW-RULE
-  Status: Draft
+  Id: CORE-002064
+  Status: Published
   Version: '1'
 Description: Raise an error when TSVAL for TSPARMCD = 'TRT'is not a valid FDA Substance Registration System (SRS) preferred term.
 Executability: Fully Executable
