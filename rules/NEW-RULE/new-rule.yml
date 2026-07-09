@@ -82,7 +82,7 @@ Check:
         - TDIGRP
       value_is_literal: true
     - name: TSVALCD
-      operator: is_not_valid_medrt_code_reference
+      operator: is_not_valid_snomed_code_reference
 Core:
   Id: NEW-RULE
   Status: Draft
