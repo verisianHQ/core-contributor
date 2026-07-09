@@ -50,14 +50,14 @@ Check:
       - name: define_variable_name
         operator: equal_to
         value: CETHNIC
-    - name: define_variable_codelist_coded_values
-      operator: not_equal_to
-      value: 'HISPANIC OR LATINO,NOT HISPANIC OR LATINO'
-      value_is_literal: true
-    - name: define_variable_codelist_coded_values
-      operator: not_equal_to
-      value: 'NOT HISPANIC OR LATINO,HISPANIC OR LATINO'
-      value_is_literal: true
+    - any:
+      - name: define_variable_codelist_coded_values
+        operator: not_matches_regex
+        value: (?<!NOT )HISPANIC OR LATINO
+      - name: define_variable_codelist_coded_values
+        operator: not_matches_regex
+        value: NOT HISPANIC OR LATINO
+
 Core:
   Id: FDA.SDTMIG.FB5701
   Status: Draft
