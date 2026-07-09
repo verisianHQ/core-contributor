@@ -90,7 +90,7 @@ Core:
   Status: Published
   Version: '1'
 Description: Raise an error when RDOMAIN is populated but the referenced RDOMAIN
-  does not exist as a dataset in the present study.
+  does not exist as a dataset in the study.
 Executability: Fully Executable
 Operations:
   - id: $study_domains
