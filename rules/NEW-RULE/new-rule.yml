@@ -49,7 +49,7 @@ Core:
   Id: NEW-RULE
   Status: Draft
   Version: '1'
-Description: Raise an error if TSVALCD is not a valid concept identifier from SNOMED CT when TSPARMCD is in ('INDIC', 'TDIGRP').
+Description: Raise an error when TSVALCD for TSPARMCD = 'INDIC' or 'TDIGRP' is not a valid SNOMED CT concept identifier.
 Executability: Fully Executable
 Outcome:
   Message: TSVALCD is not a valid concept identifier from SNOMED CT.
