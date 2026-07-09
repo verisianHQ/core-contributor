@@ -49,6 +49,7 @@ jobs:
           import requests
           import yaml
           from jsonschema import Draft202012Validator
+          from collections import defaultdict
 
           SCHEMA_URL = "https://rule-editor.cdisc.org/api/schema"
 
@@ -62,7 +63,7 @@ jobs:
               sys.exit(1)
 
           changed_files = sys.argv[1].split()
-          comments = []
+          file_line_errors = defaultdict(list)
 
           def get_line_number(filepath, error_path):
               if not error_path:
@@ -112,19 +113,11 @@ jobs:
                   with open(filepath, 'r', encoding='utf-8') as f:
                       rule_data = yaml.safe_load(f)
               except yaml.YAMLError as exc:
-                  comments.append({
-                      "path": filepath,
-                      "line": 1,
-                      "body": f"**YAML Parsing Error:**\n```\n{exc}\n```"
-                  })
+                  file_line_errors[(filepath, 1)].append(("YAML Parsing Error", f"```\n{exc}\n```"))
                   continue
 
               if rule_data is None:
-                  comments.append({
-                      "path": filepath,
-                      "line": 1,
-                      "body": "**Validation Error:** File is empty or contains invalid YAML structure."
-                  })
+                  file_line_errors[(filepath, 1)].append(("Validation Error", "File is empty or contains invalid YAML structure."))
                   continue
 
               for error in validator.iter_errors(rule_data):
@@ -133,12 +126,28 @@ jobs:
 
                   path_str = " -> ".join([str(p) for p in error.path]) if error.path else "Root Document"
                   line_num = get_line_number(filepath, error.path)
-                  
-                  comments.append({
-                      "path": filepath,
-                      "line": line_num,
-                      "body": f"**Schema Validation Error at `{path_str}`:**\n{error.message}"
-                  })
+                  file_line_errors[(filepath, line_num)].append((path_str, error.message))
+
+          comments = []
+          for (filepath, line_num), errors in file_line_errors.items():
+              if len(errors) == 1:
+                  title, msg = errors[0]
+                  if title in ("YAML Parsing Error", "Validation Error"):
+                      body = f"**{title}:**\n{msg}"
+                  else:
+                      body = f"**Schema Error at `{title}`:** {msg}"
+              else:
+                  body = f"<details><summary>**Multiple Schema Errors ({len(errors)})**</summary>\n\n"
+                  for title, msg in errors:
+                      body += f"- **`{title}`**: {msg}\n"
+                  body += "</details>"
+              
+              body += "\n"
+              comments.append({
+                  "path": filepath,
+                  "line": line_num,
+                  "body": body
+              })
 
           with open('pr_comments.json', 'w') as f:
               json.dump(comments, f, indent=2)
@@ -161,16 +170,66 @@ jobs:
               return;
             }
 
-            for (const comment of comments) {
-              await github.rest.pulls.createReviewComment({
+            const { data: existingReviewComments } = await github.rest.pulls.listReviewComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              per_page: 100
+            });
+
+            const botReviewComments = existingReviewComments.filter(comment => 
+              comment.user && comment.user.login === 'github-actions[bot]'
+            );
+
+            for (const comment of botReviewComments) {
+              await github.rest.pulls.deleteReviewComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                pull_number: context.issue.number,
-                commit_id: context.payload.pull_request.head.sha,
-                path: comment.path,
-                line: comment.line,
-                body: comment.body
+                comment_id: comment.id,
               });
+            }
+
+            const { data: existingIssueComments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              per_page: 100
+            });
+
+            const botIssueComments = existingIssueComments.filter(comment => 
+              comment.user && comment.user.login === 'github-actions[bot]'
+            );
+
+            for (const comment of botIssueComments) {
+              await github.rest.issues.deleteComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: comment.id,
+              });
+            }
+
+            for (const comment of comments) {
+              try {
+                await github.rest.pulls.createReviewComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: context.issue.number,
+                  commit_id: context.payload.pull_request.head.sha,
+                  path: comment.path,
+                  line: comment.line,
+                  body: comment.body
+                });
+              } catch (error) {
+                console.log(`Could not post inline comment on ${comment.path} line ${comment.line}. Falling back to general PR comment.`);
+                const fallbackBody = `**Schema Error in \`${comment.path}\` (Line ${comment.line}):**\n\n${comment.body}`;
+                
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.issue.number,
+                  body: fallbackBody
+                });
+              }
             }
 
             core.setFailed("Schema validation failed. Please check the PR comments and correct the issues.");

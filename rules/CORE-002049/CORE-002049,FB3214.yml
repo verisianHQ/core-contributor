@@ -1,0 +1,78 @@
+# Variable: BESTDY
+# Condition: BESTDY ^= Null and BEDY ^= Null
+# Rule: BEDY <= BESTDY
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if
+                  collected, and study day of observation (--DY) should be
+                  submitted.
+                Document: FDA
+                Section: FDAB032
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3214
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if
+                  collected, and study day of observation (--DY) should be
+                  submitted.
+                Document: FDA
+                Section: FDAB032
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3214
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if
+                  collected, and study day of observation (--DY) should be
+                  submitted.
+                Document: FDA
+                Section: FDAB032
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3214
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: BESTDY
+      operator: non_empty
+    - name: BEDY
+      operator: non_empty
+    - name: BEDY
+      operator: greater_than
+      value: BESTDY
+Core:
+  Id: CORE-002049
+  Status: Published
+  Version: '1'
+Description: Raise an error when Study Day of Specimen Collection (BEDY) is greater than Study Day of Start of Biospecimen Event (BESTDY).
+Executability: Fully Executable
+Outcome:
+  Message: BEDY is greater than BESTDY.
+  Output Variables:
+    - BESTDY
+    - BEDY
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - BE
+Sensitivity: Record
