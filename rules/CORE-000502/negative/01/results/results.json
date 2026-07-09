@@ -4,7 +4,7 @@
       "dataset": "supplb.xpt",
       "domain": "SUPPLB",
       "execution_status": "success",
-      "execution_message": "RDOMAIN does not represent a dataset in the study.",
+      "execution_message": "RDOMAIN does not represent a dataset present in the study.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,9 +12,14 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "RDOMAIN": "LB"
+            "RDOMAIN": "LB",
+            "$study_domains": [
+              "CO",
+              "RELREC",
+              "SUPPLB"
+            ]
           },
-          "validated": true
+          "validated": false
         }
       ]
     },
@@ -22,7 +27,7 @@
       "dataset": "relrec.xpt",
       "domain": "RELREC",
       "execution_status": "success",
-      "execution_message": "RDOMAIN does not represent a dataset in the study.",
+      "execution_message": "RDOMAIN does not represent a dataset present in the study.",
       "number_errors": 1,
       "errors": [
         {
@@ -30,9 +35,14 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "RDOMAIN": "LB"
+            "RDOMAIN": "LB",
+            "$study_domains": [
+              "CO",
+              "RELREC",
+              "SUPPLB"
+            ]
           },
-          "validated": true
+          "validated": false
         }
       ]
     },
@@ -40,7 +50,7 @@
       "dataset": "co.xpt",
       "domain": "CO",
       "execution_status": "success",
-      "execution_message": "RDOMAIN does not represent a dataset in the study.",
+      "execution_message": "RDOMAIN does not represent a dataset present in the study.",
       "number_errors": 1,
       "errors": [
         {
@@ -48,9 +58,14 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "RDOMAIN": "IS"
+            "RDOMAIN": "IS",
+            "$study_domains": [
+              "CO",
+              "RELREC",
+              "SUPPLB"
+            ]
           },
-          "validated": true
+          "validated": false
         }
       ]
     }
