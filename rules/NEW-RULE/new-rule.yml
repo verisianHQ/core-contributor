@@ -46,7 +46,7 @@ Check:
     - name: $STYPE_INTERVENTIONAL
       operator: greater_than_or_equal_to
       value: 1
-    - name: $ts_tsparmcd
+    - name: $TS_TSPARMCD_VALUES
       operator: does_not_contain
       value: PCLAS
       value_is_literal: true
@@ -60,20 +60,21 @@ Operations:
   - filter:
       TSPARMCD: STYPE
       TSVAL: INTERVENTIONAL
-    group:
-      - TSGRPID
     id: $STYPE_INTERVENTIONAL
     operator: record_count
+  - filter:
+      TSPARMCD: PCLAS
+    id: $TSPARMCD_PCLAS
+    operator: record_count
   - domain: TS
-    group:
-      - STUDYID
-    id: $ts_tsparmcd
+    id: $TS_TSPARMCD_VALUES
     name: TSPARMCD
     operator: distinct
 Outcome:
   Message: FDA Conditional Desired TSPARMCD = 'PCLAS' is missing in the TS dataset when TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL'.
   Output Variables:
-    - STUDYID
+    - $STYPE_INTERVENTIONAL
+    - $TSPARMCD_PCLAS
 Rule Type: Record Data
 Scope:
   Classes:
@@ -82,6 +83,4 @@ Scope:
   Domains:
     Include:
       - TS
-Sensitivity: Group
-Grouping_Variables:
-  - STUDYID
+Sensitivity: Dataset
