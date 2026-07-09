@@ -58,6 +58,8 @@ Authorities:
         Version: '3.3'
 Check:
   all:
+    - name: POOLDEF
+      operator: not_exists
     - name: RSUBJID
       operator: non_empty
     - name: RSUBJID
@@ -71,7 +73,8 @@ Core:
   Status: Published
   Version: '1'
 Description: Raise an error when RSUBJID is poplulated and not equal to 
-  POOLID but RSUBJID is not equal to USUBJID in the DM dataset.
+  a POOLID in the POOLDEF dataset but RSUBJID is not equal to a USUBJID
+  in the DM dataset.
 Executability: Fully Executable
 Operations:
   - domain: POOLDEF
@@ -83,8 +86,9 @@ Operations:
     name: USUBJID
     operator: distinct
 Outcome:
-  Message: RSUBJID must be equal to USUBJID in the DM dataset when 
-    RSUBJID is populated and RSUBJID is not equal to POOLID.
+  Message: RSUBJID must be equal to a USUBJID in the DM dataset when
+    RSUBJID is populated and RSUBJID is not equal to a POOLID
+    in the POOLDEF dataset.
   Output Variables:
     - RSUBJID
 Rule Type: Record Data
