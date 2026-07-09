@@ -8,14 +8,13 @@
       "number_errors": 1,
       "errors": [
         {
-          "row": 43,
-          "SEQ": 1,
-          "USUBJID": "None",
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
           "value": {
-            "TSGRPID": "STYPE1",
-            "TSPARMCD": "STYPE",
-            "TSVAL": "INTERVENTIONAL",
-            "$STYPE_INTERVENTIONAL": 1
+            "$STYPE_INTERVENTIONAL": 1,
+            "$TSPARMCD_INTMODEL": 1,
+            "$TSPARMCD_INTTYPE": 0
           },
           "validated": true
         }

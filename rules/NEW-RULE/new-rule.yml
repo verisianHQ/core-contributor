@@ -47,11 +47,11 @@ Check:
       operator: greater_than_or_equal_to
       value: 1
     - any:
-        - name: $ts_tsparmcd
+        - name: $TS_TSPARMCD_VALUES
           operator: does_not_contain
           value: INTMODEL
           value_is_literal: true
-        - name: $ts_tsparmcd
+        - name: $TS_TSPARMCD_VALUES
           operator: does_not_contain
           value: INTTYPE
           value_is_literal: true
@@ -65,23 +65,26 @@ Operations:
   - filter:
       TSPARMCD: STYPE
       TSVAL: INTERVENTIONAL
-    group:
-      - TSGRPID
     id: $STYPE_INTERVENTIONAL
     operator: record_count
+  - filter:
+      TSPARMCD: INTMODEL
+    id: $TSPARMCD_INTMODEL
+    operator: record_count
+  - filter:
+      TSPARMCD: INTTYPE
+    id: $TSPARMCD_INTTYPE
+    operator: record_count
   - domain: TS
-    group:
-      - TSGRPID
-    id: $ts_tsparmcd
+    id: $TS_TSPARMCD_VALUES
     name: TSPARMCD
     operator: distinct
 Outcome:
   Message: FDA Conditionally Desired TSPARMCD = 'INTMODEL' or 'INTTYPE' is missing in the TS dataset when TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL'.
   Output Variables:
-    - TSGRPID
-    - TSPARMCD
-    - TSVAL
     - $STYPE_INTERVENTIONAL
+    - $TSPARMCD_INTMODEL
+    - $TSPARMCD_INTTYPE
 Rule Type: Record Data
 Scope:
   Classes:
@@ -90,4 +93,4 @@ Scope:
   Domains:
     Include:
       - TS
-Sensitivity: Record
+Sensitivity: Dataset
