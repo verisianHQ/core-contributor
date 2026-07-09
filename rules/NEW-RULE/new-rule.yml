@@ -47,7 +47,7 @@ Core:
   Id: NEW-RULE
   Status: Draft
   Version: '1'
-Description: Raise an error if TSVALCD is not a valid unique ingredient identifier from FDA Substance Registration System (SRS) when TSPARMCD is 'CURTRT'.
+Description: Raise an error when TSVALCD for TSPARMCD = 'CURTRT' is not a valid FDA Substance Registration System (SRS) unique ingredient identifier.
 Executability: Fully Executable
 Outcome:
   Message: TSVALCD is not a valid unique ingredient identifier from FDA Substance Registration System (SRS).
