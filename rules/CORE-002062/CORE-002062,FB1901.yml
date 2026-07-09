@@ -141,8 +141,8 @@ Check:
       operator: greater_than
       value: $max_variable_value_length
 Core:
-  Id: FDA.SDTMIG.FB1901
-  Status: Draft
+  Id: CORE-002062
+  Status: Published
   Version: '1'
 Description: Raise an error when variable length is longer than the maximum length of the actual data contained by the variable.
 Executability: Fully Executable
