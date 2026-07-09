@@ -46,7 +46,7 @@ Check:
     - name: $HLTSUBJI_N
       operator: greater_than_or_equal_to
       value: 1
-    - name: $ts_tsparmcd
+    - name: $TS_TSPARMCD_VALUES
       operator: does_not_contain
       value: TDIGRP
       value_is_literal: true
@@ -64,17 +64,25 @@ Operations:
       - TSGRPID
     id: $HLTSUBJI_N
     operator: record_count
+  - filter:
+      TSPARMCD: TDIGRP
+    group:
+      - TSGRPID
+    id: $TSPARMCD_TDIGRP
+    operator: record_count
   - domain: TS
     group:
       - TSGRPID
-    id: $ts_tsparmcd
+    id: $TS_TSPARMCD_VALUES
     name: TSPARMCD
     operator: distinct
 Outcome:
   Message: FDA Conditionally Desired TSPARMCD = 'TDIGRP' is missing in the TS dataset when TSPARMCD = 'HLTSUBJI' and TSVAL = 'N'.
   Output Variables:
     - TSGRPID
+    - TSVAL
     - $HLTSUBJI_N
+    - $TSPARMCD_TDIGRP
 Rule Type: Record Data
 Scope:
   Classes:
@@ -85,4 +93,4 @@ Scope:
       - TS
 Sensitivity: Group
 Grouping_Variables:
-  - STUDYID
+  - TSGRPID
