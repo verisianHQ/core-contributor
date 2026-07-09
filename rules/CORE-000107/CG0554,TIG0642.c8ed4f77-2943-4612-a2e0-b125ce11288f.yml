@@ -45,7 +45,7 @@ Authorities:
               - Cited Guidance: STUDYID, DOMAIN, and --SEQ are required in all domains based on
                   one of the 3 general observation classes. Each general class
                   domain must also include at least one of the following subject
-                  identifiers; SUBJID, SPDEVID, or POOLID.
+                  identifiers; USUBJID, SPDEVID, or POOLID.
                 Document: SDTM v2.1
                 Section: Section 3.1.4 Identifiers For All Classes
               - Cited Guidance: The Associated Persons Identifier (APID) will be required in all
@@ -96,7 +96,7 @@ Description: Raise an error when APID is not present in an Associated Persons Da
   3 general observation classes.
 Executability: Fully Executable
 Outcome:
-  Message: Either USUBJID, APID, SPDEVID, POOLID, SPTOBID or STOCONID must be present.
+  Message: At least one of USUBJID, APID, SPDEVID, POOLID, SPTOBID or STOCONID must be present.
   Output Variables:
     - APID
     - USUBJID
