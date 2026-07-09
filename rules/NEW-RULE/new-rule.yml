@@ -46,7 +46,7 @@ Check:
     - name: $STYPE_INTERVENTIONAL
       operator: greater_than_or_equal_to
       value: 1
-    - name: $ts_tsparmcd
+    - name: $TS_TSPARMCD_VALUES
       operator: does_not_contain
       value: TRT
       value_is_literal: true
@@ -60,23 +60,21 @@ Operations:
   - filter:
       TSPARMCD: STYPE
       TSVAL: INTERVENTIONAL
-    group:
-      - TSGRPID
     id: $STYPE_INTERVENTIONAL
     operator: record_count
+  - filter:
+      TSPARMCD: TRT
+    id: $TSPARMCD_TRT
+    operator: record_count
   - domain: TS
-    group:
-      - TSGRPID
-    id: $ts_tsparmcd
+    id: $TS_TSPARMCD_VALUES
     name: TSPARMCD
     operator: distinct
 Outcome:
   Message: FDA Conditionally Desired TSPARMCD = 'TRT' is missing in the TS dataset when TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL'.
   Output Variables:
-    - TSGRPID
-    - TSPARMCD
-    - TSVAL
     - $STYPE_INTERVENTIONAL
+    - $TSPARMCD_TRT
 Rule Type: Record Data
 Scope:
   Classes:
@@ -85,6 +83,4 @@ Scope:
   Domains:
     Include:
       - TS
-Sensitivity: Group
-Grouping_Variables:
-  - STUDYID
+Sensitivity: Dataset

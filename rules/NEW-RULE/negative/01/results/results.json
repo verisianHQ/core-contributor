@@ -4,18 +4,16 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "A record exists in TS where TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL' but TSPARMCD = 'TRT' is not present.",
+      "execution_message": "FDA Conditionally Desired TSPARMCD = 'TRT' is missing in the TS dataset when TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL'.",
       "number_errors": 1,
       "errors": [
         {
-          "row": 43,
-          "SEQ": 1,
-          "USUBJID": "None",
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
           "value": {
-            "TSGRPID": "STYPE1",
-            "TSPARMCD": "STYPE",
-            "TSVAL": "INTERVENTIONAL",
-            "$STYPE_INTERVENTIONAL": 1
+            "$STYPE_INTERVENTIONAL": 1,
+            "$TSPARMCD_TRT": 0
           },
           "validated": true
         }
