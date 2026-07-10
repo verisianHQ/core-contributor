@@ -1,0 +1,96 @@
+# Variable: TSPARMCD
+# Condition: record exists where TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL'
+# Rule: TSPARMCD = 'INTMODEL' and TSPARMCD = 'INTTYPE' are present
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1109
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1109
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1109
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: $STYPE_INTERVENTIONAL
+      operator: greater_than_or_equal_to
+      value: 1
+    - any:
+        - name: $TS_TSPARMCD_VALUES
+          operator: does_not_contain
+          value: INTMODEL
+          value_is_literal: true
+        - name: $TS_TSPARMCD_VALUES
+          operator: does_not_contain
+          value: INTTYPE
+          value_is_literal: true
+Core:
+  Id: FDA.SDTMIG.FB1109
+  Status: Draft
+  Version: '1'
+Description: Raise an error when FDA Conditionally Desired Trial Summary (TS) Parameters for Interventional Model (TSPARMCD= 'INTMODEL') or Intervention Type (TSPARMCD = 'INTTYPE') are not present in the TS dataset when Study Type (TSPARMCD = 'STYPE') is interventional.
+Executability: Fully Executable
+Operations:
+  - filter:
+      TSPARMCD: STYPE
+      TSVAL: INTERVENTIONAL
+    id: $STYPE_INTERVENTIONAL
+    operator: record_count
+  - filter:
+      TSPARMCD: INTMODEL
+    id: $TSPARMCD_INTMODEL
+    operator: record_count
+  - filter:
+      TSPARMCD: INTTYPE
+    id: $TSPARMCD_INTTYPE
+    operator: record_count
+  - domain: TS
+    id: $TS_TSPARMCD_VALUES
+    name: TSPARMCD
+    operator: distinct
+Outcome:
+  Message: FDA Conditionally Desired TSPARMCD = 'INTMODEL' or 'INTTYPE' is missing in the TS dataset when TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL'.
+  Output Variables:
+    - $STYPE_INTERVENTIONAL
+    - $TSPARMCD_INTMODEL
+    - $TSPARMCD_INTTYPE
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Dataset
