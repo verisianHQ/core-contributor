@@ -57,8 +57,8 @@ Check:
       operator: date_greater_than
       value: BESTDTC
 Core:
-  Id: FDA.SDTMIG.FB3212
-  Status: Draft
+  Id: CORE-002078
+  Status: Published
   Version: '1'
 Description: Raise an error when Date/Time of Specimen Collection (BEDTC) is after
   Start Date/Time of Biospecimen Event (BESTDTC).
