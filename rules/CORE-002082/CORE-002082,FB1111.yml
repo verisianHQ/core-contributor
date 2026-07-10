@@ -51,8 +51,8 @@ Check:
       value: TDIGRP
       value_is_literal: true
 Core:
-  Id: FDA.SDTMIG.FB1111
-  Status: Draft
+  Id: CORE-002082
+  Status: Published
   Version: '1'
 Description: Raise an error when FDA Conditionally Desired Trial Summary (TS) Parameter TSPARMCD = 'TDIGRP' is not present in the TS dataset when Healthy Subject Indicator (TSPARMCD = 'HLTSUBJI') is equal to 'N'.
 Executability: Fully Executable
