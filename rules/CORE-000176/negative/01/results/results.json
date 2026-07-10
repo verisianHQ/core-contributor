@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "SBSTRAIN is present in DM dataset.",
+      "execution_message": "SBSTRAIN must not be present.",
       "number_errors": 1,
       "errors": [
         {
@@ -14,7 +14,7 @@
           "value": {
             "SBSTRAIN": "Bad2"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
