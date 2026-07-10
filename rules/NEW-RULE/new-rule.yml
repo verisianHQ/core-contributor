@@ -138,7 +138,7 @@ Core:
   Id: FDA.SDTMIG.FB1701
   Status: Draft
   Version: '1'
-Description: Raise an error when CDISC published Controlled Terminology indicates codelist is non-extensible and a new term not in the codelist is used.
+Description: Raise an error when CDISC Controlled Terminology specifies the codelist as non-extensible and a term not included in the codelist is used.
 Executability: Fully Executable
 Operations:
   - id: $non_extensible_codelist_codes
@@ -149,11 +149,12 @@ Operations:
       - Extensible: 'No'
       - Standard Type: 'sdtm'
 Outcome:
-  Message: A new term has been added to a non-extensible code list, or a term that is not in the codelist has been used.
+  Message: A new term has been added to a non-extensible code list.
   Output Variables:
     - variable_name
     - variable_value
     - library_variable_ccode
+    - library_variable_codelist_name
 Rule Type: Value Check against Library Metadata
 Scope:
   Classes:
