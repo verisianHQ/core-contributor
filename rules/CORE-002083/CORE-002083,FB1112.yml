@@ -51,8 +51,8 @@ Check:
       value: TRT
       value_is_literal: true
 Core:
-  Id: FDA.SDTMIG.FB1112
-  Status: Draft
+  Id: CORE-002083
+  Status: Published
   Version: '1'
 Description: Raise an error when FDA Conditionally Desired Trial Summary (TS) Parameter for Interventional Model TSPARMCD = 'TRT' is not present in the TS dataset when Study Type (TSPARMCD = 'STYPE') is interventional.
 Executability: Fully Executable
