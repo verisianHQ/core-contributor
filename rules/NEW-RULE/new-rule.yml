@@ -164,6 +164,8 @@ Description: Raise an error when TS dataset is not present in the submission.
 Executability: Fully Executable
 Outcome:
   Message: Missing TS dataset.
+  Output Variables:
+    - TS
 Rule Type: Domain Presence Check
 Scope:
   Classes:
