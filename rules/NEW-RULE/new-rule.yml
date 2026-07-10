@@ -1,0 +1,79 @@
+# Variable: BESTDTC
+# Condition: BESTDTC ^= Null and BEDTC ^= Null
+# Rule: BEDTC <= BESTDTC
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if
+                  collected, and study day of observation (--DY) should be
+                  submitted.
+                Document: FDA
+                Section: FDAB032
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3212
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if
+                  collected, and study day of observation (--DY) should be
+                  submitted.
+                Document: FDA
+                Section: FDAB032
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3212
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if
+                  collected, and study day of observation (--DY) should be
+                  submitted.
+                Document: FDA
+                Section: FDAB032
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3212
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: BESTDTC
+      operator: non_empty
+    - name: BEDTC
+      operator: non_empty
+    - name: BEDTC
+      operator: date_greater_than
+      value: BESTDTC
+Core:
+  Id: FDA.SDTMIG.FB3212
+  Status: Draft
+  Version: '1'
+Description: Raise an error when Date/Time of Specimen Collection (BEDTC) is after
+  Start Date/Time of Biospecimen Event (BESTDTC).
+Executability: Fully Executable
+Outcome:
+  Message: BEDTC falls after BESTDTC.
+  Output Variables:
+    - BESTDTC
+    - BEDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - BE
+Sensitivity: Record
