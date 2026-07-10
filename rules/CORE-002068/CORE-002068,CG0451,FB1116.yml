@@ -82,8 +82,8 @@ Check:
     - name: TSVALCD
       operator: is_not_valid_unii_code_reference
 Core:
-  Id: NEW-RULE
-  Status: Draft
+  Id: CORE-002068
+  Status: Published
   Version: '1'
 Description: Raise an error when TSVALCD for TSPARMCD = 'TRT' is not a valid FDA Substance Registration System (SRS) unique ingredient identifier. 
 Executability: Fully Executable
