@@ -1,6 +1,3 @@
-# Variable: ARMNRS
-# Condition: ARMNRS ^= ("SCREEN FAILURE", "NOT ASSIGNED", "ASSIGNED, NOT TREATED")
-# Rule: Value is present for subject in EX
 # verified
 Authorities:
   - Organization: FDA
@@ -42,19 +39,23 @@ Authorities:
             Version: '1.5'
         Version: '3.2'
 Check:
-  all:
+  any:
     - name: file_tag_name
       operator: not_contains_all
       value: 
         - "data-tabulation-dataset-sdtm"
+    - name: file_tag_name
+      operator: not_contains_all
+      value: 
+        - "data-tabulation-data-definition"
 Core:
-  Id: CORE-002039
-  Status: Published
+  Id: TRC1375a
+  Status: Draft
   Version: '1'
-Description: Raise an error when the STF file tag 'data-tabulation-dataset-sdtm' is not present.
-Executability: Partially Executable - Possible Overreporting
+Description: Raise an error when the STF file tag 'data-tabulation-dataset-sdtm'and/or 'data-tabulation-data-definition' is not present.
+Executability: Fully Executable
 Outcome:
-  Message: File tag 'data-tabulation-dataset-sdtm' is not present in the STF file tag.
+  Message: Missing 'data-tabulation-dataset-sdtm' and/or 'data-tabulation-data-definition' STF file tag.
   Output Variables:
     - study_id
 Rule Type: STF Metadata Check
