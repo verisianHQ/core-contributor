@@ -84,8 +84,8 @@ Check:
     - name: TSVALCD
       operator: is_not_valid_snomed_code_reference
 Core:
-  Id: NEW-RULE
-  Status: Draft
+  Id: CORE-002071
+  Status: Published
   Version: '1'
 Description: Raise an error when TSVALCD for TSPARMCD = 'INDIC' or 'TDIGRP' is not a valid SNOMED CT concept identifier.
 Executability: Fully Executable
