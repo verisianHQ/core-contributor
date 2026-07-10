@@ -5,7 +5,7 @@
       "domain": "PC",
       "execution_status": "success",
       "execution_message": "Standard unit (PCSTRESU) is not consistent per test (PCTESTCD).",
-      "number_errors": 2,
+      "number_errors": 4,
       "errors": [
         {
           "row": 1,
@@ -26,6 +26,26 @@
             "PCSTRESU": "mg/L"
           },
           "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 1,
+          "USUBJID": "123103",
+          "value": {
+            "PCTESTCD": "DRUG Z",
+            "PCSTRESU": "ug/mL"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 2,
+          "USUBJID": "123103",
+          "value": {
+            "PCTESTCD": "DRUG Z",
+            "PCSTRESU": "mg/L"
+          },
+          "validated": true
         }
       ]
     },
@@ -34,7 +54,7 @@
       "domain": "PP",
       "execution_status": "success",
       "execution_message": "Standard unit (PPSTRESU) is not consistent per test (PPTESTCD).",
-      "number_errors": 3,
+      "number_errors": 2,
       "errors": [
         {
           "row": 1,
@@ -50,16 +70,6 @@
           "row": 2,
           "SEQ": 1,
           "USUBJID": "01-005",
-          "value": {
-            "PPTESTCD": "AUCIFP",
-            "PPSTRESU": "h*ug/mL"
-          },
-          "validated": true
-        },
-        {
-          "row": 3,
-          "SEQ": 1,
-          "USUBJID": "01-006",
           "value": {
             "PPTESTCD": "AUCIFP",
             "PPSTRESU": "h*ug/mL"

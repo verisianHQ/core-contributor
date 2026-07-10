@@ -150,4 +150,7 @@ Scope:
     Include:
       - PC
       - PP
-Sensitivity: Record
+Sensitivity: Group
+Grouping_Variables:
+  - --STRESU
+  - --TESTCD
