@@ -1,0 +1,96 @@
+# Variable: TSPARMCD
+# Condition: record exists where TSPARMCD = 'HLTSUBJI' and TSVAL = 'N'
+# Rule: TSPARMCD = 'TDIGRP' is present
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1111
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1111
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1111
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: $HLTSUBJI_N
+      operator: greater_than_or_equal_to
+      value: 1
+    - name: $TS_TSPARMCD_VALUES
+      operator: does_not_contain
+      value: TDIGRP
+      value_is_literal: true
+Core:
+  Id: FDA.SDTMIG.FB1111
+  Status: Draft
+  Version: '1'
+Description: Raise an error when FDA Conditionally Desired Trial Summary (TS) Parameter TSPARMCD = 'TDIGRP' is not present in the TS dataset when Healthy Subject Indicator (TSPARMCD = 'HLTSUBJI') is equal to 'N'.
+Executability: Fully Executable
+Operations:
+  - filter:
+      TSPARMCD: HLTSUBJI
+      TSVAL: N
+    group:
+      - TSGRPID
+    id: $HLTSUBJI_N
+    operator: record_count
+  - filter:
+      TSPARMCD: TDIGRP
+    group:
+      - TSGRPID
+    id: $TSPARMCD_TDIGRP
+    operator: record_count
+  - domain: TS
+    group:
+      - TSGRPID
+    id: $TS_TSPARMCD_VALUES
+    name: TSPARMCD
+    operator: distinct
+Outcome:
+  Message: FDA Conditionally Desired TSPARMCD = 'TDIGRP' is missing in the TS dataset when TSPARMCD = 'HLTSUBJI' and TSVAL = 'N'.
+  Output Variables:
+    - TSGRPID
+    - TSVAL
+    - $HLTSUBJI_N
+    - $TSPARMCD_TDIGRP
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Group
+Grouping_Variables:
+  - TSGRPID
