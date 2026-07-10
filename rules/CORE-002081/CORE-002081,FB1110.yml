@@ -51,8 +51,8 @@ Check:
       value: PCLAS
       value_is_literal: true
 Core:
-  Id: FDA.SDTMIG.FB1110
-  Status: Draft
+  Id: CORE-002081
+  Status: Published
   Version: '1'
 Description: Raise an error when FDA Conditionally Desired Trial Summary (TS) Parameter for Pharmalogical Class (TSPARMCD = 'PCLAS') is not present in the TS dataset when Study Type (TSPARMCD = 'STYPE') is interventional.
 Executability: Fully Executable
