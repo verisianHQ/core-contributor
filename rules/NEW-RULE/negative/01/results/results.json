@@ -4,8 +4,8 @@
       "dataset": "pc.xpt",
       "domain": "PC",
       "execution_status": "success",
-      "execution_message": "PCSTRESU is not consistent per PCTESTCD.",
-      "number_errors": 4,
+      "execution_message": "Standard unit (PCSTRESU) is not consistent per test (PCTESTCD).",
+      "number_errors": 2,
       "errors": [
         {
           "row": 1,
@@ -13,7 +13,7 @@
           "USUBJID": "123101",
           "value": {
             "PCTESTCD": "DRUG X",
-            "PCSTRESU": "Not in dataset"
+            "PCSTRESU": "ug/mL"
           },
           "validated": true
         },
@@ -23,27 +23,7 @@
           "USUBJID": "123101",
           "value": {
             "PCTESTCD": "DRUG X",
-            "PCSTRESU": "Not in dataset"
-          },
-          "validated": true
-        },
-        {
-          "row": 3,
-          "SEQ": 1,
-          "USUBJID": "123102",
-          "value": {
-            "PCTESTCD": "DRUG Y",
-            "PCSTRESU": "Not in dataset"
-          },
-          "validated": true
-        },
-        {
-          "row": 4,
-          "SEQ": 2,
-          "USUBJID": "123102",
-          "value": {
-            "PCTESTCD": "DRUG Y",
-            "PCSTRESU": "Not in dataset"
+            "PCSTRESU": "mg/L"
           },
           "validated": true
         }
@@ -53,7 +33,7 @@
       "dataset": "pp.xpt",
       "domain": "PP",
       "execution_status": "success",
-      "execution_message": "PPSTRESU is not consistent per PPTESTCD.",
+      "execution_message": "Standard unit (PPSTRESU) is not consistent per test (PPTESTCD).",
       "number_errors": 3,
       "errors": [
         {

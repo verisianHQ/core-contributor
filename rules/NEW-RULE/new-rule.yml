@@ -128,8 +128,6 @@ Authorities:
 Check:
   any:
     - name: --STRESU
-      operator: not_exists
-    - name: --STRESU
       operator: is_inconsistent_across_dataset
       value: --TESTCD
 Core:
