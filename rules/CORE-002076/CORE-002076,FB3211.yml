@@ -155,8 +155,8 @@ Check:
       operator: date_greater_than
       value: --DTC
 Core:
-  Id: FDA.SDTMIG.FB3211
-  Status: Draft
+  Id: CORE-002076
+  Status: Published
   Version: '1'
 Description: Raise an error when Start Date/Time of Observation (--STDTC) is after the
   Date/Time of Collection (--DTC).
