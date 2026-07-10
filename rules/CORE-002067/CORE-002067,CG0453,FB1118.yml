@@ -80,8 +80,8 @@ Check:
     - name: TSVAL
       operator: is_not_valid_medrt_term_reference
 Core:
-  Id: NEW-RULE
-  Status: Draft
+  Id: CORE-002067
+  Status: Published
   Version: '1'
 Description: Raise an error when TSPARMCD = 'PCLAS' but TSVAL is not a valid term from MED-RT.
 Executability: Fully Executable
