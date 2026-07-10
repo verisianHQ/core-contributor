@@ -56,8 +56,8 @@ Check:
           value: INTTYPE
           value_is_literal: true
 Core:
-  Id: FDA.SDTMIG.FB1109
-  Status: Draft
+  Id: CORE-002080
+  Status: Published
   Version: '1'
 Description: Raise an error when FDA Conditionally Desired Trial Summary (TS) Parameters for Interventional Model (TSPARMCD= 'INTMODEL') or Intervention Type (TSPARMCD = 'INTTYPE') are not present in the TS dataset when Study Type (TSPARMCD = 'STYPE') is interventional.
 Executability: Fully Executable
