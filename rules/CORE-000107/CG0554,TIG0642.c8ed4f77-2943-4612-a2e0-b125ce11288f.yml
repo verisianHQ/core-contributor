@@ -1,6 +1,7 @@
 # Variable: GEN
 # Condition: 
 # Rule: STUDYID, DOMAIN, and --SEQ exist and at least one of USUBJID, APID, SPDEVID, or POOLID
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -26,10 +27,10 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'STUDYID, DOMAIN, and --SEQ are required in all domains based on
+              - Cited Guidance: STUDYID, DOMAIN, and --SEQ are required in all domains based on
                   one of the 3 general observation classes. Each general class
                   domain must also include at least one of the following subject
-                  identifiers: USUBJID, APID, SPDEVID, or POOLID.'
+                  identifiers; USUBJID, APID, SPDEVID, or POOLID.
                 Document: Model v1.7
                 Section: 2.2.4
             Origin: SDTM and SDTMIG Conformance Rules
@@ -44,7 +45,7 @@ Authorities:
               - Cited Guidance: STUDYID, DOMAIN, and --SEQ are required in all domains based on
                   one of the 3 general observation classes. Each general class
                   domain must also include at least one of the following subject
-                  identifiers - SUBJID, SPDEVID, or POOLID.
+                  identifiers; USUBJID, SPDEVID, or POOLID.
                 Document: SDTM v2.1
                 Section: Section 3.1.4 Identifiers For All Classes
               - Cited Guidance: The Associated Persons Identifier (APID) will be required in all
@@ -91,24 +92,28 @@ Core:
   Id: CORE-000107
   Status: Published
   Version: '1'
-Description: APID is required in all Associated Persons Data. In addition to
-  STUDYID, DOMAIN, and --SEQ being required for all domains based on one of the
-  3 general observation classes, one of USUBJID, APID, SPDEVID, or POOLID must
-  also be present.
+Description: Raise an error when APID is not present in an Associated Persons Data dataset, or when none of the required subject identifiers (USUBJID, SPDEVID, POOLID, SPTOBID or STOCONID) are present in a dataset based on one of the
+  3 general observation classes.
 Executability: Fully Executable
 Outcome:
-  Message: An appropriate identifier is not present; USUBJID, APID, SPDEVID,
-    SPTOBID, POOLID, SPTOBID, STOCONID should be present.
+  Message: At least one of USUBJID, APID, SPDEVID, POOLID, SPTOBID or STOCONID must be present.
+  Output Variables:
+    - APID
+    - USUBJID
+    - SPDEVID
+    - POOLID
+    - SPTOBID
+    - STOCONID
 Rule Type: Record Data
 Scope:
   Classes:
-    Include:
-      - EVENTS
-      - INTERVENTIONS
-      - FINDINGS ABOUT
-      - FINDINGS
+    Exclude:
+      - RELATIONSHIP
+      - SPECIAL PURPOSE
+      - STUDY REFERENCE
+      - TRIAL DESIGN
   Domains:
-    Include:
-      - ALL
+    Exclude:
+      - POOLDEF
   Use Case: INDH, PROD
 Sensitivity: Dataset
