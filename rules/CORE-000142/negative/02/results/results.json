@@ -4,7 +4,7 @@
       "dataset": "vs.xpt",
       "domain": "VS",
       "execution_status": "success",
-      "execution_message": "VSELTM is not the same value across records with the same values of DOMAIN, VISITNUM, VSTPTREF, and VSTPTNUM.",
+      "execution_message": "VSELTM is not the same value across records with the same values of DOMAIN, VISITNUM, VSTPTREF, and VSTPTNUM when VSTPT, VSTPTNUM, and VSELTM are populated.",
       "number_errors": 4,
       "errors": [
         {
@@ -18,7 +18,7 @@
             "VISITNUM": 5.0,
             "DOMAIN": "VS"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -31,7 +31,7 @@
             "VISITNUM": 4.0,
             "DOMAIN": "VS"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -44,7 +44,7 @@
             "VISITNUM": 4.0,
             "DOMAIN": "VS"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -57,7 +57,7 @@
             "VISITNUM": 5.0,
             "DOMAIN": "VS"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
