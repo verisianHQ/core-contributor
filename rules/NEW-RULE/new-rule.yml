@@ -55,10 +55,10 @@ Core:
   Id: ''
   Status: Draft
   Version: '1'
-Description: Define-XML document is present in the submission.
+Description: Raise an error when the Define-XML document is not present in the submission.
 Executability: Fully Executable
 Outcome:
-  Message: Missing Define-XML document - Define-XML document is required for SDTM datasets.
+  Message: Missing Define-XML document.
 Rule Type: Record Data
 Scope:
   Classes:
