@@ -80,8 +80,8 @@ Check:
     - name: TSVALCD
       operator: is_not_valid_medrt_code_reference
 Core:
-  Id: NEW-RULE
-  Status: Draft
+  Id: CORE-002066
+  Status: Published
   Version: '1'
 Description: Raise an error if TSVALCD is not a valid code from NDF-RT when TSPARMCD = 'PCLAS'.
 Executability: Fully Executable
