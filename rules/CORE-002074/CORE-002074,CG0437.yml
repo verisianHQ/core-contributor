@@ -49,8 +49,8 @@ Check:
       filter_attribute: term_type
       filter_value: SOC
 Core:
-  Id: NEW-RULE
-  Status: Draft
+  Id: CORE-002074
+  Status: Published
   Version: '1'
 Description:  Raise an error when --SOCCD is not a valid MedDRA primary system organ class code.
 Executability: Fully Executable
