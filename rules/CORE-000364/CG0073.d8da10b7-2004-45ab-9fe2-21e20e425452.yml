@@ -1,7 +1,7 @@
 # Variable: EPOCH
 # Condition: DSCAT = 'PROTOCOL MILESTONE'
 # Rule: EPOCH = null
-
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -33,11 +33,11 @@ Core:
   Id: CORE-000364
   Status: Published
   Version: '1'
-Description: ''
+Description: Raise an error when DSCAT is equal to 'PROTOCOL MILESTONE' 
+  and EPOCH is populated.
 Executability: Fully Executable
-
 Outcome:
-  Message: EPOCH should be null if DSCAT is protocol milestone
+  Message: DSCAT is equal to 'PROTOCOL MILESTONE' but EPOCH is populated.
   Output Variables:
     - DSDECOD
     - DSCAT
@@ -50,5 +50,4 @@ Scope:
   Domains:
     Include:
       - DS
-
 Sensitivity: Record
