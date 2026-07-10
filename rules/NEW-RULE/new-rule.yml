@@ -174,10 +174,14 @@ Operations:
     id: $ts_tsparmcd
     name: TSPARMCD
     operator: distinct
+  - filter:
+      TSPARMCD: SSTDTC
+    id: $tsparmcd_sstdtc_count
+    operator: record_count
 Outcome:
   Message: FDA Desired TSPARMCD = SSTDTC is missing in the TS dataset.
   Output Variables:
-    - STUDYID
+    - $tsparmcd_sstdtc_count
 Rule Type: Record Data
 Scope:
   Classes:
@@ -186,6 +190,4 @@ Scope:
   Domains:
     Include:
       - TS
-Sensitivity: Group
-Grouping_Variables:
-  - STUDYID
+Sensitivity: Dataset
