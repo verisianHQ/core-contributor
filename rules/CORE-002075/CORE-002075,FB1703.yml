@@ -47,8 +47,8 @@ Check:
       operator: does_not_contain
       value: COUNTRY
 Core:
-  Id: FDA.SDTMIG.FB1703
-  Status: Draft
+  Id: CORE-002075
+  Status: Published
   Version: '1'
 Description: Raise an error when value for COUNTRY in DM dataset is not populated with a valid 3-letter country code found in GENC standard.
 Executability: Fully Executable
