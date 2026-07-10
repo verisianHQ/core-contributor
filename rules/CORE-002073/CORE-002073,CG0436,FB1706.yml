@@ -87,8 +87,8 @@ Check:
       filter_attribute: term_type
       filter_value: SOC
 Core:
-  Id: NEW-RULE
-  Status: Draft
+  Id: CORE-002073
+  Status: Published
   Version: '1'
 Description: Raise an error when --SOC is not a valid MedDRA primary system organ class.
 Executability: Fully Executable
