@@ -1,20 +1,41 @@
 {
   "datasets": [
     {
-      "dataset": "ae.xpt",
-      "domain": "AE",
+      "dataset": "ce.xpt",
+      "domain": "CE",
       "execution_status": "success",
-      "execution_message": "AEENRF is populated when AEOCCUR = \"N\"",
-      "number_errors": 1,
+      "execution_message": "CEENRF must not be populated when CEOCCUR is equal to 'N'.",
+      "number_errors": 3,
       "errors": [
+        {
+          "row": 1,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CEOCCUR": "N",
+            "CEENRF": "ONGOING"
+          },
+          "validated": true
+        },
         {
           "row": 2,
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "AEENRF": "ONGOING"
+            "CEOCCUR": "N",
+            "CEENRF": "Lorem ipsum dolor sit amet"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CEOCCUR": "N",
+            "CEENRF": "123456789"
+          },
+          "validated": true
         }
       ]
     }

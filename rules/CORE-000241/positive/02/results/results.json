@@ -4,9 +4,19 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "execution_message": "CMENRF must not be populated when CMOCCUR is equal to 'N'.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMOCCUR": "N",
+            "CMENRF": "Not in dataset"
+          }
+        }
+      ]
     }
   ]
 }
