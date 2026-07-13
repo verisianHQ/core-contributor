@@ -52,8 +52,8 @@ Check:
     - name: define.xml
       operator: not_exists
 Core:
-  Id: ''
-  Status: Draft
+  Id: CORE-002084
+  Status: Published
   Version: '1'
 Description: Raise an error when the Define-XML document is not present in the submission.
 Executability: Fully Executable
