@@ -1,0 +1,78 @@
+# Variable: LBSTNRC
+# Condition: LBORRES = continuous measurement
+# Rule: LBSTNRC = null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  For normal range values that are character in ordinal scale or
+                  if categorical ranges were supplied (e.g., "-1 to +1",
+                  "NEGATIVE TO TRACE").
+                Document: IG v3.4
+                Item: Specification
+                Section: 6.3.5.6
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0184
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: For normal range values that are character in ordinal scale or
+                  if categorical ranges were supplied (e.g., "-1 to +1",
+                  "NEGATIVE TO TRACE").
+                Document: IG v3.2
+                Item: Specification
+                Section: '6.3'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0184
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: For normal range values that are character in ordinal scale or
+                  if categorical ranges were supplied (e.g., "-1 to +1",
+                  "NEGATIVE TO TRACE").
+                Document: IG v3.3
+                Item: Specification
+                Section: 6.3.6
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0184
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: LBORRES
+      operator: matches_regex
+      value: ^([<>-]?)(\d*)(\.?\d*)$
+    - name: LBSTNRC
+      operator: non_empty
+Core:
+  Id: CDISC.SDTMIG.CG0184
+  Status: Draft
+  Version: '1'
+Description: When LBORRES is a continuous measurement, LBSTNRC should be null
+Executability: Fully Executable
+Outcome:
+  Message: LBSTNRC is populated when LBORRES is a continuous measurement
+  Output Variables:
+    - LBSTNRC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - LB
+Sensitivity: Record
