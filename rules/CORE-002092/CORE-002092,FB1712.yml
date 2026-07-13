@@ -50,8 +50,8 @@ Check:
     - name: CMCLASCD
       operator: is_not_valid_whodrug_code_reference
 Core:
-  Id: FB1712
-  Status: Draft
+  Id: CORE-002092
+  Status: Published
   Version: '1'
 Description: Raise an error when CMCLASCD is populated but not a valid WHODrug dictionary medication class code.
 Executability: Fully Executable
