@@ -38,7 +38,7 @@ Check:
       operator: is_contained_by
       value: $usubjids_in_ex
 Core:
-  Status: Draft
+  Status: Published
   Version: '1'
   Id: FB2303
 Description: Raise an error when subject participating in an interventional study with at least one record in the EX dataset, is not assigned to an actual treatment.
