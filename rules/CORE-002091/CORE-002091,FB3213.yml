@@ -155,8 +155,8 @@ Check:
       operator: greater_than
       value: --DY
 Core:
-  Id: FDA.SDTMIG.FB3213
-  Status: Draft
+  Id: CORE-002091
+  Status: Published
   Version: '1'
 Description: Raise an error when Study Day of Start of Observation (--STDY) is greater than Study Day of Visit/Collection/Exam (--DY).
 Executability: Fully Executable
