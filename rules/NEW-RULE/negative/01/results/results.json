@@ -1,0 +1,43 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMDECOD must be populated when CMTRT is populated with a valid WHODrug term.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "STUDY001-SUBJ0001",
+          "value": {
+            "CMTRT": "CETIRIZINE",
+            "CMDECOD": null
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "STUDY001-SUBJ0003",
+          "value": {
+            "CMTRT": "Metronidazole",
+            "CMDECOD": null
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "STUDY001-SUBJ0005",
+          "value": {
+            "CMTRT": "NAPROXEN",
+            "CMDECOD": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
