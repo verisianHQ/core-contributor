@@ -53,8 +53,8 @@ Check:
       operator: date_greater_than
       value: RFPENDTC
 Core:
-  Id: FB3405
-  Status: Draft
+  Id: CORE-002088
+  Status: Published
   Version: '1'
 Description: Raise an error when Start Date/Time (--STDTC) is after Date/Time of End of Participation (RFPENDTC).
 Executability: Fully Executable
