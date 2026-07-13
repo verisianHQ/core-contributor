@@ -1,0 +1,29 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVALCD is not a valid unique ingredient identifier from FDA Substance Registration System (SRS).",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "CURTRT",
+            "TSVAL": "UNIITERM1",
+            "TSVALCD": "CEROUS SALICYLATE"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ],
+  "dictionary_versions": {
+    "unii": {
+      "version": "10Apr2026"
+    }
+  }
+}
