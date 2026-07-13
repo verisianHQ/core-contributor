@@ -143,8 +143,8 @@ Check:
       operator: date_greater_than
       value: $max_dsstdtc
 Core:
-  Id: FDA.SDTMIG.FB3403
-  Status: Draft
+  Id: CORE-002089
+  Status: Published
   Version: '1'
 Description: Raise an error when End Date/Time of Treatment (EXENDTC) is after the Start Date/Time of the latest Disposition Event (DSSTDTC).
 Executability: Fully Executable
