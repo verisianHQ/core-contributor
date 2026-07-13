@@ -5,7 +5,7 @@
       "domain": "CO",
       "execution_status": "success",
       "execution_message": "IDVAR must be populated when RDOMAIN is populated and is not equal to 'DM'.",
-      "number_errors": 2,
+      "number_errors": 1,
       "errors": [
         {
           "row": 2,
@@ -13,17 +13,7 @@
           "USUBJID": "XX-11",
           "value": {
             "RDOMAIN": "PE",
-            "IDVAR": null
-          },
-          "validated": true
-        },
-        {
-          "row": 7,
-          "SEQ": 7,
-          "USUBJID": "YY-20",
-          "value": {
-            "RDOMAIN": "VS",
-            "IDVAR": null
+            "IDVAR": "Not in dataset"
           },
           "validated": true
         }
