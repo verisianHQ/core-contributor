@@ -1,0 +1,42 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Ethnicity is collected, but one of the following ethnicity options are not offered - 'HISPANIC OR LATINO' or 'NOT HISPANIC OR LATINO'.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 19,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_variable_name": "ETHNIC",
+            "define_variable_codelist_coded_values": "HISPANIC OR LATINO"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "suppdm.xpt",
+      "domain": "SUPPDM",
+      "execution_status": "success",
+      "execution_message": "Ethnicity is collected, but one of the following ethnicity options are not offered - 'HISPANIC OR LATINO' or 'NOT HISPANIC OR LATINO'.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 11,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_variable_name": "CETHNIC",
+            "define_variable_codelist_coded_values": "HISPANIC OR LATINO"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
