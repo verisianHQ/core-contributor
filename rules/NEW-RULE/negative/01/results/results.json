@@ -1,0 +1,82 @@
+{
+  "datasets": [
+    {
+      "dataset": "pc.xpt",
+      "domain": "PC",
+      "execution_status": "success",
+      "execution_message": "Standard unit (PCSTRESU) is not consistent per test (PCTESTCD).",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "123101",
+          "value": {
+            "PCTESTCD": "DRUG X",
+            "PCSTRESU": "ug/mL"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "PCTESTCD": "DRUG X",
+            "PCSTRESU": "mg/L"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 1,
+          "USUBJID": "123103",
+          "value": {
+            "PCTESTCD": "DRUG Z",
+            "PCSTRESU": "ug/mL"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 2,
+          "USUBJID": "123103",
+          "value": {
+            "PCTESTCD": "DRUG Z",
+            "PCSTRESU": "mg/L"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "pp.xpt",
+      "domain": "PP",
+      "execution_status": "success",
+      "execution_message": "Standard unit (PPSTRESU) is not consistent per test (PPTESTCD).",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "01-004",
+          "value": {
+            "PPTESTCD": "AUCIFP",
+            "PPSTRESU": "h*ng/mL"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "01-005",
+          "value": {
+            "PPTESTCD": "AUCIFP",
+            "PPSTRESU": "h*ug/mL"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
