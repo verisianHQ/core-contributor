@@ -67,8 +67,8 @@ Check:
         operator: not_matches_regex
         value: WHITE
 Core:
-  Id: FDA.SDTMIG.FB5901
-  Status: Draft
+  Id: CORE-002093
+  Status: Published
   Version: '1'
 Description: Raise an error when race is collected but 'AMERICAN INDIAN OR ALASKA NATIVE', 'ASIAN', 'BLACK OR AFRICAN AMERICAN', 'NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER', and 'WHITE' are not offered options.
 Executability: Fully Executable
