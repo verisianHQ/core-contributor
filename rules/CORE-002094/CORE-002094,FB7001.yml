@@ -131,8 +131,8 @@ Check:
       operator: is_inconsistent_across_dataset
       value: --TESTCD
 Core:
-  Id: FDA.SDTMIG.FB7001
-  Status: Draft
+  Id: CORE-002094
+  Status: Published
   Version: '1'
 Description: Raise an error when standard unit (--STRESU) is not consistent per test (--TESTCD) for a given drug or metabolite across pharmacokinetic datasets within a submission. 
 Executability: Fully Executable
