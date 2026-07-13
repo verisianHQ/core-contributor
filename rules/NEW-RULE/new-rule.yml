@@ -129,10 +129,10 @@ Check:
   all:
     - name: PCTEST
       operator: equal_to
-      value: RELREC.PPCAT
+      value: PPCAT
     - name: PCSPEC
       operator: not_equal_to
-      value: RELREC.PPSPEC
+      value: PPSPEC
 Core:
   Id: FDA.SDTMIG.FB7101
   Status: Draft
@@ -140,15 +140,16 @@ Core:
 Description: Raise an error when for the same drug or metabolite (PCTEST = PCCAT), specimen type (--SPEC) is not consistent across pharmacokinetic datasets within a submission. 
 Executability: Partially Executable
 Match Datasets:
-  - Name: RELREC
-    Wildcard: PP
+  - Name: PP
+    Keys:
+      - USUBJID
 Outcome:
   Message: PCSPEC is not equal to PPSPEC for the same drug or metabolite (PCTEST = PPCAT).
   Output Variables:
     - PCTEST
-    - RELREC.PPCAT
+    - PPCAT
     - PCSPEC
-    - RELREC.PPSPEC
+    - PPSPEC
 Rule Type: Record Data
 Scope:
   Classes:
@@ -157,4 +158,8 @@ Scope:
   Domains:
     Include:
       - PC
-Sensitivity: Record
+Sensitivity: Group
+Grouping_Variables:
+  - PCTEST
+  - PCSPEC
+  - PPSPEC

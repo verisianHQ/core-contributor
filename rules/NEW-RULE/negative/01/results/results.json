@@ -5,7 +5,7 @@
       "domain": "PC",
       "execution_status": "success",
       "execution_message": "PCSPEC is not equal to PPSPEC for the same drug or metabolite (PCTEST = PPCAT).",
-      "number_errors": 5,
+      "number_errors": 1,
       "errors": [
         {
           "row": 2,
@@ -13,59 +13,11 @@
           "USUBJID": "ABC-123-0001",
           "value": {
             "PCTEST": "StudyDrug1",
-            "RELREC.PPCAT": "StudyDrug1",
+            "PPCAT": "StudyDrug1",
             "PCSPEC": "PLASMA",
-            "RELREC.PPSPEC": "SERUM"
+            "PPSPEC": "SERUM"
           },
           "validated": true
-        },
-        {
-          "row": 2,
-          "SEQ": 3,
-          "USUBJID": "ABC-123-0001",
-          "value": {
-            "PCTEST": "StudyDrug1",
-            "RELREC.PPCAT": "StudyDrug1",
-            "PCSPEC": "PLASMA",
-            "RELREC.PPSPEC": "SERUM"
-          },
-          "validated": false
-        },
-        {
-          "row": 2,
-          "SEQ": 3,
-          "USUBJID": "ABC-123-0001",
-          "value": {
-            "PCTEST": "StudyDrug1",
-            "RELREC.PPCAT": "StudyDrug1",
-            "PCSPEC": "PLASMA",
-            "RELREC.PPSPEC": "SERUM"
-          },
-          "validated": false
-        },
-        {
-          "row": 2,
-          "SEQ": 3,
-          "USUBJID": "ABC-123-0001",
-          "value": {
-            "PCTEST": "StudyDrug1",
-            "RELREC.PPCAT": "StudyDrug1",
-            "PCSPEC": "PLASMA",
-            "RELREC.PPSPEC": "SERUM"
-          },
-          "validated": false
-        },
-        {
-          "row": 2,
-          "SEQ": 3,
-          "USUBJID": "ABC-123-0001",
-          "value": {
-            "PCTEST": "StudyDrug1",
-            "RELREC.PPCAT": "StudyDrug1",
-            "PCSPEC": "PLASMA",
-            "RELREC.PPSPEC": "SERUM"
-          },
-          "validated": false
         }
       ]
     },
@@ -74,14 +26,6 @@
       "domain": "PP",
       "execution_status": "skipped",
       "execution_message": "Rule skipped - doesn't apply to domain for rule id=FDA.SDTMIG.FB7101, dataset=PP",
-      "number_errors": 0,
-      "errors": []
-    },
-    {
-      "dataset": "relrec.xpt",
-      "domain": "RELREC",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to class for rule id=FDA.SDTMIG.FB7101, dataset=RELREC",
       "number_errors": 0,
       "errors": []
     }
