@@ -27,6 +27,7 @@ Check:
     - name: DSCAT
       operator: equal_to
       value: PROTOCOL MILESTONE
+      value_is_literal: true
     - name: EPOCH
       operator: non_empty
 Core:
