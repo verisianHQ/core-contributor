@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "RFSTDTC must be null when ARMNRS is populated and is not equal to \"UNPLANNED TREATMENT\", provided that the study defines RFSTDTC as the date/time of first treatment exposure.",
+      "execution_message": "RFSTDTC must be null when ARMNRS is populated and is not equal to 'UNPLANNED TREATMENT', provided that this study defines RFSTDTC as the date/time of first treatment exposure.",
       "number_errors": 3,
       "errors": [
         {
