@@ -1,3 +1,7 @@
+# Variable: IDVARVAL
+# Condition: IDVAR ^= null
+# Rule: IDVARVAL = value of variable = IDVAR in domain = RDOMAIN
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -76,10 +80,11 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: "CDISC Notes for IDVAR and IDVARVAL: 'Identifiying variable of
+              - Cited Guidance: >-
+                  CDISC Notes for IDVAR and IDVARVAL: 'Identifiying variable of
                   the parent record(s)to which the comment applies.' and 'Value
                   of identifying variable of the parent record(s).',
-                  respectively."
+                  respectively.
                 Document: SENDIG v3.0
                 Item: Assumption 3.a
                 Section: 5.2.1
@@ -197,9 +202,6 @@ Authorities:
             Version: '1.0'
         Substandard: SEND
         Version: '1.0'
-# Variable: IDVARVAL
-# Condition: IDVAR ^= null
-# Rule: IDVARVAL = value of variable = IDVAR in domain = RDOMAIN
 Check:
   all:
     - name: IDVAR
@@ -215,31 +217,26 @@ Core:
   Id: CORE-000206
   Status: Published
   Version: '1'
-Description: When IDVAR is populated, IDVARVAL must equal a value of the
-  variable referenced by IDVAR within the domain referenced by RDOMAIN
+Description: Raise an error when IDVARVAL is not equal to a value of the
+  variable referenced by IDVAR within the domain referenced by RDOMAIN when
+  IDVAR is populated.
 Executability: Fully Executable
 Match Datasets:
   - Child: true
     Keys:
       - USUBJID
-      - IDVAR
-      - IDVARVAL
     Name: SUPP--
   - Child: true
     Keys:
       - USUBJID
-      - IDVAR
-      - IDVARVAL
     Name: CO
   - Child: true
     Keys:
       - USUBJID
-      - IDVAR
-      - IDVARVAL
     Name: RELREC
 Outcome:
-  Message: IDVARVAL does not equal a value of the variable referenced by IDVAR in
-    domain = RDOMAIN.
+  Message: IDVARVAL does not equal a value of the variable referenced by IDVAR
+    where domain is equal to RDOMAIN.
   Output Variables:
     - RDOMAIN
     - USUBJID
