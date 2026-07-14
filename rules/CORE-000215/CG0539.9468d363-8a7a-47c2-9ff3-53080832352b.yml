@@ -26,10 +26,14 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Assumption 2.b.2[DSSCAT = 'STUDY TREATMENT' can be used as a
+              - Cited Guidance: DSSCAT = 'STUDY TREATMENT' can be used as a
                   generic identifier when a study has only a single
-                  treatment.]|Assumption 2.b.3[If a study has multiple
-                  treatments, then DSSCAT should name the individual treatment.]
+                  treatment.
+                Document: IG v3.3
+                Item: Assumption 2.b.2
+                Section: 6.2.3 DS
+              - Cited Guidance: If a study has multiple
+                  treatments, then DSSCAT should name the individual treatment.
                 Document: IG v3.3
                 Item: Assumption 2.b.2|Assumption 2.b.3
                 Section: 6.2.3 DS
@@ -57,9 +61,9 @@ Core:
   Id: CORE-000215
   Status: Published
   Version: '1'
-Description: Trigger error when subject has more than one record per Epoch with
+Description: Raise an error when subject has more than one record per Epoch with
   DSCAT = 'DISPOSITION EVENT' and more than one record where DSSCAT = 'STUDY
-  TREATMENT'
+  TREATMENT' exists.
 Executability: Fully Executable
 Operations:
   - domain: DS
@@ -75,9 +79,9 @@ Outcome:
   Message: More than 1 record exists per subject per EPOCH with DSCAT =
     'DISPOSITION EVENT' and DSSCAT = 'STUDY TREATMENT'.
   Output Variables:
-    - USUBJID
     - DSCAT
     - DSSCAT
+    - EPOCH
 Rule Type: Record Data
 Scope:
   Classes:

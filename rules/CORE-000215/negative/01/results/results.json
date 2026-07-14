@@ -12,22 +12,22 @@
           "SEQ": 1,
           "USUBJID": "S001",
           "value": {
-            "USUBJID": "S001",
             "DSCAT": "DISPOSITION EVENT",
-            "DSSCAT": "STUDY TREATMENT"
+            "DSSCAT": "STUDY TREATMENT",
+            "EPOCH": "TREATMENT"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": 2,
           "USUBJID": "S001",
           "value": {
-            "USUBJID": "S001",
             "DSCAT": "DISPOSITION EVENT",
-            "DSSCAT": "STUDY TREATMENT"
+            "DSSCAT": "STUDY TREATMENT",
+            "EPOCH": "TREATMENT"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
