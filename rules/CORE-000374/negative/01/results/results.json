@@ -4,7 +4,7 @@
       "dataset": "ds.xpt",
       "domain": "DS",
       "execution_status": "success",
-      "execution_message": "There is more than one record per subject per EPOCH",
+      "execution_message": "DSCAT = 'DISPOSITION EVENT' and DSSCAT is not present in the DS dataset, but there is more than one record per subject per EPOCH.",
       "number_errors": 2,
       "errors": [
         {
@@ -16,7 +16,7 @@
             "DSSCAT": "Not in dataset",
             "EPOCH": "TREATMENT"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -27,7 +27,7 @@
             "DSSCAT": "Not in dataset",
             "EPOCH": "TREATMENT"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
