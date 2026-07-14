@@ -121,7 +121,7 @@ Core:
   Status: Published
   Version: '1'
 Description: Raise an error when milestone associated with RFSTDTC is start of
-  treatment and ARMNRS is not null and different from "UNPLANNED TREATMENT",
+  treatment and ARMNRS is not null and different from 'UNPLANNED TREATMENT',
   but RFSTDTC is not null.
 # Executability: Whether a study uses first treatment exposure as the anchor for
 # RFSTDTC is study-level context. It generally cannot be determined reliably from
@@ -129,7 +129,7 @@ Description: Raise an error when milestone associated with RFSTDTC is start of
 Executability: Partially Executable
 Outcome:
   Message: RFSTDTC must be null when ARMNRS is populated and is not equal to
-    "UNPLANNED TREATMENT", provided that this study defines RFSTDTC as the date/time
+    'UNPLANNED TREATMENT', provided that this study defines RFSTDTC as the date/time
     of first treatment exposure.
   Output Variables:
     - ARM
