@@ -1,4 +1,48 @@
 {
-  "error": "No result - either the rule or test case data unit-test-coreid-CG0373-negative.xlsx is broken",
-  "exception": "cannot unpack non-iterable NoneType object"
+  "datasets": [
+    {
+      "dataset": "suppdm.xpt",
+      "domain": "SUPPDM",
+      "execution_status": "success",
+      "execution_message": "RDOMAIN value in the SUPPDM dataset does not represent a dataset present in the study.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "RDOMAIN": "DM"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000457, dataset=EC",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "suppec.xpt",
+      "domain": "SUPPEC",
+      "execution_status": "success",
+      "execution_message": "RDOMAIN value in the SUPPEC dataset does not represent a dataset present in the study.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "RDOMAIN": "VS"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
 }
