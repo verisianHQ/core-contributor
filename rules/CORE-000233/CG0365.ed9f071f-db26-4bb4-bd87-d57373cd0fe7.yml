@@ -57,11 +57,10 @@ Core:
   Id: CORE-000233
   Status: Published
   Version: '1'
-Description: Raise an error when RDEVID is populated and RSUBJID is populated
-  for the same record.
+Description: Raise an error when RDEVID is populated but RSUBJID is populated.
 Executability: Fully Executable
 Outcome:
-  Message: RSUBJID must not be populated when RDEVID is populated.
+  Message: RDEVID must not be populated when RSUBJID is populated.
   Output Variables:
     - RSUBJID
     - RDEVID
