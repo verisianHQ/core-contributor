@@ -1,13 +1,14 @@
 # Variable: GEN
 # Condition: Subject has more than one record per Epoch with DSCAT = 'DISPOSITION EVENT'
 # Rule: No more than 1 record per subject has DSSCAT = 'STUDY PARTICIPATION'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: DSSCAT = "STUDY PARTICIPATION" is used to represent disposition
+              - Cited Guidance: DSSCAT = 'STUDY PARTICIPATION' is used to represent disposition
                   of study participation
                 Document: IG v3.4
                 Item: Assumption 2.b.1
@@ -21,7 +22,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: DSSCAT = "STUDY PARTICIPATION" is used to represent disposition
+              - Cited Guidance: DSSCAT = 'STUDY PARTICIPATION' is used to represent disposition
                   of study participation.
                 Document: IG v3.3
                 Item: Assumption 2.b.1
@@ -35,7 +36,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: DSSCAT = "STUDY PARTICIPATION" is used to represent disposition
+              - Cited Guidance: DSSCAT = 'STUDY PARTICIPATION' is used to represent disposition
                   of study participation.
                 Document: TIG 1.0
                 Item: 2.b.i
@@ -65,9 +66,9 @@ Core:
   Id: CORE-000214
   Status: Published
   Version: '1'
-Description: Trigger error when subject has more than one record per Epoch with
+Description: Raise an error when subject has more than one record per Epoch with
   DSCAT = 'DISPOSITION EVENT' and more than one record where DSSCAT = 'STUDY
-  PARTICIPATION'
+  PARTICIPATION' exists.
 Executability: Fully Executable
 Operations:
   - domain: DS
@@ -84,7 +85,6 @@ Outcome:
     'DISPOSITION EVENT' and DSSCAT = 'STUDY PARTICIPATION'.
   Output Variables:
     - DSSCAT
-    - USUBJID
     - EPOCH
     - DSCAT
 Rule Type: Record Data
