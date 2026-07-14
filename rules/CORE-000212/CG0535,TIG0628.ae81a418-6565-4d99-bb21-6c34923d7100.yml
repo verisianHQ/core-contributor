@@ -1,6 +1,7 @@
 # Variable: GEN
 # Condition: Subject has more than one record per Epoch with DSCAT = 'DISPOSITION EVENT'
 # Rule: DSSCAT must be present
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -24,7 +25,7 @@ Authorities:
                   has only a single treatment. If a study has multiple
                   treatments, then DSSCAT should name the individual treatment.
                 Document: IG v3.4
-                Item: DS – Assumption 2b
+                Item: DS - Assumption 2b
                 Section: 6.2.3
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -85,12 +86,12 @@ Core:
   Id: CORE-000212
   Status: Published
   Version: '1'
-Description: When subject has more than one record per Epoch with DSCAT =
-  DISPOSITION EVENT, DSSCAT must be present.
+Description: Raise an error when a subject has more than one record per EPOCH with 
+  DSCAT = 'DISPOSITION EVENT', but DSSCAT is not present.
 Executability: Fully Executable
 Outcome:
-  Message: DSSCAT is not present when subject has more than one record per Epoch
-    with DSCAT = 'DISPOSITION EVENT'.
+  Message: DSSCAT must be present when a subject has more than one record per EPOCH with 
+   DSCAT = 'DISPOSITION EVENT'.
   Output Variables:
     - USUBJID
 Rule Type: Record Data
