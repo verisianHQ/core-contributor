@@ -1,6 +1,7 @@
 # Variable: GEN
 # Condition: Subject has more than one record per Epoch with DSCAT = 'DISPOSITION EVENT'
 # Rule: No more than 1 record per subject has DSSCAT = 'STUDY TREATMENT'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
