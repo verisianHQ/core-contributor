@@ -74,6 +74,7 @@ Check:
     - name: DSDECOD
       operator: equal_to
       value: INFORMED CONSENT OBTAINED
+      value_is_literal: true
     - name: $min_ds_dsstdtc
       operator: not_equal_to
       value: RFICDTC
