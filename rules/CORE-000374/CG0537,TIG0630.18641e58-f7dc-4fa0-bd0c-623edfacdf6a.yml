@@ -14,7 +14,8 @@ Authorities:
                 Document: IG v3.4
                 Item: Assumption 2.b
                 Section: 6.2.3
-              - Cited Guidance: ICH E3; Section 10.1 indicates that 'the specific reason for
+              - Cited Guidance: >-
+                  ICH E3: Section 10.1 indicates that 'the specific reason for
                   discontinuation' should be presented, and that summaries
                   should be 'grouped by treatment and by major reason.' The
                   CDISC SDS Team interprets this guidance as requiring one
@@ -40,7 +41,8 @@ Authorities:
                 Document: IG v3.3
                 Item: Assumption 2.b
                 Section: 6.2.3 DS
-              - Cited Guidance: ICH E3 ;Section 10.1 indicates that 'the specific reason for
+              - Cited Guidance: >-
+                  ICH E3: Section 10.1 indicates that 'the specific reason for
                   discontinuation' should be presented, and that summaries
                   should be 'grouped by treatment and by major reason.' The
                   CDISC SDS Team interprets this guidance as requiring one
@@ -92,10 +94,10 @@ Core:
   Id: CORE-000374
   Status: Published
   Version: '1'
-Description: Raise an error when DSCAT = 'DISPOSITION EVENT' and DSSCAT is not present in the DS dataset and there is more than one record per subject per EPOCH.
+Description: Raise an error when DSCAT is equal to 'DISPOSITION EVENT' and DSSCAT is not present in the DS dataset and there is more than one record per subject per EPOCH.
 Executability: Fully Executable
 Outcome:
-  Message: DSCAT = 'DISPOSITION EVENT' and DSSCAT is not present in the DS dataset, but there is more than one record per subject per EPOCH.
+  Message: DSCAT is equal to 'DISPOSITION EVENT' and DSSCAT is not present in the DS dataset, but there is more than one record per subject per EPOCH.
   Output Variables:
     - DSCAT
     - DSSCAT
