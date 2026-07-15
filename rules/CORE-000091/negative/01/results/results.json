@@ -4,7 +4,7 @@
       "dataset": "ag.xpt",
       "domain": "AG",
       "execution_status": "success",
-      "execution_message": "AGVAMTU must not be populated when AGTRTV is empty.",
+      "execution_message": "AGVAMTU must not be populated when AGTRTV is not populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,6 +12,7 @@
           "SEQ": 1,
           "USUBJID": "XYZ-001-002",
           "value": {
+            "AGTRT": "Tuberculin PPD-S",
             "AGTRTV": null,
             "AGVAMTU": "mL"
           },

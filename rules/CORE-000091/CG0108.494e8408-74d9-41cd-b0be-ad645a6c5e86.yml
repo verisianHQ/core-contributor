@@ -52,11 +52,12 @@ Core:
   Id: CORE-000091
   Status: Published
   Version: '1'
-Description: Raise an error when --TRTV is empty and --VAMTU is not empty.
+Description: Raise an error when --TRTV is not populated but --VAMTU is populated.
 Executability: Fully Executable
 Outcome:
-  Message: --VAMTU must not be populated when --TRTV is empty.
+  Message: --VAMTU must not be populated when --TRTV is not populated.
   Output Variables:
+    - --TRT
     - --TRTV
     - --VAMTU
 Rule Type: Record Data
