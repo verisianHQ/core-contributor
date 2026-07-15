@@ -4,7 +4,7 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "AETERM is equal to 'MULTIPLE'",
+      "execution_message": "AETERM must not be equal to 'MULTIPLE'.",
       "number_errors": 1,
       "errors": [
         {
@@ -14,7 +14,25 @@
           "value": {
             "AETERM": "MULTIPLE"
           },
-          "validated": false
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "DSTERM must not be equal to 'MULTIPLE'.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "DSTERM": "MULTIPLE"
+          },
+          "validated": true
         }
       ]
     }
