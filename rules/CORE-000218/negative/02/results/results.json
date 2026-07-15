@@ -4,7 +4,7 @@
       "dataset": "co.xpt",
       "domain": "CO",
       "execution_status": "success",
-      "execution_message": "IDVAR is empty but IDVARVAL is not empty",
+      "execution_message": "IDVARVAL must be null when IDVAR is null.",
       "number_errors": 2,
       "errors": [
         {
@@ -13,9 +13,9 @@
           "USUBJID": "CDISC009",
           "value": {
             "IDVAR": null,
-            "IDVARVAL": "20"
+            "IDVARVAL": "\u3053\u308c\u306f\u4e8b\u5b9f\u3068\u3046\u3068\u3046\u3053\u306e\u5909\u5316\u9662\u3068\u3044\u3046\u306e\u306e\u6642\u3092\u3057\u306a\u3046\u3002"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -23,9 +23,9 @@
           "USUBJID": "CDISC009",
           "value": {
             "IDVAR": null,
-            "IDVARVAL": "1"
+            "IDVARVAL": "123456789"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

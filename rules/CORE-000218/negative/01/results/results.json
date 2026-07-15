@@ -4,8 +4,8 @@
       "dataset": "suppec.xpt",
       "domain": "SUPPEC",
       "execution_status": "success",
-      "execution_message": "IDVAR is empty but IDVARVAL is not empty",
-      "number_errors": 3,
+      "execution_message": "IDVARVAL must be null when IDVAR is null.",
+      "number_errors": 2,
       "errors": [
         {
           "row": 1,
@@ -13,9 +13,9 @@
           "USUBJID": "CDISC009",
           "value": {
             "IDVAR": null,
-            "IDVARVAL": "122"
+            "IDVARVAL": "Lorem ipsum"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -23,19 +23,9 @@
           "USUBJID": "CDISC009",
           "value": {
             "IDVAR": null,
-            "IDVARVAL": "123"
+            "IDVARVAL": "12345678"
           },
-          "validated": false
-        },
-        {
-          "row": 3,
-          "SEQ": null,
-          "USUBJID": "CDISC009",
-          "value": {
-            "IDVAR": null,
-            "IDVARVAL": "124"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     }
