@@ -1,3 +1,4 @@
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -151,12 +152,16 @@ Core:
   Id: CORE-000328
   Status: Published
   Version: '1'
-Description: Study Day of Start (--STDY) variable should be included into
-  dataset, when Start Study Date/Time (--STDTC) variable is present.
+Description: Start Date/Time of Observation (--STDTC) is present in the dataset
+  and the Study Day of Start of Observation (--STDY) is not present in the
+  dataset.
 Executability: Fully Executable
 Outcome:
-  Message: The Study Day of Start of Observation (--STDY) is not present in the
-    dataset when Start Date/Time of Observation (--STDTC) is present.
+  Message: Study Day of Start of Observation (--STDY) variable is missing when
+    Start Date/Time of Observation (--STDTC) is present.
+  Output Variables:
+    - --STDY
+    - --STDTC
 Rule Type: Record Data
 Scope:
   Classes:
