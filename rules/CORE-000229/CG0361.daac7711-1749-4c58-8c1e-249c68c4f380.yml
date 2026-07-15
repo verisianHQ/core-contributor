@@ -4,11 +4,11 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: '"USUBJID: Either USUBJID or POOILD must be populated."'
+              - Cited Guidance: USUBJID[Either USUBJID or POOLID must be populated.]
                 Document: Model v2.0
                 Item: USUBJID
                 Section: RELSUB
-              - Cited Guidance: '"POOILD: Either USUBJID or POOILD must be populated."        '
+              - Cited Guidance: POOLID[Either USUBJID or POOLID must be populated.        '
                 Document: Model v2.0
                 Item: POOLID
                 Section: RELSUB
@@ -52,7 +52,7 @@ Core:
   Id: CORE-000229
   Status: Published
   Version: '1'
-Description: Verify that When USUBJID is populated, POOLID is not populated
+Description: Raise an error when USUBJID is populated and POOLID is populated
 Executability: Fully Executable
 Outcome:
   Message: POOLID must be null when USUBJID is populated
@@ -63,7 +63,7 @@ Rule Type: Record Data
 Scope:
   Classes:
     Include:
-      - SPECIAL PURPOSE
+      - RELATIONSHIP
   Domains:
     Include:
       - RELSUB
