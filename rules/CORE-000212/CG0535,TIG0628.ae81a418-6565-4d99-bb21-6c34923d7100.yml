@@ -91,7 +91,7 @@ Description: Raise an error when a subject has more than one record per EPOCH wi
   DSCAT = 'DISPOSITION EVENT', but DSSCAT is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: DSSCAT must be present when a subject has more than one record per EPOCH with 
+  Message: DSSCAT must be populated when a subject has more than one record per EPOCH with 
    DSCAT = 'DISPOSITION EVENT'.
   Output Variables:
     - USUBJID
