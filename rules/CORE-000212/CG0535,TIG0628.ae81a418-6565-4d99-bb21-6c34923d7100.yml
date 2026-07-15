@@ -80,6 +80,7 @@ Check:
     - name: DSCAT
       operator: equal_to
       value: DISPOSITION EVENT
+      value_is_literal: true
     - name: DSSCAT
       operator: not_exists
 Core:
