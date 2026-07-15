@@ -36,7 +36,7 @@ Authorities:
               - Cited Guidance: If a study has multiple
                   treatments, then DSSCAT should name the individual treatment.
                 Document: IG v3.3
-                Item: Assumption 2.b.2|Assumption 2.b.3
+                Item: Assumption 2.b.3
                 Section: 6.2.3 DS
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -63,7 +63,7 @@ Core:
   Status: Published
   Version: '1'
 Description: Raise an error when subject has more than one record per Epoch with
-  DSCAT = 'DISPOSITION EVENT' and more than one record where DSSCAT = 'STUDY
+  DSCAT is equal to 'DISPOSITION EVENT' and more than one record where DSSCAT is equal to 'STUDY
   TREATMENT' exists.
 Executability: Fully Executable
 Operations:
@@ -77,8 +77,7 @@ Operations:
     name: DSCAT
     operator: record_count
 Outcome:
-  Message: More than 1 record exists per subject per EPOCH with DSCAT =
-    'DISPOSITION EVENT' and DSSCAT = 'STUDY TREATMENT'.
+  Message: More than 1 record exists per subject per EPOCH with DSCAT is equal to 'DISPOSITION EVENT' and DSSCAT is equal to 'STUDY TREATMENT'.
   Output Variables:
     - DSCAT
     - DSSCAT
