@@ -12,7 +12,7 @@
       "dataset": "sm.xpt",
       "domain": "SM",
       "execution_status": "success",
-      "execution_message": "MIDSTYPE is not unique within subject when MIDSTYPE = TM.MIDSTYPE and TM.TMRPT = 'N'",
+      "execution_message": "MIDSTYPE must be unique within subject when MIDSTYPE is equal to MIDSTYPE in TM dataset and TMRPT in TM dataset is equal to 'N'.",
       "number_errors": 2,
       "errors": [
         {
@@ -20,20 +20,18 @@
           "SEQ": 1,
           "USUBJID": "001",
           "value": {
-            "MIDSTYPE": "DIAGNOSIS",
-            "TMRPT": "N"
+            "MIDSTYPE": "DIAGNOSIS"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": 2,
           "USUBJID": "001",
           "value": {
-            "MIDSTYPE": "DIAGNOSIS",
-            "TMRPT": "N"
+            "MIDSTYPE": "DIAGNOSIS"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

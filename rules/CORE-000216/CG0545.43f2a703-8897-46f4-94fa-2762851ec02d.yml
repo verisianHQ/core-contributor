@@ -1,6 +1,7 @@
 # Variable: MIDSTYPE
 # Condition: MIDSTYPE = TM.MIDSTYPE and TM.TMRPT = 'N'
 # Rule: MIDSTYPE is unique per subject
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -49,8 +50,7 @@ Core:
   Id: CORE-000216
   Status: Published
   Version: '1'
-Description: MIDSTYPE must be unique within subject when MIDSTYPE = TM.MIDSTYPE
-  and TM.TMRPT = 'N'
+Description: Raise an error when MIDSTYPE is equal to MIDSTYPE in TM dataset and TMRPT in TM dataset is equal to 'N' and MIDSTYPE is not unique within subject.
 Executability: Fully Executable
 Match Datasets:
   - Name: TM
@@ -62,8 +62,9 @@ Operations:
     name: MIDSTYPE
     operator: distinct
 Outcome:
-  Message: MIDSTYPE is not unique within subject when MIDSTYPE = TM.MIDSTYPE and
-    TM.TMRPT = 'N'
+  Message: MIDSTYPE must be unique within subject when MIDSTYPE is equal to MIDSTYPE in TM dataset and TMRPT in TM dataset is equal to 'N'.
+  Output Variables:
+    - MIDSTYPE
 Rule Type: Record Data
 Scope:
   Classes:
