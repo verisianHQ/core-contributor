@@ -4,7 +4,7 @@
       "dataset": "suppdm.xpt",
       "domain": "SUPPDM",
       "execution_status": "success",
-      "execution_message": "RDOMAIN value in the SUPPDM dataset does not represent a dataset present in the study.",
+      "execution_message": "RDOMAIN value in the SUPPDM dataset does not correspond to a dataset present in the study.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,7 +12,8 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "RDOMAIN": "DM"
+            "RDOMAIN": "DM",
+            "USUBJID": "CDISC009"
           },
           "validated": true
         }
@@ -30,7 +31,7 @@
       "dataset": "suppec.xpt",
       "domain": "SUPPEC",
       "execution_status": "success",
-      "execution_message": "RDOMAIN value in the SUPPEC dataset does not represent a dataset present in the study.",
+      "execution_message": "RDOMAIN value in the SUPPEC dataset does not correspond to a dataset present in the study.",
       "number_errors": 1,
       "errors": [
         {
@@ -38,7 +39,8 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "RDOMAIN": "VS"
+            "RDOMAIN": "VS",
+            "USUBJID": "CDISC009"
           },
           "validated": true
         }
