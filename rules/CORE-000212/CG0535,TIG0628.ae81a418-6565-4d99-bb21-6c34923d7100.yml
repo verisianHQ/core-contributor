@@ -94,7 +94,11 @@ Outcome:
   Message: DSSCAT must be populated when a subject has more than one record per EPOCH with 
    DSCAT = 'DISPOSITION EVENT'.
   Output Variables:
-    - USUBJID
+    - DSDECOD
+    - DSCAT
+    - DSSCAT
+     
+    
 Rule Type: Record Data
 Scope:
   Classes:
