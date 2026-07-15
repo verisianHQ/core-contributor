@@ -73,16 +73,19 @@ Authorities:
 Check:
   all:
     - name: DSCAT
+      operator: equal_to
+      value: DISPOSITION EVENT
+      value_is_literal: true
+    - name: DSCAT
       operator: is_not_unique_set
       value:
         - USUBJID
         - EPOCH
-    - name: DSCAT
-      operator: equal_to
-      value: DISPOSITION EVENT
-      value_is_literal: true
-    - name: DSSCAT
-      operator: not_exists
+    - any:
+      - name: DSSCAT
+        operator: not_exists
+      - name: DSSCAT
+        operator: empty
 Core:
   Id: CORE-000212
   Status: Published
@@ -97,8 +100,6 @@ Outcome:
     - DSDECOD
     - DSCAT
     - DSSCAT
-     
-    
 Rule Type: Record Data
 Scope:
   Classes:
@@ -108,4 +109,4 @@ Scope:
     Include:
       - DS
   Use Case: INDH
-Sensitivity: Dataset
+Sensitivity: Record
