@@ -4,8 +4,8 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "Invalid date for TSVAL for TSPARMCD = DCUTDTC (Data Cutoff Date)",
-      "number_errors": 1,
+      "execution_message": "TSVAL when TSPARMCD = 'DCUTDTC' is not a valid ISO 8601 date.",
+      "number_errors": 5,
       "errors": [
         {
           "row": 1,
@@ -15,16 +15,49 @@
             "TSPARMCD": "DCUTDTC",
             "TSVAL": "2023-02-30"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "DCUTDTC",
+            "TSVAL": "2023-01-32"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "DCUTDTC",
+            "TSVAL": "2023-04-31"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "DCUTDTC",
+            "TSVAL": "2023-00-00"
+          },
+          "validated": true
+        },
+        {
+          "row": 7,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "DCUTDTC",
+            "TSVAL": "DATE"
+          },
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ts.xpt",
-      "Row": 5,
-      "Variable": "TSVAL"
     }
   ]
 }

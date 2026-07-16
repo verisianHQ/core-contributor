@@ -1,0 +1,86 @@
+# Variable: TSPARMCD
+# Condition: record exists where TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL'
+# Rule: TSPARMCD = 'TRT' is present
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1112
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1112
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1112
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: $STYPE_INTERVENTIONAL
+      operator: greater_than_or_equal_to
+      value: 1
+    - name: $TS_TSPARMCD_VALUES
+      operator: does_not_contain
+      value: TRT
+      value_is_literal: true
+Core:
+  Id: CORE-002083
+  Status: Published
+  Version: '1'
+Description: Raise an error when FDA Conditionally Desired Trial Summary (TS) Parameter for Interventional Model TSPARMCD = 'TRT' is not present in the TS dataset when Study Type (TSPARMCD = 'STYPE') is interventional.
+Executability: Fully Executable
+Operations:
+  - filter:
+      TSPARMCD: STYPE
+      TSVAL: INTERVENTIONAL
+    id: $STYPE_INTERVENTIONAL
+    operator: record_count
+  - filter:
+      TSPARMCD: TRT
+    id: $TSPARMCD_TRT
+    operator: record_count
+  - domain: TS
+    id: $TS_TSPARMCD_VALUES
+    name: TSPARMCD
+    operator: distinct
+Outcome:
+  Message: FDA Conditionally Desired TSPARMCD = 'TRT' is missing in the TS dataset when TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL'.
+  Output Variables:
+    - $STYPE_INTERVENTIONAL
+    - $TSPARMCD_TRT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Dataset
