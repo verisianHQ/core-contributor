@@ -21,13 +21,18 @@
     {
       "dataset": "dm.xpt",
       "domain": "DM",
-      "execution_status": "execution_error",
-      "execution_message": "SQL operation execution error",
+      "execution_status": "success",
+      "execution_message": "Variable is not listed in the Model List of Allowed Variables for the Observation Class and should be in supplemental qualifiers.",
       "number_errors": 1,
       "errors": [
         {
-          "error": "SQL error in sqlgetmodelcolumnorder operation",
-          "message": "Metadata retrieval failed due to error: Class metadata is not found in CDISC Library. class=SPECIAL-PURPOSE DATASETS"
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ARMCDXX"
+          },
+          "validated": true
         }
       ]
     },
@@ -174,13 +179,6 @@
           "validated": false
         }
       ]
-    }
-  ],
-  "unmatched_validation": [
-    {
-      "value": {
-        "variable_name": "ARMCDXX"
-      }
     }
   ]
 }
