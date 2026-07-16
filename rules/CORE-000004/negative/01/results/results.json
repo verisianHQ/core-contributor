@@ -4,14 +4,15 @@
       "dataset": "ec.xpt",
       "domain": "EC",
       "execution_status": "success",
-      "execution_message": "ECOCCUR indicates dose was not given, ECDOSE needs to be blank or greater than 0.",
-      "number_errors": 4,
+      "execution_message": "ECOCCUR is equal to 'N', but ECDOSE is populated and less than or equal to 0.",
+      "number_errors": 3,
       "errors": [
         {
-          "row": 11,
-          "SEQ": 122,
-          "USUBJID": "CDISC009",
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "CDISC001",
           "value": {
+            "ECTRT": "ZANOMALINE",
             "ECDOSE": 0.0,
             "ECOCCUR": "N"
           },
@@ -22,16 +23,7 @@
           "SEQ": 124,
           "USUBJID": "CDISC009",
           "value": {
-            "ECDOSE": 0.0,
-            "ECOCCUR": "N"
-          },
-          "validated": true
-        },
-        {
-          "row": 14,
-          "SEQ": 125,
-          "USUBJID": "CDISC009",
-          "value": {
+            "ECTRT": "PLACEBO",
             "ECDOSE": 0.0,
             "ECOCCUR": "N"
           },
@@ -42,6 +34,7 @@
           "SEQ": 126,
           "USUBJID": "CDISC009",
           "value": {
+            "ECTRT": "PLACEBO",
             "ECDOSE": -10.0,
             "ECOCCUR": "N"
           },
@@ -55,7 +48,7 @@
       "1": [
         "ec.xpt",
         "record",
-        15,
+        10,
         "ECDOSE",
         0
       ]
@@ -68,31 +61,17 @@
         "ECDOSE",
         0
       ]
-    },
-    {
-      "3": [
-        "ec.xpt",
-        "record",
-        18,
-        "ECDOSE",
-        0
-      ]
     }
   ],
   "unvalidated_highlights": [
     {
       "Sheet": "ec.xpt",
-      "Row": 15,
+      "Row": 10,
       "Variable": "ECDOSE"
     },
     {
       "Sheet": "ec.xpt",
       "Row": 17,
-      "Variable": "ECDOSE"
-    },
-    {
-      "Sheet": "ec.xpt",
-      "Row": 18,
       "Variable": "ECDOSE"
     }
   ]
