@@ -1,3 +1,6 @@
+# Variable: --DY
+# Condition: --DTC ^= NULL
+# Rule: --DY not present in dataset
 # verified
 Authorities:
   - Organization: FDA
@@ -152,13 +155,12 @@ Core:
   Id: CORE-000321
   Status: Published
   Version: '1'
-Description: When Date/Time of Collection (--DTC) is present in the dataset,
-  then the Study Day of Visit/Collection/Exam (--DY) should also be present in
-  the dataset.
+Description: Raise an error when --DTC is present and populated but --DY is not
+  present in the dataset.
 Executability: Fully Executable
 Outcome:
-  Message: Study Day of Visit/Collection/Exam (--DY) variable is missing when
-    Date/Time of Collection (--DTC) is present.
+  Message: --DY must be included in the dataset when --DTC is present and
+    populated.
   Output Variables:
     - --DY
     - --DTC
