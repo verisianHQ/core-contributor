@@ -1,6 +1,7 @@
 # Variable: AGE
 # Condition: AGEU ^= null
 # Rule: AGE ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -43,10 +44,10 @@ Core:
   Id: CORE-000190
   Status: Published
   Version: '1'
-Description: Raise an error when AGEU is not blank and AGE is blank.
+Description: Raise an error when AGEU is populated but AGE is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: AGE is missing when AGEU is provided.
+  Message: AGE must be populated when AGEU is populated.
   Output Variables:
     - AGE
     - AGEU
