@@ -4,7 +4,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "Start Date/Time of Observation (CMSTDTC) variable is missing when Study Day of Start of Observation (CMSTDY) is present.",
+      "execution_message": "CMSTDTC must be included in the dataset when CMSTDY is present and populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -23,7 +23,7 @@
       "dataset": "ce.xpt",
       "domain": "CE",
       "execution_status": "success",
-      "execution_message": "Start Date/Time of Observation (CESTDTC) variable is missing when Study Day of Start of Observation (CESTDY) is present.",
+      "execution_message": "CESTDTC must be included in the dataset when CESTDY is present and populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -42,7 +42,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "Start Date/Time of Observation (LBSTDTC) variable is missing when Study Day of Start of Observation (LBSTDY) is present.",
+      "execution_message": "LBSTDTC must be included in the dataset when LBSTDY is present and populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -61,7 +61,7 @@
       "dataset": "fa.xpt",
       "domain": "FA",
       "execution_status": "success",
-      "execution_message": "Start Date/Time of Observation (FASTDTC) variable is missing when Study Day of Start of Observation (FASTDY) is present.",
+      "execution_message": "FASTDTC must be included in the dataset when FASTDY is present and populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -80,7 +80,7 @@
       "dataset": "se.xpt",
       "domain": "SE",
       "execution_status": "success",
-      "execution_message": "Start Date/Time of Observation (SESTDTC) variable is missing when Study Day of Start of Observation (SESTDY) is present.",
+      "execution_message": "SESTDTC must be included in the dataset when SESTDY is present and populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -99,7 +99,7 @@
       "dataset": "sv.xpt",
       "domain": "SV",
       "execution_status": "success",
-      "execution_message": "Start Date/Time of Observation (SVSTDTC) variable is missing when Study Day of Start of Observation (SVSTDY) is present.",
+      "execution_message": "SVSTDTC must be included in the dataset when SVSTDY is present and populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -118,7 +118,7 @@
       "dataset": "sm.xpt",
       "domain": "SM",
       "execution_status": "success",
-      "execution_message": "Start Date/Time of Observation (SMSTDTC) variable is missing when Study Day of Start of Observation (SMSTDY) is present.",
+      "execution_message": "SMSTDTC must be included in the dataset when SMSTDY is present and populated.",
       "number_errors": 1,
       "errors": [
         {
