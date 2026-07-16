@@ -1,3 +1,6 @@
+# Variable: --STDY
+# Condition: --STDTC ^= NULL
+# Rule: --STDY not present in dataset
 # verified
 Authorities:
   - Organization: FDA
