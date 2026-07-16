@@ -5,8 +5,48 @@
       "domain": "DS",
       "execution_status": "success",
       "execution_message": "DSSEQ is not a unique number per USUBJID per domain, nor a unique number per POOLID per domain, including when the domain is split into multiple files.",
-      "number_errors": 2,
+      "number_errors": 13,
       "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "0001",
+          "value": {
+            "DOMAIN": "DS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "0001",
+          "value": {
+            "DOMAIN": "DS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "0001",
+          "value": {
+            "DOMAIN": "DS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "0001",
+          "value": {
+            "DOMAIN": "DS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": false
+        },
         {
           "row": 5,
           "SEQ": 5,
@@ -15,7 +55,7 @@
             "DOMAIN": "DS",
             "POOLID": "Not in dataset"
           },
-          "validated": true
+          "validated": false
         },
         {
           "row": 6,
@@ -25,7 +65,77 @@
             "DOMAIN": "DS",
             "POOLID": "Not in dataset"
           },
-          "validated": true
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": 7,
+          "USUBJID": "0001",
+          "value": {
+            "DOMAIN": "DS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": 1,
+          "USUBJID": "0002",
+          "value": {
+            "DOMAIN": "DS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": false
+        },
+        {
+          "row": 9,
+          "SEQ": 2,
+          "USUBJID": "0002",
+          "value": {
+            "DOMAIN": "DS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": false
+        },
+        {
+          "row": 10,
+          "SEQ": 3,
+          "USUBJID": "0002",
+          "value": {
+            "DOMAIN": "DS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": false
+        },
+        {
+          "row": 11,
+          "SEQ": 4,
+          "USUBJID": "0002",
+          "value": {
+            "DOMAIN": "DS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": false
+        },
+        {
+          "row": 12,
+          "SEQ": 5,
+          "USUBJID": "0002",
+          "value": {
+            "DOMAIN": "DS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": false
+        },
+        {
+          "row": 14,
+          "SEQ": 7,
+          "USUBJID": "0002",
+          "value": {
+            "DOMAIN": "DS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": false
         }
       ]
     },
@@ -33,9 +143,150 @@
       "dataset": "ss1.xpt",
       "domain": "SS",
       "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "execution_message": "SSSEQ is not a unique number per USUBJID per domain, nor a unique number per POOLID per domain, including when the domain is split into multiple files.",
+      "number_errors": 14,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "0001",
+          "value": {
+            "DOMAIN": "SS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "0001",
+          "value": {
+            "DOMAIN": "SS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "0001",
+          "value": {
+            "DOMAIN": "SS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "0001",
+          "value": {
+            "DOMAIN": "SS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "0001",
+          "value": {
+            "DOMAIN": "SS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "0001",
+          "value": {
+            "DOMAIN": "SS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 7,
+          "SEQ": 7,
+          "USUBJID": "0001",
+          "value": {
+            "DOMAIN": "SS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 8,
+          "SEQ": 1,
+          "USUBJID": "0002",
+          "value": {
+            "DOMAIN": "SS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": false
+        },
+        {
+          "row": 9,
+          "SEQ": 2,
+          "USUBJID": "0002",
+          "value": {
+            "DOMAIN": "SS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": false
+        },
+        {
+          "row": 10,
+          "SEQ": 3,
+          "USUBJID": "0002",
+          "value": {
+            "DOMAIN": "SS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": false
+        },
+        {
+          "row": 11,
+          "SEQ": 4,
+          "USUBJID": "0002",
+          "value": {
+            "DOMAIN": "SS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": false
+        },
+        {
+          "row": 12,
+          "SEQ": 5,
+          "USUBJID": "0002",
+          "value": {
+            "DOMAIN": "SS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": false
+        },
+        {
+          "row": 13,
+          "SEQ": 6,
+          "USUBJID": "0002",
+          "value": {
+            "DOMAIN": "SS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": false
+        },
+        {
+          "row": 14,
+          "SEQ": 7,
+          "USUBJID": "0002",
+          "value": {
+            "DOMAIN": "SS",
+            "POOLID": "Not in dataset"
+          },
+          "validated": false
+        }
+      ]
     },
     {
       "dataset": "ss2.xpt",
@@ -71,8 +322,18 @@
       "domain": "AE",
       "execution_status": "success",
       "execution_message": "AESEQ is not a unique number per USUBJID per domain, nor a unique number per POOLID per domain, including when the domain is split into multiple files.",
-      "number_errors": 3,
+      "number_errors": 4,
       "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "AE",
+            "POOLID": "0001"
+          },
+          "validated": true
+        },
         {
           "row": 8,
           "SEQ": 1,
@@ -101,7 +362,7 @@
             "DOMAIN": "AE",
             "POOLID": "0002"
           },
-          "validated": true
+          "validated": false
         }
       ]
     },
@@ -109,17 +370,179 @@
       "dataset": "lbae.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "execution_message": "LBSEQ is not a unique number per USUBJID per domain, nor a unique number per POOLID per domain, including when the domain is split into multiple files.",
+      "number_errors": 8,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 4,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "LB",
+            "POOLID": "0001"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 5,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "LB",
+            "POOLID": "0001"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 6,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "LB",
+            "POOLID": "0001"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 7,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "LB",
+            "POOLID": "0001"
+          },
+          "validated": false
+        },
+        {
+          "row": 11,
+          "SEQ": 4,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "LB",
+            "POOLID": "0002"
+          },
+          "validated": false
+        },
+        {
+          "row": 12,
+          "SEQ": 5,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "LB",
+            "POOLID": "0002"
+          },
+          "validated": false
+        },
+        {
+          "row": 13,
+          "SEQ": 6,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "LB",
+            "POOLID": "0002"
+          },
+          "validated": false
+        },
+        {
+          "row": 14,
+          "SEQ": 7,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "LB",
+            "POOLID": "0002"
+          },
+          "validated": false
+        }
+      ]
     },
     {
       "dataset": "lbds.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "execution_message": "LBSEQ is not a unique number per USUBJID per domain, nor a unique number per POOLID per domain, including when the domain is split into multiple files.",
+      "number_errors": 8,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 11,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "LB",
+            "POOLID": "0001"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 12,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "LB",
+            "POOLID": "0001"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 13,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "LB",
+            "POOLID": "0001"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 14,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "LB",
+            "POOLID": "0001"
+          },
+          "validated": false
+        },
+        {
+          "row": 11,
+          "SEQ": 11,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "LB",
+            "POOLID": "0002"
+          },
+          "validated": false
+        },
+        {
+          "row": 12,
+          "SEQ": 12,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "LB",
+            "POOLID": "0002"
+          },
+          "validated": false
+        },
+        {
+          "row": 13,
+          "SEQ": 13,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "LB",
+            "POOLID": "0002"
+          },
+          "validated": false
+        },
+        {
+          "row": 14,
+          "SEQ": 14,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "LB",
+            "POOLID": "0002"
+          },
+          "validated": false
+        }
+      ]
     }
   ],
   "unmatched_validation": [
@@ -163,60 +586,6 @@
       "value": {
         "DOMAIN": "SS",
         "POOLID": "[ABSENT]"
-      }
-    },
-    {
-      "value": {
-        "DOMAIN": "SS",
-        "POOLID": "[ABSENT]"
-      }
-    },
-    {
-      "value": {
-        "DOMAIN": "SS",
-        "POOLID": "[ABSENT]"
-      }
-    },
-    {
-      "value": {
-        "DOMAIN": "SS",
-        "POOLID": "[ABSENT]"
-      }
-    },
-    {
-      "value": {
-        "DOMAIN": "SS",
-        "POOLID": "[ABSENT]"
-      }
-    },
-    {
-      "value": {
-        "DOMAIN": "SS",
-        "POOLID": "[ABSENT]"
-      }
-    },
-    {
-      "value": {
-        "DOMAIN": "SS",
-        "POOLID": "[ABSENT]"
-      }
-    },
-    {
-      "value": {
-        "DOMAIN": "SS",
-        "POOLID": "[ABSENT]"
-      }
-    },
-    {
-      "value": {
-        "DOMAIN": "LB",
-        "POOLID": "0002"
-      }
-    },
-    {
-      "value": {
-        "DOMAIN": "LB",
-        "POOLID": "0002"
       }
     }
   ]
