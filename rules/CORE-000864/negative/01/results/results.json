@@ -4,7 +4,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "End Date/Time of Observation (CMENDTC) variable is missing when Study Day of End of Observation (CMENDY) is present.",
+      "execution_message": "CMENDTC must be included in the dataset when CMENDY is present and populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -23,7 +23,7 @@
       "dataset": "ce.xpt",
       "domain": "CE",
       "execution_status": "success",
-      "execution_message": "End Date/Time of Observation (CEENDTC) variable is missing when Study Day of End of Observation (CEENDY) is present.",
+      "execution_message": "CEENDTC must be included in the dataset when CEENDY is present and populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -42,7 +42,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "End Date/Time of Observation (LBENDTC) variable is missing when Study Day of End of Observation (LBENDY) is present.",
+      "execution_message": "LBENDTC must be included in the dataset when LBENDY is present and populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -61,7 +61,7 @@
       "dataset": "fa.xpt",
       "domain": "FA",
       "execution_status": "success",
-      "execution_message": "End Date/Time of Observation (FAENDTC) variable is missing when Study Day of End of Observation (FAENDY) is present.",
+      "execution_message": "FAENDTC must be included in the dataset when FAENDY is present and populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -80,7 +80,7 @@
       "dataset": "se.xpt",
       "domain": "SE",
       "execution_status": "success",
-      "execution_message": "End Date/Time of Observation (SEENDTC) variable is missing when Study Day of End of Observation (SEENDY) is present.",
+      "execution_message": "SEENDTC must be included in the dataset when SEENDY is present and populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -99,7 +99,7 @@
       "dataset": "sv.xpt",
       "domain": "SV",
       "execution_status": "success",
-      "execution_message": "End Date/Time of Observation (SVENDTC) variable is missing when Study Day of End of Observation (SVENDY) is present.",
+      "execution_message": "SVENDTC must be included in the dataset when SVENDY is present and populated.",
       "number_errors": 1,
       "errors": [
         {
