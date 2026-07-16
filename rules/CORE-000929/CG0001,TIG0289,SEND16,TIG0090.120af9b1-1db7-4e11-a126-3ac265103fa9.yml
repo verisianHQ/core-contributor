@@ -198,8 +198,11 @@ Operations:
 Outcome:
   Message: DOMAIN Code is not a published DOMAIN Code in CDISC Controlled Terminology.
   Output Variables:
-    - DOMAIN
+    - define_variable_ccode
+    - define_variable_name
     - define_variable_codelist_coded_codes
+    - define_variable_codelist_coded_values
+    - $domain_lib_ccode
 Rule Type: Define Item Metadata Check against Library Metadata
 Scope:
   Classes:

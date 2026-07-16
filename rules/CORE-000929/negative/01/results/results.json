@@ -12,10 +12,13 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "DOMAIN": "Not in dataset",
-            "define_variable_codelist_coded_codes": "Not in dataset"
+            "define_variable_ccode": null,
+            "define_variable_name": null,
+            "define_variable_codelist_coded_codes": "Not in dataset",
+            "define_variable_codelist_coded_values": null,
+            "$domain_lib_ccode": null
           },
-          "validated": true
+          "validated": false
         }
       ]
     },
@@ -31,10 +34,13 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "DOMAIN": "Not in dataset",
-            "define_variable_codelist_coded_codes": "Not in dataset"
+            "define_variable_ccode": null,
+            "define_variable_name": null,
+            "define_variable_codelist_coded_codes": "Not in dataset",
+            "define_variable_codelist_coded_values": null,
+            "$domain_lib_ccode": null
           },
-          "validated": true
+          "validated": false
         }
       ]
     },
@@ -50,12 +56,35 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "DOMAIN": "Not in dataset",
-            "define_variable_codelist_coded_codes": "Not in dataset"
+            "define_variable_ccode": null,
+            "define_variable_name": null,
+            "define_variable_codelist_coded_codes": "Not in dataset",
+            "define_variable_codelist_coded_values": null,
+            "$domain_lib_ccode": null
           },
-          "validated": true
+          "validated": false
         }
       ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "DOMAIN": "CM",
+        "define_variable_codelist_coded_codes": "C00001"
+      }
+    },
+    {
+      "value": {
+        "DOMAIN": "FA",
+        "define_variable_codelist_coded_codes": "C00002"
+      }
+    },
+    {
+      "value": {
+        "DOMAIN": "VS",
+        "define_variable_codelist_coded_codes": "C00003"
+      }
     }
   ],
   "unvalidated_highlights": [
