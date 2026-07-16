@@ -1,4 +1,66 @@
 {
-  "error": "No result - either the rule or test case data unit-test-coreid-CG0001-positive.xlsx is broken",
-  "exception": "'NoneType' object has no attribute 'split'"
+  "datasets": [
+    {
+      "dataset": "zb.xpt",
+      "domain": "ZB",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "execution_status": "success",
+      "execution_message": "DOMAIN Code is not a published DOMAIN Code in CDISC Controlled Terminology.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "DOMAIN": "Not in dataset",
+            "define_variable_codelist_coded_codes": "Not in dataset"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "DOMAIN Code is not a published DOMAIN Code in CDISC Controlled Terminology.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "DOMAIN": "Not in dataset",
+            "define_variable_codelist_coded_codes": "Not in dataset"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "DOMAIN Code is not a published DOMAIN Code in CDISC Controlled Terminology.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "DOMAIN": "Not in dataset",
+            "define_variable_codelist_coded_codes": "Not in dataset"
+          }
+        }
+      ]
+    }
+  ]
 }
