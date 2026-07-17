@@ -71,7 +71,7 @@ Core:
 Description: Raise an error when TAETORD is not unique within an ARM.
 Executability: Fully Executable
 Outcome:
-  Message: TAETORD is not unique within ARM.
+  Message: TAETORD must be unique within ARM.
   Output Variables:
     - TAETORD
     - ARM
