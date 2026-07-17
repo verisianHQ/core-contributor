@@ -1,6 +1,7 @@
 # Variable: TSVAL
 # Condition: TSPARMCD = SSTDTC (Study Start Date)
 # Rule: TSVAL conforms to ISO 8601 date
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -200,10 +201,12 @@ Core:
   Id: CORE-000505
   Status: Published
   Version: '1'
-Description: 'Raise an error when TSVAL for TSPARMCD=SSTDTC is not a valid date/time'
+Description: Raise an error when TSPARMCD is equal to SSTDTC but 
+  TSVAL is not a valid ISO 8601 date/time.
 Executability: Fully Executable
 Outcome:
-  Message: 'Invalid date for TSVAL for TSPARMCD = SSTDTC (Study Start Date)'
+  Message: TSVAL is not a valid ISO 8601 date/time when TSPARMCD is 
+    equal to SSTDTC.
 Rule Type: Record Data
 Scope:
   Classes:
