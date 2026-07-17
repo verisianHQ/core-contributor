@@ -155,12 +155,13 @@ Core:
   Id: CORE-000776
   Status: Published
   Version: '1'
-Description: Raise an error when --ENDTC is present and populated but --ENDY is
-  not present in the dataset.
+Description: Raise an error when End Date/Time of Observation (--ENDTC) is
+  present in the dataset and the Study Day of End of Observation (--ENDY) is not
+  present in the dataset.
 Executability: Fully Executable
 Outcome:
-  Message: --ENDY must be included in the dataset when --ENDTC is present and
-    populated.
+  Message: Study Day of End of Observation (--ENDY) variable is missing when End
+    Date/Time of Observation (--ENDTC) is present.
   Output Variables:
     - --ENDY
     - --ENDTC
