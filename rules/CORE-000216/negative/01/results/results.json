@@ -12,7 +12,7 @@
       "dataset": "sm.xpt",
       "domain": "SM",
       "execution_status": "success",
-      "execution_message": "MIDSTYPE must be unique within subject when MIDSTYPE is equal to MIDSTYPE in TM dataset and TMRPT in TM dataset is equal to 'N'.",
+      "execution_message": "MIDSTYPE must be unique within a subject when it matches a MIDSTYPE value in the TM dataset that can only occur once (TMRPT = 'N').",
       "number_errors": 2,
       "errors": [
         {

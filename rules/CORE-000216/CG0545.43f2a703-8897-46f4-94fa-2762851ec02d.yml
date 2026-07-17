@@ -43,6 +43,7 @@ Check:
     - name: TMRPT
       operator: equal_to
       value: N
+      value_is_literal: true
     - name: MIDSTYPE
       operator: is_not_unique_set
       value: USUBJID
@@ -62,7 +63,7 @@ Operations:
     name: MIDSTYPE
     operator: distinct
 Outcome:
-  Message: MIDSTYPE must be unique within subject when MIDSTYPE is equal to MIDSTYPE in TM dataset and TMRPT in TM dataset is equal to 'N'.
+  Message: MIDSTYPE must be unique within a subject when it matches a MIDSTYPE value in the TM dataset that can only occur once (TMRPT = 'N').
   Output Variables:
     - MIDSTYPE
     - TMRPT
