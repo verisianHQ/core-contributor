@@ -4,7 +4,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMDTC must be included in the dataset when CMDY is present and populated.",
+      "execution_message": "Date/Time of Collection (CMDTC) variable is missing when Study Day of Visit/Collection/Exam (CMDY) is present.",
       "number_errors": 1,
       "errors": [
         {
@@ -23,7 +23,7 @@
       "dataset": "ce.xpt",
       "domain": "CE",
       "execution_status": "success",
-      "execution_message": "CEDTC must be included in the dataset when CEDY is present and populated.",
+      "execution_message": "Date/Time of Collection (CEDTC) variable is missing when Study Day of Visit/Collection/Exam (CEDY) is present.",
       "number_errors": 1,
       "errors": [
         {
@@ -42,7 +42,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "LBDTC must be included in the dataset when LBDY is present and populated.",
+      "execution_message": "Date/Time of Collection (LBDTC) variable is missing when Study Day of Visit/Collection/Exam (LBDY) is present.",
       "number_errors": 1,
       "errors": [
         {
@@ -61,7 +61,7 @@
       "dataset": "fa.xpt",
       "domain": "FA",
       "execution_status": "success",
-      "execution_message": "FADTC must be included in the dataset when FADY is present and populated.",
+      "execution_message": "Date/Time of Collection (FADTC) variable is missing when Study Day of Visit/Collection/Exam (FADY) is present.",
       "number_errors": 1,
       "errors": [
         {
@@ -80,7 +80,7 @@
       "dataset": "se.xpt",
       "domain": "SE",
       "execution_status": "success",
-      "execution_message": "SEDTC must be included in the dataset when SEDY is present and populated.",
+      "execution_message": "Date/Time of Collection (SEDTC) variable is missing when Study Day of Visit/Collection/Exam (SEDY) is present.",
       "number_errors": 1,
       "errors": [
         {
@@ -99,7 +99,7 @@
       "dataset": "sv.xpt",
       "domain": "SV",
       "execution_status": "success",
-      "execution_message": "SVDTC must be included in the dataset when SVDY is present and populated.",
+      "execution_message": "Date/Time of Collection (SVDTC) variable is missing when Study Day of Visit/Collection/Exam (SVDY) is present.",
       "number_errors": 1,
       "errors": [
         {
@@ -118,7 +118,7 @@
       "dataset": "sm.xpt",
       "domain": "SM",
       "execution_status": "success",
-      "execution_message": "SMDTC must be included in the dataset when SMDY is present and populated.",
+      "execution_message": "Date/Time of Collection (SMDTC) variable is missing when Study Day of Visit/Collection/Exam (SMDY) is present.",
       "number_errors": 1,
       "errors": [
         {
@@ -145,7 +145,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "DMDTC must be included in the dataset when DMDY is present and populated.",
+      "execution_message": "Date/Time of Collection (DMDTC) variable is missing when Study Day of Visit/Collection/Exam (DMDY) is present.",
       "number_errors": 1,
       "errors": [
         {

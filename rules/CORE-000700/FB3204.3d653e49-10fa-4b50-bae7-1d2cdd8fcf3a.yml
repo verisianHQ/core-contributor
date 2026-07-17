@@ -155,12 +155,13 @@ Core:
   Id: CORE-000700
   Status: Published
   Version: '1'
-Description: Raise an error when --DY is present and populated but --DTC is not
-  present in the dataset.
+Description: Raise an error when Study Day of Visit/Collection/Exam (--DY) is
+  present in the dataset and Date/Time of Collection (--DTC) is not present in
+  the dataset.
 Executability: Fully Executable
 Outcome:
-  Message: --DTC must be included in the dataset when --DY is present and
-    populated.
+  Message: Date/Time of Collection (--DTC) variable is missing when Study Day of
+    Visit/Collection/Exam (--DY) is present.
   Output Variables:
     - --DTC
     - --DY
