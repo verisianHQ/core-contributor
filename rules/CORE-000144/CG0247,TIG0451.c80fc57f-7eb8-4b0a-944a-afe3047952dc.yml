@@ -1,6 +1,7 @@
 # Variable: TAETORD
 # Condition: 
 # Rule: TAETORD is unique within an ARM
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -67,10 +68,10 @@ Core:
   Id: CORE-000144
   Status: Published
   Version: '1'
-Description: Trigger error when TAETORD is not unique within an ARM
+Description: Raise error when TAETORD is not unique within an ARM.
 Executability: Fully Executable
 Outcome:
-  Message: TAETORD is not unique within ARM
+  Message: TAETORD is not unique within ARM.
   Output Variables:
     - TAETORD
     - ARM
