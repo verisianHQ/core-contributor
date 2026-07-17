@@ -155,12 +155,13 @@ Core:
   Id: CORE-000862
   Status: Published
   Version: '1'
-Description: Raise an error when --STDY is present and populated but --STDTC is
-  not present in the dataset.
+Description: Raise an error when Study Day of Start of Observation (--STDY) is
+  present in the dataset and Start Date/Time of Observation (--STDTC) is not
+  present in the dataset.
 Executability: Fully Executable
 Outcome:
-  Message: --STDTC must be included in the dataset when --STDY is present and
-    populated.
+  Message: Start Date/Time of Observation (--STDTC) variable is missing when
+    Study Day of Start of Observation (--STDY) is present.
   Output Variables:
     - --STDTC
     - --STDY
