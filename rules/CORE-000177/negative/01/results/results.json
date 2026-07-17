@@ -12,14 +12,15 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "DM.RFENDTC is empty, but CMENRF is completed.",
-      "number_errors": 4,
+      "execution_message": "DM.RFENDTC is empty, but CMENRF is not empty.",
+      "number_errors": 2,
       "errors": [
         {
           "row": 2,
           "SEQ": 2,
           "USUBJID": "CDISC002",
           "value": {
+            "RFENDTC": null,
             "CMENRF": "AFTER"
           },
           "validated": false
@@ -29,29 +30,26 @@
           "SEQ": 2,
           "USUBJID": "CDISC004",
           "value": {
-            "CMENRF": "AFTER"
-          },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": 3,
-          "USUBJID": "CDISC005",
-          "value": {
-            "CMENRF": "BEFORE"
-          },
-          "validated": false
-        },
-        {
-          "row": 10,
-          "SEQ": 2,
-          "USUBJID": "CDISC010",
-          "value": {
+            "RFENDTC": null,
             "CMENRF": "AFTER"
           },
           "validated": false
         }
       ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "RFENDTC": null,
+        "CMENRF": "AFTER"
+      }
+    },
+    {
+      "value": {
+        "RFENDTC": null,
+        "CMENRF": "AFTER"
+      }
     }
   ]
 }
