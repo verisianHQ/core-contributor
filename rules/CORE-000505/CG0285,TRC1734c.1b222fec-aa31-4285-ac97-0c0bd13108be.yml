@@ -195,6 +195,7 @@ Check:
     - name: TSPARMCD
       operator: equal_to
       value: SSTDTC
+      value_is_literal: true
     - name: TSVAL
       operator: invalid_date
 Core:
