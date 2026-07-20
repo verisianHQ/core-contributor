@@ -1,6 +1,8 @@
 # Variable: USUBJID
 # Condition: POOLID ^= null
 # Rule: USUBJID = null
+# verified
+# Error in CG362 has SPC instead of REL.  Corrected in YAML.
 Authorities:
   - Organization: CDISC
     Standards:
@@ -55,18 +57,17 @@ Core:
   Id: CORE-000230
   Status: Published
   Version: '1'
-Description: Verify that when POOLID is populated, USUBJID is not populated
+Description: Raise an error when POOLID is populated but USUBJID is populated
 Executability: Fully Executable
 Outcome:
-  Message: USUBJID must be null when POOLID is populated
+  Message: USUBJID must be null when POOLID is populated.
   Output Variables:
     - POOLID
-    - USUBJID
 Rule Type: Record Data
 Scope:
   Classes:
     Include:
-      - ALL
+      - RELATIONSHIP
   Domains:
     Include:
       - RELSUB
