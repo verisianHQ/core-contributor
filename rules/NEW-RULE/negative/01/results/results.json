@@ -1,0 +1,73 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "A new term has been added to a non-extensible code list.",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 109,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AESEV",
+            "variable_value": "MAJOR",
+            "library_variable_ccode": "C66769",
+            "library_variable_codelist_name": "Severity/Intensity Scale for Adverse Events"
+          },
+          "validated": true
+        },
+        {
+          "row": 119,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AESER",
+            "variable_value": "Q",
+            "library_variable_ccode": "C66742",
+            "library_variable_codelist_name": "No Yes Response"
+          },
+          "validated": true
+        },
+        {
+          "row": 134,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AEOUT",
+            "variable_value": "FIXED",
+            "library_variable_ccode": "C66768",
+            "library_variable_codelist_name": "Outcome of Event"
+          },
+          "validated": true
+        },
+        {
+          "row": 142,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AESHOSP",
+            "variable_value": "Yes",
+            "library_variable_ccode": "C66742",
+            "library_variable_codelist_name": "No Yes Response"
+          },
+          "validated": true
+        },
+        {
+          "row": 144,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AESHOSP",
+            "variable_value": "77",
+            "library_variable_ccode": "C66742",
+            "library_variable_codelist_name": "No Yes Response"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
