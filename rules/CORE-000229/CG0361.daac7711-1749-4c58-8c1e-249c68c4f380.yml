@@ -1,3 +1,4 @@
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -55,9 +56,8 @@ Core:
 Description: Raise an error when USUBJID is populated and POOLID is populated
 Executability: Fully Executable
 Outcome:
-  Message: POOLID must be null when USUBJID is populated
+  Message: POOLID must be null when USUBJID is populated.
   Output Variables:
-    - USUBJID
     - POOLID
 Rule Type: Record Data
 Scope:

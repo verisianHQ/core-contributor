@@ -4,7 +4,7 @@
       "dataset": "relsub.xpt",
       "domain": "RELSUB",
       "execution_status": "success",
-      "execution_message": "POOLID must be null when USUBJID is populated",
+      "execution_message": "POOLID must be null when USUBJID is populated.",
       "number_errors": 3,
       "errors": [
         {
@@ -12,49 +12,29 @@
           "SEQ": null,
           "USUBJID": "HEM021-001",
           "value": {
-            "USUBJID": "HEM021-001",
             "POOLID": "HEM021-001"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
           "SEQ": null,
           "USUBJID": "HEM021-002",
           "value": {
-            "USUBJID": "HEM021-002",
             "POOLID": "HEM021-001"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 6,
           "SEQ": null,
           "USUBJID": "HEM021-003",
           "value": {
-            "USUBJID": "HEM021-003",
             "POOLID": "HEM021-001"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unmatched_validation": [
-    {
-      "value": {
-        "POOLID": "HEM021-001"
-      }
-    },
-    {
-      "value": {
-        "POOLID": "HEM021-001"
-      }
-    },
-    {
-      "value": {
-        "POOLID": "HEM021-001"
-      }
     }
   ]
 }
