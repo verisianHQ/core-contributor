@@ -157,8 +157,8 @@ Check:
     - name: TS
       operator: not_exists
 Core:
-  Id: FDA.TRC1734a
-  Status: Draft
+  Id: CORE-002095
+  Status: Published
   Version: '1'
 Description: Raise an error when TS dataset is not present in the submission.
 Executability: Fully Executable
