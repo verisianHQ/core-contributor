@@ -58,17 +58,13 @@ Core:
   Id: CORE-000344
   Status: Published
   Version: '1'
-Description: Raise an error when the value of a variable associated with
-  an extensible codelist is not in the associated codelist or equal to 'MULTIPLE'.
-Executability: Fully Executable
+Description: Trigger error if the value of a variable, which is associated with
+  an extensible codelist, is in the associated codelist or equal to 'OTHER'
+Executability: Not Executable
 Outcome:
-  Message: Variable is not equal to any values within the extensible codelist or equal to 'MULTIPLE'.
-  Output Variables:
-    - variable_value
-    - variable_name
-    - define_variable_ccode
-    - define_variable_codelist_coded_values
-Rule Type: Value Check against Define XML Variable
+  Message: Variable is not equal to value within the extensible codelist, nor
+    equal to OTHER
+Rule Type: Record Data
 Scope:
   Classes:
     Include:
