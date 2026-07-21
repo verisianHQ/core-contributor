@@ -61,13 +61,13 @@ Core:
   Id: CORE-000345
   Status: Draft
   Version: '1'
-Description: Raise an error when the value of a variable associated with
+Description: Trigger error if the value of a variable, which is associated with
   an extensible codelist, is in the associated codelist or equal to 'OTHER'
 Executability: Not Executable
 Outcome:
   Message: Variable is not equal to value within the extensible codelist, nor
     equal to OTHER
-Rule Type: Value Check with Variable Metadata
+Rule Type: Record Data
 Scope:
   Classes:
     Include:
