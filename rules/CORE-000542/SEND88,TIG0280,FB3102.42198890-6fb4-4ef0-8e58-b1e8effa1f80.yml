@@ -1,3 +1,4 @@
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -248,7 +249,7 @@ Check:
           operator: empty
         - name: --STRESC
           operator: not_equal_to
-          type_insensitive: true
+          type_insensitive: numeric
           value: --STRESN
 Core:
   Id: CORE-000542
