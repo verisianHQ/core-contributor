@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "ARMNRS must be not be null when ACTARM is null.",
+      "execution_message": "ARMNRS must be populated when ACTARM is not populated.",
       "number_errors": 2,
       "errors": [
         {
