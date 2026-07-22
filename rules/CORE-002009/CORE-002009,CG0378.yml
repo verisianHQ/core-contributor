@@ -45,6 +45,8 @@ Authorities:
 Check:
   all:
     - name: --LLTCD
+      operator: exists
+    - name: --LLTCD
       operator: is_not_valid_meddra_code_reference
       filter_attribute: term_type
       filter_value: LLT
