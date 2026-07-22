@@ -49,11 +49,11 @@ Core:
   Status: Published
   Version: '1'
 Description: Raise an error when TSPARMCD is equal to 'SENDTC' but TSVAL 
-  is not a valid ISO8601 date/time value.
+  is not a valid ISO8601 date.
 Executability: Fully Executable
 Outcome:
-  Message: TSVAL must be a valid ISO8601 date/time value when TSPARMCD
-    is equal to 'SENDTC'.
+  Message: Study End Date (SENDTC) value in the TS dataset is not 
+    populated in ISO 8601 format.
 Rule Type: Record Data
 Scope:
   Classes:
