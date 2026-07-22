@@ -86,6 +86,8 @@ Authorities:
 Check:
   all:
     - name: --LLT
+      operator: exists
+    - name: --LLT
       operator: is_not_valid_meddra_term_reference
       filter_attribute: term_type
       filter_value: LLT

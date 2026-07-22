@@ -1,45 +1,6 @@
 {
   "datasets": [
     {
-      "dataset": "mh.xpt",
-      "domain": "MH",
-      "execution_status": "success",
-      "execution_message": "MHLLT is not a valid MedDRA lowest level TERM.",
-      "number_errors": 3,
-      "errors": [
-        {
-          "row": 1,
-          "SEQ": 1,
-          "USUBJID": "CDISC010",
-          "value": {
-            "MHLLT": "Knee surgery Not correct",
-            "MHTERM": "KNEE SURGERY NOS"
-          },
-          "validated": true
-        },
-        {
-          "row": 4,
-          "SEQ": 1,
-          "USUBJID": "CDISC012",
-          "value": {
-            "MHLLT": null,
-            "MHTERM": "NICKEL ALLERGY"
-          },
-          "validated": true
-        },
-        {
-          "row": 5,
-          "SEQ": 1,
-          "USUBJID": "CDISC012",
-          "value": {
-            "MHLLT": "Vascular disorders",
-            "MHTERM": "SHOULDER DISLOCATION"
-          },
-          "validated": true
-        }
-      ]
-    },
-    {
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
