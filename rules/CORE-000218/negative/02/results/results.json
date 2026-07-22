@@ -4,7 +4,7 @@
       "dataset": "co.xpt",
       "domain": "CO",
       "execution_status": "success",
-      "execution_message": "IDVARVAL must be null when IDVAR is null.",
+      "execution_message": "IDVARVAL must not be populated when IDVAR is not populated.",
       "number_errors": 2,
       "errors": [
         {
