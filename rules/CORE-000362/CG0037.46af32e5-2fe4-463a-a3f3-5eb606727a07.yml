@@ -51,9 +51,9 @@ Check:
     - any:
       - name: --BDSYCD
         operator: not_exists
-      - name: --SOCCD
+      - name: --BDSYCD
         operator: not_equal_to
-        value: --BDSYCD
+        value: --SOCCD
 Core:
   Id: CORE-000362
   Status: Published
