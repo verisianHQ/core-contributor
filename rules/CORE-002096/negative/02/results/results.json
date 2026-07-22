@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "RACE or ETHNIC do not have origin 'Collected' in the define-xml.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 20,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ETHNIC",
+            "define_variable_origin_type": "Derived"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
