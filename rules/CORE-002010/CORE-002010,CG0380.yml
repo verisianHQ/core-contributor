@@ -46,6 +46,8 @@ Authorities:
 Check:
   all:
     - name: --PTCD
+      operator: exists
+    - name: --PTCD
       operator: is_not_valid_meddra_code_reference
       filter_attribute: term_type
       filter_value: PT
