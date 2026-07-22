@@ -66,10 +66,10 @@ Core:
   Id: CORE-000223
   Status: Published
   Version: '1'
-Description: Raise an error when ACTARMCD is null but ARMNRS is also null.
+Description: Raise an error when ACTARMCD is empty and ARMNRS is not completed.
 Executability: Fully Executable
 Outcome:
-  Message: ARMNRS must be not be null when ACTARMCD is null.
+  Message: ACTARMCD is empty, but ARMNRS is not completed.
   Output Variables:
     - ACTARMCD
     - ARMNRS

@@ -4,28 +4,48 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "ARMNRS must be not be null when ACTARMCD is null.",
-      "number_errors": 2,
+      "execution_message": "ACTARMCD is empty, but ARMNRS is not completed.",
+      "number_errors": 4,
       "errors": [
         {
-          "row": 1,
+          "row": 4,
           "SEQ": null,
-          "USUBJID": "CDISC101",
+          "USUBJID": "CDISC004",
           "value": {
             "ACTARMCD": null,
             "ARMNRS": null
           },
-          "validated": true
+          "validated": false
         },
         {
-          "row": 2,
+          "row": 5,
           "SEQ": null,
-          "USUBJID": "CDISC102",
+          "USUBJID": "CDISC005",
           "value": {
             "ACTARMCD": null,
             "ARMNRS": null
           },
-          "validated": true
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "CDISC006",
+          "value": {
+            "ACTARMCD": null,
+            "ARMNRS": null
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "CDISC007",
+          "value": {
+            "ACTARMCD": null,
+            "ARMNRS": null
+          },
+          "validated": false
         }
       ]
     }
