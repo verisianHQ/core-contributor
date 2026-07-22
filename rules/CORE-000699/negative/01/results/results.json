@@ -3,90 +3,80 @@
     {
       "dataset": "fa.xpt",
       "domain": "FA",
-      "execution_status": "execution_error",
-      "execution_message": "SQL operator execution error",
-      "number_errors": 1,
+      "execution_status": "success",
+      "execution_message": "Standards units are inconsistent within the same test (category, sub-category, specimen and method)",
+      "number_errors": 2,
       "errors": [
         {
-          "error": "SQL error in is_inconsistent_across_dataset operator",
-          "message": "column or relation does not exist"
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FASTRESU": "mm",
+            "FATESTCD": "LENGTH",
+            "FACAT": "INJECTION SITE REACTION",
+            "FASCAT": "SCAT1",
+            "FASPEC": "Not in dataset",
+            "FAMETHOD": "Not in dataset",
+            "FASTAT": "DONE"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FASTRESU": "cm",
+            "FATESTCD": "WIDTH",
+            "FACAT": "INJECTION SITE REACTION",
+            "FASCAT": "SCAT1",
+            "FASPEC": "Not in dataset",
+            "FAMETHOD": "Not in dataset",
+            "FASTAT": "DONE"
+          },
+          "validated": true
         }
       ]
     },
     {
       "dataset": "lb.xpt",
       "domain": "LB",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
-      "number_errors": 1,
+      "execution_status": "success",
+      "execution_message": "Standards units are inconsistent within the same test (category, sub-category, specimen and method)",
+      "number_errors": 2,
       "errors": [
         {
-          "error": "Validation error",
-          "message": "Invalid sensitivity value: Group"
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBSTRESU": "g/L",
+            "LBTESTCD": "ALB",
+            "LBCAT": "CHEMISTRY",
+            "LBSCAT": "ALBCAT1",
+            "LBSPEC": "SERUM",
+            "LBMETHOD": "METHOD-A",
+            "LBSTAT": "DONE"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBSTRESU": "10^9/L",
+            "LBTESTCD": "BASO",
+            "LBCAT": "HEMATOLOGY",
+            "LBSCAT": "BASOCAT1",
+            "LBSPEC": "SERUM",
+            "LBMETHOD": "BASOMETHOD",
+            "LBSTAT": "DONE"
+          },
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "fa.xpt",
-      "Row": 15,
-      "Variable": "FASTRESU"
-    },
-    {
-      "Sheet": "fa.xpt",
-      "Row": 15,
-      "Variable": "FASTAT"
-    },
-    {
-      "Sheet": "fa.xpt",
-      "Row": 17,
-      "Variable": "FASTRESU"
-    },
-    {
-      "Sheet": "fa.xpt",
-      "Row": 17,
-      "Variable": "FASTAT"
-    },
-    {
-      "Sheet": "fa.xpt",
-      "Row": 19,
-      "Variable": "FASTRESU"
-    },
-    {
-      "Sheet": "fa.xpt",
-      "Row": 19,
-      "Variable": "FASTAT"
-    },
-    {
-      "Sheet": "fa.xpt",
-      "Row": 21,
-      "Variable": "FASTRESU"
-    },
-    {
-      "Sheet": "fa.xpt",
-      "Row": 21,
-      "Variable": "FASTAT"
-    },
-    {
-      "Sheet": "fa.xpt",
-      "Row": 23,
-      "Variable": "FASTRESU"
-    },
-    {
-      "Sheet": "fa.xpt",
-      "Row": 23,
-      "Variable": "FASTAT"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 5,
-      "Variable": "LBSTRESU"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 12,
-      "Variable": "LBSTRESU"
     }
   ]
 }
