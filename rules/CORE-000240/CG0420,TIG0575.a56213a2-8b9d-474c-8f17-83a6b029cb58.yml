@@ -1,6 +1,7 @@
 # Variable: --STRF
 # Condition: --OCCUR = 'N'
 # Rule: --STRF = null
+# Verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -84,11 +85,12 @@ Core:
   Id: CORE-000240
   Status: Published
   Version: '1'
-Description: When --OCCUR = 'N', --STRF must not be populated
+Description: Raise an error when --OCCUR is equal to 'N' and --STRF is populated.
 Executability: Fully Executable
 Outcome:
-  Message: --STRF is populated when --OCCUR = "N"
+  Message: --STRF must not be populated when --OCCUR is equal to 'N'.
   Output Variables:
+    - --OCCUR
     - --STRF
 Rule Type: Record Data
 Scope:
