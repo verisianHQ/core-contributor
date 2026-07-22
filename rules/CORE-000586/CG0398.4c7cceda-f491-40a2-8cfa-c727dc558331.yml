@@ -1,6 +1,7 @@
 # Variable: GEN
 # Condition: DSCAT = 'DISPOSITION EVENT'
 # Rule: At most one record per subject per epoch
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -39,12 +40,12 @@ Core:
   Id: CORE-000586
   Status: Published
   Version: '1'
-Description: 'Raise an error when DSCAT = DISPOSITION EVENT and there is more
-  than one record per subject for an EPOCH'
+Description: Raise an error when DSCAT = 'DISPOSITION EVENT' but there is more
+  than one record per subject per EPOCH.
 Executability: Fully Executable
 Outcome:
-  Message: 'Multiple records exist within the same EPOCH for a subject when DSCAT
-    = DISPOSITION EVENT'
+  Message: DSCAT = 'DISPOSITION EVENT', but multiple records exist within the
+    same EPOCH for a subject.
   Output Variables:
     - DSCAT
     - EPOCH
