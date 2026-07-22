@@ -1,6 +1,7 @@
 # Variable: GEN
 # Condition: 
 # Rule: Variable name length <= 8
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -163,6 +164,8 @@ Description: Raise an error when variable name length is greater than 8.
 Executability: Fully Executable
 Outcome:
   Message: Variable name length is greater than 8.
+  Output Variables:
+    - variable_name
 Rule Type: Variable Metadata Check
 Scope:
   Classes:
