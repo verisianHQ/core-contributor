@@ -1,6 +1,7 @@
 # Variable: DOMAIN
 # Condition: 
 # Rule: DOMAIN value length = 4
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -52,10 +53,12 @@ Core:
   Id: CORE-000181
   Status: Published
   Version: '1'
-Description: Raise an error when AP-- domain value length is not equal to 4.
+Description: Raise an error when DOMAIN value length is not equal to 4.
 Executability: Fully Executable
 Outcome:
-  Message: AP-- Domain value length is not equal to 4.
+  Message: DOMAIN value length is not equal to 4.
+  Output Variables:
+    - DOMAIN
 Rule Type: Record Data
 Scope:
   Classes:
