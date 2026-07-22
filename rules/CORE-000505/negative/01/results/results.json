@@ -4,7 +4,7 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSVAL is not a valid ISO 8601 date/time when TSPARMCD is equal to SSTDTC.",
+      "execution_message": "TSVAL where TSPARMCD = 'STSTDTC' is not in ISO 8601 format.",
       "number_errors": 1,
       "errors": [
         {
