@@ -4,7 +4,7 @@
       "dataset": "dmx.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "Domain value length is not equal 2.",
+      "execution_message": "DOMAIN value length is not equal to 2.",
       "number_errors": 1,
       "errors": [
         {
@@ -14,7 +14,7 @@
           "value": {
             "DOMAIN": "DMX"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -22,7 +22,7 @@
       "dataset": "ae1.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "Domain value length is not equal 2.",
+      "execution_message": "DOMAIN value length is not equal to 2.",
       "number_errors": 1,
       "errors": [
         {
@@ -32,7 +32,25 @@
           "value": {
             "DOMAIN": "AE1"
           },
-          "validated": false
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "DOMAIN value length is not equal to 2.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "DOMAIN": "C"
+          },
+          "validated": true
         }
       ]
     }
