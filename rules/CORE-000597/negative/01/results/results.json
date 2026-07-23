@@ -4,7 +4,7 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "QNAM ='AESOSP' is present in the SUPPAE dataset, but no AE record with AESMIE ='Y' is present in the AE dataset.",
+      "execution_message": "QNAM equal to 'AESOSP' is present in the SUPPAE dataset, but no record with AESMIE equal to 'Y' is present in the AE dataset.",
       "number_errors": 2,
       "errors": [
         {
@@ -12,9 +12,9 @@
           "SEQ": 1,
           "USUBJID": "CDISC-TEST-001",
           "value": {
+            "AESOSP": "SPONTANEOUS ABORTION ",
             "AETERM": "UPSET STOMACH",
-            "AESMIE": null,
-            "AESOSP": "SPONTANEOUS ABORTION "
+            "AESMIE": null
           },
           "validated": true
         },
@@ -23,9 +23,9 @@
           "SEQ": 1,
           "USUBJID": "CDISC-TEST-002",
           "value": {
+            "AESOSP": "HIGH RISK FOR ADDITIONAL THROMBOSIS",
             "AETERM": "BRONCHITIS",
-            "AESMIE": "N",
-            "AESOSP": "HIGH RISK FOR ADDITIONAL THROMBOSIS"
+            "AESMIE": "N"
           },
           "validated": true
         }
