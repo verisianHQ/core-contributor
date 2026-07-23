@@ -67,6 +67,7 @@ Check:
     - name: DOMAIN
       operator: has_not_equal_length
       value: 2
+      value_is_literal: true
 Core:
   Id: CORE-000180
   Status: Published
