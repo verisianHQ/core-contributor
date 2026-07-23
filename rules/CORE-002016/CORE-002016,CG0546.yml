@@ -46,6 +46,7 @@ Check:
     - name: TMRPT
       operator: equal_to
       value: Y
+      value_is_literal: true
     - name: SMSTDTC
       operator: exists
     - name: SMSTDTC
@@ -69,14 +70,14 @@ Core:
   Id: CORE-002016
   Status: Published
   Version: '1'
-Description: Raise an error when, for records where MIDSTYPE = TM.MIDSTYPE and TM.TMRPT = 'Y', the corresponding MIDS values are not suffixed with a sequence number that reflects a consistent chronological order. 
+Description: Raise an error when, for records where MIDSTYPE is equal to MIDSTYPE with TMRPT equal to 'Y' in the TM dataset, the corresponding MIDS values are not suffixed with a sequence number that reflects a consistent chronological order. 
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - MIDSTYPE
     Name: TM
 Outcome:
-  Message: MIDS value is not correctly sequenced chronologically per SMSTDTC for the corresponding MIDSTYPE in the TM dataset where TMRPT = 'Y'.
+  Message: MIDS value is not correctly sequenced chronologically per SMSTDTC for the corresponding MIDSTYPE in the TM dataset where TMRPT is equal to 'Y'.
   Output Variables:
     - MIDS
     - MIDSTYPE
