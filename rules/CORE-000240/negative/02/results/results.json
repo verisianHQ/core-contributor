@@ -4,17 +4,28 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMSTRF is populated when CMOCCUR = \"N\"",
-      "number_errors": 1,
+      "execution_message": "CMSTRF must not be populated when CMOCCUR is equal to 'N'.",
+      "number_errors": 2,
       "errors": [
         {
-          "row": 2,
-          "SEQ": 2,
+          "row": 1,
+          "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
+            "CMOCCUR": "N",
             "CMSTRF": "AFTER"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMOCCUR": "N",
+            "CMSTRF": "Lorem ipsum dolor sit amet"
+          },
+          "validated": true
         }
       ]
     }
