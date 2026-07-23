@@ -49,6 +49,7 @@ Check:
     - name: DOMAIN
       operator: has_not_equal_length
       value: 4
+      value_is_literal: true
 Core:
   Id: CORE-000181
   Status: Published
