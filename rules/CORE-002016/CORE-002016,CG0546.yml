@@ -1,7 +1,7 @@
 # Variable: MIDS
 # Condition: SM.MIDSTYPE = TM.MIDSTYPE and TM.TMRPT = 'Y'
 # Rule: SM.MIDS is suffixed with a sequence number in consistent chronological order
-# Assumption: Appropriate to use SMSTDTC to cross-check consistent chronological order..
+# Assumption: OK to use SMSTDTC to cross-check consistent chronological order..
 # Author: Marcelina Hungria
 # verified
 Authorities:
