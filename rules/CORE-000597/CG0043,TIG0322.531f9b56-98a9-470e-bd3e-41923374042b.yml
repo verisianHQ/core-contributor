@@ -84,18 +84,18 @@ Core:
   Id: CORE-000597
   Status: Published
   Version: '1'
-Description: Raise an error when there is a record in the SUPPAE dataset where QNAM = 'AESOSP' but no record with AESMIE = 'Y' is present in the AE dataset.
+Description: Raise an error when there is a record in the SUPPAE dataset where QNAM is equal to 'AESOSP' but no record with AESMIE equal to 'Y' is present in the AE dataset.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: SUPPAE
 Outcome:
-  Message: QNAM ='AESOSP' is present in the SUPPAE dataset, but no AE record with AESMIE ='Y' is present in the AE dataset.
+  Message: QNAM equal to 'AESOSP' is present in the SUPPAE dataset, but no record with AESMIE equal to 'Y' is present in the AE dataset.
   Output Variables:
+    - AESOSP
     - AETERM
     - AESMIE
-    - AESOSP
 Rule Type: Record Data
 Scope:
   Classes:
