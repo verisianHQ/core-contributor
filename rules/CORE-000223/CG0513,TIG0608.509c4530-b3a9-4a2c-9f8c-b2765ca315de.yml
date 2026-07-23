@@ -1,6 +1,7 @@
 # Variable: ARMNRS
 # Condition: ACTARMCD = null
 # Rule: ARMNRS^=null
+# Verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -66,10 +67,10 @@ Core:
   Id: CORE-000223
   Status: Published
   Version: '1'
-Description: Raise an error when ACTARMCD is null but ARMNRS is also null.
+Description: Raise an error when ACTARMCD is not populated but ARMNRS is also not populated.
 Executability: Fully Executable
 Outcome:
-  Message: ARMNRS must be not be null when ACTARMCD is null.
+  Message: ARMNRS must be populated when ACTARMCD is not populated.
   Output Variables:
     - ACTARMCD
     - ARMNRS
