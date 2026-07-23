@@ -17,40 +17,50 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          const p1 = 'eljanssens';
-          const p2 = 'pendingintent';
+          const targetReviewer = 'pendingintent';
           const prAuthor = context.payload.pull_request.user.login;
           const owner = context.repo.owner;
           const repo = context.repo.repo;
+          const pull_number = context.issue.number;
 
-          let reviewerToAdd;
-
-          if (prAuthor === p1) {
-            reviewerToAdd = p2;
-          } else if (prAuthor === p2) {
-            reviewerToAdd = p1;
-          } else {
-            const getOpenPRCount = async (username) => {
-              const response = await github.rest.search.issuesAndPullRequests({
-                q: `repo:${owner}/${repo} is:pr is:open review-requested:${username}`
-              });
-              return response.data.total_count;
-            };
-
-            const p1Count = await getOpenPRCount(p1);
-            const p2Count = await getOpenPRCount(p2);
-            
-            console.log(`${p1} has ${p1Count} open PRs.`);
-            console.log(`${p2} has ${p2Count} open PRs.`);
-
-            reviewerToAdd = p1Count <= p2Count ? p1 : p2;
+          if (prAuthor === targetReviewer) {
+            console.log(`Author is ${targetReviewer}. Skipping self-assignment.`);
+            return;
           }
 
-          console.log(`Assigning ${reviewerToAdd} to PR #${context.issue.number}`);
+          let hasAdamRules = false;
+          let page = 1;
+          
+          while (true) {
+            const files = await github.rest.pulls.listFiles({
+              owner: owner,
+              repo: repo,
+              pull_number: pull_number,
+              per_page: 100,
+              page: page
+            });
+            
+            if (files.data.length === 0) break;
+            
+            if (files.data.some(f => f.filename.startsWith('adam_rules/'))) {
+              hasAdamRules = true;
+              break;
+            }
+            
+            if (files.data.length < 100) break;
+            page++;
+          }
+
+          if (hasAdamRules) {
+            console.log("Changed files include 'adam_rules/'. Skipping reviewer assignment.");
+            return;
+          }
+
+          console.log(`Assigning ${targetReviewer} to PR #${pull_number}`);
 
           await github.rest.pulls.requestReviewers({
             owner: owner,
             repo: repo,
-            pull_number: context.issue.number,
-            reviewers: [reviewerToAdd],
+            pull_number: pull_number,
+            reviewers: [targetReviewer],
           });
