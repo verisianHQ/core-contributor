@@ -1,15 +1,14 @@
 # Variable: DTHFL
 # Condition: DTHDTC ^= null
 # Rule: DTHFL = 'Y'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: DTHDTC[The date or date and time of death, represented in a
-                  standardized character format.] DTHFL[An indication that the
-                  subject died.]
+              - Cited Guidance: DTHDTC[The date or date and time of death, represented in standardized character format.]|DTHFL[An indication that the subject died.]
                 Document: Model v2.0
                 Item: DTHDTC|DTHFL
                 Section: Demographics
@@ -114,11 +113,10 @@ Core:
   Id: CORE-000007
   Status: Published
   Version: '1'
-Description: When a DTHDTC is populated in DM domain, death flag is populated as
-  Y in DM dataset for corresponding subject
+Description: Raise an error when DTHDTC is populated but DTHFL is not 'Y'
 Executability: Fully Executable
 Outcome:
-  Message: DTHFL is not "Y", when DTHDTC is populated
+  Message: DTHFL is not 'Y', when DTHDTC is populated.
   Output Variables:
     - DTHDTC
     - DTHFL
