@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "RFSTDTC must be null when ARMNRS is populated and is not equal to 'UNPLANNED TREATMENT', provided that this study defines RFSTDTC as the date/time of first treatment exposure.",
+      "execution_message": "RFSTDTC must not be populated when ARMNRS is populated with a value other than 'UNPLANNED TREATMENT', provided that this study defines RFSTDTC as the date/time of first treatment exposure.",
       "number_errors": 3,
       "errors": [
         {
@@ -40,35 +40,6 @@
           },
           "validated": true
         }
-      ]
-    }
-  ],
-  "unhighlighted_validations": [
-    {
-      "1": [
-        "dm.xpt",
-        "record",
-        5,
-        "ARM",
-        "ARMNRS is not \"UNPLANNED TREATMENT\""
-      ]
-    },
-    {
-      "2": [
-        "dm.xpt",
-        "record",
-        6,
-        "ARM",
-        "ARMNRS is not \"UNPLANNED TREATMENT\""
-      ]
-    },
-    {
-      "3": [
-        "dm.xpt",
-        "record",
-        7,
-        "ARM",
-        "ARMNRS is not \"UNPLANNED TREATMENT\", random text"
       ]
     }
   ]
