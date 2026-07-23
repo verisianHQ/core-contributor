@@ -1,6 +1,7 @@
 # Variable: GEN
 # Condition: DM.ACTARMCD not null
 # Rule: DS records present for subject
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -72,7 +73,7 @@ Core:
   Id: CORE-000296
   Status: Published
   Version: '1'
-Description: When ACTARMCD is populated, disposition data for subject must be present
+Description: Raise an error when ACTARMCD is populated, but no disposition data are present for the subject.
 Executability: Fully Executable
 Operations:
   - domain: DS
@@ -80,9 +81,9 @@ Operations:
     name: USUBJID
     operator: distinct
 Outcome:
-  Message: There are no DS records for subject who was assigned treatment
+  Message: At least one DS record must be present for subject who was assigned treatment.
   Output Variables:
-    - USUBJID
+    - ACTARMCD
 Rule Type: Record Data
 Scope:
   Classes:

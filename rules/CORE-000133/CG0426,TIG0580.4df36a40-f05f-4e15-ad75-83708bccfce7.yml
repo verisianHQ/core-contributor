@@ -1,3 +1,7 @@
+# Variable: --STRESC
+# Condition: --STRESU ^= null
+# Rule: --STRESC (in standard units) ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -10,6 +14,8 @@ Authorities:
                   and --STREFN and --LLOQ and --ULOQ.
                 Document: Model v2.0
                 Section: Findings
+                Item: --STRESU
+                Item: --STRESU
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0426
@@ -58,9 +64,6 @@ Authorities:
             Version: '1.0'
         Substandard: SDTM
         Version: '1.0'
-# Variable: --STRESC
-# Condition: --STRESU ^= null
-# Rule: --STRESC (in standard units) ^= null
 Check:
   all:
     - name: --STRESU
@@ -71,12 +74,11 @@ Core:
   Id: CORE-000133
   Status: Published
   Version: '1'
-Description: When --STRESU is populated, --STRESC must also be populated. Please
-  note that this rule, as executed, cannot check if --STRESC is populated with
-  the standardized unit.
+Description: Raise an error when --STRESU is populated but --STRESC is not 
+  populated. 
 Executability: Fully Executable
 Outcome:
-  Message: Missing value for --STRESC, when --STRESU is provided
+  Message: --STRESU is populated but --STRESC is not populated.
 Rule Type: Record Data
 Scope:
   Classes:

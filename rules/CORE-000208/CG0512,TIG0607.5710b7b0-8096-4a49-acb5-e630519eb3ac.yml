@@ -1,6 +1,7 @@
 # Variable: ACTARMCD
 # Condition: Study does not use multi-stage arm assignments and ACTARMCD ^= null
 # Rule: ACTARMCD in TA.ARMCD
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -67,8 +68,7 @@ Core:
   Id: CORE-000208
   Status: Published
   Version: '1'
-Description: Trigger error when study does not use multi-stage arm assignments
-  and ACTARMCD ^= null, and ACTARMCD is not in TA.ARMCD
+Description: Raise an error when ACTARMCD value in DM dataset does not match any ARMCD value in TA dataset.
 Executability: Partially Executable - Possible Overreporting
 Operations:
   - domain: TA
@@ -76,7 +76,7 @@ Operations:
     name: ARMCD
     operator: distinct
 Outcome:
-  Message: ACTARMCD is not in TA.ARMCD
+  Message: ACTARMCD value in DM dataset does not match any ARMCD value in TA dataset. This is only acceptable for multi-stage studies with incomplete ARM assignments.
   Output Variables:
     - ACTARMCD
 Rule Type: Record Data

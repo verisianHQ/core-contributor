@@ -1,13 +1,14 @@
 # Variable: --LOBXFL
 # Condition: 
 # Rule: Value must be 'Y' or null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The value should be "Y" or null.
+              - Cited Guidance: The value should be 'Y' or null.
                 Document: IG v3.4
                 Item: Specification
                 Section: Various Findings Domains
@@ -20,7 +21,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The value should be "Y" or null.
+              - Cited Guidance: The value should be 'Y' or null.
                 Document: IG v3.3
                 Item: CDISC Notes
                 Section: Various Findings Domains
@@ -33,7 +34,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: The value should be "Y" or null.
+              - Cited Guidance: The value should be 'Y' or null.
                 Document: TIG 1.0
                 Item: Specification:--LOBXFL
                 Section: Various Finding Domains
@@ -49,19 +50,19 @@ Check:
     - name: --LOBXFL
       operator: not_equal_to
       value: Y
+      value_is_literal: true
     - name: --LOBXFL
       operator: non_empty
 Core:
   Id: CORE-000170
   Status: Published
   Version: '1'
-Description: Raise an error when --LOBXFL is not 'Y' or null
+Description: Raise an error when --LOBXFL is not 'Y' or null.
 Executability: Fully Executable
 Outcome:
-  Message: Value of --LOBXFL must be 'Y' or null
+  Message: Value of --LOBXFL must be 'Y' or null.
   Output Variables:
     - --CAT
-    - --TEST
     - --TESTCD
     - --LOBXFL
 Rule Type: Record Data
