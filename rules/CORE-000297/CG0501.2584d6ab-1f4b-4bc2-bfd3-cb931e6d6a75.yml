@@ -49,7 +49,7 @@ Operations:
     name: MIDS
     operator: variable_exists
 Outcome:
-  Message: TM dataset is missing when MIDS variable is present in one of the dataset.
+  Message: TM dataset must be present when MIDS variable is present in a dataset.
   Output Variables:
     - MIDS
     - TM
