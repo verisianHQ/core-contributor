@@ -1,6 +1,7 @@
 # Variable: RSUBJID
 # Condition: RSUBJID ^=null and RSUBJID ^= POOLID
 # Rule: RSUBJID = DM.USUBJID
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -14,8 +15,8 @@ Authorities:
                   about associated persons who are related to the study but not
                   to any of the study subjects.
                 Document: Model v2.0
-                Item: RSUBJID
                 Section: Associated Persons
+                Item: RSUBJID
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0367
@@ -57,11 +58,13 @@ Authorities:
         Version: '3.3'
 Check:
   all:
+    - name: POOLDEF
+      operator: not_exists
     - name: RSUBJID
       operator: non_empty
     - name: RSUBJID
-      operator: not_equal_to
-      value: POOLID
+      operator: is_not_contained_by
+      value: $pooldef_poolid
     - name: RSUBJID
       operator: is_not_contained_by
       value: $dm_usubjid
@@ -69,19 +72,24 @@ Core:
   Id: CORE-000235
   Status: Published
   Version: '1'
-Description: Verify that RSUBJID=DM.USUBJID when RSUBJID is populated and
-  RSUBJID is not equal to POOLID
+Description: Raise an error when RSUBJID is poplulated and not equal to 
+  a POOLID in the POOLDEF dataset but RSUBJID is not equal to a USUBJID
+  in the DM dataset.
 Executability: Fully Executable
 Operations:
+  - domain: POOLDEF
+    id: $pooldef_poolid
+    name: POOLID
+    operator: distinct
   - domain: DM
     id: $dm_usubjid
     name: USUBJID
     operator: distinct
 Outcome:
-  Message: RSUBJID must equal DM.USUBJID when RSUBJID is populated and RSUBJID
-    does not equal POOLID
+  Message: RSUBJID must be equal to a USUBJID in the DM dataset when
+    RSUBJID is populated and RSUBJID is not equal to a POOLID
+    in the POOLDEF dataset.
   Output Variables:
-    - USUBJID
     - RSUBJID
     - POOLID
 Rule Type: Record Data
