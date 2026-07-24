@@ -1,33 +1,33 @@
 # Variable: VISITNUM
 # Condition: Scheduled or Contingent visit (exists in TV)
 # Rule: VISITNUM identifies unique record within subject
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: One record per subject per actual visit.
+              - Cited Guidance: >-
+                  IG v3.4[5.5 SV][One record per subject per actual visit.]
+                  IG v3.4[7.3.1.1 TV][TV Issues 4][Some data collection is 
+                  contingent on the occurrence of a 'trigger' event, or disease 
+                  milestone (see the Trial Disease Milestones (TM) dataset 
+                  under Section 7.3, Schedule for Assessments (TV, TD, and TM)).
+                  When such planned data collection involves an additional 
+                  clinic visit, a 'contingent' Visit may be included in the 
+                  trial visits table, with start a rule that describes the 
+                  circumstances under which it will take place. Since values of 
+                  VISITNUM must be assigned to all records in the Trial Visits 
+                  dataset, a contingent Visit included in the Trial Visits 
+                  dataset must have a VISITNUM, but the VISITNUM value may not 
+                  be a 'chronological' value, due to the uncertain timing of a 
+                  contingent Visit. If contingent visits are not included in 
+                  the TV dataset, then they would be treated as unplanned 
+                  visits in the Subject Visits (SV) domain.]
                 Document: IG v3.4
-                Item: 7.3.1.1 TV
-                Section: '5.5'
-              - Cited Guidance: Some data collection is contingent on the occurrence of a
-                  "trigger" event, or disease milestone (see the Trial Disease
-                  Milestones (TM) dataset under Section 7.3, Schedule for
-                  Assessments (TV, TD, and TM)). When such planned data
-                  collection involves an additional clinic visit, a "contingent"
-                  Visit may be included in the trial visits table, with start a
-                  rule that describes the circumstances under which it will take
-                  place. Since values of VISITNUM must be assigned to all
-                  records in the Trial Visits dataset, a contingent Visit
-                  included in the Trial Visits dataset must have a VISITNUM, but
-                  the VISITNUM value may not be a "chronological" value, due to
-                  the uncertain timing of a contingent Visit. If contingent
-                  visits are not included in the TV dataset, then they would be
-                  treated as unplanned visits in the Subject Visits (SV) domain.
-                Document: IG v3.4
-                Item: TV Issues 4
-                Section: 7.3.1.1
+                Item: '[7.3.1.1 TV][TV Issues 4]'
+                Section: 5.5|7.3.1.1
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0410
@@ -51,10 +51,10 @@ Authorities:
           - Citations:
               - Cited Guidance: IG v3.3[5.5 SV][One record per subject per actual visit.]|IG
                   v3.3[7.3.1.1 TV][TV Issues 4][Some data collection is
-                  contingent on the occurrence of a "trigger" event; or disease
+                  contingent on the occurrence of a 'trigger' event; or disease
                   milestone (see Section 7.3.3 Trial Disease Milestones). When
                   such planned data collection involves an additional clinic
-                  visit; a "contingent" Visit may be included in the trial
+                  visit; a 'contingent' Visit may be included in the trial
                   visits table;]
                 Document: IG v3.3
                 Item: IG v3.3[5.5 SV]|IG v3.3[7.3.1.1 TV][TV Issues 4]
@@ -91,8 +91,8 @@ Core:
   Id: CORE-000204
   Status: Published
   Version: '1'
-Description: When VISITNUM is present in TV.VISITNUM, SV.VISITNUM must be unique
-  within subject
+Description: Raise an error when VISITNUM is not unique in the SV dataset 
+  within subject when VISITNUM is present in the TV dataset.
 Executability: Fully Executable
 Operations:
   - domain: TV
@@ -100,9 +100,9 @@ Operations:
     name: VISITNUM
     operator: distinct
 Outcome:
-  Message: Scheduled or Contingent visit is not unique within subject
+  Message: VISITNUM in the SV dataset must be unique within subject when the
+    VISITNUM is present in the TV dataset.
   Output Variables:
-    - USUBJID
     - VISITNUM
 Rule Type: Record Data
 Scope:

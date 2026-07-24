@@ -4,7 +4,7 @@
       "dataset": "sv.xpt",
       "domain": "SV",
       "execution_status": "success",
-      "execution_message": "Scheduled or Contingent visit is not unique within subject",
+      "execution_message": "VISITNUM in the SV dataset must be unique within subject when the VISITNUM is present in the TV dataset.",
       "number_errors": 2,
       "errors": [
         {
@@ -12,20 +12,18 @@
           "SEQ": null,
           "USUBJID": "CDISC001",
           "value": {
-            "USUBJID": "CDISC001",
             "VISITNUM": 1.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": null,
           "USUBJID": "CDISC001",
           "value": {
-            "USUBJID": "CDISC001",
             "VISITNUM": 1.0
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
