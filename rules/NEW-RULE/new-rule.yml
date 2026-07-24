@@ -1,0 +1,165 @@
+# Variable: --STINT
+# Condition: --ENINT ^= null
+# Rule: --STINT ^= null
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: A specimen material type should be named consistently across pharmacokinetic datasets within a submission.
+                Document: FDA
+                Section: FDAB071
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB7101
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: A specimen material type should be named consistently across pharmacokinetic datasets within a submission.
+                Document: FDA
+                Section: FDAB071
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB7101
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: A specimen material type should be named consistently across pharmacokinetic datasets within a submission.
+                Document: FDA
+                Section: FDAB071
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB7101
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: A specimen material type should be named consistently across pharmacokinetic datasets within a submission.
+                Document: FDA
+                Section: FDAB071
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB7101
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: A specimen material type should be named consistently across pharmacokinetic datasets within a submission.
+                Document: FDA
+                Section: FDAB071
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB7101
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: A specimen material type should be named consistently across pharmacokinetic datasets within a submission.
+                Document: FDA
+                Section: FDAB071
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB7101
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: A specimen material type should be named consistently across pharmacokinetic datasets within a submission.
+                Document: FDA
+                Section: FDAB071
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB7101
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: A specimen material type should be named consistently across pharmacokinetic datasets within a submission.
+                Document: FDA
+                Section: FDAB071
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB7101
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: 'SENDIG-AR'
+        References:
+          - Citations:
+              - Cited Guidance: A specimen material type should be named consistently across pharmacokinetic datasets within a submission.
+                Document: FDA
+                Section: FDAB071
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB7101
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: 'SENDIG-GENETOX'
+        References:
+          - Citations:
+              - Cited Guidance: A specimen material type should be named consistently across pharmacokinetic datasets within a submission.
+                Document: FDA
+                Section: FDAB071
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB7101
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  all:
+    - name: PCTEST
+      operator: equal_to
+      value: PPCAT
+    - name: PCSPEC
+      operator: not_equal_to
+      value: PPSPEC
+Core:
+  Id: FDA.SDTMIG.FB7101
+  Status: Draft
+  Version: '1'
+Description: Raise an error when for the same drug or metabolite (PCTEST = PCCAT), specimen type (--SPEC) is not consistent across pharmacokinetic datasets within a submission. 
+Executability: Partially Executable
+Match Datasets:
+  - Name: PP
+    Keys:
+      - USUBJID
+Outcome:
+  Message: PCSPEC is not equal to PPSPEC for the same drug or metabolite (PCTEST = PPCAT).
+  Output Variables:
+    - PCTEST
+    - PPCAT
+    - PCSPEC
+    - PPSPEC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - PC
+Sensitivity: Group
+Grouping_Variables:
+  - PCTEST
+  - PCSPEC
+  - PPSPEC
