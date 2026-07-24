@@ -5,7 +5,6 @@ on:
     types: [closed]
     paths:
       - 'rules/NEW-RULE/**'
-      - 'adam_rules/NEW-RULE/**'
     branches: [main]
 
 jobs:
@@ -29,13 +28,8 @@ jobs:
         id: check-dir
         run: |
           if [ -d "rules/NEW-RULE" ]; then
-            echo "rules_dir=rules" >> $GITHUB_OUTPUT
-            echo "exists=true" >> $GITHUB_OUTPUT
-          elif [ -d "adam_rules/NEW-RULE" ]; then
-            echo "rules_dir=adam_rules" >> $GITHUB_OUTPUT
             echo "exists=true" >> $GITHUB_OUTPUT
           else
-            echo "rules_dir=" >> $GITHUB_OUTPUT
             echo "exists=false" >> $GITHUB_OUTPUT
           fi
 
@@ -53,66 +47,29 @@ jobs:
           import os
           import re
 
-          rules_dir = os.environ.get('rules_dir', 'rules')
+          rules_dir = 'rules'
           new_rule_dir = os.path.join(rules_dir, 'NEW-RULE')
 
           if not os.path.exists(new_rule_dir):
               exit(0)
 
-          def get_conformance_ids(yaml_path):
-              unique_ids = []
-              in_rule_id_block = False
-              with open(yaml_path, 'r', encoding='utf-8') as f:
-                  for line in f:
-                      stripped = line.strip()
-                      if stripped.startswith('Rule Identifier:'):
-                          in_rule_id_block = True
-                      elif in_rule_id_block and stripped.startswith('Id:'):
-                          val = stripped.split('Id:', 1)[1].strip().strip('\'\"')
-                          if val and val not in unique_ids:
-                              unique_ids.append(val)
-                          in_rule_id_block = False
-              return unique_ids
+          existing_ids = []
+          for d in os.listdir(rules_dir):
+              match = re.match(r'CORE-(\d+)', d)
+              if match:
+                  num = int(match.group(1))
+                  if num >= 2000:
+                      existing_ids.append(num)
 
-          yaml_file_path = None
-          for root, dirs, files in os.walk(new_rule_dir):
-              for file in files:
-                  if file.endswith(('.yml', '.yaml')):
-                      yaml_file_path = os.path.join(root, file)
-                      break
-              if yaml_file_path:
+          existing_ids.sort()
+          next_id = 2000
+          for num in existing_ids:
+              if num == next_id:
+                  next_id += 1
+              elif num > next_id:
                   break
 
-          if not yaml_file_path:
-              print("No YAML file found in NEW-RULE directory.")
-              exit(1)
-
-          unique_ids = get_conformance_ids(yaml_file_path)
-
-          if rules_dir == 'rules':
-              existing_ids = []
-              for d in os.listdir(rules_dir):
-                  match = re.match(r'CORE-(\d+)', d)
-                  if match:
-                      num = int(match.group(1))
-                      if num >= 2000:
-                          existing_ids.append(num)
-              existing_ids.sort()
-              next_id = 2000
-              for num in existing_ids:
-                  if num == next_id:
-                      next_id += 1
-                  elif num > next_id:
-                      break
-              new_core_id = f'CORE-{next_id:06d}'
-          elif rules_dir == 'adam_rules':
-              if not unique_ids:
-                  print("No conformance IDs found for ADaM rule.")
-                  exit(1)
-              new_core_id = unique_ids[0]
-          else:
-              exit(1)
-
+          new_core_id = f'CORE-{next_id:06d}'
           print(f'Assigning new ID: {new_core_id}')
 
           if 'GITHUB_OUTPUT' in os.environ:
@@ -131,7 +88,9 @@ jobs:
                   old_path = os.path.join(root, file)
                   
                   if file.endswith(('.yml', '.yaml')):
+                      unique_ids = []
                       updated_lines = []
+                      in_rule_id_block = False
                       in_core_block = False
                       
                       with open(old_path, 'r', encoding='utf-8') as f:
@@ -139,6 +98,14 @@ jobs:
 
                       for line in lines:
                           stripped = line.strip()
+                          
+                          if stripped.startswith('Rule Identifier:'):
+                              in_rule_id_block = True
+                          elif in_rule_id_block and stripped.startswith('Id:'):
+                              val = stripped.split('Id:', 1)[1].strip().strip('\'\"')
+                              if val and val not in unique_ids:
+                                  unique_ids.append(val)
+                              in_rule_id_block = False
                           
                           if stripped == 'Core:':
                               in_core_block = True
@@ -152,11 +119,7 @@ jobs:
 
                           updated_lines.append(line)
 
-                      if rules_dir == 'rules':
-                          new_name = f"{new_core_id},{','.join(unique_ids)}.yml" if unique_ids else file.replace('NEW-RULE', new_core_id)
-                      elif rules_dir == 'adam_rules':
-                          new_name = f"{new_core_id}.yml"
-                          
+                      new_name = f"{new_core_id},{','.join(unique_ids)}.yml" if unique_ids else file.replace('NEW-RULE', new_core_id)
                       new_path = os.path.join(root, new_name)
                       
                       with open(new_path, 'w', encoding='utf-8') as f:
@@ -173,8 +136,6 @@ jobs:
           EOF
           
           python rename_script.py
-        env:
-          rules_dir: ${{ steps.check-dir.outputs.rules_dir }}
 
       - name: Commit and Push Changes
         if: steps.check-dir.outputs.exists == 'true'
@@ -182,7 +143,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          git add rules/ adam_rules/
+          git add rules/
           
           if git diff --staged --quiet; then
             echo "No changes to commit."
