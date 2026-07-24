@@ -154,7 +154,7 @@ Core:
 Description: Raise an error when STUDYID is not equal to STUDYID in the DM 
   dataset. The STUDYID in all domains must be the same in all records 
   across the study.
-Executability: Fully executable
+Executability: Fully Executable
 Operations:
   - domain: DM
     id: $dm_studyid
