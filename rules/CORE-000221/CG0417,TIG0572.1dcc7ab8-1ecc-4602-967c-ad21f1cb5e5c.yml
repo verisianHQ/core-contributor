@@ -1,15 +1,14 @@
 # Variable: QNAM
 # Condition: 
 # Rule: QNAM value length <=8 and cannot start with a number and cannot contain characters other than letters in upper case, numbers, or underscores
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The value in QNAM cannot be longer than 8 characters; nor can it
-                  start with a  number (e.g., '1TEST'). QNAM cannot contain
-                  characters other than letters; numbers; or underscores.
+              - Cited Guidance: The value in QNAM cannot be longer than 8 characters; nor can it start with a number (e.g., '1TEST'). QNAM cannot contain characters other than letters; numbers; or underscores.
                 Document: Model v2.0
                 Item: QNAM
                 Section: Supplemental Qualifiers
@@ -22,9 +21,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The value in QNAM cannot be longer than 8 characters; nor can it
-                  start with a number (e.g., '1TEST'). QNAM cannot contain
-                  characters other than letters; numbers; or underscores.
+              - Cited Guidance: The value in QNAM cannot be longer than 8 characters; nor can it start with a number (e.g., '1TEST'). QNAM cannot contain characters other than letters; numbers; or underscores.
                 Document: Model v1.7
                 Item: QNAM
                 Section: 4.1.2
@@ -37,9 +34,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The value in QNAM cannot be longer than 8 characters; nor can it
-                  start with a number (e.g., '1TEST'). QNAM cannot contain
-                  characters other than letters; numbers; or underscores.
+              - Cited Guidance: The value in QNAM cannot be longer than 8 characters; nor can it start with a number (e.g., '1TEST'). QNAM cannot contain characters other than letters; numbers; or underscores.
                 Document: Model v1.4
                 Item: QNAM
                 Section: 4.1.2
@@ -66,9 +61,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: The value in QNAM cannot be longer than 8 characters; nor can it
-                  start with a number (e.g., '1TEST'). QNAM cannot contain
-                  characters other than letters; numbers; or underscores.
+              - Cited Guidance: The value in QNAM cannot be longer than 8 characters; nor can it start with a number (e.g., '1TEST'). QNAM cannot contain characters other than letters; numbers; or underscores.
                 Document: SDTM v2.1
                 Item: QNAM
                 Section: Section 6.2 Supplemental Qualifiers Data set
@@ -88,12 +81,10 @@ Core:
   Id: CORE-000221
   Status: Published
   Version: '1'
-Description: Raise an error when QNAM > 8 chars or contains more than only
-  letters in uppercase, numbers and underscores, or starts with a number.
+Description: Raise an error when QNAM > 8 chars or contains more than only letters in uppercase, numbers and underscores, or starts with a number.
 Executability: Fully Executable
 Outcome:
-  Message: QNAM > 8 chars or contains letters that are in not in uppercase, more
-    than only letters, numbers, underscores, or starts with a number.
+  Message: QNAM > 8 chars or contains letters that are in not in uppercase, more than only letters, numbers, underscores, or starts with a number.
   Output Variables:
     - IDVAR
     - IDVARVAL
