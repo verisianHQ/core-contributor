@@ -112,7 +112,12 @@ jobs:
             echo "Generating fresh results..."
             
             export RULE_DIR="$RULES_DIR"
-            $PYTHON_CMD -c "from test import generate_rule_results; generate_rule_results('$RULES_DIR', '$RULE_ID')" || {
+            if [ "$RULES_DIR" = "adam_rules" ]; then
+              STANDARD="adam"
+            else
+              STANDARD="sdtm"
+            fi
+            $PYTHON_CMD -c "from test import generate_rule_results; generate_rule_results('$STANDARD', '$RULES_DIR', '$RULE_ID')" || {
               echo "**ERROR:** Failed to generate results" >> $REPORT_FILE
               OVERALL_SUCCESS=false
               continue
