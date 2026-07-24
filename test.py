@@ -16,7 +16,8 @@ from typing import List, Optional, Tuple, Any, Dict
 warnings.filterwarnings("ignore", category=UserWarning, module="openpyxl")
 logging.basicConfig(level=logging.CRITICAL)
 
-RULES_DIR = Path("rules")
+SDTM_RULES_DIR = Path("rules")
+ADAM_RULES_DIR = Path("adam_rules")
 ENGINE_DIR = Path("engine")
 
 
@@ -94,10 +95,10 @@ class ResultReporter:
 
     @classmethod
     def save_case_results(
-        cls, rule_id: str, test_type: str, case_id: str, results: dict, version_info: Optional[dict] = None
+        cls, rules_dir: str, rule_id: str, test_type: str, case_id: str, results: dict, version_info: Optional[dict] = None
     ):
         """Saves JSON and TXT results to the file system."""
-        results_path = RULES_DIR / rule_id / test_type / case_id / "results"
+        results_path = Path(rules_dir) / rule_id / test_type / case_id / "results"
         results_path.mkdir(parents=True, exist_ok=True)
 
         output = {**results, "dictionary_versions": version_info} if version_info else results
@@ -143,6 +144,7 @@ class TestRunner:
 
     def __init__(
         self,
+        standard: str,
         use_pgserver: bool = True,
         whodrug_path: Optional[str] = None,
         meddra_path: Optional[str] = None,
@@ -157,6 +159,15 @@ class TestRunner:
         load_dotenv("engine/.env.example")
         self._setup_engine_path()
         self.use_pgserver = use_pgserver
+        self.standard = standard
+        self.rules_dir = None
+        if standard == "sdtm":
+            self.rules_dir = SDTM_RULES_DIR
+        elif standard == "adam":
+            self.rules_dir = ADAM_RULES_DIR
+        else:
+            raise ValueError(f"Unsupported standard: {standard}")
+
         from engine.cdisc_rules_engine.models.sql_external_dictionaries_container import (
             SqlExternalDictionariesContainer,
         )
@@ -218,23 +229,21 @@ class TestRunner:
 
         return version_info
 
-    @staticmethod
-    def get_available_rules() -> List[str]:
-        if not RULES_DIR.exists():
+    def get_available_rules(self) -> List[str]:
+        if not self.rules_dir.exists():
             return []
         return sorted(
             [
                 d.name
-                for d in RULES_DIR.iterdir()
-                if d.is_dir() and (d.name.startswith("CORE-") or d.name.startswith("NEW-RULE"))
+                for d in self.rules_dir.iterdir()
+                if d.is_dir() and (d.name.startswith("CORE-") or d.name.startswith("AD") or d.name.startswith("NEW-RULE"))
             ]
         )
 
-    @staticmethod
-    def get_test_cases(rule_id: str) -> dict:
+    def get_test_cases(self, rule_id: str) -> dict:
         """Scans directories to find available test cases for a rule."""
         cases = {"positive": [], "negative": []}
-        rule_path = RULES_DIR / rule_id
+        rule_path = self.rules_dir / rule_id
 
         for test_type in ["positive", "negative"]:
             test_type_path = rule_path / test_type
@@ -302,7 +311,7 @@ class TestRunner:
 
     def run_validation(self, rule_id: str, data_path: str) -> Tuple[Any, Optional[dict]]:
         """Invokes the engine to validate data against the rule."""
-        rule_path = RULES_DIR / rule_id
+        rule_path = self.rules_dir / rule_id
         rule_ymls = list(rule_path.glob("[!~]*.yml"))
 
         if not rule_ymls:
@@ -394,7 +403,7 @@ class TestRunner:
 
         if results_data.get("error"):
             results_path = ResultReporter.save_case_results(
-                rule_id, test_type, case_id, results_data, self.version_info
+                self.rules_dir, rule_id, test_type, case_id, results_data, self.version_info
             )  # noqa
             return {
                 "case_id": case_id,
@@ -419,7 +428,7 @@ class TestRunner:
             if unvalidated_highlights:
                 results_data["unvalidated_highlights"] = unvalidated_highlights
 
-        results_path = ResultReporter.save_case_results(rule_id, test_type, case_id, results_data, self.version_info)
+        results_path = ResultReporter.save_case_results(self.rules_dir, rule_id, test_type, case_id, results_data, self.version_info)
         total_errors = sum(len(ds.get("errors", [])) for ds in results_data.get("datasets", []))
         passed = (total_errors == 0) if test_type == "positive" else (total_errors > 0)
 
@@ -640,6 +649,7 @@ class InteractiveHandler:
 
 def parse_args():
     parser = argparse.ArgumentParser(description="CDISC SQL Rules Engine Tester")
+    parser.add_argument("-s", "--standard", help="Provide the standard (e.g. sdtm, adam) to test against.", default="sdtm")
     parser.add_argument("-r", "--rule", help="Rule ID (e.g., CORE-000176 or NEW-RULE)")
     parser.add_argument("-all", "--all-rules", action="store_true", help="Run all rules")
     parser.add_argument("-tc", "--test-case", help="Specific case (e.g., positive/01)")
@@ -658,8 +668,11 @@ def parse_args():
 
 def main():
     args = parse_args()
+    standard = args.standard.lower()
+    rules_dir = SDTM_RULES_DIR if standard == "sdtm" else ADAM_RULES_DIR if standard == "adam" else None
     use_pgserver = not args.use_postgres
     runner = TestRunner(
+        standard=standard,
         use_pgserver=use_pgserver,
         whodrug_path=args.whodrug,
         meddra_path=args.meddra,
@@ -765,10 +778,10 @@ def main():
     sys.exit(1 if results["failed"] or results["error"] else 0)
 
 
-def generate_rule_results(rule_id: str) -> dict:
+def generate_rule_results(rules_dir: str, rule_id: str) -> dict:
     """Function run by the pr comment bot github action run_validation."""
 
-    rule_path = RULES_DIR / rule_id
+    rule_path = Path(rules_dir) / rule_id
     rule_yml = list(rule_path.glob("[!~]*.yml"))[0]
     with rule_yml.open("r", encoding="utf-8") as f:
         content = f.read().lower()

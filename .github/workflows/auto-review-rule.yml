@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'rules/**'
+      - 'adam_rules/**'
     types: [opened, synchronize, reopened]
 
 jobs:
@@ -30,7 +31,7 @@ jobs:
       - name: Detect changed rules
         id: changed-files
         run: |
-          CHANGED_FILES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD | grep -E '^rules/.*\.ya?ml$' || true)
+          CHANGED_FILES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD | grep -E '^(adam_rules|rules)/.*\.ya?ml$' || true)
           
           if [ -z "$CHANGED_FILES" ]; then
             echo "No YAML files changed in rules directory."
