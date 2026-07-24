@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "Value for ARMNRS is populated, when both ARMCD and ACTARMCD values are populated",
+      "execution_message": "ARMNRS must not be populated when both ARMCD and ACTARMCD are populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -16,41 +16,9 @@
             "ACTARMCD": "PLACEBO",
             "ARMNRS": "UNPLANNED TREATMENT"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 1,
-      "Variable": "ARMNRS"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 8,
-      "Variable": "ARMCD"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 8,
-      "Variable": "ARM"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 8,
-      "Variable": "ACTARMCD"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 8,
-      "Variable": "ACTARM"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 8,
-      "Variable": "ARMNRS"
     }
   ]
 }
