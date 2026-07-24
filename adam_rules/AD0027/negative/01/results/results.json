@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.xpt",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "FASFN has a value that is not 1 or 0.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FASFN": 2.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

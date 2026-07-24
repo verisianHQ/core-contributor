@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.xpt",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "PPROTFL has a value that is not Y or N.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "PPROTFL": "X"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
