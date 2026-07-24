@@ -1,0 +1,94 @@
+# Variable: SAFFL
+# Condition: SAFFL is present
+# Rule: SAFFL is present and has a value that is not Y or N
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '23'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.3
+                Section: 3.2.3
+                Item: '1'
+                Cited Guidance:
+                  'ADaMIG v1.3, Section 3.2, Table 3.2.3: Population Indicator(s) have a Codelist / Controlled Term value of "Y, N".'
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '23'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.2
+                Section: 3.2.3
+                Item: '1'
+                Cited Guidance:
+                  'ADaMIG v1.2, Section 3.2, Table 3.2.3: Population Indicator(s) have a Codelist / Controlled Term value of "Y, N".'
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '23'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.1
+                Section: 3.2.3
+                Item: '1'
+                Cited Guidance:
+                  'ADaMIG v1.1, Section 3.2, Table 3.2.3: Population Indicator(s) have a Codelist / Controlled Term value of "Y, N".'
+      - Name: ADaMIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '23'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.0
+                Section: 3.1.1
+                Item: '1'
+                Cited Guidance:
+                  'ADaMIG v1.0, Section 3.1, Table 3.1.1: Population Indicator(s) have a Codelist / Controlled Term value of "Y, N".'
+Check:
+  all:
+    - name: SAFFL
+      operator: exists
+    - name: SAFFL
+      operator: not_equal_to
+      value: 'Y'
+      value_is_literal: true
+    - name: SAFFL
+      operator: not_equal_to
+      value: 'N'
+      value_is_literal: true
+Core:
+  Id: AD0023
+  Status: Published
+  Version: '1'
+Description: Raise an error when the Population Flag variable (SAFFL) is present and has a value that is not Y or N.
+Executability: Fully Executable
+Outcome:
+  Message: SAFFL has a value that is not Y or N.
+  Output Variables:
+    - SAFFL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ADSL
+  Domains:
+    Include:
+      - ADSL
+Sensitivity: Record
