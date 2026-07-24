@@ -1,15 +1,14 @@
 # Variable: --SCAT
 # Condition: 
 # Rule: --SCAT ^= --BODSYS
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the
-                  domain  name or dictionary classification provided by --DECOD
-                  and --BODSYS.
+              - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the domain name or dictionary classification provided by --DECOD and --BODSYS.
                 Document: IG v3.4
                 Section: 4.2.6
             Origin: SDTM and SDTMIG Conformance Rules
@@ -21,9 +20,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the
-                  domain  name or dictionary classification provided by --DECOD
-                  and --BODSYS.
+              - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the domain name or dictionary classification provided by --DECOD and --BODSYS.
                 Document: IG v3.3
                 Section: 4.2.6
             Origin: SDTM and SDTMIG Conformance Rules
@@ -35,9 +32,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the
-                  domain  name or dictionary classification provided by --DECOD
-                  and --BODSYS.
+              - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the domain name or dictionary classification provided by --DECOD and --BODSYS.
                 Document: IG v3.2
                 Section: 4.1.2.6
             Origin: SDTM and SDTMIG Conformance Rules
@@ -49,8 +44,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: Values for --CAT and --SCAT will not be the domain name or
-                  dictionary classification represented in --DECOD and --BODSYS.
+              - Cited Guidance: Values for --CAT and --SCAT will not be the domain name or dictionary classification represented in --DECOD and --BODSYS.
                 Document: TIG 1.0
                 Item: General Conventions table NUM 7
                 Section: 2.8.7.1
@@ -73,7 +67,7 @@ Core:
 Description: Raise an error when --SCAT = --BODSYS.
 Executability: Fully Executable
 Outcome:
-  Message: --SCAT is equal to --BODSYS.
+  Message: --SCAT must not be equal to --BODSYS.
   Output Variables:
     - --TERM
     - --SCAT
