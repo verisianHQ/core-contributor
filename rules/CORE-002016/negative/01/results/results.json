@@ -4,7 +4,7 @@
       "dataset": "sm.xpt",
       "domain": "SM",
       "execution_status": "success",
-      "execution_message": "MIDS value is not correctly sequenced chronologically per SMSTDTC for the corresponding MIDSTYPE in the TM dataset where TMRPT = 'Y'.",
+      "execution_message": "MIDS value is not correctly sequenced chronologically per SMSTDTC for the corresponding MIDSTYPE in the TM dataset where TMRPT is equal to 'Y'.",
       "number_errors": 11,
       "errors": [
         {
@@ -145,7 +145,7 @@
       "dataset": "tm.xpt",
       "domain": "TM",
       "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CDISC.SDTMIG.CG0546, dataset=TM",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-002016, dataset=TM",
       "number_errors": 0,
       "errors": []
     }
