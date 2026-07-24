@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'rules/**'
+      - 'adam_rules/**'
     types: [opened, synchronize, reopened, edited]
 
 jobs:
@@ -49,14 +50,14 @@ jobs:
       - name: Detect changed rules
         id: changed-rules
         run: |
-          # Get list of changed rule directories
-          CHANGED_RULES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD | grep -E '^rules/(CORE-|NEW-RULE)' | cut -d'/' -f2 | sort -u)
+          CHANGED_RULES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD | grep -E '^(rules/(CORE-|NEW-RULE)|adam_rules/(AD|NEW-RULE))' | cut -d'/' -f1,2 | sort -u)
           
           if [ -z "$CHANGED_RULES" ]; then
             echo "No rule changes detected"
             echo "rules=" >> $GITHUB_OUTPUT
           else
-            echo "Changed rules: $CHANGED_RULES"
+            echo "Changed rules paths:"
+            echo "$CHANGED_RULES"
             # Convert to JSON array
             RULES_JSON=$(echo "$CHANGED_RULES" | jq -R -s -c 'split("\n") | map(select(length > 0))')
             echo "rules=$RULES_JSON" >> $GITHUB_OUTPUT
@@ -78,13 +79,16 @@ jobs:
           
           OVERALL_SUCCESS=true
           
-          while read -r RULE_ID; do
-            echo "Validating $RULE_ID"
-            echo "## Rule: $RULE_ID" >> $REPORT_FILE
+          while read -r RULE_PATH; do
+            RULES_DIR=$(dirname "$RULE_PATH")
+            RULE_ID=$(basename "$RULE_PATH")
+            
+            echo "Validating $RULE_ID in $RULES_DIR"
+            echo "## Rule: $RULE_ID ($RULES_DIR)" >> $REPORT_FILE
             echo "" >> $REPORT_FILE
 
-            if [ ! -d "rules/$RULE_ID" ]; then
-              echo "**ERROR:** Directory rules/$RULE_ID not found" >> $REPORT_FILE
+            if [ ! -d "$RULE_PATH" ]; then
+              echo "**ERROR:** Directory $RULE_PATH not found" >> $REPORT_FILE
               OVERALL_SUCCESS=false
               continue
             fi
@@ -93,7 +97,7 @@ jobs:
             echo ""
             echo "Backing up committed results..."
             for TEST_TYPE in positive negative; do
-              TEST_PATH="rules/$RULE_ID/$TEST_TYPE"
+              TEST_PATH="$RULE_PATH/$TEST_TYPE"
               if [ -d "$TEST_PATH" ]; then
                 for CASE_DIR in "$TEST_PATH"/*; do
                   if [ -d "$CASE_DIR" ] && [ -f "$CASE_DIR/results/results.json" ]; then
@@ -106,6 +110,8 @@ jobs:
             
             echo ""
             echo "Generating fresh results..."
+            
+            export RULE_DIR="$RULES_DIR"
             $PYTHON_CMD -c "from test import generate_rule_results; generate_rule_results('$RULE_ID')" || {
               echo "**ERROR:** Failed to generate results" >> $REPORT_FILE
               OVERALL_SUCCESS=false
@@ -118,7 +124,7 @@ jobs:
             FAILED_COUNT=0
             
             for TEST_TYPE in positive negative; do
-              TEST_PATH="rules/$RULE_ID/$TEST_TYPE"
+              TEST_PATH="$RULE_PATH/$TEST_TYPE"
               
               if [ ! -d "$TEST_PATH" ]; then
                 echo "  (No $TEST_TYPE cases found in $TEST_PATH)"

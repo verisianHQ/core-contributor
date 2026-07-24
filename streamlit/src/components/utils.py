@@ -14,8 +14,8 @@ class UtilityFunctions:
             yml_files = [f for f in files if f.endswith(".yml")]
             if yml_files:
                 folder_name = os.path.relpath(root, rules_dir)
-                folders_with_yml.append({"Core-ID": folder_name})
-        return pd.DataFrame(folders_with_yml)
+                folders_with_yml.append(folder_name)
+        return pd.DataFrame(folders_with_yml, columns=["CORE-ID"])
 
     @staticmethod
     def get_csv_cols(filepath, cols=None):
@@ -97,7 +97,7 @@ class UtilityFunctions:
 
                         results_data.append(
                             {
-                                "Core-ID": core_id,
+                                "CORE-ID": core_id,
                                 "Test Type": test_type,
                                 "Case ID": case_dir.name,
                                 "Status": status,
@@ -161,34 +161,50 @@ class UtilityFunctions:
     @staticmethod
     def determine_completion(row):
         core_id = row.get("CORE-ID")
-        status = row.get("Status")
-        status_rule = row.get("Status Rule")
-
-        if pd.isna(core_id) or str(core_id).strip() in ["", "/", "nan"]:
+        rule_id = row.get("Rule ID")
+        
+        identifier = core_id if pd.notna(core_id) else rule_id
+        if pd.isna(identifier):
             return "Missing"
 
-        status = str(status).strip().upper()
-        status_rule = str(status_rule).strip().upper()
+        def normalize(value):
+            if pd.isna(value):
+                return ""
+            return str(value).strip().upper()
+
+        status = normalize(row.get("Status"))
+        status_rule = normalize(row.get("Status Rule"))
+
+        status_rule_map = {
+            "MERGED": "Completed",
+            "PR REVIEW": "Partially Completed",
+            "WORKING ON": "Partially Completed",
+            "DIBS": "Unimplemented",
+            "BLOCKED": "Unimplemented",
+        }
+
+        if status_rule:
+            if status == "PUBLISHED":
+                return "Completed" if status_rule == "MERGED" else "Partially Completed"
+            if status in {"DRAFT", "DRAFT - NOT EXECUTABLE", "OPEN"}:
+                return "Unimplemented"
+            if status == "NOT EXECUTABLE":
+                return "Not Executable"
+            return status_rule_map.get(status_rule, "Unimplemented")
 
         if status == "PUBLISHED":
-            if status_rule == "MERGED":
-                return "Completed"
-            else:
-                return "Partially Completed"
-
-        if status in ["DRAFT", "DRAFT - NOT EXECUTABLE", "OPEN"]:
+            return "Partially Completed"
+        if status in {"DRAFT", "DRAFT - NOT EXECUTABLE", "OPEN"}:
             return "Unimplemented"
-            
         if status == "NOT EXECUTABLE":
             return "Not Executable"
-            
-        return "Unknown"
+        return "Missing" if not status else "Unimplemented"
 
     @staticmethod
     def get_yaml_fields(rules_dir, repo_rules, keys, null_value="No Value"):
         vals = []
 
-        for rule_folder in repo_rules["Core-ID"].to_list():
+        for rule_folder in repo_rules["CORE-ID"].to_list():
             path = Path(rules_dir) / rule_folder
             yml_file = list(path.glob("*.yml")) + list(path.glob("*.yaml"))
             if not yml_file or len(yml_file) == 0:
@@ -207,7 +223,7 @@ class UtilityFunctions:
     def get_yaml_verified(rules_dir, repo_rules):
         vals = {}
 
-        for rule_folder in repo_rules["Core-ID"].to_list():
+        for rule_folder in repo_rules["CORE-ID"].to_list():
             path = Path(rules_dir) / rule_folder
             yml_file = list(path.glob("*.yml")) + list(path.glob("*.yaml"))
             if not yml_file or len(yml_file) == 0:
