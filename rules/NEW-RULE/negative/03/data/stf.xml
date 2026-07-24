@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ectd:study SYSTEM "../../../util/dtd/ich-stf-v2-2.dtd">
+<?xml-stylesheet type="text/xsl" href="../../../util/style/ich-stf-stylesheet-2-2a.xsl"?>
+<ectd:study xmlns:ectd="http://www.ich.org/ectd" xmlns:xlink="http://www.w3.org/1999/xlink" xml:lang="en" dtd-version="2.2">
+	<study-identifier>
+		<title>Phase 3 Randomized Study ABC-301 SDTM Submission Package</title>
+		<study-id>ABC-301</study-id>
+		<category name="species" info-type="ich">human</category>
+		<category name="route-of-admin" info-type="ich">oral</category>
+		<category name="type-of-control" info-type="ich">placebo</category>
+		<category name="data-standard" info-type="us">sdtm-3.4</category>
+	</study-identifier>
+	<study-document>
+		<content-block>
+			<block-title>Clinical Data Standards Package</block-title>
+			<property name="submission-type" info-type="us">original</property>
+			<property name="standards-body" info-type="us">CDISC</property>
+			<file-tag name="study-data-reviewers-guide" info-type="ich"/>
+			<doc-content xlink:href="../../../index.xml#id4500">
+				<title>Study Data Reviewer's Guide</title>
+				<file-tag name="study-data-reviewers-guide" info-type="ich">
+					<property name="version" info-type="us">1.0</property>
+					<property name="standard" info-type="us">SDTMIG 3.4</property>
+				</file-tag>
+			</doc-content>
+			<content-block>
+				<block-title>Define and Metadata</block-title>
+				<doc-content xlink:href="../../../index.xml#id4510">
+					<title>Define-XML for SDTM Datasets</title>
+					<file-tag name="data-tabulation-data" info-type="us">
+						<property name="xml-standard" info-type="us">define-xml-2.1</property>
+					</file-tag>
+				</doc-content>
+			</content-block>
+			<content-block>
+				<block-title>Core SDTM Domains</block-title>
+				<doc-content xlink:href="../../../index.xml#id4520">
+					<title>Demographics Dataset (DM.xpt)</title>
+					<property name="domain" info-type="us">DM</property>
+					<file-tag name="data-tabulation-dataset-sdtm" info-type="us"/>
+				</doc-content>
+				<doc-content xlink:href="../../../index.xml#id4521">
+					<title>Adverse Events Dataset (AE.xpt)</title>
+					<property name="domain" info-type="us">AE</property>
+					<file-tag name="dataset-sdtm" info-type="us"/>
+				</doc-content>
+				<doc-content xlink:href="../../../index.xml#id4522">
+					<title>Laboratory Dataset (LB.xpt)</title>
+					<property name="domain" info-type="us">LB</property>
+					<file-tag name="sdtm" info-type="us"/>
+				</doc-content>
+			</content-block>
+		</content-block>
+	</study-document>
+</ectd:study>
