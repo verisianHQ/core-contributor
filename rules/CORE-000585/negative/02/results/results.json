@@ -1,0 +1,92 @@
+{
+  "datasets": [
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "success",
+      "execution_message": "All of the following variables must be present in the dataset; STUDYID, DOMAIN, USUBJID (or POOLID) or ECSEQ.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "STUDYID": "Not in dataset",
+            "DOMAIN": "EC",
+            "USUBJID": "CDISC001",
+            "POOLID": "Not in dataset",
+            "ECSEQ": 1.0
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "All of the following variables must be present in the dataset; STUDYID, DOMAIN, USUBJID (or POOLID) or LBSEQ.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "STUDYID": "ABC123",
+            "DOMAIN": "LB",
+            "USUBJID": "Not in dataset",
+            "POOLID": "ABC12301001",
+            "LBSEQ": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "All of the following variables must be present in the dataset; STUDYID, DOMAIN, USUBJID (or POOLID) or AESEQ.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "STUDYID": "TEST",
+            "DOMAIN": "Not in dataset",
+            "USUBJID": "001",
+            "POOLID": "001",
+            "AESEQ": 2.0
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "All of the following variables must be present in the dataset; STUDYID, DOMAIN, USUBJID (or POOLID) or FASEQ.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "STUDYID": "ABC123",
+            "DOMAIN": "FA",
+            "USUBJID": "Not in dataset",
+            "POOLID": "Not in dataset",
+            "FASEQ": "1"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
