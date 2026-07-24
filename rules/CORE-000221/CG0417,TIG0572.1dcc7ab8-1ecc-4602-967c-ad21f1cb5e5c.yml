@@ -81,10 +81,10 @@ Core:
   Id: CORE-000221
   Status: Published
   Version: '1'
-Description: Raise an error when QNAM > 8 chars or contains more than only letters in uppercase, numbers and underscores, or starts with a number.
+Description: Raise an error when QNAM is greater than 8 chars or contains more than only letters in uppercase, numbers and underscores, or starts with a number.
 Executability: Fully Executable
 Outcome:
-  Message: QNAM > 8 chars or contains letters that are in not in uppercase, more than only letters, numbers, underscores, or starts with a number.
+  Message: QNAM is greater than 8 chars or contains letters that are in not in uppercase, more than only letters, numbers, underscores, or starts with a number.
   Output Variables:
     - IDVAR
     - IDVARVAL
