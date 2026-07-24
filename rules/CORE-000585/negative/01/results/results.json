@@ -4,7 +4,7 @@
       "dataset": "ec.xpt",
       "domain": "EC",
       "execution_status": "success",
-      "execution_message": "One of following variables is not present in the dataset; STUDYID, DOMAIN, USUBJID (or POOLID) or ECSEQ.",
+      "execution_message": "All of the following variables must be present in the dataset; STUDYID, DOMAIN, USUBJID (or POOLID) or ECSEQ.",
       "number_errors": 1,
       "errors": [
         {
@@ -13,34 +13,12 @@
           "USUBJID": null,
           "value": {
             "STUDYID": "Not in dataset",
-            "DOMAIN": "EC",
+            "DOMAIN": "Not in dataset",
             "USUBJID": "CDISC001",
             "POOLID": "Not in dataset",
             "ECSEQ": 1.0
           },
-          "validated": false
-        }
-      ]
-    },
-    {
-      "dataset": "ae.xpt",
-      "domain": "AE",
-      "execution_status": "success",
-      "execution_message": "One of following variables is not present in the dataset; STUDYID, DOMAIN, USUBJID (or POOLID) or AESEQ.",
-      "number_errors": 1,
-      "errors": [
-        {
-          "row": null,
-          "SEQ": null,
-          "USUBJID": null,
-          "value": {
-            "STUDYID": "TEST",
-            "DOMAIN": "Not in dataset",
-            "USUBJID": "001",
-            "POOLID": "Not in dataset",
-            "AESEQ": 2.0
-          },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -48,7 +26,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "One of following variables is not present in the dataset; STUDYID, DOMAIN, USUBJID (or POOLID) or LBSEQ.",
+      "execution_message": "All of the following variables must be present in the dataset; STUDYID, DOMAIN, USUBJID (or POOLID) or LBSEQ.",
       "number_errors": 1,
       "errors": [
         {
@@ -60,31 +38,9 @@
             "DOMAIN": "LB",
             "USUBJID": "Not in dataset",
             "POOLID": "Not in dataset",
-            "LBSEQ": 1.0
+            "LBSEQ": "Not in dataset"
           },
-          "validated": false
-        }
-      ]
-    },
-    {
-      "dataset": "fa.xpt",
-      "domain": "FA",
-      "execution_status": "success",
-      "execution_message": "One of following variables is not present in the dataset; STUDYID, DOMAIN, USUBJID (or POOLID) or FASEQ.",
-      "number_errors": 1,
-      "errors": [
-        {
-          "row": null,
-          "SEQ": null,
-          "USUBJID": null,
-          "value": {
-            "STUDYID": "ABC123",
-            "DOMAIN": "FA",
-            "USUBJID": "Not in dataset",
-            "POOLID": "ABC123-0201",
-            "FASEQ": "Not in dataset"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     }
