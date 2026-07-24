@@ -64,7 +64,7 @@ Core:
   Id: CORE-000198
   Status: Published
   Version: '1'
-Description: Raise an error when --SCAT = --BODSYS.
+Description: Raise an error when --SCAT is equal to --BODSYS.
 Executability: Fully Executable
 Outcome:
   Message: --SCAT must not be equal to --BODSYS.
