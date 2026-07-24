@@ -1,20 +1,23 @@
 {
   "datasets": [
     {
-      "dataset": "ft.xpt",
-      "domain": "FT",
+      "dataset": "se.xpt",
+      "domain": "SE",
       "execution_status": "success",
-      "execution_message": "STUDYID is not equal to DM.STUDYID",
+      "execution_message": "STUDYID must be equal to STUDYID in the DM dataset.",
       "number_errors": 1,
       "errors": [
         {
-          "row": 1,
+          "row": 3,
           "SEQ": 1,
           "USUBJID": "CDISC002",
           "value": {
-            "STUDYID": "CDISCPILOT03"
+            "STUDYID": "CDISCPILOT01",
+            "$dm_studyid": [
+              "CDISCPILOT1"
+            ]
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -25,6 +28,14 @@
       "execution_message": null,
       "number_errors": 0,
       "errors": []
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "STUDYID": "CDISCPILOT02",
+        "$dm_studyid": "CDISCPILOT1"
+      }
     }
   ]
 }
