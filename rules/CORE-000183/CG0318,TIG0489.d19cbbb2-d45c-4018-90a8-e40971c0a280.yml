@@ -7,17 +7,10 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Note, domain pairs have been modeled for microbiology data
-                  (MB/MS domains) and PK data (PC/PP domains) to enable
-                  dataset-level relationships to be described using RELREC.
+              - Cited Guidance: 2.6[Item 1][Note, domain pairs have been modeled for microbiology data (MB/MS domains) and PK data (PC/PP domains) to enable dataset-level relationships to be described using RELREC.]|6.3.5.6.2[PP - Description/Overview][A findings domain that contains pharmacokinetic parameters derived from pharmacokinetic concentration-time (PC) data.]
                 Document: IG v3.4
-                Item: '1'
-                Section: '2.6'
-              - Cited Guidance: A findings domain that contains pharmacokinetic parameters
-                  derived from pharmacokinetic concentration-time (PC) data.
-                Document: IG v3.4
-                Item: PP - Description/Overview
-                Section: 6.3.5.6.2
+                Item: '2.6[Item 1]|6.3.5.6.2[PP - Description/Overview]'
+                Section: '2.6|6.3.5.6.2'
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0318
@@ -27,11 +20,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: IG v3.2[2.6][The domain pair uses DOMAIN as an Identifier to
-                  group parent records (e.g., MB) from child records (e.g., MS)
-                  and enables a dataset-level relationship to be described in
-                  RELREC.]|IG v3.2[6.3][PP][Pharmacokinetic parameters derived
-                  from pharmacokinetic concentration-time (PC) data.]
+              - Cited Guidance: IG v3.2[2.6][The domain pair uses DOMAIN as an Identifier to group parent records (e.g., MB) from child records (e.g., MS) and enables a dataset-level relationship to be described in RELREC.]|IG v3.2[6.3][PP][Pharmacokinetic parameters derived from pharmacokinetic concentration-time (PC) data.]
                 Document: IG v3.2
                 Item: IG v3.2[2.6]|IG v3.2[6.3][PP]
                 Section: IG v3.2[2.6]|IG v3.2[6.3]
@@ -44,12 +33,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: IG v3.3[2.6]|IG v3.3[6.3.11.2][The domain pair uses DOMAIN as an
-                  Identifier to group parent records (e.g., MB) from child
-                  records (e.g., MS) and enables a dataset-level relationship to
-                  be described in RELREC.]|IG v3.3[6.3.11.2][A findings domain
-                  that contains pharmacokinetic parameters derived from
-                  pharmacokinetic concentration-time (PC) data.]
+              - Cited Guidance: IG v3.3[2.6]|IG v3.3[6.3.11.2][The domain pair uses DOMAIN as an Identifier to group parent records (e.g., MB) from child records (e.g., MS) and enables a dataset-level relationship to be described in RELREC.]|IG v3.3[6.3.11.2][A findings domain that contains pharmacokinetic parameters derived from pharmacokinetic concentration-time (PC) data.]
                 Document: IG v3.3
                 Item: IG v3.3[2.6]|IG v3.3[6.3.11.2]
                 Section: IG v3.3[2.6]|IG v3.3[6.3.11.2]
@@ -88,7 +72,10 @@ Description: Raise an error when a PP dataset is present in study, but a PC
   dataset is not present in study.
 Executability: Fully Executable
 Outcome:
-  Message: PP dataset is present in  study, but PC dataset is not present in study.
+  Message: PP dataset is present in study, but PC dataset is not present in study.
+  Output Variables:
+    - PP
+    - PC
 Rule Type: Domain Presence Check
 Scope:
   Classes:
