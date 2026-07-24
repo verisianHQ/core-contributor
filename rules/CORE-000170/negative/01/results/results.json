@@ -4,8 +4,8 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "Value of LBLOBXFL must be 'Y' or null",
-      "number_errors": 10,
+      "execution_message": "Value of LBLOBXFL must be 'Y' or null.",
+      "number_errors": 4,
       "errors": [
         {
           "row": 1,
@@ -13,11 +13,10 @@
           "USUBJID": "CDISC001",
           "value": {
             "LBCAT": "CHEMISTRY",
-            "LBTEST": "Albumin",
             "LBTESTCD": "ALB",
             "LBLOBXFL": "n"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -25,11 +24,10 @@
           "USUBJID": "CDISC001",
           "value": {
             "LBCAT": "CHEMISTRY",
-            "LBTEST": "Alkaline Phosphatase",
             "LBTESTCD": "ALP",
             "LBLOBXFL": "y"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -37,11 +35,10 @@
           "USUBJID": "CDISC001",
           "value": {
             "LBCAT": "CHEMISTRY",
-            "LBTEST": "Alanine Aminotransferase",
             "LBTESTCD": "ALT",
             "LBLOBXFL": "0"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -49,83 +46,63 @@
           "USUBJID": "CDISC001",
           "value": {
             "LBCAT": "CHEMISTRY",
-            "LBTEST": "Aspartate Aminotransferase",
             "LBTESTCD": "AST",
             "LBLOBXFL": "1"
           },
-          "validated": false
-        },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "execution_status": "success",
+      "execution_message": "Value of VSLOBXFL must be 'Y' or null.",
+      "number_errors": 4,
+      "errors": [
         {
-          "row": 5,
-          "SEQ": 5,
+          "row": 1,
+          "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "LBCAT": "HEMATOLOGY",
-            "LBTEST": "Basophils",
-            "LBTESTCD": "BASO",
-            "LBLOBXFL": "!"
+            "VSCAT": "Not in dataset",
+            "VSTESTCD": "DIABP",
+            "VSLOBXFL": "!"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 6,
-          "SEQ": 6,
+          "row": 2,
+          "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "LBCAT": "CHEMISTRY",
-            "LBTEST": "Bilirubin",
-            "LBTESTCD": "BILI",
-            "LBLOBXFL": "  \n  "
+            "VSCAT": "Not in dataset",
+            "VSTESTCD": "DIABP",
+            "VSLOBXFL": "N"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 7,
-          "SEQ": 7,
+          "row": 3,
+          "SEQ": 3,
           "USUBJID": "CDISC001",
           "value": {
-            "LBCAT": "CHEMISTRY",
-            "LBTEST": "Urea Nitrogen",
-            "LBTESTCD": "UREAN",
-            "LBLOBXFL": "        Y"
+            "VSCAT": "Not in dataset",
+            "VSTESTCD": "DIABP",
+            "VSLOBXFL": "."
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 8,
-          "SEQ": 8,
+          "row": 4,
+          "SEQ": 4,
           "USUBJID": "CDISC001",
           "value": {
-            "LBCAT": "CHEMISTRY",
-            "LBTEST": "Calcium",
-            "LBTESTCD": "CA",
-            "LBLOBXFL": "N"
+            "VSCAT": "Not in dataset",
+            "VSTESTCD": "DIABP",
+            "VSLOBXFL": "YN"
           },
-          "validated": false
-        },
-        {
-          "row": 9,
-          "SEQ": 9,
-          "USUBJID": "CDISC001",
-          "value": {
-            "LBCAT": "CHEMISTRY",
-            "LBTEST": "Cholesterol",
-            "LBTESTCD": "CHOL",
-            "LBLOBXFL": "."
-          },
-          "validated": false
-        },
-        {
-          "row": 10,
-          "SEQ": 10,
-          "USUBJID": "CDISC001",
-          "value": {
-            "LBCAT": "CHEMISTRY",
-            "LBTEST": "Creatine Kinase",
-            "LBTESTCD": "CK",
-            "LBLOBXFL": "YN"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     }
