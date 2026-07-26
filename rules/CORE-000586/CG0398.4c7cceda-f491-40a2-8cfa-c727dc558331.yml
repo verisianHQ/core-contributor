@@ -40,11 +40,11 @@ Core:
   Id: CORE-000586
   Status: Published
   Version: '1'
-Description: Raise an error when DSCAT = 'DISPOSITION EVENT' but there is more
+Description: Raise an error when DSCAT  'DISPOSITION EVENT' but there is more
   than one record per subject per EPOCH.
 Executability: Fully Executable
 Outcome:
-  Message: DSCAT = 'DISPOSITION EVENT', but multiple records exist within the
+  Message: DSCAT is equal to 'DISPOSITION EVENT', but multiple records exist within the
     same EPOCH for a subject.
   Output Variables:
     - DSCAT
