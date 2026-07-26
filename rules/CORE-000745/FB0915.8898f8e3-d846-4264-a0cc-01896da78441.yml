@@ -1,6 +1,7 @@
-# Variable: OIPARM, OIPARMCD
+# Variable: OIPARMCD AND OIPARM
 # Condition:
-# Rule: OIPARMCD and OIPARM have a one-to-one relationship 
+# Rule: OIPARMCD and OIPARM do not have a one-to-one relationship
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -52,17 +53,14 @@ Authorities:
 Check:
   all:
     - name: OIPARM
-      operator: exists
-    - name: OIPARMCD
-      operator: exists
-    - name: OIPARM
       operator: is_not_unique_relationship
       value: OIPARMCD
 Core:
   Id: CORE-000745
   Status: Published
   Version: '1'
-Description: OIPARMCD and OIPARM should have a one-to-one relationship.
+Description: Raise an error when OIPARMCD and OIPARM do not have a one-to-one
+  relationship.
 Executability: Fully Executable
 Outcome:
   Message: OIPARMCD and OIPARM do not have a one-to-one relationship.
