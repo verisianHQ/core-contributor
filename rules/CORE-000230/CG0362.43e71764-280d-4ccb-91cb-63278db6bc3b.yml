@@ -56,7 +56,7 @@ Core:
   Id: CORE-000230
   Status: Published
   Version: '1'
-Description: Raise an error when POOLID is populated but USUBJID is populated
+Description: Raise an error when POOLID is populated but USUBJID is populated.
 Executability: Fully Executable
 Outcome:
   Message: USUBJID must be null when POOLID is populated.
