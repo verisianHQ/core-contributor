@@ -12,18 +12,20 @@
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
+            "CMTRT": "ASPIRIN",
             "CMVAMT": -1.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": 6,
           "USUBJID": "CDISC001",
           "value": {
+            "CMTRT": "FEOSOL",
             "CMVAMT": -325.0
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -39,18 +41,20 @@
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
+            "EXTRT": "ZANOMALINE",
             "EXVAMT": -1.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": 3,
           "USUBJID": "CDISC001",
           "value": {
+            "EXTRT": "ZANOMALINE",
             "EXVAMT": -2.0
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
