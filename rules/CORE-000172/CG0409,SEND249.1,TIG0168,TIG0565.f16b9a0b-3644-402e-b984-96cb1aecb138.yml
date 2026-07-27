@@ -152,8 +152,7 @@ Core:
   Status: Published
   Version: '1'
 Description: Raise an error when STUDYID is not equal to STUDYID in the DM 
-  dataset. The STUDYID in all domains must be the same in all records 
-  across the study.
+  dataset. 
 Executability: Fully Executable
 Operations:
   - domain: DM
