@@ -91,8 +91,8 @@ Core:
   Id: CORE-000204
   Status: Published
   Version: '1'
-Description: Raise an error when VISITNUM is not unique in the SV dataset 
-  within subject when VISITNUM is present in the TV dataset.
+Description: Raise an error when a VISITNUM value matches a VISITNUM value in 
+  the TV dataset but is not unique within USUBJID.
 Executability: Fully Executable
 Operations:
   - domain: TV
@@ -100,8 +100,8 @@ Operations:
     name: VISITNUM
     operator: distinct
 Outcome:
-  Message: VISITNUM in the SV dataset must be unique within subject when the
-    VISITNUM is present in the TV dataset.
+  Message: VISITNUM in the SV dataset must be unique within USUBJID when the
+    VISITNUM value is in the TV dataset.
   Output Variables:
     - VISITNUM
 Rule Type: Record Data
