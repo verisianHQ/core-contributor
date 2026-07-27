@@ -2,6 +2,8 @@ name: Add Reviewers
 
 on:
   pull_request:
+    paths:
+      - 'rules/**'
     types: [opened, ready_for_review]
 
 permissions:
