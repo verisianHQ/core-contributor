@@ -778,7 +778,7 @@ def main():
     sys.exit(1 if results["failed"] or results["error"] else 0)
 
 
-def generate_rule_results(rules_dir: str, rule_id: str) -> dict:
+def generate_rule_results(standard: str, rules_dir: str, rule_id: str) -> dict:
     """Function run by the pr comment bot github action run_validation."""
 
     rule_path = Path(rules_dir) / rule_id
@@ -791,6 +791,7 @@ def generate_rule_results(rules_dir: str, rule_id: str) -> dict:
         snomed_path = "dummy_ex_dicts/snomed" if "snomed" in content else None
 
     runner = TestRunner(
+        standard=standard,
         unii_path=unii_path,
         medrt_path=medrt_path,
         loinc_path=loinc_path,
