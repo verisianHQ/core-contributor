@@ -88,7 +88,9 @@ Rule Type: Record Data
 Scope:
   Classes:
     Include:
-      - ALL
+      - EVENTS
+      - FINDINGS
+      - INTERVENTIONS
   Domains:
     Include:
       - ALL
