@@ -36,7 +36,7 @@ Core:
   Status: Published
   Version: '1'
 Description: Raise an error when one of the following variables; STUDYID, DOMAIN, USUBJID (or POOLID) or --SEQ is not present in the dataset.
-Executability: Fully Executable
+Executability: Partially Executable - Possible Underreporting
 Outcome:
   Message: All of the following variables must be present in the dataset; STUDYID, DOMAIN, USUBJID (or POOLID) or --SEQ.
   Output Variables:
