@@ -40,6 +40,7 @@ Check:
     - name: TSPARMCD
       operator: equal_to
       value: PLANSUB
+      value_is_literal: true
     - name: TSVAL
       operator: not_matches_regex
       value: ^[1-9]\d*$
