@@ -15,7 +15,7 @@
             "AELLT": "Upset stomach",
             "AELLTCD": 10046318.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -25,7 +25,7 @@
             "AELLT": "Headache",
             "AELLTCD": 10019211.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -35,7 +35,7 @@
             "AELLT": "Headache",
             "AELLTCD": 10019212.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -45,7 +45,7 @@
             "AELLT": "Headache",
             "AELLTCD": 10019212.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 5,
@@ -55,7 +55,7 @@
             "AELLT": null,
             "AELLTCD": 10019211.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 6,
@@ -65,7 +65,7 @@
             "AELLT": "Hypertension",
             "AELLTCD": 10020772.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 7,
@@ -75,7 +75,7 @@
             "AELLT": "Hypertension",
             "AELLTCD": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 9,
@@ -85,7 +85,7 @@
             "AELLT": "Cardiac arrest",
             "AELLTCD": 10046318.0
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -100,183 +100,15 @@
     {
       "dataset": "mh.xpt",
       "domain": "MH",
-      "execution_status": "success",
-      "execution_message": "MHLLTCD and MHLLT do not have a one-to-one relationship.",
-      "number_errors": 6,
+      "execution_status": "execution_error",
+      "execution_message": "SQL operator execution error",
+      "number_errors": 1,
       "errors": [
         {
-          "row": 1,
-          "SEQ": 1,
-          "USUBJID": "CDISC001",
-          "value": {
-            "MHLLT": "Alzheimer's disease",
-            "MHLLTCD": 10001896.0
-          },
-          "validated": false
-        },
-        {
-          "row": 2,
-          "SEQ": 1,
-          "USUBJID": "CDISC002",
-          "value": {
-            "MHLLT": "Alzheimer disease",
-            "MHLLTCD": 10001896.0
-          },
-          "validated": false
-        },
-        {
-          "row": 3,
-          "SEQ": 1,
-          "USUBJID": "CDISC003",
-          "value": {
-            "MHLLT": "Alzheimer's disease",
-            "MHLLTCD": 10001897.0
-          },
-          "validated": false
-        },
-        {
-          "row": 4,
-          "SEQ": 1,
-          "USUBJID": "CDISC004",
-          "value": {
-            "MHLLT": null,
-            "MHLLTCD": 10001897.0
-          },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": 1,
-          "USUBJID": "CDISC005",
-          "value": {
-            "MHLLT": "Alzheimer disease",
-            "MHLLTCD": null
-          },
-          "validated": false
-        },
-        {
-          "row": 6,
-          "SEQ": 1,
-          "USUBJID": "CDISC006",
-          "value": {
-            "MHLLT": null,
-            "MHLLTCD": 10001898.0
-          },
-          "validated": false
+          "error": "SQL error in is_not_unique_relationship operator",
+          "message": "Column 'MHLLT' not found in table 'MH'"
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ae.xpt",
-      "Row": 5,
-      "Variable": "AELLT"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 5,
-      "Variable": "AELLTCD"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 6,
-      "Variable": "AELLT"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 6,
-      "Variable": "AELLTCD"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 7,
-      "Variable": "AELLT"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 7,
-      "Variable": "AELLTCD"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 8,
-      "Variable": "AELLT"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 8,
-      "Variable": "AELLTCD"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 10,
-      "Variable": "AELLT"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 10,
-      "Variable": "AELLTCD"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 11,
-      "Variable": "AELLT"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 11,
-      "Variable": "AELLTCD"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 13,
-      "Variable": "AELLT"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 13,
-      "Variable": "AELLTCD"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 5,
-      "Variable": "MHLLT"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 5,
-      "Variable": "MHLLTCD"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 6,
-      "Variable": "MHLLT"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 6,
-      "Variable": "MHLLTCD"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 7,
-      "Variable": "MHLLT"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 7,
-      "Variable": "MHLLTCD"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 9,
-      "Variable": "MHLLT"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 9,
-      "Variable": "MHLLTCD"
     }
   ]
 }
