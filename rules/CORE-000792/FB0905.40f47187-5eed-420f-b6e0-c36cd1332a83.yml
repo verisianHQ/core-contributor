@@ -1,6 +1,7 @@
-# Variable: --CLAS, --CLASCD
+# Variable: --CLASCD AND --CLAS
 # Condition:
-# Rule: --CLASCD and --CLAS have a one-to-one relationship 
+# Rule: --CLASCD and --CLAS do not have a one-to-one relationship
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -52,17 +53,14 @@ Authorities:
 Check:
   all:
     - name: --CLAS
-      operator: exists
-    - name: --CLASCD
-      operator: exists
-    - name: --CLAS
       operator: is_not_unique_relationship
       value: --CLASCD
 Core:
   Id: CORE-000792
   Status: Published
   Version: '1'
-Description: --CLASCD and --CLAS should have a one-to-one relationship.
+Description: Raise an error when --CLASCD and --CLAS do not have a one-to-one
+  relationship.
 Executability: Fully Executable
 Outcome:
   Message: --CLASCD and --CLAS do not have a one-to-one relationship.
