@@ -4,8 +4,8 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "RFENDTC is missing when ARM is provided.",
-      "number_errors": 2,
+      "execution_message": "RFENDTC is not populated when ARM is populated.",
+      "number_errors": 1,
       "errors": [
         {
           "row": 1,
@@ -16,18 +16,15 @@
             "RFENDTC": null
           },
           "validated": false
-        },
-        {
-          "row": 2,
-          "SEQ": null,
-          "USUBJID": "CDISC003",
-          "value": {
-            "ARM": "Zanomaline High Dose (100 mg)",
-            "RFENDTC": null
-          },
-          "validated": false
         }
       ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "RFENDTC": null
+      }
     }
   ]
 }
