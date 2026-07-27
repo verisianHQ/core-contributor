@@ -1,6 +1,7 @@
 # Variable: RFENDTC
 # Condition: ARMNRS ^= null
 # Rule: RFENDTC = null
+#verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -57,10 +58,10 @@ Core:
   Id: CORE-000192
   Status: Published
   Version: '1'
-Description: Raise an error when ARMNRS is not blank and RFENDTC is provided.
+Description: Raise an error when ARMNRS is not null but RFENDTC is not null.
 Executability: Fully Executable
 Outcome:
-  Message: RFENDTC is not blank when ARMNRS is provided.
+  Message: RFENDTC is not null when ARMNRS is not null.
   Output Variables:
     - ARMNRS
     - RFENDTC
