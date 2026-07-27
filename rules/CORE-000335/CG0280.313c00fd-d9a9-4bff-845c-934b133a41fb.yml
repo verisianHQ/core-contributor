@@ -53,6 +53,9 @@ Description: Raise an error when TSPARMCD = "RANDQT" and the value provided in
 Executability: Fully Executable
 Outcome:
   Message: 'TSPARMCD = "RANDQT" but TSVAL is not a number between 0 and 1.'
+  Output Variables:
+    - TSPARMCD
+    - TSVAL
 Rule Type: Record Data
 Scope:
   Classes:
