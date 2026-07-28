@@ -40,18 +40,18 @@ def create_excel_file(filepath: Path, is_negative: bool, is_bundled: bool):
     wb.save(filepath)
 
 def create_csv_files(case_dir: Path, is_negative: bool, is_bundled: bool):
-    with (case_dir / "library.csv").open("w", newline="", encoding="utf-8") as f:
+    with (case_dir / "_library.csv").open("w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow(["Product", "Version"])
         writer.writerow(["sdtmig", "3-4"])
 
-    with (case_dir / "datasets.csv").open("w", newline="", encoding="utf-8") as f:
+    with (case_dir / "_datasets.csv").open("w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow(["Filename", "Label"])
         writer.writerow(["", ""])
 
     if is_negative:
-        with (case_dir / "validation.csv").open("w", newline="", encoding="utf-8") as f:
+        with (case_dir / "_validation.csv").open("w", newline="", encoding="utf-8") as f:
             writer = csv.writer(f)
             headers = ["Error group", "Sheet", "Error level", "Row num", "Variable", "Error value"]
             
@@ -66,17 +66,24 @@ def create_test_cases(base_dir: Path, test_type: str, count: int, is_bundled: bo
         case_id = f"{i:02d}"
         
         case_dir = base_dir / test_type / case_id
-        case_dir.mkdir(parents=True, exist_ok=True)
+        data_dir = case_dir / "data" if not is_bundled else case_dir
+        data_dir.mkdir(parents=True, exist_ok=True)
+        
+        if not is_bundled:
+            res_dir = case_dir / "results"
+            res_dir.mkdir(parents=True, exist_ok=True)
+            with (res_dir / "results.json").open("w") as f:
+                json.dump({}, f)
+            (res_dir / "results.txt").touch()
         
         if format_choice == 'csv':
-            create_csv_files(case_dir, is_negative=(test_type == "negative"), is_bundled=is_bundled)
+            create_csv_files(data_dir, is_negative=(test_type == "negative"), is_bundled=is_bundled)
         else:
             excel_filename = f"{file_prefix.lower()}-{test_type}-{case_id}.xlsx"
-            excel_path = case_dir / excel_filename
+            excel_path = data_dir / excel_filename
             create_excel_file(excel_path, is_negative=(test_type == "negative"), is_bundled=is_bundled)
 
 def main():
-    # user input for which rules dir
     rules_choice = input("Which rules directory would you like to use? (sdtm/adam) ").lower()
     if rules_choice == "sdtm":
         RULES_DIR = SDTM_RULES_DIR
@@ -88,6 +95,12 @@ def main():
 
     is_bundled = input("Is this part of a bundled rule structure sharing test cases? (y/n) ").lower() == 'y'
     
+    format_choice = ""
+    while format_choice not in ["csv", "xlsx"]:
+        format_choice = input("Would you like test cases in CSV or XLSX format? (csv/xlsx): ").strip().lower()
+        if format_choice not in ["csv", "xlsx"]:
+            print("Invalid format. Please enter 'csv' or 'xlsx'.")
+
     if is_bundled:
         bundle_name = input("Enter the bundle folder name (e.g., AD0020-32): ").strip()
         bundle_dir = RULES_DIR / bundle_name
@@ -110,6 +123,14 @@ def main():
         bundle_dir.mkdir(parents=True, exist_ok=True)
         test_cases_dir.mkdir(parents=True, exist_ok=True)
         
+        n_pos = int(input(f"Enter the number of positive test cases for the whole bundle: ") or 0)
+        n_neg = int(input(f"Enter the number of negative test cases for the whole bundle: ") or 0)
+
+        if n_pos > 0:
+            create_test_cases(test_cases_dir, "positive", n_pos, True, format_choice, bundle_name)
+        if n_neg > 0:
+            create_test_cases(test_cases_dir, "negative", n_neg, True, format_choice, bundle_name)
+
         for r_id in rule_ids:
             rule_dir = bundle_dir / r_id
             if rule_dir.exists():
@@ -121,19 +142,17 @@ def main():
                 shutil.copy("tests/template-rule.yml", yml_file)
             except FileNotFoundError:
                 yml_file.touch()
-                
-            res_dir = rule_dir / "results"
-            res_dir.mkdir(parents=True, exist_ok=True)
-            with (res_dir / "results.json").open("w") as f:
-                json.dump({}, f)
-            (res_dir / "results.txt").touch()
-
-        file_prefix = bundle_name
+            
+            for test_type, count in [("positive", n_pos), ("negative", n_neg)]:
+                for i in range(1, count + 1):
+                    case_res_dir = rule_dir / "results" / test_type / f"{i:02d}"
+                    case_res_dir.mkdir(parents=True, exist_ok=True)
+                    with (case_res_dir / "results.json").open("w") as f:
+                        json.dump({}, f)
+                    (case_res_dir / "results.txt").touch()
 
     else:
         rule_dir = RULES_DIR / PLACEHOLDER_RULE_ID
-        test_cases_dir = rule_dir
-
         if rule_dir.exists():
             do_wipe = input("Another NEW-RULE folder already exists here. Erase it and make a new one? (y/n) ").lower() == "y"
             if not do_wipe:
@@ -151,20 +170,14 @@ def main():
             
         file_prefix = PLACEHOLDER_RULE_ID
 
-    format_choice = ""
-    while format_choice not in ["csv", "xlsx"]:
-        format_choice = input("Would you like test cases in CSV or XLSX format? (csv/xlsx): ").strip().lower()
-        if format_choice not in ["csv", "xlsx"]:
-            raise ValueError("Invalid format. Please enter 'csv' or 'xlsx'.")
+        n_pos_cases = int(input("Enter the number of positive test cases to create: "))
+        n_neg_cases = int(input("Enter the number of negative test cases to create: "))
 
-    n_pos_cases = int(input("Enter the number of positive test cases to create: "))
-    n_neg_cases = int(input("Enter the number of negative test cases to create: "))
+        if n_pos_cases > 0:
+            create_test_cases(rule_dir, "positive", n_pos_cases, False, format_choice, file_prefix)
 
-    if n_pos_cases > 0:
-        create_test_cases(test_cases_dir, "positive", n_pos_cases, is_bundled, format_choice, file_prefix)
-
-    if n_neg_cases > 0:
-        create_test_cases(test_cases_dir, "negative", n_neg_cases, is_bundled, format_choice, file_prefix)
+        if n_neg_cases > 0:
+            create_test_cases(rule_dir, "negative", n_neg_cases, False, format_choice, file_prefix)
 
     print(f"\nSuccess!")
 
