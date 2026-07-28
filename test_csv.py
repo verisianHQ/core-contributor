@@ -79,10 +79,16 @@ class ResultReporter:
 
     @classmethod
     def save_case_results(
-        cls, rules_dir: str, rule_id: str, test_type: str, case_id: str, results: dict, version_info: Optional[dict] = None
+        cls,
+        rules_dir: str,
+        rule_id: str,
+        test_type: str,
+        case_id: str,
+        results: dict,
+        version_info: Optional[dict] = None,
     ):
         """Saves JSON and TXT results to the file system."""
-        results_path = Path(rules_dir) / rule_id / test_type / case_id / "results"
+        results_path = Path(rules_dir) / rule_id / "results" / test_type / case_id
         results_path.mkdir(parents=True, exist_ok=True)
 
         output = {**results, "dictionary_versions": version_info} if version_info else results
@@ -216,49 +222,57 @@ class TestRunner:
     def get_rule_path(self, rule_id: str) -> Optional[Path]:
         if not self.rules_dir.exists():
             return None
-            
+
         standalone_path = self.rules_dir / rule_id
         if standalone_path.exists() and standalone_path.is_dir():
             return standalone_path
-            
+
         for d in self.rules_dir.iterdir():
             if d.is_dir():
                 bundled_path = d / rule_id
                 if bundled_path.exists() and bundled_path.is_dir():
                     return bundled_path
-                    
+
         return None
 
     def get_available_rules(self) -> List[str]:
         if not self.rules_dir.exists():
             return []
-            
+
         rules = []
         for d in self.rules_dir.iterdir():
-            if not d.is_dir(): 
+            if not d.is_dir():
                 continue
-            
-            if (d.name.startswith("CORE-") or d.name.startswith("AD") or d.name.startswith("NEW-RULE")):
+
+            if d.name.startswith("CORE-") or d.name.startswith("AD") or d.name.startswith("NEW-RULE"):
                 if list(d.glob("[!~]*.yml")):
-                    rules.append(d.name)
+                    rules.append(
+                        "/".join(d.parts[d.parts.index(self.rules_dir.name) + 1 :])  # noqa
+                        if self.rules_dir.name in d.parts
+                        else d.name
+                    )
                 else:
                     for subd in d.iterdir():
                         if subd.is_dir() and list(subd.glob("[!~]*.yml")):
-                            rules.append(subd.name)
-                            
+                            rules.append(
+                                "/".join(subd.parts[subd.parts.index(self.rules_dir.name) + 1 :])  # noqa
+                                if self.rules_dir.name in subd.parts
+                                else subd.name
+                            )
+
         return sorted(rules)
 
     def get_test_cases(self, rule_id: str) -> dict:
         """Scans directories to find available test cases for a rule, searching for CSV files."""
         cases = {"positive": [], "negative": []}
         rule_path = self.get_rule_path(rule_id)
-        
+
         if not rule_path:
             return cases
 
         parent_dir = rule_path.parent
         shared_cases_path = parent_dir / "shared_test_cases"
-        
+
         test_source = shared_cases_path if shared_cases_path.exists() else rule_path
 
         for test_type in ["positive", "negative"]:
@@ -269,31 +283,31 @@ class TestRunner:
                         data_dir = case_dir / "data"
                         if not data_dir.exists():
                             data_dir = case_dir
-                            
+
                         if list(data_dir.glob("*.csv")):
                             cases[test_type].append({"case_id": case_dir.name, "data_path": str(data_dir)})
-                            
+
         return cases
 
     @staticmethod
     def _read_library_specs(data_path: str) -> Tuple[str, str, List[str]]:
         """Reads the standard, version, and ct list from library.csv."""
-        lib_path = Path(data_path) / "library.csv"
-        
+        lib_path = Path(data_path) / "_library.csv"
+
         if not lib_path.exists():
-            raise ValueError(f"library.csv not found in {data_path}")
+            raise ValueError(f"_library.csv not found in {data_path}")
 
         with lib_path.open("r", encoding="utf-8-sig") as f:
             reader = csv.reader(f)
             headers = next(reader)
-            
+
             try:
                 first_row = next(reader)
             except StopIteration:
                 raise ValueError(f"library.csv in {data_path} is empty")
 
             if not first_row or not first_row[0]:
-                raise ValueError(f"Missing standard/version data in {data_path}/library.csv")
+                raise ValueError(f"Missing standard/version data in {data_path}/_library.csv")
 
             standard = str(first_row[0]).strip()
             version = str(first_row[1]).strip().replace("-", ".")
@@ -310,10 +324,10 @@ class TestRunner:
 
     def _load_csv_datasets(self, data_path: str) -> list:
         from engine.tests.rule_regression.regression import TestDataset, VariableMetadata
-        
-        datasets_csv_path = Path(data_path) / "datasets.csv"
+
+        datasets_csv_path = Path(data_path) / "_datasets.csv"
         if not datasets_csv_path.exists():
-            raise ValueError(f"datasets.csv missing in {data_path}")
+            raise ValueError(f"_datasets.csv missing in {data_path}")
 
         datasets_df = pd.read_csv(datasets_csv_path)
         test_datasets = []
@@ -325,10 +339,10 @@ class TestRunner:
 
             if dataset_path.exists():
                 dataset_df = pd.read_csv(dataset_path, keep_default_na=False, na_values=[""])
-                
+
                 variables = []
                 col_type_dict = {}
-                
+
                 for i, col in enumerate(dataset_df.columns):
                     if col.startswith("Unnamed:"):
                         continue
@@ -336,10 +350,10 @@ class TestRunner:
                     var_label = str(dataset_df[col].iloc[0])
                     var_type = str(dataset_df[col].iloc[1])
                     var_length = dataset_df[col].iloc[2]
-                    
+
                     if var_type not in ["Char", "Num"]:
                         raise ValueError(f"Unknown variable type: {var_type}. This data needs fixing.")
-                    
+
                     variables.append(
                         VariableMetadata(
                             name=var_name, label=var_label, type=var_type, length=var_length, format="", order=i + 1
@@ -353,12 +367,12 @@ class TestRunner:
                         continue
                     column_name = col
                     column_values = dataset_df[col].iloc[3:].tolist()
-                    
+
                     if col_type_dict[column_name].lower() == "num":
                         column_values = [None if pd.isna(val) or val == "" else float(val) for val in column_values]
                     elif col_type_dict[column_name].lower() == "char":
                         column_values = ["" if pd.isna(val) else str(val) for val in column_values]
-                        
+
                     data[column_name] = column_values
 
                 test_datasets.append(
@@ -370,7 +384,6 @@ class TestRunner:
                         records=data,
                     )
                 )
-
         return test_datasets
 
     @staticmethod
@@ -419,7 +432,8 @@ class TestRunner:
                 if define_xml_path:
                     from engine.cdisc_rules_engine.services.define_xml.define_xml_reader_factory import (
                         DefineXMLReaderFactory,
-                    ) 
+                    )
+
                     define_xml_reader = DefineXMLReaderFactory.from_filename(define_xml_path)
                     extensible_terms = define_xml_reader.get_extensible_codelist_mappings()
                     self.data_service._add_extensible_ct_terms(extensible_terms)
@@ -493,7 +507,9 @@ class TestRunner:
             if unmatched:
                 results_data["unmatched_validation"] = unmatched
 
-        results_path = ResultReporter.save_case_results(self.rules_dir, rule_id, test_type, case_id, results_data, self.version_info)
+        results_path = ResultReporter.save_case_results(
+            self.rules_dir, rule_id, test_type, case_id, results_data, self.version_info
+        )
         total_errors = sum(len(ds.get("errors", [])) for ds in results_data.get("datasets", []))
         passed = (total_errors == 0) if test_type == "positive" else (total_errors > 0)
 
@@ -508,8 +524,8 @@ class TestRunner:
     def get_validation_info(self, data_path: str) -> dict:
         """Extracts validation targets from validation.csv and maps them by Rule ID."""
         validation_values = {}
-        val_path = Path(data_path) / "validation.csv"
-        
+        val_path = Path(data_path) / "_validation.csv"
+
         if not val_path.exists():
             return validation_values
 
@@ -520,23 +536,32 @@ class TestRunner:
             except StopIteration:
                 return validation_values
 
-            rule_id_idx = headers.index("Rule ID") if "Rule ID" in headers else -1
+            rule_id_idx = headers.index("Rule") if "Rule" in headers else -1
             error_group_idx = headers.index("Error group") if "Error group" in headers else -1
 
             for row in reader:
                 if not row or not any(row):
                     continue
-                
-                r_id = row[rule_id_idx].strip() if rule_id_idx != -1 and len(row) > rule_id_idx and row[rule_id_idx] else None
-                e_id = row[error_group_idx].strip() if error_group_idx != -1 and len(row) > error_group_idx and row[error_group_idx] else "1"
-                
+
+                r_id = (
+                    row[rule_id_idx].strip()
+                    if rule_id_idx != -1 and len(row) > rule_id_idx and row[rule_id_idx]
+                    else None
+                )
+                e_id = (
+                    row[error_group_idx].strip()
+                    if error_group_idx != -1 and len(row) > error_group_idx and row[error_group_idx]
+                    else "1"
+                )
+
                 if len(row) == len(headers):
                     row_data = dict(zip(headers, row))
                     validation_values.setdefault(r_id, {}).setdefault(e_id, []).append(row_data)
-
         return validation_values
 
     def validate_errors(self, results_data: dict, validations: dict, rule_id: str):
+        rule_id = rule_id.split("/")[-1]
+
         unmatched = []
 
         rule_validations = validations.get(rule_id, validations.get(None, {}))
@@ -548,17 +573,17 @@ class TestRunner:
             error_level = entries[0].get("Error level", "Record").lower()
             sheet = entries[0]["Sheet"]
             row = entries[0]["Row num"]
-            
+
             if str(row).lower() in ["1", "n/a"]:
                 row = 1
             else:
                 row = int(row) - 4
-                
+
             values = {e["Variable"]: e["Error value"] for e in entries}
             flat_validation[(sheet, error_level, row, idx)] = values
 
         for ds in results_data.get("datasets", []):
-            sheet_name = ds["dataset"]
+            sheet_name = ds["dataset"].split(".")[0].lower()
 
             for error_obj in ds.get("errors", []):
                 if not error_obj.get("error"):
@@ -660,7 +685,9 @@ class InteractiveHandler:
 
 def parse_args():
     parser = argparse.ArgumentParser(description="CDISC SQL Rules Engine Tester")
-    parser.add_argument("-s", "--standard", help="Provide the standard (e.g. sdtm, adam) to test against.", default="sdtm")
+    parser.add_argument(
+        "-s", "--standard", help="Provide the standard (e.g. sdtm, adam) to test against.", default="sdtm"
+    )
     parser.add_argument("-r", "--rule", help="Rule ID (e.g., CORE-000176 or NEW-RULE)")
     parser.add_argument("-all", "--all-rules", action="store_true", help="Run all rules")
     parser.add_argument("-tc", "--test-case", help="Specific case (e.g., positive/01)")
@@ -748,7 +775,7 @@ def main():
     print("FINAL SUMMARY")
     print("=" * 60)
     print(
-        f"Total: {total} | Passed: {len(results['passed'])} | Failed: {len(results['failed'])} | Errors: {len(results['error'])}"
+        f"Total: {total} | Passed: {len(results['passed'])} | Failed: {len(results['failed'])} | Errors: {len(results['error'])}"  # noqa
     )
 
     if results["failed"]:
@@ -759,12 +786,12 @@ def main():
                 for t in s["positive_tests"]:
                     if not t["passed"]:
                         print(
-                            f"      Case positive/{t['case_id']}: Expected {t['expected']}, Got {t['total_errors']} errors"
+                            f"      Case positive/{t['case_id']}: Expected {t['expected']}, Got {t['total_errors']} errors"  # noqa
                         )
                 for t in s["negative_tests"]:
                     if not t["passed"]:
                         print(
-                            f"      Case negative/{t['case_id']}: Expected {t['expected']}, Got {t['total_errors']} errors"
+                            f"      Case negative/{t['case_id']}: Expected {t['expected']}, Got {t['total_errors']} errors"  # noqa
                         )
 
     if results["error"]:
