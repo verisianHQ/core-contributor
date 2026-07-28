@@ -58,13 +58,16 @@ Authorities:
         Version: '3.3'
 Check:
   all:
-    - name: POOLDEF
-      operator: not_exists
     - name: RSUBJID
       operator: non_empty
-    - name: RSUBJID
-      operator: is_not_contained_by
-      value: $pooldef_poolid
+    - any:
+      - name: $study_domains
+        operator: does_not_contain
+        value: PO
+        value_is_literal: true
+      - name: RSUBJID
+        operator: is_not_contained_by
+        value: $pooldef_poolid
     - name: RSUBJID
       operator: is_not_contained_by
       value: $dm_usubjid
@@ -85,6 +88,8 @@ Operations:
     id: $dm_usubjid
     name: USUBJID
     operator: distinct
+  - id: $study_domains
+    operator: study_domains
 Outcome:
   Message: RSUBJID must be equal to a USUBJID in the DM dataset when
     RSUBJID is populated and RSUBJID is not equal to a POOLID
