@@ -1,6 +1,7 @@
 # Variable: TSVAL
 # Condition: TSPARMCD = 'AGEMIN' and TSVAL ^= null
 # Rule: TSVAL conforms to ISO 8601 time period
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -39,20 +40,20 @@ Check:
     - name: TSPARMCD
       operator: equal_to
       value: AGEMIN
+      value_is_literal: true
     - name: TSVAL
       operator: non_empty
     - name: TSVAL
-      negative: true
+      negative: false
       operator: invalid_duration
 Core:
   Id: CORE-000730
   Status: Published
   Version: '1'
-Description: 'When TSPARMCD is equal to AGEMIN and TSVAL is not null, TSVAL
-  should conform to ISO 8601'
+Description: Raise an error when TSPARMCD is equal to AGEMIN and TSVAL is populated, but TSVAL does not conform to a positive duration in ISO 8601 time period format.
 Executability: Fully Executable
 Outcome:
-  Message: 'TSVAL does not conform to ISO 8601'
+  Message: TSVAL must be a positive duration in ISO 8601 time period format when TSPARMCD is equal to AGEMIN.
   Output Variables:
     - TSVAL
     - TSPARMCD
