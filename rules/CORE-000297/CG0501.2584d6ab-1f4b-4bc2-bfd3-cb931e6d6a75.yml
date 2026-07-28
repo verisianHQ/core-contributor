@@ -33,7 +33,7 @@ Authorities:
                 Section: 2.2.5
 Check:
   all:
-    - name: $MIDS_EXISTS
+    - name: $MIDS_VARIABLE_PRESENT
       operator: equal_to
       value: true
     - name: TM
@@ -42,16 +42,16 @@ Core:
   Id: CORE-000297
   Status: Published
   Version: '1'
-Description: Raise an error when variable MIDS is present in any of the dataset and TM dataset is missing.
+Description: Raise an error when variable MIDS is present in any of the datasets, but TM dataset is missing.
 Executability: Fully Executable
 Operations:
-  - id: $MIDS_EXISTS
+  - id: $MIDS_VARIABLE_PRESENT
     name: MIDS
     operator: variable_exists
 Outcome:
   Message: TM dataset must be present when MIDS variable is present in a dataset.
   Output Variables:
-    - MIDS
+    - $MIDS_VARIABLE_PRESENT
     - TM
 Rule Type: Domain Presence Check
 Scope:
