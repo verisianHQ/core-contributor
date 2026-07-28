@@ -8,10 +8,36 @@ import re
 import json
 import csv
 from pathlib import Path
+import openpyxl
 
 SDTM_RULES_DIR = Path("rules")
 ADAM_RULES_DIR = Path("adam_rules")
 PLACEHOLDER_RULE_ID = "NEW-RULE"
+
+def create_excel_file(filepath: Path, is_negative: bool, is_bundled: bool):
+    wb = openpyxl.Workbook()
+    wb.remove(wb.active)
+
+    ws_lib = wb.create_sheet("Library")
+    ws_lib.append(["Product", "Version"])
+    ws_lib["A2"] = "sdtmig"
+    ws_lib["B2"] = "3-4"
+
+    ws_data = wb.create_sheet("Datasets")
+    ws_data.append(["Filename", "Label"])
+    ws_data.append(["", ""])
+
+    if is_negative:
+        ws_val = wb.create_sheet("Validation")
+        headers = ["Error group", "Sheet", "Error level", "Row num", "Variable", "Error value"]
+        
+        if is_bundled:
+            headers.insert(0, "Rule ID")
+            
+        ws_val.append(headers)
+        ws_val.append([""] * len(headers))
+
+    wb.save(filepath)
 
 def create_csv_files(case_dir: Path, is_negative: bool, is_bundled: bool):
     with (case_dir / "library.csv").open("w", newline="", encoding="utf-8") as f:
@@ -35,14 +61,19 @@ def create_csv_files(case_dir: Path, is_negative: bool, is_bundled: bool):
             writer.writerow(headers)
             writer.writerow([""] * len(headers))
 
-def create_test_cases(base_dir: Path, test_type: str, count: int, is_bundled: bool):
+def create_test_cases(base_dir: Path, test_type: str, count: int, is_bundled: bool, format_choice: str, file_prefix: str):
     for i in range(1, count + 1):
         case_id = f"{i:02d}"
         
         case_dir = base_dir / test_type / case_id
         case_dir.mkdir(parents=True, exist_ok=True)
         
-        create_csv_files(case_dir, is_negative=(test_type == "negative"), is_bundled=is_bundled)
+        if format_choice == 'csv':
+            create_csv_files(case_dir, is_negative=(test_type == "negative"), is_bundled=is_bundled)
+        else:
+            excel_filename = f"{file_prefix.lower()}-{test_type}-{case_id}.xlsx"
+            excel_path = case_dir / excel_filename
+            create_excel_file(excel_path, is_negative=(test_type == "negative"), is_bundled=is_bundled)
 
 def main():
     # user input for which rules dir
@@ -97,6 +128,8 @@ def main():
                 json.dump({}, f)
             (res_dir / "results.txt").touch()
 
+        file_prefix = bundle_name
+
     else:
         rule_dir = RULES_DIR / PLACEHOLDER_RULE_ID
         test_cases_dir = rule_dir
@@ -115,15 +148,23 @@ def main():
             shutil.copy("tests/template-rule.yml", yml_file)
         except FileNotFoundError:
             yml_file.touch()
+            
+        file_prefix = PLACEHOLDER_RULE_ID
+
+    format_choice = ""
+    while format_choice not in ["csv", "xlsx"]:
+        format_choice = input("Would you like test cases in CSV or XLSX format? (csv/xlsx): ").strip().lower()
+        if format_choice not in ["csv", "xlsx"]:
+            raise ValueError("Invalid format. Please enter 'csv' or 'xlsx'.")
 
     n_pos_cases = int(input("Enter the number of positive test cases to create: "))
     n_neg_cases = int(input("Enter the number of negative test cases to create: "))
 
     if n_pos_cases > 0:
-        create_test_cases(test_cases_dir, "positive", n_pos_cases, is_bundled)
+        create_test_cases(test_cases_dir, "positive", n_pos_cases, is_bundled, format_choice, file_prefix)
 
     if n_neg_cases > 0:
-        create_test_cases(test_cases_dir, "negative", n_neg_cases, is_bundled)
+        create_test_cases(test_cases_dir, "negative", n_neg_cases, is_bundled, format_choice, file_prefix)
 
     print(f"\nSuccess!")
 
