@@ -61,6 +61,7 @@ Check:
     - name: --PRESP
       operator: equal_to
       value: Y
+      value_is_literal: true
     - name: --OCCUR
       operator: empty
     - name: --STAT
@@ -69,13 +70,14 @@ Core:
   Id: CORE-000118
   Status: Published
   Version: '1'
-Description: Raise an error when --PRESP is equal to 'Y' and --OCCUR is empty and --STAT is not present in dataset.
+Description: Raise an error when --PRESP is equal to 'Y' and --OCCUR is empty, but --STAT is not present in the dataset.
 Executability: Fully Executable
 Outcome:
-  Message: --STAT is not present in dataset when --PRESP is equal to 'Y' and --OCCUR is blank.
+  Message: --STAT must be present in the dataset when --PRESP is equal to 'Y' and --OCCUR is not populated.
   Output Variables:
     - --PRESP
     - --OCCUR
+    - --STAT
 Rule Type: Record Data
 Scope:
   Classes:
