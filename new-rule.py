@@ -7,7 +7,8 @@ import shutil
 from pathlib import Path
 import openpyxl
 
-RULES_DIR = Path("rules")
+SDTM_RULES_DIR = Path("rules")
+ADAM_RULES_DIR = Path("adam_rules")
 PLACEHOLDER_RULE_ID = "NEW-RULE"
 
 def create_excel_file(filepath: Path, is_negative: bool):
@@ -45,8 +46,17 @@ def create_test_cases(rule_dir: Path, test_type: str, count: int):
         create_excel_file(excel_path, is_negative=(test_type == "negative"))
 
 def main():
-    rule_dir = RULES_DIR / PLACEHOLDER_RULE_ID
+    # user input for which rules dir
+    rules_choice = input("Which rules directory would you like to use? (sdtm/adam) ").lower()
+    if rules_choice == "sdtm":
+        RULES_DIR = SDTM_RULES_DIR
+    elif rules_choice == "adam":
+        RULES_DIR = ADAM_RULES_DIR
+    else:
+        print("Invalid choice. Aborting.")
+        sys.exit(1)
 
+    rule_dir = RULES_DIR / PLACEHOLDER_RULE_ID
     if rule_dir.exists():
         do_wipe: bool = True if input("Another new rule folder already exists. Would you like to erase it and make a new one? (Y/N) ").lower() == "y" else False
         if not do_wipe:
