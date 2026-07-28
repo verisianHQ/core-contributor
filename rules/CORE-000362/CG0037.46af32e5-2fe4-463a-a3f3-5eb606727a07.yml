@@ -47,9 +47,13 @@ Authorities:
 Check:
   all:
     - name: --SOCCD
-      operator: not_equal_to
-      value: --BDSYCD
-      value_is_reference: true
+      operator: exists
+    - any:
+      - name: --BDSYCD
+        operator: not_exists
+      - name: --BDSYCD
+        operator: not_equal_to
+        value: --SOCCD
 Core:
   Id: CORE-000362
   Status: Published
