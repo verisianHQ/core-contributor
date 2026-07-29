@@ -1,0 +1,102 @@
+# Variable: TSPARMCD
+# Condition: TSPARMCD =’CTAUG’ and TSVAL starts with ’QT Studies’
+# Rule: TSPARMCDs ('EGBLIND','EGCTMON','EGLEADPR','EGLEADSM','EGRDMETH','EGREPLBL','EGREPLTR','EGTWVALG') are present
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: TCG, Appendix B
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1107
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: TCG, Appendix B
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1107
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: TCG, Appendix B
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1107
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: TSPARMCD
+      operator: equal_to
+      value: CTAUG
+      value_is_literal: true
+    - name: TSVAL
+      operator: starts_with
+      value: QT Studies
+      value_is_literal: true
+    - name: TSPARMCD
+      operator: not_contains_all
+      value:
+        - EGBLIND
+        - EGCTMON
+        - EGLEADPR
+        - EGLEADSM
+        - EGRDMETH
+        - EGREPLBL
+        - EGREPLTR
+        - EGTWVALG
+Core:
+  Id: CORE-002058
+  Status: Published
+  Version: '1'
+Description: Raise an error when not all FDA Conditionally Desired Trial Summary (TS) Parameters (TSPARMCDs) for QTc evaluations are present in the TS dataset.
+Executability: Fully Executable
+Operations:
+  - id: $distinct_tsparmcds
+    name: TSPARMCD
+    operator: distinct
+  - id: $missing_tsparmcds
+    name: 
+      - EGBLIND
+      - EGCTMON
+      - EGLEADPR
+      - EGLEADSM
+      - EGRDMETH
+      - EGREPLBL
+      - EGREPLTR
+      - EGTWVALG
+    operator: minus
+    subtract: $distinct_tsparmcds
+
+Outcome:
+  Message: At least one FDA Conditional Desired TSPARMCD for QTc evaluations is missing in the TS dataset.
+  Output Variables:
+    - TSPARMCD
+    - TSVAL
+    - $missing_tsparmcds
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

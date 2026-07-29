@@ -54,8 +54,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'Records with a baseline flag should have a corresponding
-                  standard result with a standardized unit where available.'
+              - Cited Guidance: Records with a baseline flag should have a corresponding
+                  standard result with a standardized unit where available.
                 Document: FDA
                 Section: FDAB026
             Origin: FDA Business Rules
@@ -67,8 +67,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'Records with a baseline flag should have a corresponding
-                  standard result with a standardized unit where available.'
+              - Cited Guidance: Records with a baseline flag should have a corresponding
+                  standard result with a standardized unit where available.
                 Document: FDA
                 Section: FDAB026
             Origin: FDA Business Rules
@@ -92,7 +92,7 @@ Core:
 Description: Raise an error when --LOBXFL = 'Y' and --STRESC is empty.
 Executability: Fully Executable
 Outcome:
-  Message: --LOBXFL = 'Y', but --STRESC is empty.
+  Message: Record has a last observation before exposure flag (--LOBXFL = 'Y') but character standard result (--STRESC) is missing.
   Output Variables:
     - --LOBXFL
     - --TESTCD

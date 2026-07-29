@@ -36,7 +36,7 @@
       "dataset": "sj.xpt",
       "domain": "SJ",
       "execution_status": "success",
-      "execution_message": "SJ dataset is present.",
+      "execution_message": "SJ dataset must not be present.",
       "number_errors": 1,
       "errors": [
         {
@@ -46,7 +46,7 @@
           "value": {
             "SJ": "sj.xpt"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },

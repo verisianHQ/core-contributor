@@ -4,7 +4,7 @@
       "dataset": "mh.xpt",
       "domain": "MH",
       "execution_status": "success",
-      "execution_message": "TM dataset is missing when MIDS variable is present in one of the dataset.",
+      "execution_message": "TM dataset must be present when MIDS variable is present in a dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,9 +12,10 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "$MIDS_EXISTS": true
+            "$MIDS_VARIABLE_PRESENT": true,
+            "TM": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

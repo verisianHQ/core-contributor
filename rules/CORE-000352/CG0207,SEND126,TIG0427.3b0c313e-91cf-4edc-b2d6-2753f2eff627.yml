@@ -1,6 +1,7 @@
 # Variable: SEENDTC
 # Condition: Next ELEMENT present in dataset
 # Rule: SEENDTC = SESTDTC of next ELEMENT
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -52,10 +53,11 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Because there are no time gaps between Elements, the SEENDTC
-                  value for one element will always be the same as the SESTDTC
-                  value for the next Element.
-                Document: IG v3.0
+              - Cited Guidance: There are, by definition, no time gaps between 
+                  Elements; therefore, the value SEENDTC for one Element will
+                  always be the same as the value of SESTDTC for the next Element. 
+                  Each Element continues until the time at which the next Element begins.
+                Document: SENDIG v3.0
                 Item: Assumption 1
                 Section: 5.3.1.1
             Origin: SEND Conformance Rules
@@ -94,10 +96,13 @@ Core:
   Id: CORE-000352
   Status: Published
   Version: '1'
-Description: Trigger error where SEENDTC is not equal to SESTDTC of the next element.
+Description: Raise an error when SEENDTC is not equal to SESTDTC of the next element.
 Executability: Fully Executable
 Outcome:
   Message: SEENDTC is not equal to SESTDTC of the next element.
+  Output Variables:
+    - SESTDTC
+    - ETCD
 Rule Type: Record Data
 Scope:
   Classes:
