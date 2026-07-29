@@ -4,7 +4,7 @@
       "dataset": "tr.xpt",
       "domain": "TR",
       "execution_status": "success",
-      "execution_message": "TRLAT is present.",
+      "execution_message": "TRLAT must not be present.",
       "number_errors": 1,
       "errors": [
         {
@@ -14,7 +14,7 @@
           "value": {
             "TRLAT": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

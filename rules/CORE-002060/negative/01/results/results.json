@@ -1,0 +1,35 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVAL is not a valid GENC 3-letter country code.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "FCNTRY",
+            "TSVAL": "ATL",
+            "TSVCDREF": "GENC"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "FCNTRY",
+            "TSVAL": "ALA",
+            "TSVCDREF": "GENC"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 # Variable: GEN
 # Condition: Custom domain and variable name is not STUDYID, DOMAIN, USUBJID, POOLID, SPDEVID, VISIT, VISITNUM, VISITDY, ELEMENT, TAETORD, EPOCH.
 # Rule: First 2 characters of the Variable Name = the 2-character domain code
+# verified
 Authorities:
   - Organization: CDISC
     Standards:

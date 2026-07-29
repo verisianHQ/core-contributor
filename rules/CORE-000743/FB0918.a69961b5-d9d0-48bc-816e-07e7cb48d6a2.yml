@@ -1,6 +1,7 @@
-# Variable: IETEST, IETESTCD
+# Variable: IETESTCD AND IETEST
 # Condition:
-# Rule: IETESTCD and IETEST have a one-to-one relationship 
+# Rule: IETESTCD and IETEST do not have a one-to-one relationship
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -52,17 +53,14 @@ Authorities:
 Check:
   all:
     - name: IETEST
-      operator: exists
-    - name: IETESTCD
-      operator: exists
-    - name: IETEST
       operator: is_not_unique_relationship
       value: IETESTCD
 Core:
   Id: CORE-000743
   Status: Published
   Version: '1'
-Description: IETESTCD and IETEST should have a one-to-one relationship.
+Description: Raise an error when IETESTCD and IETEST do not have a one-to-one
+  relationship.
 Executability: Fully Executable
 Outcome:
   Message: IETESTCD and IETEST do not have a one-to-one relationship.
