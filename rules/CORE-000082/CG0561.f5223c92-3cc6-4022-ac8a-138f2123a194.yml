@@ -1,6 +1,7 @@
 # Variable: PESTRESC
 # Condition: PEORRES =  null
 # Rule: PESTRESC = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -40,10 +41,10 @@ Core:
   Id: CORE-000082
   Status: Published
   Version: '1'
-Description: Verify that PESTRESC is null when PEORRES is null
+Description: Raise an error when PEORRES is null and PESTRESC is not null.
 Executability: Fully Executable
 Outcome:
-  Message: PESTRESC value is not missing when PEORRES value is missing
+  Message: PESTRESC must be null when PEORRES is null.
   Output Variables:
     - PEORRES
     - PESTRESC

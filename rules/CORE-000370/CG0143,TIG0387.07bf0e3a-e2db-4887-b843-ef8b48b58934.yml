@@ -104,9 +104,8 @@ Core:
   Id: CORE-000370
   Status: Published
   Version: '1'
-Description: Raise an error when RFICDTC in the DM dataset is not equal to
-  the earliest DSSTDTC value in the DS dataset when DSTERM is equal to 
-  'INFORMED CONSENT OBTAINED'.
+Description: Raise an error when DSTERM indicates INFORMED CONSENT OBTAINED but RFICDTC in the DM dataset is not equal to
+  the earliest DSSTDTC.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
@@ -120,8 +119,7 @@ Operations:
     name: DSSTDTC
     operator: min_date
 Outcome:
-  Message: RFICDTC in the DM dataset is not equal to the earliest DSSTDTC 
-    value in the DS dataset, when DSTERM is equal to 'INFORMED CONSENT OBTAINED'.
+  Message: DSTERM indicates INFORMED CONSENT OBTAINED but RFICDTC in the DM dataset is not equal to the earliest DSSTDTC.
   Output Variables:
     - DSTERM
     - RFICDTC
