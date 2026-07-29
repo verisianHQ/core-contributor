@@ -144,7 +144,7 @@ Core:
   Id: CORE-000217
   Status: Published
   Version: '1'
-Description: Raise an error when ECDOSE is null, ECOCCUR is not equal to 'N', ECSTAT is null and ECDOSTXT is null.
+Description: Raise an error when ECDOSE is not populated, ECOCCUR is not equal to 'N', ECSTAT is not populated, but ECDOSTXT is also not populated.
 Executability: Fully Executable
 Outcome:
   Message: ECDOSE is not populated, ECOCCUR is not equal to 'N' and ECSTAT is not populated, but ECDOSTXT is also not populated.
