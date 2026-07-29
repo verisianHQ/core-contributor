@@ -53,7 +53,7 @@ Core:
 Description: Raise an error when TSPARMCD is equal to AGEMIN and TSVAL is populated, but TSVAL does not conform to a positive duration in ISO 8601 time period format.
 Executability: Fully Executable
 Outcome:
-  Message: TSVAL must be a positive duration in ISO 8601 time period format when TSPARMCD is equal to AGEMIN.
+  Message: TSVAL must be a positive duration in ISO 8601 time period format when TSPARMCD is equal to 'AGEMIN'.
   Output Variables:
     - TSVAL
     - TSPARMCD
