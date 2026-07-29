@@ -88,10 +88,8 @@ Rule Type: Record Data
 Scope:
   Classes:
     Include:
-      - EVENTS
-      - FINDINGS
-      - INTERVENTIONS
-  Domains:
-    Include:
       - ALL
+  Domains:
+    Exclude:
+      - SUPP--
 Sensitivity: Dataset
