@@ -8,7 +8,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: IG v3.2[7.4][Assumption 3][Further information about the
+              - Cited Guidance: >-
+                  IG v3.2[7.4][Assumption 3][Further information about the
                   parameters is included below in Table 1. TSVAL may have
                   controlled terminology depending on the value of TSPARMCD]|IG
                   v3.2[Appendix C1][If the study population is healthy subjects
@@ -29,7 +30,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: IG v3.3[7.4.2][Assumption 3][Further information about the
+              - Cited Guidance: >-
+                  IG v3.3[7.4.2][Assumption 3][Further information about the
                   parameters is included Appendix C1, Trial Summary Codes. TSVAL
                   may have controlled terminology depending on the value of
                   TSPARMCD. Conditions for including parameters are included in
@@ -68,10 +70,12 @@ Core:
   Id: CORE-000473
   Status: Published
   Version: '1'
-Description: Raise an error when a record exists where TSPARMCD =
-  'HLTSUBJI' and TSVAL = 'Y' but TSVAL is not empty or does
-  not equal 'HEALTHY SUBJECTS' where TSPARMCD = 'TDIGRP' 
+Description: Raise an error when a record exists where TSPARMCD is equal to
+  'HLTSUBJI' and TSVAL is equal to 'Y' but TSVAL is not empty or does
+  not equal 'HEALTHY SUBJECTS' where TSPARMCD is equal to 'TDIGRP'. 
 Executability: Fully Executable
+Grouping_Variables:
+  - TSGRPID
 Operations:
   - filter:
       TSPARMCD: HLTSUBJI
@@ -81,9 +85,9 @@ Operations:
     id: $HLTSUBJI_Y
     operator: record_count
 Outcome:
-  Message: A record exists where TSPARMCD = 'HLTSUBJI' and TSVAL = 'Y' but
-    TSVAL is not empty or does not equal 'HEALTHY SUBJECTS' where 
-    TSPARMCD = 'TDIGRP'.
+  Message: TSVAL must be empty or must equal 'HEALTHY SUBJECTS' where 
+    TSPARMCD is equal to 'TDIGRP' when a record exists where TSPARMCD is 
+    equal to 'HLTSUBJI' and TSVAL is equal to 'Y'.
   Output Variables:
     - TSPARMCD
     - TSVAL
@@ -95,4 +99,4 @@ Scope:
   Domains:
     Include:
       - TS
-Sensitivity: Record
+Sensitivity: Group

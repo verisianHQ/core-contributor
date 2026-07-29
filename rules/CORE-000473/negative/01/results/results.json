@@ -4,7 +4,7 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "A record exists where TSPARMCD = 'HLTSUBJI' and TSVAL = 'Y' but TSVAL is not empty or does not equal 'HEALTHY SUBJECTS' where TSPARMCD = 'TDIGRP'.",
+      "execution_message": "TSVAL must be empty or must equal 'HEALTHY SUBJECTS' where TSPARMCD is equal to 'TDIGRP' when a record exists where TSPARMCD is equal to 'HLTSUBJI' and TSVAL is equal to 'Y'.",
       "number_errors": 1,
       "errors": [
         {
