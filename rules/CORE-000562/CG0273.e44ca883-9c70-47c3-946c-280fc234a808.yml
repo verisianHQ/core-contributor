@@ -67,6 +67,8 @@ Description: Raise an error when a record exists where TSPARMCD =
   'HLTSUBJI' and TSVAL = 'N' but where TSPARMCD = 'TDIGRP' TSVAL is
   not populated
 Executability: Fully Executable
+Grouping_Variables:
+  - TSGRPID
 Operations:
   - filter:
       TSPARMCD: HLTSUBJI
@@ -90,4 +92,4 @@ Scope:
   Domains:
     Include:
       - TS
-Sensitivity: Record
+Sensitivity: Group
