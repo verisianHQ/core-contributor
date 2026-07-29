@@ -46,7 +46,7 @@ Core:
 Description: SUPPDM must not include population flags.
 Executability: Fully Executable
 Outcome:
-  Message: Population flag is present in SUPPDM.
+  Message: Population flag must not be present in SUPPDM.
   Output Variables:
     - QNAM
 Rule Type: Record Data
