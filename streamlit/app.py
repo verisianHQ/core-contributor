@@ -14,43 +14,98 @@ def main():
     util = UtilityFunctions
 
     st.sidebar.title("Filters")
-    standard_filter = st.sidebar.selectbox("Standard", ["All", "SDTMIG", "FDA"])
+    standard_filter = st.sidebar.selectbox("Standard", ["All", "SDTMIG", "FDA", "ADaM"])
 
     if standard_filter == "SDTMIG":
-        filtered_sdtm_rules = data.cg_raw
+        filtered_raw_rules = data.cg_raw
         filtered_cg_data = data.cg_data
-        filtered_fda_data = pd.DataFrame(columns=data.fda_data.columns) 
+        filtered_fda_data = pd.DataFrame()
+        filtered_adam_data = pd.DataFrame()
+        
+        repo_rules = data.sdtm_repo_rules
+        rules_path = data.sdtm_rules_path
+        verified_data = data.sdtm_verified_data
+        test_stats = data.sdtm_test_stats
+        
+        valid_core_ids = set(
+            x.strip() for ids in filtered_raw_rules["CORE-ID"].dropna() 
+            for x in str(ids).split(";") if x.strip() and x.strip() != "/"
+        )
+
     elif standard_filter == "FDA":
-        filtered_sdtm_rules = data.fda_raw
-        filtered_cg_data = pd.DataFrame(columns=data.cg_data.columns)
+        filtered_raw_rules = data.fda_raw
+        filtered_cg_data = pd.DataFrame()
         filtered_fda_data = data.fda_data
+        filtered_adam_data = pd.DataFrame()
+
+        repo_rules = data.sdtm_repo_rules
+        rules_path = data.sdtm_rules_path
+        verified_data = data.sdtm_verified_data
+        test_stats = data.sdtm_test_stats
+        
+        valid_core_ids = set(
+            x.strip() for ids in filtered_raw_rules["CORE-ID"].dropna() 
+            for x in str(ids).split(";") if x.strip() and x.strip() != "/"
+        )
+
+    elif standard_filter == "ADaM":
+        filtered_raw_rules = data.adam_raw
+        filtered_cg_data = pd.DataFrame()
+        filtered_fda_data = pd.DataFrame()
+        filtered_adam_data = data.adam_data
+
+        repo_rules = data.adam_repo_rules
+        rules_path = data.adam_rules_path
+        verified_data = data.adam_verified_data
+        test_stats = data.adam_test_stats
+        
+        valid_core_ids = set(
+            x.strip() for ids in filtered_raw_rules["Rule ID"].dropna() 
+            for x in str(ids).split(";") if x.strip() and x.strip() != "/"
+        )
+
     else:
-        filtered_sdtm_rules = data.sdtm_rules
+        filtered_raw_rules = pd.concat([data.sdtm_rules, data.adam_raw], ignore_index=True)
         filtered_cg_data = data.cg_data
         filtered_fda_data = data.fda_data
+        filtered_adam_data = data.adam_data
 
-    valid_core_ids = set(
-        x.strip() for ids in filtered_sdtm_rules["CORE-ID"].dropna() 
-        for x in str(ids).split(";") if x.strip() and x.strip() != "/"
-    )
+        repo_rules = pd.concat([data.sdtm_repo_rules, data.adam_repo_rules], ignore_index=True)
+        verified_data = {**data.sdtm_verified_data, **data.adam_verified_data}
+        test_stats = pd.concat([data.sdtm_test_stats, data.adam_test_stats], ignore_index=True)
 
-    filtered_repo_rules = data.repo_rules[data.repo_rules["Core-ID"].isin(valid_core_ids)]
+        sdtm_ids = set(
+            x.strip() for ids in data.sdtm_rules["CORE-ID"].dropna() 
+            for x in str(ids).split(";") if x.strip() and x.strip() != "/"
+        )
+        adam_ids = set(
+            x.strip() for ids in data.adam_raw["Rule ID"].dropna() 
+            for x in str(ids).split(";") if x.strip() and x.strip() != "/"
+        )
+        valid_core_ids = sdtm_ids.union(adam_ids)
+
+    filtered_repo_rules = repo_rules[repo_rules["CORE-ID"].isin(valid_core_ids)]
     
     if not filtered_repo_rules.empty:
-        filtered_core_status_data = util.get_yaml_fields(
-            data.rules_path, 
-            filtered_repo_rules, 
-            keys=["Core", "Status"]
-        )
+        if standard_filter == "All":
+            sdtm_filtered = data.sdtm_repo_rules[data.sdtm_repo_rules["CORE-ID"].isin(valid_core_ids)]
+            adam_filtered = data.adam_repo_rules[data.adam_repo_rules["CORE-ID"].isin(valid_core_ids)]
+            
+            sdtm_status = util.get_yaml_fields(data.sdtm_rules_path, sdtm_filtered, keys=["Core", "Status"]) if not sdtm_filtered.empty else pd.Series(dtype=int)
+            adam_status = util.get_yaml_fields(data.adam_rules_path, adam_filtered, keys=["Core", "Status"]) if not adam_filtered.empty else pd.Series(dtype=int)
+            
+            filtered_core_status_data = sdtm_status.add(adam_status, fill_value=0).astype(int)
+        else:
+            filtered_core_status_data = util.get_yaml_fields(rules_path, filtered_repo_rules, keys=["Core", "Status"])
     else:
         filtered_core_status_data = pd.Series(dtype=int)
 
     filtered_verified_data = {
-        k: v for k, v in data.verified_data.items() if k in valid_core_ids
+        k: v for k, v in verified_data.items() if k in valid_core_ids
     }
 
-    if not data.test_stats.empty:
-        filtered_test_stats = data.test_stats[data.test_stats["Core-ID"].isin(valid_core_ids)]
+    if not test_stats.empty:
+        filtered_test_stats = test_stats[test_stats["CORE-ID"].isin(valid_core_ids)]
     else:
         filtered_test_stats = pd.DataFrame()
 
@@ -59,10 +114,14 @@ def main():
     st.markdown("---")
     
     st.subheader("Rule Status")
-
     col1, col2 = st.columns(2)
     with col1:
-        dsp.sdtm_rule_status_display(filtered_repo_rules, filtered_sdtm_rules)
+        title = (
+            "ADaM Rule Implementation Status" if standard_filter == "ADaM" 
+            else "SDTM/ADaM Rule Implementation Status" if standard_filter == "All" 
+            else "SDTM Rule Implementation Status"
+        )
+        dsp.rule_status_display(filtered_repo_rules, filtered_raw_rules, title=title)
 
     with col2:
         if not filtered_core_status_data.empty:
@@ -78,10 +137,22 @@ def main():
             st.info("No verification data found for this filter.")
 
     with col4:
-        if not filtered_cg_data.empty or not filtered_fda_data.empty:
-            dsp.conformance_rule_completion_display(filtered_cg_data, filtered_fda_data)
+        if standard_filter == "ADaM":
+            if not filtered_adam_data.empty:
+                print(filtered_adam_data)
+                dsp.conformance_rule_completion_display(filtered_adam_data, pd.DataFrame())
+            else:
+                st.info("No Excel data available for Rule ID tracking for this filter.")
+        elif standard_filter == "All":
+            combined_cg_adam = pd.concat(
+                [filtered_cg_data, filtered_adam_data], ignore_index=True
+            ) if not filtered_adam_data.empty else filtered_cg_data
+            dsp.conformance_rule_completion_display(combined_cg_adam, filtered_fda_data)
         else:
-            st.info("No Excel data available for Rule ID tracking for this filter.")
+            if not filtered_cg_data.empty or not filtered_fda_data.empty:
+                dsp.conformance_rule_completion_display(filtered_cg_data, filtered_fda_data)
+            else:
+                st.info("No Excel data available for Rule ID tracking for this filter.")
 
     st.markdown("---")
     st.subheader("Test Execution Health")
