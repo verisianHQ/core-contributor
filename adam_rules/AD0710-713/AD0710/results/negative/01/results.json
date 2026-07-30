@@ -1,4 +1,33 @@
 {
-  "error": "Error executing engine validation.",
-  "exception": "Unsupported column type: <class 'str'>"
+  "datasets": [
+    {
+      "dataset": "bds.csv",
+      "domain": "bds",
+      "execution_status": "success",
+      "execution_message": "A variable with a suffix of RFL has a value that is not Y, N, or null.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 14,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ITTRFL",
+            "variable_value": "X"
+          },
+          "validated": true
+        },
+        {
+          "row": 15,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ITTRFL",
+            "variable_value": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
 }

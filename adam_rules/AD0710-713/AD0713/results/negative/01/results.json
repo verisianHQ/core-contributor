@@ -1,4 +1,33 @@
 {
-  "error": "Error executing engine validation.",
-  "exception": "Unsupported column type: <class 'str'>"
+  "datasets": [
+    {
+      "dataset": "bds.csv",
+      "domain": "bds",
+      "execution_status": "success",
+      "execution_message": "A variable with a suffix of PFN has a value that is not 1, 0, or null.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 23,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ITTPFN",
+            "variable_value": "2"
+          },
+          "validated": true
+        },
+        {
+          "row": 24,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ITTPFN",
+            "variable_value": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
 }

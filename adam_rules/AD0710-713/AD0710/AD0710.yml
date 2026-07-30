@@ -1,4 +1,4 @@
-# Variable: ITTRFL
+# Variable: *RFL
 # Condition: Variable with a suffix of RFL is present
 # Rule: Value is not Y, N, or null
 # verified
@@ -10,63 +10,48 @@ Authorities:
         References:
           - Origin: ADaM Conformance Rules
             Rule Identifier:
-              Id: '204'
+              Id: '710'
               Version: '1'
             Version: '5.0'
             Citations:
               - Document: IG v1.3
-                Section: '3.2'
-                Item: 'Table 3.2.2'
-                Cited Guidance: 
-                  'ADaMIG v1.3, Section 3.2, Table 3.2.2: DM.AGE'
+                Section: '3.1.4'
+                Item: '6'
+                Cited Guidance:
+                  'ADaMIG v1.3, Section 3.1.4, Item 6: For parameter-level and record-level character population flag variables: N = no (not included), Y = yes (included). Null values are allowed.'
+              - Document: ADaMIG-MD v1.0
+                Section: '3.1'
+                Item: '6'
+                Cited Guidance:
+                  'ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis needs by adding SPDEVID as a required key variable and USUBJID as a conditionally required variable. See the BDS class for further details.'
       - Name: ADaMIG
         Version: '1.2'
         References:
           - Origin: ADaM Conformance Rules
             Rule Identifier:
-              Id: '204'
+              Id: '710'
               Version: '1'
             Version: '5.0'
             Citations:
               - Document: IG v1.2
-                Section: '3.2'
-                Item: 'Table 3.2.2'
-                Cited Guidance: 
-                  'ADaMIG v1.2, Section 3.2, Table 3.2.2: DM.AGE'
-      - Name: ADaMIG
-        Version: '1.1'
-        References:
-          - Origin: ADaM Conformance Rules
-            Rule Identifier:
-              Id: '204'
-              Version: '1'
-            Version: '5.0'
-            Citations:
-              - Document: IG v1.1
-                Section: '3.2'
-                Item: 'Table 3.2.2'
-                Cited Guidance: 
-                  'ADaMIG v1.1, Section 3.2, Table 3.2.2: DM.AGE'
-      - Name: ADaMIG
-        Version: '1.0'
-        References:
-          - Origin: ADaM Conformance Rules
-            Rule Identifier:
-              Id: '204'
-              Version: '1'
-            Version: '5.0'
-            Citations:
-              - Document: IG v1.0
-                Section: '3.1'
-                Item: 'Table 3.1.1'
-                Cited Guidance: 
-                  'ADaMIG v1.0, Section 3.1, Table 3.1.1: If the variable is not a copy of DM.AGE, then an additional differently named variable must be added.'
+                Section: '3.1.4'
+                Item: '6'
+                Cited Guidance:
+                  'ADaMIG v1.2, Section 3.1.4, Item 6: For parameter-level and record-level character population flag variables: N = no (not included), Y = yes (included). Null values are allowed.'
 Check:
   all:
     - name: variable_name
       operator: suffix_matches_regex
       suffix: 3
-      value: 'RFL$'
+      value: 'RFL'
+    - name: variable_value
+      operator: not_equal_to
+      value: 'Y'
+      value_is_literal: true
+    - name: variable_value
+      operator: not_equal_to
+      value: 'N'
+      value_is_literal: true
 Core:
   Id: AD0710
   Status: Published

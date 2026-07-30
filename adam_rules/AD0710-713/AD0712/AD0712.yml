@@ -1,51 +1,74 @@
+# Variable: *RFN
+# Condition: Variable with a suffix of RFN is present
+# Rule: Value is not 1, 0, or null
+# verified
 Authorities:
-  - Organization: ''
+  - Organization: CDISC
     Standards:
-      - Name: ''
+      - Name: ADaMIG
+        Version: '1.3'
         References:
-          - Citations:
-              - Cited Guidance: ''
-                Document: ''
-                Item: ''
-                Section: ''
-            Criteria:
-              Logical Expression:
-                Condition: ''
-                Rule: ''
-              Plain Language Expression: ''
-              Type: ''
-            Origin: ''
-            Release Notes: ''
+          - Origin: ADaM Conformance Rules
             Rule Identifier:
-              Id: ''
-              Version: ''
-            Validator Rule Message: ''
-            Version: ''
-        Version: ''
+              Id: '712'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.3
+                Section: '3.1.4'
+                Item: '6'
+                Cited Guidance:
+                  'ADaMIG v1.3, Section 3.1.4, Item 6: For parameter-level and record-level character population flag variables: 0 = no (not included), 1 = yes (included). Null values are allowed.'
+              - Document: ADaMIG-MD v1.0
+                Section: '3.1'
+                Item: '6'
+                Cited Guidance:
+                  'ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis needs by adding SPDEVID as a required key variable and USUBJID as a conditionally required variable. See the BDS class for further details.'
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '712'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.2
+                Section: '3.1.4'
+                Item: '6'
+                Cited Guidance:
+                  'ADaMIG v1.2, Section 3.1.4, Item 6: For parameter-level and record-level character population flag variables: 0 = no (not included), 1 = yes (included). Null values are allowed.'
 Check:
   all:
-    - operator: ''
-      name: ''
-      value: ''
+    - name: variable_name
+      operator: suffix_matches_regex
+      suffix: 3
+      value: 'RFN'
+    - name: variable_value
+      operator: not_equal_to
+      value: '1'
+      value_is_literal: true
+    - name: variable_value
+      operator: not_equal_to
+      value: '0'
+      value_is_literal: true
 Core:
-  Id: ''
-  Status: Draft
+  Id: AD0712
+  Status: Published
   Version: '1'
-Description: ''
+Description: Raise an error when a variable with a suffix of RFN has a value that is not 1, 0, or null.
 Executability: Fully Executable
-Operations:
-  - id: ''
-    operator: ''
 Outcome:
-  Message: ''
+  Message: A variable with a suffix of RFN has a value that is not 1, 0, or null.
   Output Variables:
-    - ''
-Rule Type: ''
+    - variable_name
+    - variable_value
+Rule Type: Value Check with Variable Metadata
 Scope:
   Classes:
     Include:
-      - ALL
+      - BDS
   Domains:
     Include:
-      - ALL
-Sensitivity: ''
+      - BDS
+Sensitivity: Record
