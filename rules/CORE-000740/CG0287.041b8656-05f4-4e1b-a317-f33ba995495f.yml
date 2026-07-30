@@ -40,33 +40,33 @@ Check:
     - name: TSPARMCD
       operator: not_contains_all
       value:
-        - ADDON
-        - AGEMAX
-        - AGEMIN
-        - LENGTH
-        - PLANSUB
-        - RANDOM
-        - SEXPOP
-        - STOPRULE
-        - TBLIND
-        - TCNTRL
-        - TITLE
-        - TPHASE
-        - TTYPE
-        - OBJPRIM
-        - SPONSOR
-        - REGID
-        - OUTMSPRI
-        - FCNTRY
-        - ADAPT
-        - DCUTDTC
-        - DCUTDESC
-        - NARMS
-        - STYPE
-        - SSTDTC
-        - SENDTC
-        - ACTSUB
-        - HLTSUBJI
+        - 'ADDON'
+        - 'AGEMAX'
+        - 'AGEMIN'
+        - 'LENGTH'
+        - 'PLANSUB'
+        - 'RANDOM'
+        - 'SEXPOP'
+        - 'STOPRULE'
+        - 'TBLIND'
+        - 'TCNTRL'
+        - 'TITLE'
+        - 'TPHASE'
+        - 'TTYPE'
+        - 'OBJPRIM'
+        - 'SPONSOR'
+        - 'REGID'
+        - 'OUTMSPRI'
+        - 'FCNTRY'
+        - 'ADAPT'
+        - 'DCUTDTC'
+        - 'DCUTDESC'
+        - 'NARMS'
+        - 'STYPE'
+        - 'SSTDTC'
+        - 'SENDTC'
+        - 'ACTSUB'
+        - 'HLTSUBJI'
 Core:
   Id: CORE-000740
   Status: Published
