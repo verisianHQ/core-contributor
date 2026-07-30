@@ -1,0 +1,47 @@
+# Variable: COUNTRY, COUNTRYL
+# Condition: COUNTRYL is present within BDS
+# Rule: COUNTRY is not present within BDS
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '884'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.3
+                Section: 3.1.1
+                Item: '6'
+                Cited Guidance: 
+                  'ADaMIG v1.3, Section 3.1.1, Item 6: When a secondary variable is included in the dataset, then the primary variable must also be included.'
+Check:
+  all:
+    - name: COUNTRYL
+      operator: exists
+    - name: COUNTRY
+      operator: not_exists
+Core:
+  Id: AD884
+  Status: Published
+  Version: '1'
+Description: Raise an error when the COUNTRYL variable is present within BDS, but the COUNTRY variable is not present.
+Executability: Fully Executable
+Outcome:
+  Message: COUNTRYL is present, but COUNTRY is not present within BDS.
+  Output Variables:
+    - COUNTRYL
+    - COUNTRY
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - BDS
+  Domains:
+    Include:
+      - BDS
+Sensitivity: Dataset

@@ -1,0 +1,47 @@
+# Variable: SUBJTYP, SUBJTYPC
+# Condition: SUBJTYPC is present within BDS
+# Rule: SUBJTYP is not present within BDS
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '809'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.3
+                Section: 3.1.1
+                Item: '6'
+                Cited Guidance: 
+                  'ADaMIG v1.3, Section 3.1.1, Item 6: When a secondary variable is included in the dataset, then the primary variable must also be included.'
+Check:
+  all:
+    - name: SUBJTYPC
+      operator: exists
+    - name: SUBJTYP
+      operator: not_exists
+Core:
+  Id: AD809
+  Status: Published
+  Version: '1'
+Description: Raise an error when the SUBJTYPC variable is present within BDS, but the SUBJTYP variable is not present.
+Executability: Fully Executable
+Outcome:
+  Message: SUBJTYPC is present, but SUBJTYP is not present within BDS.
+  Output Variables:
+    - SUBJTYPC
+    - SUBJTYP
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - BDS
+  Domains:
+    Include:
+      - BDS
+Sensitivity: Dataset
