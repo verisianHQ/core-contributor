@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "bds.csv",
+      "domain": "bds",
+      "execution_status": "success",
+      "execution_message": "SEXN is present, but SEX is not present within BDS.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "SEXN": 1.0,
+            "SEX": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

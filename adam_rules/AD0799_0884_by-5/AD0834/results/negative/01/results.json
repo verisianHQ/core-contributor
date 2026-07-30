@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "bds.csv",
+      "domain": "bds",
+      "execution_status": "success",
+      "execution_message": "DVIDN is present, but DVID is not present within BDS.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "DVIDN": 1001.0,
+            "DVID": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

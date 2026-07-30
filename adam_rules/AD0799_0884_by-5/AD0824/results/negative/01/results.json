@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "bds.csv",
+      "domain": "bds",
+      "execution_status": "success",
+      "execution_message": "SITEIDN is present, but SITEID is not present within BDS.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "SITEIDN": 1000013.0,
+            "SITEID": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

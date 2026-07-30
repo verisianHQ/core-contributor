@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "bds.csv",
+      "domain": "bds",
+      "execution_status": "success",
+      "execution_message": "RACEN is present, but RACE is not present within BDS.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "RACEN": 205432.0,
+            "RACE": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

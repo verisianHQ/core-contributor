@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "bds.csv",
+      "domain": "bds",
+      "execution_status": "success",
+      "execution_message": "SUBJIDN is present, but SUBJID is not present within BDS.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "SUBJIDN": 10000001.0,
+            "SUBJID": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

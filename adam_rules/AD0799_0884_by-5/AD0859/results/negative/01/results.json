@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "bds.csv",
+      "domain": "bds",
+      "execution_status": "success",
+      "execution_message": "ACYCLEC is present, but ACYCLE is not present within BDS.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "ACYCLEC": "A-001002",
+            "ACYCLE": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
