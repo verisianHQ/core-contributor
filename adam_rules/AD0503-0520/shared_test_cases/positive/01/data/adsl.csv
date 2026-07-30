@@ -1,0 +1,5 @@
+STUDYID,USUBJID,SUBJID,SITEID,AGE,TRTSDT,TRTSTM,TRTSDTM,TRTSDTF,TRTSTMF,TRTEDT,TRTETM,TRTEDTM,TRTEDTF,TRTETMF
+Study Identifier,Unique Subject Identifier,Subject Identifier for the Study,Study Site Identifier,Age,Start Date of First Exposure to Treatment,Start Time of First Exposure to Treatment,Start Datetime of First Exposure to Treatment,Start Date of First Exposure Imputation Flag,Start Time of First Exposure Imputation Flag,End Date of Last Exposure to Treatment,End Time of Last Exposure to Treatment,End Datetime of Last Exposure to Treatment,End Date of Last Exposure Imputation Flag,End Time of Last Exposure Imputation Flag
+Char,Char,Char,Char,Num,Char,Char,Char,Char,Char,Char,Char,Char,Char,Char
+12,8,8,8,3,12,12,12,12,12,12,12,12,12,12
+STUDY001,STUDY001-SUBJ0001,SUBJ0001,19,50,2026-01-01,00:00:00,2026-01-01T00:00:00,2026-01-01,00:00:00,2026-01-01,00:00:00,2026-01-01T00:00:00,2026-01-01,00:00:00

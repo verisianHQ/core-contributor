@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "*ETMF does not contain \"End Time Imputation Flag\" in the label",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 15,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "TRTETMF",
+            "variable_label": "nan"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "adpe.csv",
+      "domain": "adpe",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

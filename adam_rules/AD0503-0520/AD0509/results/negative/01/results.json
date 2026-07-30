@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "*SDT does not contain \"Start Date\" in the label",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "TRTSDT",
+            "variable_label": "Day of First Exposure to Treatment"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "adpe.csv",
+      "domain": "adpe",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}
