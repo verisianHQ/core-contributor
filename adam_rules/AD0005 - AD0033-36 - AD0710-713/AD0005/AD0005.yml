@@ -1,0 +1,142 @@
+# Variable: *FL
+# Condition: Variable with a suffix of FL is present
+# Rule: A variable has a value that is not Y, N or null
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '5'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: ADaMIG v1.0
+                Section: '3'
+                Item: 4 (General Flag Variable Conventions)
+                Cited Guidance: 'ADaMIG v1.0, Section 3, Item 4 (General Flag Variable Conventions):
+                  For subject-level character population flag variables: N = no (not included
+                  in the population), Y = yes (included). Null values are not allowed.'
+              - Document: ADaMIG v1.0
+                Section: '3'
+                Item: 9 (General Flag Variable Conventions)
+                Cited Guidance: 'ADaMIG v1.0, Section 3, Item 9 (General Flag Variable Conventions):
+                  For character flags that are not population flags, a scheme of Y/N/null,
+                  or Y/null may be specified. As indicated in Table 3.2.6.1, some common character
+                  flags use the scheme Y/null. Corresponding 1/0/null and 1/null schemes apply
+                  to numeric flags that are not population indicators.'
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '5'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: ADaMIG v1.1
+                Section: 3.1.4
+                Item: '4'
+                Cited Guidance: 'ADaMIG v1.1, Section 3.1.4, Item 4: For subject-level character
+                  population flag variables: N = no (not included in the population), Y =
+                  yes (included). Null values are not allowed.'
+              - Document: ADaMIG v1.1
+                Section: 3.1.4
+                Item: '9'
+                Cited Guidance: 'ADaMIG v1.1, Section 3.1.4, Item 9: For character flags with
+                  variable names that end in FL and that are not population flags, a scheme
+                  of Y/N/null, or Y/null may be specified. As indicated in Table 3.3.4.2,
+                  and Table 3.3.8.1, some common character flags use the scheme Y/null. Corresponding
+                  1/0/null and 1/null schemes apply to numeric flags with variable names that
+                  end in FN and that are not population indicators.'
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '5'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: ADaMIG v1.2
+                Section: 3.1.4
+                Item: '4'
+                Cited Guidance: 'ADaMIG v1.2, Section 3.1.4, Item 4: For subject-level character
+                  population flag variables: N = no (not included in the population), Y =
+                  yes (included). Null values are not allowed.'
+              - Document: ADaMIG v1.2
+                Section: 3.1.4
+                Item: '9'
+                Cited Guidance: 'ADaMIG v1.2, Section 3.1.4, Item 9: For character flags with
+                  variable names that end in FL and that are not population flags, a scheme
+                  of Y/N/null, or Y/null may be specified. As indicated in Tables 3.3.4.3.1
+                  and 3.3.8.1, some common character flags use the scheme Y/null. The choice
+                  of Y/N/null vs Y/null is dependent on analysis needs. Y/N/null should be
+                  used when N and null values need to be analyzed differently. Y/null can
+                  be used when the need is to analyze just the Y values. Corresponding 1/0/null
+                  and 1/null schemes apply to numeric flags with variable names that end in
+                  FN and which are not population indicators.'
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '5'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: ADaMIG v1.3
+                Section: 3.1.4
+                Item: '4'
+                Cited Guidance: 'ADaMIG v1.3, Section 3.1.4, Item 4: For subject-level character
+                  population flag variables: N = no (not included in the population), Y =
+                  yes (included). Null values are not allowed.'
+              - Document: ADaMIG v1.3
+                Section: 3.1.4
+                Item: '9'
+                Cited Guidance: 'ADaMIG v1.3, Section 3.1.4, Item 9: For character flags with
+                  variable names that end in FL and that are not population flags, a scheme
+                  of Y/N/null, or Y/null may be specified. As indicated in Tables 3.3.4.3.1
+                  and 3.3.8.1, some common character flags use the scheme Y/null. The choice
+                  of Y/N/null vs Y/null is dependent on analysis needs. Y/N/null should be
+                  used when N and null values need to be analyzed differently. Y/null can
+                  be used when the need is to analyze just the Y values. Corresponding 1/0/null
+                  and 1/null schemes apply to numeric flags with variable names that end in
+                  FN and which are not population indicators.'
+Check:
+  all:
+    - name: variable_name
+      operator: suffix_matches_regex
+      suffix: 2
+      value: 'FL'
+    - name: variable_value
+      operator: not_equal_to
+      value: 'Y'
+      value_is_literal: true
+    - name: variable_value
+      operator: not_equal_to
+      value: 'N'
+      value_is_literal: true
+Core:
+  Id: AD0005
+  Status: Published
+  Version: '1'
+Description: Raise an error when a variable with a suffix of FL has a value that is not Y, N or null.
+Executability: Fully Executable
+Outcome:
+  Message: A variable with a suffix of RFL has a value that is not Y, N, or null.
+  Output Variables:
+    - variable_name
+    - variable_value
+Rule Type: Value Check with Variable Metadata
+Scope:
+  Classes:
+    Include:
+      - BDS
+  Domains:
+    Include:
+      - BDS
+Sensitivity: Record
