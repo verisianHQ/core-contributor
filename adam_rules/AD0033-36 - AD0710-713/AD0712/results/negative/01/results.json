@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    {
+      "dataset": "bds.csv",
+      "domain": "bds",
+      "execution_status": "success",
+      "execution_message": "A variable with a suffix of RFN has a value that is not 1, 0, or null.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 17,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ITTRFN",
+            "variable_value": "2"
+          },
+          "validated": true
+        },
+        {
+          "row": 18,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ITTRFN",
+            "variable_value": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
