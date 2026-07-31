@@ -76,10 +76,10 @@ Core:
   Id: CORE-000085
   Status: Published
   Version: '1'
-Description: Raise an error when --STTPT is completed and --STRTPT is not completed.
+Description: Raise an error when --STTPT is populated and --STRTPT is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: --STTPT is completed, but --STRTPT is not completed.
+  Message: --STTPT is populated, but --STRTPT is not populated.
   Output Variables:
     - --STTPT
     - --STRTPT
