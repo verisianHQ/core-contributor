@@ -1,0 +1,147 @@
+# Variable: *TMF
+# Condition: Variable with a suffix of TMF is present
+# Rule: Value that is not within Controlled Terminology for TIMEFL
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '40'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: IG v1.0
+        Section: '3'
+        Item: '7 (General Timing Variable Conventions)'
+        Cited Guidance: 'ADaMIG v1.0, Section 3, Item 7 (General Timing Variable Conventions):
+          Variables whose names end in TMF are time imputation flags. *TMF variables
+          represent the level of imputation of the *TM (and *DTM) variable based on
+          the source SDTM DTC variable. *TMF = H if the entire time is imputed. *TMF
+          = M if minutes and seconds are imputed. *TMF = S if only seconds are imputed.
+          *TMF = null if *TM equals the SDTM DTC variable time part equivalent. For
+          a given SDTM DTC variable, if only hours and minutes are ever collected,
+          and seconds are imputed in *DTM as 00, then it is not necessary to set *TMF
+          to "S". However if seconds are generally collected but are missing in a
+          given value of the DTC variable and imputed as 00, or if a collected value
+          of seconds is changed in the creation of *DTM, then the difference is significant
+          and should be qualified in *TMF. If a time was imputed *TMF must be populated
+          and is required. Both *DTF and *TMF may be needed to describe the level
+          of imputation in *DTM if imputation was done.'
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '40'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: IG v1.1
+        Section: '3.1.3'
+        Item: '2'
+        Cited Guidance: 'ADaMIG v1.1, Section 3.1.3, Item 2: As described in Table
+          3.1.5.1, variables whose names end in TMF are time imputation flags. *TMF
+          variables represent the level of imputation of the *TM (and *DTM) variable
+          based on the source SDTM DTC variable. *TMF = H if the entire time is imputed.
+          *TMF = M if minutes and seconds are imputed. *TMF = S if only seconds are
+          imputed. *TMF = null if *TM equals the SDTM DTC variable time part equivalent.
+          For a given SDTM DTC variable, if only hours and minutes are ever collected,
+          and seconds are imputed in *DTM as 00, then it is not necessary to set *TMF
+          to "S". However if seconds are generally collected but are missing in a
+          given value of the DTC variable and imputed as 00, or if a collected value
+          of seconds is changed in the creation of *DTM, then *TMF should be set to
+          "S". If a time was imputed *TMF must be populated and is required. Both
+          *DTF and *TMF may be needed to describe the level of imputation in *DTM
+          if imputation was done.'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '40'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: IG v1.2
+        Section: '3.1.3'
+        Item: '2'
+        Cited Guidance: 'ADaMIG v1.2, Section 3.1.3, Item 2: As described in Table
+          3.1.5.1, variables whose names end in TMF are time imputation flags. *TMF
+          variables represent the level of imputation of the *TM (and *DTM) variable
+          based on the source SDTM dataset DTC variable. *TMF = H if the entire time
+          is imputed. *TMF = M if minutes and seconds are imputed. *TMF = S if only
+          seconds are imputed. *TMF = null if *TM equals the SDTM DTC variable time
+          part equivalent. For a given SDTM DTC variable, if only hours and minutes
+          are ever collected, and seconds are imputed in *DTM as 00, then it is not
+          necessary to set *TMF to "S". However if seconds are generally collected
+          but are missing in a given value of the DTC variable and imputed as 00,
+          or if a collected value of seconds is changed in the creation of *DTM, then
+          *TMF should be set to "S". If a time was imputed *TMF must be populated
+          and is required. Both *DTF and *TMF may be needed to describe the level
+          of imputation in *DTM if imputation was done.'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '40'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: IG v1.3
+        Section: '3.1.3'
+        Item: '2'
+        Cited Guidance: 'ADaMIG v1.3, Section 3.1.3, Item 2: As described in Table
+          3.1.5.1, variables whose names end in TMF are time imputation flags. *TMF
+          variables represent the level of imputation of the *TM (and *DTM) variable
+          based on the source SDTM dataset DTC variable. *TMF = H if the entire time
+          is imputed. *TMF = M if minutes and seconds are imputed. *TMF = S if only
+          seconds are imputed. *TMF = null if *TM equals the SDTM DTC variable time
+          part equivalent. For a given SDTM DTC variable, if only hours and minutes
+          are ever collected, and seconds are imputed in *DTM as 00, then it is not
+          necessary to set *TMF to "S". However if seconds are generally collected
+          but are missing in a given value of the DTC variable and imputed as 00,
+          or if a collected value of seconds is changed in the creation of *DTM, then
+          *TMF should be set to "S". If a time was imputed *TMF must be populated
+          and is required. Both *DTF and *TMF may be needed to describe the level
+          of imputation in *DTM if imputation was done.'
+Check:
+  all:
+    - name: variable_name
+      operator: suffix_matches_regex
+      suffix: 3
+      value: 'TMF'
+    - name: $timefl_codelist
+      operator: does_not_contain
+      value: variable_value
+Core:
+  Id: AD0040
+  Status: Published
+  Version: '1'
+Description: Raise an error when a variable with a suffix of TMF has a value that is not within Controlled Terminology for TIMEFL
+Executability: Fully Executable
+Operations:
+  - id: $timefl_codelist
+    operator: distinct
+    domain: ig_codelists
+    name: value
+    filter:
+      codelist_code: 'C81226'
+Outcome:
+  Message: A variable with a suffix of TMF has a value that is not within Controlled Terminology for TIMEFL
+  Output Variables:
+    - variable_name
+    - variable_value
+Rule Type: Value Check with Variable Metadata
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

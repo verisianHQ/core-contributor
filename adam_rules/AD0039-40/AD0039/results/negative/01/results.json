@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "bds.csv",
+      "domain": "bds",
+      "execution_status": "success",
+      "execution_message": "A variable with a suffix of DTF has a value that is not within Controlled Terminology for DATEFL",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 16,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "STARTDTF",
+            "variable_value": "X"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+# Variable: *DTF
+# Condition: Variable with a suffix of DTF is present
+# Rule: Value that is not within Controlled Terminology for DATEFL
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '39'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.0
+                Section: ''
+                Item: ''
+                Cited Guidance: 'ADaMIG v1.0, Section 3, Item 6 (General Timing Variable Conventions):
+                  Variables whose names end in DTF are date imputation flags. *DTF variables
+                  represent the level of imputation of the *DT variable based on the source
+                  SDTM DTC variable. *DTF = Y if the entire date is imputed. *DTF = M if month
+                  and day are imputed. *DTF = D if only day is imputed. *DTF = null if *DT
+                  equals the SDTM DTC variable date part equivalent. If a date was imputed,
+                  *DTF must be populated and is required. Both *DTF and *TMF may be needed
+                  to describe the level of imputation in *DTM if imputation was done.'
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '39'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.1
+                Section: ''
+                Item: ''
+                Cited Guidance: 'ADaMIG v1.1, Section 3.1.3, Item 1: As described in Table
+                  3.1.5.1, variables whose names end in DTF are date imputation flags. *DTF
+                  variables represent the highest level of imputation of the *DT variable
+                  based on the source SDTM DTC variable. *DTF = Y if the year is imputed.
+                  *DTF = M if year is present and month is imputed. *DTF = D if only day is
+                  imputed. *DTF = null if *DT equals the SDTM DTC variable date part equivalent.
+                  If a date was imputed, *DTF must be populated and is required. Both *DTF
+                  and *TMF may be needed to describe the level of imputation in *DTM if imputation
+                  was done. Note that the list of examples in Table 3.1.3.1 is not exhaustive.'
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '39'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.2
+                Section: ''
+                Item: ''
+                Cited Guidance: 'ADaMIG v1.2, Section 3.1.3, Item 1: As described in Table
+                  3.1.5.1, variables whose names end in DTF are date imputation flags. *DTF
+                  variables represent the highest level of imputation of the *DT variable
+                  based on the source SDTM dataset DTC variable. *DTF = Y if the year is imputed.
+                  *DTF = M if year is present and month is imputed. *DTF = D if only day is
+                  imputed. *DTF = null if *DT equals the SDTM dataset DTC variable date part
+                  equivalent. If a date was imputed, *DTF must be populated and is required.
+                  Both *DTF and *TMF may be needed to describe the level of imputation in
+                  *DTM if imputation was done. Note that the list of examples in Table 3.1.3.1
+                  is not exhaustive.'
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '39'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.3
+                Section: ''
+                Item: ''
+                Cited Guidance: 'ADaMIG v1.3, Section 3.1.3, Item 1: As described in Table
+                  3.1.5.1, variables whose names end in DTF are date imputation flags. *DTF
+                  variables represent the highest level of imputation of the *DT variable
+                  based on the source SDTM dataset DTC variable. *DTF = Y if the year is imputed.
+                  *DTF = M if year is present and month is imputed. *DTF = D if only day is
+                  imputed. *DTF = null if *DT equals the SDTM dataset DTC variable date part
+                  equivalent. If a date was imputed, *DTF must be populated and is required.
+                  Both *DTF and *TMF may be needed to describe the level of imputation in
+                  *DTM if imputation was done. Note that the list of examples in Table 3.1.3.1
+                  is not exhaustive.'
+Check:
+  all:
+    - name: variable_name
+      operator: suffix_matches_regex
+      suffix: 3
+      value: 'DTF'
+    - name: $datefl_codelist
+      operator: does_not_contain
+      value: variable_value
+Core:
+  Id: AD0039
+  Status: Published
+  Version: '1'
+Description: Raise an error when a variable with a suffix of DTF has a value that is not within Controlled Terminology for DATEFL
+Executability: Fully Executable
+Operations:
+  - id: $datefl_codelist
+    operator: distinct
+    domain: ig_codelists
+    name: value
+    filter:
+      codelist_code: 'C81223'
+Outcome:
+  Message: A variable with a suffix of DTF has a value that is not within Controlled Terminology for DATEFL
+  Output Variables:
+    - variable_name
+    - variable_value
+Rule Type: Value Check with Variable Metadata
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record
