@@ -1,0 +1,47 @@
+# Variable: ACYCLEC
+# Condition: ACYCLE is populated
+# Rule: ACYCLEC must be populated
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADPPKIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '855'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADPPKIG v1.0'
+                Section: '3.2'
+                Item: 'Table 3.2'
+                Cited Guidance: |-
+                  ADPPKIG v1.0, Section 3.2, Table 3.2: Derived from ACYCLE as one-on-one unique match. The character versions of the primary/character variables can be assigned from its corresponding numeric pair variable.
+Check:
+  all:
+    - name: ACYCLE
+      operator: non_empty
+    - name: ACYCLEC
+      operator: empty
+Core:
+  Id: AD0855
+  Status: Draft
+  Version: '1'
+Description: 'ACYCLEC must be populated when ACYCLE is populated.'
+Executability: Fully Executable
+Outcome:
+  Message: 'ACYCLEC is not populated when ACYCLE is populated.'
+  Output Variables:
+    - ACYCLEC
+    - ACYCLE
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BDS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

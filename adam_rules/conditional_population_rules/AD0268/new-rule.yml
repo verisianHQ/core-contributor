@@ -1,0 +1,52 @@
+# Variable: ADURU
+# Condition: ADURN is populated
+# Rule: ADURU must be populated
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: OCCDS
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '268'
+              Version: '2'
+            Version: '5.0'
+            Citations:
+              - Document: 'OCCDS v1.0; OCCDS v1.1; ADaMIG-MD v1.0'
+                Section: '3.2.4; 3.2.4; 3.1'
+                Item: 'Table 3.2.4.1; Table 3.2.4.1'
+                Cited Guidance: |-
+                  OCCDS v1.0, Section 3.2.4, Table 3.2.4.1: CDISC Notes for ADURU state: "Conditional on whether ADURN is included and units are not included in the label of ADURN".
+                  
+                  OCCDS v1.1, Section 3.2.4, Table 3.2.4.1: CDISC Notes for ADURU state: "Conditional on whether ADURN is included".
+                  
+                  ADaMIG-MD v1.0, Section 3.1: The MDOCCDS supports analysis needs by adding SPDEVID as a required identifier and allowing USUBJID be a conditionally required variable. See the OCCDS class for further details.
+Check:
+  all:
+    - name: ADURN
+      operator: non_empty
+    - name: ADURU
+      operator: empty
+Core:
+  Id: AD0268
+  Status: Draft
+  Version: '1'
+Description: 'ADURU must be populated when ADURN is populated.'
+Executability: Fully Executable
+Outcome:
+  Message: 'ADURU is not populated when ADURN is populated.'
+  Output Variables:
+    - ADURU
+    - ADURN
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - OCCDS
+      - MDOCCDS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

@@ -1,0 +1,53 @@
+# Variable: TRTPN
+# Condition: TRTP is populated
+# Rule: TRTPN must be populated
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '458'
+              Version: '2'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADaMIG v1.3; ADaMIG-MD v1.0'
+                Section: '3.3.2; 3.1'
+                Item: 'Table 3.3.2.1'
+                Cited Guidance: |-
+                  ADaMIG v1.3, Section 3.3.2, Table 3.3.2.1: There must be a one-to-one relationship between TRTPN and TRTP within a study.
+                  TRTPN cannot be present unless TRTP is also present. When TRTP and TRTPN are present, then on a given record, either both must be populated or both must be null.
+                  
+                  ADaMIG-MD v1.0, Section 3.1: MDBDS and MDOCCDS support analysis needs by adding SPDEVID as a required key variable and USUBJID as a conditionally required variable. See the BDS and OCCDS class for further details.
+Check:
+  all:
+    - name: TRTP
+      operator: non_empty
+    - name: TRTPN
+      operator: empty
+Core:
+  Id: AD0458
+  Status: Draft
+  Version: '1'
+Description: TRTPN must be populated when TRTP is populated.
+Executability: Fully Executable
+Outcome:
+  Message: TRTPN is not populated when TRTP is populated.
+  Output Variables:
+    - TRTPN
+    - TRTP
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BDS
+      - MDBDS
+      - OCCDS
+      - MDOCCDS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

@@ -1,0 +1,63 @@
+# Variable: STRATAVN
+# Condition: STRATAV is populated
+# Rule: STRATAVN must be populated
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '474'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADaMIG v1.3'
+                Section: '3.2'
+                Item: 'Table 3.2.9'
+                Cited Guidance: |-
+                  ADaMIG v1.3, Section 3.2, Table 3.2.9: There must be a one-to-one relationship between STRATAVN and STRATAV within a study.
+                  STRATAVN cannot be present unless STRATAV is also present. When STRATAV and STRATAVN are present, then on a given record, either both must be populated or both must be null.
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '474'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADaMIG v1.2'
+                Section: '3.2'
+                Item: 'Table 3.2.9'
+                Cited Guidance: |-
+                  ADaMIG v1.2, Section 3.2, Table 3.2.9: There must be a one-to-one relationship between STRATAVN and STRATAV within a study.
+                  STRATAVN cannot be present unless STRATAV is also present. When STRATAV and STRATAVN are present, then on a given record, either both must be populated or both must be null.
+Check:
+  all:
+    - name: STRATAV
+      operator: non_empty
+    - name: STRATAVN
+      operator: empty
+Core:
+  Id: AD0474
+  Status: Draft
+  Version: '1'
+Description: 'STRATAVN must be populated when STRATAV is populated.'
+Executability: Fully Executable
+Outcome:
+  Message: 'STRATAVN is not populated when STRATAV is populated.'
+  Output Variables:
+    - STRATAVN
+    - STRATAV
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - ADSL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

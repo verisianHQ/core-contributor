@@ -1,0 +1,64 @@
+# Variable: STRATwRN
+# Condition: STRATwR is populated
+# Rule: STRATwRN must be populated
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '470'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADaMIG v1.3'
+                Section: '3.2'
+                Item: 'Table 3.2.9'
+                Cited Guidance: |-
+                  ADaMIG v1.3, Section 3.2, Table 3.2.9: There must be a one-to-one relationship between STRATwRN and STRATwR within a study.
+                  STRATwRN cannot be present unless STRATwR is also present. When STRATwR and STRATwRN are present, then on a given record, either both must be populated or both must be null.
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '470'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADaMIG v1.2'
+                Section: '3.2'
+                Item: 'Table 3.2.9'
+                Cited Guidance: |-
+                  ADaMIG v1.2, Section 3.2, Table 3.2.9: There must be a one-to-one relationship between STRATwRN and STRATwR within a study.
+                  STRATwRN cannot be present unless STRATwR is also present. When STRATwR and STRATwRN are present, then on a given record, either both must be populated or both must be null.
+Check:
+  all:
+    - name: '^STRAT(?P<w>[1-9])R$'
+      variable_regex_pattern: true
+      operator: non_empty
+    - name: 'STRAT{{w}}RN'
+      operator: empty
+Core:
+  Id: AD0470
+  Status: Draft
+  Version: '1'
+Description: 'STRATwRN must be populated when STRATwR is populated.'
+Executability: Fully Executable
+Outcome:
+  Message: 'STRATwRN is not populated when STRATwR is populated.'
+  Output Variables:
+    - 'STRAT{{w}}RN'
+    - 'STRAT{{w}}R'
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - ADSL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

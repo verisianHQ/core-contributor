@@ -1,0 +1,53 @@
+# Variable: CRITy
+# Condition: CRITyFL is populated
+# Rule: CRITy must be populated
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '137'
+              Version: '2'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADaMIG v1.3; ADaMIG-MD v1.0'
+                Section: '3.3.4.3; 3.1'
+                Item: 'Table 3.3.4.3.1'
+                Cited Guidance: |-
+                  ADaMIG v1.3, Section 3.3.4.3, Table 3.3.4.3.1: Required if CRITyFL is present. In some cases, the presence of the text string indicates that the criterion is satisfied on this record and CRITyFL is set to Y, while a null value indicates that the criterion is not satisfied or is not evaluable and is accompanied by a null value in CRITyFL. In other cases, the text string identifies the criterion being evaluated and is populated on every row for the parameter, but whether or not the criterion is satisfied is indicated by the value of the variable CRITyFL.
+                  
+                  ADaMIG v1.3, Section 3.3.4.3, Table 3.3.4.3.1: Character flag variable indicating whether the criterion defined in CRITy was met by the data on the record.
+                  
+                  ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis needs by adding SPDEVID as a required key variable and USUBJID as a conditionally required variable. See the BDS class for further details.
+Check:
+  all:
+    - name: '^CRIT(?P<y>[1-9][0-9]?)FL$'
+      variable_regex_pattern: true
+      operator: non_empty
+    - name: 'CRIT{{y}}'
+      operator: empty
+Core:
+  Id: AD0137
+  Status: Draft
+  Version: '1'
+Description: 'CRITy must be populated when CRITyFL is populated.'
+Executability: Fully Executable
+Outcome:
+  Message: 'CRITy is not populated when CRITyFL is populated.'
+  Output Variables:
+    - 'CRIT{{y}}'
+    - 'CRIT{{y}}FL'
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BDS
+      - MDBDS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

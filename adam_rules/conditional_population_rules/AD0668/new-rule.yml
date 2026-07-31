@@ -1,0 +1,89 @@
+# Variable: ACYCLEC
+# Condition: ACYCLE is populated
+# Rule: ACYCLEC must be populated
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADNCA
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '668'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADNCA v1.0'
+                Section: '4.2'
+                Item: 'Table 4.2.1'
+                Cited Guidance: |-
+                  ADNCA v1.0, Section 4.2, Table 4.2.1: There must be a one-to-one mapping between ACYCLE and ACYCLEC.  When ACYCLE and ACYCLEC are present, then on a given record, either both must be populated or both must be null.
+      - Name: ADNCA
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '668'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADNCA v1.0'
+                Section: '4.2'
+                Item: 'Table 4.2.1'
+                Cited Guidance: |-
+                  ADNCA v1.0, Section 4.2, Table 4.2.1: There must be a one-to-one mapping between ACYCLE and ACYCLEC.  When ACYCLE and ACYCLEC are present, then on a given record, either both must be populated or both must be null.
+      - Name: ADNCA
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '668'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADNCA v1.0'
+                Section: '4.2'
+                Item: 'Table 4.2.1'
+                Cited Guidance: |-
+                  ADNCA v1.0, Section 4.2, Table 4.2.1: There must be a one-to-one mapping between ACYCLE and ACYCLEC.  When ACYCLE and ACYCLEC are present, then on a given record, either both must be populated or both must be null.
+      - Name: ADNCA
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '668'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADNCA v1.0'
+                Section: '4.2'
+                Item: 'Table 4.2.1'
+                Cited Guidance: |-
+                  ADNCA v1.0, Section 4.2, Table 4.2.1: There must be a one-to-one mapping between ACYCLE and ACYCLEC.  When ACYCLE and ACYCLEC are present, then on a given record, either both must be populated or both must be null.
+Check:
+  all:
+    - name: ACYCLE
+      operator: non_empty
+    - name: ACYCLEC
+      operator: empty
+Core:
+  Id: AD0668
+  Status: Draft
+  Version: '1'
+Description: 'ACYCLEC must be populated when ACYCLE is populated.'
+Executability: Fully Executable
+Outcome:
+  Message: 'ACYCLEC is not populated when ACYCLE is populated.'
+  Output Variables:
+    - ACYCLEC
+    - ACYCLE
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BDS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

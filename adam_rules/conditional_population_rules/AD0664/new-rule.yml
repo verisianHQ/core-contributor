@@ -1,0 +1,89 @@
+# Variable: COHORTN
+# Condition: COHORT is populated
+# Rule: COHORTN must be populated
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADNCA
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '664'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADNCA v1.0'
+                Section: '4.2'
+                Item: 'Table 4.2.1'
+                Cited Guidance: |-
+                  ADNCA v1.0, Section 4.2, Table 4.2.1: There must be a one-to-one mapping between COHORT and COHORTN.  When COHORT and COHORTN are present, then on a given record, either both must be populated or both must be null.
+      - Name: ADNCA
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '664'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADNCA v1.0'
+                Section: '4.2'
+                Item: 'Table 4.2.1'
+                Cited Guidance: |-
+                  ADNCA v1.0, Section 4.2, Table 4.2.1: There must be a one-to-one mapping between COHORT and COHORTN.  When COHORT and COHORTN are present, then on a given record, either both must be populated or both must be null.
+      - Name: ADNCA
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '664'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADNCA v1.0'
+                Section: '4.2'
+                Item: 'Table 4.2.1'
+                Cited Guidance: |-
+                  ADNCA v1.0, Section 4.2, Table 4.2.1: There must be a one-to-one mapping between COHORT and COHORTN.  When COHORT and COHORTN are present, then on a given record, either both must be populated or both must be null.
+      - Name: ADNCA
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '664'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADNCA v1.0'
+                Section: '4.2'
+                Item: 'Table 4.2.1'
+                Cited Guidance: |-
+                  ADNCA v1.0, Section 4.2, Table 4.2.1: There must be a one-to-one mapping between COHORT and COHORTN.  When COHORT and COHORTN are present, then on a given record, either both must be populated or both must be null.
+Check:
+  all:
+    - name: COHORT
+      operator: non_empty
+    - name: COHORTN
+      operator: empty
+Core:
+  Id: AD0664
+  Status: Draft
+  Version: '1'
+Description: 'COHORTN must be populated when COHORT is populated.'
+Executability: Fully Executable
+Outcome:
+  Message: 'COHORTN is not populated when COHORT is populated.'
+  Output Variables:
+    - COHORTN
+    - COHORT
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BDS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

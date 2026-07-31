@@ -1,0 +1,47 @@
+# Variable: COUNTRY
+# Condition: COUNTRYN is populated
+# Rule: COUNTRY must be populated
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADPPKIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '876'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADPPKIG v1.0'
+                Section: '3.2'
+                Item: 'Table 3.3'
+                Cited Guidance: |-
+                  ADPPKIG v1.0, Section 3.3, Table 3.3: Numeric version of COUNTRY.
+Check:
+  all:
+    - name: COUNTRYN
+      operator: non_empty
+    - name: COUNTRY
+      operator: empty
+Core:
+  Id: AD0876
+  Status: Draft
+  Version: '1'
+Description: 'COUNTRY must be populated when COUNTRYN is populated.'
+Executability: Fully Executable
+Outcome:
+  Message: 'COUNTRY is not populated when COUNTRYN is populated.'
+  Output Variables:
+    - COUNTRY
+    - COUNTRYN
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BDS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

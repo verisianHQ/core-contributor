@@ -1,0 +1,63 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0484, dataset=ADSL",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "advs.csv",
+      "domain": "advs",
+      "execution_status": "success",
+      "execution_message": "PBCHGCyN is not populated when PBCHGCAy is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 28,
+          "SEQ": null,
+          "USUBJID": "STUDY001-028",
+          "value": {
+            "PBCHGC1N": null,
+            "PBCHGCA1": "PBCHGCA1 Value"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "adae.csv",
+      "domain": "adae",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0484, dataset=ADAE",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "adpc.csv",
+      "domain": "adpc",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "addl.csv",
+      "domain": "addl",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0484, dataset=ADDL",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "adppk.csv",
+      "domain": "adppk",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}
