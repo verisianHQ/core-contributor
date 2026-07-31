@@ -1,0 +1,52 @@
+# Variable: APERIOD
+# Condition: ASPER is populated
+# Rule: APERIOD must be populated
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '501'
+              Version: '2'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADaMIG v1.3; ADaMIG-MD v1.0'
+                Section: '3.3.3; 3.1'
+                Item: 'Table 3.3.3.1'
+                Cited Guidance: |-
+                  ADaMIG v1.3, Section 3.3.3, Table 3.3.3.1: APERIOD is required if ASPER is present. APERIOD must be populated on all records where ASPER is populated.
+                  
+                  ADaMIG-MD v1.0, Section 3.1: MDBDS and MDOCCDS support analysis needs by adding SPDEVID as a required key variable and USUBJID as a conditionally required variable. See the BDS and OCCDS class for further details.
+Check:
+  all:
+    - name: ASPER
+      operator: non_empty
+    - name: APERIOD
+      operator: empty
+Core:
+  Id: AD0501
+  Status: Draft
+  Version: '1'
+Description: 'APERIOD must be populated when ASPER is populated.'
+Executability: Fully Executable
+Outcome:
+  Message: 'APERIOD is not populated when ASPER is populated.'
+  Output Variables:
+    - APERIOD
+    - ASPER
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BDS
+      - MDBDS
+      - OCCDS
+      - MDOCCDS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

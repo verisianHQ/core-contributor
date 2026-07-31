@@ -1,0 +1,6 @@
+STUDYID,USUBJID,PARAMCD,AVAL,COHORT,COHORTN,TRTA,DOSPCTDF,ACYCLEC,ACYCLE
+Study Identifier,Unique Subject Identifier,Parameter Code,Analysis Value,COHORT Character Value,COHORTN Numeric Value,TRTA Character Value,DOSPCTDF Numeric Value,ACYCLEC Character Value,ACYCLE Numeric Value
+Char,Char,Char,Num,Char,Num,Char,Num,Char,Num
+40,40,40,8,40,8,40,8,40,8
+STUDY001,STUDY001-001,TEST,1,COHORT Value,1,TRTA Value,1,ACYCLEC Value,1
+STUDY001,STUDY001-002,TEST,2,,,,,,

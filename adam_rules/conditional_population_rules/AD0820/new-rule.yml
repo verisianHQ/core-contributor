@@ -1,0 +1,47 @@
+# Variable: SITEIDN
+# Condition: SITEID is populated
+# Rule: SITEIDN must be populated
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADPPKIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '820'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADPPKIG v1.0'
+                Section: '3.2'
+                Item: 'Table 3.2'
+                Cited Guidance: |-
+                  ADPPKIG v1.0, Section 3.2, Table 3.2: Unique numerical representation of SITEID. The numeric versions of the primary/character variables can be assigned from its corresponding character pair variable.
+Check:
+  all:
+    - name: SITEID
+      operator: non_empty
+    - name: SITEIDN
+      operator: empty
+Core:
+  Id: AD0820
+  Status: Draft
+  Version: '1'
+Description: 'SITEIDN must be populated when SITEID is populated.'
+Executability: Fully Executable
+Outcome:
+  Message: 'SITEIDN is not populated when SITEID is populated.'
+  Output Variables:
+    - SITEIDN
+    - SITEID
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BDS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record
