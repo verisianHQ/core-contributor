@@ -68,10 +68,9 @@ Outcome:
   Message: 'A record exists in TS where TSPARMCD = STYPE and TSVAL =
     INTERVENTIONAL but TSVAL for TSPARMCD = TRT is empty.'
   Output Variables:
-    - TSGRPID
     - TSPARMCD
     - TSVAL
-    - $STYPE_INTERVENTIONAL
+    - TSSEQ
 Rule Type: Record Data
 
 Scope:
