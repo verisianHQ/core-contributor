@@ -1,0 +1,83 @@
+# Variable: TRTPGyN
+# Condition: TRTPGyN and TRTPGy are populated
+# Rule: Each TRTPGy value must map to only one TRTPGyN value
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '763'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: 3.3.2
+        Item: Table 3.3.2.1
+        Cited Guidance: 'ADaMIG v1.1, Section 3.3.2, Table 3.3.2.1: TRTPGyN: The numeric code for TRTPGy. One-to-one mapping
+          within a study to TRTPGy.'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '763'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: 3.3.2
+        Item: Table 3.3.2.1
+        Cited Guidance: 'ADaMIG v1.2, Section 3.3.2, Table 3.3.2.1: TRTPGyN:Numeric representation of TRTPGy. There must be
+          a one-to-one relationship between TRTPGyN and TRTPGy within a study. TRTPGyN cannot be present unless TRTPGy is
+          also present. When TRTPGy and TRTPGyN are present, then on a given record, either both must be populated or both
+          must be null.'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '763'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3; ADaMIG-MD v1.0
+        Section: 3.3.2; 3.1
+        Item: Table 3.3.2.1
+        Cited Guidance: 'ADaMIG v1.3, Section 3.3.2, Table 3.3.2.1: TRTPGyN:Numeric representation of TRTPGy. There must be
+          a one-to-one relationship between TRTPGyN and TRTPGy within a study. TRTPGyN cannot be present unless TRTPGy is
+          also present. When TRTPGy and TRTPGyN are present, then on a given record, either both must be populated or both
+          must be null.
+
+
+          ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis needs by adding SPDEVID as a required key variable and
+          USUBJID as a conditionally required variable. See the BDS class for further details.'
+Check:
+  all:
+  - name: ^TRTPG(?P<y>[1-9][0-9]?)N$
+    variable_regex_pattern: true
+    operator: is_inconsistent_across_dataset
+    value: TRTPG{{y}}
+    where_populated: true
+Core:
+  Id: AD0763
+  Status: Draft
+  Version: '1'
+Description: Each TRTPGy value must map to only one TRTPGyN value when both variables are populated.
+Executability: Fully Executable
+Outcome:
+  Message: TRTPGyN has more than one value for a given TRTPGy value when both variables are populated.
+  Output Variables:
+  - TRTPG{{y}}N
+  - TRTPG{{y}}
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BASIC DATA STRUCTURE
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

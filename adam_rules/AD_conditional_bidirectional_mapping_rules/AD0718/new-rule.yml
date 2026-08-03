@@ -1,0 +1,74 @@
+# Variable: TRTxxP
+# Condition: TRTxxP and TRTxxPN are populated
+# Rule: Each TRTxxPN value must map to only one TRTxxP value
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '718'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: '3.2'
+        Item: Table 3.2.4
+        Cited Guidance: 'ADaMIG v1.1, Section 3.2, Table 3.2.4: One-to-one mapping to TRTxxP within a study'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '718'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: '3.2'
+        Item: Table 3.2.4
+        Cited Guidance: 'ADaMIG v1.2, Section 3.2, Table 3.2.4: There must be a one-to-one relationship between TRTxxPN and
+          TRTxxP within a study'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '718'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: '3.2'
+        Item: Table 3.2.4
+        Cited Guidance: 'ADaMIG v1.3, Section 3.2, Table 3.2.4: There must be a one-to-one relationship between TRTxxPN and
+          TRTxxP within a study'
+Check:
+  all:
+  - name: ^TRT(?P<xx>0[1-9]|[1-9][0-9])P$
+    variable_regex_pattern: true
+    operator: is_inconsistent_across_dataset
+    value: TRT{{xx}}PN
+    where_populated: true
+Core:
+  Id: AD0718
+  Status: Draft
+  Version: '1'
+Description: Each TRTxxPN value must map to only one TRTxxP value when both variables are populated.
+Executability: Fully Executable
+Outcome:
+  Message: TRTxxP has more than one value for a given TRTxxPN value when both variables are populated.
+  Output Variables:
+  - TRT{{xx}}P
+  - TRT{{xx}}PN
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - SUBJECT LEVEL ANALYSIS DATASET
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record
