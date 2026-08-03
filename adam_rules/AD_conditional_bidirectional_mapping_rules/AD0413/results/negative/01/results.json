@@ -1,0 +1,57 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0413, dataset=ADSL",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "advs.csv",
+      "domain": "advs",
+      "execution_status": "success",
+      "execution_message": "ANLzzFN has more than one value for a given ANLzzFL value when both variables are populated.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "ANL01FN": 1.0,
+            "ANL01FL": "X"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "STUDY001-002",
+          "value": {
+            "ANL01FN": 2.0,
+            "ANL01FL": "X"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "adae.csv",
+      "domain": "adae",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0413, dataset=ADAE",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "addl.csv",
+      "domain": "addl",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0413, dataset=ADDL",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

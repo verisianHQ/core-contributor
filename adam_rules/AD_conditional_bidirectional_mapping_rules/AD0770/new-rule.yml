@@ -1,0 +1,112 @@
+# Variable: AESEVN
+# Condition: AESEVN and AESEV are populated
+# Rule: Each AESEV value must map to only one AESEVN value
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '770'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1; OCCDS v1.0; OCCDS v1.1
+        Section: 3.1.1; 3.2.8; 3.2.8
+        Item: 6; Table 3.2.8.1; Table 3.2.8.1
+        Cited Guidance: 'ADaMIG v1.1, Section 3.1.1, Item 6: In a pair of corresponding variables (e.g., TRTP and TRTPN),
+          the primary or most commonly used variable does not have the suffix or extension (e.g., N for Numeric or C for Character).
+          The relevant suffix is used only on the name of the secondary member of the variable pair. For example, in the (TRTP,
+          TRTPN) pair, the primary variable, TRTP is character; but it is not named TRTPC. Similarly in the (APERIOD, APERIODC)
+          pair, the primary variable, APERIOD, is numeric; but it is not named APERIODN. When the secondary variable is numeric,
+          it can only be included if the primary variable is also present in the dataset. If both variables of a variable
+          pair are present, there must be a one-to-one mapping between the values of the two variables, as described in ADaMIG
+          v1.1, Section 3.1.1, Item 5.
+
+
+          OCCDS v1.0, Section 3.2.8, Table 3.2.8.1: CDISC Notes for AESEVN state: "Code AE.AESEV to numeric".
+
+
+          OCCDS v1.1, Section 3.2.8, Table 3.2.8.1: CDISC Notes for AESEVN state: "Code AE.AESEV to numeric".'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '770'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2; OCCDS v1.0; OCCDS v1.1
+        Section: 3.1.1; 3.2.8; 3.2.8
+        Item: 6; Table 3.2.8.1; Table 3.2.8.1
+        Cited Guidance: 'ADaMIG v1.2, Section 3.1.1, Item 6: In a pair of corresponding variables (e.g., TRTP and TRTPN),
+          the primary or most commonly used variable does not have the suffix or extension (i.e., N for Numeric or C for Character).
+          The relevant suffix is used only on the name of the secondary member of the variable pair. For example, in the (TRTP,
+          TRTPN) pair, the primary variable, TRTP is character; but it is not named TRTPC. Similarly in the (APERIOD, APERIODC)
+          pair, the primary variable, APERIOD, is numeric; but it is not named APERIODN. When the secondary variable is included
+          in the dataset, then the primary variable must also be included. If both variables of a variable pair are present,
+          there must be a one-to-one relationship between the values of the two variables, as described in Item 5 above.
+
+
+          OCCDS v1.0, Section 3.2.8, Table 3.2.8.1: CDISC Notes for AESEVN state: "Code AE.AESEV to numeric".
+
+
+          OCCDS v1.1, Section 3.2.8, Table 3.2.8.1: CDISC Notes for AESEVN state: "Code AE.AESEV to numeric".'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '770'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3; OCCDS v1.0; OCCDS v1.1; ADaMIG-MD v1.0
+        Section: 3.1.1; 3.2.8; 3.2.8; 3.1
+        Item: 6; Table 3.2.8.1; Table 3.2.8.1
+        Cited Guidance: 'ADaMIG v1.3, Section 3.1.1, Item 6: In a pair of corresponding variables (e.g., TRTP and TRTPN),
+          the primary or most commonly used variable does not have the suffix or extension (i.e., N for Numeric or C for Character).
+          The relevant suffix is used only on the name of the secondary member of the variable pair. For example, in the (TRTP,
+          TRTPN) pair, the primary variable, TRTP is character; but it is not named TRTPC. Similarly in the (APERIOD, APERIODC)
+          pair, the primary variable, APERIOD, is numeric; but it is not named APERIODN. When the secondary variable is included
+          in the dataset, then the primary variable must also be included. If both variables of a variable pair are present,
+          there must be a one-to-one relationship between the values of the two variables, as described in Item 5 above.
+
+
+          OCCDS v1.0, Section 3.2.8, Table 3.2.8.1: CDISC Notes for AESEVN state: "Code AE.AESEV to numeric".
+
+
+          OCCDS v1.1, Section 3.2.8, Table 3.2.8.1: CDISC Notes for AESEVN state: "Code AE.AESEV to numeric".
+
+
+          ADaMIG-MD v1.0, Section 3.1: The MDOCCDS supports analysis needs by adding SPDEVID as a required identifier and
+          allowing USUBJID be a conditionally required variable. See the OCCDS class for further details.'
+Check:
+  all:
+  - name: AESEVN
+    operator: is_inconsistent_across_dataset
+    value: AESEV
+    where_populated: true
+Core:
+  Id: AD0770
+  Status: Draft
+  Version: '1'
+Description: Each AESEV value must map to only one AESEVN value when both variables are populated.
+Executability: Fully Executable
+Outcome:
+  Message: AESEVN has more than one value for a given AESEV value when both variables are populated.
+  Output Variables:
+  - AESEVN
+  - AESEV
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - OCCURRENCE DATA STRUCTURE
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

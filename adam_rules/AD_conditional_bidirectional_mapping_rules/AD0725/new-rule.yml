@@ -1,0 +1,74 @@
+# Variable: APERIODC
+# Condition: APERIODC and APERIOD are populated
+# Rule: Each APERIOD value must map to only one APERIODC value
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '725'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: 3.3.3
+        Item: Table 3.3.3.1
+        Cited Guidance: 'ADaMIG v1.1, Section 3.3.3, Table 3.3.3.1: Text characterizing to which analysis period the record
+          belongs. One-to-one mapping within a dataset to APERIOD.'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '725'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: 3.3.3
+        Item: Table 3.3.3.1
+        Cited Guidance: 'ADaMIG v1.2, Section 3.3.3, Table 3.3.3.1: Text characterizing to which analysis period the record
+          belongs. There must be a one-to-one relationship between APERIODC and APERIOD within a study.'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '725'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: 3.3.3
+        Item: Table 3.3.3.1
+        Cited Guidance: 'ADaMIG v1.3, Section 3.3.3, Table 3.3.3.1: Text characterizing to which analysis period the record
+          belongs. There must be a one-to-one relationship between APERIODC and APERIOD within a study.'
+Check:
+  all:
+  - name: APERIODC
+    operator: is_inconsistent_across_dataset
+    value: APERIOD
+    where_populated: true
+Core:
+  Id: AD0725
+  Status: Draft
+  Version: '1'
+Description: Each APERIOD value must map to only one APERIODC value when both variables are populated.
+Executability: Fully Executable
+Outcome:
+  Message: APERIODC has more than one value for a given APERIOD value when both variables are populated.
+  Output Variables:
+  - APERIODC
+  - APERIOD
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - ALL
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record
