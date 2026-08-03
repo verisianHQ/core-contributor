@@ -79,7 +79,7 @@ Core:
 Description: Raise an error when --STTPT is populated and --STRTPT is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: --STTPT is populated, but --STRTPT is not populated.
+  Message: --STRTPT must be populated when --STTPT is populated.
   Output Variables:
     - --STTPT
     - --STRTPT
