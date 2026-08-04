@@ -4,7 +4,7 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSVAL must be populated when TSPARMCD is equal to 'CURTRT' when a record exists where TSPARMCD is equal to 'ADDON' and TSVAL is equal to 'Y'.",
+      "execution_message": "When TSPARMCD is equal to 'ADDON' and TSVAL is equal to 'Y', a corresponding TSPARMCD is equal to 'CURTRT' record with a populated TSVAL must be present.",
       "number_errors": 2,
       "errors": [
         {

@@ -54,9 +54,9 @@ Core:
   Id: CORE-000532
   Status: Published
   Version: '1'
-Description: Raise an error when a record exists where TSPARMCD is equal to 
-  'ADDON' and TSVAL is equal to 'Y' but TSVAL where TSPARMCD is equal to 
-  'CURTRT' is not populated.
+Description: Raise an error when TSPARMCD is equal to 
+  'ADDON' and TSVAL is equal to 'Y', but no corresponding TSPARMCD is equal
+  to 'CURTRT' record with a populated TSVAL is present.
 Executability: Fully Executable
 Grouping_Variables:
   - TSGRPID
@@ -69,8 +69,9 @@ Operations:
     id: $ADDON_Y
     operator: record_count
 Outcome:
-  Message: TSVAL must be populated when TSPARMCD is equal to 'CURTRT' when a 
-    record exists where TSPARMCD is equal to 'ADDON' and TSVAL is equal to 'Y'.
+  Message: When TSPARMCD is equal to 'ADDON' and TSVAL is equal to 'Y', 
+    a corresponding TSPARMCD is equal to 'CURTRT' record with a populated
+    TSVAL must be present.
   Output Variables:
     - TSGRPID
     - TSPARMCD
