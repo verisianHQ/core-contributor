@@ -148,13 +148,13 @@ Check:
   all:
     - name: variable_label
       operator: not_matches_regex
-      value: ^\s*[A-Z][a-zA-Z]*(?:[-/][A-Z][a-zA-Z]*)*(?:\s+(?:(?:a|an|the|as|and|per|to|but|or|for|in|is|of|on|with|and/or|within|from)|[A-Z][a-zA-Z]*(?:[-/][A-Z][a-zA-Z]*)*))*\s*$
+      value: ^\s*[A-Z][A-Za-z0-9]*(?:[-/][A-Z][A-Za-z0-9]*)*\s*((?:a|an|the|as|and|per|to|but|or|for|in|is|of|on|with|and/or|is|within|from|[A-Z][A-Za-z0-9]*(?:[-/][A-Z][A-Za-z0-9]*)*|\d+)\s*)*$
 Core:
   Id: CORE-000594
   Status: Published
   Version: '1'
 Description: Raise an error when a variable label is not in title case.
-Executability: Fully Executable
+Executability: Partially Executable - Possible Underreporting
 Outcome:
   Message: Variable label must be in title case.
   Output Variables:
