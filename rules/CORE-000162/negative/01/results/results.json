@@ -4,7 +4,7 @@
       "dataset": "ft.xpt",
       "domain": "FT",
       "execution_status": "success",
-      "execution_message": "FTTESTCD is equal to 'MULTIPLE'",
+      "execution_message": "FTTESTCD must not be equal to 'MULTIPLE'.",
       "number_errors": 1,
       "errors": [
         {
@@ -14,7 +14,25 @@
           "value": {
             "FTTESTCD": "MULTIPLE"
           },
-          "validated": false
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBTESTCD must not be equal to 'MULTIPLE'.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "MULTIPLE"
+          },
+          "validated": true
         }
       ]
     }
