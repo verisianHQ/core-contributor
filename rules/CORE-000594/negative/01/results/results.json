@@ -5,7 +5,7 @@
       "domain": "AE",
       "execution_status": "success",
       "execution_message": "Variable label must be in title case.",
-      "number_errors": 4,
+      "number_errors": 5,
       "errors": [
         {
           "row": 1,
@@ -31,6 +31,15 @@
           "USUBJID": "None",
           "value": {
             "variable_label": "unique subject identifier"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_label": "A1ction Taken With Study Treatment"
           },
           "validated": true
         },
