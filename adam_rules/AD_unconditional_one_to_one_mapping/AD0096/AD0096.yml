@@ -1,0 +1,46 @@
+# Variable: TRTA
+# Condition: 
+# Rule: There is more than one value of TRTA for a given value of TRTAN
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '96'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: IG v1.0
+        Section: ''
+        Item: ''
+        Cited Guidance: 'ADaMIG v1.0, Section 3.2.2, Table 3.2.2.1: The numeric code
+          for TRTA. One-to-one map to TRTA.'
+Check:
+  all:
+  - name: TRTA
+    operator: is_inconsistent_across_dataset
+    value: TRTAN
+Core:
+  Id: AD0096
+  Status: Draft
+  Version: '1'
+Description: Each TRTAN value must map to only one TRTA value.
+Executability: Fully Executable
+Outcome:
+  Message: TRTA has more than one value for a given TRTAN value.
+  Output Variables:
+  - TRTA
+  - TRTAN
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BASIC DATA STRUCTURE
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

@@ -1,0 +1,47 @@
+# Variable: TRTxxP where xx is an integer [01-99, zero-padded]
+# Condition: 
+# Rule: There is more than one value of TRTxxP for a given value of TRTxxPN
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '77'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: IG v1.0
+        Section: ''
+        Item: ''
+        Cited Guidance: 'ADaMIG v1.0, Section 3.1, Table 3.1.1: One-to-one map to
+          TRTxxP'
+Check:
+  all:
+  - name: ^TRT(?P<xx>0[1-9]|[1-9][0-9])P$
+    variable_regex_pattern: true
+    operator: is_inconsistent_across_dataset
+    value: TRT{{xx}}PN
+Core:
+  Id: AD0077
+  Status: Draft
+  Version: '1'
+Description: Each TRTxxPN value must map to only one TRTxxP value.
+Executability: Fully Executable
+Outcome:
+  Message: TRTxxP has more than one value for a given TRTxxPN value.
+  Output Variables:
+  - TRT{{xx}}P
+  - TRT{{xx}}PN
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - SUBJECT LEVEL ANALYSIS DATASET
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

@@ -1,0 +1,46 @@
+# Variable: TRTSEQP
+# Condition: 
+# Rule: There is more than one value of TRTSEQP for a given value of TRTSEQPN
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '227'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: IG v1.0
+        Section: ''
+        Item: ''
+        Cited Guidance: 'ADaMIG v1.0, Section 3.1, Table 3.1.1: One-to-one map to
+          TRTSEQP'
+Check:
+  all:
+  - name: TRTSEQP
+    operator: is_inconsistent_across_dataset
+    value: TRTSEQPN
+Core:
+  Id: AD0227
+  Status: Draft
+  Version: '1'
+Description: Each TRTSEQPN value must map to only one TRTSEQP value.
+Executability: Fully Executable
+Outcome:
+  Message: TRTSEQP has more than one value for a given TRTSEQPN value.
+  Output Variables:
+  - TRTSEQP
+  - TRTSEQPN
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - SUBJECT LEVEL ANALYSIS DATASET
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

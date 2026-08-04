@@ -1,0 +1,49 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0291, dataset=ADSL",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "advs.csv",
+      "domain": "advs",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0291, dataset=ADVS",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "adae.csv",
+      "domain": "adae",
+      "execution_status": "success",
+      "execution_message": "RELGRy has more than one value for a given RELGRyN value.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "RELGR1": "A",
+            "RELGR1N": 1.0
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "STUDY001-003",
+          "value": {
+            "RELGR1": "B",
+            "RELGR1N": 1.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

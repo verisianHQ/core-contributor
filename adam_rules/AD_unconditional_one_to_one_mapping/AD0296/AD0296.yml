@@ -1,0 +1,64 @@
+# Variable: ATOXGRN
+# Condition: 
+# Rule: There is more than one value of ATOXGRN for a given value of ATOXGR
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '296'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: IG v1.0
+        Section: ''
+        Item: ''
+        Cited Guidance: 'ADaMIG v1.0, Section 3, Item 9 (General Variable Naming Conventions):
+          In general, if SDTM character variables are converted to numeric variables
+          in ADaM datasets, then they should be named as they are in the SDTM with
+          an "N" suffix added. For example, the numeric version of the DM SEX variable
+          is SEXN in an ADaM dataset, and a numeric version of RACE is RACEN. If necessary
+          to keep within the 8-character variable name length limit, the last character
+          may be removed prior to appending the N. Note that this naming scheme applies
+          only to numeric variables whose values map one-to-one to the values of the
+          equivalent character variables. Note also that this convention does not
+          apply to date/time variables.'
+      - Document: IG v1.0
+        Section: ''
+        Item: ''
+        Cited Guidance: 'OCCDS v1.0, Section 3.2.8, Table 3.2.8.1: CDISC Notes for
+          ATOXGRN state: "Code ATOXGR to numeric".'
+      - Document: IG v1.0
+        Section: ''
+        Item: ''
+        Cited Guidance: 'OCCDS v1.1, Section 3.2.8, Table 3.2.8.1: CDISC Notes for
+          ATOXGRN state: "Code ATOXGR to numeric".'
+Check:
+  all:
+  - name: ATOXGRN
+    operator: is_inconsistent_across_dataset
+    value: ATOXGR
+Core:
+  Id: AD0296
+  Status: Draft
+  Version: '1'
+Description: Each ATOXGR value must map to only one ATOXGRN value.
+Executability: Fully Executable
+Outcome:
+  Message: ATOXGRN has more than one value for a given ATOXGR value.
+  Output Variables:
+  - ATOXGRN
+  - ATOXGR
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - OCCURRENCE DATA STRUCTURE
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

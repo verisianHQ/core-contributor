@@ -1,0 +1,46 @@
+# Variable: TRTP
+# Condition: 
+# Rule: There is more than one value of TRTP for a given value of TRTPN
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '93'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: IG v1.0
+        Section: ''
+        Item: ''
+        Cited Guidance: 'ADaMIG v1.0, Section 3.2.2, Table 3.2.2.1: The numeric code
+          for TRTP. One-to-one map to TRTP.'
+Check:
+  all:
+  - name: TRTP
+    operator: is_inconsistent_across_dataset
+    value: TRTPN
+Core:
+  Id: AD0093
+  Status: Draft
+  Version: '1'
+Description: Each TRTPN value must map to only one TRTP value.
+Executability: Fully Executable
+Outcome:
+  Message: TRTP has more than one value for a given TRTPN value.
+  Output Variables:
+  - TRTP
+  - TRTPN
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BASIC DATA STRUCTURE
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

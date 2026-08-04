@@ -1,0 +1,60 @@
+# Variable: PARAMTYP
+# Condition: 
+# Rule: There is more than one value of PARAMTYP for a given value of PARAMCD
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '123'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: IG v1.0
+        Section: ''
+        Item: ''
+        Cited Guidance: 'ADaMIG v1.0, Section 3.2.4, Table 3.2.4.1: Indicator of whether
+          the parameter is derived as a function of one or more other parameters.'
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '123'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: IG v1.1
+        Section: ''
+        Item: ''
+        Cited Guidance: 'ADaMIG v1.1, Section 3.3.4, Table 3.3.4.1: Indicator of whether
+          the parameter is derived as a function of one or more other parameters.'
+Check:
+  all:
+  - name: PARAMTYP
+    operator: is_inconsistent_across_dataset
+    value: PARAMCD
+Core:
+  Id: AD0123
+  Status: Draft
+  Version: '1'
+Description: Each PARAMCD value must map to only one PARAMTYP value.
+Executability: Fully Executable
+Outcome:
+  Message: PARAMTYP has more than one value for a given PARAMCD value.
+  Output Variables:
+  - PARAMTYP
+  - PARAMCD
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BASIC DATA STRUCTURE
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

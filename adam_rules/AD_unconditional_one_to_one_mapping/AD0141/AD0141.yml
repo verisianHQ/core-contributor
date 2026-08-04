@@ -1,0 +1,46 @@
+# Variable: PARAM
+# Condition: 
+# Rule: There is more than one value of PARAM for a given value of PARAMCD
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '141'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: IG v1.0
+        Section: ''
+        Item: ''
+        Cited Guidance: 'ADaMIG v1.0, Section 3.2.4, Table 3.2.4.1: There must be
+          a one-to-one mapping with PARAM.'
+Check:
+  all:
+  - name: PARAM
+    operator: is_inconsistent_across_dataset
+    value: PARAMCD
+Core:
+  Id: AD0141
+  Status: Draft
+  Version: '1'
+Description: Each PARAMCD value must map to only one PARAM value.
+Executability: Fully Executable
+Outcome:
+  Message: PARAM has more than one value for a given PARAMCD value.
+  Output Variables:
+  - PARAM
+  - PARAMCD
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BASIC DATA STRUCTURE
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

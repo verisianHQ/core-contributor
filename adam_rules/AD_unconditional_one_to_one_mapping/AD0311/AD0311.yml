@@ -1,0 +1,55 @@
+# Variable: SMQzzSCN where zz is an integer [01-99, zero-padded]
+# Condition: 
+# Rule: There is more than one value of SMQzzSCN for a given value of SMQzzSC
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '311'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: IG v1.0
+        Section: ''
+        Item: ''
+        Cited Guidance: 'ADaMIG v1.0, Section 3, Item 9 (General Variable Naming Conventions):
+          In general, if SDTM character variables are converted to numeric variables
+          in ADaM datasets, then they should be named as they are in the SDTM with
+          an "N" suffix added. For example, the numeric version of the DM SEX variable
+          is SEXN in an ADaM dataset, and a numeric version of RACE is RACEN. If necessary
+          to keep within the 8-character variable name length limit, the last character
+          may be removed prior to appending the N. Note that this naming scheme applies
+          only to numeric variables whose values map one-to-one to the values of the
+          equivalent character variables. Note also that this convention does not
+          apply to date/time variables.'
+Check:
+  all:
+  - name: ^SMQ(?P<zz>0[1-9]|[1-9][0-9])SCN$
+    variable_regex_pattern: true
+    operator: is_inconsistent_across_dataset
+    value: SMQ{{zz}}SC
+Core:
+  Id: AD0311
+  Status: Draft
+  Version: '1'
+Description: Each SMQzzSC value must map to only one SMQzzSCN value.
+Executability: Fully Executable
+Outcome:
+  Message: SMQzzSCN has more than one value for a given SMQzzSC value.
+  Output Variables:
+  - SMQ{{zz}}SCN
+  - SMQ{{zz}}SC
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - OCCURRENCE DATA STRUCTURE
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record
