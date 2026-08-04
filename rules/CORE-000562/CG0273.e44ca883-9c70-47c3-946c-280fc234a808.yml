@@ -8,7 +8,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: IG v3.2[7.4][Assumption 3][Further information about the
+              - Cited Guidance:
+                  IG v3.2[7.4][Assumption 3][Further information about the
                   parameters is included below in Table 1. TSVAL may have
                   controlled terminology depending on the value of TSPARMCD]|IG
                   v3.2[Appendix C1][If the study population is healthy subjects
@@ -29,7 +30,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: IG v3.3[7.4.2][Assumption 3][Further information about the
+              - Cited Guidance:
+                  IG v3.3[7.4.2][Assumption 3][Further information about the
                   parameters is included Appendix C1, Trial Summary Codes. TSVAL
                   may have controlled terminology depending on the value of
                   TSPARMCD. Conditions for including parameters are included in
@@ -54,6 +56,7 @@ Check:
     - name: TSPARMCD
       operator: equal_to
       value: TDIGRP
+      value_is_literal: true
     - name: $HLTSUBJI_N
       operator: greater_than_or_equal_to
       value: 1
@@ -63,9 +66,9 @@ Core:
   Id: CORE-000562
   Status: Published
   Version: '1'
-Description: Raise an error when a record exists where TSPARMCD =
-  'HLTSUBJI' and TSVAL = 'N' but where TSPARMCD = 'TDIGRP' TSVAL is
-  not populated
+Description: Raise an error when a record exists where TSPARMCD is equal to
+  'HLTSUBJI' and TSVAL is equal to 'N' but where TSPARMCD is equal to 'TDIGRP',
+  TSVAL is not populated.
 Executability: Fully Executable
 Grouping_Variables:
   - TSGRPID
@@ -78,8 +81,9 @@ Operations:
     id: $HLTSUBJI_N
     operator: record_count
 Outcome:
-  Message: A record exists where TSPARMCD = 'HLTSUBJI' and TSVAL = 'N' but
-    where TSPARMCD = 'TDIGRP' TSVAL is not populated.
+  Message: A record exists where TSPARMCD is equal to 'HLTSUBJI' and TSVAL
+    is equal to 'N' but where TSPARMCD is equal to 'TDIGRP', TSVAL is not
+    populated.
   Output Variables:
     - TSGRPID
     - TSPARMCD
