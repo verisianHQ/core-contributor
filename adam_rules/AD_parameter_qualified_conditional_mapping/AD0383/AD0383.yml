@@ -1,0 +1,76 @@
+# Variable: BTOXGRL
+# Condition: On rows where both BTOXGRL and BTOXGRLN are both populated
+# Rule: Within a parameter, there is more than one value of BTOXGRL for a given value of BTOXGRLN
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '383'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: 3.3.7
+        Item: Table 3.3.7.1
+        Cited Guidance: 'ADaMIG v1.2, Section 3.3.7, Table 3.3.7.1: There must be
+          a one-to-one relationship between BTOXGRLN and BTOXGRL within a parameter.  BTOXGRLN
+          cannot be present unless BTOXGRL is also present. When BTOXGRL and BTOXGRLN
+          are present, then on a given record, either both must be populated or both
+          must be null.'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '383'
+        Version: '2'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: 3.3.7
+        Item: Table 3.3.7.1
+        Cited Guidance: 'ADaMIG v1.3, Section 3.3.7, Table 3.3.7.1: There must be
+          a one-to-one relationship between BTOXGRLN and BTOXGRL within a parameter.  BTOXGRLN
+          cannot be present unless BTOXGRL is also present. When BTOXGRL and BTOXGRLN
+          are present, then on a given record, either both must be populated or both
+          must be null.'
+      - Document: ADaMIG-MD v1.0
+        Section: '3.1'
+        Item: Table 3.3.7.1
+        Cited Guidance: 'ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis
+          needs by adding SPDEVID as a required key variable and USUBJID as a conditionally
+          required variable. See the BDS class for further details.'
+Check:
+  all:
+  - name: BTOXGRL
+    operator: is_inconsistent_across_dataset
+    value:
+    - PARAMCD
+    - BTOXGRLN
+    where_populated: true
+Core:
+  Id: AD0383
+  Status: Draft
+  Version: '1'
+Description: Raise an error when within a parameter, there is more than one value of BTOXGRL for a given value of BTOXGRLN, considering only those rows on which both variables are populated.
+Executability: Fully Executable
+Outcome:
+  Message: BTOXGRL has more than one value for a given BTOXGRLN value within a parameter.
+  Output Variables:
+  - BTOXGRL
+  - PARAMCD
+  - BTOXGRLN
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BASIC DATA STRUCTURE
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

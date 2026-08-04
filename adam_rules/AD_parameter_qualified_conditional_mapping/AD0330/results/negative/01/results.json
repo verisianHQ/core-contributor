@@ -1,0 +1,35 @@
+{
+  "datasets": [
+    {
+      "dataset": "adlb.csv",
+      "domain": "adlb",
+      "execution_status": "success",
+      "execution_message": "BASECAyN has more than one value for a given BASECATy value within a parameter.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "BASECA1N": 1.0,
+            "PARAMCD": "PARAM1",
+            "BASECAT1": "A1"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "STUDY001-002",
+          "value": {
+            "BASECA1N": 2.0,
+            "PARAMCD": "PARAM1",
+            "BASECAT1": "A1"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
