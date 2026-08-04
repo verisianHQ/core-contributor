@@ -56,6 +56,7 @@ Check:
     - name: TSPARMCD
       operator: equal_to
       value: TDIGRP
+      value_is_literal: true
     - name: $HLTSUBJI_Y
       operator: greater_than_or_equal_to
       value: 1
@@ -70,9 +71,10 @@ Core:
   Id: CORE-000473
   Status: Published
   Version: '1'
-Description: Raise an error when a record exists where TSPARMCD is equal to
-  'HLTSUBJI' and TSVAL is equal to 'Y' but TSVAL is not empty or does
-  not equal 'HEALTHY SUBJECTS' where TSPARMCD is equal to 'TDIGRP'. 
+Description: Raise an error when a record exists with TSPARMCD is equal to
+  'HLTSUBJI' and TSVAL is equal to 'Y', but a corresponding TSPARMCD is equal
+  to 'TDIGRP' record with TSVAL not populated or equal to 'HEALTHY SUBJECTS' 
+  does not exist. 
 Executability: Fully Executable
 Grouping_Variables:
   - TSGRPID
@@ -85,10 +87,11 @@ Operations:
     id: $HLTSUBJI_Y
     operator: record_count
 Outcome:
-  Message: TSVAL must be empty or must equal 'HEALTHY SUBJECTS' where 
-    TSPARMCD is equal to 'TDIGRP' when a record exists where TSPARMCD is 
-    equal to 'HLTSUBJI' and TSVAL is equal to 'Y'.
+  Message: When TSPARMCD is equal to 'HLTSUBJI' and TSVAL is equal to 'Y', 
+    a corresponding TSPARMCD is equal to 'TDIGRP' record with TSVAL not 
+    populated or equal to 'HEALTHY SUBJECTS' must be present.
   Output Variables:
+    - TSGRPID
     - TSPARMCD
     - TSVAL
 Rule Type: Record Data
