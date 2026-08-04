@@ -1,0 +1,47 @@
+# Variable: DEVTYGyN
+# Condition: DEVTYGyN and DEVTYGy are populated
+# Rule: Each DEVTYGy value must map to only one DEVTYGyN value
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG-MD
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '678'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG-MD v1.0
+        Section: 3.2.1.2
+        Item: None
+        Cited Guidance: 'ADaMIG-MD v1.0, Section 3.2.1.2: Numeric representation of grouping "y" of the pooled device type
+          group.  There must be a one-to-one relationship between DEVTYGyN and DEVTYGy within a study.'
+Check:
+  all:
+  - name: ^DEVTYG(?P<y>[1-9])N$
+    variable_regex_pattern: true
+    operator: is_inconsistent_across_dataset
+    value: DEVTYG{{y}}
+    where_populated: true
+Core:
+  Id: AD0678
+  Status: Draft
+  Version: '1'
+Description: Each DEVTYGy value must map to only one DEVTYGyN value when both variables are populated.
+Executability: Fully Executable
+Outcome:
+  Message: DEVTYGyN has more than one value for a given DEVTYGy value when both variables are populated.
+  Output Variables:
+  - DEVTYG{{y}}N
+  - DEVTYG{{y}}
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - ADAM OTHER
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record
