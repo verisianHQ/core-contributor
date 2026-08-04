@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "bds.csv",
+      "domain": "bds",
+      "execution_status": "success",
+      "execution_message": "ATOXGRLN is present, but ATOXGRL is not present within BDS or MDBDS.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "ATOXGRLN": 0.0999,
+            "ATOXGRL": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

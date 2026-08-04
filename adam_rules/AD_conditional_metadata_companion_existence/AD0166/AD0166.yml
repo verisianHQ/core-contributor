@@ -1,0 +1,104 @@
+# Variable: ANRIND, BNRIND
+# Condition: BNRIND is present within BDS or MDBDS
+# Rule: ANRIND is not present within BDS or MDBDS
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '166'
+              Version: '2'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.3
+                Section: 3.3.7
+                Item: 'Table 3.3.7.1'
+                Cited Guidance: 
+                  'ADaMIG v1.3, Section 3.3.7, Table 3.3.7.1: ANRIND of the baseline record identified by ABLFL.'
+      - Name: ADaMIG-MD
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '166'
+              Version: '2'
+            Version: '5.0'
+            Citations:
+              - Document: IG-MD v1.0
+                Section: 3.1
+                Cited Guidance: 
+                  'ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis needs by adding SPDEVID as a required key variable and USUBJID as a conditionally required variable. See the BDS class for further details.'
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '166'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.2
+                Section: 3.3.7
+                Item: 'Table 3.3.7.1'
+                Cited Guidance: 
+                  'ADaMIG v1.2, Section 3.3.7, Table 3.3.7.1: ANRIND of the baseline record identified by ABLFL.'
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '166'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.1
+                Section: 3.3.7
+                Item: 'Table 3.3.7.1'
+                Cited Guidance: 
+                  'ADaMIG v1.1, Section 3.3.7, Table 3.3.7.1: ANRIND of the baseline record identified by ABLFL.'
+      - Name: ADaMIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '166'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.0
+                Section: 3.2.5
+                Item: 'Table 3.2.5.4'
+                Cited Guidance: 
+                  'ADaMIG v1.0, Section 3.2.5, Table 3.2.5.4: ANRIND of the baseline record identified by ABLFL.'
+Check:
+  all:
+    - name: BNRIND
+      operator: exists
+    - name: ANRIND
+      operator: not_exists
+Core:
+  Id: AD0166
+  Status: Published
+  Version: '2'
+Description: Raise an error when the BNRIND variable is present within BDS or MDBDS, but the ANRIND variable is not present.
+Executability: Fully Executable
+Outcome:
+  Message: BNRIND is present, but ANRIND is not present within BDS or MDBDS.
+  Output Variables:
+    - BNRIND
+    - ANRIND
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - BDS
+      - MDBDS
+  Domains:
+    Include:
+      - BDS
+      - MDBDS
+Sensitivity: Dataset

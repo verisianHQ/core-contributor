@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "bds.csv",
+      "domain": "bds",
+      "execution_status": "success",
+      "execution_message": "ARELTMU is present, but ARELTM is not present within BDS or MDBDS.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "ARELTMU": "sec",
+            "ARELTM": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

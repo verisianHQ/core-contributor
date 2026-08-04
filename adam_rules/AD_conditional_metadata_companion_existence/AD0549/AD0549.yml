@@ -1,0 +1,76 @@
+# Variable: BTOXGRH, BTOXGRHN
+# Condition: BTOXGRHN is present within BDS or MDBDS
+# Rule: BTOXGRH is not present within BDS or MDBDS
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '549'
+              Version: '2'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.3
+                Section: 3.1.1
+                Item: '6'
+                Cited Guidance: 
+                  'ADaMIG v1.3, Section 3.1.1, Item 6: When a secondary variable is included in the dataset, then the primary variable must also be included.'
+      - Name: ADaMIG-MD
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '549'
+              Version: '2'
+            Version: '5.0'
+            Citations:
+              - Document: IG-MD v1.0
+                Section: 3.1
+                Cited Guidance: 
+                  'ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis needs by adding SPDEVID as a required key variable and USUBJID as a conditionally required variable. See the BDS class for further details.'
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '549'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.2
+                Section: 3.1.1
+                Item: '6'
+                Cited Guidance: 
+                  'ADaMIG v1.2, Section 3.1.1, Item 6: When a secondary variable is included in the dataset, then the primary variable must also be included.'
+Check:
+  all:
+    - name: BTOXGRHN
+      operator: exists
+    - name: BTOXGRH
+      operator: not_exists
+Core:
+  Id: AD0549
+  Status: Published
+  Version: '2'
+Description: Raise an error when the BTOXGRHN variable is present within BDS or MDBDS, but the BTOXGRH variable is not present.
+Executability: Fully Executable
+Outcome:
+  Message: BTOXGRHN is present, but BTOXGRH is not present within BDS or MDBDS.
+  Output Variables:
+    - BTOXGRHN
+    - BTOXGRH
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - BDS
+      - MDBDS
+  Domains:
+    Include:
+      - BDS
+      - MDBDS
+Sensitivity: Dataset
