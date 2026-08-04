@@ -1,0 +1,51 @@
+# Variable: FLGREAS
+# Condition: FLGREAS and FLGREASC are populated
+# Rule: Each FLGREAS value must map to only one FLGREASC value
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADPPKIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '828'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADPPKIG v1.0
+        Section: '3.2'
+        Item: Table 3.2
+        Cited Guidance: 'ADPPKIG v1.0, Section 3.2, Table 3.2: Captures primary reason
+          for identifying the record for data issues, e.g., dose time imputation flags,
+          etc. A sequential number starting with 1 and increments with each unique
+          reason. Examples of reasons for identification of Data Issue can be found
+          in Section 3.4.'
+Check:
+  all:
+  - name: FLGREASC
+    operator: is_inconsistent_across_dataset
+    value: FLGREAS
+    where_populated: true
+Core:
+  Id: AD0828
+  Status: Draft
+  Version: '1'
+Description: Each FLGREAS value must map to only one FLGREASC value when both variables
+  are populated.
+Executability: Fully Executable
+Outcome:
+  Message: FLGREASC has more than one value for a given FLGREAS value when both variables
+    are populated.
+  Output Variables:
+  - FLGREASC
+  - FLGREAS
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BDS
+  Domains:
+    Include:
+    - ADPPK
+Sensitivity: Record

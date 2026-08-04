@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    {
+      "dataset": "adppk.csv",
+      "domain": "adppk",
+      "execution_status": "success",
+      "execution_message": "ALQFN has more than one value for a given ALQFL value when both variables are populated.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "ALQFN": 1.0,
+            "ALQFL": "Y"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "ALQFN": 0.0,
+            "ALQFL": "Y"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

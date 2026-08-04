@@ -1,0 +1,48 @@
+# Variable: SUBJTYPC
+# Condition: SUBJTYPC and SUBJTYP are populated
+# Rule: Each SUBJTYPC value must map to only one SUBJTYP value
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADPPKIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '807'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADPPKIG v1.0
+        Section: '3.2'
+        Item: Table 3.2
+        Cited Guidance: 'ADPPKIG v1.0, Section 3.2, Table 3.2: Unique character representation
+          of SUBJTYP. For first-in-human studies, the value can be "Healthy volunteers".'
+Check:
+  all:
+  - name: SUBJTYP
+    operator: is_inconsistent_across_dataset
+    value: SUBJTYPC
+    where_populated: true
+Core:
+  Id: AD0807
+  Status: Draft
+  Version: '1'
+Description: Each SUBJTYPC value must map to only one SUBJTYP value when both variables
+  are populated.
+Executability: Fully Executable
+Outcome:
+  Message: SUBJTYP has more than one value for a given SUBJTYPC value when both variables
+    are populated.
+  Output Variables:
+  - SUBJTYP
+  - SUBJTYPC
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BDS
+  Domains:
+    Include:
+    - ADPPK
+Sensitivity: Record

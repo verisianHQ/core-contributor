@@ -1,0 +1,50 @@
+# Variable: COHORT
+# Condition: COHORT and COHORTC are populated
+# Rule: Each COHORT value must map to only one COHORTC value
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADPPKIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '863'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADPPKIG v1.0
+        Section: '3.2'
+        Item: Table 3.2
+        Cited Guidance: 'ADPPKIG v1.0, Section 3.2, Table 3.2: Character representation
+          of the COHORT variable. There must be a one-to-one mapping to COHORT. The
+          character versions of the primary/character variables can be assigned from
+          its corresponding numeric pair variable.'
+Check:
+  all:
+  - name: COHORTC
+    operator: is_inconsistent_across_dataset
+    value: COHORT
+    where_populated: true
+Core:
+  Id: AD0863
+  Status: Draft
+  Version: '1'
+Description: Each COHORT value must map to only one COHORTC value when both variables
+  are populated.
+Executability: Fully Executable
+Outcome:
+  Message: COHORTC has more than one value for a given COHORT value when both variables
+    are populated.
+  Output Variables:
+  - COHORTC
+  - COHORT
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BDS
+  Domains:
+    Include:
+    - ADPPK
+Sensitivity: Record

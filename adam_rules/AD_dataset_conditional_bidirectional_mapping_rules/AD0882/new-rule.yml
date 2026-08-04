@@ -1,0 +1,48 @@
+# Variable: COUNTRYL
+# Condition: COUNTRYL and COUNTRY are populated
+# Rule: Each COUNTRYL value must map to only one COUNTRY value
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADPPKIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '882'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADPPKIG v1.0
+        Section: '3.3'
+        Item: Table 3.3
+        Cited Guidance: 'ADPPKIG v1.0, Section 3.3, Table 3.3: Numeric version of
+          COUNTRY.'
+Check:
+  all:
+  - name: COUNTRY
+    operator: is_inconsistent_across_dataset
+    value: COUNTRYL
+    where_populated: true
+Core:
+  Id: AD0882
+  Status: Draft
+  Version: '1'
+Description: Each COUNTRYL value must map to only one COUNTRY value when both variables
+  are populated.
+Executability: Fully Executable
+Outcome:
+  Message: COUNTRY has more than one value for a given COUNTRYL value when both variables
+    are populated.
+  Output Variables:
+  - COUNTRY
+  - COUNTRYL
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BDS
+  Domains:
+    Include:
+    - ADPPK
+Sensitivity: Record
