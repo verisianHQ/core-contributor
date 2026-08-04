@@ -14,9 +14,9 @@ Authorities:
         Version: '1'
       Version: '5.0'
       Citations:
-      - Document: IG v1.0
-        Section: ''
-        Item: ''
+      - Document: ADaMIG v1.0
+        Section: 3.2.2
+        Item: Table 3.2.2.1
         Cited Guidance: 'ADaMIG v1.0, Section 3.2.2, Table 3.2.2.1: TRTPGyN: The numeric
           code for TRTPGy. One-to-one map to TRTPGy.'
 Check:
@@ -29,7 +29,7 @@ Core:
   Id: AD0237
   Status: Draft
   Version: '1'
-Description: Each TRTPGyN value must map to only one TRTPGy value.
+Description: Raise an error when there is more than one value of TRTPGy for a given value of TRTPGyN, where y is a single-digit integer [1-9].
 Executability: Fully Executable
 Outcome:
   Message: TRTPGy has more than one value for a given TRTPGyN value.

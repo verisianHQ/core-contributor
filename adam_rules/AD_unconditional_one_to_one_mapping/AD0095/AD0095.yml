@@ -14,9 +14,9 @@ Authorities:
         Version: '1'
       Version: '5.0'
       Citations:
-      - Document: IG v1.0
-        Section: ''
-        Item: ''
+      - Document: ADaMIG v1.0
+        Section: 3.2.2
+        Item: Table 3.2.2.1
         Cited Guidance: 'ADaMIG v1.0, Section 3.2.2, Table 3.2.2.1: The numeric code
           for TRTA. One-to-one map to TRTA.'
 Check:
@@ -28,7 +28,7 @@ Core:
   Id: AD0095
   Status: Draft
   Version: '1'
-Description: Each TRTA value must map to only one TRTAN value.
+Description: Raise an error when there is more than one value of TRTAN for a given value of TRTA.
 Executability: Fully Executable
 Outcome:
   Message: TRTAN has more than one value for a given TRTA value.

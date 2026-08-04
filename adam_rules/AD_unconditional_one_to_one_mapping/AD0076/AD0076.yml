@@ -14,9 +14,9 @@ Authorities:
         Version: '1'
       Version: '5.0'
       Citations:
-      - Document: IG v1.0
-        Section: ''
-        Item: ''
+      - Document: ADaMIG v1.0
+        Section: '3.1'
+        Item: Table 3.1.1
         Cited Guidance: 'ADaMIG v1.0, Section 3.1, Table 3.1.1: One-to-one map to
           TRTxxP'
 Check:
@@ -29,7 +29,7 @@ Core:
   Id: AD0076
   Status: Draft
   Version: '1'
-Description: Each TRTxxP value must map to only one TRTxxPN value.
+Description: Raise an error when there is more than one value of TRTxxPN for a given value of TRTxxP.
 Executability: Fully Executable
 Outcome:
   Message: TRTxxPN has more than one value for a given TRTxxP value.

@@ -14,9 +14,9 @@ Authorities:
         Version: '1'
       Version: '5.0'
       Citations:
-      - Document: IG v1.0
-        Section: ''
-        Item: ''
+      - Document: ADaMIG v1.0
+        Section: '3'
+        Item: 9 (General Variable Naming Conventions)
         Cited Guidance: 'ADaMIG v1.0, Section 3, Item 9 (General Variable Naming Conventions):
           In general, if SDTM character variables are converted to numeric variables
           in ADaM datasets, then they should be named as they are in the SDTM with
@@ -37,7 +37,7 @@ Core:
   Id: AD0310
   Status: Draft
   Version: '1'
-Description: Each SMQzzSCN value must map to only one SMQzzSC value.
+Description: Raise an error when there is more than one value of SMQzzSC for a given value of SMQzzSCN.
 Executability: Fully Executable
 Outcome:
   Message: SMQzzSC has more than one value for a given SMQzzSCN value.

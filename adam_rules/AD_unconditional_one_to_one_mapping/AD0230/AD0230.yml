@@ -14,9 +14,9 @@ Authorities:
         Version: '1'
       Version: '5.0'
       Citations:
-      - Document: IG v1.0
-        Section: ''
-        Item: ''
+      - Document: ADaMIG v1.0
+        Section: '3.1'
+        Item: Table 3.1.1
         Cited Guidance: 'ADaMIG v1.0, Section 3.1, Table 3.1.1: One-to-one map to
           TRTSEQA'
 Check:
@@ -28,7 +28,7 @@ Core:
   Id: AD0230
   Status: Draft
   Version: '1'
-Description: Each TRTSEQA value must map to only one TRTSEQAN value.
+Description: Raise an error when there is more than one value of TRTSEQAN for a given value of TRTSEQA.
 Executability: Fully Executable
 Outcome:
   Message: TRTSEQAN has more than one value for a given TRTSEQA value.

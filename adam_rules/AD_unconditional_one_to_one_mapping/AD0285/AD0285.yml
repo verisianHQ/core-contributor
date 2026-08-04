@@ -14,9 +14,9 @@ Authorities:
         Version: '1'
       Version: '5.0'
       Citations:
-      - Document: IG v1.0
-        Section: ''
-        Item: ''
+      - Document: ADaMIG v1.0
+        Section: '3'
+        Item: 9 (General Variable Naming Conventions)
         Cited Guidance: 'ADaMIG v1.0, Section 3, Item 9 (General Variable Naming Conventions):
           In general, if SDTM character variables are converted to numeric variables
           in ADaM datasets, then they should be named as they are in the SDTM with
@@ -27,14 +27,14 @@ Authorities:
           only to numeric variables whose values map one-to-one to the values of the
           equivalent character variables. Note also that this convention does not
           apply to date/time variables.'
-      - Document: IG v1.0
-        Section: ''
-        Item: ''
+      - Document: OCCDS v1.0
+        Section: 3.2.8
+        Item: Table 3.2.8.1
         Cited Guidance: 'OCCDS v1.0, Section 3.2.8, Table 3.2.8.1: CDISC Notes for
           SEVGRyN state: "Code SEVGRy to numeric".'
-      - Document: IG v1.0
-        Section: ''
-        Item: ''
+      - Document: OCCDS v1.1
+        Section: 3.2.8
+        Item: Table 3.2.8.1
         Cited Guidance: 'OCCDS v1.1, Section 3.2.8, Table 3.2.8.1: CDISC Notes for
           SEVGRyN state: "Code SEVGRy to numeric".'
 Check:
@@ -47,7 +47,7 @@ Core:
   Id: AD0285
   Status: Draft
   Version: '1'
-Description: Each SEVGRyN value must map to only one SEVGRy value.
+Description: Raise an error when there is more than one value of SEVGRy for a given value of SEVGRyN.
 Executability: Fully Executable
 Outcome:
   Message: SEVGRy has more than one value for a given SEVGRyN value.

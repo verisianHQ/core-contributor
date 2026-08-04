@@ -14,9 +14,9 @@ Authorities:
         Version: '1'
       Version: '5.0'
       Citations:
-      - Document: IG v1.0
-        Section: ''
-        Item: ''
+      - Document: ADaMIG v1.0
+        Section: 3.2.4
+        Item: Table 3.2.4.1
         Cited Guidance: 'ADaMIG v1.0, Section 3.2.4, Table 3.2.4.1: There must be
           a one-to-one mapping with PARAM.'
 Check:
@@ -28,7 +28,7 @@ Core:
   Id: AD0141
   Status: Draft
   Version: '1'
-Description: Each PARAMCD value must map to only one PARAM value.
+Description: Raise an error when there is more than one value of PARAM for a given value of PARAMCD.
 Executability: Fully Executable
 Outcome:
   Message: PARAM has more than one value for a given PARAMCD value.

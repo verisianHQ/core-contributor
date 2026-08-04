@@ -14,9 +14,9 @@ Authorities:
         Version: '1'
       Version: '5.0'
       Citations:
-      - Document: IG v1.0
-        Section: ''
-        Item: ''
+      - Document: ADaMIG v1.0
+        Section: '3.1'
+        Item: Table 3.1.1
         Cited Guidance: 'ADaMIG v1.0, Section 3.1, Table 3.1.1: TRxxPGyN: The numeric
           code for TRxxPGy. One-to-one map to TRxxPGy.'
 Check:
@@ -29,7 +29,7 @@ Core:
   Id: AD0233
   Status: Draft
   Version: '1'
-Description: Each TRxxPGy value must map to only one TRxxPGyN value.
+Description: Raise an error when there is more than one value of TRxxPGyN for a given value of TRxxPGy, where xx is an integer [01-99, zero-padded] and y is a single-digit integer [1-9].
 Executability: Fully Executable
 Outcome:
   Message: TRxxPGyN has more than one value for a given TRxxPGy value.

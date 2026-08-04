@@ -14,9 +14,9 @@ Authorities:
         Version: '1'
       Version: '5.0'
       Citations:
-      - Document: IG v1.0
-        Section: ''
-        Item: ''
+      - Document: ADaMIG v1.0
+        Section: '3.1'
+        Item: Table 3.1.1
         Cited Guidance: 'ADaMIG v1.0, Section 3.1, Table 3.1.1: TRTxxAN: The numeric
           code variable for TRTxxA. One-to-one map to TRTxxA.'
 Check:
@@ -29,7 +29,7 @@ Core:
   Id: AD0242
   Status: Draft
   Version: '1'
-Description: Each TRTxxA value must map to only one TRTxxAN value.
+Description: Raise an error when there is more than one value of TRTxxAN for a given value of TRTxxA, where xx is an integer [01-99, zero-padded].
 Executability: Fully Executable
 Outcome:
   Message: TRTxxAN has more than one value for a given TRTxxA value.

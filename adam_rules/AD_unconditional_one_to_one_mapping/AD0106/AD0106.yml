@@ -14,9 +14,9 @@ Authorities:
         Version: '1'
       Version: '5.0'
       Citations:
-      - Document: IG v1.0
-        Section: ''
-        Item: ''
+      - Document: ADaMIG v1.0
+        Section: 3.2.3
+        Item: Table 3.2.3.1
         Cited Guidance: 'ADaMIG v1.0, Section 3.2.3, Table 3.2.3.1: Text characterizing
           to which period the record belongs. One-to-one map to APERIOD.'
 Check:
@@ -28,7 +28,7 @@ Core:
   Id: AD0106
   Status: Draft
   Version: '1'
-Description: Each APERIODC value must map to only one APERIOD value.
+Description: Raise an error when there is more than one value of APERIOD for a given value of APERIODC.
 Executability: Fully Executable
 Outcome:
   Message: APERIOD has more than one value for a given APERIODC value.

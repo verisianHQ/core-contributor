@@ -14,9 +14,9 @@ Authorities:
         Version: '1'
       Version: '5.0'
       Citations:
-      - Document: IG v1.0
-        Section: ''
-        Item: ''
+      - Document: ADaMIG v1.0
+        Section: 3.2.2
+        Item: Table 3.2.2.1
         Cited Guidance: 'ADaMIG v1.0, Section 3.2.2, Table 3.2.2.1: TRTAGyN: The numeric
           code for TRTAGy. One-to-one map to TRTAGy.'
 Check:
@@ -29,7 +29,7 @@ Core:
   Id: AD0240
   Status: Draft
   Version: '1'
-Description: Each TRTAGyN value must map to only one TRTAGy value.
+Description: Raise an error when there is more than one value of TRTAGy for a given value of TRTAGyN, where y is a single-digit integer [1-9].
 Executability: Fully Executable
 Outcome:
   Message: TRTAGy has more than one value for a given TRTAGyN value.
