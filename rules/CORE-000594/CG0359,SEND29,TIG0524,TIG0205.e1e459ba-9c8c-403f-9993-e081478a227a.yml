@@ -148,7 +148,7 @@ Check:
   all:
     - name: variable_label
       operator: not_matches_regex
-      value: ^\s*[A-Z][a-zA-Z]*(?:[-/][A-Z][a-zA-Z]*)*\s*((?:a|an|the|as|and|per|to|but|or|for|in|is|of|on|with|and/or|is|within|from|[A-Z][a-zA-Z]*(?:[-/][A-Z][a-zA-Z]*)*|\d+)\s*)*$
+      value: ^\s*[A-Z]\S*(?:\s+(?:(?:a|an|the|as|and|per|to|but|or|for|in|is|of|on|with|within|from)|[A-Z]\S*|[^A-Za-z\s]+))*\s*$
 Core:
   Id: CORE-000594
   Status: Published
