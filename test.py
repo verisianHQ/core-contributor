@@ -139,7 +139,7 @@ class ResultReporter:
             print(f"{'-'*54}")
             print(f"{test_type.capitalize()} Test Cases: {len(tests)}")
             for test in tests:
-                symbol = "[PASS]" if test["passed"] else "[FAIL]"
+                symbol = "[SKIP]" if test.get("skipped") else "[PASS]" if test["passed"] else "[FAIL]"
                 print(f"\n  {symbol} Case {test['case_id']} - Results at: {test['results_path']}")
 
                 if verbose:
@@ -451,10 +451,32 @@ class TestRunner:
         except Exception as e:
             return None, {"error": "Error executing engine validation.", "exception": str(e)}
 
+    @staticmethod
+    def _rule_applicable_to_case(rule_id: str, data_path: str) -> bool:
+        """
+        Returns True when single-column CSV file _rules.csv does not exist 
+        in the test case folder (meaning: run against all rules) 
+        or when it exists and it contains the rule_id, 
+        (meaning: run this test case against this rule).
+        Returns False if the _rules.csv file exists but it does not contain the rule_id.
+        """
+        rules_path = Path(data_path) / "_rules.csv"
+        if not rules_path.exists():
+            return True
+
+        with rules_path.open("r", encoding="utf-8-sig") as f:
+            listed_ids = {row[0].strip() for row in csv.reader(f) if row and row[0].strip()}
+
+        short_id = rule_id.split("/")[-1]
+        return not listed_ids or short_id in listed_ids
+
     def evaluate_case(self, rule_id: str, test_type: str, case_info: dict) -> dict:
         case_id = case_info["case_id"]
         is_csv = case_info["format"] == "csv"
         expected = "0 errors" if test_type == "positive" else ">0 errors"
+
+        if not self._rule_applicable_to_case(rule_id, case_info["data_path"]):
+            return {"case_id": case_id, "passed": True, "skipped": True, "total_errors": None, "expected": expected, "results_path": "N/A"}
 
         _, results_data = self.run_validation(rule_id, case_info)
 
