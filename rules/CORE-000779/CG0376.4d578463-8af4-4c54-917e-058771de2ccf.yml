@@ -1,6 +1,7 @@
 # Variable: TDSTOFF
 # Condition: 
 # Rule: TDSTOFF = 0 or positive value in ISO 8601 Duration format
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -46,6 +47,7 @@ Check:
     - name: TDSTOFF
       operator: not_equal_to
       value: 0
+      type_insensitive: true
     - name: TDSTOFF
       operator: not_matches_regex
       value: ^P(?=\d+[YMWD])(\d+Y)?(\d+M)?(\d+W)?(\d+D)?(T(?=\d+[HMS])(\d+H)?(\d+M)?(\d+S)?)?$
