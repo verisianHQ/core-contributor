@@ -52,38 +52,57 @@ Authorities:
             Version: '2.0'
         Version: '3.3'
 Check:
-  all:
-    - name: TSPARMCD
-      operator: equal_to
-      value: TDIGRP
-      value_is_literal: true
-    - name: $HLTSUBJI_N
-      operator: greater_than_or_equal_to
-      value: 1
-    - name: TSVAL
-      operator: empty
+  any:
+    - all:
+        - name: TSPARMCD
+          operator: equal_to
+          value: TDIGRP
+          value_is_literal: true
+        - name: $HLTSUBJI_N
+          operator: greater_than_or_equal_to
+          value: 1
+        - name: TSVAL
+          operator: empty
+    - all:
+        - name: TSPARMCD
+          operator: equal_to
+          value: HLTSUBJI
+          value_is_literal: true
+        - name: TSVAL
+          operator: equal_to
+          value: 'N'
+          value_is_literal: true
+        - name: $TDIGRP_COUNT
+          operator: less_than
+          value: 1
 Core:
   Id: CORE-000562
   Status: Published
   Version: '1'
-Description: Raise an error when a record exists where TSPARMCD is equal to
-  'HLTSUBJI' and TSVAL is equal to 'N' but where TSPARMCD is equal to 'TDIGRP',
-  TSVAL is not populated.
+Description: Raise an error when a record exists with TSPARMCD is equal to
+  'HLTSUBJI' and TSVAL is equal to 'N', but a corresponding TSPARMCD is equal
+  to 'TDIGRP' record with TSVAL populated does not exist.
 Executability: Fully Executable
 Grouping_Variables:
   - TSGRPID
 Operations:
   - filter:
       TSPARMCD: HLTSUBJI
-      TSVAL: N
+      TSVAL: 'N'
     group:
       - TSGRPID
     id: $HLTSUBJI_N
     operator: record_count
+  - filter:
+      TSPARMCD: TDIGRP
+    group:
+      - TSGRPID
+    id: $TDIGRP_COUNT
+    operator: record_count
 Outcome:
-  Message: A record exists where TSPARMCD is equal to 'HLTSUBJI' and TSVAL
-    is equal to 'N' but where TSPARMCD is equal to 'TDIGRP', TSVAL is not
-    populated.
+  Message: When TSPARMCD is equal to 'HLTSUBJI' and TSVAL is equal to 'N',
+    a corresponding TSPARMCD is equal to 'TDIGRP' record with TSVAL populated
+    must be present.
   Output Variables:
     - TSGRPID
     - TSPARMCD

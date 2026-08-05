@@ -4,11 +4,11 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "A record exists where TSPARMCD is equal to 'HLTSUBJI' and TSVAL is equal to 'N' but where TSPARMCD is equal to 'TDIGRP', TSVAL is not populated.",
+      "execution_message": "When TSPARMCD is equal to 'HLTSUBJI' and TSVAL is equal to 'N', a corresponding TSPARMCD is equal to 'TDIGRP' record with TSVAL populated must be present.",
       "number_errors": 2,
       "errors": [
         {
-          "row": 7,
+          "row": 5,
           "SEQ": 2,
           "USUBJID": "None",
           "value": {
@@ -19,7 +19,7 @@
           "validated": true
         },
         {
-          "row": 8,
+          "row": 6,
           "SEQ": 3,
           "USUBJID": "None",
           "value": {
