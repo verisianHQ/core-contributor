@@ -36,6 +36,7 @@ Check:
     - name: TSPARMCD
       operator: equal_to
       value: STOPRULE
+      value_is_literal: true
     - name: TSVAL
       operator: empty
 Core:
