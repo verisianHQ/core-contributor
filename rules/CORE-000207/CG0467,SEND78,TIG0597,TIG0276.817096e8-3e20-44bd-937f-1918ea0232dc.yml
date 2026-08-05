@@ -156,10 +156,10 @@ Core:
   Id: CORE-000207
   Status: Published
   Version: '1'
-Description: Raise an error when --STDTC is present in a Findings general observation class.
+Description: Raise an error when --STDTC is present in a Findings domain.
 Executability: Fully Executable
 Outcome:
-  Message: --STDTC must not be present in a Findings general observation class.
+  Message: --STDTC must not be present in a Findings domain.
   Output Variables:
     - --STDTC
 Rule Type: Record Data
