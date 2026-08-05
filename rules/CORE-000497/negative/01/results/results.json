@@ -4,7 +4,7 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "When TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL', a corresponding TSPARMCD = 'PCLAS' record with TSVAL populated must be present.",
+      "execution_message": "When TSPARMCD is equal to 'STYPE' and TSVAL is equal to 'INTERVENTIONAL', a corresponding TSPARMCD equal to 'PCLAS' record with TSVAL populated must be present.",
       "number_errors": 1,
       "errors": [
         {

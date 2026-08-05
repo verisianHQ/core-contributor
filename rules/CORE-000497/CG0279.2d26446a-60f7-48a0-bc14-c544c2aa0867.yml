@@ -57,7 +57,7 @@ Core:
   Id: CORE-000497
   Status: Published
   Version: '1'
-Description: Raise an error when a record exists with TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL', but a corresponding TSPARMCD = 'PCLAS' 
+Description: Raise an error when a record exists with TSPARMCD is equal to 'STYPE' and TSVAL is equal to 'INTERVENTIONAL', but a corresponding TSPARMCD equal to 'PCLAS' 
   record with TSVAL populated does not exist.
 Executability: Partially Executable - Possible Overreporting
 Operations:
@@ -69,7 +69,7 @@ Operations:
     id: $STYPE_INTERVENTIONAL
     operator: record_count
 Outcome:
-  Message: When TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL', a corresponding TSPARMCD = 'PCLAS' 
+  Message: When TSPARMCD is equal to 'STYPE' and TSVAL is equal to 'INTERVENTIONAL', a corresponding TSPARMCD equal to 'PCLAS' 
     record with TSVAL populated must be present.
   Output Variables:
     - TSGRPID
