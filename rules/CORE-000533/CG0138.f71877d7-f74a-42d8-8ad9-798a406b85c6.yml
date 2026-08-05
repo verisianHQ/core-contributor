@@ -41,7 +41,7 @@ Core:
   Version: '1'
 Description: Raise an error when a SUPP domain other than SUPPDM contains
   population flags.
-Executability: Fully Executable
+Executability: Partially Executable - Possible Overreporting
 Grouping_Variables:
   - QNAM
 Outcome:
