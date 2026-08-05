@@ -1,6 +1,7 @@
 # Variable: IETESTCD
 # Condition: TIVERS not present in dataset
 # Rule: IETESTCD unique in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -13,16 +14,9 @@ Authorities:
               Version: '1'
             Version: '2.0'
             Citations:
-              - Cited Guidance: The number of this version of the Inclusion/Exclusion
-                  criteria. May be omitted if there is only one version.
+              - Cited Guidance: Specification[The number of this version of the Inclusion/Exclusion criteria. May be omitted if there is only one version.]|Assumption 3[Individual criteria do not have versions. If a criterion changes, it should be treated as a new criterion, with a new value for IETESTCD.]
                 Document: IG v3.4
-                Item: Specification
-                Section: 7.4.1
-              - Cited Guidance: Individual criteria do not have versions. If a criterion
-                  changes, it should be treated as a new criterion, with a new value
-                  for IETESTCD.
-                Document: IG v3.4
-                Item: Assumption 3
+                Item: Specification|Assumption 3
                 Section: 7.4.1
       - Name: SDTMIG
         Version: '3.3'
@@ -33,16 +27,9 @@ Authorities:
               Version: '1'
             Version: '2.0'
             Citations:
-              - Cited Guidance: The number of this version of the Inclusion/Exclusion
-                  criteria. May be omitted if there is only one version.
+              - Cited Guidance: Specification[The number of this version of the Inclusion/Exclusion criteria. May be omitted if there is only one version.]|Assumption 3[Individual criteria do not have versions. If a criterion changes, it should be treated as a new criterion, with a new value for IETESTCD.]
                 Document: IG v3.3
-                Item: Specification
-                Section: 7.4.1
-              - Cited Guidance: Individual criteria do not have versions. If a criterion
-                  changes, it should be treated as a new criterion, with a new value
-                  for IETESTCD.
-                Document: IG v3.3
-                Item: Assumption 3
+                Item: Specification|Assumption 3
                 Section: 7.4.1
       - Name: SDTMIG
         Version: '3.2'
@@ -53,16 +40,9 @@ Authorities:
               Version: '1'
             Version: '2.0'
             Citations:
-              - Cited Guidance: The number of this version of the Inclusion/Exclusion
-                  criteria. May be omitted if there is only one version.
+              - Cited Guidance: Specification[The number of this version of the Inclusion/Exclusion criteria. May be omitted if there is only one version.]|Assumption 3[Individual criteria do not have versions. If a criterion changes, it should be treated as a new criterion, with a new value for IETESTCD.]
                 Document: IG v3.2
-                Item: Specification
-                Section: '7.4'
-              - Cited Guidance: Individual criteria do not have versions. If a criterion
-                  changes, it should be treated as a new criterion, with a new value
-                  for IETESTCD.
-                Document: IG v3.2
-                Item: Assumption 3
+                Item: Specification|Assumption 3
                 Section: '7.4'
 Check:
   all:
@@ -75,12 +55,13 @@ Core:
   Id: CORE-000146
   Status: Published
   Version: '1'
-Description: Trigger error when IETESTCD is not unique within dataset
+Description: Raise an error when TIVERS is not present but IETESTCD is not unique within the dataset.
 Executability: Fully Executable
 Outcome:
-  Message: IETESTCD is not unique
+  Message: IETESTCD must be unique within the dataset.
   Output Variables:
     - IETESTCD
+    - TIVERS
 Rule Type: Record Data
 Scope:
   Classes:

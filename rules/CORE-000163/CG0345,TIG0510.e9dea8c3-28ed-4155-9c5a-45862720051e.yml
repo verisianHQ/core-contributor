@@ -1,6 +1,7 @@
 # Variable: --TRT
-# Condition: 
+# Condition:
 # Rule: --TRT ^= 'MULTIPLE'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -83,10 +84,10 @@ Core:
   Id: CORE-000163
   Status: Published
   Version: '1'
-Description: Raise an error when --TRT = 'MULTIPLE'
+Description: Raise an error when --TRT is equal to 'MULTIPLE'.
 Executability: Fully Executable
 Outcome:
-  Message: --TRT is equal to 'MULTIPLE'
+  Message: --TRT must not be equal to 'MULTIPLE'.
   Output Variables:
     - --TRT
 Rule Type: Record Data

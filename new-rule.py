@@ -4,13 +4,17 @@ Script to create a new rule directory with the required structure and template f
 
 import sys
 import shutil
+import re
+import json
+import csv
 from pathlib import Path
 import openpyxl
 
-RULES_DIR = Path("rules")
+SDTM_RULES_DIR = Path("rules")
+ADAM_RULES_DIR = Path("adam_rules")
 PLACEHOLDER_RULE_ID = "NEW-RULE"
 
-def create_excel_file(filepath: Path, is_negative: bool):
+def create_excel_file(filepath: Path, is_negative: bool, is_bundled: bool):
     wb = openpyxl.Workbook()
     wb.remove(wb.active)
 
@@ -25,48 +29,155 @@ def create_excel_file(filepath: Path, is_negative: bool):
 
     if is_negative:
         ws_val = wb.create_sheet("Validation")
-        ws_val.append(["Error group", "Sheet", "Error level", "Row num", "Variable", "Error value"])
-        ws_val.append(["", "", "", "", "", ""])
+        headers = ["Error group", "Sheet", "Error level", "Row num", "Variable", "Error value"]
+        
+        if is_bundled:
+            headers.insert(0, "Rule ID")
+            
+        ws_val.append(headers)
+        ws_val.append([""] * len(headers))
 
     wb.save(filepath)
 
-def create_test_cases(rule_dir: Path, test_type: str, count: int):
+def create_csv_files(case_dir: Path, is_negative: bool, is_bundled: bool):
+    with (case_dir / "_library.csv").open("w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow(["Product", "Version"])
+        writer.writerow(["sdtmig", "3-4"])
+
+    with (case_dir / "_datasets.csv").open("w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow(["Filename", "Label"])
+        writer.writerow(["", ""])
+
+    if is_negative:
+        with (case_dir / "_validation.csv").open("w", newline="", encoding="utf-8") as f:
+            writer = csv.writer(f)
+            headers = ["Error group", "Sheet", "Error level", "Row num", "Variable", "Error value"]
+            
+            if is_bundled:
+                headers.insert(0, "Rule ID")
+                
+            writer.writerow(headers)
+            writer.writerow([""] * len(headers))
+
+def create_test_cases(base_dir: Path, test_type: str, count: int, is_bundled: bool, format_choice: str, file_prefix: str):
     for i in range(1, count + 1):
         case_id = f"{i:02d}"
-        case_dir = rule_dir / test_type / case_id
         
-        data_dir = case_dir / "data"
-        results_dir = case_dir / "results"
+        case_dir = base_dir / test_type / case_id
+        data_dir = case_dir / "data" if not is_bundled else case_dir
         data_dir.mkdir(parents=True, exist_ok=True)
-        results_dir.mkdir(parents=True, exist_ok=True)
         
-        excel_filename = f"{PLACEHOLDER_RULE_ID.lower()}-{test_type}-{case_id}.xlsx"
-        excel_path = data_dir / excel_filename
-        create_excel_file(excel_path, is_negative=(test_type == "negative"))
+        if not is_bundled:
+            res_dir = case_dir / "results"
+            res_dir.mkdir(parents=True, exist_ok=True)
+            with (res_dir / "results.json").open("w") as f:
+                json.dump({}, f)
+            (res_dir / "results.txt").touch()
+        
+        if format_choice == 'csv':
+            create_csv_files(data_dir, is_negative=(test_type == "negative"), is_bundled=is_bundled)
+        else:
+            excel_filename = f"{file_prefix.lower()}-{test_type}-{case_id}.xlsx"
+            excel_path = data_dir / excel_filename
+            create_excel_file(excel_path, is_negative=(test_type == "negative"), is_bundled=is_bundled)
 
 def main():
-    rule_dir = RULES_DIR / PLACEHOLDER_RULE_ID
+    rules_choice = input("Which rules directory would you like to use? (sdtm/adam) ").lower()
+    if rules_choice == "sdtm":
+        RULES_DIR = SDTM_RULES_DIR
+    elif rules_choice == "adam":
+        RULES_DIR = ADAM_RULES_DIR
+    else:
+        print("Invalid choice. Aborting.")
+        sys.exit(1)
 
-    if rule_dir.exists():
-        do_wipe: bool = True if input("Another new rule folder already exists. Would you like to erase it and make a new one? (Y/N) ").lower() == "y" else False
-        if not do_wipe:
-            print("Aborting.")
-            sys.exit(0)
-        shutil.rmtree(rule_dir, ignore_errors=False)
+    is_bundled = input("Is this part of a bundled rule structure sharing test cases? (y/n) ").lower() == 'y'
+    
+    format_choice = ""
+    while format_choice not in ["csv", "xlsx"]:
+        format_choice = input("Would you like test cases in CSV or XLSX format? (csv/xlsx): ").strip().lower()
+        if format_choice not in ["csv", "xlsx"]:
+            print("Invalid format. Please enter 'csv' or 'xlsx'.")
 
-    rule_dir.mkdir(parents=True, exist_ok=True)
+    if is_bundled:
+        bundle_name = input("Enter the bundle folder name (e.g., AD0020-32): ").strip()
+        bundle_dir = RULES_DIR / bundle_name
+        test_cases_dir = bundle_dir / "shared_test_cases"
+        
+        range_input = input("Enter the rule ID range (e.g., AD0020-AD0032): ").strip()
+        
+        match = re.match(r"([A-Za-z]+)(\d+)-([A-Za-z]*)(\d+)", range_input)
+        if not match:
+            print("Invalid range format. Please use format like AD0020-AD0032. Aborting.")
+            sys.exit(1)
+            
+        prefix1, num1, _, num2 = match.groups()
+        pad = len(num1)
+        start_num, end_num = int(num1), int(num2)
+        prefix = prefix1.upper()
+        
+        rule_ids = [f"{prefix}{i:0{pad}d}" for i in range(start_num, end_num + 1)]
+        
+        bundle_dir.mkdir(parents=True, exist_ok=True)
+        test_cases_dir.mkdir(parents=True, exist_ok=True)
+        
+        n_pos = int(input(f"Enter the number of positive test cases for the whole bundle: ") or 0)
+        n_neg = int(input(f"Enter the number of negative test cases for the whole bundle: ") or 0)
 
-    yml_file = rule_dir / f"{PLACEHOLDER_RULE_ID.lower()}.yml"
-    shutil.copy("tests/template-rule.yml", yml_file)
+        if n_pos > 0:
+            create_test_cases(test_cases_dir, "positive", n_pos, True, format_choice, bundle_name)
+        if n_neg > 0:
+            create_test_cases(test_cases_dir, "negative", n_neg, True, format_choice, bundle_name)
 
-    n_pos_cases = int(input("Enter the number of positive test cases to create: "))
-    n_neg_cases = int(input("Enter the number of negative test cases to create: "))
+        for r_id in rule_ids:
+            rule_dir = bundle_dir / r_id
+            if rule_dir.exists():
+                shutil.rmtree(rule_dir, ignore_errors=True)
+            rule_dir.mkdir(parents=True, exist_ok=True)
+            
+            yml_file = rule_dir / f"{r_id}.yml"
+            try:
+                shutil.copy("tests/template-rule.yml", yml_file)
+            except FileNotFoundError:
+                yml_file.touch()
+            
+            for test_type, count in [("positive", n_pos), ("negative", n_neg)]:
+                for i in range(1, count + 1):
+                    case_res_dir = rule_dir / "results" / test_type / f"{i:02d}"
+                    case_res_dir.mkdir(parents=True, exist_ok=True)
+                    with (case_res_dir / "results.json").open("w") as f:
+                        json.dump({}, f)
+                    (case_res_dir / "results.txt").touch()
 
-    if n_pos_cases > 0:
-        create_test_cases(rule_dir, "positive", n_pos_cases)
+    else:
+        rule_dir = RULES_DIR / PLACEHOLDER_RULE_ID
+        if rule_dir.exists():
+            do_wipe = input("Another NEW-RULE folder already exists here. Erase it and make a new one? (y/n) ").lower() == "y"
+            if not do_wipe:
+                print("Aborting.")
+                sys.exit(0)
+            shutil.rmtree(rule_dir, ignore_errors=False)
 
-    if n_neg_cases > 0:
-        create_test_cases(rule_dir, "negative", n_neg_cases)
+        rule_dir.mkdir(parents=True, exist_ok=True)
+
+        yml_file = rule_dir / f"{PLACEHOLDER_RULE_ID.lower()}.yml"
+        try:
+            shutil.copy("tests/template-rule.yml", yml_file)
+        except FileNotFoundError:
+            yml_file.touch()
+            
+        file_prefix = PLACEHOLDER_RULE_ID
+
+        n_pos_cases = int(input("Enter the number of positive test cases to create: "))
+        n_neg_cases = int(input("Enter the number of negative test cases to create: "))
+
+        if n_pos_cases > 0:
+            create_test_cases(rule_dir, "positive", n_pos_cases, False, format_choice, file_prefix)
+
+        if n_neg_cases > 0:
+            create_test_cases(rule_dir, "negative", n_neg_cases, False, format_choice, file_prefix)
 
     print(f"\nSuccess!")
 
