@@ -42,10 +42,10 @@ Core:
   Id: CORE-000467
   Status: Published
   Version: '1'
-Description: Raise an error when TSPARMCD = STOPRULE and TSVAL is not completed.
+Description: Raise an error when TSPARMCD is equal to 'STOPRULE' and TSVAL is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: TSVAL is missing when TSPARMCD = STOPRULE.
+  Message: TSVAL must be populated when TSPARMCD is equal to 'STOPRULE'.
   Output Variables:
     - TSPARMCD
     - TSVAL
