@@ -19,19 +19,6 @@ Authorities:
                 Item: '6'
                 Cited Guidance: 
                   'ADaMIG v1.3, Section 3.1.1, Item 6: When a secondary variable is included in the dataset, then the primary variable must also be included.'
-      - Name: ADaMIG-MD
-        Version: '1.0'
-        References:
-          - Origin: ADaM Conformance Rules
-            Rule Identifier:
-              Id: '549'
-              Version: '2'
-            Version: '5.0'
-            Citations:
-              - Document: IG-MD v1.0
-                Section: 3.1
-                Cited Guidance: 
-                  'ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis needs by adding SPDEVID as a required key variable and USUBJID as a conditionally required variable. See the BDS class for further details.'
       - Name: ADaMIG
         Version: '1.2'
         References:
@@ -46,6 +33,20 @@ Authorities:
                 Item: '6'
                 Cited Guidance: 
                   'ADaMIG v1.2, Section 3.1.1, Item 6: When a secondary variable is included in the dataset, then the primary variable must also be included.'
+      - Name: ADaMIG-MD
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '549'
+              Version: '2'
+            Version: '5.0'
+            Citations:
+              - Document: IG-MD v1.0
+                Section: 3.1
+                Item: '6'
+                Cited Guidance: 
+                  'ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis needs by adding SPDEVID as a required key variable and USUBJID as a conditionally required variable. See the BDS class for further details.'
 Check:
   all:
     - name: BTOXGRHN

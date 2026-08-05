@@ -19,19 +19,6 @@ Authorities:
                 Item: 'Table 3.3.7.1'
                 Cited Guidance: 
                   'ADaMIG v1.3, Section 3.3.7, Table 3.3.7.1: ATOXGR of the baseline record identified by ABLFL.'
-      - Name: ADaMIG-MD
-        Version: '1.0'
-        References:
-          - Origin: ADaM Conformance Rules
-            Rule Identifier:
-              Id: '164'
-              Version: '2'
-            Version: '5.0'
-            Citations:
-              - Document: IG-MD v1.0
-                Section: 3.1
-                Cited Guidance: 
-                  'ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis needs by adding SPDEVID as a required key variable and USUBJID as a conditionally required variable. See the BDS class for further details.'
       - Name: ADaMIG
         Version: '1.2'
         References:
@@ -74,6 +61,20 @@ Authorities:
                 Item: 'Table 3.2.5.4'
                 Cited Guidance: 
                   'ADaMIG v1.0, Section 3.2.5, Table 3.2.5.4: ATOXGR of the baseline record identified by ABLFL.'
+      - Name: ADaMIG-MD
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '164'
+              Version: '2'
+            Version: '5.0'
+            Citations:
+              - Document: IG-MD v1.0
+                Section: 3.1
+                Item: 'Table 3.3.7.1'
+                Cited Guidance: 
+                  'ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis needs by adding SPDEVID as a required key variable and USUBJID as a conditionally required variable. See the BDS class for further details.'
 Check:
   all:
     - name: BTOXGR
