@@ -1,0 +1,98 @@
+# Variable: --REPNUM
+# Condition: REPNUM is in the dataset, and the are multiple records for a subject for a test within the timeframe identified by the timing variables on the record
+# Rule: --REPNUM ^= null and unique per subject per test per the timing variables
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The instance number of a test that is repeated within a given timeframe for the same test. The level of granularity can vary (e.g., within a time point or within a visit).
+                Document: Model v2.0
+                Item: --REPNUM
+                Section: Findings
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0562
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The instance number of a test that is repeated within a given timeframe for the same test. The level of granularity can vary (e.g., within a time point or within a visit). For example, multiple measurements of blood pressure or multiple analyses of a sample.
+                Document: Model v1.7
+                Item: --REPNUM
+                Section: Table 2.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0562
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The instance number of a test that is repeated within a given timeframe for the same test. The level of granularity can vary (e.g., within a time point or within a visit).
+                Document: SDTM v2.1
+                Item: --REPNUM
+                Section: 3.1.3 The Findings Observation Class
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0648
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --REPNUM
+      operator: exists
+    - name: $record_count_per_subject_test_timing
+      operator: greater_than
+      value: 1
+    - any:
+        - name: --REPNUM
+          operator: empty
+        - name: --REPNUM
+          operator: is_not_unique_set
+          regex: ^\d{4}-\d{2}-\d{2}
+          value:
+            - USUBJID
+            - --TESTCD
+            - $TIMING_VARIABLES
+Core:
+  Id: CORE-001034
+  Status: Published
+  Version: '1'
+Description: Raise an error when REPNUM is present and there are multiple records for a subject for a test within the timeframe identified by the timing variables on the record, and --REPNUM is null or not unique per subject per test per timing variables.
+Executability: Fully Executable
+Operations:
+  - id: $TIMING_VARIABLES
+    key_name: role
+    key_value: Timing
+    operator: get_dataset_filtered_variables
+  - group:
+      - USUBJID
+      - --TESTCD
+      - $TIMING_VARIABLES
+    id: $record_count_per_subject_test_timing
+    operator: record_count
+    regex: ^\d{4}-\d{2}-\d{2}
+Outcome:
+  Message: --REPNUM is null or is not unique per subject per test per timing variables.
+  Output Variables:
+    - USUBJID
+    - --TESTCD
+    - --REPNUM
+    - $TIMING_VARIABLES
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH
+Sensitivity: Record
