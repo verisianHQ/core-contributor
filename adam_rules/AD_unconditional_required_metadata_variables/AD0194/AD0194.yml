@@ -1,0 +1,99 @@
+# Variable: PARAM
+# Condition: 
+# Rule: PARAM is not present within BDS
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '194'
+              Version: '2'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.3
+                Section: 3.3.4.1
+                Item: 'Table 3.3.4.1.1'
+                Cited Guidance: 
+                  'ADaMIG v1.3, Section 3.3.4.1, Table 3.3.4.1.1: PARAM has Core=Req and PARAM must be present and populated on every record in a BDS dataset.'
+      - Name: ADaMIG-MD
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '194'
+              Version: '2'
+            Version: '5.0'
+            Citations:
+              - Document: IG-MD v1.0
+                Section: 3.1
+                Cited Guidance: 
+                  'ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis needs by adding SPDEVID as a required key variable and USUBJID as a conditionally required variable. See the BDS class for further details.'
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '194'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.2
+                Section: 3.3.4.1
+                Item: 'Table 3.3.4.1.1'
+                Cited Guidance: 
+                  'ADaMIG v1.2, Section 3.3.4.1, Table 3.3.4.1.1: PARAM has Core=Req and PARAM must be present and populated on every record in a BDS dataset.'
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '194'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.1
+                Section: 3.3.4
+                Item: 'Table 3.3.4.1'
+                Cited Guidance: 
+                  'ADaMIG v1.1, Section 3.3.4, Table 3.3.4.1: PARAM has Core=Req.'
+      - Name: ADaMIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '194'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.0
+                Section: 3.2.4
+                Item: 'Table 3.2.4.1'
+                Cited Guidance: 
+                  'ADaMIG v1.0, Section 3.2.4, Table 3.2.4.1: PARAM has Core=Req.'
+Check:
+  all:
+    - name: PARAM
+      operator: not_exists
+Core:
+  Id: AD0194
+  Status: Published
+  Version: '2'
+Description: Raise an error when the PARAM variable is not present within BDS.
+Executability: Fully Executable
+Outcome:
+  Message: PARAM is not present within BDS.
+  Output Variables:
+    - PARAM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - BDS
+  Domains:
+    Include:
+      - BDS
+Sensitivity: Dataset

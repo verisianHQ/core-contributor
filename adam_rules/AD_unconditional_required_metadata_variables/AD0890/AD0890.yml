@@ -1,0 +1,44 @@
+# Variable: AMT
+# Condition: 
+# Rule: AMT is not present within BDS
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADPPKIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '890'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: ADPPKIG v1.0
+                Section: 3.2
+                Item: 'Table 3.2'
+                Cited Guidance: 
+                  'ADPPKIG v1.0, Section 3.2, Table 3.2: Core Value is required.'
+Check:
+  all:
+    - name: AMT
+      operator: not_exists
+Core:
+  Id: AD0890
+  Status: Published
+  Version: '1'
+Description: Raise an error when the AMT variable is not present within BDS.
+Executability: Fully Executable
+Outcome:
+  Message: AMT is not present within BDS.
+  Output Variables:
+    - AMT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - BDS
+  Domains:
+    Include:
+      - BDS
+Sensitivity: Dataset

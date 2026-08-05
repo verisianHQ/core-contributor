@@ -1,0 +1,44 @@
+# Variable: AFRLT
+# Condition: 
+# Rule: AFRLT is not present within BDS
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADPPKIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '886'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: ADPPKIG v1.0
+                Section: 3.2
+                Item: 'Table 3.2'
+                Cited Guidance: 
+                  'ADPPKIG v1.0, Section 3.2, Table 3.2: Core Value is required.'
+Check:
+  all:
+    - name: AFRLT
+      operator: not_exists
+Core:
+  Id: AD0886
+  Status: Published
+  Version: '1'
+Description: Raise an error when the AFRLT variable is not present within BDS.
+Executability: Fully Executable
+Outcome:
+  Message: AFRLT is not present within BDS.
+  Output Variables:
+    - AFRLT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - BDS
+  Domains:
+    Include:
+      - BDS
+Sensitivity: Dataset
