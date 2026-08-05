@@ -1,0 +1,50 @@
+# Variable: PCHGCATy where y is an integer [1-9, not zero-padded]
+# Condition: Within a given value of PARAMCD
+# Rule: There is more than one value of PCHGCATy for a given value of PCHG
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '226'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.0
+        Section: 3.2.4
+        Item: Table 3.2.4.1
+        Cited Guidance: 'ADaMIG v1.0, Section 3.2.4, Table 3.2.4.1: A categorical
+          representation of PCHG'
+Check:
+  all:
+  - name: ^PCHGCAT(?P<y>[1-9])$
+    variable_regex_pattern: true
+    operator: is_inconsistent_across_dataset
+    value:
+    - PARAMCD
+    - PCHG
+Core:
+  Id: AD0226
+  Status: Draft
+  Version: '1'
+Description: Raise an error when within a given value of PARAMCD, there is more than one value of PCHGCATy for a given value of PCHG and y.
+Executability: Fully Executable
+Outcome:
+  Message: PCHGCATy has more than one value for a given PCHG value within a parameter.
+  Output Variables:
+  - PCHGCAT{{y}}
+  - PARAMCD
+  - PCHG
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BASIC DATA STRUCTURE
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record
