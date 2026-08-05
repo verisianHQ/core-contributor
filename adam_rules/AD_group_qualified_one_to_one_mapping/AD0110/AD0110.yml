@@ -1,0 +1,50 @@
+# Variable: AVISIT
+# Condition: 
+# Rule: Within a given value of PARAMCD, there is more than one value of AVISIT for a given value of AVISITN
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '110'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.0
+        Section: 3.2.3
+        Item: Table 3.2.3.1
+        Cited Guidance: 'ADaMIG v1.0, Section 3.2.3, Table 3.2.3.1: Within a parameter,
+          there is a one-to-one mapping between AVISITN and AVISIT so that AVISITN
+          has the same value for each distinct AVISIT.'
+Check:
+  all:
+  - name: AVISIT
+    operator: is_inconsistent_across_dataset
+    value:
+    - PARAMCD
+    - AVISITN
+Core:
+  Id: AD0110
+  Status: Draft
+  Version: '1'
+Description: Raise an error when within a given value of PARAMCD, there is more than one value of AVISIT for a given value of AVISITN.
+Executability: Fully Executable
+Outcome:
+  Message: AVISIT has more than one value for a given AVISITN value within a parameter.
+  Output Variables:
+  - AVISIT
+  - PARAMCD
+  - AVISITN
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BASIC DATA STRUCTURE
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

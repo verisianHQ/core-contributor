@@ -1,0 +1,35 @@
+{
+  "datasets": [
+    {
+      "dataset": "adlb.csv",
+      "domain": "adlb",
+      "execution_status": "success",
+      "execution_message": "AVISIT has more than one value for a given AVISITN value within a parameter.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "AVISIT": "VIS1",
+            "PARAMCD": "PARAM1",
+            "AVISITN": 1.0
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AVISIT": "VIS2",
+            "PARAMCD": "PARAM1",
+            "AVISITN": 1.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
