@@ -1,0 +1,38 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0623, dataset=ADSL",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "bds.csv",
+      "domain": "bds",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0623, dataset=BDS",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "occds.csv",
+      "domain": "occds",
+      "execution_status": "success",
+      "execution_message": "AESEQ is not present within OCCDS.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "AESEQ": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

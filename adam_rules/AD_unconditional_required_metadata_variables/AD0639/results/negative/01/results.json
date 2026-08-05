@@ -1,0 +1,38 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0639, dataset=ADSL",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "bds.csv",
+      "domain": "bds",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0639, dataset=BDS",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "occds.csv",
+      "domain": "occds",
+      "execution_status": "success",
+      "execution_message": "AENDY is not present within OCCDS.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "AENDY": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
