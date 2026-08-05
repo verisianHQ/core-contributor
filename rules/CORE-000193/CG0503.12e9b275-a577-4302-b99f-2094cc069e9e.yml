@@ -14,7 +14,8 @@ Authorities:
               Version: '1'
             Version: '2.0'
             Citations:
-              - Cited Guidance: The start date/time of the Disease Milestone Instance Name in MIDS.
+              - Cited Guidance: The start date/time of the Disease Milestone Instance
+                  Name in MIDS.
                 Document: Model v2.0
                 Item: MIDSDTC
                 Section: Timing
@@ -27,7 +28,8 @@ Authorities:
               Version: '1'
             Version: '2.0'
             Citations:
-              - Cited Guidance: The start date/time of the Disease Milestone Instance Name in MIDS.
+              - Cited Guidance: The start date/time of the Disease Milestone Instance
+                  Name in MIDS.
                 Document: Model v1.7
                 Item: MIDSDTC
                 Section: 2.2.5
@@ -41,10 +43,11 @@ Core:
   Id: CORE-000193
   Status: Published
   Version: '1'
-Description: Raise an error when variable MIDSDTC is present and MIDS variable is missing.
+Description: Raise an error when variable MIDSDTC is present and MIDS
+  variable is missing.
 Executability: Fully Executable
 Outcome:
-  Message: MIDS variable is missing when MIDSDTC variable is present in a dataset.
+  Message: MIDS variable must be present in the dataset when MIDSDTC variable is present.
   Output Variables:
     - MIDSDTC
     - MIDS
