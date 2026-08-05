@@ -1,6 +1,6 @@
-# Variable: PARAMCD
+# Variable: AEENDTC
 # Condition: 
-# Rule: PARAMCD is not present within BDS
+# Rule: AEENDTC is not present within OCCDS
 # verified
 Authorities:
   - Organization: CDISC
@@ -10,49 +10,49 @@ Authorities:
         References:
           - Origin: ADaM Conformance Rules
             Rule Identifier:
-              Id: '195'
-              Version: '2'
+              Id: '636'
+              Version: '1'
             Version: '5.0'
             Citations:
               - Document: IG v1.3
-                Section: 3.3.4.1
-                Item: 'Table 3.3.4.1.1'
+                Section: 3.2.4
+                Item: 'Table 3.2.4.1'
                 Cited Guidance: 
-                  'ADaMIG v1.3, Section 3.3.4.1, Table 3.3.4.1.1: PARAMCD has Core=Req and PARAMCD must be present and populated on every record in a BDS dataset.'
+                  'OCCDS v1.1, Section 3.2.4, Table 3.2.4.1: --ENDTC has Core=Req for SubClass=ADVERSE EVENT.'
       - Name: ADaMIG
         Version: '1.2'
         References:
           - Origin: ADaM Conformance Rules
             Rule Identifier:
-              Id: '195'
+              Id: '636'
               Version: '1'
             Version: '5.0'
             Citations:
               - Document: IG v1.2
-                Section: 3.3.4.1
-                Item: 'Table 3.3.4.1.1'
+                Section: 3.2.4
+                Item: 'Table 3.2.4.1'
                 Cited Guidance: 
-                  'ADaMIG v1.2, Section 3.3.4.1, Table 3.3.4.1.1: PARAMCD has Core=Req and PARAMCD must be present and populated on every record in a BDS dataset.'
+                  'OCCDS v1.1, Section 3.2.4, Table 3.2.4.1: --ENDTC has Core=Req for SubClass=ADVERSE EVENT.'
       - Name: ADaMIG
         Version: '1.1'
         References:
           - Origin: ADaM Conformance Rules
             Rule Identifier:
-              Id: '195'
+              Id: '636'
               Version: '1'
             Version: '5.0'
             Citations:
               - Document: IG v1.1
-                Section: 3.3.4
-                Item: 'Table 3.3.4.1'
+                Section: 3.2.4
+                Item: 'Table 3.2.4.1'
                 Cited Guidance: 
-                  'ADaMIG v1.1, Section 3.3.4, Table 3.3.4.1: PARAMCD has Core=Req.'
+                  'OCCDS v1.1, Section 3.2.4, Table 3.2.4.1: --ENDTC has Core=Req for SubClass=ADVERSE EVENT.'
       - Name: ADaMIG
         Version: '1.0'
         References:
           - Origin: ADaM Conformance Rules
             Rule Identifier:
-              Id: '195'
+              Id: '636'
               Version: '1'
             Version: '5.0'
             Citations:
@@ -60,41 +60,41 @@ Authorities:
                 Section: 3.2.4
                 Item: 'Table 3.2.4.1'
                 Cited Guidance: 
-                  'ADaMIG v1.0, Section 3.2.4, Table 3.2.4.1: PARAMCD has Core=Req.'
-      - Name: ADaMIG-MD
-        Version: '1.0'
+                  'OCCDS v1.1, Section 3.2.4, Table 3.2.4.1: --ENDTC has Core=Req for SubClass=ADVERSE EVENT.'
+      - Name: OCCDS
+        Version: '1.1'
         References:
           - Origin: ADaM Conformance Rules
             Rule Identifier:
-              Id: '195'
-              Version: '2'
+              Id: '636'
+              Version: '1'
             Version: '5.0'
             Citations:
-              - Document: IG-MD v1.0
-                Section: 3.1
-                Item: 'Table 3.3.4.1.1'
+              - Document: OCCDS v1.1
+                Section: 3.2.4
+                Item: 'Table 3.2.4.1'
                 Cited Guidance: 
-                  'ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis needs by adding SPDEVID as a required key variable and USUBJID as a conditionally required variable. See the BDS class for further details.'
+                  'OCCDS v1.1, Section 3.2.4, Table 3.2.4.1: --ENDTC has Core=Req for SubClass=ADVERSE EVENT.'
 Check:
   all:
-    - name: PARAMCD
+    - name: AEENDTC
       operator: not_exists
 Core:
-  Id: AD0195
+  Id: AD0636
   Status: Published
-  Version: '2'
-Description: Raise an error when the PARAMCD variable is not present within BDS.
+  Version: '1'
+Description: Raise an error when the AEENDTC variable is not present within OCCDS.
 Executability: Fully Executable
 Outcome:
-  Message: PARAMCD is not present within BDS.
+  Message: AEENDTC is not present within OCCDS.
   Output Variables:
-    - PARAMCD
+    - AEENDTC
 Rule Type: Record Data
 Scope:
   Classes:
     Include:
-      - BDS
+      - OCCDS
   Domains:
     Include:
-      - BDS
+      - OCCDS
 Sensitivity: Dataset
