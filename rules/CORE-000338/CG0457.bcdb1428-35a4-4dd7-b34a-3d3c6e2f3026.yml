@@ -39,6 +39,7 @@ Check:
     - name: TSPARMCD
       operator: equal_to
       value: ACTSUB
+      value_is_literal: true
     - name: TSVAL
       operator: not_matches_regex
       value: ^[1-9]\d*$
