@@ -1,6 +1,7 @@
 # Variable: TSVAL
 # Condition: TSPARMCD = 'CURTRT' and record exists where TSPARMCD = 'ADDON' and TSVAL = 'Y'
 # Rule: TSVAL ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -10,7 +11,7 @@ Authorities:
               - Cited Guidance: IG v3.2[7.4][Assumption 3][Further information about the
                   parameters is included below in Table 1. TSVAL may have
                   controlled terminology depending on the value of TSPARMCD.]|IG
-                  v3.2[Appendix C1][Required when ADDON equals "Y"]
+                  v3.2[Appendix C1][Required when ADDON equals 'Y']
                 Document: IG v3.2
                 Item: IG v3.2[7.4][Assumption 3]|IG v3.2[Appendix C1]
                 Section: IG v3.2[7.4]|IG v3.2[Appendix C1]
@@ -28,7 +29,7 @@ Authorities:
                   may have controlled terminology depending on the value of
                   TSPARMCD. Conditions for including parameters are included in
                   Appendix C1, Trial Summary Codes.]|IG v3.3[Appendix
-                  C1][Required when ADDON equals "Y"]
+                  C1][Required when ADDON equals 'Y']
                 Document: IG v3.3
                 Item: IG v3.3[7.4.2][Assumption 3]|IG v3.3[Appendix C1]
                 Section: IG v3.3[7.4.2]|IG v3.3[Appendix C1]
@@ -43,6 +44,7 @@ Check:
     - name: TSPARMCD
       operator: equal_to
       value: CURTRT
+      value_is_literal: true
     - name: $ADDON_Y
       operator: greater_than_or_equal_to
       value: 1
@@ -52,25 +54,28 @@ Core:
   Id: CORE-000532
   Status: Published
   Version: '1'
-Description: 'Raise an error when a record exists in TS where TSPARMCD = ADDON
-  and TSVAL = Y but TSVAL for TSPARMCD = CURTRT is empty.'
+Description: Raise an error when TSPARMCD is equal to 
+  'ADDON' and TSVAL is equal to 'Y', but no corresponding TSPARMCD is equal
+  to 'CURTRT' record with a populated TSVAL is present.
 Executability: Fully Executable
+Grouping_Variables:
+  - TSGRPID
 Operations:
   - filter:
       TSPARMCD: ADDON
-      TSVAL: "Y"
+      TSVAL: 'Y'
     group:
       - TSGRPID
     id: $ADDON_Y
     operator: record_count
 Outcome:
-  Message: 'A record exists in TS where TSPARMCD = ADDON and TSVAL = Y but TSVAL
-    for TSPARMCD = CURTRT is empty.'
+  Message: When TSPARMCD is equal to 'ADDON' and TSVAL is equal to 'Y', 
+    a corresponding TSPARMCD is equal to 'CURTRT' record with a populated
+    TSVAL must be present.
   Output Variables:
     - TSGRPID
     - TSPARMCD
     - TSVAL
-    - $ADDON_Y
 Rule Type: Record Data
 Scope:
   Classes:
@@ -79,4 +84,4 @@ Scope:
   Domains:
     Include:
       - TS
-Sensitivity: Record
+Sensitivity: Group
