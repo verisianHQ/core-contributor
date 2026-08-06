@@ -77,7 +77,7 @@ Core:
   Status: Published
   Version: '1'
 Description: Raise an error when --STRTPT is equal to 'BEFORE', 'COINCIDENT', or 'UNKNOWN' and --STTPT is equal to the date of collection or assessment.
-Executability: Partially Executable
+Executability: Fully Executable
 Outcome:
   Message: --STRTPT must be equal to 'BEFORE', 'COINCIDENT', or 'UNKNOWN' and --STTPT is equal to the date of collection or assessment.
   Output Variables:
