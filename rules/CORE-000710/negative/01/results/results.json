@@ -5,7 +5,7 @@
       "domain": "CM",
       "execution_status": "success",
       "execution_message": "CMSTRTPT is not in ('BEFORE', 'COINCIDENT', 'AFTER', 'UNKNOWN')",
-      "number_errors": 5,
+      "number_errors": 3,
       "errors": [
         {
           "row": 2,
@@ -16,7 +16,7 @@
             "CMSTRTPT": null,
             "CMDTC": "2013-05-20"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -27,7 +27,7 @@
             "CMSTRTPT": "ONGOING",
             "CMDTC": "2013-05-20"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 7,
@@ -35,150 +35,12 @@
           "USUBJID": "CDISC002",
           "value": {
             "CMSTTPT": "2013-05-10",
-            "CMSTRTPT": "ONGOING",
+            "CMSTRTPT": "before",
             "CMDTC": "2013-05-20"
           },
-          "validated": false
-        },
-        {
-          "row": 10,
-          "SEQ": 3,
-          "USUBJID": "CDISC002",
-          "value": {
-            "CMSTTPT": "2013-05-10",
-            "CMSTRTPT": "POST",
-            "CMDTC": "2013-05-20"
-          },
-          "validated": false
-        },
-        {
-          "row": 13,
-          "SEQ": 3,
-          "USUBJID": "CDISC002",
-          "value": {
-            "CMSTTPT": "2013-05-10",
-            "CMSTRTPT": "UNK",
-            "CMDTC": "2013-05-20"
-          },
-          "validated": false
+          "validated": true
         }
       ]
-    },
-    {
-      "dataset": "mh.xpt",
-      "domain": "MH",
-      "execution_status": "success",
-      "execution_message": "MHSTRTPT is not in ('BEFORE', 'COINCIDENT', 'AFTER', 'UNKNOWN')",
-      "number_errors": 5,
-      "errors": [
-        {
-          "row": 2,
-          "SEQ": 1,
-          "USUBJID": "CDISC002",
-          "value": {
-            "MHSTTPT": "2013-02-18",
-            "MHSTRTPT": "ONGOING",
-            "MHDTC": "2013-05-20"
-          },
-          "validated": false
-        },
-        {
-          "row": 6,
-          "SEQ": 1,
-          "USUBJID": "CDISC006",
-          "value": {
-            "MHSTTPT": "2007-04-20",
-            "MHSTRTPT": "ONGOING",
-            "MHDTC": "2013-05-20"
-          },
-          "validated": false
-        },
-        {
-          "row": 7,
-          "SEQ": 1,
-          "USUBJID": "CDISC007",
-          "value": {
-            "MHSTTPT": "2012-05-20",
-            "MHSTRTPT": "ONGOING",
-            "MHDTC": "2013-05-20"
-          },
-          "validated": false
-        },
-        {
-          "row": 8,
-          "SEQ": 1,
-          "USUBJID": "CDISC012",
-          "value": {
-            "MHSTTPT": "2013-05-02",
-            "MHSTRTPT": null,
-            "MHDTC": "2013-05-03"
-          },
-          "validated": false
-        },
-        {
-          "row": 9,
-          "SEQ": 1,
-          "USUBJID": "CDISC013",
-          "value": {
-            "MHSTTPT": "2013-04-04",
-            "MHSTRTPT": null,
-            "MHDTC": "2013-05-04"
-          },
-          "validated": false
-        }
-      ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "cm.xpt",
-      "Row": 6,
-      "Variable": "CMSTRTPT"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 7,
-      "Variable": "CMSTRTPT"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 11,
-      "Variable": "CMSTRTPT"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 14,
-      "Variable": "CMSTRTPT"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 17,
-      "Variable": "CMSTRTPT"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 6,
-      "Variable": "MHSTRTPT"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 10,
-      "Variable": "MHSTRTPT"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 11,
-      "Variable": "MHSTRTPT"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 12,
-      "Variable": "MHSTRTPT"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 13,
-      "Variable": "MHSTRTPT"
     }
   ]
 }
