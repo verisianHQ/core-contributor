@@ -264,3 +264,9 @@ Just make sure to use `checkout` commands or the console to switch to the releva
 > ***The XLSX editor isn't loading or looks strange***
 
 Ensure you have no other Excel-related extensions enabled. There may be conflicts if multiple VSCode extensions try to handle .xlsx files simultaneously. Try disabling other Excel extensions and restarting VSCode to fix this.
+<br />
+
+> ***I'm getting a pgserver-related subprocess error after I tried running the test script***
+
+Close VSCode and reopen it WITHOUT selecting "Run As Administrator". PostgreSQL blocks the actual database server that the file "initdb.exe" spins up from running directly under a Windows administrator account for security reasons. Then, re-run your test script. If the same error appears, then delete the `venv` folder in your repo and run the setup script again as mentioned in "First Time Local Setup Steps" section 9 above and then afterwards, simply re-run the test script again.
+<br />
