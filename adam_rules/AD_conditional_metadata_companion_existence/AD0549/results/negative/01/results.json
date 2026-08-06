@@ -1,6 +1,14 @@
 {
   "datasets": [
     {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0549, dataset=ADSL",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
       "dataset": "bds.csv",
       "domain": "bds",
       "execution_status": "success",
@@ -18,6 +26,14 @@
           "validated": true
         }
       ]
+    },
+    {
+      "dataset": "occds.csv",
+      "domain": "occds",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0549, dataset=OCCDS",
+      "number_errors": 0,
+      "errors": []
     }
   ]
 }
