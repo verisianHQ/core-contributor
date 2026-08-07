@@ -57,6 +57,7 @@ Check:
   all:
   - name: ATPTN
     operator: is_inconsistent_across_dataset
+    where_populated: true
     value:
     - PARAMCD
     - ATPT

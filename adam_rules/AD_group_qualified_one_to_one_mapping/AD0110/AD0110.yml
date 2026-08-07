@@ -24,6 +24,7 @@ Check:
   all:
   - name: AVISIT
     operator: is_inconsistent_across_dataset
+    where_populated: true
     value:
     - PARAMCD
     - AVISITN

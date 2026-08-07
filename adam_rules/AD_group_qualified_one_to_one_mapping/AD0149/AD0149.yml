@@ -24,6 +24,7 @@ Check:
   all:
   - name: AVALC
     operator: is_inconsistent_across_dataset
+    where_populated: true
     value:
     - PARAMCD
     - AVAL

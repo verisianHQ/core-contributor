@@ -30,6 +30,7 @@ Check:
   - name: ^SHIFT(?P<y>[1-9])N$
     variable_regex_pattern: true
     operator: is_inconsistent_across_dataset
+    where_populated: true
     value:
     - PARAMCD
     - SHIFT{{y}}
