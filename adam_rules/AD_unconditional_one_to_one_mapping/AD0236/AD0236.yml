@@ -1,0 +1,47 @@
+# Variable: TRxxAGyN where xx is an integer [01-99, zero-padded] and y is an integer [1-9, not zero-padded]
+# Condition: 
+# Rule: There is more than one value of TRxxAGyN for a given value of TRxxAGy
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '236'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.0
+        Section: '3.1'
+        Item: Table 3.1.1
+        Cited Guidance: 'ADaMIG v1.0, Section 3.1, Table 3.1.1: TRxxAGyN: The numeric
+          code for TRxxAGy. One-to-one map to TRxxAGy'
+Check:
+  all:
+  - name: ^TR(?P<xx>0[1-9]|[1-9][0-9])AG(?P<y>[1-9])N$
+    variable_regex_pattern: true
+    operator: is_inconsistent_across_dataset
+    value: TR{{xx}}AG{{y}}
+Core:
+  Id: AD0236
+  Status: Draft
+  Version: '1'
+Description: Raise an error when there is more than one value of TRxxAGyN for a given value of TRxxAGy, where xx is an integer [01-99, zero-padded] and y is a single-digit integer [1-9].
+Executability: Fully Executable
+Outcome:
+  Message: TRxxAGyN has more than one value for a given TRxxAGy value.
+  Output Variables:
+  - TR{{xx}}AG{{y}}N
+  - TR{{xx}}AG{{y}}
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - SUBJECT LEVEL ANALYSIS DATASET
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record
