@@ -1,15 +1,14 @@
 # Variable: ARM
 # Condition: ARM ^= null
 # Rule: ARM in TA.ARM
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 1. Name given to an Arm or Treatment Group. 2. If the timing of
-                  visits for a trial does not depend on which Arm a subject is
-                  in, then Arm should be left blank.
+              - Cited Guidance: 1. Name given to an Arm or Treatment Group. 2. If the timing of Visits for a trial does not depend on which Arm a subject is in, then Arm should be left blank.
                 Document: IG v3.4
                 Item: Specification
                 Section: 7.3.1
@@ -22,9 +21,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 1. Name given to an Arm or Treatment Group. 2. If the timing of
-                  Visits for a trial does not depend on which Arm a subject is
-                  in, then Arm should be left blank.
+              - Cited Guidance: 1. Name given to an Arm or Treatment Group. 2. If the timing of Visits for a trial does not depend on which Arm a subject is in, then Arm should be left blank.
                 Document: IG v3.2
                 Item: Specification
                 Section: '7'
@@ -37,9 +34,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 1. Name given to an Arm or Treatment Group. 2. If the timing of
-                  Visits for a trial does not depend on which Arm a subject is
-                  in, then Arm should be left blank.
+              - Cited Guidance: 1. Name given to an Arm or Treatment Group. 2. If the timing of Visits for a trial does not depend on which Arm a subject is in, then Arm should be left blank.
                 Document: IG v3.3
                 Item: Specification
                 Section: 7.3.1
@@ -52,9 +47,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: 1. Name given to an Arm or Product Exposure Group. 2. If the
-                  timing of Visits for a trial does not depend on which Arm a
-                  subject is in, then Arm should be left blank.
+              - Cited Guidance: 1. Name given to an Arm or Product Exposure Group. 2. If the timing of Visits for a trial does not depend on which Arm a subject is in, then Arm should be left blank.
                 Document: TIG 1.0
                 Item: Specification:ARM
                 Section: 2.8.10.31
@@ -76,7 +69,7 @@ Core:
   Id: CORE-000156
   Status: Published
   Version: '1'
-Description: Trigger error when ARM is populated and ARM is not in TA.ARM
+Description: Raise an error when ARM is populated and ARM is not in TA.ARM.
 Executability: Fully Executable
 Operations:
   - domain: TA
@@ -84,7 +77,7 @@ Operations:
     name: ARM
     operator: distinct
 Outcome:
-  Message: ARM is not in TA.ARM
+  Message: ARM must be in TA.ARM.
 Rule Type: Record Data
 Scope:
   Classes:
