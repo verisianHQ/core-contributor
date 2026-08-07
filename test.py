@@ -208,7 +208,7 @@ class TestRunner:
 
         cache_dir = "resources/cache"
         latest_codelist_path = max(glob(f"engine/{cache_dir}/{self.standard}ct-[0-9][0-9][0-9][0-9]-*.pkl"), default=None)
-        latest_codelist_file = latest_codelist_path.split("/")[-1] if latest_codelist_path else None
+        latest_codelist_file = Path(latest_codelist_path).name if latest_codelist_path else None
 
         self.data_service = PostgresQLDataService.instance(
             use_pgserver=self.use_pgserver,
