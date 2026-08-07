@@ -1,4 +1,20 @@
 {
-  "error": "No result - either the rule or test case data unit-test-coreid-CG0408-negative.xlsx is broken",
-  "exception": "cannot unpack non-iterable NoneType object"
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "Dataset has no record.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {},
+          "validated": true
+        }
+      ]
+    }
+  ]
 }
