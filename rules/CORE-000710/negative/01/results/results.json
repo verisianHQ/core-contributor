@@ -4,7 +4,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMSTRTPT is not in ('BEFORE', 'COINCIDENT', 'AFTER', 'UNKNOWN')",
+      "execution_message": "CMSTRTPT must be equal to 'BEFORE', 'COINCIDENT', 'AFTER', or 'UNKNOWN' when CMSTTPT is prior to the date of collection or assessment.",
       "number_errors": 3,
       "errors": [
         {
