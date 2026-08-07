@@ -1,0 +1,104 @@
+# Variable: *FN
+# Condition: *FN is present
+# Rule: The same-root *FL variable must be present
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '7'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.0
+        Section: '3'
+        Item: 3 (General Variable Naming Conventions)
+        Cited Guidance: 'ADaMIG v1.0, Section 3, Item 3 (General Variable Naming Conventions): The names of all other character
+          flag (or indicator) variables end in FL, and the names of the corresponding numeric flag (or indicator) variables
+          end in FN If the flag is used, the character version (*FL) is required but the numeric version (*FN) can also be
+          included.'
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '7'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: 3.1.1
+        Item: '8'
+        Cited Guidance: 'ADaMIG v1.1, Section 3.1.1, Item 8: Variables whose names end in FL are character flag (or indicator)
+          variables with at most two possible non-missing values, Y or N (i.e., yes or no). The name of the corresponding
+          numeric flag (or indicator) variable ends in FN. If the flag is included in an ADaM dataset, the character version
+          (*FL) is required but the corresponding numeric version (*FN) can also be included. If both versions of the flag
+          are included, there must be a one-to-one mapping between the values of the two variables, as described in Section
+          3.1.4.'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '7'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: 3.1.1
+        Item: '8'
+        Cited Guidance: 'ADaMIG v1.2, Section 3.1.1, Item 8: Variables whose names end in FL are character flag (or indicator)
+          variables with at most two possible non-missing values, Y or N (i.e., yes or no). The name of the corresponding
+          numeric flag (or indicator) variable ends in FN. If the flag is included in an ADaM dataset, the character version
+          (*FL) is required but the corresponding numeric version (*FN) can also be included. If both versions of the flag
+          are included, there must be a one-to-one relationship between the values of the two variables, as described in Section
+          3.1.4, Flag Variable Conventions.'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '7'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: 3.1.1
+        Item: '8'
+        Cited Guidance: 'ADaMIG v1.3, Section 3.1.1, Item 8: Variables whose names end in FL are character flag (or indicator)
+          variables with at most two possible non-missing values, Y or N (i.e., yes or no). The name of the corresponding
+          numeric flag (or indicator) variable ends in FN. If the flag is included in an ADaM dataset, the character version
+          (*FL) is required but the corresponding numeric version (*FN) can also be included. If both versions of the flag
+          are included, there must be a one-to-one relationship between the values of the two variables, as described in Section
+          3.1.4, Flag Variable Conventions.'
+Check:
+  all:
+  - name: ^(?P<root>[A-Z][A-Z0-9_]{0,4})FN$
+    variable_regex_pattern: true
+    operator: exists
+  - name: '{{root}}FL'
+    operator: not_exists
+Core:
+  Id: AD0007
+  Status: Draft
+  Version: '1'
+Description: A variable with a suffix of FN is present without a variable with the same root and a suffix of FL.
+Executability: Fully Executable
+Outcome:
+  Message: A variable with a suffix of FN is present without a variable with the same root and a suffix of FL.
+  Output Variables:
+  - '{{root}}FN'
+  - '{{root}}FL'
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - ALL
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

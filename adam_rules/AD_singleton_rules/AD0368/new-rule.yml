@@ -1,0 +1,89 @@
+# Variable: TRxxPGy
+# Condition: TRxxPGy and TRTxxA are present
+# Rule: Corresponding TRxxAGy must be present
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '368'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.0
+        Section: '3.1'
+        Item: Table 3.1.1
+        Cited Guidance: 'ADaMIG v1.0, Section 3.1, Table 3.1.1: Required when TRxxPGy is present and TRTxxA is present.'
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '368'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: '3.2'
+        Item: Table 3.2.4
+        Cited Guidance: 'ADaMIG v1.1, Section 3.2, Table 3.2.4: Required when TRxxPGy is present and TRTxxA is present.'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '368'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: '3.2'
+        Item: Table 3.2.4
+        Cited Guidance: 'ADaMIG v1.2, Section 3.2, Table 3.2.4: Required when TRxxPGy is present and TRTxxA is present.'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '368'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: '3.2'
+        Item: Table 3.2.4
+        Cited Guidance: 'ADaMIG v1.3, Section 3.2, Table 3.2.4: Required when TRxxPGy is present and TRTxxA is present.'
+Check:
+  all:
+  - name: ^TR(?P<xx>0[1-9]|[1-9][0-9])PG(?P<y>[1-9])$
+    variable_regex_pattern: true
+    operator: exists
+  - name: TRT{{xx}}A
+    operator: exists
+  - name: TR{{xx}}AG{{y}}
+    operator: not_exists
+Core:
+  Id: AD0368
+  Status: Draft
+  Version: '1'
+Description: TRxxPGy and TRTxxA are present while corresponding TRxxAGy is absent.
+Executability: Fully Executable
+Outcome:
+  Message: TRxxPGy and TRTxxA are present while corresponding TRxxAGy is absent.
+  Output Variables:
+  - TR{{xx}}PG{{y}}
+  - TRT{{xx}}A
+  - TR{{xx}}AG{{y}}
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - ADSL
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

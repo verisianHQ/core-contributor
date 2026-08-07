@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "A GRyN variable is present without its same-root GRy variable.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "AGEGR1N": 1.0,
+            "AGEGR1": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

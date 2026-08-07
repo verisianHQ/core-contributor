@@ -1,0 +1,29 @@
+{
+  "datasets": [
+    {
+      "dataset": "advs.csv",
+      "domain": "advs",
+      "execution_status": "success",
+      "execution_message": "SHIFTy is present without any permitted complete before/after variable pair.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "SHIFT1": "LOW to NORMAL"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "SHIFT2": "NORMAL to HIGH"
+      }
+    }
+  ]
+}

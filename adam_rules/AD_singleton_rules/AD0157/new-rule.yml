@@ -1,0 +1,54 @@
+# Variable: CRITy
+# Condition: CRITy is present
+# Rule: Corresponding CRITyFL must be present
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '157'
+        Version: '2'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3; ADaMIG-MD v1.0
+        Section: 3.3.4.3; 3.1
+        Item: Table 3.3.4.3.1
+        Cited Guidance: 'ADaMIG v1.3, Section 3.3.4.3, Table 3.3.4.3.1: Character flag variable indicating whether the criterion
+          defined in CRITy was met by the data on the record. See CRITy for more information regarding how to use CRITy and
+          CRITyFL to indicate whether a criterion is met. Required if CRITy exists.
+
+
+          ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis needs by adding SPDEVID as a required key variable and
+          USUBJID as a conditionally required variable. See the BDS class for further details.'
+Check:
+  all:
+  - name: ^CRIT(?P<y>[1-9])$
+    variable_regex_pattern: true
+    operator: exists
+  - name: CRIT{{y}}FL
+    operator: not_exists
+Core:
+  Id: AD0157
+  Status: Draft
+  Version: '2'
+Description: CRITy is present without its corresponding CRITyFL variable.
+Executability: Fully Executable
+Outcome:
+  Message: CRITy is present without its corresponding CRITyFL variable.
+  Output Variables:
+  - CRIT{{y}}
+  - CRIT{{y}}FL
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BDS
+    - MDBDS
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

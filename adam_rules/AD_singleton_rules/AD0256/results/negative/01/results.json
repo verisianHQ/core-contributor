@@ -1,0 +1,30 @@
+{
+  "datasets": [
+    {
+      "dataset": "adae.csv",
+      "domain": "adae",
+      "execution_status": "success",
+      "execution_message": "The values of USUBJID are not present in ADSL.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-002",
+          "value": {
+            "USUBJID": "STUDY001-002"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

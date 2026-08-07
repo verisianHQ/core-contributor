@@ -1,0 +1,93 @@
+# Variable: ADOSEDUR
+# Condition: ADOSEDUR is present
+# Rule: NDOSEDUR and DOSEDURU must be present
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADNCA
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '661'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADNCA v1.0
+        Section: '4.2'
+        Item: Table 4.2.1
+        Cited Guidance: 'ADNCA v1.0, Section 4.2, Table 4.2.1: CDISC Notes for DOSEDURU state: When ADOSEDUR is present, NDOSEDUR
+          and DOSEDURU must also be included in the dataset. '
+  - Name: ADNCA
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '661'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADNCA v1.0
+        Section: '4.2'
+        Item: Table 4.2.1
+        Cited Guidance: 'ADNCA v1.0, Section 4.2, Table 4.2.1: CDISC Notes for DOSEDURU state: When ADOSEDUR is present, NDOSEDUR
+          and DOSEDURU must also be included in the dataset. '
+  - Name: ADNCA
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '661'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADNCA v1.0
+        Section: '4.2'
+        Item: Table 4.2.1
+        Cited Guidance: 'ADNCA v1.0, Section 4.2, Table 4.2.1: CDISC Notes for DOSEDURU state: When ADOSEDUR is present, NDOSEDUR
+          and DOSEDURU must also be included in the dataset. '
+  - Name: ADNCA
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '661'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADNCA v1.0
+        Section: '4.2'
+        Item: Table 4.2.1
+        Cited Guidance: 'ADNCA v1.0, Section 4.2, Table 4.2.1: CDISC Notes for DOSEDURU state: When ADOSEDUR is present, NDOSEDUR
+          and DOSEDURU must also be included in the dataset. '
+Check:
+  all:
+  - name: ADOSEDUR
+    operator: exists
+  - any:
+    - name: NDOSEDUR
+      operator: not_exists
+    - name: DOSEDURU
+      operator: not_exists
+Core:
+  Id: AD0661
+  Status: Draft
+  Version: '1'
+Description: ADOSEDUR is present while NDOSEDUR or DOSEDURU is absent.
+Executability: Fully Executable
+Outcome:
+  Message: ADOSEDUR is present while NDOSEDUR or DOSEDURU is absent.
+  Output Variables:
+  - ADOSEDUR
+  - NDOSEDUR
+  - DOSEDURU
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BDS
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record
