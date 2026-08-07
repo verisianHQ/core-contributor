@@ -1,0 +1,49 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0238, dataset=ADSL",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "advs.csv",
+      "domain": "advs",
+      "execution_status": "success",
+      "execution_message": "TRTPGyN has more than one value for a given TRTPGy value.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "TRTPG1N": 1.0,
+            "TRTPG1": "A"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "STUDY001-002",
+          "value": {
+            "TRTPG1N": 2.0,
+            "TRTPG1": "A"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "adae.csv",
+      "domain": "adae",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0238, dataset=ADAE",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

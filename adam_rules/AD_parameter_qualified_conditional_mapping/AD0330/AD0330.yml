@@ -1,0 +1,88 @@
+# Variable: BASECAyN where y is an integer [1-9, not zero-padded]
+# Condition: On rows where both BASECAyN and BASECATy are both populated
+# Rule: Within a parameter, there is more than one value of BASECAyN for a given value of BASECATy
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '330'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: 3.3.4
+        Item: Table 3.3.4.1
+        Cited Guidance: 'ADaMIG v1.1, Section 3.3.4, Table 3.3.4.1: CDISC Notes for
+          BASECAyN state: "There must be a one-to-one relationship within a parameter
+          between BASECATy and BASECAyN."'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '330'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: 3.3.4.1
+        Item: Table 3.3.4.1.1
+        Cited Guidance: 'ADaMIG v1.2, Section 3.3.4.1, Table 3.3.4.1.1: CDISC Notes
+          for BASECAyN state: "There must be a one-to-one relationship between BASECAyN
+          and BASECATy within a parameter."'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '330'
+        Version: '2'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: 3.3.4.1
+        Item: Table 3.3.4.1.1
+        Cited Guidance: 'ADaMIG v1.3, Section 3.3.4.1, Table 3.3.4.1.1: CDISC Notes
+          for BASECAyN state: "There must be a one-to-one relationship between BASECAyN
+          and BASECATy within a parameter."'
+      - Document: ADaMIG-MD v1.0
+        Section: '3.1'
+        Item: Table 3.3.4.1.1
+        Cited Guidance: 'ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis
+          needs by adding SPDEVID as a required key variable and USUBJID as a conditionally
+          required variable. See the BDS class for further details.'
+Check:
+  all:
+  - name: ^BASECA(?P<y>[1-9][0-9]?)N$
+    variable_regex_pattern: true
+    operator: is_inconsistent_across_dataset
+    value:
+    - PARAMCD
+    - BASECAT{{y}}
+    where_populated: true
+Core:
+  Id: AD0330
+  Status: Draft
+  Version: '1'
+Description: Raise an error when within a parameter, there is more than one value of BASECAyN for a given value of BASECATy, considering only those rows on which both variables are populated.
+Executability: Fully Executable
+Outcome:
+  Message: BASECAyN has more than one value for a given BASECATy value within a parameter.
+  Output Variables:
+  - BASECA{{y}}N
+  - PARAMCD
+  - BASECAT{{y}}
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BASIC DATA STRUCTURE
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record
