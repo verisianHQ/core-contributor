@@ -139,7 +139,7 @@ class ResultReporter:
             print(f"{'-'*54}")
             print(f"{test_type.capitalize()} Test Cases: {len(tests)}")
             for test in tests:
-                symbol = "[SKIP]" if test.get("skipped") else "[PASS]" if test["passed"] else "[FAIL]"
+                symbol = "[OMIT]" if test.get("omitted") else "[PASS]" if test["passed"] else "[FAIL]"
                 print(f"\n  {symbol} Case {test['case_id']} - Results at: {test['results_path']}")
 
                 if verbose:
@@ -476,7 +476,7 @@ class TestRunner:
         expected = "0 errors" if test_type == "positive" else ">0 errors"
 
         if not self._rule_applicable_to_case(rule_id, case_info["data_path"]):
-            return {"case_id": case_id, "passed": True, "skipped": True, "total_errors": None, "expected": expected, "results_path": "N/A"}
+            return {"case_id": case_id, "passed": True, "omitted": True, "total_errors": None, "expected": expected, "results_path": "N/A"}
 
         _, results_data = self.run_validation(rule_id, case_info)
 
