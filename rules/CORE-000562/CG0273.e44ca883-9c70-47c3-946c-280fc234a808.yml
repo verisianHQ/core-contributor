@@ -24,9 +24,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0273
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
@@ -48,37 +48,24 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0273
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
-  any:
-    - all:
-        - name: TSPARMCD
-          operator: equal_to
-          value: TDIGRP
-          value_is_literal: true
-        - name: $HLTSUBJI_N
-          operator: greater_than_or_equal_to
-          value: 1
-        - name: TSVAL
-          operator: empty
-    - all:
-        - name: TSPARMCD
-          operator: equal_to
-          value: HLTSUBJI
-          value_is_literal: true
-        - name: TSVAL
-          operator: equal_to
-          value: 'N'
-          value_is_literal: true
-        - name: $TDIGRP_COUNT
-          operator: less_than
-          value: 1
+  all:
+    - name: TSPARMCD
+      operator: equal_to
+      value: TDIGRP
+      value_is_literal: true
+    - name: $HLTSUBJI_N
+      operator: greater_than_or_equal_to
+      value: 1
+    - name: TSVAL
+      operator: empty
 Core:
   Id: CORE-000562
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when a record exists with TSPARMCD is equal to
   'HLTSUBJI' and TSVAL is equal to 'N', but a corresponding TSPARMCD is equal
   to 'TDIGRP' record with TSVAL populated does not exist.
@@ -88,16 +75,10 @@ Grouping_Variables:
 Operations:
   - filter:
       TSPARMCD: HLTSUBJI
-      TSVAL: 'N'
+      TSVAL: "N"
     group:
       - TSGRPID
     id: $HLTSUBJI_N
-    operator: record_count
-  - filter:
-      TSPARMCD: TDIGRP
-    group:
-      - TSGRPID
-    id: $TDIGRP_COUNT
     operator: record_count
 Outcome:
   Message: When TSPARMCD is equal to 'HLTSUBJI' and TSVAL is equal to 'N',
