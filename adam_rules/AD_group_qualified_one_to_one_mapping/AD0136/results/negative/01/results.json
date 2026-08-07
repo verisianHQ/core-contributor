@@ -1,0 +1,35 @@
+{
+  "datasets": [
+    {
+      "dataset": "adlb.csv",
+      "domain": "adlb",
+      "execution_status": "success",
+      "execution_message": "SHIFTyN has more than one value for a given SHIFTy value within a parameter.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SHIFT1N": 1.0,
+            "PARAMCD": "PARAM1",
+            "SHIFT1": "S1"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "SHIFT1N": 2.0,
+            "PARAMCD": "PARAM1",
+            "SHIFT1": "S1"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
