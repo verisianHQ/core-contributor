@@ -15,7 +15,7 @@
             "AEHLT": "Headaches NEC",
             "AEHLTCD": 10019233.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -25,7 +25,7 @@
             "AEHLT": "Headaches NEC",
             "AEHLTCD": 10019234.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -35,7 +35,7 @@
             "AEHLT": "Headaches NEC",
             "AEHLTCD": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 5,
@@ -45,7 +45,7 @@
             "AEHLT": "Headaches NEC",
             "AEHLTCD": 10019233.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 6,
@@ -55,7 +55,7 @@
             "AEHLT": "Vascular hypertensive disorders NEC",
             "AEHLTCD": 10020774.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 7,
@@ -65,7 +65,7 @@
             "AEHLT": null,
             "AEHLTCD": 10020774.0
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -80,153 +80,15 @@
     {
       "dataset": "mh.xpt",
       "domain": "MH",
-      "execution_status": "success",
-      "execution_message": "MHHLTCD and MHHLT do not have a one-to-one relationship.",
-      "number_errors": 5,
+      "execution_status": "execution_error",
+      "execution_message": "SQL operator execution error",
+      "number_errors": 1,
       "errors": [
         {
-          "row": 1,
-          "SEQ": 1,
-          "USUBJID": "CDISC001",
-          "value": {
-            "MHHLT": "Alzheimer's disease (incl subtypes)",
-            "MHHLTCD": 10001897.0
-          },
-          "validated": false
-        },
-        {
-          "row": 2,
-          "SEQ": 1,
-          "USUBJID": "CDISC002",
-          "value": {
-            "MHHLT": "Alzheimer's disease (incl subtypes)",
-            "MHHLTCD": 10001898.0
-          },
-          "validated": false
-        },
-        {
-          "row": 3,
-          "SEQ": 1,
-          "USUBJID": "CDISC003",
-          "value": {
-            "MHHLT": "Alzheimer's disease (incl subtypes)",
-            "MHHLTCD": null
-          },
-          "validated": false
-        },
-        {
-          "row": 4,
-          "SEQ": 1,
-          "USUBJID": "CDISC004",
-          "value": {
-            "MHHLT": "Alzheimer's disease (incl subtype)",
-            "MHHLTCD": 10001897.0
-          },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": 1,
-          "USUBJID": "CDISC005",
-          "value": {
-            "MHHLT": "Alzheimer's disease (incl subtype)",
-            "MHHLTCD": 10001898.0
-          },
-          "validated": false
+          "error": "SQL error in is_not_unique_relationship operator",
+          "message": "Column 'MHHLT' not found in table 'MH'"
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ae.xpt",
-      "Row": 6,
-      "Variable": "AEHLT"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 6,
-      "Variable": "AEHLTCD"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 7,
-      "Variable": "AEHLT"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 7,
-      "Variable": "AEHLTCD"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 8,
-      "Variable": "AEHLT"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 8,
-      "Variable": "AEHLTCD"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 9,
-      "Variable": "AEHLT"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 9,
-      "Variable": "AEHLTCD"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 5,
-      "Variable": "MHHLT"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 5,
-      "Variable": "MHHLTCD"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 6,
-      "Variable": "MHHLT"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 6,
-      "Variable": "MHHLTCD"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 7,
-      "Variable": "MHHLT"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 7,
-      "Variable": "MHHLTCD"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 8,
-      "Variable": "MHHLT"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 8,
-      "Variable": "MHHLTCD"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 9,
-      "Variable": "MHHLT"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 9,
-      "Variable": "MHHLTCD"
     }
   ]
 }
