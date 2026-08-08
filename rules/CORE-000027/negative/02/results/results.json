@@ -4,7 +4,7 @@
       "dataset": "te.xpt",
       "domain": "TE",
       "execution_status": "success",
-      "execution_message": "At least one of TEENRL and TEDUR must be populated.",
+      "execution_message": "Either TEENRL or TEDUR must be populated for an element.",
       "number_errors": 2,
       "errors": [
         {
@@ -12,22 +12,20 @@
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "ETCD": "E002",
             "TEDUR": null,
             "TEENRL": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "ETCD": "E003",
             "TEDUR": null,
             "TEENRL": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
