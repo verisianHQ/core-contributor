@@ -31,7 +31,7 @@
             "CMCLAS": "NSAID",
             "CMCLASCD": "C3853540"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -41,7 +41,7 @@
             "CMCLAS": "NSAID",
             "CMCLASCD": "C3853542"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -51,7 +51,7 @@
             "CMCLAS": "NSAID",
             "CMCLASCD": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -61,7 +61,7 @@
             "CMCLAS": "NSAID",
             "CMCLASCD": "C3853545"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 5,
@@ -71,7 +71,7 @@
             "CMCLAS": null,
             "CMCLASCD": "C3853545"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -90,7 +90,7 @@
             "SUCLAS": "CIGARETTE",
             "SUCLASCD": "C42678"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -100,106 +100,22 @@
             "SUCLAS": "CIGARETTE",
             "SUCLASCD": "C42679"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "DTHFL"
     },
     {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "DTHFL"
-    },
-    {
-      "Sheet": "ce.xpt",
-      "Row": 1,
-      "Variable": "CEDECOD"
-    },
-    {
-      "Sheet": "ce.xpt",
-      "Row": 5,
-      "Variable": "CETERM"
-    },
-    {
-      "Sheet": "ce.xpt",
-      "Row": 6,
-      "Variable": "CEDECOD"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 5,
-      "Variable": "CMCLAS"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 5,
-      "Variable": "CMCLASCD"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 6,
-      "Variable": "CMCLAS"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 6,
-      "Variable": "CMCLASCD"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 7,
-      "Variable": "CMCLAS"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 7,
-      "Variable": "CMCLASCD"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 8,
-      "Variable": "CMCLAS"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 8,
-      "Variable": "CMCLASCD"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 9,
-      "Variable": "CMCLAS"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 9,
-      "Variable": "CMCLASCD"
-    },
-    {
-      "Sheet": "su.xpt",
-      "Row": 5,
-      "Variable": "SUCLAS"
-    },
-    {
-      "Sheet": "su.xpt",
-      "Row": 5,
-      "Variable": "SUCLASCD"
-    },
-    {
-      "Sheet": "su.xpt",
-      "Row": 7,
-      "Variable": "SUCLAS"
-    },
-    {
-      "Sheet": "su.xpt",
-      "Row": 7,
-      "Variable": "SUCLASCD"
+      "dataset": "ag.xpt",
+      "domain": "AG",
+      "execution_status": "execution_error",
+      "execution_message": "SQL operator execution error",
+      "number_errors": 1,
+      "errors": [
+        {
+          "error": "SQL error in is_not_unique_relationship operator",
+          "message": "Column 'AGCLAS' not found in table 'AG'"
+        }
+      ]
     }
   ]
 }
