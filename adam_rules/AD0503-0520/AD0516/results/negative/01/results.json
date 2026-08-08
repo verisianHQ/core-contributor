@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "*ETM does not contain \"End Time\" in the label",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 12,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "TRTETM",
+            "variable_label": "Entirely Different Label"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "adpe.csv",
+      "domain": "adpe",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

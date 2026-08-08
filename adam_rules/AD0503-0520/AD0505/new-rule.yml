@@ -1,0 +1,76 @@
+# Variable: *DTM
+# Condition: Variable name ends with *DTM
+# Rule: A variable ending in DTM must contain "Datetime" in the label
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '505'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: ADaMIG v1.3
+                Section: 3.1.6
+                Item: '2'
+                Cited Guidance: 'ADaMIG v1.3, Section 3.1.6, Item 2: Variable labels containing a word or phrase in curly brackets, e.g., {Time} (the label for *TM variables), should be replaced by the producer with appropriate text. The label must contain the bracketed word or phrase somewhere in the text'
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '505'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: ADaMIG v1.2
+                Section: 3.1.6
+                Item: '2'
+                Cited Guidance: 'ADaMIG v1.2, Section 3.1.6, Item 2: Variable labels containing a word or phrase in curly brackets, e.g., {Time} (the label for *TM variables), should be replaced by the producer with appropriate text. The label must contain the bracketed word or phrase somewhere in the text'
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '505'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: ADaMIG v1.1
+                Section: 3.1.6
+                Item: '2'
+                Cited Guidance: 'ADaMIG v1.1, Section 3.1.6, Item 2: Variable labels containing a word or phrase in brackets, e.g. {Time}, should be replaced by the producer with appropriate text that contains the bracketed word or phrase somewhere in the text (e.g., the label for a *TM variable is indicated as {Time} in this document) indicating any producer defined label is permitted as long as the word Time is incorporated in it.'
+Check:
+  all:
+    - name: variable_name
+      operator: suffix_matches_regex
+      suffix: 4
+      value: ^(?!.*(?:SDTM|EDTM)$).*DTM$
+    - name: variable_label
+      operator: not_matches_regex
+      value: (?i)^(?=.*\mdatetime\M ?).*$
+      value_is_literal: true
+Core:
+  Id: AD0505
+  Status: Draft
+  Version: '1'
+Description: A variable ending in DTM must contain "Datetime" in the label
+Executability: Fully Executable
+Outcome:
+  Message: '*DTM does not contain "Datetime" in the label'
+  Output Variables:
+    - variable_name
+    - variable_label
+Rule Type: Variable Metadata Check
+Scope:
+  Data Structures:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

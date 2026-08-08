@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "adpe.csv",
+      "domain": "adpe",
+      "execution_status": "success",
+      "execution_message": "*DT does not contain \"Date\" in the label.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ADT",
+            "variable_label": "Analysis Day"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
