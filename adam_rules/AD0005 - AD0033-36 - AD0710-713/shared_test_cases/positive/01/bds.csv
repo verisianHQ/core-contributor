@@ -1,0 +1,6 @@
+STUDYID,USUBJID,PARAM,PARAMCD,ITTRFL,ITTRFN,ITTPFL,ITTPFN
+Study Identifier,Unique Subject Identifier,Parameter Name,Parameter Code,Intent to Treat Flag,Intent to Treat Flag Numeric,Intent to Treat Population Flag,Intent to Treat Population Flag Numeric
+Char,Char,Char,Char,Char,Num,Char,Num
+10,8,20,10,1,1,1,1
+CDISCPILOT01,CDISC001,PARAMETER 1,PARAMCD1,Y,1,Y,1
+CDISCPILOT01,CDISC001,PARAMETER 1,PARAMCD1,N,0,N,0
