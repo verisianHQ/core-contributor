@@ -1,0 +1,57 @@
+{
+  "datasets": [
+    {
+      "dataset": "ta.xpt",
+      "domain": "TA",
+      "execution_status": "success",
+      "execution_message": "TAETORD should be in the same order as the order of elements in the TA dataset for the Arm to which the subject was assigned.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "TAETORD": 1.0,
+            "ARM": "Zanomaline High Dose (81 mg)",
+            "ARMCD": "ZAN_HIGH"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "TAETORD": 3.0,
+            "ARM": "Zanomaline High Dose (81 mg)",
+            "ARMCD": "ZAN_HIGH"
+          },
+          "validated": true
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "TAETORD": 2.0,
+            "ARM": "Zanomaline High Dose (81 mg)",
+            "ARMCD": "ZAN_HIGH"
+          },
+          "validated": true
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "TAETORD": 4.0,
+            "ARM": "Zanomaline High Dose (81 mg)",
+            "ARMCD": "ZAN_HIGH"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
