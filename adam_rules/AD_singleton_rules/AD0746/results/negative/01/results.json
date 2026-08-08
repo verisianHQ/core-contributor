@@ -1,0 +1,30 @@
+{
+  "datasets": [
+    {
+      "dataset": "adpp.csv",
+      "domain": "adpp",
+      "execution_status": "success",
+      "execution_message": "SRCDOM has a value that is not an SDTM domain name, ADaM dataset name, or null.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "SRCDOM": "XX"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "pp.csv",
+      "domain": "pp",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0746, dataset=PP",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

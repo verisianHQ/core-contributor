@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "No variable with a suffix of FL is present in ADSL.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "^[A-Z][A-Z0-9_]*FL$": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

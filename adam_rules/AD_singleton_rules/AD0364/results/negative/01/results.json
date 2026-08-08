@@ -1,0 +1,24 @@
+{
+  "datasets": [
+    {
+      "dataset": "adae.csv",
+      "domain": "adae",
+      "execution_status": "success",
+      "execution_message": "DOSEON or DOSCUMA is present while DOSEU is absent.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "DOSEON": 1.0,
+            "DOSCUMA": 10.0,
+            "DOSEU": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "A variable with a suffix of FL has a value that is not Y, N, or null.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "SAFFL",
+            "variable_value": "X"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ITTFL",
+            "variable_value": "0"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
