@@ -1,0 +1,22 @@
+Rule ID,Error group,Sheet,Error level,Row num,Variable,Error value
+AD0204,1,adsl.csv,Record,5,USUBJID,CDISC001
+AD0204,1,adsl.csv,Record,5,AGE,63
+AD0204,1,dm.csv,Record,5,DM.AGE,65
+AD0205,1,adsl.csv,Record,5,USUBJID,CDISC001
+AD0205,1,adsl.csv,Record,5,AGEU,YEARS
+AD0205,1,dm.csv,Record,5,DM.AGEU,MONTHS
+AD0206,1,adsl.csv,Record,5,USUBJID,CDISC001
+AD0206,1,adsl.csv,Record,5,SEX,M
+AD0206,1,dm.csv,Record,5,DM.SEX,F
+AD0207,1,adsl.csv,Record,5,USUBJID,CDISC001
+AD0207,1,adsl.csv,Record,5,RACE,WHITE
+AD0207,1,dm.csv,Record,5,DM.RACE,BLACK
+AD0208,1,adsl.csv,Record,5,USUBJID,CDISC001
+AD0208,1,adsl.csv,Record,5,SUBJID,CDISC001
+AD0208,1,dm.csv,Record,5,DM.SUBJID,CDISC003
+AD0209,1,adsl.csv,Record,5,USUBJID,CDISC001
+AD0209,1,adsl.csv,Record,5,SITEID,SITE001
+AD0209,1,dm.csv,Record,5,DM.SITEID,SITE003
+AD0210,1,adsl.csv,Record,5,USUBJID,CDISC001
+AD0210,1,adsl.csv,Record,5,ARM,ARM001
+AD0210,1,dm.csv,Record,5,DM.ARM,ARM003
