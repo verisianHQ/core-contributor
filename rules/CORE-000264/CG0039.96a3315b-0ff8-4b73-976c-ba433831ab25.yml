@@ -58,15 +58,20 @@ Authorities:
                 Section: IG v3.2[6.2 AE]|Model v1.4[2.2.2]
 Check:
   all:
-    - name: --BODSYS
-      operator: not_equal_to
-      value: --SOC
+    - name: --SOC
+      operator: exists
+    - any:
+      - name: --BODSYS
+        operator: not_exists
+      - name: --BODSYS
+        operator: not_equal_to
+        value: --SOC
 Core:
   Id: CORE-000264
   Status: Published
   Version: '1'
-Description: Raise an error when primary SOC is used for analysis but --BODSYS is not
-  equal to --SOC.
+Description: Raise an error when primary SOC is used for analysis but --BODSYS is missing
+  or is not equal to --SOC.
 Executability: Partially Executable - Possible Overreporting
 Outcome:
   Message: --BODSYS must be equal to --SOC when primary SOC is used for analysis.

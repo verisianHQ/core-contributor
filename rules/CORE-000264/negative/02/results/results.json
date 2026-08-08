@@ -1,0 +1,106 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AEBODSYS must be equal to AESOC when primary SOC is used for analysis.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1593,
+          "USUBJID": "CDISC-TEST-099",
+          "value": {
+            "AETERM": "PNEUMONIA",
+            "AEDECOD": "Pneumonia",
+            "AEBODSYS": "Not in dataset",
+            "AESOC": "Cardiac disorders"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 1595,
+          "USUBJID": "CDISC-TEST-099",
+          "value": {
+            "AETERM": "URINARY TRACT INFECTION",
+            "AEDECOD": "Urinary tract infection",
+            "AEBODSYS": "Not in dataset",
+            "AESOC": "CARDIAC disorders"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 1596,
+          "USUBJID": "CDISC-TEST-100",
+          "value": {
+            "AETERM": "UPSET STOMACH",
+            "AEDECOD": "Abdominal discomfort",
+            "AEBODSYS": "Not in dataset",
+            "AESOC": "Gastrointestinal disorders"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 1598,
+          "USUBJID": "CDISC-TEST-100",
+          "value": {
+            "AETERM": "BACK PAIN",
+            "AEDECOD": "Back pain",
+            "AEBODSYS": "Not in dataset",
+            "AESOC": "Musculoskeletal and connective tissue disorders"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "MHBODSYS must be equal to MHSOC when primary SOC is used for analysis.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC003",
+          "value": {
+            "MHTERM": "ALZHEIMER'S DISEASE",
+            "MHDECOD": "Not in dataset",
+            "MHBODSYS": "Not in dataset",
+            "MHSOC": "Neurodegenerative Diseases"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "CDISC004",
+          "value": {
+            "MHTERM": "ALZHEIMER'S DISEASE",
+            "MHDECOD": "Not in dataset",
+            "MHBODSYS": "Not in dataset",
+            "MHSOC": "Bodysystem 2"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC005",
+          "value": {
+            "MHTERM": "ALZHEIMER'S DISEASE",
+            "MHDECOD": "Not in dataset",
+            "MHBODSYS": "Not in dataset",
+            "MHSOC": "Neurodegenerative Diseases 1"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
