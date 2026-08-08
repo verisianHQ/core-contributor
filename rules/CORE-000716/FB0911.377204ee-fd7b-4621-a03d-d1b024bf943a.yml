@@ -1,6 +1,7 @@
-# Variable: --SOC, -SOCCD
+# Variable: --SOCCD AND --SOC
 # Condition:
-# Rule: --SOCCD and --SOC have a one-to-one relationship 
+# Rule: --SOCCD and --SOC do not have a one-to-one relationship
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -52,17 +53,13 @@ Authorities:
 Check:
   all:
     - name: --SOC
-      operator: exists
-    - name: --SOCCD
-      operator: exists
-    - name: --SOC
       operator: is_not_unique_relationship
       value: --SOCCD
 Core:
   Id: CORE-000716
   Status: Published
   Version: '1'
-Description: --SOCCD and --SOC should have a one-to-one relationship.
+Description: Raise an error when --SOCCD and --SOC do not have a one-to-one relationship.
 Executability: Fully Executable
 Outcome:
   Message: --SOCCD and --SOC do not have a one-to-one relationship.
