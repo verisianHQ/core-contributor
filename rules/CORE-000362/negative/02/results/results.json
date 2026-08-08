@@ -1,0 +1,61 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AESOCCD must be equal to AEBDSYCD when primary SOC is used for analysis.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1593,
+          "USUBJID": "CDISC-TEST-099",
+          "value": {
+            "AETERM": "PNEUMONIA",
+            "AEDECOD": "Pneumonia",
+            "AEBDSYCD": "Not in dataset",
+            "AESOCCD": 112.0
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 1595,
+          "USUBJID": "CDISC-TEST-099",
+          "value": {
+            "AETERM": "URINARY TRACT INFECTION",
+            "AEDECOD": "Urinary tract infection",
+            "AEBDSYCD": "Not in dataset",
+            "AESOCCD": 112.0
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 1596,
+          "USUBJID": "CDISC-TEST-100",
+          "value": {
+            "AETERM": "UPSET STOMACH",
+            "AEDECOD": "Abdominal discomfort",
+            "AEBDSYCD": "Not in dataset",
+            "AESOCCD": 124.0
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 1598,
+          "USUBJID": "CDISC-TEST-100",
+          "value": {
+            "AETERM": "BACK PAIN",
+            "AEDECOD": "Back pain",
+            "AEBDSYCD": "Not in dataset",
+            "AESOCCD": 111.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
