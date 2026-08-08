@@ -5,7 +5,7 @@
       "domain": "TS",
       "execution_status": "success",
       "execution_message": "TSPARMCD = RANDQT record is not present",
-      "number_errors": 2,
+      "number_errors": 1,
       "errors": [
         {
           "row": 1,
@@ -14,39 +14,11 @@
           "value": {
             "TSPARMCD": "TRT",
             "$trt_count": 1,
-            "$rand_count": "Operation variable not found"
+            "$randqt_count": 0
           },
-          "validated": false
-        },
-        {
-          "row": 2,
-          "SEQ": 1,
-          "USUBJID": "None",
-          "value": {
-            "TSPARMCD": "RAND",
-            "$trt_count": 1,
-            "$rand_count": "Operation variable not found"
-          },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ts.xpt",
-      "Row": 1,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 5,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 6,
-      "Variable": "TSPARMCD"
     }
   ]
 }

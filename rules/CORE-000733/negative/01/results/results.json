@@ -12,25 +12,13 @@
           "SEQ": 1,
           "USUBJID": "None",
           "value": {
-            "TSPARMCD": "TRT",
-            "$trt_count": 1,
-            "$rand_count": "Operation variable not found"
+            "TSPARMCD": "BRT",
+            "$trt_count": 0,
+            "$randqt_count": 0
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ts.xpt",
-      "Row": 1,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 5,
-      "Variable": "TSPARMCD"
     }
   ]
 }
