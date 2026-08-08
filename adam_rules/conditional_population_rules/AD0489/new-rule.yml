@@ -1,0 +1,53 @@
+# Variable: ONTRTFL
+# Condition: ONTRTFN is populated
+# Rule: ONTRTFL must be populated
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '489'
+              Version: '2'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADaMIG v1.3; ADaMIG-MD v1.0'
+                Section: '3.3.8; 3.1'
+                Item: 'Table 3.3.8.1'
+                Cited Guidance: |-
+                  ADaMIG v1.3, Section 3.3.8, Table 3.3.8.1: There must be a one-to-one relationship between ONTRTFN and ONTRTFL within a dataset.
+                  ONTRTFN cannot be present unless ONTRTFL is also present. When ONTRTFL and ONTRTFN are present, then on a given record, either both must be populated or both must be null.
+                  
+                  ADaMIG-MD v1.0, Section 3.1: MDBDS and MDOCCDS support analysis needs by adding SPDEVID as a required key variable and USUBJID as a conditionally required variable. See the BDS and OCCDS class for further details.
+Check:
+  all:
+    - name: ONTRTFN
+      operator: non_empty
+    - name: ONTRTFL
+      operator: empty
+Core:
+  Id: AD0489
+  Status: Draft
+  Version: '1'
+Description: 'ONTRTFL must be populated when ONTRTFN is populated.'
+Executability: Fully Executable
+Outcome:
+  Message: 'ONTRTFL is not populated when ONTRTFN is populated.'
+  Output Variables:
+    - ONTRTFL
+    - ONTRTFN
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BDS
+      - MDBDS
+      - OCCDS
+      - MDOCCDS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

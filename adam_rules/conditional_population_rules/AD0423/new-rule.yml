@@ -1,0 +1,54 @@
+# Variable: TRTPGy
+# Condition: TRTPGyN is populated
+# Rule: TRTPGy must be populated
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '423'
+              Version: '2'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADaMIG v1.3; ADaMIG-MD v1.0'
+                Section: '3.3.2; 3.1'
+                Item: 'Table 3.3.2.1'
+                Cited Guidance: |-
+                  ADaMIG v1.3, Section 3.3.2, Table 3.3.2.1: There must be a one-to-one relationship between TRTPGyN and TRTPGy within a study.
+                  TRTPGyN cannot be present unless TRTPGy is also present. When TRTPGy and TRTPGyN are present, then on a given record, either both must be populated or both must be null.
+                  
+                  ADaMIG-MD v1.0, Section 3.1: MDBDS and MDOCCDS support analysis needs by adding SPDEVID as a required key variable and USUBJID as a conditionally required variable. See the BDS and OCCDS class for further details.
+Check:
+  all:
+    - name: '^TRTPG(?P<y>[1-9][0-9]?)N$'
+      variable_regex_pattern: true
+      operator: non_empty
+    - name: 'TRTPG{{y}}'
+      operator: empty
+Core:
+  Id: AD0423
+  Status: Draft
+  Version: '1'
+Description: TRTPGy must be populated when TRTPGyN is populated.
+Executability: Fully Executable
+Outcome:
+  Message: TRTPGy is not populated when TRTPGyN is populated.
+  Output Variables:
+    - 'TRTPG{{y}}'
+    - 'TRTPG{{y}}N'
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BDS
+      - MDBDS
+      - OCCDS
+      - MDOCCDS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

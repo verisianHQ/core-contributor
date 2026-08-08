@@ -1,0 +1,48 @@
+# Variable: DEVTYGyN
+# Condition: DEVTYGy is populated
+# Rule: DEVTYGyN must be populated
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG-MD
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '679'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADaMIG-MD v1.0'
+                Section: '3.2.1.2'
+                Item: 'None'
+                Cited Guidance: |-
+                  ADaMIG-MD v1.0, Section 3.2.1.2: DEVTYGyN cannot be present unless DEVTYGy is also present. When DEVTYGy and DEVTYGyN are present, then on a given record, either both must be populated or both must be null.
+Check:
+  all:
+    - name: '^DEVTYG(?P<y>[1-9])$'
+      variable_regex_pattern: true
+      operator: non_empty
+    - name: 'DEVTYG{{y}}N'
+      operator: empty
+Core:
+  Id: AD0679
+  Status: Draft
+  Version: '1'
+Description: 'DEVTYGyN must be populated when DEVTYGy is populated.'
+Executability: Fully Executable
+Outcome:
+  Message: 'DEVTYGyN is not populated when DEVTYGy is populated.'
+  Output Variables:
+    - 'DEVTYG{{y}}N'
+    - 'DEVTYG{{y}}'
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - ADAM OTHER
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record
