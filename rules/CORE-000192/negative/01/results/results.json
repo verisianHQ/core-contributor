@@ -4,8 +4,8 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "RFENDTC is not blank when ARMNRS is provided.",
-      "number_errors": 2,
+      "execution_message": "RFENDTC must be null when ARMNRS is not null.",
+      "number_errors": 1,
       "errors": [
         {
           "row": 1,
@@ -16,18 +16,15 @@
             "RFENDTC": "2013-10-29"
           },
           "validated": false
-        },
-        {
-          "row": 2,
-          "SEQ": null,
-          "USUBJID": "CDISC004",
-          "value": {
-            "ARMNRS": "ASSIGNED, NOT TREATED",
-            "RFENDTC": "2014-03-18"
-          },
-          "validated": false
         }
       ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "RFENDTC": "2013-10-29"
+      }
     }
   ]
 }
