@@ -1,0 +1,82 @@
+# Variable: PARAMN
+# Condition: PARAMN and PARAM are populated
+# Rule: Each PARAMN value must map to only one PARAM value
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '740'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: 3.3.4
+        Item: Table 3.3.4.1
+        Cited Guidance: 'ADaMIG v1.1, Section 3.3.4, Table 3.3.4.1: There must be
+          a one-to-one mapping to PARAM within a dataset.'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '740'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: 3.3.4.1
+        Item: Table 3.3.4.1.1
+        Cited Guidance: 'ADaMIG v1.2, Section 3.3.4.1, Table 3.3.4.1.1: There must
+          be a one-to-one mapping to PARAM within a dataset.'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '740'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: 3.3.4.1; 3.1
+        Item: Table 3.3.4.1.1
+        Cited Guidance: 'ADaMIG v1.3, Section 3.3.4.1, Table 3.3.4.1.1: There must
+          be a one-to-one mapping to PARAM within a dataset.
+
+
+          ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis needs by adding
+          SPDEVID as a required key variable and USUBJID as a conditionally required
+          variable. See the BDS class for further details.'
+Check:
+  all:
+  - name: PARAM
+    operator: is_inconsistent_across_dataset
+    value: PARAMN
+    where_populated: true
+Core:
+  Id: AD0740
+  Status: Draft
+  Version: '1'
+Description: Each PARAMN value must map to only one PARAM value when both variables
+  are populated.
+Executability: Fully Executable
+Outcome:
+  Message: PARAM has more than one value for a given PARAMN value when both variables
+    are populated.
+  Output Variables:
+  - PARAM
+  - PARAMN
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BDS
+  Domains:
+    Include:
+    - ADPPK
+Sensitivity: Record

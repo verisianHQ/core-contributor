@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    {
+      "dataset": "adppk.csv",
+      "domain": "adppk",
+      "execution_status": "success",
+      "execution_message": "ACYCLE has more than one value for a given ACYCLEC value when both variables are populated.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "ACYCLE": "Cycle1",
+            "ACYCLEC": "A"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "STUDY001-002",
+          "value": {
+            "ACYCLE": "Cycle2",
+            "ACYCLEC": "A"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

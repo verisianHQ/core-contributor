@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    {
+      "dataset": "adppk.csv",
+      "domain": "adppk",
+      "execution_status": "success",
+      "execution_message": "SITEIDN has more than one value for a given SITEID value when both variables are populated.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "SITEIDN": 1.0,
+            "SITEID": "SITE-001"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "SITEIDN": 2.0,
+            "SITEID": "SITE-001"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
