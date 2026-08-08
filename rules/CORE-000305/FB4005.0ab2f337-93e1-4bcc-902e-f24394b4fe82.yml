@@ -1,3 +1,7 @@
+# Variable: --DUR
+# Condition: --DUR ^= null
+# Rule: --DUR does not contain '-'
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -152,10 +156,12 @@ Core:
   Id: CORE-000305
   Status: Published
   Version: '1'
-Description: Collected Duration (--DUR) value should not be negative.
+Description: Raise an error when Collected Duration (--DUR) value is negative.
 Executability: Fully Executable
 Outcome:
   Message: Negative value for --DUR.
+  Output Variables:
+    - --DUR
 Rule Type: Record Data
 Scope:
   Classes:
