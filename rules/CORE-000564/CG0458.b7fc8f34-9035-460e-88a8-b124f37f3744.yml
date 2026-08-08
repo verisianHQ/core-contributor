@@ -1,15 +1,14 @@
 # Variable: TSVCDREF
 # Condition: TSPARMCD in ('INDIC', 'TDIGRP')
 # Rule: TSVCDREF = 'SNOMED'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Further information about the parameters is included below in
-                  Table 1. TSVAL may have controlled terminology depending on
-                  the value of TSPARMCD
+              - Cited Guidance: Further information about the parameters is included below in Table 1. TSVAL may have controlled terminology depending on the value of TSPARMCD
                 Document: IG v3.2
                 Item: Assumption 3
                 Section: 7.4|Appendix C1
@@ -22,9 +21,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Further information about the parameters is included below in
-                  Table 1. TSVAL may have controlled terminology depending on
-                  the value of TSPARMCD
+              - Cited Guidance: Further information about the parameters is included below in Table 1. TSVAL may have controlled terminology depending on the value of TSPARMCD
                 Document: IG v3.3
                 Item: Assumption 3
                 Section: '7.4'
@@ -41,18 +38,19 @@ Check:
       value:
         - INDIC
         - TDIGRP
+      value_is_literal: true
     - name: TSVCDREF
       operator: not_equal_to
       value: SNOMED
+      value_is_literal: true
 Core:
   Id: CORE-000564
   Status: Published
   Version: '1'
-Description: Raise an error when TSPARMCD = INDIC or TSPARMCD = TDIGRP but
-  TSVCDREF is not equal to 'SNOMED'.
+Description: Raise an error when TSPARMCD is equal to 'INDIC' or 'TDIGRP' but TSVCDREF is not equal to 'SNOMED'.
 Executability: Fully Executable
 Outcome:
-  Message: TSPARMCD = INDIC or TSPARMCD = TDIGRP but TSVCDREF is not equal to 'SNOMED'.
+  Message: TSPARMCD is equal to 'INDIC' or 'TDIGRP' but TSVCDREF is not equal to 'SNOMED'.
 Rule Type: Record Data
 Scope:
   Classes:
