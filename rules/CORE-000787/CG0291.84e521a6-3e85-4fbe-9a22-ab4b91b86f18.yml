@@ -1,6 +1,7 @@
 # Variable: TSVAL
 # Condition: TSVALNF = null
 # Rule: TSVAL not populated with values or synonyms of values in the ISO 21090 null flavor codelist (or other terms that can be represented as null flavors)
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -12,7 +13,7 @@ Authorities:
                   then have to recognize this special term as an exception to
                   the expected data format. Therefore, it was decided that a
                   separate null flavor variable that uses the ISO 21090 null
-                  flavor terminology would be a better solution.
+                  flavor terminology would be a better solution .
                 Document: IG v3.4
                 Section: 7.4.2.1
             Origin: SDTM and SDTMIG Conformance Rules
@@ -61,23 +62,20 @@ Check:
       operator: empty
     - name: TSVAL
       operator: matches_regex
-      value: (?i:^(NI|No information|INV|Invalid|OTH|Other|PINF|Positive
+      value: (?i)^(NI|No information|INV|Invalid|OTH|Other|PINF|Positive
         infinity|NINF|Negative
         infinity|UNC|Unencoded|DER|Derived|UNK|Unknown|ASKU|Asked but
         unknown|NAV|Temporarily unavailable|NASK|Not
-        asked|TRC|Trace|MSK|Masked|QS|Sufficient Quantity)$)
+        asked|TRC|Trace|MSK|Masked|QS|Sufficient Quantity)$
 Core:
   Id: CORE-000787
   Status: Published
   Version: '1'
-Description: Raise an error when TSVALNF is empty and TSVAL is populated with
-  values or synonyms of values in the ISO 21090 null flavor codelist (or other
-  terms that can be represented as null flavors)
+Description: Raise an error when TSVALNF is null and TSVAL is populated with values or synonyms of values in the ISO 21090 null flavor codelist (or other terms that can be represented as null flavors).
 Executability: Fully Executable
 Outcome:
-  Message: TSVAL is populated with an ISO 21090 null flavor or null flavor description.
+  Message: TSVALNF is null, but TSVAL is populated with an ISO 21090 null flavor or null flavor description.
   Output Variables:
-    - TSPARMCD
     - TSVALNF
     - TSVAL
 Rule Type: Record Data
