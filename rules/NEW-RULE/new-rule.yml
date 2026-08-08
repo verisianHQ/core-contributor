@@ -1,0 +1,109 @@
+# Variable: CMDECOD
+# Condition: CMTRT has a decode value in the dictionary
+# Rule: CMDECOD ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: CMDECOD is the standardized medication/therapy term derived by
+                  the sponsor from  the coding dictionary. It is expected that
+                  the reported term (CMTRT) or the modified term (CMMODIFY) will
+                  be coded using a standard dictionary
+                Document: IG v3.4
+                Item: Assumption 2c
+                Section: 6.1.2
+              - Cited Guidance: Standardized or dictionary-derived text description of CMTRT or
+                  CMMODIFY.  Equivalent to the generic medication name in WHO
+                  Drug. The sponsor is expected to provide the dictionary name
+                  and version used to map  the terms utilizing the define.xml
+                  external codelist attributes. If an intervention term does not
+                  have a decode value in the dictionary then  CMDECOD will be
+                  left blank.
+                Document: IG v3.3
+                Item: Specification
+                Section: 6.1.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0096
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: IG v3.2[6.1][Assumption 2c][CMDECOD is the standardized
+                  medication/therapy term derived by the sponsor from the coding
+                  dictionary. It is expected that the reported term (CMTRT) or
+                  the modified term (CMMODIFY) will be coded using a standard
+                  dictionary.]|IG v3.2[6.1][Specification][Standardized or
+                  dictionary-derived text description of CMTRT or CMMODIFY.
+                  Equivalent to the generic medication name in WHO Drug. The
+                  sponsor is expected to provide the dictionary name and version
+                  used to map the terms utilizing the define.xml external
+                  codelist attributes. If an intervention term does not have a
+                  decode value in the dictionary then CMDECOD will be left
+                  blank.]
+                Document: IG v3.2
+                Item: IG v3.2[6.1][Assumption 2c]|IG v3.2[6.1][Specification]
+                Section: IG v3.2[6.1]
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0096
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: IG v3.3[6.1.2][Assumption 2c][CMDECOD is the standardized
+                  medication/therapy term derived by the sponsor from the coding
+                  dictionary. It is expected that the reported term (CMTRT) or
+                  the modified term (CMMODIFY) will be coded using a standard
+                  dictionary.]|IG v3.3[6.1.2][Specification][Standardized or
+                  dictionary-derived text description of CMTRT or CMMODIFY.
+                  Equivalent to the generic medication name in WHO Drug. The
+                  sponsor is expected to provide the dictionary name and version
+                  used to map the terms utilizing the define.xml external
+                  codelist attributes. If an intervention term does not have a
+                  decode value in the dictionary then CMDECOD will be left
+                  blank.]
+                Document: IG v3.3
+                Item: IG v3.3[6.1.2][Assumption 2c]|IG v3.3[6.1.2][Specification]
+                Section: IG v3.3[6.1.2]
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0096
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: CMTRT
+      operator: non_empty
+    - name: CMTRT
+      operator: is_valid_whodrug_term_reference
+      case_insensitive: true
+    - name: CMDECOD
+      operator: empty
+Core:
+  Id: CDISC.SDTMIG.CG0096
+  Status: Draft
+  Version: '1'
+Description: Raise an error when CMTRT is populated with a valid WHODrug term, but CMDECOD is empty.
+Executability: Fully Executable
+Outcome:
+  Message: CMDECOD must be populated when CMTRT is populated with a valid WHODrug term.
+  Output Variables:
+    - CMTRT
+    - CMDECOD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - CM
+Sensitivity: Record
