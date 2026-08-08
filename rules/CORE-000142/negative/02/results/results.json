@@ -4,7 +4,7 @@
       "dataset": "vs.xpt",
       "domain": "VS",
       "execution_status": "success",
-      "execution_message": "VSELTM is not the same value across records with the same values of DOMAIN, VISITNUM, VSTPTREF, and VSTPTNUM.",
+      "execution_message": "VSELTM is not the same value across records with the same values of DOMAIN, VISITNUM, VSTPTREF, and VSTPTNUM when VSTPT, VSTPTNUM, and VSELTM are populated.",
       "number_errors": 4,
       "errors": [
         {
@@ -14,6 +14,7 @@
           "value": {
             "VSTPT": "4H PREDOSE",
             "VSTPTNUM": 10.0,
+            "VSTPTREF": "DOSE",
             "VSELTM": "-PT4H",
             "VISITNUM": 5.0,
             "DOMAIN": "VS"
@@ -27,6 +28,7 @@
           "value": {
             "VSTPT": "4H PREDOSE",
             "VSTPTNUM": 5.0,
+            "VSTPTREF": "DOSE",
             "VSELTM": "-PT4H",
             "VISITNUM": 4.0,
             "DOMAIN": "VS"
@@ -40,6 +42,7 @@
           "value": {
             "VSTPT": "10MIN POSTDOSE",
             "VSTPTNUM": 5.0,
+            "VSTPTREF": "DOSE",
             "VSELTM": "10",
             "VISITNUM": 4.0,
             "DOMAIN": "VS"
@@ -53,6 +56,7 @@
           "value": {
             "VSTPT": "10MIN POSTDOSE",
             "VSTPTNUM": 10.0,
+            "VSTPTREF": "DOSE",
             "VSELTM": "10",
             "VISITNUM": 5.0,
             "DOMAIN": "VS"
@@ -60,6 +64,44 @@
           "validated": false
         }
       ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "VSTPT": "4H PREDOSE",
+        "VSTPTNUM": 10,
+        "VSELTM": "-PT4H",
+        "VISITNUM": 5,
+        "DOMAIN": "VS"
+      }
+    },
+    {
+      "value": {
+        "VSTPT": "4H PREDOSE",
+        "VSTPTNUM": 5,
+        "VSELTM": "-PT4H",
+        "VISITNUM": 4,
+        "DOMAIN": "VS"
+      }
+    },
+    {
+      "value": {
+        "VSTPT": "10MIN POSTDOSE",
+        "VSTPTNUM": 5,
+        "VSELTM": 10,
+        "VISITNUM": 4,
+        "DOMAIN": "VS"
+      }
+    },
+    {
+      "value": {
+        "VSTPT": "10MIN POSTDOSE",
+        "VSTPTNUM": 10,
+        "VSELTM": 10,
+        "VISITNUM": 5,
+        "DOMAIN": "VS"
+      }
     }
   ]
 }
