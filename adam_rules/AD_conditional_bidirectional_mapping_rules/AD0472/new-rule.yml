@@ -1,0 +1,67 @@
+# Variable: STRATwR
+# Condition: STRATwR and STRATwRN are populated
+# Rule: Each STRATwRN value must map to only one STRATwR value
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '472'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: '3.2'
+        Item: Table 3.2.9
+        Cited Guidance: 'ADaMIG v1.2, Section 3.2, Table 3.2.9: There must be a one-to-one relationship between STRATwRN and
+          STRATwR within a study.
+
+          STRATwRN cannot be present unless STRATwR is also present. When STRATwR and STRATwRN are present, then on a given
+          record, either both must be populated or both must be null.'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '472'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: '3.2'
+        Item: Table 3.2.9
+        Cited Guidance: 'ADaMIG v1.3, Section 3.2, Table 3.2.9: There must be a one-to-one relationship between STRATwRN and
+          STRATwR within a study.
+
+          STRATwRN cannot be present unless STRATwR is also present. When STRATwR and STRATwRN are present, then on a given
+          record, either both must be populated or both must be null.'
+Check:
+  all:
+  - name: ^STRAT(?P<w>[1-9])R$
+    variable_regex_pattern: true
+    operator: is_inconsistent_across_dataset
+    value: STRAT{{w}}RN
+    where_populated: true
+Core:
+  Id: AD0472
+  Status: Draft
+  Version: '1'
+Description: Each STRATwRN value must map to only one STRATwR value when both variables are populated.
+Executability: Fully Executable
+Outcome:
+  Message: STRATwR has more than one value for a given STRATwRN value when both variables are populated.
+  Output Variables:
+  - STRAT{{w}}R
+  - STRAT{{w}}RN
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - SUBJECT LEVEL ANALYSIS DATASET
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

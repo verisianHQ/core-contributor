@@ -1,0 +1,74 @@
+# Variable: DTHCAUS
+# Condition: DTHCAUS and DTHCAUSN are populated
+# Rule: Each DTHCAUSN value must map to only one DTHCAUS value
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '359'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: '3.2'
+        Item: Table 3.2.8
+        Cited Guidance: 'ADaMIG v1.1, Section 3.2, Table 3.2.8: CDISC Notes for DTHCAUSN state: "Must have a one-to-one mapping
+          to DTHCAUS."'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '359'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: '3.2'
+        Item: Table 3.2.8
+        Cited Guidance: 'ADaMIG v1.2, Section 3.2, Table 3.2.8: CDISC Notes for DTHCAUSN state: "There must be a one-to-one
+          relationship between DTHCAUSN and DTHCAUS within a study."'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '359'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: '3.2'
+        Item: Table 3.2.8
+        Cited Guidance: 'ADaMIG v1.3, Section 3.2, Table 3.2.8: CDISC Notes for DTHCAUSN state: "There must be a one-to-one
+          relationship between DTHCAUSN and DTHCAUS within a study."'
+Check:
+  all:
+  - name: DTHCAUS
+    operator: is_inconsistent_across_dataset
+    value: DTHCAUSN
+    where_populated: true
+Core:
+  Id: AD0359
+  Status: Draft
+  Version: '1'
+Description: Each DTHCAUSN value must map to only one DTHCAUS value when both variables are populated.
+Executability: Fully Executable
+Outcome:
+  Message: DTHCAUS has more than one value for a given DTHCAUSN value when both variables are populated.
+  Output Variables:
+  - DTHCAUS
+  - DTHCAUSN
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - SUBJECT LEVEL ANALYSIS DATASET
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

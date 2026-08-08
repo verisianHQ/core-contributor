@@ -1,0 +1,75 @@
+# Variable: TRTSEQPN
+# Condition: TRTSEQPN and TRTSEQP are populated
+# Rule: Each TRTSEQP value must map to only one TRTSEQPN value
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '753'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: '3.2'
+        Item: Table 3.2.4
+        Cited Guidance: 'ADaMIG v1.1, Section 3.2, Table 3.2.4: One-to-one mapping to TRTSEQP within a study.'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '753'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: '3.2'
+        Item: Table 3.2.4
+        Cited Guidance: 'ADaMIG v1.2, Section 3.2, Table 3.2.4: Numeric representation of TRTSEQP. There must be a one-to-one
+          relationship between TRTSEQPN and TRTSEQP within a study. TRTSEQPN cannot be present unless TRTSEQP is also present.
+          When TRTSEQP and TRTSEQPN are present, then on a given record, either both must be populated or both must be null.'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '753'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: '3.2'
+        Item: Table 3.2.4
+        Cited Guidance: 'ADaMIG v1.3, Section 3.2, Table 3.2.4: Numeric representation of TRTSEQP. There must be a one-to-one
+          relationship between TRTSEQPN and TRTSEQP within a study. TRTSEQPN cannot be present unless TRTSEQP is also present.
+          When TRTSEQP and TRTSEQPN are present, then on a given record, either both must be populated or both must be null.'
+Check:
+  all:
+  - name: TRTSEQPN
+    operator: is_inconsistent_across_dataset
+    value: TRTSEQP
+    where_populated: true
+Core:
+  Id: AD0753
+  Status: Draft
+  Version: '1'
+Description: Each TRTSEQP value must map to only one TRTSEQPN value when both variables are populated.
+Executability: Fully Executable
+Outcome:
+  Message: TRTSEQPN has more than one value for a given TRTSEQP value when both variables are populated.
+  Output Variables:
+  - TRTSEQPN
+  - TRTSEQP
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - SUBJECT LEVEL ANALYSIS DATASET
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

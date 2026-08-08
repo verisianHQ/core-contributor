@@ -1,0 +1,47 @@
+# Variable: DEVGRy
+# Condition: DEVGRy and DEVGRyN are populated
+# Rule: Each DEVGRyN value must map to only one DEVGRy value
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG-MD
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '673'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG-MD v1.0
+        Section: 3.2.1.2
+        Item: None
+        Cited Guidance: 'ADaMIG-MD v1.0, Section 3.2.1.2: Numeric representation of grouping "y" of the pooled device group. 
+          There must be a one-to-one relationship between DEVGRyN and DEVGRy within a study.'
+Check:
+  all:
+  - name: ^DEVGR(?P<y>[1-9][0-9]?)$
+    variable_regex_pattern: true
+    operator: is_inconsistent_across_dataset
+    value: DEVGR{{y}}N
+    where_populated: true
+Core:
+  Id: AD0673
+  Status: Draft
+  Version: '1'
+Description: Each DEVGRyN value must map to only one DEVGRy value when both variables are populated.
+Executability: Fully Executable
+Outcome:
+  Message: DEVGRy has more than one value for a given DEVGRyN value when both variables are populated.
+  Output Variables:
+  - DEVGR{{y}}
+  - DEVGR{{y}}N
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - ADAM OTHER
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

@@ -1,0 +1,75 @@
+# Variable: REGIONyN
+# Condition: REGIONyN and REGIONy are populated
+# Rule: Each REGIONy value must map to only one REGIONyN value
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '356'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: '3.2'
+        Item: Table 3.2.1
+        Cited Guidance: 'ADaMIG v1.1, Section 3.2, Table 3.2.1: CDISC Notes for REGIONyN state: "One-to-one mapping to REGIONy
+          within a study."'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '356'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: '3.2'
+        Item: Table 3.2.1
+        Cited Guidance: 'ADaMIG v1.2, Section 3.2, Table 3.2.1: CDISC Notes for REGIONyN state: "There must be a one-to-one
+          relationship between REGIONyN and REGIONy within a study."'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '356'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: '3.2'
+        Item: Table 3.2.1
+        Cited Guidance: 'ADaMIG v1.3, Section 3.2, Table 3.2.1: CDISC Notes for REGIONyN state: "There must be a one-to-one
+          relationship between REGIONyN and REGIONy within a study."'
+Check:
+  all:
+  - name: ^REGION(?P<y>[1-9])N$
+    variable_regex_pattern: true
+    operator: is_inconsistent_across_dataset
+    value: REGION{{y}}
+    where_populated: true
+Core:
+  Id: AD0356
+  Status: Draft
+  Version: '1'
+Description: Each REGIONy value must map to only one REGIONyN value when both variables are populated.
+Executability: Fully Executable
+Outcome:
+  Message: REGIONyN has more than one value for a given REGIONy value when both variables are populated.
+  Output Variables:
+  - REGION{{y}}N
+  - REGION{{y}}
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - SUBJECT LEVEL ANALYSIS DATASET
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

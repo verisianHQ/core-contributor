@@ -1,0 +1,79 @@
+# Variable: TRxxAGy
+# Condition: TRxxAGy and TRxxAGyN are populated
+# Rule: Each TRxxAGyN value must map to only one TRxxAGy value
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '760'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: '3.2'
+        Item: Table 3.2.4
+        Cited Guidance: 'ADaMIG v1.1, Section 3.2, Table 3.2.4: TRxxAGyN: The numeric code for TRxxAGy. One-to-one mapping
+          to TRxxAGy within a study.'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '760'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: '3.2'
+        Item: Table 3.2.4
+        Cited Guidance: 'ADaMIG v1.2, Section 3.2, Table 3.2.4: TRxxAGyN: Numeric representation of TRxxAGy. There must be
+          a one-to-one relationship between TRxxAGyN and TRxxAGy within a study. TRxxAGyN cannot be present unless TRxxAGy
+          is also present. When TRxxAGy and TRxxAGyN are present, then on a given record, either both must be populated or
+          both must be null.'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '760'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: '3.2'
+        Item: Table 3.2.4
+        Cited Guidance: 'ADaMIG v1.3, Section 3.2, Table 3.2.4: TRxxAGyN: Numeric representation of TRxxAGy. There must be
+          a one-to-one relationship between TRxxAGyN and TRxxAGy within a study. TRxxAGyN cannot be present unless TRxxAGy
+          is also present. When TRxxAGy and TRxxAGyN are present, then on a given record, either both must be populated or
+          both must be null.'
+Check:
+  all:
+  - name: ^TR(?P<xx>0[1-9]|[1-9][0-9])AG(?P<y>[1-9][0-9]?)$
+    variable_regex_pattern: true
+    operator: is_inconsistent_across_dataset
+    value: TR{{xx}}AG{{y}}N
+    where_populated: true
+Core:
+  Id: AD0760
+  Status: Draft
+  Version: '1'
+Description: Each TRxxAGyN value must map to only one TRxxAGy value when both variables are populated.
+Executability: Fully Executable
+Outcome:
+  Message: TRxxAGy has more than one value for a given TRxxAGyN value when both variables are populated.
+  Output Variables:
+  - TR{{xx}}AG{{y}}
+  - TR{{xx}}AG{{y}}N
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - SUBJECT LEVEL ANALYSIS DATASET
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record
