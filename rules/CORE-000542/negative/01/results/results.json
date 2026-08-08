@@ -1,4 +1,159 @@
 {
-  "error": "No result - either the rule or test case data unit-test-coreid-FB3102-negative.xlsx is broken",
-  "exception": "Error converting column 'FASTRESN' in table 'fa.xpt' to numeric: could not convert string to float: 'YES'"
+  "datasets": [
+    {
+      "dataset": "eg.xpt",
+      "domain": "EG",
+      "execution_status": "success",
+      "execution_message": "EGSTRESC is numeric but EGSTRESN is not populated or not equal to EGSTRESC.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "123101",
+          "value": {
+            "EGSTRESC": "72",
+            "EGSTRESN": 62.0,
+            "EGTESTCD": "EGHRMN"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "EGSTRESC": "150",
+            "EGSTRESN": 150.2,
+            "EGTESTCD": "PRAG"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 2,
+          "USUBJID": "123102",
+          "value": {
+            "EGSTRESC": "149.876",
+            "EGSTRESN": 150.0,
+            "EGTESTCD": "PRAG"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "FASTRESC is numeric but FASTRESN is not populated or not equal to FASTRESC.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "123101",
+          "value": {
+            "FASTRESC": "-1.234",
+            "FASTRESN": 1.0,
+            "FATESTCD": "TSTRES"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "123101",
+          "value": {
+            "FASTRESC": "-1.235",
+            "FASTRESN": 1.235,
+            "FATESTCD": "TSTRES"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "123101",
+          "value": {
+            "FASTRESC": "1.236",
+            "FASTRESN": 1.0,
+            "FATESTCD": "TSTRES"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "mi.xpt",
+      "domain": "MI",
+      "execution_status": "success",
+      "execution_message": "MISTRESC is numeric but MISTRESN is not populated or not equal to MISTRESC.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "ABC-1001",
+          "value": {
+            "MISTRESC": "0",
+            "MISTRESN": null,
+            "MITESTCD": "HER2"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBSTRESC is numeric but LBSTRESN is not populated or not equal to LBSTRESC.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "123101",
+          "value": {
+            "LBSTRESC": "200",
+            "LBSTRESN": 210.0,
+            "LBTESTCD": "Prot"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "execution_status": "success",
+      "execution_message": "VSSTRESC is numeric but VSSTRESN is not populated or not equal to VSSTRESC.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "123101",
+          "value": {
+            "VSSTRESC": "154",
+            "VSSTRESN": "Not in dataset",
+            "VSTESTCD": "SYSBP"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "VSSTRESC": "44",
+            "VSSTRESN": "Not in dataset",
+            "VSTESTCD": "DIABP"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
 }
