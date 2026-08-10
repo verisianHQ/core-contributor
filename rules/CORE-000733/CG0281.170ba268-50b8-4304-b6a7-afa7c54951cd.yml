@@ -32,17 +32,13 @@ Authorities:
             Version: '2.0'
         Version: '3.3'
 Check:
-  any:
+  all:
     - name: $trt_count
       operator: equal_to
-      value: 0
-    - all:
-        - name: $trt_count
-          operator: equal_to
-          value: 1
-        - name: $randqt_count
-          operator: less_than
-          value: 1
+      value: 1
+    - name: $randqt_count
+      operator: less_than
+      value: 1
 Core:
   Id: CORE-000733
   Status: Published
@@ -77,4 +73,4 @@ Scope:
   Domains:
     Include:
       - TS
-Sensitivity: Record
+Sensitivity: Dataset
