@@ -1,6 +1,7 @@
 # Variable: RSUBJID
 # Condition: RDEVID ^= null
 # Rule: RSUBJID = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -17,7 +18,6 @@ Authorities:
                   subjects who can be associated with a study, a particular study
                   subject, or a device used in the study.
                 Document: Model v2.0
-                Item: ' '
                 Section: Associated Persons
       - Name: SDTMIG
         Version: '3.2'
@@ -57,10 +57,10 @@ Core:
   Id: CORE-000234
   Status: Published
   Version: '1'
-Description: Verify that RSUBJID is empty when RDEVID is populated
+Description: Raise an error when RSUBJID is populated but RDEVID is populated.
 Executability: Fully Executable
 Outcome:
-  Message: RSUBJID must be missing when RDEVID is populated
+  Message: RSUBJID must not be populated when RDEVID is populated.
   Output Variables:
     - RDEVID
     - RSUBJID

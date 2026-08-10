@@ -1,0 +1,24 @@
+{
+  "datasets": [
+    {
+      "dataset": "pp.xpt",
+      "domain": "PP",
+      "execution_status": "success",
+      "execution_message": "Parameter is normalized by weight but PPSTRESU does not contain a valid weight-normalized unit (value not in PKUWG or PKUWKG codelists).",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "01-004",
+          "value": {
+            "PPTESTCD": "AUCIFPW",
+            "PPTEST": "AUC Infinity Obs Norm by WT",
+            "PPSTRESU": "day*ug/mL/mg"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

@@ -4,7 +4,7 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSPARM and TSPARMCD don't have a one-to-one relationship.",
+      "execution_message": "TSPARM and TSPARMCD do not have a one-to-one relationship.",
       "number_errors": 2,
       "errors": [
         {
@@ -15,7 +15,7 @@
             "TSPARM": "Planned Maximum Age of\nSubjects",
             "TSPARMCD": "AGEMAX"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 5,
@@ -25,7 +25,7 @@
             "TSPARM": "Planned Maximum Age of\nSubjects",
             "TSPARMCD": "AGEMIN"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
