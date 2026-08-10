@@ -146,7 +146,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: Either TEENRL or TEDUR must be present for each Element; both may be present.
-                Document: IG v3.1.1
+                Document: SENDIG v3.1.1
                 Item: Specification
                 Section: 7.2.1
             Origin: SEND Conformance Rules
@@ -159,7 +159,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: Either TEENRL or TEDUR must be present for each Element; both may be present.
-                Document: IG v3.1
+                Document: SENDIG v3.1
                 Item: Specification
                 Section: 7.2.1
             Origin: SEND Conformance Rules
@@ -172,7 +172,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: Either TEENRL or TEDUR must be present for each Element; both may be present.
-                Document: IG v3.0
+                Document: SENDIG v3.0
                 Item: Specification
                 Section: 7.2.1 | 7.2.1.1
             Origin: SEND Conformance Rules
@@ -185,7 +185,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: Either TEENRL or TEDUR must be present for each Element; both may be present.
-                Document: IG v3.1.1
+                Document: SENDIG v3.1.1
                 Item: Specification
                 Section: 7.2.1
             Origin: SEND Conformance Rules
@@ -198,7 +198,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: Either TEENRL or TEDUR must be present for each Element; both may be present.
-                Document: IG v3.1
+                Document: SENDIG v3.1
                 Item: Specification
                 Section: 7.2.1
             Origin: SEND Conformance Rules
@@ -211,7 +211,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: Either TEENRL or TEDUR must be present for each Element; both may be present.
-                Document: IG v3.1.1
+                Document: SENDIG v3.1.1
                 Item: Specification
                 Section: 7.2.1
             Origin: SEND Conformance Rules
@@ -239,7 +239,7 @@ Core:
 Description: Raise an error when neither TEENRL or TEDUR is present for an element.
 Executability: Fully Executable
 Outcome:
-  Message: Either TEENRL or TEDUR must be populated for an element.
+  Message: At least one of TEENRL and TEDUR must be populated.
   Output Variables:
     - TEDUR
     - TEENRL
