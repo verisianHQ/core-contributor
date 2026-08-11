@@ -4,13 +4,13 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSPARMCD = RANDQT record is not present",
+      "execution_message": "TSPARMCD is equal to 'RANDQT' record must be present",
       "number_errors": 1,
       "errors": [
         {
-          "row": null,
-          "SEQ": null,
-          "USUBJID": null,
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
           "value": {
             "TSPARMCD": "TRT",
             "$trt_count": 1,
