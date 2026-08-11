@@ -3,28 +3,18 @@
     {
       "dataset": "eg.xpt",
       "domain": "EG",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
-      "number_errors": 1,
-      "errors": [
-        {
-          "error": "An unknown exception has occurred",
-          "message": "Operation get_dataset_filtered_variables is not implemented"
-        }
-      ]
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     },
     {
       "dataset": "vs.xpt",
       "domain": "VS",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
-      "number_errors": 1,
-      "errors": [
-        {
-          "error": "An unknown exception has occurred",
-          "message": "Operation get_dataset_filtered_variables is not implemented"
-        }
-      ]
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     },
     {
       "dataset": "sv.xpt",
