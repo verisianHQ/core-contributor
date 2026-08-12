@@ -1,0 +1,97 @@
+# Variable: ANRLO
+# Condition: 
+# Rule: Within a parameter, there is more than one value of ANRLO for a given value of ANRLOC
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '342'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: 3.3.7
+        Item: Table 3.3.7.1
+        Cited Guidance: 'ADaMIG v1.1, Section 3.3.7, Table 3.3.7.1: CDISC Notes for
+          ANRLOC state: "Within a given parameter, if there exists a row on which
+          both ANRLOC and ANRLO are populated, then there must be a one-to-one mapping
+          between ANRLOC and ANRLO on all rows on which both variables are populated."'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '342'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: 3.3.7
+        Item: Table 3.3.7.1
+        Cited Guidance: 'ADaMIG v1.2, Section 3.3.7, Table 3.3.7.1: CDISC Notes for
+          ANRLOC state: "Within a given parameter, if there exists a row on which
+          both ANRLOC and ANRLO are populated, then there must be a one-to-one relationship
+          between ANRLOC and ANRLO on all rows on which both variables are populated.
+          (In other words, there is no requirement that records with a null value
+          in either ANRLO or ANRLOC be included when determining whether the one-to-one
+          relationship requirement is satisfied.) On a given record, it is permissible
+          for ANRLO, ANRLOC, or both to be null."'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '342'
+        Version: '2'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: 3.3.7
+        Item: Table 3.3.7.1
+        Cited Guidance: 'ADaMIG v1.3, Section 3.3.7, Table 3.3.7.1: CDISC Notes for
+          ANRLOC state: "Within a given parameter, if there exists a row on which
+          both ANRLOC and ANRLO are populated, then there must be a one-to-one relationship
+          between ANRLOC and ANRLO on all rows on which both variables are populated.
+          (In other words, there is no requirement that records with a null value
+          in either ANRLO or ANRLOC be included when determining whether the one-to-one
+          relationship requirement is satisfied.) On a given record, it is permissible
+          for ANRLO, ANRLOC, or both to be null."'
+      - Document: ADaMIG-MD v1.0
+        Section: '3.1'
+        Item: Table 3.3.7.1
+        Cited Guidance: 'ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis
+          needs by adding SPDEVID as a required key variable and USUBJID as a conditionally
+          required variable. See the BDS class for further details.'
+Check:
+  all:
+  - name: ANRLO
+    operator: is_inconsistent_across_dataset
+    value:
+    - PARAMCD
+    - ANRLOC
+Core:
+  Id: AD0342
+  Status: Draft
+  Version: '1'
+Description: Raise an error when within a parameter, there is more than one value of ANRLO for a given value of ANRLOC.
+Executability: Fully Executable
+Outcome:
+  Message: ANRLO has more than one value for a given ANRLOC value within a parameter.
+  Output Variables:
+  - ANRLO
+  - PARAMCD
+  - ANRLOC
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BASIC DATA STRUCTURE
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record
