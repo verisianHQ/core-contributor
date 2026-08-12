@@ -4,172 +4,76 @@
       "dataset": "eg.xpt",
       "domain": "EG",
       "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
-    },
-    {
-      "dataset": "vs.xpt",
-      "domain": "VS",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
-    },
-    {
-      "dataset": "sv.xpt",
-      "domain": "SV",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-001034, dataset=SV",
-      "number_errors": 0,
-      "errors": []
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "eg.xpt",
-      "Row": 5,
-      "Variable": "EGREPNUM"
-    },
-    {
-      "Sheet": "eg.xpt",
-      "Row": 6,
-      "Variable": "EGREPNUM"
-    },
-    {
-      "Sheet": "eg.xpt",
-      "Row": 7,
-      "Variable": "EGREPNUM"
-    },
-    {
-      "Sheet": "eg.xpt",
-      "Row": 8,
-      "Variable": "EGREPNUM"
-    },
-    {
-      "Sheet": "eg.xpt",
-      "Row": 9,
-      "Variable": "EGREPNUM"
-    },
-    {
-      "Sheet": "eg.xpt",
-      "Row": 10,
-      "Variable": "EGREPNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 10,
-      "Variable": "VSREPNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 11,
-      "Variable": "VSREPNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 12,
-      "Variable": "VSREPNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 13,
-      "Variable": "VSREPNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 14,
-      "Variable": "VSREPNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 16,
-      "Variable": "VSREPNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 17,
-      "Variable": "VSREPNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 18,
-      "Variable": "VSREPNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 19,
-      "Variable": "VSREPNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 20,
-      "Variable": "VSREPNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 21,
-      "Variable": "VSREPNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 22,
-      "Variable": "VSREPNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 23,
-      "Variable": "VSREPNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 24,
-      "Variable": "VSREPNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 25,
-      "Variable": "VSREPNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 26,
-      "Variable": "VSREPNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 27,
-      "Variable": "VSREPNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 28,
-      "Variable": "VSREPNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 29,
-      "Variable": "VSREPNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 30,
-      "Variable": "VSREPNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 31,
-      "Variable": "VSREPNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 32,
-      "Variable": "VSREPNUM"
-    },
-    {
-      "Sheet": "vs.xpt",
-      "Row": 33,
-      "Variable": "VSREPNUM"
+      "execution_message": "EGREPNUM is null or is not unique per subject per test per timing variables.",
+      "number_errors": 6,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "TEST123",
+          "value": {
+            "USUBJID": "TEST123",
+            "EGTESTCD": "QTCFAG",
+            "EGREPNUM": 1.0
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "TEST123",
+          "value": {
+            "USUBJID": "TEST123",
+            "EGTESTCD": "QTCFAG",
+            "EGREPNUM": 1.0
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "TEST123",
+          "value": {
+            "USUBJID": "TEST123",
+            "EGTESTCD": "QTCFAG",
+            "EGREPNUM": 1.0
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "TEST123",
+          "value": {
+            "USUBJID": "TEST123",
+            "EGTESTCD": "QTCFAG",
+            "EGREPNUM": null
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "TEST123",
+          "value": {
+            "USUBJID": "TEST123",
+            "EGTESTCD": "QTCFAG",
+            "EGREPNUM": null
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "TEST123",
+          "value": {
+            "USUBJID": "TEST123",
+            "EGTESTCD": "QTCFAG",
+            "EGREPNUM": null
+          },
+          "validated": true
+        }
+      ]
     }
   ]
 }
