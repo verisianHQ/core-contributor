@@ -1,6 +1,7 @@
 # Variable: QNAM
 # Condition: SUPP--.QNAM present in dataset
 # Rule: Value of SUPP--.QNAM ^= any variable name defined in the corresponding SDTM version
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -157,7 +158,6 @@ Outcome:
     equals a variable name defined in the corresponding SDTM version.
   Output Variables:
     - QNAM
-    - $model_variables
 Rule Type: Record Data
 Scope:
   Classes:
