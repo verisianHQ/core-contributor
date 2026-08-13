@@ -1,15 +1,19 @@
 # Variable: GEN
-# Condition: Dataset split by parent domain and dataset name length > 2 and dataset name begins with 'FA'
-# Rule: The characters of the dataset name after 'FA' equal a domain that present in the study
+# Condition: Dataset split by parent domain and dataset name length > 2 and
+# dataset name begins with 'FA'
+# Rule: The characters of the dataset name after 'FA' equal a domain that
+# present in the study
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'If splitting Findings About by parent domain, then the dataset
-                  name would be the domain code, "FA", plus the two-character
-                  domain code for parent domain code (e.g., "FACM"). '
+              - Cited Guidance: If splitting Findings About by parent domain,
+                  then the dataset name would be the domain code, "FA", plus
+                  the two-character domain code for parent domain code (e.g.,
+                  "FACM").
                 Document: IG v3.4
                 Item: '6'
                 Section: 4.1.7
@@ -22,15 +26,16 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Split dataset names can be up to four characters in length. For
-                  example; if splitting by --CAT; then dataset names would be
-                  the domain name plus up to two additional characters (e.g.,
-                  QS36 for SF-36). If splitting Findings About by parent domain;
-                  then the dataset name would be the domain name plus the
-                  two-character domain code describing the parent domain code
-                  (e.g., FACM). The four-character dataset-name limitation
-                  allows the use of a Supplemental Qualifier dataset associated
-                  with the split dataset.
+              - Cited Guidance: Split dataset names can be up to four
+                  characters in length. For example; if splitting by --CAT;
+                  then dataset names would be the domain name plus up to two
+                  additional characters (e.g., QS36 for SF-36). If splitting
+                  Findings About by parent domain; then the dataset name would
+                  be the domain name plus the two-character domain code
+                  describing the parent domain code (e.g., FACM). The four-
+                  character dataset-name limitation allows the use of a
+                  Supplemental Qualifier dataset associated with the split
+                  dataset.
                 Document: IG v3.2
                 Item: '6'
                 Section: 4.1.1.7
@@ -43,15 +48,16 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Split dataset names can be up to four characters in length. For
-                  example; if splitting by --CAT; then dataset names would be
-                  the domain name plus up to two additional characters (e.g.,
-                  QS36 for SF-36). If splitting Findings About by parent domain;
-                  then the dataset name would be the domain name plus the
-                  two-character domain code describing the parent domain code
-                  (e.g., FACM). The four-character dataset-name limitation
-                  allows the use of a Supplemental Qualifier dataset associated
-                  with the split dataset.
+              - Cited Guidance: Split dataset names can be up to four
+                  characters in length. For example; if splitting by --CAT;
+                  then dataset names would be the domain name plus up to two
+                  additional characters (e.g., QS36 for SF-36). If splitting
+                  Findings About by parent domain; then the dataset name would
+                  be the domain name plus the two-character domain code
+                  describing the parent domain code (e.g., FACM). The four-
+                  character dataset-name limitation allows the use of a
+                  Supplemental Qualifier dataset associated with the split
+                  dataset.
                 Document: IG v3.3
                 Item: '6'
                 Section: 4.1.7
@@ -64,12 +70,12 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: If splitting Findings About by parent domain, then the dataset
-                  name would be the domain code, "FA", plus the two-character
-                  domain code for parent domain code (e.g., "FACM"). The
-                  four-character dataset-name limitation allows the use of a
-                  Supplemental Qualifier dataset associated with the split
-                  dataset.
+              - Cited Guidance: If splitting Findings About by parent domain,
+                  then the dataset name would be the domain code, "FA", plus
+                  the two-character domain code for parent domain code (e.g.,
+                  "FACM"). The four-character dataset-name limitation allows
+                  the use of a Supplemental Qualifier dataset associated with
+                  the split dataset.
                 Document: TIG 1.0
                 Item: Num 9.e.i
                 Section: '2.6'
@@ -104,8 +110,8 @@ Operations:
   - id: $list_dataset_names
     operator: dataset_names
 Outcome:
-  Message: Parent domain referenced in Findings About dataset name is not present
-    in the study
+  Message: Parent domain referenced in Findings About dataset name must be
+    present in the study.
   Output Variables:
     - dataset_name
     - $list_dataset_names
