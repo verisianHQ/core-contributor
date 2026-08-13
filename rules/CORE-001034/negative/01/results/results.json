@@ -4,7 +4,7 @@
       "dataset": "eg.xpt",
       "domain": "EG",
       "execution_status": "success",
-      "execution_message": "EGREPNUM is null or is not unique per subject per test per timing variables.",
+      "execution_message": "EGREPNUM must not be null and must be unique per subject per test per timing variables.",
       "number_errors": 6,
       "errors": [
         {
@@ -14,9 +14,51 @@
           "value": {
             "USUBJID": "TEST123",
             "EGTESTCD": "QTCFAG",
-            "EGREPNUM": 1.0
+            "EGREPNUM": 1.0,
+            "$TIMING_VARIABLES": [
+              "VISITNUM",
+              "VISIT",
+              "VISITDY",
+              "TAETORD",
+              "EPOCH",
+              "RPHASE",
+              "RPPLDY",
+              "RPPLSTDY",
+              "RPPLENDY",
+              "EGDTC",
+              "EGSTDTC",
+              "EGENDTC",
+              "EGDY",
+              "EGSTDY",
+              "EGENDY",
+              "EGNOMDY",
+              "EGNOMLBL",
+              "EGRPDY",
+              "EGRPSTDY",
+              "EGRPENDY",
+              "EGDUR",
+              "EGTPT",
+              "EGTPTNUM",
+              "EGELTM",
+              "EGTPTREF",
+              "EGRFTDTC",
+              "EGSTRF",
+              "EGENRF",
+              "EGEVLINT",
+              "EGEVINTX",
+              "EGSTRTPT",
+              "EGSTTPT",
+              "EGENRTPT",
+              "EGENTPT",
+              "MIDS",
+              "RELMIDS",
+              "MIDSDTC",
+              "EGSTINT",
+              "EGENINT",
+              "EGDETECT"
+            ]
           },
-          "validated": true
+          "validated": false
         },
         {
           "row": 2,
@@ -25,9 +67,51 @@
           "value": {
             "USUBJID": "TEST123",
             "EGTESTCD": "QTCFAG",
-            "EGREPNUM": 1.0
+            "EGREPNUM": 1.0,
+            "$TIMING_VARIABLES": [
+              "VISITNUM",
+              "VISIT",
+              "VISITDY",
+              "TAETORD",
+              "EPOCH",
+              "RPHASE",
+              "RPPLDY",
+              "RPPLSTDY",
+              "RPPLENDY",
+              "EGDTC",
+              "EGSTDTC",
+              "EGENDTC",
+              "EGDY",
+              "EGSTDY",
+              "EGENDY",
+              "EGNOMDY",
+              "EGNOMLBL",
+              "EGRPDY",
+              "EGRPSTDY",
+              "EGRPENDY",
+              "EGDUR",
+              "EGTPT",
+              "EGTPTNUM",
+              "EGELTM",
+              "EGTPTREF",
+              "EGRFTDTC",
+              "EGSTRF",
+              "EGENRF",
+              "EGEVLINT",
+              "EGEVINTX",
+              "EGSTRTPT",
+              "EGSTTPT",
+              "EGENRTPT",
+              "EGENTPT",
+              "MIDS",
+              "RELMIDS",
+              "MIDSDTC",
+              "EGSTINT",
+              "EGENINT",
+              "EGDETECT"
+            ]
           },
-          "validated": true
+          "validated": false
         },
         {
           "row": 3,
@@ -36,9 +120,51 @@
           "value": {
             "USUBJID": "TEST123",
             "EGTESTCD": "QTCFAG",
-            "EGREPNUM": 1.0
+            "EGREPNUM": 1.0,
+            "$TIMING_VARIABLES": [
+              "VISITNUM",
+              "VISIT",
+              "VISITDY",
+              "TAETORD",
+              "EPOCH",
+              "RPHASE",
+              "RPPLDY",
+              "RPPLSTDY",
+              "RPPLENDY",
+              "EGDTC",
+              "EGSTDTC",
+              "EGENDTC",
+              "EGDY",
+              "EGSTDY",
+              "EGENDY",
+              "EGNOMDY",
+              "EGNOMLBL",
+              "EGRPDY",
+              "EGRPSTDY",
+              "EGRPENDY",
+              "EGDUR",
+              "EGTPT",
+              "EGTPTNUM",
+              "EGELTM",
+              "EGTPTREF",
+              "EGRFTDTC",
+              "EGSTRF",
+              "EGENRF",
+              "EGEVLINT",
+              "EGEVINTX",
+              "EGSTRTPT",
+              "EGSTTPT",
+              "EGENRTPT",
+              "EGENTPT",
+              "MIDS",
+              "RELMIDS",
+              "MIDSDTC",
+              "EGSTINT",
+              "EGENINT",
+              "EGDETECT"
+            ]
           },
-          "validated": true
+          "validated": false
         },
         {
           "row": 4,
@@ -47,9 +173,51 @@
           "value": {
             "USUBJID": "TEST123",
             "EGTESTCD": "QTCFAG",
-            "EGREPNUM": null
+            "EGREPNUM": null,
+            "$TIMING_VARIABLES": [
+              "VISITNUM",
+              "VISIT",
+              "VISITDY",
+              "TAETORD",
+              "EPOCH",
+              "RPHASE",
+              "RPPLDY",
+              "RPPLSTDY",
+              "RPPLENDY",
+              "EGDTC",
+              "EGSTDTC",
+              "EGENDTC",
+              "EGDY",
+              "EGSTDY",
+              "EGENDY",
+              "EGNOMDY",
+              "EGNOMLBL",
+              "EGRPDY",
+              "EGRPSTDY",
+              "EGRPENDY",
+              "EGDUR",
+              "EGTPT",
+              "EGTPTNUM",
+              "EGELTM",
+              "EGTPTREF",
+              "EGRFTDTC",
+              "EGSTRF",
+              "EGENRF",
+              "EGEVLINT",
+              "EGEVINTX",
+              "EGSTRTPT",
+              "EGSTTPT",
+              "EGENRTPT",
+              "EGENTPT",
+              "MIDS",
+              "RELMIDS",
+              "MIDSDTC",
+              "EGSTINT",
+              "EGENINT",
+              "EGDETECT"
+            ]
           },
-          "validated": true
+          "validated": false
         },
         {
           "row": 5,
@@ -58,9 +226,51 @@
           "value": {
             "USUBJID": "TEST123",
             "EGTESTCD": "QTCFAG",
-            "EGREPNUM": null
+            "EGREPNUM": null,
+            "$TIMING_VARIABLES": [
+              "VISITNUM",
+              "VISIT",
+              "VISITDY",
+              "TAETORD",
+              "EPOCH",
+              "RPHASE",
+              "RPPLDY",
+              "RPPLSTDY",
+              "RPPLENDY",
+              "EGDTC",
+              "EGSTDTC",
+              "EGENDTC",
+              "EGDY",
+              "EGSTDY",
+              "EGENDY",
+              "EGNOMDY",
+              "EGNOMLBL",
+              "EGRPDY",
+              "EGRPSTDY",
+              "EGRPENDY",
+              "EGDUR",
+              "EGTPT",
+              "EGTPTNUM",
+              "EGELTM",
+              "EGTPTREF",
+              "EGRFTDTC",
+              "EGSTRF",
+              "EGENRF",
+              "EGEVLINT",
+              "EGEVINTX",
+              "EGSTRTPT",
+              "EGSTTPT",
+              "EGENRTPT",
+              "EGENTPT",
+              "MIDS",
+              "RELMIDS",
+              "MIDSDTC",
+              "EGSTINT",
+              "EGENINT",
+              "EGDETECT"
+            ]
           },
-          "validated": true
+          "validated": false
         },
         {
           "row": 6,
@@ -69,11 +279,97 @@
           "value": {
             "USUBJID": "TEST123",
             "EGTESTCD": "QTCFAG",
-            "EGREPNUM": null
+            "EGREPNUM": null,
+            "$TIMING_VARIABLES": [
+              "VISITNUM",
+              "VISIT",
+              "VISITDY",
+              "TAETORD",
+              "EPOCH",
+              "RPHASE",
+              "RPPLDY",
+              "RPPLSTDY",
+              "RPPLENDY",
+              "EGDTC",
+              "EGSTDTC",
+              "EGENDTC",
+              "EGDY",
+              "EGSTDY",
+              "EGENDY",
+              "EGNOMDY",
+              "EGNOMLBL",
+              "EGRPDY",
+              "EGRPSTDY",
+              "EGRPENDY",
+              "EGDUR",
+              "EGTPT",
+              "EGTPTNUM",
+              "EGELTM",
+              "EGTPTREF",
+              "EGRFTDTC",
+              "EGSTRF",
+              "EGENRF",
+              "EGEVLINT",
+              "EGEVINTX",
+              "EGSTRTPT",
+              "EGSTTPT",
+              "EGENRTPT",
+              "EGENTPT",
+              "MIDS",
+              "RELMIDS",
+              "MIDSDTC",
+              "EGSTINT",
+              "EGENINT",
+              "EGDETECT"
+            ]
           },
-          "validated": true
+          "validated": false
         }
       ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "USUBJID": "TEST123",
+        "EGTESTCD": "QTCFAG",
+        "EGREPNUM": 1
+      }
+    },
+    {
+      "value": {
+        "USUBJID": "TEST123",
+        "EGTESTCD": "QTCFAG",
+        "EGREPNUM": 1
+      }
+    },
+    {
+      "value": {
+        "USUBJID": "TEST123",
+        "EGTESTCD": "QTCFAG",
+        "EGREPNUM": 1
+      }
+    },
+    {
+      "value": {
+        "USUBJID": "TEST123",
+        "EGTESTCD": "QTCFAG",
+        "EGREPNUM": null
+      }
+    },
+    {
+      "value": {
+        "USUBJID": "TEST123",
+        "EGTESTCD": "QTCFAG",
+        "EGREPNUM": null
+      }
+    },
+    {
+      "value": {
+        "USUBJID": "TEST123",
+        "EGTESTCD": "QTCFAG",
+        "EGREPNUM": null
+      }
     }
   ]
 }

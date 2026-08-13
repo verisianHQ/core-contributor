@@ -62,6 +62,9 @@ Check:
   all:
     - name: --REPNUM
       operator: exists
+    - name: $record_count_per_subject_test_timing
+      operator: greater_than
+      value: 1      
     - any:
         - name: --REPNUM
           operator: empty
@@ -85,6 +88,9 @@ Operations:
     key_name: role
     key_value: Timing
     operator: get_model_filtered_variables
+  - id: $record_count_per_subject_test_timing
+    operator: record_count
+    regex: ^\d{4}-\d{2}-\d{2}
 Outcome:
   Message: --REPNUM must not be null and must be unique per subject per test 
    per timing variables.
@@ -92,6 +98,7 @@ Outcome:
     - USUBJID
     - --TESTCD
     - --REPNUM
+    - $TIMING_VARIABLES
 Rule Type: Record Data
 Scope:
   Classes:
