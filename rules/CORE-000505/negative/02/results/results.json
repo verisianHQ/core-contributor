@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVAL where TSPARMCD = 'STSTDTC' is not in ISO 8601 format.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "SSTDTC",
+            "TSVAL": "ABC"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
