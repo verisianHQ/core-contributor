@@ -62,7 +62,6 @@ Operations:
 Outcome:
   Message: TSPARMCD is equal to 'RANDQT' record must be present
   Output Variables:
-    - TSPARMCD
     - $trt_count
     - $randqt_count
 Rule Type: Record Data
@@ -73,4 +72,4 @@ Scope:
   Domains:
     Include:
       - TS
-Sensitivity: Record
+Sensitivity: Dataset
