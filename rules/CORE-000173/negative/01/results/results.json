@@ -4,7 +4,7 @@
       "dataset": "se.xpt",
       "domain": "SE",
       "execution_status": "success",
-      "execution_message": "ETCD is not equal to 'UNPLAN' and not equal to TE.ETCD",
+      "execution_message": "ETCD must be equal to TE.ETCD or 'UNPLAN'.",
       "number_errors": 3,
       "errors": [
         {
