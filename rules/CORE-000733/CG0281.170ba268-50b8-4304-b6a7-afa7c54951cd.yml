@@ -44,7 +44,7 @@ Core:
   Status: Published
   Version: '1'
 Description: Raise an error when at least one observation where TSPARMCD is equal to 'TRT' is present and there
-  is only one investigational treatment. TSPARMCD is equal to 'RANDQT' record must be present
+  is only one investigational treatment. TSPARMCD is equal to 'RANDQT' record must be present.
 Executability: Fully Executable
 Operations:
   - filter:
@@ -58,7 +58,7 @@ Operations:
     name: TSPARMCD
     operator: record_count
 Outcome:
-  Message: TSPARMCD is equal to 'RANDQT' record must be present
+  Message: TSPARMCD must be equal to 'RANDQT' only when there is exactly one investigational treatment.
   Output Variables:
     - $trt_count
     - $randqt_count
