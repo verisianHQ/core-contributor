@@ -19,6 +19,24 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
+          const activeReviewer = 'pendingintent';
+          const prAuthor = context.payload.pull_request.user.login;
+        
+          if (prAuthor === activeReviewer) {
+            console.log(`${prAuthor} authored this PR; skipping auto-assignment.`);
+            return;
+          }
+        
+          console.log(`Assigning ${activeReviewer} to PR #${context.issue.number}`);
+        
+          await github.rest.pulls.requestReviewers({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            pull_number: context.issue.number,
+            reviewers: [activeReviewer],
+          });
+
+          /*
           const p1 = 'eljanssens';
           const p2 = 'pendingintent';
           const prAuthor = context.payload.pull_request.user.login;
@@ -56,3 +74,4 @@ jobs:
             pull_number: context.issue.number,
             reviewers: [reviewerToAdd],
           });
+          */
