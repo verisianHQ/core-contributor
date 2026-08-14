@@ -47,14 +47,12 @@ Description: Raise an error when at least one observation where TSPARMCD is equa
   is only one investigational treatment. TSPARMCD is equal to 'RANDQT' record must be present
 Executability: Fully Executable
 Operations:
-  - domain: TS
-    filter:
+  - filter:
       TSPARMCD: TRT
     id: $trt_count
     name: TSPARMCD
     operator: record_count
-  - domain: TS
-    filter:
+  - filter:
       TSPARMCD: RANDQT
     id: $randqt_count
     name: TSPARMCD
