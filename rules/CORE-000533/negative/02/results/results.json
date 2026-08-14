@@ -16,22 +16,22 @@
       "number_errors": 2,
       "errors": [
         {
-          "row": 3,
+          "row": 2,
           "SEQ": null,
-          "USUBJID": "CDISC009",
+          "USUBJID": "CDISC010",
           "value": {
-            "QNAM": "SAFETY",
+            "QNAM": "safety",
             "QLABEL": "Safety Flag"
           },
           "validated": true
         },
         {
-          "row": 4,
+          "row": 3,
           "SEQ": null,
-          "USUBJID": "CDISC009",
+          "USUBJID": "CDISC011",
           "value": {
-            "QNAM": "ITT",
-            "QLABEL": "Intent-To-Treat Flag"
+            "QNAM": "SAFETY",
+            "QLABEL": "Safety Flag"
           },
           "validated": true
         }
