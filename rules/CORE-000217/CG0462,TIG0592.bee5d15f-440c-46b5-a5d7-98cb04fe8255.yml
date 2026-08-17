@@ -1,6 +1,7 @@
 # Variable: ECDOSTXT
 # Condition: ECDOSE = null and ECOCCUR ^= 'N' and ECSTAT = null
 # Rule: ECDOSTXT ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -143,12 +144,10 @@ Core:
   Id: CORE-000217
   Status: Published
   Version: '1'
-Description: Raise an error when ECDOSE is empty, ECOCCUR is not equal to 'N',
-  ECSTAT is empty and ECDOSTXT is empty
+Description: Raise an error when ECDOSE is not populated, ECOCCUR is not equal to 'N', ECSTAT is not populated, but ECDOSTXT is also not populated.
 Executability: Fully Executable
 Outcome:
-  Message: ECDOSE is empty, ECOCCUR is not equal to 'N' and ECSTAT is empty, but
-    ECDOSTXT is also empty.
+  Message: ECDOSE is not populated, ECOCCUR is not equal to 'N' and ECSTAT is not populated, but ECDOSTXT is also not populated.
   Output Variables:
     - ECDOSE
     - ECOCCUR
