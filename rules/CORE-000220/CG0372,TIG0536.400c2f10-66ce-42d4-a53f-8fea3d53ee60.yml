@@ -2,6 +2,7 @@
 # Condition: 
 # Rule: --TESTCD <= 8 chars and contains only letters, numbers, and underscores
 # and can not start with a number
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -59,10 +60,10 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: The value in --TESTCD cannot be longer than 8 characters, nor
-                  can it start with a number (e.g., "1TEST" is not valid).
-                  --TESTCD cannot contain characters other than letters,
-                  numbers, or underscores.
+              - Cited Guidance: The value in --TESTCD cannot be longer than 8
+                  characters, nor can it start with a number (e.g., "1TEST" is
+                  not valid). --TESTCD cannot contain characters other than
+                  letters, numbers, or underscores.
                 Document: TIG 1.0
                 Item: Specifications --TESTCD
                 Section: Finding Domain Specifications
