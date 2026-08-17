@@ -71,7 +71,8 @@ Core:
   Id: CORE-000384
   Status: Published
   Version: '1'
-Description: RELREC.RDOMAIN represents a dataset that is present in the study.
+Description: Raise an error when RELREC.RDOMAIN represents a dataset that is not
+ present in the study.
 Executability: Fully Executable
 Operations:
   - id: $study_domains
