@@ -3,13 +3,21 @@
     {
       "dataset": "supplbch.xpt",
       "domain": "SUPPLB",
-      "execution_status": "execution_error",
-      "execution_message": "SQL operation execution error",
+      "execution_status": "success",
+      "execution_message": "RDOMAIN must match characters 5 and 6 of the dataset name.",
       "number_errors": 1,
       "errors": [
         {
-          "error": "SQL error in sqlextractmetadataoperation operation",
-          "message": "Metadata extraction of dataset_name failed - metadata not found"
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "$dataset_names": [
+              "supplbch"
+            ],
+            "RDOMAIN": "DM"
+          },
+          "validated": false
         }
       ]
     }
