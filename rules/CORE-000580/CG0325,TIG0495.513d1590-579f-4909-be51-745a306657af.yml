@@ -114,8 +114,8 @@ Core:
   Id: CORE-000580
   Status: Published
   Version: '1'
-Description: The combination of TESTRL, TEENRL, and TEDUR must be unique for
- each ETCD.
+Description: Raise an error when the combination of TESTRL, TEENRL, and TEDUR
+ is not unique for each ETCD.
 Executability: Fully Executable
 Outcome:
   Message: The combination of TESTRL, TEENRL, and TEDUR must be unique for each
