@@ -4,8 +4,8 @@
       "dataset": "te.xpt",
       "domain": "TE",
       "execution_status": "success",
-      "execution_message": "The combination of TESTRL, TEENRL, and TEDUR must be unique for each ETCD.",
-      "number_errors": 5,
+      "execution_message": "The combination of ELEMENT, TESTRL, TEENRL, and TEDUR must be unique for each ETCD.",
+      "number_errors": 4,
       "errors": [
         {
           "row": 2,
@@ -34,28 +34,15 @@
           "validated": true
         },
         {
-          "row": 6,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ETCD": "E006",
-            "ELEMENT": "Y",
-            "TESTRL": "Not in dataset",
-            "TEENRL": null,
-            "TEDUR": null
-          },
-          "validated": true
-        },
-        {
           "row": 7,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
             "ETCD": "E006",
-            "ELEMENT": "Y",
+            "ELEMENT": null,
             "TESTRL": "Not in dataset",
             "TEENRL": null,
-            "TEDUR": null
+            "TEDUR": "TEST"
           },
           "validated": true
         },
@@ -65,10 +52,10 @@
           "USUBJID": "None",
           "value": {
             "ETCD": "E007",
-            "ELEMENT": "Y",
+            "ELEMENT": null,
             "TESTRL": "Not in dataset",
             "TEENRL": null,
-            "TEDUR": null
+            "TEDUR": "TEST"
           },
           "validated": true
         }
