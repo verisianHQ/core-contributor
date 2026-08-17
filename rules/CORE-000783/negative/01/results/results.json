@@ -12,7 +12,7 @@
       "dataset": "suppae.xpt",
       "domain": "SUPPAE",
       "execution_status": "success",
-      "execution_message": "SUPPSUPPAE.QNAM is present in the dataset, but the value of SUPPSUPPAE.QNAM equals a variable name defined in the corresponding SDTM version.",
+      "execution_message": "SUPPAE.QNAM is present in the dataset, but the value of SUPPAE.QNAM must not be equal to a variable name defined in the corresponding SDTM version.",
       "number_errors": 2,
       "errors": [
         {
@@ -39,7 +39,7 @@
       "dataset": "supplb.xpt",
       "domain": "SUPPLB",
       "execution_status": "success",
-      "execution_message": "SUPPSUPPLB.QNAM is present in the dataset, but the value of SUPPSUPPLB.QNAM equals a variable name defined in the corresponding SDTM version.",
+      "execution_message": "SUPPLB.QNAM is present in the dataset, but the value of SUPPLB.QNAM must not be equal to a variable name defined in the corresponding SDTM version.",
       "number_errors": 2,
       "errors": [
         {

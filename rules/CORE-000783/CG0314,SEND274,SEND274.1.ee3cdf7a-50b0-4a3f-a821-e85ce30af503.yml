@@ -154,8 +154,9 @@ Operations:
   - id: $model_variables
     operator: get_parent_model_column_order
 Outcome:
-  Message: SUPP--.QNAM is present in the dataset, but the value of SUPP--.QNAM
-    equals a variable name defined in the corresponding SDTM version.
+  Message: --.QNAM is present in the dataset, but the value of --.QNAM
+    must not be equal to a variable name defined in the corresponding SDTM
+    version.
   Output Variables:
     - QNAM
 Rule Type: Record Data
