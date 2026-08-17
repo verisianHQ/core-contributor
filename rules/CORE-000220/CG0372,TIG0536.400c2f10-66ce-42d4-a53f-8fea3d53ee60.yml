@@ -1,15 +1,18 @@
 # Variable: --TESTCD
 # Condition: 
-# Rule: --TESTCD <= 8 chars and contains only letters, numbers, and underscores and can not start with a number
+# Rule: --TESTCD <= 8 chars and contains only letters, numbers, and underscores
+# and can not start with a number
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Values of --TESTCD must be limited to 8 characters; and cannot
-                  start with a number; nor can they contain characters other
-                  than letters; numbers; or underscores
+              - Cited Guidance: IG v3.4[4.2.1 ][Values of --TESTCD must be
+                  limited to 8 characters; and cannot start with a number; nor
+                  can they contain characters other than letters; numbers; or
+                  underscores]
                 Document: IG v3.4
                 Section: 4.2.1
             Origin: SDTM and SDTMIG Conformance Rules
@@ -21,17 +24,15 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Values of --TESTCD must be limited to 8 characters; and cannot
-                  start with a number; nor can they contain characters other
-                  than letters; numbers; or underscores
-                Document: IG v3.3
-                Section: 7.4.1
-              - Cited Guidance: The value in IETESTCD cannot be longer than 8 characters; nor
-                  can it start with a number (e.g., '1TEST'). IETESTCD cannot
-                  contain characters other than letters; numbers; or
-                  underscores.
-                Document: Model v1.7
-                Section: 3.2.1
+              - Cited Guidance: IG v3.3[7.4.1 ][Values of --TESTCD must be
+                  limited to 8 characters; and cannot start with a number; nor
+                  can they contain characters other than letters; numbers; or
+                  underscores]|Model v1.7[3.2.1][The value in IETESTCD cannot
+                  be longer than 8 characters; nor can it start with a number
+                  (e.g., '1TEST'). IETESTCD cannot contain characters other
+                  than letters; numbers; or underscores.]
+                Document: IG v3.3|Model v1.7
+                Section: IG v3.3[7.4.1 ]|Model v1.7[3.2.1]
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0372
@@ -41,17 +42,15 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Values of --TESTCD must be limited to 8 characters; and cannot
-                  start with a number; nor can they contain characters other
-                  than letters; numbers; or underscores
-                Document: IG v3.2
-                Section: 4.1.2.1
-              - Cited Guidance: The value in IETESTCD cannot be longer than 8 characters; nor
-                  can it start with a number (e.g., '1TEST'). IETESTCD cannot
-                  contain characters other than letters; numbers; or
-                  underscores.
-                Document: Model v1.4
-                Section: 3.3.1
+              - Cited Guidance: IG v3.2[4.1.2.1][Values of --TESTCD must be
+                  limited to 8 characters; and cannot start with a number; nor
+                  can they contain characters other than letters; numbers; or
+                  underscores]|Model v1.4[3.3.1][The value in IETESTCD cannot
+                  be longer than 8 characters; nor can it start with a number
+                  (e.g., '1TEST'). IETESTCD cannot contain characters other
+                  than letters; numbers; or underscores.]
+                Document: IG v3.2|Model v1.4
+                Section: IG v3.2[4.1.2.1]|Model v1.4[3.3.1]
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0372
@@ -61,10 +60,10 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: The value in --TESTCD cannot be longer than 8 characters, nor
-                  can it start with a number (e.g., "1TEST" is not valid).
-                  --TESTCD cannot contain characters other than letters,
-                  numbers, or underscores.
+              - Cited Guidance: The value in --TESTCD cannot be longer than 8
+                  characters, nor can it start with a number (e.g., "1TEST" is
+                  not valid). --TESTCD cannot contain characters other than
+                  letters, numbers, or underscores.
                 Document: TIG 1.0
                 Item: Specifications --TESTCD
                 Section: Finding Domain Specifications
@@ -84,12 +83,14 @@ Core:
   Id: CORE-000220
   Status: Published
   Version: '1'
-Description: Part A - Raise an error when --TESTCD > 8 chars or contains more
-  than only letters, numbers and underscores, or starts with a number.
+Description: Raise an error when --TESTCD is longer than 8 characters or
+  contains characters besides letters, numbers, and underscores, or starts with
+  a number.
 Executability: Fully Executable
 Outcome:
-  Message: --TESTCD > 8 chars or contains more than only letters, numbers,
-    underscores, or starts with a number.
+  Message: --TESTCD must be shorter than 9 characters and must not contain 
+    characters besides letters, numbers, and underscores, and must not start
+    with a number.
   Output Variables:
     - --TESTCD
 Rule Type: Record Data
