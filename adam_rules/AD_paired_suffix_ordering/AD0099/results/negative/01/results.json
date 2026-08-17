@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "adlb.csv",
+      "domain": "adlb",
+      "execution_status": "success",
+      "execution_message": "TRTSTDY is greater than TRTENDY when both variables are populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "01-101",
+          "value": {
+            "TRTSTDY": 9.0,
+            "TRTENDY": 3.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
