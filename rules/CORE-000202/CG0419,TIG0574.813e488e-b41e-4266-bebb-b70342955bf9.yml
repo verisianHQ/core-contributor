@@ -1,24 +1,19 @@
 # Variable: RELTYPE
 # Condition: IDVAR populated with a --SEQ value
 # Rule: RELTYPE = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Identifies the hierarchical level of the records in the
-                  relationship. Values should be either ONE or MANY. Used only
-                  when identifying a relationship between datasets (as described
-                  in Section 8.3, Relating Datasets).
+              - Cited Guidance: '[8.2.1] Identifies the hierarchical level of
+                  the records in the relationship. Values should be either ONE
+                  or MANY. Used only when identifying a relationship between
+                  datasets (as described in Section 8.3, Relating Datasets).'
                 Document: IG 3.4
-                Section: 8.2.1
-              - Cited Guidance: Since IDVAR identifies the keys that can be used to merge/join
-                  records between the datasets, --SEQ cannot be used because
-                  --SEQ only has meaning within a subject within a dataset, not
-                  across datasets.
-                Document: IG 3.4
-                Section: 8.3.1
+                Section: 8.2.1|8.3.1
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0419
@@ -28,18 +23,18 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Identifies the hierarchical level of the records in the
-                  relationship. Values should be either ONE or MANY. Used only
-                  when identifying a relationship between datasets (as described
-                  in Section 8.3, Relating Datasets).
+              - Cited Guidance: IG v3.2[8.2.1][Identifies the hierarchical
+                  level of the records in the relationship. Values should be
+                  either ONE or MANY. Used only when identifying a relationship
+                  between datasets (as described in Section 8.3).] 
+                  IG v3.2[8.3.1][Since IDVAR identifies the keys that can be
+                  used to merge/join records between the datasets; the root
+                  values (e.g., -- GRPID in the above example) for IDVAR must
+                  be the same for both records with the same RELID. --SEQ
+                  cannot be used because --SEQ only has meaning within a
+                  subject within a dataset; not across datasets.]
                 Document: IG v3.2
-                Section: 8.2.1
-              - Cited Guidance: Since IDVAR identifies the keys that can be used to merge/join
-                  records between the datasets, --SEQ cannot be used because
-                  --SEQ only has meaning within a subject within a dataset, not
-                  across datasets.
-                Document: IG v3.2
-                Section: 8.3.1
+                Section: IG v3.2[8.2.1]|IG v3.2[8.3.1]
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0419
@@ -49,18 +44,16 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Identifies the hierarchical level of the records in the
-                  relationship. Values should be either ONE or MANY. Used only
-                  when identifying a relationship between datasets (as described
-                  in Section 8.3, Relating Datasets).
+              - Cited Guidance: IG v3.3[8.2.1][Identifies the hierarchical
+                  level of the records in the relationship. Values should be
+                  either ONE or MANY. Used only when identifying a relationship
+                  between datasets (as described in Section 8.3).]|
+                  IG v3.3[8.3.1][Since IDVAR identifies the keys that can be
+                  used to merge/join records between the datasets; --SEQ cannot
+                  be used because --SEQ only has meaning within a subject
+                  within a dataset; not across datasets.]
                 Document: IG 3.3
                 Section: 8.2.1
-              - Cited Guidance: Since IDVAR identifies the keys that can be used to merge/join
-                  records between the datasets, --SEQ cannot be used because
-                  --SEQ only has meaning within a subject within a dataset, not
-                  across datasets.
-                Document: IG 3.3
-                Section: 8.3.1
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0419
@@ -70,10 +63,10 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: Identifies the hierarchical level of the records in the
-                  relationship. Values should be either ONE or MANY. Used only
-                  when identifying a relationship between datasets (as described
-                  in Section 2.8.5.2.
+              - Cited Guidance: Identifies the hierarchical level of the
+                  records in the relationship. Values should be either ONE or
+                  MANY. Used only when identifying a relationship between
+                  datasets (as described in Section 2.8.5.2.
                 Document: TIG 1.0
                 Section: 2.8.5.2|2.8.10.21
             Origin: TIG Conformance Rules
@@ -95,10 +88,12 @@ Core:
   Id: CORE-000202
   Status: Published
   Version: '1'
-Description: When IDVAR is populated with a --SEQ value, RELTYPE must be null.
+Description: Raise an error when IDVAR is populated with a --SEQ value and
+  RELTYPE is not null.
 Executability: Fully Executable
 Outcome:
-  Message: RELTYPE is populated when IDVAR is populated with a 'SEQ' value.
+  Message: RELTYPE must be populated when IDVAR is populated with a 'SEQ'
+    value.
   Output Variables:
     - IDVAR
     - RELTYPE
