@@ -1,7 +1,7 @@
 # Variable: --STRF
 # Condition: --OCCUR = 'N'
 # Rule: --STRF = null
-# Verified
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -79,6 +79,7 @@ Check:
     - name: --OCCUR
       operator: equal_to
       value: N
+      value_is_literal: true
     - name: --STRF
       operator: non_empty
 Core:
