@@ -1,3 +1,7 @@
+# Variable: --STRTPT
+# Condition: --STTPT corresponds to the date of collection or assessment.
+# Rule: --STRTPT in ('BEFORE', 'COINCIDENT', 'UNKNOWN')
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -87,9 +91,6 @@ Authorities:
             Version: '1.0'
         Substandard: SDTM
         Version: '1.0'
-# Variable: --STRTPT
-# Condition: --STTPT corresponds to the date of collection or assessment.
-# Rule: --STRTPT in ('BEFORE', 'COINCIDENT', 'UNKNOWN')
 Check:
   all:
     - name: --STTPT
@@ -111,11 +112,17 @@ Core:
   Id: CORE-000763
   Status: Published
   Version: '1'
-Description: Trigger error when --STRTPT is not in ('BEFORE', 'COINCIDENT', 'UNKNOWN')
-Executability: Partially Executable
+Description: Raise an error when --STRTPT is not equal to 'BEFORE', 
+  'COINCIDENT', or 'UNKNOWN' and --STTPT is equal to the date of collection
+  or assessment.
+Executability: Fully Executable
 Outcome:
-  Message: --STTPT is equal to the date of collection or assessment but --STRTPT
-    is not in ('BEFORE', 'COINCIDENT',  'UNKNOWN').
+  Message: --STRTPT must be equal to 'BEFORE', 'COINCIDENT', or 'UNKNOWN' when
+   --STTPT is equal to the date of collection or assessment.
+  Output Variables:
+    - --DTC
+    - --STRTPT
+    - --STTPT
 Rule Type: Record Data
 Scope:
   Classes:
