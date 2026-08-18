@@ -1,0 +1,5 @@
+STUDYID,USUBJID,PARAMCD,PARAM,AVAL,VISITSDY,VISITEDY,TRTSTDY,TRTENDY,EVTSDT,EVTEDT,DOSESTM,DOSEETM,DOSESDTM,DOSEEDTM
+Study Identifier,Unique Subject Identifier,Parameter Code,Parameter,Analysis Value,Visit Start Study Day,Visit End Study Day,Treatment Start Study Day,Treatment End Study Day,Event Start Date,Event End Date,Dose Start Time,Dose End Time,Dose Start Date Time,Dose End Date Time
+Char,Char,Char,Char,Num,Num,Num,Num,Num,Num,Num,Num,Num,Num,Num
+20,20,8,40,8,8,8,8,8,8,8,8,8,12,12
+STUDY-01,01-101,P1,PARAM1,99,15,10,9,3,10,1,1800,900,202003051000,202003041000

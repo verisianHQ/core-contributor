@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "adlb.csv",
+      "domain": "adlb",
+      "execution_status": "success",
+      "execution_message": "DOSESDTM is greater than DOSEEDTM when both variables are populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "01-101",
+          "value": {
+            "DOSESDTM": 202003051000.0,
+            "DOSEEDTM": 202003041000.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
