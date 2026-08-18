@@ -34,10 +34,6 @@ Authorities:
 Check:
   all:
     - name: TSPARMCD
-      operator: equal_to
-      value: TEST
-      value_is_literal: true
-    - name: TSPARMCD
       operator: not_contains_all
       value:
         - 'ADDON'
@@ -71,7 +67,7 @@ Core:
   Id: CORE-000740
   Status: Published
   Version: '1'
-Description: 'A required value of TSPARMCD is not found'
+Description: A required value of TSPARMCD is not found
 Executability: Fully Executable
 Operations:
   - id: $distinct_tsparmcds
@@ -109,9 +105,8 @@ Operations:
     operator: minus
     subtract: $distinct_tsparmcds
 Outcome:
-  Message: 'A required value of TSPARMCD is not found'
+  Message: A required value of TSPARMCD is not found
   Output Variables:
-    - TSPARMCD
     - $missing_tsparmcds
 Rule Type: Record Data
 Scope:
@@ -121,4 +116,4 @@ Scope:
   Domains:
     Include:
       - TS
-Sensitivity: Record
+Sensitivity: Dataset
