@@ -4,7 +4,7 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "A record exists in TS where TSPARMCD = STYPE and TSVAL = INTERVENTIONAL but TSVAL for TSPARMCD = TRT is empty.",
+      "execution_message": "A record exists in TS where TSPARMCD is equal to 'STYPE' and TSVAL is equal to 'INTERVENTIONAL' but TSVAL for TSPARMCD is equal to 'TRT' is empty.",
       "number_errors": 3,
       "errors": [
         {
@@ -14,7 +14,8 @@
           "value": {
             "TSPARMCD": "TRT",
             "TSVAL": null,
-            "TSSEQ": 1.0
+            "TSGRPID": "1",
+            "$STYPE_INTERVENTIONAL": 1
           },
           "validated": true
         },
@@ -25,7 +26,8 @@
           "value": {
             "TSPARMCD": "TRT",
             "TSVAL": null,
-            "TSSEQ": 2.0
+            "TSGRPID": "2",
+            "$STYPE_INTERVENTIONAL": 1
           },
           "validated": true
         },
@@ -36,7 +38,8 @@
           "value": {
             "TSPARMCD": "TRT",
             "TSVAL": null,
-            "TSSEQ": 3.0
+            "TSGRPID": null,
+            "$STYPE_INTERVENTIONAL": 1
           },
           "validated": true
         }
