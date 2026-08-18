@@ -44,15 +44,19 @@ Check:
     - name: TSVAL
       operator: not_matches_regex
       value: ^[1]$
+    - name: TSPARMCD
+      operator: equal_to
+      value: RANDQT
+      value_is_literal: true
 Core:
   Id: CORE-000335
   Status: Published
   Version: '1'
-Description: Raise an error when TSPARMCD = "RANDQT" and the value provided in
+Description: Raise an error when TSPARMCD is equal to 'RANDQT' and the value provided in
   TSVAL is not a number between 0 and 1.
 Executability: Fully Executable
 Outcome:
-  Message: 'TSPARMCD = "RANDQT" but TSVAL is not a number between 0 and 1.'
+  Message: TSPARMCD = 'RANDQT' but TSVAL is not a number between 0 and 1.
   Output Variables:
     - TSPARMCD
     - TSVAL
