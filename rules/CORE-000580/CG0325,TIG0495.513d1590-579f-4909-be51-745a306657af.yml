@@ -70,7 +70,7 @@ Authorities:
         Substandard: SDTM
         Version: '1.0'
 Check:
-  all:
+  any:
     - name: ETCD
       operator: is_not_unique_relationship
       value:
@@ -78,6 +78,38 @@ Check:
         - TESTRL
         - TEENRL
         - TEDUR
+    - all:
+        - name: ETCD
+          operator: is_unique_set
+          value:
+            - ELEMENT
+            - TESTRL
+            - TEENRL
+            - TEDUR
+        - name: ELEMENT
+          operator: is_not_unique_set
+          value:
+            - TESTRL
+            - TEENRL
+            - TEDUR
+        - name: TESTRL
+          operator: is_not_unique_set
+          value:
+            - ELEMENT
+            - TEENRL
+            - TEDUR
+        - name: TEENRL
+          operator: is_not_unique_set
+          value:
+            - ELEMENT
+            - TESTRL
+            - TEDUR
+        - name: TEDUR
+          operator: is_not_unique_set
+          value:
+            - ELEMENT
+            - TEENRL
+            - TESTRL
 Core:
   Id: CORE-000580
   Status: Published

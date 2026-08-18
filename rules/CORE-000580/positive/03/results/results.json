@@ -4,46 +4,9 @@
       "dataset": "te.xpt",
       "domain": "TE",
       "execution_status": "success",
-      "execution_message": "The combination of ELEMENT, TESTRL, TEENRL, and TEDUR must be unique for each ETCD.",
-      "number_errors": 3,
-      "errors": [
-        {
-          "row": 6,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ETCD": "E006",
-            "ELEMENT": "X",
-            "TESTRL": "INFORMED CONSENT SIGNED2",
-            "TEENRL": null,
-            "TEDUR": "P2W"
-          }
-        },
-        {
-          "row": 7,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ETCD": "E006",
-            "ELEMENT": "Y",
-            "TESTRL": "INFORMED CONSENT SIGNED2",
-            "TEENRL": null,
-            "TEDUR": "P2W"
-          }
-        },
-        {
-          "row": 8,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ETCD": "E006",
-            "ELEMENT": "Z",
-            "TESTRL": "INFORMED CONSENT SIGNED2",
-            "TEENRL": null,
-            "TEDUR": "P2W"
-          }
-        }
-      ]
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     }
   ]
 }
