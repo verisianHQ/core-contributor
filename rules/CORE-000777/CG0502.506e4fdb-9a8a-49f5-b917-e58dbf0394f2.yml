@@ -1,6 +1,7 @@
 # Variable: RELMIDS
 # Condition: RELMIDS present in dataset
 # Rule: TM dataset present in study
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -13,8 +14,7 @@ Authorities:
               Version: '2'
             Version: '2.0'
             Citations:
-              - Cited Guidance: The temporal relationship of the observation to the Disease
-                  Milestone Instance Name in MIDS.
+              - Cited Guidance: The temporal relationship of the observation to the Disease Milestone Instance Name in MIDS.
                 Document: Model v2.0
                 Item: RELMIDS
                 Section: Timing
@@ -27,9 +27,7 @@ Authorities:
               Version: '2'
             Version: '2.0'
             Citations:
-              - Cited Guidance: 'The temporal relationship of the observation to the Disease
-                  Milestone Instance Name in MIDS. Examples: "IMMEDIATELY
-                  BEFORE", "AT TIME OF", "AFTER".'
+              - Cited Guidance: 'The temporal relationship of the observation to the Disease Milestone Instance Name in MIDS. Examples: "IMMEDIATELY BEFORE", "AT TIME OF", "AFTER".'
                 Document: Model v1.7
                 Item: RELMIDS
                 Section: 2.2.5
@@ -44,15 +42,17 @@ Core:
   Id: CORE-000777
   Status: Published
   Version: '1'
-Description: Raise an error when variable RELMIDS is present in any of the
-  dataset and TM dataset is missing in a study.
+Description: Raise an error when variable RELMIDS is present in any of the dataset and TM dataset is missing in a study.
 Executability: Fully Executable
 Operations:
   - id: $RELMIDS_EXISTS
     name: RELMIDS
     operator: variable_exists
 Outcome:
-  Message: TM dataset is missing when RELMIDS variable is present in any of the dataset.
+  Message: TM dataset must be present when RELMIDS variable is present in a dataset.
+  Output Variables:
+    - $RELMIDS_EXISTS
+    - TM
 Rule Type: Domain Presence Check
 Scope:
   Classes:
