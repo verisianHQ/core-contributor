@@ -1,3 +1,7 @@
+# Variable: --ENRTPT
+# Condition: --ENTPT corresponds to the date of collection or assessment.
+# Rule: --ENRTPT in ('BEFORE', 'COINCIDENT', 'ONGOING', 'UNKNOWN')
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -96,9 +100,6 @@ Authorities:
             Version: '1.0'
         Substandard: SDTM
         Version: '1.0'
-# Variable: --ENRTPT
-# Condition: --ENTPT corresponds to the date of collection or assessment.
-# Rule: --ENRTPT in ('BEFORE', 'COINCIDENT', 'ONGOING', 'UNKNOWN')
 Check:
   all:
     - name: --ENTPT
@@ -121,11 +122,13 @@ Core:
   Id: CORE-000324
   Status: Published
   Version: '1'
-Description: Trigger error when --ENRTPT is not in ('BEFORE', 'COINCIDENT',
-  'ONGOING', 'UNKNOWN')
-Executability: Partially Executable
+Description: Raise an error when --ENRTPT is not equal to 'BEFORE', 
+ 'COINCIDENT', 'ONGOING', or 'UNKNOWN' and --ENTPT is equal to the date of
+ collection or assessment.
+Executability: Fully Executable
 Outcome:
-  Message: --ENRTPT is not in ('BEFORE', 'COINCIDENT', 'ONGOING', 'UNKNOWN')
+  Message: --ENRTPT must be equal to 'BEFORE', 'COINCIDENT', 'ONGOING', or
+   'UNKNOWN' when --ENTPT is equal to the date of collection or assessment.
   Output Variables:
     - --ENTPT
     - --ENRTPT

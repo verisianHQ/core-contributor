@@ -1,7 +1,6 @@
 # Variable: MIDSDTC
 # Condition: MIDSDTC present in dataset
 # Rule: MIDS present in dataset
-# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -43,11 +42,11 @@ Core:
   Id: CORE-000193
   Status: Published
   Version: '1'
-Description: Raise an error when variable MIDSDTC is present and MIDS
-  variable is missing.
+Description: Raise an error when variable MIDSDTC is present and MIDS variable is
+  missing.
 Executability: Fully Executable
 Outcome:
-  Message: MIDS variable must be present in the dataset when MIDSDTC variable is present.
+  Message: MIDS variable is missing when MIDSDTC variable is present in a dataset.
   Output Variables:
     - MIDSDTC
     - MIDS

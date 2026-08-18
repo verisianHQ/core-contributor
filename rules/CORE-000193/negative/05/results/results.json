@@ -84,9 +84,20 @@
       "dataset": "ta.xpt",
       "domain": "TA",
       "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "execution_message": "MIDS variable is missing when MIDSDTC variable is present in a dataset.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "MIDSDTC": "2012-11-23",
+            "MIDS": "Not in dataset"
+          },
+          "validated": false
+        }
+      ]
     },
     {
       "dataset": "te.xpt",
@@ -99,14 +110,6 @@
     {
       "dataset": "ti.xpt",
       "domain": "TI",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
-    },
-    {
-      "dataset": "tm.xpt",
-      "domain": "TM",
       "execution_status": "success",
       "execution_message": null,
       "number_errors": 0,
