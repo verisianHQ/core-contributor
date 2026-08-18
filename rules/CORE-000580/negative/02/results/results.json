@@ -4,36 +4,29 @@
       "dataset": "te.xpt",
       "domain": "TE",
       "execution_status": "success",
-      "execution_message": "The combination of ELEMENT, TESTRL, TEENRL, and TEDUR must be unique for each ETCD.",
-      "number_errors": 2,
-      "errors": [
-        {
-          "row": 2,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ETCD": "E001",
-            "ELEMENT": "HUMAN INSULIN",
-            "TESTRL": "FIRST DOSE OF HUMAN INSULIN",
-            "TEENRL": "END OF TREATMENT",
-            "TEDUR": "Not in dataset"
-          },
-          "validated": true
-        },
-        {
-          "row": 3,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ETCD": "E002",
-            "ELEMENT": "HUMAN INSULIN",
-            "TESTRL": "FIRST DOSE OF HUMAN INSULIN",
-            "TEENRL": "END OF TREATMENT",
-            "TEDUR": "Not in dataset"
-          },
-          "validated": true
-        }
-      ]
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "ETCD": "E001",
+        "ELEMENT": "HUMAN INSULIN",
+        "TESTRL": "FIRST DOSE OF HUMAN INSULIN",
+        "TEENRL": "END OF TREATMENT",
+        "TEDUR": "[ABSENT]"
+      }
+    },
+    {
+      "value": {
+        "ETCD": "E002",
+        "ELEMENT": "HUMAN INSULIN",
+        "TESTRL": "FIRST DOSE OF HUMAN INSULIN",
+        "TEENRL": "END OF TREATMENT",
+        "TEDUR": "[ABSENT]"
+      }
     }
   ]
 }

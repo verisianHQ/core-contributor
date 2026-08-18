@@ -4,62 +4,47 @@
       "dataset": "te.xpt",
       "domain": "TE",
       "execution_status": "success",
-      "execution_message": "The combination of ELEMENT, TESTRL, TEENRL, and TEDUR must be unique for each ETCD.",
-      "number_errors": 4,
-      "errors": [
-        {
-          "row": 2,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ETCD": "E001",
-            "ELEMENT": "HUMAN INSULIN",
-            "TESTRL": "Not in dataset",
-            "TEENRL": "END OF TREATMENT",
-            "TEDUR": "P26W"
-          },
-          "validated": true
-        },
-        {
-          "row": 3,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ETCD": "E002",
-            "ELEMENT": "HUMAN INSULIN",
-            "TESTRL": "Not in dataset",
-            "TEENRL": "END OF TREATMENT",
-            "TEDUR": "P26W"
-          },
-          "validated": true
-        },
-        {
-          "row": 7,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ETCD": "E006",
-            "ELEMENT": null,
-            "TESTRL": "Not in dataset",
-            "TEENRL": null,
-            "TEDUR": "TEST"
-          },
-          "validated": true
-        },
-        {
-          "row": 8,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ETCD": "E007",
-            "ELEMENT": null,
-            "TESTRL": "Not in dataset",
-            "TEENRL": null,
-            "TEDUR": "TEST"
-          },
-          "validated": true
-        }
-      ]
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "ETCD": "E001",
+        "ELEMENT": "HUMAN INSULIN",
+        "TESTRL": "[ABSENT]",
+        "TEENRL": "END OF TREATMENT",
+        "TEDUR": "P26W"
+      }
+    },
+    {
+      "value": {
+        "ETCD": "E002",
+        "ELEMENT": "HUMAN INSULIN",
+        "TESTRL": "[ABSENT]",
+        "TEENRL": "END OF TREATMENT",
+        "TEDUR": "P26W"
+      }
+    },
+    {
+      "value": {
+        "ETCD": "E006",
+        "ELEMENT": null,
+        "TESTRL": "[ABSENT]",
+        "TEENRL": null,
+        "TEDUR": "TEST"
+      }
+    },
+    {
+      "value": {
+        "ETCD": "E007",
+        "ELEMENT": null,
+        "TESTRL": "[ABSENT]",
+        "TEENRL": null,
+        "TEDUR": "TEST"
+      }
     }
   ]
 }
