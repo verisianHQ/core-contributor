@@ -13,25 +13,35 @@
       "domain": "SUPPEC",
       "execution_status": "success",
       "execution_message": "A SUPP domain other than SUPPDM must not contain population flags.",
-      "number_errors": 2,
+      "number_errors": 3,
       "errors": [
         {
-          "row": 3,
+          "row": 1,
           "SEQ": null,
-          "USUBJID": "CDISC009",
+          "USUBJID": "CDISC020",
           "value": {
-            "QNAM": "SAFETY",
-            "QLABEL": "Safety Flag"
+            "QNAM": "COMPLT",
+            "QLABEL": "Completer Flag"
           },
           "validated": true
         },
         {
-          "row": 4,
+          "row": 2,
           "SEQ": null,
-          "USUBJID": "CDISC009",
+          "USUBJID": "CDISC021",
           "value": {
-            "QNAM": "ITT",
-            "QLABEL": "Intent-To-Treat Flag"
+            "QNAM": "FULLSET",
+            "QLABEL": "Full Set Flag"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC022",
+          "value": {
+            "QNAM": "PPROT",
+            "QLABEL": "Per Protocol Flag"
           },
           "validated": true
         }
