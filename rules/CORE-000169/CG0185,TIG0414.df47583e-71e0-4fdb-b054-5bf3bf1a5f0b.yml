@@ -8,8 +8,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: '"If value is from a numeric scale, represent only the
-                  number  (e.g., "2" and not "Grade 2")."'
+              - Cited Guidance: If value is from a numeric scale, represent only the
+                  number  (e.g., '2' and not 'Grade 2').
                 Document: IG v3.4
                 Item: Specification
                 Section: 6.3.5.6
@@ -23,7 +23,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: If value is from a numeric scale, represent only the number
-                  (e.g., "2" and not "Grade 2").
+                  (e.g., '2' and not 'Grade 2').
                 Document: IG v3.2
                 Item: Specification
                 Section: '6.3'
@@ -37,7 +37,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: If value is from a numeric scale, represent only the number
-                  (e.g., "2" and not "Grade 2").
+                  (e.g., '2' and not 'Grade 2').
                 Document: IG v3.3
                 Item: Specification
                 Section: 6.3.6
@@ -52,7 +52,7 @@ Authorities:
           - Citations:
               - Cited Guidance: Records toxicity grade value using a standard toxicity scale
                   (such as the NCI CTCAE). If value is from a numeric scale,
-                  represent only the number (e.g., "2" and not "Grade 2").
+                  represent only the number (e.g., '2' and not 'Grade 2').
                 Document: TIG 1.0
                 Item: Specification-LBTOXGR
                 Section: 2.8.10.14
@@ -64,24 +64,26 @@ Authorities:
         Substandard: SDTM
         Version: '1.0'
 Check:
-  all:
-    - name: LBTOXGR
-      operator: matches_regex
-      value: .*[a-zA-Z].* # identifiers string contains characters
-    - name: LBTOXGR
-      operator: matches_regex
-      value: .*[0-9].* #identifies that string also contains a number  
+  any:
+    - all:
+        - name: LBTOXGR
+          operator: matches_regex
+          value: .*[a-zA-Z].* # identifiers string contains characters
+        - name: LBTOXGR
+          operator: matches_regex
+          value: .*[0-9].* #identifies that string also contains a number
 Core:
   Id: CORE-000169
   Status: Published
   Version: '1'
-Description: Raise an error when LBTOXGR uses a numeric scale but contains 
+Description: Raise an error when LBTOXGR uses a numeric scale but contains
     non-numeric values.
-Executability: Fully Executable
+Executability: Partially Executable - Possible Overreporting
 Outcome:
-  Message: LBTOXGR uses non-numeric values, which is not allowed when a 
+  Message: LBTOXGR must not include non-numeric values when a
     numeric scale is used.
   Output Variables:
+    - LBTESTCD
     - LBTOX
     - LBTOXGR
 Rule Type: Record Data
