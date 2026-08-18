@@ -1,6 +1,7 @@
 # Variable: TSVAL
 # Condition: TSPARMCD = 'TRT' and record exists where TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL'
 # Rule: TSVAL ^= null
+# Verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -53,8 +54,8 @@ Core:
   Id: CORE-000468
   Status: Published
   Version: '1'
-Description: 'Raise an error when a record exists in TS where TSPARMCD = STYPE
-  and TSVAL = INTERVENTIONAL but TSVAL for TSPARMCD = TRT is empty.'
+Description: Raise an error when a record exists in TS where TSPARMCD is equal to 'STYPE' and 
+  TSVAL is equal to 'INTERVENTIONAL' but TSVAL for TSPARMCD is equal to 'TRT' is not populated.
 Executability: Fully Executable
 Operations:
   - filter:
@@ -65,13 +66,15 @@ Operations:
     id: $STYPE_INTERVENTIONAL
     operator: record_count
 Outcome:
-  Message: 'A record exists in TS where TSPARMCD = STYPE and TSVAL =
-    INTERVENTIONAL but TSVAL for TSPARMCD = TRT is empty.'
+  Message: A record exists in TS where TSPARMCD is equal to 'STYPE' and TSVAL is equal to
+    'INTERVENTIONAL' but TSVAL for TSPARMCD is equal to 'TRT' is not populated.
   Output Variables:
-    - TSGRPID
     - TSPARMCD
     - TSVAL
+    - TSGRPID
     - $STYPE_INTERVENTIONAL
+  
+    
 Rule Type: Record Data
 
 Scope:
