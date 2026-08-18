@@ -1,6 +1,7 @@
 # Variable: SSDTC
 # Condition: SSSTRESC = 'DEAD'
 # Rule: SSDTC >= all DS.DSSTDTC
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -77,7 +78,8 @@ Core:
   Id: CORE-000178
   Status: Published
   Version: '1'
-Description: Raise an error when SSSTRESC = 'DEAD' and SSDTC < max DS.DSSTDTC.
+Description: Raise an error when SSSTRESC is equal to 'DEAD' in the 
+  SS dataset and SSDTC is less than the maximum DSSTDTC in the DS dataset.
 Executability: Fully Executable
 Operations:
   - operator: max_date
@@ -87,7 +89,8 @@ Operations:
     group:
       - USUBJID
 Outcome:
-  Message: SSSTRESC = 'DEAD', but SSDTC < max DS.DSSTDTC.
+  Message: SSSTRESC is equal to 'DEAD' in the SS dataset, but SSDTC is
+    less than the maximum DSSTDTC value in the DS dataset.
   Output Variables:
     - SSSTRESC
     - SSDTC

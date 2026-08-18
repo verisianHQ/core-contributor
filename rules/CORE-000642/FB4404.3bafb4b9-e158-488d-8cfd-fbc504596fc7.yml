@@ -1,0 +1,140 @@
+Authorities:
+  - Organization: 'FDA'
+    Standards:
+      # Applicable to SDTMIG versions 3.2, 3.3, 3.4
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.'
+                Document: 'FDA'
+                Section: 'FDAB044'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB4404'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.'
+                Document: 'FDA'
+                Section: 'FDAB044'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB4404'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.'
+                Document: 'FDA'
+                Section: 'FDAB044'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB4404'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+      # REMARK: SENDIG: NOT applicable to SEND 3.0 and 3.1
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.'
+                Document: 'FDA'
+                Section: 'FDAB044'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB4404'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.'
+                Document: 'FDA'
+                Section: 'FDAB044'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB4404'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.'
+                Document: 'FDA'
+                Section: 'FDAB044'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB4404'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: 'SENDIG-AR'
+        References:
+          - Citations:
+              - Cited Guidance: 'When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.'
+                Document: 'FDA'
+                Section: 'FDAB044'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB4404'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: 'SENDIG-GENETOX'
+        References:
+          - Citations:
+              - Cited Guidance: 'When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.'
+                Document: 'FDA'
+                Section: 'FDAB044'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB4404'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  # REMARK: --TPTNUM and --ENINT both are usually "permissible"
+  all:
+    - name: '--TPTREF'
+      operator: exists
+    - name: '--ENINT'
+      operator: exists
+    - name: '--ENINT'
+      operator: 'non_empty'
+    - name: '--TPTREF'
+      operator: 'empty'
+Core:
+  Id: CORE-000642
+  Status: Published
+  Version: '1'
+Description: 'When Planned End of Assessment Interval (--ENINT) is populated,
+  Time Point Reference (--TPTREF) should also be populated.'
+Executability: Fully Executable
+Outcome:
+  Message: --ENINT is populated, but --TPTREF is missing.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+      - EVENTS
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

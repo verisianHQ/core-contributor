@@ -1,0 +1,84 @@
+# Variable: TSVAL, TSVALCD
+# Condition: TSVCDREF ^= null
+# Rule: TSVALCD and TSVAL have a one-to-one relationship 
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0904
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0904
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0904
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: TSVCDREF
+      operator: exists
+    - name: TSVAL
+      operator: exists
+    - name: TSVALCD
+      operator: exists
+    - name: TSVCDREF
+      operator: non_empty
+    - name: TSVAL
+      operator: is_not_unique_relationship
+      value: TSVALCD
+Core:
+  Id: CORE-000728
+  Status: Published
+  Version: '1'
+Description: TSVALCD and TSVAL should have a one-to-one relationship.
+Executability: Fully Executable
+Outcome:
+  Message: TSVALCD and TSVAL do not have a one-to-one relationship.
+  Output Variables:
+    - TSVAL
+    - TSVALCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

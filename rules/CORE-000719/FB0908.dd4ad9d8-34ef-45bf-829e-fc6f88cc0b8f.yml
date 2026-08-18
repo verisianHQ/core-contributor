@@ -1,0 +1,80 @@
+# Variable: --HLGT, --HLGTCD
+# Condition:
+# Rule: --HLGTCD and --HLGT have a one-to-one relationship 
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0908
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0908
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0908
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: --HLGT
+      operator: exists
+    - name: --HLGTCD
+      operator: exists
+    - name: --HLGT
+      operator: is_not_unique_relationship
+      value: --HLGTCD
+Core:
+  Id: CORE-000719
+  Status: Published
+  Version: '1'
+Description: --HLGTCD and --HLGT should have a one-to-one relationship.
+Executability: Fully Executable
+Outcome:
+  Message: --HLGTCD and --HLGT do not have a one-to-one relationship.
+  Output Variables:
+    - --HLGT
+    - --HLGTCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

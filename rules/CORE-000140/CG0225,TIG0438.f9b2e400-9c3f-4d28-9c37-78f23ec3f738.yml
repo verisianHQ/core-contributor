@@ -1,6 +1,7 @@
 # Variable: VISITDY
 # Condition: VISITNUM is NOT in TV.VISITNUM
 # Rule: VISITDY = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -77,7 +78,8 @@ Core:
   Id: CORE-000140
   Status: Published
   Version: '1'
-Description: Trigger error if VISITDY is populated when VISITNUM is not in TV.
+Description: Raise an error when a visit is unplanned (VISITNUM does not match
+  a VISITNUM value in TV dataset) but VISITDY is populated.
 Executability: Fully Executable
 Operations:
   - domain: TV
@@ -85,8 +87,10 @@ Operations:
     name: VISITNUM
     operator: distinct
 Outcome:
-  Message: VISITDY is not null when VISITNUM is not in TV.VISITNUM
+  Message: VISITNUM does not match any of the VISITNUM values in the TV
+    dataset but VISITDY is populated.
   Output Variables:
+    - VISIT
     - VISITNUM
     - VISITDY
 Rule Type: Record Data

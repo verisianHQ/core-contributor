@@ -1,6 +1,7 @@
 # Variable: --SPCUFL
 # Condition: 
 # Rule: --SPCUFL = 'N' or null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -9,7 +10,8 @@ Authorities:
           - Citations:
               - Cited Guidance: The value will be "N" if the specimen is not usable, and null if
                   the specimen is usable.
-                Document: SDTM v2.0
+                Document: Model v2.0
+                Item: Specification
                 Section: Findings
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -39,16 +41,17 @@ Check:
     - name: --SPCUFL
       operator: not_equal_to
       value: N
+      value_is_literal: true
     - name: --SPCUFL
       operator: non_empty
 Core:
   Id: CORE-000116
   Status: Published
   Version: '1'
-Description: Raise an error when --SPCUFL is not null or equal to "N"
+Description: Raise an error when --SPCUFL is not null or equal to 'N'.
 Executability: Fully Executable
 Outcome:
-  Message: --SPCUFL is not null or equal to 'N'
+  Message: --SPCUFL must be null or equal to 'N'.
 Rule Type: Record Data
 Scope:
   Classes:

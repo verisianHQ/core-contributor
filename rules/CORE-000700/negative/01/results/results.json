@@ -1,0 +1,164 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "Date/Time of Collection (CMDTC) variable is missing when Study Day of Visit/Collection/Exam (CMDY) is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "CMDTC": "Not in dataset",
+            "CMDY": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "execution_status": "success",
+      "execution_message": "Date/Time of Collection (CEDTC) variable is missing when Study Day of Visit/Collection/Exam (CEDY) is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "CEDTC": "Not in dataset",
+            "CEDY": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "Date/Time of Collection (LBDTC) variable is missing when Study Day of Visit/Collection/Exam (LBDY) is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "LBDTC": "Not in dataset",
+            "LBDY": -7.0
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "Date/Time of Collection (FADTC) variable is missing when Study Day of Visit/Collection/Exam (FADY) is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "FADTC": "Not in dataset",
+            "FADY": 3.0
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "success",
+      "execution_message": "Date/Time of Collection (SEDTC) variable is missing when Study Day of Visit/Collection/Exam (SEDY) is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "SEDTC": "Not in dataset",
+            "SEDY": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "sv.xpt",
+      "domain": "SV",
+      "execution_status": "success",
+      "execution_message": "Date/Time of Collection (SVDTC) variable is missing when Study Day of Visit/Collection/Exam (SVDY) is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "SVDTC": "Not in dataset",
+            "SVDY": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "sm.xpt",
+      "domain": "SM",
+      "execution_status": "success",
+      "execution_message": "Date/Time of Collection (SMDTC) variable is missing when Study Day of Visit/Collection/Exam (SMDY) is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "SMDTC": "Not in dataset",
+            "SMDY": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "tv.xpt",
+      "domain": "TV",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000700, dataset=TV",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Date/Time of Collection (DMDTC) variable is missing when Study Day of Visit/Collection/Exam (DMDY) is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "DMDTC": "Not in dataset",
+            "DMDY": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

@@ -12,7 +12,7 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "RFSTDTC in DM dataset is empty but AESTRF is completed.",
+      "execution_message": "RFSTDTC in DM the dataset is not populated but AESTRF is populated.",
       "number_errors": 4,
       "errors": [
         {
@@ -20,36 +20,40 @@
           "SEQ": 727,
           "USUBJID": "CDISC001",
           "value": {
-            "AESTRF": "BEFORE"
+            "AESTRF": "BEFORE",
+            "RFSTDTC": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": 782,
           "USUBJID": "CDISC003",
           "value": {
-            "AESTRF": "BEFORE"
+            "AESTRF": "BEFORE",
+            "RFSTDTC": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 6,
           "SEQ": 840,
           "USUBJID": "CDISC006",
           "value": {
-            "AESTRF": "BEFORE"
+            "AESTRF": "BEFORE",
+            "RFSTDTC": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 9,
           "SEQ": 881,
           "USUBJID": "CDISC009",
           "value": {
-            "AESTRF": "ONGOING"
+            "AESTRF": "ONGOING",
+            "RFSTDTC": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

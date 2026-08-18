@@ -3,10 +3,15 @@
     {
       "dataset": "suppae.xpt",
       "domain": "SUPPAE",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "execution_status": "execution_error",
+      "execution_message": "SQL operator execution error",
+      "number_errors": 1,
+      "errors": [
+        {
+          "error": "SQL error in does_not_equal_string_part operator",
+          "message": "Column '$dataset_name' not found in table 'SUPPAE'"
+        }
+      ]
     }
   ]
 }

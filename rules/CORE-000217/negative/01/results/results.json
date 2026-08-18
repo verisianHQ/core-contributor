@@ -4,7 +4,7 @@
       "dataset": "ec.xpt",
       "domain": "EC",
       "execution_status": "success",
-      "execution_message": "ECDOSE is empty, ECOCCUR is not equal to 'N' and ECSTAT is empty, but ECDOSTXT is also empty.",
+      "execution_message": "ECDOSE is not populated, ECOCCUR is not equal to 'N' and ECSTAT is not populated, but ECDOSTXT is also not populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -13,11 +13,11 @@
           "USUBJID": "CDISC001",
           "value": {
             "ECDOSE": null,
-            "ECDOSTXT": null,
             "ECOCCUR": "Y",
-            "ECSTAT": null
+            "ECSTAT": null,
+            "ECDOSTXT": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

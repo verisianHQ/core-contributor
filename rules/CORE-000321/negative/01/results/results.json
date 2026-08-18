@@ -1,0 +1,156 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "Study Day of Visit/Collection/Exam (CMDY) variable is missing when Date/Time of Collection (CMDTC) is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "CMDY": "Not in dataset",
+            "CMDTC": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "execution_status": "success",
+      "execution_message": "Study Day of Visit/Collection/Exam (CEDY) variable is missing when Date/Time of Collection (CEDTC) is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "CEDY": "Not in dataset",
+            "CEDTC": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "Study Day of Visit/Collection/Exam (LBDY) variable is missing when Date/Time of Collection (LBDTC) is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "LBDY": "Not in dataset",
+            "LBDTC": "2012-11-23T11:20"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "Study Day of Visit/Collection/Exam (FADY) variable is missing when Date/Time of Collection (FADTC) is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "FADY": "Not in dataset",
+            "FADTC": "2012-12-02"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "success",
+      "execution_message": "Study Day of Visit/Collection/Exam (SEDY) variable is missing when Date/Time of Collection (SEDTC) is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "SEDY": "Not in dataset",
+            "SEDTC": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "sv.xpt",
+      "domain": "SV",
+      "execution_status": "success",
+      "execution_message": "Study Day of Visit/Collection/Exam (SVDY) variable is missing when Date/Time of Collection (SVDTC) is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "SVDY": "Not in dataset",
+            "SVDTC": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "sm.xpt",
+      "domain": "SM",
+      "execution_status": "success",
+      "execution_message": "Study Day of Visit/Collection/Exam (SMDY) variable is missing when Date/Time of Collection (SMDTC) is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "SMDY": "Not in dataset",
+            "SMDTC": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Study Day of Visit/Collection/Exam (DMDY) variable is missing when Date/Time of Collection (DMDTC) is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "DMDY": "Not in dataset",
+            "DMDTC": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

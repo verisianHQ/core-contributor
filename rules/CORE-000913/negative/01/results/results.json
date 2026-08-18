@@ -1,0 +1,70 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000913, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "DSSTDTC for DEATH record in DS dataset is not equal to DTHDTC in the DM dataset.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "DSDECOD": "DEATH",
+            "DSSTDTC": "2006-08-30",
+            "DTHDTC": "2006-04-01"
+          },
+          "validated": false
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "DSDECOD": "DEATH",
+            "DSSTDTC": null,
+            "DTHDTC": "2006-03-26"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "dm.xpt",
+      "Row": 5,
+      "Variable": "DTHDTC"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 9,
+      "Variable": "DSDECOD"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 9,
+      "Variable": "DSSTDTC"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 14,
+      "Variable": "DSDECOD"
+    },
+    {
+      "Sheet": "ds.xpt",
+      "Row": 14,
+      "Variable": "DSSTDTC"
+    }
+  ]
+}

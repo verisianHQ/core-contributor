@@ -12,9 +12,9 @@
           "SEQ": 1,
           "USUBJID": "None",
           "value": {
-            "$rand_count": "Operation variable not found",
+            "TSPARMCD": "TRT",
             "$trt_count": 1,
-            "TSPARMCD": "TRT"
+            "$rand_count": "Operation variable not found"
           },
           "validated": false
         },
@@ -23,9 +23,9 @@
           "SEQ": 1,
           "USUBJID": "None",
           "value": {
-            "$rand_count": "Operation variable not found",
+            "TSPARMCD": "RAND",
             "$trt_count": 1,
-            "TSPARMCD": "RAND"
+            "$rand_count": "Operation variable not found"
           },
           "validated": false
         }

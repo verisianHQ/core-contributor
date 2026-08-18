@@ -1,23 +1,18 @@
 # Variable: AESER
 # Condition: AESCAN ^= 'Y' and AESCONG ^= 'Y' and AESDISAB ^= 'Y' and AESDTH ^= 'Y' and AESHOSP ^= 'Y' and AESLIFE ^= 'Y' and AESOD ^= 'Y' and AESMIE ^= 'Y'
 # Rule: AESER = 'N'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: "If categories of serious events are collected secondarily to a
-                  leading question, as in the example below,  the values of the
-                  variables that capture reasons an event is considered serious
-                  (i.e., AESCAN, AESCONG, etc.) may be null.  For example, if
-                  Serious = \"No\", the values for these variables may be null.
-                  However, if Serious = \"Yes\", at least one of them will have
-                  a \"Y\" response.
-
-
-
-                  \    "
+              - Cited Guidance: If categories of serious events are collected secondarily to a leading question, 
+                  as in the example below, the values of the variables that capture reasons an event is considered 
+                  serious (i.e., AESCAN, AESCONG, etc.) may be null. For example, if Serious is answered "No, " 
+                  the values for these variables may be null. However, if Serious is answered "Yes, " at least one 
+                  of them will have a "Y" response.
                 Document: IG v3.4
                 Item: Assumption 6a
                 Section: 6.2.1
@@ -30,12 +25,10 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: If categories of serious events are collected secondarily to a
-                  leading question, as in the example below, the values of the
-                  variables that capture reasons an event is considered serious
-                  (i.e., AESCAN, AESCONG, etc.) may be null. For example, if
-                  Serious is answered "No, " the values for these variables may
-                  be null. However, if Serious is answered "Yes, " at least one
+              - Cited Guidance: If categories of serious events are collected secondarily to a leading question, 
+                  as in the example below, the values of the variables that capture reasons an event is considered 
+                  serious (i.e., AESCAN, AESCONG, etc.) may be null. For example, if Serious is answered "No, " 
+                  the values for these variables may be null. However, if Serious is answered "Yes, " at least one 
                   of them will have a "Y" response.
                 Document: IG v3.2
                 Item: Assumption 6a
@@ -49,12 +42,10 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: If categories of serious events are collected secondarily to a
-                  leading question, as in the example below, the values of the
-                  variables that capture reasons an event is considered serious
-                  (i.e., AESCAN, AESCONG, etc.) may be null. For example, if
-                  Serious is answered "No, " the values for these variables may
-                  be null. However, if Serious is answered "Yes, " at least one
+              - Cited Guidance: If categories of serious events are collected secondarily to a leading question, 
+                  as in the example below, the values of the variables that capture reasons an event is considered 
+                  serious (i.e., AESCAN, AESCONG, etc.) may be null. For example, if Serious is answered "No, " 
+                  the values for these variables may be null. However, if Serious is answered "Yes, " at least one 
                   of them will have a "Y" response.
                 Document: IG v3.3
                 Item: Assumption 6a
@@ -143,13 +134,13 @@ Core:
   Id: CORE-000266
   Status: Published
   Version: '1'
-Description: Select record where AESCAN and AESCONG and AESDISAB and AESDTH and
-  AESHOSP and AESLIFE and AESOD and AESMIE ^= "Y" However, AESER ^= "N"
+Description: Raise an error when none of the serious events categories (AESCAN, AESCONG,
+    AESDISAB, AESDTH, AESHOSP, AESLIFE, AESOD, AESMIE) are equal to 'Y' but AESER is not equal to 'N'.
 Executability: Fully Executable
 Outcome:
-  Message: If AESER = "N" then none of the seriousness criteria (AESCAN, AESCONG,
-    AESDISAB, AESDTH, AESHOSP, AESLIFE, AESOD, AESMIE) could be equal to "Y".
+  Message: AESER is not equal to 'N', but none of the seriousness events categories (AESCAN, AESCONG, AESDISAB, AESDTH, AESHOSP, AESLIFE, AESOD, AESMIE) are flagged as 'Y'.
   Output Variables:
+    - AETERM
     - AESER
     - AESCAN
     - AESCONG

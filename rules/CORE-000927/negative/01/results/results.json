@@ -1,0 +1,99 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000927, dataset=TS",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "A subject has a record in EX but is not assigned to a treatment while participating in an interventional study",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "ABC123",
+          "value": {
+            "ARMNRS": "SCREEN FAILURE"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "ZZZ100",
+          "value": {
+            "ARMNRS": "ASSIGNED, NOT TREATED"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000927, dataset=EX",
+      "number_errors": 0,
+      "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ts.xpt",
+      "Row": 14,
+      "Variable": "TSPARMCD"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 14,
+      "Variable": "TSPARM"
+    },
+    {
+      "Sheet": "ts.xpt",
+      "Row": 14,
+      "Variable": "TSVAL"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 5,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 5,
+      "Variable": "ARMNRS"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 7,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 7,
+      "Variable": "ARMNRS"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 5,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 6,
+      "Variable": "USUBJID"
+    },
+    {
+      "Sheet": "ex.xpt",
+      "Row": 9,
+      "Variable": "USUBJID"
+    }
+  ]
+}

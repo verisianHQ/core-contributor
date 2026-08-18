@@ -1,0 +1,206 @@
+{
+  "datasets": [
+    {
+      "dataset": "eg.xpt",
+      "domain": "EG",
+      "execution_status": "success",
+      "execution_message": "EGSTRESC is populated with a numeric value, but EGSTRESN is not populated.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "EGSTRESC": "150",
+            "EGSTRESN": null
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 2,
+          "USUBJID": "123102",
+          "value": {
+            "EGSTRESC": "149.876",
+            "EGSTRESN": null
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "FASTRESC is populated with a numeric value, but FASTRESN is not populated.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "123101",
+          "value": {
+            "FASTRESC": "-1.234",
+            "FASTRESN": null
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "123101",
+          "value": {
+            "FASTRESC": "1.236",
+            "FASTRESN": null
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "mi.xpt",
+      "domain": "MI",
+      "execution_status": "success",
+      "execution_message": "MISTRESC is populated with a numeric value, but MISTRESN is not populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "ABC-1001",
+          "value": {
+            "MISTRESC": "0",
+            "MISTRESN": null
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBSTRESC is populated with a numeric value, but LBSTRESN is not populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "123101",
+          "value": {
+            "LBSTRESC": "200",
+            "LBSTRESN": null
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "execution_status": "success",
+      "execution_message": "VSSTRESC is populated with a numeric value, but VSSTRESN is not populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "VSSTRESC": "44",
+            "VSSTRESN": null
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "eg.xpt",
+      "Row": 1,
+      "Variable": "EGORRES"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 1,
+      "Variable": "EGSTAT"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 6,
+      "Variable": "EGSTRESN"
+    },
+    {
+      "Sheet": "eg.xpt",
+      "Row": 8,
+      "Variable": "EGSTRESN"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 1,
+      "Variable": "FAORRES"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 1,
+      "Variable": "FASTAT"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 7,
+      "Variable": "FASTRESN"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 9,
+      "Variable": "FASTRESN"
+    },
+    {
+      "Sheet": "mi.xpt",
+      "Row": 1,
+      "Variable": "MIORRES"
+    },
+    {
+      "Sheet": "mi.xpt",
+      "Row": 1,
+      "Variable": "MISTAT"
+    },
+    {
+      "Sheet": "mi.xpt",
+      "Row": 5,
+      "Variable": "MISTRESN"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "LBORRES"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "LBSTAT"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 6,
+      "Variable": "LBSTRESN"
+    },
+    {
+      "Sheet": "vs.xpt",
+      "Row": 1,
+      "Variable": "VSORRES"
+    },
+    {
+      "Sheet": "vs.xpt",
+      "Row": 1,
+      "Variable": "VSSTAT"
+    },
+    {
+      "Sheet": "vs.xpt",
+      "Row": 6,
+      "Variable": "VSSTRESN"
+    }
+  ]
+}

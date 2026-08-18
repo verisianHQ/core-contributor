@@ -1,0 +1,167 @@
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  Values for the following should not be negative: age, dose,
+                  and duration of event, exposure or observation.
+                Document: FDA
+                Section: FDAB040
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4005
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  Values for the following should not be negative: age, dose,
+                  and duration of event, exposure or observation.
+                Document: FDA
+                Section: FDAB040
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4005
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  Values for the following should not be negative: age, dose,
+                  and duration of event, exposure or observation.
+                Document: FDA
+                Section: FDAB040
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4005
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  Values for the following should not be negative: age, dose,
+                  and duration of event, exposure or observation.
+                Document: FDA
+                Section: FDAB040
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4005
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  Values for the following should not be negative: age, dose,
+                  and duration of event, exposure or observation.
+                Document: FDA
+                Section: FDAB040
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4005
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  Values for the following should not be negative: age, dose,
+                  and duration of event, exposure or observation.
+                Document: FDA
+                Section: FDAB040
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4005
+              Version: '1'
+            Version: '1.5'
+        Version: 3.1.1
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  Values for the following should not be negative: age, dose,
+                  and duration of event, exposure or observation.
+                Document: FDA
+                Section: FDAB040
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4005
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  Values for the following should not be negative: age, dose,
+                  and duration of event, exposure or observation.
+                Document: FDA
+                Section: FDAB040
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4005
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  Values for the following should not be negative: age, dose,
+                  and duration of event, exposure or observation.
+                Document: FDA
+                Section: FDAB040
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4005
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: SENDIG-AR
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  Values for the following should not be negative: age, dose,
+                  and duration of event, exposure or observation.
+                Document: FDA
+                Section: FDAB040
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4005
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  all:
+    - name: --DUR
+      operator: non_empty
+    - name: --DUR
+      operator: contains
+      value: '-'
+Core:
+  Id: CORE-000305
+  Status: Published
+  Version: '1'
+Description: Collected Duration (--DUR) value should not be negative.
+Executability: Fully Executable
+Outcome:
+  Message: Negative value for --DUR.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

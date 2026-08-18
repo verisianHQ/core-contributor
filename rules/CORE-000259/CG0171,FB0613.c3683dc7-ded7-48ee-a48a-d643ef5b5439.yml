@@ -1,6 +1,7 @@
 # Variable: SSDTC
 # Condition: SSSTRESC = 'DEAD'
 # Rule: SSDTC >= DM.DTHDTC
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -119,18 +120,16 @@ Core:
   Id: CORE-000259
   Status: Published
   Version: '1'
-Description: Date time of collection of subject status in SS domain, where
-  survival status is marked as DEAD, is on or after the date time of death
-  populated in DM domain #Message has been updated as per the FDA Business Rules Spreadsheet.
+Description: Raise an error when SSDTC in the SS dataset, where SSSTRESC is 
+  equal to 'DEAD', is not on or after DTHDTC in the DM dataset.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: DM
 Outcome:
-  Message: Date time of collection of subject status in SS domain, where survival
-    status is marked as DEAD, is not on or after the date time of death
-    populated in DM domain. #Error message has been updated as per the FDA Business Rules Spreadsheet.
+  Message: SSDTC in the SS dataset, where SSSTRESC is equal to 'DEAD', is 
+    equal to or after DTHDTC in the DM dataset.
   Output Variables:
     - SSSTRESC
     - SSDTC

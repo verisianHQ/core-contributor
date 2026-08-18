@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBSTNRHI is less than or equal to LBSTNRLO.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "LBTESTCD": "ALT",
+            "LBSTNRLO": 1.0,
+            "LBSTNRHI": 1.0
+          }
+        }
+      ]
+    }
+  ]
+}

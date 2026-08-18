@@ -1,0 +1,77 @@
+# Variable: INVID AND INVNAM
+# Condition:
+# Rule: INVID and INVNAM have a one-to-one relationship
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0912
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0912
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0912
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: INVID
+      operator: is_not_unique_relationship
+      value: INVNAM
+Core:
+  Id: CORE-000729
+  Status: Published
+  Version: '1'
+Description: Raise an error when INVID and INVNAM do not have a one-to-one relationship.
+Executability: Fully Executable
+Outcome:
+  Message: INVID and INVNAM do not have a one-to-one relationship.
+  Output Variables:
+    - INVID
+    - INVNAM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

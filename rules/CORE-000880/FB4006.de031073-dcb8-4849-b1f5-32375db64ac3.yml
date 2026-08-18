@@ -1,0 +1,56 @@
+#Rule: --PDUR is greater than or equal to zero	
+#Logic: --PDUR >= 0	
+#Condition: --PDUR ^= null
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  Values for the following should not be negative: age, dose,
+                  and duration of event, exposure or observation.
+                Document: FDA
+                Section: FDAB040
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4006
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: --PDUR
+      operator: non_empty
+    - name: --PDUR
+      operator: contains
+      value: "-"
+Core:
+  Id: CORE-000880
+  Status: Published
+  Version: '1'
+Description: Planned Duration (--PDUR) value should not be negative.
+Executability: Fully Executable
+Outcome:
+  Message: Negative value for --PDUR.
+  Output Variables:
+    - --PDUR
+Rule Type: Record Data
+
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - BS
+      - CP
+      - GF
+      - IS
+      - LB
+      - MB
+      - MS
+      - MI
+      - PC
+      - PP
+Sensitivity: Record

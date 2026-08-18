@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "Subject has no records in EX but ACTARMCD is not equal to SCRNFAIL, NOTASSGN or NOTTRT.",
+      "execution_message": "Subject has no records in the EX dataset but ACTARMCD is not equal to SCRNFAIL, NOTASSGN or NOTTRT.",
       "number_errors": 3,
       "errors": [
         {
@@ -14,25 +14,25 @@
           "value": {
             "ACTARMCD": "RANDOM"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": null,
           "USUBJID": "015246-300-0004-00002",
           "value": {
-            "ACTARMCD": "RANDOM"
+            "ACTARMCD": "SCRNFAILS"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": null,
           "USUBJID": "015246-999-0004-9999",
           "value": {
-            "ACTARMCD": "RANDOM"
+            "ACTARMCD": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },

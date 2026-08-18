@@ -1,6 +1,7 @@
 # Variable: --NOMDY
 # Condition: 
 # Rule: --NOMDY not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -9,11 +10,11 @@ Authorities:
           - Citations:
               - Cited Guidance: The following SDTM variables, defined for use in non-clinical
                   studies (SEND), must NEVER be used in the submission of
-                  SDTM-based data for human clinical trials --USCHFL
-                  (Interventions, Events, Findings) --DTHREL (Findings) --EXCLFL
-                  (Findings) --REASEX (Findings) --IMPLBL (Findings) FETUSID
-                  (Identifiers) --DETECT (Timing Variables) --NOMDY (Timing
-                  Variables) --NOMLBL (Timing Variables)
+                  SDTM-based data for human clinical trials; --USCHFL
+                  (Interventions, Events, Findings), --DTHREL (Findings), --EXCLFL
+                  (Findings), --REASEX (Findings), --IMPLBL (Findings), FETUSID
+                  (Identifiers), --DETECT (Timing Variables), --NOMDY (Timing
+                  Variables), --NOMLBL (Timing Variables)
                 Document: IG v3.4
                 Item: SDTM Variables Not Allowed in SDTMIG
                 Section: '2.7'
@@ -26,13 +27,13 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'The following SDTM variables; defined for use in non-clinical
+              - Cited Guidance: The following SDTM variables; defined for use in non-clinical
                   studies (SEND); must NEVER be used in the submission of
-                  SDTM-based data for human clinical trials: --USCHFL
+                  SDTM-based data for human clinical trials; --USCHFL
                   (Interventions, Events, Findings), --DTHREL (Findings),
                   --EXCLFL (Findings), --REASEX (Findings), --IMPLBL (Findings),
                   --FETUSID (Identifiers), --DETECT (Timing Variables), --NOMDY
-                  (Timing Variables), --NOMLBL (Timing Variables)'
+                  (Timing Variables), --NOMLBL (Timing Variables)
                 Document: IG v3.3
                 Section: '2.7'
             Origin: SDTM and SDTMIG Conformance Rules
@@ -61,8 +62,9 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: --NOMDY is not be used in human clinical trials.
-                Document: SDTM v2.0
+              - Cited Guidance: Not in human clinical trials.
+                Document: Model v2.0
+                Item: --NOMDY
                 Section: Timing
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -95,7 +97,9 @@ Core:
 Description: Raise an error when --NOMDY is present.
 Executability: Fully Executable
 Outcome:
-  Message: --NOMDY is present.
+  Message: --NOMDY must not be present.
+  Output Variables:
+    - --NOMDY
 Rule Type: Record Data
 Scope:
   Classes:

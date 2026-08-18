@@ -4,7 +4,7 @@
       "dataset": "mi.xpt",
       "domain": "MI",
       "execution_status": "success",
-      "execution_message": "MICONCU is present in a dataset other than MS.",
+      "execution_message": "MICONCU must not be present.",
       "number_errors": 1,
       "errors": [
         {
@@ -14,7 +14,7 @@
           "value": {
             "MICONCU": "ug/dL"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

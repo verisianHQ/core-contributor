@@ -1,0 +1,45 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBDY is greater than LBENDY.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBDY": -20.0,
+            "LBENDY": -22.0
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 2,
+          "USUBJID": "CDISC002",
+          "value": {
+            "LBDY": 2.0,
+            "LBENDY": 1.0
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "lb.xpt",
+      "Row": 5,
+      "Variable": "LBDY"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 8,
+      "Variable": "LBDY"
+    }
+  ]
+}

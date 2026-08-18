@@ -1,0 +1,88 @@
+# Variable: DTHFL
+# Condition: DTHFL= "Y"
+# Rule: Record present in DS where DSDECOD= "DEATH"
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0608
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0608
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0608
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: DTHFL
+      operator: equal_to
+      value: Y
+      value_is_literal: true
+    - name: $ds_dsdecod
+      operator: does_not_contain
+      value: DEATH
+      value_is_literal: true
+Core:
+  Id: CORE-000679
+  Status: Published
+  Version: '1'
+Description: When Death flag (DTHFL) in the DM dataset is populated as 'Y' then
+  a record should be present in the DS dataset where DSDECOD = 'DEATH' for the
+  corresponding subject.
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: DM
+Operations:
+  - domain: DS
+    group:
+      - USUBJID
+    id: $ds_dsdecod
+    name: DSDECOD
+    operator: distinct
+Outcome:
+  Message: DTHFL in DM dataset is "Y" but a record is missing in DS dataset where
+    DSDECOD = "DEATH".
+  Output Variables:
+    - USUBJID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - DS
+Sensitivity: Dataset

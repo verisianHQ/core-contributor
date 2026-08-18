@@ -1,0 +1,57 @@
+# Variable: ARM
+# Condition: ARM ^= (Screen Failure, Not Assigned) and DM.ACTARM ^= Not Treated
+# Rule: DM.USUBJID in EX.USUBJID
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Randomized subjects are expected to receive a study treatment.
+                Document: FDA
+                Section: FDAB025
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB2505
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+Check:
+  all:
+    - name: ARM
+      operator: is_not_contained_by_case_insensitive
+      value:
+        - Screen Failure
+        - Not Assigned
+    - name: ACTARM
+      operator: is_not_contained_by_case_insensitive
+      value:
+        - Not Treated
+    - name: USUBJID
+      operator: is_not_contained_by
+      value: $usubjids_in_ex
+Core:
+  Id: "CORE-000790"
+  Status: Published
+  Version: '1'
+Description: If a subject is assigned to an arm, the subject should have a record in EX.
+Executability: Partially Executable
+Operations:
+  - domain: EX
+    id: $usubjids_in_ex
+    name: USUBJID
+    operator: distinct
+Outcome:
+  Message: Subject is assigned to an arm code (randomized) but has no record in EX.
+  Output Variables:
+    - ARM
+    - ACTARM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

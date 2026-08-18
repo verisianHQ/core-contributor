@@ -1,0 +1,74 @@
+# Variable: DTHDTC
+# Condition: DTHFL = Y
+# Rule: DTHDTC ^= Null
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0610
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0610
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All death information should be populated for subjects that died
+                  during the study including any post treatment follow-up.
+                Document: FDA
+                Section: FDAB006
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0610
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: DTHFL
+      operator: equal_to
+      value: Y
+    - name: DTHDTC
+      operator: empty
+Core:
+  Id: CORE-000705
+  Status: Published
+  Version: '1'
+Description: When Death flag (DTHFL) in the DM dataset is populated as 'Y' then
+  Date/Time of Death (DTHDTC)should be populated in the DM dataset for the
+  corresponding subject.
+Executability: Fully Executable
+Outcome:
+  Message: DTHFL is "Y", but DTHDTC is not populated in the DM dataset.
+  Output Variables:
+    - DTHDTC
+    - DTHFL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

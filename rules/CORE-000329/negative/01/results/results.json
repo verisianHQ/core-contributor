@@ -4,7 +4,7 @@
       "dataset": "ds.xpt",
       "domain": "DS",
       "execution_status": "success",
-      "execution_message": "Multiple records within same USUBJID exist with DSCAT = DISPOSITION EVENT but EPOCH is empty",
+      "execution_message": "Multiple records within same USUBJID exist with DSCAT = 'DISPOSITION EVENT' but EPOCH is not populated.",
       "number_errors": 4,
       "errors": [
         {
@@ -12,40 +12,44 @@
           "SEQ": null,
           "USUBJID": "015246-076-0003-00003",
           "value": {
+            "DSDECOD": "FUTURE USE OF SAMPLES INFORMED CONSENT OBTAINED",
             "DSCAT": "DISPOSITION EVENT",
             "EPOCH": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": null,
           "USUBJID": "015246-076-0003-00003",
           "value": {
+            "DSDECOD": "STUDY INFORMED CONSENT OBTAINED",
             "DSCAT": "DISPOSITION EVENT",
             "EPOCH": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": null,
           "USUBJID": "015246-076-0003-00003",
           "value": {
+            "DSDECOD": "COMPLETED",
             "DSCAT": "DISPOSITION EVENT",
             "EPOCH": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
           "SEQ": null,
           "USUBJID": "015246-036-0002-00004",
           "value": {
+            "DSDECOD": "COMPLETED",
             "DSCAT": "DISPOSITION EVENT",
             "EPOCH": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

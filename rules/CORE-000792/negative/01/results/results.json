@@ -1,0 +1,205 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000792, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000792, dataset=CE",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMCLASCD and CMCLAS do not have a one-to-one relationship.",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMCLAS": "NSAID",
+            "CMCLASCD": "C3853540"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CMCLAS": "NSAID",
+            "CMCLASCD": "C3853542"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 2,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CMCLAS": "NSAID",
+            "CMCLASCD": null
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 3,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CMCLAS": "NSAID",
+            "CMCLASCD": "C3853545"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": 4,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CMCLAS": null,
+            "CMCLASCD": "C3853545"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "su.xpt",
+      "domain": "SU",
+      "execution_status": "success",
+      "execution_message": "SUCLASCD and SUCLAS do not have a one-to-one relationship.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SUCLAS": "CIGARETTE",
+            "SUCLASCD": "C42678"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC003",
+          "value": {
+            "SUCLAS": "CIGARETTE",
+            "SUCLASCD": "C42679"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "dm.xpt",
+      "Row": 5,
+      "Variable": "DTHFL"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 6,
+      "Variable": "DTHFL"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 1,
+      "Variable": "CEDECOD"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 5,
+      "Variable": "CETERM"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 6,
+      "Variable": "CEDECOD"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 5,
+      "Variable": "CMCLAS"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 5,
+      "Variable": "CMCLASCD"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 6,
+      "Variable": "CMCLAS"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 6,
+      "Variable": "CMCLASCD"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 7,
+      "Variable": "CMCLAS"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 7,
+      "Variable": "CMCLASCD"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 8,
+      "Variable": "CMCLAS"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 8,
+      "Variable": "CMCLASCD"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 9,
+      "Variable": "CMCLAS"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 9,
+      "Variable": "CMCLASCD"
+    },
+    {
+      "Sheet": "su.xpt",
+      "Row": 5,
+      "Variable": "SUCLAS"
+    },
+    {
+      "Sheet": "su.xpt",
+      "Row": 5,
+      "Variable": "SUCLASCD"
+    },
+    {
+      "Sheet": "su.xpt",
+      "Row": 7,
+      "Variable": "SUCLAS"
+    },
+    {
+      "Sheet": "su.xpt",
+      "Row": 7,
+      "Variable": "SUCLASCD"
+    }
+  ]
+}

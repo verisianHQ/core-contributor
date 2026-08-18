@@ -1,0 +1,80 @@
+# Variable: --HLT, --HLTCD
+# Condition:
+# Rule: --HLTCD and --HLT have a one-to-one relationship 
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0907
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0907
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0907
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: --HLT
+      operator: exists
+    - name: --HLTCD
+      operator: exists
+    - name: --HLT
+      operator: is_not_unique_relationship
+      value: --HLTCD
+Core:
+  Id: CORE-000723
+  Status: Published
+  Version: '1'
+Description: --HLTCD and --HLT should have a one-to-one relationship.
+Executability: Fully Executable
+Outcome:
+  Message: --HLTCD and --HLT do not have a one-to-one relationship.
+  Output Variables:
+    - --HLT
+    - --HLTCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

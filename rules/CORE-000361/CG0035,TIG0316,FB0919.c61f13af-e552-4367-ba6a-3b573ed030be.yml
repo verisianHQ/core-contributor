@@ -1,6 +1,7 @@
 # Variable: VISITNUM
 # Condition: VISITNUM in TV.VISITNUM
 # Rule: VISIT and VISITNUM have a one-to-one relationship
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -122,8 +123,8 @@ Core:
   Id: CORE-000361
   Status: Published
   Version: '1'
-Description: Trigger error when VISITNUM is present in TV.VISITNUM and does not
-  have a one-to-one relationship with VISIT
+Description: Raise an error when VISITNUM value matches a VISITNUM value in the TV dataset but VISIT and VISITNUM do not
+  have a one-to-one relationship.
 Executability: Fully Executable
 Operations:
   - domain: TV
@@ -131,7 +132,7 @@ Operations:
     name: VISITNUM
     operator: distinct
 Outcome:
-  Message: VISIT and VISITNUM do not have a one-to-one relationship
+  Message: VISIT and VISITNUM do not have a one-to-one relationship.
   Output Variables:
     - VISITNUM
     - VISIT

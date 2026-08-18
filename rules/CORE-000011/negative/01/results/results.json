@@ -4,7 +4,7 @@
       "dataset": "ie.xpt",
       "domain": "IE",
       "execution_status": "success",
-      "execution_message": "IEORRES is not equal to 'Y' when IECAT equals 'EXCLUSION'.",
+      "execution_message": "IEORRES is not equal to 'Y', but IECAT is equal to 'EXCLUSION'.",
       "number_errors": 1,
       "errors": [
         {
@@ -15,7 +15,7 @@
             "IECAT": "EXCLUSION",
             "IEORRES": "N"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

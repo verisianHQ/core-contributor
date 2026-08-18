@@ -1,6 +1,7 @@
 # Variable: RFXSTDTC
 # Condition: EX records present for subject
 # Rule: RFXSTDTC = earliest EX.EXSTDTC
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -74,8 +75,9 @@ Core:
   Id: CORE-000239
   Status: Published
   Version: '1'
-Description: Raise an error when EX records are present for subject but RFXSTDTC
-  does not equal the earliest value of EX.EXSTDTC
+Description: Raise an error when EX records are present for subject but 
+  RFXSTDTC does not equal the earliest value of EXSTDTC in the EX
+  dataset.
 Executability: Fully Executable
 Operations:
   - domain: EX
@@ -89,7 +91,8 @@ Operations:
     name: EXSTDTC
     operator: min_date
 Outcome:
-  Message: RFXSTDTC does not equal the earliest value of EX.EXSTDTC
+  Message: RFXSTDTC does not equal the earliest value of EXSTDTC in the 
+    EX dataset.
   Output Variables:
     - RFXSTDTC
     - $min_ex_exstdtc

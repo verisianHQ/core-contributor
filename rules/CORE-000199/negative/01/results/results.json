@@ -4,7 +4,7 @@
       "dataset": "oe.xpt",
       "domain": "OE",
       "execution_status": "success",
-      "execution_message": "Value length of OETEST > 40.",
+      "execution_message": "OETEST value length is greater than 40 characters.",
       "number_errors": 11,
       "errors": [
         {
@@ -12,99 +12,209 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd",
+            "OETESTCD": "INTP"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd",
+            "OETESTCD": "INTP"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 7,
           "SEQ": 7,
           "USUBJID": "CDISC001",
           "value": {
-            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd",
+            "OETESTCD": "INTP"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 8,
           "SEQ": 8,
           "USUBJID": "CDISC001",
           "value": {
-            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd",
+            "OETESTCD": "INTP"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 10,
           "SEQ": 10,
           "USUBJID": "CDISC001",
           "value": {
-            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd",
+            "OETESTCD": "INTP"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 11,
           "SEQ": 11,
           "USUBJID": "CDISC001",
           "value": {
-            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd",
+            "OETESTCD": "INTP"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 12,
           "SEQ": 5,
           "USUBJID": "CDISC003",
           "value": {
-            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd",
+            "OETESTCD": "INTP"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 13,
           "SEQ": 6,
           "USUBJID": "CDISC003",
           "value": {
-            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd",
+            "OETESTCD": "INTP"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 14,
           "SEQ": 7,
           "USUBJID": "CDISC003",
           "value": {
-            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd",
+            "OETESTCD": "INTP"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 15,
           "SEQ": 7,
           "USUBJID": "CDISC004",
           "value": {
-            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd",
+            "OETESTCD": "INTP"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 16,
           "SEQ": 8,
           "USUBJID": "CDISC004",
           "value": {
-            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+            "OETEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd",
+            "OETESTCD": "INTP"
           },
-          "validated": false
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "execution_status": "success",
+      "execution_message": "VSTEST value length is greater than 40 characters.",
+      "number_errors": 9,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSTEST": "DiastolicBloodPressureDiastolicBloodPressure",
+            "VSTESTCD": "DIABP"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSTEST": "DiastolicBloodPressureDiastolicBloodPressure",
+            "VSTESTCD": "DIABP"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSTEST": "DiastolicBloodPressureDiastolicBloodPressure",
+            "VSTESTCD": "DIABP"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSTEST": "DiastolicBloodPressureDiastolicBloodPressure",
+            "VSTESTCD": "DIABP"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSTEST": "DiastolicBloodPressureDiastolicBloodPressure",
+            "VSTESTCD": "DIABP"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSTEST": "DiastolicBloodPressureDiastolicBloodPressure",
+            "VSTESTCD": "DIABP"
+          },
+          "validated": true
+        },
+        {
+          "row": 7,
+          "SEQ": 7,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSTEST": "DiastolicBloodPressureDiastolicBloodPressure",
+            "VSTESTCD": "DIABP"
+          },
+          "validated": true
+        },
+        {
+          "row": 8,
+          "SEQ": 8,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSTEST": "DiastolicBloodPressureDiastolicBloodPressure",
+            "VSTESTCD": "DIABP"
+          },
+          "validated": true
+        },
+        {
+          "row": 9,
+          "SEQ": 9,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VSTEST": "DiastolicBloodPressureDiastolicBloodPressure",
+            "VSTESTCD": "DIABP"
+          },
+          "validated": true
         }
       ]
     }

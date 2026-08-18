@@ -1,0 +1,62 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "Negative value for CMDOSTOT.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMTRT": "ASPIRIN",
+            "CMDOSTOT": -1.0
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 6,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMTRT": "FEOSOL",
+            "CMDOSTOT": -325.0
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "success",
+      "execution_message": "Negative value for EXDOSTOT.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "EXTRT": "ZANOMALINE",
+            "EXDOSTOT": -1.0
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "EXTRT": "ZANOMALINE",
+            "EXDOSTOT": -2.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

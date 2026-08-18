@@ -1,0 +1,48 @@
+{
+  "datasets": [
+    {
+      "dataset": "sv.xpt",
+      "domain": "SV",
+      "execution_status": "success",
+      "execution_message": "Variable is expected and data is collected as per define-xml document but variable is not present in the dataset or variable has no data.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_variable_name": "SVSTDTC",
+            "define_variable_has_no_data": null,
+            "library_variable_core": "Exp",
+            "variable_name": "SVSTDTC",
+            "variable_is_empty": true
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "tv.xpt",
+      "domain": "TV",
+      "execution_status": "success",
+      "execution_message": "Variable is expected and data is collected as per define-xml document but variable is not present in the dataset or variable has no data.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_variable_name": "ARMCD",
+            "define_variable_has_no_data": null,
+            "library_variable_core": "Exp",
+            "variable_name": null,
+            "variable_is_empty": true
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

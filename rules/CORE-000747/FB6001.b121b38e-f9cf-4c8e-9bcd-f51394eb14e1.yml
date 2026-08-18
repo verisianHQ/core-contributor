@@ -1,0 +1,90 @@
+# Variable: RACE, CRACE
+# Condition: SUPPDM CRACE = HATIAN or NEGRO
+# Rule: DM.RACE = BLACK OR AFRICAN AMERICAN
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The term "Hatian or Negro" can be used collect race data. If the
+                  term "Hatian or Negro" is collected, it should be mapped to
+                  the controlled terminology "BLACK OR AFRICAN AMERICAN" for
+                  submission.
+                Document: FDA
+                Section: FDAB060
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB6001
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The term "Hatian or Negro" can be used collect race data. If the
+                  term "Hatian or Negro" is collected, it should be mapped to
+                  the controlled terminology "BLACK OR AFRICAN AMERICAN" for
+                  submission.
+                Document: FDA
+                Section: FDAB060
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB6001
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The term "Hatian or Negro" can be used collect race data. If the
+                  term "Hatian or Negro" is collected, it should be mapped to
+                  the controlled terminology "BLACK OR AFRICAN AMERICAN" for
+                  submission.
+                Document: FDA
+                Section: FDAB060
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB6001
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: RACE
+      operator: non_empty
+    - name: RACE
+      operator: not_equal_to
+      value: 'BLACK OR AFRICAN AMERICAN'
+    - name: QNAM
+      operator: equal_to
+      value: CRACE
+    - name: QVAL
+      operator: equal_to
+      value: 'HATIAN or NEGRO'
+Core:
+  Id: CORE-000747
+  Status: Published
+  Version: '1'
+Description: When Race Term 'Haitian' or 'Negro' (SUPPDM.CRACE) is collected, it
+  should be mapped to Race (RACE) 'BLACK OR AFRICAN AMERICAN' in the DM dataset.
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: SUPPDM
+Outcome:
+  Message: Race Term 'Haitian' or 'Negro' is collected (SUPPDM.CRACE) but is not
+    mapped to RACE = BLACK OR AFRICAN AMERICAN in DM dataset.
+  Output Variables:
+    - RACE
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

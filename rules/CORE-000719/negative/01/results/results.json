@@ -1,0 +1,135 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AEHLGTCD and AEHLGT do not have a one-to-one relationship.",
+      "number_errors": 6,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 735,
+          "USUBJID": "CDISC-TEST-046",
+          "value": {
+            "AEHLGT": "Headaches",
+            "AEHLGTCD": 10019231.0
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 782,
+          "USUBJID": "CDISC-TEST-049",
+          "value": {
+            "AEHLGT": "Headaches",
+            "AEHLGTCD": 10019232.0
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 783,
+          "USUBJID": "CDISC-TEST-049",
+          "value": {
+            "AEHLGT": "Headaches",
+            "AEHLGTCD": null
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": 839,
+          "USUBJID": "CDISC-TEST-052",
+          "value": {
+            "AEHLGT": "Headaches",
+            "AEHLGTCD": 10019231.0
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": 840,
+          "USUBJID": "CDISC-TEST-052",
+          "value": {
+            "AEHLGT": null,
+            "AEHLGTCD": 10057166.0
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": 843,
+          "USUBJID": "CDISC-TEST-052",
+          "value": {
+            "AEHLGT": "Vascular hypertensive disorders",
+            "AEHLGTCD": 10057166.0
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ae.xpt",
+      "Row": 6,
+      "Variable": "AEHLGT"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 6,
+      "Variable": "AEHLGTCD"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 7,
+      "Variable": "AEHLGT"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 7,
+      "Variable": "AEHLGTCD"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 8,
+      "Variable": "AEHLGT"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 8,
+      "Variable": "AEHLGTCD"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 9,
+      "Variable": "AEHLGT"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 9,
+      "Variable": "AEHLGTCD"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 10,
+      "Variable": "AEHLGT"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 10,
+      "Variable": "AEHLGTCD"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 11,
+      "Variable": "AEHLGT"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 11,
+      "Variable": "AEHLGTCD"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "RFICDTC falls after RFXSTDTC.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "CDISC005",
+          "value": {
+            "RFICDTC": "2019-03-20",
+            "RFXSTDTC": "2018-02-20T09:40"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "CDISC006",
+          "value": {
+            "RFICDTC": "2018-02-20T11:50",
+            "RFXSTDTC": "2018-02-20T09:40"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "CDISC007",
+          "value": {
+            "RFICDTC": "2018-02-20T09:50",
+            "RFXSTDTC": "2018-02-20"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "dm.xpt",
+      "Row": 1,
+      "Variable": "RFXSTDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 1,
+      "Variable": "RFICDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 9,
+      "Variable": "RFXSTDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 9,
+      "Variable": "RFICDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 10,
+      "Variable": "RFXSTDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 10,
+      "Variable": "RFICDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 11,
+      "Variable": "RFXSTDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 11,
+      "Variable": "RFICDTC"
+    }
+  ]
+}

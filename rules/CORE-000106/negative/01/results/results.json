@@ -4,7 +4,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMENTPT is completed, but CMENRTPT is not completed.",
+      "execution_message": "CMENRTPT is not populated when CMENTPT is populated.",
       "number_errors": 5,
       "errors": [
         {
@@ -12,50 +12,139 @@
           "SEQ": 1,
           "USUBJID": "CDISC005",
           "value": {
-            "CMENRTPT": null,
-            "CMENTPT": "2013-08-06"
+            "CMENTPT": "2013-08-06",
+            "CMENRTPT": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 8,
           "SEQ": 4,
           "USUBJID": "CDISC005",
           "value": {
-            "CMENRTPT": null,
-            "CMENTPT": "2013-08-06"
+            "CMENTPT": "2013-08-06",
+            "CMENRTPT": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 9,
           "SEQ": 1,
           "USUBJID": "CDISC017",
           "value": {
-            "CMENRTPT": null,
-            "CMENTPT": "2014-03-08"
+            "CMENTPT": "2014-03-08",
+            "CMENRTPT": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 10,
           "SEQ": 2,
           "USUBJID": "CDISC017",
           "value": {
-            "CMENRTPT": null,
-            "CMENTPT": "2014-03-08"
+            "CMENTPT": "2014-03-08",
+            "CMENRTPT": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 11,
           "SEQ": 3,
           "USUBJID": "CDISC017",
           "value": {
-            "CMENRTPT": null,
-            "CMENTPT": "2014-03-08"
+            "CMENTPT": "2014-03-08",
+            "CMENRTPT": null
           },
-          "validated": false
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "MHENRTPT is not populated when MHENTPT is populated.",
+      "number_errors": 8,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "MHENTPT": "2021-05-01",
+            "MHENRTPT": null
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "MHENTPT": "2021-02-15",
+            "MHENRTPT": null
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC003",
+          "value": {
+            "MHENTPT": "2015-05-09",
+            "MHENRTPT": null
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "CDISC004",
+          "value": {
+            "MHENTPT": "2011-06-11",
+            "MHENRTPT": null
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 1,
+          "USUBJID": "CDISC005",
+          "value": {
+            "MHENTPT": "2000-06-11",
+            "MHENRTPT": null
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 1,
+          "USUBJID": "CDISC006",
+          "value": {
+            "MHENTPT": "2021-05-01",
+            "MHENRTPT": null
+          },
+          "validated": true
+        },
+        {
+          "row": 7,
+          "SEQ": 1,
+          "USUBJID": "CDISC007",
+          "value": {
+            "MHENTPT": "2021-05-02",
+            "MHENRTPT": null
+          },
+          "validated": true
+        },
+        {
+          "row": 8,
+          "SEQ": 1,
+          "USUBJID": "CDISC008",
+          "value": {
+            "MHENTPT": "2021-11-23",
+            "MHENRTPT": null
+          },
+          "validated": true
         }
       ]
     }
