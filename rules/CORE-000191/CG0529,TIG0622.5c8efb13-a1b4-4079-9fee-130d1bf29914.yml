@@ -1,6 +1,7 @@
 # Variable: RFENDTC
 # Condition: ARM ^= null
 # Rule: RFENDTC ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -57,10 +58,10 @@ Core:
   Id: CORE-000191
   Status: Published
   Version: '1'
-Description: Raise an error when ARM is not empty and RFENDTC is empty.
+Description: Raise an error when ARM is populated but RFENDTC is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: RFENDTC is missing when ARM is provided.
+  Message: RFENDTC is not populated when ARM is populated.
   Output Variables:
     - ARM
     - RFENDTC

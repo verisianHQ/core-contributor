@@ -12,17 +12,28 @@
       "dataset": "suppec.xpt",
       "domain": "SUPPEC",
       "execution_status": "success",
-      "execution_message": "A SUPP domain other than SUPPDM contains population flags (name fragments reserved)",
-      "number_errors": 1,
+      "execution_message": "A SUPP domain other than SUPPDM must not contain population flags.",
+      "number_errors": 2,
       "errors": [
         {
-          "row": null,
+          "row": 3,
           "SEQ": null,
-          "USUBJID": null,
+          "USUBJID": "CDISC009",
           "value": {
-            "QNAM": "SAFETY"
+            "QNAM": "SAFETY",
+            "QLABEL": "Safety Flag"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "QNAM": "ITT",
+            "QLABEL": "Intent-To-Treat Flag"
+          },
+          "validated": true
         }
       ]
     }
