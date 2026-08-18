@@ -1,0 +1,87 @@
+# Variable: TRTPGy where y is an integer [1-99, not zero-padded]
+# Condition: 
+# Rule: Within a given value of TRTP, there is more than one value of TRTPGy
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '322'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: 3.3.2
+        Item: Table 3.3.2.1
+        Cited Guidance: 'ADaMIG v1.1, Section 3.3.2, Table 3.3.2.1: CDISC Notes for
+          TRTPGy state: "Each value of TRTP is pooled within at most one value of
+          TRTPGy."'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '322'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: 3.3.2
+        Item: Table 3.3.2.1
+        Cited Guidance: 'ADaMIG v1.2, Section 3.3.2, Table 3.3.2.1: CDISC Notes for
+          TRTPGy state: "Each value of TRTP is pooled within at most one value of
+          TRTPGy."'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '322'
+        Version: '2'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: 3.3.2
+        Item: Table 3.3.2.1
+        Cited Guidance: 'ADaMIG v1.3, Section 3.3.2, Table 3.3.2.1: CDISC Notes for
+          TRTPGy state: "Each value of TRTP is pooled within at most one value of
+          TRTPGy."'
+      - Document: ADaMIG-MD v1.0
+        Section: '3.1'
+        Item: Table 3.3.2.1
+        Cited Guidance: 'ADaMIG-MD v1.0, Section 3.1: MDBDS and MDOCCDS support analysis
+          needs by adding SPDEVID as a required key variable and USUBJID as a conditionally
+          required variable. See the BDS and OCCDS class for further details.'
+Check:
+  all:
+    - name: '^TRTPG(?P<y>[1-9][0-9]?)$'
+      variable_regex_pattern: true
+      operator: is_inconsistent_across_dataset
+      value: TRTP
+Core:
+  Id: AD0322
+  Status: Draft
+  Version: '1'
+Description: Raise an error when within a given value of TRTP, there is more than one value of TRTPGy, where y is an integer [1-99, not zero-padded].
+Executability: Fully Executable
+Outcome:
+  Message: Within a given value of TRTP, there is more than one value of TRTPG{{y}}.
+  Output Variables:
+    - TRTPG{{y}}
+    - TRTP
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BDS
+      - OCCDS
+      - MDBDS
+      - MDODDS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record
