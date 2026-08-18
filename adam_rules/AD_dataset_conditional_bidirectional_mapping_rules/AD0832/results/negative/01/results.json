@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    {
+      "dataset": "adppk.csv",
+      "domain": "adppk",
+      "execution_status": "success",
+      "execution_message": "DVID has more than one value for a given DVIDN value when both variables are populated.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "DVID": "Dose",
+            "DVIDN": 0.0
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "STUDY001-002",
+          "value": {
+            "DVID": "Obs",
+            "DVIDN": 0.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

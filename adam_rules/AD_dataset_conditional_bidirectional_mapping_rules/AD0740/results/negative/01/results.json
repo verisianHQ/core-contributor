@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    {
+      "dataset": "adppk.csv",
+      "domain": "adppk",
+      "execution_status": "success",
+      "execution_message": "PARAM has more than one value for a given PARAMN value when both variables are populated.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "PARAM": "Weight",
+            "PARAMN": 1.0
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "STUDY001-002",
+          "value": {
+            "PARAM": "Height",
+            "PARAMN": 1.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
