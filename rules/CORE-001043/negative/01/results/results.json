@@ -5,10 +5,10 @@
       "domain": "DM",
       "execution_status": "success",
       "execution_message": "Age is missing for a non-screen failure subject.",
-      "number_errors": 2,
+      "number_errors": 3,
       "errors": [
         {
-          "row": 7,
+          "row": 1,
           "SEQ": null,
           "USUBJID": "CDISC007",
           "value": {
@@ -16,10 +16,10 @@
             "ARMCD": "B",
             "AGE": null
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 8,
+          "row": 2,
           "SEQ": null,
           "USUBJID": "CDISC008",
           "value": {
@@ -27,31 +27,20 @@
             "ARMCD": "B",
             "AGE": null
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "ARMNRS": "UNASSIGNED",
+            "ARMCD": null,
+            "AGE": null
+          },
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 11,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 11,
-      "Variable": "AGE"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 12,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 12,
-      "Variable": "AGE"
     }
   ]
 }
