@@ -4,7 +4,7 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSPARMCD = 'RANDQT' but TSVAL is not a number between 0 and 1.",
+      "execution_message": "TSVAL must be a value between 0 and 1 when TSPARMCD is equal to 'RANDQT'.",
       "number_errors": 4,
       "errors": [
         {

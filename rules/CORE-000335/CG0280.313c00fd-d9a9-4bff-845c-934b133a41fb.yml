@@ -56,7 +56,7 @@ Description: Raise an error when TSPARMCD is equal to 'RANDQT' and the value pro
   TSVAL is not a number between 0 and 1.
 Executability: Fully Executable
 Outcome:
-  Message: TSPARMCD = 'RANDQT' but TSVAL is not a number between 0 and 1.
+  Message: TSVAL must be a value between 0 and 1 when TSPARMCD is equal to 'RANDQT'.
   Output Variables:
     - TSPARMCD
     - TSVAL
