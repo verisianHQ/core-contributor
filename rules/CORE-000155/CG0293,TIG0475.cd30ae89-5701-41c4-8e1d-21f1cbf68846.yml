@@ -1,6 +1,7 @@
 # Variable: ARMCD
 # Condition: ARMCD ^= null
 # Rule: ARMCD in TA.ARMCD
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -72,7 +73,7 @@ Core:
   Id: CORE-000155
   Status: Published
   Version: '1'
-Description: Trigger error when ARMCD is populated and ARMCD is not in TA.ARMCD
+Description: Raise an error when ARMCD is populated and ARMCD is not in TA.ARMCD.
 Executability: Fully Executable
 Operations:
   - domain: TA
@@ -80,7 +81,7 @@ Operations:
     name: ARMCD
     operator: distinct
 Outcome:
-  Message: ARMCD is not in TA.ARMCD
+  Message: ARMCD must be in TA.ARMCD when ARMCD is populated.
   Output Variables:
     - ARMCD
 Rule Type: Record Data
