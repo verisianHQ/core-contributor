@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "PHEDTM is not equal to any PHwEDTM variable when APHASEN is not present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "01-101",
+          "value": {
+            "PHEDTM": 2111711.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
