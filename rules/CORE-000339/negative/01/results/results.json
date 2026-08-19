@@ -4,78 +4,78 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSPARMCD = FCNTRY but TSVCDREF is not equal to 'ISO 3166-1 alpha-3'",
+      "execution_message": "TSVCDREF must be equal to 'ISO 3166-1 alpha-3' when TSPARMCD is equal to 'FCNTRY'",
       "number_errors": 7,
       "errors": [
         {
-          "row": 15,
+          "row": 2,
           "SEQ": 1,
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "FCNTRY",
             "TSVCDREF": "ISO3166-1 alpha-3"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 16,
+          "row": 3,
           "SEQ": 2,
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "FCNTRY",
             "TSVCDREF": "ISO 3166-1alpha-3"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 17,
+          "row": 4,
           "SEQ": 3,
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "FCNTRY",
             "TSVCDREF": "ISO3166-1alpha-3"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 18,
+          "row": 5,
           "SEQ": 4,
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "FCNTRY",
             "TSVCDREF": "ISO 3166 1 alpha 3"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 19,
+          "row": 6,
           "SEQ": 5,
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "FCNTRY",
             "TSVCDREF": "ISO 3166-1 alpha-"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 20,
+          "row": 7,
           "SEQ": 6,
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "FCNTRY",
             "TSVCDREF": "3166-1 alpha-3"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 21,
+          "row": 8,
           "SEQ": 7,
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "FCNTRY",
             "TSVCDREF": "SO 3166-1 alpha-3"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

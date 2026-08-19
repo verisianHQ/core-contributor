@@ -1,15 +1,16 @@
 # Variable: TSVCDREF
 # Condition: TSPARMCD = 'FCNTRY'
 # Rule: TSVCDREF = 'ISO 3166-1 alpha-3'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Further information about the parameters is included below in
-                  Table 1. TSVAL may have controlled terminology depending on
-                  the value of TSPARMCD
+              - Cited Guidance: Further information about the parameters is
+                  included below in Table 1. TSVAL may have controlled
+                  terminology depending on the value of TSPARMCD
                 Document: IG v3.2
                 Item: Assumption 3
                 Section: 7.4|Appendix C1
@@ -22,9 +23,9 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Further information about the parameters is included below in
-                  Table 1. TSVAL may have controlled terminology depending on
-                  the value of TSPARMCD
+              - Cited Guidance: Further information about the parameters is
+                  included below in Table 1. TSVAL may have controlled
+                  terminology depending on the value of TSPARMCD
                 Document: IG v3.3
                 Item: Assumption 3
                 Section: '7.4'
@@ -39,18 +40,24 @@ Check:
     - name: TSPARMCD
       operator: equal_to
       value: FCNTRY
+      value_is_literal: true
     - name: TSVCDREF
       operator: not_equal_to
-      value: ISO 3166-1 alpha-3
+      value: 'ISO 3166-1 alpha-3'
+      value_is_literal: true
 Core:
   Id: CORE-000339
   Status: Published
   Version: '1'
-Description: Raise an error when TSPARMCD = FCNTRY and TSVCDREF is not equal to
-  'ISO 3166-1 alpha-3'
+Description: Raise an error when TSPARMCD is equal to 'FCNTRY' and TSVCDREF is
+  not equal to 'ISO 3166-1 alpha-3'
 Executability: Fully Executable
 Outcome:
-  Message: TSPARMCD = FCNTRY but TSVCDREF is not equal to 'ISO 3166-1 alpha-3'
+  Message: TSVCDREF must be equal to 'ISO 3166-1 alpha-3' when TSPARMCD is
+    equal to 'FCNTRY'
+  Output Variables:
+    - TSPARMCD
+    - TSVCDREF
 Rule Type: Record Data
 Scope:
   Classes:
