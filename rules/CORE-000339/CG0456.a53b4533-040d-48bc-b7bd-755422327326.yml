@@ -50,11 +50,11 @@ Core:
   Status: Published
   Version: '1'
 Description: Raise an error when TSPARMCD is equal to 'FCNTRY' and TSVCDREF is
-  not equal to 'ISO 3166-1 alpha-3'
+  not equal to 'ISO 3166-1 alpha-3'.
 Executability: Fully Executable
 Outcome:
   Message: TSVCDREF must be equal to 'ISO 3166-1 alpha-3' when TSPARMCD is
-    equal to 'FCNTRY'
+    equal to 'FCNTRY'.
   Output Variables:
     - TSPARMCD
     - TSVCDREF
