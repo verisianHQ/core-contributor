@@ -1,6 +1,7 @@
 # Variable: DTHFL
 # Condition: CE record with CETERM or CEDECOD = "DEATH" present for the subject
 # Rule: DTHFL = 'Y'
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -63,17 +64,14 @@ Core:
   Id: CORE-000709
   Status: Published
   Version: '1'
-Description: When a record is present in the CE dataset where CETERM or
-  CEDECOD  = 'DEATH' then death flag (DTHFL) should be populated as 'Y' in the
-  DM dataset for the corresponding subject.
+Description: Raise an error when CETERM or CEDECOD is equal to 'DEATH' in the CE dataset but DTHFL is not equal to 'Y' in the DM dataset for the corresponding subject.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: CE
 Outcome:
-  Message: CETERM or CEDECOD is 'DEATH' in CE dataset, but DTHFL in DM dataset is
-    not "Y".
+  Message: CETERM or CEDECOD is 'DEATH' in CE dataset, but DTHFL in DM dataset is not 'Y'.
   Output Variables:
     - CETERM
     - CEDECOD
