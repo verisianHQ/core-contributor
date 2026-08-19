@@ -55,8 +55,8 @@ Core:
   Id: CORE-000761
   Status: Published
   Version: '1'
-Description: Trigger error when TSVCDREF = 'CDISC' and TSVCDVER is not a valid
-  published version (date)
+Description: Trigger error when TSVCDREF is equal to 'CDISC' and TSVCDVER is not a valid
+  published version (date).
 Executability: Fully Executable
 Operations:
   - ct_package_types:
@@ -64,10 +64,10 @@ Operations:
     id: $valid_dates
     operator: valid_codelist_dates
 Outcome:
-  Message: TSVCDVER is not a valid published version (date)
+  Message: When TSVCDREF is equal to 'CDISC' then TSVCDVER must be a valid published version (date).
   Output Variables:
+    - TSVCDVER
     - TSVCDREF
-    - $valid_dates
 Rule Type: Record Data
 Scope:
   Classes:
