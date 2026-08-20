@@ -12,28 +12,9 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "Subject in interventional study with exposure records in EX dataset is not assigned to an actual treatment.",
-      "number_errors": 2,
-      "errors": [
-        {
-          "row": 1,
-          "SEQ": null,
-          "USUBJID": "ABC123",
-          "value": {
-            "ARMNRS": "SCREEN FAILURE"
-          },
-          "validated": true
-        },
-        {
-          "row": 2,
-          "SEQ": null,
-          "USUBJID": "ZZZ100",
-          "value": {
-            "ARMNRS": "ASSIGNED, NOT TREATED"
-          },
-          "validated": true
-        }
-      ]
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     },
     {
       "dataset": "ex.xpt",
