@@ -1,0 +1,39 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "TRTxxPN is present, but TRTxxP is not present within ADSL.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "TRT01PN": 2.0,
+            "TRT01P": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "bds.csv",
+      "domain": "bds",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0075, dataset=BDS",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "occds.csv",
+      "domain": "occds",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0075, dataset=OCCDS",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}
