@@ -59,7 +59,7 @@ Description: When Death flag (DTHFL) in the DM dataset is populated as 'Y' then
   corresponding subject.
 Executability: Fully Executable
 Outcome:
-  Message: DTHDTC must be populated in the DM dataset when DTHFL is equal to 'Y'.
+  Message: DTHFL is 'Y', but DTHDTC is not populated in the DM dataset.
   Output Variables:
     - DTHDTC
     - DTHFL
