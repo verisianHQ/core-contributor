@@ -1,6 +1,7 @@
-# Variable: --DTC, RFPENDTC
+# Variable: --DTC
 # Condition: --DTC ^= Null and DM.RFPENDTC ^= Null
 # Rule: --DTC <= DM.RFPENDTC
+# verified
 Authorities:
   - Organization: FDA
     Standards:
