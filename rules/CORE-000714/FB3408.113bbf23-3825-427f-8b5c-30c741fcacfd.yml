@@ -1,6 +1,7 @@
-# Variable: DM.RFXSTDTC, DM.RFXENDTC
+# Variable: RFXSTDTC
 # Condition: DM.RFXSTDTC ^= Null and DM.RFXENDTC ^= Null
 # Rule: DM.RFXSTDTC <= DM.RFXENDTC
+# verified
 Authorities:
   - Organization: FDA
     Standards:
