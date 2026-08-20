@@ -1,6 +1,6 @@
 # Variable: --ENDTC
 # Condition: --ENDTC ^= Null and DM.RFPENDTC ^= Null
-# Rule: --ENDTC > DM.RFPENDTC
+# Rule: --ENDTC <= DM.RFPENDTC
 # verified
 Authorities:
   - Organization: FDA
