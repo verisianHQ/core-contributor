@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "TRTxxP is present for xx greater than 01, but the previous period treatment variable is missing.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "SUBJ001",
+          "value": {
+            "TRT03P": "DRUGB"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

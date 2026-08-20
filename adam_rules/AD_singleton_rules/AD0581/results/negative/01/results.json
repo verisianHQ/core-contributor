@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "advs.csv",
+      "domain": "advs",
+      "execution_status": "success",
+      "execution_message": "No defined record-level or subject-level treatment variable is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "^(?:TRTP|TRTA|ARM|ACTARM|TRTSEQP|TRTSEQA|TRTPG[1-9][0-9]?|TRTAG[1-9][0-9]?|TRT(?:0[1-9]|[1-9][0-9])[PA]|TR(?:0[1-9]|[1-9][0-9])[PA]G[1-9][0-9]?|TSEQ[PA]G[1-9][0-9]?)$": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

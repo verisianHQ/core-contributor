@@ -1,0 +1,29 @@
+{
+  "datasets": [
+    {
+      "dataset": "adae.csv",
+      "domain": "adae",
+      "execution_status": "success",
+      "execution_message": "SMQzzSCN is not 1 or 2.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "SMQ01SCN": 3.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "SMQ02SCN": "4"
+      }
+    }
+  ]
+}

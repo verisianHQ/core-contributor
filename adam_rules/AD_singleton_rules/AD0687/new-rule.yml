@@ -1,0 +1,49 @@
+# Variable: DEVIPDT
+# Condition: DEVIPDT and DEVXPDT are populated
+# Rule: DEVIPDT must not be after DEVXPDT
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '687'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG-MD v1.0
+        Section: 3.2.1.3
+        Cited Guidance: 'ADaMIG-MD v1.0, Section 3.2.1.3: Definition of variable DEVIPDT and DEVXPDT being Date Device Implanted
+          in the subject and Date Device Explanted from the subject.
+
+
+          The ADaM Team acknowledges that this cited text does not adequately support the creation of a conformance rule.  See
+          definition of Message Type="Note" in Section 3, Description of ADaM Conformance Rules Table.'
+Check:
+  all:
+  - name: DEVIPDT
+    operator: date_greater_than
+    value: DEVXPDT
+Core:
+  Id: AD0687
+  Status: Draft
+  Version: '1'
+Description: DEVIPDT is greater than DEVXPDT.
+Executability: Fully Executable
+Outcome:
+  Message: DEVIPDT is greater than DEVXPDT.
+  Output Variables:
+  - DEVIPDT
+  - DEVXPDT
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - ALL
+  Domains:
+    Include:
+    - ADDL
+Sensitivity: Record

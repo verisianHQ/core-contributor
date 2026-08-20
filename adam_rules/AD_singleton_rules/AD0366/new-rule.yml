@@ -1,0 +1,87 @@
+# Variable: RANDFL
+# Condition: RANDFL equals Y for at least one record
+# Rule: RANDDT must be present
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '366'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.0
+        Section: '3.1'
+        Item: Table 3.1.1
+        Cited Guidance: 'ADaMIG v1.0, Section 3.1, Table 3.1.1: CDISC Notes for RANDDT state: "Required in randomized trials"'
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '366'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: '3.2'
+        Item: Table 3.2.8
+        Cited Guidance: 'ADaMIG v1.1, Section 3.2, Table 3.2.8: CDISC Notes for RANDDT state: "Required in randomized trials"'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '366'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: '3.2'
+        Item: Table 3.2.8
+        Cited Guidance: 'ADaMIG v1.2, Section 3.2, Table 3.2.8: CDISC Notes for RANDDT state: "Required in randomized trials"'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '366'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: '3.2'
+        Item: Table 3.2.8
+        Cited Guidance: 'ADaMIG v1.3, Section 3.2, Table 3.2.8: CDISC Notes for RANDDT state: "Required in randomized trials"'
+Check:
+  all:
+  - name: RANDFL
+    operator: equal_to
+    value: Y
+    value_is_literal: true
+  - name: RANDDT
+    operator: not_exists
+Core:
+  Id: AD0366
+  Status: Draft
+  Version: '1'
+Description: RANDDT is absent when RANDFL equals Y for at least one record.
+Executability: Fully Executable
+Outcome:
+  Message: RANDDT is absent when RANDFL equals Y for at least one record.
+  Output Variables:
+  - RANDFL
+  - RANDDT
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - ADSL
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

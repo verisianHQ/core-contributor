@@ -1,0 +1,77 @@
+# Variable: SMQzzSC
+# Condition: SMQzzNAM is populated
+# Rule: SMQzzSC must be BROAD or NARROW
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: OCCDS
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '312'
+        Version: '2'
+      Version: '5.0'
+      Citations:
+      - Document: OCCDS v1.0; OCCDS v1.1; ADaMIG-MD v1.0
+        Section: 3.2.9; 3.2.9; 3.1
+        Item: Table 3.2.9.1; Table 3.2.9.1
+        Cited Guidance: 'OCCDS v1.0, Section 3.2.9, Table 3.2.9.1: Code List / Controlled Terms have allowable values of: "BROAD", "NARROW".
+
+
+          OCCDS v1.1, Section 3.2.9, Table 3.2.9.1: Code List / Controlled Terms have allowable values of: "BROAD", "NARROW".
+
+
+          ADaMIG-MD v1.0, Section 3.1: The MDOCCDS supports analysis needs by adding SPDEVID as a required identifier and allowing USUBJID be a conditionally required variable. See the OCCDS class for further details.'
+  - Name: OCCDS
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '312'
+        Version: '2'
+      Version: '5.0'
+      Citations:
+      - Document: OCCDS v1.0; OCCDS v1.1; ADaMIG-MD v1.0
+        Section: 3.2.9; 3.2.9; 3.1
+        Item: Table 3.2.9.1; Table 3.2.9.1
+        Cited Guidance: 'OCCDS v1.0, Section 3.2.9, Table 3.2.9.1: Code List / Controlled Terms have allowable values of: "BROAD", "NARROW".
+
+
+          OCCDS v1.1, Section 3.2.9, Table 3.2.9.1: Code List / Controlled Terms have allowable values of: "BROAD", "NARROW".
+
+
+          ADaMIG-MD v1.0, Section 3.1: The MDOCCDS supports analysis needs by adding SPDEVID as a required identifier and allowing USUBJID be a conditionally required variable. See the OCCDS class for further details.'
+Check:
+  all:
+  - name: ^SMQ(?P<zz>0[1-9]|[1-9][0-9])NAM$
+    variable_regex_pattern: true
+    operator: non_empty
+  - name: SMQ{{zz}}SC
+    operator: not_equal_to
+    value: BROAD
+  - name: SMQ{{zz}}SC
+    operator: not_equal_to
+    value: NARROW
+Core:
+  Id: AD0312
+  Status: Draft
+  Version: '1'
+Description: SMQzzSC is not BROAD or NARROW when SMQzzNAM is populated.
+Executability: Fully Executable
+Outcome:
+  Message: SMQzzSC is not BROAD or NARROW when SMQzzNAM is populated.
+  Output Variables:
+  - SMQ{{zz}}NAM
+  - SMQ{{zz}}SC
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - OCCDS
+      - MDOCCDS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record
