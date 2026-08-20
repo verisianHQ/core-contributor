@@ -1,45 +1,46 @@
-# Variable: AEENDTC, AEOUT
-# Condition: AEOUT = "NOT RECOVERED/NOT RESOLVED"
+# Variable: AEENDTC
+# Condition: AEOUT = 'NOT RECOVERED/NOT RESOLVED'
 # Rule: AEENDTC = Null
+# verified
 Authorities:
-  - Organization: 'FDA'
+  - Organization: FDA
     Standards:
-      - Name: 'SDTMIG'
+      - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'Study start and end date/time should include month, day, and
-                  year.'
-                Document: 'FDA'
-                Section: 'FDAB034'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: Study start and end date/time should include month, day, and
+                  year.
+                Document: FDA
+                Section: FDAB034
+            Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB3409'
+              Id: FB3409
               Version: '1'
             Version: '1.5'
         Version: '3.2'
-      - Name: 'SDTMIG'
+      - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'Study start and end date/time should include month, day, and
-                  year.'
-                Document: 'FDA'
-                Section: 'FDAB034'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: Study start and end date/time should include month, day, and
+                  year.
+                Document: FDA
+                Section: FDAB034
+            Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB3409'
+              Id: FB3409
               Version: '1'
             Version: '1.5'
         Version: '3.3'
-      - Name: 'SDTMIG'
+      - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'Study start and end date/time should include month, day, and
-                  year.'
-                Document: 'FDA'
-                Section: 'FDAB034'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: Study start and end date/time should include month, day, and
+                  year.
+                Document: FDA
+                Section: FDAB034
+            Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB3409'
+              Id: FB3409
               Version: '1'
             Version: '1.5'
         Version: '3.4'
@@ -54,9 +55,9 @@ Core:
   Id: CORE-000657
   Status: Published
   Version: '1'
-Description: When Adverse Event Outcome (AEOUT) is populated with 'NOT
-  RECOVERED/NOT RESOLVED', then the End Date/Time of Adverse Event (AEENDTC)
-  should not be populated
+Description: Adverse Event Outcome (AEOUT) is populated with 
+  'NOT RECOVERED/NOT RESOLVED', and the End Date/Time of Adverse
+  Event (AEENDTC) is not populated.
 Executability: Fully Executable
 Outcome:
   Message: AEENDTC is populated, when AEOUT = NOT RECOVERED/NOT RESOLVED.
