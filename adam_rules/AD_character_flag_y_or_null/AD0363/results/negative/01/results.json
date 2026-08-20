@@ -1,0 +1,40 @@
+{
+  "datasets": [
+    {
+      "dataset": "bds.csv",
+      "domain": "bds",
+      "execution_status": "success",
+      "execution_message": "ONTRTFL is not equal to Y or null within BDS or OCCDS.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "STUDY001-SUBJ0002",
+          "value": {
+            "ONTRTFL": "N"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "occds.csv",
+      "domain": "occds",
+      "execution_status": "success",
+      "execution_message": "ONTRTFL is not equal to Y or null within BDS or OCCDS.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "STUDY001-SUBJ0002",
+          "value": {
+            "ONTRTFL": "N"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
