@@ -55,7 +55,7 @@ Core:
   Id: CORE-000761
   Status: Published
   Version: '1'
-Description: Trigger error when TSVCDREF is equal to 'CDISC' and TSVCDVER is not a valid
+Description: Raise an error when TSVCDREF is equal to 'CDISC' and TSVCDVER is not a valid
   published version (date).
 Executability: Fully Executable
 Operations:
