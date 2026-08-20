@@ -1,6 +1,6 @@
 # Variable: AEENDTC
 # Condition: AE.AEOUT= "FATAL"
-# Rule: AE.AEENDTC = DM.DTHDTC
+# Rule: AE.AEENDTC ^= DM.DTHDTC
 # verified
 Authorities:
   - Organization: FDA
