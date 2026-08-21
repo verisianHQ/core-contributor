@@ -1,14 +1,15 @@
 # Variable: ACTARMCD
-# Condition: DM.USUBJID not in EX.USUBJID AND TSVAL = "INTERVENTIONAL" when TSPARMCD = "STYPE"
-# Rule: DM.ACTARMCD in ('SCRNFAIL', 'NOTASSGN', 'NOTTRT')
+# Condition: USUBJID not in EX.USUBJID AND TSVAL = 'INTERVENTIONAL' when TSPARMCD = 'STYPE'
+# Rule: ACTARMCD in ('SCRNFAIL', 'NOTASSGN', 'NOTTRT')
+# verified
 Authorities:
   - Organization: FDA
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: For interventional studies all treated subjects should have
-                  exposure data.
+              - Cited Guidance: For interventional studies all treated subjects
+                  should have exposure data.
                 Document: FDA
                 Section: FDAB023
             Origin: FDA Business Rules
@@ -31,7 +32,7 @@ Check:
       value_is_literal: true
     - name: TSVAL
       operator: equal_to
-      value: "INTERVENTIONAL"
+      value: 'INTERVENTIONAL'
       value_is_literal: true
     - name: USUBJID
       operator: is_not_contained_by
@@ -40,9 +41,8 @@ Core:
   Id: CORE-001064
   Status: Published
   Version: '1'
-Description: All subjects that have no record in the Exposure domain who are
-  participating in a study that includes an interventional product should not be
-  assigned to a treatment. #needs an update based on update in FDA business rules spreadsheet#
+Description: Subject participating in an interventional study with no record
+  in the EX dataset, is not assigned to an actual treatment.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
@@ -54,13 +54,12 @@ Operations:
     name: USUBJID
     operator: distinct
 Outcome:
-  Message: Subject has a no record in EX but is assigned to a treatment while
-    participating in an interventional study
+  Message: Subject in interventional study with no exposure records in EX
+   dataset is assigned to an actual treatment.
   Output Variables:
     - ACTARMCD
     - TSPARMCD
     - TSVAL
-    # - $STYPE_INTERVENTIONAL
 Rule Type: Record Data
 Scope:
   Classes:
