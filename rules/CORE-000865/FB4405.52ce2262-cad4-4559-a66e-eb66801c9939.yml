@@ -1,3 +1,7 @@
+# Variable: --ELTM, --TPTREF
+# Condition: --ELTM ^= Null
+# Rule: --TPTREF ^= Null
+# verified
 Authorities:
   - Organization: 'FDA'
     Standards:
@@ -152,8 +156,8 @@ Core:
   Id: CORE-000865
   Status: Published
   Version: '1'
-Description: 'When Planned Elapsed Time from Time Point Ref (--ELTM) is
-  populated, Time Point Reference (--TPTREF) should also be populated.'
+Description: When Planned Elapsed Time from Time Point Ref (--ELTM) is
+  populated, Time Point Reference (--TPTREF) should also be populated.
 Executability: Fully Executable
 Outcome:
   Message: --ELTM is populated, but --TPTREF is missing.
