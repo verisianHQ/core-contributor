@@ -38,8 +38,8 @@ Core:
   Id: CORE-000790
   Status: Published
   Version: '1'
-Description: If a subject is assigned to an arm, the subject should have a
-  record in EX.
+Description: Raise an error if a subject is assigned to an arm but the subject
+  does not have a record in EX.
 Executability: Partially Executable
 Operations:
   - domain: EX
@@ -47,7 +47,7 @@ Operations:
     name: USUBJID
     operator: distinct
 Outcome:
-  Message: Subject is assigned to an arm code (randomized) but has no record
+  Message: All subjects assigned to an arm code (randomized) must have a record
    in EX.
   Output Variables:
     - ARM
