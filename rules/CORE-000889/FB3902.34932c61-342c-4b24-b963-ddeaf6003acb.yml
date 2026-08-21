@@ -1,133 +1,137 @@
+# Variable: --ORNRHI
+# Condition: --ORNRLO and --ORNRHI ^= null
+# Rule: --ORNRHI > --ORNRLO
+# verified
 Authorities:
   - Organization: FDA
     Standards:
-      - Name: 'SDTMIG'
+      - Name: SDTMIG
         References:
           - Citations:
               - Cited Guidance: Upper limit of reference range should be greater than lower
                   limit, whenever both are submitted.
-                Document: 'FDA'
-                Section: 'FDAB039'
+                Document: FDA
+                Section: FDAB039
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB3902'
+              Id: FB3902
               Version: '1'
             Version: '1.5'
         Version: '3.2'
-      - Name: 'SDTMIG'
+      - Name: SDTMIG
         References:
           - Citations:
               - Cited Guidance: Upper limit of reference range should be greater than lower
                   limit, whenever both are submitted.
-                Document: 'FDA'
-                Section: 'FDAB039'
+                Document: FDA
+                Section: FDAB039
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB3902'
+              Id: FB3902
               Version: '1'
             Version: '1.5'
         Version: '3.3'
-      - Name: 'SDTMIG'
+      - Name: SDTMIG
         References:
           - Citations:
               - Cited Guidance: Upper limit of reference range should be greater than lower
                   limit, whenever both are submitted.
-                Document: 'FDA'
-                Section: 'FDAB039'
+                Document: FDA
+                Section: FDAB039
             Origin: FDA Business Rules
             Rule Identifier:
               Id: 'FB3902'
               Version: '1'
             Version: '1.5'
         Version: '3.4'
-      - Name: 'SENDIG'
+      - Name: SENDIG
         References:
           - Citations:
               - Cited Guidance: Upper limit of reference range should be greater than lower
                   limit, whenever both are submitted.
-                Document: 'FDA'
-                Section: 'FDAB039'
+                Document: FDA
+                Section: FDAB039
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB3902'
+              Id: FB3902
               Version: '1'
             Version: '1.5'
         Version: '3.0'
-      - Name: 'SENDIG'
+      - Name: SENDIG
         References:
           - Citations:
               - Cited Guidance: Upper limit of reference range should be greater than lower
                   limit, whenever both are submitted.
-                Document: 'FDA'
-                Section: 'FDAB039'
+                Document: FDA
+                Section: FDAB039
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB3902'
+              Id: FB3902
               Version: '1'
             Version: '1.5'
         Version: '3.1'
-      - Name: 'SENDIG'
+      - Name: SENDIG
         References:
           - Citations:
               - Cited Guidance: Upper limit of reference range should be greater than lower
                   limit, whenever both are submitted.
-                Document: 'FDA'
-                Section: 'FDAB039'
+                Document: FDA
+                Section: FDAB039
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB3902'
+              Id: FB3902
               Version: '1'
             Version: '1.5'
         Version: '3.1.1'
-      - Name: 'SENDIG-DART'
+      - Name: SENDIG-DART
         References:
           - Citations:
               - Cited Guidance: Upper limit of reference range should be greater than lower
                   limit, whenever both are submitted.
-                Document: 'FDA'
-                Section: 'FDAB039'
+                Document: FDA
+                Section: FDAB039
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB3902'
+              Id: FB3902
               Version: '1'
             Version: '1.5'
         Version: '1.1'
-      - Name: 'SENDIG-DART'
+      - Name: SENDIG-DART
         References:
           - Citations:
               - Cited Guidance: Upper limit of reference range should be greater than lower
                   limit, whenever both are submitted.
-                Document: 'FDA'
-                Section: 'FDAB039'
+                Document: FDA
+                Section: FDAB039
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB3902'
+              Id: FB3902
               Version: '1'
             Version: '1.5'
         Version: '1.2'
-      - Name: 'SENDIG-GENETOX'
+      - Name: SENDIG-GENETOX
         References:
           - Citations:
               - Cited Guidance: Upper limit of reference range should be greater than lower
                   limit, whenever both are submitted.
-                Document: 'FDA'
-                Section: 'FDAB039'
+                Document: FDA
+                Section: FDAB039
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB3902'
+              Id: FB3902
               Version: '1'
             Version: '1.5'
         Version: '1.0'
-      - Name: 'SENDIG-AR'
+      - Name: SENDIG-AR
         References:
           - Citations:
               - Cited Guidance: Upper limit of reference range should be greater than lower
                   limit, whenever both are submitted.
-                Document: 'FDA'
-                Section: 'FDAB039'
+                Document: FDA
+                Section: FDAB039
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB3902'
+              Id: FB3902
               Version: '1'
             Version: '1.5'
         Version: '1.0'
