@@ -1,6 +1,7 @@
-# Variable: AESTDTC, DSENDTC
+# Variable: AESTDTC
 # Condition: AESTDTC ^= Null and Max(DSSTDTC) ^= Null
 # Rule: AESTDTC <= Max(DSSTDTC)
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -54,8 +55,8 @@ Core:
   Id: CORE-000717
   Status: Published
   Version: '1'
-Description: Start Date/Time of Adverse Event (AESTDTC) should be prior or equal
-  to the Start Date/Time of the latest Disposition Event (DSSTDTC).
+Description: Start Date/Time of Adverse Event (AESTDTC) is prior or equal to
+  the Start Date/Time of the latest Disposition Event (DSSTDTC)
 Executability: Fully Executable
 Operations:
   - domain: DS
