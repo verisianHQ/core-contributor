@@ -4,7 +4,7 @@
       "dataset": "apmhe.xpt",
       "domain": "AP",
       "execution_status": "success",
-      "execution_message": "APAP Domain value length is not equal to 4.",
+      "execution_message": "DOMAIN value length is not equal to 4.",
       "number_errors": 4,
       "errors": [
         {
@@ -14,7 +14,7 @@
           "value": {
             "DOMAIN": "APMHE"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -23,7 +23,7 @@
           "value": {
             "DOMAIN": "APMHE"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -32,7 +32,7 @@
           "value": {
             "DOMAIN": "APMHE"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -41,7 +41,7 @@
           "value": {
             "DOMAIN": "APMHE"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
