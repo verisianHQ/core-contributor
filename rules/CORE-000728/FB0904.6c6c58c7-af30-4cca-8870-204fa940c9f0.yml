@@ -7,10 +7,10 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: All paired variables should have a one-to-one relationship.
-                  Examples include short name and name of test; parameter name
-                  and parameter code or number; variable name and variable
-                  label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one
+                  relationship. Examples include short name and name of test;
+                  parameter name and parameter code or number; variable name
+                  and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -22,10 +22,10 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: All paired variables should have a one-to-one relationship.
-                  Examples include short name and name of test; parameter name
-                  and parameter code or number; variable name and variable
-                  label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one
+                  relationship. Examples include short name and name of test;
+                  parameter name and parameter code or number; variable name
+                  and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -37,10 +37,10 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: All paired variables should have a one-to-one relationship.
-                  Examples include short name and name of test; parameter name
-                  and parameter code or number; variable name and variable
-                  label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one
+                  relationship. Examples include short name and name of test;
+                  parameter name and parameter code or number; variable name
+                  and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -66,10 +66,11 @@ Core:
   Id: CORE-000728
   Status: Published
   Version: '1'
-Description: TSVALCD and TSVAL should have a one-to-one relationship.
+Description: Raise an error if TSVALCD and TSVAL do not have a one-to-one
+  relationship.
 Executability: Fully Executable
 Outcome:
-  Message: TSVALCD and TSVAL do not have a one-to-one relationship.
+  Message: TSVALCD and TSVAL must have a one-to-one relationship.
   Output Variables:
     - TSVAL
     - TSVALCD
