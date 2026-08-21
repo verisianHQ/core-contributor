@@ -1,0 +1,111 @@
+# Variable: TSPARMCD
+# Condition:
+# Rule: All FDA Desired Trial Summary (TS) Parameters (TSPARMCDs) are present in the TS dataset.
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the
+                  FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1102
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the
+                  FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1102
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the
+                  FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1102
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: TSPARMCD
+      operator: not_contains_all
+      value:
+        - ACTSUB
+        - ADAPT
+        - ADDON
+        - AGEMAX
+        - AGEMIN
+        - COMPTRT
+        - DCUTDESC
+        - DCUTDTC
+        - EXTTIND
+        - FCNTRY
+        - HLTSUBJI
+        - LENGTH
+        - NARMS
+        - NCOHORT
+        - OBJPRIM
+        - OBJSEC
+        - ONGOSIND
+        - OUTMSPRI
+        - PDPSTIND
+        - PDSTIND
+        - PIPIND
+        - PLANSUB
+        - RDIND
+        - REGID
+        - SENDTC
+        - SEXPOP
+        - SPONSOR
+        - STOPRULE
+        - SSTDTC
+        - STYPE
+        - TBLIND
+        - TCNTRL
+        - THERAREA
+        - TITLE
+        - TPHASE
+        - TTYPE
+        - INDIC
+        - RANDQT
+    - name: TSVAL
+      operator: non_empty
+Core:
+  Id: CORE-000737
+  Status: Published
+  Version: '1'
+Description: Raise an error if any of the parameters without conditions listed in the TCG, Appendix B, are not included in the list of TSPARMCD with TSVAL populated.
+Executability: Fully Executable
+Outcome:
+  Message: FDA Desired TSPARMCD is missing in the TS dataset.
+  Output Variables:
+    - TSVAL
+    - TSPARMCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record
