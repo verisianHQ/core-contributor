@@ -1,6 +1,6 @@
 # Variable: ARM, ACTARM
-# Condition: ARM ^= null, ACTARM ^= null
-# Rule: ARM ^= ACTARM
+# Condition: ARM = ACTARM
+# Rule: ARM ^= null and ACTARM ^= null
 # verified
 Authorities:
   - Organization: FDA
