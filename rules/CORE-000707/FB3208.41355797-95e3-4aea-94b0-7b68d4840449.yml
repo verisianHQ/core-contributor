@@ -1,6 +1,7 @@
-# Variable: --DY, --ENDY
+# Variable: --DY
 # Condition: --DY ^= Null and --ENDY ^= Null
 # Rule: --DY <= --ENDY
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -161,8 +162,8 @@ Core:
   Id: CORE-000707
   Status: Published
   Version: '1'
-Description: Study Day of Visit/Collection/Exam (--DY) should be less than or
-  equal to Study Day of End of Observation (--ENDY).
+Description: Study Day of Visit/Collection/Exam (--DY) is less than or equal
+  to Study Day of End of Observation (--ENDY).
 Executability: Fully Executable
 Outcome:
   Message: --DY is greater than --ENDY.
