@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "Subject is assigned to an arm code (randomized) but has no record in EX.",
+      "execution_message": "All subjects assigned to an arm code (randomized) must have a record in EX.",
       "number_errors": 3,
       "errors": [
         {
@@ -15,7 +15,7 @@
             "ARM": "IKd",
             "ACTARM": "IKd"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -25,7 +25,7 @@
             "ARM": "IKd",
             "ACTARM": "IKd"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -35,7 +35,7 @@
             "ARM": "IKd",
             "ACTARM": "IKd"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -46,23 +46,6 @@
       "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000790, dataset=EX",
       "number_errors": 0,
       "errors": []
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 7,
-      "Variable": "USUBJID"
     }
   ]
 }
