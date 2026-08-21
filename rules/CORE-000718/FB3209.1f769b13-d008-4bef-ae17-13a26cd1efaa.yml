@@ -1,6 +1,7 @@
-# Variable: --STDTC, --ENDTC
+# Variable: --STDTC
 # Condition: --STDTC ^= Null and --ENDTC ^= Null
 # Rule: --STDTC <= --ENDTC
+# verified
 Authorities:
   - Organization: FDA
     Standards:
