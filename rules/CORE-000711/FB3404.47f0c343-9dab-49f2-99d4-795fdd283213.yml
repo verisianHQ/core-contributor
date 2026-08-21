@@ -1,6 +1,7 @@
-# Variable: DM.RFSTDTC, DM.RFENDTC
-# Condition: DM.RFSTDTC ^= Null and DM.RFENDTC ^= Null
-# Rule: DM.RFSTDTC <= DM.RFENDTC (Note: When comparing values that contain missing date/time components, the comparison is based on the most detailed level of specificity shared by both values. If components such as day, month, or time are missing in either value, these components are excluded from the comparison. Interval components are not included in the comparison.)
+# Variable: RFSTDTC
+# Condition: RFSTDTC ^= Null and RFENDTC ^= Null
+# Rule: RFSTDTC <= RFENDTC
+# verified
 Authorities:
   - Organization: FDA
     Standards:
