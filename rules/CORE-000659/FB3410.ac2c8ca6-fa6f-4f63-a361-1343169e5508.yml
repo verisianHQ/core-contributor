@@ -1,45 +1,46 @@
-# Variable: AEDUR, AEOUT
+# Variable: AEENDTC
 # Condition: AEOUT = "RECOVERED/RESOLVED"
-# Rule: AEENDTC <> Null
+# Rule: AEENDTC ^= Null
+# verified
 Authorities:
-  - Organization: 'FDA'
+  - Organization: FDA
     Standards:
-      - Name: 'SDTMIG'
+      - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'Study start and end date/time should include month, day, and
-                  year.'
-                Document: 'FDA'
-                Section: 'FDAB034'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: Study start and end date/time should include month, day, and
+                  year.
+                Document: FDA
+                Section: FDAB034
+            Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB3410'
+              Id: FB3410
               Version: '1'
             Version: '1.5'
         Version: '3.2'
-      - Name: 'SDTMIG'
+      - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'Study start and end date/time should include month, day, and
-                  year.'
-                Document: 'FDA'
-                Section: 'FDAB034'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: Study start and end date/time should include month, day, and
+                  year.
+                Document: FDA
+                Section: FDAB034
+            Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB3410'
+              Id: FB3410
               Version: '1'
             Version: '1.5'
         Version: '3.3'
-      - Name: 'SDTMIG'
+      - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'Study start and end date/time should include month, day, and
-                  year.'
-                Document: 'FDA'
-                Section: 'FDAB034'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: Study start and end date/time should include month, day, and
+                  year.
+                Document: FDA
+                Section: FDAB034
+            Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB3410'
+              Id: FB3410
               Version: '1'
             Version: '1.5'
         Version: '3.4'
