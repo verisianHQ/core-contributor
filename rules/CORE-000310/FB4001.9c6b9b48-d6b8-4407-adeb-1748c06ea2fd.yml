@@ -1,3 +1,7 @@
+# Variable: AGE
+# Condition: 
+# Rule: AGE >= 0
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -150,7 +154,7 @@ Core:
   Id: CORE-000310
   Status: Published
   Version: '1'
-Description: Age (AGE) value should not be negative
+Description: Age (AGE) value is not negative.
 Executability: Fully Executable
 Outcome:
   Message: Negative value for AGE.
