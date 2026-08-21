@@ -138,7 +138,11 @@ Check:
     - name: --DTC
       operator: is_complete_date
     - name: --DY
-      operator: not_exists
+      operator: non_empty
+    - name: --STDY
+      operator: non_empty
+    - name: --ENDY
+      operator: non_empty
 Core:
   Id: CORE-000793
   Status: Published
@@ -149,6 +153,9 @@ Executability: Fully Executable
 Outcome:
   Message: Collection study day (--DY) is missing when date/time of collection
     (--DTC) is populated.
+  Output Variables:
+    - --DTC
+    - --DY
 Rule Type: Record Data
 Scope:
   Classes:
