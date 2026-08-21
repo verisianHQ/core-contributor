@@ -42,9 +42,9 @@ Core:
   Id: CORE-001064
   Status: Published
   Version: '1'
-Description: Raise an error when any subjects without a record in the Exposure
-  domain who are participating in a study that includes an interventional
-  product are assigned to a treatment.
+Description: Raise an error when a subject without a record in the Exposure
+  domain who is participating in a study that includes an interventional
+  product is assigned to a treatment.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
