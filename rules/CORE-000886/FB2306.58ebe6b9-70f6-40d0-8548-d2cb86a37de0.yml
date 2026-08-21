@@ -1,7 +1,8 @@
 # Variable: ARMNRS
 # Condition: DM.USUBJID not in EX.USUBJID AND TSVAL = "INTERVENTIONAL" when
 # TSPARMCD = "STYPE"
-# Rule: ARMNRS^=null 
+# Rule: ARMNRS^=null
+# verified
 Authorities:
   - Organization: FDA
     Standards:
