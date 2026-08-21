@@ -1,3 +1,7 @@
+# Variable: --ENINT, --TPTREF
+# Condition: --ENINT ^= Null
+# Rule: --TPTREF ^= Null
+# verified
 Authorities:
   - Organization: 'FDA'
     Standards:
