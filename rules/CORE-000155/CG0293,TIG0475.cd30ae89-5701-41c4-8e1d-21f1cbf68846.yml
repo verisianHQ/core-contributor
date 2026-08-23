@@ -73,7 +73,7 @@ Core:
   Id: CORE-000155
   Status: Published
   Version: '1'
-Description: Raise an error when ARMCD is populated and ARMCD is not in TA.ARMCD.
+Description: Raise an error when ARMCD is populated but ARMCD is not in TA.ARMCD.
 Executability: Fully Executable
 Operations:
   - domain: TA
