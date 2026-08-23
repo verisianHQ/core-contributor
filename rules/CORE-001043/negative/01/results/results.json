@@ -5,7 +5,7 @@
       "domain": "DM",
       "execution_status": "success",
       "execution_message": "Age is missing for a non-screen failure subject.",
-      "number_errors": 3,
+      "number_errors": 2,
       "errors": [
         {
           "row": 1,
@@ -20,17 +20,6 @@
         },
         {
           "row": 2,
-          "SEQ": null,
-          "USUBJID": "CDISC008",
-          "value": {
-            "ARMNRS": null,
-            "ARMCD": "B",
-            "AGE": null
-          },
-          "validated": true
-        },
-        {
-          "row": 3,
           "SEQ": null,
           "USUBJID": "CDISC009",
           "value": {
