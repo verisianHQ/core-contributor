@@ -13,7 +13,7 @@ Authorities:
                   then have to recognize this special term as an exception to
                   the expected data format. Therefore, it was decided that a
                   separate null flavor variable that uses the ISO 21090 null
-                  flavor terminology would be a better solution .
+                  flavor terminology would be a better solution.
                 Document: IG v3.4
                 Section: 7.4.2.1
             Origin: SDTM and SDTMIG Conformance Rules
@@ -71,7 +71,7 @@ Core:
   Id: CORE-000787
   Status: Published
   Version: '1'
-Description: Raise an error when TSVALNF is null and TSVAL is populated with values or synonyms of values in the ISO 21090 null flavor codelist (or other terms that can be represented as null flavors).
+Description: Raise an error when TSVALNF is null but TSVAL is populated with values or synonyms of values in the ISO 21090 null flavor codelist (or other terms that can be represented as null flavors).
 Executability: Fully Executable
 Outcome:
   Message: TSVALNF is null, but TSVAL is populated with an ISO 21090 null flavor or null flavor description.
