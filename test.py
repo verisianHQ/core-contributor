@@ -12,6 +12,7 @@ import textwrap
 import csv
 import pandas as pd
 import openpyxl as op
+from glob import glob
 from pathlib import Path
 from typing import List, Optional, Tuple, Any, Dict
 
@@ -138,7 +139,7 @@ class ResultReporter:
             print(f"{'-'*54}")
             print(f"{test_type.capitalize()} Test Cases: {len(tests)}")
             for test in tests:
-                symbol = "[PASS]" if test["passed"] else "[FAIL]"
+                symbol = "[OMIT]" if test.get("omitted") else "[PASS]" if test["passed"] else "[FAIL]"
                 print(f"\n  {symbol} Case {test['case_id']} - Results at: {test['results_path']}")
 
                 if verbose:
@@ -205,11 +206,15 @@ class TestRunner:
 
         from engine.cdisc_rules_engine.data_service.postgresql_data_service import PostgresQLDataService
 
+        cache_dir = "resources/cache"
+        latest_codelist_path = max(glob(f"engine/{cache_dir}/{self.standard}ct-[0-9][0-9][0-9][0-9]-*.pkl"), default=None)
+        latest_codelist_file = latest_codelist_path.split("/")[-1] if latest_codelist_path else None
+
         self.data_service = PostgresQLDataService.instance(
             use_pgserver=self.use_pgserver,
-            codelists=["sdtmct-2025-03-28.pkl"],
+            codelists=[latest_codelist_file] if latest_codelist_file else [],
             provided_codelists=ct,
-            cache_path="resources/cache",
+            cache_path=cache_dir,
             external_dictionaries=ext_dicts,
         )
 
@@ -446,10 +451,32 @@ class TestRunner:
         except Exception as e:
             return None, {"error": "Error executing engine validation.", "exception": str(e)}
 
+    @staticmethod
+    def _rule_applicable_to_case(rule_id: str, data_path: str) -> bool:
+        """
+        Returns True when single-column CSV file _rules.csv does not exist 
+        in the test case folder (meaning: run against all rules) 
+        or when it exists and it contains the rule_id, 
+        (meaning: run this test case against this rule).
+        Returns False if the _rules.csv file exists but it does not contain the rule_id.
+        """
+        rules_path = Path(data_path) / "_rules.csv"
+        if not rules_path.exists():
+            return True
+
+        with rules_path.open("r", encoding="utf-8-sig") as f:
+            listed_ids = {row[0].strip() for row in csv.reader(f) if row and row[0].strip()}
+
+        short_id = rule_id.split("/")[-1]
+        return not listed_ids or short_id in listed_ids
+
     def evaluate_case(self, rule_id: str, test_type: str, case_info: dict) -> dict:
         case_id = case_info["case_id"]
         is_csv = case_info["format"] == "csv"
         expected = "0 errors" if test_type == "positive" else ">0 errors"
+
+        if not self._rule_applicable_to_case(rule_id, case_info["data_path"]):
+            return {"case_id": case_id, "passed": True, "omitted": True, "total_errors": None, "expected": expected, "results_path": "N/A"}
 
         _, results_data = self.run_validation(rule_id, case_info)
 
