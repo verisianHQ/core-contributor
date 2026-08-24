@@ -37,11 +37,11 @@ Check:
       operator: empty
     - name: TSPARMCD
       operator: equal_to
-      value: "STYPE"
+      value: STYPE
       value_is_literal: true
     - name: TSVAL
       operator: equal_to
-      value: "INTERVENTIONAL"
+      value: INTERVENTIONAL
       value_is_literal: true
     - name: USUBJID
       operator: is_not_contained_by
