@@ -4,7 +4,7 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "A record exists in TS where TSPARMCD is equal to 'STYPE' and TSVAL is equal to 'INTERVENTIONAL' but TSVAL for TSPARMCD is equal to 'TRT' is not populated.",
+      "execution_message": "TSVAL must not be null for a record when TSPARMCD is equal to 'TRT' where TSPARMCD is equal to 'STYPE' with TSVAL equal to 'INTERVENTIONAL'.",
       "number_errors": 3,
       "errors": [
         {

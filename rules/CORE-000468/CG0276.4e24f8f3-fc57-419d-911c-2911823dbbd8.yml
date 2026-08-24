@@ -66,8 +66,8 @@ Operations:
     id: $STYPE_INTERVENTIONAL
     operator: record_count
 Outcome:
-  Message: A record exists in TS where TSPARMCD is equal to 'STYPE' and TSVAL is equal to
-    'INTERVENTIONAL' but TSVAL for TSPARMCD is equal to 'TRT' is not populated.
+  Message: TSVAL must not be null for a record when TSPARMCD is equal to 'TRT' where TSPARMCD is 
+    equal to 'STYPE' with TSVAL equal to 'INTERVENTIONAL'.
   Output Variables:
     - TSPARMCD
     - TSVAL
