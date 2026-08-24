@@ -74,7 +74,7 @@ Core:
 Description: Raise an error when TSVALNF is null but TSVAL is populated with values or synonyms of values in the ISO 21090 null flavor codelist (or other terms that can be represented as null flavors).
 Executability: Fully Executable
 Outcome:
-  Message: TSVALNF is null, but TSVAL is populated with an ISO 21090 null flavor or null flavor description.
+  Message: TSVALNF must not be null when TSVAL is populated with an ISO 21090 null flavor or null flavor description.
   Output Variables:
     - TSVALNF
     - TSVAL

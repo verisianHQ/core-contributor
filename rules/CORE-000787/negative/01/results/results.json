@@ -4,7 +4,7 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSVALNF is null, but TSVAL is populated with an ISO 21090 null flavor or null flavor description.",
+      "execution_message": "TSVALNF must not be null when TSVAL is populated with an ISO 21090 null flavor or null flavor description.",
       "number_errors": 25,
       "errors": [
         {
