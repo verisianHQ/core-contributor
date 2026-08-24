@@ -112,13 +112,13 @@ Authorities:
         Version: '1.0'
 Check:
   all:
-    - name: '--TPTREF'
+    - name: --TPTREF
       operator: exists
-    - name: '--STINT'
+    - name: --STINT
       operator: exists
-    - name: '--STINT'
+    - name: --STINT
       operator: 'non_empty'
-    - name: '--TPTREF'
+    - name: --TPTREF
       operator: 'empty'
 Core:
   Id: CORE-000616
