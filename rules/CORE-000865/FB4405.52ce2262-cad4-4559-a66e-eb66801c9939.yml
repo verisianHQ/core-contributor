@@ -3,151 +3,144 @@
 # Rule: --TPTREF ^= Null
 # verified
 Authorities:
-  - Organization: 'FDA'
+  - Organization: FDA
     Standards:
-      # Applicable to SDTMIG versions 3.2, 3.3, 3.4
-      - Name: 'SDTMIG'
+      - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'When timing info is provided as a reference to a particular
-                  timepoint, the timepoint should be also populated.'
-                Document: 'FDA'
-                Section: 'FDAB044'
+              - Cited Guidance: When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.
+                Document: FDA
+                Section: FDAB044
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB4405'
+              Id: FB4405
               Version: '1'
             Version: '1.5'
         Version: '3.2'
-      - Name: 'SDTMIG'
+      - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'When timing info is provided as a reference to a particular
-                  timepoint, the timepoint should be also populated.'
-                Document: 'FDA'
-                Section: 'FDAB044'
+              - Cited Guidance: When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.
+                Document: FDA
+                Section: FDAB044
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB4405'
+              Id: FB4405
               Version: '1'
             Version: '1.5'
         Version: '3.3'
-      - Name: 'SDTMIG'
+      - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'When timing info is provided as a reference to a particular
-                  timepoint, the timepoint should be also populated.'
-                Document: 'FDA'
-                Section: 'FDAB044'
+              - Cited Guidance: When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.
+                Document: FDA
+                Section: FDAB044
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB4405'
+              Id: FB4405
               Version: '1'
             Version: '1.5'
         Version: '3.4'
-      - Name: 'SENDIG'
+      - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'When timing info is provided as a reference to a particular
-                  timepoint, the timepoint should be also populated.'
-                Document: 'FDA'
-                Section: 'FDAB044'
+              - Cited Guidance: When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.
+                Document: FDA
+                Section: FDAB044
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB4405'
+              Id: FB4405
               Version: '1'
             Version: '1.5'
         Version: '3.0'
-      - Name: 'SENDIG'
+      - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'When timing info is provided as a reference to a particular
-                  timepoint, the timepoint should be also populated.'
-                Document: 'FDA'
-                Section: 'FDAB044'
+              - Cited Guidance: When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.
+                Document: FDA
+                Section: FDAB044
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB4405'
+              Id: FB4405
               Version: '1'
             Version: '1.5'
         Version: '3.1'
-      - Name: 'SENDIG'
+      - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'When timing info is provided as a reference to a particular
-                  timepoint, the timepoint should be also populated.'
-                Document: 'FDA'
-                Section: 'FDAB044'
+              - Cited Guidance: When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.
+                Document: FDA
+                Section: FDAB044
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB4405'
+              Id: FB4405
               Version: '1'
             Version: '1.5'
         Version: '3.1.1'
-      - Name: 'SENDIG-DART'
+      - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: 'When timing info is provided as a reference to a particular
-                  timepoint, the timepoint should be also populated.'
-                Document: 'FDA'
-                Section: 'FDAB044'
+              - Cited Guidance: When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.
+                Document: FDA
+                Section: FDAB044
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB4405'
+              Id: FB4405
               Version: '1'
             Version: '1.5'
         Version: '1.1'
-      - Name: 'SENDIG-DART'
+      - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: 'When timing info is provided as a reference to a particular
-                  timepoint, the timepoint should be also populated.'
-                Document: 'FDA'
-                Section: 'FDAB044'
+              - Cited Guidance: When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.
+                Document: FDA
+                Section: FDAB044
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB4405'
+              Id: FB4405
               Version: '1'
             Version: '1.5'
         Version: '1.2'
-      - Name: 'SENDIG-AR'
+      - Name: SENDIG-AR
         References:
           - Citations:
-              - Cited Guidance: 'When timing info is provided as a reference to a particular
-                  timepoint, the timepoint should be also populated.'
-                Document: 'FDA'
-                Section: 'FDAB044'
+              - Cited Guidance: When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.
+                Document: FDA
+                Section: FDAB044
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB4405'
+              Id: FB4405
               Version: '1'
             Version: '1.5'
         Version: '1.0'
-      - Name: 'SENDIG-GENETOX'
+      - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: 'When timing info is provided as a reference to a particular
-                  timepoint, the timepoint should be also populated.'
-                Document: 'FDA'
-                Section: 'FDAB044'
+              - Cited Guidance: When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.
+                Document: FDA
+                Section: FDAB044
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB4405'
+              Id: FB4405
               Version: '1'
             Version: '1.5'
         Version: '1.0'
 Check:
-  # REMARK: --TPTNUM and --ELTM both are usually "permissible"
   all:
     - name: '--TPTREF'
       operator: exists
     - name: '--ELTM'
       operator: exists
-    #- name: '--TPTREF'
-    #  operator: 'non_empty'
-    #- name: '--ELTM'
-    #  operator: 'empty'
-    # Correction 2025-09-05
     - name: '--ELTM'
       operator: 'non_empty'
     - name: '--TPTREF'
