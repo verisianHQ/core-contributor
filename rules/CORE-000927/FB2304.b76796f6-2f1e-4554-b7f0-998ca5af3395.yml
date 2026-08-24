@@ -1,6 +1,7 @@
 # Variable: ARMNRS
 # Condition: USUBJID in EX.USUBJID AND TSVAL = 'INTERVENTIONAL' when TSPARMCD = 'STYPE'
-# Rule: ARMNRS in (SCREEN FAILURE; NOT ASSIGNED; ASSIGNED, NOT TREATED)
+# Rule: ARMNRS = null or ARMNRS = 'UNPLANNED TREATMENT'
+# verified
 
 Authorities:
   - Organization: FDA
