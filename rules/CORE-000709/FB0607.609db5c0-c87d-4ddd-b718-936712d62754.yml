@@ -1,5 +1,5 @@
 # Variable: DTHFL
-# Condition: CE record with CETERM or CEDECOD = "DEATH" present for the subject
+# Condition: CE record is present where CETERM or CEDECOD = 'DEATH' for the subject
 # Rule: DTHFL = 'Y'
 # verified
 Authorities:
@@ -64,7 +64,7 @@ Core:
   Id: CORE-000709
   Status: Published
   Version: '1'
-Description: Raise an error when CETERM or CEDECOD is equal to 'DEATH' in the CE dataset but DTHFL is not equal to 'Y' in the DM dataset for the corresponding subject.
+Description:  A record is present in the CE dataset where CETERM or CEDECOD  = 'DEATH' and death flag (DTHFL) is populated as 'Y' in the DM dataset for the corresponding subject.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
