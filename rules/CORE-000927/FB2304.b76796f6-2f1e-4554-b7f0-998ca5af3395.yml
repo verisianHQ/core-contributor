@@ -55,7 +55,7 @@ Core:
   Status: Published
   Version: '1'
   Id: CORE-000927
-Description: Raise an error when a subject participating in an interventional study has a record in EX but ARMNRS is populated and is not equal to 'UNPLANNED TREATMENT'.
+Description: End Date/Time of Observation (--ENDTC) is present in the dataset and the Study Day of End of Observation (--ENDY) is also present in the dataset
 Executability: Fully Executable
 Match Datasets:
   - Keys:
