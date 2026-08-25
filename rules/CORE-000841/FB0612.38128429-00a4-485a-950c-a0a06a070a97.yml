@@ -57,7 +57,7 @@ Core:
   Id: CORE-000841
   Status: Published
   Version: '1'
-Description: Raise an error when AEOUT is equal to 'FATAL' but AEENDTC is not equal to DTHDTC in the DM dataset.
+Description: End Date/Time of Adverse Event (AEENDTC) in AE dataset of Adverse Event where AEOUT = 'FATAL' is equal to the Date/Time of Death (DTHDTC) in the DM dataset for the corresponding subject.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
