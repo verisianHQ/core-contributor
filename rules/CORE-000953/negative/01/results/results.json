@@ -19,13 +19,27 @@
     {
       "dataset": "co.xpt",
       "domain": "CO",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
-      "number_errors": 1,
+      "execution_status": "success",
+      "execution_message": "Value for IDVAR in CO does not represent a variable present in the dataset referenced in RDOMAIN.",
+      "number_errors": 2,
       "errors": [
         {
-          "error": "Column not found in data",
-          "message": "IDVAR"
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "S001",
+          "value": {
+            "IDVAR": "LBSEK"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "S002",
+          "value": {
+            "IDVAR": "LBSEQ"
+          },
+          "validated": false
         }
       ]
     },
