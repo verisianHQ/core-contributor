@@ -1,5 +1,5 @@
 # Variable: AEOUT, AESDTH
-# Condition: DTHFL = "Y"
+# Condition: DTHFL = 'Y'
 # Rule: Record is present in AE where AESDTH = 'Y' and AEOUT= 'FATAL' for the subject
 # verified
 Authorities:
@@ -50,21 +50,16 @@ Check:
       operator: equal_to
       value: 'Y'
       value_is_literal: true
-    - name: $ae_aeout
-      operator: does_not_contain
-      value: 'FATAL'
-      value_is_literal: true
-    - name: $ae_aesdth
-      operator: does_not_contain
-      value: 'Y'
-      value_is_literal: true
+    - name: $ae_fatal_death_count
+      operator: equal_to
+      value: 0
 Core:
   Status: Published
   Version: '1'
   Id: CORE-001078
-Description: Death flag (DTHFL) in the DM dataset is populated as 'Y' 
-  and a record is not present in the AE dataset where AEOUT is equal to 'FATAL' 
-  and AESDTH is equal to 'Y' for the corresponding subject.
+Description: Death flag (DTHFL) in the DM dataset is populated as 'Y' and a
+  record is present in the AE dataset where AEOUT = 'FATAL' and AESDTH = 'Y'
+  for the corresponding subject.
 Executability: Fully Executable
 Grouping_Variables:
   - USUBJID
@@ -77,23 +72,19 @@ Match Datasets:
     Name: AE
 Operations:
   - domain: AE
+    filter:
+      AEOUT: FATAL
+      AESDTH: 'Y'
     group:
       - USUBJID
-    id: $ae_aeout
+    id: $ae_fatal_death_count
     name: AEOUT
-    operator: distinct
-  - domain: AE
-    group:
-      - USUBJID
-    id: $ae_aesdth
-    name: AESDTH
-    operator: distinct
+    operator: record_count
 Outcome:
   Message: DTHFL in DM dataset is 'Y' but a record is missing in AE dataset where
     AESDTH is equal to 'Y' and AEOUT is equal to 'FATAL'.
   Output Variables:
-    - $ae_aeout
-    - $ae_aesdth
+    - $ae_fatal_death_count
     - USUBJID
     - DTHFL
 Rule Type: Record Data
