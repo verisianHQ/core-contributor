@@ -1,6 +1,7 @@
 # Variable: --ENTPT
 # Condition: --ENRTPT present in dataset
 # Rule: --ENTPT present in dataset
+# validated
 Authorities:
   - Organization: CDISC
     Standards:
@@ -81,10 +82,9 @@ Description: Raises an error when --ENRTPT is present in dataset but --ENTPT is
   not present in dataset.
 Executability: Fully Executable
 Outcome:
-  Message: --ENTPT should be present when --ENRTPT is present in a dataset
+  Message: --ENTPT should be present when --ENRTPT is present in a dataset.
   Output Variables:
     - --ENRTPT
-    - --ENTPT
 Rule Type: Record Data
 Scope:
   Classes:
