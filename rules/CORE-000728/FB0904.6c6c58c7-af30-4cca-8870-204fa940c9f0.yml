@@ -1,6 +1,7 @@
 # Variable: TSVAL, TSVALCD
 # Condition: TSVCDREF ^= null
 # Rule: TSVALCD and TSVAL have a one-to-one relationship 
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -53,11 +54,15 @@ Check:
   all:
     - name: TSVCDREF
       operator: exists
+    - name: TSVCDREF
+      operator: non_empty      
     - name: TSVAL
       operator: exists
+    - name: TSVAL
+      operator: non_empty
     - name: TSVALCD
       operator: exists
-    - name: TSVCDREF
+    - name: TSVALCD
       operator: non_empty
     - name: TSVAL
       operator: is_not_unique_relationship
