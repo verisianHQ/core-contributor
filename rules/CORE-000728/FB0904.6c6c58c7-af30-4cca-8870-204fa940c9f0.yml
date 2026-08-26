@@ -1,6 +1,6 @@
-# Variable: TSVAL, TSVALCD
-# Condition: TSVCDREF ^= null
-# Rule: TSVALCD and TSVAL have a one-to-one relationship 
+# Variable: TSVALCD
+# Condition: TSVAL ^= null and TSVALCD ^= null
+# Rule: TSVALCD and TSVAL have a one-to-one relationship
 # verified
 Authorities:
   - Organization: FDA
@@ -71,11 +71,10 @@ Core:
   Id: CORE-000728
   Status: Published
   Version: '1'
-Description: Raise an error if TSVALCD and TSVAL do not have a one-to-one
-  relationship.
+Description: TSVALCD and TSVAL have a one-to-one relationship.
 Executability: Fully Executable
 Outcome:
-  Message: TSVALCD and TSVAL must have a one-to-one relationship.
+  Message: TSVALCD and TSVAL do not have a one-to-one relationship.
   Output Variables:
     - TSVAL
     - TSVALCD
