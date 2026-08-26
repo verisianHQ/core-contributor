@@ -52,7 +52,8 @@ Core:
   Status: Published
   Version: '1'
   Id: CORE-000915
-Description: Exactly one record is present with a last observation before exposure flag (--LOBXFL = 'Y') per unique --TESTCD, --CAT, --SCAT, --SPEC, --METHOD combination
+Description: Exactly one record is present with a last observation before exposure flag (--LOBXFL = 'Y') 
+  per unique --TESTCD, --CAT, --SCAT, --SPEC, --METHOD combination.
 Executability: Fully Executable
 Outcome:
   Message: There are multiple records per assigned last observation before
