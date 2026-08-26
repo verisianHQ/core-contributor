@@ -1,6 +1,7 @@
 # Variable: AEOUT, AESDTH
 # Condition: DTHFL = "Y"
-# Rule: Record present in AE where AESDTH = "Y" AND AEOUT= "FATAL"
+# Rule: Record is present in AE where AESDTH = 'Y' and AEOUT= 'FATAL' for the subject
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -61,9 +62,9 @@ Core:
   Status: Published
   Version: '1'
   Id: CORE-001078
-Description: When Death flag (DTHFL) in the DM dataset is populated as 'Y' then
-  a record should be present in the AE dataset where AEOUT = 'FATAL' and AESDTH
-  = 'Y' for the corresponding subject.
+Description: Death flag (DTHFL) in the DM dataset is populated as 'Y' 
+  and a record is not present in the AE dataset where AEOUT is equal to 'FATAL' 
+  and AESDTH is equal to 'Y' for the corresponding subject.
 Executability: Fully Executable
 Grouping_Variables:
   - USUBJID
@@ -74,7 +75,6 @@ Match Datasets:
   - Keys:
       - USUBJID
     Name: AE
-# We make a list of the distinct values of aeout and aesdth within usubjid
 Operations:
   - domain: AE
     group:
@@ -89,13 +89,13 @@ Operations:
     name: AESDTH
     operator: distinct
 Outcome:
-  Message: DTHFL in DM dataset is "Y" but a record is missing in AE dataset where
-    AESDTH = "Y" and AEOUT = "FATAL".
+  Message: DTHFL in DM dataset is 'Y' but a record is missing in AE dataset where
+    AESDTH is equal to 'Y' and AEOUT is equal to 'FATAL'.
   Output Variables:
     - $ae_aeout
     - $ae_aesdth
-    - DTHFL
     - USUBJID
+    - DTHFL
 Rule Type: Record Data
 Scope:
   Classes:
@@ -105,7 +105,3 @@ Scope:
     Include:
       - AE
 Sensitivity: Group
-
-# When "Dataset" is taken for "Sensitivity", only the first violation is reported
-# When "Record" is taken for "Sensitivity", a violation is reported for each row in the group that violates the rule
-# Used "Group" sensitivity to outcome issue at subject level.

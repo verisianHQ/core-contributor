@@ -11,57 +11,82 @@
     {
       "dataset": "ae.xpt",
       "domain": "AE",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
-      "number_errors": 1,
+      "execution_status": "success",
+      "execution_message": "DTHFL in DM dataset is 'Y' but a record is missing in AE dataset where AESDTH is equal to 'Y' and AEOUT is equal to 'FATAL'.",
+      "number_errors": 2,
       "errors": [
         {
-          "error": "Validation error",
-          "message": "Invalid sensitivity value: Group"
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "$ae_aeout": [
+              "",
+              "RECOVERED/RESOLVED"
+            ],
+            "$ae_aesdth": [
+              ""
+            ],
+            "USUBJID": "CDISC002",
+            "DTHFL": "Y"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "CDISC003",
+          "value": {
+            "$ae_aeout": [
+              "RECOVERED/RESOLVED"
+            ],
+            "$ae_aesdth": [
+              ""
+            ],
+            "USUBJID": "CDISC003",
+            "DTHFL": "Y"
+          },
+          "validated": false
         }
       ]
     }
   ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "DTHFL": "Y",
+        "$ae_aeout": "[ABSENT]",
+        "$ae_aesdth": "[ABSENT]"
+      }
+    },
+    {
+      "value": {
+        "DTHFL": "Y",
+        "$ae_aeout": "[ABSENT]",
+        "$ae_aesdth": "[ABSENT]"
+      }
+    }
+  ],
   "unvalidated_highlights": [
     {
-      "Sheet": "dm.xpt",
-      "Row": 1,
-      "Variable": "DTHFL"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "DTHFL"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 7,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 7,
-      "Variable": "DTHFL"
-    },
-    {
       "Sheet": "ae.xpt",
-      "Row": 1,
+      "Row": 8,
       "Variable": "AEOUT"
     },
     {
       "Sheet": "ae.xpt",
-      "Row": 1,
+      "Row": 8,
       "Variable": "AESDTH"
     },
     {
       "Sheet": "ae.xpt",
-      "Row": 10,
-      "Variable": "USUBJID"
+      "Row": 9,
+      "Variable": "AEOUT"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 9,
+      "Variable": "AESDTH"
     },
     {
       "Sheet": "ae.xpt",
@@ -76,7 +101,12 @@
     {
       "Sheet": "ae.xpt",
       "Row": 11,
-      "Variable": "USUBJID"
+      "Variable": "AEOUT"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 11,
+      "Variable": "AESDTH"
     }
   ]
 }
