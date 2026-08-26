@@ -157,7 +157,7 @@ Core:
   Version: '1'
   Id: CORE-000914
 Description: Exactly one record is present with a baseline flag (--BLFL is equal to 'Y') 
-  per unique --TESTCD, --CAT, --SCAT, --SPEC, --METHOD combination
+  per unique --TESTCD, --CAT, --SCAT, --SPEC, --METHOD combination.
 Executability: Fully Executable
 Outcome:
   Message: There are multiple records per assigned baseline flag (--BLFL).
