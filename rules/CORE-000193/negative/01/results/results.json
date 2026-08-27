@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "sv.xpt",
+      "domain": "SV",
+      "execution_status": "success",
+      "execution_message": "MIDS variable must be present in the dataset when MIDSDTC variable is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "MIDSDTC": "2012-11-23",
+            "MIDS": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
