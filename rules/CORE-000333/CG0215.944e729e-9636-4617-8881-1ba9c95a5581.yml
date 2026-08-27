@@ -56,8 +56,8 @@ Operations:
     name: VISIT
     operator: distinct
 Outcome:
-  Message: When SVUPDES is not populated or does not exist the VISIT must be
-    equal to a VISIT present in TV dataset.
+  Message: VISIT in the SV dataset must be equal to VISIT in the TV dataset
+    when SVUPDES is not populated.
   Output Variables:
     - SVUPDES
     - VISIT
