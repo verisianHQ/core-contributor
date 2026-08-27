@@ -12,7 +12,7 @@
       "dataset": "ex.xpt",
       "domain": "EX",
       "execution_status": "success",
-      "execution_message": "EXVAMT is present when EC exists.",
+      "execution_message": "EXVAMT must not be present when EC exists.",
       "number_errors": 1,
       "errors": [
         {
@@ -22,21 +22,9 @@
           "value": {
             "$EXVAMT_EXISTS": true
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ex.xpt",
-      "Row": 5,
-      "Variable": "EXVAMT"
-    },
-    {
-      "Sheet": "ex.xpt",
-      "Row": 5,
-      "Variable": "EXVAMTU"
     }
   ]
 }
