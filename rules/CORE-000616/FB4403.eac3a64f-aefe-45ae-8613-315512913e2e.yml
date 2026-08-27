@@ -124,7 +124,8 @@ Core:
   Id: CORE-000616
   Status: Published
   Version: '1'
-Description: Raise an error when planned Start of Assessment Interval (--STINT) is populated and Time Point Reference (--TPTREF) is also populated.
+Description: Planned Start of Assessment Interval (--STINT) is populated and 
+  Time Point Reference (--TPTREF) is also populated.
 Executability: Fully Executable
 Outcome:
   Message: --STINT is populated, but --TPTREF is missing.
