@@ -4,8 +4,8 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMSTAT should be \"NOT DONE\" when CMREASND is provided.",
-      "number_errors": 1,
+      "execution_message": "CMSTAT must be 'NOT DONE' when CMREASND is populated.",
+      "number_errors": 2,
       "errors": [
         {
           "row": 2,
@@ -15,7 +15,17 @@
             "CMSTAT": "Not Done",
             "CMREASND": "Subject's Decision"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMSTAT": "NOT STARTED",
+            "CMREASND": "Subject's Decision"
+          },
+          "validated": true
         }
       ]
     },
@@ -23,7 +33,7 @@
       "dataset": "mh.xpt",
       "domain": "MH",
       "execution_status": "success",
-      "execution_message": "MHSTAT should be \"NOT DONE\" when MHREASND is provided.",
+      "execution_message": "MHSTAT must be 'NOT DONE' when MHREASND is populated.",
       "number_errors": 2,
       "errors": [
         {
@@ -34,36 +44,19 @@
             "MHSTAT": "Not Done",
             "MHREASND": "Subject's Decision"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
-          "SEQ": 1,
+          "SEQ": 4,
           "USUBJID": "CDISC002",
           "value": {
             "MHSTAT": null,
             "MHREASND": "Subject's Decision"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "cm.xpt",
-      "Row": 6,
-      "Variable": "CMSTAT"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 7,
-      "Variable": "MHSTAT"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 8,
-      "Variable": "MHSTAT"
     }
   ]
 }

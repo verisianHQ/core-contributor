@@ -1,21 +1,23 @@
+# Variable: --STAT
+# Condition: --REASND ^= null
+# Rule: --STAT = 'NOT DONE'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The explanation for why requested information was not available.
-                  Used in conjunction with --STAT when value is "NOT DONE".
+              - Cited Guidance: Events[The explanation for why requested information was not 
+                  available. Used in conjunction with --STAT when value is "NOT 
+                  DONE".]|Interventions[The explanation for why requested 
+                  information was not available. Used in conjunction with --STAT
+                  when value is "NOT DONE".]|Findings[The explanation for why
+                  requested information was not available. Used in conjunction
+                  with --STAT when value is "NOT DONE".]
                 Document: Model v2.0
-                Section: Interventions
-              - Cited Guidance: The explanation for why requested information was not available.
-                  Used in conjunction with --STAT when value is "NOT DONE".
-                Document: Model v2.0
-                Section: Events
-              - Cited Guidance: The explanation for why requested information was not available.
-                  Used in conjunction with --STAT when value is "NOT DONE".
-                Document: Model v2.0
-                Section: Findings
+                Item: --REASND
+                Section: Interventions|Events|Findings
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0094
@@ -72,9 +74,6 @@ Authorities:
             Version: '1.0'
         Substandard: SDTM
         Version: '1.0'
-# Variable: --STAT
-# Condition: --REASND ^= null
-# Rule: --STAT = 'NOT DONE'
 Check:
   all:
     - name: --REASND
@@ -86,10 +85,10 @@ Core:
   Id: CORE-000225
   Status: Published
   Version: '1'
-Description: Raise an error when --REASND is provided and --STAT is not equal to "NOT DONE".
+Description: Raise an error when --REASND is populated, but --STAT is not equal to 'NOT DONE'.
 Executability: Fully Executable
 Outcome:
-  Message: --STAT should be "NOT DONE" when --REASND is provided.
+  Message: --STAT must be 'NOT DONE' when --REASND is populated.
   Output Variables:
     - --STAT
     - --REASND
