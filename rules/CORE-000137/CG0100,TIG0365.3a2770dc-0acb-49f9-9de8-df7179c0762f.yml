@@ -1,6 +1,7 @@
 # Variable: ECDOSE
 # Condition: ECOCCUR ^= 'N' and ECSTAT = null and ECDOSTXT = null
 # Rule: ECDOSE > 0
+# validated
 Authorities:
   - Organization: CDISC
     Standards:
@@ -174,7 +175,6 @@ Outcome:
     - ECSTAT
     - ECDOSTXT
     - ECDOSE
-    - ECSTDTC
 Rule Type: Record Data
 Scope:
   Classes:
