@@ -4,7 +4,7 @@
       "dataset": "ec.xpt",
       "domain": "EC",
       "execution_status": "success",
-      "execution_message": "ECTPTREF is present when ECELTM, ECTPTNUM, and ECTPT are not present.",
+      "execution_message": "ECTPTREF must not be present when ECELTM, ECTPTNUM, and ECTPT are not present.",
       "number_errors": 1,
       "errors": [
         {
