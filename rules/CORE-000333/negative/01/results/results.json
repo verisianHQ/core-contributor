@@ -12,7 +12,7 @@
       "dataset": "sv.xpt",
       "domain": "SV",
       "execution_status": "success",
-      "execution_message": "When SVUPDES is not populated or does not exist the VISIT must be equal to a VISIT present in TV dataset.",
+      "execution_message": "VISIT in the SV dataset must be equal to VISIT in the TV dataset when SVUPDES is not populated.",
       "number_errors": 2,
       "errors": [
         {
