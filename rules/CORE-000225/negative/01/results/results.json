@@ -4,7 +4,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMSTAT must be 'NOT DONE' when CMREASND is populated.",
+      "execution_message": "CMSTAT must be equal to 'NOT DONE' when CMREASND is populated.",
       "number_errors": 2,
       "errors": [
         {
@@ -33,7 +33,7 @@
       "dataset": "mh.xpt",
       "domain": "MH",
       "execution_status": "success",
-      "execution_message": "MHSTAT must be 'NOT DONE' when MHREASND is populated.",
+      "execution_message": "MHSTAT must be equal to 'NOT DONE' when MHREASND is populated.",
       "number_errors": 2,
       "errors": [
         {

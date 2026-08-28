@@ -89,7 +89,7 @@ Core:
 Description: Raise an error when --REASND is populated, but --STAT is not equal to 'NOT DONE'.
 Executability: Fully Executable
 Outcome:
-  Message: --STAT must be 'NOT DONE' when --REASND is populated.
+  Message: --STAT must be equal to 'NOT DONE' when --REASND is populated.
   Output Variables:
     - --STAT
     - --REASND
