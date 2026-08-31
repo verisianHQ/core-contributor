@@ -53,8 +53,8 @@ Core:
   Id: CORE-000470
   Status: Published
   Version: '1'
-Description: 'Raise an error when a record exists in TS where TSPARMCD = STYPE
-  and TSVAL = INTERVENTIONAL but TSVAL for TSPARMCD = INTTYPE is empty.'
+Description: Raise an error when a record exists in TS where TSPARMCD is equal to 'STYPE'
+  and TSVAL is equal to 'INTERVENTIONAL' but TSVAL for TSPARMCD is equal to 'INTTYPE' is not populated.
 Executability: Fully Executable
 Operations:
   - filter:
@@ -65,8 +65,8 @@ Operations:
     id: $STYPE_INTERVENTIONAL
     operator: record_count
 Outcome:
-  Message: 'A record exists in TS where TSPARMCD = STYPE and TSVAL =
-    INTERVENTIONAL but TSVAL for TSPARMCD = INTTYPE is empty.'
+  Message: TSVAL must not be null for a record when TSPARMCD is equal to 'INTTYPE' where TSPARMCD is 
+    equal to 'STYPE' with TSVAL equal to 'INTERVENTIONAL'.
   Output Variables:
     - TSGRPID
     - TSPARMCD
