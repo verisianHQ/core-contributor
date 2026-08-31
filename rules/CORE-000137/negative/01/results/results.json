@@ -4,7 +4,7 @@
       "dataset": "ec.xpt",
       "domain": "EC",
       "execution_status": "success",
-      "execution_message": "ECOCCUR is not 'N', ECSTAT and ECDOSTXT are both empty but ECDOSE is less than or equal to 0.",
+      "execution_message": "ECDOSE must not be less than or equal to 0 when ECOCCUR is not equal to 'N' and ECSTAT and ECDOSTXT are both not populated.",
       "number_errors": 4,
       "errors": [
         {

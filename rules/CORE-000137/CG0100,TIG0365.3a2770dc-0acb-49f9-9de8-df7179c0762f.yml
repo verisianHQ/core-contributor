@@ -168,8 +168,7 @@ Description: Raise an error when ECOCCUR is not equal to 'N', ECSTAT and
   ECDOSTXT are both empty but ECDOSE less than or equal to 0.
 Executability: Fully Executable
 Outcome:
-  Message: ECOCCUR is not 'N', ECSTAT and ECDOSTXT are both empty but ECDOSE is
-    less than or equal to 0.
+  Message: ECDOSE must not be less than or equal to 0 when ECOCCUR is not equal to 'N' and ECSTAT and ECDOSTXT are both not populated.
   Output Variables:
     - ECOCCUR
     - ECSTAT
