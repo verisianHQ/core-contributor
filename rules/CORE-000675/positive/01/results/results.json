@@ -4,127 +4,17 @@
       "dataset": "fa.xpt",
       "domain": "FA",
       "execution_status": "success",
-      "execution_message": "FASTAT is equal to 'NOT DONE', but  a result variable (FAORRES, FASTRESC and/or FASTRESN) is populated.",
-      "number_errors": 4,
-      "errors": [
-        {
-          "row": 1,
-          "SEQ": 2,
-          "USUBJID": "CDISC011",
-          "value": {
-            "FATESTCD": "WIDTH",
-            "FAORRES": null,
-            "FASTRESC": null,
-            "FASTRESN": null,
-            "FASTAT": "NOT DONE"
-          }
-        },
-        {
-          "row": 2,
-          "SEQ": 11,
-          "USUBJID": "CDISC011",
-          "value": {
-            "FATESTCD": "WIDTH",
-            "FAORRES": null,
-            "FASTRESC": null,
-            "FASTRESN": null,
-            "FASTAT": "NOT DONE"
-          }
-        },
-        {
-          "row": 3,
-          "SEQ": 6,
-          "USUBJID": "CDISC014",
-          "value": {
-            "FATESTCD": "WIDTH",
-            "FAORRES": null,
-            "FASTRESC": null,
-            "FASTRESN": null,
-            "FASTAT": "NOT DONE"
-          }
-        },
-        {
-          "row": 4,
-          "SEQ": 4,
-          "USUBJID": "CDISC017",
-          "value": {
-            "FATESTCD": "LENGTH",
-            "FAORRES": null,
-            "FASTRESC": null,
-            "FASTRESN": null,
-            "FASTAT": "NOT DONE"
-          }
-        }
-      ]
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     },
     {
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "LBSTAT is equal to 'NOT DONE', but  a result variable (LBORRES, LBSTRESC and/or LBSTRESN) is populated.",
-      "number_errors": 5,
-      "errors": [
-        {
-          "row": 1,
-          "SEQ": 1,
-          "USUBJID": "CDISC001",
-          "value": {
-            "LBTESTCD": "ALB",
-            "LBORRES": null,
-            "LBSTRESC": null,
-            "LBSTRESN": null,
-            "LBSTAT": "NOT DONE"
-          }
-        },
-        {
-          "row": 2,
-          "SEQ": 5,
-          "USUBJID": "CDISC001",
-          "value": {
-            "LBTESTCD": "BASO",
-            "LBORRES": null,
-            "LBSTRESC": null,
-            "LBSTRESN": null,
-            "LBSTAT": "NOT DONE"
-          }
-        },
-        {
-          "row": 3,
-          "SEQ": 38,
-          "USUBJID": "CDISC001",
-          "value": {
-            "LBTESTCD": "ALB",
-            "LBORRES": null,
-            "LBSTRESC": null,
-            "LBSTRESN": null,
-            "LBSTAT": "NOT DONE"
-          }
-        },
-        {
-          "row": 4,
-          "SEQ": 42,
-          "USUBJID": "CDISC001",
-          "value": {
-            "LBTESTCD": "BASO",
-            "LBORRES": null,
-            "LBSTRESC": null,
-            "LBSTRESN": null,
-            "LBSTAT": "NOT DONE"
-          }
-        },
-        {
-          "row": 5,
-          "SEQ": 73,
-          "USUBJID": "CDISC001",
-          "value": {
-            "LBTESTCD": "ALB",
-            "LBORRES": null,
-            "LBSTRESC": null,
-            "LBSTRESN": null,
-            "LBSTAT": "NOT DONE"
-          }
-        }
-      ]
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     },
     {
       "dataset": "ae.xpt",
