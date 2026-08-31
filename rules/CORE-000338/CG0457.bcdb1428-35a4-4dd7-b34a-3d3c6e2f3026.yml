@@ -1,15 +1,14 @@
 # Variable: TSVAL
 # Condition: TSPARMCD = 'ACTSUB'
 # Rule: TSVAL is integer and > 0
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Further information about the parameters is included below in
-                  Table 1. TSVAL may have controlled terminology depending on
-                  the value of TSPARMCD
+              - Cited Guidance: Further information about the parameters is included below in Table 1. TSVAL may have controlled terminology depending on the value of TSPARMCD
                 Document: IG v3.2
                 Item: Assumption 3
                 Section: 7.4|Appendix C1
@@ -22,9 +21,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Further information about the parameters is included below in
-                  Table 1. TSVAL may have controlled terminology depending on
-                  the value of TSPARMCD
+              - Cited Guidance: Further information about the parameters is included below in Table 1. TSVAL may have controlled terminology depending on the value of TSPARMCD
                 Document: IG v3.3
                 Item: Assumption 3
                 Section: '7.4'
@@ -39,6 +36,7 @@ Check:
     - name: TSPARMCD
       operator: equal_to
       value: ACTSUB
+      value_is_literal: true
     - name: TSVAL
       operator: not_matches_regex
       value: ^[1-9]\d*$
@@ -46,11 +44,13 @@ Core:
   Id: CORE-000338
   Status: Published
   Version: '1'
-Description: Raise an error when TSPARMCD = "ACTSUB" and the value provided in
-  TSVAL is not an integer greater than 0.
+Description: Raise an error when TSVAL is not a positive integer and TSPARMCD is equal to 'ACTSUB'.
 Executability: Fully Executable
 Outcome:
-  Message: TSPARMCD = ACTSUB but the value provided in TSVAL is not a positive integer.
+  Message: TSVAL must be a positive integer when TSPARMCD is equal to 'ACTSUB'.
+  Output Variables:
+    - TSPARMCD
+    - TSVAL  
 Rule Type: Record Data
 Scope:
   Classes:
