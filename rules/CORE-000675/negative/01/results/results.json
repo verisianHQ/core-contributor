@@ -1,0 +1,399 @@
+{
+  "datasets": [
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "FASTAT is equal to 'NOT DONE', but  a result variable (FAORRES, FASTRESC and/or FASTRESN) is populated.",
+      "number_errors": 9,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FATESTCD": "WIDTH",
+            "FAORRES": "12.7",
+            "FASTRESC": "12.7",
+            "FASTRESN": 12.7,
+            "FASTAT": "NOT DONE"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 8,
+          "USUBJID": "CDISC002",
+          "value": {
+            "FATESTCD": "WIDTH",
+            "FAORRES": "100",
+            "FASTRESC": null,
+            "FASTRESN": null,
+            "FASTAT": "NOT DONE"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 2,
+          "USUBJID": "CDISC003",
+          "value": {
+            "FATESTCD": "WIDTH",
+            "FAORRES": null,
+            "FASTRESC": null,
+            "FASTRESN": 75.0,
+            "FASTAT": "NOT DONE"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 14,
+          "USUBJID": "CDISC005",
+          "value": {
+            "FATESTCD": "WIDTH",
+            "FAORRES": null,
+            "FASTRESC": "100",
+            "FASTRESN": null,
+            "FASTAT": "NOT DONE"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": 20,
+          "USUBJID": "CDISC005",
+          "value": {
+            "FATESTCD": "WIDTH",
+            "FAORRES": null,
+            "FASTRESC": null,
+            "FASTRESN": null,
+            "FASTAT": "NOT DONE"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": 2,
+          "USUBJID": "CDISC011",
+          "value": {
+            "FATESTCD": "WIDTH",
+            "FAORRES": "50",
+            "FASTRESC": null,
+            "FASTRESN": null,
+            "FASTAT": "NOT DONE"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": 11,
+          "USUBJID": "CDISC011",
+          "value": {
+            "FATESTCD": "WIDTH",
+            "FAORRES": null,
+            "FASTRESC": "30",
+            "FASTRESN": null,
+            "FASTAT": "NOT DONE"
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": 6,
+          "USUBJID": "CDISC014",
+          "value": {
+            "FATESTCD": "WIDTH",
+            "FAORRES": null,
+            "FASTRESC": null,
+            "FASTRESN": 76.0,
+            "FASTAT": "NOT DONE"
+          },
+          "validated": false
+        },
+        {
+          "row": 9,
+          "SEQ": 4,
+          "USUBJID": "CDISC017",
+          "value": {
+            "FATESTCD": "LENGTH",
+            "FAORRES": null,
+            "FASTRESC": null,
+            "FASTRESN": null,
+            "FASTAT": "NOT DONE"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBSTAT is equal to 'NOT DONE', but  a result variable (LBORRES, LBSTRESC and/or LBSTRESN) is populated.",
+      "number_errors": 10,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBORRES": "3.9",
+            "LBSTRESC": "39",
+            "LBSTRESN": 39.0,
+            "LBSTAT": "NOT DONE"
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 5,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "BASO",
+            "LBORRES": null,
+            "LBSTRESC": null,
+            "LBSTRESN": null,
+            "LBSTAT": "NOT DONE"
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 38,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBORRES": "3.6",
+            "LBSTRESC": null,
+            "LBSTRESN": null,
+            "LBSTAT": "NOT DONE"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 42,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "BASO",
+            "LBORRES": null,
+            "LBSTRESC": "0.04",
+            "LBSTRESN": null,
+            "LBSTAT": "NOT DONE"
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": 73,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBORRES": null,
+            "LBSTRESC": null,
+            "LBSTRESN": 35.0,
+            "LBSTAT": "NOT DONE"
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": 77,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "BASO",
+            "LBORRES": "0.05",
+            "LBSTRESC": "0.05",
+            "LBSTRESN": 0.05,
+            "LBSTAT": "NOT DONE"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": 103,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBORRES": null,
+            "LBSTRESC": null,
+            "LBSTRESN": 37.0,
+            "LBSTAT": "NOT DONE"
+          },
+          "validated": false
+        },
+        {
+          "row": 9,
+          "SEQ": 122,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "BASO",
+            "LBORRES": null,
+            "LBSTRESC": null,
+            "LBSTRESN": 0.03,
+            "LBSTAT": "NOT DONE"
+          },
+          "validated": false
+        },
+        {
+          "row": 10,
+          "SEQ": 148,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBORRES": "3.9",
+            "LBSTRESC": null,
+            "LBSTRESN": null,
+            "LBSTAT": "NOT DONE"
+          },
+          "validated": false
+        },
+        {
+          "row": 12,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBORRES": null,
+            "LBSTRESC": null,
+            "LBSTRESN": null,
+            "LBSTAT": "NOT DONE"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000675, dataset=AE",
+      "number_errors": 0,
+      "errors": []
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "FAORRES": 12.7,
+        "FASTRESC": 12.7,
+        "FASTRESN": 12.7,
+        "FASTAT": "NOT DONE"
+      }
+    },
+    {
+      "value": {
+        "FAORRES": 100,
+        "FASTRESC": null,
+        "FASTRESN": null,
+        "FASTAT": "NOT DONE"
+      }
+    },
+    {
+      "value": {
+        "FAORRES": null,
+        "FASTRESC": null,
+        "FASTRESN": 75,
+        "FASTAT": "NOT DONE"
+      }
+    },
+    {
+      "value": {
+        "FAORRES": null,
+        "FASTRESC": 100,
+        "FASTRESN": null,
+        "FASTAT": "NOT DONE"
+      }
+    },
+    {
+      "value": {
+        "FAORRES": 50,
+        "FASTRESC": null,
+        "FASTRESN": null,
+        "FASTAT": "NOT DONE"
+      }
+    },
+    {
+      "value": {
+        "FAORRES": null,
+        "FASTRESC": 30,
+        "FASTRESN": null,
+        "FASTAT": "NOT DONE"
+      }
+    },
+    {
+      "value": {
+        "FAORRES": null,
+        "FASTRESC": null,
+        "FASTRESN": 76,
+        "FASTAT": "NOT DONE"
+      }
+    },
+    {
+      "value": {
+        "LBORRES": 3.9,
+        "LBSTRESC": 39,
+        "LBSTRESN": 39,
+        "LBSTAT": "NOT DONE"
+      }
+    },
+    {
+      "value": {
+        "LBORRES": 3.6,
+        "LBSTRESC": null,
+        "LBSTRESN": null,
+        "LBSTAT": "NOT DONE"
+      }
+    },
+    {
+      "value": {
+        "LBORRES": null,
+        "LBSTRESC": 0.04,
+        "LBSTRESN": null,
+        "LBSTAT": "NOT DONE"
+      }
+    },
+    {
+      "value": {
+        "LBORRES": null,
+        "LBSTRESC": null,
+        "LBSTRESN": 35,
+        "LBSTAT": "NOT DONE"
+      }
+    },
+    {
+      "value": {
+        "LBORRES": 0.05,
+        "LBSTRESC": 0.05,
+        "LBSTRESN": 0.05,
+        "LBSTAT": "NOT DONE"
+      }
+    },
+    {
+      "value": {
+        "LBORRES": null,
+        "LBSTRESC": null,
+        "LBSTRESN": 37,
+        "LBSTAT": "NOT DONE"
+      }
+    },
+    {
+      "value": {
+        "LBORRES": null,
+        "LBSTRESC": null,
+        "LBSTRESN": 0.03,
+        "LBSTAT": "NOT DONE"
+      }
+    },
+    {
+      "value": {
+        "LBORRES": 3.9,
+        "LBSTRESC": null,
+        "LBSTRESN": null,
+        "LBSTAT": "NOT DONE"
+      }
+    }
+  ]
+}
