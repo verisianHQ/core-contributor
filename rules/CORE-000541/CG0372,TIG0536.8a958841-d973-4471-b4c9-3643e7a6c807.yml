@@ -83,9 +83,9 @@ Core:
   Id: CORE-000541
   Status: Published
   Version: '1'
-Description: Raise an error when IETESTCD is longer than 8 characters or
-  contains characters besides letters, numbers, and underscores, or starts with
-  a number.
+Description: Part B - Raise an error when IETESTCD is longer than 8 characters
+  or contains characters besides letters, numbers, and underscores, or starts
+  with a number.
 Executability: Fully Executable
 Outcome:
   Message: IETESTCD must be shorter than 9 characters and must not contain 
