@@ -126,9 +126,9 @@ Core:
   Id: CORE-000324
   Status: Published
   Version: '1'
-Description: Raise an error when --ENRTPT is not equal to 'BEFORE', 
- 'COINCIDENT', 'ONGOING', or 'UNKNOWN' and --ENTPT is equal to the date of
- collection or assessment.
+Description: Raise an error when --ENTPT is equal to the date of collection or
+ assessment but --ENRTPT is not equal to 'BEFORE', 'COINCIDENT', 'ONGOING', or
+ 'UNKNOWN'.
 Executability: Fully Executable
 Outcome:
   Message: --ENRTPT must be equal to 'BEFORE', 'COINCIDENT', 'ONGOING', or
