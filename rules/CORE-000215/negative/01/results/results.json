@@ -4,7 +4,7 @@
       "dataset": "ds.xpt",
       "domain": "DS",
       "execution_status": "success",
-      "execution_message": "More than 1 record exists per subject per EPOCH with DSCAT = 'DISPOSITION EVENT' and DSSCAT = 'STUDY TREATMENT'.",
+      "execution_message": "More than 1 record exists per subject per EPOCH with DSCAT is equal to 'DISPOSITION EVENT' and DSSCAT is equal to 'STUDY TREATMENT'.",
       "number_errors": 2,
       "errors": [
         {
@@ -12,22 +12,22 @@
           "SEQ": 1,
           "USUBJID": "S001",
           "value": {
-            "USUBJID": "S001",
             "DSCAT": "DISPOSITION EVENT",
-            "DSSCAT": "STUDY TREATMENT"
+            "DSSCAT": "STUDY TREATMENT",
+            "EPOCH": "TREATMENT"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": 2,
           "USUBJID": "S001",
           "value": {
-            "USUBJID": "S001",
             "DSCAT": "DISPOSITION EVENT",
-            "DSSCAT": "STUDY TREATMENT"
+            "DSSCAT": "STUDY TREATMENT",
+            "EPOCH": "TREATMENT"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

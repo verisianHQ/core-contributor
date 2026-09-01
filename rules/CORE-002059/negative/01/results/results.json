@@ -1,0 +1,26 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVALNF for TSPARMCD = 'INDIC' is not equal to 'NA' when TSPARMCD = 'HLTSUBJI' and TSVAL = 'Y'.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 18,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSGRPID": null,
+            "TSPARMCD": "INDIC",
+            "TSVAL": "Alzheimer's Disease (Disorder)",
+            "TSVALNF": "AD",
+            "$HLTSUBJI_Y": 1
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

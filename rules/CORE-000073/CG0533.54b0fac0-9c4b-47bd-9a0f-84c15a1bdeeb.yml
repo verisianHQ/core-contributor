@@ -1,6 +1,7 @@
 # Variable: RPATHCD
 # Condition: 
 # Rule: RPATHCD not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -13,8 +14,9 @@ Authorities:
               Version: '1'
             Version: '2.0'
             Citations:
-              - Cited Guidance: Not in clinical trials.
+              - Cited Guidance: Not in human clinical trials.
                 Document: Model v2.0
+                Item: RPATHCD
                 Section: Demographics
       - Name: SDTMIG
         Version: '3.3'
@@ -27,6 +29,7 @@ Authorities:
             Citations:
               - Cited Guidance: Not to be used with human clinical trials.
                 Document: Model v1.7
+                Item: RPATHCD
                 Section: Table 2.2.6.1
 Check:
   all:
@@ -39,7 +42,7 @@ Core:
 Description: Raise an error when RPATHCD is present.
 Executability: Fully Executable
 Outcome:
-  Message: RPATHCD is present.
+  Message: RPATHCD must not be present.
   Output Variables:
     - RPATHCD
 Rule Type: Record Data

@@ -1,6 +1,7 @@
 # Variable: --ENDY
 # Condition: --ENDTC and DM.RFSTDTC both contain complete values in their date portion
 # Rule: --ENDY is properly calculated per study day algorithm
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -100,20 +101,21 @@ Authorities:
         Version: '1.0'
 Check:
   all:
-    #   - name: --ENDY
-    #     operator: non_empty
     - name: --ENDTC
       operator: is_complete_date
     - name: RFSTDTC
       operator: is_complete_date
-    - name: --ENDY # checking failure criteria
+    - name: --ENDY
       operator: not_equal_to
-      value: $val_endy # this is created in the operations statement that follows
+      value: $val_endy
 Core:
   Id: CORE-000553
   Status: Published
   Version: '1'
-Description: Study day must be calculated using the algorithm detailed in the SDTMIG.
+Description: Raise an error when Study Day of End of Observation (--ENDY) is 
+  not correctly calculated as per the study day algorithm as a non-zero 
+  integer value when the date portion of --ENDTC is complete and the date
+  portion of RFSTDTC is complete.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
@@ -124,7 +126,8 @@ Operations:
     name: --ENDTC
     operator: dy
 Outcome:
-  Message: --ENDY is not properly calculated per study day algorithm
+  Message: --ENDY is not calculated correctly even though the date portion 
+    of --ENDTC is complete and the date portion of RFSTDTC is complete.
   Output Variables:
     - --ENDY
     - --ENDTC

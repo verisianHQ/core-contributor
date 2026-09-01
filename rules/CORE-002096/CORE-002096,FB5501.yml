@@ -1,0 +1,72 @@
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Trial participants should self-report race and ethnicity and they should not be assigned by the study team.
+                Document: FDA
+                Section: FDAB055
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5501
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Trial participants should self-report race and ethnicity and they should not be assigned by the study team.
+                Document: FDA
+                Section: FDAB055
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5501
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Trial participants should self-report race and ethnicity and they should not be assigned by the study team.
+                Document: FDA
+                Section: FDAB055
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5501
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: define_variable_origin_type
+      operator: not_equal_to
+      value: Collected
+    - any:
+        - name: variable_name
+          operator: equal_to
+          value: RACE
+        - name: variable_name
+          operator: equal_to
+          value: ETHNIC
+Core:
+  Id: CORE-002096
+  Status: Published
+  Version: '1'
+Description: Raise an error when RACE or ETHNIC do not have origin 'Collected' in the define-xml.
+Executability: Fully Executable
+Outcome:
+  Message: RACE or ETHNIC do not have origin 'Collected' in the define-xml.
+  Output Variables:
+    - variable_name
+    - define_variable_origin_type
+Rule Type: Variable Metadata Check against Define XML
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

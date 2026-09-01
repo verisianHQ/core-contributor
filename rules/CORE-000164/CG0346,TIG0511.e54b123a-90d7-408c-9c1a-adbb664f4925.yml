@@ -1,6 +1,7 @@
 # Variable: --TERM
-# Condition: 
+# Condition:
 # Rule: --TERM ^= 'MULTIPLE'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -83,10 +84,10 @@ Core:
   Id: CORE-000164
   Status: Published
   Version: '1'
-Description: Raise an error when --TERM = 'MULTIPLE'
+Description: Raise an error when --TERM is equal to 'MULTIPLE'.
 Executability: Fully Executable
 Outcome:
-  Message: --TERM is equal to 'MULTIPLE'
+  Message: --TERM must not be equal to 'MULTIPLE'.
   Output Variables:
     - --TERM
 Rule Type: Record Data

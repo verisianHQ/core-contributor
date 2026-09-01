@@ -1,0 +1,53 @@
+{
+  "datasets": [
+    {
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "execution_status": "success",
+      "execution_message": "CESTDY is greater than CEDY.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CESTDY": 3.0,
+            "CEDY": 1.0
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CESTDY": 2.0,
+            "CEDY": -10.0
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 5,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CESTDY": 15.0,
+            "CEDY": 0.0
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 14,
+          "USUBJID": "CDISC003",
+          "value": {
+            "CESTDY": 48.0,
+            "CEDY": 47.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

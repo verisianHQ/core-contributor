@@ -1,4 +1,113 @@
 {
-  "error": "No result - either the rule or test case data unit-test-coreid-CG0112-negative.xlsx is broken",
-  "exception": "cannot unpack non-iterable NoneType object"
+  "datasets": [
+    {
+      "dataset": "ag.xpt",
+      "domain": "AG",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMDOSTXT value is numeric.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "ABC-0002",
+          "value": {
+            "CMTRT": "ASPIRIN",
+            "CMDOSTXT": "100"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "ABC-0003",
+          "value": {
+            "CMTRT": "ASPIRIN",
+            "CMDOSTXT": "2.5"
+          },
+          "validated": true
+        },
+        {
+          "row": 7,
+          "SEQ": 1,
+          "USUBJID": "ABC-0005",
+          "value": {
+            "CMTRT": "ASPIRIN",
+            "CMDOSTXT": "-5"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "success",
+      "execution_message": "EXDOSTXT value is numeric.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "ABC2001",
+          "value": {
+            "EXTRT": "DRUG Z",
+            "EXDOSTXT": "500"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ml.xpt",
+      "domain": "ML",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "pr.xpt",
+      "domain": "PR",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "su.xpt",
+      "domain": "SU",
+      "execution_status": "success",
+      "execution_message": "SUDOSTXT value is numeric.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "1234005",
+          "value": {
+            "SUTRT": "COFFEE",
+            "SUDOSTXT": "3"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
 }

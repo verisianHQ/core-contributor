@@ -1,14 +1,15 @@
 # Variable: --STRESC
 # Condition: --RESCAT ^= null
 # Rule: --STRESC ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: A grouping or classification of the results of an assessment.
-                  The result is in --STRESC.
+              - Cited Guidance: '--RESCAT: A grouping or classification of 
+                  the results of an assessment. The result is in --STRESC.'
                 Document: Model v2.0
                 Item: --RESCAT
                 Section: Findings
@@ -71,10 +72,12 @@ Core:
   Id: CORE-000101
   Status: Published
   Version: '1'
-Description: Raise an error when --RESCAT is not empty, but --STRESC is empty
+Description: Raise an error when --RESCAT is populated but 
+  --STRESC is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: Missing --STRESC value, when --RESCAT value is populated.
+  Message: --RESCAT value is populated but --STRESC is not
+    populated.
   Output Variables:
     - --RESCAT
     - --STRESC
