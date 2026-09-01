@@ -1,0 +1,79 @@
+{
+  "datasets": [
+    {
+      "dataset": "eg.xpt",
+      "domain": "EG",
+      "execution_status": "success",
+      "execution_message": "EGREPNUM must not be null and must be unique per subject per test per timing variables.",
+      "number_errors": 6,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "TEST123",
+          "value": {
+            "USUBJID": "TEST123",
+            "EGTESTCD": "QTCFAG",
+            "EGREPNUM": 1.0
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "TEST123",
+          "value": {
+            "USUBJID": "TEST123",
+            "EGTESTCD": "QTCFAG",
+            "EGREPNUM": 1.0
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "TEST123",
+          "value": {
+            "USUBJID": "TEST123",
+            "EGTESTCD": "QTCFAG",
+            "EGREPNUM": 1.0
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "TEST123",
+          "value": {
+            "USUBJID": "TEST123",
+            "EGTESTCD": "QTCFAG",
+            "EGREPNUM": null
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "TEST123",
+          "value": {
+            "USUBJID": "TEST123",
+            "EGTESTCD": "QTCFAG",
+            "EGREPNUM": null
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "TEST123",
+          "value": {
+            "USUBJID": "TEST123",
+            "EGTESTCD": "QTCFAG",
+            "EGREPNUM": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

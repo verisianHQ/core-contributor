@@ -1,6 +1,7 @@
 # Variable: --PTCD
 # Condition: --PTCD ^= null
 # Rule: --DECOD ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -70,10 +71,10 @@ Core:
   Id: CORE-000267
   Status: Published
   Version: '1'
-Description: Raise an error when --DECOD is not populated but --PTCD is populated
+Description: Raise an error when --PTCD is populated and --DECOD is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: --DECOD should be populated when --PTCD is populated
+  Message: --DECOD must be populated when --PTCD is populated.
   Output Variables:
     - --TERM
     - --PTCD
