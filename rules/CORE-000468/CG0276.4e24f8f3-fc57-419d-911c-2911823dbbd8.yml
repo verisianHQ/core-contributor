@@ -1,7 +1,7 @@
 # Variable: TSVAL
 # Condition: TSPARMCD = 'TRT' and record exists where TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL'
 # Rule: TSVAL ^= null
-# Verified
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -73,10 +73,7 @@ Outcome:
     - TSVAL
     - TSGRPID
     - $STYPE_INTERVENTIONAL
-  
-    
 Rule Type: Record Data
-
 Scope:
   Classes:
     Include:
