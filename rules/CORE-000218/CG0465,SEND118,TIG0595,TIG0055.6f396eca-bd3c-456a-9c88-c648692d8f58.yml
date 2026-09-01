@@ -1,6 +1,7 @@
 # Variable: IDVARVAL
 # Condition: IDVAR = null
 # Rule: IDVARVAL = null
+# Verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -178,10 +179,10 @@ Core:
   Id: CORE-000218
   Status: Published
   Version: '1'
-Description: Raise an error when IDVAR is empty and IDVARVAL is not empty
+Description: Raise an error when IDVAR is not populated but IDVARVAL is populated.
 Executability: Fully Executable
 Outcome:
-  Message: IDVAR is empty but IDVARVAL is not empty
+  Message: IDVARVAL must not be populated when IDVAR is not populated.
   Output Variables:
     - IDVAR
     - IDVARVAL

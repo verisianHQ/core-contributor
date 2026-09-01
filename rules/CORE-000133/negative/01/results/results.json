@@ -4,7 +4,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "Missing value for LBSTRESC, when LBSTRESU is provided",
+      "execution_message": "LBSTRESU is populated but LBSTRESC is not populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -15,7 +15,7 @@
             "LBSTRESU": "mg/L",
             "LBSTRESC": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

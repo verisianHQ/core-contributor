@@ -12,7 +12,7 @@
       "dataset": "ds.xpt",
       "domain": "DS",
       "execution_status": "success",
-      "execution_message": "The earliest disposition date for \"INFORMED CONSENT OBTAINED\" is not equal to DM.RFICDTC",
+      "execution_message": "DSDECOD is equal to 'INFORMED CONSENT OBTAINED' but RFICDTC in the DM dataset is not equal to the earliest DSSTDTC.",
       "number_errors": 1,
       "errors": [
         {
@@ -20,21 +20,14 @@
           "SEQ": 1,
           "USUBJID": "015246-300-0004-00002",
           "value": {
-            "RFICDTC": "2018-04-20",
-            "$min_ds_dsstdtc": "2018-04-17",
             "DSDECOD": "INFORMED CONSENT OBTAINED",
-            "DSSTDTC": "2018-04-17"
+            "RFICDTC": "2018-04-20",
+            "DSSTDTC": "2018-04-17",
+            "$min_ds_dsstdtc": "2018-04-17"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 1,
-      "Variable": "RFICDTC"
     }
   ]
 }
