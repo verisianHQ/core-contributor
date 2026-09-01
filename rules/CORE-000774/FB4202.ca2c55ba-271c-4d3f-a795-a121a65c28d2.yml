@@ -160,8 +160,8 @@ Core:
   Id: CORE-000774
   Status: Published
   Version: '1'
-Description: When a test is not done (--STAT = NOT DONE), the Reason Not Done
-  (--REASND) should be populated.
+Description: Test is not done (--STAT = NOT DONE) and the Reason Not Done (--REASND)
+  is populated.
 Executability: Partially Executable - Possible Overreporting
 Outcome:
   Message: --STAT = NOT DONE, but --REASND is missing.
