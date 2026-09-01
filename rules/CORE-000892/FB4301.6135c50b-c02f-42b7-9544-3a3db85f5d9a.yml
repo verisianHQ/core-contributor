@@ -186,8 +186,8 @@ Core:
   Id: CORE-000892
   Status: Published
   Version: '1'
-Description: When end timepoint (--ENDTC, --ENRF or --ENRTPT) is populated,
-  related start timepoint (--STDTC, --STRF or --STRTPT) should also be populated.
+Description: End timepoint (--ENDTC, --ENRF or --ENRTPT) is populated and 
+  related start timepoint (--STDTC, --STRF or --STRTPT) is also populated.
 Executability: Fully Executable
 Outcome:
   Message: End timepoint is populated but start timepoint is missing.
