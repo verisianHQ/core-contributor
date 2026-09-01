@@ -57,10 +57,11 @@ Core:
   Id: CORE-000079
   Status: Published
   Version: '1'
-Description: Raise an error when --LOC is not present and --LAT is present.
+Description: Raise an error when --LOC is not present but --LAT is present in
+  the dataset.
 Executability: Fully Executable
 Outcome:
-  Message: --LAT must be present when --LOC is not present in a dataset.
+  Message: --LAT must not be present in the dataset when --LOC is not present.
   Output Variables:
     - --LOC
     - --LAT
