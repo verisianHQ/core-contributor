@@ -1,3 +1,7 @@
+# variable: --REASND
+# condition: --STAT = 'NOT DONE'
+# rule: --REASND ^= null
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -84,7 +88,7 @@ Authorities:
               Id: FB4202
               Version: '1'
             Version: '1.5'
-        Version: 3.1.1
+        Version: '3.1.1'
       - Name: SENDIG-GENETOX
         References:
           - Citations:
