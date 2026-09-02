@@ -90,8 +90,8 @@ Core:
   Id: CORE-000104
   Status: Published
   Version: '1'
-Description: Raise an error when --SCAT exists in a dataset, but --CAT does not
-  exist.
+Description: Part A - Raise an error when --SCAT exists in a dataset, but --CAT
+  does not exist.
 Executability: Fully Executable
 Outcome:
   Message: --CAT must be present when --SCAT exists in a dataset.
