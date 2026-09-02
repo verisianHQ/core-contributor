@@ -1,6 +1,7 @@
-# Variable: --LLT, --LLTCD
+# Variable: --LLTCD AND --LLT
 # Condition:
-# Rule: --LLTCD and --LLT have a one-to-one relationship 
+# Rule: --LLTCD and --LLT do not have a one-to-one relationship
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -52,17 +53,13 @@ Authorities:
 Check:
   all:
     - name: --LLT
-      operator: exists
-    - name: --LLTCD
-      operator: exists
-    - name: --LLT
       operator: is_not_unique_relationship
       value: --LLTCD
 Core:
   Id: CORE-000706
   Status: Published
   Version: '1'
-Description: --LLTCD and --LLT should have a one-to-one relationship.
+Description: Raise an error when --LLTCD and --LLT do not have a one-to-one relationship.
 Executability: Fully Executable
 Outcome:
   Message: --LLTCD and --LLT do not have a one-to-one relationship.
