@@ -1,15 +1,16 @@
 # Variable: 
 # Condition: RACE = MULTIPLE
 # Rule: Multiple SUPPDM.QNAM records exist for the subject
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: If multiple races are collected then the value of RACE should be
-                  'MULTIPLE' and the additional information will be included in
-                  the Supplemental Qualifiers dataset.
+              - Cited Guidance: If multiple races are collected then the value
+                  of RACE should be 'MULTIPLE' and the additional information
+                  will be included in the Supplemental Qualifiers dataset.
                 Document: IG v3.3
                 Item: Assumption 6
                 Section: '5.2'
@@ -22,9 +23,9 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: If multiple races are collected, then the value of RACE should
-                  be “MULTIPLE” and the additional information will be included
-                  in the Supplemental Qualifiers dataset.
+              - Cited Guidance: If multiple races are collected, then the value
+                  of RACE should be 'MULTIPLE' and the additional information
+                  will be included in the Supplemental Qualifiers dataset.
                 Document: IG v3.4
                 Item: Assumption 6
                 Section: '5.2'
@@ -56,7 +57,8 @@ Operations:
     name: RACE
     operator: record_count
 Outcome:
-  Message: RACE in DM equals 'MULTIPLE' but multiple races are not collected in SUPPDM.
+  Message: RACE in DM equals 'MULTIPLE' but multiple races are not collected in
+    SUPPDM.
   Output Variables:
     - $multiple_race
 Rule Type: Domain Presence Check
