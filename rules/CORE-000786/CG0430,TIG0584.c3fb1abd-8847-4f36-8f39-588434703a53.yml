@@ -90,8 +90,8 @@ Core:
   Id: CORE-000786
   Status: Published
   Version: '1'
-Description: Raise an error when IESCAT exists in a dataset, but IECAT does not
-  exist.
+Description: Part B - Raise an error when IESCAT exists in a dataset, but IECAT
+  does not exist.
 Executability: Fully Executable
 Outcome:
   Message: IECAT must be present when IESCAT exists in a dataset.
