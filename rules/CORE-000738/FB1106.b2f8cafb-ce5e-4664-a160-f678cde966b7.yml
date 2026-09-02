@@ -79,7 +79,7 @@ Description: At least one Trial Summary Parameter for Current Treatment or
   Therapy (TSPARMCD = 'CURTRT') is included in the TS dataset with TSVAL
   populated when treatment is added on to existing treatments (TSPARMCD =
   'ADDON').
-Executability: Partially Executable
+Executability: Partially Executable - Possible Overreporting
 Grouping_Variables:
   - TSGRPID
 Operations:
