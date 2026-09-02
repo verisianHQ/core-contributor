@@ -12,6 +12,7 @@
           "SEQ": 735,
           "USUBJID": "CDISC-TEST-046",
           "value": {
+            "AETERM": "HEADACHE",
             "AESOC": "Nervous system disorders",
             "AESOCCD": 10029205.0
           },
@@ -22,6 +23,7 @@
           "SEQ": 782,
           "USUBJID": "CDISC-TEST-049",
           "value": {
+            "AETERM": "HEADACHE",
             "AESOC": "Nervous system disorders",
             "AESOCCD": 10029206.0
           },
@@ -32,6 +34,7 @@
           "SEQ": 783,
           "USUBJID": "CDISC-TEST-049",
           "value": {
+            "AETERM": "HEADACHE",
             "AESOC": "Nervous system disorders",
             "AESOCCD": null
           },
@@ -42,6 +45,7 @@
           "SEQ": 839,
           "USUBJID": "CDISC-TEST-052",
           "value": {
+            "AETERM": "HEADACHE",
             "AESOC": "Nervous system disorders",
             "AESOCCD": 10029205.0
           },
@@ -52,6 +56,7 @@
           "SEQ": 840,
           "USUBJID": "CDISC-TEST-052",
           "value": {
+            "AETERM": "HYPERTENSION",
             "AESOC": "Vascular disorders",
             "AESOCCD": 10047065.0
           },
@@ -62,6 +67,7 @@
           "SEQ": 843,
           "USUBJID": "CDISC-TEST-052",
           "value": {
+            "AETERM": "HYPERTENSION",
             "AESOC": null,
             "AESOCCD": 10047065.0
           },
@@ -80,15 +86,10 @@
     {
       "dataset": "mh.xpt",
       "domain": "MH",
-      "execution_status": "execution_error",
-      "execution_message": "SQL operator execution error",
-      "number_errors": 1,
-      "errors": [
-        {
-          "error": "SQL error in is_not_unique_relationship operator",
-          "message": "Column 'MHSOC' not found in table 'MH'"
-        }
-      ]
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     }
   ]
 }

@@ -64,6 +64,7 @@ Executability: Fully Executable
 Outcome:
   Message: --SOCCD and --SOC do not have a one-to-one relationship.
   Output Variables:
+    - --TERM
     - --SOC
     - --SOCCD
 Rule Type: Record Data
