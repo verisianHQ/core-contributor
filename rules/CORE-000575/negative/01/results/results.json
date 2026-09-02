@@ -4,7 +4,7 @@
       "dataset": "ec.xpt",
       "domain": "EC",
       "execution_status": "success",
-      "execution_message": "No timing variable is provided",
+      "execution_message": "At least one timing variable must exist.",
       "number_errors": 1,
       "errors": [
         {
@@ -73,7 +73,7 @@
               "ECDETECT"
             ]
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -81,7 +81,7 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "No timing variable is provided",
+      "execution_message": "At least one timing variable must exist.",
       "number_errors": 1,
       "errors": [
         {
@@ -152,7 +152,7 @@
               "AEDETECT"
             ]
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -160,7 +160,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "No timing variable is provided",
+      "execution_message": "At least one timing variable must exist.",
       "number_errors": 1,
       "errors": [
         {
@@ -248,7 +248,7 @@
               "LBDETECT"
             ]
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

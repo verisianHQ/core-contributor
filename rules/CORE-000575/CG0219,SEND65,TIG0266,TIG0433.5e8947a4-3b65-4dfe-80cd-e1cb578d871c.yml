@@ -1,3 +1,7 @@
+# Variable: GEN
+# Condition:
+# Rule: At least one timing variable present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -214,8 +218,8 @@ Core:
   Id: CORE-000575
   Status: Published
   Version: '1'
-Description: There must be at least one timing variable for any of the domains
-  based on the three general observation classes
+Description: Raise an error when at least one timing variable for any of the domains
+  based on the three general observation classes does not exist.
 Executability: Partially Executable - Possible Underreporting
 Operations:
   - id: $dataset_variables
@@ -225,7 +229,7 @@ Operations:
     key_value: Timing
     operator: get_model_filtered_variables
 Outcome:
-  Message: No timing variable is provided
+  Message: At least one timing variable must exist.
   Output Variables:
     - $dataset_variables
     - $timing_variables
