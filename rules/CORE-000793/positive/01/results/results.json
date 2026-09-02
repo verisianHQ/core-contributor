@@ -1,4 +1,20 @@
 {
-  "error": "Error executing engine validation.",
-  "exception": "Error converting column 'CMDY' in table 'cm.xpt' to numeric: could not convert string to float: '2013-01-01'"
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
 }

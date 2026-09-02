@@ -4,79 +4,20 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
-    },
-    {
-      "dataset": "ce.xpt",
-      "domain": "CE",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
-    },
-    {
-      "dataset": "lb.xpt",
-      "domain": "LB",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
-    },
-    {
-      "dataset": "fa.xpt",
-      "domain": "FA",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
-    },
-    {
-      "dataset": "se.xpt",
-      "domain": "SE",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
-    },
-    {
-      "dataset": "sv.xpt",
-      "domain": "SV",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
-    },
-    {
-      "dataset": "sm.xpt",
-      "domain": "SM",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
-    },
-    {
-      "dataset": "dm.xpt",
-      "domain": "DM",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
-    }
-  ],
-  "unmatched_validation": [
-    {
-      "value": {
-        "CMENDTC": "2013-04-29",
-        "CMDY": null
-      }
-    },
-    {
-      "value": {
-        "CMENDTC": "2013-05-14",
-        "CMDY": null
-      }
+      "execution_message": "Collection study day (CMDY) is missing when date/time of collection (CMDTC) is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "CMDTC": "2012-08",
+            "CMDY": null
+          },
+          "validated": true
+        }
+      ]
     }
   ]
 }
