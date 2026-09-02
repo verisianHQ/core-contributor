@@ -1,6 +1,7 @@
 # Variable: DTHDTC
 # Condition: DTHFL = Y
 # Rule: DTHDTC ^= Null
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -59,7 +60,7 @@ Description: When Death flag (DTHFL) in the DM dataset is populated as 'Y' then
   corresponding subject.
 Executability: Fully Executable
 Outcome:
-  Message: DTHFL is "Y", but DTHDTC is not populated in the DM dataset.
+  Message: DTHFL is 'Y', but DTHDTC is not populated in the DM dataset.
   Output Variables:
     - DTHDTC
     - DTHFL
