@@ -98,7 +98,7 @@ _Don't forget: whenever you type a command, you should be in the core-contributo
    local branch and not from main. If you would then want to merge changes from your new local branch, it will merge with the first local branch and not with the main branch. Therefore, ensure to be on the main
    branch first prior to creating a local branch (git checkout main). Once the local branch exists, you can checkout out to it from any branch._
    
-3) Switch to your new branch: \
+4) Switch to your new branch: \
        `git checkout <your-branch-name>`
 
 **Set-up Rule Folder.**
