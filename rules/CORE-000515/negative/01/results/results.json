@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "ACTARMCD in the DM dataset must be equal to 'SCRNFAIL', 'NOTASSGN' or 'NOTTRT' when there are no records for the same subject in the DS dataset.",
+      "execution_message": "At least one DS record must be present for a subject when ACTARMCD in the DM dataset is not equal to 'SCRNFAIL', 'NOTASSGN' or 'NOTTRT'.",
       "number_errors": 2,
       "errors": [
         {
