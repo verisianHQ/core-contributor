@@ -4,15 +4,15 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "RACE in DM equals 'MULTIPLE' but multiple races are not collected in SUPPDM.",
+      "execution_message": "Multiple SUPPDM.QNAM records must exist for the subject if RACE in DM equals 'MULTIPLE'.",
       "number_errors": 1,
       "errors": [
         {
-          "row": 1,
+          "row": 2,
           "SEQ": null,
-          "USUBJID": "None",
+          "USUBJID": "CDISC009",
           "value": {
-            "$multiple_race": 2
+            "RACE": "MULTIPLE"
           },
           "validated": true
         }

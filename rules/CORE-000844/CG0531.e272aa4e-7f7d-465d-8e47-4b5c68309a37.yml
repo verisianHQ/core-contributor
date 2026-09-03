@@ -37,11 +37,14 @@ Authorities:
         Version: '3.4'
 Check:
   all:
-    - name: $multiple_race
-      operator: greater_than_or_equal_to
-      value: 1
-    - name: SUPPDM
-      operator: not_exists
+    - name: RACE
+      operator: equal_to
+      value: MULTIPLE
+      value_is_literal: true
+    - name: $study_domains
+      operator: does_not_contain
+      value: SUPPDM
+      value_is_literal: true
 Core:
   Id: CORE-000844
   Status: Published
@@ -50,18 +53,14 @@ Description: Part A - Raise an error when RACE in DM equals 'MULTIPLE' and
   SUPPDM dataset is not present.
 Executability: Fully Executable
 Operations:
-  - domain: DM
-    filter:
-      RACE: MULTIPLE
-    id: $multiple_race
-    name: RACE
-    operator: record_count
+  - id: $study_domains
+    operator: study_domains
 Outcome:
-  Message: RACE in DM equals 'MULTIPLE' but multiple races are not collected in
-    SUPPDM.
+  Message: Multiple SUPPDM.QNAM records must exist for the subject if RACE in
+    DM equals 'MULTIPLE'.
   Output Variables:
-    - $multiple_race
-Rule Type: Domain Presence Check
+    - RACE
+Rule Type: Record Data
 Scope:
   Classes:
     Include:
