@@ -1,6 +1,7 @@
 # Variable: AEENDTC
 # Condition: AE.AEOUT= "FATAL"
-# Rule: AE.AEENDTC = DM.DTHDTC
+# Rule: AE.AEENDTC ^= DM.DTHDTC
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -48,6 +49,7 @@ Check:
     - name: AEOUT
       operator: equal_to
       value: 'FATAL'
+      value_is_literal: true
     - name: AEENDTC
       operator: not_equal_to
       value: DTHDTC
@@ -55,9 +57,7 @@ Core:
   Id: CORE-000841
   Status: Published
   Version: '1'
-Description: End Date/Time of Adverse Event (AEENDTC) in AE dataset of Adverse
-  Event where AEOUT = 'FATAL' should be equal to the Date/Time of Death (DTHDTC)
-  in the DM dataset for the corresponding subject.
+Description: End Date/Time of Adverse Event (AEENDTC) in AE dataset of Adverse Event where AEOUT = 'FATAL' is equal to the Date/Time of Death (DTHDTC) in the DM dataset for the corresponding subject.
 Executability: Fully Executable
 Match Datasets:
   - Keys:

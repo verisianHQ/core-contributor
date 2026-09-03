@@ -1,10 +1,15 @@
+# Variable: DSCAT
+# Condition: 
+# Rule: DSCAT ^= null
+# verified
 Authorities:
   - Organization: FDA
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Category for Disposition Event (DSCAT) should be populated.
+              - Cited Guidance: Category for Disposition Event (DSCAT) should
+                  be populated.
                 Document: FDA
                 Section: FDAB014
             Origin: FDA Business Rules
@@ -16,7 +21,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Category for Disposition Event (DSCAT) should be populated.
+              - Cited Guidance: Category for Disposition Event (DSCAT) should
+                  be populated.
                 Document: FDA
                 Section: FDAB014
             Origin: FDA Business Rules
@@ -28,7 +34,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Category for Disposition Event (DSCAT) should be populated.
+              - Cited Guidance: Category for Disposition Event (DSCAT) should
+                  be populated.
                 Document: FDA
                 Section: FDAB014
             Origin: FDA Business Rules
@@ -45,10 +52,11 @@ Core:
   Id: CORE-000522
   Status: Published
   Version: '1'
-Description: Category for Disposition Event (DSCAT) should be populated.
+Description: Raise an error when Category for Disposition Event (DSCAT) is not
+  populated.
 Executability: Fully Executable
 Outcome:
-  Message: Missing DSCAT value for Disposition Event.
+  Message: Category for Disposition Event (DSCAT) must be populated.
 Rule Type: Record Data
 Scope:
   Classes:
