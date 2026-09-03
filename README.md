@@ -106,7 +106,7 @@ _Don't forget: whenever you type a command, you should be in the core-contributo
 **_*IMPORTANT NOTE*_**\
 _Step 4 is only applicable in case you want to create a rule for which the folder does not exist yet in the GitHub repository. It is therefore important to first check if a folder is already present. If no folder is present, you can automatically generate the required folder structure for a new rule including a blank YAML template and template Excel files (negative and positive) for the test data._
 
-3) Initialize your new rule folder structure:
+4) Initialize your new rule folder structure:
    - In the base directory of the project, activate the virtual environment by running:
      - WINDOWS: `venv\Scripts\activate`
      - MAC: `source venv/bin/activate`
