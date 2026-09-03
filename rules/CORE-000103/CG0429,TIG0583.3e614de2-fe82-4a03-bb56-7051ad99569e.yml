@@ -83,16 +83,21 @@ Check:
   all:
     - name: --SCAT
       operator: non_empty
-    - name: --CAT
-      operator: empty
+    - any:
+        - name: --CAT
+          operator: not_exists
+        - name: --CAT
+          operator: empty
 Core:
   Id: CORE-000103
   Status: Published
   Version: '1'
-Description: Part A - Raise an error when --SCAT is populated, but --CAT is not populated.
+Description: Part A - Raise an error when --SCAT is populated, but --CAT is either
+  not populated or not present in the dataset.
 Executability: Fully Executable
 Outcome:
-  Message: --CAT must not be null when --SCAT is populated.
+  Message: --CAT must be present in the dataset and populated when --SCAT is
+    populated.
   Output Variables:
     - --CAT
     - --SCAT

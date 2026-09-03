@@ -4,7 +4,7 @@
       "dataset": "ag.xpt",
       "domain": "AG",
       "execution_status": "success",
-      "execution_message": "AGCAT must not be null when AGSCAT is populated.",
+      "execution_message": "AGCAT must be present in the dataset and populated when AGSCAT is populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -23,7 +23,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMCAT must not be null when CMSCAT is populated.",
+      "execution_message": "CMCAT must be present in the dataset and populated when CMSCAT is populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -45,6 +45,25 @@
       "execution_message": null,
       "number_errors": 0,
       "errors": []
+    },
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "MHCAT must be present in the dataset and populated when MHSCAT is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "XYZ-001-001",
+          "value": {
+            "MHCAT": "Not in dataset",
+            "MHSCAT": "CARDIAC HISTORY"
+          },
+          "validated": true
+        }
+      ]
     }
   ]
 }
