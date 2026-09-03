@@ -12,54 +12,9 @@
       "dataset": "tv.xpt",
       "domain": "TV",
       "execution_status": "success",
-      "execution_message": "ARM is not in TA.ARM",
-      "number_errors": 12,
+      "execution_message": "ARM must be in TA.ARM.",
+      "number_errors": 3,
       "errors": [
-        {
-          "row": 1,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARM": "ZAN_LOWER"
-          },
-          "validated": false
-        },
-        {
-          "row": 2,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARM": "ZAN_LOWER"
-          },
-          "validated": false
-        },
-        {
-          "row": 3,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARM": "ZAN_LOWER"
-          },
-          "validated": false
-        },
-        {
-          "row": 4,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARM": "ZAN_LOWER"
-          },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARM": "ZAN_LOWER"
-          },
-          "validated": false
-        },
         {
           "row": 6,
           "SEQ": null,
@@ -67,34 +22,7 @@
           "value": {
             "ARM": "ZAN_LOWER"
           },
-          "validated": false
-        },
-        {
-          "row": 7,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARM": "ZAN_HIGHEST"
-          },
-          "validated": false
-        },
-        {
-          "row": 8,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARM": "ZAN_HIGHEST"
-          },
-          "validated": false
-        },
-        {
-          "row": 9,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARM": "ZAN_HIGHEST"
-          },
-          "validated": false
+          "validated": true
         },
         {
           "row": 10,
@@ -103,25 +31,16 @@
           "value": {
             "ARM": "ZAN_HIGHEST"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 11,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "ARM": "PLACEBO"
+            "ARM": "placebo"
           },
-          "validated": false
-        },
-        {
-          "row": 12,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARM": "PLACEBO"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     }

@@ -4,7 +4,7 @@
       "dataset": "suppdm.xpt",
       "domain": "SUPPDM",
       "execution_status": "success",
-      "execution_message": "The combination of IDVAR, IDVARVAL, and QNAM is not unique per parent subject record",
+      "execution_message": "The combination of IDVAR, IDVARVAL, and QNAM must be unique per parent subject record.",
       "number_errors": 2,
       "errors": [
         {
@@ -12,24 +12,26 @@
           "SEQ": null,
           "USUBJID": "S001",
           "value": {
+            "RDOMAIN": "DM",
             "USUBJID": "S001",
             "IDVAR": null,
             "IDVARVAL": null,
             "QNAM": "RACEMLT"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": null,
           "USUBJID": "S001",
           "value": {
+            "RDOMAIN": "DM",
             "USUBJID": "S001",
             "IDVAR": null,
             "IDVARVAL": null,
             "QNAM": "RACEMLT"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -37,7 +39,7 @@
       "dataset": "supplb.xpt",
       "domain": "SUPPLB",
       "execution_status": "success",
-      "execution_message": "The combination of IDVAR, IDVARVAL, and QNAM is not unique per parent subject record",
+      "execution_message": "The combination of IDVAR, IDVARVAL, and QNAM must be unique per parent subject record.",
       "number_errors": 2,
       "errors": [
         {
@@ -45,24 +47,26 @@
           "SEQ": null,
           "USUBJID": "S001",
           "value": {
+            "RDOMAIN": "LB",
             "USUBJID": "S001",
             "IDVAR": "LBSEQ",
             "IDVARVAL": "220",
             "QNAM": "LBCLSIG"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": null,
           "USUBJID": "S001",
           "value": {
+            "RDOMAIN": "LB",
             "USUBJID": "S001",
             "IDVAR": "LBSEQ",
             "IDVARVAL": "220",
             "QNAM": "LBCLSIG"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
