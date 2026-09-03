@@ -28,7 +28,7 @@ Check:
         - NOTTRT
     - name: TSPARMCD
       operator: equal_to
-      value: "STYPE"
+      value: 'STYPE'
       value_is_literal: true
     - name: TSVAL
       operator: equal_to
