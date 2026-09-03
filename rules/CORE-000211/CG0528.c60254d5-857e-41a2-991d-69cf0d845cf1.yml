@@ -1,6 +1,7 @@
 # Variable: QNAM
 # Condition: 
 # Rule: ADSL Population flags not in SUPPDM
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -51,15 +52,15 @@ Check:
       value: DM
     - name: QNAM
       operator: matches_regex
-      value: (ENRFL|SAFFL|EFFFL|ITTFL|PPROTFL|COMPLFL|COMPLT|FULLSET|ITT|PPROT|SAFETY)
+      value: ^(ENRFL|SAFFL|EFFFL|ITTFL|PPROTFL|COMPLFL|COMPLT|FULLSET|ITT|PPROT|SAFETY)$
 Core:
   Id: CORE-000211
   Status: Published
   Version: '1'
 Description: SUPPDM must not include population flags.
-Executability: Fully Executable
+Executability: Partially Executable - Possible Overreporting
 Outcome:
-  Message: Population flag is present in SUPPDM
+  Message: Population flag must not be present in SUPPDM.
   Output Variables:
     - QNAM
 Rule Type: Record Data
