@@ -111,14 +111,14 @@ Authorities:
         Version: '1.0'
 Check:
   all:
-    - name: '--TPTREF'
+    - name: --TPTREF
       operator: exists
-    - name: '--ENINT'
+    - name: --ENINT
       operator: exists
-    - name: '--ENINT'
-      operator: 'non_empty'
-    - name: '--TPTREF'
-      operator: 'empty'
+    - name: --ENINT
+      operator: non_empty
+    - name: --TPTREF
+      operator: empty
 Core:
   Id: CORE-000642
   Status: Published
