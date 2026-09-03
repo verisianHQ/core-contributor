@@ -82,6 +82,7 @@ Check:
     - name: --STAT
       operator: not_equal_to
       value: NOT DONE
+      value_is_literal: true
 Core:
   Id: CORE-000225
   Status: Published
