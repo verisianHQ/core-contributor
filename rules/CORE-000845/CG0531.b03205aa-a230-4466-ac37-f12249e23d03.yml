@@ -57,8 +57,8 @@ Operations:
     name: USUBJID
     operator: distinct
 Outcome:
-  Message: RACE in DM equals 'MULTIPLE' but multiple races are not collected in
-    SUPPDM.
+  Message: Multiple SUPPDM.QNAM records must exist for the subject if RACE in
+    DM equals 'MULTIPLE'.
   Output Variables:
     - USUBJID
     - RACE
