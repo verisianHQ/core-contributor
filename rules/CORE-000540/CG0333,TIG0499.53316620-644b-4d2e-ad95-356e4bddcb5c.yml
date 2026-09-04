@@ -84,13 +84,9 @@ Check:
   all:
     - name: dataset_name
       operator: matches_regex
-      value: ^[a-z(?-i)]{2}[a-z(?-i)]{1,2}
+      value: ^FA[A-Za-z0-9]{1,2}$
     - name: dataset_name
-      operator: prefix_equal_to
-      prefix: 2
-      value: 'FA'
-    - name: dataset_name
-      operator: suffix_is_not_contained_by
+      operator: suffix_is_not_contained_by_case_insensitive
       suffix: 2
       value: $list_dataset_names
 Core:
