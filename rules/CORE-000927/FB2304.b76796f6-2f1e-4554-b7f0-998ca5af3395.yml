@@ -2,7 +2,6 @@
 # Condition: USUBJID in EX.USUBJID AND TSVAL = 'INTERVENTIONAL' when TSPARMCD = 'STYPE'
 # Rule: ARMNRS = null or ARMNRS = 'UNPLANNED TREATMENT'
 # verified
-
 Authorities:
   - Organization: FDA
     Standards:
@@ -38,15 +37,15 @@ Check:
       operator: non_empty
     - name: ARMNRS
       operator: not_equal_to
-      value: "UNPLANNED TREATMENT"
+      value: 'UNPLANNED TREATMENT'
       value_is_literal: true
     - name: TSPARMCD
       operator: equal_to
-      value: "STYPE"
+      value: 'STYPE'
       value_is_literal: true
     - name: TSVAL
       operator: equal_to
-      value: "INTERVENTIONAL"
+      value: 'INTERVENTIONAL'
       value_is_literal: true
     - name: USUBJID
       operator: is_contained_by
@@ -55,7 +54,7 @@ Core:
   Status: Published
   Version: '1'
   Id: CORE-000927
-Description: End Date/Time of Observation (--ENDTC) is present in the dataset and the Study Day of End of Observation (--ENDY) is also present in the dataset
+Description: Subject participating in an interventional study with at least one record in the EX dataset, is assigned to an actual treatment.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
