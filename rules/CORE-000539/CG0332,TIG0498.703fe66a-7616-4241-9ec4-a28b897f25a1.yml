@@ -87,13 +87,13 @@ Check:
   all:
     - name: dataset_name
       operator: matches_regex
-      value: ^[a-z(?-i)]{2}[a-z0-9(?-i)]{1,2}
+      value: ^[A-Za-z]{2}[A-Za-z0-9]{1,2}$
     - name: dataset_name
       operator: not_prefix_matches_regex
       prefix: 2
       value: (AP|FA)
     - name: dataset_name
-      operator: prefix_is_not_contained_by
+      operator: prefix_is_not_contained_by_case_insensitive
       prefix: 2
       value: $list_dataset_names
 Core:
@@ -107,7 +107,7 @@ Operations:
   - id: $list_dataset_names
     operator: dataset_names
 Outcome:
-  Message: Split dataset is present but the two-Letter parent domain is missing.
+  Message: Split dataset is present but the two-letter parent domain is missing.
   Output Variables:
     - dataset_name
     - $list_dataset_names
