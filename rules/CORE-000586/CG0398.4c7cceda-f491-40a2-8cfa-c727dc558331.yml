@@ -8,14 +8,15 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: "ICH E3: Section 10.1 indicates that 'the specific reason for
+              - Cited Guidance: >-
+                  ICH E3: Section 10.1 indicates that 'the specific reason for
                   discontinuation' should be presented; and that summaries
                   should be 'grouped by treatment and by major reason.' The
                   CDISC SDS Team interprets this guidance as requiring one
                   standardized disposition term (DSDECOD) per disposition event.
                   If multiple reasons are reported; the sponsor should identify
                   a primary reason and use that to populate DSTERM and DSDECOD.
-                  Additional reasons should be submitted in SUPPDS."
+                  Additional reasons should be submitted in SUPPDS.
                 Document: IG v3.2
                 Item: Assumption 5.a
                 Section: 6.2 DS
@@ -35,17 +36,16 @@ Check:
       value:
         - USUBJID
         - EPOCH
-
 Core:
   Id: CORE-000586
   Status: Published
   Version: '1'
-Description: Raise an error when DSCAT  'DISPOSITION EVENT' but there is more
-  than one record per subject per EPOCH.
+Description: Raise an error when DSCAT is equal to 'DISPOSITION EVENT' but
+  there is more than one record per subject per EPOCH.
 Executability: Fully Executable
 Outcome:
-  Message: DSCAT is equal to 'DISPOSITION EVENT', but multiple records exist within the
-    same EPOCH for a subject.
+  Message: Multiple records exist within the same EPOCH for a subject but
+    DSCAT is equal to 'DISPOSITION EVENT'.
   Output Variables:
     - DSCAT
     - EPOCH
