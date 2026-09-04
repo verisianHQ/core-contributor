@@ -4,7 +4,7 @@
       "dataset": "ec.xpt",
       "domain": "EC",
       "execution_status": "success",
-      "execution_message": "ECPORTOT variable is present, when ECLOC variable does not exist in a dataset.",
+      "execution_message": "ECPORTOT must not be present when ECLOC is not present in the dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -15,7 +15,7 @@
             "ECLOC": "Not in dataset",
             "ECPORTOT": "SINGLE"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -31,7 +31,7 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "AEPORTOT variable is present, when AELOC variable does not exist in a dataset.",
+      "execution_message": "AEPORTOT must not be present when AELOC is not present in the dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -42,7 +42,7 @@
             "AELOC": "Not in dataset",
             "AEPORTOT": "PARTIAL"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -58,7 +58,7 @@
       "dataset": "tu.xpt",
       "domain": "TU",
       "execution_status": "success",
-      "execution_message": "TUPORTOT variable is present, when TULOC variable does not exist in a dataset.",
+      "execution_message": "TUPORTOT must not be present when TULOC is not present in the dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -67,48 +67,11 @@
           "USUBJID": null,
           "value": {
             "TULOC": "Not in dataset",
-            "TUPORTOT": "SINGLE"
+            "TUPORTOT": "SEGMENT"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ec.xpt",
-      "Row": 1,
-      "Variable": "ECPORTOT"
-    },
-    {
-      "Sheet": "pr.xpt",
-      "Row": 1,
-      "Variable": "PRLOC"
-    },
-    {
-      "Sheet": "pr.xpt",
-      "Row": 1,
-      "Variable": "PRPORTOT"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 1,
-      "Variable": "AEPORTOT"
-    },
-    {
-      "Sheet": "oe.xpt",
-      "Row": 1,
-      "Variable": "OELOC"
-    },
-    {
-      "Sheet": "oe.xpt",
-      "Row": 1,
-      "Variable": "OEPORTOT"
-    },
-    {
-      "Sheet": "tu.xpt",
-      "Row": 1,
-      "Variable": "TUPORTOT"
     }
   ]
 }

@@ -1,4 +1,46 @@
 {
-  "error": "No result - either the rule or test case data unit-test-coreid-FB3102-negative.xlsx is broken",
-  "exception": "Error converting column 'FASTRESN' in table 'fa.xpt' to numeric: could not convert string to float: 'YES'"
+  "datasets": [
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "FASTRESC is numeric but FASTRESN is not equal to FASTRESC.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "123101",
+          "value": {
+            "FASTRESC": "-1.234",
+            "FASTRESN": 1.0,
+            "FATESTCD": "TSTRES"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "123101",
+          "value": {
+            "FASTRESC": "-1.235",
+            "FASTRESN": 1.0,
+            "FATESTCD": "TSTRES"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "123101",
+          "value": {
+            "FASTRESC": "1.236",
+            "FASTRESN": null,
+            "FATESTCD": "TSTRES"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
 }
