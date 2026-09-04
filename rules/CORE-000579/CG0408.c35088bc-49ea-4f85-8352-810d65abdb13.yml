@@ -1,6 +1,7 @@
 # Variable: GEN
 # Condition: Dataset planned for submission
 # Rule: Dataset > 0 records
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -64,7 +65,7 @@ Operations:
   - id: $records_in_dataset
     operator: record_count
 Outcome:
-  Message: Dataset has no record.
+  Message: Dataset must have at least one record.
 Rule Type: Dataset Metadata Check
 Scope:
   Classes:
