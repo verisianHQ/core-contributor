@@ -12,7 +12,7 @@
       "dataset": "sv.xpt",
       "domain": "SV",
       "execution_status": "success",
-      "execution_message": "SVUPDES is not populated or does not exist, but the VISIT does not equal a VISIT present in TV",
+      "execution_message": "VISIT in the SV dataset must be equal to VISIT in the TV dataset when SVUPDES is not populated.",
       "number_errors": 3,
       "errors": [
         {
@@ -23,7 +23,7 @@
             "SVUPDES": "Not in dataset",
             "VISIT": "UNSCHEDULED1"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 10,
@@ -33,7 +33,7 @@
             "SVUPDES": "Not in dataset",
             "VISIT": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 16,
@@ -43,26 +43,9 @@
             "SVUPDES": "Not in dataset",
             "VISIT": "UNSCHEDULED"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "sv.xpt",
-      "Row": 9,
-      "Variable": "VISIT"
-    },
-    {
-      "Sheet": "sv.xpt",
-      "Row": 14,
-      "Variable": "VISIT"
-    },
-    {
-      "Sheet": "sv.xpt",
-      "Row": 20,
-      "Variable": "VISIT"
     }
   ]
 }

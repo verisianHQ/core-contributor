@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "INVNAM and INVID do not have a one-to-one relationship.",
+      "execution_message": "INVID and INVNAM do not have a one-to-one relationship.",
       "number_errors": 4,
       "errors": [
         {
@@ -15,7 +15,7 @@
             "INVID": "3000004",
             "INVNAM": "John,M"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -25,7 +25,7 @@
             "INVID": "3000005",
             "INVNAM": "John,M"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -35,7 +35,7 @@
             "INVID": null,
             "INVNAM": "John,M"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -45,51 +45,9 @@
             "INVID": "3000004",
             "INVNAM": null
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "INVNAM"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "INVID"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "INVNAM"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "INVID"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 7,
-      "Variable": "INVNAM"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 7,
-      "Variable": "INVID"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 8,
-      "Variable": "INVNAM"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 8,
-      "Variable": "INVID"
     }
   ]
 }
