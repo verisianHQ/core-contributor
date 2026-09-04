@@ -1,11 +1,15 @@
+# Variable: --DY
+# Condition: --DTC ^= Null
+# Rule: --DY is present
+# verified
 Authorities:
-  - Organization: 'FDA'
+  - Organization: FDA
     Standards:
-      - Name: 'SDTMIG'
+      - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Collection study day should be populated when date/time of
-                  collection is available.
+              - Cited Guidance: Collection study day should be populated when
+                  date/time of collection is available.
                 Document: FDA
                 Section: FDAB016
             Origin: FDA Business Rules
@@ -14,11 +18,11 @@ Authorities:
               Version: '1'
             Version: '1.5'
         Version: '3.2'
-      - Name: 'SDTMIG'
+      - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Collection study day should be populated when date/time of
-                  collection is available.
+              - Cited Guidance: Collection study day should be populated when
+                  date/time of collection is available.
                 Document: FDA
                 Section: FDAB016
             Origin: FDA Business Rules
@@ -27,11 +31,11 @@ Authorities:
               Version: '1'
             Version: '1.5'
         Version: '3.3'
-      - Name: 'SDTMIG'
+      - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Collection study day should be populated when date/time of
-                  collection is available.
+              - Cited Guidance: Collection study day should be populated when
+                  date/time of collection is available.
                 Document: FDA
                 Section: FDAB016
             Origin: FDA Business Rules
@@ -40,11 +44,11 @@ Authorities:
               Version: '1'
             Version: '1.5'
         Version: '3.4'
-      - Name: 'SENDIG'
+      - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Collection study day should be populated when date/time of
-                  collection is available.
+              - Cited Guidance: Collection study day should be populated when
+                  date/time of collection is available.
                 Document: FDA
                 Section: FDAB016
             Origin: FDA Business Rules
@@ -53,11 +57,11 @@ Authorities:
               Version: '1'
             Version: '1.5'
         Version: '3.0'
-      - Name: 'SENDIG'
+      - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Collection study day should be populated when date/time of
-                  collection is available.
+              - Cited Guidance: Collection study day should be populated when
+                  date/time of collection is available.
                 Document: FDA
                 Section: FDAB016
             Origin: FDA Business Rules
@@ -66,11 +70,11 @@ Authorities:
               Version: '1'
             Version: '1.5'
         Version: '3.1'
-      - Name: 'SENDIG'
+      - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Collection study day should be populated when date/time of
-                  collection is available.
+              - Cited Guidance: Collection study day should be populated when
+                  date/time of collection is available.
                 Document: FDA
                 Section: FDAB016
             Origin: FDA Business Rules
@@ -79,11 +83,11 @@ Authorities:
               Version: '1'
             Version: '1.5'
         Version: '3.1.1'
-      - Name: 'SENDIG-GENETOX'
+      - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: Collection study day should be populated when date/time of
-                  collection is available.
+              - Cited Guidance: Collection study day should be populated when
+                  date/time of collection is available.
                 Document: FDA
                 Section: FDAB016
             Origin: FDA Business Rules
@@ -92,11 +96,11 @@ Authorities:
               Version: '1'
             Version: '1.5'
         Version: '1.0'
-      - Name: 'SENDIG-DART'
+      - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: Collection study day should be populated when date/time of
-                  collection is available.
+              - Cited Guidance: Collection study day should be populated when
+                  date/time of collection is available.
                 Document: FDA
                 Section: FDAB016
             Origin: FDA Business Rules
@@ -105,11 +109,11 @@ Authorities:
               Version: '1'
             Version: '1.5'
         Version: '1.1'
-      - Name: 'SENDIG-DART'
+      - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: Collection study day should be populated when date/time of
-                  collection is available.
+              - Cited Guidance: Collection study day should be populated when
+                  date/time of collection is available.
                 Document: FDA
                 Section: FDAB016
             Origin: FDA Business Rules
@@ -121,8 +125,8 @@ Authorities:
       - Name: 'SENDIG-AR'
         References:
           - Citations:
-              - Cited Guidance: Collection study day should be populated when date/time of
-                  collection is available.
+              - Cited Guidance: Collection study day should be populated when
+                  date/time of collection is available.
                 Document: FDA
                 Section: FDAB016
             Origin: FDA Business Rules
@@ -133,22 +137,23 @@ Authorities:
         Version: '1.0'
 Check:
   all:
+    - name: --DY
+      operator: exists
     - name: --DTC
       operator: non_empty
-    - name: --DTC
-      operator: is_complete_date
-    - name: --DY
-      operator: not_exists
 Core:
   Id: CORE-000793
   Status: Published
   Version: '1'
-Description: 'Collection study day (--DY) should be present when date/time of
-  collection (--DTC) is populated'
+Description: Collection study day (--DY) is present when date/time of
+  collection (--DTC) is populated.
 Executability: Fully Executable
 Outcome:
   Message: Collection study day (--DY) is missing when date/time of collection
     (--DTC) is populated.
+  Output Variables:
+    - --DTC
+    - --DY
 Rule Type: Record Data
 Scope:
   Classes:

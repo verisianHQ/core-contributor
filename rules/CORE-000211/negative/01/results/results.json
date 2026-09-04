@@ -4,8 +4,8 @@
       "dataset": "suppdm.xpt",
       "domain": "SUPPDM",
       "execution_status": "success",
-      "execution_message": "Population flag is present in SUPPDM",
-      "number_errors": 10,
+      "execution_message": "Population flag must not be present in SUPPDM.",
+      "number_errors": 11,
       "errors": [
         {
           "row": 1,
@@ -14,7 +14,7 @@
           "value": {
             "QNAM": "SAFETY"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -23,7 +23,7 @@
           "value": {
             "QNAM": "ENRFL"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -32,7 +32,7 @@
           "value": {
             "QNAM": "EFFFL"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -41,7 +41,7 @@
           "value": {
             "QNAM": "PPROTFL"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 6,
@@ -50,7 +50,7 @@
           "value": {
             "QNAM": "COMPLT"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 7,
@@ -59,7 +59,7 @@
           "value": {
             "QNAM": "FULLSET"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 8,
@@ -68,7 +68,7 @@
           "value": {
             "QNAM": "ITT"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 9,
@@ -77,7 +77,7 @@
           "value": {
             "QNAM": "PPROT"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 10,
@@ -86,7 +86,7 @@
           "value": {
             "QNAM": "ITTFL"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 11,
@@ -95,7 +95,16 @@
           "value": {
             "QNAM": "COMPLFL"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 12,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "QNAM": "SAFFL"
+          },
+          "validated": true
         }
       ]
     }
