@@ -1,6 +1,7 @@
 # Variable: ARMNRS
-# Condition: DM.USUBJID in EX.USUBJID AND TSVAL = "INTERVENTIONAL" when TSPARMCD = "STYPE"
-# Rule: ARMNRS=null or ARMNRS = "UNPLANNED TREATMENT"
+# Condition: USUBJID in EX.USUBJID AND TSVAL = 'INTERVENTIONAL' when TSPARMCD = 'STYPE'
+# Rule: ARMNRS = null or ARMNRS = 'UNPLANNED TREATMENT'
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -36,15 +37,15 @@ Check:
       operator: non_empty
     - name: ARMNRS
       operator: not_equal_to
-      value: "UNPLANNED TREATMENT"
+      value: 'UNPLANNED TREATMENT'
       value_is_literal: true
     - name: TSPARMCD
       operator: equal_to
-      value: "STYPE"
+      value: 'STYPE'
       value_is_literal: true
     - name: TSVAL
       operator: equal_to
-      value: "INTERVENTIONAL"
+      value: 'INTERVENTIONAL'
       value_is_literal: true
     - name: USUBJID
       operator: is_contained_by
@@ -53,8 +54,7 @@ Core:
   Status: Published
   Version: '1'
   Id: CORE-000927
-Description: All subjects in the Exposure domain who are participating in a
-  study that includes an interventional product must be assigned to an ARM.
+Description: Subject participating in an interventional study with at least one record in the EX dataset, is assigned to an actual treatment.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
@@ -66,8 +66,7 @@ Operations:
     name: USUBJID
     operator: distinct
 Outcome:
-  Message: A subject has a record in EX but is not assigned to a treatment while
-    participating in an interventional study
+  Message: Subject in interventional study with exposure records in EX dataset is not assigned to an actual treatment.
   Output Variables:
     - ARMNRS
 Rule Type: Record Data
