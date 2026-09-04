@@ -1,0 +1,50 @@
+# Variable: ATPTN
+# Condition: ATPTN and ATPT are both populated
+# Rule: Within a given value of PARAMCD, there is more than one value of ATPTN for a given value of ATPT
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '729'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.1
+                Section: '3.3.3'
+                Item: 'Table 3.3.3.1'
+                Cited Guidance: 
+                  'ADaMIG v1.1, Section 3.3.3, Table 3.3.3.1: Within the same parameter, there is a one-to-one mapping between ATPT and ATPTN.'
+Check:
+  all:
+    - name: ATPTN
+      operator: is_inconsistent_across_dataset
+      where_populated: true
+      value:
+        - PARAMCD
+        - ATPT
+Core:
+  Id: AD0729
+  Status: Published
+  Version: '1'
+Description: Raise an error when, within a given value of PARAMCD, there is more than one value of ATPTN for a given value of ATPT within BDS.
+Executability: Fully Executable
+Outcome:
+  Message: Within a given value of PARAMCD, there is more than one value of ATPTN for a given value of ATPT within BDS.
+  Output Variables:
+    - PARAMCD
+    - ATPTN
+    - ATPT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - BDS
+  Domains:
+    Include:
+      - BDS
+Sensitivity: Record
