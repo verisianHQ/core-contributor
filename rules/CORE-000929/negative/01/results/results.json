@@ -3,106 +3,129 @@
     {
       "dataset": "zb.xpt",
       "domain": "ZB",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
-      "number_errors": 1,
-      "errors": [
-        {
-          "error": "An unknown exception has occurred",
-          "message": "Operation codelist_terms is not implemented"
-        }
-      ]
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     },
     {
       "dataset": "vs.xpt",
       "domain": "VS",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
+      "execution_status": "success",
+      "execution_message": "DOMAIN Code is not a published DOMAIN Code in CDISC Controlled Terminology.",
       "number_errors": 1,
       "errors": [
         {
-          "error": "An unknown exception has occurred",
-          "message": "Operation codelist_terms is not implemented"
+          "row": 52,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "$domain_lib_values": [
+              "AE",
+              "AG",
+              "APRELSUB",
+              "BE",
+              "BS",
+              "CE",
+              "CM",
+              "CO",
+              "CP",
+              "CV",
+              "DA",
+              "DD",
+              "DE",
+              "DI",
+              "DM",
+              "DO",
+              "DR",
+              "DS",
+              "DT",
+              "DU",
+              "DV",
+              "DX",
+              "EC",
+              "ED",
+              "EG",
+              "ES",
+              "EX",
+              "FA",
+              "FT",
+              "GF",
+              "GI",
+              "HM",
+              "HO",
+              "IE",
+              "IG",
+              "IN",
+              "IQ",
+              "IS",
+              "IT",
+              "LB",
+              "MB",
+              "MH",
+              "MI",
+              "MK",
+              "ML",
+              "MS",
+              "NV",
+              "OE",
+              "OI",
+              "PC",
+              "PD",
+              "PE",
+              "POOLDEF",
+              "PP",
+              "PR",
+              "PT",
+              "QS",
+              "RE",
+              "RELREC",
+              "RELSPEC",
+              "RELSUB",
+              "RP",
+              "RS",
+              "SA",
+              "SC",
+              "SE",
+              "SM",
+              "SR",
+              "SS",
+              "SU",
+              "SV",
+              "TA",
+              "TD",
+              "TE",
+              "TI",
+              "TM",
+              "TO",
+              "TR",
+              "TS",
+              "TU",
+              "TV",
+              "UR",
+              "VS"
+            ],
+            "define_variable_codelist_coded_values": "VX"
+          },
+          "validated": true
         }
       ]
     },
     {
       "dataset": "cm.xpt",
       "domain": "CM",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
-      "number_errors": 1,
-      "errors": [
-        {
-          "error": "An unknown exception has occurred",
-          "message": "Operation codelist_terms is not implemented"
-        }
-      ]
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     },
     {
       "dataset": "fa.xpt",
       "domain": "FA",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
-      "number_errors": 1,
-      "errors": [
-        {
-          "error": "An unknown exception has occurred",
-          "message": "Operation codelist_terms is not implemented"
-        }
-      ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "cm.xpt",
-      "Row": 1,
-      "Variable": "CMDOSE"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 1,
-      "Variable": "CMDOSTXT"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 5,
-      "Variable": "CMDOSE"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 5,
-      "Variable": "CMDOSTXT"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 6,
-      "Variable": "CMDOSE"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 6,
-      "Variable": "CMDOSTXT"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 7,
-      "Variable": "CMDOSE"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 7,
-      "Variable": "CMDOSTXT"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 8,
-      "Variable": "CMDOSE"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 8,
-      "Variable": "CMDOSTXT"
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     }
   ]
 }

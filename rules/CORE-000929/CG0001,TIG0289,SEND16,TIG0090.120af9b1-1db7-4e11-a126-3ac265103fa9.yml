@@ -1,3 +1,7 @@
+# Variable: DOMAIN
+# Condition: Not custom domain
+# Rule: DOMAIN = valid Domain Code published by CDISC
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -164,9 +168,6 @@ Authorities:
             Version: '1.0'
         Substandard: SEND
         Version: '1.0'
-# Variable: DOMAIN
-# Condition: Not custom domain
-# Rule: DOMAIN = valid Domain Code published by CDISC
 Check:
   all:
     - name: $domain_is_custom
@@ -175,9 +176,9 @@ Check:
     - name: define_variable_ccode
       operator: equal_to
       value: C66734
-    - name: define_variable_codelist_coded_codes
+    - name: define_variable_codelist_coded_values
       operator: is_not_contained_by
-      value: $domain_lib_ccode
+      value: $domain_lib_values
 Core:
   Id: CORE-000929
   Status: Published
@@ -188,17 +189,17 @@ Executability: Fully Executable
 Operations:
   - id: $domain_is_custom
     operator: domain_is_custom
-  - codelists:
-      - DOMAIN
-    id: $domain_lib_ccode
-    level: term
-    operator: codelist_terms
-    returntype: code
+  - ct_attribute: Term Signification
+    id: $domain_lib_values
+    operator: get_codelist_attributes
+    name: DOMAIN
+    ct_conditions:
+      - Codelist Code: C66734
 Outcome:
   Message: DOMAIN Code is not a published DOMAIN Code in CDISC Controlled Terminology.
   Output Variables:
-    - $domain_lib_ccode
-    - define_variable_codelist_coded_codes
+    - $domain_lib_values
+    - define_variable_codelist_coded_values
 Rule Type: Define Item Metadata Check against Library Metadata
 Scope:
   Classes:
