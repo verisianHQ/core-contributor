@@ -4,8 +4,8 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "A record exists in TS where TSPARMCD = STYPE and TSVAL = INTERVENTIONAL but TSVAL for TSPARMCD = INTTYPE is empty.",
-      "number_errors": 4,
+      "execution_message": "TSVAL must not be null for a record when TSPARMCD is equal to 'INTTYPE' where TSPARMCD is equal to 'STYPE' with TSVAL equal to 'INTERVENTIONAL'.",
+      "number_errors": 2,
       "errors": [
         {
           "row": 19,
@@ -17,7 +17,7 @@
             "TSVAL": null,
             "$STYPE_INTERVENTIONAL": 1
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 20,
@@ -29,235 +29,9 @@
             "TSVAL": null,
             "$STYPE_INTERVENTIONAL": 1
           },
-          "validated": false
-        },
-        {
-          "row": 21,
-          "SEQ": 3,
-          "USUBJID": "None",
-          "value": {
-            "TSGRPID": null,
-            "TSPARMCD": "INTTYPE",
-            "TSVAL": null,
-            "$STYPE_INTERVENTIONAL": 2
-          },
-          "validated": false
-        },
-        {
-          "row": 22,
-          "SEQ": 3,
-          "USUBJID": "None",
-          "value": {
-            "TSGRPID": null,
-            "TSPARMCD": "INTTYPE",
-            "TSVAL": null,
-            "$STYPE_INTERVENTIONAL": 2
-          },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ts.xpt",
-      "Row": 23,
-      "Variable": "TSGRPID"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 23,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 23,
-      "Variable": "TSPARM"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 23,
-      "Variable": "TSVAL"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 23,
-      "Variable": "TSVALNF"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 24,
-      "Variable": "TSGRPID"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 24,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 24,
-      "Variable": "TSPARM"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 24,
-      "Variable": "TSVAL"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 24,
-      "Variable": "TSVALNF"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 25,
-      "Variable": "TSGRPID"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 25,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 25,
-      "Variable": "TSPARM"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 25,
-      "Variable": "TSVAL"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 25,
-      "Variable": "TSVALNF"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 26,
-      "Variable": "TSGRPID"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 26,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 26,
-      "Variable": "TSPARM"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 26,
-      "Variable": "TSVAL"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 26,
-      "Variable": "TSVALNF"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 49,
-      "Variable": "TSGRPID"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 49,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 49,
-      "Variable": "TSPARM"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 49,
-      "Variable": "TSVAL"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 49,
-      "Variable": "TSVALNF"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 50,
-      "Variable": "TSGRPID"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 50,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 50,
-      "Variable": "TSPARM"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 50,
-      "Variable": "TSVAL"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 50,
-      "Variable": "TSVALNF"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 51,
-      "Variable": "TSGRPID"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 51,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 51,
-      "Variable": "TSPARM"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 51,
-      "Variable": "TSVAL"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 51,
-      "Variable": "TSVALNF"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 52,
-      "Variable": "TSGRPID"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 52,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 52,
-      "Variable": "TSPARM"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 52,
-      "Variable": "TSVAL"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 52,
-      "Variable": "TSVALNF"
     }
   ]
 }
