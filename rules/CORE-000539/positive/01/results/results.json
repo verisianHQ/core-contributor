@@ -4,24 +4,9 @@
       "dataset": "qsae.xpt",
       "domain": "QS",
       "execution_status": "success",
-      "execution_message": "Split dataset is present but the two-Letter parent domain is missing.",
-      "number_errors": 1,
-      "errors": [
-        {
-          "row": 1,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "dataset_name": "QSAE",
-            "$list_dataset_names": [
-              "qsae",
-              "qs",
-              "qs1",
-              "ae"
-            ]
-          }
-        }
-      ]
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     },
     {
       "dataset": "qs.xpt",
@@ -35,24 +20,9 @@
       "dataset": "qs1.xpt",
       "domain": "QS",
       "execution_status": "success",
-      "execution_message": "Split dataset is present but the two-Letter parent domain is missing.",
-      "number_errors": 1,
-      "errors": [
-        {
-          "row": 1,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "dataset_name": "QS1",
-            "$list_dataset_names": [
-              "qsae",
-              "qs",
-              "qs1",
-              "ae"
-            ]
-          }
-        }
-      ]
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     },
     {
       "dataset": "ae.xpt",
