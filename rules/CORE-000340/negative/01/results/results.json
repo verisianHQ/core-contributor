@@ -4,38 +4,38 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSPARMCD = PLANSUB but the value provided in TSVAL is not a positive integer.",
+      "execution_message": "TSPARMCD is equal to 'PLANSUB' but the value provided in TSVAL is not a positive integer.",
       "number_errors": 3,
       "errors": [
         {
-          "row": 32,
+          "row": 1,
           "SEQ": 1,
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "PLANSUB",
             "TSVAL": "-1"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 33,
+          "row": 2,
           "SEQ": 2,
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "PLANSUB",
             "TSVAL": "0"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 34,
+          "row": 3,
           "SEQ": 3,
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "PLANSUB",
             "TSVAL": "1.5"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

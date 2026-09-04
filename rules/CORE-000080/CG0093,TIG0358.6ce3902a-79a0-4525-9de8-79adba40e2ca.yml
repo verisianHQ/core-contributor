@@ -1,6 +1,7 @@
 # Variable: --TPTREF
 # Condition: --ELTM, --TPTNUM, and --TPT not present in dataset
 # Rule: --TPTREF not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -9,7 +10,7 @@ Authorities:
           - Citations:
               - Cited Guidance: The description of a time point that acts as a fixed reference
                   for a series of planned time points, used for study data
-                  tabulation. Description of the fixed reference point referred
+                  tabulation. Description of the fixed reference point referred
                   to by --ELTM, --TPTNUM, --TPT, --STINT, and --ENINT.
                 Document: Model v2.0
                 Item: --TPTREF
@@ -23,9 +24,9 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: '(--TPTREF) Description of the fixed reference point referred to
-                  by --ELTM, --TPTNUM, and --TPT. Examples: PREVIOUS DOSE,
-                  PREVIOUS MEAL.'
+              - Cited Guidance: (--TPTREF) Description of the fixed reference point referred to
+                  by --ELTM, --TPTNUM, and --TPT. Examples include PREVIOUS DOSE,
+                  PREVIOUS MEAL.
                 Document: Model v1.4
                 Item: Specification
                 Section: 2.2.5 Timing Variables for All Classes
@@ -38,11 +39,12 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'Description of the fixed reference point referred to by --ELTM,
-                  --TPTNUM, --TPT, --STINT, and --ENINT. Examples: "PREVIOUS
-                  DOSE", "PREVIOUS MEAL".'
+              - Cited Guidance: Description of the fixed reference point referred to by --ELTM,
+                  --TPTNUM, --TPT, --STINT, and --ENINT. Examples include 'PREVIOUS
+                  DOSE', 'PREVIOUS MEAL'.
                 Document: Model v1.7
-                Item: 'Table 2.2.5.1: --TPTREF'
+                Item: >-
+                  Table 2.2.5.1: --TPTREF
                 Section: 2.2.5 Timing Variables for All Classes
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -85,12 +87,9 @@ Description: Raise an error when --ELTM, --TPTNUM, and --TPT are not present in
   dataset, but --TPTREF is present.
 Executability: Fully Executable
 Outcome:
-  Message: --TPTREF is present when --ELTM, --TPTNUM, and --TPT are not present.
+  Message: --TPTREF must not be present when --ELTM, --TPTNUM, and --TPT are not present.
   Output Variables:
     - --TPTREF
-    - --ELTM
-    - --TPTNUM
-    - --TPT
 Rule Type: Record Data
 Scope:
   Classes:

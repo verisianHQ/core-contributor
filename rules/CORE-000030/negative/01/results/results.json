@@ -4,7 +4,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMREASND should not be present in dataset, when CMPRESP is not present in dataset.",
+      "execution_message": "CMREASND must not be present in the dataset when CMPRESP is not present.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,7 +12,27 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
+            "CMPRESP": "Not in dataset",
             "CMREASND": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "MHREASND must not be present in the dataset when MHPRESP is not present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "MHPRESP": "Not in dataset",
+            "MHREASND": "Unknown reason why"
           },
           "validated": true
         }

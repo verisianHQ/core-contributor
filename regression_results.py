@@ -90,6 +90,7 @@ def build_runner(use_postgres: bool, dictionary_paths: Dict[str, str]) -> Any:
     from test import TestRunner
 
     return TestRunner(
+        standard="sdtm",
         use_pgserver=not use_postgres,
         whodrug_path=dictionary_paths.get("whodrug"),
         meddra_path=dictionary_paths.get("meddra"),
@@ -107,23 +108,30 @@ def _total_errors(payload: Dict[str, Any]) -> int:
 
 def _execute_case(runner: Any, rule_id: str, test_type: str, case_info: Dict[str, str]) -> Dict[str, Any]:
     """Run one test case and return a results.json payload (without writing to rules/)."""
-    _, results_data = runner.run_validation(rule_id, case_info["data_path"])
+    _, results_data = runner.run_validation(rule_id, case_info)
 
     if results_data is None:
         results_data = {"error": "Unknown Error", "exception": "Engine returned None"}
 
     if not results_data.get("error") and test_type == "negative":
-        validations = runner.get_validation_info(case_info["data_path"])
-        results_data, unmatched = runner.validate_errors(results_data, validations)
-        highlights = runner.get_excel_highlights(case_info["data_path"])
-        unhighlighted_validations, unvalidated_highlights = runner.check_highlights(validations, highlights)
+        is_csv = case_info["format"] == "csv"
+        validations = (
+            runner.get_validation_info_csv(case_info["data_path"])
+            if is_csv
+            else runner.get_validation_info_xlsx(case_info["data_path"])
+        )
+        results_data, unmatched = runner.validate_errors(results_data, validations, rule_id if is_csv else None)
 
         if unmatched:
             results_data["unmatched_validation"] = unmatched
-        if unhighlighted_validations:
-            results_data["unhighlighted_validations"] = unhighlighted_validations
-        if unvalidated_highlights:
-            results_data["unvalidated_highlights"] = unvalidated_highlights
+
+        if not is_csv:
+            highlights = runner.get_excel_highlights(case_info["data_path"])
+            unhighlighted_validations, unvalidated_highlights = runner.check_highlights(validations, highlights)
+            if unhighlighted_validations:
+                results_data["unhighlighted_validations"] = unhighlighted_validations
+            if unvalidated_highlights:
+                results_data["unvalidated_highlights"] = unvalidated_highlights
 
     if runner.version_info:
         return {**results_data, "dictionary_versions": runner.version_info}
