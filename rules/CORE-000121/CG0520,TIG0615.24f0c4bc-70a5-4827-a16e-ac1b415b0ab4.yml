@@ -9,7 +9,10 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: >
-                  Specification [A coded reason that arm variables (ARM and ARMCD) and/or actual arm variables (ACTARM and ACTARMCD) are null.]|Assumption 4[ARMNRS may not be populated if both ARMCD and ACTARMCD are populated]
+                  Specification [A coded reason that arm variables 
+                    (ARM and ARMCD) and/or actual arm variables (ACTARM and 
+                    ACTARMCD) are null.]|Assumption 4[ARMNRS may not be 
+                    populated if both ARMCD and ACTARMCD are populated]
                 Document: IG v3.4
                 Item: Specification|Assumption 4
                 Section: '5.2'
@@ -23,7 +26,10 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: >
-                  Specification[A coded reason that arm variables (ARM and ARMCD) and/or actual arm variables (ACTARM and ACTARMCD) are null.]|Assumption 4[ARMNRS may not be populated if both ARMCD and ACTARMCD are populated]
+                  Specification[A coded reason that arm variables 
+                  (ARM and ARMCD) and/or actual arm variables (ACTARM and 
+                  ACTARMCD) are null.]|Assumption 4[ARMNRS may not be 
+                  populated if both ARMCD and ACTARMCD are populated]
                 Document: IG v3.3
                 Item: Specification|Assumption 4
                 Section: '5.2'
@@ -62,10 +68,12 @@ Core:
   Id: CORE-000121
   Status: Published
   Version: '1'
-Description: Raise an error when ARMNRS is populated and both ARMCD and ACTARMCD are populated.
+Description: Raise an error when both ARMCD and ACTARMCD are populated and 
+  ARMNRS is also populated.
 Executability: Fully Executable
 Outcome:
-  Message: ARMNRS must not be populated when both ARMCD and ACTARMCD are populated.
+  Message: ARMNRS must not be populated when both ARMCD and ACTARMCD are 
+    populated.
   Output Variables:
     - ARMCD
     - ACTARMCD
