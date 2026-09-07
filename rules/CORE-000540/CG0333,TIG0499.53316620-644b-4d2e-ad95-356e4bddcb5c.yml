@@ -1,6 +1,7 @@
 # Variable: GEN
 # Condition: Dataset split by parent domain and dataset name length > 2 and dataset name begins with 'FA'
 # Rule: The characters of the dataset name after 'FA' equal a domain that present in the study
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
