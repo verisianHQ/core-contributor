@@ -1,6 +1,7 @@
 # Variable: --CONCU
 # Condition: 
 # Rule: --CONCU not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -55,10 +56,10 @@ Core:
   Id: CORE-000113
   Status: Published
   Version: '1'
-Description: Raise an error when --CONCU is present in a dataset other than MS.
+Description: Raise an error when --CONCU is present in a dataset other than the MS dataset.
 Executability: Fully Executable
 Outcome:
-  Message: --CONCU is present in a dataset other than MS.
+  Message: --CONCU must not be present.
   Output Variables:
     - --CONCU
 Rule Type: Record Data

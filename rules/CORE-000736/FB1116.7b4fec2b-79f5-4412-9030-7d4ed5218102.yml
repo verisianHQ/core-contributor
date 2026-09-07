@@ -1,0 +1,168 @@
+# Variable: TSPARMCD
+# Condition: 
+# Rule: Either 'AGE' or 'AGETXT' is in the list of TSPARAMCDs with TSVAL populated, not both.
+Authorities:
+  - Organization: 'FDA'
+    Standards:
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1116'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1116'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+      # SEND-IGs added Jozef
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1116'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1116'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1116'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: 'SENDIG-GENETOX'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1116'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1116'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1116'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: 'SENDIG-AR'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1116'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  all:
+    - any:
+        - name: TSPARMCD
+          operator: equal_to
+          value: AGE
+        - name: TSPARMCD
+          operator: equal_to
+          value: AGETXT
+    - name: $age_count
+      operator: greater_than_or_equal_to
+      value: 1
+    - name: $agetxt_count
+      operator: greater_than_or_equal_to
+      value: 1
+    - name: TSVAL
+      operator: non_empty
+Core:
+  Id: CORE-000736
+  Status: Published
+  Version: '1'
+Description: 'Either AGE or AGETXT is in the list of TSPARMCDs with TSVAL
+  populated, not both.'
+Executability: Fully Executable
+Operations:
+  - domain: TS
+    filter:
+      TSPARMCD: AGE
+    id: $age_count
+    name: TSPARMCD
+    operator: record_count
+  - domain: TS
+    filter:
+      TSPARMCD: AGETXT
+    id: $agetxt_count
+    name: TSPARMCD
+    operator: record_count
+Outcome:
+  Message: 'AGE and AGETXT are in the list of TSPARAMCDs with TSVAL populated.'
+  Output Variables:
+    - TSPARMCD
+    - TSVAL
+    - $age_count
+    - $agetxt_count
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

@@ -1,6 +1,7 @@
 # Variable: --TESTCD
 # Condition: 
 # Rule: --TESTCD ^= 'MULTIPLE'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -77,10 +78,10 @@ Core:
   Id: CORE-000162
   Status: Published
   Version: '1'
-Description: Raise an error when --TESTCD = 'MULTIPLE'
+Description: Raise an error when --TESTCD is equal to 'MULTIPLE'.
 Executability: Fully Executable
 Outcome:
-  Message: --TESTCD is equal to 'MULTIPLE'
+  Message: --TESTCD must not be equal to 'MULTIPLE'.
   Output Variables:
     - --TESTCD
 Rule Type: Record Data

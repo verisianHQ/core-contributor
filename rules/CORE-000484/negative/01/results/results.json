@@ -4,7 +4,7 @@
       "dataset": "relrec.xpt",
       "domain": "RELREC",
       "execution_status": "success",
-      "execution_message": "Unique RELID is NOT present on multiple RELREC records within a subject.",
+      "execution_message": "Unique RELID is not present on multiple RELREC records within a subject.",
       "number_errors": 10,
       "errors": [
         {
@@ -14,7 +14,7 @@
           "value": {
             "RELID": "AEDS1"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -23,7 +23,7 @@
           "value": {
             "RELID": "AEDS2"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -32,7 +32,7 @@
           "value": {
             "RELID": "AEDD3"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -41,7 +41,7 @@
           "value": {
             "RELID": "AEDD4"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 5,
@@ -50,7 +50,7 @@
           "value": {
             "RELID": "AEFA5"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 6,
@@ -59,7 +59,7 @@
           "value": {
             "RELID": "AEFA6"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 7,
@@ -68,7 +68,7 @@
           "value": {
             "RELID": "AECM1"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 8,
@@ -77,7 +77,7 @@
           "value": {
             "RELID": "AECM2"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 9,
@@ -86,7 +86,7 @@
           "value": {
             "RELID": "AECM3"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 10,
@@ -95,7 +95,7 @@
           "value": {
             "RELID": "AECM4"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

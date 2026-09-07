@@ -4,17 +4,17 @@
       "dataset": "ex.xpt",
       "domain": "EX",
       "execution_status": "success",
-      "execution_message": "EXMETHOD is not to be used with human clinical trials",
+      "execution_message": "EXMETHOD must not be present.",
       "number_errors": 1,
       "errors": [
         {
-          "row": 1,
-          "SEQ": 1,
-          "USUBJID": "CDISC001",
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
           "value": {
             "EXMETHOD": "INFUSION"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

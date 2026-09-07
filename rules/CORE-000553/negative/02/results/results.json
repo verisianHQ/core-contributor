@@ -1,0 +1,57 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMENDY is not calculated correctly even though the date portion of CMENDTC is complete and the date portion of RFSTDTC is complete.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 7,
+          "SEQ": 5,
+          "USUBJID": "CDISC007",
+          "value": {
+            "CMENDY": null,
+            "CMENDTC": "2013-05-10",
+            "$val_endy": 126,
+            "RFSTDTC": "2013-01-05"
+          },
+          "validated": true
+        },
+        {
+          "row": 8,
+          "SEQ": 6,
+          "USUBJID": "CDISC008",
+          "value": {
+            "CMENDY": 11.0,
+            "CMENDTC": "2014-05-20",
+            "$val_endy": 10,
+            "RFSTDTC": "2014-05-11"
+          },
+          "validated": true
+        },
+        {
+          "row": 10,
+          "SEQ": 2,
+          "USUBJID": "CDISC010",
+          "value": {
+            "CMENDY": -107.0,
+            "CMENDTC": "2013-06-05",
+            "$val_endy": -108,
+            "RFSTDTC": "2013-09-21"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000553, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

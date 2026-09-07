@@ -1,0 +1,120 @@
+{
+  "datasets": [
+    {
+      "dataset": "sm.xpt",
+      "domain": "SM",
+      "execution_status": "success",
+      "execution_message": "SMSTDTC falls after  SMENDTC.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SMSTDTC": "2018-07-18T11:15",
+            "SMENDTC": "2018-07-18"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "success",
+      "execution_message": "SESTDTC falls after  SEENDTC.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SESTDTC": "2018-01-24",
+            "SEENDTC": "2006-03-10"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "sv.xpt",
+      "domain": "SV",
+      "execution_status": "success",
+      "execution_message": "SVSTDTC falls after  SVENDTC.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVSTDTC": "2018-02-20T16:38",
+            "SVENDTC": "2018-02-20T16:31:00"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AESTDTC falls after  AEENDTC.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AESTDTC": "2019",
+            "AEENDTC": "2018-06-14"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "sm.xpt",
+      "Row": 7,
+      "Variable": "SMSTDTC"
+    },
+    {
+      "Sheet": "sm.xpt",
+      "Row": 9,
+      "Variable": "SMSTDTC"
+    },
+    {
+      "Sheet": "se.xpt",
+      "Row": 5,
+      "Variable": "SESTDTC"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 6,
+      "Variable": "SVSTDTC"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 12,
+      "Variable": "AESTDTC"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 7,
+      "Variable": "CMSTDTC"
+    }
+  ]
+}

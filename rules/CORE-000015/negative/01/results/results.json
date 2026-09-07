@@ -4,7 +4,7 @@
       "dataset": "ag.xpt",
       "domain": "AG",
       "execution_status": "success",
-      "execution_message": "AGPRESP is missing in dataset when AGOCCUR is present.",
+      "execution_message": "AGPRESP is not present in dataset when AGOCCUR is present in dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,10 +12,10 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "AGOCCUR": null,
-            "AGPRESP": "Not in dataset"
+            "AGPRESP": "Not in dataset",
+            "AGOCCUR": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -23,7 +23,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMPRESP is missing in dataset when CMOCCUR is present.",
+      "execution_message": "CMPRESP is not present in dataset when CMOCCUR is present in dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -31,10 +31,10 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "CMOCCUR": null,
-            "CMPRESP": "Not in dataset"
+            "CMPRESP": "Not in dataset",
+            "CMOCCUR": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -42,7 +42,7 @@
       "dataset": "ec.xpt",
       "domain": "EC",
       "execution_status": "success",
-      "execution_message": "ECPRESP is missing in dataset when ECOCCUR is present.",
+      "execution_message": "ECPRESP is not present in dataset when ECOCCUR is present in dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -50,10 +50,10 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "ECOCCUR": null,
-            "ECPRESP": "Not in dataset"
+            "ECPRESP": "Not in dataset",
+            "ECOCCUR": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -69,7 +69,7 @@
       "dataset": "ml.xpt",
       "domain": "ML",
       "execution_status": "success",
-      "execution_message": "MLPRESP is missing in dataset when MLOCCUR is present.",
+      "execution_message": "MLPRESP is not present in dataset when MLOCCUR is present in dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -77,10 +77,10 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "MLOCCUR": null,
-            "MLPRESP": "Not in dataset"
+            "MLPRESP": "Not in dataset",
+            "MLOCCUR": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -88,7 +88,7 @@
       "dataset": "pr.xpt",
       "domain": "PR",
       "execution_status": "success",
-      "execution_message": "PRPRESP is missing in dataset when PROCCUR is present.",
+      "execution_message": "PRPRESP is not present in dataset when PROCCUR is present in dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -96,10 +96,10 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "PROCCUR": null,
-            "PRPRESP": "Not in dataset"
+            "PRPRESP": "Not in dataset",
+            "PROCCUR": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -107,7 +107,7 @@
       "dataset": "su.xpt",
       "domain": "SU",
       "execution_status": "success",
-      "execution_message": "SUPRESP is missing in dataset when SUOCCUR is present.",
+      "execution_message": "SUPRESP is not present in dataset when SUOCCUR is present in dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -115,10 +115,10 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "SUOCCUR": null,
-            "SUPRESP": "Not in dataset"
+            "SUPRESP": "Not in dataset",
+            "SUOCCUR": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -134,7 +134,7 @@
       "dataset": "be.xpt",
       "domain": "BE",
       "execution_status": "success",
-      "execution_message": "BEPRESP is missing in dataset when BEOCCUR is present.",
+      "execution_message": "BEPRESP is not present in dataset when BEOCCUR is present in dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -142,10 +142,10 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "BEOCCUR": null,
-            "BEPRESP": "Not in dataset"
+            "BEPRESP": "Not in dataset",
+            "BEOCCUR": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -153,7 +153,7 @@
       "dataset": "ce.xpt",
       "domain": "CE",
       "execution_status": "success",
-      "execution_message": "CEPRESP is missing in dataset when CEOCCUR is present.",
+      "execution_message": "CEPRESP is not present in dataset when CEOCCUR is present in dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -161,10 +161,10 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "CEOCCUR": null,
-            "CEPRESP": "Not in dataset"
+            "CEPRESP": "Not in dataset",
+            "CEOCCUR": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -188,7 +188,7 @@
       "dataset": "ho.xpt",
       "domain": "HO",
       "execution_status": "success",
-      "execution_message": "HOPRESP is missing in dataset when HOOCCUR is present.",
+      "execution_message": "HOPRESP is not present in dataset when HOOCCUR is present in dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -196,10 +196,10 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "HOOCCUR": null,
-            "HOPRESP": "Not in dataset"
+            "HOPRESP": "Not in dataset",
+            "HOOCCUR": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -207,7 +207,7 @@
       "dataset": "mh.xpt",
       "domain": "MH",
       "execution_status": "success",
-      "execution_message": "MHPRESP is missing in dataset when MHOCCUR is present.",
+      "execution_message": "MHPRESP is not present in dataset when MHOCCUR is present in dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -215,10 +215,10 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "MHOCCUR": null,
-            "MHPRESP": "Not in dataset"
+            "MHPRESP": "Not in dataset",
+            "MHOCCUR": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

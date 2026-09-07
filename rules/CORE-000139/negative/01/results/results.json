@@ -4,7 +4,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMENDY is not null when either CMENDTC or DM.RFSTDTC do not contain complete values in their date portion",
+      "execution_message": "CMENDY is populated but either CMENDTC or RFSTDTC in the DM dataset do not contain complete values in the date portion.",
       "number_errors": 2,
       "errors": [
         {
@@ -12,22 +12,22 @@
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "CMENDTC": "2013-04",
             "CMENDY": 151.0,
+            "CMENDTC": "2013-04",
             "RFSTDTC": "2012-11-30"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
           "SEQ": 4,
           "USUBJID": "CDISC001",
           "value": {
-            "CMENDTC": "2013----14",
             "CMENDY": 166.0,
+            "CMENDTC": "2013----14",
             "RFSTDTC": "2012-11-30"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },

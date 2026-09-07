@@ -1,0 +1,53 @@
+{
+  "datasets": [
+    {
+      "dataset": "oi.xpt",
+      "domain": "OI",
+      "execution_status": "success",
+      "execution_message": "OIPARMCD and OIPARM do not have a one-to-one relationship.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "OIPARM": "Genotype",
+            "OIPARMCD": null
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "None",
+          "value": {
+            "OIPARM": "Genotype",
+            "OIPARMCD": "GENTYPE"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "None",
+          "value": {
+            "OIPARM": null,
+            "OIPARMCD": "SUBTYPE"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "None",
+          "value": {
+            "OIPARM": "Subtype",
+            "OIPARMCD": "SUBTYPE"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

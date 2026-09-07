@@ -1,6 +1,7 @@
 # Variable: ETCD
 # Condition: ELEMENT present in dataset and ETCD present in dataset
 # Rule: ELEMENT and ETCD have a one-to-one relationship
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -52,7 +53,7 @@ Authorities:
               - Cited Guidance: Elements with different start and end rules are different
                   Elements and must be represented as unique values in ELEMENT
                   and ETCD.
-                Document: IG v3.0
+                Document: SENDIG v3.0
                 Item: Specification
                 Section: 7.2.1.1
             Origin: SEND Conformance Rules
@@ -67,7 +68,7 @@ Authorities:
               - Cited Guidance: Elements with different start and end rules are different
                   Elements and must be represented as unique values in ELEMENT
                   and ETCD.
-                Document: IG v3.1
+                Document: SENDIG v3.1
                 Item: Specification
                 Section: 7.2.1.1
             Origin: SEND Conformance Rules
@@ -82,7 +83,7 @@ Authorities:
               - Cited Guidance: Elements with different start and end rules are different
                   Elements and must be represented as unique values in ELEMENT
                   and ETCD.
-                Document: IG v3.1.1
+                Document: SENDIG v3.1.1
                 Item: Specification
                 Section: 7.2.1.1
             Origin: SEND Conformance Rules
@@ -97,7 +98,7 @@ Authorities:
               - Cited Guidance: Elements with different start and end rules are different
                   Elements and must be represented as unique values in ELEMENT
                   and ETCD.
-                Document: IG v3.1
+                Document: SENDIG v3.1
                 Item: Specification
                 Section: 7.2.1.1
             Origin: SEND Conformance Rules
@@ -112,7 +113,7 @@ Authorities:
               - Cited Guidance: Elements with different start and end rules are different
                   Elements and must be represented as unique values in ELEMENT
                   and ETCD.
-                Document: IG v3.1.1
+                Document: SENDIG v3.1.1
                 Item: Specification
                 Section: 7.2.1.1
             Origin: SEND Conformance Rules
@@ -127,7 +128,7 @@ Authorities:
               - Cited Guidance: Elements with different start and end rules are different
                   Elements and must be represented as unique values in ELEMENT
                   and ETCD.
-                Document: IG v3.1.1
+                Document: SENDIG v3.1.1
                 Item: Specification
                 Section: 7.2.1.1
             Origin: SEND Conformance Rules
@@ -305,8 +306,8 @@ Core:
   Id: CORE-000132
   Status: Published
   Version: '1'
-Description: When ETCD and ELEMENTCD are present, ETCD and  ELEMENT should have
-  a one-to-one relationship.
+Description: Raise an error when ETCD and ELEMENT are present, but
+  ETCD and ELEMENT do not have a one-to-one relationship.
 Executability: Fully Executable
 Outcome:
   Message: ELEMENT and ETCD do not have a one-to-one relationship.

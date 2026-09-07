@@ -3,8 +3,8 @@
     {
       "dataset": "apsu.xpt",
       "domain": "AP",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000107, dataset=APSU",
+      "execution_status": "success",
+      "execution_message": null,
       "number_errors": 0,
       "errors": []
     },
@@ -36,15 +36,15 @@
       "dataset": "pooldef.xpt",
       "domain": "PO",
       "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000107, dataset=POOLDEF",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000107, dataset=POOLDEF",
       "number_errors": 0,
       "errors": []
     },
     {
       "dataset": "di.xpt",
       "domain": "DI",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000107, dataset=DI",
+      "execution_status": "success",
+      "execution_message": null,
       "number_errors": 0,
       "errors": []
     },

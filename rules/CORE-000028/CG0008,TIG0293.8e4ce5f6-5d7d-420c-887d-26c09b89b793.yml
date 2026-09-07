@@ -1,6 +1,7 @@
 # Variable: --ELTM
 # Condition: --TPTREF = null
 # Rule: --ELTM = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -10,7 +11,7 @@ Authorities:
               - Cited Guidance: The interval of time between a planned time point and a fixed
                   reference point, represented in a standardized character
                   format. The fixed reference point is in --TPTREF.
-                Document: SDTM Model v2.0
+                Document: Model v2.0
                 Item: --ELTM
                 Section: Timing
             Origin: SDTM and SDTMIG Conformance Rules
@@ -24,10 +25,9 @@ Authorities:
           - Citations:
               - Cited Guidance: Planned Elapsed time relative to a planned fixed reference
                   (--TPTREF) such as "Previous Dose" or "Previous Meal". This
-                  variable is useful where there are repetitive measures. Not a
-                  clock time or a date/time variable, but an
-                  interval.   Format=ISO8601
-                Document: SDTM Model v1.7
+                  variable is useful where there are repetitive measures. Not a clock time or a date/time variable, but an
+                  interval. Format=ISO8601
+                Document: Model v1.7
                 Item: Table 2.2.5, --ELTM
                 Section: 2.2.5
             Origin: SDTM and SDTMIG Conformance Rules
@@ -40,9 +40,8 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: Planned Elapsed time in ISO 8601 character format relative to a
-                  planned fixed reference (--TPTREF) such as "Previous Dose" or
-                  "Previous Meal".
-                Document: SDTM Model v1.4
+                  planned fixed reference (--TPTREF) such as "Previous Dose" or "Previous Meal".
+                Document: Model v1.4
                 Item: Table 2.2.5, --ELTM
                 Section: 2.2.5
             Origin: SDTM and SDTMIG Conformance Rules
@@ -81,11 +80,12 @@ Core:
   Id: CORE-000028
   Status: Published
   Version: '1'
-Description: Raise an error when --TPTREF is empty, but --ELTM is not empty
+Description: Raise an error when --TPTREF is not populated, but --ELTM is populated.
 Executability: Fully Executable
 Outcome:
-  Message: --TPTREF is empty and --ELTM is not empty
+  Message: --TPTREF is not populated but --ELTM is populated.
   Output Variables:
+    - --TPT
     - --TPTREF
     - --ELTM
 Rule Type: Record Data

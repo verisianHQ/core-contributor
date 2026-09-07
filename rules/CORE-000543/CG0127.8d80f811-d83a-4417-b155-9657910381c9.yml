@@ -1,6 +1,7 @@
 # Variable: ACTARMCD
 # Condition: ACTARMCD in ('SCRNFAIL', 'NOTASSGN')
 # Rule: ACTARMCD = ARMCD
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -32,13 +33,14 @@ Core:
   Id: CORE-000543
   Status: Published
   Version: '1'
-Description: Raise an error when ACTARMCD equals "SCRFNFAIL" or "NOTASSGN" but
-  ARMCD doesn't equal ACTARMCD.
+Description: Raise an error when ACTARMCD equals 'SCRFNFAIL' or 'NOTASSGN' but
+  ARMCD is not equal to ACTARMCD.
 Executability: Fully Executable
 Outcome:
   Message: ARMCD does not equal ACTARMCD when subject is either a screen failure
     or not assigned to treatment
   Output Variables:
+    - ACTARMCD
     - ARMCD
 Rule Type: Record Data
 Scope:

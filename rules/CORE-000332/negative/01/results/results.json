@@ -4,29 +4,58 @@
       "dataset": "mb.xpt",
       "domain": "MB",
       "execution_status": "success",
-      "execution_message": "MBRESCAT is expected when MBTESTCD='ORGANISM', MSSTRESC!='NO GROWTH', MBMETHOD!='GRAM STAIN'",
-      "number_errors": 1,
+      "execution_message": "For records with MBTESTCD = 'ORGANISM', MBRESCAT must be populated when MBSTRESC is not equal to 'NO GROWTH' and MBMETHOD is not equal to 'GRAM STAIN'.",
+      "number_errors": 4,
       "errors": [
         {
           "row": 1,
           "SEQ": 1,
           "USUBJID": "ABC-001-002",
           "value": {
-            "MBMETHOD": "NOT GRAM STAIN",
-            "MBRESCAT": null,
+            "MBTESTCD": "ORGANISM",
             "MBSTRESC": "NOT NO GROWTH",
-            "MBTESTCD": "ORGANISM"
+            "MBMETHOD": "Not Gram stain",
+            "MBRESCAT": null
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "ABC-001-002",
+          "value": {
+            "MBTESTCD": "ORGANISM",
+            "MBSTRESC": "NOT NO growth",
+            "MBMETHOD": "NOT GRAM STAIN",
+            "MBRESCAT": null
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "ABC-001-003",
+          "value": {
+            "MBTESTCD": "ORGANISM",
+            "MBSTRESC": null,
+            "MBMETHOD": "NOT GRAM STAIN",
+            "MBRESCAT": null
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "ABC-001-004",
+          "value": {
+            "MBTESTCD": "ORGANISM",
+            "MBSTRESC": "NOT NO growth",
+            "MBMETHOD": null,
+            "MBRESCAT": null
+          },
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "mb.xpt",
-      "Row": 5,
-      "Variable": "MBRESCAT"
     }
   ]
 }

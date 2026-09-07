@@ -1,0 +1,25 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBSTREFN is not populated when LBSTREFC is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISCPILOT01-001",
+          "value": {
+            "LBTESTCD": "GLUC",
+            "LBTEST": "Glucose",
+            "LBSTREFC": "4.1",
+            "LBSTREFN": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

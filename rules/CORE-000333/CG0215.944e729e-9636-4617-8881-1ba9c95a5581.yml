@@ -1,13 +1,15 @@
 # Variable: VISIT
 # Condition: SVUPDES = null
 # Rule: VISIT in TV.VISIT
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Protocol-defined description of clinical encounter.
+              - Cited Guidance: Protocol-defined description of clinical
+                  encounter.
                 Document: IG v3.2
                 Item: Specification
                 Section: 5 SV
@@ -20,7 +22,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Protocol-defined description of clinical encounter.
+              - Cited Guidance: Protocol-defined description of clinical
+                  encounter.
                 Document: IG v3.3
                 Item: Specification
                 Section: '5.5'
@@ -30,7 +33,6 @@ Authorities:
               Version: '1'
             Version: '2.0'
         Version: '3.3'
-
 Check:
   all:
     - any:
@@ -45,7 +47,8 @@ Core:
   Id: CORE-000333
   Status: Published
   Version: '1'
-Description: 'Raise an error when SVUPDES is null and SV.VISIT is not in TV.VISIT'
+Description: Raise an error when SVUPDES is null and SV.VISIT is not in
+  TV.VISIT.
 Executability: Partially Executable - Possible Overreporting
 Operations:
   - domain: TV
@@ -53,8 +56,8 @@ Operations:
     name: VISIT
     operator: distinct
 Outcome:
-  Message: SVUPDES is not populated or does not exist, but the VISIT does not
-    equal a VISIT present in TV
+  Message: VISIT in the SV dataset must be equal to VISIT in the TV dataset
+    when SVUPDES is not populated.
   Output Variables:
     - SVUPDES
     - VISIT

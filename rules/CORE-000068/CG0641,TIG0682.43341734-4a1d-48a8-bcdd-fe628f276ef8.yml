@@ -1,14 +1,16 @@
 # Variable: AGETXT
 # Condition: 
 # Rule: AGETXT not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: AGETXT is not be used in human clinical trials.
-                Document: SDTM v2.0
+              - Cited Guidance: Not in human clinical trials.
+                Document: Model v2.0
+                Item: AGETXT
                 Section: Demographics
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -41,7 +43,9 @@ Core:
 Description: Raise an error when AGETXT is present.
 Executability: Fully Executable
 Outcome:
-  Message: AGETXT is present.
+  Message: AGETXT must not be present.
+  Output Variables:
+    - AGETXT
 Rule Type: Record Data
 Scope:
   Classes:

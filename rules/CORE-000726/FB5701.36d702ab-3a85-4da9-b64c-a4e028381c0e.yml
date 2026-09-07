@@ -1,0 +1,100 @@
+# Variable: ETHNIC, CETHNIC
+# Condition: Ethnicity is collected
+# Rule: DM.ETHNIC = "HISPANIC OR LATINO" or "NOT HISPANIC OR LATINO"
+#           SUPPDM.CETHNIC = "HISPANIC OR LATINO" or "NOT HISPANIC OR LATINO"
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'When collecting ethnicity demographic data from clinical trial
+                  participants, the following two minimum choices should be
+                  offered: "HISPANIC OR LATINO" or "NOT HISPANIC OR LATINO"'
+                Document: FDA
+                Section: FDAB057
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5701
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'When collecting ethnicity demographic data from clinical trial
+                  participants, the following two minimum choices should be
+                  offered: "HISPANIC OR LATINO" or "NOT HISPANIC OR LATINO"'
+                Document: FDA
+                Section: FDAB057
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5701
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'When collecting ethnicity demographic data from clinical trial
+                  participants, the following two minimum choices should be
+                  offered: "HISPANIC OR LATINO" or "NOT HISPANIC OR LATINO"'
+                Document: FDA
+                Section: FDAB057
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5701
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  any:
+    - all:
+        - name: ETHNIC
+          operator: non_empty
+        - name: "ETHNIC"
+          operator: "is_not_contained_by"
+          value:
+            - "HISPANIC OR LATINO"
+            - "NOT HISPANIC OR LATINO"
+    - all:
+        - name: QNAM
+          operator: equal_to
+          value: CETHNIC
+        - name: QVAL
+          operator: "is_not_contained_by"
+          value:
+            - "HISPANIC OR LATINO"
+            - "NOT HISPANIC OR LATINO"
+        - name: "ETHNIC"
+          operator: "is_not_contained_by"
+          value:
+            - "HISPANIC OR LATINO"
+            - "NOT HISPANIC OR LATINO"
+Core:
+  Id: CORE-000726
+  Status: Published
+  Version: '1'
+Description: When Ethnicity was collected and it was not mapped as "HISPANIC OR
+  LATINO" or "NOT HISPANIC OR LATINO".
+Executability: Partially Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: SUPPDM
+Outcome:
+  Message: Ethnicity has been collected but the values is not mapped to "HISPANIC
+    OR LATINO" or "NOT HISPANIC OR LATINO"
+  Output Variables:
+    - ETHNIC
+    - CETHNIC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

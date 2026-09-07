@@ -72,9 +72,14 @@ Authorities:
         Version: '1.0'
 Check:
   all:
-    - name: SVPRESP
-      operator: equal_to
-      value: Y
+    - name: VISITNUM
+      operator: non_empty
+    - any:
+      - name: SVPRESP
+        operator: not_exists
+      - name: SVPRESP
+        operator: equal_to
+        value: Y
     - name: VISITNUM
       operator: is_not_contained_by
       value: $TV_VISITNUM
@@ -82,9 +87,9 @@ Core:
   Id: CORE-000270
   Status: Published
   Version: '1'
-Description: Verify when VISITNUM is not null in any given domain and VISITNUM
-  is planned (SVPRESP = 'Y'), then VISIT should be among TV.VISITNUM.
-Executability: Fully Executable
+Description: Raise an error when VISITNUM is populated for a planned visit, but VISITNUM value does not match any VISITNUM value in the TV dataset.
+  If SVPRESP isn't present, all non-missing VISITNUM values are checked against TV.VISITNUM.
+Executability: Partially Executable - Possible Overreporting
 Match Datasets:
   - Keys:
       - USUBJID
@@ -96,11 +101,10 @@ Operations:
     name: VISITNUM
     operator: distinct
 Outcome:
-  Message: For a planned visit (SVPRESP = 'Y'), non-missing VISITNUM value must be
-    among those present in TV.VISITNUM. in TV.VISITNUM
+  Message: VISITNUM value for planned visit does not match any VISITNUM value in the TV dataset.
   Output Variables:
     - VISITNUM
-    - SVPRESP
+    - VISIT
 Rule Type: Record Data
 Scope:
   Classes:

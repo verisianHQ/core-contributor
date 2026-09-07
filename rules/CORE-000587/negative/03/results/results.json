@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVAL must be an integer greater than 0 when TSPARMCD is equal to 'NARMS'.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "NARMS",
+            "TSVAL": "abc"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

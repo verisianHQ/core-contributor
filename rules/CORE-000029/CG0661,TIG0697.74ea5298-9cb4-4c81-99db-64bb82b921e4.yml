@@ -1,6 +1,7 @@
 # Variable: --TPT
 # Condition: --TPTNUM present in dataset
 # Rule: --TPT present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -43,12 +44,13 @@ Core:
   Id: CORE-000029
   Status: Published
   Version: '1'
-Description: Raise an error when --TPTNUM exists in a dataset and --TPT does not exist.
+Description: Raise an error when --TPTNUM is present in a dataset, but --TPT is not present in the dataset.
 Executability: Fully Executable
 Outcome:
-  Message: --TPTNUM exists in a dataset, but --TPT does not exist. When time
-    points are represented in SDTMIG domains, both --TPT and --TPTNUM must be
-    used.
+  Message: --TPT must be present when --TPTNUM is present.
+  Output Variables:
+    - --TPTNUM
+    - --TPT
 Rule Type: Record Data
 Scope:
   Classes:

@@ -1,14 +1,16 @@
 # Variable: RPPLSTDY
 # Condition: 
 # Rule: RPPLSTDY not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: RPPLSTDY is not be used in human clinical trials.
-                Document: SDTM v2.0
+              - Cited Guidance: Not in human clinical trials.
+                Document: Model v2.0
+                Item: RPPLSTDY
                 Section: Timing
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -41,7 +43,9 @@ Core:
 Description: Raise an error when RPPLSTDY is present.
 Executability: Fully Executable
 Outcome:
-  Message: RPPLSTDY is present.
+  Message: RPPLSTDY must not be present.
+  Output Variables:
+    - RPPLSTDY
 Rule Type: Record Data
 Scope:
   Classes:

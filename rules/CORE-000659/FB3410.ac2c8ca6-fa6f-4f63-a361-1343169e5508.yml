@@ -1,0 +1,75 @@
+# Variable: AEDUR, AEOUT
+# Condition: AEOUT = "RECOVERED/RESOLVED"
+# Rule: AEENDTC <> Null
+Authorities:
+  - Organization: 'FDA'
+    Standards:
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Study start and end date/time should include month, day, and
+                  year.'
+                Document: 'FDA'
+                Section: 'FDAB034'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB3410'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Study start and end date/time should include month, day, and
+                  year.'
+                Document: 'FDA'
+                Section: 'FDAB034'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB3410'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Study start and end date/time should include month, day, and
+                  year.'
+                Document: 'FDA'
+                Section: 'FDAB034'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB3410'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: AEOUT
+      operator: 'equal_to'
+      value: 'RECOVERED/RESOLVED'
+    - name: AEENDTC
+      operator: empty
+Core:
+  Id: CORE-000659
+  Status: Published
+  Version: '1'
+Description: When Adverse Event Outcome (AEOUT) is populated with
+  RECOVERED/RESOLVED, then the End Date/Time of Adverse Event (AEENDTC) should
+  be populated.
+Executability: Fully Executable
+Outcome:
+  Message: AEENDTC is missing, when AEOUT = RECOVERED/RESOLVED.
+  Output Variables:
+    - AETERM
+    - AEOUT
+    - AEENDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - AE
+Sensitivity: Record

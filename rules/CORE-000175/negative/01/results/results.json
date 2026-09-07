@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "STRAIN is present in DM dataset.",
+      "execution_message": "STRAIN must not be present.",
       "number_errors": 1,
       "errors": [
         {
@@ -14,7 +14,7 @@
           "value": {
             "STRAIN": "Bad"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

@@ -1,0 +1,135 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AESOCCD and AESOC do not have a one-to-one relationship.",
+      "number_errors": 6,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 735,
+          "USUBJID": "CDISC-TEST-046",
+          "value": {
+            "AESOC": "Nervous system disorders",
+            "AESOCCD": 10029205.0
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 782,
+          "USUBJID": "CDISC-TEST-049",
+          "value": {
+            "AESOC": "Nervous system disorders",
+            "AESOCCD": 10029206.0
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 783,
+          "USUBJID": "CDISC-TEST-049",
+          "value": {
+            "AESOC": "Nervous system disorders",
+            "AESOCCD": null
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": 839,
+          "USUBJID": "CDISC-TEST-052",
+          "value": {
+            "AESOC": "Nervous system disorders",
+            "AESOCCD": 10029205.0
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": 840,
+          "USUBJID": "CDISC-TEST-052",
+          "value": {
+            "AESOC": "Vascular disorders",
+            "AESOCCD": 10047065.0
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": 843,
+          "USUBJID": "CDISC-TEST-052",
+          "value": {
+            "AESOC": null,
+            "AESOCCD": 10047065.0
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "ae.xpt",
+      "Row": 6,
+      "Variable": "AESOC"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 6,
+      "Variable": "AESOCCD"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 7,
+      "Variable": "AESOC"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 7,
+      "Variable": "AESOCCD"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 8,
+      "Variable": "AESOC"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 8,
+      "Variable": "AESOCCD"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 9,
+      "Variable": "AESOC"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 9,
+      "Variable": "AESOCCD"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 10,
+      "Variable": "AESOC"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 10,
+      "Variable": "AESOCCD"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 11,
+      "Variable": "AESOC"
+    },
+    {
+      "Sheet": "ae.xpt",
+      "Row": 11,
+      "Variable": "AESOCCD"
+    }
+  ]
+}

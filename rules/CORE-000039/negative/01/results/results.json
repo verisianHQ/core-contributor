@@ -4,9 +4,54 @@
       "dataset": "sv.xpt",
       "domain": "SV",
       "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "execution_message": "VISITNUM value for planned visit does not match any VISITNUM value in the TV dataset.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VISITNUM": 14.0,
+            "VISIT": "BASELINE",
+            "SVPRESP": "Y"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VISITNUM": 5.01,
+            "VISIT": "WEEK 4: UNSCHEDULED 01",
+            "SVPRESP": "Y"
+          },
+          "validated": true
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VISITNUM": 101.0,
+            "VISIT": "EARLY DISCONTINUATION",
+            "SVPRESP": "Y"
+          },
+          "validated": true
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "VISITNUM": 201.0,
+            "VISIT": "EARLY DISCONTINUATION RETRIEVAL",
+            "SVPRESP": "Y"
+          },
+          "validated": true
+        }
+      ]
     },
     {
       "dataset": "tv.xpt",

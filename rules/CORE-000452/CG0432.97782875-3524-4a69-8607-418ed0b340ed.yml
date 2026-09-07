@@ -1,6 +1,7 @@
 # Variable: AGEU
 # Condition: AGE ^= null or AGETXT ^= null
 # Rule: AGEU ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -32,8 +33,6 @@ Check:
   all:
     - any:
         - name: AGEU
-          operator: not_exists
-        - name: AGEU
           operator: empty
     - any:
         - name: AGETXT
@@ -44,14 +43,14 @@ Core:
   Id: CORE-000452
   Status: Published
   Version: '1'
-Description: Raise an error when AGEU is empty, but AGE or AGETXT is not empty.
+Description: Raise an error when AGE or AGETXT is populated, but AGEU is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: Missing value for AGEU, when AGE or AGETXT is provided
+  Message: AGEU must be populated when AGE or AGETXT is populated.
   Output Variables:
     - AGE
-    - AGEU
     - AGETXT
+    - AGEU
 Rule Type: Record Data
 Scope:
   Classes:
