@@ -176,9 +176,9 @@ Check:
     - name: define_variable_ccode
       operator: equal_to
       value: C66734
-    - name: define_variable_codelist_coded_values
+    - name: define_variable_codelist_coded_codes
       operator: is_not_contained_by
-      value: $domain_lib_values
+      value: $domain_lib_ccode
 Core:
   Id: CORE-000929
   Status: Published
@@ -189,8 +189,8 @@ Executability: Fully Executable
 Operations:
   - id: $domain_is_custom
     operator: domain_is_custom
-  - ct_attribute: Term Signification
-    id: $domain_lib_values
+  - ct_attribute: Term CCODE
+    id: $domain_lib_ccode
     operator: get_codelist_attributes
     name: DOMAIN
     ct_conditions:
@@ -198,8 +198,8 @@ Operations:
 Outcome:
   Message: DOMAIN Code is not a published DOMAIN Code in CDISC Controlled Terminology.
   Output Variables:
-    - $domain_lib_values
-    - define_variable_codelist_coded_values
+    - $domain_lib_ccode
+    - define_variable_codelist_coded_codes
 Rule Type: Define Item Metadata Check against Library Metadata
 Scope:
   Classes:

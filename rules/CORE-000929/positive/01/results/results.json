@@ -1,8 +1,16 @@
 {
   "datasets": [
     {
-      "dataset": "zb.xpt",
-      "domain": "ZB",
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
       "execution_status": "success",
       "execution_message": null,
       "number_errors": 0,
@@ -17,16 +25,8 @@
       "errors": []
     },
     {
-      "dataset": "cm.xpt",
-      "domain": "CM",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
-    },
-    {
-      "dataset": "fa.xpt",
-      "domain": "FA",
+      "dataset": "zb.xpt",
+      "domain": "ZB",
       "execution_status": "success",
       "execution_message": null,
       "number_errors": 0,
