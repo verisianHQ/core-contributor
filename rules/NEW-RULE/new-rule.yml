@@ -38,7 +38,7 @@ Authorities:
                   the sponsor from the coding dictionary.
                 Document: IG v3.2
                 Item: Assumption 2c
-                Section: 6.1
+                Section: 6.1.2
               - Cited Guidance: Standardized or dictionary-derived text description of CMTRT or
                   CMMODIFY.  Equivalent to the generic medication name in WHO
                   Drug. The sponsor is expected to provide the dictionary name
@@ -94,7 +94,6 @@ Executability: Fully Executable
 Outcome:
   Message: CMDECOD is not a valid WHODrug dictionary preferred drug name.
   Output Variables:
-    - CMTRT
     - CMDECOD
 Rule Type: Record Data
 Scope:
