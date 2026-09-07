@@ -1,3 +1,7 @@
+# Variable: TSVALn
+# Condition: TSVAL(n+1) ^= null
+# Rule: TSVALn ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -43,21 +47,18 @@ Authorities:
               Version: '1'
             Version: '2.0'
         Version: '3.3'
-# Variable: TSVALn
-# Condition: TSVAL(n+1) ^= null
-# Rule: TSVALn ^= null
 Check:
   all:
-    - name: --VAL
+    - name: TSVAL
       operator: inconsistent_enumerated_columns
 Core:
   Id: CORE-000582
   Status: Published
   Version: '1'
-Description: Raise an error when TSVAL(n+1) ^= null and TSVALn = null
+Description: Raise an error when TSVAL(n+1) is populated and TSVALn is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: TSVALn is null when TSVAL(n+1) is populated.
+  Message: TSVALn must be populated when TSVAL(n+1) is populated.
   Output Variables:
     - TSGRPID
     - TSPARMCD

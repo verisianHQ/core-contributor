@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "AGEU is completed, but both AGE and AGETXT are not completed.",
+      "execution_message": "AGE or AGETXT must be populated when AGEU is populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -13,44 +13,12 @@
           "USUBJID": "015246-099-0000-00002",
           "value": {
             "AGE": null,
-            "AGEU": "YEARS",
-            "AGETXT": null
+            "AGETXT": null,
+            "AGEU": "YEARS"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 1,
-      "Variable": "AGE"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 1,
-      "Variable": "AGETXT"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 1,
-      "Variable": "AGEU"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 7,
-      "Variable": "AGE"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 7,
-      "Variable": "AGETXT"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 7,
-      "Variable": "AGEU"
     }
   ]
 }

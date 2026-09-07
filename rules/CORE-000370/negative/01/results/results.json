@@ -12,7 +12,7 @@
       "dataset": "ds.xpt",
       "domain": "DS",
       "execution_status": "success",
-      "execution_message": "RFICDTC in the DM dataset is not equal to the earliest DSSTDTC value in the DS dataset, when DSTERM is equal to 'INFORMED CONSENT OBTAINED'.",
+      "execution_message": "DSTERM indicates INFORMED CONSENT OBTAINED but RFICDTC in the DM dataset is not equal to the earliest DSSTDTC.",
       "number_errors": 2,
       "errors": [
         {
@@ -20,7 +20,7 @@
           "SEQ": 1,
           "USUBJID": "015246-076-0003-00003",
           "value": {
-            "DSTERM": "INFORMED CONSENT OBTAINED",
+            "DSTERM": "INFORMED CONSENT FOR STUDY OBTAINED",
             "RFICDTC": "2018-05-20",
             "DSSTDTC": "2018-03-06",
             "$min_ds_dsstdtc": "2018-03-06"

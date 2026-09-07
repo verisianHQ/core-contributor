@@ -1,6 +1,7 @@
 # Variable: AGETXT
 # Condition: AGEU ^= null and AGE = null
 # Rule: AGETXT ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -56,34 +57,28 @@ Authorities:
         Substandard: SDTM
         Version: '1.0'
 Check:
-  any:
-    - all:
-        - name: AGEU
-          operator: non_empty
-        - name: AGE
-          operator: empty
-        - name: AGETXT
-          operator: empty
-    - all:
-        - name: AGEU
-          operator: non_empty
-        - name: AGE
-          operator: empty
-        - name: AGETXT
-          operator: not_exists
+  all:
+      - name: AGEU
+        operator: non_empty
+      - name: AGE
+        operator: empty
+      - any:
+          - name: AGETXT
+            operator: not_exists
+          - name: AGETXT
+            operator: empty
 Core:
   Id: CORE-000122
   Status: Published
   Version: '1'
-Description: Raise an error when AGEU is completed but both AGETXT and AGE are
-  not completed.
+Description: Raise an error when AGEU is populated, but neither AGE nor AGETXT is populated.
 Executability: Fully Executable
 Outcome:
-  Message: AGEU is completed, but both AGE and AGETXT are not completed.
+  Message: AGE or AGETXT must be populated when AGEU is populated.
   Output Variables:
     - AGE
-    - AGEU
     - AGETXT
+    - AGEU
 Rule Type: Record Data
 Scope:
   Classes:

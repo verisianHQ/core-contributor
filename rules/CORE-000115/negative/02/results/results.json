@@ -4,7 +4,7 @@
       "dataset": "ta.xpt",
       "domain": "TA",
       "execution_status": "success",
-      "execution_message": "ARM cannot be equal to 'Screen Failure', 'Not Assigned', 'Unplanned Treatment' or 'Not Treated'.",
+      "execution_message": "ARM must not be equal to 'Screen Failure', 'Not Assigned', 'Unplanned Treatment' or 'Not Treated'.",
       "number_errors": 4,
       "errors": [
         {
@@ -14,7 +14,7 @@
           "value": {
             "ARM": "NOT TREATED"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -23,7 +23,7 @@
           "value": {
             "ARM": "NOT ASSIGNED"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -32,7 +32,7 @@
           "value": {
             "ARM": "SCREEN FAILURE"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -41,7 +41,7 @@
           "value": {
             "ARM": "UNPLANNED TREATMENT"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

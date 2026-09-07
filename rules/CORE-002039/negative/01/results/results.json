@@ -3,74 +3,105 @@
     {
       "dataset": "dm.xpt",
       "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=FDA.SDTMIG.FB4302, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "lb1.xpt",
+      "domain": "LB",
       "execution_status": "success",
-      "execution_message": "Subject is assigned to an arm code (randomized) but has no record in the EX dataset.",
+      "execution_message": "LBENDTC is populated, but LBDTC is not populated.",
       "number_errors": 5,
       "errors": [
         {
           "row": 1,
-          "SEQ": null,
-          "USUBJID": "ZZZZZZZZZZZZZZZZz103",
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
           "value": {
-            "ARMNRS": null,
-            "ARMCD": "IKD",
-            "ACTARMCD": "RANDOM"
+            "LBTESTCD": "ALB",
+            "LBENDTC": "2012-11-23",
+            "LBDTC": "Not in dataset"
           },
           "validated": true
         },
         {
           "row": 2,
-          "SEQ": null,
-          "USUBJID": "ZZZ103",
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
           "value": {
-            "ARMNRS": "SCREEN FAIL",
-            "ARMCD": "IKD",
-            "ACTARMCD": "RANDOM"
+            "LBTESTCD": "ALP",
+            "LBENDTC": "2012-11-24",
+            "LBDTC": "Not in dataset"
           },
           "validated": true
         },
         {
           "row": 3,
-          "SEQ": null,
-          "USUBJID": "ZZZ102",
+          "SEQ": 3,
+          "USUBJID": "CDISC002",
           "value": {
-            "ARMNRS": "ASSIGNED",
-            "ARMCD": "IKD",
-            "ACTARMCD": "RANDOM"
+            "LBTESTCD": "ALB",
+            "LBENDTC": "2012-11-24",
+            "LBDTC": "Not in dataset"
           },
           "validated": true
         },
         {
           "row": 4,
-          "SEQ": null,
-          "USUBJID": "ZZZ101",
+          "SEQ": 4,
+          "USUBJID": "CDISC002",
           "value": {
-            "ARMNRS": "NOT TREATEd",
-            "ARMCD": "XYZ",
-            "ACTARMCD": "XYZ"
+            "LBTESTCD": "ALP",
+            "LBENDTC": "2012-11-24",
+            "LBDTC": "Not in dataset"
           },
           "validated": true
         },
         {
           "row": 5,
-          "SEQ": null,
-          "USUBJID": "ABC12546790373",
+          "SEQ": 5,
+          "USUBJID": "CDISC003",
           "value": {
-            "ARMNRS": "FAILure",
-            "ARMCD": "XYZ",
-            "ACTARMCD": "XYZ"
+            "LBTESTCD": "BASO",
+            "LBENDTC": "2012-11-23",
+            "LBDTC": "Not in dataset"
           },
           "validated": true
         }
       ]
     },
     {
-      "dataset": "ex.xpt",
-      "domain": "EX",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000748, dataset=EX",
-      "number_errors": 0,
-      "errors": []
+      "dataset": "lb2.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBENDTC is populated, but LBDTC is not populated.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "ALP",
+            "LBENDTC": "2012-11-24T15:39:00",
+            "LBDTC": null
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "CDISC003",
+          "value": {
+            "LBTESTCD": "BASO",
+            "LBENDTC": "2012-11-23T15:39:00",
+            "LBDTC": null
+          },
+          "validated": true
+        }
+      ]
     }
   ]
 }

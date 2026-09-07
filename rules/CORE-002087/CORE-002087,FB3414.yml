@@ -1,0 +1,68 @@
+# Variable: DM.RFICDTC
+# Rule: DM.RFICTDTC ^= Null
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Study start and end date/time should include month, day, and
+                  year.
+                Document: FDA
+                Section: FDAB034
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3414
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Study start and end date/time should include month, day, and
+                  year.
+                Document: FDA
+                Section: FDAB034
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3414
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Study start and end date/time should include month, day, and
+                  year.
+                Document: FDA
+                Section: FDAB034
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3414
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: RFICDTC
+      operator: empty
+Core:
+  Id: CORE-002087
+  Status: Published
+  Version: '1'
+Description: Raise an error when Date/Time of Informed Consent (RFICDTC) is not populated.
+Executability: Fully Executable
+Outcome:
+  Message: Missing RFICDTC.
+  Output Variables:
+    - RFICDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record
