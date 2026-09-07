@@ -138,7 +138,7 @@ Core:
   Status: Draft
   Version: '1'
 Description: Raise an error when for the same drug or metabolite (PCTEST = PCCAT), specimen type (--SPEC) is not consistent across pharmacokinetic datasets within a submission. 
-Executability: Partially Executable
+Executability: Fully Executable
 Match Datasets:
   - Name: PP
     Keys:
