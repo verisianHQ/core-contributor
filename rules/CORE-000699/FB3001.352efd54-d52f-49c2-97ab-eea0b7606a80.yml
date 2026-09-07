@@ -164,7 +164,7 @@ Description: Raise an error when standard unit (--STRESU) is not consistent with
   (unique --TESTCD, --CAT, --SCAT, --SPEC, --METHOD combination).
 Executability: Fully Executable
 Outcome:
-  Message: Standards unit (--STRESU) is not consistent within the same assessment ( --TESTCD, --CAT, --SCAT, --SPEC, --METHOD).
+  Message: Standard unit (--STRESU) is not consistent within the same assessment (--TESTCD, --CAT, --SCAT, --SPEC, --METHOD).
   Output Variables:
     - --STRESU
     - --TESTCD
