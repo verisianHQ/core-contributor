@@ -148,8 +148,8 @@ Core:
   Id: CORE-000711
   Status: Published
   Version: '1'
-Description: Subject Reference Start Date/Time (RFSTDTC) should be prior or
-  equal to the Subject Reference End Date/Time (RFENDTC).
+Description: Raise an error when subject Reference Start Date/Time (RFSTDTC) 
+  is after the Subject Reference End Date/Time (RFENDTC).
 Executability: Fully Executable
 Outcome:
   Message: RFSTDTC falls after RFENDTC.
