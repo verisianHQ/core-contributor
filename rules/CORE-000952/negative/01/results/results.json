@@ -23,7 +23,7 @@
             "AEENDTC": "2022-01-30",
             "DM.RFPENDTC": "2022-01-19"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 7,
@@ -33,7 +33,7 @@
             "AEENDTC": "2018-06-14",
             "DM.RFPENDTC": "2006-03-19"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -52,7 +52,7 @@
             "CMENDTC": "2022-01-25",
             "DM.RFPENDTC": "2022-01-19"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -71,7 +71,7 @@
             "SEENDTC": "2022-01-22",
             "DM.RFPENDTC": "2022-01-19"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -82,48 +82,6 @@
       "execution_message": null,
       "number_errors": 0,
       "errors": []
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 1,
-      "Variable": "RFPENDTC"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "RFPENDTC"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 1,
-      "Variable": "AEENDTC"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 7,
-      "Variable": "AEENDTC"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 1,
-      "Variable": "CMENDTC"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 7,
-      "Variable": "CMENDTC"
-    },
-    {
-      "Sheet": "se.xpt",
-      "Row": 1,
-      "Variable": "SEENDTC"
-    },
-    {
-      "Sheet": "se.xpt",
-      "Row": 7,
-      "Variable": "SEENDTC"
     }
   ]
 }
