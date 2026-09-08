@@ -1,16 +1,17 @@
 # Variable: EXVAMT
 # Condition: EC domain is present
 # Rule: EXVAMT not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: '"When the EC domain is implemented in conjunction with the EX
-                  domain, EXVAMT and EXVAMTU should not be used in
-                  EX;  collected values instead would be represented in ECDOSE
-                  and ECDOSU."'
+              - Cited Guidance: When the EC domain is implemented in
+                  conjunction with the EX domain, EXVAMT and EXVAMTU should not
+                  be used in EX; collected values instead would be represented
+                  in ECDOSE and ECDOSU.
                 Document: IG v3.4
                 Item: Assumption 6c
                 Section: 6.1.3.1
@@ -23,9 +24,10 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: When the EC domain is implemented in conjunction with the EX
-                  domain, EXVAMT and EXVAMTU should not be used in EX; collected
-                  values instead would be represented in ECDOSE and ECDOSU.
+              - Cited Guidance: When the EC domain is implemented in
+                  conjunction with the EX domain, EXVAMT and EXVAMTU should not
+                  be used in EX; collected values instead would be represented
+                  in ECDOSE and ECDOSU.
                 Document: IG v3.3
                 Item: Assumption 6c
                 Section: 6.1.3.1
@@ -38,10 +40,10 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: When the EC domain (See Section 6.1.2.3) is implemented in
-                  conjunction with the EX domain, EXVAMT and EXVAMTU should not
-                  be used in EX; collected values instead would be represented
-                  in ECDOSE and ECDOSU
+              - Cited Guidance: When the EC domain (See Section 6.1.2.3) is
+                  implemented in conjunction with the EX domain, EXVAMT and
+                  EXVAMTU should not be used in EX; collected values instead
+                  would be represented in ECDOSE and ECDOSU.
                 Document: IG v3.2
                 Item: Assumption 6c
                 Section: '6.1'
@@ -54,9 +56,10 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: When the EC domain is implemented in conjunction with the EX
-                  domain, EXVAMT and EXVAMTU should not be used in EX; collected
-                  values instead would be represented in ECDOSE and ECDOSU.
+              - Cited Guidance: When the EC domain is implemented in
+                  conjunction with the EX domain, EXVAMT and EXVAMTU should not
+                  be used in EX; collected values instead would be represented
+                  in ECDOSE and ECDOSU.
                 Document: TIG 1.0
                 Item: Assumption 6c
                 Section: 2.8.10.10
@@ -67,7 +70,6 @@ Authorities:
             Version: '1.0'
         Substandard: SDTM
         Version: '1.0'
-
 Check:
   all:
     - name: $EXVAMT_EXISTS
@@ -79,7 +81,7 @@ Core:
   Id: CORE-000291
   Status: Published
   Version: '1'
-Description: When EC exists, EXVAMT should not be used.
+Description: Raise an error when EC is present and EXVAMT is also present.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
@@ -90,7 +92,7 @@ Operations:
     name: EXVAMT
     operator: variable_exists
 Outcome:
-  Message: EXVAMT is present when EC exists.
+  Message: EXVAMT must not be present when EC is present.
   Output Variables:
     - $EXVAMT_EXISTS
 Rule Type: Domain Presence Check
