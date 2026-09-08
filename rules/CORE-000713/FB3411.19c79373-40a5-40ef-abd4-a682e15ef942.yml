@@ -1,9 +1,23 @@
-# Variable: RFICDTC, RFSTDTC
-# Condition: DM.RFICTDTC ^= Null and DM.RFSTDTC ^= Null
-# Rule: DM.RFICDTC <= DM.RFSTDTC
+# Variable: RFICDTC
+# Condition: RFICTDTC ^= Null and RFSTDTC ^= Null
+# Rule: RFICDTC <= RFSTDTC
+# verified
 Authorities:
   - Organization: FDA
     Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Study start and end date/time should include month, day, and
+                  year.
+                Document: FDA
+                Section: FDAB034
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB3411
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
       - Name: SDTMIG
         References:
           - Citations:
@@ -43,8 +57,8 @@ Core:
   Id: CORE-000713
   Status: Published
   Version: '1'
-Description: Date/Time of Informed Consent (RFICDTC) should be prior or equal to
-  the Subject Reference Start Date/Time (RFSTDTC).
+Description: Date/Time of Informed Consent (RFICDTC) is prior or equal to the
+  Subject Reference Start Date/Time (RFSTDTC).
 Executability: Fully Executable
 Outcome:
   Message: RFICDTC falls after RFSTDTC.
