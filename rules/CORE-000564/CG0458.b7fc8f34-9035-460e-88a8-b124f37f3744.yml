@@ -41,9 +41,11 @@ Check:
       value:
         - INDIC
         - TDIGRP
+      value_is_literal: true
     - name: TSVCDREF
       operator: not_equal_to
       value: SNOMED
+      value_is_literal: true
 Core:
   Id: CORE-000564
   Status: Published
