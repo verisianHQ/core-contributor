@@ -1,15 +1,14 @@
 # Variable: GEN
 # Condition: 
 # Rule: A set of records exist with at least one record with TSPARMCD equal to each of the required values in the list of Trial Summary Codes in Appendix C1
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Further information about the parameters is included below in
-                  Table 1. TSVAL may have controlled terminology depending on
-                  the value of TSPARMCD
+              - Cited Guidance: Further information about the parameters is included below in Table 1. TSVAL may have controlled terminology depending on the value of TSPARMCD
                 Document: IG v3.2
                 Item: Assumption 3
                 Section: '7.4'
@@ -22,10 +21,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Further information about the parameters is included Appendix
-                  C1, Trial Summary Codes. TSVAL may have controlled terminology
-                  depending on the value of TSPARMCD. Conditions for including
-                  parameters are included in Appendix C1, Trial Summary Codes.
+              - Cited Guidance: Further information about the parameters is included Appendix C1, Trial Summary Codes. TSVAL may have controlled terminology depending on the value of TSPARMCD. Conditions for including parameters are included in Appendix C1, Trial Summary Codes.
                 Document: IG v3.3
                 Item: Assumption 3
                 Section: '7.4'
@@ -71,12 +67,47 @@ Core:
   Id: CORE-000740
   Status: Published
   Version: '1'
-Description: 'A required value of TSPARMCD is not found'
+Description: A required value of TSPARMCD is not found
 Executability: Fully Executable
+Operations:
+  - id: $distinct_tsparmcds
+    name: TSPARMCD
+    operator: distinct
+  - id: $missing_tsparmcds
+    name: 
+      - 'ADDON'
+      - 'AGEMAX'
+      - 'AGEMIN'
+      - 'LENGTH'
+      - 'PLANSUB'
+      - 'RANDOM'
+      - 'SEXPOP'
+      - 'STOPRULE'
+      - 'TBLIND'
+      - 'TCNTRL'
+      - 'TITLE'
+      - 'TPHASE'
+      - 'TTYPE'
+      - 'OBJPRIM'
+      - 'SPONSOR'
+      - 'REGID'
+      - 'OUTMSPRI'
+      - 'FCNTRY'
+      - 'ADAPT'
+      - 'DCUTDTC'
+      - 'DCUTDESC'
+      - 'NARMS'
+      - 'STYPE'
+      - 'SSTDTC'
+      - 'SENDTC'
+      - 'ACTSUB'
+      - 'HLTSUBJI'
+    operator: minus
+    subtract: $distinct_tsparmcds
 Outcome:
-  Message: 'A required value of TSPARMCD is not found'
+  Message: A required value of TSPARMCD is not found
   Output Variables:
-    - TSPARMCD
+    - $missing_tsparmcds
 Rule Type: Record Data
 Scope:
   Classes:
@@ -85,4 +116,4 @@ Scope:
   Domains:
     Include:
       - TS
-Sensitivity: Record
+Sensitivity: Dataset
