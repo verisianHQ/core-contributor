@@ -162,8 +162,8 @@ Core:
   Id: CORE-000866
   Status: Published
   Version: '1'
-Description: Date/Time of Collection (--DTC) is prior or equal to the End
-  Date/Time of Observation (--ENDTC).
+Description: Raise an error when Date/Time of Collection (--DTC) is after
+  the End Date/Time of Observation (--ENDTC).
 Executability: Fully Executable
 Outcome:
   Message: --DTC falls after --ENDTC.
