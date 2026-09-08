@@ -1,6 +1,7 @@
 # Variable: GEN
 # Condition: DM.ACTARMCD not in ('SCRNFAIL', 'NOTASSGN', 'NOTTRT')
 # Rule: Subject records > 0
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -37,8 +38,9 @@ Core:
   Id: CORE-000515
   Status: Published
   Version: '1'
-Description: 'Raise an error when DM.ACTARMCD does not equal "SCRNFAIL",
-  "NOTASSGN" or "NOTTRT", and there are no DS records for the same subject'
+Description: Raise an error when ACTARMCD in the DM dataset is not
+  equal to 'SCRNFAIL', 'NOTASSGN' or 'NOTTRT' and there are no 
+  records in the DS dataset for the same subject.
 Executability: Fully Executable
 Operations:
   - domain: DS
@@ -46,8 +48,8 @@ Operations:
     name: USUBJID
     operator: distinct
 Outcome:
-  Message: 'DM.ACTARMCD does not equal "SCRNFAIL", "NOTASSGN" or "NOTTRT" but
-    there are no DS records for the same subject'
+  Message: At least one DS record must be present for a subject when ACTARMCD
+    in the DM dataset is not equal to 'SCRNFAIL', 'NOTASSGN' or 'NOTTRT'.
 Rule Type: Record Data
 Scope:
   Classes:

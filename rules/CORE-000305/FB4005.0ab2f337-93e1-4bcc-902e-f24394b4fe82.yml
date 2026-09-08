@@ -1,3 +1,7 @@
+# variable: --DUR
+# condition: --DUR ^= null
+# rule: --DUR >= 0
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -84,7 +88,7 @@ Authorities:
               Id: FB4005
               Version: '1'
             Version: '1.5'
-        Version: 3.1.1
+        Version: '3.1.1'
       - Name: SENDIG-GENETOX
         References:
           - Citations:
@@ -152,7 +156,7 @@ Core:
   Id: CORE-000305
   Status: Published
   Version: '1'
-Description: Collected Duration (--DUR) value should not be negative.
+Description: Collected Duration (--DUR) value is not negative.
 Executability: Fully Executable
 Outcome:
   Message: Negative value for --DUR.
