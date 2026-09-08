@@ -44,8 +44,8 @@ Core:
   Id: CORE-000760
   Status: Published
   Version: '1'
-Description: Date/Time of First Challenge Agent Admin (RFCSTDTC) is prior or
-  equal to the Date/Time of Last Challenge Agent Admin (RFCENDTC).
+Description: Raise an error when Date/Time of First Challenge Agent Admin 
+  (RFCSTDTC) is after the Date/Time of Last Challenge Agent Admin (RFCENDTC).
 Executability: Fully Executable
 Outcome:
   Message: RFCSTDTC falls after RFCENDTC.
