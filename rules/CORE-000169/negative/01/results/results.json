@@ -5,7 +5,7 @@
       "domain": "LB",
       "execution_status": "success",
       "execution_message": "LBTOXGR must not include non-numeric values when a numeric scale is used.",
-      "number_errors": 1,
+      "number_errors": 2,
       "errors": [
         {
           "row": 1,
@@ -15,6 +15,17 @@
             "LBTESTCD": "ALB",
             "LBTOX": "Grade 2",
             "LBTOXGR": "Grade 2"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBTESTCD": "ALP",
+            "LBTOX": null,
+            "LBTOXGR": "Grade II"
           },
           "validated": true
         }

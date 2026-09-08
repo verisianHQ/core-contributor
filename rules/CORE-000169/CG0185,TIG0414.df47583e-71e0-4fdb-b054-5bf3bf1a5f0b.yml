@@ -64,14 +64,10 @@ Authorities:
         Substandard: SDTM
         Version: '1.0'
 Check:
-  any:
-    - all:
-        - name: LBTOXGR
-          operator: matches_regex
-          value: .*[a-zA-Z].* # identifiers string contains characters
-        - name: LBTOXGR
-          operator: matches_regex
-          value: .*[0-9].* #identifies that string also contains a number
+  all:
+    - name: LBTOXGR
+      operator: matches_regex
+      value: .*[a-zA-Z].* # flags any value containing a letter, whether alone (e.g. "Grade II") or mixed with a number (e.g. "Grade 2") - only a pure number is conformant
 Core:
   Id: CORE-000169
   Status: Published
