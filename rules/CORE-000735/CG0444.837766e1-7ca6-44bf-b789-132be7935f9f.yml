@@ -1,64 +1,61 @@
 # Variable: TSVCDREF
 # Condition: TSPARMCD in ('COMPTRT', 'CURTRT', 'TRT')
 # Rule: TSVCDREF = 'UNII'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'Further information about the parameters is included below in
-                  Table 1. TSVAL may have     controlled terminology depending
-                  on the value of TSPARMCD'
-                Document: SDTM and SDTMIG Conformance Rules v2.0
+              - Cited Guidance: Further information about the parameters is included below in
+                  Table 1. TSVAL may have controlled terminology depending
+                  on the value of TSPARMCD
+                Document: IG v3.2
                 Item: Assumption 3
-                Section: '7.4'
-            Origin: 'SDTM and SDTMIG Conformance Rules'
+                Section: 7.4|Appendix C1
+            Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
-              Id: 'CG0444'
+              Id: CG0444
               Version: '1'
             Version: '2.0'
         Version: '3.2'
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'Further information about the parameters is included below in
-                  Table 1. TSVAL may have     controlled terminology depending
-                  on the value of TSPARMCD'
-                Document: SDTM and SDTMIG Conformance Rules v2.0
+              - Cited Guidance: Further information about the parameters is included below in
+                  Table 1. TSVAL may have controlled terminology depending
+                  on the value of TSPARMCD
+                Document: IG v3.3
                 Item: Assumption 3
                 Section: '7.4'
-            Origin: 'SDTM and SDTMIG Conformance Rules'
+            Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
-              Id: 'CG0444'
+              Id: CG0444
               Version: '1'
             Version: '2.0'
         Version: '3.3'
 Check:
   all:
-    - any:
-        - name: TSPARMCD
-          operator: equal_to
-          value: COMPTRT
-        - name: TSPARMCD
-          operator: equal_to
-          value: CURTRT
-        - name: TSPARMCD
-          operator: equal_to
-          value: TRT
+    - name: TSPARMCD
+      operator: is_contained_by
+      value: 
+        - COMPTRT
+        - CURTRT
+        - TRT
+      value_is_literal: true
     - name: TSVCDREF
       operator: not_equal_to
       value: 'UNII'
-
+      value_is_literal: true
 Core:
   Id: CORE-000735
   Status: Published
   Version: '1'
-Description: 'When TSPARMCD is equal to COMPTRT, CURTRT or TRT, TSVCDREF should equal UNII'
+Description: Raise an error when TSPARMCD is equal to 'COMPTRT', 'CURTRT' or 'TRT', but TSVCDREF is not equal to 'UNII'.
 Executability: Fully Executable
 Outcome:
-  Message: 'Throw error when TSPARMCD is equal to COMPTRT, CURTRT, or TRT and
-    TSVCDREF ^= UNII'
+  Message: TSPARMCD is equal to 'COMPTRT', 'CURTRT' or 'TRT', but TSVCDREF is not equal to 'UNII'.
   Output Variables:
     - TSPARMCD
     - TSVCDREF
