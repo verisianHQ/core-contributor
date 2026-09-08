@@ -4,7 +4,7 @@
       "dataset": "vs.xpt",
       "domain": "VS",
       "execution_status": "success",
-      "execution_message": "BLFL is set to \"Y\", but no value for STRESC is provided",
+      "execution_message": "BLFL is set to 'Y', but no value for STRESC is provided.",
       "number_errors": 1,
       "errors": [
         {
@@ -15,16 +15,9 @@
             "VSBLFL": "Y",
             "VSSTRESC": null
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "vs.xpt",
-      "Row": 7,
-      "Variable": "VSSTRESC"
     }
   ]
 }
