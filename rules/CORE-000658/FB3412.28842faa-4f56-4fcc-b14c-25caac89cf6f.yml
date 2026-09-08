@@ -57,8 +57,8 @@ Core:
   Id: CORE-000658
   Status: Published
   Version: '1'
-Description: Date/Time of Informed Consent (RFICDTC) is after the Date/Time of
-  First Study Treatment (RFXSTDTC).
+Description: Raise an error when Date/Time of Informed Consent (RFICDTC) is 
+  after the Date/Time of First Study Treatment (RFXSTDTC).
 Executability: Fully Executable
 Outcome:
   Message: RFICDTC falls after RFXSTDTC.
