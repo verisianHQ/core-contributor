@@ -4,16 +4,16 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSPARMCD = PCLAS but TSVCDREF does not equal 'MED-RT'.",
+      "execution_message": "TSPARMCD = 'CURTRT' is missing in the TS dataset or TSVAL is not populated when TSPARMCD = 'ADDON' and TSVAL = 'Y'.",
       "number_errors": 1,
       "errors": [
         {
-          "row": 32,
-          "SEQ": 1,
+          "row": 8,
+          "SEQ": 4,
           "USUBJID": "None",
           "value": {
-            "TSPARMCD": "PCLAS",
-            "TSVCDREF": "MEDRT"
+            "TSPARMCD": "CURTRT",
+            "TSVAL": null
           },
           "validated": true
         }
