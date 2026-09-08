@@ -10,7 +10,7 @@ Authorities:
           - Citations:
               - Cited Guidance: Using SDTM-specified standard domain names and prefixes where
                   applicable.
-                Document: SDTMIG v3.4
+                Document: IG v3.4
                 Section: 3.2.2
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -183,7 +183,7 @@ Core:
   Id: CORE-000929
   Status: Published
   Version: '1'
-Description: Raise and error when the DOMAIN Code is not a valid Domain Code
+Description: Raise an error when a dataset is not a custom domain but the DOMAIN Code is not a valid Domain Code
   published by CDISC.
 Executability: Fully Executable
 Operations:
@@ -196,7 +196,7 @@ Operations:
     ct_conditions:
       - Codelist Code: C66734
 Outcome:
-  Message: DOMAIN Code is not a published DOMAIN Code in CDISC Controlled Terminology.
+  Message: Dataset is not a custom domain but the DOMAIN Code is not a published DOMAIN Code in CDISC Controlled Terminology.
   Output Variables:
     - $domain_lib_ccode
     - define_variable_codelist_coded_codes
