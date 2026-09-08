@@ -4,8 +4,8 @@
       "dataset": "ta.xpt",
       "domain": "TA",
       "execution_status": "success",
-      "execution_message": "TAETORD is not unique within ARM",
-      "number_errors": 6,
+      "execution_message": "TAETORD must be unique within ARM.",
+      "number_errors": 2,
       "errors": [
         {
           "row": 1,
@@ -15,7 +15,7 @@
             "TAETORD": 2.0,
             "ARM": "Placebo"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -25,47 +25,7 @@
             "TAETORD": 2.0,
             "ARM": "Placebo"
           },
-          "validated": false
-        },
-        {
-          "row": 3,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "TAETORD": 1.0,
-            "ARM": "Zanomaline Low Dose (54 mg)"
-          },
-          "validated": false
-        },
-        {
-          "row": 4,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "TAETORD": 1.0,
-            "ARM": "Zanomaline Low Dose (54 mg)"
-          },
-          "validated": false
-        },
-        {
-          "row": 6,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "TAETORD": 3.0,
-            "ARM": "Zanomaline High Dose (81 mg)"
-          },
-          "validated": false
-        },
-        {
-          "row": 7,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "TAETORD": 3.0,
-            "ARM": "Zanomaline High Dose (81 mg)"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     }
