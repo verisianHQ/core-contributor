@@ -207,12 +207,11 @@ class TestRunner:
         from engine.cdisc_rules_engine.data_service.postgresql_data_service import PostgresQLDataService
 
         cache_dir = "resources/cache"
-        latest_codelist_path = max(glob(f"engine/{cache_dir}/{self.standard}ct-[0-9][0-9][0-9][0-9]-*.pkl"), default=None)
-        latest_codelist_file = latest_codelist_path.split("/")[-1] if latest_codelist_path else None
+        codelist_files = self._resolve_codelist_files(cache_dir)
 
         self.data_service = PostgresQLDataService.instance(
             use_pgserver=self.use_pgserver,
-            codelists=[latest_codelist_file] if latest_codelist_file else [],
+            codelists=codelist_files,
             provided_codelists=ct,
             cache_path=cache_dir,
             external_dictionaries=ext_dicts,
@@ -223,6 +222,76 @@ class TestRunner:
         """Ensures the engine submodule is in sys.path."""
         if str(ENGINE_DIR) not in sys.path:
             sys.path.insert(0, str(ENGINE_DIR))
+
+    # Operators whose result depends on which CT package version is loaded -
+    # only rules using one of these can possibly need a non-latest package.
+    _CODELIST_VERSION_SENSITIVE_KEYWORDS = (
+        "get_codelist_attributes",
+        "codelist_terms",
+        "valid_codelist_dates",
+        "codelist_extensible",
+        "define_extensible_codelists",
+        "get_countries",
+    )
+
+    def _discover_referenced_codelist_versions(self) -> set:
+        """
+        Finds every CT package version (eg. "sdtmct-2017-12-22") referenced by
+        Library sheets/CSVs, scoped to rule folders whose YAML uses a
+        CT-version-sensitive operator to keep this cheap on every invocation.
+        """
+        versions = set()
+        if not self.rules_dir or not self.rules_dir.exists():
+            return versions
+
+        candidate_dirs = set()
+        for yml_file in self.rules_dir.rglob("*.yml"):
+            try:
+                text = yml_file.read_text(encoding="utf-8", errors="ignore")
+            except Exception:
+                continue
+            if any(keyword in text for keyword in self._CODELIST_VERSION_SENSITIVE_KEYWORDS):
+                candidate_dirs.add(yml_file.parent)
+                candidate_dirs.add(yml_file.parent.parent / "shared_test_cases")
+
+        for candidate_dir in candidate_dirs:
+            if not candidate_dir.is_dir():
+                continue
+            for data_dir in candidate_dir.rglob("data"):
+                if not data_dir.is_dir():
+                    continue
+                try:
+                    if (data_dir / "_library.csv").exists():
+                        _, _, ct_list = self._read_library_specs_csv(str(data_dir))
+                    else:
+                        excel_files = list(data_dir.glob("[!~]*.xlsx")) + list(data_dir.glob("[!~]*.xls"))
+                        if not excel_files:
+                            continue
+                        _, _, ct_list = self._read_library_specs_xlsx(str(excel_files[0]))
+                    versions.update(ct_list)
+                except Exception:
+                    # Malformed/unrelated Library sheet - ignore, this is a best-effort scan.
+                    continue
+
+        return versions
+
+    def _resolve_codelist_files(self, cache_dir: str) -> List[str]:
+        """Cached CT filenames to preload: the latest package plus any others referenced by test data."""
+        available = sorted(glob(f"engine/{cache_dir}/{self.standard}ct-[0-9][0-9][0-9][0-9]-*.pkl"))
+        if not available:
+            return []
+
+        needed_files = {Path(available[-1]).name}
+        for version in self._discover_referenced_codelist_versions():
+            needed_files.add(f"{version}.pkl")
+
+        resolved = []
+        for fname in sorted(needed_files):
+            if Path(f"engine/{cache_dir}/{fname}").exists():
+                resolved.append(fname)
+            else:
+                print(f"Warning: referenced codelist package '{fname}' not found in {cache_dir}; skipping.")
+        return resolved
 
     @staticmethod
     def get_ext_dict_versions(ext_dicts):
