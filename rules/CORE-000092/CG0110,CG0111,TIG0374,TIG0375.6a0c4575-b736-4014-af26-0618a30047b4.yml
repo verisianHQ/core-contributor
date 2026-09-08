@@ -1,6 +1,7 @@
 # Variable: --DOSE
 # Condition: --DOSTXT ^= null
 # Rule: --DOSE = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -47,10 +48,10 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Not populated when --DOSE is populated
-                Document: Model v1.4
-                Item: --DOSTXT
-                Section: Interventions
+              - Cited Guidance: 'Amount of --TRT when non-numeric. Dosing amounts or a range of dosing information collected in text form. Example: 200-400. Not populated when --DOSE is populated.'
+                Document: IG v3.2
+                Item: Specification
+                Section: '6.1'
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0111
@@ -74,10 +75,10 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Not populated when --DOSE is populated.
+              - Cited Guidance: 'Dosing information collected in text form. Examples: <1 per day, 200-400. Not populated when --DOSE is populated.'
                 Document: Model v1.7
-                Item: --DOSTXT
-                Section: Interventions
+                Item: Specification
+                Section: 2.2.1
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0111
@@ -122,10 +123,10 @@ Core:
   Id: CORE-000092
   Status: Published
   Version: '1'
-Description: Raise an error when --DOSE ^= null and --DOSTXT ^= null.
+Description: Raise an error when --DOSE is populated and --DOSTXT is populated.
 Executability: Fully Executable
 Outcome:
-  Message: Both --DOSE and --DOSTXT values are populated
+  Message: Both --DOSE and --DOSTXT values are populated.
   Output Variables:
     - --DOSE
     - --DOSTXT

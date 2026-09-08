@@ -1,4 +1,137 @@
 {
-  "error": "No result - either the rule or test case data unit-test-coreid-CG0110-negative.xlsx is broken",
-  "exception": "cannot unpack non-iterable NoneType object"
+  "datasets": [
+    {
+      "dataset": "ag.xpt",
+      "domain": "AG",
+      "execution_status": "success",
+      "execution_message": "Both AGDOSE and AGDOSTXT values are populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "XYZ-001-001",
+          "value": {
+            "AGDOSE": 250.0,
+            "AGDOSTXT": "250-300"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "Both CMDOSE and CMDOSTXT values are populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "ABC-0002",
+          "value": {
+            "CMDOSE": 100.0,
+            "CMDOSTXT": "100-120"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "success",
+      "execution_message": "Both ECDOSE and ECDOSTXT values are populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "ABC2001",
+          "value": {
+            "ECDOSE": 2.0,
+            "ECDOSTXT": "2-3"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "success",
+      "execution_message": "Both EXDOSE and EXDOSTXT values are populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "ABC2001",
+          "value": {
+            "EXDOSE": 500.0,
+            "EXDOSTXT": "500-600"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ml.xpt",
+      "domain": "ML",
+      "execution_status": "success",
+      "execution_message": "Both MLDOSE and MLDOSTXT values are populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "XYZ-001-001",
+          "value": {
+            "MLDOSE": 8.0,
+            "MLDOSTXT": "8"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "pr.xpt",
+      "domain": "PR",
+      "execution_status": "success",
+      "execution_message": "Both PRDOSE and PRDOSTXT values are populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "ABC123-2002",
+          "value": {
+            "PRDOSE": 25.0,
+            "PRDOSTXT": "25-30"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "su.xpt",
+      "domain": "SU",
+      "execution_status": "success",
+      "execution_message": "Both SUDOSE and SUDOSTXT values are populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "1234005",
+          "value": {
+            "SUDOSE": 3.0,
+            "SUDOSTXT": "3-4"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
 }

@@ -1,6 +1,7 @@
 # Variable: AGE
 # Condition: Subject is not a screen failure
 # Rule: AGE ^= null
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -54,21 +55,23 @@ Check:
             - name: ARMCD
               operator: not_equal_to
               value: SCRNFAIL
+              value_is_literal: true
         - all:
             - name: ARMNRS
               operator: non_empty
             - name: ARMNRS
               operator: not_equal_to
               value: SCREEN FAILURE
+              value_is_literal: true
             - name: ARMNRS
               operator: not_equal_to
               value: Screen Failure
+              value_is_literal: true
 Core:
   Id: CORE-001043
   Status: Published
   Version: '1'
-Description: Age should be provided for all subjects, except where not collected
-  for screen failures.
+Description: Age is provided for all subjects, except where not collected for screen failures.
 Executability: Fully Executable
 Outcome:
   Message: Age is missing for a non-screen failure subject.
