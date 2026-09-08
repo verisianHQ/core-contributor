@@ -57,8 +57,8 @@ Core:
   Id: CORE-000713
   Status: Published
   Version: '1'
-Description: Date/Time of Informed Consent (RFICDTC) is prior or equal to the
-  Subject Reference Start Date/Time (RFSTDTC).
+Description: Raise an error when Date/Time of Informed Consent (RFICDTC) is 
+  after the Subject Reference Start Date/Time (RFSTDTC).
 Executability: Fully Executable
 Outcome:
   Message: RFICDTC falls after RFSTDTC.
