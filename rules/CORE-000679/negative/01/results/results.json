@@ -12,7 +12,7 @@
       "dataset": "ds.xpt",
       "domain": "DS",
       "execution_status": "success",
-      "execution_message": "DTHFL in DM dataset is \"Y\" but a record is missing in DS dataset where DSDECOD = \"DEATH\".",
+      "execution_message": "DTHFL in DM dataset is 'Y' but a record is missing in DS dataset where DSDECOD = 'DEATH'.",
       "number_errors": 1,
       "errors": [
         {
@@ -20,28 +20,17 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "USUBJID": "CDISC002"
+            "USUBJID": "CDISC002",
+            "DTHFL": "Y",
+            "$ds_dsdecod": [
+              "COMPLETED",
+              "INFORMED CONSENT OBTAINED",
+              "RANDOMIZED"
+            ]
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 1,
-      "Variable": "DTHFL"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "DTHFL"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 9,
-      "Variable": "DSDECOD"
     }
   ]
 }

@@ -4,7 +4,7 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "A record exists in TS where TSPARMCD = STYPE and TSVAL = INTERVENTIONAL but TSVAL for TSPARMCD = TRT is empty.",
+      "execution_message": "TSVAL must not be null for a record when TSPARMCD is equal to 'TRT' where TSPARMCD is equal to 'STYPE' with TSVAL equal to 'INTERVENTIONAL'.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,56 +12,14 @@
           "SEQ": 1,
           "USUBJID": "None",
           "value": {
-            "TSGRPID": null,
             "TSPARMCD": "TRT",
             "TSVAL": null,
+            "TSGRPID": null,
             "$STYPE_INTERVENTIONAL": 1
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ts.xpt",
-      "Row": 46,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 46,
-      "Variable": "TSPARM"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 46,
-      "Variable": "TSVAL"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 46,
-      "Variable": "TSVALNF"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 53,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 53,
-      "Variable": "TSPARM"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 53,
-      "Variable": "TSVAL"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 53,
-      "Variable": "TSVALNF"
     }
   ]
 }

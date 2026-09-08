@@ -1,6 +1,7 @@
-# Variable: TSVCDREF
-# Condition: TSPARMCD = 'PCLAS'
-# Rule: TSVCDREF = 'NDF-RT'
+# variable: TSVCDREF
+# condition: TSPARMCD = 'PCLAS'
+# rule: TSVCDREF = 'MED-RT'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -34,6 +35,47 @@ Authorities:
               Version: '1'
             Version: '2.0'
         Version: '3.3'
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the
+                  FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1117
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the
+                  FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1117
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the
+                  FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1117
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
 Check:
   all:
     - name: TSPARMCD
@@ -46,7 +88,8 @@ Core:
   Id: CORE-000483
   Status: Published
   Version: '1'
-Description: Raise an error when TSPARMCD = PCLAS but TSVCDREF is not equal to 'MED-RT'.
+Description: Medication Reference Terminology (MED-RT) is included for Pharmacologic
+  class(es) of all active investigational substances (TSPARMCD = 'PCLAS').
 Executability: Fully Executable
 Outcome:
   Message: TSPARMCD = PCLAS but TSVCDREF does not equal 'MED-RT'.
