@@ -13,10 +13,10 @@
       "domain": "DS",
       "execution_status": "success",
       "execution_message": "DSSTDTC for DEATH record in DS dataset is not equal to DTHDTC in the DM dataset.",
-      "number_errors": 2,
+      "number_errors": 3,
       "errors": [
         {
-          "row": 5,
+          "row": 1,
           "SEQ": null,
           "USUBJID": "CDISC001",
           "value": {
@@ -24,10 +24,10 @@
             "DSSTDTC": "2006-08-30",
             "DTHDTC": "2006-04-01"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 10,
+          "row": 2,
           "SEQ": null,
           "USUBJID": "CDISC002",
           "value": {
@@ -35,36 +35,20 @@
             "DSSTDTC": null,
             "DTHDTC": "2006-03-26"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC004",
+          "value": {
+            "DSDECOD": "DEATH",
+            "DSSTDTC": "2006-05-01",
+            "DTHDTC": null
+          },
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "DTHDTC"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 9,
-      "Variable": "DSDECOD"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 9,
-      "Variable": "DSSTDTC"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 14,
-      "Variable": "DSDECOD"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 14,
-      "Variable": "DSSTDTC"
     }
   ]
 }
