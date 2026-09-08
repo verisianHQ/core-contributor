@@ -55,7 +55,7 @@ Core:
   Version: '1'
   Id: CORE-000927
 Description: Raise an error when subject participating in an interventional
-  study with at least one record in the EX dataset, is assigned to an 
+  study has at least one record in the EX dataset but is not assigned to an 
   actual treatment.
 Executability: Fully Executable
 Match Datasets:
