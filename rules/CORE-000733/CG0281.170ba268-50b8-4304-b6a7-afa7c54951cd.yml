@@ -1,20 +1,14 @@
 # Variable: TSPARMCD
 # Condition: At least one observation where TSPARMCD = TRT and there is only one investigational treatment
 # Rule: TSPARMCD = RANDQT record is present
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: '|IG v3.2[Appendix C1][Further information about the parameters
-                  is included below in Table 1. TSVAL may have controlled
-                  terminology depending on the value of TSPARMCD]|IG
-                  v3.2[Appendix C1][Required only when there is only one
-                  investigational treatment. The value is always a number
-                  between 0 and 1. There are cases where the ratio is 1 (e.g.,
-                  crossover study or open label study where all subjects are
-                  exposed to investigational therapy).]'
+              - Cited Guidance: IG v3.2[Appendix C1][Further information about the parameters is included below in Table 1. TSVAL may have controlled terminology depending on the value of TSPARMCD]|IG v3.2[Appendix C1][Required only when there is only one investigational treatment. The value is always a number between 0 and 1. There are cases where the ratio is 1 (e.g., crossover study or open label study where all subjects are exposed to investigational therapy).]
                 Document: IG v3.2
                 Item: IG v3.2[7.4][Assumption 3]|IG v3.2[Appendix C1]
                 Section: IG v3.2[7.4]|IG v3.2[Appendix C1]
@@ -27,16 +21,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: IG v3.3[7.4.2][Assumption 3][Further information about the
-                  parameters is included Appendix C1, Trial Summary Codes. TSVAL
-                  may have controlled terminology depending on the value of
-                  TSPARMCD. Conditions for including parameters are included in
-                  Appendix C1, Trial Summary Codes.]|IG v3.3[Appendix
-                  C1][Required only when there is only one investigational
-                  treatment. The value is always a number between 0 and 1. There
-                  are cases where the ratio is 1 (e.g., crossover study or open
-                  label study where all subjects are exposed to investigational
-                  therapy).]
+              - Cited Guidance: IG v3.3[7.4.2][Assumption 3][Further information about the parameters is included Appendix C1, Trial Summary Codes. TSVAL may have controlled terminology depending on the value of TSPARMCD. Conditions for including parameters are included in Appendix C1, Trial Summary Codes.]|IG v3.3[Appendix C1][Required only when there is only one investigational treatment. The value is always a number between 0 and 1. There are cases where the ratio is 1 (e.g., crossover study or open label study where all subjects are exposed to investigational therapy).]
                 Document: IG v3.3
                 Item: IG v3.3[7.4.2][Assumption 3]|IG v3.3[Appendix C1]
                 Section: IG v3.3[7.4.2]|IG v3.3[Appendix C1]
@@ -47,43 +32,36 @@ Authorities:
             Version: '2.0'
         Version: '3.3'
 Check:
-  any:
+  all:
     - name: $trt_count
       operator: equal_to
-      value: 0
-    - all:
-        - name: $trt_count
-          operator: equal_to
-          value: 1
-        - name: $randqt_count
-          operator: less_than
-          value: 1
+      value: 1
+    - name: $randqt_count
+      operator: less_than
+      value: 1
 Core:
   Id: CORE-000733
   Status: Published
   Version: '1'
-Description: 'At least one observation where TSPARMCD = TRT is present and there
-  is only one investigational treatment'
+Description: Raise an error when at least one observation where TSPARMCD is equal to 'TRT' is present and there
+  is only one investigational treatment. TSPARMCD is equal to 'RANDQT' record must be present.
 Executability: Fully Executable
 Operations:
-  - domain: TS
-    filter:
+  - filter:
       TSPARMCD: TRT
     id: $trt_count
     name: TSPARMCD
     operator: record_count
-  - domain: TS
-    filter:
+  - filter:
       TSPARMCD: RANDQT
     id: $randqt_count
     name: TSPARMCD
     operator: record_count
 Outcome:
-  Message: 'TSPARMCD = RANDQT record is not present'
+  Message: TSPARMCD must be equal to 'RANDQT' only when there is exactly one investigational treatment.
   Output Variables:
-    - TSPARMCD
     - $trt_count
-    - $rand_count
+    - $randqt_count
 Rule Type: Record Data
 Scope:
   Classes:
@@ -92,4 +70,4 @@ Scope:
   Domains:
     Include:
       - TS
-Sensitivity: Record
+Sensitivity: Dataset

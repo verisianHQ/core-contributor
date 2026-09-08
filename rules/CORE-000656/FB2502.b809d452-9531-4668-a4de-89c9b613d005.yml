@@ -1,3 +1,7 @@
+# Variable: ARM, ACTARM
+# Condition: ARM ^= null and ACTARM ^= null
+# Rule: ARM = ACTARM
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -51,10 +55,10 @@ Core:
   Id: CORE-000656
   Status: Published
   Version: '1'
-Description: Values in ARM and ACTARM should match
+Description: Values in ARM and ACTARM should match.
 Executability: Fully Executable
 Outcome:
-  Message: Values between ARM and ACTARM are not matching
+  Message: Values between ARM and ACTARM are not matching.
 Rule Type: Record Data
 Scope:
   Classes:
