@@ -57,8 +57,8 @@ Core:
   Id: CORE-000952
   Status: Published
   Version: '1'
-Description: End Date/Time (--ENDTC) variable value should be prior or equal to
-  the Date/Time of End of Participation (RFPENDTC).
+Description: Raise an error when End Date/Time (--ENDTC) variable value is 
+  after the Date/Time of End of Participation (RFPENDTC).
 Executability: Fully Executable
 Match Datasets:
   - Keys:
