@@ -15,7 +15,7 @@
             "LBDY": -20.0,
             "LBENDY": -22.0
           },
-          "validated": true
+          "validated": false
         },
         {
           "row": 4,
@@ -25,9 +25,21 @@
             "LBDY": 2.0,
             "LBENDY": 1.0
           },
-          "validated": true
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "lb.xpt",
+      "Row": 5,
+      "Variable": "LBDY"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 8,
+      "Variable": "LBDY"
     }
   ]
 }

@@ -1,7 +1,6 @@
-# Variable: --STDY
+# Variable: --STDY, --ENDY
 # Condition: --STDY ^= Null and --ENDY ^= Null
 # Rule: --STDY <= --ENDY
-# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -158,8 +157,9 @@ Core:
   Id: CORE-000708
   Status: Published
   Version: '1'
-Description: Study Day of Start of Observation (--STDY) is less than or equal
-  to Study Day of End of Observation (--ENDY).
+Description: When Study Day of End of Observation (--ENDY) is present in the
+  dataset, then the End Date/Time of Observation (--ENDTC) should also be
+  present in the dataset.
 Executability: Fully Executable
 Outcome:
   Message: --STDY is greater than --ENDY.
