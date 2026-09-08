@@ -695,7 +695,7 @@ class TestRunner:
 
     def check_highlights(self, validations: dict, highlights: dict):
         unmatched_validations, unmatched_highlights, matched_highlights = [], [], set()
-
+ 
         for v_entries in validations.get(None, {}).values():
             for e in v_entries:
                 sheet, error_level, row, var, error_val = (
@@ -708,13 +708,20 @@ class TestRunner:
                 if str(var)[0] == "$":
                     continue
                 var = var.split(".")[-1] if "." in str(var) else var
+                row_highlights = highlights.get(sheet, {}).get(row, {})
                 if error_level == "record" and error_val != "[ABSENT]":
-                    if str(highlights.get(sheet, {}).get(row, {}).get(var)) == str(error_val):
+                    if str(row_highlights.get(var)) == str(error_val):
                         matched_highlights.add((sheet, row, var))
                     else:
-                        unmatched_validations.append({None: [sheet, error_level, row, var, error_val]})
+                        match_col = next(
+                            (col for col, val in row_highlights.items() if str(val) == str(error_val)), None
+                        )
+                        if match_col is not None:
+                            matched_highlights.add((sheet, row, match_col))
+                        else:
+                            unmatched_validations.append({None: [sheet, error_level, row, var, error_val]})
                 elif error_level == "variable" and error_val == "[PRESENT]":
-                    if var in highlights.get(sheet, {}).get(row, {}):
+                    if var in row_highlights:
                         matched_highlights.add((sheet, row, var))
                     else:
                         unmatched_validations.append({None: [sheet, error_level, row, var, error_val]})
