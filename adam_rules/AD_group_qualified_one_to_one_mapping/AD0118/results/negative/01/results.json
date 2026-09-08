@@ -1,0 +1,35 @@
+{
+  "datasets": [
+    {
+      "dataset": "adlb.csv",
+      "domain": "adlb",
+      "execution_status": "success",
+      "execution_message": "ATPTN has more than one value for a given ATPT value within a parameter.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ATPTN": 1.0,
+            "PARAMCD": "PARAM1",
+            "ATPT": "TPT1"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "ATPTN": 2.0,
+            "PARAMCD": "PARAM1",
+            "ATPT": "TPT1"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

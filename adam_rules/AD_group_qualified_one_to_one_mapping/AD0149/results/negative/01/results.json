@@ -1,0 +1,35 @@
+{
+  "datasets": [
+    {
+      "dataset": "adlb.csv",
+      "domain": "adlb",
+      "execution_status": "success",
+      "execution_message": "AVALC has more than one value for a given AVAL value within a parameter.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "AVALC": "C1",
+            "PARAMCD": "PARAM1",
+            "AVAL": 1.0
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AVALC": "C2",
+            "PARAMCD": "PARAM1",
+            "AVAL": 1.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+# Variable: AVAL
+# Condition: 
+# Rule: Within a given value of PARAMCD, there is more than one value of AVAL for a given value of AVALC
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '150'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.0
+        Section: 3.2.4
+        Item: Table 3.2.4.1
+        Cited Guidance: 'ADaMIG v1.0, Section 3.2.4, Table 3.2.4.1: AVALC can be a
+          character string mapping to AVAL, but if so there must be a one-to-one map
+          between AVAL and AVALC within a given PARAM.'
+Check:
+  all:
+  - name: AVAL
+    operator: is_inconsistent_across_dataset
+    value:
+    - PARAMCD
+    - AVALC
+Core:
+  Id: AD0150
+  Status: Draft
+  Version: '1'
+Description: Raise an error when within a given value of PARAMCD, there is more than one value of AVAL for a given value of AVALC.
+Executability: Fully Executable
+Outcome:
+  Message: AVAL has more than one value for a given AVALC value within a parameter.
+  Output Variables:
+  - AVAL
+  - PARAMCD
+  - AVALC
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BASIC DATA STRUCTURE
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record
