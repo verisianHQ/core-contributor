@@ -5,7 +5,7 @@
       "domain": "CM",
       "execution_status": "success",
       "execution_message": "End timepoint is populated but start timepoint is missing.",
-      "number_errors": 3,
+      "number_errors": 7,
       "errors": [
         {
           "row": 1,
@@ -22,6 +22,48 @@
           "validated": true
         },
         {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMSTDTC": null,
+            "CMSTRF": "BEFORE",
+            "CMSTRTPT": null,
+            "CMENDTC": "2013-04",
+            "CMENRF": null,
+            "CMENRTPT": null
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMSTDTC": null,
+            "CMSTRF": null,
+            "CMSTRTPT": "VISIT 0",
+            "CMENDTC": "2013-04",
+            "CMENRF": null,
+            "CMENRTPT": null
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CMSTDTC": "2012-03",
+            "CMSTRF": null,
+            "CMSTRTPT": null,
+            "CMENDTC": null,
+            "CMENRF": "AFTER",
+            "CMENRTPT": null
+          },
+          "validated": true
+        },
+        {
           "row": 6,
           "SEQ": 3,
           "USUBJID": "CDISC002",
@@ -32,6 +74,20 @@
             "CMENDTC": null,
             "CMENRF": "DURING",
             "CMENRTPT": null
+          },
+          "validated": true
+        },
+        {
+          "row": 7,
+          "SEQ": 1,
+          "USUBJID": "CDISC003",
+          "value": {
+            "CMSTDTC": "2013-01-11",
+            "CMSTRF": null,
+            "CMSTRTPT": null,
+            "CMENDTC": null,
+            "CMENRF": null,
+            "CMENRTPT": "VISIT99"
           },
           "validated": true
         },
