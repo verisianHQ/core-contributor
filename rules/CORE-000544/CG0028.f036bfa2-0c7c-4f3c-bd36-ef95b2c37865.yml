@@ -1,6 +1,7 @@
 # Variable: --SEQ
 # Condition: Variable is not TS.TSSEQ
 # Rule: --SEQ is a unique number per USUBJID per domain, or a unique number per POOLID per domain, including when the domain is split into multiple files
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -27,22 +28,6 @@ Authorities:
                   for a subject (or within a parameter, in the case of the Trial
                   Summary domain). May be any valid number (including decimals)
                   and does not have to start at 1.
-                Document: Model v1.4
-                Item: 'Table 2.2.4: --SEQ'
-                Section: 2.2.4
-            Origin: SDTM and SDTMIG Conformance Rules
-            Rule Identifier:
-              Id: CG0028
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
-      - Name: SDTMIG
-        References:
-          - Citations:
-              - Cited Guidance: Sequence number to ensure uniqueness of records within a dataset
-                  for a subject (or within a parameter, in the case of the Trial
-                  Summary domain). May be any valid number (including decimals)
-                  and does not have to start at 1.
                 Document: Model v1.7
                 Item: --SEQ
                 Section: 2.2.4
@@ -52,11 +37,25 @@ Authorities:
               Version: '1'
             Version: '2.0'
         Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Sequence number to ensure uniqueness of records within a dataset
+                  for a subject (or within a parameter, in the case of the Trial
+                  Summary domain). May be any valid number (including decimals)
+                  and does not have to start at 1.
+                Document: Model v1.4
+                Item: 'Table 2.2.4: --SEQ'
+                Section: 2.2.4
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0028
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
 Check:
   any:
     - all:
-        - name: --SEQ
-          operator: exists
         - name: USUBJID
           operator: non_empty
         - name: --SEQ
@@ -65,8 +64,6 @@ Check:
             - DOMAIN
             - USUBJID
     - all:
-        - name: --SEQ
-          operator: exists
         - name: POOLID
           operator: non_empty
         - name: --SEQ
@@ -85,7 +82,7 @@ Executability: Fully Executable
 Outcome:
   Message: --SEQ is not a unique number per USUBJID per domain, nor a unique
     number per POOLID per domain, including when the domain is split into
-    multiple files
+    multiple files.
 Rule Type: Record Data
 Scope:
   Classes:
