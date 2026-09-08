@@ -162,8 +162,8 @@ Core:
   Id: CORE-000707
   Status: Published
   Version: '1'
-Description: Study Day of Visit/Collection/Exam (--DY) is less than or equal
-  to Study Day of End of Observation (--ENDY).
+Description: Raise an error when Study Day of Visit/Collection/Exam (--DY) 
+  is greater than or equal to Study Day of End of Observation (--ENDY).
 Executability: Fully Executable
 Outcome:
   Message: --DY is greater than --ENDY.
