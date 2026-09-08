@@ -55,8 +55,8 @@ Core:
   Id: CORE-000659
   Status: Published
   Version: '1'
-Description: When Adverse Event Outcome (AEOUT) is populated with
-  RECOVERED/RESOLVED, then the End Date/Time of Adverse Event (AEENDTC) should
+Description: Raise an error when Adverse Event Outcome (AEOUT) is populated with
+  RECOVERED/RESOLVED but the End Date/Time of Adverse Event (AEENDTC) is not
   be populated.
 Executability: Fully Executable
 Outcome:
