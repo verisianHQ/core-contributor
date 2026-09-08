@@ -15,7 +15,7 @@
             "variable_value": " CDISC001",
             "variable_name": "USUBJID"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 20,
@@ -25,7 +25,7 @@
             "variable_value": "       HYTRIN",
             "variable_name": "CMTRT"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 30,
@@ -35,7 +35,7 @@
             "variable_value": " TABLET",
             "variable_name": "CMDOSU"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 47,
@@ -45,7 +45,7 @@
             "variable_value": " 2013-01-11",
             "variable_name": "CMSTDTC"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -64,7 +64,7 @@
             "variable_value": " CDISCPILOT01",
             "variable_name": "STUDYID"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 5,
@@ -74,7 +74,7 @@
             "variable_value": " CDISCPILOT01",
             "variable_name": "STUDYID"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 6,
@@ -84,7 +84,7 @@
             "variable_value": " CDISCPILOT01",
             "variable_name": "STUDYID"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 7,
@@ -94,7 +94,7 @@
             "variable_value": " CDISCPILOT01",
             "variable_name": "STUDYID"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 8,
@@ -104,7 +104,7 @@
             "variable_value": " CDISCPILOT01",
             "variable_name": "STUDYID"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 9,
@@ -114,7 +114,7 @@
             "variable_value": " CDISCPILOT01",
             "variable_name": "STUDYID"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 10,
@@ -124,7 +124,7 @@
             "variable_value": " CDISCPILOT01",
             "variable_name": "STUDYID"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 11,
@@ -134,7 +134,7 @@
             "variable_value": " CDISCPILOT01",
             "variable_name": "STUDYID"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 12,
@@ -144,7 +144,7 @@
             "variable_value": " CDISCPILOT01",
             "variable_name": "STUDYID"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 13,
@@ -154,7 +154,7 @@
             "variable_value": " CDISCPILOT01",
             "variable_name": "STUDYID"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 14,
@@ -164,7 +164,7 @@
             "variable_value": " CDISCPILOT01",
             "variable_name": "STUDYID"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -183,7 +183,7 @@
             "variable_value": " COINCIDENT",
             "variable_name": "LBENRTPT"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 118,
@@ -193,7 +193,7 @@
             "variable_value": "     ",
             "variable_name": "LBENRTPT"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -212,8 +212,172 @@
             "variable_value": " SCREEN",
             "variable_name": "ETCD"
           },
-          "validated": false
+          "validated": true
         }
+      ]
+    }
+  ],
+  "unhighlighted_validations": [
+    {
+      "null": [
+        "cm.xpt",
+        "record",
+        5,
+        "variable_value",
+        " CDISC001"
+      ]
+    },
+    {
+      "null": [
+        "cm.xpt",
+        "record",
+        6,
+        "variable_value",
+        " TABLET"
+      ]
+    },
+    {
+      "null": [
+        "cm.xpt",
+        "record",
+        7,
+        "variable_value",
+        " 2013-01-11"
+      ]
+    },
+    {
+      "null": [
+        "cm.xpt",
+        "record",
+        8,
+        "variable_value",
+        "       HYTRIN"
+      ]
+    },
+    {
+      "null": [
+        "ce.xpt",
+        "record",
+        8,
+        "variable_value",
+        " CDISCPILOT01"
+      ]
+    },
+    {
+      "null": [
+        "ce.xpt",
+        "record",
+        9,
+        "variable_value",
+        " CDISCPILOT01"
+      ]
+    },
+    {
+      "null": [
+        "ce.xpt",
+        "record",
+        10,
+        "variable_value",
+        " CDISCPILOT01"
+      ]
+    },
+    {
+      "null": [
+        "ce.xpt",
+        "record",
+        11,
+        "variable_value",
+        " CDISCPILOT01"
+      ]
+    },
+    {
+      "null": [
+        "ce.xpt",
+        "record",
+        12,
+        "variable_value",
+        " CDISCPILOT01"
+      ]
+    },
+    {
+      "null": [
+        "ce.xpt",
+        "record",
+        13,
+        "variable_value",
+        " CDISCPILOT01"
+      ]
+    },
+    {
+      "null": [
+        "ce.xpt",
+        "record",
+        14,
+        "variable_value",
+        " CDISCPILOT01"
+      ]
+    },
+    {
+      "null": [
+        "ce.xpt",
+        "record",
+        15,
+        "variable_value",
+        " CDISCPILOT01"
+      ]
+    },
+    {
+      "null": [
+        "ce.xpt",
+        "record",
+        16,
+        "variable_value",
+        " CDISCPILOT01"
+      ]
+    },
+    {
+      "null": [
+        "ce.xpt",
+        "record",
+        17,
+        "variable_value",
+        " CDISCPILOT01"
+      ]
+    },
+    {
+      "null": [
+        "ce.xpt",
+        "record",
+        18,
+        "variable_value",
+        " CDISCPILOT01"
+      ]
+    },
+    {
+      "null": [
+        "lb.xpt",
+        "record",
+        5,
+        "variable_value",
+        " COINCIDENT"
+      ]
+    },
+    {
+      "null": [
+        "lb.xpt",
+        "record",
+        7,
+        "variable_value",
+        "     "
+      ]
+    },
+    {
+      "null": [
+        "se.xpt",
+        "record",
+        5,
+        "variable_value",
+        " SCREEN"
       ]
     }
   ],
@@ -296,6 +460,11 @@
     {
       "Sheet": "lb.xpt",
       "Row": 5,
+      "Variable": "LBENRTPT"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 7,
       "Variable": "LBENRTPT"
     },
     {
