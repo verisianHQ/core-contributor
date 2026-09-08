@@ -151,8 +151,8 @@ Core:
   Id: "CORE-000853"
   Status: Published
   Version: '1'
-Description: Collection study day (--DY) is populated when date/time of 
-  collection (--DTC) is populated.
+Description: Raise an error when collection study day (--DY) is not populated 
+  when date/time of collection (--DTC) is populated.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
