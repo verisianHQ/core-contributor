@@ -1,6 +1,7 @@
-# Variable: --HLT, --HLTCD
+# Variable: --HLTCD AND --HLT
 # Condition:
-# Rule: --HLTCD and --HLT have a one-to-one relationship 
+# Rule: --HLTCD and --HLT do not have a one-to-one relationship
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -52,17 +53,13 @@ Authorities:
 Check:
   all:
     - name: --HLT
-      operator: exists
-    - name: --HLTCD
-      operator: exists
-    - name: --HLT
       operator: is_not_unique_relationship
       value: --HLTCD
 Core:
   Id: CORE-000723
   Status: Published
   Version: '1'
-Description: --HLTCD and --HLT should have a one-to-one relationship.
+Description: Raise an error when --HLTCD and --HLT do not have a one-to-one relationship.
 Executability: Fully Executable
 Outcome:
   Message: --HLTCD and --HLT do not have a one-to-one relationship.

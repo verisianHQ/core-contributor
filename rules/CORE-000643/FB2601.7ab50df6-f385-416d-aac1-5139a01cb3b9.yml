@@ -1,3 +1,7 @@
+# Variable: --STRESC, --BLFL
+# Condition: --BLFL="Y"
+# Rule: --STRESC = Null
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -143,11 +147,11 @@ Core:
   Id: 'CORE-000643'
   Status: Published
   Version: '1'
-Description: 'Records with a baseline flag (--BLFL) have a non missing value in
-  character standard result variable (--STRESC)'
+Description: Records with a baseline flag (--BLFL) have a non missing value in
+  character standard result variable (--STRESC)
 Executability: Fully Executable
 Outcome:
-  Message: 'BLFL is set to "Y", but no value for STRESC is provided'
+  Message: BLFL is set to 'Y', but no value for STRESC is provided.
 Rule Type: Record Data
 Scope:
   Classes:
