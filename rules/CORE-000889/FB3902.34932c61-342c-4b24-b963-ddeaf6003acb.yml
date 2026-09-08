@@ -154,8 +154,9 @@ Core:
   Id: CORE-000889
   Status: Published
   Version: '1'
-Description: 'Normal Range Upper Limit-Original Units (--ORNRHI) is greater than
-  the Normal Range Lower Limit-Original Units (--ORNRLO).'
+Description: Raise an error when Normal Range Upper Limit-Original Units 
+  (--ORNRHI) is less than or equal to the Normal Range Lower Limit-Original 
+  Units (--ORNRLO).
 Executability: Partially Executable - Possible Underreporting
 Outcome:
   Message: --ORNRHI is less than or equal to --ORNRLO.
