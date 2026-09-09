@@ -48,6 +48,7 @@ Check:
     - name: TSVCDREF
       operator: equal_to
       value: CDISC
+      value_is_literal: true
     - name: TSVCDVER
       operator: is_not_contained_by
       value: $valid_dates

@@ -40,16 +40,19 @@ Check:
         - name: TSPARMCD
           operator: equal_to
           value: COMPTRT
+          value_is_literal: true
         - name: TSPARMCD
           operator: equal_to
           value: CURTRT
+          value_is_literal: true
         - name: TSPARMCD
           operator: equal_to
           value: TRT
+          value_is_literal: true
     - name: TSVCDREF
       operator: not_equal_to
       value: 'UNII'
-
+      value_is_literal: true
 Core:
   Id: CORE-000735
   Status: Published
