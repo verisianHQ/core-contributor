@@ -49,6 +49,7 @@ Check:
     - name: DTHFL
       operator: equal_to
       value: Y
+      value_is_literal: true
     - name: DTHDTC
       operator: empty
 Core:
