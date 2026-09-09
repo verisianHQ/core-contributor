@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "ARMNRS is missing when ARM value is missing",
+      "execution_message": "ARMNRS must be populated when ARM is not populated.",
       "number_errors": 2,
       "errors": [
         {
@@ -15,17 +15,17 @@
             "ARM": null,
             "ARMNRS": null
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 11,
+          "row": 2,
           "SEQ": null,
           "USUBJID": "CDISC011",
           "value": {
             "ARM": null,
             "ARMNRS": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

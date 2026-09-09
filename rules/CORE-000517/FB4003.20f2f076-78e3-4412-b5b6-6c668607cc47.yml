@@ -1,3 +1,7 @@
+# Variable: --DOSTOT
+# Condition: --DOSTOT ^= null
+# Rule: --DOSTOT >= 0
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -148,14 +152,18 @@ Check:
     - name: --DOSTOT
       operator: less_than
       value: 0
+      value_is_literal: true
 Core:
   Id: 'CORE-000517'
   Status: Published
   Version: '1'
-Description: Total Daily Dose (--DOSTOT) value should not be negative.
+Description: Raise an error when Total Daily Dose (--DOSTOT) value is negative.
 Executability: Fully Executable
 Outcome:
   Message: Negative value for --DOSTOT.
+  Output Variables:
+    - --TRT
+    - --DOSTOT
 Rule Type: Record Data
 Scope:
   Classes:

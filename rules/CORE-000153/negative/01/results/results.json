@@ -4,38 +4,28 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSVCDREF is null when TSVCDVER is populated",
-      "number_errors": 3,
+      "execution_message": "TSVCDREF is not populated when TSVCDVER is populated.",
+      "number_errors": 2,
       "errors": [
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVCDVER": "2020-03-27",
+            "TSVCDREF": null
+          },
+          "validated": true
+        },
         {
           "row": 3,
           "SEQ": 1,
           "USUBJID": "None",
           "value": {
-            "TSVCDREF": null,
-            "TSVCDVER": "2020-03-27"
+            "TSVCDVER": "2020-03-27",
+            "TSVCDREF": null
           },
-          "validated": false
-        },
-        {
-          "row": 17,
-          "SEQ": 1,
-          "USUBJID": "None",
-          "value": {
-            "TSVCDREF": null,
-            "TSVCDVER": "2019-03-01"
-          },
-          "validated": false
-        },
-        {
-          "row": 42,
-          "SEQ": 1,
-          "USUBJID": "None",
-          "value": {
-            "TSVCDREF": null,
-            "TSVCDVER": "2020-03-27"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     }

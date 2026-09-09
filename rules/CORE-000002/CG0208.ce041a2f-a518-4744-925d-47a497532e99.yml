@@ -1,6 +1,7 @@
 # Variable: SESTDTC
-# Condition: 
+# Condition:
 # Rule: SESTDTC ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -21,7 +22,8 @@ Authorities:
                   it started, even if that information is imprecise. Thus, SESTDTC
                   may not be null, although some records may not have all the components
                   (e.g., year, month, day, hour, minute) of the date/time value collected.
-                Document: SDTM v1.4
+                Document: IG v3.4
+                Item: Assumption 9
                 Section: '5.3'
       - Name: SDTMIG
         Version: '3.2'
@@ -71,10 +73,12 @@ Core:
   Id: CORE-000002
   Status: Published
   Version: '1'
-Description: Raise an error when SESTDTC is null.
+Description: Raise an error when SESTDTC is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: SESTDTC should be populated.
+  Message: SESTDTC is not populated.
+  Output Variables:
+    - SESTDTC
 Rule Type: Record Data
 Scope:
   Classes:

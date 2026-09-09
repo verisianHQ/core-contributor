@@ -12,19 +12,106 @@
       "dataset": "sv.xpt",
       "domain": "SV",
       "execution_status": "success",
-      "execution_message": "EPOCH values don't match between Subject Visits (SV) and Subject Elements (SE) datasets.",
-      "number_errors": 1,
+      "execution_message": "EPOCH value in the SV dataset doesn't match the corresponding EPOCH value in the SE dataset.",
+      "number_errors": 7,
       "errors": [
         {
           "row": 5,
           "SEQ": null,
           "USUBJID": "1201001",
           "value": {
+            "VISIT": "CYCLE1DAY9",
             "EPOCH": "SCREENING",
-            "SESTDTC": "2018-08-13",
-            "SVSTDTC": "2018-08-20"
+            "SVSTDTC": "2024-05-21",
+            "SESTDTC": "2024-05-15T12:25",
+            "SEENDTC": "2024-06-01T08:00",
+            "SE.EPOCH": "TREATMENT"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "1201001",
+          "value": {
+            "VISIT": "FOLLOW-UP",
+            "EPOCH": "FOLLOW-UP1",
+            "SVSTDTC": "2024-06-01",
+            "SESTDTC": "2024-05-15T12:25",
+            "SEENDTC": "2024-06-01T08:00",
+            "SE.EPOCH": "TREATMENT"
+          },
+          "validated": true
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "1201002",
+          "value": {
+            "VISIT": "SCREENING",
+            "EPOCH": "TREATMENT",
+            "SVSTDTC": "2025-06-10",
+            "SESTDTC": "2025-06-10",
+            "SEENDTC": "2025-06-17T09:52",
+            "SE.EPOCH": "SCREENING"
+          },
+          "validated": true
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "1201002",
+          "value": {
+            "VISIT": "CYCLE1DAY1",
+            "EPOCH": "FOLLOW-UP",
+            "SVSTDTC": "2025-06-15",
+            "SESTDTC": "2025-06-10",
+            "SEENDTC": "2025-06-17T09:52",
+            "SE.EPOCH": "SCREENING"
+          },
+          "validated": true
+        },
+        {
+          "row": 11,
+          "SEQ": null,
+          "USUBJID": "1201002",
+          "value": {
+            "VISIT": "CYCLE1DAY2",
+            "EPOCH": "TREATMENT",
+            "SVSTDTC": "2025-06-17",
+            "SESTDTC": "2025-06-10",
+            "SEENDTC": "2025-06-17T09:52",
+            "SE.EPOCH": "SCREENING"
+          },
+          "validated": true
+        },
+        {
+          "row": 14,
+          "SEQ": null,
+          "USUBJID": "1201002",
+          "value": {
+            "VISIT": "CYCLE1DAY15",
+            "EPOCH": "TREATMENT1",
+            "SVSTDTC": "2025-06-20",
+            "SESTDTC": "2025-06-17T09:52",
+            "SEENDTC": "2025-12-18T04:22",
+            "SE.EPOCH": "TREATMENT"
+          },
+          "validated": true
+        },
+        {
+          "row": 17,
+          "SEQ": null,
+          "USUBJID": "1201003",
+          "value": {
+            "VISIT": "SCREENING",
+            "EPOCH": "FOLLOW-UP5",
+            "SVSTDTC": "2024-05-15",
+            "SESTDTC": "2023-12-22T10:38",
+            "SEENDTC": "2024-05-15",
+            "SE.EPOCH": "FOLLOW-UP"
+          },
+          "validated": true
         }
       ]
     }

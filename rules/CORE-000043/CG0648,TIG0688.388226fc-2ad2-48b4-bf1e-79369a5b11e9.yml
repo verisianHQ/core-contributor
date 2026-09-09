@@ -1,14 +1,15 @@
 # Variable: 
 # Condition: 
 # Rule: TP dataset not present
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The TP dataset must not be used in human clinical trials.
-                Document: SDTM v2.0
+              - Cited Guidance: Not in human clinical trials.
+                Document: Model v2.0
                 Section: Trial Repro Paths
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -40,7 +41,9 @@ Core:
 Description: Raise an error when TP dataset is present.
 Executability: Fully Executable
 Outcome:
-  Message: TP dataset is present.
+  Message: TP dataset must not be present.
+  Output Variables:
+    - TP
 Rule Type: Domain Presence Check
 Scope:
   Classes:

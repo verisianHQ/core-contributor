@@ -1,6 +1,7 @@
 # Variable: GEN
 # Condition: Study on human subjects
 # Rule: DM dataset present in study
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -215,10 +216,12 @@ Core:
   Id: CORE-000581
   Status: Published
   Version: '1'
-Description: Raise an error when DM dataset is not present
+Description: Raise an error when DM dataset is not present.
 Executability: Fully Executable
 Outcome:
   Message: DM dataset is missing.
+  Output Variables:
+    - DM
 Rule Type: Domain Presence Check
 Scope:
   Classes:
@@ -228,4 +231,4 @@ Scope:
     Include:
       - ALL
   Use Case: INDH
-Sensitivity: Dataset
+Sensitivity: Study

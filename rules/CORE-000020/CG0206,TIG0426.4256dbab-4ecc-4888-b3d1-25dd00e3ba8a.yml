@@ -1,6 +1,7 @@
 # Variable: TAETORD
 # Condition: ETCD = 'UNPLAN'
 # Rule: TAETORD = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -96,16 +97,17 @@ Check:
     - name: ETCD
       operator: equal_to
       value: UNPLAN
+      value_is_literal: true
     - name: TAETORD
       operator: non_empty
 Core:
   Id: CORE-000020
   Status: Published
   Version: '1'
-Description: Raise an error when ETCD="UNPLAN" and TAETORD is not null.
+Description: Raise an error when ETCD = 'UNPLAN' but TAETORD is populated.
 Executability: Fully Executable
 Outcome:
-  Message: TAETORD should be null when ETCD = 'UNPLAN'.
+  Message: TAETORD must be null when ETCD = 'UNPLAN'.
   Output Variables:
     - ETCD
     - TAETORD

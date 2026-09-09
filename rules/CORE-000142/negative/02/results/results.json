@@ -12,11 +12,11 @@
           "SEQ": 3,
           "USUBJID": "CDISC001",
           "value": {
-            "DOMAIN": "VS",
-            "VISITNUM": 5.0,
-            "VSELTM": "-PT4H",
             "VSTPT": "4H PREDOSE",
-            "VSTPTNUM": 10.0
+            "VSTPTNUM": 10.0,
+            "VSELTM": "-PT4H",
+            "VISITNUM": 5.0,
+            "DOMAIN": "VS"
           },
           "validated": false
         },
@@ -25,11 +25,11 @@
           "SEQ": 4,
           "USUBJID": "CDISC001",
           "value": {
-            "DOMAIN": "VS",
-            "VISITNUM": 4.0,
-            "VSELTM": "-PT4H",
             "VSTPT": "4H PREDOSE",
-            "VSTPTNUM": 5.0
+            "VSTPTNUM": 5.0,
+            "VSELTM": "-PT4H",
+            "VISITNUM": 4.0,
+            "DOMAIN": "VS"
           },
           "validated": false
         },
@@ -38,11 +38,11 @@
           "SEQ": 6,
           "USUBJID": "CDISC002",
           "value": {
-            "DOMAIN": "VS",
-            "VISITNUM": 4.0,
-            "VSELTM": "10",
             "VSTPT": "10MIN POSTDOSE",
-            "VSTPTNUM": 5.0
+            "VSTPTNUM": 5.0,
+            "VSELTM": "10",
+            "VISITNUM": 4.0,
+            "DOMAIN": "VS"
           },
           "validated": false
         },
@@ -51,11 +51,11 @@
           "SEQ": 7,
           "USUBJID": "CDISC002",
           "value": {
-            "DOMAIN": "VS",
-            "VISITNUM": 5.0,
-            "VSELTM": "10",
             "VSTPT": "10MIN POSTDOSE",
-            "VSTPTNUM": 10.0
+            "VSTPTNUM": 10.0,
+            "VSELTM": "10",
+            "VISITNUM": 5.0,
+            "DOMAIN": "VS"
           },
           "validated": false
         }

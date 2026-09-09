@@ -12,7 +12,7 @@
       "dataset": "fa.xpt",
       "domain": "FA",
       "execution_status": "success",
-      "execution_message": "LNKID variable is only found in one domain.",
+      "execution_message": "LNKID variable is present but not in any other domain.",
       "number_errors": 1,
       "errors": [
         {
@@ -20,10 +20,10 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "$VARIABLE_COUNT": 1,
-            "FALNKID": "CDISC001 - 1"
+            "FALNKID": "CDISC001 - 1",
+            "$LNKID_variable_count": 1
           },
-          "validated": false
+          "validated": true
         }
       ]
     },

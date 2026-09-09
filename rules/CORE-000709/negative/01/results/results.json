@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "CETERM or CEDECOD is 'DEATH' in CE dataset, but DTHFL in DM dataset is not \"Y\".",
+      "execution_message": "CETERM or CEDECOD is 'DEATH' in CE dataset, but DTHFL in DM dataset is not 'Y'.",
       "number_errors": 2,
       "errors": [
         {
@@ -16,7 +16,7 @@
             "CEDECOD": null,
             "DTHFL": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -27,7 +27,7 @@
             "CEDECOD": "DEATH",
             "DTHFL": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -38,33 +38,6 @@
       "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000709, dataset=CE",
       "number_errors": 0,
       "errors": []
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "DTHFL"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "DTHFL"
-    },
-    {
-      "Sheet": "ce.xpt",
-      "Row": 1,
-      "Variable": "CEDECOD"
-    },
-    {
-      "Sheet": "ce.xpt",
-      "Row": 5,
-      "Variable": "CETERM"
-    },
-    {
-      "Sheet": "ce.xpt",
-      "Row": 6,
-      "Variable": "CEDECOD"
     }
   ]
 }

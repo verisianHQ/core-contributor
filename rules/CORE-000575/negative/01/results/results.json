@@ -4,7 +4,7 @@
       "dataset": "ec.xpt",
       "domain": "EC",
       "execution_status": "success",
-      "execution_message": "No timing variable is provided",
+      "execution_message": "At least one timing variable must be present in the dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,25 +12,7 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "$dataset_variables": [
-              "STUDYID",
-              "DOMAIN",
-              "USUBJID",
-              "SPDEVID",
-              "ECSEQ",
-              "ECTRT",
-              "ECPRESP",
-              "ECOCCUR",
-              "ECDOSE",
-              "ECDOSU",
-              "ECDOSFRM",
-              "ECDOSFRQ",
-              "ECROUTE",
-              "ECLOT",
-              "ECPSTRG",
-              "ECPSTRGU"
-            ],
-            "$timing_variables": [
+            "$model_timing_variables": [
               "VISITNUM",
               "VISIT",
               "VISITDY",
@@ -51,12 +33,6 @@
               "ECRPDY",
               "ECRPSTDY",
               "ECRPENDY",
-              "ECXDY",
-              "ECXSTDY",
-              "ECXENDY",
-              "ECCHDY",
-              "ECCHSTDY",
-              "ECCHENDY",
               "ECDUR",
               "ECTPT",
               "ECTPTNUM",
@@ -76,12 +52,10 @@
               "MIDSDTC",
               "ECSTINT",
               "ECENINT",
-              "ECDETECT",
-              "ECPTFL",
-              "ECPDUR"
+              "ECDETECT"
             ]
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -89,7 +63,7 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "No timing variable is provided",
+      "execution_message": "At least one timing variable must be present in the dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -97,27 +71,7 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "$dataset_variables": [
-              "STUDYID",
-              "DOMAIN",
-              "USUBJID",
-              "AESEQ",
-              "AETERM",
-              "AEMODIFY",
-              "AEDECOD",
-              "AEBODSYS",
-              "AESEV",
-              "AESER",
-              "AEACN",
-              "AEREL",
-              "AEOUT",
-              "AESCONG",
-              "AESDISAB",
-              "AESDTH",
-              "AESHOSP",
-              "AESLIFE"
-            ],
-            "$timing_variables": [
+            "$model_timing_variables": [
               "VISITNUM",
               "VISIT",
               "VISITDY",
@@ -138,12 +92,6 @@
               "AERPDY",
               "AERPSTDY",
               "AERPENDY",
-              "AEXDY",
-              "AEXSTDY",
-              "AEXENDY",
-              "AECHDY",
-              "AECHSTDY",
-              "AECHENDY",
               "AEDUR",
               "AETPT",
               "AETPTNUM",
@@ -163,12 +111,10 @@
               "MIDSDTC",
               "AESTINT",
               "AEENINT",
-              "AEDETECT",
-              "AEPTFL",
-              "AEPDUR"
+              "AEDETECT"
             ]
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -176,7 +122,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "No timing variable is provided",
+      "execution_message": "At least one timing variable must be present in the dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -184,44 +130,7 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "$dataset_variables": [
-              "STUDYID",
-              "DOMAIN",
-              "USUBJID",
-              "LBSEQ",
-              "LBGRPID",
-              "LBTESTCD",
-              "LBTEST",
-              "LBTSTCND",
-              "LBCAT",
-              "LBSCAT",
-              "LBORRES",
-              "LBORRESU",
-              "LBRESSCL",
-              "LBRESTYP",
-              "LBCOLSRT",
-              "LBORNRLO",
-              "LBORNRHI",
-              "LBLLOD",
-              "LBSTRESC",
-              "LBSTRESN",
-              "LBSTRESU",
-              "LBSTNRLO",
-              "LBSTNRHI",
-              "LBSTNRC",
-              "LBNRIND",
-              "LBSTAT",
-              "LBREASND",
-              "LBLOINC",
-              "LBSPEC",
-              "LBMETHOD",
-              "LBTMTHSN",
-              "LBLOBXFL",
-              "LBFAST",
-              "LBDRVFL",
-              "LBCLSIG"
-            ],
-            "$timing_variables": [
+            "$model_timing_variables": [
               "VISITNUM",
               "VISIT",
               "VISITDY",
@@ -242,12 +151,6 @@
               "LBRPDY",
               "LBRPSTDY",
               "LBRPENDY",
-              "LBXDY",
-              "LBXSTDY",
-              "LBXENDY",
-              "LBCHDY",
-              "LBCHSTDY",
-              "LBCHENDY",
               "LBDUR",
               "LBTPT",
               "LBTPTNUM",
@@ -267,12 +170,10 @@
               "MIDSDTC",
               "LBSTINT",
               "LBENINT",
-              "LBDETECT",
-              "LBPTFL",
-              "LBPDUR"
+              "LBDETECT"
             ]
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

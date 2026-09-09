@@ -1,0 +1,72 @@
+# Variable: COUNTRY
+# Condition: 
+# Rule: COUNTRY value is a valid 3-letter country code.
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1703
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1703
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1703
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: $alpha_3_genc_country_codes
+      operator: does_not_contain
+      value: COUNTRY
+Core:
+  Id: CORE-002075
+  Status: Published
+  Version: '1'
+Description: Raise an error when value for COUNTRY in DM dataset is not populated with a valid 3-letter country code found in GENC standard.
+Executability: Fully Executable
+Operations:
+  - id: $alpha_3_genc_country_codes
+    operator: get_countries
+    attribute_name: alpha_3
+    codelist: GENC
+Outcome:
+  Message: COUNTRY value is not a valid GENC 3-letter country code.
+  Output Variables:
+    - COUNTRY
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record
