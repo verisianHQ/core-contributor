@@ -92,6 +92,7 @@ Check:
     - name: ETCD
       operator: not_equal_to
       value: UNPLAN
+      value_is_literal: true
     - name: ETCD
       operator: is_not_contained_by
       value: $te_etcd

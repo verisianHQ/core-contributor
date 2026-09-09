@@ -50,6 +50,7 @@ Check:
     - name: RDOMAIN
       operator: equal_to_case_insensitive
       value: DM
+      value_is_literal: true
     - name: QNAM
       operator: matches_regex
       value: ^(ENRFL|SAFFL|EFFFL|ITTFL|PPROTFL|COMPLFL|COMPLT|FULLSET|ITT|PPROT|SAFETY)$
