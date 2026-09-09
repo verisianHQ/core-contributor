@@ -1,13 +1,15 @@
 # Variable: TSVAL
 # Condition: TSPARMCD = 'TDIGRP' and record exists where TSPARMCD = 'HLTSUBJI' and TSVAL = 'N'
 # Rule: TSVAL ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: IG v3.2[7.4][Assumption 3][Further information about the
+              - Cited Guidance:
+                  IG v3.2[7.4][Assumption 3][Further information about the
                   parameters is included below in Table 1. TSVAL may have
                   controlled terminology depending on the value of TSPARMCD]|IG
                   v3.2[Appendix C1][If the study population is healthy subjects
@@ -22,13 +24,14 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0273
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: IG v3.3[7.4.2][Assumption 3][Further information about the
+              - Cited Guidance:
+                  IG v3.3[7.4.2][Assumption 3][Further information about the
                   parameters is included Appendix C1, Trial Summary Codes. TSVAL
                   may have controlled terminology depending on the value of
                   TSPARMCD. Conditions for including parameters are included in
@@ -45,14 +48,15 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0273
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
     - name: TSPARMCD
       operator: equal_to
       value: TDIGRP
+      value_is_literal: true
     - name: $HLTSUBJI_N
       operator: greater_than_or_equal_to
       value: 1
@@ -61,26 +65,29 @@ Check:
 Core:
   Id: CORE-000562
   Status: Published
-  Version: '1'
-Description: 'Raise an error when a record exists in TS where TSPARMCD =
-  HLTSUBJI and TSVAL = N but TSVAL for TSPARMCD = TDIGRP is empty.'
+  Version: "1"
+Description: Raise an error when a record exists with TSPARMCD is equal to
+  'HLTSUBJI' and TSVAL is equal to 'N', but a corresponding TSPARMCD is equal
+  to 'TDIGRP' record with TSVAL populated does not exist.
 Executability: Fully Executable
+Grouping_Variables:
+  - TSGRPID
 Operations:
   - filter:
       TSPARMCD: HLTSUBJI
-      TSVAL: N
+      TSVAL: "N"
     group:
       - TSGRPID
     id: $HLTSUBJI_N
     operator: record_count
 Outcome:
-  Message: 'A record exists in TS where TSPARMCD = HLTSUBJI and TSVAL = N but
-    TSVAL for TSPARMCD = TDIGRP is empty.'
+  Message: When TSPARMCD is equal to 'HLTSUBJI' and TSVAL is equal to 'N',
+    a corresponding TSPARMCD is equal to 'TDIGRP' record with TSVAL populated
+    must be present.
   Output Variables:
     - TSGRPID
     - TSPARMCD
     - TSVAL
-    - $HLTSUBJI_N
 Rule Type: Record Data
 Scope:
   Classes:
@@ -89,4 +96,4 @@ Scope:
   Domains:
     Include:
       - TS
-Sensitivity: Record
+Sensitivity: Group
