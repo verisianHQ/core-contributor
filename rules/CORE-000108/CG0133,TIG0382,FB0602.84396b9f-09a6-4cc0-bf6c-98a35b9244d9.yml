@@ -122,6 +122,7 @@ Check:
     - name: DTHFL
       operator: not_equal_to
       value: 'Y'
+      value_is_literal: true
     - name: USUBJID
       operator: is_contained_by
       value: $usubjids_in_dd
