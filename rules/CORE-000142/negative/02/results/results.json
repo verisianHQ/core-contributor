@@ -19,7 +19,7 @@
             "VISITNUM": 5.0,
             "DOMAIN": "VS"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -33,7 +33,7 @@
             "VISITNUM": 4.0,
             "DOMAIN": "VS"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -47,7 +47,7 @@
             "VISITNUM": 4.0,
             "DOMAIN": "VS"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -61,47 +61,9 @@
             "VISITNUM": 5.0,
             "DOMAIN": "VS"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unmatched_validation": [
-    {
-      "value": {
-        "VSTPT": "4H PREDOSE",
-        "VSTPTNUM": 10,
-        "VSELTM": "-PT4H",
-        "VISITNUM": 5,
-        "DOMAIN": "VS"
-      }
-    },
-    {
-      "value": {
-        "VSTPT": "4H PREDOSE",
-        "VSTPTNUM": 5,
-        "VSELTM": "-PT4H",
-        "VISITNUM": 4,
-        "DOMAIN": "VS"
-      }
-    },
-    {
-      "value": {
-        "VSTPT": "10MIN POSTDOSE",
-        "VSTPTNUM": 5,
-        "VSELTM": 10,
-        "VISITNUM": 4,
-        "DOMAIN": "VS"
-      }
-    },
-    {
-      "value": {
-        "VSTPT": "10MIN POSTDOSE",
-        "VSTPTNUM": 10,
-        "VSELTM": 10,
-        "VISITNUM": 5,
-        "DOMAIN": "VS"
-      }
     }
   ]
 }
