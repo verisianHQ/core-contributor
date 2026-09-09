@@ -57,9 +57,9 @@ Core:
   Status: Published
   Version: '1'
   Id: CORE-001078
-Description: Death flag (DTHFL) in the DM dataset is populated as 'Y' and a
-  record is present in the AE dataset where AEOUT = 'FATAL' and AESDTH = 'Y'
-  for the corresponding subject.
+Description: Raise an error when Death flag (DTHFL) in the DM dataset is populated as 'Y' 
+  and a record is not present in the AE dataset where AEOUT = 'FATAL' 
+  and AESDTH = 'Y' for the corresponding subject.
 Executability: Fully Executable
 Grouping_Variables:
   - USUBJID
