@@ -4,8 +4,8 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMENRTPT is completed, but CMENTPT is not completed.",
-      "number_errors": 6,
+      "execution_message": "CMENRTPT is populated, but CMENTPT is missing.",
+      "number_errors": 2,
       "errors": [
         {
           "row": 1,
@@ -15,7 +15,7 @@
             "CMENRTPT": "ONGOING",
             "CMENTPT": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -25,47 +25,7 @@
             "CMENRTPT": "ONGOING",
             "CMENTPT": null
           },
-          "validated": false
-        },
-        {
-          "row": 3,
-          "SEQ": 1,
-          "USUBJID": "CDISC017",
-          "value": {
-            "CMENRTPT": "ONGOING",
-            "CMENTPT": null
-          },
-          "validated": false
-        },
-        {
-          "row": 4,
-          "SEQ": 2,
-          "USUBJID": "CDISC017",
-          "value": {
-            "CMENRTPT": "ONGOING",
-            "CMENTPT": null
-          },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": 3,
-          "USUBJID": "CDISC017",
-          "value": {
-            "CMENRTPT": "ONGOING",
-            "CMENTPT": null
-          },
-          "validated": false
-        },
-        {
-          "row": 6,
-          "SEQ": 4,
-          "USUBJID": "CDISC017",
-          "value": {
-            "CMENRTPT": "ONGOING",
-            "CMENTPT": null
-          },
-          "validated": false
+          "validated": true
         }
       ]
     }
