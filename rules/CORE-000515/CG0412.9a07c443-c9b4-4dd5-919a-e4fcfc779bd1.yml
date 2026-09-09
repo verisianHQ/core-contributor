@@ -31,6 +31,7 @@ Check:
         - SCRNFAIL
         - NOTASSGN
         - NOTTRT
+      value_is_literal: true
     - name: USUBJID
       operator: is_not_contained_by
       value: $ds_usubjid
