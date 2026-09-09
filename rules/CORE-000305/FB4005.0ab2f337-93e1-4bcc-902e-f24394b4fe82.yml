@@ -152,6 +152,7 @@ Check:
     - name: --DUR
       operator: contains
       value: '-'
+      value_is_literal: true
 Core:
   Id: CORE-000305
   Status: Published
