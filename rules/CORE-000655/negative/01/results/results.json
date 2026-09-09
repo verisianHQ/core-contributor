@@ -15,7 +15,7 @@
             "ARMCD": "ZAN_LOW",
             "ACTARMCD": "ZAN_HIGH"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -25,7 +25,7 @@
             "ARMCD": "ZAN_HIGH",
             "ACTARMCD": "PLACEBO"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 6,
@@ -35,7 +35,7 @@
             "ARMCD": "ZAN_LOW",
             "ACTARMCD": "ZAN_LO"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 7,
@@ -45,7 +45,7 @@
             "ARMCD": "AN_LOW",
             "ACTARMCD": "ZAN_LOW"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 8,
@@ -55,61 +55,9 @@
             "ARMCD": "ZAN_HIGH",
             "ACTARMCD": "ZAN_high"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "ARMCD"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "ACTARMCD"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 7,
-      "Variable": "ARMCD"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 7,
-      "Variable": "ACTARMCD"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 10,
-      "Variable": "ARMCD"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 10,
-      "Variable": "ACTARMCD"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 11,
-      "Variable": "ARMCD"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 11,
-      "Variable": "ACTARMCD"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 12,
-      "Variable": "ARMCD"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 12,
-      "Variable": "ACTARMCD"
     }
   ]
 }

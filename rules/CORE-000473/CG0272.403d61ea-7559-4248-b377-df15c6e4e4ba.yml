@@ -1,13 +1,15 @@
 # Variable: TSVAL
 # Condition: TSPARMCD = 'TDIGRP' and record exists where TSPARMCD = 'HLTSUBJI' and TSVAL = 'Y'
 # Rule: TSVAL = null or 'HEALTHY SUBJECTS'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: IG v3.2[7.4][Assumption 3][Further information about the
+              - Cited Guidance: >-
+                  IG v3.2[7.4][Assumption 3][Further information about the
                   parameters is included below in Table 1. TSVAL may have
                   controlled terminology depending on the value of TSPARMCD]|IG
                   v3.2[Appendix C1][If the study population is healthy subjects
@@ -28,7 +30,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: IG v3.3[7.4.2][Assumption 3][Further information about the
+              - Cited Guidance: >-
+                  IG v3.3[7.4.2][Assumption 3][Further information about the
                   parameters is included Appendix C1, Trial Summary Codes. TSVAL
                   may have controlled terminology depending on the value of
                   TSPARMCD. Conditions for including parameters are included in
@@ -53,6 +56,7 @@ Check:
     - name: TSPARMCD
       operator: equal_to
       value: TDIGRP
+      value_is_literal: true
     - name: $HLTSUBJI_Y
       operator: greater_than_or_equal_to
       value: 1
@@ -67,27 +71,29 @@ Core:
   Id: CORE-000473
   Status: Published
   Version: '1'
-Description: 'Raise an error when a record exists in TS where TSPARMCD =
-  HLTSUBJI and TSVAL = Y but TSVAL for TSPARMCD = TDIGRP is not empty or does
-  not equal HEALTHY SUBJECTS.'
+Description: Raise an error when a record exists with TSPARMCD is equal to
+  'HLTSUBJI' and TSVAL is equal to 'Y', but a corresponding TSPARMCD is equal
+  to 'TDIGRP' record with TSVAL not populated or equal to 'HEALTHY SUBJECTS' 
+  does not exist. 
 Executability: Fully Executable
+Grouping_Variables:
+  - TSGRPID
 Operations:
   - filter:
       TSPARMCD: HLTSUBJI
-      TSVAL: "Y"
+      TSVAL: 'Y'
     group:
       - TSGRPID
     id: $HLTSUBJI_Y
     operator: record_count
 Outcome:
-  Message: 'A record exists in TS where TSPARMCD = HLTSUBJI and TSVAL = Y but
-    TSVAL for TSPARMCD = TDIGRP is not empty or does not equal HEALTHY
-    SUBJECTS.'
+  Message: When TSPARMCD is equal to 'HLTSUBJI' and TSVAL is equal to 'Y', 
+    a corresponding TSPARMCD is equal to 'TDIGRP' record with TSVAL not 
+    populated or equal to 'HEALTHY SUBJECTS' must be present.
   Output Variables:
     - TSGRPID
     - TSPARMCD
     - TSVAL
-    - $HLTSUBJI_Y
 Rule Type: Record Data
 Scope:
   Classes:
@@ -96,4 +102,4 @@ Scope:
   Domains:
     Include:
       - TS
-Sensitivity: Record
+Sensitivity: Group

@@ -1,14 +1,15 @@
 # Variable: ARM
 # Condition: ARMCD = null
 # Rule: ARM = null
+# Verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: If ARMCD is null, then ARM must be null and ARMNRS must be
-                  populated with the reason ARMCD is null.
+              - Cited Guidance: |
+                  If ARMCD is null, then ARM must be null and ARMNRS must be populated with the reason ARMCD is null.
                 Document: IG v3.4
                 Item: Assumption 4
                 Section: '5.2'
@@ -21,8 +22,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: If ARMCD is null, then ARM must be null and ARMNRS must be
-                  populated with the reason ARMCD is null.
+              - Cited Guidance: |
+                  If ARMCD is null, then ARM must be null and ARMNRS must be populated with the reason ARMCD is null.
                 Document: IG v3.3
                 Item: Assumption 4
                 Section: '5.2'
@@ -57,10 +58,10 @@ Core:
   Id: CORE-000119
   Status: Published
   Version: '1'
-Description: Raise an error when ARM is not empty, but ARMCD is empty
+Description: Raise an error when ARMCD is not populated but ARM is populated.
 Executability: Fully Executable
 Outcome:
-  Message: ARM is populated, when ARMCD is NULL
+  Message: ARM must not be populated when ARMCD is not populated.
   Output Variables:
     - ARMCD
     - ARM
