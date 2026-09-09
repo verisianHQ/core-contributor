@@ -1,133 +1,137 @@
+# variable: 
+# condition: Variable is a text variable
+# rule: Value does not start with a leading space
+# verified
 Authorities:
-  - Organization: 'FDA'
+  - Organization: FDA
     Standards:
-      - Name: 'SDTMIG'
+      - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'Character values should not have leading spaces or only have a
-                  period character.'
-                Document: 'FDA'
-                Section: 'FDAB015'
+              - Cited Guidance: Character values should not have leading spaces or only have a
+                  period character.
+                Document: FDA
+                Section: FDAB015
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB1501'
+              Id: FB1501
               Version: '1'
             Version: '1.5'
         Version: '3.2'
-      - Name: 'SDTMIG'
+      - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'Character values should not have leading spaces or only have a
-                  period character.'
-                Document: 'FDA'
-                Section: 'FDAB015'
+              - Cited Guidance: Character values should not have leading spaces or only have a
+                  period character.
+                Document: FDA
+                Section: FDAB015
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB1501'
+              Id: FB1501
               Version: '1'
             Version: '1.5'
         Version: '3.3'
-      - Name: 'SDTMIG'
+      - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'Character values should not have leading spaces or only have a
-                  period character.'
-                Document: 'FDA'
-                Section: 'FDAB015'
+              - Cited Guidance: Character values should not have leading spaces or only have a
+                  period character.
+                Document: FDA
+                Section: FDAB015
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB1501'
+              Id: FB1501
               Version: '1'
             Version: '1.5'
         Version: '3.4'
-      - Name: 'SENDIG'
+      - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'Character values should not have leading spaces or only have a
-                  period character.'
-                Document: 'FDA'
-                Section: 'FDAB015'
+              - Cited Guidance: Character values should not have leading spaces or only have a
+                  period character.
+                Document: FDA
+                Section: FDAB015
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB1501'
+              Id: FB1501
               Version: '1'
             Version: '1.5'
         Version: '3.0'
-      - Name: 'SENDIG'
+      - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'Character values should not have leading spaces or only have a
-                  period character.'
-                Document: 'FDA'
-                Section: 'FDAB015'
+              - Cited Guidance: Character values should not have leading spaces or only have a
+                  period character.
+                Document: FDA
+                Section: FDAB015
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB1501'
+              Id: FB1501
               Version: '1'
             Version: '1.5'
         Version: '3.1'
-      - Name: 'SENDIG'
+      - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'Character values should not have leading spaces or only have a
-                  period character.'
-                Document: 'FDA'
-                Section: 'FDAB015'
+              - Cited Guidance: Character values should not have leading spaces or only have a
+                  period character.
+                Document: FDA
+                Section: FDAB015
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB1501'
+              Id: FB1501
               Version: '1'
             Version: '1.5'
         Version: '3.1.1'
-      - Name: 'SENDIG-DART'
+      - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: 'Character values should not have leading spaces or only have a
-                  period character.'
-                Document: 'FDA'
-                Section: 'FDAB015'
+              - Cited Guidance: Character values should not have leading spaces or only have a
+                  period character.
+                Document: FDA
+                Section: FDAB015
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB1501'
+              Id: FB1501
               Version: '1'
             Version: '1.5'
         Version: '1.1'
-      - Name: 'SENDIG-DART'
+      - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: 'Character values should not have leading spaces or only have a
-                  period character.'
-                Document: 'FDA'
-                Section: 'FDAB015'
+              - Cited Guidance: Character values should not have leading spaces or only have a
+                  period character.
+                Document: FDA
+                Section: FDAB015
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB1501'
+              Id: FB1501
               Version: '1'
             Version: '1.5'
         Version: '1.2'
-      - Name: 'SENDIG-AR'
+      - Name: SENDIG-AR
         References:
           - Citations:
-              - Cited Guidance: 'Character values should not have leading spaces or only have a
-                  period character.'
-                Document: 'FDA'
-                Section: 'FDAB015'
+              - Cited Guidance: Character values should not have leading spaces or only have a
+                  period character.
+                Document: FDA
+                Section: FDAB015
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB1501'
+              Id: FB1501
               Version: '1'
             Version: '1.5'
         Version: '1.0'
-      - Name: 'SENDIG-GENETOX'
+      - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: 'Character values should not have leading spaces or only have a
-                  period character.'
-                Document: 'FDA'
-                Section: 'FDAB015'
+              - Cited Guidance: Character values should not have leading spaces or only have a
+                  period character.
+                Document: FDA
+                Section: FDAB015
             Origin: FDA Business Rules
             Rule Identifier:
-              Id: 'FB1501'
+              Id: FB1501
               Version: '1'
             Version: '1.5'
         Version: '1.0'
@@ -138,12 +142,13 @@ Check:
       value: Char
     - name: variable_value
       operator: matches_regex
-      value: ^\s # leading spaces
+      value: ^\s
 Core:
   Id: CORE-000867
   Status: Published
   Version: '1'
-Description: Text variable in submitted dataset should not contain leading spaces ' '.
+Description: Raise an error when a text variable in submitted dataset 
+  contains leading spaces ' '.
 Executability: Fully Executable
 Outcome:
   Message: Text variable contains leading spaces.
