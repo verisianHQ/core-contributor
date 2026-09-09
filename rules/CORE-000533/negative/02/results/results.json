@@ -1,0 +1,41 @@
+{
+  "datasets": [
+    {
+      "dataset": "suppdm.xpt",
+      "domain": "SUPPDM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000533, dataset=SUPPDM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "suppec.xpt",
+      "domain": "SUPPEC",
+      "execution_status": "success",
+      "execution_message": "A SUPP domain other than SUPPDM must not contain population flags.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC010",
+          "value": {
+            "QNAM": "safety",
+            "QLABEL": "Safety Flag"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC011",
+          "value": {
+            "QNAM": "SAFETY",
+            "QLABEL": "Safety Flag"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
