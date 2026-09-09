@@ -43,13 +43,16 @@ Check:
     - name: define_variable_origin_type
       operator: not_equal_to
       value: Collected
+      value_is_literal: true
     - any:
         - name: variable_name
           operator: equal_to
           value: RACE
+          value_is_literal: true
         - name: variable_name
           operator: equal_to
           value: ETHNIC
+          value_is_literal: true
 Core:
   Id: CORE-002096
   Status: Published

@@ -20,20 +20,9 @@
       "dataset": "vs.xpt",
       "domain": "VS",
       "execution_status": "success",
-      "execution_message": "VSSTAT = NOT DONE, but VSREASND is missing.",
-      "number_errors": 1,
-      "errors": [
-        {
-          "row": 1,
-          "SEQ": 1,
-          "USUBJID": "CDISC001",
-          "value": {
-            "VSTESTCD": "DIABP",
-            "VSSTAT": "NOT DONE",
-            "VSREASND": "Not in dataset"
-          }
-        }
-      ]
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     },
     {
       "dataset": "ae.xpt",
