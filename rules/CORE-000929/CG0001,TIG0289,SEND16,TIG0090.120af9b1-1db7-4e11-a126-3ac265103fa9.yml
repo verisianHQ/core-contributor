@@ -176,6 +176,7 @@ Check:
     - name: define_variable_ccode
       operator: equal_to
       value: C66734
+      value_is_literal: true
     - name: define_variable_codelist_coded_codes
       operator: is_not_contained_by
       value: $domain_lib_ccode
