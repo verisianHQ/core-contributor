@@ -147,7 +147,8 @@ Core:
   Id: CORE-000867
   Status: Published
   Version: '1'
-Description: Text variable in submitted dataset does not contain leading spaces ' '.
+Description: Raise an error when a text variable in submitted dataset 
+  contains leading spaces ' '.
 Executability: Fully Executable
 Outcome:
   Message: Text variable contains leading spaces.
