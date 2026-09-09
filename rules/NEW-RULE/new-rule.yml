@@ -127,7 +127,7 @@ Core:
   Id: CDISC.SDTMIG.CG0096
   Status: Draft
   Version: '1'
-Description: Raise an error when CMDECOD is populated with a value that is not a valid WHODrug dictionary preferred drug name.
+Description: Raise an error when value for --DECOD is not found in MedDRA dictionary.
 Executability: Fully Executable
 Outcome:
   Message: CMDECOD is not a valid WHODrug dictionary preferred drug name.
