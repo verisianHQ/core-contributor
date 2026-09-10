@@ -1,0 +1,175 @@
+# Variable: --ORRES, --STRESC, --STRESN
+# Condition: --STAT = 'NOT DONE'
+# Rule: --ORRES = null and --STRESC = null and --STRESN = null
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: When a test is not done, the result variable should not be
+                  populated, and the reason not done should be provided in the
+                  appropriate variable.
+                Document: FDA
+                Section: FDAB042
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4201
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: When a test is not done, the result variable should not be
+                  populated, and the reason not done should be provided in the
+                  appropriate variable.
+                Document: FDA
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4201
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: When a test is not done, the result variable should not be
+                  populated, and the reason not done should be provided in the
+                  appropriate variable.
+                Document: FDA
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4201
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: When a test is not done, the result variable should not be
+                  populated, and the reason not done should be provided in the
+                  appropriate variable.
+                Document: FDA
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4201
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: When a test is not done, the result variable should not be
+                  populated, and the reason not done should be provided in the
+                  appropriate variable.
+                Document: FDA
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4201
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: When a test is not done, the result variable should not be
+                  populated, and the reason not done should be provided in the
+                  appropriate variable.
+                Document: FDA
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4201
+              Version: '1'
+            Version: '1.5'
+        Version: 3.1.1
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: When a test is not done, the result variable should not be
+                  populated, and the reason not done should be provided in the
+                  appropriate variable.
+                Document: FDA
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4201
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: When a test is not done, the result variable should not be
+                  populated, and the reason not done should be provided in the
+                  appropriate variable.
+                Document: FDA
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4201
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: When a test is not done, the result variable should not be
+                  populated, and the reason not done should be provided in the
+                  appropriate variable.
+                Document: FDA
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4201
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: SENDIG-AR
+        References:
+          - Citations:
+              - Cited Guidance: When a test is not done, the result variable should not be
+                  populated, and the reason not done should be provided in the
+                  appropriate variable.
+                Document: FDA
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4201
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  all:
+    - name: --STAT
+      operator: equal_to
+      value: NOT DONE
+      value_is_literal: true
+    - any:
+        - name: --ORRES
+          operator: non_empty
+        - name: --STRESC
+          operator: non_empty
+        - name: --STRESN
+          operator: non_empty
+Core:
+  Id: CORE-000675
+  Status: Published
+  Version: '1'
+Description: Raise an error when test is not done (--STAT is equal to 'NOT DONE') 
+  and the result variables (--ORRES, --STRESC and --STRESN) are not populated.
+Executability: Fully Executable
+Outcome:
+  Message: --STAT is equal to 'NOT DONE', but  a result variable (--ORRES, --STRESC and/or --STRESN) is populated.
+  Output Variables:
+    - --ORRES
+    - --STRESC
+    - --STRESN
+    - --STAT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+      - FINDINGS ABOUT
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record
