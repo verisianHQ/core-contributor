@@ -1,6 +1,7 @@
 # Variable: ACTARM
 # Condition: ACTARM in ('Screen Failure', 'Not Assigned')
 # Rule: ACTARM = ARM
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -27,6 +28,7 @@ Check:
         - Not Assigned
         - SCREEN FAILURE
         - NOT ASSIGNED
+      value_is_literal: true
     - name: ACTARM
       operator: not_equal_to
       value: ARM
@@ -34,11 +36,11 @@ Core:
   Id: CORE-000530
   Status: Published
   Version: '1'
-Description: 'Raise an error when ACTARM is Screen Failure or Not Assigned, and
-  ACTARM does not equal ARM'
+Description: Raise an error when ACTARM is 'Screen Failure' or 'Not Assigned' and
+  the value in ACTARM does not equal ARM.
 Executability: Fully Executable
 Outcome:
-  Message: ACTARM should be equal to ARM when ACTARM is Screen Failure or Not Assigned.
+  Message: ACTARM must equal ARM when ACTARM is 'Screen Failure' or 'Not Assigned'.
   Output Variables:
     - ACTARM
     - ARM

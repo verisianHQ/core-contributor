@@ -1,6 +1,7 @@
 # Variable: EPOCH
 # Condition: Multiple events per subject where DSCAT = 'DISPOSITION EVENT'
 # Rule: EPOCH ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -31,24 +32,26 @@ Authorities:
 Check:
   all:
     - name: DSCAT
-      operator: present_on_multiple_rows_within
-      within: USUBJID
-    - name: DSCAT
       operator: equal_to
       value: DISPOSITION EVENT
       value_is_literal: true
+    - name: DSCAT
+      operator: present_on_multiple_rows_within
+      within: USUBJID
     - name: EPOCH
       operator: empty
 Core:
   Id: CORE-000329
   Status: Published
   Version: '1'
-Description: Raise an error when multiple records within same USUBJID exist with
-  DSCAT = DISPOSITION EVENT but EPOCH is empty
+Description: Raise an error when more than one record for the same USUBJID has DSCAT = 'DISPOSITION EVENT' and EPOCH is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: Multiple records within same USUBJID exist with DSCAT = DISPOSITION
-    EVENT but EPOCH is empty
+  Message: Multiple records within same USUBJID exist with DSCAT = 'DISPOSITION EVENT' but EPOCH is not populated.
+  Output Variables:
+    - DSDECOD
+    - DSCAT
+    - EPOCH
 Rule Type: Record Data
 Scope:
   Classes:

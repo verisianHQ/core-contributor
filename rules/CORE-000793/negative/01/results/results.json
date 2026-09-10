@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "Collection study day (CMDY) is missing when date/time of collection (CMDTC) is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "CMDTC": "2012-08",
+            "CMDY": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

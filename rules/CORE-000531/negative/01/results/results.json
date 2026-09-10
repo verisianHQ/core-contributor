@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "DM.ARMCD must equal SCRNFAIL or NOTASSGN if the value is not present in TA.ARMCD",
+      "execution_message": "ARMCD in the DM dataset must equal 'SCRNFAIL' or 'NOTASSGN' if the value does not exist in any ARMCD in the TA dataset.",
       "number_errors": 3,
       "errors": [
         {
@@ -14,7 +14,7 @@
           "value": {
             "ARMCD": "ZAN_MED"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 11,
@@ -23,7 +23,7 @@
           "value": {
             "ARMCD": "ZAN_UNK"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 12,
@@ -32,7 +32,7 @@
           "value": {
             "ARMCD": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },

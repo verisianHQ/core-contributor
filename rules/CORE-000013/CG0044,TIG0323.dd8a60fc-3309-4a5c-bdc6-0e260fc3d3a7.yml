@@ -1,13 +1,14 @@
 # Variable: AESTAT
 # Condition: 
 # Rule: AESTAT not present in dataset
+# Verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: --> The following Qualifiers would not be used in AE; "--OCCUR",
+              - Cited Guidance: The following Qualifiers would not be used in AE; "--OCCUR",
                   "--STAT", and "--REASND". They are the only Qualifiers from
                   the SDTM Events Class not in the AE domain. They are not
                   permitted because the AE domain contains only records for
@@ -24,7 +25,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: --> The following Qualifiers would not be used in AE; "--OCCUR",
+              - Cited Guidance: The following Qualifiers would not be used in AE; "--OCCUR",
                   "--STAT", and "--REASND". They are the only Qualifiers from
                   the SDTM Events Class not in the AE domain. They are not
                   permitted because the AE domain contains only records for
@@ -41,7 +42,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: --> The following Qualifiers would not be used in AE; "--OCCUR",
+              - Cited Guidance: The following Qualifiers would not be used in AE; "--OCCUR",
                   "--STAT", and "--REASND". They are the only Qualifiers from
                   the SDTM Events Class not in the AE domain. They are not
                   permitted because the AE domain contains only records for
@@ -86,7 +87,7 @@ Core:
 Description: Raise an error when AESTAT is present in AE dataset.
 Executability: Fully Executable
 Outcome:
-  Message: AESTAT variable is present in AE dataset.
+  Message: AESTAT must not be present in AE dataset.
   Output Variables:
     - AESTAT
 Rule Type: Record Data

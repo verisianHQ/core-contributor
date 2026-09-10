@@ -1,0 +1,54 @@
+{1 item
+"DM":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"dm.xpt"
+"domain":"DM"
+"variables":[]0 items
+"message":NULL
+"errors":[]0 items
+}{1 item
+"DM":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"dm.xpt"
+"domain":"DM"
+"variables":[2 items
+0:"RFICDTC"
+1:"RFSTDTC"
+]
+"message":"RFICDTC is greater than RFSTDTC"
+"errors":[3 items
+0:{4 items
+"value":{2 items
+"RFSTDTC":"2018-04-17T09:25"
+"RFICDTC":"2018-05"
+}
+"dataset":"dm.xpt"
+"row":2
+"USUBJID":"CDISC002"
+}
+1:{4 items
+"value":{2 items
+"RFSTDTC":"2018-04-18T09:30"
+"RFICDTC":"2018-04-22"
+}
+"dataset":"dm.xpt"
+"row":3
+"USUBJID":"CDISC003"
+}
+2:{4 items
+"value":{2 items
+"RFSTDTC":"2018-04-18T09:30"
+"RFICDTC":"2019"
+}
+"dataset":"dm.xpt"
+"row":5
+"USUBJID":"CDISC005"
+}
+]
+}
+]
+}
+]
+}

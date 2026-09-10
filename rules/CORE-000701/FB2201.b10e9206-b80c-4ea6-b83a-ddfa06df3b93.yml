@@ -1,0 +1,78 @@
+# Variable: EPOCH
+# Condition:
+# Rule: EPOCH ^= null
+
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: EPOCH should be included for clinical subject-level observations
+                  (e.g., adverse events, laboratory, concomitant medications,
+                  exposure, and vital signs).
+                Document: FDA
+                Section: FDAB022
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB2201
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: EPOCH should be included for clinical subject-level observations
+                  (e.g., adverse events, laboratory, concomitant medications,
+                  exposure, and vital signs).
+                Document: FDA
+                Section: FDAB022
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB2201
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: EPOCH should be included for clinical subject-level observations
+                  (e.g., adverse events, laboratory, concomitant medications,
+                  exposure, and vital signs).
+                Document: FDA
+                Section: FDAB022
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB2201
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  any:
+    - name: EPOCH
+      operator: not_exists
+    - name: EPOCH
+      operator: empty
+Core:
+  Id: CORE-000701
+  Status: Published
+  Version: '1'
+Description: EPOCH should be populated for clinical subject-level observations.
+Executability: Partially Executable - Possible Overreporting
+Outcome:
+  Message: EPOCH is missing for clinical subject-level observation.
+  Output Variables:
+    - EPOCH
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+      - FINDINGS
+      - EVENTS
+  Domains:
+    Exclude:
+      - DD
+      - PP
+      - MH
+Sensitivity: Record

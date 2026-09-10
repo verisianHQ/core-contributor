@@ -1,0 +1,82 @@
+# Variable: --CLAS, --CLASCD
+# Condition:
+# Rule: --CLASCD and --CLAS have a one-to-one relationship 
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0905
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0905
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0905
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: --CLAS
+      operator: exists
+    - name: --CLASCD
+      operator: exists
+    - name: --CLAS
+      operator: is_not_unique_relationship
+      value: --CLASCD
+Core:
+  Id: CORE-000792
+  Status: Published
+  Version: '1'
+Description: --CLASCD and --CLAS should have a one-to-one relationship.
+Executability: Fully Executable
+Outcome:
+  Message: --CLASCD and --CLAS do not have a one-to-one relationship.
+  Output Variables:
+    - --CLAS
+    - --CLASCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - AG
+      - CM
+      - SU
+Sensitivity: Record

@@ -1,0 +1,41 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=FB3405, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "execution_status": "success",
+      "execution_message": "CESTDTC falls after RFPENDTC.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CESTDTC": "2022-01-20",
+            "RFPENDTC": "2022-01-19"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "CDISC003",
+          "value": {
+            "CESTDTC": "2023",
+            "RFPENDTC": "2022-01-19"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

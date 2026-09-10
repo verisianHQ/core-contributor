@@ -1,0 +1,58 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBSTNRHI is less than or equal to LBSTNRLO.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 9,
+          "SEQ": 9,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "LBTESTCD": "CHOL",
+            "LBSTNRLO": 4.0,
+            "LBSTNRHI": 4.0
+          },
+          "validated": false
+        },
+        {
+          "row": 10,
+          "SEQ": 10,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "LBTESTCD": "CHOL",
+            "LBSTNRLO": 5.0,
+            "LBSTNRHI": 4.0
+          },
+          "validated": false
+        },
+        {
+          "row": 17,
+          "SEQ": 17,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "LBTESTCD": "HBA1CHGB",
+            "LBSTNRLO": 61.0,
+            "LBSTNRHI": 60.0
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "lb.xpt",
+      "Row": 13,
+      "Variable": "LBSTNRLO"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 13,
+      "Variable": "LBSTNRHI"
+    }
+  ]
+}

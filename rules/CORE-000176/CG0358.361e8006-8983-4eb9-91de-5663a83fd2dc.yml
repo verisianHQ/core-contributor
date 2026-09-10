@@ -1,6 +1,7 @@
 # Variable: SBSTRAIN
 # Condition: 
 # Rule: SBSTRAIN not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -13,14 +14,13 @@ Authorities:
               Version: '1'
             Version: '2.0'
             Citations:
-              - Cited Guidance: "The following variables can be used for non-clinical\
-                  \ studies (SEND) but must NEVER be used in the Demographics domain\
-                  \ for human clinical trials. However, the use of these variables\
-                  \ is currently  being evaluated in Findings general observation\
-                  \ class domains being developed for use in the  tabulations of virology\
-                  \ data:\n  SPECIES (Demographics)\n  STRAIN (Demographics)\n  SBSTRAIN\
-                  \ (Demographics)"
-                Document: IG 3.4
+              - Cited Guidance: 'The following variables can be used for non-clinical
+                  studies (SEND) but must NEVER be used in the Demographics domain
+                  for human clinical trials. However, the use of these variables is
+                  currently being evaluated in Findings general observation class
+                  domains being developed for use in the tabulations of virology data:
+                  SPECIES (Demographics) STRAIN (Demographics) SBSTRAIN (Demographics)'
+                Document: IG v3.4
                 Section: '2.7'
       - Name: SDTMIG
         Version: '3.2'
@@ -64,10 +64,10 @@ Core:
   Id: CORE-000176
   Status: Published
   Version: '1'
-Description: Verify variable SBSTRAIN does not exist in DM dataset
+Description: Raise an error when SBSTRAIN is present.
 Executability: Fully Executable
 Outcome:
-  Message: SBSTRAIN is present in DM dataset.
+  Message: SBSTRAIN must not be present.
   Output Variables:
     - SBSTRAIN
 Rule Type: Record Data

@@ -3,10 +3,38 @@
     {
       "dataset": "relsub.xpt",
       "domain": "RELSUB",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000229, dataset=RELSUB",
-      "number_errors": 0,
-      "errors": []
+      "execution_status": "success",
+      "execution_message": "POOLID must be null when USUBJID is populated.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "HEM021-001",
+          "value": {
+            "POOLID": "HEM021-001"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "HEM021-002",
+          "value": {
+            "POOLID": "HEM021-001"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "HEM021-003",
+          "value": {
+            "POOLID": "HEM021-001"
+          },
+          "validated": true
+        }
+      ]
     }
   ]
 }

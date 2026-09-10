@@ -1,6 +1,7 @@
 # Variable: TSVCDREF
 # Condition: TSVCDVER ^= null
 # Rule: TSVCDREF ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -56,10 +57,10 @@ Core:
   Id: CORE-000153
   Status: Published
   Version: '1'
-Description: Trigger error when TSVCDVER is populated and TSVCDREF is null
+Description: Raise an error when TSVCDREF is not populated and TSVCDVER is populated.
 Executability: Fully Executable
 Outcome:
-  Message: TSVCDREF is null when TSVCDVER is populated
+  Message: TSVCDREF is not populated when TSVCDVER is populated.
   Output Variables:
     - TSVCDVER
     - TSVCDREF

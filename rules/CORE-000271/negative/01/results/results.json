@@ -12,7 +12,7 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "EPOCH is not in TA.EPOCH",
+      "execution_message": "EPOCH value does not match any of the EPOCH values in the TA dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -30,7 +30,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "EPOCH is not in TA.EPOCH",
+      "execution_message": "EPOCH value does not match any of the EPOCH values in the TA dataset.",
       "number_errors": 2,
       "errors": [
         {
@@ -57,7 +57,7 @@
       "dataset": "ex.xpt",
       "domain": "EX",
       "execution_status": "success",
-      "execution_message": "EPOCH is not in TA.EPOCH",
+      "execution_message": "EPOCH value does not match any of the EPOCH values in the TA dataset.",
       "number_errors": 2,
       "errors": [
         {

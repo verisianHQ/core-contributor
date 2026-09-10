@@ -1,6 +1,7 @@
 # Variable: TSPARMCD AND TSPARM
 # Condition: 
 # Rule: TSPARM and TSPARMCD have a one-to-one relationship
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -218,10 +219,11 @@ Core:
   Id: CORE-000179
   Status: Published
   Version: '1'
-Description: Raise an error when TSPARM and TSPARMCD don't have a one-to-one relationship.
+Description: Raise an error when TSPARM and TSPARMCD do not have a one-to-one
+  relationship.
 Executability: Fully Executable
 Outcome:
-  Message: TSPARM and TSPARMCD don't have a one-to-one relationship.
+  Message: TSPARM and TSPARMCD do not have a one-to-one relationship.
   Output Variables:
     - TSPARM
     - TSPARMCD

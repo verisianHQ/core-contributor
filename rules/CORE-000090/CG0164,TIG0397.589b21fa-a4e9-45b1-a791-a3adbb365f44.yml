@@ -1,6 +1,7 @@
 # Variable: IDVAR
 # Condition: RDOMAIN = null
 # Rule: IDVAR = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -8,10 +9,10 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: Identifying variable in the parent dataset that identifies the
-                  record(s) to which the   comment  applies. Examples AESEQ or
+                  record(s) to which the comment applies. Examples AESEQ or
                   CMGRPID. Used only when individual comments are related to
-                  domain records.Null for comments collected on separate CRFs.
-                Document: SDTMIG v3.4
+                  domain records. Null for comments collected on separate CRFs.
+                Document: IG v3.4
                 Item: Specification
                 Section: '5.1'
             Origin: SDTM and SDTMIG Conformance Rules
@@ -26,7 +27,7 @@ Authorities:
               - Cited Guidance: Identifying variable in the parent dataset that identifies the
                   record(s) to which the comment applies. Examples AESEQ or
                   CMGRPID. Used only when individual comments are related to
-                  domain records. null for comments collected on separate CRFs.
+                  domain records. Null for comments collected on separate CRFs.
                 Document: IG v3.2
                 Item: Specification
                 Section: '5'
@@ -42,7 +43,7 @@ Authorities:
               - Cited Guidance: Identifying variable in the parent dataset that identifies the
                   record(s) to which the comment applies. Examples AESEQ or
                   CMGRPID. Used only when individual comments are related to
-                  domain records. null for comments collected on separate CRFs.
+                  domain records. Null for comments collected on separate CRFs.
                 Document: IG v3.3
                 Item: Specification
                 Section: '5.1'
@@ -80,10 +81,11 @@ Core:
   Id: CORE-000090
   Status: Published
   Version: '1'
-Description: Verify IDVAR is null when RDOMAIN is null
+Description: Raise an error when IDVAR is populated but RDOMAIN
+  is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: RDOMAIN has a missing value but IDVAR has a non-missing value
+  Message: RDOMAIN is not populated but IDVAR is populated.
   Output Variables:
     - RDOMAIN
     - IDVAR

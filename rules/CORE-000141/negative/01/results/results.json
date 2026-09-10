@@ -4,7 +4,7 @@
       "dataset": "ft.xpt",
       "domain": "FT",
       "execution_status": "success",
-      "execution_message": "FTTPT and FTTPTNUM do not have a one-to-one relationship",
+      "execution_message": "FTTPT and FTTPTNUM do not have a one-to-one relationship when VISITNUM and FTTPTREF are not present in the dataset.",
       "number_errors": 3,
       "errors": [
         {
@@ -13,9 +13,11 @@
           "USUBJID": "CDISC001",
           "value": {
             "FTTPT": "30 MIN POST",
-            "FTTPTNUM": 30.0
+            "FTTPTNUM": 30.0,
+            "VISITNUM": "Not in dataset",
+            "FTTPTREF": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -23,9 +25,11 @@
           "USUBJID": "CDISC001",
           "value": {
             "FTTPT": "30 MIN POST",
-            "FTTPTNUM": 1.0
+            "FTTPTNUM": 1.0,
+            "VISITNUM": "Not in dataset",
+            "FTTPTREF": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -33,9 +37,11 @@
           "USUBJID": "CDISC007",
           "value": {
             "FTTPT": "60 MIN POST",
-            "FTTPTNUM": 1.0
+            "FTTPTNUM": 1.0,
+            "VISITNUM": "Not in dataset",
+            "FTTPTREF": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

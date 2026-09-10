@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    {
+      "dataset": "eg.xpt",
+      "domain": "EG",
+      "execution_status": "success",
+      "execution_message": "Missing value for EGSTRESN when EGSTRESC is numeric.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "EGSTRESC": "150",
+            "EGSTRESN": null
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 2,
+          "USUBJID": "123102",
+          "value": {
+            "EGSTRESC": "149.876",
+            "EGSTRESN": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

@@ -4,15 +4,16 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "DTHFL is not 'Y', when SSSTRESC equals 'DEAD'.",
+      "execution_message": "SSSTRESC in the SS dataset is 'DEAD', but DTHFL in the DM dataset is not equal to 'Y'.",
       "number_errors": 2,
       "errors": [
         {
           "row": 1,
           "SEQ": null,
-          "USUBJID": "015246-076-0003-00003",
+          "USUBJID": "001",
           "value": {
             "DTHFL": null,
+            "SSTESTCD": "SURVSTAT",
             "SSSTRESC": "DEAD"
           },
           "validated": true
@@ -20,9 +21,10 @@
         {
           "row": 2,
           "SEQ": null,
-          "USUBJID": "015246-300-0004-00002",
+          "USUBJID": "002",
           "value": {
             "DTHFL": "N",
+            "SSTESTCD": "SURVSTAT",
             "SSSTRESC": "DEAD"
           },
           "validated": true

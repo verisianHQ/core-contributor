@@ -1,6 +1,7 @@
 # Variable: ARMCD
 # Condition: Study does not use multi-stage arm assignments and ARMCD ^= null
 # Rule: ARMCD in TA.ARMCD
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -65,11 +66,7 @@ Core:
   Id: CORE-000210
   Status: Published
   Version: '1'
-Description: When study does not use multi-stage arm assignments and ARMCD is
-  populated, ARMCD must be present in TA.ARMCD. This rule has been executed to
-  identify all cases when ARMCD is not present in TA.ARMCD and therefore
-  acknowledges that false positives may be recorded when multi-stage arm
-  assignments are in use.
+Description: Raise an error when ARMCD value in DM dataset does not match any ARMCD value in TA dataset.
 Executability: Partially Executable - Possible Overreporting
 Operations:
   - domain: TA
@@ -77,7 +74,9 @@ Operations:
     name: ARMCD
     operator: distinct
 Outcome:
-  Message: ARMCD is not present in TA.ARMCD
+  Message: ARMCD value in DM dataset does not match any ARMCD value in TA dataset. This is only acceptable for multi-stage studies with incomplete ARM assignments.
+  Output Variables:
+    - ARMCD
 Rule Type: Record Data
 Scope:
   Classes:

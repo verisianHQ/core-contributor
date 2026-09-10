@@ -1,3 +1,8 @@
+
+# Variable: RELID
+# Condition: 
+# Rule: Within a subject each unique RELID is present on multiple RELREC records
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -58,9 +63,6 @@ Authorities:
             Version: '1.0'
         Substandard: SDTM
         Version: '1.0'
-# Variable: RELID
-# Condition: 
-# Rule: Within a subject each unique RELID is present on multiple RELREC records
 Check:
   all:
     - name: RELID
@@ -70,11 +72,11 @@ Core:
   Id: CORE-000484
   Status: Published
   Version: '1'
-Description: Within a subject, each unique RELID should be present on multiple
-  RELREC records
+Description: Raise an error when within a subject, each unique RELID is not present on multiple
+  RELREC records.
 Executability: Fully Executable
 Outcome:
-  Message: Unique RELID is NOT present on multiple RELREC records within a subject.
+  Message: Unique RELID is not present on multiple RELREC records within a subject.
   Output Variables:
     - RELID
 Rule Type: Record Data

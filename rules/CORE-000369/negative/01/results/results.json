@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "RFENDTC must be null when ACTARM in (Screen Failure, Not Assigned, Not Treated).",
+      "execution_message": "RFENDTC must not be populated when ACTARM is equal to 'Screen Failure', 'Not Assigned' or 'Not Treated'.",
       "number_errors": 2,
       "errors": [
         {
@@ -12,54 +12,22 @@
           "SEQ": null,
           "USUBJID": "015246-076-0003-00003",
           "value": {
-            "ACTARM": "Screen Failure",
-            "RFENDTC": "2023-01-02"
+            "RFENDTC": "2023-01-02",
+            "ACTARM": "Screen Failure"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": null,
           "USUBJID": "015246-300-0004-00002",
           "value": {
-            "ACTARM": "Not Assigned",
-            "RFENDTC": "2023-01-02"
+            "RFENDTC": "2023-01-02",
+            "ACTARM": "Not Assigned"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "RFSTDTC"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "RFENDTC"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "RFSTDTC"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "RFENDTC"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 7,
-      "Variable": "RFSTDTC"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 7,
-      "Variable": "RFENDTC"
     }
   ]
 }

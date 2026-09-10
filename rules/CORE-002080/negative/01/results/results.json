@@ -1,0 +1,24 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "FDA Conditionally Desired TSPARMCD = 'INTMODEL' or 'INTTYPE' is missing in the TS dataset when TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL'.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "$STYPE_INTERVENTIONAL": 1,
+            "$TSPARMCD_INTMODEL": 1,
+            "$TSPARMCD_INTTYPE": 0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 # Variable: --VAMTU
 # Condition: --TRTV = null
 # Rule: --VAMTU = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -26,11 +27,7 @@ Authorities:
               Version: '2'
             Version: '2.0'
             Citations:
-              - Cited Guidance: '--TRTV:Vehicle for administration of treatment, such
-                  as a liquid in which the treatment drug is dissolved. Example: SALINE.
-                  --VAMT: Amount of the prepared product (treatment + vehicle) administered
-                  or given. Note: should not be diluent amount alone. --VAMTU: Units
-                  for the prepared product (treatment + vehicle). Examples: mL, mg.'
+              - Cited Guidance: '--TRTV:Vehicle for administration of treatment, such as a liquid in which the treatment drug is dissolved. Example: SALINE. --VAMT: Amount of the prepared product (treatment + vehicle) administered or given. Note: should not be diluent amount alone. --VAMTU: Units for the prepared product (treatment + vehicle). Examples: mL, mg.'
                 Document: Model v1.4
                 Section: 2.2.1
       - Name: SDTMIG
@@ -42,11 +39,7 @@ Authorities:
               Version: '2'
             Version: '2.0'
             Citations:
-              - Cited Guidance: '--TRTV:Vehicle for administration of treatment, such
-                  as a liquid in which the treatment drug is dissolved. Example: SALINE.
-                  --VAMT: Amount of the prepared product (treatment + vehicle) administered
-                  or given. Note: should not be diluent amount alone. --VAMTU: Units
-                  for the prepared product (treatment + vehicle). Examples: mL, mg.'
+              - Cited Guidance: '--TRTV:Vehicle for administration of treatment, such as a liquid in which the treatment drug is dissolved. Example: SALINE. --VAMT: Amount of the prepared product (treatment + vehicle) administered or given. Note: should not be diluent amount alone. --VAMTU: Units for the prepared product (treatment + vehicle). Examples: mL, mg.'
                 Document: Model v1.7
                 Section: 2.2.1
 Check:
@@ -59,11 +52,12 @@ Core:
   Id: CORE-000091
   Status: Published
   Version: '1'
-Description: Raise an error when --TRTV is null, --VAMTU is not null
+Description: Raise an error when --TRTV is not populated but --VAMTU is populated.
 Executability: Fully Executable
 Outcome:
-  Message: Value for --VAMTU is populated, when --TRTV is NULL.
+  Message: --VAMTU must not be populated when --TRTV is not populated.
   Output Variables:
+    - --TRT
     - --TRTV
     - --VAMTU
 Rule Type: Record Data

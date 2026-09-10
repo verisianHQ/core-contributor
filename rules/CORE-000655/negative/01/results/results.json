@@ -1,0 +1,63 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Values between ARMCD and ACTARMCD are not matching",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ARMCD": "ZAN_LOW",
+            "ACTARMCD": "ZAN_HIGH"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC003",
+          "value": {
+            "ARMCD": "ZAN_HIGH",
+            "ACTARMCD": "PLACEBO"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "CDISC016",
+          "value": {
+            "ARMCD": "ZAN_LOW",
+            "ACTARMCD": "ZAN_LO"
+          },
+          "validated": true
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "CDISC017",
+          "value": {
+            "ARMCD": "AN_LOW",
+            "ACTARMCD": "ZAN_LOW"
+          },
+          "validated": true
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "CDISC018",
+          "value": {
+            "ARMCD": "ZAN_HIGH",
+            "ACTARMCD": "ZAN_high"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
