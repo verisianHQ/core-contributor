@@ -12,8 +12,8 @@
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "LBTPTREF": null,
-            "LBSTINT": "PT05M"
+            "LBSTINT": "PT05M",
+            "LBTPTREF": null
           },
           "validated": true
         },
@@ -22,8 +22,8 @@
           "SEQ": 2,
           "USUBJID": "CDISC002",
           "value": {
-            "LBTPTREF": null,
-            "LBSTINT": "PT05M"
+            "LBSTINT": "PT05M",
+            "LBTPTREF": null
           },
           "validated": true
         }
@@ -33,9 +33,50 @@
       "dataset": "pp.xpt",
       "domain": "PP",
       "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "execution_message": "PPSTINT is populated, but PPTPTREF is missing.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "PPSTINT": "PT05M",
+            "PPTPTREF": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "PPSTINT": "PT05M",
+            "PPTPTREF": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "PPSTINT": "PT05M",
+            "PPTPTREF": "Not in dataset"
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "PPSTINT": "PT05M",
+            "PPTPTREF": "Not in dataset"
+          },
+          "validated": false
+        }
+      ]
     }
   ]
 }

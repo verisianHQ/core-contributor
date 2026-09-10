@@ -112,28 +112,32 @@ Authorities:
         Version: '1.0'
 Check:
   all:
-    - name: --TPTREF
-      operator: exists
-    - name: --STINT
-      operator: exists
     - name: --STINT
       operator: non_empty
-    - name: --TPTREF
-      operator: empty
+    - any:
+      - name: --TPTREF
+        operator: empty
+      - name: --TPTREF
+        operator: not_exists
 Core:
   Id: CORE-000616
   Status: Published
   Version: '1'
-Description: Planned Start of Assessment Interval (--STINT) is populated and 
-  Time Point Reference (--TPTREF) is also populated.
+Description: Raise an error when Planned Start of Assessment Interval (--STINT) is populated and 
+  Time Point Reference (--TPTREF) is not populated.
 Executability: Fully Executable
 Outcome:
   Message: --STINT is populated, but --TPTREF is missing.
+  Output Variables:
+    - --STINT
+    - --TPTREF
 Rule Type: Record Data
 Scope:
   Classes:
     Include:
-      - ALL
+      - INTERVENTIONS
+      - EVENTS
+      - FINDINGS
   Domains:
     Include:
       - ALL
