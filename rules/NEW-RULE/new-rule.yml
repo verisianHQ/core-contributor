@@ -47,7 +47,10 @@ Authorities:
                 Item: --LOINC
                 Section: Findings
 Check:
-  all:
+  any:
+    - name: $define_loinc_version
+      operator: greater_than
+      value: $dict_loinc_version
     - name: --LOINC
       operator: is_not_valid_loinc_code_reference
       filter_attribute: version
@@ -62,6 +65,9 @@ Executability: Fully Executable
 Operations:
   - id: $define_loinc_version
     operator: get_define_external_dictionary_version
+    external_dictionary_type: loinc
+  - id: $dict_loinc_version
+    operator: get_external_dictionary_version
     external_dictionary_type: loinc
 Outcome:
   Message: --LOINC is not a valid code in the version of the LOINC dictionary specified
