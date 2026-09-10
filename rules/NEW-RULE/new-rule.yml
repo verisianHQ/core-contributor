@@ -63,8 +63,8 @@ Core:
   Status: Draft
   Version: '1'
 Description: Raise an error when trial Summary Parameter Study Start Date
-  (SSTDTC) is equal to the earliest date of informed consent (min RFICDTC) in
-  the DM dataset.
+  (SSTDTC) is not equal to the earliest date of informed consent (min RFICDTC)
+  in the DM dataset.
 Executability: Fully Executable
 Operations:
   - operator: min_date
