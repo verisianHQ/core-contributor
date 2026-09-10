@@ -8,7 +8,10 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+              - Cited Guidance: Controlled terms should use the exact term
+                  (case, spelling, and punctuation) used by the terminology
+                  maintenance organizations (e.g., MedDRA, CDISC controlled
+                  terminology).
                 Document: FDA
                 Section: FDAB017
             Origin: FDA Business Rules
@@ -20,7 +23,10 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+              - Cited Guidance: Controlled terms should use the exact term
+                  (case, spelling, and punctuation) used by the terminology
+                  maintenance organizations (e.g., MedDRA, CDISC controlled
+                  terminology).
                 Document: FDA
                 Section: FDAB017
             Origin: FDA Business Rules
@@ -32,7 +38,10 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+              - Cited Guidance: Controlled terms should use the exact term
+                  (case, spelling, and punctuation) used by the terminology
+                  maintenance organizations (e.g., MedDRA, CDISC controlled
+                  terminology). 
                 Document: FDA
                 Section: FDAB017
             Origin: FDA Business Rules
@@ -44,7 +53,10 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+              - Cited Guidance: Controlled terms should use the exact term
+                  (case, spelling, and punctuation) used by the terminology
+                  maintenance organizations (e.g., MedDRA, CDISC controlled
+                  terminology). 
                 Document: FDA
                 Section: FDAB017
             Origin: FDA Business Rules
@@ -56,7 +68,10 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+              - Cited Guidance: Controlled terms should use the exact term
+                  (case, spelling, and punctuation) used by the terminology
+                  maintenance organizations (e.g., MedDRA, CDISC controlled
+                  terminology). 
                 Document: FDA
                 Section: FDAB017
             Origin: FDA Business Rules
@@ -68,7 +83,10 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+              - Cited Guidance: Controlled terms should use the exact term
+                  (case, spelling, and punctuation) used by the terminology
+                  maintenance organizations (e.g., MedDRA, CDISC controlled
+                  terminology). 
                 Document: FDA
                 Section: FDAB017
             Origin: FDA Business Rules
@@ -80,7 +98,10 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+              - Cited Guidance: Controlled terms should use the exact term
+                  (case, spelling, and punctuation) used by the terminology
+                  maintenance organizations (e.g., MedDRA, CDISC controlled
+                  terminology). 
                 Document: FDA
                 Section: FDAB017
             Origin: FDA Business Rules
@@ -92,7 +113,10 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+              - Cited Guidance: Controlled terms should use the exact term
+                  (case, spelling, and punctuation) used by the terminology
+                  maintenance organizations (e.g., MedDRA, CDISC controlled
+                  terminology). 
                 Document: FDA
                 Section: FDAB017
             Origin: FDA Business Rules
@@ -104,7 +128,10 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+              - Cited Guidance: Controlled terms should use the exact term
+                  (case, spelling, and punctuation) used by the terminology
+                  maintenance organizations (e.g., MedDRA, CDISC controlled
+                  terminology). 
                 Document: FDA
                 Section: FDAB017
             Origin: FDA Business Rules
@@ -116,7 +143,10 @@ Authorities:
       - Name: SENDIG-AR
         References:
           - Citations:
-              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+              - Cited Guidance: Controlled terms should use the exact term
+                  (case, spelling, and punctuation) used by the terminology
+                  maintenance organizations (e.g., MedDRA, CDISC controlled
+                  terminology). 
                 Document: FDA
                 Section: FDAB017
             Origin: FDA Business Rules
@@ -140,7 +170,9 @@ Core:
   Id: FDA.SDTMIG.FB1702
   Status: Draft
   Version: '1'
-Description: Raise an error when a new term has been added to an extensible code list that is a duplicate, a synonym or a subset of an existing submission value.
+Description: Raise an error when CDISC Controlled Terminology specifies the
+ codelist as extensible and a new term is a duplicate, a synonym or a subset of
+ an existing submission value.
 Executability: Fully Executable
 Operations:
   - id: $standard_values
@@ -160,7 +192,8 @@ Operations:
       - Standard Type: null
       - Extensible: 'Yes'
 Outcome:
-  Message: A new term has been added to an extensible code list that is a duplicate, a synonym or a subset of an existing submission value.
+  Message: A new term has been added to an extensible code list that is a
+    duplicate, a synonym or a subset of an existing submission value.
   Output Variables:
     - $extended_values
 Rule Type: Record Data
