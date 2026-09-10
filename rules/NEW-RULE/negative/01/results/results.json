@@ -4,16 +4,16 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "No occurrence of TSPARAMCD='CURTRT' is included in TS or TSVAL is null.The count of occurrences of TSPARAMCD = <value> not in the set ('FCNTRY', 'OBJPRIM', 'OBJSEC', 'OUTMSPRI', 'OUTMSSEC', 'REGID', 'TITLE', 'TTYPE') included in the list of TSPARAMCD with TSVAL populated is gt 1.",
-      "number_errors": 2,
+      "execution_message": "TSVCDREF must be completed with 'UNII' when TSPARMCD = 'COMPTRT', 'CURTRT' or 'TRT'.",
+      "number_errors": 3,
       "errors": [
         {
           "row": 1,
           "SEQ": 1,
           "USUBJID": "None",
           "value": {
-            "TSPARMCD": "ADDL",
-            "TSVAL": "Val 1"
+            "TSPARMCD": "COMPTRT",
+            "TSVCDREF": "UNI"
           },
           "validated": true
         },
@@ -22,8 +22,18 @@
           "SEQ": 2,
           "USUBJID": "None",
           "value": {
-            "TSPARMCD": "ADDL",
-            "TSVAL": "Val 2"
+            "TSPARMCD": "TRT",
+            "TSVCDREF": "UN"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "CURTRT",
+            "TSVCDREF": "UNIII"
           },
           "validated": true
         }
