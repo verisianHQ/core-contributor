@@ -140,8 +140,6 @@ Check:
     - name: '--TPTREF'
       operator: exists
     - name: '--ELTM'
-      operator: exists
-    - name: '--ELTM'
       operator: 'non_empty'
     - name: '--TPTREF'
       operator: 'empty'
@@ -149,11 +147,14 @@ Core:
   Id: CORE-000865
   Status: Published
   Version: '1'
-Description: When Planned Elapsed Time from Time Point Ref (--ELTM) is
-  populated, Time Point Reference (--TPTREF) should also be populated.
+Description: Raise an error when Planned Elapsed Time from Time Point Ref (--ELTM) is
+  populated and Time Point Reference (--TPTREF) is not populated.
 Executability: Fully Executable
 Outcome:
   Message: --ELTM is populated, but --TPTREF is missing.
+  Output Variables:
+    - --ELTM
+    - --TPTREF
 Rule Type: Record Data
 Scope:
   Classes:
