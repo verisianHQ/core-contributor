@@ -137,15 +137,15 @@ Authorities:
         Version: '1.0'
 Check:
   all:
-    - name: --DY
-      operator: exists
     - name: --DTC
       operator: non_empty
+    - name: --DY
+      operator: not_exists
 Core:
   Id: CORE-000793
   Status: Published
   Version: '1'
-Description: Collection study day (--DY) is present when date/time of
+Description: Raise an error when collection study day (--DY) is not present when date/time of
   collection (--DTC) is populated.
 Executability: Fully Executable
 Outcome:
