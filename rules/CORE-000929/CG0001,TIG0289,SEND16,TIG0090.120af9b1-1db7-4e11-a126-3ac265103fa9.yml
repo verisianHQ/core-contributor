@@ -197,9 +197,8 @@ Operations:
     ct_conditions:
       - Codelist Code: C66734
 Outcome:
-  Message: Dataset is not a custom domain but the DOMAIN Code is not a published DOMAIN Code in CDISC Controlled Terminology.
+  Message: Dataset is not a custom domain, but the DOMAIN code in the define.xml document is not a published DOMAIN code in the CDISC Controlled Terminology version specified for the study.
   Output Variables:
-    - $domain_lib_ccode
     - define_variable_codelist_coded_codes
 Rule Type: Define Item Metadata Check against Library Metadata
 Scope:
