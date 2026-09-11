@@ -101,8 +101,7 @@ Core:
   Id: CORE-000539
   Status: Published
   Version: '1'
-Description: Raise an error when split domains (i.e three/four-letter domain
-  name) do not have a two-letter parent domain present in the study.
+Description: Raise an error when a split dataset is present (dataset name length = 3 or 4 and dataset name does not begin with 'AP' or 'FA') but the first 2 characters of the dataset name are not equal to a domain that is present in the study.
 Executability: Fully Executable
 Operations:
   - id: $list_dataset_names
