@@ -158,8 +158,8 @@ Core:
   Id: CORE-000708
   Status: Published
   Version: '1'
-Description: Study Day of Start of Observation (--STDY) is less than or equal
-  to Study Day of End of Observation (--ENDY).
+Description: Raise an error when Study Day of Start of Observation (--STDY) 
+  is greater than Study Day of End of Observation (--ENDY).
 Executability: Fully Executable
 Outcome:
   Message: --STDY is greater than --ENDY.
