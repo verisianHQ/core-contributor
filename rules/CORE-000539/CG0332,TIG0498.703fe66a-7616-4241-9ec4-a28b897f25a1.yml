@@ -1,6 +1,7 @@
 # Variable: GEN
 # Condition: Dataset name length = 3 or 4 and dataset name does not begin with 'AP' or 'FA'
 # Rule: The first two characters of the dataset name must equal a domain that is present in the study
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -107,7 +108,7 @@ Operations:
   - id: $list_dataset_names
     operator: dataset_names
 Outcome:
-  Message: Split dataset is present but the two-letter parent domain is missing.
+  Message: Split dataset is present but the first 2 characters of the dataset name are not equal to a domain that is present in the study.
   Output Variables:
     - dataset_name
     - $list_dataset_names
