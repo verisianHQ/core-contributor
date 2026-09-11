@@ -126,26 +126,25 @@ Authorities:
             Version: '1.5'
         Version: '1.0'
 Check:
-  any:
-    - all:
+  all:
+    - any:
         - name: --ENDTC
           operator: non_empty
-        - any:
-            - name: --STDTC
-              operator: not_exists
-            - name: --STDTC
-              operator: empty
-    - all:
         - name: --ENRF
           operator: non_empty
+        - name: --ENRTPT
+          operator: non_empty
+    - all:
+        - any:
+            - name: --STDTC
+              operator: not_exists
+            - name: --STDTC
+              operator: empty
         - any:
             - name: --STRF
               operator: not_exists
             - name: --STRF
               operator: empty
-    - all:
-        - name: --ENRTPT
-          operator: non_empty
         - any:
             - name: --STRTPT
               operator: not_exists
