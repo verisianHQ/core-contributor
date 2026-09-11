@@ -1,6 +1,7 @@
 # Variable: GEN
 # Condition: Dataset split by parent domain and dataset name length > 2 and dataset name begins with 'FA'
 # Rule: The characters of the dataset name after 'FA' equal a domain that present in the study
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -9,7 +10,7 @@ Authorities:
           - Citations:
               - Cited Guidance: 'If splitting Findings About by parent domain, then the dataset
                   name would be the domain code, "FA", plus the two-character
-                  domain code for parent domain code (e.g., "FACM"). '
+                  domain code for parent domain code (e.g., "FACM").'
                 Document: IG v3.4
                 Item: '6'
                 Section: 4.1.7
@@ -83,29 +84,24 @@ Authorities:
 Check:
   all:
     - name: dataset_name
-      operator: matches_regex
-      value: ^[a-z(?-i)]{2}[a-z(?-i)]{1,2}
+      operator: matches_regex_case_insensitive
+      value: ^FA[A-Za-z0-9]{1,2}$
     - name: dataset_name
-      operator: prefix_equal_to
-      prefix: 2
-      value: 'FA'
-      value_is_literal: true
-    - name: dataset_name
-      operator: suffix_is_not_contained_by
+      operator: suffix_is_not_contained_by_case_insensitive
       suffix: 2
       value: $list_dataset_names
 Core:
   Id: CORE-000540
   Status: Published
   Version: '1'
-Description: Raise an error when parent domain referenced in Findings About
+Description: Raise an error when a split dataset is present based on Findings About (dataset name length > 2 and begins with 'FA') but characters of the dataset name after 'FA' are not equal to a domain that is present in the study.
   dataset name is not present in the study.
 Executability: Fully Executable
 Operations:
   - id: $list_dataset_names
     operator: dataset_names
 Outcome:
-  Message: Parent domain referenced in Findings About dataset name is not present
+  Message: Split FA dataset is present but the characters of the dataset name after FA are not equal to a domain that is present in the study.
     in the study
   Output Variables:
     - dataset_name
