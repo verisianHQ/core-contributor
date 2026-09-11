@@ -11,72 +11,64 @@
     {
       "dataset": "ae.xpt",
       "domain": "AE",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
-      "number_errors": 1,
+      "execution_status": "success",
+      "execution_message": "DTHFL in DM dataset is 'Y' but a record is missing in AE dataset where AESDTH is equal to 'Y' and AEOUT is equal to 'FATAL'.",
+      "number_errors": 3,
       "errors": [
         {
-          "error": "Validation error",
-          "message": "Invalid sensitivity value: Group"
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "$ae_fatal_death_count": 0,
+            "DTHFL": "Y"
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "CDISC003",
+          "value": {
+            "$ae_fatal_death_count": 0,
+            "DTHFL": "Y"
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "CDISC004",
+          "value": {
+            "$ae_fatal_death_count": 0,
+            "DTHFL": "Y"
+          },
+          "validated": false
         }
       ]
     }
   ],
-  "unvalidated_highlights": [
+  "unmatched_validation": [
     {
-      "Sheet": "dm.xpt",
-      "Row": 1,
-      "Variable": "DTHFL"
+      "value": {
+        "USUBJID": "CDISC002",
+        "DTHFL": "Y",
+        "$ae_fatal_death_count": "0"
+      }
     },
     {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "USUBJID"
+      "value": {
+        "USUBJID": "CDISC003",
+        "DTHFL": "Y",
+        "$ae_fatal_death_count": "0"
+      }
     },
     {
-      "Sheet": "dm.xpt",
-      "Row": 6,
-      "Variable": "DTHFL"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 7,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 7,
-      "Variable": "DTHFL"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 1,
-      "Variable": "AEOUT"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 1,
-      "Variable": "AESDTH"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 10,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 10,
-      "Variable": "AEOUT"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 10,
-      "Variable": "AESDTH"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 11,
-      "Variable": "USUBJID"
+      "value": {
+        "USUBJID": "CDISC004",
+        "DTHFL": "Y",
+        "$ae_fatal_death_count": "0"
+      }
     }
   ]
 }
