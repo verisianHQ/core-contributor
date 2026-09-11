@@ -52,6 +52,7 @@ Check:
     - name: library_variable_core
       operator: equal_to
       value: Perm
+      value_is_literal: true
     - name: define_variable_has_no_data
       operator: empty
     - any:

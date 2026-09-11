@@ -1,3 +1,7 @@
+# Variable: ACTARMCD AND ACTARM
+# Condition:
+# Rule: ACTARMCD and ACTARM do not have a one-to-one relationship
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -160,7 +164,8 @@ Core:
   Id: CORE-000791
   Status: Published
   Version: '1'
-Description: ACTARMCD and ACTARM should have a one-to-one relationship.
+Description: Raise an error when ACTARMCD and ACTARM do not have a one-to-one
+  relationship.
 Executability: Fully Executable
 Outcome:
   Message: ACTARMCD and ACTARM do not have a one-to-one relationship.
