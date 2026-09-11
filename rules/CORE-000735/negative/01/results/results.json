@@ -4,7 +4,7 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "Throw error when TSPARMCD is equal to COMPTRT, CURTRT, or TRT and TSVCDREF ^= UNII",
+      "execution_message": "TSVCDREF must be completed with 'UNII' when TSPARMCD = 'COMPTRT', 'CURTRT' or 'TRT'.",
       "number_errors": 3,
       "errors": [
         {
@@ -13,9 +13,9 @@
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "COMPTRT",
-            "TSVCDREF": null
+            "TSVCDREF": "SNOMED"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -25,7 +25,7 @@
             "TSPARMCD": "CURTRT",
             "TSVCDREF": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -35,26 +35,9 @@
             "TSPARMCD": "TRT",
             "TSVCDREF": "ISO 8601"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ts.xpt",
-      "Row": 5,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 6,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 7,
-      "Variable": "TSPARMCD"
     }
   ]
 }
