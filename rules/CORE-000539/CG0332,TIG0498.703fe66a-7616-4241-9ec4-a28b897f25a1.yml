@@ -90,7 +90,7 @@ Check:
       operator: matches_regex
       value: ^[A-Za-z]{2}[A-Za-z0-9]{1,2}$
     - name: dataset_name
-      operator: not_prefix_matches_regex
+      operator: not_prefix_matches_regex_case_insensitive
       prefix: 2
       value: (AP|FA)
     - name: dataset_name
