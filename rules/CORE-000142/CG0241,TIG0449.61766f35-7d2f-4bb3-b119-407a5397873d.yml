@@ -1,6 +1,7 @@
 # Variable: --ELTM
 # Condition: --TPT ^= null and --TPTNUM ^= null and --ELTM ^= null
 # Rule: --ELTM is the same value across records with the same values of DOMAIN, VISITNUM, --TPTREF, and --TPTNUM
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -108,16 +109,18 @@ Core:
   Id: CORE-000142
   Status: Published
   Version: '1'
-Description: Raise an error when --TPT ^= null and --TPTNUM ^= null and --ELTM
-  ^= null and --ELTM does not have the same value across records with the same
-  values of DOMAIN, VISITNUM, --TPTREF, and --TPTNUM.
+Description: Raise an error when --TPT is populated and --TPTNUM is populated 
+  and --ELTM is populated but --ELTM does not have the same value across 
+  records with the same values of DOMAIN, VISITNUM, --TPTREF, and --TPTNUM.
 Executability: Fully Executable
 Outcome:
   Message: --ELTM is not the same value across records with the same values of
-    DOMAIN, VISITNUM, --TPTREF, and --TPTNUM.
+    DOMAIN, VISITNUM, --TPTREF, and --TPTNUM when --TPT, --TPTNUM, and --ELTM
+    are populated.
   Output Variables:
     - --TPT
     - --TPTNUM
+    - --TPTREF
     - --ELTM
     - VISITNUM
     - DOMAIN
