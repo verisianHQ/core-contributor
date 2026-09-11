@@ -94,14 +94,14 @@ Core:
   Id: CORE-000540
   Status: Published
   Version: '1'
-Description: Raise an error when parent domain referenced in Findings About
+Description: Raise an error when a split dataset is present based on Findings About (dataset name length > 2 and begins with 'FA') but characters of the dataset name after 'FA' are not equal to a domain that is present in the study.
   dataset name is not present in the study.
 Executability: Fully Executable
 Operations:
   - id: $list_dataset_names
     operator: dataset_names
 Outcome:
-  Message: Parent domain referenced in Findings About dataset name is not present
+  Message: Split FA dataset is present but the characters of the dataset name after FA are not equal to a domain that is present in the study.
     in the study
   Output Variables:
     - dataset_name
