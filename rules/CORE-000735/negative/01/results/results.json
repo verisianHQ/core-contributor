@@ -4,7 +4,7 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSPARMCD is equal to 'COMPTRT', 'CURTRT' or 'TRT', but TSVCDREF is not equal to 'UNII'.",
+      "execution_message": "TSVCDREF must be completed with 'UNII' when TSPARMCD = 'COMPTRT', 'CURTRT' or 'TRT'.",
       "number_errors": 3,
       "errors": [
         {
