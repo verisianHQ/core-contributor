@@ -1,0 +1,105 @@
+# Variable: ARELTMU, ARELTM
+# Condition: ARELTM is present within BDS or MDBDS
+# Rule: ARELTMU is not present within BDS or MDBDS
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '111'
+              Version: '2'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.3
+                Section: 3.3.3
+                Item: 'Table 3.3.3.1'
+                Cited Guidance: 
+                  'ADaMIG v1.3, Section 3.3.3, Table 3.3.3.1: When ARELTM is present, the anchor time variable and ARELTMU must also be included in the dataset, and the anchor time variable must be identified in the metadata for ARELTM.'
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '111'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.2
+                Section: 3.3.3
+                Item: 'Table 3.3.3.1'
+                Cited Guidance: 
+                  'ADaMIG v1.2, Section 3.3.3, Table 3.3.3.1: When ARELTM is present, the anchor time variable and ARELTMU must also be included in the dataset, and the anchor time variable must be identified in the metadata for ARELTM.'
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '111'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.1
+                Section: 3.3.3
+                Item: 'Table 3.3.3.1'
+                Cited Guidance: 
+                  'ADaMIG v1.1, Section 3.3.3, Table 3.3.3.1: When ARELTM is present, the anchor time variable and ARELTMU must also be included in the dataset, and the anchor time variable must be identified in the metadata for ARELTM.'
+      - Name: ADaMIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '111'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.0
+                Section: 3.2.3
+                Item: 'Table 3.2.3.1'
+                Cited Guidance: 
+                  'ADaMIG v1.0, Section 3.2.3, Table 3.2.3.1: When ARELTM is present, the anchor time variable and ARELTMU must also be included in the dataset, and the anchor time variable must be identified in the metadata for ARELTM.'
+      - Name: ADaMIG-MD
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '111'
+              Version: '2'
+            Version: '5.0'
+            Citations:
+              - Document: IG-MD v1.0
+                Section: 3.1
+                Item: 'Table 3.3.3.1'
+                Cited Guidance: 
+                  'ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis needs by adding SPDEVID as a required key variable and USUBJID as a conditionally required variable. See the BDS class for further details.'
+Check:
+  all:
+    - name: ARELTM
+      operator: exists
+    - name: ARELTMU
+      operator: not_exists
+Core:
+  Id: AD0111
+  Status: Published
+  Version: '2'
+Description: Raise an error when the ARELTM variable is present within BDS or MDBDS, but the ARELTMU variable is not present.
+Executability: Fully Executable
+Outcome:
+  Message: ARELTM is present, but ARELTMU is not present within BDS or MDBDS.
+  Output Variables:
+    - ARELTM
+    - ARELTMU
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - BDS
+      - MDBDS
+  Domains:
+    Include:
+      - BDS
+      - MDBDS
+Sensitivity: Dataset

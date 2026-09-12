@@ -1,0 +1,95 @@
+# Variable: ATPTN, ATPT
+# Condition: ATPTN is present
+# Rule: ATPT is not present
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '542'
+              Version: '2'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.3
+                Section: 3.1.1
+                Item: '6'
+                Cited Guidance: 
+                  'ADaMIG v1.3, Section 3.1.1, Item 6: When a secondary variable is included in the dataset, then the primary variable must also be included.'
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '542'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.2
+                Section: 3.1.1
+                Item: '6'
+                Cited Guidance: 
+                  'ADaMIG v1.2, Section 3.1.1, Item 6: When a secondary variable is included in the dataset, then the primary variable must also be included.'
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '542'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.1
+                Section: 3.1.1
+                Item: '6'
+                Cited Guidance: 
+                  'ADaMIG v1.1, Section 3.1.1, Item 6: When the secondary variable is numeric, it can only be included if the primary variable is also present in the dataset.'
+      - Name: ADaMIG-MD
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '542'
+              Version: '2'
+            Version: '5.0'
+            Citations:
+              - Document: IG-MD v1.0
+                Section: 3.1
+                Item: '6'
+                Cited Guidance: 
+                  'ADaMIG-MD v1.0, Section 3.1: MDBDS and MDOCCDS support analysis needs by adding SPDEVID as a required key variable and USUBJID as a conditionally required variable. See the BDS and OCCDS class for further details.'
+Check:
+  all:
+    - name: ATPTN
+      operator: exists
+    - name: ATPT
+      operator: not_exists
+Core:
+  Id: AD0542
+  Status: Published
+  Version: '2'
+Description: Raise an error when the ATPTN variable is present within BDS or MDBDS or OCCDS or MDOCCDS, but the ATPT variable is not present.
+Executability: Fully Executable
+Outcome:
+  Message: ATPTN is present, but ATPT is not present within BDS or MDBDS or OCCDS or MDOCCDS.
+  Output Variables:
+    - ATPTN
+    - ATPT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - BDS
+      - MDBDS
+      - OCCDS
+      - MDOCCDS
+  Domains:
+    Include:
+      - BDS
+      - MDBDS
+      - OCCDS
+      - MDOCCDS
+Sensitivity: Dataset
