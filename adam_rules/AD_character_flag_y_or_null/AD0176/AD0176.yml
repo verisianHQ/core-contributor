@@ -1,0 +1,62 @@
+# Variable: ABLFL
+# Condition: 
+# Rule: ABLFL is not equal to Y or null
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '176'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.0
+                Section: 3.2.6
+                Item: 'Table 3.2.6.1'
+                Cited Guidance:
+                  'ADaMIG v1.0, Section 3.2.6, Table 3.2.6.1: Codelist/Controlled Terms: Y {Y,NULL}'
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '176'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.1
+                Section: 3.3.8
+                Item: 'Table 3.3.8.1'
+                Cited Guidance:
+                  'ADaMIG v1.1, Section 3.3.8, Table 3.3.8.1: Codelist/Controlled Terms: Y {Y,NULL}'
+Check:
+  all:
+    - name: ABLFL
+      operator: non_empty
+    - name: ABLFL
+      operator: not_equal_to
+      value: 'Y'
+      value_is_literal: true
+Core:
+  Id: AD0176
+  Status: Published
+  Version: '1'
+Description: Raise an error when ABLFL is not equal to Y or null within BDS.
+Executability: Fully Executable
+Outcome:
+  Message: ABLFL is not equal to Y or null within BDS.
+  Output Variables:
+    - ABLFL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - BDS
+  Domains:
+    Include:
+      - BDS
+Sensitivity: Record

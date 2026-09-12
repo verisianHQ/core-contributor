@@ -1,0 +1,65 @@
+# Variable: ANLzzFL
+# Condition: 
+# Rule: A variable with a prefix of ANL and a suffix of FL is not equal to Y or null
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '178'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.0
+                Section: 3.2.6
+                Item: 'Table 3.2.6.1'
+                Cited Guidance:
+                  'ADaMIG v1.0, Section 3.2.6, Table 3.2.6.1: Codelist/Controlled Terms: Y {Y,NULL}'
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '178'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.1
+                Section: 3.3.8
+                Item: 'Table 3.3.8.1'
+                Cited Guidance:
+                  'ADaMIG v1.1, Section 3.3.8, Table 3.3.8.1: Codelist/Controlled Terms: Y {Y,NULL}'
+Check:
+  all:
+    - name: '^ANL(?P<zz>0[1-9]|[1-9][0-9])FL$'
+      variable_regex_pattern: true
+      operator: non_empty
+    - name: 'ANL{{zz}}FL'
+      operator: not_equal_to
+      value: 'Y'
+      value_is_literal: true
+Core:
+  Id: AD0178
+  Status: Published
+  Version: '1'
+Description: Raise an error when ANLzzFL is not equal to Y or null within BDS or OCCDS.
+Executability: Fully Executable
+Outcome:
+  Message: ANLzzFL is not equal to Y or null within BDS or OCCDS.
+  Output Variables:
+    - 'ANL{{zz}}FL$'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - BDS
+      - OCCDS
+  Domains:
+    Include:
+      - BDS
+      - OCCDS
+Sensitivity: Record

@@ -1,0 +1,134 @@
+# Variable: PREFL
+# Condition: 
+# Rule: PREFL is not equal to Y or null
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '270'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: OCCDS v1.0
+                Section: 3.2.5
+                Item: 'Table 3.2.5.5'
+                Cited Guidance:
+                  'OCCDS v1.0, Section 3.2.5, Table 3.2.5.5: Code List / Controlled Terms have allowable values of: "Y"'
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '270'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: OCCDS v1.1
+                Section: 3.2.5
+                Item: 'Table 3.2.5.5'
+                Cited Guidance:
+                  'OCCDS v1.1, Section 3.2.5, Table 3.2.5.5: Code List / Controlled Terms have allowable values of: "Y"'
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '270'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: OCCDS v1.1
+                Section: 3.2.5
+                Item: 'Table 3.2.5.5'
+                Cited Guidance:
+                  'OCCDS v1.1, Section 3.2.5, Table 3.2.5.5: Code List / Controlled Terms have allowable values of: "Y"'
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '270'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: OCCDS v1.1
+                Section: 3.2.5
+                Item: 'Table 3.2.5.5'
+                Cited Guidance:
+                  'OCCDS v1.1, Section 3.2.5, Table 3.2.5.5: Code List / Controlled Terms have allowable values of: "Y"'
+      - Name: ADaMIG-MD
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '270'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG-MD v1.0
+                Section: 3.1
+                Item: 'Table 3.2.5.5'
+                Cited Guidance:
+                  'ADaMIG-MD v1.0, Section 3.1: The MDOCCDS supports analysis needs by adding SPDEVID as a required identifier and allowing USUBJID be a conditionally required variable. See the OCCDS class for further details.'
+      - Name: OCCDS
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '270'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: OCCDS v1.0
+                Section: 3.2.5
+                Item: 'Table 3.2.5.5'
+                Cited Guidance: 
+                  'OCCDS v1.0, Section 3.2.5, Table 3.2.5.5: Code List / Controlled Terms have allowable values of: "Y"'
+      - Name: OCCDS
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '270'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: OCCDS v1.1
+                Section: 3.2.5
+                Item: 'Table 3.2.5.5'
+                Cited Guidance: 
+                  'OCCDS v1.1, Section 3.2.5, Table 3.2.5.5: Code List / Controlled Terms have allowable values of: "Y"'
+Check:
+  all:
+    - name: PREFL
+      operator: non_empty
+    - name: PREFL
+      operator: not_equal_to
+      value: 'Y'
+      value_is_literal: true
+Core:
+  Id: AD0270
+  Status: Published
+  Version: '1'
+Description: Raise an error when PREFL is not equal to Y or null within OCCDS or MDOCCDS.
+Executability: Fully Executable
+Outcome:
+  Message: PREFL is not equal to Y or null within OCCDS or MDOCCDS.
+  Output Variables:
+    - PREFL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - OCCDS
+      - MDOCCDS
+  Domains:
+    Include:
+      - OCCDS
+      - MDOCCDS
+Sensitivity: Record

@@ -1,0 +1,30 @@
+{
+  "datasets": [
+    {
+      "dataset": "bds.csv",
+      "domain": "bds",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0269, dataset=BDS",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "occds.csv",
+      "domain": "occds",
+      "execution_status": "success",
+      "execution_message": "TRTEMFL is not equal to Y or null within OCCDS or MDOCCDS.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "STUDY001-SUBJ0002",
+          "value": {
+            "TRTEMFL": "N"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
