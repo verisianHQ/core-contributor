@@ -84,6 +84,8 @@ Check:
   all:
     - name: SEUPDES
       operator: non_empty
+    - name: SEUPDES
+      operator: exists
     - name: ETCD
       operator: not_equal_to
       value: UNPLAN

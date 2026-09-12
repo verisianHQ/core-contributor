@@ -81,6 +81,8 @@ Check:
           operator: is_incomplete_date
     - name: --DY
       operator: non_empty
+    - name: --DY
+      operator: exists
 Core:
   Id: CORE-000354
   Status: Published
