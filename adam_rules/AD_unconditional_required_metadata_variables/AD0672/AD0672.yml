@@ -1,0 +1,56 @@
+# Variable: SPDEVID
+# Condition: 
+# Rule: SPDEVID is not present within ADDL
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '672'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.3
+                Section: '3.2.1.1'
+                Cited Guidance: 
+                  'ADaMIG-MD v1.0, Section 3.2.1.1: SPDEVID has Core=Req.'
+      - Name: ADaMIG-MD
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '672'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG-MD v1.0
+                Section: '3.2.1.1'
+                Cited Guidance: 
+                  'ADaMIG-MD v1.0, Section 3.2.1.1: SPDEVID has Core=Req.'
+Check:
+  all:
+    - name: SPDEVID
+      operator: not_exists
+Core:
+  Id: AD0672
+  Status: Published
+  Version: '1'
+Description: Raise an error when the SPDEVID variable is not present within ADDL.
+Executability: Fully Executable
+Outcome:
+  Message: SPDEVID is not present within ADDL.
+  Output Variables:
+    - SPDEVID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ADDL
+  Domains:
+    Include:
+      - ADDL
+Sensitivity: Dataset
