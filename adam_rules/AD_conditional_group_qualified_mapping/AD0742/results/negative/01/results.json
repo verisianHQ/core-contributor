@@ -1,0 +1,35 @@
+{
+  "datasets": [
+    {
+      "dataset": "bds.csv",
+      "domain": "bds",
+      "execution_status": "success",
+      "execution_message": "Within a given value of PARAMCD, there is more than one value of AVALC for a given value of AVAL within BDS or MDBDS.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "STUDY001-SUBJ0002",
+          "value": {
+            "PARAMCD": "AY023823",
+            "AVALC": "High",
+            "AVAL": 200.0
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "STUDY001-SUBJ0003",
+          "value": {
+            "PARAMCD": "AY023823",
+            "AVALC": "Low",
+            "AVAL": 200.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
