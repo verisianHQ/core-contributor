@@ -1,0 +1,113 @@
+{
+  "datasets": [
+    {
+      "dataset": "ft.xpt",
+      "domain": "FT",
+      "execution_status": "success",
+      "execution_message": "FTTPT and FTTPTNUM do not have a one-to-one relationship.",
+      "number_errors": 10,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 120,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FTTPT": "30 MIN POST",
+            "FTTPTNUM": 10.0
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 121,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FTTPT": "30 MIN POST",
+            "FTTPTNUM": 10.0
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 256,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FTTPT": "30 MIN POST",
+            "FTTPTNUM": 11.0
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 257,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FTTPT": "30 MIN POST",
+            "FTTPTNUM": 11.0
+          },
+          "validated": true
+        },
+        {
+          "row": 11,
+          "SEQ": 394,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FTTPT": "30 MIN POST1",
+            "FTTPTNUM": 10.0
+          },
+          "validated": true
+        },
+        {
+          "row": 12,
+          "SEQ": 395,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FTTPT": "30 MIN POST1",
+            "FTTPTNUM": 10.0
+          },
+          "validated": true
+        },
+        {
+          "row": 27,
+          "SEQ": 258,
+          "USUBJID": "CDISC003",
+          "value": {
+            "FTTPT": "30 MIN POST",
+            "FTTPTNUM": 20.0
+          },
+          "validated": true
+        },
+        {
+          "row": 28,
+          "SEQ": 259,
+          "USUBJID": "CDISC003",
+          "value": {
+            "FTTPT": "30 MIN POST",
+            "FTTPTNUM": 20.0
+          },
+          "validated": true
+        },
+        {
+          "row": 31,
+          "SEQ": 530,
+          "USUBJID": "CDISC003",
+          "value": {
+            "FTTPT": "30 MIN POST12",
+            "FTTPTNUM": 10.0
+          },
+          "validated": true
+        },
+        {
+          "row": 32,
+          "SEQ": 531,
+          "USUBJID": "CDISC003",
+          "value": {
+            "FTTPT": "30 MIN POST12",
+            "FTTPTNUM": 10.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
