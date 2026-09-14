@@ -4,7 +4,7 @@
       "dataset": "suppapfamh.xpt",
       "domain": "SUPPAP",
       "execution_status": "success",
-      "execution_message": "Length of dataset name of SUPPSUPPAP dataset is greater than 8.",
+      "execution_message": "Length of SUPPSUPPAP dataset name is greater than 8 characters.",
       "number_errors": 1,
       "errors": [
         {
@@ -14,7 +14,7 @@
           "value": {
             "dataset_name": "SUPPAPFAMH"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

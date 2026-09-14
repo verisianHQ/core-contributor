@@ -1,6 +1,7 @@
 # Variable: SMSTDTC
 # Condition: 
 # Rule: SMSTDTC ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -19,6 +20,7 @@ Authorities:
                   need to be defined.
                 Document: SDTMIG v3.4
                 Section: '5.4'
+                Item: Assumption 3.a
       - Name: SDTMIG
         Version: '3.3'
         References:
@@ -43,10 +45,13 @@ Core:
   Id: CORE-000109
   Status: Published
   Version: '1'
-Description: Raise an error when SMSTDTC is null.
+Description: Raise an error when SMSTDTC is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: SMSTDTC is null.
+  Message: SMSTDTC must be populated.
+  Output Variables:
+    - MIDS
+    - SMSTDTC
 Rule Type: Record Data
 Scope:
   Classes:

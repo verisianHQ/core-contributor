@@ -4,63 +4,83 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMSTAT should equal 'NOT DONE' when CMPRESP = 'Y' and CMOCCUR = null",
-      "number_errors": 5,
+      "execution_message": "CMPRESP is equal to 'Y' and CMOCCUR is not populated but CMSTAT is not equal to 'NOT DONE'.",
+      "number_errors": 3,
       "errors": [
         {
           "row": 1,
           "SEQ": 1,
           "USUBJID": "CDISC001",
           "value": {
-            "CMSTAT": "DONE",
             "CMPRESP": "Y",
-            "CMOCCUR": null
+            "CMOCCUR": null,
+            "CMSTAT": "DONE"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "CMSTAT": null,
             "CMPRESP": "Y",
-            "CMOCCUR": null
+            "CMOCCUR": null,
+            "CMSTAT": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": 3,
           "USUBJID": "CDISC001",
           "value": {
-            "CMSTAT": "837",
             "CMPRESP": "Y",
-            "CMOCCUR": null
+            "CMOCCUR": null,
+            "CMSTAT": "837"
           },
-          "validated": false
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "MHPRESP is equal to 'Y' and MHOCCUR is not populated but MHSTAT is not equal to 'NOT DONE'.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC004",
+          "value": {
+            "MHPRESP": "Y",
+            "MHOCCUR": null,
+            "MHSTAT": null
+          },
+          "validated": true
         },
         {
-          "row": 4,
-          "SEQ": 4,
-          "USUBJID": "CDISC001",
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "CDISC005",
           "value": {
-            "CMSTAT": null,
-            "CMPRESP": "Y",
-            "CMOCCUR": null
+            "MHPRESP": "Y",
+            "MHOCCUR": null,
+            "MHSTAT": "ASPIRIN"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 5,
-          "SEQ": 5,
-          "USUBJID": "CDISC001",
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC007",
           "value": {
-            "CMSTAT": "ASPIRIN",
-            "CMPRESP": "Y",
-            "CMOCCUR": null
+            "MHPRESP": "Y",
+            "MHOCCUR": null,
+            "MHSTAT": "not done"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

@@ -1,18 +1,22 @@
 # Variable: AEREASND
 # Condition: 
 # Rule: AEREASND not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The following Qualifiers would not be used in AE, --OCCUR,
+              - Cited Guidance: 'Additional Events Qualifiers:
+
+                  The following Qualifiers would not be used in AE: --OCCUR,
                   --STAT, and--REASND. They are the only Qualifiers from the
                   SDTM Events Class not in the AE domain. They are not permitted
                   because the AE domain contains only records for adverse events
-                  that actually occurred.
+                  that actually occurred.'
                 Document: IG v3.4
+                Item: Assumption 9
                 Section: 6.2.1
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -57,11 +61,11 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: The following qualifiers would not be used in AE; --OCCUR,
+              - Cited Guidance: 'The following qualifiers would not be used in AE: --OCCUR,
                   --STAT, and--REASND. They are the only qualifiers from the
                   SDTM Events class not in the AE domain. They are not permitted
                   because the AE domain contains only records for adverse events
-                  that actually occurred
+                  that actually occurred'
                 Document: TIG 1.0
                 Item: Assumption 10
                 Section: 2.8.10.1
@@ -83,7 +87,7 @@ Core:
 Description: Raise an error when AEREASND is present.
 Executability: Fully Executable
 Outcome:
-  Message: AEREASND is present.
+  Message: AEREASND must not be present.
   Output Variables:
     - AEREASND
 Rule Type: Record Data

@@ -1,0 +1,46 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVALNF must be populated when TSVAL is not populated.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 11,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "EXTTIND",
+            "TSVAL": null,
+            "TSVALNF": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 22,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "NCOHORT",
+            "TSVAL": null,
+            "TSVALNF": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 28,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "PDPSTIND",
+            "TSVAL": null,
+            "TSVALNF": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

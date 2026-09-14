@@ -1,0 +1,29 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVAL is not a valid preferred term from the FDA Substance Registration System (SRS).",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "CURTRT",
+            "TSVAL": "0001H6R5H1",
+            "TSVALCD": "00000UNII1"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ],
+  "dictionary_versions": {
+    "unii": {
+      "version": "10Apr2026"
+    }
+  }
+}

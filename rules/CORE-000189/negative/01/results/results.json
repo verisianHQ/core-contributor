@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "AGEU is missing when AGE is provided.",
+      "execution_message": "AGEU must be populated when AGE is populated.",
       "number_errors": 3,
       "errors": [
         {
@@ -15,7 +15,7 @@
             "AGE": 26.0,
             "AGEU": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -25,7 +25,7 @@
             "AGE": 57.0,
             "AGEU": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -35,7 +35,7 @@
             "AGE": 21.0,
             "AGEU": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

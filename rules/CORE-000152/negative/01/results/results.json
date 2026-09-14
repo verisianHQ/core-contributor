@@ -4,7 +4,7 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "There is not a one-to-one relationship between TSVAL and TSVALCD",
+      "execution_message": "TSVAL and TSVALCD do not have a one-to-one relationship.",
       "number_errors": 4,
       "errors": [
         {
@@ -13,9 +13,10 @@
           "USUBJID": "None",
           "value": {
             "TSVAL": "N",
-            "TSVALCD": "C49487"
+            "TSVALCD": "C49487",
+            "TSPARMCD": "ADAPT"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -23,9 +24,10 @@
           "USUBJID": "None",
           "value": {
             "TSVAL": "N",
-            "TSVALCD": "C49488"
+            "TSVALCD": "C49488",
+            "TSPARMCD": "ADDON"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 16,
@@ -33,9 +35,10 @@
           "USUBJID": "None",
           "value": {
             "TSVAL": "N",
-            "TSVALCD": "C49487"
+            "TSVALCD": "C49487",
+            "TSPARMCD": "HLTSUBJI"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 31,
@@ -43,9 +46,10 @@
           "USUBJID": "None",
           "value": {
             "TSVAL": "Y",
-            "TSVALCD": "C49488"
+            "TSVALCD": "C49488",
+            "TSPARMCD": "RANDOM"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

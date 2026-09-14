@@ -4,7 +4,7 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "Primary analysis used but AEBODSYS and AESOC are not equal",
+      "execution_message": "AEBODSYS must be equal to AESOC when primary SOC is used for analysis.",
       "number_errors": 4,
       "errors": [
         {
@@ -13,10 +13,11 @@
           "USUBJID": "CDISC-TEST-099",
           "value": {
             "AETERM": "PNEUMONIA",
+            "AEDECOD": "Pneumonia",
             "AEBODSYS": "Infections and infestations",
             "AESOC": "Cardiac disorders"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -24,10 +25,11 @@
           "USUBJID": "CDISC-TEST-099",
           "value": {
             "AETERM": "URINARY TRACT INFECTION",
+            "AEDECOD": "Urinary tract infection",
             "AEBODSYS": "Cardiac disorders",
             "AESOC": "CARDIAC disorders"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -35,10 +37,11 @@
           "USUBJID": "CDISC-TEST-100",
           "value": {
             "AETERM": "UPSET STOMACH",
+            "AEDECOD": "Abdominal discomfort",
             "AEBODSYS": "Musculoskeletal and connective tissue disorders",
             "AESOC": "Gastrointestinal disorders"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -46,10 +49,56 @@
           "USUBJID": "CDISC-TEST-100",
           "value": {
             "AETERM": "BACK PAIN",
+            "AEDECOD": "Back pain",
             "AEBODSYS": "Musculoskeletal and connective TISSUE disorders",
             "AESOC": "Musculoskeletal and connective tissue disorders"
           },
-          "validated": false
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "MHBODSYS must be equal to MHSOC when primary SOC is used for analysis.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC003",
+          "value": {
+            "MHTERM": "ALZHEIMER'S DISEASE",
+            "MHDECOD": "Not in dataset",
+            "MHBODSYS": null,
+            "MHSOC": "Neurodegenerative Diseases"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "CDISC004",
+          "value": {
+            "MHTERM": "ALZHEIMER'S DISEASE",
+            "MHDECOD": "Not in dataset",
+            "MHBODSYS": "Bodysystem 1",
+            "MHSOC": "Bodysystem 2"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC005",
+          "value": {
+            "MHTERM": "ALZHEIMER'S DISEASE",
+            "MHDECOD": "Not in dataset",
+            "MHBODSYS": "Neurodegenerative Diseases",
+            "MHSOC": "Neurodegenerative Diseases 1"
+          },
+          "validated": true
         }
       ]
     }

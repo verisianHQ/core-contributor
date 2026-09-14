@@ -1,6 +1,7 @@
 # Variable: ACTARM
 # Condition: Study does not use multi-stage arm assignments and ACTARM ^= null
 # Rule: ACTARM in TA.ARM
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -67,11 +68,7 @@ Core:
   Id: CORE-000209
   Status: Published
   Version: '1'
-Description: When study does not use multi-stage arm assignments and ACTARM is
-  populated, ACTARM must be present in TA.ARM. This rule has been executed to
-  identify all cases when ACTARM is not present in TA.ARM and therefore
-  acknowledges that false positives may be recorded when multi-stage arm
-  assignments are in use.
+Description: Raise an error when ACTARM value in DM dataset does not match any ARM value in TA dataset.
 Executability: Partially Executable - Possible Overreporting
 Operations:
   - domain: TA
@@ -79,10 +76,9 @@ Operations:
     name: ARM
     operator: distinct
 Outcome:
-  Message: ACTARM value in DM dataset is not among the values of ARM variable in
-    the TA dataset. This is allowed only in a multistage study with incomplete
-    ARM assignment. Please confirm if your study is a multistage assignment
-    study.
+  Message: ACTARM value in DM dataset does not match any ARM value in
+    TA dataset. This is only acceptable for multi-stage studies with incomplete
+    ARM assignments.
   Output Variables:
     - ACTARM
 Rule Type: Record Data

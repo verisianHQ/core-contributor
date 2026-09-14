@@ -1,3 +1,7 @@
+# Variable: ARMCD, ACTARMCD
+# Condition: ARMCD ^= null, ACTARMCD ^= null
+# Rule: ARMCD ^= ACTARMCD
+# verified
 Authorities:
   - Organization: FDA
     Standards:

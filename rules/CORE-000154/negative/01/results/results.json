@@ -4,8 +4,8 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSSEQ is not unique within TSPARMCD",
-      "number_errors": 8,
+      "execution_message": "TSSEQ is not unique within TSPARMCD.",
+      "number_errors": 6,
       "errors": [
         {
           "row": 10,
@@ -15,7 +15,7 @@
             "TSSEQ": 3.0,
             "TSPARMCD": "DOSE"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 11,
@@ -25,7 +25,7 @@
             "TSSEQ": 3.0,
             "TSPARMCD": "DOSE"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 24,
@@ -35,17 +35,7 @@
             "TSSEQ": 1.0,
             "TSPARMCD": "OUTMSPRI"
           },
-          "validated": false
-        },
-        {
-          "row": 25,
-          "SEQ": 2,
-          "USUBJID": "None",
-          "value": {
-            "TSSEQ": 2.0,
-            "TSPARMCD": "OUTMSPRI"
-          },
-          "validated": false
+          "validated": true
         },
         {
           "row": 27,
@@ -55,17 +45,17 @@
             "TSSEQ": 1.0,
             "TSPARMCD": "OUTMSPRI"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 28,
-          "SEQ": 2,
+          "row": 49,
+          "SEQ": 1,
           "USUBJID": "None",
           "value": {
-            "TSSEQ": 2.0,
-            "TSPARMCD": "OUTMSPRI"
+            "TSSEQ": 1.0,
+            "TSPARMCD": "TTYPE"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 50,
@@ -75,17 +65,7 @@
             "TSSEQ": 1.0,
             "TSPARMCD": "TTYPE"
           },
-          "validated": false
-        },
-        {
-          "row": 51,
-          "SEQ": 1,
-          "USUBJID": "None",
-          "value": {
-            "TSSEQ": 1.0,
-            "TSPARMCD": "TTYPE"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     }

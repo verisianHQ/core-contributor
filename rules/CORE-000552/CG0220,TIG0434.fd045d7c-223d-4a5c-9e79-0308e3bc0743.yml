@@ -1,6 +1,7 @@
 # Variable: --STDY
 # Condition: --STDTC and DM.RFSTDTC both contain complete values in their date portion
 # Rule: --STDY is properly calculated per study day algorithm
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -104,26 +105,29 @@ Check:
       operator: is_complete_date
     - name: RFSTDTC
       operator: is_complete_date
-    - name: --STDY # checking failure criteria
+    - name: --STDY
       operator: not_equal_to
-      value: $val_stdy # this is created in the operations statement that follows
+      value: $val_stdy
 Core:
   Id: CORE-000552
   Status: Published
   Version: '1'
-Description: Study day must be calculated using the algorithm detailed in the SDTMIG.
+Description: Raise an error when the Study Day of Start of Observation 
+  (--STDY) is not correctly calculated as per the study day algorithm 
+  as a non-zero integer value when the date portion of --STDTC is complete
+  and the date portion of RFSTDTC is a complete date.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: DM
 Operations:
-  #domain: DM
   - id: $val_stdy
     name: --STDTC
     operator: dy
 Outcome:
-  Message: --STDY is not properly calculated per study day algorithm
+  Message: --STDY is not calculated correctly even though the date portion 
+    of --STDTC is complete and the date portion of RFSTDTC is complete.
   Output Variables:
     - --STDY
     - --STDTC

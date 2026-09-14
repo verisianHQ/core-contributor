@@ -4,18 +4,32 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "LBSTREFN is null when LBSTREFC is populated.",
-      "number_errors": 1,
+      "execution_message": "LBSTREFN is not populated when LBSTREFC is populated.",
+      "number_errors": 2,
       "errors": [
         {
-          "row": 1,
-          "SEQ": null,
-          "USUBJID": "CDISC001",
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISCPILOT01-001",
           "value": {
-            "LBSTREFC": "ABC",
+            "LBTESTCD": "SODIUM",
+            "LBTEST": "Sodium",
+            "LBSTREFC": "135",
             "LBSTREFN": null
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISCPILOT01-001",
+          "value": {
+            "LBTESTCD": "ALT",
+            "LBTEST": "Alanine Aminotransferase",
+            "LBSTREFC": "30",
+            "LBSTREFN": null
+          },
+          "validated": true
         }
       ]
     }

@@ -29,6 +29,7 @@ Check:
         - SCREEN FAILURE
         - NOT ASSIGNED
         - NOT TREATED
+      value_is_literal: true
     - name: RFSTDTC
       operator: non_empty
 Core:
@@ -37,7 +38,7 @@ Core:
   Version: '1'
 Description: Raise an error when RFSTDTC is populated, but ACTARM is either
   'Screen Failure', 'Not Assigned', or 'Not Treated'.
-Executability: Partially Executable
+Executability: Partially Executable - Possible Overreporting
 Outcome:
   Message: RFSTDTC must not be populated when ACTARM is equal to any of the
     values 'Screen Failure', 'Not Assigned', or 'Not Treated'.
