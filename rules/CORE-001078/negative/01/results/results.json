@@ -23,7 +23,7 @@
             "$ae_fatal_death_count": 0,
             "DTHFL": "Y"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 7,
@@ -33,7 +33,7 @@
             "$ae_fatal_death_count": 0,
             "DTHFL": "Y"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 8,
@@ -43,32 +43,9 @@
             "$ae_fatal_death_count": 0,
             "DTHFL": "Y"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unmatched_validation": [
-    {
-      "value": {
-        "USUBJID": "CDISC002",
-        "DTHFL": "Y",
-        "$ae_fatal_death_count": "0"
-      }
-    },
-    {
-      "value": {
-        "USUBJID": "CDISC003",
-        "DTHFL": "Y",
-        "$ae_fatal_death_count": "0"
-      }
-    },
-    {
-      "value": {
-        "USUBJID": "CDISC004",
-        "DTHFL": "Y",
-        "$ae_fatal_death_count": "0"
-      }
     }
   ]
 }
