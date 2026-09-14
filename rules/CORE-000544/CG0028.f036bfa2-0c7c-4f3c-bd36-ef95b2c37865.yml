@@ -56,8 +56,6 @@ Authorities:
 Check:
   any:
     - all:
-        - name: --SEQ
-          operator: exists
         - name: USUBJID
           operator: non_empty
         - name: --SEQ
@@ -66,8 +64,6 @@ Check:
             - DOMAIN
             - USUBJID
     - all:
-        - name: --SEQ
-          operator: exists
         - name: POOLID
           operator: non_empty
         - name: --SEQ
@@ -84,7 +80,7 @@ Description: Raise an error when --SEQ is not TSSEQ but --SEQ is not a unique
   including when the domain is split into multiple files.
 Executability: Fully Executable
 Outcome:
-  Message: --SEQ is not a unique number per USUBJID per domain, nor a unique
+  Message: --SEQ must be a unique number per USUBJID per domain, or a unique
     number per POOLID per domain, including when the domain is split into
     multiple files.
   Output Variables:
