@@ -90,6 +90,6 @@ Scope:
     Include:
       - ALL
   Domains:
-    Include:
-      - ALL
+    Exclude:
+      - SUPP--
 Sensitivity: Dataset

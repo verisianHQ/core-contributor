@@ -4,9 +4,34 @@
       "dataset": "ds.xpt",
       "domain": "DS",
       "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "execution_message": "More than one record exists per subject per DSSCAT per EPOCH when DSCAT is equal to 'DISPOSITION EVENT'.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 7,
+          "SEQ": 7,
+          "USUBJID": "S002",
+          "value": {
+            "DSDECOD": "COMPLETED",
+            "DSCAT": "DISPOSITION EVENT",
+            "DSSCAT": null,
+            "EPOCH": "TREATMENT"
+          },
+          "validated": true
+        },
+        {
+          "row": 8,
+          "SEQ": 8,
+          "USUBJID": "S002",
+          "value": {
+            "DSDECOD": "COMPLETED",
+            "DSCAT": "DISPOSITION EVENT",
+            "DSSCAT": null,
+            "EPOCH": "TREATMENT"
+          },
+          "validated": true
+        }
+      ]
     }
   ]
 }
