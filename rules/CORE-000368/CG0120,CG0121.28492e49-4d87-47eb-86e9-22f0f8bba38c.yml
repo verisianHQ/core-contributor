@@ -37,6 +37,7 @@ Check:
         - Not Assigned
         - SCREEN FAILURE
         - NOT ASSIGNED
+      value_is_literal: true
     - name: ARM
       operator: is_not_contained_by
       value: $arm_list

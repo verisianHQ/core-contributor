@@ -136,6 +136,7 @@ Check:
     - name: variable_data_type
       operator: equal_to
       value: Char
+      value_is_literal: true
     - name: variable_value
       operator: non_empty
     - name: variable_value
