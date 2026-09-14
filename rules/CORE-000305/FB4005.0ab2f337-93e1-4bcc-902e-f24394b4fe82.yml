@@ -150,8 +150,8 @@ Check:
     - name: --DUR
       operator: non_empty
     - name: --DUR
-      operator: contains
-      value: '-'
+      negative: false
+      operator: invalid_duration
 Core:
   Id: CORE-000305
   Status: Published
