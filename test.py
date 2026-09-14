@@ -762,7 +762,6 @@ class TestRunner:
 
     def check_highlights(self, validations: dict, highlights: dict):
         unmatched_validations, unmatched_highlights, matched_highlights = [], [], set()
- 
         for v_entries in validations.get(None, {}).values():
             for e in v_entries:
                 sheet, error_level, row, var, error_val = (
