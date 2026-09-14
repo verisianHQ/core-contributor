@@ -1,0 +1,25 @@
+{
+  "datasets": [
+    {
+      "dataset": "ti.xpt",
+      "domain": "TI",
+      "execution_status": "success",
+      "execution_message": "IETESTCD/IETEST combination occurs more than once in the TI dataset but TIVERS is not populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETESTCD": "INCL01",
+            "IETEST": "Males and postmenopausal females at least 50 years of age.",
+            "TIVERS": null,
+            "$record_count_ietestcd_ietest": 2
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
