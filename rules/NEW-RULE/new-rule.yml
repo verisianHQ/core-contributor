@@ -1,5 +1,5 @@
 # Variable: TAETORD
-# Condition: 
+# Condition:
 # Rule: TAETORD order of elements match order in TA within ARM of the Subject
 # verified
 Authorities:
@@ -46,32 +46,54 @@ Authorities:
             Version: '2.0'
         Version: '3.4'
 Check:
-  all:
-    - name: TAETORD
-      operator: exists
-    - name: TAETORD
-      operator: is_not_ordered_set
-      value:
-        - ARM
-        - ARMCD
+  any:
+    - all:
+        - name: TAETORD
+          operator: exists
+        - name: TAETORD
+          operator: is_not_contained_by
+          value: $ta_taetord_for_arm
+    - all:
+        - name: TAETORD
+          operator: exists
+        - name: TAETORD
+          operator: is_not_ordered_set
+          value:
+            - USUBJID
 Core:
   Id: NEW-RULE
   Status: Draft
   Version: '1'
-Description: Raise an error when TAETORD order of elements in the dataset is not in the same order as the order of elements in the TA dataset for the Arm to which the subject was assigned.
+Description: Raise an error when TAETORD in a non-TA domain is not a valid
+  TAETORD value in the TA dataset for the Arm to which the subject was assigned
+  in DM.
 Executability: Fully Executable
+Match Datasets:
+  - Join Type: LEFT
+    Keys:
+      - USUBJID
+    Name: DM
+Operations:
+  - domain: TA
+    group:
+      - ARM
+    id: $ta_taetord_for_arm
+    name: TAETORD
+    operator: distinct
 Outcome:
-  Message: TAETORD should be in the same order as the order of elements in the TA dataset for the Arm to which the subject was assigned.
+  Message: TAETORD must be a planned order of an Element within the Arm to which
+    the subject was assigned, as defined in the TA dataset.
   Output Variables:
+    - USUBJID
     - TAETORD
     - ARM
-    - ARMCD
 Rule Type: Record Data
 Scope:
   Classes:
     Include:
       - ALL
   Domains:
-    Include:
-      - ALL
+    Exclude:
+      - TA
+      - DM
 Sensitivity: Record

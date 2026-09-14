@@ -21,27 +21,38 @@
       "domain": "AE",
       "execution_status": "success",
       "execution_message": "TAETORD must be a planned order of an Element within the Arm to which the subject was assigned, as defined in the TA dataset.",
-      "number_errors": 2,
+      "number_errors": 3,
       "errors": [
         {
-          "row": 4,
-          "SEQ": 4,
+          "row": 1,
+          "SEQ": 1,
           "USUBJID": "SUBJ001",
           "value": {
             "USUBJID": "SUBJ001",
-            "TAETORD": 4.0,
+            "TAETORD": 1.0,
             "ARM": "Drug A"
           },
           "validated": true
         },
         {
-          "row": 9,
-          "SEQ": 9,
-          "USUBJID": "SUBJ002",
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "SUBJ001",
           "value": {
-            "USUBJID": "SUBJ002",
-            "TAETORD": 5.0,
-            "ARM": "Drug B"
+            "USUBJID": "SUBJ001",
+            "TAETORD": 3.0,
+            "ARM": "Drug A"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "SUBJ001",
+          "value": {
+            "USUBJID": "SUBJ001",
+            "TAETORD": 2.0,
+            "ARM": "Drug A"
           },
           "validated": true
         }
