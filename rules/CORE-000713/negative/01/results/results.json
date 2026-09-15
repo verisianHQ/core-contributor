@@ -15,7 +15,7 @@
             "RFICDTC": "2018-05",
             "RFSTDTC": "2018-04-17T09:25"
           },
-          "validated": true
+          "validated": false
         },
         {
           "row": 3,
@@ -25,7 +25,7 @@
             "RFICDTC": "2018-04-22",
             "RFSTDTC": "2018-04-18T09:30"
           },
-          "validated": true
+          "validated": false
         },
         {
           "row": 5,
@@ -35,9 +35,51 @@
             "RFICDTC": "2019",
             "RFSTDTC": "2018-04-18T09:30"
           },
-          "validated": true
+          "validated": false
         }
       ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "dm.xpt",
+      "Row": 1,
+      "Variable": "RFSTDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 1,
+      "Variable": "RFICDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 6,
+      "Variable": "RFSTDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 6,
+      "Variable": "RFICDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 7,
+      "Variable": "RFSTDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 7,
+      "Variable": "RFICDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 9,
+      "Variable": "RFSTDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 9,
+      "Variable": "RFICDTC"
     }
   ]
 }
