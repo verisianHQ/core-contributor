@@ -34,6 +34,7 @@ Check:
         - SCRNFAIL
         - NOTASSGN
         - NOTTRT
+      value_is_literal: true
     - name: ACTARMCD
       operator: non_empty
     - name: USUBJID
