@@ -1,6 +1,7 @@
-# Variable: DM.RFXSTDTC, DM.RFXENDTC
+# Variable: RFXSTDTC
 # Condition: DM.RFXSTDTC ^= Null and DM.RFXENDTC ^= Null
 # Rule: DM.RFXSTDTC <= DM.RFXENDTC
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -134,8 +135,8 @@ Core:
   Id: CORE-000714
   Status: Published
   Version: '1'
-Description: Date/Time of First Study Treatment (RFXSTDTC) variable value should
-  be prior or equal to the Date/Time of Last Study Treatment (RFXENDTC).
+Description: Raise an error when the Date/Time of First Study Treatment 
+  (RFXSTDTC) variable value is after the Date/Time of Last Study Treatment (RFXENDTC).
 Executability: Fully Executable
 Outcome:
   Message: RFXSTDTC falls after RFXENDTC.
