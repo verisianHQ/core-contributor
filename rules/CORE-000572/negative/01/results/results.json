@@ -3,63 +3,22 @@
     {
       "dataset": "cm.xpt",
       "domain": "CM",
-      "execution_status": "execution_error",
-      "execution_message": "SQL operator execution error",
+      "execution_status": "success",
+      "execution_message": "CMENRTPT must be equal to 'BEFORE', 'COINCIDENT', 'ONGOING', 'AFTER', or 'UNKNOWN' when CMENTPT is prior to the date of collection or assessment.",
       "number_errors": 1,
       "errors": [
         {
-          "error": "SQL error in date_less_than operator",
-          "message": "invalid input syntax"
-        }
-      ]
-    },
-    {
-      "dataset": "mh.xpt",
-      "domain": "MH",
-      "execution_status": "success",
-      "execution_message": "MHENRTPT is not in ('BEFORE', 'COINCIDENT', 'ONGOING', 'AFTER', 'UNKNOWN')",
-      "number_errors": 2,
-      "errors": [
-        {
           "row": 6,
-          "SEQ": 1,
-          "USUBJID": "CDISC006",
+          "SEQ": 2,
+          "USUBJID": "CDISC002",
           "value": {
-            "MHENTPT": "2013-05-19",
-            "MHENRTPT": "WRONG",
-            "MHDTC": "2013-05-20"
+            "CMENTPT": "2013-05-20",
+            "CMENRTPT": "WRONG",
+            "CMDTC": "2014-01-01"
           },
-          "validated": false
-        },
-        {
-          "row": 13,
-          "SEQ": 1,
-          "USUBJID": "CDISC013",
-          "value": {
-            "MHENTPT": "2013-05-02",
-            "MHENRTPT": null,
-            "MHDTC": "2013-05-04"
-          },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "cm.xpt",
-      "Row": 10,
-      "Variable": "CMENRTPT"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 10,
-      "Variable": "MHENRTPT"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 17,
-      "Variable": "MHENRTPT"
     }
   ]
 }
