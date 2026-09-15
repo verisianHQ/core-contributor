@@ -44,6 +44,7 @@ Check:
     - name: TSPARMCD
       operator: equal_to
       value: INTMODEL
+      value_is_literal: true
     - name: $STYPE_INTERVENTIONAL
       operator: greater_than_or_equal_to
       value: 1

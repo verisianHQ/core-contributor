@@ -4,7 +4,7 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "A record exists in TS where TSPARMCD = STYPE and TSVAL = INTERVENTIONAL but TSVAL for TSPARMCD = PCLAS is empty when PCLAS is applicable.",
+      "execution_message": "When TSPARMCD is equal to 'STYPE' and TSVAL is equal to 'INTERVENTIONAL', a corresponding TSPARMCD equal to 'PCLAS' record with TSVAL populated must be present.",
       "number_errors": 1,
       "errors": [
         {
@@ -14,54 +14,11 @@
           "value": {
             "TSGRPID": null,
             "TSPARMCD": "PCLAS",
-            "TSVAL": null,
-            "$STYPE_INTERVENTIONAL": 1
+            "TSVAL": null
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ts.xpt",
-      "Row": 33,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 33,
-      "Variable": "TSPARM"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 33,
-      "Variable": "TSVAL"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 33,
-      "Variable": "TSVALNF"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 46,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 46,
-      "Variable": "TSPARM"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 46,
-      "Variable": "TSVAL"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 46,
-      "Variable": "TSVALNF"
     }
   ]
 }
