@@ -48,6 +48,7 @@ Check:
     - name: AEOUT
       operator: 'equal_to'
       value: 'RECOVERED/RESOLVED'
+      value_is_literal: true
     - name: AEENDTC
       operator: empty
 Core:
