@@ -84,6 +84,7 @@ Check:
     - name: IDVAR
       operator: ends_with
       value: SEQ
+      value_is_literal: true
 Core:
   Id: CORE-000136
   Status: Published

@@ -53,24 +53,28 @@ Check:
         - name: ETHNIC
           operator: non_empty
         - name: "ETHNIC"
-          operator: "is_not_contained_by"
+          operator: is_not_contained_by
           value:
             - "HISPANIC OR LATINO"
             - "NOT HISPANIC OR LATINO"
+          value_is_literal: true
     - all:
         - name: QNAM
           operator: equal_to
           value: CETHNIC
+          value_is_literal: true
         - name: QVAL
-          operator: "is_not_contained_by"
+          operator: is_not_contained_by
           value:
             - "HISPANIC OR LATINO"
             - "NOT HISPANIC OR LATINO"
+          value_is_literal: true
         - name: "ETHNIC"
-          operator: "is_not_contained_by"
+          operator: is_not_contained_by
           value:
             - "HISPANIC OR LATINO"
             - "NOT HISPANIC OR LATINO"
+          value_is_literal: true
 Core:
   Id: CORE-000726
   Status: Published

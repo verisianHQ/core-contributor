@@ -81,9 +81,11 @@ Check:
     - name: TSPARMCD
       operator: equal_to
       value: PCLAS
+      value_is_literal: true
     - name: TSVCDREF
       operator: not_equal_to
       value: MED-RT
+      value_is_literal: true
 Core:
   Id: CORE-000483
   Status: Published
