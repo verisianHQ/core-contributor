@@ -137,12 +137,13 @@ Authorities:
         Version: '1.0'
 Check:
   all:
-    - name: '--TPTREF'
-      operator: exists
     - name: '--ELTM'
       operator: 'non_empty'
-    - name: '--TPTREF'
-      operator: 'empty'
+    - any:
+      - name: '--TPTREF'
+        operator: 'empty'
+      - name: '--TPTREF'
+        operator: not_exists
 Core:
   Id: CORE-000865
   Status: Published
