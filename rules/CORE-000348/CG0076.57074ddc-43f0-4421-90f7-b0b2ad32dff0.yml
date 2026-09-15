@@ -1,6 +1,7 @@
 # Variable: GEN
 # Condition: 
 # Rule: Event is not derived
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -49,16 +50,28 @@ Authorities:
               Version: '1'
             Version: '2.0'
         Version: '3.3'
+Check: 
+  all:
+    - name: variable_name
+      operator: equal_to
+      value: DVTERM
+      value_is_literal: true
+    - name: define_variable_origin_type
+      operator: equal_to
+      value: Derived
+      value_is_literal: true
 Core:
   Id: CORE-000348
   Status: Draft
   Version: '1'
-Description: Trigger error if deviation record is a derived variable, not a
-  deviation that was collected
-Executability: Not Executable
+Description: Raise an error when deviation event ('DVTERM') is derived.
+Executability: Fully Executable
 Outcome:
-  Message: Deviation event must not be derived deviation
-Rule Type: Record Data
+  Message: The DV dataset is intended for collected protocol deviations but DVTERM is listed as 'Derived' in the define.xml document.
+  Output Variables:
+    - variable_name
+    - define_variable_origin_type
+Rule Type: Variable Metadata Check against Define XML
 Scope:
   Classes:
     Include:
@@ -66,4 +79,4 @@ Scope:
   Domains:
     Include:
       - DV
-Sensitivity: Record
+Sensitivity: Dataset

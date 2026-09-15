@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "dv.xpt",
+      "domain": "DV",
+      "execution_status": "success",
+      "execution_message": "The DV dataset is intended for collected protocol deviations but DVTERM is listed as 'Derived' in the define.xml document.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "variable_name": "DVTERM",
+            "define_variable_origin_type": "Derived"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
