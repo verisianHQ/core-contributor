@@ -141,6 +141,7 @@ Check:
     - name: --BLFL
       operator: equal_to
       value: 'Y'
+      value_is_literal: true
     - name: --STRESC
       operator: empty
 Core:
