@@ -47,8 +47,8 @@ Authorities:
 Check:
   all:
     - name: AEOUT
-      operator: 'equal_to'
-      value: 'RECOVERED/RESOLVED'
+      operator: equal_to
+      value: RECOVERED/RESOLVED
       value_is_literal: true
     - name: AEENDTC
       operator: empty
@@ -58,7 +58,7 @@ Core:
   Version: '1'
 Description: Raise an error when Adverse Event Outcome (AEOUT) is populated with
   RECOVERED/RESOLVED but the End Date/Time of Adverse Event (AEENDTC) is not
-  be populated.
+  populated.
 Executability: Fully Executable
 Outcome:
   Message: AEENDTC is missing, when AEOUT = RECOVERED/RESOLVED.
