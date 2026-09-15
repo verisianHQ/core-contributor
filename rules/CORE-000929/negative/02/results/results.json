@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "success",
+      "execution_message": "Dataset is not a custom domain, but the DOMAIN code in the define.xml document is not a published DOMAIN code in the CDISC Controlled Terminology version specified for the study.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_variable_codelist_coded_codes": "C117466"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

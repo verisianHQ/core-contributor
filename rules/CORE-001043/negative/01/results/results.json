@@ -8,7 +8,7 @@
       "number_errors": 2,
       "errors": [
         {
-          "row": 7,
+          "row": 1,
           "SEQ": null,
           "USUBJID": "CDISC007",
           "value": {
@@ -16,42 +16,20 @@
             "ARMCD": "B",
             "AGE": null
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 8,
+          "row": 2,
           "SEQ": null,
-          "USUBJID": "CDISC008",
+          "USUBJID": "CDISC009",
           "value": {
-            "ARMNRS": null,
-            "ARMCD": "B",
+            "ARMNRS": "UNASSIGNED",
+            "ARMCD": null,
             "AGE": null
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 11,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 11,
-      "Variable": "AGE"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 12,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 12,
-      "Variable": "AGE"
     }
   ]
 }

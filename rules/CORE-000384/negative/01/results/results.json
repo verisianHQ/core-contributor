@@ -12,8 +12,8 @@
       "dataset": "relrec.xpt",
       "domain": "RELREC",
       "execution_status": "success",
-      "execution_message": "RELREC.RDOMAIN does not represent a dataset present in the study",
-      "number_errors": 1,
+      "execution_message": "RELREC.RDOMAIN must represent a dataset present in the study.",
+      "number_errors": 2,
       "errors": [
         {
           "row": 1,
@@ -22,7 +22,16 @@
           "value": {
             "RDOMAIN": "LB"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "RDOMAIN": "COO"
+          },
+          "validated": true
         }
       ]
     },

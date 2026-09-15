@@ -75,6 +75,7 @@ Check:
     - name: --TERM
       operator: equal_to
       value: OTHER
+      value_is_literal: true
 Core:
   Id: CORE-000161
   Status: Published
