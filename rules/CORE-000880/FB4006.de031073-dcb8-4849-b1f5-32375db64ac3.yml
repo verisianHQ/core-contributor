@@ -24,8 +24,8 @@ Check:
     - name: --PDUR
       operator: non_empty
     - name: --PDUR
-      operator: contains
-      value: "-"
+      operator: invalid_duration
+      negative: False
 Core:
   Id: CORE-000880
   Status: Published
