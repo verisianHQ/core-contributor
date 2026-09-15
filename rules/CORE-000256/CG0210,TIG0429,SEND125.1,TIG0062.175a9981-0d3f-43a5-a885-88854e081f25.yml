@@ -187,8 +187,11 @@ Authorities:
         Version: '1.0'
 Check:
   all:
-    - name: SEUPDES
-      operator: empty
+    - any:
+      - name: SEUPDES
+        operator: empty
+      - name: SEUPDES
+        operator: not_exists
     - name: ETCD
       operator: equal_to
       value: UNPLAN
