@@ -71,16 +71,25 @@ Authorities:
         Substandard: SDTM
         Version: '1.0'
 Check:
-  all:
-    - name: FAOBJ
-      operator: not_equal_to
-      value: RELREC.**TERM
-    - name: FAOBJ
-      operator: not_equal_to
-      value: RELREC.**TRT
-    - name: FAOBJ
-      operator: not_equal_to_case_insensitive
-      value: RELREC.**DECOD
+  any:
+    - all:
+        - name: RELREC.**TERM
+          operator: non_empty
+        - name: FAOBJ
+          operator: not_equal_to
+          value: RELREC.**TERM
+    - all:
+        - name: RELREC.**TRT
+          operator: non_empty
+        - name: FAOBJ
+          operator: not_equal_to
+          value: RELREC.**TRT
+    - all:
+        - name: RELREC.**DECOD
+          operator: non_empty
+        - name: FAOBJ
+          operator: not_equal_to_case_insensitive
+          value: RELREC.**DECOD
 Core:
   Id: CORE-000744
   Status: Published
