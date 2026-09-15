@@ -26,6 +26,7 @@ Check:
       value:
         - SCRNFAIL
         - NOTASSGN
+      value_is_literal: true
     - name: ACTARMCD
       operator: not_equal_to
       value: ARMCD
