@@ -82,6 +82,7 @@ Check:
     - name: --TESTCD
       operator: equal_to
       value: OTHER
+      value_is_literal: true
 Core:
   Id: CORE-000159
   Status: Published

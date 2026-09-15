@@ -89,6 +89,7 @@ Check:
       operator: prefix_equal_to
       prefix: 2
       value: 'FA'
+      value_is_literal: true
     - name: dataset_name
       operator: suffix_is_not_contained_by
       suffix: 2

@@ -9,25 +9,165 @@
       "errors": []
     },
     {
+      "dataset": "pp.xpt",
+      "domain": "PP",
+      "execution_status": "success",
+      "execution_message": "Parameter Category for a drug or metabolite (PPCAT) does not match a Test Name (PCTEST) in the PC dataset.",
+      "number_errors": 12,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "ABC-123-0001",
+          "value": {
+            "PPCAT": "DRUGX1",
+            "PPRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCTEST": "StudyDrug"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "ABC-123-0001",
+          "value": {
+            "PPCAT": "DRUGX2",
+            "PPRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCTEST": "StudyDrug"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "ABC-123-0001",
+          "value": {
+            "PPCAT": "DRUGX3",
+            "PPRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCTEST": "StudyDrug"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "ABC-123-0001",
+          "value": {
+            "PPCAT": "DRUGX4",
+            "PPRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCTEST": "StudyDrug"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "ABC-123-0001",
+          "value": {
+            "PPCAT": "DRUGX5",
+            "PPRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCTEST": "StudyDrug"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "ABC-123-0001",
+          "value": {
+            "PPCAT": "DRUGX6",
+            "PPRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCTEST": "StudyDrug"
+          },
+          "validated": true
+        },
+        {
+          "row": 7,
+          "SEQ": 7,
+          "USUBJID": "ABC-123-0001",
+          "value": {
+            "PPCAT": "DRUGX7",
+            "PPRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCTEST": "StudyDrug"
+          },
+          "validated": true
+        },
+        {
+          "row": 8,
+          "SEQ": 8,
+          "USUBJID": "ABC-123-0001",
+          "value": {
+            "PPCAT": "DRUGX8",
+            "PPRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCTEST": "StudyDrug1"
+          },
+          "validated": true
+        },
+        {
+          "row": 9,
+          "SEQ": 9,
+          "USUBJID": "ABC-123-0001",
+          "value": {
+            "PPCAT": "DRUGX9",
+            "PPRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCTEST": "StudyDrug1"
+          },
+          "validated": true
+        },
+        {
+          "row": 10,
+          "SEQ": 10,
+          "USUBJID": "ABC-123-0001",
+          "value": {
+            "PPCAT": "DRUGX10",
+            "PPRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCTEST": "StudyDrug1"
+          },
+          "validated": true
+        },
+        {
+          "row": 11,
+          "SEQ": 11,
+          "USUBJID": "ABC-123-0001",
+          "value": {
+            "PPCAT": "DRUGX11",
+            "PPRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCTEST": "StudyDrug1"
+          },
+          "validated": true
+        },
+        {
+          "row": 12,
+          "SEQ": 12,
+          "USUBJID": "ABC-123-0001",
+          "value": {
+            "PPCAT": "DRUGX12",
+            "PPRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCRFTDTC": "2001-02-01T08:35",
+            "RELREC.PCTEST": "StudyDrug1"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
       "dataset": "relrec.xpt",
       "domain": "RELREC",
       "execution_status": "skipped",
       "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000901, dataset=RELREC",
       "number_errors": 0,
       "errors": []
-    },
-    {
-      "dataset": "pp.xpt",
-      "domain": "PP",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
-      "number_errors": 1,
-      "errors": [
-        {
-          "error": "Validation error",
-          "message": "RELREC MERGE: Original schema is missing required column: STUDYID"
-        }
-      ]
     }
   ]
 }

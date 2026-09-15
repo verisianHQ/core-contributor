@@ -4,38 +4,20 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSVAL is missing when TSPARMCD = STOPRULE.",
+      "execution_message": "TSVAL must be populated when TSPARMCD is equal to 'STOPRULE'.",
       "number_errors": 1,
       "errors": [
         {
-          "row": 46,
+          "row": 6,
           "SEQ": 1,
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "STOPRULE",
-            "TSVAL": null,
-            "TSGRPID": null
+            "TSVAL": null
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ts.xpt",
-      "Row": 50,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 50,
-      "Variable": "TSPARM"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 50,
-      "Variable": "TSVAL"
     }
   ]
 }
