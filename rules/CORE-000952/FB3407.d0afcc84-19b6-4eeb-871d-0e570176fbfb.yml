@@ -66,6 +66,9 @@ Match Datasets:
     Name: DM
 Outcome:
   Message: --ENDTC falls after RFPENDTC.
+  Output Variables:
+    - DM.RFPENDTC
+    - --ENDTC
 Rule Type: Record Data
 Scope:
   Classes:
