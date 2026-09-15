@@ -102,7 +102,6 @@ Operations:
     operator: dataset_names
 Outcome:
   Message: Split FA dataset is present but the characters of the dataset name after FA are not equal to a domain that is present in the study.
-    in the study
   Output Variables:
     - dataset_name
     - $list_dataset_names
