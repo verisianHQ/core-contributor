@@ -4,7 +4,7 @@
       "dataset": "facm.xpt",
       "domain": "FA",
       "execution_status": "success",
-      "execution_message": "Parent domain referenced in Findings About dataset name is not present in the study",
+      "execution_message": "Split FA dataset is present but the characters of the dataset name after FA are not equal to a domain that is present in the study.",
       "number_errors": 1,
       "errors": [
         {
@@ -14,7 +14,7 @@
           "value": {
             "dataset_name": "FACM",
             "$list_dataset_names": [
-              "facm"
+              "FACM"
             ]
           },
           "validated": true
