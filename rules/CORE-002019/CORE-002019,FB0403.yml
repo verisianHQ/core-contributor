@@ -43,6 +43,7 @@ Check:
     - name: define_dataset_name
       operator: equal_to
       value: DS
+      value_is_literal: true
     - name: define_dataset_has_no_data
       operator: equal_to
       value: false
