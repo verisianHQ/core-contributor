@@ -1,7 +1,6 @@
-# Variable: RFCSTDTC
-# Condition: RFCSTDTC ^= Null and RFCENDTC ^= Null
-# Rule: RFCSTDTC <= RFCENDTC
-# verified
+# Variable: DM.RFCSTDTC, DM.RFCENDTC
+# Condition: DM.RFCSTDTC ^= Null and DM.RFCENDTC ^= Null
+# Rule: DM.RFCSTDTC <= DM.RFCENDTC
 Authorities:
   - Organization: FDA
     Standards:
@@ -44,8 +43,8 @@ Core:
   Id: CORE-000760
   Status: Published
   Version: '1'
-Description: Date/Time of First Challenge Agent Admin (RFCSTDTC) is prior or
-  equal to the Date/Time of Last Challenge Agent Admin (RFCENDTC).
+Description: Date/Time of First Challenge Agent Admin (RFCSTDTC) should be prior
+  or equal to the Date/Time of Last Challenge Agent Admin (RFCENDTC).
 Executability: Fully Executable
 Outcome:
   Message: RFCSTDTC falls after RFCENDTC.
