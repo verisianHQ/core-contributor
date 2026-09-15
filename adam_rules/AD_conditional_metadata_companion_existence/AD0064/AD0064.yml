@@ -1,0 +1,90 @@
+# Variable: TRTxxAN, TRTxxA
+# Condition: TRTxxAN is present
+# Rule: TRTxxA is not present
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '64'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.3
+                Section: 3.1.1
+                Item: '6'
+                Cited Guidance: 
+                  'ADaMIG v1.3, Section 3.1.1, Item 6: When a secondary variable is included in the dataset, then the primary variable must also be included'
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '64'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.2
+                Section: 3.1.1
+                Item: '6'
+                Cited Guidance: 
+                  'ADaMIG v1.2, Section 3.1.1, Item 6: When a secondary variable is included in the dataset, then the primary variable must also be included'
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '64'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.1
+                Section: 3.1.1
+                Item: '6'
+                Cited Guidance: 
+                  'ADaMIG v1.1, Section 3.1.1, Item 6: the secondary variable of the variable pair cannot be present in the dataset unless the primary variable is also present'
+      - Name: ADaMIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '64'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.0
+                Section: 3.1
+                Item: 'Table 3.1.1'
+                Cited Guidance: 
+                  'ADaMIG v1.0, Section 3.1, Table 3.1.1: One-to-one map to TRTxxA'
+Check:
+  all:
+    - name: '^TRT(?P<xx>0[1-9]|[1-9][0-9])AN$'
+      variable_regex_pattern: true
+      operator: exists
+    - name: 'TRT{{xx}}A'
+      operator: not_exists
+Core:
+  Id: AD0064
+  Status: Published
+  Version: '1'
+Description: Raise an error when the TRTxxAN variable is present within ADSL, but the TRTxxA variable is not present.
+Executability: Fully Executable
+Outcome:
+  Message: TRTxxAN is present, but TRTxxA is not present within ADSL.
+  Output Variables:
+    - 'TRT{{xx}}AN'
+    - 'TRT{{xx}}A'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ADSL
+  Domains:
+    Include:
+      - ADSL
+Sensitivity: Dataset

@@ -1,0 +1,47 @@
+# Variable: USUBJID, USUBJIDN
+# Condition: USUBJIDN is present within BDS
+# Rule: USUBJID is not present within BDS
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '814'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.3
+                Section: 3.1.1
+                Item: '6'
+                Cited Guidance: 
+                  'ADaMIG v1.3, Section 3.1.1, Item 6: When a secondary variable is included in the dataset, then the primary variable must also be included.'
+Check:
+  all:
+    - name: USUBJIDN
+      operator: exists
+    - name: USUBJID
+      operator: not_exists
+Core:
+  Id: AD0814
+  Status: Published
+  Version: '1'
+Description: Raise an error when the USUBJIDN variable is present within BDS, but the USUBJID variable is not present.
+Executability: Fully Executable
+Outcome:
+  Message: USUBJIDN is present, but USUBJID is not present within BDS.
+  Output Variables:
+    - USUBJIDN
+    - USUBJID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - BDS
+  Domains:
+    Include:
+      - BDS
+Sensitivity: Dataset
