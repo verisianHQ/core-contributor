@@ -49,8 +49,9 @@ Check:
     - operator: greater_than
       name: $record_count_ietestcd_ietest
       value: 1
-    - name: TIVERS
-      operator: empty
+    - name: $tivers_is_null
+      operator: equal_to
+      value: true
 Core:
   Id: ''
   Status: Draft
@@ -64,6 +65,10 @@ Operations:
     group:
       - IETESTCD
       - IETEST
+  - operator: variable_is_null
+    name: TIVERS
+    id: $tivers_is_null
+    source: submission
 Outcome:
   Message: IETESTCD/IETEST combination occurs more than once in the TI dataset but TIVERS is not populated.
   Output Variables:
@@ -79,7 +84,4 @@ Scope:
   Domains:
     Include:
       - TI
-Sensitivity: Group
-Grouping_Variables:
-  - IETESTCD
-  - IETEST
+Sensitivity: Record

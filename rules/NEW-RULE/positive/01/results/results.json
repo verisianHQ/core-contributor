@@ -3,10 +3,15 @@
     {
       "dataset": "ti.xpt",
       "domain": "TI",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "execution_status": "execution_error",
+      "execution_message": "rule execution error",
+      "number_errors": 1,
+      "errors": [
+        {
+          "error": "An unknown exception has occurred",
+          "message": "Operation variable_is_null is not implemented"
+        }
+      ]
     }
   ]
 }
