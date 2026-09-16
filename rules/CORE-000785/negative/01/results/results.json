@@ -4,88 +4,52 @@
       "dataset": "ti.xpt",
       "domain": "TI",
       "execution_status": "success",
-      "execution_message": "IECAT should not be null when IESCAT is populated",
-      "number_errors": 8,
+      "execution_message": "IECAT must be populated when IESCAT is populated.",
+      "number_errors": 4,
       "errors": [
         {
           "row": 1,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
+            "IETESTCD": "INCL01",
             "IECAT": null,
             "IESCAT": "INCLUSION SUB"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
+            "IETESTCD": "INCL02",
             "IECAT": null,
             "IESCAT": "INCLUSION SUB"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
+            "IETESTCD": "EXCL11",
             "IECAT": null,
-            "IESCAT": "INCLUSION SUB"
+            "IESCAT": "EXCLUSION SUB"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
+            "IETESTCD": "EXCL14",
             "IECAT": null,
             "IESCAT": "EXCLUSION SUB"
           },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "IECAT": null,
-            "IESCAT": "EXCLUSION SUB"
-          },
-          "validated": false
-        },
-        {
-          "row": 6,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "IECAT": null,
-            "IESCAT": "EXCLUSION SUB"
-          },
-          "validated": false
-        },
-        {
-          "row": 7,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "IECAT": null,
-            "IESCAT": "EXCLUSION SUB"
-          },
-          "validated": false
-        },
-        {
-          "row": 8,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "IECAT": null,
-            "IESCAT": "EXCLUSION SUB"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     }
