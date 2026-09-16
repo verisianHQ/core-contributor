@@ -111,6 +111,7 @@ Check:
     - name: DTHFL
       operator: not_equal_to
       value: Y
+      value_is_literal: true
 Core:
   Id: CORE-000007
   Status: Published
