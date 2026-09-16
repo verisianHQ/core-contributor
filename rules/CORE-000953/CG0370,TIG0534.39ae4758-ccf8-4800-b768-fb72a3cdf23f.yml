@@ -1,6 +1,7 @@
 # Variable: IDVAR
 # Condition: IDVAR ^= null
 # Rule: IDVAR is variable in domain = RDOMAIN
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -86,21 +87,16 @@ Core:
 Description: Raise and error when IDVAR in CO is not populated with a
   valid variable from the dataset referenced in RDOMAIN.
 Executability: Fully Executable
-# Match Datasets:
-#   - Child: true
-#     Keys:
-#       - USUBJID
-#       - IDVAR
-#       - IDVARVAL
-#     Name: CO
+Match Datasets:
+  - Child: true
+    Keys:
+      - USUBJID
+    Name: CO
 Operations:
-    - id: $rdomain_variables
-      operator: get_parent_model_column_order
-  # - domain: CO
-  #   id: $rdomain_variables
-  #   name: IDVAR
-  #   operator: distinct
-  #   value_is_reference: true
+  - domain: CO
+    id: $rdomain_variables
+    name: RDOMAIN
+    operator: referenced_domain_variable_names
 Outcome:
   Message: Value for IDVAR in CO does not represent a variable present in the
     dataset referenced in RDOMAIN.

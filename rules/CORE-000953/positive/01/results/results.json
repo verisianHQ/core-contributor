@@ -1,14 +1,6 @@
 {
   "datasets": [
     {
-      "dataset": "dm.xpt",
-      "domain": "DM",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000953, dataset=DM",
-      "number_errors": 0,
-      "errors": []
-    },
-    {
       "dataset": "suppdm.xpt",
       "domain": "SUPPDM",
       "execution_status": "skipped",
@@ -36,18 +28,9 @@
       "dataset": "co.xpt",
       "domain": "CO",
       "execution_status": "success",
-      "execution_message": "Value for IDVAR in CO does not represent a variable present in the dataset referenced in RDOMAIN.",
-      "number_errors": 1,
-      "errors": [
-        {
-          "row": 1,
-          "SEQ": 1,
-          "USUBJID": "S001",
-          "value": {
-            "IDVAR": "LBSEQ"
-          }
-        }
-      ]
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     },
     {
       "dataset": "lb.xpt",

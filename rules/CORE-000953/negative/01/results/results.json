@@ -21,7 +21,7 @@
       "domain": "CO",
       "execution_status": "success",
       "execution_message": "Value for IDVAR in CO does not represent a variable present in the dataset referenced in RDOMAIN.",
-      "number_errors": 2,
+      "number_errors": 1,
       "errors": [
         {
           "row": 1,
@@ -30,16 +30,7 @@
           "value": {
             "IDVAR": "LBSEK"
           },
-          "validated": false
-        },
-        {
-          "row": 2,
-          "SEQ": 2,
-          "USUBJID": "S002",
-          "value": {
-            "IDVAR": "LBSEQ"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -50,28 +41,6 @@
       "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000953, dataset=LB",
       "number_errors": 0,
       "errors": []
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "supplb.xpt",
-      "Row": 5,
-      "Variable": "IDVAR"
-    },
-    {
-      "Sheet": "relrec.xpt",
-      "Row": 5,
-      "Variable": "IDVAR"
-    },
-    {
-      "Sheet": "relrec.xpt",
-      "Row": 6,
-      "Variable": "IDVAR"
-    },
-    {
-      "Sheet": "co.xpt",
-      "Row": 5,
-      "Variable": "IDVAR"
     }
   ]
 }
