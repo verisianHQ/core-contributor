@@ -1,54 +1,87 @@
 # Variable: TSVCDREF
 # Condition: TSPARMCD in ('COMPTRT', 'CURTRT', 'TRT')
 # Rule: TSVCDREF = 'UNII'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'Further information about the parameters is included below in
-                  Table 1. TSVAL may have     controlled terminology depending
-                  on the value of TSPARMCD'
-                Document: SDTM and SDTMIG Conformance Rules v2.0
+              - Cited Guidance: Further information about the parameters is included below in
+                  Table 1. TSVAL may have controlled terminology depending
+                  on the value of TSPARMCD
+                Document: IG v3.2
                 Item: Assumption 3
-                Section: '7.4'
-            Origin: 'SDTM and SDTMIG Conformance Rules'
+                Section: 7.4|Appendix C1
+            Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
-              Id: 'CG0444'
+              Id: CG0444
               Version: '1'
             Version: '2.0'
         Version: '3.2'
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'Further information about the parameters is included below in
-                  Table 1. TSVAL may have     controlled terminology depending
-                  on the value of TSPARMCD'
-                Document: SDTM and SDTMIG Conformance Rules v2.0
+              - Cited Guidance: Further information about the parameters is included below in
+                  Table 1. TSVAL may have controlled terminology depending
+                  on the value of TSPARMCD
+                Document: IG v3.3
                 Item: Assumption 3
                 Section: '7.4'
-            Origin: 'SDTM and SDTMIG Conformance Rules'
+            Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
-              Id: 'CG0444'
+              Id: CG0444
               Version: '1'
             Version: '2.0'
         Version: '3.3'
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1114
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1114
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1114
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
 Check:
   all:
-    - any:
-        - name: TSPARMCD
-          operator: equal_to
-          value: COMPTRT
-          value_is_literal: true
-        - name: TSPARMCD
-          operator: equal_to
-          value: CURTRT
-          value_is_literal: true
-        - name: TSPARMCD
-          operator: equal_to
-          value: TRT
-          value_is_literal: true
+    - name: TSPARMCD
+      operator: is_contained_by
+      value: 
+        - COMPTRT
+        - CURTRT
+        - TRT
+      value_is_literal: true
     - name: TSVCDREF
       operator: not_equal_to
       value: 'UNII'
@@ -57,11 +90,10 @@ Core:
   Id: CORE-000735
   Status: Published
   Version: '1'
-Description: 'When TSPARMCD is equal to COMPTRT, CURTRT or TRT, TSVCDREF should equal UNII'
+Description: Raise an error when Unique Ingredient Identifier (UNII) is not included for all active moieties of investigational products (TSPARMCD = TRT), active comparators (TSPARMCD = COMPTRT), and any protocol-specified background treatments (TSPARMCD = CURTRT).
 Executability: Fully Executable
 Outcome:
-  Message: 'Throw error when TSPARMCD is equal to COMPTRT, CURTRT, or TRT and
-    TSVCDREF ^= UNII'
+  Message: TSVCDREF must be completed with 'UNII' when TSPARMCD = 'COMPTRT', 'CURTRT' or 'TRT'.
   Output Variables:
     - TSPARMCD
     - TSVCDREF
