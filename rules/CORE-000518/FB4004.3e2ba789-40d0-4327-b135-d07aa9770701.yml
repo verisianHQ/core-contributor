@@ -1,3 +1,7 @@
+# Variable: --VAMT
+# Condition: --VAMT ^= null
+# Rule: --VAMT >= 0
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -148,14 +152,18 @@ Check:
     - name: --VAMT
       operator: less_than
       value: 0
+      value_is_literal: true
 Core:
   Id: CORE-000518
   Status: Published
   Version: '1'
-Description: Value for Treatment Vehicle Amount (--VAMT) should not be negative.
+Description: Raise an error when Value for Treatment Vehicle Amount (--VAMT) value is negative.
 Executability: Fully Executable
 Outcome:
   Message: Negative value for --VAMT.
+  Output Variables:
+    - --TRT
+    - --VAMT
 Rule Type: Record Data
 Scope:
   Classes:
