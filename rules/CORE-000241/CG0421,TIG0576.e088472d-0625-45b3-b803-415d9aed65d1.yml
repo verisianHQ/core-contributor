@@ -78,6 +78,7 @@ Check:
     - name: --OCCUR
       operator: equal_to
       value: N
+      value_is_literal: true
     - name: --ENRF
       operator: non_empty
 Core:
