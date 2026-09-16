@@ -1,0 +1,65 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "The reference terminology used in the TS dataset is versioned ('CDISC CT', 'UNII', 'SNOMED', 'MED-RT') but TSVCDVER is not populated.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "ADAPT",
+            "TSVCDREF": "CDISC CT",
+            "TSVCDVER": null
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "INDIC",
+            "TSVCDREF": "SNOMED",
+            "TSVCDVER": null
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "PCLAS",
+            "TSVCDREF": "MED-RT",
+            "TSVCDVER": null
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "TRT",
+            "TSVCDREF": "UNII",
+            "TSVCDVER": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ti.xpt",
+      "domain": "TI",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=, dataset=TI",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}
