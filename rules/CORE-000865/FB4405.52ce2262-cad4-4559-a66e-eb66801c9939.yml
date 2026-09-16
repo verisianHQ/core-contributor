@@ -152,7 +152,7 @@ Description: Raise an error when Planned Elapsed Time from Time Point Ref (--ELT
   populated and Time Point Reference (--TPTREF) is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: --ELTM is populated, but --TPTREF is missing.
+  Message: --ELTM is populated, but --TPTREF is not populated.
   Output Variables:
     - --ELTM
     - --TPTREF
