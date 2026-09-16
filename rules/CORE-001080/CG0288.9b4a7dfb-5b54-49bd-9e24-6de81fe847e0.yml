@@ -20,7 +20,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The version number of the Reference Terminology, if applicable.
+              - Cited Guidance: The version number of the Reference
+                 Terminology, if applicable.
                 Document: IG v3.3
                 Item: Specification
                 Section: 7.4.2
@@ -33,7 +34,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The version number of the Reference Terminology, if applicable.
+              - Cited Guidance: The version number of the Reference
+                 Terminology, if applicable.
                 Document: IG v3.2
                 Item: Specification
                 Section: '7.4'
@@ -50,11 +52,11 @@ Check:
       prefix: 5
       value: CDISC
       value_is_literal: true
-    # - name: $VALID_TERM_CODES
-    #   operator: non_empty
-    # - name: TSVALCD
-    #   operator: is_not_contained_by
-    #   value: $VALID_TERM_CODES
+    - name: $VALID_TERM_CODES
+      operator: non_empty
+    - name: TSVALCD
+      operator: is_not_contained_by
+      value: $VALID_TERM_CODES
 Core:
   Id: CORE-001080
   Status: Published
