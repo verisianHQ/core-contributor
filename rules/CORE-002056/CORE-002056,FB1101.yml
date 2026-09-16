@@ -133,7 +133,7 @@ Core:
   Id: CORE-002056
   Status: Published
   Version: '1'
-Description: Raise an error when not all trial design model datasets as listed in the corresponding IG are present in the submission.
+Description: All trial design model datasets as listed in the corresponding IG are present in the submission.
 Executability: Fully Executable
 Outcome:
   Message: At least one Trial Design Dataset is missing.
@@ -143,7 +143,7 @@ Rule Type: Record Data
 Operations: 
   - operator: standard_domains
     id: $trial_design_domains
-    domain_class: "TRIAL DESIGN"
+    domain_class: 'TRIAL DESIGN'
   - operator: dataset_names
     id: $dataset_names
   - operator: minus
@@ -154,7 +154,7 @@ Operations:
 Scope:
   Classes:
     Include:
-      - TRIAL DESIGN
+      - ALL
   Domains:
     Include:
       - ALL
