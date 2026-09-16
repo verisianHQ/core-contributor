@@ -31,6 +31,7 @@ Check:
         - Not Assigned
         - SCREEN FAILURE
         - NOT ASSIGNED
+      value_is_literal: true
     - name: ARM
       operator: not_equal_to
       value: ACTARM

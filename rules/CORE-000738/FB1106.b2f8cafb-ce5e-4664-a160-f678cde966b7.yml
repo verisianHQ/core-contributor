@@ -1,0 +1,113 @@
+# Variable: TSPARMCD
+# Condition: TSPARMCD = 'ADDON' and TSVAL = 'Y' 
+# Rule: TSPARMCD = 'CURTRT' is present and TSVAL ^= null
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as
+                  specified in the FDA Study Data Technical Conformance Guide
+                  (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1106
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as
+                  specified in the FDA Study Data Technical Conformance Guide
+                  (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1106
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as
+                  specified in the FDA Study Data Technical Conformance Guide
+                  (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1106
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  any:
+    - all:
+        - name: TSPARMCD
+          operator: equal_to
+          value: ADDON
+          value_is_literal: true
+        - name: TSVAL
+          operator: equal_to
+          value: Y
+          value_is_literal: true
+        - name: $curtrt_count
+          operator: less_than
+          value: 1
+    - all:
+        - name: TSPARMCD
+          operator: equal_to
+          value: CURTRT
+          value_is_literal: true
+        - name: $ADDON_Y
+          operator: greater_than_or_equal_to
+          value: 1
+        - name: TSVAL
+          operator: empty
+Core:
+  Id: CORE-000738
+  Status: Published
+  Version: '1'
+Description: At least one Trial Summary Parameter for Current Treatment or
+  Therapy (TSPARMCD = 'CURTRT') is included in the TS dataset with TSVAL
+  populated when treatment is added on to existing treatments (TSPARMCD =
+  'ADDON').
+Executability: Fully Executable
+Grouping_Variables:
+  - TSGRPID
+Operations:
+  - filter:
+      TSPARMCD: CURTRT
+    group:
+      - TSGRPID
+    id: $curtrt_count
+    operator: record_count
+  - filter:
+      TSPARMCD: ADDON
+      TSVAL: 'Y'
+    group:
+      - TSGRPID
+    id: $ADDON_Y
+    operator: record_count
+Outcome:
+  Message: TSPARMCD = 'CURTRT' is missing in the TS dataset or TSVAL is not
+    populated when TSPARMCD = 'ADDON' and TSVAL = 'Y'.
+  Output Variables:
+    - TSPARMCD
+    - TSVAL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

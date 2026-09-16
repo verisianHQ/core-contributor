@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "Study End Date (SENDTC) value in the TS dataset is not populated in ISO 8601 format.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "SENDTC",
+            "TSVAL": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
