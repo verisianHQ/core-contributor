@@ -1,6 +1,7 @@
-# Variable: --STDTC, --ENDTC
+# Variable: --STDTC
 # Condition: --STDTC ^= Null and --ENDTC ^= Null
 # Rule: --STDTC <= --ENDTC
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -157,8 +158,8 @@ Core:
   Id: CORE-000718
   Status: Published
   Version: '1'
-Description: Start Date/Time of Observation (--STDTC) should be prior or equal
-  to the End Date/Time of Observation (--ENDTC).
+Description: Raise an error when Start Date/Time of Observation (--STDTC) is 
+  after the End Date/Time of Observation (--ENDTC).
 Executability: Fully Executable
 Outcome:
   Message: --STDTC falls after  --ENDTC.
