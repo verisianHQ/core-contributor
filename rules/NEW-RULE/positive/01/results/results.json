@@ -1,0 +1,20 @@
+{
+  "datasets": [
+    {
+      "dataset": "aplb.xpt",
+      "domain": "AP",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CDISC.SDTMIG.CG0155, dataset=LB",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}
