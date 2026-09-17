@@ -27,15 +27,10 @@
     {
       "dataset": "relrec.xpt",
       "domain": "RELREC",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
-      "number_errors": 1,
-      "errors": [
-        {
-          "error": "Column not found in data",
-          "message": "IDVAR"
-        }
-      ]
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     },
     {
       "dataset": "co.xpt",
