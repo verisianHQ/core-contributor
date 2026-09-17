@@ -1,3 +1,7 @@
+# Variable: 
+# Condition: Variable is a text variable
+# Rule: Value does not start with a leading space
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -146,8 +150,8 @@ Core:
   Id: CORE-000890
   Status: Published
   Version: '1'
-Description: Text variable in submitted dataset should not contain  '.' as an
-  entire value.
+Description: Raise an error when text variable in submitted dataset contains
+  '.' as an entire value.
 Executability: Fully Executable
 Outcome:
   Message: Text variable contains '.' as an entire value.
