@@ -5,15 +5,15 @@
       "domain": "DM",
       "execution_status": "success",
       "execution_message": "Ethnicity is collected, but one of the following ethnicity options are not offered: 'HISPANIC OR LATINO' or 'NOT HISPANIC OR LATINO'.\n",
-      "number_errors": 3,
+      "number_errors": 4,
       "errors": [
         {
-          "row": 1,
+          "row": 2,
           "SEQ": null,
-          "USUBJID": "S001",
+          "USUBJID": "S002",
           "value": {
             "ETHNIC": "HISPANIC",
-            "CETHNIC": null,
+            "CETHNIC": "HISPANIC",
             "QVAL": "Not in dataset"
           },
           "validated": true
@@ -24,7 +24,7 @@
           "USUBJID": "S003",
           "value": {
             "ETHNIC": "NOT HISPANIC",
-            "CETHNIC": null,
+            "CETHNIC": "HISPANIC OR LATINO",
             "QVAL": "Not in dataset"
           },
           "validated": true
@@ -34,8 +34,19 @@
           "SEQ": null,
           "USUBJID": "S004",
           "value": {
-            "ETHNIC": "XXXXXXX",
-            "CETHNIC": null,
+            "ETHNIC": "LATINO",
+            "CETHNIC": "LATINO",
+            "QVAL": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "S005",
+          "value": {
+            "ETHNIC": null,
+            "CETHNIC": "HISPANIC",
             "QVAL": "Not in dataset"
           },
           "validated": true
