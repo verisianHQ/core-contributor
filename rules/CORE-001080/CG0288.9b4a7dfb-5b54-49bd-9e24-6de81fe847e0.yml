@@ -1,13 +1,15 @@
 # Variable: TSVALCD
 # Condition: TSVCDREF = 'CDISC'
 # Rule: TSVALCD = valid code in the version identified in TSVCDVER
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The version number of the Reference Terminology, if applicable.
+              - Cited Guidance: The version number of the Reference
+                  Terminology, if applicable.
                 Document: IG v3.4
                 Item: Specification
                 Section: 7.4.2
@@ -77,7 +79,6 @@ Outcome:
     - TSVALCD
     - TSPARMCD
     - TSVCDVER
-    - $VALID_TERM_CODES
 Rule Type: Record Data
 Scope:
   Classes:
