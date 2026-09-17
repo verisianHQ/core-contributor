@@ -62,12 +62,12 @@ Check:
       value_is_literal: true
 Core:
   Id: CORE-000348
-  Status: Draft
+  Status: Published
   Version: '1'
 Description: Raise an error when deviation event ('DVTERM') is derived.
 Executability: Fully Executable
 Outcome:
-  Message: The DV dataset is intended for collected protocol deviations but DVTERM is listed as 'Derived' in the define.xml document.
+  Message: DVTERM must not be listed as 'Derived' in the define.xml.
   Output Variables:
     - variable_name
     - define_variable_origin_type

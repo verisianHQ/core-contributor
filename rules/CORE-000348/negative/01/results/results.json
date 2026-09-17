@@ -4,7 +4,7 @@
       "dataset": "dv.xpt",
       "domain": "DV",
       "execution_status": "success",
-      "execution_message": "The DV dataset is intended for collected protocol deviations but DVTERM is listed as 'Derived' in the define.xml document.",
+      "execution_message": "DVTERM must not be listed as 'Derived' in the define.xml.",
       "number_errors": 1,
       "errors": [
         {
