@@ -1,0 +1,100 @@
+# Variable: DOSEU
+# Condition: 
+# Rule: DOSEU is not present within BDS
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '656'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.3
+                Section: '4.2'
+                Item: 'Table 4.2.2'
+                Cited Guidance: 
+                  'ADNCA v1.0, Section 4.2, Table 4.2.2: DOSEU has Core=Req.'
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '656'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.2
+                Section: '4.2'
+                Item: 'Table 4.2.2'
+                Cited Guidance: 
+                  'ADNCA v1.0, Section 4.2, Table 4.2.2: DOSEU has Core=Req.'
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '656'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.1
+                Section: '4.2'
+                Item: 'Table 4.2.2'
+                Cited Guidance: 
+                  'ADNCA v1.0, Section 4.2, Table 4.2.2: DOSEU has Core=Req.'
+      - Name: ADaMIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '656'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.0
+                Section: '4.2'
+                Item: 'Table 4.2.2'
+                Cited Guidance: 
+                  'ADNCA v1.0, Section 4.2, Table 4.2.2: DOSEU has Core=Req.'
+      - Name: ADNCA
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '656'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: ADNCA v1.0
+                Section: '4.2'
+                Item: 'Table 4.2.2'
+                Cited Guidance: 
+                  'ADNCA v1.0, Section 4.2, Table 4.2.2: DOSEU has Core=Req.'
+Check:
+  all:
+    - name: DOSEU
+      operator: not_exists
+Core:
+  Id: AD0656
+  Status: Published
+  Version: '1'
+Description: Raise an error when the DOSEU variable is not present within BDS.
+Executability: Fully Executable
+Outcome:
+  Message: DOSEU is not present within BDS.
+  Output Variables:
+    - DOSEU
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - BDS
+  Domains:
+    Include:
+      - BDS
+Sensitivity: Dataset

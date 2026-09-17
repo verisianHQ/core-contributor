@@ -1,0 +1,114 @@
+# Variable: AEBODSYS
+# Condition: 
+# Rule: AEBODSYS is not present within OCCDS
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '262'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.3
+                Section: 3.2.3
+                Item: 'Table 3.2.3.1'
+                Cited Guidance: 
+                  'OCCDS v1.1, Section 3.2.3, Table 3.2.3.1: --BODSYS has Core=Req for SubClass=ADVERSE EVENT and the CDISC Notes state "Required for Adverse Event data".'
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '262'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.2
+                Section: 3.2.3
+                Item: 'Table 3.2.3.1'
+                Cited Guidance: 
+                  'OCCDS v1.1, Section 3.2.3, Table 3.2.3.1: --BODSYS has Core=Req for SubClass=ADVERSE EVENT and the CDISC Notes state "Required for Adverse Event data".'
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '262'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.1
+                Section: 3.2.3
+                Item: 'Table 3.2.3.1'
+                Cited Guidance: 
+                  'OCCDS v1.1, Section 3.2.3, Table 3.2.3.1: --BODSYS has Core=Req for SubClass=ADVERSE EVENT and the CDISC Notes state "Required for Adverse Event data".'
+      - Name: ADaMIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '262'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.0
+                Section: 3.2.3
+                Item: 'Table 3.2.3.1'
+                Cited Guidance: 
+                  'OCCDS v1.1, Section 3.2.3, Table 3.2.3.1: --BODSYS has Core=Req for SubClass=ADVERSE EVENT and the CDISC Notes state "Required for Adverse Event data".'
+      - Name: OCCDS
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '262'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: OCCDS v1.0
+                Section: 3.2.3
+                Item: 'Table 3.2.3.1'
+                Cited Guidance: 
+                  'OCCDS v1.0, Section 3.2.3, Table 3.2.3.1: --BODSYS has Core=Cond and the CDISC Notes state "Required for Adverse Event data".'
+      - Name: OCCDS
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '262'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: OCCDS v1.1
+                Section: 3.2.3
+                Item: 'Table 3.2.3.1'
+                Cited Guidance: 
+                  'OCCDS v1.1, Section 3.2.3, Table 3.2.3.1: --BODSYS has Core=Req for SubClass=ADVERSE EVENT and the CDISC Notes state "Required for Adverse Event data".'
+Check:
+  all:
+    - name: AEBODSYS
+      operator: not_exists
+Core:
+  Id: AD0262
+  Status: Published
+  Version: '1'
+Description: Raise an error when the AEBODSYS variable is not present within OCCDS.
+Executability: Fully Executable
+Outcome:
+  Message: AEBODSYS is not present within OCCDS.
+  Output Variables:
+    - AEBODSYS
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - OCCDS
+  Domains:
+    Include:
+      - OCCDS
+Sensitivity: Dataset
