@@ -1,3 +1,7 @@
+# Variable: QNAM AND QLABEL
+# Condition:
+# Rule: QNAM and QLABEL do not have a one-to-one relationship
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -160,8 +164,9 @@ Core:
   Id: CORE-000302
   Status: Published
   Version: '1'
-Description: QNAM and QLABEL should have a one-to-one relationship.
-Executability: Fully Executable
+Description: Raise an error when QNAM and QLABEL do not have a one-to-one
+  relationship.
+Executability: Partially Executable - Possible Overreporting
 Outcome:
   Message: QNAM and QLABEL do not have a one-to-one relationship.
   Output Variables:

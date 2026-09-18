@@ -4,8 +4,8 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "Variables not listed in the Model List of Allowed Variables for Observation Class should be in SUPPQUAL.",
-      "number_errors": 1,
+      "execution_message": "Variable is not listed in the Model List of Allowed Variables for the Observation Class and should be in supplemental qualifiers.",
+      "number_errors": 2,
       "errors": [
         {
           "row": 4,
@@ -14,7 +14,16 @@
           "value": {
             "variable_name": "ARMCDXX"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "DMSEV"
+          },
+          "validated": true
         }
       ]
     },
@@ -22,9 +31,18 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "Variables not listed in the Model List of Allowed Variables for Observation Class should be in SUPPQUAL.",
-      "number_errors": 1,
+      "execution_message": "Variable is not listed in the Model List of Allowed Variables for the Observation Class and should be in supplemental qualifiers.",
+      "number_errors": 2,
       "errors": [
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AETRT"
+          },
+          "validated": true
+        },
         {
           "row": 22,
           "SEQ": null,
@@ -32,7 +50,7 @@
           "value": {
             "variable_name": "AESTDYXX"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -40,8 +58,8 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "Variables not listed in the Model List of Allowed Variables for Observation Class should be in SUPPQUAL.",
-      "number_errors": 1,
+      "execution_message": "Variable is not listed in the Model List of Allowed Variables for the Observation Class and should be in supplemental qualifiers.",
+      "number_errors": 2,
       "errors": [
         {
           "row": 5,
@@ -50,26 +68,18 @@
           "value": {
             "variable_name": "LBSPIDXX"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 22,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBPRESP"
+          },
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 1,
-      "Variable": "ARMCDXX"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 1,
-      "Variable": "AESTDYXX"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 1,
-      "Variable": "LBSPIDXX"
     }
   ]
 }

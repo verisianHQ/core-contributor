@@ -14,8 +14,8 @@ class UtilityFunctions:
             yml_files = [f for f in files if f.endswith(".yml")]
             if yml_files:
                 folder_name = os.path.relpath(root, rules_dir)
-                folders_with_yml.append({"Core-ID": folder_name})
-        return pd.DataFrame(folders_with_yml)
+                folders_with_yml.append(folder_name)
+        return pd.DataFrame(folders_with_yml, columns=["CORE-ID"])
 
     @staticmethod
     def get_csv_cols(filepath, cols=None):
@@ -97,7 +97,7 @@ class UtilityFunctions:
 
                         results_data.append(
                             {
-                                "Core-ID": core_id,
+                                "CORE-ID": core_id,
                                 "Test Type": test_type,
                                 "Case ID": case_dir.name,
                                 "Status": status,
@@ -112,44 +112,99 @@ class UtilityFunctions:
         return pd.DataFrame(results_data)
 
     @staticmethod
-    def get_csv_completion_data(filepath):
+    def load_and_filter_csv(filepath, standard=None):
         try:
-            df = pd.read_csv(filepath)
-            df["Completion"] = df.apply(UtilityFunctions.determine_completion, axis=1)
+            try:
+                df = pd.read_csv(filepath, encoding="utf-8-sig")
+            except UnicodeDecodeError:
+                df = pd.read_csv(filepath, encoding="cp1252")
+
+            if len(df.columns) > 0 and df.columns[0].endswith("Rule ID"):
+                df = df.rename(columns={df.columns[0]: "Rule ID"})
+                
+            if standard == "FDA":
+                sdtm_cols = df.columns[2:5]
+                
+                mask = df[sdtm_cols].apply(lambda col: col.astype(str).str.contains('x', case=False, na=False)).any(axis=1)
+                df = df[mask].copy()
+                
+                df = df.rename(columns={
+                    df.columns[2]: "SDTMIG Version 3.2",
+                    df.columns[3]: "SDTMIG Version 3.3",
+                    df.columns[4]: "SDTMIG Version 3.4"
+                })
+            elif standard == "SDTMIG":
+                sdtm_cols = df.columns[1:4]
+                mask = df[sdtm_cols].any(axis=1)
+                df = df[mask].copy()
+                
+                df = df.rename(columns={
+                    df.columns[1]: "SDTMIG Version 3.2",
+                    df.columns[2]: "SDTMIG Version 3.3",
+                    df.columns[3]: "SDTMIG Version 3.4"
+                })
+            else:
+                pass
             return df
         except Exception as e:
-            print(f"Error reading Excel file: {e}")
-            return pd.DataFrame()
+            print(f"Error reading CSV file: {e}")
+            return pd.DataFrame(columns=["Rule ID", "CORE-ID", "Status", "Status Rule", "SDTMIG Version 3.2", "SDTMIG Version 3.3", "SDTMIG Version 3.4"])
+
+    @staticmethod
+    def get_csv_completion_data(df):
+        if df.empty:
+            return df
+        df = df.copy()
+        df["Completion"] = df.apply(UtilityFunctions.determine_completion, axis=1)
+        return df
 
     @staticmethod
     def determine_completion(row):
-        core_id = row["CORE-ID"]
-        status = row["Status"]
-
-        if pd.isna(core_id) or core_id == "":
+        core_id = row.get("CORE-ID")
+        rule_id = row.get("Rule ID")
+        
+        identifier = core_id if pd.notna(core_id) else rule_id
+        if pd.isna(identifier):
             return "Missing"
 
-        if pd.isna(status):
-            status = ""
-        else:
-            status = str(status)
+        def normalize(value):
+            if pd.isna(value):
+                return ""
+            return str(value).strip().upper()
 
-        if "DRAFT" in status and "PUBLISHED" in status:
-            return "Partially Completed"
+        status = normalize(row.get("Status"))
+        status_rule = normalize(row.get("Status Rule"))
 
-        if status in ["DRAFT", "DRAFT - NOT EXECUTABLE"]:
-            return "Unimplemented"
+        status_rule_map = {
+            "MERGED": "Completed",
+            "PR REVIEW": "Partially Completed",
+            "WORKING ON": "Partially Completed",
+            "DIBS": "Unimplemented",
+            "BLOCKED": "Unimplemented",
+        }
+
+        if status_rule:
+            if status == "PUBLISHED":
+                return "Completed" if status_rule == "MERGED" else "Partially Completed"
+            if status in {"DRAFT", "DRAFT - NOT EXECUTABLE", "OPEN"}:
+                return "Unimplemented"
+            if status == "NOT EXECUTABLE":
+                return "Not Executable"
+            return status_rule_map.get(status_rule, "Unimplemented")
 
         if status == "PUBLISHED":
-            return "Completed"
-
-        return "Unknown"
+            return "Partially Completed"
+        if status in {"DRAFT", "DRAFT - NOT EXECUTABLE", "OPEN"}:
+            return "Unimplemented"
+        if status == "NOT EXECUTABLE":
+            return "Not Executable"
+        return "Missing" if not status else "Unimplemented"
 
     @staticmethod
     def get_yaml_fields(rules_dir, repo_rules, keys, null_value="No Value"):
         vals = []
 
-        for rule_folder in repo_rules["Core-ID"].to_list():
+        for rule_folder in repo_rules["CORE-ID"].to_list():
             path = Path(rules_dir) / rule_folder
             yml_file = list(path.glob("*.yml")) + list(path.glob("*.yaml"))
             if not yml_file or len(yml_file) == 0:
@@ -168,7 +223,7 @@ class UtilityFunctions:
     def get_yaml_verified(rules_dir, repo_rules):
         vals = {}
 
-        for rule_folder in repo_rules["Core-ID"].to_list():
+        for rule_folder in repo_rules["CORE-ID"].to_list():
             path = Path(rules_dir) / rule_folder
             yml_file = list(path.glob("*.yml")) + list(path.glob("*.yaml"))
             if not yml_file or len(yml_file) == 0:

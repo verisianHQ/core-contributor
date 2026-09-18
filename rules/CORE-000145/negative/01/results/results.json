@@ -4,68 +4,48 @@
       "dataset": "ti.xpt",
       "domain": "TI",
       "execution_status": "success",
-      "execution_message": "IETESTCD is not unique within TIVERS",
-      "number_errors": 6,
+      "execution_message": "IETESTCD must be unique within TIVERS.",
+      "number_errors": 4,
       "errors": [
         {
-          "row": 28,
+          "row": 1,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "IETESTCD": "INCL05",
+            "IETESTCD": "EXCL09",
             "TIVERS": "ORIGINAL"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 29,
+          "row": 4,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "IETESTCD": "INCL05",
+            "IETESTCD": "EXCL09",
             "TIVERS": "ORIGINAL"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 44,
+          "row": 6,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "IETESTCD": "EXCL22",
+            "IETESTCD": "EXCL10",
             "TIVERS": "AMENDMENT 1"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 45,
+          "row": 7,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "IETESTCD": "EXCL22",
+            "IETESTCD": "EXCL10",
             "TIVERS": "AMENDMENT 1"
           },
-          "validated": false
-        },
-        {
-          "row": 61,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "IETESTCD": "INCL08",
-            "TIVERS": "AMENDMENT 1"
-          },
-          "validated": false
-        },
-        {
-          "row": 62,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "IETESTCD": "INCL08",
-            "TIVERS": "AMENDMENT 1"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     }

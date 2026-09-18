@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "ARM is populated, when ARMCD is NULL",
+      "execution_message": "ARM must not be populated when ARMCD is not populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -13,28 +13,11 @@
           "USUBJID": "015246-099-0000-00000",
           "value": {
             "ARMCD": null,
-            "ARM": "IKd"
+            "ARM": "Lorem ipsum dolor sit amet"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 1,
-      "Variable": "ARM"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "ARMCD"
-    },
-    {
-      "Sheet": "dm.xpt",
-      "Row": 5,
-      "Variable": "ARM"
     }
   ]
 }

@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "COUNTRY value is not a valid GENC 3-letter country code.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "COUNTRY": "ZZZ"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "COUNTRY": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

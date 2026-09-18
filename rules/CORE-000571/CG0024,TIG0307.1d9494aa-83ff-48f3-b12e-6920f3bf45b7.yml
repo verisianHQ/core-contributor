@@ -1,6 +1,7 @@
 # Variable: --LNKID
 # Condition: --LNKID present in a domain
 # Rule: --LNKID present in another domain
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -76,22 +77,25 @@ Check:
   all:
     - name: --LNKID
       operator: exists
-    - name: $VARIABLE_COUNT
+    - name: $LNKID_variable_count
       operator: less_than
       value: 2
 Core:
   Id: "CORE-000571"
   Status: Published
   Version: '1'
-Description: Verify that when --LNKID is present in one domain it is also
+Description: Raise an error when --LNKID is present in one domain but not
   present in another domain.
 Executability: Fully Executable
 Operations:
-  - id: $VARIABLE_COUNT
+  - id: $LNKID_variable_count
     name: --LNKID
     operator: variable_count
 Outcome:
-  Message: "LNKID variable is only found in one domain."
+  Message: LNKID variable is present but not in any other domain.
+  Output Variables:
+    - --LNKID
+    - $LNKID_variable_count
 Rule Type: Record Data
 Scope:
   Classes:

@@ -14,17 +14,9 @@
           "value": {
             "EPOCH": null
           },
-          "validated": false
+          "validated": true
         }
       ]
-    },
-    {
-      "dataset": "mh.xpt",
-      "domain": "MH",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000701, dataset=MH",
-      "number_errors": 0,
-      "errors": []
     },
     {
       "dataset": "ce.xpt",
@@ -40,7 +32,7 @@
           "value": {
             "EPOCH": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -58,7 +50,7 @@
           "value": {
             "EPOCH": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -67,7 +59,7 @@
           "value": {
             "EPOCH": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -85,7 +77,7 @@
           "value": {
             "EPOCH": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -103,44 +95,9 @@
           "value": {
             "EPOCH": null
           },
-          "validated": false
+          "validated": true
         }
       ]
-    },
-    {
-      "dataset": "pp.xpt",
-      "domain": "PP",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000701, dataset=PP",
-      "number_errors": 0,
-      "errors": []
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ae.xpt",
-      "Row": 6,
-      "Variable": "EPOCH"
-    },
-    {
-      "Sheet": "mh.xpt",
-      "Row": 5,
-      "Variable": "EPOCH"
-    },
-    {
-      "Sheet": "ce.xpt",
-      "Row": 6,
-      "Variable": "EPOCH"
-    },
-    {
-      "Sheet": "lb.xpt",
-      "Row": 6,
-      "Variable": "EPOCH"
-    },
-    {
-      "Sheet": "pc.xpt",
-      "Row": 6,
-      "Variable": "EPOCH"
     }
   ]
 }

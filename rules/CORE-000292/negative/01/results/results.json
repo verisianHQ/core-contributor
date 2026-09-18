@@ -12,7 +12,7 @@
       "dataset": "ex.xpt",
       "domain": "EX",
       "execution_status": "success",
-      "execution_message": "EXVAMTU is present when EC domain exists.",
+      "execution_message": "EXVAMTU must not be present when EC is present.",
       "number_errors": 1,
       "errors": [
         {
@@ -22,31 +22,9 @@
           "value": {
             "$EXVAMTU_EXISTS": true
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ex.xpt",
-      "Row": 1,
-      "Variable": "EXVAMT"
-    },
-    {
-      "Sheet": "ex.xpt",
-      "Row": 1,
-      "Variable": "EXVAMTU"
-    },
-    {
-      "Sheet": "ex.xpt",
-      "Row": 5,
-      "Variable": "EXVAMT"
-    },
-    {
-      "Sheet": "ex.xpt",
-      "Row": 5,
-      "Variable": "EXVAMTU"
     }
   ]
 }

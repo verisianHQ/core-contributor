@@ -4,7 +4,7 @@
       "dataset": "pe.xpt",
       "domain": "PE",
       "execution_status": "success",
-      "execution_message": "PESTRESC value is not missing when PEORRES value is missing",
+      "execution_message": "PESTRESC must be null when PEORRES is null.",
       "number_errors": 3,
       "errors": [
         {
@@ -15,7 +15,7 @@
             "PEORRES": null,
             "PESTRESC": "NORMAL"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -25,7 +25,7 @@
             "PEORRES": null,
             "PESTRESC": "NORMAL"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 6,
@@ -33,9 +33,9 @@
           "USUBJID": "ABC-001-001",
           "value": {
             "PEORRES": null,
-            "PESTRESC": "NORMAL"
+            "PESTRESC": "ABNORMAL"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

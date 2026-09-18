@@ -1,30 +1,24 @@
 # Variable: --CAT
 # Condition: --SCAT present in dataset
 # Rule: --CAT present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: A further grouping or classification of the category for the
+              - Cited Guidance: Interventions[A further grouping or 
+                  classification of the category for the topic of the finding,
+                  event, or intervention. The category is in --CAT.]|Events[A
+                  further grouping or classification of the category for the
                   topic of the finding, event, or intervention. The category is
-                  in --CAT.
+                  in --CAT.]|Findings[A further grouping or classification of
+                  the category for the topic of the finding, event, or
+                  intervention. The category is in --CAT.]                  
                 Document: Model v2.0
                 Item: --SCAT
-                Section: Interventions
-              - Cited Guidance: A further grouping or classification of the category for the
-                  topic of the finding, event, or intervention. The category is
-                  in --CAT.
-                Document: Model v2.0
-                Item: --SCAT
-                Section: Events
-              - Cited Guidance: A further grouping or classification of the category for the
-                  topic of the finding, event, or intervention. The category is
-                  in --CAT.
-                Document: Model v2.0
-                Item: --SCAT
-                Section: Findings
+                Section: Interventions|Events|Findings
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0430
@@ -34,7 +28,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Used to define a further categorization of --CAT values.
+              - Cited Guidance: Used to define a further categorization of
+                  --CAT values.
                 Document: Model v1.4
                 Section: 2.2.1|2.2.2|2.2.3
             Origin: SDTM and SDTMIG Conformance Rules
@@ -46,10 +41,15 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Used to define a further categorization of --CAT values.]'
+              - Cited Guidance: >-
+                  2.2.1[Table 3.2.1: --SCAT][Used to define a
+                  further categorization of --CAT values.]|2.2.2[Table 3.2.2:
+                  --SCAT][Used to define a further categorization of --CAT
+                  values.]|2.2.3[Table 3.2.3: --SCAT][Used to define a further
+                  categorization of --CAT values.]
                 Document: Model v1.7
-                Item: '2.2.1[Table 3.2.1: --SCAT]|2.2.2[Table 3.2.2: --SCAT]|2.2.3[Table 3.2.3:
-                  --SCAT]'
+                Item: '2.2.1[Table 3.2.1: --SCAT]|2.2.2[Table 3.2.2: --SCAT]|
+                  2.2.3[Table 3.2.3: --SCAT]'
                 Section: 2.2.1|2.2.2|2.2.3
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -60,24 +60,19 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: A further grouping or classification of the category for the
+              - Cited Guidance: Interventions[A further grouping or
+                  classification of the category for the topic of the finding,
+                  event, or intervention. The category is in --CAT.]|Events[A
+                  further grouping or classification of the category for the
                   topic of the finding, event, or intervention. The category is
-                  in --CAT.
+                  in --CAT.]|Findings[A further grouping or classification of
+                  the category for the topic of the finding, event, or
+                  intervention. The category is in --CAT.]
                 Document: SDTM v2.1
                 Item: Specifications --SCAT
-                Section: Section 3.1.1 The Interventions Observation Class
-              - Cited Guidance: A further grouping or classification of the category for the
-                  topic of the finding, event, or intervention. The category is
-                  in --CAT.
-                Document: SDTM v2.1
-                Item: Specifications --SCAT
-                Section: Section 3.1.2 The Events Observation Class Section
-              - Cited Guidance: A further grouping or classification of the category for the
-                  topic of the finding, event, or intervention. The category is
-                  in --CAT.
-                Document: SDTM v2.1
-                Item: Specifications --SCAT
-                Section: 3.1.3 The Findings Observation Class
+                Section: Section 3.1.1 The Interventions Observation Class|
+                  Section 3.1.2 The Events Observation Class Section|3.1.3 The
+                  Findings Observation Class
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0584
@@ -99,7 +94,7 @@ Description: Part B - Raise an error when IESCAT exists in a dataset, but IECAT
   does not exist.
 Executability: Fully Executable
 Outcome:
-  Message: IESCAT exists in a dataset, but IECAT does not exist.
+  Message: IECAT must be present when IESCAT exists in a dataset.
   Output Variables:
     - IECAT
     - IESCAT

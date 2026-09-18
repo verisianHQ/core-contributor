@@ -1,4 +1,20 @@
 {
-  "error": "No result - either the rule or test case data unit-test-coreid-CG0318-positive.xlsx is broken",
-  "exception": "Error converting column 'PCSTRESN' in table 'pc.xpt' to numeric: could not convert string to float: '.'"
+  "datasets": [
+    {
+      "dataset": "pc.xpt",
+      "domain": "PC",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ft.xpt",
+      "domain": "FT",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000183, dataset=FT",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
 }

@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "apdm.xpt",
+      "domain": "AP",
+      "execution_status": "success",
+      "execution_message": "RSUBJID must be equal to a USUBJID in the DM dataset when RSUBJID is populated and RSUBJID is not equal to a POOLID in the POOLDEF dataset.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "RSUBJID": "CDISC-TEST-004",
+            "POOLID": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000235, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}
