@@ -3,36 +3,39 @@
     {
       "dataset": "ft.xpt",
       "domain": "FT",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
+      "execution_status": "success",
+      "execution_message": "FTEVAL must not be present.",
       "number_errors": 1,
       "errors": [
         {
-          "error": "An unknown exception has occurred",
-          "message": "Operation codelist_terms is not implemented"
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "FTEVAL": "PERSON A"
+          },
+          "validated": true
         }
       ]
     },
     {
       "dataset": "rs.xpt",
       "domain": "RS",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
-      "number_errors": 1,
-      "errors": [
-        {
-          "error": "An unknown exception has occurred",
-          "message": "Operation codelist_terms is not implemented"
-        }
-      ]
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000031, dataset=VS",
+      "number_errors": 0,
+      "errors": []
     }
   ],
   "unmatched_validation": [
-    {
-      "value": {
-        "FTEVAL": "[PRESENT]"
-      }
-    },
     {
       "value": {
         "RSEVAL": "[PRESENT]"

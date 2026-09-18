@@ -3,22 +3,20 @@
     {
       "dataset": "qs.xpt",
       "domain": "QS",
-      "execution_status": "execution_error",
-      "execution_message": "rule execution error",
+      "execution_status": "success",
+      "execution_message": "QSEVAL must not be present.",
       "number_errors": 1,
       "errors": [
         {
-          "error": "An unknown exception has occurred",
-          "message": "Operation codelist_terms is not implemented"
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "QSEVAL": "PERSON A"
+          },
+          "validated": true
         }
       ]
-    }
-  ],
-  "unmatched_validation": [
-    {
-      "value": {
-        "QSEVAL": "[PRESENT]"
-      }
     }
   ]
 }

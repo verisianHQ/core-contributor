@@ -16,17 +16,17 @@ Authorities:
             Citations:
               - Cited Guidance: --EVAL and --EVALID must not be used to model QRS
                   data in SDTM.
-                Document: SDTMIG v3.4
+                Document: IG v3.4
                 Item: Assumption 8
                 Section: 6.3.9.1
               - Cited Guidance: --EVAL and --EVALID must not be used to model QRS
                   data in SDTM.
-                Document: SDTMIG v3.4
+                Document: IG v3.4
                 Item: Assumption 8
                 Section: 6.3.9.2
               - Cited Guidance: --EVAL and --EVALID must not be used to model QRS
                   data in SDTM.
-                Document: SDTMIG v3.4
+                Document: IG v3.4
                 Item: Assumption 8
                 Section: 6.3.9.3.2
 Check:
@@ -36,28 +36,28 @@ Check:
     - name: FTEVAL
       operator: exists
     - all:
-        - name: RSEVAL
-          operator: exists
+     #   - name: RSEVAL
+     #     operator: exists
         - name: RSCAT
           operator: is_contained_by
           value: $cccat_terms
 Operations:
-  - id: $cccat_terms
-    operator: codelist_terms
-    codelists:
-      - CCCAT
-    level: term
-    returntype: value
+  - ct_attribute: Term Value
+    id: $cccat_terms
+    operator: get_codelist_attributes
+    name: CCCAT
+    ct_conditions:
+      - Codelist Code: C118971
 Core:
   Id: CORE-000031
   Status: Published
   Version: '1'
-Description: Raise an error when --EVAL is present in the QS or FT dataset, or in the RS dataset for the Clinical Classification Use Case.    This includes the 'QS' and
-  'FT' domains as well as the 'RS' domain when the record pertains to a Clinical Classification
-  Use Case). This rule has been fully executed for the QS and FT domains only.
+Description: Raise an error when --EVAL is present in the QS or FT dataset, or in the RS dataset for the Clinical Classification Use Case.
 Executability: Fully Executable
 Outcome:
-  Message: --EVAL must not be present.  --EVAL must not be used to model QRS data.
+  Message: --EVAL must not be present.
+  Output Variables:
+    - --EVAL
 Rule Type: Record Data
 Scope:
   Classes:
