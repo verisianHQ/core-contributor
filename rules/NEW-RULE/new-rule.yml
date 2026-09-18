@@ -1,0 +1,72 @@
+# Variable: GEN
+# Condition: 
+# Rule: Variable Format = SDTM-specified controlled terminology and format guidelines for variables, when provided
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Following SDTM-specified controlled terminology and format guidelines for variables, when provided
+                Document: IG v3.2
+                Section: 3.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0011
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Following SDTM-specified controlled terminology and format guidelines for variables, when provided
+                Document: IG v3.3
+                Section: 3.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0011
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Following SDTM-specified controlled terminology and format guidelines for variables, when provided
+                Document: IG v3.4
+                Section: 3.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0011
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+Check:
+  all:
+    - operator: does_not_contain
+      name: $alpha_3_iso3166_1_country_codes
+      value: COUNTRY
+Core:
+  Id: ''
+  Status: Draft
+  Version: '1'
+Description: Part A - Raise an error when value for COUNTRY in DM dataset is not populated with a valid 3-letter country code found in ISO 3166-1.
+Executability: Fully Executable
+Operations:
+  - id: $alpha_3_iso3166_1_country_codes
+    operator: get_countries
+    attribute_name: alpha_3
+    codelist: ISO 3166-1
+Outcome:
+  Message: COUNTRY value must be a valid ISO 3166-1 3-letter country code.
+  Output Variables:
+    - COUNTRY
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record
