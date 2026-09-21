@@ -87,19 +87,66 @@ Check:
         - TTYPE
         - INDIC
         - RANDQT
+      value_is_literal: true
     - name: TSVAL
       operator: non_empty
 Core:
   Id: CORE-000737
   Status: Published
   Version: '1'
-Description: Raise an error if any of the parameters without conditions listed in the TCG, Appendix B, are not included in the list of TSPARMCD with TSVAL populated.
+Description: Raise an error when not all FDA Desired Trial Summary (TS)
+  Parameters (TSPARMCDs) are present in the TS dataset.
 Executability: Fully Executable
+Operations:
+  - id: $distinct_tsparmcds
+    name: TSPARMCD
+    operator: distinct
+  - id: $missing_tsparmcds
+    name:
+      - ACTSUB
+      - ADAPT
+      - ADDON
+      - AGEMAX
+      - AGEMIN
+      - COMPTRT
+      - DCUTDESC
+      - DCUTDTC
+      - EXTTIND
+      - FCNTRY
+      - HLTSUBJI
+      - LENGTH
+      - NARMS
+      - NCOHORT
+      - OBJPRIM
+      - OBJSEC
+      - ONGOSIND
+      - OUTMSPRI
+      - PDPSTIND
+      - PDSTIND
+      - PIPIND
+      - PLANSUB
+      - RDIND
+      - REGID
+      - SENDTC
+      - SEXPOP
+      - SPONSOR
+      - STOPRULE
+      - SSTDTC
+      - STYPE
+      - TBLIND
+      - TCNTRL
+      - THERAREA
+      - TITLE
+      - TPHASE
+      - TTYPE
+      - INDIC
+      - RANDQT
+    operator: minus
+    subtract: $distinct_tsparmcds
 Outcome:
-  Message: FDA Desired TSPARMCD is missing in the TS dataset.
+  Message: At least one FDA Desired TSPARMCD is missing in the TS dataset.
   Output Variables:
-    - TSVAL
-    - TSPARMCD
+    - $missing_tsparmcds
 Rule Type: Record Data
 Scope:
   Classes:
@@ -108,4 +155,4 @@ Scope:
   Domains:
     Include:
       - TS
-Sensitivity: Record
+Sensitivity: Dataset
