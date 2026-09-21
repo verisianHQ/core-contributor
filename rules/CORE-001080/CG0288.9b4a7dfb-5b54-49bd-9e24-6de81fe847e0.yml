@@ -53,7 +53,6 @@ Check:
       operator: prefix_equal_to
       prefix: 5
       value: CDISC
-      value_is_literal: true
     - name: $VALID_TERM_CODES
       operator: non_empty
     - name: TSVALCD

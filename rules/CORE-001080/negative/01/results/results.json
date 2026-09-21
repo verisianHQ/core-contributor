@@ -4,32 +4,25 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSVALCD must be a valid code in the CDISC CT version identified in TSVCDVER.",
-      "number_errors": 2,
-      "errors": [
-        {
-          "row": 3,
-          "SEQ": 1,
-          "USUBJID": "None",
-          "value": {
-            "TSVALCD": "C00001",
-            "TSPARMCD": "ADDON",
-            "TSVCDVER": "2025-03-28"
-          },
-          "validated": true
-        },
-        {
-          "row": 16,
-          "SEQ": 1,
-          "USUBJID": "None",
-          "value": {
-            "TSVALCD": "C00002",
-            "TSPARMCD": "HLTSUBJI",
-            "TSVCDVER": "2025-03-28"
-          },
-          "validated": true
-        }
-      ]
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "TSVALCD": "C00001",
+        "TSPARMCD": "ADDON",
+        "TSVCDVER": "2025-03-28"
+      }
+    },
+    {
+      "value": {
+        "TSVALCD": "C00002",
+        "TSPARMCD": "HLTSUBJI",
+        "TSVCDVER": "2025-03-28"
+      }
     }
   ]
 }
