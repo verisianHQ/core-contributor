@@ -51,31 +51,20 @@ Authorities:
             Version: '1.5'
         Version: '3.4'
 Check:
-  any:
-    - all:
-        - name: ETHNIC
-          operator: non_empty
-        - name: ETHNIC
-          operator: is_not_contained_by
-          value:
-            - HISPANIC OR LATINO
-            - NOT HISPANIC OR LATINO
-          value_is_literal: true
-    - all:
-        - name: CETHNIC
-          operator: non_empty
-        - name: CETHNIC
-          operator: is_not_contained_by
-          value:
-            - HISPANIC OR LATINO
-            - NOT HISPANIC OR LATINO
-          value_is_literal: true
-        - name: ETHNIC
-          operator: is_not_contained_by
-          value:
-            - HISPANIC OR LATINO
-            - NOT HISPANIC OR LATINO
-          value_is_literal: true
+  not:
+    any:
+      - name: ETHNIC
+        operator: is_contained_by
+        value:
+          - HISPANIC OR LATINO
+          - NOT HISPANIC OR LATINO
+        value_is_literal: true
+      - name: CETHNIC
+        operator: is_contained_by
+        value:
+          - HISPANIC OR LATINO
+          - NOT HISPANIC OR LATINO
+        value_is_literal: true
 Core:
   Id: CORE-000726
   Status: Published

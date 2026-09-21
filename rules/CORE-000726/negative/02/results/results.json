@@ -5,7 +5,7 @@
       "domain": "DM",
       "execution_status": "success",
       "execution_message": "Ethnicity is collected, but one of the following ethnicity options are not offered: 'HISPANIC OR LATINO' or 'NOT HISPANIC OR LATINO'.\n",
-      "number_errors": 4,
+      "number_errors": 3,
       "errors": [
         {
           "row": 2,
@@ -14,17 +14,6 @@
           "value": {
             "ETHNIC": "HISPANIC",
             "CETHNIC": "HISPANIC",
-            "QVAL": "Not in dataset"
-          },
-          "validated": true
-        },
-        {
-          "row": 3,
-          "SEQ": null,
-          "USUBJID": "S003",
-          "value": {
-            "ETHNIC": "NOT HISPANIC",
-            "CETHNIC": "HISPANIC OR LATINO",
             "QVAL": "Not in dataset"
           },
           "validated": true
