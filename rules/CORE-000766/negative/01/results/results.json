@@ -12,7 +12,7 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "Related record is present in the parent domain dataset and AEDECOD is not populated or not present, but FAOBJ is not equal to the AETERM in the parent domain dataset.",
+      "execution_message": "Related record is present in the parent events domain dataset with AEDECOD not populated or not present, but FAOBJ is not equal to the AETERM in the parent domain dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -48,7 +48,7 @@
       "dataset": "mh.xpt",
       "domain": "MH",
       "execution_status": "success",
-      "execution_message": "Related record is present in the parent domain dataset and MHDECOD is not populated or not present, but FAOBJ is not equal to the MHTERM in the parent domain dataset.",
+      "execution_message": "Related record is present in the parent events domain dataset with MHDECOD not populated or not present, but FAOBJ is not equal to the MHTERM in the parent domain dataset.",
       "number_errors": 1,
       "errors": [
         {

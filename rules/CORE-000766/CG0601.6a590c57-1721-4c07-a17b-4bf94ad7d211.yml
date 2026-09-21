@@ -42,7 +42,7 @@ Match Datasets:
   - Name: RELREC
     Wildcard: FA
 Outcome:
-  Message: Related record is present in the parent domain dataset and --DECOD is not populated or not present, but FAOBJ is not equal to the --TERM in the parent domain dataset.
+  Message: Related record is present in the parent events domain dataset with --DECOD not populated or not present, but FAOBJ is not equal to the --TERM in the parent domain dataset.
   Output Variables:
     - RELREC.FAOBJ
     - --DECOD
