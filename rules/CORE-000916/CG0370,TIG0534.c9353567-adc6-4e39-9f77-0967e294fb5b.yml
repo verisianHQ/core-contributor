@@ -91,8 +91,6 @@ Match Datasets:
   - Child: true
     Keys:
       - USUBJID
-      - IDVAR
-      - IDVARVAL
     Name: RELREC
 Operations:
   - domain: RELREC
@@ -104,6 +102,7 @@ Outcome:
     the dataset referenced in RDOMAIN.
   Output Variables:
     - IDVAR
+    - RDOMAIN
 Rule Type: Record Data
 Scope:
   Classes:
