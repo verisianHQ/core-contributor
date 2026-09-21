@@ -48,11 +48,11 @@ Check:
   all:
     - name: --ENDTC
       operator: non_empty
-    - name: DM.RFPENDTC
+    - name: RFPENDTC
       operator: non_empty
     - name: --ENDTC
       operator: date_greater_than
-      value: DM.RFPENDTC
+      value: RFPENDTC
 Core:
   Id: CORE-000952
   Status: Published
