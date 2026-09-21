@@ -1,4 +1,201 @@
 {
-  "error": "Error executing engine validation.",
-  "exception": "Error converting column 'STUDYID' in table 'dm.xpt' to numeric: could not convert string to float: 'CDISCPILOT01'"
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "Variable data type specified in the dataset does not match the variable data type in the IG or the Model.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "VISITNUM",
+            "variable_data_type": "Char",
+            "library_variable_data_type": "Num"
+          },
+          "validated": true
+        },
+        {
+          "row": 13,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBCHENDY",
+            "variable_data_type": "Char",
+            "library_variable_data_type": "Num"
+          },
+          "validated": true
+        },
+        {
+          "row": 14,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBDURATION",
+            "variable_data_type": "Char",
+            "library_variable_data_type": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Variable data type specified in the dataset does not match the variable data type in the IG or the Model.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "STUDYID",
+            "variable_data_type": "Num",
+            "library_variable_data_type": "Char"
+          },
+          "validated": true
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "RFXSTDTC",
+            "variable_data_type": "Num",
+            "library_variable_data_type": "Char"
+          },
+          "validated": true
+        },
+        {
+          "row": 22,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "COUNTRY",
+            "variable_data_type": "Num",
+            "library_variable_data_type": "Char"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "xy.xpt",
+      "domain": "XY",
+      "execution_status": "success",
+      "execution_message": "Variable data type specified in the dataset does not match the variable data type in the IG or the Model.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "XYSEQ",
+            "variable_data_type": "Char",
+            "library_variable_data_type": "Num"
+          },
+          "validated": true
+        },
+        {
+          "row": 12,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "XYDY",
+            "variable_data_type": "Char",
+            "library_variable_data_type": "Num"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "dm.xpt",
+      "Row": 1,
+      "Variable": "STUDYID"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 1,
+      "Variable": "RFXSTDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 1,
+      "Variable": "COUNTRY"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 3,
+      "Variable": "STUDYID"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 3,
+      "Variable": "RFXSTDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 3,
+      "Variable": "COUNTRY"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "VISITNUM"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "LBCHENDY"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 1,
+      "Variable": "LBDURATION"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 3,
+      "Variable": "VISITNUM"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 3,
+      "Variable": "LBCHENDY"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 3,
+      "Variable": "LBDURATION"
+    },
+    {
+      "Sheet": "xy.xpt",
+      "Row": 1,
+      "Variable": "XYSEQ"
+    },
+    {
+      "Sheet": "xy.xpt",
+      "Row": 1,
+      "Variable": "XYDY"
+    },
+    {
+      "Sheet": "xy.xpt",
+      "Row": 3,
+      "Variable": "XYSEQ"
+    },
+    {
+      "Sheet": "xy.xpt",
+      "Row": 3,
+      "Variable": "XYDY"
+    }
+  ]
 }

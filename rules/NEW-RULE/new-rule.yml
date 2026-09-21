@@ -49,8 +49,7 @@ Authorities:
                 Document: IG v3.4
                 Section: 3.2.2
               - Cited Guidance: Note that the SDTM type specified in this document is either
-                  character or numeric, as these are the only types supported by
-                  SAS v.5 transport files.]
+                  character or numeric, as these are the only types supported by  SAS v.5 transport files.
                 Document: Model v2.0
                 Section: '2.1'
             Origin: SDTM and SDTMIG Conformance Rules
@@ -65,8 +64,8 @@ Check:
       operator: not_equal_to
       value: library_variable_data_type
 Core:
-  Id: ''
-  Status: Draft
+  Id: CORE-001082
+  Status: Published
   Version: '1'
 Description: Raise an error when the variable type does not match IG Type (for
   domains in IG) or Model Type (for custom domains).
