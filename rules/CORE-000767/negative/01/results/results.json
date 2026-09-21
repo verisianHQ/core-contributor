@@ -42,9 +42,30 @@
       "dataset": "fa.xpt",
       "domain": "FA",
       "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "execution_message": "Parent record exists and FADECOD is not null, but FAOBJ is not equal to FADECOD.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "RELREC.FAOBJ": "Not in dataset",
+            "FADECOD": "TEST"
+          },
+          "validated": false
+        },
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "RELREC.FAOBJ": "Not in dataset",
+            "FADECOD": "TEST"
+          },
+          "validated": false
+        }
+      ]
     },
     {
       "dataset": "relrec.xpt",
