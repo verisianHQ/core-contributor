@@ -1,6 +1,7 @@
 # Variable: --TPT
 # Condition: VISITNUM and --TPTREF present in dataset
 # Rule: --TPT and --TPTNUM have a one-to-one relationship per unique combination of VISITNUM and –TPTREF values
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -113,12 +114,12 @@ Core:
   Status: Published
   Version: '1'
 Description: Raise an error when VISITNUM and --TPTREF are present and --TPT and
-  --TPTNUM does not have a one-to-one relationship per unique combination of
-  VISITNUM and --TPTREF values
+  --TPTNUM do not have a one-to-one relationship per unique combination of
+  VISITNUM and --TPTREF values.
 Executability: Fully Executable
 Outcome:
   Message: --TPT and --TPTNUM do not have a one-to-one relationship per unique
-    combination of VISITNUM and --TPTREF values
+    combination of VISITNUM and --TPTREF values.
   Output Variables:
     - VISITNUM
     - --TPTREF

@@ -110,13 +110,11 @@ Authorities:
         Version: '1.0'
 Check:
   all:
-    - name: ECOCCUR # The condition is ECOCCUR = "N"
+    - name: ECOCCUR
       operator: equal_to
       value: N
+      value_is_literal: true
     - name: ECDOSE
-        # The rule is ECDOSE is null or > 0
-        # so the failure criteria is not empty and LE 0
-        # which is the same as just LE 0
       operator: less_than_or_equal_to
       value: 0
     - name: ECDOSE
@@ -125,12 +123,12 @@ Core:
   Id: CORE-000004
   Status: Published
   Version: '1'
-Description: When ECOCCUR indicates no dose, then ECDOSE needs to be null or >
-  0; it cannot be used to indicate a dose wasn't taken.
+Description: Raise an error when ECOCCUR is equal to 'N', but ECDOSE is populated and less than or equal to 0.
 Executability: Fully Executable
 Outcome:
-  Message: ECOCCUR indicates dose was not given, ECDOSE needs to be blank or greater than 0.
+  Message: ECOCCUR is equal to 'N', but ECDOSE is populated and less than or equal to 0.
   Output Variables:
+    - ECTRT
     - ECDOSE
     - ECOCCUR
 Rule Type: Record Data

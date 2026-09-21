@@ -1,3 +1,7 @@
+# Variable: --ENDY
+# Condition: --ENDTC ^= NULL
+# Rule: --ENDY not present in dataset
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -151,13 +155,16 @@ Core:
   Id: CORE-000776
   Status: Published
   Version: '1'
-Description: When End Date/Time of Observation (--ENDTC) is present in the
-  dataset, then the Study Day of End of Observation (--ENDY) should also be
-  present in the dataset
+Description: Raise an error when End Date/Time of Observation (--ENDTC) is
+  present in the dataset and the Study Day of End of Observation (--ENDY) is not
+  present in the dataset.
 Executability: Fully Executable
 Outcome:
   Message: Study Day of End of Observation (--ENDY) variable is missing when End
     Date/Time of Observation (--ENDTC) is present.
+  Output Variables:
+    - --ENDY
+    - --ENDTC
 Rule Type: Record Data
 Scope:
   Classes:
