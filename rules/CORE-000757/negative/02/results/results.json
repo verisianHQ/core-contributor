@@ -4,7 +4,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "Interventions parent record exists and CMDECOD = null, but FAOBJ is not equal to CMTRT.",
+      "execution_message": "Related record is present in the parent interventions domain dataset with CMDECOD not populated or not present, but FAOBJ is not equal to the CMTRT in the parent domain dataset.",
       "number_errors": 2,
       "errors": [
         {
@@ -13,10 +13,10 @@
           "USUBJID": "CDISC001",
           "value": {
             "RELREC.FAOBJ": "ASPIRINA",
-            "CMTRT": "ASPIRIN",
-            "CMDECOD": null
+            "CMDECOD": null,
+            "CMTRT": "ASPIRIN"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -24,10 +24,10 @@
           "USUBJID": "CDISC001",
           "value": {
             "RELREC.FAOBJ": "ERYTHEMA",
-            "CMTRT": "HYDROCORTISONE, TOPICAL",
-            "CMDECOD": null
+            "CMDECOD": null,
+            "CMTRT": "HYDROCORTISONE, TOPICAL"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -54,18 +54,6 @@
       "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000757, dataset=RELREC",
       "number_errors": 0,
       "errors": []
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "cm.xpt",
-      "Row": 5,
-      "Variable": "CMTRT"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 7,
-      "Variable": "CMTRT"
     }
   ]
 }
