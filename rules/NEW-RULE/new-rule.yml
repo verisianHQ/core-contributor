@@ -64,9 +64,8 @@ Core:
   Id: NEW-RULE
   Status: Draft
   Version: '1'
-Description: Raise an error when TAETORD in a non-TA domain is not a valid
-  TAETORD value in the TA dataset for the Arm to which the subject was assigned
-  in DM.
+Description: Raise an error when TAETORD order of elements does not match
+  order in the TA dataset within ARM of the subject.
 Executability: Fully Executable
 Match Datasets:
   - Join Type: LEFT
@@ -81,8 +80,7 @@ Operations:
     name: TAETORD
     operator: distinct
 Outcome:
-  Message: TAETORD must be a planned order of an Element within the Arm to which
-    the subject was assigned, as defined in the TA dataset.
+  Message: TAETORD must match value and order of elements as defined in the TA dataset within ARM of the subject.
   Output Variables:
     - USUBJID
     - TAETORD
