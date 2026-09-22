@@ -1,6 +1,7 @@
-# Variable: --DECOD
-# Condition: Parent record exists and --DECOD is not null, but FAOBJ is not equal to --DECOD
-# Rule: --FAOBJ is not coded value
+# Variable: --OBJ
+# Condition: Parent record exists and --DECOD ^= null
+# Rule: --OBJ = --DECOD
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -13,7 +14,7 @@ Authorities:
                   depends on whether the FA record has a parent record and
                   whether the "Other, specify" value was coded.
                 Document: IG v3.4
-                Section: '4.2.7.4'
+                Section: 4.2.7.4
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0603
@@ -31,15 +32,15 @@ Core:
   Id: CORE-000767
   Status: Published
   Version: '1'
-Description: 'When findings are collected, and the parent record exists and
-  --DECOD is not null, FAOBJ should not be equal to --DECOD'
+Description: Raise an error when parent record exists and
+  --DECOD is populated, but FAOBJ is not equal to --DECOD.
 Executability: Fully Executable
 Match Datasets:
   - Name: RELREC
     Wildcard: FA
 Outcome:
-  Message: Parent record exists and --DECOD is not null, but FAOBJ is not equal to
-    --DECOD.
+  Message: Related record is present in the parent domain dataset with --DECOD populated, but FAOBJ is not equal to
+    --DECOD in the parent domain dataset.
   Output Variables:
     - RELREC.FAOBJ
     - --DECOD
