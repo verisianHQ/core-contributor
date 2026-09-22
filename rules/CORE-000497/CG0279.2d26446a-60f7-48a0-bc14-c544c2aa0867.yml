@@ -1,6 +1,7 @@
 # Variable: TSVAL
 # Condition: TSPARMCD = 'PCLAS' and record exists where TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL' and Pharmacological Class of Interventional Therapy is applicable
 # Rule: TSVAL ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
