@@ -56,12 +56,15 @@ Check:
     - name: ETHNIC
       operator: not_equal_to
       value: 'HISPANIC OR LATINO'
+      value_is_literal: true
     - name: QNAM
       operator: equal_to
       value: CETHNIC
+      value_is_literal: true
     - name: QVAL
       operator: equal_to
       value: 'SPANISH ORIGIN'
+      value_is_literal: true
 Core:
   Id: CORE-000746
   Status: Published

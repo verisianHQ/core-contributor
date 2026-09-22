@@ -4,7 +4,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "The Study Day of Start of Observation (CMSTDY) is not present in the dataset when Start Date/Time of Observation (CMSTDTC) is present.",
+      "execution_message": "Study Day of Start of Observation (CMSTDY) variable is missing when Start Date/Time of Observation (CMSTDTC) is present.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,9 +12,10 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
+            "CMSTDY": "Not in dataset",
             "CMSTDTC": "2011"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -22,7 +23,7 @@
       "dataset": "ce.xpt",
       "domain": "CE",
       "execution_status": "success",
-      "execution_message": "The Study Day of Start of Observation (CESTDY) is not present in the dataset when Start Date/Time of Observation (CESTDTC) is present.",
+      "execution_message": "Study Day of Start of Observation (CESTDY) variable is missing when Start Date/Time of Observation (CESTDTC) is present.",
       "number_errors": 1,
       "errors": [
         {
@@ -30,9 +31,10 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
+            "CESTDY": "Not in dataset",
             "CESTDTC": "2012-12-02"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -40,7 +42,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "The Study Day of Start of Observation (LBSTDY) is not present in the dataset when Start Date/Time of Observation (LBSTDTC) is present.",
+      "execution_message": "Study Day of Start of Observation (LBSTDY) variable is missing when Start Date/Time of Observation (LBSTDTC) is present.",
       "number_errors": 1,
       "errors": [
         {
@@ -48,9 +50,10 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
+            "LBSTDY": "Not in dataset",
             "LBSTDTC": "2012-11-23T11:20"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -58,7 +61,7 @@
       "dataset": "fa.xpt",
       "domain": "FA",
       "execution_status": "success",
-      "execution_message": "The Study Day of Start of Observation (FASTDY) is not present in the dataset when Start Date/Time of Observation (FASTDTC) is present.",
+      "execution_message": "Study Day of Start of Observation (FASTDY) variable is missing when Start Date/Time of Observation (FASTDTC) is present.",
       "number_errors": 1,
       "errors": [
         {
@@ -66,9 +69,10 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
+            "FASTDY": "Not in dataset",
             "FASTDTC": "2012-12-02"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -76,7 +80,7 @@
       "dataset": "se.xpt",
       "domain": "SE",
       "execution_status": "success",
-      "execution_message": "The Study Day of Start of Observation (SESTDY) is not present in the dataset when Start Date/Time of Observation (SESTDTC) is present.",
+      "execution_message": "Study Day of Start of Observation (SESTDY) variable is missing when Start Date/Time of Observation (SESTDTC) is present.",
       "number_errors": 1,
       "errors": [
         {
@@ -84,9 +88,10 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
+            "SESTDY": "Not in dataset",
             "SESTDTC": "2012-11-23"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -94,7 +99,7 @@
       "dataset": "sv.xpt",
       "domain": "SV",
       "execution_status": "success",
-      "execution_message": "The Study Day of Start of Observation (SVSTDY) is not present in the dataset when Start Date/Time of Observation (SVSTDTC) is present.",
+      "execution_message": "Study Day of Start of Observation (SVSTDY) variable is missing when Start Date/Time of Observation (SVSTDTC) is present.",
       "number_errors": 1,
       "errors": [
         {
@@ -102,9 +107,10 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
+            "SVSTDY": "Not in dataset",
             "SVSTDTC": "2012-11-23"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -112,7 +118,7 @@
       "dataset": "sm.xpt",
       "domain": "SM",
       "execution_status": "success",
-      "execution_message": "The Study Day of Start of Observation (SMSTDY) is not present in the dataset when Start Date/Time of Observation (SMSTDTC) is present.",
+      "execution_message": "Study Day of Start of Observation (SMSTDY) variable is missing when Start Date/Time of Observation (SMSTDTC) is present.",
       "number_errors": 1,
       "errors": [
         {
@@ -120,9 +126,10 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
+            "SMSTDY": "Not in dataset",
             "SMSTDTC": "2011-11-23"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },

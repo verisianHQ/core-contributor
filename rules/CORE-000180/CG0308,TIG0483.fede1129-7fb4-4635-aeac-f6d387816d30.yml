@@ -1,6 +1,7 @@
 # Variable: DOMAIN
 # Condition: 
 # Rule: DOMAIN value length = 2
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -64,16 +65,19 @@ Authorities:
 Check:
   all:
     - name: DOMAIN
-      operator: longer_than
+      operator: has_not_equal_length
       value: 2
+      value_is_literal: true
 Core:
   Id: CORE-000180
   Status: Published
   Version: '1'
-Description: Raise an error when DOMAIN value length is not equal 2.
+Description: Raise an error when DOMAIN value length is not equal to 2.
 Executability: Fully Executable
 Outcome:
-  Message: Domain value length is not equal 2.
+  Message: DOMAIN value length is not equal to 2.
+  Output Variables:
+    - DOMAIN
 Rule Type: Record Data
 Scope:
   Classes:

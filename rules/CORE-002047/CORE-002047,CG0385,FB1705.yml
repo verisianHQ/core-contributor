@@ -1,0 +1,117 @@
+# Variable: --BODSYS
+# Condition: 
+# Rule: --BODSYS = MedDRA system organ class
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0385
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: A standardized or dictionary derived name for the
+                  body system or organ class. Body system or system organ class assigned
+                  for analysis from a standard hierarchy (e.g., MedDRA) associated
+                  with an event.
+                Document: Model v2.0
+                Item: --BODSYS
+                Section: Events
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0385
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: 'Body system or system organ class assigned for analysis
+                  from a standard hierarchy (e.g. MedDRA) associated with an event.
+                  Example: GASTROINTESTINAL DISORDERS.'
+                Document: Model v1.4
+                Section: 2.2.2
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0385
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: 'Body system or system organ class assigned for analysis
+                  from a standard hierarchy (e.g. MedDRA) associated with an event.
+                  Example: GASTROINTESTINAL DISORDERS.'
+                Document: Model v1.7
+                Section: 2.2.2
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1705
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1705
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1705
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: --BODSYS
+      operator: is_not_valid_meddra_term_reference
+      filter_attribute: term_type
+      filter_value: SOC
+Core:
+  Id: CORE-002047
+  Status: Published
+  Version: '1'
+Description: Raise an error when --BODSYS is not a valid MedDRA system organ class.
+Executability: Fully Executable
+Outcome:
+  Message: --BODSYS is not a valid MedDRA system organ class.
+  Output Variables:
+    - --BODSYS
+    - --TERM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - AE
+      - MH
+      - CE
+Sensitivity: Record

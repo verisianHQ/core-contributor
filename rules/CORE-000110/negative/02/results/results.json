@@ -1,0 +1,26 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBSTREFC is not populated when LBORREF is populated or LBDRVFL is equal to 'Y'.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISCPILOT01-001",
+          "value": {
+            "LBTESTCD": "GLUC",
+            "LBTEST": "Glucose",
+            "LBORREF": "4.1",
+            "LBDRVFL": null,
+            "LBSTREFC": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

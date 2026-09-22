@@ -4,7 +4,7 @@
       "dataset": "sv.xpt",
       "domain": "SV",
       "execution_status": "success",
-      "execution_message": "VISITNUM for unplanned visit is present in TV.",
+      "execution_message": "VISITNUM for unplanned visit matches a VISITNUM value in the TV dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,10 +12,11 @@
           "SEQ": null,
           "USUBJID": "CDISC001",
           "value": {
-            "SVPRESP": null,
-            "VISITNUM": 101.0
+            "VISITNUM": 101.0,
+            "VISIT": "EARLY DISCONTINUATION",
+            "SVPRESP": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },

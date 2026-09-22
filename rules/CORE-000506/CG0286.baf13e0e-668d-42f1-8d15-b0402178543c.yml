@@ -1,6 +1,7 @@
 # Variable: TSVAL
 # Condition: TSPARMCD = SENDTC (Study End Date)
 # Rule: TSVAL conforms to ISO 8601 date
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -40,16 +41,19 @@ Check:
     - name: TSPARMCD
       operator: equal_to
       value: SENDTC
+      value_is_literal: true
     - name: TSVAL
       operator: invalid_date
 Core:
   Id: CORE-000506
   Status: Published
   Version: '1'
-Description: 'Raise an error when TSVAL for TSPARMCD=SENDTC is not a valid date/time'
+Description: Raise an error when TSPARMCD is equal to 'SENDTC' but TSVAL 
+  is not a valid ISO8601 date.
 Executability: Fully Executable
 Outcome:
-  Message: 'Invalid date for TSVAL for TSPARMCD = SENDTC (Study End Date)'
+  Message: Study End Date (SENDTC) value in the TS dataset is not 
+    populated in ISO 8601 format.
 Rule Type: Record Data
 Scope:
   Classes:

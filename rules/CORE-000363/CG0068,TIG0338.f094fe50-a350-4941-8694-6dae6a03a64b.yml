@@ -1,3 +1,7 @@
+# Variable: DSSTDTC
+# Condition: Multiple informed consents obtained and DSDECOD = 'INFORMED CONSENT OBTAINED'
+# Rule: For each subject, earliest DSSTDTC = DM.RFICDTC
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -62,9 +66,6 @@ Authorities:
             Version: '1.0'
         Substandard: SDTM
         Version: '1.0'
-# Variable: DSSTDTC
-# Condition: Multiple informed consents obtained and DSDECOD = 'INFORMED CONSENT OBTAINED'
-# Rule: For each subject, earliest DSSTDTC = DM.RFICDTC
 Check:
   all:
     - name: DSDECOD
@@ -73,6 +74,7 @@ Check:
     - name: DSDECOD
       operator: equal_to
       value: INFORMED CONSENT OBTAINED
+      value_is_literal: true
     - name: $min_ds_dsstdtc
       operator: not_equal_to
       value: RFICDTC
@@ -83,9 +85,9 @@ Core:
   Id: CORE-000363
   Status: Published
   Version: '1'
-Description: When there are multiple informed consents obtained and DSDECOD =
-  'INFORMED CONSENT OBTAINED', the earliest DSSTDTC for each subject should be
-  equal to DM.RFICDTC.
+Description: Raise an error when DSDECOD is equal to 'INFORMED CONSENT 
+  OBTAINED' but the earliest DSSTDTC for each subject is not equal to 
+  RFICDTC in the DM dataset.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
@@ -99,13 +101,13 @@ Operations:
     name: DSSTDTC
     operator: min_date
 Outcome:
-  Message: The earliest disposition date for "INFORMED CONSENT OBTAINED" is not
-    equal to DM.RFICDTC
+  Message: DSDECOD is equal to 'INFORMED CONSENT OBTAINED' but RFICDTC in the 
+    DM dataset is not equal to the earliest DSSTDTC. 
   Output Variables:
-    - RFICDTC
-    - $min_ds_dsstdtc
     - DSDECOD
+    - RFICDTC
     - DSSTDTC
+    - $min_ds_dsstdtc
 Rule Type: Record Data
 Scope:
   Classes:

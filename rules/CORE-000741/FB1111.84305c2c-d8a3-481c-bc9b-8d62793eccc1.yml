@@ -45,23 +45,27 @@ Check:
         - INTMODEL
         - INTTYPE
         - PCLASS
+      value_is_literal: true
     - any:
         - all:
             - name: TSPARMCD
               operator: equal_to
               value: INTMODEL
+              value_is_literal: true
             - name: TSVAL
               operator: empty
         - all:
             - name: TSPARMCD
               operator: equal_to
               value: INTTYPE
+              value_is_literal: true
             - name: TSVAL
               operator: empty
         - all:
             - name: TSPARMCD
               operator: equal_to
               value: PCLASS
+              value_is_literal: true
             - name: TSVAL
               operator: empty
     - name: $STYPE_INTERVENTIONAL
