@@ -1,0 +1,144 @@
+# Variable: CMDECOD
+# Condition: CMTRT has a decode value in the dictionary
+# Rule: CMDECOD ^= null
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: CMDECOD is the standardized medication/therapy term derived by
+                  the sponsor from  the coding dictionary. It is expected that
+                  the reported term (CMTRT) or the modified term (CMMODIFY) will
+                  be coded using a standard dictionary
+                Document: IG v3.4
+                Item: Assumption 2c
+                Section: 6.1.2
+              - Cited Guidance: Standardized or dictionary-derived text description of CMTRT or
+                  CMMODIFY.  Equivalent to the generic medication name in WHO
+                  Drug. The sponsor is expected to provide the dictionary name
+                  and version used to map  the terms utilizing the define.xml
+                  external codelist attributes. If an intervention term does not
+                  have a decode value in the dictionary then  CMDECOD will be
+                  left blank.
+                Document: IG v3.4
+                Item: Specification
+                Section: 6.1.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0096
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: CMDECOD is the standardized medication/therapy term derived by
+                  the sponsor from the coding dictionary.
+                Document: IG v3.2
+                Item: Assumption 2c
+                Section: 6.1.2
+              - Cited Guidance: Standardized or dictionary-derived text description of CMTRT or
+                  CMMODIFY.  Equivalent to the generic medication name in WHO
+                  Drug. The sponsor is expected to provide the dictionary name
+                  and version used to map the terms utilizing the define.xml
+                  external codelist attributes. If an intervention term does not
+                  have a decode value in the dictionary then CMDECOD will be left
+                  blank.
+                Document: IG v3.2
+                Item: Specification
+                Section: 6.1.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0096
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: CMDECOD is the standardized medication/therapy term derived by
+                  the sponsor from the coding dictionary.
+                Document: IG v3.3
+                Item: Assumption 2c
+                Section: 6.1.2
+              - Cited Guidance: Standardized or dictionary-derived text description of CMTRT or
+                  CMMODIFY. Equivalent to the generic medication name in WHO Drug.
+                  The sponsor is expected to provide the dictionary name and
+                  version used to map the terms utilizing the define.xml external
+                  codelist attributes. If an intervention term does not have a
+                  decode value in the dictionary then CMDECOD will be left blank.
+                Document: IG v3.3
+                Item: Specification
+                Section: 6.1.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0096
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology). 
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1710
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1710
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1710
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: CMDECOD
+      operator: non_empty
+    - name: CMDECOD
+      operator: is_not_valid_whodrug_term_reference
+      case_insensitive: true
+Core:
+  Id: CDISC.SDTMIG.CG0096
+  Status: Draft
+  Version: '1'
+Description: Raise an error when value for --DECOD is not found in MedDRA dictionary.
+Executability: Fully Executable
+Outcome:
+  Message: CMDECOD is not a valid WHODrug dictionary preferred drug name.
+  Output Variables:
+    - CMDECOD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - CM
+Sensitivity: Record
