@@ -1,4 +1,24 @@
 {
-  "error": "No result - either the rule or test case data unit-test-coreid-CG0413-negative.xlsx is broken",
-  "exception": "'Worksheet Library does not exist.'"
+  "datasets": [
+    {
+      "dataset": "alb.xpt",
+      "domain": "AL",
+      "execution_status": "success",
+      "execution_message": "Dataset name does not begin with DOMAIN value",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "variable_name": "DOMAIN",
+            "variable_value": "LB",
+            "dataset_name": "ALB"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
 }

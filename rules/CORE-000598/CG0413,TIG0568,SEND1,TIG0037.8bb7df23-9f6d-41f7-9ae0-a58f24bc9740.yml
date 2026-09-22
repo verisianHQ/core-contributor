@@ -181,10 +181,14 @@ Authorities:
         Version: '1.0'
 Check:
   all:
+    - name: variable_name
+      operator: equal_to
+      value: DOMAIN
+      value_is_literal: true
     - name: dataset_name
       operator: prefix_not_equal_to
       prefix: 2
-      value: DOMAIN
+      value: variable_value
 Core:
   Id: CORE-000598
   Status: Published
@@ -193,7 +197,11 @@ Description: The dataset name must begin with the DOMAIN value.
 Executability: Fully Executable
 Outcome:
   Message: Dataset name does not begin with DOMAIN value
-Rule Type: Dataset Metadata Check
+  Output Variables:
+    - variable_name
+    - variable_value
+    - dataset_name
+Rule Type: Value Check with Dataset Metadata
 Scope:
   Classes:
     Include:
