@@ -1,0 +1,103 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "EPOCH is missing for clinical subject-level observation.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "EPOCH": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "execution_status": "success",
+      "execution_message": "EPOCH is missing for clinical subject-level observation.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "EPOCH": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "eg.xpt",
+      "domain": "EG",
+      "execution_status": "success",
+      "execution_message": "EPOCH is missing for clinical subject-level observation.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "123101",
+          "value": {
+            "EPOCH": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "EPOCH": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "EPOCH is missing for clinical subject-level observation.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "EPOCH": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "pc.xpt",
+      "domain": "PC",
+      "execution_status": "success",
+      "execution_message": "EPOCH is missing for clinical subject-level observation.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "EPOCH": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

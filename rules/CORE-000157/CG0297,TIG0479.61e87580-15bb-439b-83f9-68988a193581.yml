@@ -1,6 +1,7 @@
 # Variable: ARMCD
-# Condition: 
+# Condition:
 # Rule: ARMCD value length <= 20
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -70,10 +71,10 @@ Core:
   Id: CORE-000157
   Status: Published
   Version: '1'
-Description: The length of ARMCD is limited to 20 characters.
+Description: Raise an error when the length of ARMCD is greater than 20 characters.
 Executability: Fully Executable
 Outcome:
-  Message: Length of ARMCD is greater than 20
+  Message: ARMCD value length is greater than 20 characters.
   Output Variables:
     - ARMCD
 Rule Type: Record Data

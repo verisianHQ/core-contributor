@@ -12,11 +12,11 @@
           "SEQ": 120,
           "USUBJID": "CDISC001",
           "value": {
-            "DOMAIN": "FT",
-            "FTELTM": "PT30M",
             "FTTPT": "30 MIN POST",
             "FTTPTNUM": 1.0,
-            "VISITNUM": 2.0
+            "FTELTM": "PT30M",
+            "VISITNUM": 2.0,
+            "DOMAIN": "FT"
           },
           "validated": false
         },
@@ -25,11 +25,11 @@
           "SEQ": 121,
           "USUBJID": "CDISC001",
           "value": {
-            "DOMAIN": "FT",
-            "FTELTM": "PT03M",
             "FTTPT": "30 MIN POST",
             "FTTPTNUM": 1.0,
-            "VISITNUM": 2.0
+            "FTELTM": "PT03M",
+            "VISITNUM": 2.0,
+            "DOMAIN": "FT"
           },
           "validated": false
         },
@@ -38,11 +38,11 @@
           "SEQ": 134,
           "USUBJID": "CDISC007",
           "value": {
-            "DOMAIN": "FT",
-            "FTELTM": "PT1H",
             "FTTPT": "90 MIN POST",
             "FTTPTNUM": 2.0,
-            "VISITNUM": 201.0
+            "FTELTM": "PT1H",
+            "VISITNUM": 201.0,
+            "DOMAIN": "FT"
           },
           "validated": false
         },
@@ -51,11 +51,11 @@
           "SEQ": 135,
           "USUBJID": "CDISC007",
           "value": {
-            "DOMAIN": "FT",
-            "FTELTM": "PT2H",
             "FTTPT": "90 MIN POST",
             "FTTPTNUM": 2.0,
-            "VISITNUM": 201.0
+            "FTELTM": "PT2H",
+            "VISITNUM": 201.0,
+            "DOMAIN": "FT"
           },
           "validated": false
         }

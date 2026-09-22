@@ -1,0 +1,73 @@
+{
+  "datasets": [
+    {
+      "dataset": "ti.xpt",
+      "domain": "TI",
+      "execution_status": "success",
+      "execution_message": "IETESTCD and IETEST do not have a one-to-one relationship.",
+      "number_errors": 6,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETEST": "Has disease under study",
+            "IETESTCD": "INCL01"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETEST": "Age 21 or greater",
+            "IETESTCD": "INCL01"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETEST": "Pregnant or lactating",
+            "IETESTCD": "EXCL01"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETEST": "Has disease under study",
+            "IETESTCD": "INCL01"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETEST": "Age 18 or greater",
+            "IETESTCD": "INCL02A"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETEST": "Pregnant or lactating",
+            "IETESTCD": "INCL02A"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

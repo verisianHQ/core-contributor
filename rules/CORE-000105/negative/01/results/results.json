@@ -4,74 +4,30 @@
       "dataset": "oe.xpt",
       "domain": "OE",
       "execution_status": "success",
-      "execution_message": "OELOBXFL = 'Y', but OESTRESC is empty.",
-      "number_errors": 6,
+      "execution_message": "Record has a last observation before exposure flag (OELOBXFL = 'Y') but character standard result (OESTRESC) is missing.",
+      "number_errors": 2,
       "errors": [
         {
-          "row": 7,
+          "row": 2,
           "SEQ": 7,
           "USUBJID": "CDISC001",
           "value": {
             "OELOBXFL": "Y",
-            "OESTRESC": null,
-            "OETESTCD": "INTP"
+            "OETESTCD": "INTP",
+            "OESTRESC": null
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 8,
-          "SEQ": 8,
+          "row": 4,
+          "SEQ": 9,
           "USUBJID": "CDISC001",
           "value": {
             "OELOBXFL": "Y",
-            "OESTRESC": null,
-            "OETESTCD": "INTP"
+            "OETESTCD": "ABDETAIL",
+            "OESTRESC": null
           },
-          "validated": false
-        },
-        {
-          "row": 12,
-          "SEQ": 5,
-          "USUBJID": "CDISC003",
-          "value": {
-            "OELOBXFL": "Y",
-            "OESTRESC": null,
-            "OETESTCD": "INTP"
-          },
-          "validated": false
-        },
-        {
-          "row": 13,
-          "SEQ": 6,
-          "USUBJID": "CDISC003",
-          "value": {
-            "OELOBXFL": "Y",
-            "OESTRESC": null,
-            "OETESTCD": "INTP"
-          },
-          "validated": false
-        },
-        {
-          "row": 15,
-          "SEQ": 7,
-          "USUBJID": "CDISC004",
-          "value": {
-            "OELOBXFL": "Y",
-            "OESTRESC": null,
-            "OETESTCD": "INTP"
-          },
-          "validated": false
-        },
-        {
-          "row": 16,
-          "SEQ": 8,
-          "USUBJID": "CDISC004",
-          "value": {
-            "OELOBXFL": "Y",
-            "OESTRESC": null,
-            "OETESTCD": "INTP"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     }

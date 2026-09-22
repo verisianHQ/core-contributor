@@ -55,6 +55,7 @@ Check:
     - name: define_dataset_class
       operator: equal_to
       value: EVENTS
+      value_is_literal: true
     - name: --TERM
       operator: not_exists
 Core:

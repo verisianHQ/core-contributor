@@ -52,11 +52,12 @@ Check:
     - name: library_variable_core
       operator: equal_to
       value: Perm
+      value_is_literal: true
     - name: define_variable_has_no_data
       operator: empty
     - any:
         - name: variable_name
-          operator: not_exists
+          operator: empty
         - name: variable_is_empty
           operator: equal_to
           value: true

@@ -1,0 +1,53 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVALCD and TSVAL do not have a one-to-one relationship.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "Y",
+            "TSVALCD": "C494888"
+          },
+          "validated": true
+        },
+        {
+          "row": 11,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "Adenocarcinom a of pancreas",
+            "TSVALCD": "C494888"
+          },
+          "validated": true
+        },
+        {
+          "row": 17,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "Y",
+            "TSVALCD": "C49488"
+          },
+          "validated": true
+        },
+        {
+          "row": 24,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "Adenocarcinom a of pancreas",
+            "TSVALCD": "700423003"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

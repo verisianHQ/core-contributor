@@ -1,0 +1,53 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "INVID and INVNAM do not have a one-to-one relationship.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "015246-300-0004-00006",
+          "value": {
+            "INVID": "3000004",
+            "INVNAM": "John,M"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "015246-300-0004-00007",
+          "value": {
+            "INVID": "3000005",
+            "INVNAM": "John,M"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "015246-300-0004-00008",
+          "value": {
+            "INVID": null,
+            "INVNAM": "John,M"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "015246-300-0004-00009",
+          "value": {
+            "INVID": "3000004",
+            "INVNAM": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

@@ -4,68 +4,88 @@
       "dataset": "sv.xpt",
       "domain": "SV",
       "execution_status": "success",
-      "execution_message": "VISIT and VISITNUM do not have a one-to-one relationship",
-      "number_errors": 6,
+      "execution_message": "VISIT and VISITNUM do not have a one-to-one relationship.",
+      "number_errors": 8,
       "errors": [
         {
           "row": 1,
           "SEQ": null,
           "USUBJID": "CDISC-TEST-001",
           "value": {
-            "VISIT": "VISIT 1 (WEEK -2)",
-            "VISITNUM": 100.0
+            "VISITNUM": 100.0,
+            "VISIT": "VISIT 1 (WEEK -2)"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": null,
           "USUBJID": "CDISC-TEST-001",
           "value": {
-            "VISIT": "VISIT 2 (WEEK 0)",
-            "VISITNUM": 200.0
+            "VISITNUM": 200.0,
+            "VISIT": "VISIT 2 (WEEK 0)"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": null,
           "USUBJID": "CDISC-TEST-001",
           "value": {
-            "VISIT": "VISIT 3 (WEEK 1)",
-            "VISITNUM": 300.0
+            "VISITNUM": 300.0,
+            "VISIT": "VISIT 3 (WEEK 1)"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 30,
           "SEQ": null,
           "USUBJID": "CDISC-TEST-002",
           "value": {
-            "VISIT": "VISIT 1",
-            "VISITNUM": 100.0
+            "VISITNUM": 100.0,
+            "VISIT": "VISIT 1"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 31,
           "SEQ": null,
           "USUBJID": "CDISC-TEST-002",
           "value": {
-            "VISIT": "VISIT 2",
-            "VISITNUM": 200.0
+            "VISITNUM": 200.0,
+            "VISIT": "VISIT 2"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 32,
           "SEQ": null,
           "USUBJID": "CDISC-TEST-002",
           "value": {
-            "VISIT": "VISIT 3",
-            "VISITNUM": 300.0
+            "VISITNUM": 300.0,
+            "VISIT": "VISIT 3"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 59,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-002",
+          "value": {
+            "VISITNUM": 3000.0,
+            "VISIT": "VISIT 29 (WEEK 27)"
+          },
+          "validated": true
+        },
+        {
+          "row": 60,
+          "SEQ": null,
+          "USUBJID": "CDISC-TEST-002",
+          "value": {
+            "VISITNUM": 3001.0,
+            "VISIT": "VISIT 29 (WEEK 27)"
+          },
+          "validated": true
         }
       ]
     },
@@ -73,28 +93,105 @@
       "dataset": "tv.xpt",
       "domain": "TV",
       "execution_status": "success",
-      "execution_message": "VISIT and VISITNUM do not have a one-to-one relationship",
-      "number_errors": 2,
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "VISIT and VISITNUM do not have a one-to-one relationship.",
+      "number_errors": 4,
       "errors": [
         {
-          "row": 7,
-          "SEQ": null,
-          "USUBJID": "None",
+          "row": 14,
+          "SEQ": 14,
+          "USUBJID": "CDISC-TEST-001",
           "value": {
-            "VISIT": "VISIT 7 (WEEK 5)",
-            "VISITNUM": 700.0
+            "VISITNUM": 1400.0,
+            "VISIT": "VISIT 14"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 8,
-          "SEQ": null,
-          "USUBJID": "None",
+          "row": 15,
+          "SEQ": 15,
+          "USUBJID": "CDISC-TEST-001",
           "value": {
-            "VISIT": "VISIT 8 (WEEK 6)",
-            "VISITNUM": 700.0
+            "VISITNUM": 1500.0,
+            "VISIT": "VISIT 15 (WEEK 13)"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 44,
+          "SEQ": 14,
+          "USUBJID": "CDISC-TEST-002",
+          "value": {
+            "VISITNUM": 1400.0,
+            "VISIT": "VISIT 14 (WEEK 12)"
+          },
+          "validated": true
+        },
+        {
+          "row": 45,
+          "SEQ": 15,
+          "USUBJID": "CDISC-TEST-002",
+          "value": {
+            "VISITNUM": 1500.0,
+            "VISIT": "VISIT 15"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "execution_status": "success",
+      "execution_message": "VISIT and VISITNUM do not have a one-to-one relationship.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 8,
+          "SEQ": 8,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "VISITNUM": 800.0,
+            "VISIT": "VISIT 8"
+          },
+          "validated": true
+        },
+        {
+          "row": 14,
+          "SEQ": 14,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "VISITNUM": 1400.0,
+            "VISIT": "VISIT 14 (WEEK 12)"
+          },
+          "validated": true
+        },
+        {
+          "row": 37,
+          "SEQ": 8,
+          "USUBJID": "CDISC-TEST-002",
+          "value": {
+            "VISITNUM": 800.0,
+            "VISIT": "VISIT 8 (WEEK 6)"
+          },
+          "validated": true
+        },
+        {
+          "row": 43,
+          "SEQ": 14,
+          "USUBJID": "CDISC-TEST-002",
+          "value": {
+            "VISITNUM": 1400.0,
+            "VISIT": "VISIT 14"
+          },
+          "validated": true
         }
       ]
     }

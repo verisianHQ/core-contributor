@@ -1,14 +1,15 @@
 # Variable: --METHOD
 # Condition: 
 # Rule: --METHOD not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Not be used in human clinical trials.
-                Document: SDTM v2.0
+              - Cited Guidance: Not in human clinical trials.
+                Document: Model v2.0
                 Item: --METHOD
                 Section: Interventions
             Origin: SDTM and SDTMIG Conformance Rules
@@ -39,10 +40,12 @@ Core:
   Id: CORE-000048
   Status: Published
   Version: '1'
-Description: Raise an error when --METHOD is present in an Interventions dataset.
+Description: Raise an error when --METHOD is present.
 Executability: Fully Executable
 Outcome:
-  Message: --METHOD is present in an interventions domain.
+  Message: --METHOD must not be present.
+  Output Variables:
+    - --METHOD
 Rule Type: Record Data
 Scope:
   Classes:

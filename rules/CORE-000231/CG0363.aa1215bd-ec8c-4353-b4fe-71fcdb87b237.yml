@@ -1,6 +1,7 @@
 # Variable: RSUBJID
 # Condition: RSUBJID ^= null
 # Rule: RSUBJID ^= USUBJID
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -58,10 +59,11 @@ Core:
   Id: CORE-000231
   Status: Published
   Version: '1'
-Description: Verify that when RSUBJID populated, RSUBJID does not equal USUBJID
+Description: Raise an error when RSUBJID is populated and RSUBJID is equal to 
+  USUBJID.
 Executability: Fully Executable
 Outcome:
-  Message: RSUBJID when populated cannot equal USUBJID
+  Message: When RSUBJID is populated the value cannot be equal to USUBJID.
   Output Variables:
     - RSUBJID
     - USUBJID

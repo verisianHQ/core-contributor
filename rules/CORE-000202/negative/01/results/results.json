@@ -4,8 +4,8 @@
       "dataset": "relrec.xpt",
       "domain": "RELREC",
       "execution_status": "success",
-      "execution_message": "RELTYPE is populated when IDVAR is populated with a 'SEQ' value.",
-      "number_errors": 2,
+      "execution_message": "RELTYPE must be populated when IDVAR is populated with a value ending in 'SEQ'.",
+      "number_errors": 4,
       "errors": [
         {
           "row": 1,
@@ -15,7 +15,7 @@
             "IDVAR": "LBSEQ",
             "RELTYPE": "ONE"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -25,7 +25,27 @@
             "IDVAR": "LBSEQ",
             "RELTYPE": "ONE"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "IDVAR": "SEQ",
+            "RELTYPE": "ONE"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "S001",
+          "value": {
+            "IDVAR": "LSEQ",
+            "RELTYPE": "ONE"
+          },
+          "validated": true
         }
       ]
     }

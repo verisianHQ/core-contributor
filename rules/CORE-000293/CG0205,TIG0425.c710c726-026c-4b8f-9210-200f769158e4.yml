@@ -1,22 +1,23 @@
 # Variable: GEN
 # Condition: 
 # Rule: Suppqual dataset names <= 8 characters
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: "\"When data have been split into multiple datasets (see Section
+              - Cited Guidance: 'When data have been split into multiple datasets (see Section
                   4.1.7, Splitting Domains), longer names such as SUPPFAMH may
                   be needed. In cases where data about Associated Persons (see
                   Associated Persons Implementation Guide) have been collected,
                   Supplemental Qualifiers for Findings About events or
                   interventions for an associated person may need to be
                   represented. A dataset name with the SUPP fragment, e.g.,
-                  SUPPAPFAMH, would be too long. In this case only, the 'SUPP'
-                  portion should be shortened to 'SQ', resulting in a dataset
-                  name such as SQAPFAMH.\""
+                  SUPPAPFAMH, would be too long. In this case only, the SUPP
+                  portion should be shortened to SQ, resulting in a dataset
+                  name such as SQAPFAMH.'
                 Document: IG v3.4
                 Section: 8.4.2
             Origin: SDTM and SDTMIG Conformance Rules
@@ -35,7 +36,7 @@ Authorities:
                   collected, an associated person with Supplemental Qualifiers
                   for Findings About their medical history, the resulting
                   dataset name SUPPAPFAMH) would be too long so that, in this
-                  case only, the "SUPP" portion should be shortened to "SQ".
+                  case only, the SUPP portion should be shortened to SQ.
                   resulting in a dataset name of SQAPFAMH.'
                 Document: IG v3.2
                 Section: 8.4.2
@@ -55,7 +56,7 @@ Authorities:
                   collected, an associated person with Supplemental Qualifiers
                   for Findings About their medical history, the resulting
                   dataset name SUPPAPFAMH) would be too long so that, in this
-                  case only, the "SUPP" portion should be shortened to "SQ".
+                  case only, the SUPP portion should be shortened to SQ.
                   resulting in a dataset name of SQAPFAMH.'
                 Document: IG v3.3
                 Section: 8.4.2
@@ -91,10 +92,11 @@ Core:
   Id: CORE-000293
   Status: Published
   Version: '1'
-Description: Trigger error if length of dataset name is greater than 8
+Description: Raise an error when length of SUPP-- dataset name is greater than
+  8 characters.
 Executability: Fully Executable
 Outcome:
-  Message: Length of dataset name of SUPP-- dataset is greater than 8.
+  Message: Length of SUPP-- dataset name is greater than 8 characters.
 Rule Type: Dataset Metadata Check
 Scope:
   Classes:

@@ -4,58 +4,52 @@
       "dataset": "suppae.xpt",
       "domain": "SUPPAE",
       "execution_status": "success",
-      "execution_message": "QORIG = ASSIGNED but QEVAL is not populated",
-      "number_errors": 5,
+      "execution_message": "QORIG is equal to 'ASSIGNED' but QEVAL is not populated.",
+      "number_errors": 4,
       "errors": [
         {
           "row": 1,
           "SEQ": null,
           "USUBJID": "CDISC-TEST-001",
           "value": {
-            "QEVAL": null,
-            "QORIG": "Assigned"
+            "QNAM": "DICTVER",
+            "QORIG": "Assigned",
+            "QEVAL": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": null,
           "USUBJID": "CDISC-TEST-001",
           "value": {
-            "QEVAL": null,
-            "QORIG": "Assigned"
+            "QNAM": "DICTVER",
+            "QORIG": "ASSIGNED",
+            "QEVAL": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": null,
           "USUBJID": "CDISC-TEST-001",
           "value": {
-            "QEVAL": null,
-            "QORIG": "Assigned"
+            "QNAM": "DICTVER",
+            "QORIG": "assigned",
+            "QEVAL": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
           "SEQ": null,
           "USUBJID": "CDISC-TEST-001",
           "value": {
-            "QEVAL": null,
-            "QORIG": "Assigned"
+            "QNAM": "DICTVER",
+            "QORIG": "Assigned",
+            "QEVAL": null
           },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": null,
-          "USUBJID": "CDISC-TEST-001",
-          "value": {
-            "QEVAL": null,
-            "QORIG": "Assigned"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -63,18 +57,30 @@
       "dataset": "suppec.xpt",
       "domain": "SUPPEC",
       "execution_status": "success",
-      "execution_message": "QORIG = ASSIGNED but QEVAL is not populated",
-      "number_errors": 1,
+      "execution_message": "QORIG is equal to 'ASSIGNED' but QEVAL is not populated.",
+      "number_errors": 2,
       "errors": [
         {
           "row": 1,
           "SEQ": null,
           "USUBJID": "CDISC009",
           "value": {
-            "QEVAL": null,
-            "QORIG": "ASSIGNED"
+            "QNAM": "ECREASOC",
+            "QORIG": "ASSIGNED",
+            "QEVAL": null
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC009",
+          "value": {
+            "QNAM": "ECREASOC",
+            "QORIG": "ASSIGNED",
+            "QEVAL": null
+          },
+          "validated": true
         }
       ]
     }

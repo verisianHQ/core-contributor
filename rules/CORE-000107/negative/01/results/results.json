@@ -4,9 +4,24 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "execution_message": "At least one of USUBJID, APID, SPDEVID, POOLID, SPTOBID or STOCONID must be present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "APID": "Not in dataset",
+            "USUBJID": "Not in dataset",
+            "SPDEVID": "Not in dataset",
+            "POOLID": "Not in dataset",
+            "SPTOBID": "Not in dataset",
+            "STOCONID": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
     }
   ]
 }

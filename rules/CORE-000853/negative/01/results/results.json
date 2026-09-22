@@ -1,0 +1,642 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "Collection study day (CMDY) is not populated when date/time of collection (CMDTC) is populated.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMDTC": "2013-01-11",
+            "RFSTDTC": "2012-11-30",
+            "CMDY": null
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMDTC": "2013-04-19",
+            "RFSTDTC": "2012-11-30",
+            "CMDY": null
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "Collection study day (LBDY) is not populated when date/time of collection (LBDTC) is populated.",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBDTC": "2012-11-23T11:19",
+            "RFSTDTC": "2012-11-30",
+            "LBDY": null
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBDTC": "2012-11-23T10:20",
+            "RFSTDTC": "2012-11-30",
+            "LBDY": null
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBDTC": "2012-11-22T11:20",
+            "RFSTDTC": "2012-11-30",
+            "LBDY": null
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBDTC": "2012-10-23T11:20",
+            "RFSTDTC": "2012-11-30",
+            "LBDY": null
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBDTC": "2011-11-23T11:20",
+            "RFSTDTC": "2012-11-30",
+            "LBDY": null
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "Collection study day (FADY) is not populated when date/time of collection (FADTC) is populated.",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FADTC": "2012-12-02",
+            "RFSTDTC": "2012-11-30",
+            "FADY": null
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FADTC": "2012-12-02",
+            "RFSTDTC": "2012-11-30",
+            "FADY": null
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FADTC": "2012-12-02",
+            "RFSTDTC": "2012-11-30",
+            "FADY": null
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FADTC": "2012-12-02",
+            "RFSTDTC": "2012-11-30",
+            "FADY": null
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FADTC": "2012-12-02",
+            "RFSTDTC": "2012-11-30",
+            "FADY": null
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "success",
+      "execution_message": "Collection study day (SEDY) is not populated when date/time of collection (SEDTC) is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SEDTC": "2012-11-23",
+            "RFSTDTC": "2012-11-30",
+            "SEDY": null
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "sv.xpt",
+      "domain": "SV",
+      "execution_status": "success",
+      "execution_message": "Collection study day (SVDY) is not populated when date/time of collection (SVDTC) is populated.",
+      "number_errors": 10,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVDTC": "2012-11-23",
+            "RFSTDTC": "2012-11-30",
+            "SVDY": null
+          },
+          "validated": false
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVDTC": "2012-11-28",
+            "RFSTDTC": "2012-11-30",
+            "SVDY": null
+          },
+          "validated": false
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVDTC": "2012-11-30",
+            "RFSTDTC": "2012-11-30",
+            "SVDY": null
+          },
+          "validated": false
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVDTC": "2012-12-13",
+            "RFSTDTC": "2012-11-30",
+            "SVDY": null
+          },
+          "validated": false
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVDTC": "2012-12-26",
+            "RFSTDTC": "2012-11-30",
+            "SVDY": null
+          },
+          "validated": false
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVDTC": "2012-12-28",
+            "RFSTDTC": "2012-11-30",
+            "SVDY": null
+          },
+          "validated": false
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVDTC": "2013-01-10",
+            "RFSTDTC": "2012-11-30",
+            "SVDY": null
+          },
+          "validated": false
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVDTC": "2013-01-23",
+            "RFSTDTC": "2012-11-30",
+            "SVDY": null
+          },
+          "validated": false
+        },
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVDTC": "2013-02-14",
+            "RFSTDTC": "2012-11-30",
+            "SVDY": null
+          },
+          "validated": false
+        },
+        {
+          "row": 10,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SVDTC": "2013-05-20",
+            "RFSTDTC": "2012-11-30",
+            "SVDY": null
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "sm.xpt",
+      "domain": "SM",
+      "execution_status": "success",
+      "execution_message": "Collection study day (SMDY) is not populated when date/time of collection (SMDTC) is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SMDTC": "2012-11-28",
+            "RFSTDTC": "2012-11-30",
+            "SMDY": null
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Collection study day (DMDY) is not populated when date/time of collection (DMDTC) is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "DMDTC": "2011-11-23",
+            "RFSTDTC": "2012-11-30",
+            "DMDY": null
+          },
+          "validated": false
+        }
+      ]
+    }
+  ],
+  "unvalidated_highlights": [
+    {
+      "Sheet": "cm.xpt",
+      "Row": 5,
+      "Variable": "CMDTC"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 5,
+      "Variable": "CMDY"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 6,
+      "Variable": "CMDTC"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 6,
+      "Variable": "CMDY"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 7,
+      "Variable": "CMDTC"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 7,
+      "Variable": "CMDY"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 8,
+      "Variable": "CMDTC"
+    },
+    {
+      "Sheet": "cm.xpt",
+      "Row": 8,
+      "Variable": "CMDY"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 12,
+      "Variable": "CEDTC"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 12,
+      "Variable": "CEDY"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 13,
+      "Variable": "CEDTC"
+    },
+    {
+      "Sheet": "ce.xpt",
+      "Row": 13,
+      "Variable": "CEDY"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 5,
+      "Variable": "LBDTC"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 5,
+      "Variable": "LBDY"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 6,
+      "Variable": "LBDTC"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 6,
+      "Variable": "LBDY"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 7,
+      "Variable": "LBDTC"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 7,
+      "Variable": "LBDY"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 8,
+      "Variable": "LBDTC"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 8,
+      "Variable": "LBDY"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 9,
+      "Variable": "LBDTC"
+    },
+    {
+      "Sheet": "lb.xpt",
+      "Row": 9,
+      "Variable": "LBDY"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 5,
+      "Variable": "FADTC"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 5,
+      "Variable": "FADY"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 6,
+      "Variable": "FADTC"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 6,
+      "Variable": "FADY"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 7,
+      "Variable": "FADTC"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 7,
+      "Variable": "FADY"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 8,
+      "Variable": "FADTC"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 8,
+      "Variable": "FADY"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 9,
+      "Variable": "FADTC"
+    },
+    {
+      "Sheet": "fa.xpt",
+      "Row": 9,
+      "Variable": "FADY"
+    },
+    {
+      "Sheet": "se.xpt",
+      "Row": 5,
+      "Variable": "SEDTC"
+    },
+    {
+      "Sheet": "se.xpt",
+      "Row": 5,
+      "Variable": "SEDY"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 5,
+      "Variable": "SVDTC"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 5,
+      "Variable": "SVDY"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 6,
+      "Variable": "SVDTC"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 6,
+      "Variable": "SVDY"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 7,
+      "Variable": "SVDTC"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 7,
+      "Variable": "SVDY"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 8,
+      "Variable": "SVDTC"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 8,
+      "Variable": "SVDY"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 9,
+      "Variable": "SVDTC"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 9,
+      "Variable": "SVDY"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 10,
+      "Variable": "SVDTC"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 10,
+      "Variable": "SVDY"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 11,
+      "Variable": "SVDTC"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 11,
+      "Variable": "SVDY"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 12,
+      "Variable": "SVDTC"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 12,
+      "Variable": "SVDY"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 13,
+      "Variable": "SVDTC"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 13,
+      "Variable": "SVDY"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 14,
+      "Variable": "SVDTC"
+    },
+    {
+      "Sheet": "sv.xpt",
+      "Row": 14,
+      "Variable": "SVDY"
+    },
+    {
+      "Sheet": "sm.xpt",
+      "Row": 6,
+      "Variable": "SMDTC"
+    },
+    {
+      "Sheet": "sm.xpt",
+      "Row": 6,
+      "Variable": "SMDY"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 5,
+      "Variable": "DMDTC"
+    },
+    {
+      "Sheet": "dm.xpt",
+      "Row": 5,
+      "Variable": "DMDY"
+    }
+  ]
+}

@@ -1,14 +1,16 @@
 # Variable: STRAIN
 # Condition: 
 # Rule: STRAIN not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: STRAIN is not be used in human clinical trials.
-                Document: SDTM v2.0
+              - Cited Guidance: Not in human clinical trials.
+                Document: Model v2.0
+                Item: STRAIN
                 Section: Demographics
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -41,7 +43,9 @@ Core:
 Description: Raise an error when STRAIN is present.
 Executability: Fully Executable
 Outcome:
-  Message: STRAIN is present.
+  Message: STRAIN must not be present.
+  Output Variables:
+    - STRAIN
 Rule Type: Record Data
 Scope:
   Classes:

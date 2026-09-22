@@ -4,7 +4,7 @@
       "dataset": "vs.xpt",
       "domain": "VS",
       "execution_status": "success",
-      "execution_message": "VSTPT and VSTPTNUM do not have a one-to-one relationship",
+      "execution_message": "VSTPT and VSTPTNUM do not have a one-to-one relationship when VISITNUM and VSTPTREF are not present in the dataset.",
       "number_errors": 6,
       "errors": [
         {
@@ -13,9 +13,11 @@
           "USUBJID": "CDISC001",
           "value": {
             "VSTPT": "10MIN POSTDOSE",
-            "VSTPTNUM": null
+            "VSTPTNUM": null,
+            "VISITNUM": "Not in dataset",
+            "VSTPTREF": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -23,9 +25,11 @@
           "USUBJID": "CDISC001",
           "value": {
             "VSTPT": null,
-            "VSTPTNUM": null
+            "VSTPTNUM": null,
+            "VISITNUM": "Not in dataset",
+            "VSTPTREF": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -33,9 +37,11 @@
           "USUBJID": "CDISC001",
           "value": {
             "VSTPT": "PREDOSE",
-            "VSTPTNUM": null
+            "VSTPTNUM": null,
+            "VISITNUM": "Not in dataset",
+            "VSTPTREF": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -43,9 +49,11 @@
           "USUBJID": "CDISC001",
           "value": {
             "VSTPT": "PREDOSE",
-            "VSTPTNUM": -1.0
+            "VSTPTNUM": -1.0,
+            "VISITNUM": "Not in dataset",
+            "VSTPTREF": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 5,
@@ -53,9 +61,11 @@
           "USUBJID": "CDISC001",
           "value": {
             "VSTPT": "10MIN POSTDOSE",
-            "VSTPTNUM": 5.0
+            "VSTPTNUM": 5.0,
+            "VISITNUM": "Not in dataset",
+            "VSTPTREF": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 6,
@@ -63,9 +73,11 @@
           "USUBJID": "CDISC001",
           "value": {
             "VSTPT": "5MIN POSTDOSE",
-            "VSTPTNUM": 5.0
+            "VSTPTNUM": 5.0,
+            "VISITNUM": "Not in dataset",
+            "VSTPTREF": "Not in dataset"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

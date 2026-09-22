@@ -1,0 +1,38 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVAL is not a valid term from MED-RT.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "PCLAS",
+            "TSVAL": "FAKENDFRTTERM"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "PCLAS",
+            "TSVAL": "N0000008290"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ],
+  "dictionary_versions": {
+    "medrt": {
+      "version": "April 2026"
+    }
+  }
+}

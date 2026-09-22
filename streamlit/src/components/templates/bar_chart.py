@@ -6,7 +6,7 @@ def make_horizontal_bar(df, title, tooltip_cols):
     if df.empty:
         return
 
-    df_sorted = df.sort_values(["Issue", "Core-ID"])
+    df_sorted = df.sort_values(["Issue", "CORE-ID"])
 
     source = df_sorted.copy()
     source["unit"] = 1

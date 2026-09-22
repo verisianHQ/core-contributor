@@ -1,0 +1,153 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "Study Day of Start of Observation (CMSTDY) variable is missing when Start Date/Time of Observation (CMSTDTC) is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "CMSTDY": "Not in dataset",
+            "CMSTDTC": "2011"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "execution_status": "success",
+      "execution_message": "Study Day of Start of Observation (CESTDY) variable is missing when Start Date/Time of Observation (CESTDTC) is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "CESTDY": "Not in dataset",
+            "CESTDTC": "2012-12-02"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "Study Day of Start of Observation (LBSTDY) variable is missing when Start Date/Time of Observation (LBSTDTC) is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "LBSTDY": "Not in dataset",
+            "LBSTDTC": "2012-11-23T11:20"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "Study Day of Start of Observation (FASTDY) variable is missing when Start Date/Time of Observation (FASTDTC) is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "FASTDY": "Not in dataset",
+            "FASTDTC": "2012-12-02"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "success",
+      "execution_message": "Study Day of Start of Observation (SESTDY) variable is missing when Start Date/Time of Observation (SESTDTC) is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "SESTDY": "Not in dataset",
+            "SESTDTC": "2012-11-23"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "sv.xpt",
+      "domain": "SV",
+      "execution_status": "success",
+      "execution_message": "Study Day of Start of Observation (SVSTDY) variable is missing when Start Date/Time of Observation (SVSTDTC) is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "SVSTDY": "Not in dataset",
+            "SVSTDTC": "2012-11-23"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "sm.xpt",
+      "domain": "SM",
+      "execution_status": "success",
+      "execution_message": "Study Day of Start of Observation (SMSTDY) variable is missing when Start Date/Time of Observation (SMSTDTC) is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "SMSTDY": "Not in dataset",
+            "SMSTDTC": "2011-11-23"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "tv.xpt",
+      "domain": "TV",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000328, dataset=TV",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}
