@@ -4,19 +4,16 @@
       "dataset": "qs.xpt",
       "domain": "QS",
       "execution_status": "success",
-      "execution_message": "QSEVAL must not be present.",
-      "number_errors": 1,
-      "errors": [
-        {
-          "row": null,
-          "SEQ": null,
-          "USUBJID": null,
-          "value": {
-            "QSEVAL": "PERSON A"
-          },
-          "validated": true
-        }
-      ]
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "QSEVAL": "[PRESENT]"
+      }
     }
   ]
 }

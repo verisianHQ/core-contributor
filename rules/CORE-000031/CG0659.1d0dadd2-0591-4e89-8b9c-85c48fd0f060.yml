@@ -31,10 +31,10 @@ Authorities:
                 Section: 6.3.9.3.2
 Check:
   any:
-    - name: QSEVAL
-      operator: exists
-    - name: FTEVAL
-      operator: exists
+#    - name: QSEVAL
+#      operator: exists
+#    - name: FTEVAL
+#      operator: exists
     - all:
      #   - name: RSEVAL
      #     operator: exists
@@ -42,7 +42,7 @@ Check:
           operator: is_contained_by
           value: $cccat_terms
 Operations:
-  - ct_attribute: Term Value
+  - ct_attribute: Term Signification
     id: $cccat_terms
     operator: get_codelist_attributes
     name: CCCAT

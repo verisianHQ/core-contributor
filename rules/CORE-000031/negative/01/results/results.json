@@ -4,19 +4,9 @@
       "dataset": "ft.xpt",
       "domain": "FT",
       "execution_status": "success",
-      "execution_message": "FTEVAL must not be present.",
-      "number_errors": 1,
-      "errors": [
-        {
-          "row": null,
-          "SEQ": null,
-          "USUBJID": null,
-          "value": {
-            "FTEVAL": "PERSON A"
-          },
-          "validated": true
-        }
-      ]
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     },
     {
       "dataset": "rs.xpt",
@@ -36,6 +26,11 @@
     }
   ],
   "unmatched_validation": [
+    {
+      "value": {
+        "FTEVAL": "[PRESENT]"
+      }
+    },
     {
       "value": {
         "RSEVAL": "[PRESENT]"
