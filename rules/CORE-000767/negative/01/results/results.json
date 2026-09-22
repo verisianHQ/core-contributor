@@ -4,7 +4,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "Parent record exists and CMDECOD is not null, but FAOBJ is not equal to CMDECOD.",
+      "execution_message": "Related record is present in the parent domain dataset with CMDECOD populated, but FAOBJ is not equal to CMDECOD in the parent domain dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -15,7 +15,7 @@
             "RELREC.FAOBJ": "ASPIRINA",
             "CMDECOD": "TEST"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -23,7 +23,7 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "Parent record exists and AEDECOD is not null, but FAOBJ is not equal to AEDECOD.",
+      "execution_message": "Related record is present in the parent domain dataset with AEDECOD populated, but FAOBJ is not equal to AEDECOD in the parent domain dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -34,7 +34,7 @@
             "RELREC.FAOBJ": "ERYTHEMA",
             "AEDECOD": "TEST"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -42,30 +42,9 @@
       "dataset": "fa.xpt",
       "domain": "FA",
       "execution_status": "success",
-      "execution_message": "Parent record exists and FADECOD is not null, but FAOBJ is not equal to FADECOD.",
-      "number_errors": 2,
-      "errors": [
-        {
-          "row": 1,
-          "SEQ": 1,
-          "USUBJID": "CDISC001",
-          "value": {
-            "RELREC.FAOBJ": "Not in dataset",
-            "FADECOD": "TEST"
-          },
-          "validated": false
-        },
-        {
-          "row": 1,
-          "SEQ": 1,
-          "USUBJID": "CDISC001",
-          "value": {
-            "RELREC.FAOBJ": "Not in dataset",
-            "FADECOD": "TEST"
-          },
-          "validated": false
-        }
-      ]
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     },
     {
       "dataset": "relrec.xpt",
@@ -74,23 +53,14 @@
       "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000767, dataset=RELREC",
       "number_errors": 0,
       "errors": []
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "cm.xpt",
-      "Row": 5,
-      "Variable": "CMDECOD"
     },
     {
-      "Sheet": "ae.xpt",
-      "Row": 5,
-      "Variable": "AEDECOD"
-    },
-    {
-      "Sheet": "fa.xpt",
-      "Row": 5,
-      "Variable": "FADECOD"
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     }
   ]
 }
