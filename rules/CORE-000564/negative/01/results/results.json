@@ -4,42 +4,30 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSPARMCD = INDIC or TSPARMCD = TDIGRP but TSVCDREF is not equal to 'SNOMED'.",
-      "number_errors": 1,
+      "execution_message": "TSPARMCD is equal to 'INDIC' or 'TDIGRP' but TSVCDREF is not equal to 'SNOMED'.",
+      "number_errors": 2,
       "errors": [
         {
-          "row": 50,
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "INDIC",
+            "TSVCDREF": "snomed"
+          },
+          "validated": true
+        },
+        {
+          "row": 8,
           "SEQ": 1,
           "USUBJID": "None",
           "value": {
             "TSPARMCD": "TDIGRP",
             "TSVCDREF": null
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ts.xpt",
-      "Row": 24,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 24,
-      "Variable": "TSVCDREF"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 54,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 54,
-      "Variable": "TSVCDREF"
     }
   ]
 }

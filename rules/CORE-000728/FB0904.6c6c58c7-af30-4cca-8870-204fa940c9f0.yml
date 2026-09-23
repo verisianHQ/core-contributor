@@ -1,16 +1,17 @@
-# Variable: TSVAL, TSVALCD
-# Condition: TSVCDREF ^= null
-# Rule: TSVALCD and TSVAL have a one-to-one relationship 
+# Variable: TSVALCD
+# Condition: TSVAL ^= null and TSVALCD ^= null
+# Rule: TSVALCD and TSVAL have a one-to-one relationship
+# verified
 Authorities:
   - Organization: FDA
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: All paired variables should have a one-to-one relationship.
-                  Examples include short name and name of test; parameter name
-                  and parameter code or number; variable name and variable
-                  label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one
+                  relationship. Examples include short name and name of test;
+                  parameter name and parameter code or number; variable name
+                  and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -22,10 +23,10 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: All paired variables should have a one-to-one relationship.
-                  Examples include short name and name of test; parameter name
-                  and parameter code or number; variable name and variable
-                  label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one
+                  relationship. Examples include short name and name of test;
+                  parameter name and parameter code or number; variable name
+                  and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -37,10 +38,10 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: All paired variables should have a one-to-one relationship.
-                  Examples include short name and name of test; parameter name
-                  and parameter code or number; variable name and variable
-                  label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one
+                  relationship. Examples include short name and name of test;
+                  parameter name and parameter code or number; variable name
+                  and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -53,11 +54,15 @@ Check:
   all:
     - name: TSVCDREF
       operator: exists
+    - name: TSVCDREF
+      operator: non_empty      
     - name: TSVAL
       operator: exists
+    - name: TSVAL
+      operator: non_empty
     - name: TSVALCD
       operator: exists
-    - name: TSVCDREF
+    - name: TSVALCD
       operator: non_empty
     - name: TSVAL
       operator: is_not_unique_relationship
@@ -66,7 +71,7 @@ Core:
   Id: CORE-000728
   Status: Published
   Version: '1'
-Description: TSVALCD and TSVAL should have a one-to-one relationship.
+Description: TSVALCD and TSVAL have a one-to-one relationship.
 Executability: Fully Executable
 Outcome:
   Message: TSVALCD and TSVAL do not have a one-to-one relationship.
