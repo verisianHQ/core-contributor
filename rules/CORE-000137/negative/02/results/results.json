@@ -1,0 +1,61 @@
+{
+  "datasets": [
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "success",
+      "execution_message": "ECDOSE must not be less than or equal to 0 when ECOCCUR is not equal to 'N' and ECSTAT and ECDOSTXT are both not populated.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 6,
+          "SEQ": 29,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ECOCCUR": "Y",
+            "ECSTAT": "Not in dataset",
+            "ECDOSTXT": null,
+            "ECDOSE": -1.0
+          },
+          "validated": true
+        },
+        {
+          "row": 13,
+          "SEQ": 124,
+          "USUBJID": "CDISC008",
+          "value": {
+            "ECOCCUR": "Y",
+            "ECSTAT": "Not in dataset",
+            "ECDOSTXT": null,
+            "ECDOSE": 0.0
+          },
+          "validated": true
+        },
+        {
+          "row": 15,
+          "SEQ": 126,
+          "USUBJID": "CDISC008",
+          "value": {
+            "ECOCCUR": "Y",
+            "ECSTAT": "Not in dataset",
+            "ECDOSTXT": null,
+            "ECDOSE": 0.0
+          },
+          "validated": true
+        },
+        {
+          "row": 16,
+          "SEQ": 127,
+          "USUBJID": "CDISC008",
+          "value": {
+            "ECOCCUR": null,
+            "ECSTAT": "Not in dataset",
+            "ECDOSTXT": null,
+            "ECDOSE": -5.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
