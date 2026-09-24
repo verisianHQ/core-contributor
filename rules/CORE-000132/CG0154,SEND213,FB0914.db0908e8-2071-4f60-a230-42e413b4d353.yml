@@ -316,6 +316,9 @@ Outcome:
     - ELEMENT
 Rule Type: Record Data
 Scope:
+  Classes:
+    Include:
+      - ALL
   Domains:
     Include:
       - TE
