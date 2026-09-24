@@ -4,7 +4,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "LBSTNRC is populated but LBORRES is a continuous measurement.",
+      "execution_message": "LBSTNRC must not be populated when LBORRES is a continuous measurement.",
       "number_errors": 4,
       "errors": [
         {
