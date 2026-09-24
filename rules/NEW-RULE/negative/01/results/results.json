@@ -4,7 +4,7 @@
       "dataset": "sv.xpt",
       "domain": "SV",
       "execution_status": "success",
-      "execution_message": "Variable is permissible and data is collected as per define-xml document but variable is not present in the dataset.",
+      "execution_message": "Variable is permissible and data is collected as per define.xml document but variable is not present in the dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -17,7 +17,7 @@
             "define_variable_is_collected": true,
             "variable_name": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -25,7 +25,7 @@
       "dataset": "tv.xpt",
       "domain": "TV",
       "execution_status": "success",
-      "execution_message": "Variable is permissible and data is collected as per define-xml document but variable is not present in the dataset.",
+      "execution_message": "Variable is permissible and data is collected as per define.xml document but variable is not present in the dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -38,27 +38,9 @@
             "define_variable_is_collected": true,
             "variable_name": null
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unmatched_validation": [
-    {
-      "value": {
-        "define_variable_name": "VISIT",
-        "define_variable_origin_type": "null",
-        "library_variable_core": "Perm",
-        "variable_name": "null"
-      }
-    },
-    {
-      "value": {
-        "define_variable_name": "TVENRL",
-        "define_variable_origin_type": "Collected",
-        "library_variable_core": "Perm",
-        "variable_name": "TVENRL"
-      }
     }
   ]
 }

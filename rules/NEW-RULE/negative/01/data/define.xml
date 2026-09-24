@@ -20,7 +20,7 @@
   ODMVersion="1.3.2"
   FileOID="www.cdisc.org/StudyMSGv2/1/Define-XML_2.1.0"
   FileType="Snapshot"
-  CreationDateTime="2021-01-24T16:59:3
+  CreationDateTime="2021-01-24T16:59:3"
   Originator="CDISC MSG Team"
   SourceSystem="M.Hungria-System"
   SourceSystemVersion="2.1-A1"
@@ -4877,7 +4877,7 @@
         <Description>
           <TranslatedText xml:lang="en">Visit Name</TranslatedText>
         </Description>
-        <def:Origin Type="CRF" Source="Sponsor"/>
+        <def:Origin Type="Collected" Source="Sponsor"/>
       </ItemDef>
       <ItemDef OID="IT.SV.SVSTDTC" Name="SVSTDTC" DataType="date" SASFieldName="SVSTDTC">
         <Description>
