@@ -36,22 +36,24 @@ Check:
     - name: library_variable_core
       operator: equal_to
       value: Perm
-    - name: define_variable_has_no_data
-      operator: empty
+      value_is_literal: true
+    - name: define_variable_is_collected
+      operator: equal_to
+      value: true
     - name: variable_name
       operator: empty
 Core:
   Id: CDISC.SDTMIG.CG0651
   Status: Published
   Version: '1'
-Description: Raise an error when a variable is permissible, data is collected as per define-xml document but variable is not present in the dataset.
+Description: Raise an error when a variable is permissible, data is collected as per define.xml document but variable is not present in the dataset.
 Executability: Fully Executable
 Outcome:
-  Message: Variable is permissible and data is collected as per define-xml document but variable is not present in the dataset.
+  Message: Variable is permissible and data is collected as per define.xml document but variable is not present in the dataset.
   Output Variables:
     - define_variable_name
-    - define_variable_has_no_data
     - library_variable_core
+    - define_variable_is_collected
     - variable_name
 Rule Type: Variable Metadata Check against Define XML and Library Metadata
 Scope:

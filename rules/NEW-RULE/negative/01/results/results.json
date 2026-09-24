@@ -13,11 +13,11 @@
           "USUBJID": "None",
           "value": {
             "define_variable_name": "VISIT",
-            "define_variable_has_no_data": null,
             "library_variable_core": "Perm",
+            "define_variable_is_collected": true,
             "variable_name": null
           },
-          "validated": true
+          "validated": false
         }
       ]
     },
@@ -34,13 +34,31 @@
           "USUBJID": "None",
           "value": {
             "define_variable_name": "TVENRL",
-            "define_variable_has_no_data": null,
             "library_variable_core": "Perm",
+            "define_variable_is_collected": true,
             "variable_name": null
           },
-          "validated": true
+          "validated": false
         }
       ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "define_variable_name": "VISIT",
+        "define_variable_origin_type": "null",
+        "library_variable_core": "Perm",
+        "variable_name": "null"
+      }
+    },
+    {
+      "value": {
+        "define_variable_name": "TVENRL",
+        "define_variable_origin_type": "Collected",
+        "library_variable_core": "Perm",
+        "variable_name": "TVENRL"
+      }
     }
   ]
 }
