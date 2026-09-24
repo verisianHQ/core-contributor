@@ -1,0 +1,40 @@
+{
+  "datasets": [
+    {
+      "dataset": "ta.xpt",
+      "domain": "TA",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=NEW-RULE, dataset=TA",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=NEW-RULE, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "TAETORD must match value and order of elements as defined in the TA dataset within ARM of the subject.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "SUBJ003",
+          "value": {
+            "USUBJID": "SUBJ003",
+            "TAETORD": 9.0,
+            "ARM": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
