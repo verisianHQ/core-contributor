@@ -3,10 +3,191 @@
     {
       "dataset": "se.xpt",
       "domain": "SE",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000132, dataset=SE",
-      "number_errors": 0,
-      "errors": []
+      "execution_status": "success",
+      "execution_message": "ELEMENT and ETCD do not have a one-to-one relationship.",
+      "number_errors": 18,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ETCD": "SCREEN",
+            "ELEMENT": "Screening"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "ETCD": null,
+            "ELEMENT": "Screening"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 1,
+          "USUBJID": "CDISC003",
+          "value": {
+            "ETCD": "SCREEN",
+            "ELEMENT": "Screening"
+          },
+          "validated": true
+        },
+        {
+          "row": 8,
+          "SEQ": 1,
+          "USUBJID": "CDISC004",
+          "value": {
+            "ETCD": "SCREEN",
+            "ELEMENT": "Screening"
+          },
+          "validated": true
+        },
+        {
+          "row": 10,
+          "SEQ": 1,
+          "USUBJID": "CDISC005",
+          "value": {
+            "ETCD": "SCREEN",
+            "ELEMENT": "Screening"
+          },
+          "validated": true
+        },
+        {
+          "row": 14,
+          "SEQ": 1,
+          "USUBJID": "CDISC006",
+          "value": {
+            "ETCD": "SCREEN",
+            "ELEMENT": "Screening"
+          },
+          "validated": true
+        },
+        {
+          "row": 16,
+          "SEQ": 1,
+          "USUBJID": "CDISC007",
+          "value": {
+            "ETCD": "SCREEN",
+            "ELEMENT": "Screening"
+          },
+          "validated": true
+        },
+        {
+          "row": 19,
+          "SEQ": 1,
+          "USUBJID": "CDISC008",
+          "value": {
+            "ETCD": "SCREEN",
+            "ELEMENT": "Screening"
+          },
+          "validated": true
+        },
+        {
+          "row": 21,
+          "SEQ": 1,
+          "USUBJID": "CDISC009",
+          "value": {
+            "ETCD": "SCREEN",
+            "ELEMENT": "Screening"
+          },
+          "validated": true
+        },
+        {
+          "row": 23,
+          "SEQ": 1,
+          "USUBJID": "CDISC010",
+          "value": {
+            "ETCD": "SCREEN",
+            "ELEMENT": "Screening"
+          },
+          "validated": true
+        },
+        {
+          "row": 25,
+          "SEQ": 1,
+          "USUBJID": "CDISC011",
+          "value": {
+            "ETCD": "SCREEN",
+            "ELEMENT": "Screening"
+          },
+          "validated": true
+        },
+        {
+          "row": 29,
+          "SEQ": 1,
+          "USUBJID": "CDISC012",
+          "value": {
+            "ETCD": "SCREEN",
+            "ELEMENT": "Screening"
+          },
+          "validated": true
+        },
+        {
+          "row": 31,
+          "SEQ": 1,
+          "USUBJID": "CDISC013",
+          "value": {
+            "ETCD": "SCREEN",
+            "ELEMENT": "Screening"
+          },
+          "validated": true
+        },
+        {
+          "row": 33,
+          "SEQ": 1,
+          "USUBJID": "CDISC014",
+          "value": {
+            "ETCD": "SCREEN",
+            "ELEMENT": "Screening"
+          },
+          "validated": true
+        },
+        {
+          "row": 36,
+          "SEQ": 1,
+          "USUBJID": "CDISC015",
+          "value": {
+            "ETCD": "SCREEN",
+            "ELEMENT": "Screening"
+          },
+          "validated": true
+        },
+        {
+          "row": 37,
+          "SEQ": 1,
+          "USUBJID": "CDISC016",
+          "value": {
+            "ETCD": "SCREEN",
+            "ELEMENT": "Screening"
+          },
+          "validated": true
+        },
+        {
+          "row": 39,
+          "SEQ": 1,
+          "USUBJID": "CDISC017",
+          "value": {
+            "ETCD": "SCREEN",
+            "ELEMENT": "Screening"
+          },
+          "validated": true
+        },
+        {
+          "row": 41,
+          "SEQ": 1,
+          "USUBJID": "CDISC018",
+          "value": {
+            "ETCD": "SCREEN",
+            "ELEMENT": "Screening"
+          },
+          "validated": true
+        }
+      ]
     },
     {
       "dataset": "ta.xpt",
