@@ -74,83 +74,11 @@
     },
     {
       "dataset": "apeg.xpt",
-      "domain": "AP",
+      "domain": "APEG",
       "execution_status": "success",
       "execution_message": "Variable is not listed in the Model List of Allowed Variables for the Observation Class and should be in supplemental qualifiers.",
-      "number_errors": 11,
+      "number_errors": 1,
       "errors": [
-        {
-          "row": 1,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "STUDYID"
-          },
-          "validated": true
-        },
-        {
-          "row": 2,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "DOMAIN"
-          },
-          "validated": false
-        },
-        {
-          "row": 3,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "APID"
-          },
-          "validated": false
-        },
-        {
-          "row": 4,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EGSEQ"
-          },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "RSUBJID"
-          },
-          "validated": false
-        },
-        {
-          "row": 6,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "SREL"
-          },
-          "validated": false
-        },
-        {
-          "row": 7,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EGTESTCD"
-          },
-          "validated": false
-        },
-        {
-          "row": 8,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EGTEST"
-          },
-          "validated": false
-        },
         {
           "row": 9,
           "SEQ": null,
@@ -158,25 +86,7 @@
           "value": {
             "variable_name": "XEGBEATNO"
           },
-          "validated": false
-        },
-        {
-          "row": 10,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EGORRES"
-          },
-          "validated": false
-        },
-        {
-          "row": 11,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "variable_name": "EGORRESU"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     }
