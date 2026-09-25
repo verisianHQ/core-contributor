@@ -8,10 +8,10 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'Upper end of reference range for continuous measurements in
+              - Cited Guidance: Upper end of reference range for continuous measurements in
                   standardized units. Should be populated only for continuous
-                  results. '
-                Document: SDTMIG v3.4
+                  results.
+                Document: IG v3.4
                 Item: Specification
                 Section: 6.3.5.6
             Origin: SDTM and SDTMIG Conformance Rules
@@ -67,9 +67,6 @@ Authorities:
         Substandard: SDTM
         Version: '1.0'
 Check:
-  # Changed by Marcelina Hungria on 2025-05-29 and revised on 2026-04-15.
-  # Fixed the regex and the LBORRES non-empty condition per revised description.
-  # Changed to Fully Executable. See Jira ticket: CORERULES-156 (CG0180) and SDTMIGRULE-288.
   all:
     - name: LBORRES
       operator: not_matches_regex
@@ -82,13 +79,10 @@ Core:
   Id: CORE-000299
   Status: Published
   Version: '1'
-Description: >-
-  Raise an error when LBORRES is not a quantitative value and LBSTNRHI is populated.
-  The interpretation of the guidance is that the rule applies when LBORRES is populated (not null).
-  Note: the rule logic applies until such time there is availability of reliable metadata to verify if the test is quantitative or not.
+Description: Raise an error when LBORRES is not a continuous measurement but LBSTNRHI is populated.
 Executability: Fully Executable
 Outcome:
-  Message: LBSTNRHI is populated when LBORRES is not a quantitative value.
+  Message: LBSTNRHI must not be populated when LBORRES is not a continuous measurement.
   Output Variables:
     - LBTESTCD
     - LBORRES

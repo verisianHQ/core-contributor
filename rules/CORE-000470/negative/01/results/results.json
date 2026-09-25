@@ -4,7 +4,7 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "A record exists in TS where TSPARMCD = STYPE and TSVAL = INTERVENTIONAL but TSVAL for TSPARMCD = INTTYPE is empty.",
+      "execution_message": "TSVAL must not be null for a record when TSPARMCD is equal to 'INTTYPE' where TSPARMCD is equal to 'STYPE' with TSVAL equal to 'INTERVENTIONAL'.",
       "number_errors": 1,
       "errors": [
         {
@@ -17,86 +17,9 @@
             "TSVAL": null,
             "$STYPE_INTERVENTIONAL": 1
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ts.xpt",
-      "Row": 23,
-      "Variable": "STUDYID"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 23,
-      "Variable": "DOMAIN"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 23,
-      "Variable": "TSSEQ"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 23,
-      "Variable": "TSGRPID"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 23,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 23,
-      "Variable": "TSPARM"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 23,
-      "Variable": "TSVAL"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 23,
-      "Variable": "TSVALNF"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 23,
-      "Variable": "TSVALCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 23,
-      "Variable": "TSVCDREF"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 23,
-      "Variable": "TSVCDVER"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 46,
-      "Variable": "TSPARMCD"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 46,
-      "Variable": "TSPARM"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 46,
-      "Variable": "TSVAL"
-    },
-    {
-      "Sheet": "ts.xpt",
-      "Row": 46,
-      "Variable": "TSVALNF"
     }
   ]
 }
