@@ -1,0 +1,93 @@
+# Variable: AVISIT
+# Condition: AVISIT and AVISITN are both populated
+# Rule: Within a given value of PARAMCD, there is more than one value of AVISIT for a given value of AVISITN
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '728'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.1
+                Section: '3.3.3'
+                Item: 'Table 3.3.3.1'
+                Cited Guidance: 
+                  'ADaMIG v1.1, Section 3.3.3, Table 3.3.3.1: AVISITN has Within a parameter, there is a one-to-one mapping between AVISITN and AVISIT so that AVISITN has the same value for each distinct AVISIT.'
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '728'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.2
+                Section: '3.3.3'
+                Item: 'Table 3.3.3.1'
+                Cited Guidance: 
+                  'ADaMIG v1.2, Section 3.3.3, Table 3.3.3.1: There must be a one-to-one relationship between AVISITN and AVISIT (i.e., AVISITN has the same value for each distinct AVISIT) within a parameter.'
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '728'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.3
+                Section: '3.3.3'
+                Item: 'Table 3.3.3.1'
+                Cited Guidance: 
+                  'ADaMIG v1.3, Section 3.3.3, Table 3.3.3.1: There must be a one-to-one relationship between AVISITN and AVISIT (i.e., AVISITN has the same value for each distinct AVISIT) within a parameter.'
+      - Name: ADaMIG-MD
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '728'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG-MD v1.0
+                Section: '3.1'
+                Cited Guidance: 
+                  'ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis needs by adding SPDEVID as a required key variable and USUBJID as a conditionally required variable. See the BDS class for further details.'
+Check:
+  all:
+    - name: AVISIT
+      operator: is_inconsistent_across_dataset
+      where_populated: true
+      value:
+        - PARAMCD
+        - AVISITN
+Core:
+  Id: AD0728
+  Status: Published
+  Version: '1'
+Description: Raise an error when, within a given value of PARAMCD, there is more than one value of AVISIT for a given value of AVISITN within BDS or MDBDS.
+Executability: Fully Executable
+Outcome:
+  Message: Within a given value of PARAMCD, there is more than one value of AVISIT for a given value of AVISITN within BDS or MDBDS.
+  Output Variables:
+    - PARAMCD
+    - AVISIT
+    - AVISITN
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - BDS
+      - MDBDS
+  Domains:
+    Include:
+      - BDS
+      - MDBDS
+Sensitivity: Record
