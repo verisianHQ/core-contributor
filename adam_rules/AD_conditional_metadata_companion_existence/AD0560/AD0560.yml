@@ -1,0 +1,61 @@
+# Variable: STRATARN, STRATAR
+# Condition: STRATARN is present
+# Rule: STRATAR is not present
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '560'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.3
+                Section: 3.1.1
+                Item: '6'
+                Cited Guidance: 
+                  'ADaMIG v1.3, Section 3.1.1, Item 6: When a secondary variable is included in the dataset, then the primary variable must also be included.'
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '560'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.2
+                Section: 3.1.1
+                Item: '6'
+                Cited Guidance: 
+                  'ADaMIG v1.2, Section 3.1.1, Item 6: When a secondary variable is included in the dataset, then the primary variable must also be included.'
+Check:
+  all:
+    - name: STRATARN
+      operator: exists
+    - name: STRATAR
+      operator: not_exists
+Core:
+  Id: AD0560
+  Status: Published
+  Version: '1'
+Description: Raise an error when the STRATARN variable is present within ADSL, but the STRATAR variable is not present.
+Executability: Fully Executable
+Outcome:
+  Message: STRATARN is present, but STRATAR is not present within ADSL.
+  Output Variables:
+    - STRATARN
+    - STRATAR
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ADSL
+  Domains:
+    Include:
+      - ADSL
+Sensitivity: Dataset
