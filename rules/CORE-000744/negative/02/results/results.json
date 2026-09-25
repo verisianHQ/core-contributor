@@ -12,7 +12,7 @@
       "dataset": "fa.xpt",
       "domain": "FA",
       "execution_status": "success",
-      "execution_message": "Related record is present in the parent domain dataset but FAOBJ is not equal to the \"TERM\", \"TRT\" or \"DECOD\" of the parent domain.",
+      "execution_message": "Related record is present in the parent domain dataset but FAOBJ is not equal to the 'TERM', 'TRT' or 'DECOD' of the parent domain.",
       "number_errors": 2,
       "errors": [
         {
@@ -21,11 +21,11 @@
           "USUBJID": "CDISC001",
           "value": {
             "FAOBJ": "INJECTION SITE REACTION",
-            "RELREC.**TERM": "Not in dataset",
+            "RELREC.**TERM": "INJECTION SITE REACTIONS",
             "RELREC.**TRT": "Not in dataset",
-            "RELREC.**DECOD": "Not in dataset"
+            "RELREC.**DECOD": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -33,11 +33,11 @@
           "USUBJID": "CDISC001",
           "value": {
             "FAOBJ": "FATIGUE",
-            "RELREC.**TERM": "Not in dataset",
+            "RELREC.**TERM": null,
             "RELREC.**TRT": "Not in dataset",
-            "RELREC.**DECOD": "Not in dataset"
+            "RELREC.**DECOD": "Headache"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -48,78 +48,6 @@
       "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000744, dataset=RELREC",
       "number_errors": 0,
       "errors": []
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ae.xpt",
-      "Row": 5,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 5,
-      "Variable": "AESEQ"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 5,
-      "Variable": "AETERM"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 5,
-      "Variable": "AEDECOD"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 6,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 6,
-      "Variable": "AESEQ"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 6,
-      "Variable": "AETERM"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 6,
-      "Variable": "AEDECOD"
-    },
-    {
-      "Sheet": "fa.xpt",
-      "Row": 7,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "fa.xpt",
-      "Row": 7,
-      "Variable": "FASEQ"
-    },
-    {
-      "Sheet": "fa.xpt",
-      "Row": 7,
-      "Variable": "FAOBJ"
-    },
-    {
-      "Sheet": "fa.xpt",
-      "Row": 8,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "fa.xpt",
-      "Row": 8,
-      "Variable": "FASEQ"
-    },
-    {
-      "Sheet": "fa.xpt",
-      "Row": 8,
-      "Variable": "FAOBJ"
     }
   ]
 }
