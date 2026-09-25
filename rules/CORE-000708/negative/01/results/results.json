@@ -15,7 +15,7 @@
             "SMSTDY": 100.0,
             "SMENDY": 50.0
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -34,7 +34,7 @@
             "SESTDY": 1435.0,
             "SEENDY": 1430.0
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -53,7 +53,7 @@
             "SVSTDY": -27.0,
             "SVENDY": -28.0
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -72,7 +72,7 @@
             "AESTDY": 8.0,
             "AEENDY": 7.0
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -91,36 +91,9 @@
             "CMSTDY": 13.0,
             "CMENDY": 12.0
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "sm.xpt",
-      "Row": 7,
-      "Variable": "SMSTDY"
-    },
-    {
-      "Sheet": "se.xpt",
-      "Row": 7,
-      "Variable": "SESTDY"
-    },
-    {
-      "Sheet": "sv.xpt",
-      "Row": 5,
-      "Variable": "SVSTDY"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 8,
-      "Variable": "AESTDY"
-    },
-    {
-      "Sheet": "cm.xpt",
-      "Row": 6,
-      "Variable": "CMSTDY"
     }
   ]
 }

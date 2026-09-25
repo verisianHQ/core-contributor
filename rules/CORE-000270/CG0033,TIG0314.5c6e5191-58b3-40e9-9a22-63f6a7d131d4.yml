@@ -80,6 +80,7 @@ Check:
       - name: SVPRESP
         operator: equal_to
         value: Y
+        value_is_literal: true
     - name: VISITNUM
       operator: is_not_contained_by
       value: $TV_VISITNUM

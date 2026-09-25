@@ -12,124 +12,84 @@
           "SEQ": 735,
           "USUBJID": "CDISC-TEST-046",
           "value": {
+            "AETERM": "HEADACHE",
             "AESOC": "Nervous system disorders",
             "AESOCCD": 10029205.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": 782,
           "USUBJID": "CDISC-TEST-049",
           "value": {
+            "AETERM": "HEADACHE",
             "AESOC": "Nervous system disorders",
             "AESOCCD": 10029206.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
           "SEQ": 783,
           "USUBJID": "CDISC-TEST-049",
           "value": {
+            "AETERM": "HEADACHE",
             "AESOC": "Nervous system disorders",
             "AESOCCD": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 5,
           "SEQ": 839,
           "USUBJID": "CDISC-TEST-052",
           "value": {
+            "AETERM": "HEADACHE",
             "AESOC": "Nervous system disorders",
             "AESOCCD": 10029205.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 6,
           "SEQ": 840,
           "USUBJID": "CDISC-TEST-052",
           "value": {
+            "AETERM": "HYPERTENSION",
             "AESOC": "Vascular disorders",
             "AESOCCD": 10047065.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 7,
           "SEQ": 843,
           "USUBJID": "CDISC-TEST-052",
           "value": {
+            "AETERM": "HYPERTENSION",
             "AESOC": null,
             "AESOCCD": 10047065.0
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ae.xpt",
-      "Row": 6,
-      "Variable": "AESOC"
     },
     {
-      "Sheet": "ae.xpt",
-      "Row": 6,
-      "Variable": "AESOCCD"
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000716, dataset=CM",
+      "number_errors": 0,
+      "errors": []
     },
     {
-      "Sheet": "ae.xpt",
-      "Row": 7,
-      "Variable": "AESOC"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 7,
-      "Variable": "AESOCCD"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 8,
-      "Variable": "AESOC"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 8,
-      "Variable": "AESOCCD"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 9,
-      "Variable": "AESOC"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 9,
-      "Variable": "AESOCCD"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 10,
-      "Variable": "AESOC"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 10,
-      "Variable": "AESOCCD"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 11,
-      "Variable": "AESOC"
-    },
-    {
-      "Sheet": "ae.xpt",
-      "Row": 11,
-      "Variable": "AESOCCD"
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     }
   ]
 }
