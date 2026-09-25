@@ -1,6 +1,7 @@
 # Variable: TSVAL
 # Condition: TSPARMCD = 'INTTYPE' and record exists where TSPARMCD = 'STYPE' and TSVAL = 'INTERVENTIONAL'
 # Rule: TSVAL ^= null
+# Verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -10,7 +11,7 @@ Authorities:
               - Cited Guidance: IG v3.3[7.4.2][Assumption 3][Further information about the
                   parameters is included below in Table 1. TSVAL may have
                   controlled terminology depending on the value of TSPARMCD]|IG
-                  v3.3[Appendix C1][If study type is "INTERVENTIONAL" this
+                  v3.3[Appendix C1][If study type is 'INTERVENTIONAL' this
                   parameter is required]
                 Document: IG v3.2
                 Item: IG v3.2[7.4][Assumption 3]|IG v3.2[Appendix C1]
@@ -29,7 +30,7 @@ Authorities:
                   may have controlled terminology depending on the value of
                   TSPARMCD. Conditions for including parameters are included in
                   Appendix C1, Trial Summary Codes.]|IG v3.3[Appendix C1][If
-                  study type is "INTERVENTIONAL" this parameter is required]
+                  study type is 'INTERVENTIONAL' this parameter is required]
                 Document: IG v3.3
                 Item: IG v3.3[7.4.2][Assumption 3]|IG v3.3[Appendix C1]
                 Section: IG v3.3[7.4.2]|IG v3.3[Appendix C1]
@@ -54,8 +55,8 @@ Core:
   Id: CORE-000470
   Status: Published
   Version: '1'
-Description: 'Raise an error when a record exists in TS where TSPARMCD = STYPE
-  and TSVAL = INTERVENTIONAL but TSVAL for TSPARMCD = INTTYPE is empty.'
+Description: Raise an error when a record exists in TS where TSPARMCD is equal to 'STYPE'
+  and TSVAL is equal to 'INTERVENTIONAL' but TSVAL for TSPARMCD is equal to 'INTTYPE' is not populated.
 Executability: Fully Executable
 Operations:
   - filter:
@@ -66,8 +67,8 @@ Operations:
     id: $STYPE_INTERVENTIONAL
     operator: record_count
 Outcome:
-  Message: 'A record exists in TS where TSPARMCD = STYPE and TSVAL =
-    INTERVENTIONAL but TSVAL for TSPARMCD = INTTYPE is empty.'
+  Message: TSVAL must not be null for a record when TSPARMCD is equal to 'INTTYPE' where TSPARMCD is 
+    equal to 'STYPE' with TSVAL equal to 'INTERVENTIONAL'.
   Output Variables:
     - TSGRPID
     - TSPARMCD
