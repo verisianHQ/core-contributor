@@ -81,6 +81,7 @@ Check:
     - name: AESER
       operator: not_equal_to
       value: N
+      value_is_literal: true
     - all:
         - any:
             - name: AESCAN
@@ -88,48 +89,56 @@ Check:
             - name: AESCAN
               operator: not_equal_to
               value: Y
+              value_is_literal: true
         - any:
             - name: AESCONG
               operator: not_exists
             - name: AESCONG
               operator: not_equal_to
               value: Y
+              value_is_literal: true
         - any:
             - name: AESDISAB
               operator: not_exists
             - name: AESDISAB
               operator: not_equal_to
               value: Y
+              value_is_literal: true
         - any:
             - name: AESDTH
               operator: not_exists
             - name: AESDTH
               operator: not_equal_to
               value: Y
+              value_is_literal: true
         - any:
             - name: AESHOSP
               operator: not_exists
             - name: AESHOSP
               operator: not_equal_to
               value: Y
+              value_is_literal: true
         - any:
             - name: AESLIFE
               operator: not_exists
             - name: AESLIFE
               operator: not_equal_to
               value: Y
+              value_is_literal: true
         - any:
             - name: AESOD
               operator: not_exists
             - name: AESOD
               operator: not_equal_to
               value: Y
+              value_is_literal: true
         - any:
             - name: AESMIE
               operator: not_exists
             - name: AESMIE
               operator: not_equal_to
               value: Y
+              value_is_literal: true
 Core:
   Id: CORE-000266
   Status: Published

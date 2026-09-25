@@ -4,8 +4,8 @@
       "dataset": "te.xpt",
       "domain": "TE",
       "execution_status": "success",
-      "execution_message": "The combination of TESTRL, TEENRL, and TEDUR is not unique for each ETCD.",
-      "number_errors": 5,
+      "execution_message": "The combination of ELEMENT, TESTRL, TEENRL, and TEDUR must be unique for each ETCD.",
+      "number_errors": 2,
       "errors": [
         {
           "row": 2,
@@ -18,7 +18,7 @@
             "TEENRL": "Not in dataset",
             "TEDUR": "P26W"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -31,150 +31,9 @@
             "TEENRL": "Not in dataset",
             "TEDUR": "P26W"
           },
-          "validated": false
-        },
-        {
-          "row": 6,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ETCD": "E006",
-            "ELEMENT": "Y",
-            "TESTRL": "INFORMED CONSENT SIGNED2",
-            "TEENRL": "Not in dataset",
-            "TEDUR": "P2W"
-          },
-          "validated": false
-        },
-        {
-          "row": 7,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ETCD": "E006",
-            "ELEMENT": "Y",
-            "TESTRL": "INFORMED CONSENT SIGNED2",
-            "TEENRL": "Not in dataset",
-            "TEDUR": "P2W"
-          },
-          "validated": false
-        },
-        {
-          "row": 8,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ETCD": "E007",
-            "ELEMENT": "Y",
-            "TESTRL": "INFORMED CONSENT SIGNED2",
-            "TEENRL": "Not in dataset",
-            "TEDUR": "P2W"
-          },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "te.xpt",
-      "Row": 6,
-      "Variable": "ETCD"
-    },
-    {
-      "Sheet": "te.xpt",
-      "Row": 6,
-      "Variable": "ELEMENT"
-    },
-    {
-      "Sheet": "te.xpt",
-      "Row": 6,
-      "Variable": "TESTRL"
-    },
-    {
-      "Sheet": "te.xpt",
-      "Row": 6,
-      "Variable": "TEDUR"
-    },
-    {
-      "Sheet": "te.xpt",
-      "Row": 7,
-      "Variable": "ETCD"
-    },
-    {
-      "Sheet": "te.xpt",
-      "Row": 7,
-      "Variable": "ELEMENT"
-    },
-    {
-      "Sheet": "te.xpt",
-      "Row": 7,
-      "Variable": "TESTRL"
-    },
-    {
-      "Sheet": "te.xpt",
-      "Row": 7,
-      "Variable": "TEDUR"
-    },
-    {
-      "Sheet": "te.xpt",
-      "Row": 10,
-      "Variable": "ETCD"
-    },
-    {
-      "Sheet": "te.xpt",
-      "Row": 10,
-      "Variable": "ELEMENT"
-    },
-    {
-      "Sheet": "te.xpt",
-      "Row": 10,
-      "Variable": "TESTRL"
-    },
-    {
-      "Sheet": "te.xpt",
-      "Row": 10,
-      "Variable": "TEDUR"
-    },
-    {
-      "Sheet": "te.xpt",
-      "Row": 11,
-      "Variable": "ETCD"
-    },
-    {
-      "Sheet": "te.xpt",
-      "Row": 11,
-      "Variable": "ELEMENT"
-    },
-    {
-      "Sheet": "te.xpt",
-      "Row": 11,
-      "Variable": "TESTRL"
-    },
-    {
-      "Sheet": "te.xpt",
-      "Row": 11,
-      "Variable": "TEDUR"
-    },
-    {
-      "Sheet": "te.xpt",
-      "Row": 12,
-      "Variable": "ETCD"
-    },
-    {
-      "Sheet": "te.xpt",
-      "Row": 12,
-      "Variable": "ELEMENT"
-    },
-    {
-      "Sheet": "te.xpt",
-      "Row": 12,
-      "Variable": "TESTRL"
-    },
-    {
-      "Sheet": "te.xpt",
-      "Row": 12,
-      "Variable": "TEDUR"
     }
   ]
 }

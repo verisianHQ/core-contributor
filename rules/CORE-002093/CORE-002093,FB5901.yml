@@ -47,9 +47,11 @@ Check:
       - name: define_variable_name
         operator: equal_to
         value: RACE
+        value_is_literal: true
       - name: define_variable_name
         operator: equal_to
         value: CRACE
+        value_is_literal: true
     - any:
       - name: define_variable_codelist_coded_values
         operator: not_matches_regex
