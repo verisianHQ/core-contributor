@@ -38,8 +38,8 @@ Check:
     - operator: non_empty
       name: ACTARMCD
 Core:
-  Id: ''
-  Status: Draft
+  Id: CORE-002099
+  Status: Published
   Version: '1'
 Description: Raise an error when subject is not assigned to treatment (ARMCD is not populated) but ACTARMCD is populated.
 Executability: Fully Executable
