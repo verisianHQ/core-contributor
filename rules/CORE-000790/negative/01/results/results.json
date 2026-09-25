@@ -4,13 +4,13 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "Subject is assigned to an arm code (randomized) but has no record in EX.",
+      "execution_message": "Subject is assigned to an arm (randomized) but has no record in EX.",
       "number_errors": 3,
       "errors": [
         {
           "row": 1,
           "SEQ": null,
-          "USUBJID": "015246-076-0003-00003",
+          "USUBJID": "123",
           "value": {
             "ARM": "IKd",
             "ACTARM": "IKd"
@@ -20,7 +20,7 @@
         {
           "row": 2,
           "SEQ": null,
-          "USUBJID": "015246-300-0004-00002",
+          "USUBJID": "124",
           "value": {
             "ARM": "IKd",
             "ACTARM": "IKd"
@@ -30,7 +30,7 @@
         {
           "row": 3,
           "SEQ": null,
-          "USUBJID": "015246-999-0004-9999",
+          "USUBJID": "125",
           "value": {
             "ARM": "IKd",
             "ACTARM": "IKd"

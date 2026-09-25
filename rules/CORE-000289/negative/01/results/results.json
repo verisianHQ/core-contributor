@@ -4,7 +4,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "LBORNRHI is populated when LBORRES is not a quantitative value.",
+      "execution_message": "LBORNRHI must not be populated when LBORRES is not a continuous measurment.",
       "number_errors": 6,
       "errors": [
         {
