@@ -55,8 +55,8 @@ Check:
     - name: LBSTNRC
       operator: non_empty
 Core:
-  Id: ''
-  Status: Draft
+  Id: CORE-002098
+  Status: Published
   Version: '1'
 Description: Raise an error when LBORRES is a continuous measurement but LBSTNRC is populated.
 Executability: Fully Executable
