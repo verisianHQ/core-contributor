@@ -8,23 +8,12 @@
       "number_errors": 3,
       "errors": [
         {
-          "row": 1,
+          "row": 2,
           "SEQ": null,
-          "USUBJID": "S001",
+          "USUBJID": "S002",
           "value": {
             "ETHNIC": "HISPANIC",
-            "CETHNIC": null,
-            "QVAL": "Not in dataset"
-          },
-          "validated": true
-        },
-        {
-          "row": 3,
-          "SEQ": null,
-          "USUBJID": "S003",
-          "value": {
-            "ETHNIC": "NOT HISPANIC",
-            "CETHNIC": null,
+            "CETHNIC": "HISPANIC",
             "QVAL": "Not in dataset"
           },
           "validated": true
@@ -34,8 +23,19 @@
           "SEQ": null,
           "USUBJID": "S004",
           "value": {
-            "ETHNIC": "XXXXXXX",
+            "ETHNIC": "LATINO",
             "CETHNIC": "LATINO",
+            "QVAL": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "S005",
+          "value": {
+            "ETHNIC": null,
+            "CETHNIC": "HISPANIC",
             "QVAL": "Not in dataset"
           },
           "validated": true
