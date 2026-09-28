@@ -57,8 +57,8 @@ Check:
     - name: TSVCDVER
       operator: empty
 Core:
-  Id: ''
-  Status: Draft
+  Id: CORE-002102
+  Status: Published
   Version: '1'
 Description: Raise an error when the reference terminology used in the TS dataset is versioned ('CDISC CT', 'UNII', 'SNOMED', 'MED-RT') but the version of the reference terminology is not provided.
 Executability: Partially Executable - Possible Underreporting
