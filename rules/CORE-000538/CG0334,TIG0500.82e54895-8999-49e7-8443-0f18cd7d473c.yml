@@ -80,11 +80,9 @@ Authorities:
 Check:
   all:
     - name: $dataset_names
-      operator: non_empty
-      #operator: does_not_equal_string_part
-      #operator: equals_string_part
-      #regex: .{4}(..).*
-      #value: $dataset_names
+      operator: does_not_equal_string_part
+      regex: .{4}(..).*
+      value: $dataset_names
 Core:
   Id: CORE-000538
   Status: Published
@@ -109,4 +107,4 @@ Scope:
     Include:
       - ALL
   Use Case: INDH, PROD
-Sensitivity: Study
+Sensitivity: Dataset

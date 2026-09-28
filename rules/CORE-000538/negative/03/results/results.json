@@ -3,21 +3,13 @@
     {
       "dataset": "supplbch.xpt",
       "domain": "SUPPLB",
-      "execution_status": "success",
-      "execution_message": "RDOMAIN must match characters 5 and 6 of the dataset name.",
+      "execution_status": "execution_error",
+      "execution_message": "SQL operator execution error",
       "number_errors": 1,
       "errors": [
         {
-          "row": null,
-          "SEQ": null,
-          "USUBJID": null,
-          "value": {
-            "$dataset_names": [
-              "supplbch"
-            ],
-            "RDOMAIN": "DM"
-          },
-          "validated": false
+          "error": "SQL error in does_not_equal_string_part operator",
+          "message": "Column '$dataset_names' not found in table 'SUPPLBCH'"
         }
       ]
     }
