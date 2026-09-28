@@ -25,6 +25,7 @@ Check:
     - name: --PDUR
       operator: contains
       value: "-"
+      value_is_literal: true
 Core:
   Id: CORE-000880
   Status: Published

@@ -1,6 +1,7 @@
 # Variable: IDVARVAL
 # Condition: IDVAR ^= null
 # Rule: IDVARVAL ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -15,7 +16,7 @@ Authorities:
                   the key variables STUDYID, RDOMAIN, and USUBJID are sufficient
                   to identify the unique parent record in DM (DM has one record
                   per USUBJID)
-                Document: SDTMIG v3.4
+                Document: IG v3.4
                 Section: 8.4.1
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -35,7 +36,7 @@ Authorities:
                   because the key variables STUDYID, RDOMAIN, and USUBJID are
                   sufficient to identify the unique parent record in DM (DM has
                   one record per USUBJID).
-                Document: SDTMIG v3.3
+                Document: IG v3.3
                 Section: 8.4.1
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -55,7 +56,7 @@ Authorities:
                   because the key variables STUDYID, RDOMAIN, and USUBJID are
                   sufficient to identify the unique parent record in DM (DM has
                   one record per USUBJID).
-                Document: SDTMIG v3.2
+                Document: IG v3.2
                 Section: 8.4.1
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -87,10 +88,11 @@ Core:
   Id: CORE-000135
   Status: Published
   Version: '1'
-Description: Raise an error when IDVAR is not empty and IDVARVAL is empty.
+Description: Raise an error when IDVAR is populated but IDVARVAL is 
+  not populated.
 Executability: Fully Executable
 Outcome:
-  Message: IDVAR is not empty but IDVARVAL is empty.
+  Message: IDVAR is populated but IDVARVAL is not populated.
   Output Variables:
     - IDVAR
     - IDVARVAL

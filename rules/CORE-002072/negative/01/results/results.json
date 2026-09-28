@@ -1,0 +1,32 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVAL is not a valid term from SNOMED CT.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "TDIGRP",
+            "TSVAL": "100000000",
+            "TSVALCD": "2"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ],
+  "dictionary_versions": {
+    "snomed": {
+      "edition": 2,
+      "language": "en",
+      "package": "INT",
+      "version": 20990101
+    }
+  }
+}

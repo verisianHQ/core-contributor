@@ -1,6 +1,7 @@
 # Variable: --EVDTYP
 # Condition: 
 # Rule: --EVDTYP not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -58,14 +59,13 @@ Core:
 Description: Raise an error when --EVDTYP is present in a dataset other than MH.
 Executability: Fully Executable
 Outcome:
-  Message: --EVDTYP is present in a dataset other than MH.
+  Message: --EVDTYP must not be present.
   Output Variables:
     - --EVDTYP
 Rule Type: Record Data
 Scope:
   Classes:
     Include:
-      #  - FINDINGS
       - EVENTS
   Domains:
     Exclude:

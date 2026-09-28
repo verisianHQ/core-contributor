@@ -30,7 +30,7 @@ jobs:
       - name: Detect changed rules
         id: changed-files
         run: |
-          CHANGED_FILES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD | grep -E '^rules/.*\.ya?ml$' || true)
+          CHANGED_FILES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD | grep -E '^(adam_rules|rules)/.*\.ya?ml$' || true)
           
           if [ -z "$CHANGED_FILES" ]; then
             echo "No YAML files changed in rules directory."
@@ -178,7 +178,7 @@ jobs:
             });
 
             const botReviewComments = existingReviewComments.filter(comment => 
-              comment.body.includes('')
+              comment.user && comment.user.login === 'github-actions[bot]'
             );
 
             for (const comment of botReviewComments) {
@@ -197,7 +197,7 @@ jobs:
             });
 
             const botIssueComments = existingIssueComments.filter(comment => 
-              comment.body.includes('')
+              comment.user && comment.user.login === 'github-actions[bot]'
             );
 
             for (const comment of botIssueComments) {

@@ -56,6 +56,7 @@ Check:
         - NOT ASSIGNED
         - NOT TREATED
         - UNPLANNED TREATMENT
+      value_is_literal: true
     - name: ACTARM
       operator: is_not_contained_by
       value: $ARMS_IN_TA

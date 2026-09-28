@@ -1,0 +1,43 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "QNAM equal to 'AESOSP' is present in the SUPPAE dataset, but no record with AESMIE equal to 'Y' is present in the AE dataset.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "AESOSP": "SPONTANEOUS ABORTION ",
+            "AETERM": "UPSET STOMACH",
+            "AESMIE": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "CDISC-TEST-002",
+          "value": {
+            "AESOSP": "HIGH RISK FOR ADDITIONAL THROMBOSIS",
+            "AETERM": "BRONCHITIS",
+            "AESMIE": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "suppae.xpt",
+      "domain": "SUPPAE",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000597, dataset=SUPPAE",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}
