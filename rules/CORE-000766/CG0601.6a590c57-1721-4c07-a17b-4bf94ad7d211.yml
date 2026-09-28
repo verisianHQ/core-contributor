@@ -1,6 +1,7 @@
 # Variable: --OBJ
 # Condition: Events parent record exists and DECOD = null
 # Rule: --OBJ = --TERM
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -22,8 +23,11 @@ Authorities:
         Version: '3.4'
 Check:
   all:
-    - name: --DECOD
-      operator: empty
+    - any:
+      - name: --DECOD
+        operator: empty
+      - name: --DECOD
+        operator: not_exists
     - name: --TERM
       operator: not_equal_to
       value: RELREC.FAOBJ
@@ -31,19 +35,18 @@ Core:
   Id: CORE-000766
   Status: Published
   Version: '1'
-Description: 'When findings are collected, and the Events parent record exists
-  and --DECOD is null, FAOBJ should not be equal to --TERM'
+Description: Raise an error when Events parent record exists
+  and --DECOD is not populated or not present, but FAOBJ is not equal to --TERM.
 Executability: Fully Executable
 Match Datasets:
   - Name: RELREC
     Wildcard: FA
 Outcome:
-  Message: Related record is present in the parent domain dataset and "Other,
-    specify" value was coded.
+  Message: Related record is present in the parent events domain dataset with --DECOD not populated or not present, but FAOBJ is not equal to the --TERM in the parent domain dataset.
   Output Variables:
+    - RELREC.FAOBJ
     - --DECOD
     - --TERM
-    - RELREC.FAOBJ
 Rule Type: Record Data
 Scope:
   Classes:

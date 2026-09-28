@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Subject is not assigned to treatment (ARMCD is not populated) but ACTARMCD is populated.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "ARMCD": null,
+            "ACTARMCD": "ZAN_LOW"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC003",
+          "value": {
+            "ARMCD": null,
+            "ACTARMCD": "ZAN_HIGH"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
