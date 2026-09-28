@@ -74,6 +74,7 @@ Check:
     - name: --TESTCD
       operator: equal_to
       value: MULTIPLE
+      value_is_literal: true
 Core:
   Id: CORE-000162
   Status: Published

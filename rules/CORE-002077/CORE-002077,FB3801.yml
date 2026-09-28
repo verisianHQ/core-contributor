@@ -142,6 +142,7 @@ Check:
     - name: library_variable_role
       operator: equal_to
       value: Timing
+      value_is_literal: true
     - name: define_variable_has_no_data
       operator: empty
     - any:

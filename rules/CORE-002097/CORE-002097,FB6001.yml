@@ -43,6 +43,7 @@ Check:
     - name: CRACE
       operator: equal_to_case_insensitive
       value: Haitian
+      value_is_literal: true
     - any:
       - all:
         - name: RACE
@@ -52,6 +53,7 @@ Check:
         - name: RACE
           operator: not_equal_to
           value: MULTIPLE
+          value_is_literal: true
       - all:
         - name: RACE
           operator: equal_to

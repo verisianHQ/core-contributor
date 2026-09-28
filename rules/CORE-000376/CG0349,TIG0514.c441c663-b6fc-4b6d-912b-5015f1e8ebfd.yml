@@ -118,6 +118,7 @@ Check:
         - RDEVID
         - SREL
         - APID
+      value_is_literal: true
     - name: variable_name
       operator: prefix_is_not_contained_by
       prefix: 2
