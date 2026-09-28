@@ -4,7 +4,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "LBSPCUFL is not null or equal to 'N'",
+      "execution_message": "LBSPCUFL must be null or equal to 'N'.",
       "number_errors": 2,
       "errors": [
         {
@@ -14,7 +14,7 @@
           "value": {
             "LBSPCUFL": "Y"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -23,7 +23,7 @@
           "value": {
             "LBSPCUFL": "No"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

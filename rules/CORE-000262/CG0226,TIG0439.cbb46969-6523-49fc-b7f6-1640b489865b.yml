@@ -1,6 +1,7 @@
 # Variable: --STRF
 # Condition: DM.RFSTDTC = null
 # Rule: --STRF = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -84,16 +85,17 @@ Core:
   Id: CORE-000262
   Status: Published
   Version: '1'
-Description: Raise an error when RFSTDTC in DM is empty and --STRF is not empty.
+Description: Raise an error when RFSTDTC in the DM dataset is not populated but --STRF is populated.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: DM
 Outcome:
-  Message: RFSTDTC in DM dataset is empty but --STRF is completed.
+  Message: RFSTDTC in DM the dataset is not populated but --STRF is populated.
   Output Variables:
     - --STRF
+    - RFSTDTC
 Rule Type: Record Data
 Scope:
   Classes:

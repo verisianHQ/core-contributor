@@ -1,6 +1,7 @@
 # Variable: DTHFL
 # Condition: DTHFL= "Y"
 # Rule: Record present in DS where DSDECOD= "DEATH"
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -57,9 +58,7 @@ Core:
   Id: CORE-000679
   Status: Published
   Version: '1'
-Description: When Death flag (DTHFL) in the DM dataset is populated as 'Y' then
-  a record should be present in the DS dataset where DSDECOD = 'DEATH' for the
-  corresponding subject.
+Description: Raise an error when DTHFL is equal to 'Y' in the DM dataset but a record where DSDECOD is equal to 'DEATH' is not present in the DS dataset for the corresponding subject.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
@@ -73,10 +72,11 @@ Operations:
     name: DSDECOD
     operator: distinct
 Outcome:
-  Message: DTHFL in DM dataset is "Y" but a record is missing in DS dataset where
-    DSDECOD = "DEATH".
+  Message: DTHFL in DM dataset is 'Y' but a record is missing in DS dataset where DSDECOD = 'DEATH'.
   Output Variables:
     - USUBJID
+    - DTHFL
+    - $ds_dsdecod
 Rule Type: Record Data
 Scope:
   Classes:

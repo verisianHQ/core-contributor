@@ -1,6 +1,7 @@
 # Variable: TRLAT
 # Condition: 
 # Rule: TRLAT not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -20,7 +21,7 @@ Authorities:
                   was developed largely to reduce duplication of stored information.
                 Document: IG v3.4
                 Section: 6.3.12.2
-                Item: TR Description/Overview
+                Item: TR – Description/Overview
       - Name: SDTMIG
         Version: '3.2'
         References:
@@ -66,7 +67,9 @@ Core:
 Description: Raise an error when TRLAT is present.
 Executability: Fully Executable
 Outcome:
-  Message: TRLAT is present.
+  Message: TRLAT must not be present.
+  Output Variables:
+    - TRLAT
 Rule Type: Record Data
 Scope:
   Classes:

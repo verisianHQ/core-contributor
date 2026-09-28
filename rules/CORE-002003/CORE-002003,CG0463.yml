@@ -54,6 +54,7 @@ Check:
     - name: define_dataset_class
       operator: equal_to
       value: INTERVENTIONS
+      value_is_literal: true
     - name: --TRT
       operator: not_exists
 Core:
