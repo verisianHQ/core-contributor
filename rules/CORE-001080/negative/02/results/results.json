@@ -1,0 +1,25 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVALCD must be a valid code in the CDISC CT version identified in TSVCDVER.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVALCD": "C128949",
+            "TSPARMCD": "CLTMDTYP",
+            "TSVCDVER": "2016-09-30",
+            "TSVCDREF": "CDISC CT"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

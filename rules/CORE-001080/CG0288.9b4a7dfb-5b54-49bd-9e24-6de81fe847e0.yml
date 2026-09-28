@@ -49,10 +49,15 @@ Authorities:
         Version: '3.2'
 Check:
   all:
-    - name: TSVCDREF
-      operator: prefix_equal_to
-      prefix: 5
-      value: CDISC
+    - any:
+      - name: TSVCDREF
+        operator: equal_to
+        value: CDISC
+        value_is_literal: true
+      - name: TSVCDREF
+        operator: equal_to
+        value: CDISC CT
+        value_is_literal: true
     - name: $VALID_TERM_CODES
       operator: non_empty
     - name: TSVALCD
@@ -78,6 +83,7 @@ Outcome:
     - TSVALCD
     - TSPARMCD
     - TSVCDVER
+    - TSVCDREF
 Rule Type: Record Data
 Scope:
   Classes:
