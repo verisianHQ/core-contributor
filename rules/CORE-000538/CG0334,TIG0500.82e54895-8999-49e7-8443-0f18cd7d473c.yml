@@ -1,6 +1,7 @@
 # Variable: RDOMAIN
 # Condition: Dataset name begins with 'SUPP'
 # Rule: Value of RDOMAIN equals characters 5 and 6 of the dataset name
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -79,10 +80,10 @@ Authorities:
         Version: '1.0'
 Check:
   all:
-    - name: $dataset_names
+    - name: RDOMAIN
       operator: does_not_equal_string_part
       regex: .{4}(..).*
-      value: $dataset_names
+      value: $dataset_name
 Core:
   Id: CORE-000538
   Status: Published
@@ -91,12 +92,13 @@ Description: Raise an error when RDOMAIN does not match characters 5 and 6 of
   the Supplementary dataset name.
 Executability: Fully Executable
 Operations:
-  - operator: dataset_names
-    id: $dataset_names
+  - id: $dataset_name
+    name: dataset_name
+    operator: extract_metadata
 Outcome:
   Message: RDOMAIN must match characters 5 and 6 of the dataset name.
   Output Variables:
-    - $dataset_names
+    - $dataset_name
     - RDOMAIN
 Rule Type: Record Data
 Scope:
@@ -105,6 +107,6 @@ Scope:
       - ALL
   Domains:
     Include:
-      - ALL
+      - SUPP--
   Use Case: INDH, PROD
-Sensitivity: Dataset
+Sensitivity: Record
