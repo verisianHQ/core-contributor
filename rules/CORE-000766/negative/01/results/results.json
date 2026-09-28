@@ -12,7 +12,7 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "Related record is present in the parent domain dataset and \"Other, specify\" value was coded.",
+      "execution_message": "Related record is present in the parent events domain dataset with AEDECOD not populated or not present, but FAOBJ is not equal to the AETERM in the parent domain dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -20,11 +20,11 @@
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
+            "RELREC.FAOBJ": "ERROR",
             "AEDECOD": null,
-            "AETERM": "FATIGUE",
-            "RELREC.FAOBJ": "ERROR"
+            "AETERM": "FATIGUE"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -43,93 +43,26 @@
       "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000766, dataset=RELREC",
       "number_errors": 0,
       "errors": []
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ae.xpt",
-      "Row": 7,
-      "Variable": "AETERM"
     },
     {
-      "Sheet": "ae.xpt",
-      "Row": 7,
-      "Variable": "AEDECOD"
-    },
-    {
-      "Sheet": "fa.xpt",
-      "Row": 6,
-      "Variable": "FAOBJ"
-    },
-    {
-      "Sheet": "relrec.xpt",
-      "Row": 9,
-      "Variable": "STUDYID"
-    },
-    {
-      "Sheet": "relrec.xpt",
-      "Row": 9,
-      "Variable": "RDOMAIN"
-    },
-    {
-      "Sheet": "relrec.xpt",
-      "Row": 9,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "relrec.xpt",
-      "Row": 9,
-      "Variable": "IDVAR"
-    },
-    {
-      "Sheet": "relrec.xpt",
-      "Row": 9,
-      "Variable": "IDVARVAL"
-    },
-    {
-      "Sheet": "relrec.xpt",
-      "Row": 9,
-      "Variable": "RELTYPE"
-    },
-    {
-      "Sheet": "relrec.xpt",
-      "Row": 9,
-      "Variable": "RELID"
-    },
-    {
-      "Sheet": "relrec.xpt",
-      "Row": 10,
-      "Variable": "STUDYID"
-    },
-    {
-      "Sheet": "relrec.xpt",
-      "Row": 10,
-      "Variable": "RDOMAIN"
-    },
-    {
-      "Sheet": "relrec.xpt",
-      "Row": 10,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "relrec.xpt",
-      "Row": 10,
-      "Variable": "IDVAR"
-    },
-    {
-      "Sheet": "relrec.xpt",
-      "Row": 10,
-      "Variable": "IDVARVAL"
-    },
-    {
-      "Sheet": "relrec.xpt",
-      "Row": 10,
-      "Variable": "RELTYPE"
-    },
-    {
-      "Sheet": "relrec.xpt",
-      "Row": 10,
-      "Variable": "RELID"
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "execution_status": "success",
+      "execution_message": "Related record is present in the parent events domain dataset with MHDECOD not populated or not present, but FAOBJ is not equal to the MHTERM in the parent domain dataset.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "RELREC.FAOBJ": "ASPIRIN",
+            "MHDECOD": "Not in dataset",
+            "MHTERM": "ALZHEIMER'S DISEASE"
+          },
+          "validated": true
+        }
+      ]
     }
   ]
 }
