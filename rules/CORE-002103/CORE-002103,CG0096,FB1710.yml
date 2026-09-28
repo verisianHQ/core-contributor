@@ -124,8 +124,8 @@ Check:
       operator: is_not_valid_whodrug_term_reference
       case_insensitive: true
 Core:
-  Id: CDISC.SDTMIG.CG0096
-  Status: Draft
+  Id: CORE-002103
+  Status: Published
   Version: '1'
 Description: Raise an error when value for --DECOD is not found in MedDRA dictionary.
 Executability: Fully Executable
