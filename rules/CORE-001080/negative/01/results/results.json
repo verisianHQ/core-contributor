@@ -5,7 +5,7 @@
       "domain": "TS",
       "execution_status": "success",
       "execution_message": "TSVALCD must be a valid code in the CDISC CT version identified in TSVCDVER.",
-      "number_errors": 2,
+      "number_errors": 3,
       "errors": [
         {
           "row": 3,
@@ -30,6 +30,18 @@
             "TSVCDREF": "CDISC CT"
           },
           "validated": true
+        },
+        {
+          "row": 51,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "TSVALCD": "C205490",
+            "TSPARMCD": "RACEC",
+            "TSVCDVER": "2024-09-27",
+            "TSVCDREF": "CDISC CT"
+          },
+          "validated": false
         }
       ]
     }
