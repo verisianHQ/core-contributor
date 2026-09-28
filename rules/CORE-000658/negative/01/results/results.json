@@ -1,0 +1,43 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "RFICDTC falls after RFXSTDTC.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "CDISC005",
+          "value": {
+            "RFICDTC": "2019-03-20",
+            "RFXSTDTC": "2018-02-20T09:40"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "CDISC006",
+          "value": {
+            "RFICDTC": "2018-02-20T11:50",
+            "RFXSTDTC": "2018-02-20T09:40"
+          },
+          "validated": true
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "CDISC007",
+          "value": {
+            "RFICDTC": "2018-02-20T09:50",
+            "RFXSTDTC": "2018-02-20"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
