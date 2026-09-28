@@ -134,8 +134,8 @@ Check:
       operator: not_equal_to
       value: PPSPEC
 Core:
-  Id: FDA.SDTMIG.FB7101
-  Status: Draft
+  Id: CORE-002105
+  Status: Published
   Version: '1'
 Description: Raise an error when for the same drug or metabolite (PCTEST = PCCAT), specimen type (--SPEC) is not consistent across pharmacokinetic datasets within a submission. 
 Executability: Fully Executable
