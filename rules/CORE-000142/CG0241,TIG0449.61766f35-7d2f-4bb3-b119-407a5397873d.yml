@@ -105,6 +105,9 @@ Check:
         - VISITNUM
         - --TPTREF
         - --TPTNUM
+      where_populated: true
+      where_populated_columns:
+        - --TPT
 Core:
   Id: CORE-000142
   Status: Published
