@@ -43,21 +43,27 @@ Check:
     - name: variable_name
       operator: not_equal_to
       value: EXMETHOD
+      value_is_literal: true
     - name: variable_name
       operator: not_equal_to
       value: EGBEATNO
+      value_is_literal: true
     - name: variable_name
       operator: not_equal_to
       value: ICIMPLBL
+      value_is_literal: true
     - name: variable_name
       operator: not_equal_to
       value: MSAGENT
+      value_is_literal: true
     - name: variable_name
       operator: not_equal_to
       value: MSCONC
+      value_is_literal: true
     - name: variable_name
       operator: not_equal_to
       value: MSCONCU
+      value_is_literal: true
     - name: variable_name
       operator: is_not_contained_by
       value: $allowed_variables
