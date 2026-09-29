@@ -2,9 +2,9 @@
   "datasets": [
     {
       "dataset": "aplb.xpt",
-      "domain": "AP",
+      "domain": "APLB",
       "execution_status": "success",
-      "execution_message": "AP DOMAIN value should start with 'AP' and length should be equal to 4.",
+      "execution_message": "DOMAIN value for an AP domain must be 4 characters long, beginning with 'AP' and ending with a valid 2-character SDTM domain code.",
       "number_errors": 7,
       "errors": [
         {
@@ -21,7 +21,7 @@
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "DOMAIN": "APL"
+            "DOMAIN": "APAP"
           },
           "validated": true
         },
@@ -30,7 +30,7 @@
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "DOMAIN": "LBLB"
+            "DOMAIN": "APL"
           },
           "validated": true
         },
@@ -39,7 +39,7 @@
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "DOMAIN": "APXX"
+            "DOMAIN": "AP1B"
           },
           "validated": true
         },
@@ -48,7 +48,7 @@
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "DOMAIN": "APXXLB"
+            "DOMAIN": "LBLB"
           },
           "validated": true
         },
@@ -57,7 +57,7 @@
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "DOMAIN": "AP1B"
+            "DOMAIN": "APXX"
           },
           "validated": true
         },
@@ -66,7 +66,7 @@
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "DOMAIN": "APAP"
+            "DOMAIN": "APXXLB"
           },
           "validated": true
         }
