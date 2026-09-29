@@ -1,0 +1,90 @@
+{
+  "datasets": [
+    {
+      "dataset": "ft.xpt",
+      "domain": "FT",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "te.xpt",
+      "domain": "TE",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "td.xpt",
+      "domain": "TD",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "FTDUR": "2003-12-15T10:00"
+      }
+    },
+    {
+      "value": {
+        "FTPDUR": "2W"
+      }
+    },
+    {
+      "value": {
+        "FTELTM": "P26"
+      }
+    },
+    {
+      "value": {
+        "FTSTINT": "-26"
+      }
+    },
+    {
+      "value": {
+        "FTENINT": "2012-11-28"
+      }
+    },
+    {
+      "value": {
+        "TEDUR": "2W"
+      }
+    },
+    {
+      "value": {
+        "TEDUR": "P26"
+      }
+    },
+    {
+      "value": {
+        "TEDUR": "-26"
+      }
+    },
+    {
+      "value": {
+        "TDSTOFF": "2003-12-15T10:00"
+      }
+    },
+    {
+      "value": {
+        "TDTGTPAI": "2W"
+      }
+    },
+    {
+      "value": {
+        "TDMINPAI": "P26"
+      }
+    },
+    {
+      "value": {
+        "TDMAXPAI": "-26"
+      }
+    }
+  ]
+}
