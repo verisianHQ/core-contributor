@@ -119,9 +119,11 @@ Check:
         - name: TSPARMCD
           operator: equal_to
           value: AGE
+          value_is_literal: true
         - name: TSPARMCD
           operator: equal_to
           value: AGETXT
+          value_is_literal: true
     - name: $age_count
       operator: greater_than_or_equal_to
       value: 1

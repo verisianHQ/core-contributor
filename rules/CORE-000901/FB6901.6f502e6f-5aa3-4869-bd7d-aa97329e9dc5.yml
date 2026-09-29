@@ -1,3 +1,7 @@
+# Variable: PPCAT
+# Condition: 
+# Rule: PPCAT in PC.PCTEST
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -144,22 +148,24 @@ Check:
       operator: not_equal_to
       value: RELREC.PCTEST
 Core:
+  Id: CORE-000901
   Status: Published
   Version: '1'
-  Id: CORE-000901
-Description: 'The values of PPCAT and PCTEST do not match at the same reference timepoint'
-Executability: Partially Executable
+Description: Parameter Category for a drug or metabolite (PPCAT) matches Test Name
+  (PCTEST) for that same drug or metabolite.
+Executability: Partially Executable - Possible Underreporting
 Match Datasets:
   - Name: RELREC
     Wildcard: PC
 Outcome:
-  Message: 'The values of PPCAT and PCTEST do not match at the same reference timepoint'
+  Message: Parameter Category for a drug or metabolite (PPCAT) does not match a
+    Test Name (PCTEST) in the PC dataset.
   Output Variables:
     - PPCAT
     - PPRFTDTC
-    - PPCAT
     - RELREC.PCRFTDTC
     - RELREC.PCTEST
+Sensitivity: Record
 Rule Type: Record Data
 Scope:
   Classes:
@@ -168,4 +174,3 @@ Scope:
   Domains:
     Include:
       - PP
-Sensitivity: Record

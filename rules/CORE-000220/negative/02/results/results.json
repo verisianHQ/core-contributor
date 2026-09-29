@@ -4,7 +4,7 @@
       "dataset": "vs.xpt",
       "domain": "VS",
       "execution_status": "success",
-      "execution_message": "VSTESTCD > 8 chars or contains more than only letters, numbers, underscores, or starts with a number.",
+      "execution_message": "VSTESTCD must be shorter than 9 characters and must not contain characters besides letters, numbers, and underscores, and must not start with a number.",
       "number_errors": 8,
       "errors": [
         {

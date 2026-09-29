@@ -1,30 +1,24 @@
 # Variable: --CAT
 # Condition: --SCAT ^= null
 # Rule: --CAT ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: A further grouping or classification of the category for the
-                  topic of the finding, event, or intervention. The category is
-                  in --CAT.
+              - Cited Guidance: Interventions[A further grouping or 
+                  classification of the category for the topic of the finding,
+                  event, or intervention. The category is in --CAT.]|Events[A
+                  further grouping or classification of the category for the 
+                  topic of the finding, event, or intervention. The category 
+                  is in --CAT.]|Findings[A further grouping or classification
+                  of the category for the topic of the finding, event, or 
+                  intervention. The category is in --CAT.]
                 Document: Model v2.0
                 Item: --SCAT
-                Section: Interventions
-              - Cited Guidance: A further grouping or classification of the category for the
-                  topic of the finding, event, or intervention. The category is
-                  in --CAT.
-                Document: Model v2.0
-                Item: --SCAT
-                Section: Events
-              - Cited Guidance: A further grouping or classification of the category for the
-                  topic of the finding, event, or intervention. The category is
-                  in --CAT.
-                Document: Model v2.0
-                Item: --SCAT
-                Section: Findings
+                Section: Interventions|Events|Findings
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0429
@@ -46,14 +40,15 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: '2.2.1[Table 3.2.1 --SCAT][Used to define a further
-                  categorization of --CAT values.]|2.2.2[Table 3.2.2
-                  --SCAT][Used to define a further categorization of --CAT
-                  values.]|2.2.3[Table 3.2.3 --SCAT][Used to define a further
-                  categorization of --CAT values.]'
+              - Cited Guidance: >-
+                  2.2.1[Table 3.2.1: --SCAT][Used to define a further 
+                  categorization of --CAT values.]|2.2.2[Table 3.2.2:
+                  --SCAT][Used to define a further categorization of 
+                  --CAT values.]|2.2.3[Table 3.2.3: --SCAT][Used to 
+                  define a further categorization of --CAT values.]
                 Document: Model v1.7
-                Item: '2.2.1[Table 3.2.1: --SCAT]|2.2.2[Table 3.2.2: --SCAT]|2.2.3[Table 3.2.3:
-                  --SCAT]'
+                Item: >-
+                  2.2.1[Table 3.2.1: --SCAT]|2.2.2[Table 3.2.2: --SCAT]|2.2.3[Table 3.2.3: --SCAT]
                 Section: 2.2.1|2.2.2|2.2.3
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -88,16 +83,21 @@ Check:
   all:
     - name: --SCAT
       operator: non_empty
-    - name: --CAT
-      operator: empty
+    - any:
+        - name: --CAT
+          operator: not_exists
+        - name: --CAT
+          operator: empty
 Core:
   Id: CORE-000103
   Status: Published
   Version: '1'
-Description: Part A - Raise an error when --SCAT is not empty, but --CAT is empty.
+Description: Part A - Raise an error when --SCAT is populated, but --CAT is either
+  not populated or not present in the dataset.
 Executability: Fully Executable
 Outcome:
-  Message: --CAT should not be null when --SCAT is populated
+  Message: --CAT must be present in the dataset and populated when --SCAT is
+    populated.
   Output Variables:
     - --CAT
     - --SCAT

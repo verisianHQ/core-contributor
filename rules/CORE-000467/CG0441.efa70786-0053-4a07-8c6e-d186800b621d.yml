@@ -1,15 +1,14 @@
 # Variable: TSVAL
 # Condition: TSPARMCD = 'STOPRULE'
 # Rule: TSVAL ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Further information about the parameters is included below in
-                  Table 1. TSVAL may have controlled terminology depending on
-                  the value of TSPARMCD
+              - Cited Guidance: Further information about the parameters is included below in Table 1. TSVAL may have controlled terminology depending on the value of TSPARMCD
                 Document: IG v3.2
                 Item: Assumption 3
                 Section: 7.4|Appendix C1
@@ -22,9 +21,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Further information about the parameters is included below in
-                  Table 1. TSVAL may have controlled terminology depending on
-                  the value of TSPARMCD
+              - Cited Guidance: Further information about the parameters is included below in Table 1. TSVAL may have controlled terminology depending on the value of TSPARMCD
                 Document: IG v3.3
                 Item: Assumption 3
                 Section: '7.4'
@@ -39,20 +36,20 @@ Check:
     - name: TSPARMCD
       operator: equal_to
       value: STOPRULE
+      value_is_literal: true
     - name: TSVAL
       operator: empty
 Core:
   Id: CORE-000467
   Status: Published
   Version: '1'
-Description: Raise an error when TSPARMCD = STOPRULE and TSVAL is not completed.
+Description: Raise an error when TSPARMCD is equal to 'STOPRULE' and TSVAL is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: TSVAL is missing when TSPARMCD = STOPRULE.
+  Message: TSVAL must be populated when TSPARMCD is equal to 'STOPRULE'.
   Output Variables:
     - TSPARMCD
     - TSVAL
-    - TSGRPID
 Rule Type: Record Data
 Scope:
   Classes:

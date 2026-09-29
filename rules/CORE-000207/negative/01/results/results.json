@@ -4,7 +4,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "LBSTDTC is present in a Findings general observation class",
+      "execution_message": "LBSTDTC must not be present in a Findings domain.",
       "number_errors": 1,
       "errors": [
         {
@@ -14,7 +14,7 @@
           "value": {
             "LBSTDTC": "1999-06-19"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
