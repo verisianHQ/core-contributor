@@ -4,7 +4,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMTRT is equal to 'MULTIPLE'",
+      "execution_message": "CMTRT must not be equal to 'MULTIPLE'.",
       "number_errors": 1,
       "errors": [
         {
@@ -14,7 +14,25 @@
           "value": {
             "CMTRT": "MULTIPLE"
           },
-          "validated": false
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "success",
+      "execution_message": "EXTRT must not be equal to 'MULTIPLE'.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "EXTRT": "MULTIPLE"
+          },
+          "validated": true
         }
       ]
     }

@@ -1,0 +1,72 @@
+# Variable: --LOBXFL
+# Condition: --LOBXFL='Y'
+# Rule: Only one --LOBXFL = 'Y' record exists per unique --TESTCD, --CAT, --SCAT, --SPEC, --METHOD combination
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Records with a baseline flag should have a corresponding
+                  standard result with a standardized unit where available.
+                Document: FDA
+                Section: FDAB026
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB2604
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Records with a baseline flag should have a corresponding
+                  standard result with a standardized unit where available.
+                Document: FDA
+                Section: FDAB026
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB2604
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: --STRESC
+      operator: non_empty
+    - name: --LOBXFL
+      operator: equal_to
+      value: 'Y'
+      value_is_literal: true
+    - name: --LOBXFL
+      operator: is_not_unique_set
+      value:
+        - --TESTCD
+        - --CAT
+        - --SCAT
+        - --SPEC
+        - --METHOD
+        - USUBJID
+Core:
+  Status: Published
+  Version: '1'
+  Id: CORE-000915
+Description: Exactly one record is present with a last observation before exposure flag (--LOBXFL = 'Y') 
+  per unique --TESTCD, --CAT, --SCAT, --SPEC, --METHOD combination.
+Executability: Fully Executable
+Outcome:
+  Message: There are multiple records per assigned last observation before
+    exposure flag (--LOBXFL).
+  Output Variables:
+    - --STRESC
+    - --LOBXFL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

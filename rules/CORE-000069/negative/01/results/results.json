@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "SPECIES is present.",
+      "execution_message": "SPECIES must not be present.",
       "number_errors": 1,
       "errors": [
         {
@@ -14,16 +14,9 @@
           "value": {
             "SPECIES": null
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "dm.xpt",
-      "Row": 1,
-      "Variable": "SPECIES"
     }
   ]
 }

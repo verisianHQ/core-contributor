@@ -3,13 +3,54 @@
     {
       "dataset": "td.xpt",
       "domain": "TD",
-      "execution_status": "execution_error",
-      "execution_message": "SQL operator execution error",
-      "number_errors": 1,
+      "execution_status": "success",
+      "execution_message": "TDSTOFF must be equal to zero or a positive value in ISO 8601 Duration format.",
+      "number_errors": 5,
       "errors": [
         {
-          "error": "SQL error in not_equal_to operator",
-          "message": "column or relation does not exist"
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "TDSTOFF": "P-1D"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "TDSTOFF": "12 Weeks"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "TDSTOFF": "P"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "TDSTOFF": "P1.5D"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "TDSTOFF": "p1d"
+          },
+          "validated": true
         }
       ]
     }

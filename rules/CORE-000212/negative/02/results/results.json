@@ -1,0 +1,57 @@
+{
+  "datasets": [
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "DSSCAT must be populated when a subject has more than one record per EPOCH with DSCAT = 'DISPOSITION EVENT'.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "S001",
+          "value": {
+            "DSDECOD": "COMPLETED",
+            "DSCAT": "DISPOSITION EVENT",
+            "DSSCAT": null
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "S001",
+          "value": {
+            "DSDECOD": "COMPLETED",
+            "DSCAT": "DISPOSITION EVENT",
+            "DSSCAT": null
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "S002",
+          "value": {
+            "DSDECOD": "COMPLETED",
+            "DSCAT": "DISPOSITION EVENT",
+            "DSSCAT": null
+          },
+          "validated": true
+        },
+        {
+          "row": 7,
+          "SEQ": 7,
+          "USUBJID": "S002",
+          "value": {
+            "DSDECOD": "COMPLETED",
+            "DSCAT": "DISPOSITION EVENT",
+            "DSSCAT": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

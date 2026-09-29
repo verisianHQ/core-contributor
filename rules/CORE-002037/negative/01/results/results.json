@@ -1,0 +1,153 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "AEDECOD is not consistent for records with identical AETERM values.",
+      "number_errors": 14,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 4,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "AEDECOD": "Back pain",
+            "AETERM": "BACK PAIN"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 5,
+          "USUBJID": "CDISC-TEST-001",
+          "value": {
+            "AEDECOD": "Diarrhoea",
+            "AETERM": "DIARRHOEA"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 18,
+          "USUBJID": "CDISC-TEST-002",
+          "value": {
+            "AEDECOD": "Back pain",
+            "AETERM": "BACK PAIN"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 19,
+          "USUBJID": "CDISC-TEST-002",
+          "value": {
+            "AEDECOD": "Bronchitis",
+            "AETERM": "BRONCHITIS"
+          },
+          "validated": true
+        },
+        {
+          "row": 7,
+          "SEQ": 20,
+          "USUBJID": "CDISC-TEST-002",
+          "value": {
+            "AEDECOD": "Diarrhoea",
+            "AETERM": "DIARRHOEA"
+          },
+          "validated": true
+        },
+        {
+          "row": 9,
+          "SEQ": 296,
+          "USUBJID": "CDISC-TEST-019",
+          "value": {
+            "AEDECOD": "Stomach pain",
+            "AETERM": "DIARRHOEA"
+          },
+          "validated": true
+        },
+        {
+          "row": 10,
+          "SEQ": 297,
+          "USUBJID": "CDISC-TEST-019",
+          "value": {
+            "AEDECOD": "Headache",
+            "AETERM": "HEADACHE"
+          },
+          "validated": true
+        },
+        {
+          "row": 13,
+          "SEQ": 4,
+          "USUBJID": "CDISC-TEST-011",
+          "value": {
+            "AEDECOD": "Back pain",
+            "AETERM": "BACK PAIN"
+          },
+          "validated": true
+        },
+        {
+          "row": 14,
+          "SEQ": 5,
+          "USUBJID": "CDISC-TEST-011",
+          "value": {
+            "AEDECOD": "Diarrhoea",
+            "AETERM": "DIARRHOEA"
+          },
+          "validated": true
+        },
+        {
+          "row": 15,
+          "SEQ": 18,
+          "USUBJID": "CDISC-TEST-022",
+          "value": {
+            "AEDECOD": "Bad back",
+            "AETERM": "BACK PAIN"
+          },
+          "validated": true
+        },
+        {
+          "row": 16,
+          "SEQ": 19,
+          "USUBJID": "CDISC-TEST-022",
+          "value": {
+            "AEDECOD": null,
+            "AETERM": "BRONCHITIS"
+          },
+          "validated": true
+        },
+        {
+          "row": 17,
+          "SEQ": 20,
+          "USUBJID": "CDISC-TEST-022",
+          "value": {
+            "AEDECOD": "Diarrhoea",
+            "AETERM": "DIARRHOEA"
+          },
+          "validated": true
+        },
+        {
+          "row": 19,
+          "SEQ": 296,
+          "USUBJID": "CDISC-TEST-191",
+          "value": {
+            "AEDECOD": "Diarrhoea",
+            "AETERM": "DIARRHOEA"
+          },
+          "validated": true
+        },
+        {
+          "row": 20,
+          "SEQ": 297,
+          "USUBJID": "CDISC-TEST-191",
+          "value": {
+            "AEDECOD": "Head pain",
+            "AETERM": "HEADACHE"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

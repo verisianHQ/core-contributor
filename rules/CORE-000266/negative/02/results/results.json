@@ -4,161 +4,188 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "If AESER = \"N\" then none of the seriousness criteria (AESCAN, AESCONG, AESDISAB, AESDTH, AESHOSP, AESLIFE, AESOD, AESMIE) could be equal to \"Y\".",
-      "number_errors": 9,
+      "execution_message": "AESER is not equal to 'N', but none of the seriousness events categories (AESCAN, AESCONG, AESDISAB, AESDTH, AESHOSP, AESLIFE, AESOD, AESMIE) are flagged as 'Y'.",
+      "number_errors": 10,
       "errors": [
         {
           "row": 1,
           "SEQ": 727,
           "USUBJID": "CDISC-TEST-046",
           "value": {
+            "AETERM": "UPSET STOMACH",
+            "AESER": "Y",
             "AESCAN": null,
-            "AESCONG": " ",
+            "AESCONG": null,
             "AESDISAB": "N",
             "AESDTH": "N",
-            "AESER": "Y",
             "AESHOSP": "N",
             "AESLIFE": "N",
-            "AESMIE": "N",
-            "AESOD": "N"
+            "AESOD": "Not in dataset",
+            "AESMIE": "N"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": 735,
           "USUBJID": "CDISC-TEST-046",
           "value": {
+            "AETERM": "HEADACHE",
+            "AESER": "Y",
             "AESCAN": "N",
             "AESCONG": null,
             "AESDISAB": "N",
             "AESDTH": "N",
-            "AESER": "Y",
             "AESHOSP": "N",
             "AESLIFE": "N",
-            "AESMIE": " ",
-            "AESOD": "N"
+            "AESOD": "Not in dataset",
+            "AESMIE": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": 782,
           "USUBJID": "CDISC-TEST-049",
           "value": {
+            "AETERM": "HEADACHE",
+            "AESER": "Y",
             "AESCAN": "N",
             "AESCONG": "N",
             "AESDISAB": null,
             "AESDTH": "N",
-            "AESER": "Y",
             "AESHOSP": "N",
             "AESLIFE": "N",
-            "AESMIE": "N",
-            "AESOD": "N"
+            "AESOD": "Not in dataset",
+            "AESMIE": "N"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
           "SEQ": 783,
           "USUBJID": "CDISC-TEST-049",
           "value": {
+            "AETERM": "HEADACHE",
+            "AESER": "Y",
             "AESCAN": "N",
-            "AESCONG": " ",
+            "AESCONG": null,
             "AESDISAB": "N",
             "AESDTH": null,
-            "AESER": "Y",
             "AESHOSP": "N",
             "AESLIFE": "N",
-            "AESMIE": "N",
-            "AESOD": "N"
+            "AESOD": "Not in dataset",
+            "AESMIE": "N"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 5,
           "SEQ": 839,
           "USUBJID": "CDISC-TEST-052",
           "value": {
+            "AETERM": "HEADACHE",
+            "AESER": "Y",
             "AESCAN": "N",
             "AESCONG": "N",
             "AESDISAB": "N",
             "AESDTH": "N",
-            "AESER": "Y",
             "AESHOSP": null,
             "AESLIFE": "N",
-            "AESMIE": "N",
-            "AESOD": "N"
+            "AESOD": "Not in dataset",
+            "AESMIE": "N"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 6,
           "SEQ": 840,
           "USUBJID": "CDISC-TEST-052",
           "value": {
+            "AETERM": "HYPERTENSION",
+            "AESER": "Y",
             "AESCAN": "N",
             "AESCONG": "N",
             "AESDISAB": "N",
             "AESDTH": "N",
-            "AESER": "Y",
             "AESHOSP": "N",
             "AESLIFE": null,
-            "AESMIE": "N",
-            "AESOD": "N"
+            "AESOD": "Not in dataset",
+            "AESMIE": "N"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 7,
           "SEQ": 843,
           "USUBJID": "CDISC-TEST-052",
           "value": {
+            "AETERM": "HYPERTENSION",
+            "AESER": "Y",
             "AESCAN": "N",
             "AESCONG": "N",
             "AESDISAB": "N",
             "AESDTH": "N",
-            "AESER": "Y",
             "AESHOSP": "N",
             "AESLIFE": "N",
-            "AESMIE": " ",
-            "AESOD": null
+            "AESOD": "Not in dataset",
+            "AESMIE": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 8,
           "SEQ": 844,
           "USUBJID": "CDISC-TEST-052",
           "value": {
+            "AETERM": "HYPOGLYCAEMIA",
+            "AESER": "Y",
             "AESCAN": "N",
             "AESCONG": "N",
             "AESDISAB": "N",
             "AESDTH": "N",
-            "AESER": "Y",
             "AESHOSP": "N",
             "AESLIFE": "N",
-            "AESMIE": null,
-            "AESOD": "N"
+            "AESOD": "Not in dataset",
+            "AESMIE": null
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 12,
-          "SEQ": 897,
+          "row": 9,
+          "SEQ": 881,
           "USUBJID": "CDISC-TEST-055",
           "value": {
+            "AETERM": "CARDIAC ARREST",
+            "AESER": null,
+            "AESCAN": "N",
+            "AESCONG": null,
+            "AESDISAB": "N",
+            "AESDTH": "N",
+            "AESHOSP": "N",
+            "AESLIFE": "N",
+            "AESOD": "Not in dataset",
+            "AESMIE": "N"
+          },
+          "validated": true
+        },
+        {
+          "row": 10,
+          "SEQ": 882,
+          "USUBJID": "CDISC-TEST-055",
+          "value": {
+            "AETERM": "DIARRHOEA",
+            "AESER": null,
             "AESCAN": null,
             "AESCONG": null,
             "AESDISAB": null,
-            "AESDTH": " ",
-            "AESER": null,
+            "AESDTH": null,
             "AESHOSP": null,
             "AESLIFE": null,
-            "AESMIE": null,
-            "AESOD": null
+            "AESOD": "Not in dataset",
+            "AESMIE": null
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

@@ -1,6 +1,7 @@
 # Variable: DSDECOD
 # Condition: DSCAT = 'PROTOCOL MILESTONE'
 # Rule: DSTERM = DSDECOD
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -32,14 +33,14 @@ Core:
   Id: CORE-000322
   Status: Published
   Version: '1'
-Description: When DSCAT equals PROTOCOL MILESTONE, then DSTERM should be equal to
-  DSDECOD
+Description: Raise an error when DSCAT = 'PROTOCOL MILESTONE' but DSTERM is not equal to DSDECOD.
 Executability: Fully Executable
 Outcome:
-  Message: DSCAT equals PROTOCOL MILESTONE but DSTERM is not equal to DSDECOD
+  Message: DSCAT equals PROTOCOL MILESTONE but DSTERM is not equal to DSDECOD.
   Output Variables:
     - DSTERM
     - DSDECOD
+    - DSCAT
 Rule Type: Record Data
 Scope:
   Classes:

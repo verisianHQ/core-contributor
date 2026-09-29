@@ -1,0 +1,42 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "Collection study day (CMDY) is missing when date/time of collection (CMDTC) is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "CMDTC": "2012-08",
+            "CMDY": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "execution_status": "success",
+      "execution_message": "Collection study day (CEDY) is missing when date/time of collection (CEDTC) is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "CEDTC": "2013-10-15",
+            "CEDY": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

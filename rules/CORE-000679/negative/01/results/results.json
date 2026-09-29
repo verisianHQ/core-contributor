@@ -1,0 +1,36 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000679, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "DTHFL in DM dataset is 'Y' but a record is missing in DS dataset where DSDECOD = 'DEATH'.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "USUBJID": "CDISC002",
+            "DTHFL": "Y",
+            "$ds_dsdecod": [
+              "COMPLETED",
+              "INFORMED CONSENT OBTAINED",
+              "RANDOMIZED"
+            ]
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000792, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000792, dataset=CE",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMCLASCD and CMCLAS do not have a one-to-one relationship.",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMTRT": "ASPIRIN",
+            "CMCLAS": "NSAID",
+            "CMCLASCD": "C3853540"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CMTRT": "ASPIRIN",
+            "CMCLAS": "NSAID",
+            "CMCLASCD": "C3853542"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 2,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CMTRT": "ASPIRIN",
+            "CMCLAS": "NSAID",
+            "CMCLASCD": null
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 3,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CMTRT": "ASPIRIN",
+            "CMCLAS": "NSAID",
+            "CMCLASCD": "C3853545"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 4,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CMTRT": "ASPIRIN",
+            "CMCLAS": null,
+            "CMCLASCD": "C3853545"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "su.xpt",
+      "domain": "SU",
+      "execution_status": "success",
+      "execution_message": "SUCLASCD and SUCLAS do not have a one-to-one relationship.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "SUTRT": "CIGARETTES",
+            "SUCLAS": "CIGARETTE",
+            "SUCLASCD": "C42678"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "CDISC003",
+          "value": {
+            "SUTRT": "CIGARETTES",
+            "SUCLAS": "CIGARETTE",
+            "SUCLASCD": "C42679"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ag.xpt",
+      "domain": "AG",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

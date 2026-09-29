@@ -1,0 +1,119 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "Collection study day (CMDY) is not populated when date/time of collection (CMDTC) is populated.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMDTC": "2013-01-11",
+            "RFSTDTC": "2012-11-30",
+            "CMDY": null
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMDTC": "2013-04-19",
+            "RFSTDTC": "2012-11-30",
+            "CMDY": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "Collection study day (LBDY) is not populated when date/time of collection (LBDTC) is populated.",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBDTC": "2012-11-23T11:19",
+            "RFSTDTC": "2012-11-30",
+            "LBDY": null
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBDTC": "2012-11-23T10:20",
+            "RFSTDTC": "2012-11-30",
+            "LBDY": null
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBDTC": "2012-11-22T11:20",
+            "RFSTDTC": "2012-11-30",
+            "LBDY": null
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBDTC": "2012-10-23T11:20",
+            "RFSTDTC": "2012-11-30",
+            "LBDY": null
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBDTC": "2011-11-23T11:20",
+            "RFSTDTC": "2012-11-30",
+            "LBDY": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Collection study day (DMDY) is not populated when date/time of collection (DMDTC) is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "DMDTC": "2011-11-23",
+            "RFSTDTC": "2012-11-30",
+            "DMDY": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

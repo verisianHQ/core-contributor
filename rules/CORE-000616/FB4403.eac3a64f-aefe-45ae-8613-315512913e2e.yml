@@ -1,0 +1,144 @@
+# Variable: --STINT, --TPTREF
+# Condition: --STINT is ^= Null
+# Rule: --TPTREF ^= Null
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.
+                Document: FDA
+                Section: FDAB044
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4403
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.
+                Document: FDA
+                Section: FDAB044
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4403
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.
+                Document: FDA
+                Section: FDAB044
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4403
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+      # REMARK: SENDIG: NOT applicable to SEND 3.0 and 3.1
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.
+                Document: FDA
+                Section: FDAB044
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4403
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.
+                Document: FDA
+                Section: FDAB044
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4403
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.
+                Document: FDA
+                Section: FDAB044
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4403
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: SENDIG-AR
+        References:
+          - Citations:
+              - Cited Guidance: When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.
+                Document: FDA
+                Section: FDAB044
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4403
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: When timing info is provided as a reference to a particular
+                  timepoint, the timepoint should be also populated.
+                Document: FDA
+                Section: FDAB044
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4403
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  all:
+    - name: --STINT
+      operator: non_empty
+    - any:
+      - name: --TPTREF
+        operator: empty
+      - name: --TPTREF
+        operator: not_exists
+Core:
+  Id: CORE-000616
+  Status: Published
+  Version: '1'
+Description: Raise an error when Planned Start of Assessment Interval (--STINT) is populated and 
+  Time Point Reference (--TPTREF) is not populated.
+Executability: Fully Executable
+Outcome:
+  Message: --STINT is populated, but --TPTREF is missing.
+  Output Variables:
+    - --STINT
+    - --TPTREF
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+      - EVENTS
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record
