@@ -1,7 +1,7 @@
 # Variable: GEN
 # Condition: 
 # Rule: Variable = Model List of Allowed Variables for Observation Class
-# 2025-11-18: SDTMIG-3-3 is implemented as a separate rule, and thus commented out here, as SDTMIG has "domain-specific" variables: which are NOT in the "SDTM Model"
+# Note SDTMIG-3-3 is implemented as a separate rule as SDTMIG 3-3 has "domain-specific" variables: which are NOT in the "SDTM Model v1.7" and are thus hardcoded in this rule: EXMETHOD, EGBEATNO, ICIMPLBL, MSAGENT, MSCONC, MSCONCU.
 # verified
 Authorities:
   - Organization: CDISC
@@ -39,7 +39,6 @@ Authorities:
         Version: '3.3'
 Check:
   all:
-  # 2025-11-17: exclude EXMETHOD, EGBEATNO, ICIMPLBL, MSAGENT, MSCONC, MSCONCU due to not incorporated in Model 1.7
     - name: variable_name
       operator: not_equal_to
       value: EXMETHOD
@@ -78,7 +77,7 @@ Operations:
     operator: get_model_column_order
 Outcome:
   Message: Variable is not listed in the Model List of Allowed Variables for the
-    Observation Class and should be in supplemental qualifiers.
+    Observation Class and must be submitted in SUPPQUAL.
   Output Variables:
     - variable_name
 Rule Type: Variable Metadata Check
