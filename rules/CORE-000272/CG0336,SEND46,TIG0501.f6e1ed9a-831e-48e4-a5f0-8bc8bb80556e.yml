@@ -1,6 +1,7 @@
 # Variable: --CAT
 # Condition: 
 # Rule: --CAT ^= Domain Name
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -52,7 +53,8 @@ Authorities:
               - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the
                   domain or dictionary classification provided by --DECOD and
                   --BODSYS.
-                Document: IG v.3.0
+                Document: SENDIG v.3.0
+                Item: Text
                 Section: 4.2.6
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -66,7 +68,8 @@ Authorities:
               - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the
                   domain or dictionary classification provided by --DECOD and
                   --BODSYS.
-                Document: IG v.3.1
+                Document: SENDIG v.3.1
+                Item: Text
                 Section: 4.2.6
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -80,7 +83,8 @@ Authorities:
               - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the
                   domain or dictionary classification provided by --DECOD and
                   --BODSYS.
-                Document: IG v.3.1.1
+                Document: SENDIG v.3.1.1
+                Item: Text
                 Section: 4.2.6
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -94,7 +98,8 @@ Authorities:
               - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the
                   domain or dictionary classification provided by --DECOD and
                   --BODSYS.
-                Document: IG v.3.1
+                Document: SENDIG v.3.1
+                Item: Text
                 Section: 4.2.6
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -108,7 +113,8 @@ Authorities:
               - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the
                   domain or dictionary classification provided by --DECOD and
                   --BODSYS.
-                Document: IG v.3.1.1
+                Document: SENDIG v.3.1.1
+                Item: Text
                 Section: 4.2.6
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -123,6 +129,7 @@ Authorities:
                   domain or dictionary classification provided by --DECOD and
                   --BODSYS.
                 Document: IG v.3.1.1
+                Item: Text
                 Section: 4.2.6
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -149,27 +156,28 @@ Check:
   all:
     - name: --CAT
       operator: equal_to_case_insensitive
-      value: $domain_label
+      value: $domain_name
 Core:
   Id: CORE-000272
   Status: Published
   Version: '1'
-Description: Raise an error when --CAT = DOMAIN.
+Description: Raise an error when --CAT is equal to Domain Name.
 Executability: Fully Executable
 Operations:
-  - id: $domain_label
+  - id: $domain_name
     operator: domain_label
 Outcome:
-  Message: --CAT is equal to DOMAIN.
+  Message: --CAT must not be equal to Domain Name.
   Output Variables:
     - --CAT
+    - $domain_name
 Rule Type: Record Data
 Scope:
   Classes:
     Include:
       - ALL
   Domains:
-    Include:
-      - ALL
+    Exclude:
+      - TI
   Use Case: INDH, PROD
 Sensitivity: Record
