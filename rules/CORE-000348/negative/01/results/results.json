@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "dv.xpt",
+      "domain": "DV",
+      "execution_status": "success",
+      "execution_message": "DVTERM must not be listed as 'Derived' in the define.xml.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "variable_name": "DVTERM",
+            "define_variable_origin_type": "Derived"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
