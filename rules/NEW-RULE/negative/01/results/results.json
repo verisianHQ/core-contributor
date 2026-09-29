@@ -1,0 +1,49 @@
+{
+  "datasets": [
+    {
+      "dataset": "qs.xpt",
+      "domain": "QS",
+      "execution_status": "execution_error",
+      "execution_message": "rule execution error",
+      "number_errors": 1,
+      "errors": [
+        {
+          "error": "Validation error",
+          "message": "Operation name must be in  ['codelist_extensible', 'codelist_terms', 'calc', 'dataset_names', 'define_extensible_codelists', 'distinct', 'dy', 'extract_metadata', 'get_column_order_from_dataset', 'get_column_order_from_library', 'get_codelist_attributes', 'get_model_column_order', 'get_model_filtered_variables', 'get_parent_model_column_order', 'intersect', 'map', 'max', 'max_date', 'mean', 'min', 'min_date', 'minus', 'record_count', 'referenced_domain_variable_names', 'whodrug_code_hierarchy', 'variable_exists', 'variable_names', 'variable_library_metadata', 'variable_value_count', 'variable_count', 'variable_is_null', 'domain_is_custom', 'domain_label', 'required_variables', 'expected_variables', 'permissible_variables', 'standard_domains', 'study_domains', 'valid_codelist_dates', 'label_referenced_variable_metadata', 'name_referenced_variable_metadata', 'define_variable_metadata', 'valid_external_dictionary_value', 'valid_external_dictionary_code', 'valid_external_dictionary_code_term_pair', 'valid_define_external_dictionary_version', 'get_define_external_dictionary_version', 'get_dataset_filtered_variables', 'get_countries', 'split'], given operation name is split_by"
+        }
+      ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "QSEVLINT": "-P2"
+      }
+    },
+    {
+      "value": {
+        "QSEVLINT": "-2W"
+      }
+    },
+    {
+      "value": {
+        "QSEVLINT": "2013-12-15T10:00"
+      }
+    },
+    {
+      "value": {
+        "QSEVLINT": "2013-12-15T10:00/-P2"
+      }
+    },
+    {
+      "value": {
+        "QSEVLINT": "2W/2013-12-15T10:00"
+      }
+    },
+    {
+      "value": {
+        "QSEVLINT": "-P2/4W"
+      }
+    }
+  ]
+}
