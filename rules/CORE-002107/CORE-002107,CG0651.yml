@@ -43,8 +43,8 @@ Check:
     - name: variable_name
       operator: empty
 Core:
-  Id: CDISC.SDTMIG.CG0651
-  Status: Draft
+  Id: CORE-002107
+  Status: Published
   Version: '1'
 Description: Raise an error when a variable is permissible, data is collected as per define.xml document but variable is not present in the dataset.
 Executability: Fully Executable
