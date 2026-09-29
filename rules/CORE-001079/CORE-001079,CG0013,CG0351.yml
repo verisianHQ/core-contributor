@@ -67,8 +67,8 @@ Check:
       operator: is_not_contained_by
       value: $allowed_variables
 Core:
-  Id: CDISC.SDTMIG.CG0013.CG0351
-  Status: Draft
+  Id: CORE-001079
+  Status: Published
   Version: '1'
 Description: Raise an error when a variable is not an allowed variable for an Observation Class.
 Executability: Partially Executable - Possible Underreporting
