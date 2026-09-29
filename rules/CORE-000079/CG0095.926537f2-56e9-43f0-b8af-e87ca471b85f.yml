@@ -1,6 +1,7 @@
 # Variable: --LAT
 # Condition: --LOC not present in dataset
 # Rule: --LAT not present in dataset
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -13,8 +14,9 @@ Authorities:
               Version: '2'
             Version: '2.0'
             Citations:
-              - Cited Guidance: Events[Variable Qualifier of --LOC]|Interventions[Variable
-                  Qualifier of --LOC]|Findings[Variable Qualifier of --LOC]
+              - Cited Guidance: Events[Variable Qualifier of --LOC]|
+                  Interventions[Variable Qualifier of --LOC]|Findings[Variable
+                  Qualifier of --LOC]
                 Document: Model v2.0
                 Section: Events|Interventions|Findings
                 Item: --LAT
@@ -27,8 +29,8 @@ Authorities:
               Version: '2'
             Version: '2.0'
             Citations:
-              - Cited Guidance: Qualifier for anatomical location further detailing
-                  laterality.
+              - Cited Guidance: Qualifier for anatomical location further
+                  detailing laterality.
                 Document: Model v1.4
                 Section: 2.2.2
       - Name: SDTMIG
@@ -40,8 +42,8 @@ Authorities:
               Version: '2'
             Version: '2.0'
             Citations:
-              - Cited Guidance: Qualifier for anatomical location further detailing
-                  laterality.
+              - Cited Guidance: Qualifier for anatomical location further
+                  detailing laterality.
                 Document: Model v1.7
                 Item: 'Table 3.2.2: --LAT'
                 Section: 2.2.2
@@ -55,10 +57,11 @@ Core:
   Id: CORE-000079
   Status: Published
   Version: '1'
-Description: Raise an error when --LOC is not present and --LAT is present.
+Description: Raise an error when --LOC is not present but --LAT is present in
+  the dataset.
 Executability: Fully Executable
 Outcome:
-  Message: --LAT is present when --LOC is not present.
+  Message: --LAT must not be present in the dataset when --LOC is not present.
   Output Variables:
     - --LOC
     - --LAT

@@ -1,0 +1,74 @@
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A treatment-emergent flag should be submitted.
+                Document: FDA
+                Section: FDAB001
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0101
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A treatment-emergent flag should be submitted.
+                Document: FDA
+                Section: FDAB001
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0101
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A treatment-emergent flag should be submitted.
+                Document: FDA
+                Section: FDAB001
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0101
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: AETERM
+      operator: non_empty
+    - any:
+      - name: AETRTEM
+        operator: not_exists
+      - name: AETRTEM  
+        operator: empty
+Core:
+  Id: CORE-002034
+  Status: Published
+  Version: '1'
+Description: Raise an error when treatment-emergent flag is not present in SUPPAE for the Adverse Event.
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: SUPPAE
+Outcome:
+  Message: Missing treatment-emergent flag (AETRTEM) for the Adverse Event.
+  Output Variables:
+    - AETERM
+    - AESTDTC
+    - AETRTEM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - AE
+Sensitivity: Record

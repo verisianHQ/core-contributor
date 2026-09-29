@@ -9,23 +9,25 @@ from src.components.utils import UtilityFunctions
 class Displays:
 
     @staticmethod
-    def sdtm_rule_status_display(repo_rules, sdtm_rules):
-        repo_core_ids = set(repo_rules["Core-ID"])
+    def rule_status_display(repo_rules, raw_rules, title="Rule Implementation Status"):
+        repo_core_ids = set(repo_rules["CORE-ID"])
         
-        sdtm_core_ids = set(
-            x.strip() for ids in sdtm_rules["CORE-ID"].dropna() 
+        id_col = "CORE-ID" if "CORE-ID" in raw_rules.columns and not raw_rules["CORE-ID"].isna().all() else "Rule ID"
+
+        raw_core_ids = set(
+            x.strip() for ids in raw_rules[id_col].dropna() 
             for x in str(ids).split(";") if x.strip() and x.strip() != "/"
         )
         
-        sdtm_not_completed = sdtm_core_ids - repo_core_ids
+        not_completed = raw_core_ids - repo_core_ids
 
-        pie_sizes = [len(repo_core_ids), len(sdtm_not_completed)]
+        pie_sizes = [len(repo_core_ids), len(not_completed)]
         comp_perc, non_comp_perc = UtilityFunctions.perc_calc(pie_sizes[0], pie_sizes[1])
         pie_labels = [
             f"Implemented ({comp_perc:.1%})",
             f"Missing ({non_comp_perc:.1%})",
         ]
-        make_pie(pie_labels, pie_sizes, "SDTM Rule Implementation Status", color_scheme="set1")
+        make_pie(pie_labels, pie_sizes, title, color_scheme="set1")
 
     @staticmethod
     def rule_comment_verification_display(verified_data):
@@ -38,7 +40,7 @@ class Displays:
 
         make_pie(formatted_labels, values, "Rule Comment Verification", color_scheme="set2")
         with st.expander("View Conformance Rules Verification Status"):
-            df = pd.DataFrame(list(verified_data.items()), columns=["Core-ID", "Verification Status"])
+            df = pd.DataFrame(list(verified_data.items()), columns=["CORE-ID", "Verification Status"])
             st.dataframe(df, width="stretch", hide_index=False)
 
 
@@ -60,29 +62,22 @@ class Displays:
         partial_count = counts.get("Partially Completed", 0)
         unimplemented_count = counts.get("Unimplemented", 0)
         missing_count = counts.get("Missing", 0)
+        not_exec_count = counts.get("Not Executable", 0)
 
-        total = completed_count + partial_count + unimplemented_count + missing_count
+        total = completed_count + partial_count + unimplemented_count + missing_count + not_exec_count
 
-        comp_perc = completed_count / total if total > 0 else 0
-        partial_perc = partial_count / total if total > 0 else 0
-        unimpl_perc = unimplemented_count / total if total > 0 else 0
-        missing_perc = missing_count / total if total > 0 else 0
+        pie_sizes = [completed_count, partial_count, unimplemented_count, missing_count, not_exec_count]
+        labels_base = ["Completed", "Partially Completed", "Unimplemented", "Missing", "Not Executable"]
+        
+        filtered_sizes = []
+        filtered_labels = []
+        for label, size in zip(labels_base, pie_sizes):
+            perc = size / total if total > 0 else 0
+            filtered_sizes.append(size)
+            filtered_labels.append(f"{label} ({perc:.1%})")
 
-        pie_sizes = [completed_count, partial_count, unimplemented_count, missing_count]
-        pie_labels = [
-            f"Completed ({comp_perc:.1%})",
-            f"Partially Completed ({partial_perc:.1%})",
-            f"Unimplemented ({unimpl_perc:.1%})",
-            f"Missing ({missing_perc:.1%})",
-        ]
-
-        make_pie(pie_labels, pie_sizes, "Conformance Rule Completion", color_scheme="tableau20")
+        make_pie(filtered_labels, filtered_sizes, "Conformance Rule Completion", color_scheme="tableau20")
         with st.expander("View Conformance Rule Id to CORE Id Mapping"):
-            combined_data = combined_data.rename(columns={
-                combined_data.columns[1]: "Version 1",
-                combined_data.columns[2]: "Version 2",
-                combined_data.columns[3]: "Version 3",
-            })
             combined_data.index = combined_data.index + 1
             st.dataframe(combined_data, width="stretch", hide_index=False)
 
@@ -103,5 +98,5 @@ class Displays:
         make_horizontal_bar(
             combined_issues,
             "Failure & Error Details",
-            tooltip_cols=["Core-ID", "Case ID", "Test Type", "Status", "Issue"],
+            tooltip_cols=["CORE-ID", "Case ID", "Test Type", "Status", "Issue"],
         )

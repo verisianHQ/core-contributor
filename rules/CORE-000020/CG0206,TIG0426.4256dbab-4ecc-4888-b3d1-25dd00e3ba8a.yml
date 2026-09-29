@@ -97,6 +97,7 @@ Check:
     - name: ETCD
       operator: equal_to
       value: UNPLAN
+      value_is_literal: true
     - name: TAETORD
       operator: non_empty
 Core:

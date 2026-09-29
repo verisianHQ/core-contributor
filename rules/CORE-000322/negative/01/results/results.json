@@ -4,82 +4,54 @@
       "dataset": "ds.xpt",
       "domain": "DS",
       "execution_status": "success",
-      "execution_message": "DSCAT equals PROTOCOL MILESTONE but DSTERM is not equal to DSDECOD",
-      "number_errors": 3,
+      "execution_message": "DSCAT equals PROTOCOL MILESTONE but DSTERM is not equal to DSDECOD.",
+      "number_errors": 4,
       "errors": [
         {
           "row": 1,
           "SEQ": null,
-          "USUBJID": "015246-076-0003-00003",
+          "USUBJID": "001",
           "value": {
             "DSTERM": "FUTURE USE OF SAMPLES INFORMED CONSENT OBTAINED",
-            "DSDECOD": "Future USE OF SAMPLES INFORMED CONSENT OBTAINED"
+            "DSDECOD": "Future USE OF SAMPLES INFORMED CONSENT OBTAINED",
+            "DSCAT": "PROTOCOL MILESTONE"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": null,
-          "USUBJID": "015246-203-0003-00001",
+          "USUBJID": "002",
           "value": {
             "DSTERM": "STUDY INFORMED CONSENT OBTAINED",
-            "DSDECOD": "STUDY INFORMED CONSENT OBTAINE"
+            "DSDECOD": "STUDY INFORMED CONSENT OBTAINE",
+            "DSCAT": "PROTOCOL MILESTONE"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": null,
-          "USUBJID": "015246-300-0004-00002",
+          "USUBJID": "003",
           "value": {
             "DSTERM": "COMPLETED",
-            "DSDECOD": "ADVERSE EVENT"
+            "DSDECOD": null,
+            "DSCAT": "PROTOCOL MILESTONE"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "004",
+          "value": {
+            "DSTERM": null,
+            "DSDECOD": "COMPLETED",
+            "DSCAT": "PROTOCOL MILESTONE"
+          },
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "ds.xpt",
-      "Row": 1,
-      "Variable": "DSTERM"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 1,
-      "Variable": "DSDECOD"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 5,
-      "Variable": "DSTERM"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 5,
-      "Variable": "DSDECOD"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 6,
-      "Variable": "DSTERM"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 6,
-      "Variable": "DSDECOD"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 7,
-      "Variable": "DSTERM"
-    },
-    {
-      "Sheet": "ds.xpt",
-      "Row": 7,
-      "Variable": "DSDECOD"
     }
   ]
 }

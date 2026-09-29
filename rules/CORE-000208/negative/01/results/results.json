@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "ACTARMCD is not in TA.ARMCD",
+      "execution_message": "ACTARMCD value in DM dataset does not match any ARMCD value in TA dataset. This is only acceptable for multi-stage studies with incomplete ARM assignments.",
       "number_errors": 2,
       "errors": [
         {
@@ -14,7 +14,7 @@
           "value": {
             "ACTARMCD": "ZANLOW"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -23,7 +23,7 @@
           "value": {
             "ACTARMCD": "ZANHIGH"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
