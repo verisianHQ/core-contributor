@@ -4,7 +4,7 @@
       "dataset": "lb.xpt",
       "domain": "LB",
       "execution_status": "success",
-      "execution_message": "For a planned visit (SVPRESP = 'Y'), non-missing VISIT value must be among those present in TV.VISIT.",
+      "execution_message": "VISIT value for planned visit does not match any VISIT value in the TV dataset.",
       "number_errors": 30,
       "errors": [
         {
@@ -15,7 +15,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 586,
@@ -25,7 +25,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 587,
@@ -35,7 +35,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 588,
@@ -45,7 +45,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 589,
@@ -55,7 +55,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 590,
@@ -65,7 +65,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 591,
@@ -75,7 +75,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 592,
@@ -85,7 +85,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 593,
@@ -95,7 +95,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 594,
@@ -105,7 +105,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 595,
@@ -115,7 +115,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 596,
@@ -125,7 +125,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 597,
@@ -135,7 +135,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 598,
@@ -145,7 +145,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 599,
@@ -155,7 +155,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 600,
@@ -165,7 +165,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 601,
@@ -175,7 +175,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 602,
@@ -185,7 +185,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 603,
@@ -195,7 +195,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 604,
@@ -205,7 +205,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 605,
@@ -215,7 +215,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 606,
@@ -225,7 +225,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 607,
@@ -235,7 +235,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 608,
@@ -245,7 +245,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 609,
@@ -255,7 +255,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 610,
@@ -265,7 +265,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 611,
@@ -275,7 +275,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 612,
@@ -285,7 +285,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 613,
@@ -295,7 +295,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 614,
@@ -305,7 +305,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -313,7 +313,7 @@
       "dataset": "oe.xpt",
       "domain": "OE",
       "execution_status": "success",
-      "execution_message": "For a planned visit (SVPRESP = 'Y'), non-missing VISIT value must be among those present in TV.VISIT.",
+      "execution_message": "VISIT value for planned visit does not match any VISIT value in the TV dataset.",
       "number_errors": 2,
       "errors": [
         {
@@ -324,7 +324,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 52,
@@ -334,7 +334,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -342,7 +342,7 @@
       "dataset": "sv.xpt",
       "domain": "SV",
       "execution_status": "success",
-      "execution_message": "For a planned visit (SVPRESP = 'Y'), non-missing VISIT value must be among those present in TV.VISIT.",
+      "execution_message": "VISIT value for planned visit does not match any VISIT value in the TV dataset.",
       "number_errors": 1,
       "errors": [
         {
@@ -353,7 +353,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -369,7 +369,7 @@
       "dataset": "vs.xpt",
       "domain": "VS",
       "execution_status": "success",
-      "execution_message": "For a planned visit (SVPRESP = 'Y'), non-missing VISIT value must be among those present in TV.VISIT.",
+      "execution_message": "VISIT value for planned visit does not match any VISIT value in the TV dataset.",
       "number_errors": 11,
       "errors": [
         {
@@ -380,7 +380,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 156,
@@ -390,7 +390,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 157,
@@ -400,7 +400,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 192,
@@ -410,7 +410,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 193,
@@ -420,7 +420,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 194,
@@ -430,7 +430,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 228,
@@ -440,7 +440,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 229,
@@ -450,7 +450,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 230,
@@ -460,7 +460,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 242,
@@ -470,7 +470,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 253,
@@ -480,7 +480,7 @@
             "VISIT": "WEEK 26",
             "VISITNUM": 13.0
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

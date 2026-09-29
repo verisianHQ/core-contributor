@@ -1,6 +1,7 @@
 # Variable: IDVAR
 # Condition: RDOMAIN ^= 'DM'
 # Rule: IDVAR ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -14,7 +15,7 @@ Authorities:
                   records, where both IDVAR and IDVARVAL will be  null because
                   the key variables STUDYID, RDOMAIN, and USUBJID are sufficient
                   to identify the unique  parent record in DM (DM has one record
-                  per USUBJID)
+                  per USUBJID).
                 Document: SDTMIG v3.4
                 Section: 8.4.1
             Origin: SDTM and SDTMIG Conformance Rules
@@ -90,10 +91,10 @@ Core:
   Id: CORE-000134
   Status: Published
   Version: '1'
-Description: Raise an error when RDOMAIN ^= 'DM' and IDVAR is empty.
+Description: Raise an error when RDOMAIN is not equal to 'DM' but IDVAR is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: RDOMAIN is not 'DM' but IDVAR is empty.
+  Message: RDOMAIN is not equal to 'DM' but IDVAR is not populated.
   Output Variables:
     - RDOMAIN
     - IDVAR

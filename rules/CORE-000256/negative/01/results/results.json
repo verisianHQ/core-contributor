@@ -4,7 +4,7 @@
       "dataset": "se.xpt",
       "domain": "SE",
       "execution_status": "success",
-      "execution_message": "Missing value for SEUPDES, when ETCD='UNPLAN'",
+      "execution_message": "SEUPDES is not populated but ETCD is equal to 'UNPLAN'.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,10 +12,10 @@
           "SEQ": 3,
           "USUBJID": "1201001",
           "value": {
-            "ETCD": "UNPLAN",
-            "SEUPDES": null
+            "SEUPDES": null,
+            "ETCD": "UNPLAN"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

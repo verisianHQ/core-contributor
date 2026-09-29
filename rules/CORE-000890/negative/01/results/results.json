@@ -1,0 +1,91 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "Text variable contains '.' as an entire value.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "USUBJID",
+            "variable_value": "."
+          },
+          "validated": true
+        },
+        {
+          "row": 11,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "USUBJID",
+            "variable_value": "."
+          },
+          "validated": true
+        },
+        {
+          "row": 20,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "CMTRT",
+            "variable_value": "."
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "Text variable contains '.' as an entire value.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 116,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBENRTPT",
+            "variable_value": "."
+          },
+          "validated": true
+        },
+        {
+          "row": 118,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBENRTPT",
+            "variable_value": "."
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "execution_status": "success",
+      "execution_message": "Text variable contains '.' as an entire value.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ETCD",
+            "variable_value": "."
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

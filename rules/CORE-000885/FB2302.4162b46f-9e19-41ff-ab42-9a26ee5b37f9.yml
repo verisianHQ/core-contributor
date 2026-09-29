@@ -1,0 +1,98 @@
+# Variable: USUBJID
+# Condition: ARMNRS=null or ARMNRS = "UNPLANNED TREATMENT" AND TSVAL = "INTERVENTIONAL" when TSPARMCD = "STYPE"
+# Rule: DM. USUBJID in EX.USUBJID
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: For interventional studies all treated subjects should have
+                  exposure data.
+                Document: FDA
+                Section: FDAB023
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB2302
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: For interventional studies all treated subjects should have
+                  exposure data.
+                Document: FDA
+                Section: FDAB023
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB2302
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  any:
+    - all:
+        - name: ARMNRS
+          operator: empty
+        - name: TSPARMCD
+          operator: equal_to
+          value: STYPE
+          value_is_literal: true
+        - name: TSVAL
+          operator: equal_to
+          value: "INTERVENTIONAL"
+          value_is_literal: true
+        - name: USUBJID
+          operator: is_not_contained_by
+          value: $usubjids_in_ex
+    - all:
+        - name: ARMNRS
+          operator: equal_to
+          value: "UNPLANNED TREATMENT"
+          value_is_literal: true
+        - name: TSPARMCD
+          operator: equal_to
+          value: STYPE
+          value_is_literal: true
+        - name: TSVAL
+          operator: equal_to
+          value: "INTERVENTIONAL"
+          value_is_literal: true
+        - name: USUBJID
+          operator: is_not_contained_by
+          value: $usubjids_in_ex
+Core:
+  Id: CORE-000885
+  Status: Published
+  Version: '1'
+Description: All subjects in the Demographics domain who are participating in a
+  study that includes an interventional product must have at least one
+  corresponding record in the Exposure domain, except for subjects who failed
+  screening, were not fully assigned to an Arm, or did not receive study
+  treatment.
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - STUDYID
+    Name: TS
+Operations:
+  - domain: EX
+    id: $usubjids_in_ex
+    name: USUBJID
+    operator: distinct
+Outcome:
+  Message: A subject has a record in DM but not in EX while participating in an
+    interventional study
+  Output Variables:
+    - ARMNRS
+    - TSVAL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

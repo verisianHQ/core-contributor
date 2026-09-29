@@ -4,58 +4,41 @@
       "dataset": "ml.xpt",
       "domain": "ML",
       "execution_status": "success",
-      "execution_message": "MLTPTREF is empty and MLELTM is not empty",
-      "number_errors": 5,
+      "execution_message": "MLTPTREF is not populated but MLELTM is populated.",
+      "number_errors": 3,
       "errors": [
         {
           "row": 1,
           "SEQ": 1,
           "USUBJID": "123101",
           "value": {
-            "MLELTM": "-PT10M",
-            "MLTPTREF": null
+            "MLTPT": "- 10 MIN ",
+            "MLTPTREF": null,
+            "MLELTM": "-PT10M"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": 2,
           "USUBJID": "123101",
           "value": {
-            "MLELTM": "PT1H",
-            "MLTPTREF": null
+            "MLTPT": "1 HR",
+            "MLTPTREF": null,
+            "MLELTM": "PT1H"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": 3,
           "USUBJID": "123101",
           "value": {
-            "MLELTM": "PT2H",
-            "MLTPTREF": null
+            "MLTPT": "2 HR",
+            "MLTPTREF": null,
+            "MLELTM": "PT2H"
           },
-          "validated": false
-        },
-        {
-          "row": 4,
-          "SEQ": 4,
-          "USUBJID": "123101",
-          "value": {
-            "MLELTM": "PT24H",
-            "MLTPTREF": null
-          },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": 5,
-          "USUBJID": "123101",
-          "value": {
-            "MLELTM": "PT48H",
-            "MLTPTREF": null
-          },
-          "validated": false
+          "validated": true
         }
       ]
     },
@@ -63,38 +46,41 @@
       "dataset": "pc.xpt",
       "domain": "PC",
       "execution_status": "success",
-      "execution_message": "PCTPTREF is empty and PCELTM is not empty",
+      "execution_message": "PCTPTREF is not populated but PCELTM is populated.",
       "number_errors": 3,
       "errors": [
         {
-          "row": 3,
+          "row": 1,
           "SEQ": 3,
           "USUBJID": "123101",
           "value": {
-            "PCELTM": "PT2H",
-            "PCTPTREF": null
+            "PCTPT": "2 HR",
+            "PCTPTREF": null,
+            "PCELTM": "PT2H"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 4,
+          "row": 2,
           "SEQ": 4,
           "USUBJID": "123101",
           "value": {
-            "PCELTM": "PT24H",
-            "PCTPTREF": null
+            "PCTPT": "24 HR",
+            "PCTPTREF": null,
+            "PCELTM": "PT24H"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 5,
+          "row": 3,
           "SEQ": 5,
           "USUBJID": "123101",
           "value": {
-            "PCELTM": "PT48H",
-            "PCTPTREF": null
+            "PCTPT": "48 HR",
+            "PCTPTREF": null,
+            "PCELTM": "PT48H"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

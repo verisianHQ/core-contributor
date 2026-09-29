@@ -4,8 +4,8 @@
       "dataset": "vs.xpt",
       "domain": "VS",
       "execution_status": "success",
-      "execution_message": "VSLOBXFL = 'Y', but VSSTRESC is empty.",
-      "number_errors": 4,
+      "execution_message": "Record has a last observation before exposure flag (VSLOBXFL = 'Y') but character standard result (VSSTRESC) is missing.",
+      "number_errors": 1,
       "errors": [
         {
           "row": 3,
@@ -13,43 +13,10 @@
           "USUBJID": "CDISC001",
           "value": {
             "VSLOBXFL": "Y",
-            "VSSTRESC": null,
-            "VSTESTCD": "DIABP"
+            "VSTESTCD": "DIABP",
+            "VSSTRESC": null
           },
-          "validated": false
-        },
-        {
-          "row": 22,
-          "SEQ": 32,
-          "USUBJID": "CDISC001",
-          "value": {
-            "VSLOBXFL": "Y",
-            "VSSTRESC": null,
-            "VSTESTCD": "SYSBP"
-          },
-          "validated": false
-        },
-        {
-          "row": 23,
-          "SEQ": 46,
-          "USUBJID": "CDISC001",
-          "value": {
-            "VSLOBXFL": "Y",
-            "VSSTRESC": null,
-            "VSTESTCD": "TEMP"
-          },
-          "validated": false
-        },
-        {
-          "row": 30,
-          "SEQ": 53,
-          "USUBJID": "CDISC001",
-          "value": {
-            "VSLOBXFL": "Y",
-            "VSSTRESC": null,
-            "VSTESTCD": "WEIGHT"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     }

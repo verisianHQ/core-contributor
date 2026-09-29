@@ -6,7 +6,8 @@ from typing import List, Optional, Dict
 import openpyxl
 from openpyxl.styles import Font, PatternFill
 
-RULES_DIR = Path("rules")
+SDTM_RULES_DIR = Path("rules")
+ADAM_RULES_DIR = Path("adam_rules")
 
 BOLD_FONT = Font(bold=True)
 ITALIC_FONT = Font(italic=True)
@@ -36,13 +37,13 @@ class FileManager:
     """Handles discovery of test case files."""
 
     @staticmethod
-    def get_all_test_cases() -> List[dict]:
+    def get_all_test_cases(rules_dir: Path) -> List[dict]:
         """Returns a flat list of all test cases across all rules."""
-        if not RULES_DIR.exists():
+        if not rules_dir.exists():
             return []
 
         cases = []
-        rule_dirs = sorted([d for d in RULES_DIR.iterdir() if d.is_dir() and d.name.startswith("CORE-")])
+        rule_dirs = sorted([d for d in rules_dir.iterdir() if d.is_dir() and (d.name.startswith("CORE-") or d.name.startswith("AD"))])
 
         for rule_path in rule_dirs:
             for test_type in ["positive", "negative"]:
@@ -263,6 +264,7 @@ class InteractiveHandler:
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Excel Test Case Formatter")
 
+    parser.add_argument("-s", "--standard", type=str, default="sdtm", help="Standard to use (sdtm or adam).")
     parser.add_argument("-r", "--rule", type=str, help="Rule ID (e.g., CORE-000123)")
     parser.add_argument("-tc", "--testcase", type=str, help="Test case sub-path (e.g., negative/01). Requires -r.")
     parser.add_argument("-all", "--all", action="store_true", help="Run on all test cases in all rules.")
@@ -302,9 +304,18 @@ def filter_cases_by_args(all_cases: List[dict], args) -> List[dict]:
 def main():
     args = parse_arguments()
 
-    all_cases = FileManager.get_all_test_cases()
+    rules_dir = None
+    if args.standard == "sdtm":
+        rules_dir = SDTM_RULES_DIR
+    elif args.standard == "adam":
+        rules_dir = ADAM_RULES_DIR
+    else:
+        print("Invalid standard specified. Aborting.")
+        sys.exit(1)
+
+    all_cases = FileManager.get_all_test_cases(rules_dir)
     if not all_cases:
-        print("No test cases found in 'rules' directory.")
+        print(f"No test cases found in '{rules_dir}' directory.")
         sys.exit(1)
 
     label_mgr = LabelManager()

@@ -12,7 +12,7 @@
       "dataset": "ss.xpt",
       "domain": "SS",
       "execution_status": "success",
-      "execution_message": "SSSTRESC = 'DEAD', but SSDTC < max DS.DSSTDTC.",
+      "execution_message": "SSSTRESC is equal to 'DEAD' in the SS dataset, but SSDTC is less than the maximum DSSTDTC value in the DS dataset.",
       "number_errors": 4,
       "errors": [
         {
@@ -20,44 +20,44 @@
           "SEQ": null,
           "USUBJID": "CDISC002",
           "value": {
-            "$max_ds_dsstdtc": "2021-03-13",
+            "SSSTRESC": "DEAD",
             "SSDTC": "2021-03-12",
-            "SSSTRESC": "DEAD"
+            "$max_ds_dsstdtc": "2021-03-13"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": null,
           "USUBJID": "CDISC003",
           "value": {
-            "$max_ds_dsstdtc": "2021-05-09",
+            "SSSTRESC": "DEAD",
             "SSDTC": "2021-04-09",
-            "SSSTRESC": "DEAD"
+            "$max_ds_dsstdtc": "2021-05-09"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
           "SEQ": null,
           "USUBJID": "CDISC004",
           "value": {
-            "$max_ds_dsstdtc": "2021-06-01",
+            "SSSTRESC": "DEAD",
             "SSDTC": "2021-05-02",
-            "SSSTRESC": "DEAD"
+            "$max_ds_dsstdtc": "2021-06-01"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 9,
           "SEQ": null,
           "USUBJID": "CDISC009",
           "value": {
-            "$max_ds_dsstdtc": "2021-08-16",
+            "SSSTRESC": "DEAD",
             "SSDTC": "2021-08-13",
-            "SSSTRESC": "DEAD"
+            "$max_ds_dsstdtc": "2021-08-16"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

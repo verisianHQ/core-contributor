@@ -1,0 +1,49 @@
+{
+  "datasets": [
+    {
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "execution_status": "success",
+      "execution_message": "Category for Disposition Event (DSCAT) must be populated.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "DSCAT": null
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "DSCAT": null
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 2,
+          "USUBJID": "CDISC002",
+          "value": {
+            "DSCAT": null
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 3,
+          "USUBJID": "CDISC002",
+          "value": {
+            "DSCAT": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

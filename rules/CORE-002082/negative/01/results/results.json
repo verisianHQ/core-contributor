@@ -1,0 +1,25 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "FDA Conditionally Desired TSPARMCD = 'TDIGRP' is missing in the TS dataset when TSPARMCD = 'HLTSUBJI' and TSVAL = 'N'.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 19,
+          "SEQ": 3,
+          "USUBJID": "None",
+          "value": {
+            "TSGRPID": "HLTSUBJ3",
+            "TSVAL": "N",
+            "$HLTSUBJI_N": 1,
+            "$TSPARMCD_TDIGRP": 0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
