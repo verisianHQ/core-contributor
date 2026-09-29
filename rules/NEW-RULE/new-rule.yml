@@ -23,6 +23,7 @@ Check:
       operator: prefix_not_equal_to
       prefix: 2
       value: AP
+      value_is_literal: true
     - name: DOMAIN
       operator: suffix_is_not_contained_by
       suffix: 2
@@ -34,8 +35,7 @@ Core:
   Id: CDISC.SDTMIG.CG0663
   Status: Draft
   Version: '1'
-Description: Raise an error when DOMAIN value begins with AP and length of
-  domain variable is not 4 or DOMAIN value doesn't end with a valid SDTM domain.
+Description: Raise an error when the dataset is an AP domain but DOMAIN value length is not 4 characters beginning with 'AP' and ending with a 2 character SDTM domain.
 Executability: Partially Executable - Possible Overreporting
 Operations:
   - ct_attribute: Term Signification
@@ -45,7 +45,7 @@ Operations:
     ct_conditions:
       - Codelist Code: C66734
 Outcome:
-  Message: AP DOMAIN value must start with 'AP', end with a valid SDTM domain, and length must be equal to 4.
+  Message: DOMAIN value for an AP domain must be 4 characters long, beginning with 'AP' and ending with a valid 2-character SDTM domain code.
   Output Variables:
     - DOMAIN
 Rule Type: Record Data

@@ -2,9 +2,9 @@
   "datasets": [
     {
       "dataset": "aplb.xpt",
-      "domain": "AP",
+      "domain": "APLB",
       "execution_status": "success",
-      "execution_message": "AP DOMAIN value must start with 'AP', end with a valid SDTM domain, and length must be equal to 4.",
+      "execution_message": "DOMAIN value for an AP domain must be 4 characters long, beginning with 'AP' and ending with a valid 2-character SDTM domain code.",
       "number_errors": 7,
       "errors": [
         {
