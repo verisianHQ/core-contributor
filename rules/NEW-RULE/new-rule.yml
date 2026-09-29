@@ -1,0 +1,85 @@
+# Variable: TSVCDREF
+# Condition: 'TSPARMCD in ('COMPTRT', 'CURTRT', 'TRT')
+# Rule: TSVCDREF = 'UNII'
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as
+                  specified in the FDA Study Data Technical Conformance Guide
+                  (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1114
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as
+                  specified in the FDA Study Data Technical Conformance Guide
+                  (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1114
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as
+                  specified in the FDA Study Data Technical Conformance Guide
+                  (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1114
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: TSPARMCD
+      operator: is_contained_by
+      value: 
+        - COMPTRT
+        - TRT
+        - CURTRT
+      value_is_literal: true
+    - name: TSVCDREF
+      operator: not_equal_to
+      value: 'UNII'
+      value_is_literal: true
+Core:
+  Id: NEW-RULE
+  Status: Draft
+  Version: '1'
+Description: Raise an error when Unique Ingredient Identifier (UNII) is not
+  included for all active moieties of investigational products (TSPARMCD =
+  TRT), active comparators (TSPARMCD = COMPTRT), and any protocol-specified
+  background treatments (TSPARMCD = CURTRT).
+Executability: Fully Executable
+Outcome:
+  Message: TSVCDREF must be completed with 'UNII' when TSPARMCD = 'COMPTRT',
+   'CURTRT' or 'TRT'.
+  Output Variables:
+    - TSPARMCD
+    - TSVCDREF
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

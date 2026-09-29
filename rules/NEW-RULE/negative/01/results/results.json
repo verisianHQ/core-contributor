@@ -1,0 +1,43 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVCDREF must be completed with 'UNII' when TSPARMCD = 'COMPTRT', 'CURTRT' or 'TRT'.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "COMPTRT",
+            "TSVCDREF": "UNI"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "TRT",
+            "TSVCDREF": "UN"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "CURTRT",
+            "TSVCDREF": "UNIII"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
