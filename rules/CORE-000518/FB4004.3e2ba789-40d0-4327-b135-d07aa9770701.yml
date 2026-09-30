@@ -152,7 +152,6 @@ Check:
     - name: --VAMT
       operator: less_than
       value: 0
-      value_is_literal: true
 Core:
   Id: CORE-000518
   Status: Published
