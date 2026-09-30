@@ -5,38 +5,15 @@
       "domain": "DM",
       "execution_status": "success",
       "execution_message": "Ethnicity is collected, but one of the following ethnicity options are not offered: 'HISPANIC OR LATINO' or 'NOT HISPANIC OR LATINO'.\n",
-      "number_errors": 3,
+      "number_errors": 1,
       "errors": [
         {
-          "row": 1,
+          "row": 19,
           "SEQ": null,
-          "USUBJID": "S001",
+          "USUBJID": "None",
           "value": {
-            "ETHNIC": "HISPANIC",
-            "CETHNIC": null,
-            "QVAL": "Not in dataset"
-          },
-          "validated": true
-        },
-        {
-          "row": 3,
-          "SEQ": null,
-          "USUBJID": "S003",
-          "value": {
-            "ETHNIC": "NOT HISPANIC",
-            "CETHNIC": null,
-            "QVAL": "Not in dataset"
-          },
-          "validated": true
-        },
-        {
-          "row": 4,
-          "SEQ": null,
-          "USUBJID": "S004",
-          "value": {
-            "ETHNIC": "XXXXXXX",
-            "CETHNIC": "LATINO",
-            "QVAL": "Not in dataset"
+            "define_variable_name": "ETHNIC",
+            "define_variable_codelist_coded_values": "HISPANIC OR LATINO"
           },
           "validated": true
         }
@@ -45,10 +22,21 @@
     {
       "dataset": "suppdm.xpt",
       "domain": "SUPPDM",
-      "execution_status": "skipped",
-      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000726, dataset=SUPPDM",
-      "number_errors": 0,
-      "errors": []
+      "execution_status": "success",
+      "execution_message": "Ethnicity is collected, but one of the following ethnicity options are not offered: 'HISPANIC OR LATINO' or 'NOT HISPANIC OR LATINO'.\n",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 11,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_variable_name": "CETHNIC",
+            "define_variable_codelist_coded_values": "HISPANIC OR LATINO"
+          },
+          "validated": true
+        }
+      ]
     }
   ]
 }
