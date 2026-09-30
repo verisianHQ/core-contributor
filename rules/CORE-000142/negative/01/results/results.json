@@ -5,7 +5,7 @@
       "domain": "FT",
       "execution_status": "success",
       "execution_message": "FTELTM is not the same value across records with the same values of DOMAIN, VISITNUM, FTTPTREF, and FTTPTNUM when FTTPT, FTTPTNUM, and FTELTM are populated.",
-      "number_errors": 4,
+      "number_errors": 2,
       "errors": [
         {
           "row": 1,
@@ -15,21 +15,6 @@
             "FTTPT": "30 MIN POST",
             "FTTPTNUM": 1.0,
             "FTTPTREF": "DOSE",
-            "FTELTM": "PT30M",
-            "VISITNUM": 2.0,
-            "DOMAIN": "FT"
-          },
-          "validated": true
-        },
-        {
-          "row": 2,
-          "SEQ": 121,
-          "USUBJID": "CDISC001",
-          "value": {
-            "FTTPT": "30 MIN POST",
-            "FTTPTNUM": 1.0,
-            "FTTPTREF": "DOSE",
-            "FTELTM": "PT03M",
             "VISITNUM": 2.0,
             "DOMAIN": "FT"
           },
@@ -43,21 +28,6 @@
             "FTTPT": "90 MIN POST",
             "FTTPTNUM": 2.0,
             "FTTPTREF": "BREAKFAST",
-            "FTELTM": "PT1H",
-            "VISITNUM": 201.0,
-            "DOMAIN": "FT"
-          },
-          "validated": true
-        },
-        {
-          "row": 4,
-          "SEQ": 135,
-          "USUBJID": "CDISC007",
-          "value": {
-            "FTTPT": "90 MIN POST",
-            "FTTPTNUM": 2.0,
-            "FTTPTREF": "BREAKFAST",
-            "FTELTM": "PT2H",
             "VISITNUM": 201.0,
             "DOMAIN": "FT"
           },
