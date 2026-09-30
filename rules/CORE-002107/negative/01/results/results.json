@@ -1,0 +1,46 @@
+{
+  "datasets": [
+    {
+      "dataset": "sv.xpt",
+      "domain": "SV",
+      "execution_status": "success",
+      "execution_message": "Variable is permissible and data is collected as per define.xml document but variable is not present in the dataset.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_variable_name": "VISIT",
+            "library_variable_core": "Perm",
+            "define_variable_is_collected": true,
+            "variable_name": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "tv.xpt",
+      "domain": "TV",
+      "execution_status": "success",
+      "execution_message": "Variable is permissible and data is collected as per define.xml document but variable is not present in the dataset.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_variable_name": "TVENRL",
+            "library_variable_core": "Perm",
+            "define_variable_is_collected": true,
+            "variable_name": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

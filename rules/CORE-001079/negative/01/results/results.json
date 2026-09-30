@@ -1,0 +1,94 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "Variable is not listed in the Model List of Allowed Variables for the Observation Class and must be submitted in SUPPQUAL.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AETRT"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Variable is not listed in the Model List of Allowed Variables for the Observation Class and must be submitted in SUPPQUAL.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ARMCDXX"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "eg.xpt",
+      "domain": "EG",
+      "execution_status": "success",
+      "execution_message": "Variable is not listed in the Model List of Allowed Variables for the Observation Class and must be submitted in SUPPQUAL.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "XEGBEATNO"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "Variable is not listed in the Model List of Allowed Variables for the Observation Class and must be submitted in SUPPQUAL.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBSPIDXX"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "apeg.xpt",
+      "domain": "APEG",
+      "execution_status": "success",
+      "execution_message": "Variable is not listed in the Model List of Allowed Variables for the Observation Class and must be submitted in SUPPQUAL.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "XEGBEATNO"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
