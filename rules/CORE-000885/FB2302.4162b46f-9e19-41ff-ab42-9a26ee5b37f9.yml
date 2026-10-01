@@ -55,7 +55,7 @@ Core:
   Id: CORE-000885
   Status: Published
   Version: '1'
-Description: Raise an error when a subject in the DM domain has ARMNRS not populated or ARMNRS is equal to 'UNPLANNED TREATMENT', TSVAL is equal to 'INTERVENTIONAL' when TSPARMCD is equal to 'STYPE', but the subject has no corresponding record in the EX domain.
+Description: Raise an error when subject participating in an interventional study and assigned to an actual treatment, has no record in the EX dataset.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
