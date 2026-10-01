@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "ti.xpt",
+      "domain": "TI",
+      "execution_status": "success",
+      "execution_message": "TIVERS must be present in the TI dataset when at least one inclusion/exclusion criterion (IETESTCD) occurs more than once.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "IETESTCD": "INCL01",
+            "TIVERS": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
