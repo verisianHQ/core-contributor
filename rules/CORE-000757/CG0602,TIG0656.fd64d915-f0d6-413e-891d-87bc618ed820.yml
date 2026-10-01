@@ -1,3 +1,7 @@
+# Variable: --OBJ
+# Condition: Interventions parent record exists and DECOD = null
+# Rule: --OBJ = --TRT
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -36,10 +40,11 @@ Authorities:
         Version: '1.0'
 Check:
   all:
-    - name: --DECOD
-      operator: empty
-    - name: RELREC.FAOBJ
-      operator: non_empty
+    - any:
+        - name: --DECOD
+          operator: empty
+        - name: --DECOD
+          operator: not_exists
     - name: --TRT
       operator: not_equal_to
       value: RELREC.FAOBJ
@@ -47,20 +52,18 @@ Core:
   Id: CORE-000757
   Status: Published
   Version: '1'
-Description: When findings are collected about an intervention, and the
-  interventions parent record exists and --DECOD = null, FAOBJ should be equal
+Description: Raise an error when interventions parent record exists and --DECOD is not populated or not present, but FAOBJ is not equal
   to --TRT.
 Executability: Fully Executable
 Match Datasets:
   - Name: RELREC
     Wildcard: FA
 Outcome:
-  Message: Interventions parent record exists and --DECOD = null, but FAOBJ is not
-    equal to --TRT.
+  Message: Related record is present in the parent interventions domain dataset with --DECOD not populated or not present, but FAOBJ is not equal to the --TRT in the parent domain dataset.
   Output Variables:
     - RELREC.FAOBJ
-    - --TRT
     - --DECOD
+    - --TRT
 Rule Type: Record Data
 Scope:
   Classes:
