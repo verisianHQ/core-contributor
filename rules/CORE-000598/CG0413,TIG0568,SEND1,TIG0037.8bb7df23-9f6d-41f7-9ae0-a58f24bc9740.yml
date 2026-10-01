@@ -197,7 +197,7 @@ Core:
 Description: Raise an error when the dataset name does not begin with the DOMAIN value.
 Executability: Fully Executable
 Outcome:
-  Message: Dataset name does not begin with DOMAIN value
+  Message: Dataset name must begin with the DOMAIN value.
   Output Variables:
     - variable_name
     - variable_value
