@@ -1,0 +1,73 @@
+{
+  "datasets": [
+    {
+      "dataset": "ta.xpt",
+      "domain": "TA",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=NEW-RULE, dataset=TA",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=NEW-RULE, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "TAETORD must match value and order of elements as defined in the TA dataset within ARM of the subject.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "SUBJ005",
+          "value": {
+            "USUBJID": "SUBJ005",
+            "TAETORD": 1.0,
+            "ARM": "Drug A"
+          },
+          "validated": true
+        },
+        {
+          "row": 11,
+          "SEQ": 11,
+          "USUBJID": "SUBJ005",
+          "value": {
+            "USUBJID": "SUBJ005",
+            "TAETORD": 2.0,
+            "ARM": "Drug A"
+          },
+          "validated": true
+        },
+        {
+          "row": 17,
+          "SEQ": 17,
+          "USUBJID": "SUBJ005",
+          "value": {
+            "USUBJID": "SUBJ005",
+            "TAETORD": 4.0,
+            "ARM": "Drug A"
+          },
+          "validated": true
+        },
+        {
+          "row": 23,
+          "SEQ": 23,
+          "USUBJID": "SUBJ005",
+          "value": {
+            "USUBJID": "SUBJ005",
+            "TAETORD": 3.0,
+            "ARM": "Drug A"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

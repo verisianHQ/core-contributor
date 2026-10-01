@@ -44,6 +44,7 @@ Check:
         - SCREEN FAILURE
         - NOT ASSIGNED
         - NOT TREATED
+      value_is_literal: true
     - name: RFENDTC
       operator: empty
 Core:

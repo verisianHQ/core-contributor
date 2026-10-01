@@ -1,6 +1,7 @@
 # Variable: ECDOSE
 # Condition: ECOCCUR ^= 'N' and ECSTAT = null and ECDOSTXT = null
 # Rule: ECDOSE > 0
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -110,55 +111,25 @@ Authorities:
         Substandard: SDTM
         Version: '1.0'
 Check:
-  any:
+  all:
+    - name: ECOCCUR
+      operator: not_equal_to
+      value: N
+      value_is_literal: true
+    - name: ECDOSE
+      operator: less_than_or_equal_to
+      value: 0
     - all:
-        - name: ECOCCUR
-          operator: not_equal_to
-          value: N
-          value_is_literal: true
-        - name: ECSTAT
-          operator: empty
-        - name: ECDOSTXT
-          operator: empty
-        - name: ECDOSE
-          operator: less_than_or_equal_to
-          value: 0
-    - all:
-        - name: ECOCCUR
-          operator: not_equal_to
-          value: N
-          value_is_literal: true
-        - name: ECSTAT
-          operator: not_exists
-        - name: ECDOSTXT
-          operator: empty
-        - name: ECDOSE
-          operator: less_than_or_equal_to
-          value: 0
-    - all:
-        - name: ECOCCUR
-          operator: not_equal_to
-          value: N
-          value_is_literal: true
-        - name: ECSTAT
-          operator: empty
-        - name: ECDOSTXT
-          operator: not_exists
-        - name: ECDOSE
-          operator: less_than_or_equal_to
-          value: 0
-    - all:
-        - name: ECOCCUR
-          operator: not_equal_to
-          value: N
-          value_is_literal: true
-        - name: ECSTAT
-          operator: not_exists
-        - name: ECDOSTXT
-          operator: not_exists
-        - name: ECDOSE
-          operator: less_than_or_equal_to
-          value: 0
+        - any:
+          - name: ECSTAT
+            operator: empty
+          - name: ECSTAT
+            operator: not_exists
+        - any:
+          - name: ECDOSTXT
+            operator: empty
+          - name: ECDOSTXT
+            operator: not_exists
 Core:
   Id: CORE-000137
   Status: Published
@@ -167,14 +138,12 @@ Description: Raise an error when ECOCCUR is not equal to 'N', ECSTAT and
   ECDOSTXT are both empty but ECDOSE less than or equal to 0.
 Executability: Fully Executable
 Outcome:
-  Message: ECOCCUR is not 'N', ECSTAT and ECDOSTXT are both empty but ECDOSE is
-    less than or equal to 0.
+  Message: ECDOSE must not be less than or equal to 0 when ECOCCUR is not equal to 'N' and ECSTAT and ECDOSTXT are both not populated.
   Output Variables:
     - ECOCCUR
     - ECSTAT
     - ECDOSTXT
     - ECDOSE
-    - ECSTDTC
 Rule Type: Record Data
 Scope:
   Classes:

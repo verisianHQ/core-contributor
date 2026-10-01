@@ -12,8 +12,8 @@
       "dataset": "tv.xpt",
       "domain": "TV",
       "execution_status": "success",
-      "execution_message": "ARMCD is not in TA.ARMCD",
-      "number_errors": 12,
+      "execution_message": "ARMCD must be in TA.ARMCD when ARMCD is populated.",
+      "number_errors": 1,
       "errors": [
         {
           "row": 1,
@@ -22,106 +22,7 @@
           "value": {
             "ARMCD": "ZAN_LOWER"
           },
-          "validated": false
-        },
-        {
-          "row": 2,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARMCD": "ZAN_LOWER"
-          },
-          "validated": false
-        },
-        {
-          "row": 3,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARMCD": "ZAN_LOWER"
-          },
-          "validated": false
-        },
-        {
-          "row": 4,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARMCD": "ZAN_LOWER"
-          },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARMCD": "ZAN_LOWER"
-          },
-          "validated": false
-        },
-        {
-          "row": 6,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARMCD": "ZAN_LOWER"
-          },
-          "validated": false
-        },
-        {
-          "row": 7,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARMCD": "ZAN_HIGHEST"
-          },
-          "validated": false
-        },
-        {
-          "row": 8,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARMCD": "ZAN_HIGHEST"
-          },
-          "validated": false
-        },
-        {
-          "row": 9,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARMCD": "ZAN_HIGHEST"
-          },
-          "validated": false
-        },
-        {
-          "row": 10,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARMCD": "ZAN_HIGHEST"
-          },
-          "validated": false
-        },
-        {
-          "row": 11,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARMCD": "PLACEBO"
-          },
-          "validated": false
-        },
-        {
-          "row": 12,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "ARMCD": "PLACEBO"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     }

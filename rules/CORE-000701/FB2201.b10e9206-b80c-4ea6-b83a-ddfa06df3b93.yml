@@ -1,7 +1,7 @@
 # Variable: EPOCH
 # Condition:
 # Rule: EPOCH ^= null
-
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -57,7 +57,7 @@ Core:
   Id: CORE-000701
   Status: Published
   Version: '1'
-Description: EPOCH should be populated for clinical subject-level observations.
+Description: Raise an error when EPOCH is either not present or not populated for clinical subject-level observations.
 Executability: Partially Executable - Possible Overreporting
 Outcome:
   Message: EPOCH is missing for clinical subject-level observation.

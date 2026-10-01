@@ -26,6 +26,7 @@ Check:
         - SCRNFAIL
         - NOTASSGN
         - NOTTRT
+      value_is_literal: true
     - name: TSPARMCD
       operator: equal_to
       value: "STYPE"
