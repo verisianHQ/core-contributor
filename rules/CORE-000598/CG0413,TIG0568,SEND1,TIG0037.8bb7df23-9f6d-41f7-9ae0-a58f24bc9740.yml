@@ -194,7 +194,7 @@ Core:
   Id: CORE-000598
   Status: Published
   Version: '1'
-Description: The dataset name must begin with the DOMAIN value.
+Description: Raise an error when the dataset name does not begin with the DOMAIN value.
 Executability: Fully Executable
 Outcome:
   Message: Dataset name does not begin with DOMAIN value
