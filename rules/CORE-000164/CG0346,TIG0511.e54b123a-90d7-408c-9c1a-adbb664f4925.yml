@@ -80,6 +80,7 @@ Check:
     - name: --TERM
       operator: equal_to
       value: MULTIPLE
+      value_is_literal: true
 Core:
   Id: CORE-000164
   Status: Published

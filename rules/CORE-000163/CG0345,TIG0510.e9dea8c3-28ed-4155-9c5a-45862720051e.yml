@@ -80,6 +80,7 @@ Check:
     - name: --TRT
       operator: equal_to
       value: MULTIPLE
+      value_is_literal: true
 Core:
   Id: CORE-000163
   Status: Published

@@ -1,3 +1,7 @@
+# Variable: DOMAIN
+# Condition: Not custom domain
+# Rule: DOMAIN = valid Domain Code published by CDISC
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -6,7 +10,7 @@ Authorities:
           - Citations:
               - Cited Guidance: Using SDTM-specified standard domain names and prefixes where
                   applicable.
-                Document: SDTMIG v3.4
+                Document: IG v3.4
                 Section: 3.2.2
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -164,9 +168,6 @@ Authorities:
             Version: '1.0'
         Substandard: SEND
         Version: '1.0'
-# Variable: DOMAIN
-# Condition: Not custom domain
-# Rule: DOMAIN = valid Domain Code published by CDISC
 Check:
   all:
     - name: $domain_is_custom
@@ -175,6 +176,7 @@ Check:
     - name: define_variable_ccode
       operator: equal_to
       value: C66734
+      value_is_literal: true
     - name: define_variable_codelist_coded_codes
       operator: is_not_contained_by
       value: $domain_lib_ccode
@@ -182,22 +184,21 @@ Core:
   Id: CORE-000929
   Status: Published
   Version: '1'
-Description: Raise and error when the DOMAIN Code is not a valid Domain Code
+Description: Raise an error when a dataset is not a custom domain but the DOMAIN Code is not a valid Domain Code
   published by CDISC.
 Executability: Fully Executable
 Operations:
   - id: $domain_is_custom
     operator: domain_is_custom
-  - codelists:
-      - DOMAIN
+  - ct_attribute: Term CCODE
     id: $domain_lib_ccode
-    level: term
-    operator: codelist_terms
-    returntype: code
+    operator: get_codelist_attributes
+    name: DOMAIN
+    ct_conditions:
+      - Codelist Code: C66734
 Outcome:
-  Message: DOMAIN Code is not a published DOMAIN Code in CDISC Controlled Terminology.
+  Message: Dataset is not a custom domain, but the DOMAIN code in the define.xml document is not a published DOMAIN code in the CDISC Controlled Terminology version specified for the study.
   Output Variables:
-    - $domain_lib_ccode
     - define_variable_codelist_coded_codes
 Rule Type: Define Item Metadata Check against Library Metadata
 Scope:
