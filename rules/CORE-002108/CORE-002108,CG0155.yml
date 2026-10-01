@@ -58,8 +58,8 @@ Check:
       operator: not_matches_regex
       value: "^[A-Z]{4}$"
 Core:
-  Id: CDISC.SDTMIG.CG0155
-  Status: Draft
+  Id: CORE-002108
+  Status: Published
   Version: '1'
 Description: Raise an error when the dataset is an AP domain but DOMAIN value length is not 4 characters beginning with 'AP' and ending with a 2 character SDTM domain.
 Executability: Partially Executable - Possible Overreporting
