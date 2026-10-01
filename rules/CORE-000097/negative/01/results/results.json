@@ -13,8 +13,22 @@
       "domain": "SV",
       "execution_status": "success",
       "execution_message": "EPOCH value in the SV dataset doesn't match the corresponding EPOCH value in the SE dataset.",
-      "number_errors": 7,
+      "number_errors": 8,
       "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "1201001",
+          "value": {
+            "VISIT": "CYCLE1DAY1",
+            "EPOCH": "SCREENING",
+            "SVSTDTC": "2024-05-15",
+            "SESTDTC": "2024-05-15T12:25",
+            "SEENDTC": "2024-06-01T08:00",
+            "SE.EPOCH": "TREATMENT"
+          },
+          "validated": true
+        },
         {
           "row": 5,
           "SEQ": null,
@@ -36,7 +50,7 @@
           "value": {
             "VISIT": "FOLLOW-UP",
             "EPOCH": "FOLLOW-UP1",
-            "SVSTDTC": "2024-06-01",
+            "SVSTDTC": "2024-06-01T07:59",
             "SESTDTC": "2024-05-15T12:25",
             "SEENDTC": "2024-06-01T08:00",
             "SE.EPOCH": "TREATMENT"
