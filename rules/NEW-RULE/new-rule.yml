@@ -46,36 +46,33 @@ Authorities:
         Version: '3.4'
 Check:
   all:
-    - operator: greater_than
-      name: $max_record_count_ietestcd_ietest
-      value: 1
+    - name: TIVERS
+      operator: exists
     - name: TIVERS
       operator: empty
+    - operator: greater_than
+      name: $max_count_ietestcd
+      value: 1
 Core:
   Id: ''
   Status: Draft
   Version: '1'
-Description: Raise an error when an inclusion/exclusion criterion occurs more than once in the TI dataset but TIVERS is not populated.
+Description: Raise an error when an inclusion/exclusion criterion occurs more than once in the TI dataset but TIVERS is not populated on every TI record.
 Executability: Fully Executable
 Operations:
-  - id: $record_count_ietestcd_ietest
+  - id: $count_ietestcd
     operator: record_count
     domain: TI
     group:
       - IETESTCD
-      - IETEST
   - operator: max
-    name: $max_record_count_ietestcd_ietest
-    id: $max_count
-    value: $record_count_ietestcd_ietest
+    name: $count_ietestcd
+    id: $max_count_ietestcd
 Outcome:
-  Message: IETESTCD/IETEST combination occurs more than once in the TI dataset but TIVERS is not populated.
+  Message: At least one inclusion/exclusion criterion (IETESTCD) occurs more than once in the TI dataset but TIVERS is not populated on every TI record.
   Output Variables:
     - IETESTCD
-    - IETEST
     - TIVERS
-    - $record_count_ietestcd_ietest
-    - $max_count
 Rule Type: Record Data
 Scope:
   Classes:
@@ -87,4 +84,3 @@ Scope:
 Sensitivity: Group
 Grouping_Variables:
   - IETESTCD
-  - IETEST
