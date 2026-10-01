@@ -1,6 +1,6 @@
-# variable: --DUR
-# condition: --DUR ^= null
-# rule: --DUR >= 0
+# Variable: --DUR
+# Condition: --DUR ^= null
+# Rule: --DUR does not contain '-'
 # verified
 Authorities:
   - Organization: FDA
@@ -88,7 +88,7 @@ Authorities:
               Id: FB4005
               Version: '1'
             Version: '1.5'
-        Version: '3.1.1'
+        Version: 3.1.1
       - Name: SENDIG-GENETOX
         References:
           - Citations:
@@ -150,17 +150,18 @@ Check:
     - name: --DUR
       operator: non_empty
     - name: --DUR
-      operator: contains
-      value: '-'
-      value_is_literal: true
+      negative: false
+      operator: invalid_duration
 Core:
   Id: CORE-000305
   Status: Published
   Version: '1'
-Description: Collected Duration (--DUR) value is not negative.
+Description: Raise an error when Collected Duration (--DUR) value is negative.
 Executability: Fully Executable
 Outcome:
   Message: Negative value for --DUR.
+  Output Variables:
+    - --DUR
 Rule Type: Record Data
 Scope:
   Classes:
