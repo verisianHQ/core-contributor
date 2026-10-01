@@ -1,6 +1,7 @@
 # Variable: --SCAT
 # Condition: 
 # Rule: --SCAT ^= --DECOD
+# Verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -8,7 +9,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the
-                  domain  name or dictionary classification provided by --DECOD
+                  domain name or dictionary classification provided by --DECOD
                   and --BODSYS.
                 Document: IG v3.4
                 Section: 4.2.6
@@ -22,7 +23,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the
-                  domain  name or dictionary classification provided by --DECOD
+                  domain name or dictionary classification provided by --DECOD
                   and --BODSYS.
                 Document: IG v3.3
                 Section: 4.2.6
@@ -36,7 +37,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the
-                  domain  name or dictionary classification provided by --DECOD
+                  domain name or dictionary classification provided by --DECOD
                   and --BODSYS.
                 Document: IG v3.2
                 Section: 4.1.2.6
@@ -70,10 +71,10 @@ Core:
   Id: CORE-000195
   Status: Published
   Version: '1'
-Description: Raise an error when --SCAT = --DECOD.
+Description: Raise an error when --SCAT is equal to --DECOD.
 Executability: Fully Executable
 Outcome:
-  Message: --SCAT is equal to --DECOD.
+  Message: --SCAT must not be equal to --DECOD.
   Output Variables:
     - --DECOD
     - --SCAT

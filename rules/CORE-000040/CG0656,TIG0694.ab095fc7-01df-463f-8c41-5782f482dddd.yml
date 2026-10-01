@@ -1,6 +1,7 @@
 # Variable: VISITNUM
 # Condition: SVPRESP = null
 # Rule: VISITNUM not in TV.VISITNUM
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -57,7 +58,7 @@ Core:
   Id: CORE-000040
   Status: Published
   Version: '1'
-Description: Raise an error when SVPRESP is null and VISITNUM is present in TV.VISITNUM
+Description: Raise an error when a visit is not planned (SVPRESP is null) but VISITNUM value matches a VISITNUM value in the TV dataset.
 Executability: Fully Executable
 Operations:
   - domain: TV
@@ -65,7 +66,11 @@ Operations:
     name: VISITNUM
     operator: distinct
 Outcome:
-  Message: VISITNUM for unplanned visit is present in TV.
+  Message: VISITNUM for unplanned visit matches a VISITNUM value in the TV dataset.
+  Output Variables:
+    - VISITNUM
+    - VISIT
+    - SVPRESP
 Rule Type: Record Data
 Scope:
   Classes:

@@ -1,6 +1,7 @@
 # Variable: --STDY
 # Condition: --STDTC or DM.RFSTDTC does not contain complete values in their date portion
 # Rule: --STDY = null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -100,31 +101,28 @@ Authorities:
         Substandard: SDTM
         Version: '1.0'
 Check:
-  any:
-    - all:
+  all:
+    - name: --STDY
+      operator: non_empty
+    - any:
         - name: --STDTC
           operator: is_incomplete_date
-        - name: --STDY
-          operator: non_empty
-    - all:
         - name: RFSTDTC
           operator: is_incomplete_date
-        - name: --STDY
-          operator: non_empty
 Core:
   Id: CORE-000138
   Status: Published
   Version: '1'
-Description: If --STDTC or DM.RFSTDTC does not contain a complete values, --STDY
-  must be null.
+Description: Raise an error when --STDY is populated but --STDTC or RFSTDTC in
+  the DM dataset does not contain a complete date value.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: DM
 Outcome:
-  Message: --STDY is not null when either --STDTC or DM.RFSTDTC do not contain
-    complete values in their date portion
+  Message: --STDY is populated but either --STDTC or RFSTDTC in the DM dataset
+    does not contain a complete date value.
   Output Variables:
     - --STDY
     - --STDTC

@@ -1,6 +1,7 @@
 # Variable: --DOSU
 # Condition: --DOSE ^= null or --DOSTOT ^= null or --DOSTXT ^= null
 # Rule: --DOSU ^= null
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -61,8 +62,11 @@ Authorities:
         Version: '1.0'
 Check:
   all:
-    - name: --DOSU
-      operator: empty
+    - any:
+        - name: --DOSU
+          operator: not_exists
+        - name: --DOSU
+          operator: empty
     - any:
         - name: --DOSE
           operator: non_empty
@@ -74,12 +78,13 @@ Core:
   Id: CORE-000093
   Status: Published
   Version: '1'
-Description: Raise an error when --DOSU = null and (--DOSE ^= null or --DOSTOT
-  ^= null or --DOSTXT ^= null)
+Description: Raise an error when --DOSE, --DOSTOT, or --DOSTXT is populated but --DOSU
+  is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: Missing value for --DOSU, when --DOSE, --DOSTXT or --DOSTOT is provided
+  Message: --DOSE, --DOSTOT, or --DOSTXT is populated but --DOSU is not populated.
   Output Variables:
+    - --TRT
     - --DOSE
     - --DOSTXT
     - --DOSTOT

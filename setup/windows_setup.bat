@@ -1,6 +1,8 @@
 @echo off
 REM Contributor setup script for Windows
 setlocal enabledelayedexpansion
+set "REPO_ROOT=%~dp0.."
+cd /d "%REPO_ROOT%"
 
 echo CDISC Rules Engine - Contributor Setup
 echo.
@@ -9,7 +11,7 @@ REM Warn if not running as admin [cite: 2]
 net session >nul 2>&1
 if %errorLevel% neq 0 (
     echo Requesting Administrative privileges...
-    powershell -Command "Start-Process -FilePath '%0' -Verb RunAs"
+    powershell -Command "Start-Process -FilePath '%~f0' -WorkingDirectory '%REPO_ROOT%' -Verb RunAs"
     exit /b
 )
 

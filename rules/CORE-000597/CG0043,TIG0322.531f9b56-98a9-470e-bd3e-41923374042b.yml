@@ -1,6 +1,7 @@
 # Variable: AESMIE
 # Condition: Record present in SUPPAE where SUPPAE.QNAM=AESOSP
 # Rule: AESMIE = 'Y'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -71,27 +72,30 @@ Authorities:
         Version: '1.0'
 Check:
   all:
-    - name: QNAM
-      operator: equal_to
-      value: AESOSP
-      value_is_literal: true
-    - name: AESMIE
-      operator: not_equal_to
-      value: Y
+    - any:
+      - name: AESMIE
+        operator: not_equal_to
+        value: Y
+        value_is_literal: true
+      - name: AESMIE
+        operator: not_exists
+    - name: AESOSP
+      operator: non_empty
 Core:
   Id: CORE-000597
   Status: Published
   Version: '1'
-Description: When SUPPAE.QNAM=AESOSP is present, a record with AESMIE=Y should be present
+Description: Raise an error when there is a record in the SUPPAE dataset where QNAM is equal to 'AESOSP' but no record with AESMIE equal to 'Y' is present in the AE dataset.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: SUPPAE
 Outcome:
-  Message: Missing AESMIE=Y where SUPPAE.QNAM=AESOSP
+  Message: QNAM equal to 'AESOSP' is present in the SUPPAE dataset, but no record with AESMIE equal to 'Y' is present in the AE dataset.
   Output Variables:
-    - QNAM
+    - AESOSP
+    - AETERM
     - AESMIE
 Rule Type: Record Data
 Scope:

@@ -4,7 +4,7 @@
       "dataset": "oe.xpt",
       "domain": "OE",
       "execution_status": "success",
-      "execution_message": "OELAT is present when OELOC is not present.",
+      "execution_message": "OELAT must not be present in the dataset when OELOC is not present.",
       "number_errors": 1,
       "errors": [
         {
@@ -15,7 +15,7 @@
             "OELOC": "Not in dataset",
             "OELAT": "RIGHT"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

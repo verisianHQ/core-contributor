@@ -48,6 +48,7 @@ Check:
     - name: define_dataset_is_non_standard
       operator: equal_to
       value: "Yes"
+      value_is_literal: true
     - name: DOMAIN
       operator: is_contained_by
       value: $valid_domain_names

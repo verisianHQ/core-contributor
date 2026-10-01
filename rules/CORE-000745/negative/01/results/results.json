@@ -15,7 +15,7 @@
             "OIPARM": "Genotype",
             "OIPARMCD": null
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -25,7 +25,7 @@
             "OIPARM": "Genotype",
             "OIPARMCD": "GENTYPE"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
@@ -35,7 +35,7 @@
             "OIPARM": null,
             "OIPARMCD": "SUBTYPE"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 5,
@@ -45,61 +45,9 @@
             "OIPARM": "Subtype",
             "OIPARMCD": "SUBTYPE"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "oi.xpt",
-      "Row": 5,
-      "Variable": "OIPARMCD"
-    },
-    {
-      "Sheet": "oi.xpt",
-      "Row": 5,
-      "Variable": "OIPARM"
-    },
-    {
-      "Sheet": "oi.xpt",
-      "Row": 6,
-      "Variable": "OIPARMCD"
-    },
-    {
-      "Sheet": "oi.xpt",
-      "Row": 6,
-      "Variable": "OIPARM"
-    },
-    {
-      "Sheet": "oi.xpt",
-      "Row": 7,
-      "Variable": "OIPARMCD"
-    },
-    {
-      "Sheet": "oi.xpt",
-      "Row": 7,
-      "Variable": "OIPARM"
-    },
-    {
-      "Sheet": "oi.xpt",
-      "Row": 8,
-      "Variable": "OIPARMCD"
-    },
-    {
-      "Sheet": "oi.xpt",
-      "Row": 8,
-      "Variable": "OIPARM"
-    },
-    {
-      "Sheet": "oi.xpt",
-      "Row": 9,
-      "Variable": "OIPARMCD"
-    },
-    {
-      "Sheet": "oi.xpt",
-      "Row": 9,
-      "Variable": "OIPARM"
     }
   ]
 }

@@ -4,7 +4,7 @@
       "dataset": "dm.xpt",
       "domain": "DM",
       "execution_status": "success",
-      "execution_message": "There are no DS records for subject who was assigned treatment",
+      "execution_message": "At least one DS record must be present for subject who was assigned treatment.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,9 +12,9 @@
           "SEQ": null,
           "USUBJID": "S001",
           "value": {
-            "USUBJID": "S001"
+            "ACTARMCD": "DRUGA"
           },
-          "validated": false
+          "validated": true
         }
       ]
     },

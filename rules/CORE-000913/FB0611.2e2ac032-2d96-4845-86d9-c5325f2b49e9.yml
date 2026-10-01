@@ -1,6 +1,7 @@
 # Variable: DSSTDTC
 # Condition: DS.DSDECOD= "DEATH"
 # Rule: DS.DSSTDTC = DM.DTHDTC
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -56,9 +57,7 @@ Core:
   Id: CORE-000913
   Status: Published
   Version: '1'
-Description: Disposition date time (DSSTDTC) for DEATH record in the DS dataset
-  should be equal to the Date of Death (DTHDTC) in the DM dataset for the
-  corresponding subject.
+Description: Raise an error when DSDECOD is equal to 'DEATH' but DSSTDTC is not equal to DTHDTC in the DM dataset.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
