@@ -1,0 +1,57 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBSTNRC must not be populated when LBORRES is a continuous measurement.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "001",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBORRES": "30",
+            "LBSTNRC": "MILD"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "002",
+          "value": {
+            "LBTESTCD": "ALB",
+            "LBORRES": "-30.5",
+            "LBSTNRC": "30"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 2,
+          "USUBJID": "001",
+          "value": {
+            "LBTESTCD": "ALP",
+            "LBORRES": "0.0005",
+            "LBSTNRC": "ABNORMAL"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 2,
+          "USUBJID": "002",
+          "value": {
+            "LBTESTCD": "ALP",
+            "LBORRES": "-35.55",
+            "LBSTNRC": "+30"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

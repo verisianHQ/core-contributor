@@ -1,6 +1,7 @@
 # Variable: GEN
 # Condition: Study includes protocol-specified study treatment
 # Rule: EX present in study
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -53,12 +54,10 @@ Core:
   Id: CORE-000739
   Status: Published
   Version: '1'
-Description: Trigger error when study includes protocol-specified study
-  treatment and EX is not present
-Executability: Fully Executable
+Description: Raise an error when EX dataset is not present.
+Executability: Partially Executable - Possible Overreporting
 Outcome:
-  Message: EX is not present in study when study includes protocol-specified study
-    treatment
+  Message: EX dataset is not present in the study. In case there is a valid reason for not having EX dataset, rule output must be explained.
 Rule Type: Domain Presence Check
 Scope:
   Classes:
