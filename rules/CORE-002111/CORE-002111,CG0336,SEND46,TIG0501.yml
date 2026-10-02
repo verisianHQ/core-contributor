@@ -158,8 +158,8 @@ Check:
       operator: equal_to_case_insensitive
       value: $domain_name
 Core:
-  Id: ''
-  Status: Draft
+  Id: CORE-002111
+  Status: Published
   Version: '1'
 Description: Raise an error when IECAT is equal to Domain Name.
 Executability: Fully Executable
