@@ -54,8 +54,8 @@ Check:
       name: $max_count_ietestcd
       value: 1
 Core:
-  Id: ''
-  Status: Draft
+  Id: CORE-002112
+  Status: Published
   Version: '1'
 Description: Raise an error when an inclusion/exclusion criterion occurs more than once in the TI dataset but TIVERS is not populated on every TI record.
 Executability: Fully Executable
