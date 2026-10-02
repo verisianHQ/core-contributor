@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    {
+      "dataset": "ti.xpt",
+      "domain": "TI",
+      "execution_status": "success",
+      "execution_message": "IECAT must not be equal to the Domain Name.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IECAT": "Trial Inclusion/Exclusion Criteria",
+            "$domain_name": "Trial Inclusion/Exclusion Criteria"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IECAT": "TRIAL INCLUSION/EXCLUSION CRITERIA",
+            "$domain_name": "Trial Inclusion/Exclusion Criteria"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
