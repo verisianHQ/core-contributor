@@ -47,13 +47,18 @@ Authorities:
 Check:
   all:
     - name: --SOCCD
-      operator: not_equal_to
-      value: --BDSYCD
+      operator: exists
+    - any:
+      - name: --BDSYCD
+        operator: not_exists
+      - name: --BDSYCD
+        operator: not_equal_to
+        value: --SOCCD
 Core:
   Id: CORE-000362
   Status: Published
   Version: '1'
-Description: Raise an error when primary SOC is used for analysis but --SOCCD is not equal to --BDSYCD.
+Description: Raise an error when primary SOC is used for analysis but --SOCCD is not equal to --BDSYCD or --BDSYCD is missing.
 Executability: Partially Executable - Possible Overreporting
 Outcome:
   Message: --SOCCD must be equal to --BDSYCD when primary SOC is used for analysis.
