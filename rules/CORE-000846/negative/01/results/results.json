@@ -20,74 +20,24 @@
           "SEQ": null,
           "USUBJID": "CDISC008",
           "value": {
+            "USUBJID": "CDISC008",
             "RACE": "MULTIPLE",
-            "$suppdm_race_count": 0
+            "$suppdm_race_count": 1
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": null,
           "USUBJID": "CDISC009",
           "value": {
+            "USUBJID": "CDISC009",
             "RACE": "MULTIPLE",
-            "$suppdm_race_count": 0
+            "$suppdm_race_count": 1
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "suppdm.xpt",
-      "Row": 6,
-      "Variable": "STUDYID"
-    },
-    {
-      "Sheet": "suppdm.xpt",
-      "Row": 6,
-      "Variable": "RDOMAIN"
-    },
-    {
-      "Sheet": "suppdm.xpt",
-      "Row": 6,
-      "Variable": "USUBJID"
-    },
-    {
-      "Sheet": "suppdm.xpt",
-      "Row": 6,
-      "Variable": "IDVAR"
-    },
-    {
-      "Sheet": "suppdm.xpt",
-      "Row": 6,
-      "Variable": "IDVARVAL"
-    },
-    {
-      "Sheet": "suppdm.xpt",
-      "Row": 6,
-      "Variable": "QNAM"
-    },
-    {
-      "Sheet": "suppdm.xpt",
-      "Row": 6,
-      "Variable": "QLABEL"
-    },
-    {
-      "Sheet": "suppdm.xpt",
-      "Row": 6,
-      "Variable": "QVAL"
-    },
-    {
-      "Sheet": "suppdm.xpt",
-      "Row": 6,
-      "Variable": "QORIG"
-    },
-    {
-      "Sheet": "suppdm.xpt",
-      "Row": 6,
-      "Variable": "QEVAL"
     }
   ]
 }
