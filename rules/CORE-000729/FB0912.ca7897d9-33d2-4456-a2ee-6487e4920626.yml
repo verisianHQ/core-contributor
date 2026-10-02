@@ -1,6 +1,7 @@
-# Variable: INVID, INVNAM
+# Variable: INVID AND INVNAM
 # Condition:
-# Rule: INVNAM and INVID have a one-to-one relationship 
+# Rule: INVID and INVNAM have a one-to-one relationship
+# verified
 Authorities:
   - Organization: FDA
     Standards:
@@ -52,20 +53,16 @@ Authorities:
 Check:
   all:
     - name: INVID
-      operator: exists
-    - name: INVNAM
-      operator: exists
-    - name: INVID
       operator: is_not_unique_relationship
       value: INVNAM
 Core:
   Id: CORE-000729
   Status: Published
   Version: '1'
-Description: INVID and INVNAM shoumd have a one-to-one relationship.
+Description: Raise an error when INVID and INVNAM do not have a one-to-one relationship.
 Executability: Fully Executable
 Outcome:
-  Message: INVNAM and INVID do not have a one-to-one relationship.
+  Message: INVID and INVNAM do not have a one-to-one relationship.
   Output Variables:
     - INVID
     - INVNAM

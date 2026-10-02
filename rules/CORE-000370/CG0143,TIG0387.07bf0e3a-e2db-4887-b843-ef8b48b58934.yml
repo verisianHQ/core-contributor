@@ -94,6 +94,7 @@ Check:
     - name: DSTERM
       operator: contains
       value: INFORMED CONSENT
+      value_is_literal: true
     - name: RFICDTC
       operator: date_not_equal_to
       value: $min_ds_dsstdtc

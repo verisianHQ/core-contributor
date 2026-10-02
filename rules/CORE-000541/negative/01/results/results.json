@@ -4,8 +4,8 @@
       "dataset": "ti.xpt",
       "domain": "TI",
       "execution_status": "success",
-      "execution_message": "IETESTCD > 8 chars or contains more than only letters, numbers, underscores, or starts with a number.",
-      "number_errors": 6,
+      "execution_message": "IETESTCD must be shorter than 9 characters and must not contain characters besides letters, numbers, and underscores, and must not start with a number.",
+      "number_errors": 5,
       "errors": [
         {
           "row": 2,
@@ -14,7 +14,7 @@
           "value": {
             "IETESTCD": "INCL0201A"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 6,
@@ -23,7 +23,7 @@
           "value": {
             "IETESTCD": "1INCL06"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 7,
@@ -32,34 +32,25 @@
           "value": {
             "IETESTCD": "INCL070001"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 8,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "IETESTCD": "INCL082121212"
-          },
-          "validated": false
-        },
-        {
-          "row": 12,
+          "row": 9,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
             "IETESTCD": "EXCL12&"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 15,
+          "row": 10,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
             "IETESTCD": "EXCL15123145"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

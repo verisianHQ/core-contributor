@@ -1,4 +1,184 @@
 {
-  "error": "No result - either the rule or test case data unit-test-coreid-CG0114-negative.xlsx is broken",
-  "exception": "cannot unpack non-iterable NoneType object"
+  "datasets": [
+    {
+      "dataset": "ag.xpt",
+      "domain": "AG",
+      "execution_status": "success",
+      "execution_message": "AGDOSE, AGDOSTOT, or AGDOSTXT is populated but AGDOSU is not populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "XYZ-001-001",
+          "value": {
+            "AGTRT": "GRASS",
+            "AGDOSE": 250.0,
+            "AGDOSTXT": null,
+            "AGDOSTOT": "Not in dataset",
+            "AGDOSU": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "CMDOSE, CMDOSTOT, or CMDOSTXT is populated but CMDOSU is not populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "ABC-0002",
+          "value": {
+            "CMTRT": "ASPIRIN",
+            "CMDOSE": 100.0,
+            "CMDOSTXT": null,
+            "CMDOSTOT": 200.0,
+            "CMDOSU": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "success",
+      "execution_message": "ECDOSE, ECDOSTOT, or ECDOSTXT is populated but ECDOSU is not populated.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "ABC1001",
+          "value": {
+            "ECTRT": "BOTTLE A",
+            "ECDOSE": 2.0,
+            "ECDOSTXT": null,
+            "ECDOSTOT": "Not in dataset",
+            "ECDOSU": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "ABC2001",
+          "value": {
+            "ECTRT": "BOTTLE A",
+            "ECDOSE": 2.0,
+            "ECDOSTXT": null,
+            "ECDOSTOT": "Not in dataset",
+            "ECDOSU": "Not in dataset"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 3,
+          "USUBJID": "ABC2001",
+          "value": {
+            "ECTRT": "BOTTLE A",
+            "ECDOSE": 2.0,
+            "ECDOSTXT": null,
+            "ECDOSTOT": "Not in dataset",
+            "ECDOSU": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "success",
+      "execution_message": "EXDOSE, EXDOSTOT, or EXDOSTXT is populated but EXDOSU is not populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "ABC1001",
+          "value": {
+            "EXTRT": "DRUG X",
+            "EXDOSE": 1000.0,
+            "EXDOSTXT": null,
+            "EXDOSTOT": "Not in dataset",
+            "EXDOSU": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ml.xpt",
+      "domain": "ML",
+      "execution_status": "success",
+      "execution_message": "MLDOSE, MLDOSTOT, or MLDOSTXT is populated but MLDOSU is not populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "XYZ-001-001",
+          "value": {
+            "MLTRT": "SNACK",
+            "MLDOSE": null,
+            "MLDOSTXT": "2",
+            "MLDOSTOT": "Not in dataset",
+            "MLDOSU": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "pr.xpt",
+      "domain": "PR",
+      "execution_status": "success",
+      "execution_message": "PRDOSE, PRDOSTOT, or PRDOSTXT is populated but PRDOSU is not populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "ABC123-1001",
+          "value": {
+            "PRTRT": "External beam radiation therapy",
+            "PRDOSE": 70.0,
+            "PRDOSTXT": null,
+            "PRDOSTOT": "Not in dataset",
+            "PRDOSU": null
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "su.xpt",
+      "domain": "SU",
+      "execution_status": "success",
+      "execution_message": "SUDOSE, SUDOSTOT, or SUDOSTXT is populated but SUDOSU is not populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "1234005",
+          "value": {
+            "SUTRT": "COFFEE",
+            "SUDOSE": null,
+            "SUDOSTXT": null,
+            "SUDOSTOT": 3.0,
+            "SUDOSU": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
 }

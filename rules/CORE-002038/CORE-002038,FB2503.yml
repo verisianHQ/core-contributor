@@ -1,5 +1,5 @@
 # Variable: ARMCD
-# Condition: ARMCD ^= (SCRNFAIL, NOTASSGN) DM.ARMCD ^= (SCRNFAIL, NOTASSGN)
+# Condition: ARMCD ^= (SCRNFAIL, NOTASSGN)
 # Rule: DM.USUBJID in EX.USUBJID
 # verified
 Authorities:
@@ -20,10 +20,13 @@ Authorities:
 Check:
   all:
     - name: ARMCD
+      operator: non_empty
+    - name: ARMCD
       operator: is_not_contained_by_case_insensitive
       value:
         - SCRNFAIL
         - NOTASSGN
+      value_is_literal: true
     - name: USUBJID
       operator: is_not_contained_by
       value: $usubjids_in_ex

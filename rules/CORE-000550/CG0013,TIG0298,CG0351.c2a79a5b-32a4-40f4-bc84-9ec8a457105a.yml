@@ -1,7 +1,7 @@
 # Variable: GEN
 # Condition: 
 # Rule: Variable = Model List of Allowed Variables for Observation Class
-# 2025-11-18: SDTMIG-3-3 is implemented in a separate rule, and thus commented out here, as SDTMIG has "domain-specific" variables: which are NOT in the "SDTM Model"
+# SDTMIG-3-3 is implemented in a separate rule as SDTMIG has "domain-specific" variables: which are NOT in the "SDTM Model"
 # verified
 Authorities:
   - Organization: CDISC
@@ -97,7 +97,7 @@ Operations:
     operator: get_model_column_order
 Outcome:
   Message: Variable is not listed in the Model List of Allowed Variables for the
-    Observation Class and should be in supplemental qualifiers.
+    Observation Class and must be sumbitted in SUPPQUAL.
   Output Variables:
     - variable_name
 Rule Type: Variable Metadata Check
