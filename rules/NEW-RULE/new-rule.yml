@@ -43,19 +43,38 @@ Authorities:
         Version: '3.4'
 Check:
   all:
-    - name: variable_name
-      operator: is_contained_by
-      value:
-      - --DUR
-      - --PDUR
-      - --ELTM
-      - --STINT
-      - --ENINT
-      - TEDUR
-      - TDSTOFF
-      - TDTGTPAI
-      - TDMINPAI
-      - TDMAXPAI
+    - any:
+      - name: variable_name
+        operator: ends_with
+        value: DUR
+        value_is_literal: true
+      - name: variable_name
+        operator: ends_with
+        value: PDUR
+        value_is_literal: true
+      - name: variable_name
+        operator: ends_with
+        value: ELTM
+        value_is_literal: true
+      - name: variable_name
+        operator: ends_with
+        value: STINT
+        value_is_literal: true
+      - name: variable_name
+        operator: ends_with
+        value: ENINT
+        value_is_literal: true
+      - name: variable_name
+        operator: is_contained_by
+        value:
+        - TEDUR
+        - TDSTOFF
+        - TDTGTPAI
+        - TDMINPAI
+        - TDMAXPAI
+        value_is_literal: true
+    - name: variable_value
+      operator: non_empty
     - name: variable_value
       operator: invalid_duration
       negative: true
@@ -66,7 +85,7 @@ Core:
 Description: Raise an error when any of the values for --DUR, --PDUR, --ELTM, --STINT, --ENINT, TEDUR, TDSTOFF, TDTGTPAI, TDMINPAI, TDMAXPAI is not ISO 8601 duration.
 Executability: Fully Executable
 Outcome:
-  Message: Values for --DUR, --PDUR, --ELTM, --STINT, --ENINT, TEDUR, TDSTOFF, TDTGTPAI, TDMINPAI, TDMAXPAI must be ISO 8601 duration.
+  Message: Value must be a valid ISO 8601 duration.
   Output Variables:
     - variable_name
     - variable_value

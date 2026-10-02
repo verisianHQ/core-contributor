@@ -4,87 +4,148 @@
       "dataset": "ft.xpt",
       "domain": "FT",
       "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "execution_message": "Value must be a valid ISO 8601 duration.",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 94,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "FTDUR",
+            "variable_value": "2003-12-15T10:00"
+          },
+          "validated": true
+        },
+        {
+          "row": 96,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "FTPDUR",
+            "variable_value": "2W"
+          },
+          "validated": true
+        },
+        {
+          "row": 102,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "FTELTM",
+            "variable_value": "P26"
+          },
+          "validated": true
+        },
+        {
+          "row": 108,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "FTSTINT",
+            "variable_value": "-26"
+          },
+          "validated": true
+        },
+        {
+          "row": 115,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "FTENINT",
+            "variable_value": "2012-11-28"
+          },
+          "validated": true
+        }
+      ]
     },
     {
       "dataset": "te.xpt",
       "domain": "TE",
       "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
+      "execution_message": "Value must be a valid ISO 8601 duration.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 31,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "TEDUR",
+            "variable_value": "2W"
+          },
+          "validated": true
+        },
+        {
+          "row": 32,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "TEDUR",
+            "variable_value": "P26"
+          },
+          "validated": true
+        },
+        {
+          "row": 33,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "TEDUR",
+            "variable_value": "-26"
+          },
+          "validated": true
+        }
+      ]
     },
     {
       "dataset": "td.xpt",
       "domain": "TD",
       "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
-    }
-  ],
-  "unmatched_validation": [
-    {
-      "value": {
-        "FTDUR": "2003-12-15T10:00"
-      }
-    },
-    {
-      "value": {
-        "FTPDUR": "2W"
-      }
-    },
-    {
-      "value": {
-        "FTELTM": "P26"
-      }
-    },
-    {
-      "value": {
-        "FTSTINT": "-26"
-      }
-    },
-    {
-      "value": {
-        "FTENINT": "2012-11-28"
-      }
-    },
-    {
-      "value": {
-        "TEDUR": "2W"
-      }
-    },
-    {
-      "value": {
-        "TEDUR": "P26"
-      }
-    },
-    {
-      "value": {
-        "TEDUR": "-26"
-      }
-    },
-    {
-      "value": {
-        "TDSTOFF": "2003-12-15T10:00"
-      }
-    },
-    {
-      "value": {
-        "TDTGTPAI": "2W"
-      }
-    },
-    {
-      "value": {
-        "TDMINPAI": "P26"
-      }
-    },
-    {
-      "value": {
-        "TDMAXPAI": "-26"
-      }
+      "execution_message": "Value must be a valid ISO 8601 duration.",
+      "number_errors": 4,
+      "errors": [
+        {
+          "row": 20,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "TDSTOFF",
+            "variable_value": "2003-12-15T10:00"
+          },
+          "validated": true
+        },
+        {
+          "row": 21,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "TDTGTPAI",
+            "variable_value": "2W"
+          },
+          "validated": true
+        },
+        {
+          "row": 26,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "TDMINPAI",
+            "variable_value": "P26"
+          },
+          "validated": true
+        },
+        {
+          "row": 31,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "TDMAXPAI",
+            "variable_value": "-26"
+          },
+          "validated": true
+        }
+      ]
     }
   ]
 }
