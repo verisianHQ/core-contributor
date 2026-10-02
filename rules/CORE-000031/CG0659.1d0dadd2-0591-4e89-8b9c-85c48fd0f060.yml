@@ -31,16 +31,26 @@ Authorities:
                 Section: 6.3.9.3.2
 Check:
   any:
-#    - name: QSEVAL
-#      operator: exists
-#    - name: FTEVAL
-#      operator: exists
     - all:
-     #   - name: RSEVAL
-     #     operator: exists
-        - name: RSCAT
+        - name: DOMAIN
+          operator: is_contained_by
+          value:
+          - FT
+          - QS
+          value_is_literal: true
+        - name: --EVAL
+          operator: exists
+    - all:
+        - name: DOMAIN
+          operator: equal_to
+          value: RS
+          value_is_literal: true
+        - name: --EVAL
+          operator: exists
+        - name: --CAT
           operator: is_contained_by
           value: $cccat_terms
+          value_is_literal: true
 Operations:
   - ct_attribute: Term Signification
     id: $cccat_terms
