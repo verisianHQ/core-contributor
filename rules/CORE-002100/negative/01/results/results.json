@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "RFSTDTC must be populated when ARMNRS is not populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "ARMNRS": null,
+            "RFSTDTC": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
