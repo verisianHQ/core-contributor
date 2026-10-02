@@ -154,22 +154,22 @@ Authorities:
         Version: '1.0'
 Check:
   all:
-    - name: --CAT
+    - name: IECAT
       operator: equal_to_case_insensitive
       value: $domain_name
 Core:
-  Id: CORE-000272
+  Id: CORE-002111
   Status: Published
   Version: '1'
-Description: Raise an error when --CAT is equal to Domain Name.
+Description: Raise an error when IECAT is equal to Domain Name.
 Executability: Fully Executable
 Operations:
   - id: $domain_name
     operator: domain_label
 Outcome:
-  Message: --CAT must not be equal to Domain Name.
+  Message: IECAT must not be equal to Domain Name.
   Output Variables:
-    - --CAT
+    - IECAT
     - $domain_name
 Rule Type: Record Data
 Scope:
@@ -177,7 +177,7 @@ Scope:
     Include:
       - ALL
   Domains:
-    Exclude:
+    Include:
       - TI
   Use Case: INDH, PROD
 Sensitivity: Record
