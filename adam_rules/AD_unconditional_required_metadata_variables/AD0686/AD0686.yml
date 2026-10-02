@@ -1,0 +1,56 @@
+# Variable: DEVEDT
+# Condition: 
+# Rule: DEVEDT is not present within ADDL
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '686'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.3
+                Section: '3.2.1.3'
+                Cited Guidance: 
+                  'ADaMIG-MD v1.0, Section 3.2.1.3: DEVEDT has Core=Req.'
+      - Name: ADaMIG-MD
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '686'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG-MD v1.0
+                Section: '3.2.1.3'
+                Cited Guidance: 
+                  'ADaMIG-MD v1.0, Section 3.2.1.3: DEVEDT has Core=Req.'
+Check:
+  all:
+    - name: DEVEDT
+      operator: not_exists
+Core:
+  Id: AD0686
+  Status: Published
+  Version: '1'
+Description: Raise an error when the DEVEDT variable is not present within ADDL.
+Executability: Fully Executable
+Outcome:
+  Message: DEVEDT is not present within ADDL.
+  Output Variables:
+    - DEVEDT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ADDL
+  Domains:
+    Include:
+      - ADDL
+Sensitivity: Dataset
