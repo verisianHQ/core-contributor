@@ -185,6 +185,7 @@ class TestRunner:
         self._setup_engine_path()
         self.use_pgserver = use_pgserver
         self.standard = standard
+        self.default_ct = ct
         self.rules_dir = None
         if standard == "sdtm":
             self.rules_dir = SDTM_RULES_DIR
@@ -561,8 +562,8 @@ class TestRunner:
                 test_datasets = sharepoint_xlsx_to_test_datasets(str(excel_file))
 
             ig_specs = self._init_engine_specs(standard, standard_version)
-            if provided_codelists:
-                self.data_service._update_provided_codelists(provided_codelists)
+            # set on every case, so that a case without Library CT does not inherit the previous case's
+            self.data_service._update_provided_codelists(provided_codelists or self.default_ct)
 
             sql_results, sql_regression = process_test_case_dataset_sql(
                 regression_errors={},
