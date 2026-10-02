@@ -1,0 +1,73 @@
+# Variable: TIVERS
+# Condition: Greater than one version of the IE criteria
+# Rule: TIVERS present in dataset
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The number of this version of the Inclusion/Exclusion criteria. May be omitted if there is only one version.
+                Document: IG v3.2
+                Item: Specification
+                Section: '7.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0254
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The number of this version of the Inclusion/Exclusion criteria. May be omitted if there is only one version.
+                Document: IG v3.3
+                Item: Specification
+                Section: '7.4.1'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0253
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The number of this version of the Inclusion/Exclusion criteria. May be omitted if there is only one version.
+                Document: IG v3.4
+                Item: Specification
+                Section: '7.4.1'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0253
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+Check:
+  all:
+    - name: TIVERS
+      operator: not_exists
+    - operator: is_not_unique_set
+      name: IETESTCD
+      value: DOMAIN
+Core:
+  Id: CORE-002110
+  Status: Published
+  Version: '1'
+Description: Raise an error when an inclusion/exclusion criterion occurs more than once in the TI dataset but TIVERS is not present in the dataset.
+Executability: Fully Executable
+Outcome:
+  Message: TIVERS must be present in the TI dataset when at least one inclusion/exclusion criterion (IETESTCD) occurs more than once.
+  Output Variables:
+    - IETESTCD
+    - TIVERS
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TI
+Sensitivity: Dataset
