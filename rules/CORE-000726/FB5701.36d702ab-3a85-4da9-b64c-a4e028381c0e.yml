@@ -64,10 +64,10 @@ Check:
     - any:
       - name: define_variable_codelist_coded_values
         operator: not_matches_regex
-        value: HISPANIC OR LATINO
+        value: (^|,)HISPANIC OR LATINO(,|$)
       - name: define_variable_codelist_coded_values
         operator: not_matches_regex
-        value: NOT HISPANIC OR LATINO
+        value: (^|,)NOT HISPANIC OR LATINO(,|$)
 Core:
   Id: CORE-000726
   Status: Published
