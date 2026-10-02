@@ -1,0 +1,49 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVALCD must be a valid code in the CDISC CT version identified in TSVCDVER.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVALCD": "C00001",
+            "TSPARMCD": "ADDON",
+            "TSVCDVER": "2025-03-28",
+            "TSVCDREF": "CDISC"
+          },
+          "validated": true
+        },
+        {
+          "row": 16,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVALCD": "C00002",
+            "TSPARMCD": "HLTSUBJI",
+            "TSVCDVER": "2025-03-28",
+            "TSVCDREF": "CDISC CT"
+          },
+          "validated": true
+        },
+        {
+          "row": 51,
+          "SEQ": 2,
+          "USUBJID": "None",
+          "value": {
+            "TSVALCD": "C205490",
+            "TSPARMCD": "RACEC",
+            "TSVCDVER": "2024-09-27",
+            "TSVCDREF": "CDISC CT"
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
+}
