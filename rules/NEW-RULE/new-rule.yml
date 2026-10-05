@@ -44,10 +44,12 @@ Check:
       operator: not_contains_all
       value: 
         - "data-tabulation-dataset-sdtm"
+      value_is_literal: true
     - name: file_tag_name
       operator: not_contains_all
       value: 
         - "data-tabulation-data-definition"
+      value_is_literal: true
 Core:
   Id: TRC1375a
   Status: Draft
