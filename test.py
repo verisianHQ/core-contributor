@@ -286,7 +286,7 @@ class TestRunner:
 
     def _read_data_ct_versions(self, data_dir: Path) -> set:
         """
-        Preloading CT package versions named by records referencing CDISC CT, 
+        Preloading CT package versions named by records referencing CDISC CT,
         in the engine's CT_VERSION_COLUMNS (e.g. TS.TSVCDVER).
         """
         from engine.cdisc_rules_engine.data_service.postgresql_data_service import (
@@ -567,6 +567,9 @@ class TestRunner:
             if file == "define.xml":
                 define_xml_path = file_path
                 self.data_service._update_define_xml_path(define_xml_path)
+                # cleared on every case, so that a case without define-XML extensible terms does not inherit
+                # the previous case's (the engine only replace them when there are new ones to add)
+                self._clear_define_extensible_ct_terms()
                 if define_xml_path:
                     from engine.cdisc_rules_engine.services.define_xml.define_xml_reader_factory import (
                         DefineXMLReaderFactory,
@@ -614,6 +617,16 @@ class TestRunner:
             return sql_results, {"datasets": sql_regression} if sql_regression else {"datasets": []}
         except Exception as e:
             return None, {"error": "Error executing engine validation.", "exception": str(e)}
+
+    def _clear_define_extensible_ct_terms(self):
+        """Removes define-XML extensible terms from the codelists table, as the engine stores them (no standard)."""
+        from engine.cdisc_rules_engine.enums.static_tables import StaticTables
+
+        table_name = StaticTables.IG_CODELIST_TABLE_NAME.value
+        if self.data_service.pgi.schema.get_table(table_name):
+            self.data_service.pgi.execute_sql(
+                f"DELETE FROM {table_name} WHERE standard_type IS NULL AND extensible = 'Yes'"
+            )
 
     @staticmethod
     def _rule_applicable_to_case(rule_id: str, data_path: str) -> bool:
