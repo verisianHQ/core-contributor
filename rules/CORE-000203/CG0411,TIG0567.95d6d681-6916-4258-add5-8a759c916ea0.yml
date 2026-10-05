@@ -1,17 +1,19 @@
 # Variable: GEN
 # Condition: 
-# Rule: IDVAR, IDVARVAL, and QNAM a unique combination per parent subject record
+# Rule: IDVAR, IDVARVAL, and QNAM must be a unique combination per parent 
+# subject record
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The combined set of values for the first six columns
-                  (STUDYID…QNAM) should be unique for every record. That is,
-                  there should not be multiple records in a SUPP-- dataset for
-                  the same QNAM value, as it relates to IDVAR/IDVARVAL for a
-                  USUBJID in a domain.
+              - Cited Guidance: The combined set of values for the first six
+                  columns (STUDYID…QNAM) should be unique for every record.
+                  That is, there should not be multiple records in a SUPP--
+                  dataset for the same QNAM value, as it relates to 
+                  IDVAR/IDVARVAL for a USUBJID in a domain.
                 Document: IG v3.4
                 Section: '8.4'
             Origin: SDTM and SDTMIG Conformance Rules
@@ -23,7 +25,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: One record per IDVAR, IDVARVAL, and QNAM value per subject
+              - Cited Guidance: One record per IDVAR, IDVARVAL, and QNAM value
+                  per subject
                 Document: IG v3.2
                 Section: 8.4.1
             Origin: SDTM and SDTMIG Conformance Rules
@@ -35,11 +38,11 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The combined set of values for the first six columns
-                  (STUDYID-QNAM) should be unique for every record. That is;
-                  there should not be multiple records in a SUPP-- dataset for
-                  the same QNAM value; as it relates to IDVAR/IDVARVAL for a
-                  USUBJID in a domain.
+              - Cited Guidance: The combined set of values for the first six
+                  columns (STUDYID-QNAM) should be unique for every record.
+                  That is; there should not be multiple records in a SUPP--
+                  dataset for the same QNAM value; as it relates to
+                  IDVAR/IDVARVAL for a USUBJID in a domain.
                 Document: IG v3.3
                 Section: '8.4'
             Origin: SDTM and SDTMIG Conformance Rules
@@ -51,9 +54,9 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: A relationship dataset used to describe nonstandard variables
-                  and their association to parent records in general-observation
-                  class datasets.
+              - Cited Guidance: A relationship dataset used to describe
+                  nonstandard variables and their association to parent records
+                  in general-observation class datasets.
                 Document: TIG 1.0
                 Item: Specifications IDVAR,IDVARVAL,QNAM|Description
                 Section: 2.8.10.27
@@ -90,13 +93,14 @@ Core:
   Id: CORE-000203
   Status: Published
   Version: '1'
-Description: Trigger error when the combination of IDVAR, IDVARVAL, and QNAM is
-  not unique per parent subject record
+Description: Raise an error when the combination of IDVAR, IDVARVAL, and QNAM 
+  is not unique per parent subject record.
 Executability: Fully Executable
 Outcome:
-  Message: The combination of IDVAR, IDVARVAL, and QNAM is not unique per parent
-    subject record
+  Message: The combination of IDVAR, IDVARVAL, and QNAM must be unique per 
+    parent subject record.
   Output Variables:
+    - RDOMAIN
     - USUBJID
     - IDVAR
     - IDVARVAL

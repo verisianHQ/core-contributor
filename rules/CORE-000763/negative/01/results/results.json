@@ -4,103 +4,43 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMSTTPT is equal to the date of collection or assessment but CMSTRTPT is not in ('BEFORE', 'COINCIDENT',  'UNKNOWN').",
-      "number_errors": 1,
+      "execution_message": "CMSTRTPT must be equal to 'BEFORE', 'COINCIDENT', or 'UNKNOWN' when CMSTTPT is equal to the date of collection or assessment.",
+      "number_errors": 3,
       "errors": [
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "CMDTC": "2013-05-11",
+            "CMSTRTPT": "unknown",
+            "CMSTTPT": "2013-05-11"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "CMDTC": "2013-05-12",
+            "CMSTRTPT": "BEFOR",
+            "CMSTTPT": "2013-05-12"
+          },
+          "validated": true
+        },
         {
           "row": 6,
           "SEQ": 2,
           "USUBJID": "CDISC002",
           "value": {
-            "CMSTTPT": "2013-05-20",
             "CMDTC": "2013-05-20",
-            "CMSTRTPT": null
+            "CMSTRTPT": null,
+            "CMSTTPT": "2013-05-20"
           },
-          "validated": false
+          "validated": true
         }
       ]
-    },
-    {
-      "dataset": "mh.xpt",
-      "domain": "MH",
-      "execution_status": "success",
-      "execution_message": "MHSTTPT is equal to the date of collection or assessment but MHSTRTPT is not in ('BEFORE', 'COINCIDENT',  'UNKNOWN').",
-      "number_errors": 6,
-      "errors": [
-        {
-          "row": 2,
-          "SEQ": 1,
-          "USUBJID": "CDISC002",
-          "value": {
-            "MHSTTPT": "2013-05-20",
-            "MHDTC": "2013-05-20",
-            "MHSTRTPT": "ONGOING"
-          },
-          "validated": false
-        },
-        {
-          "row": 3,
-          "SEQ": 1,
-          "USUBJID": "CDISC003",
-          "value": {
-            "MHSTTPT": "2013-05-20",
-            "MHDTC": "2013-05-20",
-            "MHSTRTPT": "AFTER"
-          },
-          "validated": false
-        },
-        {
-          "row": 6,
-          "SEQ": 1,
-          "USUBJID": "CDISC006",
-          "value": {
-            "MHSTTPT": "2013-05-20",
-            "MHDTC": "2013-05-20",
-            "MHSTRTPT": "ONGOING"
-          },
-          "validated": false
-        },
-        {
-          "row": 7,
-          "SEQ": 1,
-          "USUBJID": "CDISC007",
-          "value": {
-            "MHSTTPT": "2013-05-20",
-            "MHDTC": "2013-05-20",
-            "MHSTRTPT": "ONGOING"
-          },
-          "validated": false
-        },
-        {
-          "row": 12,
-          "SEQ": 1,
-          "USUBJID": "CDISC012",
-          "value": {
-            "MHSTTPT": "2013-05-03",
-            "MHDTC": "2013-05-03",
-            "MHSTRTPT": "AFTER"
-          },
-          "validated": false
-        },
-        {
-          "row": 13,
-          "SEQ": 1,
-          "USUBJID": "CDISC013",
-          "value": {
-            "MHSTTPT": "2013-05-04",
-            "MHDTC": "2013-05-04",
-            "MHSTRTPT": null
-          },
-          "validated": false
-        }
-      ]
-    }
-  ],
-  "unvalidated_highlights": [
-    {
-      "Sheet": "cm.xpt",
-      "Row": 10,
-      "Variable": "CMENRTPT"
     }
   ]
 }
