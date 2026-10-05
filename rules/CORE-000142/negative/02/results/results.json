@@ -4,8 +4,8 @@
       "dataset": "vs.xpt",
       "domain": "VS",
       "execution_status": "success",
-      "execution_message": "VSELTM is not the same value across records with the same values of DOMAIN, VISITNUM, VSTPTREF, and VSTPTNUM.",
-      "number_errors": 4,
+      "execution_message": "VSELTM is not the same value across records with the same values of DOMAIN, VISITNUM, VSTPTREF, and VSTPTNUM when VSTPT, VSTPTNUM, and VSELTM are populated.",
+      "number_errors": 2,
       "errors": [
         {
           "row": 1,
@@ -14,11 +14,11 @@
           "value": {
             "VSTPT": "4H PREDOSE",
             "VSTPTNUM": 10.0,
-            "VSELTM": "-PT4H",
+            "VSTPTREF": "DOSE",
             "VISITNUM": 5.0,
             "DOMAIN": "VS"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -27,37 +27,11 @@
           "value": {
             "VSTPT": "4H PREDOSE",
             "VSTPTNUM": 5.0,
-            "VSELTM": "-PT4H",
+            "VSTPTREF": "DOSE",
             "VISITNUM": 4.0,
             "DOMAIN": "VS"
           },
-          "validated": false
-        },
-        {
-          "row": 3,
-          "SEQ": 6,
-          "USUBJID": "CDISC002",
-          "value": {
-            "VSTPT": "10MIN POSTDOSE",
-            "VSTPTNUM": 5.0,
-            "VSELTM": "10",
-            "VISITNUM": 4.0,
-            "DOMAIN": "VS"
-          },
-          "validated": false
-        },
-        {
-          "row": 4,
-          "SEQ": 7,
-          "USUBJID": "CDISC002",
-          "value": {
-            "VSTPT": "10MIN POSTDOSE",
-            "VSTPTNUM": 10.0,
-            "VSELTM": "10",
-            "VISITNUM": 5.0,
-            "DOMAIN": "VS"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     }
