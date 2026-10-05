@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    {
+      "dataset": "adppk.csv",
+      "domain": "adppk",
+      "execution_status": "success",
+      "execution_message": "RACEN has more than one value for a given RACE value when both variables are populated.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "RACEN": 1.0,
+            "RACE": "White"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "RACEN": 2.0,
+            "RACE": "White"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

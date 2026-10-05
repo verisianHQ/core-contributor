@@ -1,0 +1,49 @@
+# Variable: USUBJIDN
+# Condition: USUBJIDN and USUBJID are populated
+# Rule: Each USUBJIDN value must map to only one USUBJID value
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADPPKIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '812'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADPPKIG v1.0
+        Section: '3.2'
+        Item: Table 3.2
+        Cited Guidance: 'ADPPKIG v1.0, Section 3.2, Table 3.2: Unique numerical representation
+          of USUBJID.'
+Check:
+  all:
+  - name: USUBJID
+    operator: is_inconsistent_across_dataset
+    value: USUBJIDN
+    where_populated: true
+Core:
+  Id: AD0812
+  Status: Draft
+  Version: '1'
+Description: Each USUBJIDN value must map to only one USUBJID value when both variables
+  are populated.
+Executability: Fully Executable
+Outcome:
+  Message: USUBJID has more than one value for a given USUBJIDN value when both variables
+    are populated.
+  Output Variables:
+  - USUBJID
+  - USUBJIDN
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BDS
+  Domains:
+    Include:
+    - ADPPK
+Sensitivity: Record

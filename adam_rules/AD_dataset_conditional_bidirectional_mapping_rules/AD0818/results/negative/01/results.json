@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    {
+      "dataset": "adppk.csv",
+      "domain": "adppk",
+      "execution_status": "success",
+      "execution_message": "SUBJIDN has more than one value for a given SUBJID value when both variables are populated.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "SUBJIDN": 1.0,
+            "SUBJID": "SUBJ-001"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "SUBJIDN": 2.0,
+            "SUBJID": "SUBJ-001"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
