@@ -1,0 +1,63 @@
+{
+  "datasets": [
+    {
+      "dataset": "eg.xpt",
+      "domain": "EG",
+      "execution_status": "success",
+      "execution_message": "EGSTRESC is not numeric but EGSTRESN is populated.",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "123101",
+          "value": {
+            "EGSTRESC": "TEST",
+            "EGSTRESN": 10.0
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "123101",
+          "value": {
+            "EGSTRESC": "2-5",
+            "EGSTRESN": 2.0
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "123102",
+          "value": {
+            "EGSTRESC": "+8",
+            "EGSTRESN": 8.0
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 2,
+          "USUBJID": "123102",
+          "value": {
+            "EGSTRESC": "positive",
+            "EGSTRESN": 15.0
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 2,
+          "USUBJID": "123102",
+          "value": {
+            "EGSTRESC": "<5",
+            "EGSTRESN": 5.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

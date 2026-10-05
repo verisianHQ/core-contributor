@@ -4,7 +4,7 @@
       "dataset": "ds.xpt",
       "domain": "DS",
       "execution_status": "success",
-      "execution_message": "EPOCH should be null if DSCAT is protocol milestone",
+      "execution_message": "DSCAT is equal to 'PROTOCOL MILESTONE' but EPOCH is populated.",
       "number_errors": 1,
       "errors": [
         {
@@ -16,7 +16,7 @@
             "DSCAT": "PROTOCOL MILESTONE",
             "EPOCH": "FIRST TREATMENT EPOCH"
           },
-          "validated": false
+          "validated": true
         }
       ]
     }

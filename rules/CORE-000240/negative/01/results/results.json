@@ -4,17 +4,28 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "AESTRF is populated when AEOCCUR = \"N\"",
-      "number_errors": 1,
+      "execution_message": "AESTRF must not be populated when AEOCCUR is equal to 'N'.",
+      "number_errors": 2,
       "errors": [
         {
-          "row": 2,
+          "row": 1,
           "SEQ": 2,
           "USUBJID": "CDISC001",
           "value": {
-            "AESTRF": "AFTER"
+            "AEOCCUR": "N",
+            "AESTRF": "BEFORE"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AEOCCUR": "N",
+            "AESTRF": "Lorem ipsum dolor sit amet"
+          },
+          "validated": true
         }
       ]
     }

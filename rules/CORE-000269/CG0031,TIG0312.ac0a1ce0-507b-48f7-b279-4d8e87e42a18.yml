@@ -81,6 +81,7 @@ Check:
       - name: SVPRESP
         operator: equal_to
         value: Y
+        value_is_literal: true
     - name: VISIT
       operator: non_empty
     - name: VISIT

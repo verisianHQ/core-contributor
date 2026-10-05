@@ -1,0 +1,59 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000887, dataset=TS",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Subject in interventional study, assigned to an actual treatment is missing exposure records in EX dataset.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "YYY100",
+          "value": {
+            "ACTARMCD": "IKD",
+            "TSVAL": "INTERVENTIONAL"
+          },
+          "validated": true
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "ZZZ200",
+          "value": {
+            "ACTARMCD": "IKD",
+            "TSVAL": "INTERVENTIONAL"
+          },
+          "validated": true
+        },
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "SSS900",
+          "value": {
+            "ACTARMCD": "SSS",
+            "TSVAL": "INTERVENTIONAL"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to class for rule id=CORE-000887, dataset=EX",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

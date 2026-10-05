@@ -47,6 +47,7 @@ Check:
     - name: TSPARMCD
       operator: equal_to
       value: PCLAS
+      value_is_literal: true
     - name: $STYPE_INTERVENTIONAL
       operator: greater_than_or_equal_to
       value: 1
@@ -56,9 +57,8 @@ Core:
   Id: CORE-000497
   Status: Published
   Version: '1'
-Description: 'Raise an error when a record exists in TS where TSPARMCD = STYPE
-  and TSVAL = INTERVENTIONAL but TSVAL for TSPARMCD = TPCLAS is empty but
-  applicable.'
+Description: Raise an error when a record exists with TSPARMCD is equal to 'STYPE' and TSVAL is equal to 'INTERVENTIONAL', but a corresponding TSPARMCD equal to 'PCLAS' 
+  record with TSVAL populated does not exist.
 Executability: Partially Executable - Possible Overreporting
 Operations:
   - filter:
@@ -69,14 +69,12 @@ Operations:
     id: $STYPE_INTERVENTIONAL
     operator: record_count
 Outcome:
-  Message: 'A record exists in TS where TSPARMCD = STYPE and TSVAL =
-    INTERVENTIONAL but TSVAL for TSPARMCD = PCLAS is empty when PCLAS is
-    applicable.'
+  Message: When TSPARMCD is equal to 'STYPE' and TSVAL is equal to 'INTERVENTIONAL', a corresponding TSPARMCD equal to 'PCLAS' 
+    record with TSVAL populated must be present.
   Output Variables:
     - TSGRPID
     - TSPARMCD
     - TSVAL
-    - $STYPE_INTERVENTIONAL
 Rule Type: Record Data
 Scope:
   Classes:
@@ -85,4 +83,6 @@ Scope:
   Domains:
     Include:
       - TS
-Sensitivity: Record
+Sensitivity: Group
+Grouping_Variables:
+  - TSGRPID

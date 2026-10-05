@@ -11,7 +11,7 @@ Authorities:
               - Cited Guidance: Upper end of reference range for continuous measurement in
                   original units. Should be populated only for continuous
                   results.
-                Document: SDTMIG v3.4
+                Document: IG v3.4
                 Item: Specification
                 Section: 6.3.5.6
             Origin: SDTM and SDTMIG Conformance Rules
@@ -68,17 +68,9 @@ Authorities:
         Version: '1.0'
 
 Check:
-  # Changed by Marcelina Hungria on 2025-05-29 and revised on 2026-04-15.
-  # Fixed the regex and the LBORRES non-empty condition per revised Description.
-  # Changed to Fully Executable. See Jira ticket: CORERULES-156 (CG0180) and SDTMIGRULE-288
-  # Change by Jozef Aerts to allow values starting with a dot, e.g. ".25"
-  # Also see Github ticket https://github.com/cdisc-org/cdisc-rules-engine/issues/520
   all:
     - name: LBORRES
       operator: not_matches_regex
-      #value: ^-?(0|[1-9]\d*)(\.\d+)?$
-      #value: ^-?(\d+(\.\d+)?$)|(\.\d+$)
-      #value: ^-?((\d+(\.\d+)?$)|(\.\d+$))
       value: ^(<|>|< |> )?(-?((\d+(\.\d+)?)|(\.\d+)))$
     - name: LBORNRHI
       operator: non_empty
@@ -88,13 +80,10 @@ Core:
   Id: CORE-000289
   Status: Published
   Version: '1'
-Description: >-
-  Raise an error when LBORRES is not a quantitative value and LBORNRHI is populated.
-  The interpretation of the guidance is that the rule applies when LBORRES is populated (not null).
-  Note: the rule logic applies until such time there is availability of reliable metadata to verify if the test is quantitative or not.
+Description: Raise an error when LBORRES is not a continuous measurement but LBORNRHI is populated.
 Executability: Fully Executable
 Outcome:
-  Message: LBORNRHI is populated when LBORRES is not a quantitative value.
+  Message: LBORNRHI must not be populated when LBORRES is not a continuous measurment.
   Output Variables:
     - LBTESTCD
     - LBORRES
