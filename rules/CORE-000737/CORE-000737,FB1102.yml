@@ -45,7 +45,7 @@ Authorities:
             Version: '1.5'
         Version: '3.4'
 Check:
-  all:
+  any:
     - name: TSPARMCD
       operator: not_contains_all
       value:
@@ -59,6 +59,7 @@ Check:
         - DCUTDTC
         - EXTTIND
         - FCNTRY
+        - FDATCHSP
         - HLTSUBJI
         - LENGTH
         - NARMS
@@ -76,9 +77,11 @@ Check:
         - SENDTC
         - SEXPOP
         - SPONSOR
+        - SDTMVER
+        - SDTIGVER
+        - STYPE
         - STOPRULE
         - SSTDTC
-        - STYPE
         - TBLIND
         - TCNTRL
         - THERAREA
@@ -86,22 +89,64 @@ Check:
         - TPHASE
         - TTYPE
         - INDIC
-        - RANDQT
+        - SPREFID
       value_is_literal: true
-    - name: TSVAL
-      operator: non_empty
+    - all:
+      - name: TSPARMCD
+        operator: is_contained_by
+        value:
+          - ACTSUB
+          - ADAPT
+          - ADDON
+          - AGEMAX
+          - AGEMIN
+          - COMPTRT
+          - DCUTDESC
+          - DCUTDTC
+          - EXTTIND
+          - FCNTRY
+          - FDATCHSP
+          - HLTSUBJI
+          - LENGTH
+          - NARMS
+          - NCOHORT
+          - OBJPRIM
+          - OBJSEC
+          - ONGOSIND
+          - OUTMSPRI
+          - PDPSTIND
+          - PDSTIND
+          - PIPIND
+          - PLANSUB
+          - RDIND
+          - REGID
+          - SENDTC
+          - SEXPOP
+          - SPONSOR
+          - SDTMVER
+          - SDTIGVER
+          - STYPE
+          - STOPRULE
+          - SSTDTC
+          - TBLIND
+          - TCNTRL
+          - THERAREA
+          - TITLE
+          - TPHASE
+          - TTYPE
+          - INDIC
+          - SPREFID
+        value_is_literal: true
 Core:
   Id: CORE-000737
   Status: Published
   Version: '1'
 Description: Raise an error when not all FDA Desired Trial Summary (TS)
-  Parameters (TSPARMCDs) are present in the TS dataset.
+  Parameters (TSPARMCDs) are present in the TS dataset or TSVAL is not populated.
 Executability: Fully Executable
 Operations:
-  - id: $distinct_tsparmcds
-    name: TSPARMCD
+  - id: $FDAdesired_missing_tsparmcds
     operator: distinct
-  - id: $missing_tsparmcds
     name:
       - ACTSUB
       - ADAPT
@@ -113,6 +158,7 @@ Operations:
       - DCUTDTC
       - EXTTIND
       - FCNTRY
+      - FDATCHSP
       - HLTSUBJI
       - LENGTH
       - NARMS
@@ -130,9 +176,11 @@ Operations:
       - SENDTC
       - SEXPOP
       - SPONSOR
+      - SDTMVER
+      - SDTIGVER
+      - STYPE
       - STOPRULE
       - SSTDTC
-      - STYPE
       - TBLIND
       - TCNTRL
       - THERAREA
@@ -140,13 +188,110 @@ Operations:
       - TPHASE
       - TTYPE
       - INDIC
-      - RANDQT
+      - SPREFID
+  - id: $distinct_tsparmcds
+    name: TSPARMCD
+    operator: distinct
+  - id: $FDAdesired_missing_tsparmcds
+    name:
+      - ACTSUB
+      - ADAPT
+      - ADDON
+      - AGEMAX
+      - AGEMIN
+      - COMPTRT
+      - DCUTDESC
+      - DCUTDTC
+      - EXTTIND
+      - FCNTRY
+      - FDATCHSP
+      - HLTSUBJI
+      - LENGTH
+      - NARMS
+      - NCOHORT
+      - OBJPRIM
+      - OBJSEC
+      - ONGOSIND
+      - OUTMSPRI
+      - PDPSTIND
+      - PDSTIND
+      - PIPIND
+      - PLANSUB
+      - RDIND
+      - REGID
+      - SENDTC
+      - SEXPOP
+      - SPONSOR
+      - SDTMVER
+      - SDTIGVER
+      - STYPE
+      - STOPRULE
+      - SSTDTC
+      - TBLIND
+      - TCNTRL
+      - THERAREA
+      - TITLE
+      - TPHASE
+      - TTYPE
+      - INDIC
+      - SPREFID
     operator: minus
     subtract: $distinct_tsparmcds
+  - id: $empty_tsparmcds
+    operator: distinct
+    name: TSPARMCD
+    filter:
+      TSVAL: null
+  - id: $FDAdesired_empty_tsparmcd
+    operator: intersect
+    name: $empty_tsparmcds
+    substract:
+      - ACTSUB
+      - ADAPT
+      - ADDON
+      - AGEMAX
+      - AGEMIN
+      - COMPTRT
+      - DCUTDESC
+      - DCUTDTC
+      - EXTTIND
+      - FCNTRY
+      - FDATCHSP
+      - HLTSUBJI
+      - LENGTH
+      - NARMS
+      - NCOHORT
+      - OBJPRIM
+      - OBJSEC
+      - ONGOSIND
+      - OUTMSPRI
+      - PDPSTIND
+      - PDSTIND
+      - PIPIND
+      - PLANSUB
+      - RDIND
+      - REGID
+      - SENDTC
+      - SEXPOP
+      - SPONSOR
+      - SDTMVER
+      - SDTIGVER
+      - STYPE
+      - STOPRULE
+      - SSTDTC
+      - TBLIND
+      - TCNTRL
+      - THERAREA
+      - TITLE
+      - TPHASE
+      - TTYPE
+      - INDIC
+      - SPREFID
 Outcome:
-  Message: At least one FDA Desired TSPARMCD is missing in the TS dataset.
+  Message: At least one FDA Desired TSPARMCD is missing in the TS dataset or TSVAL is not populated.
   Output Variables:
-    - $missing_tsparmcds
+    - $FDAdesired_missing_tsparmcds
+    - $FDAdesired_empty_tsparmcd
 Rule Type: Record Data
 Scope:
   Classes:
