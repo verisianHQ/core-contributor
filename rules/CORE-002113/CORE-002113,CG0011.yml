@@ -79,8 +79,8 @@ Check:
       operator: invalid_duration
       negative: true
 Core:
-  Id: ''
-  Status: Draft
+  Id: CORE-002113
+  Status: Published
   Version: '1'
 Description: Part C - Raise an error when any of the values for --DUR, --PDUR, --ELTM, --STINT, --ENINT, TEDUR, TDSTOFF, TDTGTPAI, TDMINPAI, TDMAXPAI is not ISO 8601 duration.
 Executability: Fully Executable
