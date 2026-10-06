@@ -452,6 +452,7 @@ class TestRunner:
         for _, row in datasets_df.iterrows():
             filename = row["Filename"]
             label = row.get("Label", "")
+            file_size = row.get("File Size")
             dataset_path = Path(data_path) / filename
 
             if dataset_path.exists():
@@ -493,6 +494,7 @@ class TestRunner:
                         label=label,
                         variables=variables,
                         records=data,
+                        file_size=None if pd.isna(file_size) else int(file_size),
                     )
                 )
         return test_datasets
