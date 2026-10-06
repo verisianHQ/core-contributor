@@ -58,8 +58,8 @@ Check:
       operator: not_equal_to
       value: $dm_rficdtc
 Core:
-  Id: NEW-RULE
-  Status: Draft
+  Id: CORE-002115
+  Status: Published
   Version: '1'
 Description: Raise an error when Trial Summary Parameter Study Start Date
   (SSTDTC) is not equal to the earliest date of informed consent (min RFICDTC)
