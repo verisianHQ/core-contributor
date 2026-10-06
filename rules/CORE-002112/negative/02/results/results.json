@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    {
+      "dataset": "ti.xpt",
+      "domain": "TI",
+      "execution_status": "success",
+      "execution_message": "At least one inclusion/exclusion criterion (IETESTCD) occurs more than once in the TI dataset but TIVERS is not populated on every TI record.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETESTCD": "EXCL12",
+            "TIVERS": null
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "IETESTCD": "EXCL12A",
+            "TIVERS": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

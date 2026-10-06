@@ -3,6 +3,7 @@
 Contributor test script for SQL CDISC Rules Engine Contributor Repo.
 """
 
+import re
 import sys
 import argparse
 import json
@@ -185,6 +186,7 @@ class TestRunner:
         self._setup_engine_path()
         self.use_pgserver = use_pgserver
         self.standard = standard
+        self.default_ct = ct
         self.rules_dir = None
         if standard == "sdtm":
             self.rules_dir = SDTM_RULES_DIR
@@ -275,10 +277,45 @@ class TestRunner:
                             continue
                         _, _, ct_list = self._read_library_specs_xlsx(str(excel_files[0]))
                     versions.update(ct_list)
+                    versions.update(self._read_data_ct_versions(data_dir))
                 except Exception:
                     # Malformed/unrelated Library sheet - ignore, this is a best-effort scan.
                     continue
 
+        return versions
+
+    def _read_data_ct_versions(self, data_dir: Path) -> set:
+        """
+        Preloading CT package versions named by records referencing CDISC CT,
+        in the engine's CT_VERSION_COLUMNS (e.g. TS.TSVCDVER).
+        """
+        from engine.cdisc_rules_engine.data_service.postgresql_data_service import (
+            CDISC_CT_REFERENCES,
+            CT_VERSION_COLUMNS,
+        )
+
+        versions = set()
+        for domain, (reference_var, version_var) in CT_VERSION_COLUMNS.items():
+            datasets = []
+            for csv_file in data_dir.glob("*.csv"):
+                if csv_file.stem.upper() == domain:
+                    datasets.append(pd.read_csv(csv_file, dtype=str, keep_default_na=False))
+            for excel_file in list(data_dir.glob("[!~]*.xlsx")) + list(data_dir.glob("[!~]*.xls")):
+                with pd.ExcelFile(excel_file) as xlsx:
+                    for sheet in xlsx.sheet_names:
+                        if sheet.split(".")[0].upper() == domain:
+                            datasets.append(pd.read_excel(xlsx, sheet_name=sheet, dtype=str, keep_default_na=False))
+
+            for dataset in datasets:
+                if not {reference_var, version_var}.issubset(dataset.columns):
+                    continue
+                records = dataset.iloc[3:]
+                cdisc_records = records[records[reference_var].str.strip().isin(CDISC_CT_REFERENCES)]
+                versions.update(
+                    f"{self.standard}ct-{v.strip()}"
+                    for v in cdisc_records[version_var]
+                    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", v.strip())
+                )
         return versions
 
     def _resolve_codelist_files(self, cache_dir: str) -> List[str]:
@@ -452,6 +489,7 @@ class TestRunner:
         for _, row in datasets_df.iterrows():
             filename = row["Filename"]
             label = row.get("Label", "")
+            file_size = row.get("File Size")
             dataset_path = Path(data_path) / filename
 
             if dataset_path.exists():
@@ -493,6 +531,7 @@ class TestRunner:
                         label=label,
                         variables=variables,
                         records=data,
+                        file_size=None if pd.isna(file_size) else int(file_size),
                     )
                 )
         return test_datasets
@@ -530,6 +569,9 @@ class TestRunner:
             if file == "define.xml":
                 define_xml_path = file_path
                 self.data_service._update_define_xml_path(define_xml_path)
+                # cleared on every case, so that a case without define-XML extensible terms does not inherit
+                # the previous case's (the engine only replace them when there are new ones to add)
+                self._clear_define_extensible_ct_terms()
                 if define_xml_path:
                     from engine.cdisc_rules_engine.services.define_xml.define_xml_reader_factory import (
                         DefineXMLReaderFactory,
@@ -561,8 +603,8 @@ class TestRunner:
                 test_datasets = sharepoint_xlsx_to_test_datasets(str(excel_file))
 
             ig_specs = self._init_engine_specs(standard, standard_version)
-            if provided_codelists:
-                self.data_service._update_provided_codelists(provided_codelists)
+            # set on every case, so that a case without Library CT does not inherit the previous case's
+            self.data_service._update_provided_codelists(provided_codelists or self.default_ct)
 
             sql_results, sql_regression = process_test_case_dataset_sql(
                 regression_errors={},
@@ -577,6 +619,16 @@ class TestRunner:
             return sql_results, {"datasets": sql_regression} if sql_regression else {"datasets": []}
         except Exception as e:
             return None, {"error": "Error executing engine validation.", "exception": str(e)}
+
+    def _clear_define_extensible_ct_terms(self):
+        """Removes define-XML extensible terms from the codelists table, as the engine stores them (no standard)."""
+        from engine.cdisc_rules_engine.enums.static_tables import StaticTables
+
+        table_name = StaticTables.IG_CODELIST_TABLE_NAME.value
+        if self.data_service.pgi.schema.get_table(table_name):
+            self.data_service.pgi.execute_sql(
+                f"DELETE FROM {table_name} WHERE standard_type IS NULL AND extensible = 'Yes'"
+            )
 
     @staticmethod
     def _rule_applicable_to_case(rule_id: str, data_path: str) -> bool:
