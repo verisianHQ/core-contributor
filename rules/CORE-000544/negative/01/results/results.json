@@ -69,22 +69,6 @@
       ]
     },
     {
-      "dataset": "lbae.xpt",
-      "domain": "LB",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
-    },
-    {
-      "dataset": "lbds.xpt",
-      "domain": "LB",
-      "execution_status": "success",
-      "execution_message": null,
-      "number_errors": 0,
-      "errors": []
-    },
-    {
       "dataset": "ss1.xpt",
       "domain": "SS",
       "execution_status": "success",
@@ -261,20 +245,44 @@
           "validated": true
         }
       ]
-    }
-  ],
-  "unmatched_validation": [
-    {
-      "value": {
-        "DOMAIN": "LB",
-        "POOLID": "0002"
-      }
     },
     {
-      "value": {
-        "DOMAIN": "LB",
-        "POOLID": "0002"
-      }
+      "dataset": "lbae.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBSEQ must be a unique number per USUBJID per domain, or a unique number per POOLID per domain, including when the domain is split into multiple files.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 8,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "LB",
+            "POOLID": "0002"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "lbds.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBSEQ must be a unique number per USUBJID per domain, or a unique number per POOLID per domain, including when the domain is split into multiple files.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 8,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "DOMAIN": "LB",
+            "POOLID": "0002"
+          },
+          "validated": true
+        }
+      ]
     }
   ]
 }
