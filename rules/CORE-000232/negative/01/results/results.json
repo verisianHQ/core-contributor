@@ -4,7 +4,7 @@
       "dataset": "relsub.xpt",
       "domain": "RELSUB",
       "execution_status": "success",
-      "execution_message": "When RSUBJID is populated, RSUBJID cannot be equal to POOLID.",
+      "execution_message": "RSUBJID must not be equal to POOLID when RSUBJID is populated.",
       "number_errors": 2,
       "errors": [
         {
