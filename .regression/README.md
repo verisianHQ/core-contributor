@@ -7,7 +7,7 @@ Run isolated regression snapshot/compare without writing to `rules/*/results`:
       - Current run output is generated in a temporary folder and automatically removed.  
       - Regression summary files written to `--comparison-dir` are:  
         - `regression_diff_summary.md` — all rules  
-        - `regression_diff_summary_verified.md` — verified rules only (rules with `# verified` at the top of their YAML)  
+        - `regression_diff_summary_verified.md` — verified rules only (rules with `# verified` or `# Verified` at the top of their YAML)  
     - Compare baseline against existing real outputs already in `rules/*/results`:  
        - `python regression_results.py compare --baseline-dir .regression/baseline --current-source rules --summary-file .regression/comparison/regression_diff_summary.md`  
     - Pass external dictionary paths using a config file:  

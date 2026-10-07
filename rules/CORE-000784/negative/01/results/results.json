@@ -12,190 +12,112 @@
       "dataset": "sv.xpt",
       "domain": "SV",
       "execution_status": "success",
-      "execution_message": "TAETORD values don't match between Subject Visits (SV) and Subject Elements (SE) datasets.",
-      "number_errors": 14,
+      "execution_message": "TAETORD value in the SV dataset doesn't match the corresponding TAETORD value in the SE dataset.",
+      "number_errors": 8,
       "errors": [
         {
           "row": 1,
           "SEQ": null,
           "USUBJID": "1201001",
           "value": {
+            "TAETORD": 3.0,
+            "SVSTDTC": "2018-06-29",
             "SESTDTC": "2018-06-29",
             "SEENDTC": "2018-08-13",
-            "SVSTDTC": "2018-06-29",
-            "TAETORD": 3.0,
             "SE.TAETORD": 1.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
           "SEQ": null,
           "USUBJID": "1201001",
           "value": {
+            "TAETORD": 2.0,
+            "SVSTDTC": "2018-08-12",
             "SESTDTC": "2018-06-29",
             "SEENDTC": "2018-08-13",
-            "SVSTDTC": "2018-08-12",
-            "TAETORD": 2.0,
             "SE.TAETORD": 1.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
           "SEQ": null,
           "USUBJID": "1201001",
           "value": {
+            "TAETORD": 3.0,
+            "SVSTDTC": "2018-08-14",
             "SESTDTC": "2018-08-13",
             "SEENDTC": "2019-05-13",
-            "SVSTDTC": "2018-08-14",
-            "TAETORD": 3.0,
             "SE.TAETORD": 2.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
           "SEQ": null,
           "USUBJID": "1201001",
           "value": {
+            "TAETORD": 1.0,
+            "SVSTDTC": "2018-08-28",
             "SESTDTC": "2018-08-13",
             "SEENDTC": "2019-05-13",
-            "SVSTDTC": "2018-08-28",
-            "TAETORD": 1.0,
             "SE.TAETORD": 2.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 5,
           "SEQ": null,
-          "USUBJID": "1201001",
+          "USUBJID": "1201002",
           "value": {
-            "SESTDTC": "2019-05-13",
-            "SEENDTC": "2020-03-22",
-            "SVSTDTC": "2019-05-20",
-            "TAETORD": 1.0,
-            "SE.TAETORD": 3.0
+            "TAETORD": 3.0,
+            "SVSTDTC": "2018-11-20T12:01",
+            "SESTDTC": "2018-11-20",
+            "SEENDTC": "2019-01-06",
+            "SE.TAETORD": 1.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 6,
           "SEQ": null,
-          "USUBJID": "1201001",
+          "USUBJID": "1201002",
           "value": {
-            "SESTDTC": "2019-05-13",
-            "SEENDTC": "2020-03-22",
-            "SVSTDTC": "2019-07-22",
-            "TAETORD": 2.0,
-            "SE.TAETORD": 3.0
+            "TAETORD": 1.0,
+            "SVSTDTC": "2019-01-06",
+            "SESTDTC": "2019-01-06",
+            "SEENDTC": "2019-01-07",
+            "SE.TAETORD": 2.0
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 7,
           "SEQ": null,
           "USUBJID": "1201002",
           "value": {
-            "SESTDTC": "2018-11-20",
-            "SEENDTC": "2019-01-07T06:10",
-            "SVSTDTC": "2018-11-20",
-            "TAETORD": 3.0,
-            "SE.TAETORD": 1.0
-          },
-          "validated": false
-        },
-        {
-          "row": 8,
-          "SEQ": null,
-          "USUBJID": "1201002",
-          "value": {
-            "SESTDTC": "2018-11-20",
-            "SEENDTC": "2019-01-07T06:10",
-            "SVSTDTC": "2019-01-06",
-            "TAETORD": 2.0,
-            "SE.TAETORD": 1.0
-          },
-          "validated": false
-        },
-        {
-          "row": 10,
-          "SEQ": null,
-          "USUBJID": "1201002",
-          "value": {
-            "SESTDTC": "2019-01-07T06:10",
-            "SEENDTC": "2022-01-04",
-            "SVSTDTC": "2019-04-22",
-            "TAETORD": 7.0,
-            "SE.TAETORD": 2.0
-          },
-          "validated": false
-        },
-        {
-          "row": 11,
-          "SEQ": null,
-          "USUBJID": "1201002",
-          "value": {
-            "SESTDTC": "2019-01-07T06:10",
-            "SEENDTC": "2022-01-04",
-            "SVSTDTC": "2019-04-29",
-            "TAETORD": 8.0,
-            "SE.TAETORD": 2.0
-          },
-          "validated": false
-        },
-        {
-          "row": 12,
-          "SEQ": null,
-          "USUBJID": "1201002",
-          "value": {
-            "SESTDTC": "2019-01-07T06:10",
-            "SEENDTC": "2022-01-04",
-            "SVSTDTC": "2020-04-06",
-            "TAETORD": 9.0,
-            "SE.TAETORD": 2.0
-          },
-          "validated": false
-        },
-        {
-          "row": 14,
-          "SEQ": null,
-          "USUBJID": "1201003",
-          "value": {
-            "SESTDTC": "2019-01-10",
-            "SEENDTC": "2019-02-06",
-            "SVSTDTC": "2019-02-05",
-            "TAETORD": 2.0,
-            "SE.TAETORD": 1.0
-          },
-          "validated": false
-        },
-        {
-          "row": 15,
-          "SEQ": null,
-          "USUBJID": "1201003",
-          "value": {
-            "SESTDTC": "2019-02-06",
-            "SEENDTC": "2019-04-24",
-            "SVSTDTC": "2019-02-07",
-            "TAETORD": 5.0,
-            "SE.TAETORD": 2.0
-          },
-          "validated": false
-        },
-        {
-          "row": 16,
-          "SEQ": null,
-          "USUBJID": "1201003",
-          "value": {
-            "SESTDTC": "2019-02-06",
-            "SEENDTC": "2019-04-24",
-            "SVSTDTC": "2019-04-12",
             "TAETORD": 1.0,
+            "SVSTDTC": "2019-01-07T06:10",
+            "SESTDTC": "2019-01-07",
+            "SEENDTC": "2022-01-05",
+            "SE.TAETORD": 3.0
+          },
+          "validated": true
+        },
+        {
+          "row": 7,
+          "SEQ": null,
+          "USUBJID": "1201002",
+          "value": {
+            "TAETORD": 1.0,
+            "SVSTDTC": "2019-01-07T06:10",
+            "SESTDTC": "2019-01-06",
+            "SEENDTC": "2019-01-07",
             "SE.TAETORD": 2.0
           },
-          "validated": false
+          "validated": true
         }
       ]
     }
