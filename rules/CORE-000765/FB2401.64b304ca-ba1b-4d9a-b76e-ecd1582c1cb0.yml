@@ -140,6 +140,7 @@ Check:
     - name: $dataset_size
       operator: greater_than
       value: 5368709120
+      value_is_literal: true
 Core:
   Id: CORE-000765
   Status: Published
