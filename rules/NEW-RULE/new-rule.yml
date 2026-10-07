@@ -52,6 +52,10 @@ Check:
       operator: greater_than
       value: $dict_loinc_version
     - name: --LOINC
+      operator: is_valid_loinc_code_reference
+      filter_attribute: status
+      filter_value: DEPRECATED
+    - name: --LOINC
       operator: is_not_valid_loinc_code_reference
       filter_attribute: version
       filter_value: $define_loinc_version
