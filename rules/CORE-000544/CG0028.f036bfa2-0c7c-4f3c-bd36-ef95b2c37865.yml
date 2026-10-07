@@ -89,13 +89,11 @@ Outcome:
 Rule Type: Record Data
 Scope:
   Classes:
+    Exclude:
+      - TRIAL DESIGN
+      - STUDY REFERENCE
+      - RELATIONSHIP
+  Domains:
     Include:
       - ALL
-  Domains:
-    Exclude:
-      - TS
-      - SUPP--
-      - RELREC
-      - RELREF
-      - RELSUB
 Sensitivity: Record
