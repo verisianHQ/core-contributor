@@ -72,8 +72,11 @@ Check:
   all:
     - name: --ENTPT
       operator: non_empty
-    - name: --ENRTPT
-      operator: empty
+    - any:
+      - name: --ENRTPT
+        operator: not_exists
+      - name: --ENRTPT
+        operator: empty
 Core:
   Id: CORE-000106
   Status: Published

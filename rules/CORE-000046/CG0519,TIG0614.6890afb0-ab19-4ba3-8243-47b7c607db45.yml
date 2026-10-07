@@ -60,8 +60,11 @@ Check:
   all:
     - name: ARM
       operator: empty
-    - name: ARMNRS
-      operator: empty
+    - any:
+        - name: ARMNRS
+          operator: not_exists
+        - name: ARMNRS
+          operator: empty
 Core:
   Id: CORE-000046
   Status: Published
