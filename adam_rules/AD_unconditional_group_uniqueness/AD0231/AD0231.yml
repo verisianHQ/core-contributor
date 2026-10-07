@@ -1,0 +1,52 @@
+# Variable: TRxxPGy where xx is an integer [01-99, zero-padded] and y is an integer [1-9, not zero-padded]
+# Condition: 
+# Rule: Within a given value of TRTxxP, there is more than one value of TRxxPGy
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '231'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.0
+        Section: '3.1'
+        Item: Table 3.1.1
+        Cited Guidance: 'ADaMIG v1.0, Section 3.1, Table 3.1.1: TRxxPGy: Planned pooled
+          treatment y for period xx. Useful when planned treatments (TRTxxP) in the
+          specified period xx are pooled together for analysis according to pooling
+          algorithm y. For example when in period 2 the first pooling algorithm dictates
+          that all doses of Drug A (TR02PG1="All doses of Drug A") are pooled together
+          for comparison to all doses of Drug B (TR02PG1="All doses of Drug B"). Each
+          value of TRTxxP is pooled within at most one value of TRxxPGy.'
+Check:
+  all:
+    - name: '^TR(?P<xx>0[1-9]|[1-9][0-9])PG(?P<y>[1-9])$'
+      variable_regex_pattern: true
+      operator: is_inconsistent_across_dataset
+      value: TRT{{xx}}P
+Core:
+  Id: AD0231
+  Status: Draft
+  Version: '1'
+Description: Raise an error when within a given value of TRTxxP, there is more than one value of TRxxPGy, where xx is an integer [01-99, zero-padded] and y is a single-digit integer [1-9].
+Executability: Fully Executable
+Outcome:
+  Message: Within a given value of TRT{{xx}}P, there is more than one value of TR{{xx}}PG{{y}}.
+  Output Variables:
+    - TR{{xx}}PG{{y}}
+    - TRT{{xx}}P
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - ADSL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record
