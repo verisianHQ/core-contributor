@@ -62,7 +62,7 @@ Core:
 Description: Raise an error when RSUBJID is populated and is equal to POOLID.
 Executability: Fully Executable
 Outcome:
-  Message: When RSUBJID is populated, RSUBJID cannot be equal to POOLID.
+  Message: RSUBJID must not be equal to POOLID when RSUBJID is populated.
   Output Variables:
     - RSUBJID
     - POOLID
