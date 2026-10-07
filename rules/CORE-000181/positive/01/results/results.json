@@ -10,20 +10,11 @@
     },
     {
       "dataset": "aprelsub.xpt",
-      "domain": "AP",
+      "domain": "APRELSUB",
       "execution_status": "success",
-      "execution_message": "APAP Domain value length is not equal to 4.",
-      "number_errors": 1,
-      "errors": [
-        {
-          "row": 1,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "DOMAIN": "Not in dataset"
-          }
-        }
-      ]
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     },
     {
       "dataset": "dm.xpt",
@@ -35,7 +26,7 @@
     },
     {
       "dataset": "apmh.xpt",
-      "domain": "AP",
+      "domain": "APMH",
       "execution_status": "success",
       "execution_message": null,
       "number_errors": 0,
