@@ -10082,7 +10082,6 @@ a) Uncontrolled Insulin Dependent Diabetes Mellitus (IDDM) (See Protocol for oth
       </CodeList>
       <CodeList OID="CL.NVTEST" Name="Nervous System Test" DataType="text" def:StandardOID="STD.3">
         <EnumeratedItem CodedValue="Interpretation" OrderNumber="1" def:ExtendedValue="Yes"/>
-        <EnumeratedItem CodedValue="ATNR" OrderNumber="2" def:ExtendedValue="Yes"/>
         <Alias Context="nci:ExtCodeID" Name="C116103"/>
       </CodeList>
       <CodeList OID="CL.NVTESTCD" Name="Nervous System Test Code" DataType="text" def:StandardOID="STD.3" SASFormatName="$FMT119">
@@ -10154,10 +10153,11 @@ a) Uncontrolled Insulin Dependent Diabetes Mellitus (IDDM) (See Protocol for oth
             <TranslatedText xml:lang="en">Abnormality Detail</TranslatedText>
           </Decode>
         </CodeListItem>
-        <CodeListItem CodedValue="INTP" OrderNumber="2" def:ExtendedValue="Yes">
+        <CodeListItem CodedValue="INTP" OrderNumber="2">
           <Decode>
             <TranslatedText xml:lang="en">Interpretation</TranslatedText>
           </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C41255"/>
         </CodeListItem>
         <Alias Context="nci:ExtCodeID" Name="C117743"/>
       </CodeList>

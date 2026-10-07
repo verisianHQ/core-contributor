@@ -156,16 +156,9 @@ Authorities:
             Version: '1.5'
         Version: '1.0'
 Check:
-  any:
-    - name: $extended_values
-      operator: is_contained_by
-      value: $standard_values
-    - name: $extended_values
-      operator: is_substring_of
-      value: $standard_synonyms
-    - name: $extended_values
-      operator: is_substring_of
-      value: $standard_values
+  all:
+    - name: $duplicate_extended_terms
+      operator: non_empty
 Core:
   Id: FDA.SDTMIG.FB1702
   Status: Draft
@@ -175,27 +168,13 @@ Description: Raise an error when CDISC Controlled Terminology specifies the
  an existing submission value.
 Executability: Fully Executable
 Operations:
-  - id: $standard_values
-    operator: get_codelist_attributes
-    ct_attribute: Term Signification
-    ct_conditions:
-      - Standard Type: 'sdtm'
-  - id: $standard_synonyms
-    operator: get_codelist_attributes
-    ct_attribute: Synonyms
-    ct_conditions:
-      - Standard Type: 'sdtm'
-  - id: $extended_values
-    operator: get_codelist_attributes
-    ct_attribute: Term Signification
-    ct_conditions:
-      - Standard Type: null
-      - Extensible: 'Yes'
+  - id: $duplicate_extended_terms
+    operator: define_extended_terms_in_ct
 Outcome:
   Message: A new term has been added to an extensible code list that is a
     duplicate, a synonym or a subset of an existing submission value.
   Output Variables:
-    - $extended_values
+    - $duplicate_extended_terms
 Rule Type: Record Data
 Scope:
   Classes:

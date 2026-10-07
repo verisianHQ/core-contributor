@@ -10145,6 +10145,8 @@ a) Uncontrolled Insulin Dependent Diabetes Mellitus (IDDM) (See Protocol for oth
         <EnumeratedItem CodedValue="Interpretation" OrderNumber="2">
           <Alias Context="nci:ExtCodeID" Name="C41255"/>
         </EnumeratedItem>
+        <EnumeratedItem CodedValue="Minimum Angle" OrderNumber="3" def:ExtendedValue="Yes"/>
+        <EnumeratedItem CodedValue="Log10" OrderNumber="4" def:ExtendedValue="Yes"/>
         <Alias Context="nci:ExtCodeID" Name="C117742"/>
       </CodeList>
       <CodeList OID="CL.OETESTCD" Name="Ophthalmic Exam Test Code" DataType="text" def:StandardOID="STD.3" SASFormatName="$FMT125">
