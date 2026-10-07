@@ -1,0 +1,68 @@
+# Variable: PHEDTM
+# Condition: 
+# Rule: On a given record, APHASEN is not present and the value of PHEDTM is not equal to the value of at least one PHwEDTM variable
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '614'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: 3.3.3
+        Item: ''
+        Cited Guidance: 'ADaMIG v1.2, Section 3.3.3: The values of period, subperiod,
+          and phase start (and end) timing variables must be consistent with their
+          subject-level counterparts from ADSL as described in Table 3.2.7 for each
+          value of APERIOD, ASPER, and APHASE, respectively.'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '614'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: 3.3.3
+        Item: ''
+        Cited Guidance: 'ADaMIG v1.3, Section 3.3.3: The values of period, subperiod,
+          and phase start (and end) timing variables must be consistent with their
+          subject-level counterparts from ADSL as described in Table 3.2.7 for each
+          value of APERIOD, ASPER, and APHASE, respectively.'
+Check:
+  all:
+    - name: APHASEN
+      operator: empty
+    - name: PHEDTM
+      operator: non_empty
+    - name: PHEDTM
+      operator: not_in_enumerated_columns
+      value: PHEDTM
+      regex: '^PH[1-9][0-9]?EDTM$'
+Core:
+  Id: AD0614
+  Status: Draft
+  Version: '1'
+Description: Raise an error when on a given record, APHASEN is not present and the value of PHEDTM is not equal to the value of at least one PHwEDTM variable.
+Executability: Fully Executable
+Outcome:
+  Message: PHEDTM is not equal to any PHwEDTM variable when APHASEN is not present.
+  Output Variables:
+    - PHEDTM
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record
