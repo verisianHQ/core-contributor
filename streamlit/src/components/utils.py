@@ -230,7 +230,7 @@ class UtilityFunctions:
                 continue
             try:
                 with open(yml_file[0], "r", encoding="utf-8") as f:
-                    if any(line.strip() == "# verified" for line in f):
+                    if any(line.strip().lower() == "# verified" for line in f):
                         vals[rule_folder] = "Verified"
                     else:
                         vals[rule_folder] = "Unverified"
