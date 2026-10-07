@@ -1,0 +1,47 @@
+# Variable: PARAMN
+# Condition: PARAMN is populated
+# Rule: PARAMN is not an integer.
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '148'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.0
+        Section: 3.2.4
+        Item: Table 3.2.4.1
+        Cited Guidance: 'ADaMIG v1.0, Section 3.2.4, Table 3.2.4.1: Must be an integer.'
+Check:
+  all:
+  - name: PARAMN
+    operator: non_empty
+  - name: PARAMN
+    operator: not_matches_regex
+    value: ^[+-]?[0-9]+$
+    value_is_literal: true
+Core:
+  Id: AD0148
+  Status: Draft
+  Version: '1'
+Description: PARAMN is not an integer.
+Executability: Fully Executable
+Outcome:
+  Message: PARAMN is not an integer.
+  Output Variables:
+  - PARAMN
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BDS
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

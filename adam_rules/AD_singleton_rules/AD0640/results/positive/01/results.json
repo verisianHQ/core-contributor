@@ -1,0 +1,20 @@
+{
+  "datasets": [
+    {
+      "dataset": "adae.csv",
+      "domain": "adae",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "suppae.csv",
+      "domain": "suppae",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0640, dataset=SUPPAE",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

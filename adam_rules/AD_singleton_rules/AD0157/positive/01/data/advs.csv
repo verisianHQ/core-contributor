@@ -1,0 +1,5 @@
+STUDYID,USUBJID,PARAMCD,AVAL,CRIT1,CRIT1FL,CRIT2,CRIT2FL
+Study Identifier,Unique Subject Identifier,Parameter Code,Analysis Value,Analysis Criterion 1,Criterion 1 Evaluation Result Flag,Analysis Criterion 2,Criterion 2 Evaluation Result Flag
+Char,Char,Char,Num,Char,Char,Char,Char
+20,40,8,8,20,1,20,1
+STUDY001,STUDY001-001,PULSE,70,> 60,Y,< 100,Y

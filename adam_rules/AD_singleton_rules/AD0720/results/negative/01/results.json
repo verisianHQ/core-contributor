@@ -1,0 +1,30 @@
+{
+  "datasets": [
+    {
+      "dataset": "adpp.csv",
+      "domain": "adpp",
+      "execution_status": "success",
+      "execution_message": "Variable is not equal to at least one value of the IG-defined character planned treatment variables in ADSL.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "TRTP": "DRUG B"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

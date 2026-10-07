@@ -1,0 +1,90 @@
+# Variable: USUBJID
+# Condition: USUBJID is present
+# Rule: USUBJID must be present in SDTM.DM
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '53'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.0
+        Section: '3'
+        Item: 4 (General Variable Naming Conventions)
+        Cited Guidance: Same-named SDTM and ADaM variables must have the same meaning and values.
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '53'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: 3.1.1
+        Item: '3'
+        Cited Guidance: Same-named SDTM and ADaM variables must have the same meaning and values.
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '53'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: 3.1.1
+        Item: '3'
+        Cited Guidance: Same-named SDTM and ADaM variables must have the same meaning and values.
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '53'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: 3.1.1
+        Item: '3'
+        Cited Guidance: Same-named SDTM and ADaM variables must have the same meaning and values.
+Check:
+  all:
+  - name: USUBJID
+    operator: non_empty
+  - name: USUBJID
+    operator: is_not_contained_by
+    value: $dm_usubjid
+Core:
+  Id: AD0053
+  Status: Draft
+  Version: '1'
+Description: The value of USUBJID is not present in SDTM.DM.
+Executability: Fully Executable
+Operations:
+- domain: DM
+  id: $dm_usubjid
+  name: USUBJID
+  operator: distinct
+Outcome:
+  Message: The value is not present in SDTM.DM.
+  Output Variables:
+  - USUBJID
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - ALL
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

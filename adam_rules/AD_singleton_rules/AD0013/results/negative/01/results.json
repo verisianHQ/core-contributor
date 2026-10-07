@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "Variable name length exceeds 8 characters.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "variable_name": "LONGNAME9"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

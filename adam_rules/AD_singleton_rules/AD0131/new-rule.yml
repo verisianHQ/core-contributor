@@ -1,0 +1,64 @@
+# Variable: BASETYPE
+# Condition: BASETYPE is present
+# Rule: BASETYPE must be consistently populated within PARAMCD
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '131'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.0
+        Section: 3.2.4
+        Item: Table 3.2.4.1
+        Cited Guidance: 'ADaMIG v1.0, Section 3.2.4, Table 3.2.4.1: Required when there are multiple ways that baseline is
+          defined. If used for a given PARAM, should be populated for all records of that PARAM.'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '131'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: 3.3.4.1; 4.2.1.6
+        Item: Table 3.3.4.1.1
+        Cited Guidance: 'ADaMIG v1.2, Section 3.3.4.1, Table 3.3.4.1.1: If used for any PARAM within a dataset, should be
+          non-null for all records of that dataset.
+
+
+          ADaMIG v1.2, Section 4.2.1.6: Whenever there is more than one definition of baseline, the BASETYPE column is required.
+          BASETYPE identifies the definition of baseline that corresponds to the value of BASE in each row.'
+Check:
+  all:
+  - name: BASETYPE
+    operator: is_inconsistent_across_dataset
+    value: PARAMCD
+Core:
+  Id: AD0131
+  Status: Draft
+  Version: '1'
+Description: BASETYPE is populated inconsistently within a value of PARAMCD.
+Executability: Fully Executable
+Outcome:
+  Message: BASETYPE is populated inconsistently within a value of PARAMCD.
+  Output Variables:
+  - PARAMCD
+  - BASETYPE
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BDS
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

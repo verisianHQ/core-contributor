@@ -1,0 +1,30 @@
+{
+  "datasets": [
+    {
+      "dataset": "adpp.csv",
+      "domain": "adpp",
+      "execution_status": "success",
+      "execution_message": "The value of APHASE does not match a value in an ADSL variable APHASEw, where w is an integer [1-9, not zero-padded].",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "APHASE": "FOLLOW-UP"
+          },
+          "validated": false
+        }
+      ]
+    },
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0500, dataset=ADSL",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

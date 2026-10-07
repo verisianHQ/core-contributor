@@ -1,0 +1,35 @@
+{
+  "datasets": [
+    {
+      "dataset": "advs.csv",
+      "domain": "advs",
+      "execution_status": "success",
+      "execution_message": "More than one record has ABLFL equal to Y within a subject and PARAMCD when BASETYPE is absent.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "USUBJID": "STUDY001-001",
+            "PARAMCD": "PULSE",
+            "ABLFL": "Y"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "USUBJID": "STUDY001-001",
+            "PARAMCD": "PULSE",
+            "ABLFL": "Y"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

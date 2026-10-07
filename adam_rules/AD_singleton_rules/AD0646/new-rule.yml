@@ -1,0 +1,89 @@
+# Variable: AEACN
+# Condition: AE.AEACN is populated
+# Rule: AEACN must be present in ADAE
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '646'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: OCCDS v1.1
+        Section: 3.2.8
+        Item: Table 3.2.8.1
+        Cited Guidance: AEACN is required in ADAE when AE.AEACN is collected and populated.
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '646'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: OCCDS v1.1
+        Section: 3.2.8
+        Item: Table 3.2.8.1
+        Cited Guidance: AEACN is required in ADAE when AE.AEACN is collected and populated.
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '646'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: OCCDS v1.1
+        Section: 3.2.8
+        Item: Table 3.2.8.1
+        Cited Guidance: AEACN is required in ADAE when AE.AEACN is collected and populated.
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '646'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: OCCDS v1.1
+        Section: 3.2.8
+        Item: Table 3.2.8.1
+        Cited Guidance: AEACN is required in ADAE when AE.AEACN is collected and populated.
+Check:
+  all:
+  - name: $aeacn_max
+    operator: non_empty
+  - name: AEACN
+    operator: not_exists
+Core:
+  Id: AD0646
+  Status: Draft
+  Version: '1'
+Description: AE.AEACN is populated on at least one record but AEACN is not present in ADAE.
+Executability: Fully Executable
+Operations:
+- domain: AE
+  id: $aeacn_max
+  name: AEACN
+  operator: max
+Outcome:
+  Message: AEACN is not present.
+  Output Variables:
+  - AEACN
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - OCCDS
+  Domains:
+    Include:
+    - ADAE
+Sensitivity: Record

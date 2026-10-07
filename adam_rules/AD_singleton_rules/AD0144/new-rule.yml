@@ -1,0 +1,60 @@
+# Variable: PARAMCD
+# Condition: PARAMCD is populated
+# Rule: PARAMCD starts with a nonletter.
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '144'
+        Version: '2'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3; ADaMIG-MD v1.0
+        Section: 3.1.1; 3.3.4.1; 3.1
+        Item: 1; Table 3.3.4.1.1
+        Cited Guidance: 'ADaMIG v1.3, Section 3.1.1, Item 1: To ensure compliance with SAS Version 5 transport file format
+          and Oracle constraints, all ADaM variable names must be no more than 8 characters in length, start with a letter
+          (not underscore), and be comprised only of letters (A-Z), underscore (_), and numerals (0-9). All ADaM variable
+          labels must be no more than 40 characters in length. All ADaM character variables must be no more than 200 characters
+          in length.
+
+
+          ADaMIG v1.3, Section 3.3.4.1, Table 3.3.4.1.1: Values of PARAMCD should follow the SAS Version 5 transport file
+          format and Oracle constraints as noted under General Variable Conventions in Section 3.1.1.
+
+
+          ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis needs by adding SPDEVID as a required key variable and
+          USUBJID as a conditionally required variable. See the BDS class for further details.'
+Check:
+  all:
+  - name: PARAMCD
+    operator: non_empty
+  - name: PARAMCD
+    operator: not_matches_regex
+    value: ^[A-Za-z]
+    value_is_literal: true
+Core:
+  Id: AD0144
+  Status: Draft
+  Version: '2'
+Description: PARAMCD starts with a nonletter.
+Executability: Fully Executable
+Outcome:
+  Message: PARAMCD starts with a nonletter.
+  Output Variables:
+  - PARAMCD
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BDS
+    - MDBDS
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

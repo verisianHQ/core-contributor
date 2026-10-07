@@ -1,0 +1,5 @@
+STUDYID,USUBJID,PARAMCD,AVAL,SHIFT1,BASECAT1,AVALCAT1,SHIFT2,B2IND,A2IND
+Study Identifier,Unique Subject Identifier,Parameter Code,Analysis Value,Shift 1,Baseline Category 1,Analysis Category 1,Shift 2,Baseline 2 Indicator,Analysis 2 Indicator
+Char,Char,Char,Num,Char,Char,Char,Char,Char,Char
+20,40,8,8,20,20,20,20,8,8
+STUDY001,STUDY001-001,PULSE,70,LOW to NORMAL,LOW,NORMAL,NORMAL to HIGH,NORMAL,HIGH

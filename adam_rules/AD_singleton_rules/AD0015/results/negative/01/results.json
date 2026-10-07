@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "Variable name contains an illegal character.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "variable_name": "BAD$NAME"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

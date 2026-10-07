@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "A variable with a suffix of FN is present without a variable with the same root and a suffix of FL.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "SAFFN": 1.0,
+            "SAFFL": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

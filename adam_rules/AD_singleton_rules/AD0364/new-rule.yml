@@ -1,0 +1,60 @@
+# Variable: DOSEON or DOSCUMA
+# Condition: DOSEON or DOSCUMA is present
+# Rule: DOSEU must be present
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: OCCDS
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '364'
+        Version: '2'
+      Version: '5.0'
+      Citations:
+      - Document: OCCDS v1.0; OCCDS v1.1; ADaMIG-MD v1.0
+        Section: 3.2.7; 3.2.7; 3.1
+        Item: Table 3.2.7.1; Table 3.2.7.1
+        Cited Guidance: 'OCCDS v1.0, Section 3.2.7, Table 3.2.7.1: CDISC Notes for DOSEU state: "Conditional on whether DOSEON
+          and/or DOSCUMA are included."
+
+
+          OCCDS v1.1, Section 3.2.7, Table 3.2.7.1: CDISC Notes for DOSEU state: "Conditional on whether DOSEON and/or DOSCUMA
+          are included."
+
+
+          ADaMIG-MD v1.0, Section 3.1: The MDOCCDS supports analysis needs by adding SPDEVID as a required identifier and
+          allowing USUBJID be a conditionally required variable. See the OCCDS class for further details.'
+Check:
+  all:
+  - any:
+    - name: DOSEON
+      operator: exists
+    - name: DOSCUMA
+      operator: exists
+  - name: DOSEU
+    operator: not_exists
+Core:
+  Id: AD0364
+  Status: Draft
+  Version: '2'
+Description: DOSEON or DOSCUMA is present while DOSEU is absent.
+Executability: Fully Executable
+Outcome:
+  Message: DOSEON or DOSCUMA is present while DOSEU is absent.
+  Output Variables:
+  - DOSEON
+  - DOSCUMA
+  - DOSEU
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - OCCDS
+    - MDOCCDS
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

@@ -1,0 +1,56 @@
+# Variable: R2AyLO
+# Condition: R2AyLO is present
+# Rule: Within PARAMCD, each AyLOC maps to only one AyLO
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '346'
+        Version: '2'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3; ADaMIG-MD v1.0
+        Section: 3.3.4.1; 3.1
+        Item: Table 3.3.4.1.1
+        Cited Guidance: 'ADaMIG v1.3, Section 3.3.4.1, Table 3.3.4.1.1: CDISC Notes for R2AyLO state: "AyLO must exist in the ADaM dataset."
+
+
+          ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis needs by adding SPDEVID as a required key variable and USUBJID as a conditionally required variable. See the BDS class for further details.'
+Check:
+  all:
+  - name: ^R2A(?P<y>[1-9][0-9]?)LO$
+    variable_regex_pattern: true
+    operator: exists
+  - name: A{{y}}LO
+    operator: is_inconsistent_across_dataset
+    value:
+      - PARAMCD
+      - 'A{{y}}LOC'
+Core:
+  Id: AD0346
+  Status: Draft
+  Version: '1'
+Description: Within PARAMCD, an AyLOC value maps to more than one AyLO value when R2AyLO is present.
+Executability: Fully Executable
+Outcome:
+  Message: Within PARAMCD, each AyLOC value must map to only one AyLO value when R2AyLO is present.
+  Output Variables:
+  - PARAMCD
+  - R2A{{y}}LO
+  - A{{y}}LOC
+  - A{{y}}LO
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BDS
+      - MDBDS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

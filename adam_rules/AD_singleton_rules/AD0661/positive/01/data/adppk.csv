@@ -1,0 +1,5 @@
+STUDYID,USUBJID,PARAMCD,AVAL,ADOSEDUR,NDOSEDUR,DOSEDURU
+Study Identifier,Unique Subject Identifier,Parameter Code,Analysis Value,Actual Dose Duration,Nominal Dose Duration,Dose Duration Units
+Char,Char,Char,Num,Num,Num,Char
+20,40,8,8,8,8,8
+STUDY001,STUDY001-001,AUC,10,2,2,HOURS

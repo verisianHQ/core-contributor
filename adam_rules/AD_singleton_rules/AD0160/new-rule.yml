@@ -1,0 +1,62 @@
+# Variable: AWU
+# Condition: AWU is present
+# Rule: AWLO or AWHI must be present
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '160'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.0
+        Section: 3.2.5
+        Item: Table 3.2.5.2
+        Cited Guidance: 'ADaMIG v1.0, Section 3.2.5, Table 3.2.5.2: Unit used for AWLO and AWHI.'
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '160'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: 3.3.5
+        Item: Table 3.3.5.2
+        Cited Guidance: 'ADaMIG v1.1, Section 3.3.5, Table 3.3.5.2: Unit used for AWLO and AWHI.'
+Check:
+  all:
+  - name: AWU
+    operator: exists
+  - name: AWLO
+    operator: not_exists
+  - name: AWHI
+    operator: not_exists
+Core:
+  Id: AD0160
+  Status: Draft
+  Version: '1'
+Description: AWU is present while both AWLO and AWHI are absent.
+Executability: Fully Executable
+Outcome:
+  Message: AWU is present while both AWLO and AWHI are absent.
+  Output Variables:
+  - AWU
+  - AWLO
+  - AWHI
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BDS
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

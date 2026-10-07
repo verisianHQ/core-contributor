@@ -1,0 +1,24 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "Character variable value exceeds 200 characters.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "COMMENT",
+            "variable_value": "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            "variable_value_length": 208.0
+          },
+          "validated": false
+        }
+      ]
+    }
+  ]
+}
