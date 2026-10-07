@@ -210,7 +210,7 @@ Core:
   Id: CORE-000493
   Status: Published
   Version: '1'
-Description: Age Range (AGETXT) must be populated with a number-number format
+Description: Raise an error when Age Range (AGETXT) is not populated with a number-number format when age range is supplied.
   when age range is supplied.
 Executability: Fully Executable
 Outcome:
