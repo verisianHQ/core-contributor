@@ -2,10 +2,13 @@ name: Add Reviewers
 
 on:
   pull_request:
+    paths:
+      - 'rules/**'
     types: [opened, ready_for_review]
 
 permissions:
   pull-requests: write
+  statuses: read
 
 jobs:
   build:
@@ -16,12 +19,44 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
+          const p1 = 'eljanssens';
+          const p2 = 'pendingintent';
+          const p3 = 'SFJohnson24';
+          
+          const reviewers = [p1, p2, p3];
           const prAuthor = context.payload.pull_request.user.login;
-          const reviewerToAdd = prAuthor === 'eljanssens' ? 'pendingintent' : 'eljanssens';
-
+          const owner = context.repo.owner;
+          const repo = context.repo.repo;
+          
+          // Exclude the PR author from eligible reviewers
+          const candidates = reviewers.filter(user => user !== prAuthor);
+          
+          const getOpenPRCount = async (username) => {
+            const response = await github.rest.search.issuesAndPullRequests({
+              q: `repo:${owner}/${repo} is:pr is:open review-requested:${username}`
+            });
+            return response.data.total_count;
+          };
+          
+          // Fetch counts in parallel for all eligible candidate reviewers
+          const candidateCounts = await Promise.all(
+            candidates.map(async (username) => {
+              const count = await getOpenPRCount(username);
+              console.log(`${username} has ${count} open PRs.`);
+              return { username, count };
+            })
+          );
+          
+          // Find the reviewer with the minimum number of open review requests
+          const reviewerToAdd = candidateCounts.reduce((min, current) => 
+            current.count < min.count ? current : min
+          ).username;
+          
+          console.log(`Assigning ${reviewerToAdd} to PR #${context.issue.number}`);
+          
           await github.rest.pulls.requestReviewers({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
+            owner: owner,
+            repo: repo,
             pull_number: context.issue.number,
             reviewers: [reviewerToAdd],
           });

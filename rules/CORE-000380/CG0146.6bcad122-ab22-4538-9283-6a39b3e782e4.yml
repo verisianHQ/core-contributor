@@ -29,6 +29,7 @@ Check:
         - SCREEN FAILURE
         - NOT ASSIGNED
         - NOT TREATED
+      value_is_literal: true
     - name: RFSTDTC
       operator: empty
 Core:

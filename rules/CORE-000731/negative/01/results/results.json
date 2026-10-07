@@ -4,8 +4,8 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "TSVAL is not NULL and does not conform to ISO 8601 time period",
-      "number_errors": 3,
+      "execution_message": "TSVAL must be a positive duration in ISO 8601 time period format.",
+      "number_errors": 4,
       "errors": [
         {
           "row": 1,
@@ -15,7 +15,7 @@
             "TSVAL": "string",
             "TSPARMCD": "LENGTH"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 2,
@@ -25,7 +25,7 @@
             "TSVAL": "100",
             "TSPARMCD": "LENGTH"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 3,
@@ -35,7 +35,17 @@
             "TSVAL": "10-22-2011 11:16:32",
             "TSPARMCD": "LENGTH"
           },
-          "validated": false
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSVAL": "-P5M",
+            "TSPARMCD": "LENGTH"
+          },
+          "validated": true
         }
       ]
     }

@@ -4,148 +4,38 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "AECAT is equal to AEDECOD.",
-      "number_errors": 14,
+      "execution_message": "AECAT must not be equal to AEDECOD.",
+      "number_errors": 3,
       "errors": [
         {
           "row": 1,
           "SEQ": 1,
           "USUBJID": "CDISC005",
           "value": {
-            "AEDECOD": "INJECTION SITE REACTION",
-            "AECAT": "INJECTION SITE REACTION"
+            "AEDECOD": "SAME TEXT CASE",
+            "AECAT": "SAME TEXT CASE"
           },
-          "validated": false
+          "validated": true
         },
         {
-          "row": 3,
-          "SEQ": 3,
+          "row": 2,
+          "SEQ": 2,
           "USUBJID": "CDISC005",
           "value": {
-            "AEDECOD": "INJECTION SITE REACTION",
-            "AECAT": "INJECTION SITE REACTION"
+            "AEDECOD": "123456789",
+            "AECAT": "123456789"
           },
-          "validated": false
+          "validated": true
         },
         {
           "row": 4,
-          "SEQ": 4,
-          "USUBJID": "CDISC005",
-          "value": {
-            "AEDECOD": "INJECTION SITE REACTION",
-            "AECAT": "INJECTION SITE REACTION"
-          },
-          "validated": false
-        },
-        {
-          "row": 5,
-          "SEQ": 5,
-          "USUBJID": "CDISC005",
-          "value": {
-            "AEDECOD": "CHEST DISCOMFORT",
-            "AECAT": "CHEST DISCOMFORT"
-          },
-          "validated": false
-        },
-        {
-          "row": 6,
-          "SEQ": 6,
-          "USUBJID": "CDISC005",
-          "value": {
-            "AEDECOD": "HEADACHE",
-            "AECAT": "HEADACHE"
-          },
-          "validated": false
-        },
-        {
-          "row": 7,
-          "SEQ": 7,
-          "USUBJID": "CDISC005",
-          "value": {
-            "AEDECOD": "Cough",
-            "AECAT": "COUGH"
-          },
-          "validated": false
-        },
-        {
-          "row": 8,
-          "SEQ": 1,
-          "USUBJID": "CDISC013",
-          "value": {
-            "AEDECOD": "MYOCARDIAL INFARCTION",
-            "AECAT": "MYOCARDIAL INFARCTION"
-          },
-          "validated": false
-        },
-        {
-          "row": 9,
-          "SEQ": 1,
-          "USUBJID": "CDISC016",
-          "value": {
-            "AEDECOD": "PARAESTHESIA ORAL",
-            "AECAT": "Paraesthesia Oral"
-          },
-          "validated": false
-        },
-        {
-          "row": 10,
-          "SEQ": 2,
-          "USUBJID": "CDISC016",
-          "value": {
-            "AEDECOD": "NASOPHARYNGITIS",
-            "AECAT": "NASOPHARYNGITIS"
-          },
-          "validated": false
-        },
-        {
-          "row": 11,
           "SEQ": 3,
           "USUBJID": "CDISC016",
           "value": {
-            "AEDECOD": "SUPRAVENTRICULAR EXTRASYSTOLES",
-            "AECAT": "SUPRAVENTRICULAR EXTRASYSTOLES"
+            "AEDECOD": "DIFFERENT TEXT CASE",
+            "AECAT": "Different Text Case"
           },
-          "validated": false
-        },
-        {
-          "row": 12,
-          "SEQ": 4,
-          "USUBJID": "CDISC016",
-          "value": {
-            "AEDECOD": "RASH PRURITIC",
-            "AECAT": "RASH PRURITIC"
-          },
-          "validated": false
-        },
-        {
-          "row": 13,
-          "SEQ": 5,
-          "USUBJID": "CDISC016",
-          "value": {
-            "AEDECOD": "VENTRICULAR EXTRASYSTOLES",
-            "AECAT": "VENTRICULAR EXTRASYSTOLES"
-          },
-          "validated": false
-        },
-        {
-          "row": 14,
-          "SEQ": 6,
-          "USUBJID": "CDISC016",
-          "value": {
-            "AEDECOD": "CONJUNCTIVAL HAEMORRHAGE",
-            "AECAT": "CONJUNCTIVAL HAEMORRHAGE"
-          },
-          "validated": false
-        },
-        {
-          "row": 15,
-          "SEQ": 7,
-          "USUBJID": "CDISC016",
-          "value": {
-            "AEDECOD": "Cerumen Impaction",
-            "AECAT": "CERUMEN IMPACTION"
-          },
-          "validated": false
+          "validated": true
         }
       ]
     }

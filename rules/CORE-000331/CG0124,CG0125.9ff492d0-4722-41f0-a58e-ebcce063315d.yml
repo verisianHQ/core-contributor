@@ -47,6 +47,7 @@ Check:
         - NOTASSGN
         - NOTTRT
         - UNPLAN
+      value_is_literal: true
     - name: ACTARMCD
       operator: is_not_contained_by
       value: $armcd_list
