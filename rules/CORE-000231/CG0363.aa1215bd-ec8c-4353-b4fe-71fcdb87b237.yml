@@ -63,7 +63,7 @@ Description: Raise an error when RSUBJID is populated and RSUBJID is equal to
   USUBJID.
 Executability: Fully Executable
 Outcome:
-  Message: When RSUBJID is populated the value cannot be equal to USUBJID.
+  Message: RSUBJID must not be equal to USUBJID when RSUBJID is populated.
   Output Variables:
     - RSUBJID
     - USUBJID
@@ -71,7 +71,7 @@ Rule Type: Record Data
 Scope:
   Classes:
     Include:
-      - ALL
+      - RELATIONSHIP
   Domains:
     Include:
       - RELSUB

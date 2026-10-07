@@ -1,28 +1,6 @@
 {
   "datasets": [
     {
-      "dataset": "qsae.xpt",
-      "domain": "QS",
-      "execution_status": "success",
-      "execution_message": "Split dataset is present but the first 2 characters of the dataset name are not equal to a domain that is present in the study.",
-      "number_errors": 1,
-      "errors": [
-        {
-          "row": 1,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "dataset_name": "QSAE",
-            "$list_dataset_names": [
-              "QSAE",
-              "QS1"
-            ]
-          },
-          "validated": true
-        }
-      ]
-    },
-    {
       "dataset": "qs1.xpt",
       "domain": "QS",
       "execution_status": "success",
@@ -35,6 +13,28 @@
           "USUBJID": "None",
           "value": {
             "dataset_name": "QS1",
+            "$list_dataset_names": [
+              "QSAE",
+              "QS1"
+            ]
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "qsae.xpt",
+      "domain": "QS",
+      "execution_status": "success",
+      "execution_message": "Split dataset is present but the first 2 characters of the dataset name are not equal to a domain that is present in the study.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "dataset_name": "QSAE",
             "$list_dataset_names": [
               "QSAE",
               "QS1"
