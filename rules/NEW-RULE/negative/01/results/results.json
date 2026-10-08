@@ -5,8 +5,46 @@
       "domain": "FA",
       "execution_status": "success",
       "execution_message": "FATEST matches a qualifier variable label defined in the SDTM model, but FATESTCD does not match the corresponding variable name.",
-      "number_errors": 1,
+      "number_errors": 3,
       "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "FATEST": "Severity/Intensity",
+            "FATESTCD": "SEVV",
+            "$fatest_lib_names": [
+              "AESEV",
+              "CESEV"
+            ],
+            "$fatest_lib_roles": [
+              "Record Qualifier",
+              "Record Qualifier"
+            ]
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "CDISC002",
+          "value": {
+            "FATEST": "Occurrence",
+            "FATESTCD": "OCCURS",
+            "$fatest_lib_names": [
+              "ECOCCUR",
+              "PROCCUR",
+              "SVOCCUR"
+            ],
+            "$fatest_lib_roles": [
+              "Record Qualifier",
+              "Record Qualifier",
+              "Record Qualifier"
+            ]
+          },
+          "validated": true
+        },
         {
           "row": 3,
           "SEQ": 1,
@@ -14,32 +52,16 @@
           "value": {
             "FATEST": "Anatomical Region of Specimen",
             "FATESTCD": "BSORRES",
-            "$fatest_lib_names": null,
-            "$fatest_lib_roles": null
+            "$fatest_lib_names": [
+              "BSANTREG"
+            ],
+            "$fatest_lib_roles": [
+              "Variable Qualifier"
+            ]
           },
-          "validated": false
+          "validated": true
         }
       ]
-    }
-  ],
-  "unmatched_validation": [
-    {
-      "value": {
-        "FATEST": "Toxicity Grade",
-        "FATESTCD": "TOXGRD"
-      }
-    },
-    {
-      "value": {
-        "FATEST": "Occurence Indicator",
-        "FATESTCD": "OCCURS"
-      }
-    },
-    {
-      "value": {
-        "FATEST": "Anatomical Region of Specimen",
-        "FATESTCD": "BSORRES"
-      }
     }
   ]
 }
