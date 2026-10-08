@@ -145,7 +145,7 @@ Core:
   Id: CORE-000765
   Status: Published
   Version: '1'
-Description: The submitted dataset is not larger than 5 GB.
+Description: Raise an error when the submitted dataset is larger than 5 GB.
 Executability: Fully Executable
 Operations:
   - id: $dataset_size
