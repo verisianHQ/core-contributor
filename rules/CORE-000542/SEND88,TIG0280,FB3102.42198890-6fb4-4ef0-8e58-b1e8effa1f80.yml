@@ -255,13 +255,13 @@ Check:
           operator: empty
         - name: --STRESC
           operator: not_equal_to
-          type_insensitive: true
+          type_insensitive: numeric
           value: --STRESN
 Core:
   Id: CORE-000542
   Status: Published
   Version: '1'
-Description: --STRESC is populated with a numeric value and --STRESN is equal
+Description: Raise an error when --STRESC is populated with a numeric value and --STRESN is equal
   to --STRESC.
 Executability: Fully Executable
 Outcome:
