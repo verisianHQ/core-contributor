@@ -4,20 +4,42 @@
       "dataset": "fa.xpt",
       "domain": "FA",
       "execution_status": "success",
-      "execution_message": "Collected data does not fit a Qualifier variable listed in specified SDTM Sections and are represented in the Findings About domain, and the name of the variable is used as FATEST.",
+      "execution_message": "FATEST matches a qualifier variable label defined in the SDTM model, but FATESTCD does not match the corresponding variable name.",
       "number_errors": 1,
       "errors": [
         {
-          "row": 1,
+          "row": 3,
           "SEQ": 1,
-          "USUBJID": "CDISC001",
+          "USUBJID": "CDISC003",
           "value": {
-            "FATEST": "Epoch",
-            "FATESTCD": "EPOCH"
+            "FATEST": "Anatomical Region of Specimen",
+            "FATESTCD": "BSORRES",
+            "$fatest_lib_names": null,
+            "$fatest_lib_roles": null
           },
-          "validated": true
+          "validated": false
         }
       ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "FATEST": "Toxicity Grade",
+        "FATESTCD": "TOXGRD"
+      }
+    },
+    {
+      "value": {
+        "FATEST": "Occurence Indicator",
+        "FATESTCD": "OCCURS"
+      }
+    },
+    {
+      "value": {
+        "FATEST": "Anatomical Region of Specimen",
+        "FATESTCD": "BSORRES"
+      }
     }
   ]
 }

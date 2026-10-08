@@ -54,20 +54,31 @@ Authorities:
             Version: '2.0'
         Version: '3.3'
 Check:
-  all:
-    - name: variable_name
-      operator: equal_to
-      value: FATESTCD
+ all: 
+  - any:
+    - name: $fatest_lib_roles
+      operator: contains
+      value: Record Qualifier
       value_is_literal: true
-    - name: variable_label
-      operator: is_contained_by
-      value: $variable_label_referenced_variable_metadata
-    - name: $variable_label_referenced_variable_metadata_role
-      operator: ends_with
-      value: Qualifier
-    - name: variable_name
-      operator: is_contained_by
-      value: $variable_name_referenced_variable_metadata
+    - name: $fatest_lib_roles
+      operator: contains
+      value: Variable Qualifier
+      value_is_literal: true
+    - name: $fatest_lib_roles
+      operator: contains
+      value: Result Qualifier
+      value_is_literal: true
+    - name: $fatest_lib_roles
+      operator: contains
+      value: Grouping Qualifier
+      value_is_literal: true
+    - name: $fatest_lib_roles
+      operator: contains
+      value: Synonym Qualifier
+      value_is_literal: true
+  - name: FATESTCD
+    operator: is_not_substring_of
+    value: $fatest_lib_names
 Core:
   Id: CDISC.SDTMIG.CG0173
   Status: Draft
@@ -75,18 +86,23 @@ Core:
 Description: Raise an error when collected data fits a Qualifier variable listed
   in specified SDTM Sections and are represented in the Findings About domain,
   and the name of the variable is used as FATEST.
-Executability: Partially Executable
+Executability: Partially Executable - Possible Underreporting
 Operations:
-  - id: $variable_label_referenced_variable_metadata
+  - id: $fatest_lib_roles
     operator: label_referenced_variable_metadata
-    name: variable_label
+    name: FATEST
+    attribute_name: role
+  - id: $fatest_lib_names
+    operator: label_referenced_variable_metadata
+    name: FATEST
+    attribute_name: name
 Outcome:
-  Message: Collected data does not fit a Qualifier variable listed in specified SDTM
-    Sections and are represented in the Findings About domain, and the name of
-    the variable is used as FATEST.
+  Message: FATEST matches a qualifier variable label defined in the SDTM model, but FATESTCD does not match the corresponding variable name.
   Output Variables:
     - FATEST
     - FATESTCD
+    - $fatest_lib_names
+    - $fatest_lib_roles
 Rule Type: Record Data
 Scope:
   Classes:
