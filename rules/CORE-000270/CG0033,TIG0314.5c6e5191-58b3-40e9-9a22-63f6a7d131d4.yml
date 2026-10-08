@@ -1,6 +1,7 @@
 # Variable: VISITNUM
 # Condition: VISITNUM ^= null and is planned
 # Rule: VISITNUM in TV.VISITNUM
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -11,7 +12,6 @@ Authorities:
                   be those defined in the Trial Visits (TV) dataset (Section
                   7.3.1, Trial Visits).
                 Document: SDTMIG v3.4
-                Item: ''
                 Section: 4.4.5
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -25,7 +25,6 @@ Authorities:
               - Cited Guidance: For planned visits, values of VISIT, VISITNUM, and VISITDY must
                   be those defined in the Trial Visits dataset.
                 Document: SDTMIG v3.3
-                Item: ''
                 Section: 4.4.5
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -39,7 +38,6 @@ Authorities:
               - Cited Guidance: For planned visits, values of VISIT, VISITNUM, and VISITDY must
                   be those defined in the Trial Visits dataset.
                 Document: SDTMIG v3.2
-                Item: ''
                 Section: 4.1.4.5
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
