@@ -160,8 +160,8 @@ Check:
     - name: $duplicate_extended_terms
       operator: non_empty
 Core:
-  Id: FDA.SDTMIG.FB1702
-  Status: Draft
+  Id: CORE-002117
+  Status: Published
   Version: '1'
 Description: Raise an error when CDISC Controlled Terminology specifies the
  codelist as extensible and a new term is a duplicate, a synonym or a subset of
