@@ -59,11 +59,8 @@ Check:
   all:
     - name: ARMCD
       operator: empty
-    - any:
-        - name: ARMNRS
-          operator: not_exists
-        - name: ARMNRS
-          operator: empty
+    - name: ARMNRS
+      operator: empty
 Core:
   Id: CORE-000045
   Status: Published
