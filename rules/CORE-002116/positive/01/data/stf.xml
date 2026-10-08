@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ectd:study SYSTEM "../../../util/dtd/ich-stf-v2-2.dtd">
+<?xml-stylesheet type="text/xsl" href="../../../util/style/ich-stf-stylesheet-2-2a.xsl"?>
+<ectd:study xmlns:ectd="http://www.ich.org/ectd" xml:lang="en" dtd-version="2.2" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<study-identifier>
+		<title>Wonderdrug Phase III Clinical Study Report for AA-S107t</title>
+		<study-id>AA-S107t</study-id>
+		<category name="species" info-type="ich">human</category>
+		<category name="route-of-admin" info-type="ich">oral</category>
+		<category name="type-of-control" info-type="ich">dose-response-without-placebo</category>
+	</study-identifier>
+	<study-document>
+		<doc-content xlink:href="../../../../0004/index.xml#id1010">
+			<title>STF-Wonderdrug Study AA-S107t Synopsis 1</title>
+			<file-tag name="synopsis" info-type="ich"/>
+		</doc-content>
+		<doc-content xlink:href="../../../index.xml#id1020">
+			<title>STF-Wonderdrug Study AA-S107t Synopsis 2</title>
+			<file-tag name="data-tabulation-dataset-sdtm" info-type="ich"/>
+		</doc-content>
+		<doc-content xlink:href="../../../index.xml#id1021">
+			<title>STF-Wonderdrug Study AA-S107t Define</title>
+			<file-tag name="data-tabulation-data-definition" info-type="ich"/>
+		</doc-content>
+	</study-document>
+</ectd:study>
