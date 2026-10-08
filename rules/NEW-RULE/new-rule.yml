@@ -1,0 +1,228 @@
+# Variable: AGETXT
+# Condition: AGETXT ^= Null
+# Rule: AGETXT value is number-number format
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: AGETXT is number-number
+                Document: SENDIG v3.0
+                Item: AGETXT CDISC Notes
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND102
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: AGETXT is number-number
+                Document: SENDIG v3.1
+                Item: AGETXT CDISC Notes
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND102
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: AGETXT is number-number
+                Document: SENDIG v3.1.1
+                Item: AGETXT CDISC Notes
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND102
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: AGETXT is number-number
+                Document: SENDIG v3.1.1
+                Item: AGETXT CDISC Notes
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND102
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: AGETXT is number-number
+                Document: SENDIG v3.1
+                Item: AGETXT CDISC Notes
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND102
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: AGETXT is number-number
+                Document: SENDIG v3.1.1
+                Item: AGETXT CDISC Notes
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND102
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Following SDTM-specified controlled terminology and format guidelines for variables, when provided
+                Document: IG v3.2
+                Section: 3.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0011
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Following SDTM-specified controlled terminology and format guidelines for variables, when provided
+                Document: IG v3.3
+                Section: 3.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0011
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Following SDTM-specified controlled terminology and format guidelines for variables, when provided
+                Document: IG v3.4
+                Section: 3.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0011
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+  - Organization: 'FDA'
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: If an age range is supplied, it should be in 'number-number'
+                  format.
+                Document: FDA
+                Section: FDAB053
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5301
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: If an age range is supplied, it should be in 'number-number'
+                  format.
+                Document: FDA
+                Section: FDAB053
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5301
+              Version: '1'
+            Version: '1.5'
+        Version: 3.1.1
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: If an age range is supplied, it should be in 'number-number'
+                  format.
+                Document: FDA
+                Section: FDAB053
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5301
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: If an age range is supplied, it should be in 'number-number'
+                  format.
+                Document: FDA
+                Section: FDAB053
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5301
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: If an age range is supplied, it should be in 'number-number'
+                  format.
+                Document: FDA
+                Section: FDAB053
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB5301'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: SENDIG-AR
+        References:
+          - Citations:
+              - Cited Guidance: If an age range is supplied, it should be in 'number-number'
+                  format.
+                Document: FDA
+                Section: FDAB053
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5301
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0' 
+Check:
+  all:
+    - name: AGETXT
+      operator: non_empty
+    - name: AGETXT
+      operator: not_matches_regex
+      value: ^[0-9]+-[0-9]+$
+Core:
+  Id: CORE-000493
+  Status: Published
+  Version: '1'
+Description: Raise an error when Age Range (AGETXT) is not populated with a number-number format when age range is supplied.
+  when age range is supplied.
+Executability: Fully Executable
+Outcome:
+  Message: AGETXT is not in number - number format.
+  Output Variables:
+    - AGETXT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record
