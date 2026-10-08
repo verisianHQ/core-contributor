@@ -4,60 +4,9 @@
       "dataset": "ts.xpt",
       "domain": "TS",
       "execution_status": "success",
-      "execution_message": "At least one FDA Desired TSPARMCD is missing in the TS dataset or TSVAL is not populated.",
-      "number_errors": 1,
-      "errors": [
-        {
-          "row": null,
-          "SEQ": null,
-          "USUBJID": null,
-          "value": {
-            "$FDAdesired_missing_tsparmcds": [
-              "PDSTIND",
-              "DCUTDESC",
-              "SEXPOP",
-              "TCNTRL",
-              "AGEMAX",
-              "SDTIGVER",
-              "OBJPRIM",
-              "LENGTH",
-              "STOPRULE",
-              "ADAPT",
-              "COMPTRT",
-              "NARMS",
-              "OUTMSPRI",
-              "SDTMVER",
-              "TPHASE",
-              "HLTSUBJI",
-              "NCOHORT",
-              "FCNTRY",
-              "INDIC",
-              "TBLIND",
-              "EXTTIND",
-              "FDATCHSP",
-              "ONGOSIND",
-              "SENDTC",
-              "OBJSEC",
-              "DCUTDTC",
-              "SSTDTC",
-              "REGID",
-              "SPREFID",
-              "PIPIND",
-              "RDIND",
-              "SPONSOR",
-              "PLANSUB",
-              "PDPSTIND",
-              "THERAREA",
-              "TTYPE",
-              "STYPE",
-              "AGEMIN",
-              "TITLE",
-              "ADDON"
-            ],
-            "$FDAdesired_empty_tsparmcd": "Query error: syntax error at or near \"{\"\nLINE 9:                         SELECT 1 FROM ({}) AS subtract_q\n                                               ^\n"
-          }
-        }
-      ]
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     }
   ]
 }
