@@ -4,20 +4,9 @@
       "dataset": "sm.xpt",
       "domain": "SM",
       "execution_status": "success",
-      "execution_message": "SMSTDTC falls after  SMENDTC.",
-      "number_errors": 1,
-      "errors": [
-        {
-          "row": 3,
-          "SEQ": 3,
-          "USUBJID": "CDISC001",
-          "value": {
-            "SMSTDTC": "2018-07-18T11:15",
-            "SMENDTC": "2018-07-18"
-          },
-          "validated": true
-        }
-      ]
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
     },
     {
       "dataset": "se.xpt",
