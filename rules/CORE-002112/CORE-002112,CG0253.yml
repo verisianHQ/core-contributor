@@ -1,0 +1,86 @@
+# Variable: TIVERS
+# Condition: Greater than one version of the IE criteria in study documentation
+# Rule: TIVERS ^= null
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If inclusion/exclusion criteria were amended during the trial, then each complete set of criteria must be included in the TI domain. TIVERS is used to distinguish between the versions.
+                Document: IG v3.2
+                Item: Assumption 1
+                Section: '7.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0253
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If inclusion/exclusion criteria were amended during the trial, then each complete set of criteria must be included in the TI domain. TIVERS is used to distinguish between the versions.
+                Document: IG v3.3
+                Item: Assumption 1
+                Section: '7.4.1'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0253
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If inclusion/exclusion criteria were amended during the trial, then each complete set of criteria must be included in the TI domain. TIVERS is used to distinguish between the versions.
+                Document: IG v3.4
+                Item: Assumption 1
+                Section: '7.4.1'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0253
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+Check:
+  all:
+    - name: TIVERS
+      operator: exists
+    - name: TIVERS
+      operator: empty
+    - operator: greater_than
+      name: $max_count_ietestcd
+      value: 1
+Core:
+  Id: CORE-002112
+  Status: Published
+  Version: '1'
+Description: Raise an error when an inclusion/exclusion criterion occurs more than once in the TI dataset but TIVERS is not populated on every TI record.
+Executability: Fully Executable
+Operations:
+  - id: $count_ietestcd
+    operator: record_count
+    domain: TI
+    group:
+      - IETESTCD
+  - operator: max
+    name: $count_ietestcd
+    id: $max_count_ietestcd
+Outcome:
+  Message: At least one inclusion/exclusion criterion (IETESTCD) occurs more than once in the TI dataset but TIVERS is not populated on every TI record.
+  Output Variables:
+    - IETESTCD
+    - TIVERS
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TI
+Sensitivity: Group
+Grouping_Variables:
+  - IETESTCD
