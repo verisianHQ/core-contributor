@@ -4,7 +4,7 @@
       "dataset": "relsub.xpt",
       "domain": "RELSUB",
       "execution_status": "success",
-      "execution_message": "When RSUBJID is populated the value cannot be equal to USUBJID.",
+      "execution_message": "RSUBJID must not be equal to USUBJID when RSUBJID is populated.",
       "number_errors": 2,
       "errors": [
         {

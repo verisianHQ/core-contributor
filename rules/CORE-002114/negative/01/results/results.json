@@ -1,0 +1,63 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "TSVALNF must be a valid ISO 21090 NullFlavor.",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "AGEMAX",
+            "TSVALNF": "PIN"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "AGEMIN",
+            "TSVALNF": "A"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "DCUTDESC",
+            "TSVALNF": "B"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "DCUTDTC",
+            "TSVALNF": "C"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 1,
+          "USUBJID": "None",
+          "value": {
+            "TSPARMCD": "DOSE",
+            "TSVALNF": "123"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
