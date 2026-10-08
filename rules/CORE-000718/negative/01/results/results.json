@@ -4,7 +4,7 @@
       "dataset": "sm.xpt",
       "domain": "SM",
       "execution_status": "success",
-      "execution_message": "SMSTDTC falls after  SMENDTC.",
+      "execution_message": "SMSTDTC falls after SMENDTC.",
       "number_errors": 1,
       "errors": [
         {
@@ -12,8 +12,8 @@
           "SEQ": 3,
           "USUBJID": "CDISC001",
           "value": {
-            "SMSTDTC": "2018-07-18T11:15",
-            "SMENDTC": "2018-07-18"
+            "SMSTDTC": "2018-07-18T11:16",
+            "SMENDTC": "2018-07-18T11:15"
           },
           "validated": true
         }
@@ -23,7 +23,7 @@
       "dataset": "se.xpt",
       "domain": "SE",
       "execution_status": "success",
-      "execution_message": "SESTDTC falls after  SEENDTC.",
+      "execution_message": "SESTDTC falls after SEENDTC.",
       "number_errors": 1,
       "errors": [
         {
@@ -42,7 +42,7 @@
       "dataset": "sv.xpt",
       "domain": "SV",
       "execution_status": "success",
-      "execution_message": "SVSTDTC falls after  SVENDTC.",
+      "execution_message": "SVSTDTC falls after SVENDTC.",
       "number_errors": 1,
       "errors": [
         {
@@ -61,7 +61,7 @@
       "dataset": "ae.xpt",
       "domain": "AE",
       "execution_status": "success",
-      "execution_message": "AESTDTC falls after  AEENDTC.",
+      "execution_message": "AESTDTC falls after AEENDTC.",
       "number_errors": 1,
       "errors": [
         {
@@ -80,7 +80,7 @@
       "dataset": "cm.xpt",
       "domain": "CM",
       "execution_status": "success",
-      "execution_message": "CMSTDTC falls after  CMENDTC.",
+      "execution_message": "CMSTDTC falls after CMENDTC.",
       "number_errors": 1,
       "errors": [
         {
