@@ -47,25 +47,15 @@ Check:
       name: --EVLINT
       negative: true
       value: true
-    - all:
-        - name: $evlint_part
-          operator: invalid_date
-          value: true
-        - name: $evlint_part
-          operator: invalid_duration
-          negative: true
-          value: true
+    - operator: invalid_interval
+      name: --EVLINT
+      value: true
 Core:
   Id: ''
   Status: Draft
   Version: '1'
 Description: Raise an error when --EVLINT is not ISO 8601 duration or interval.
 Executability: Fully Executable
-Operations:
-  - name: --EVLINT
-    id: $evlint_part
-    operator: split_by
-    delimiter: /
 Outcome:
   Message: --EVLINT must be ISO 8601 duration or interval.
   Output Variables:

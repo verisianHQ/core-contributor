@@ -1,1 +1,17 @@
-{}
+{
+  "datasets": [
+    {
+      "dataset": "qs.xpt",
+      "domain": "QS",
+      "execution_status": "execution_error",
+      "execution_message": "rule execution error",
+      "number_errors": 1,
+      "errors": [
+        {
+          "error": "Rule format error",
+          "message": "Rule contains invalid operator"
+        }
+      ]
+    }
+  ]
+}
