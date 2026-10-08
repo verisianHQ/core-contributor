@@ -42,19 +42,19 @@ Authorities:
             Version: '2.0'
         Version: '3.4'
 Check:
-  any:
+  all:
     - operator: invalid_duration
       name: --EVLINT
       negative: true
       value: true
-    - operator: invalid_interval
+    - operator: invalid_date_interval
       name: --EVLINT
       value: true
 Core:
   Id: ''
   Status: Draft
   Version: '1'
-Description: Raise an error when --EVLINT is not ISO 8601 duration or interval.
+Description: Part B - Raise an error when --EVLINT is not ISO 8601 duration or interval.
 Executability: Fully Executable
 Outcome:
   Message: --EVLINT must be ISO 8601 duration or interval.
