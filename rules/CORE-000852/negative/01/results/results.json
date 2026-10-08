@@ -1,0 +1,252 @@
+{
+  "datasets": [
+    {
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "execution_status": "success",
+      "execution_message": "Variables are not in the correct order as shown in SDTM for the observation class.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "$column_order_from_dataset": [
+              "STUDYID",
+              "USUBJID",
+              "DOMAIN",
+              "CMSEQ",
+              "CMTRT",
+              "CMINDC",
+              "CMDOSE",
+              "CMDOSU",
+              "CMDOSFRQ",
+              "CMROUTE",
+              "EPOCH",
+              "CMDTC",
+              "CMSTDTC",
+              "CMENDTC",
+              "CMDY",
+              "CMSTDY",
+              "CMENDY",
+              "CMSTRTPT",
+              "CMSTTPT",
+              "CMENRTPT",
+              "CMENTPT"
+            ],
+            "$library_with_dataset_only": [
+              "STUDYID",
+              "DOMAIN",
+              "USUBJID",
+              "CMSEQ",
+              "CMTRT",
+              "CMINDC",
+              "CMDOSE",
+              "CMDOSU",
+              "CMDOSFRQ",
+              "CMROUTE",
+              "EPOCH",
+              "CMDTC",
+              "CMSTDTC",
+              "CMENDTC",
+              "CMDY",
+              "CMSTDY",
+              "CMENDY",
+              "CMSTRTPT",
+              "CMSTTPT",
+              "CMENRTPT",
+              "CMENTPT"
+            ]
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ce.xpt",
+      "domain": "CE",
+      "execution_status": "success",
+      "execution_message": "Variables are not in the correct order as shown in SDTM for the observation class.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "$column_order_from_dataset": [
+              "STUDYID",
+              "DOMAIN",
+              "USUBJID",
+              "CESEQ",
+              "CEGRPID",
+              "CETERM",
+              "CESEV",
+              "EPOCH",
+              "CEDTC",
+              "CESTDTC",
+              "CEDY",
+              "CEENDTC",
+              "CESTDY",
+              "CEENDY",
+              "CESTRTPT",
+              "CESTTPT",
+              "CEENRTPT",
+              "CEENTPT"
+            ],
+            "$library_with_dataset_only": [
+              "STUDYID",
+              "DOMAIN",
+              "USUBJID",
+              "CESEQ",
+              "CEGRPID",
+              "CETERM",
+              "CESEV",
+              "EPOCH",
+              "CEDTC",
+              "CESTDTC",
+              "CEENDTC",
+              "CEDY",
+              "CESTDY",
+              "CEENDY",
+              "CESTRTPT",
+              "CESTTPT",
+              "CEENRTPT",
+              "CEENTPT"
+            ]
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "Variables are not in the correct order as shown in SDTM for the observation class.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "$column_order_from_dataset": [
+              "LBDTC",
+              "STUDYID",
+              "DOMAIN",
+              "USUBJID",
+              "LBSEQ",
+              "LBTESTCD",
+              "LBTEST",
+              "LBCAT",
+              "LBORRES",
+              "LBORRESU",
+              "LBORNRLO",
+              "LBORNRHI",
+              "LBSTRESC",
+              "LBSTRESN",
+              "LBSTRESU",
+              "LBSTNRLO",
+              "LBSTNRHI",
+              "LBNRIND",
+              "LBLOBXFL",
+              "VISITNUM",
+              "VISIT",
+              "LBDY",
+              "LBENRTPT",
+              "LBENTPT"
+            ],
+            "$library_with_dataset_only": [
+              "STUDYID",
+              "DOMAIN",
+              "USUBJID",
+              "LBSEQ",
+              "LBTESTCD",
+              "LBTEST",
+              "LBCAT",
+              "LBORRES",
+              "LBORRESU",
+              "LBORNRLO",
+              "LBORNRHI",
+              "LBSTRESC",
+              "LBSTRESN",
+              "LBSTRESU",
+              "LBSTNRLO",
+              "LBSTNRHI",
+              "LBNRIND",
+              "LBLOBXFL",
+              "VISITNUM",
+              "VISIT",
+              "LBDTC",
+              "LBDY",
+              "LBENRTPT",
+              "LBENTPT"
+            ]
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "fa.xpt",
+      "domain": "FA",
+      "execution_status": "success",
+      "execution_message": "Variables are not in the correct order as shown in SDTM for the observation class.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "$column_order_from_dataset": [
+              "STUDYID",
+              "DOMAIN",
+              "USUBJID",
+              "FASEQ",
+              "FALNKGRP",
+              "FATESTCD",
+              "FATEST",
+              "FAOBJ",
+              "FASTRESC",
+              "FAORRES",
+              "FASTNRLO",
+              "FASTNRHI",
+              "FALOC",
+              "VISITNUM",
+              "EPOCH",
+              "FADTC",
+              "FADY",
+              "FAENRTPT",
+              "FAENTPT"
+            ],
+            "$library_with_dataset_only": [
+              "STUDYID",
+              "DOMAIN",
+              "USUBJID",
+              "FASEQ",
+              "FALNKGRP",
+              "FATESTCD",
+              "FATEST",
+              "FAOBJ",
+              "FAORRES",
+              "FASTRESC",
+              "FASTNRLO",
+              "FASTNRHI",
+              "FALOC",
+              "VISITNUM",
+              "EPOCH",
+              "FADTC",
+              "FADY",
+              "FAENRTPT",
+              "FAENTPT"
+            ]
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

@@ -86,6 +86,7 @@ Executability: Fully Executable
 Outcome:
   Message: IEORRES is not equal to 'Y', but IECAT is equal to 'EXCLUSION'.
   Output Variables:
+    - IETESTCD
     - IECAT
     - IEORRES
 Rule Type: Record Data
