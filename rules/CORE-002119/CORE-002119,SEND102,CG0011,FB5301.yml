@@ -207,7 +207,7 @@ Check:
       operator: not_matches_regex
       value: ^[0-9]+-[0-9]+$
 Core:
-  Id: CORE-000493
+  Id: CORE-002119
   Status: Published
   Version: '1'
 Description: Raise an error when Age Range (AGETXT) is not populated with a number-number format when age range is supplied.
