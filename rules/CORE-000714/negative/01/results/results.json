@@ -5,14 +5,14 @@
       "domain": "DM",
       "execution_status": "success",
       "execution_message": "RFXSTDTC falls after RFXENDTC.",
-      "number_errors": 2,
+      "number_errors": 3,
       "errors": [
         {
           "row": 1,
           "SEQ": null,
           "USUBJID": "CDISC001",
           "value": {
-            "RFXSTDTC": "2019-02-20T11:50",
+            "RFXSTDTC": "2019-02-20T10:39",
             "RFXENDTC": "2019-02-20T10:38"
           },
           "validated": true
@@ -24,6 +24,16 @@
           "value": {
             "RFXSTDTC": "2018-08-18T09:30",
             "RFXENDTC": "2018-07-18T11:15"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "CDISC006",
+          "value": {
+            "RFXSTDTC": "2018-05-17",
+            "RFXENDTC": "2018-04"
           },
           "validated": true
         }
