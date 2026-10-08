@@ -8,18 +8,18 @@
       "number_errors": 3,
       "errors": [
         {
-          "row": 7,
+          "row": 1,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "define_variable_role": "Topic",
-            "define_variable_name": "SVUPDES",
-            "library_variable_role": "Record Qualifier"
+            "define_variable_role": "Timing",
+            "define_variable_name": "DOMAIN",
+            "library_variable_role": "Identifier"
           },
           "validated": true
         },
         {
-          "row": 15,
+          "row": 5,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
@@ -30,13 +30,13 @@
           "validated": true
         },
         {
-          "row": 16,
+          "row": 12,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
-            "define_variable_role": "Timing",
-            "define_variable_name": "DOMAIN",
-            "library_variable_role": "Identifier"
+            "define_variable_role": "Topic",
+            "define_variable_name": "SVUPDES",
+            "library_variable_role": "Record Qualifier"
           },
           "validated": true
         }
@@ -50,24 +50,24 @@
       "number_errors": 2,
       "errors": [
         {
-          "row": 136,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "define_variable_role": "Timing",
-            "define_variable_name": "LBTEST",
-            "library_variable_role": "Synonym Qualifier"
-          },
-          "validated": true
-        },
-        {
-          "row": 155,
+          "row": 2,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
             "define_variable_role": "Identifier",
             "define_variable_name": "EPOCH",
             "library_variable_role": "Timing"
+          },
+          "validated": true
+        },
+        {
+          "row": 131,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_variable_role": "Timing",
+            "define_variable_name": "LBTEST",
+            "library_variable_role": "Synonym Qualifier"
           },
           "validated": true
         }
@@ -81,24 +81,24 @@
       "number_errors": 2,
       "errors": [
         {
-          "row": 52,
-          "SEQ": null,
-          "USUBJID": "None",
-          "value": {
-            "define_variable_role": "Topic",
-            "define_variable_name": "XDSEQ",
-            "library_variable_role": "Identifier"
-          },
-          "validated": true
-        },
-        {
-          "row": 116,
+          "row": 96,
           "SEQ": null,
           "USUBJID": "None",
           "value": {
             "define_variable_role": "Topic",
             "define_variable_name": "XDORRES",
             "library_variable_role": "Result Qualifier"
+          },
+          "validated": true
+        },
+        {
+          "row": 122,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "define_variable_role": "Topic",
+            "define_variable_name": "XDSEQ",
+            "library_variable_role": "Identifier"
           },
           "validated": true
         }
