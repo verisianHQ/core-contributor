@@ -80,8 +80,8 @@ Check:
     operator: is_not_substring_of
     value: $fatest_lib_names
 Core:
-  Id: CDISC.SDTMIG.CG0173
-  Status: Draft
+  Id: CORE-002122
+  Status: Published
   Version: '1'
 Description: Raise an error when collected data fits a Qualifier variable listed
   in specified SDTM Sections and are represented in the Findings About domain,
