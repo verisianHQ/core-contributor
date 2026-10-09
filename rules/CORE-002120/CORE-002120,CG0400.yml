@@ -60,8 +60,8 @@ Check:
       filter_attribute: version
       filter_value: $define_loinc_version
 Core:
-  Id: CDISC.SDTMIG.CG0400
-  Status: Draft
+  Id: CORE-002120
+  Status: Published
   Version: '1'
 Description: Raise error when --LOINC is not a valid code in the version of the
   LOINC dictionary specified in the define.xml document.
