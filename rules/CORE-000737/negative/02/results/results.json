@@ -1,0 +1,25 @@
+{
+  "datasets": [
+    {
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "execution_status": "success",
+      "execution_message": "At least one FDA Desired TSPARMCD is missing in the TS dataset or TSVAL is not populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "$FDAdesired_missing_tsparmcds": [
+              "SPREFID"
+            ],
+            "$FDAdesired_empty_tsparmcds": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
