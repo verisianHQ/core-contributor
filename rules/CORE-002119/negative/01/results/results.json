@@ -1,0 +1,58 @@
+{
+  "datasets": [
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "AGETXT is not in number - number format.",
+      "number_errors": 5,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "CDISC002",
+          "value": {
+            "AGETXT": "11"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "CDISC003",
+          "value": {
+            "AGETXT": "a11-20"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "CDISC004",
+          "value": {
+            "AGETXT": "young"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "CDISC005",
+          "value": {
+            "AGETXT": "11--a2"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": null,
+          "USUBJID": "CDISC006",
+          "value": {
+            "AGETXT": "11--22"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
