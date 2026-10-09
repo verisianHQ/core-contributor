@@ -1,0 +1,104 @@
+# Variable: GEN
+# Condition: 
+# Rule: Variable Format = SDTM-specified controlled terminology and format guidelines for variables, when provided
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Following SDTM-specified controlled terminology and format guidelines for variables, when provided
+                Document: IG v3.2
+                Section: 3.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0011
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Following SDTM-specified controlled terminology and format guidelines for variables, when provided
+                Document: IG v3.3
+                Section: 3.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0011
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Following SDTM-specified controlled terminology and format guidelines for variables, when provided
+                Document: IG v3.4
+                Section: 3.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0011
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+Check:
+  all:
+    - any:
+      - name: variable_name
+        operator: ends_with
+        value: DTC
+        value_is_literal: true
+      - name: variable_name
+        operator: ends_with
+        value: STDTC
+        value_is_literal: true
+      - name: variable_name
+        operator: ends_with
+        value: ENDTC
+        value_is_literal: true
+      - name: variable_name
+        operator: ends_with
+        value: RFTDTC
+        value_is_literal: true
+      - name: variable_name
+        operator: is_contained_by
+        value:
+        - MIDSDTC
+        - RFSTDTC
+        - RFENDTC
+        - RFXSTDTC
+        - RFXENDTC
+        - RFCSTDTC
+        - RFCENDTC
+        - RFICDTC
+        - RFPENDTC
+        - DTHDTC
+        - BRTHDTC
+        - DMDTC
+        value_is_literal: true
+    - name: variable_value
+      operator: non_empty
+    - name: variable_value
+      operator: invalid_date
+    - name: variable_value
+      operator: invalid_date_interval
+Core:
+  Id: ''
+  Status: Draft
+  Version: '1'
+Description: Part D - Raise an error when any of the values for --DTC, --STDTC, --ENDTC, --RFTDTC, MIDSDTC, RFSTDTC, RFENDTC, RFXSTDTC, RFXENDTC, RFCSTDTC, RFCENDTC, RFICDTC, RFPENDTC, DTHDTC, BRTHDTC, DMDTC is not ISO 8601 datetime or interval.
+Executability: Fully Executable
+Outcome:
+  Message: Value must be a valid ISO 8601 datetime or interval.
+  Output Variables:
+    - variable_name
+    - variable_value
+Rule Type: Value Check with Dataset Metadata
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

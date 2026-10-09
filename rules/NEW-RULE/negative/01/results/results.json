@@ -1,0 +1,339 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "Value must be a valid ISO 8601 datetime or interval.",
+      "number_errors": 6,
+      "errors": [
+        {
+          "row": 77,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AESTDTC",
+            "variable_value": "2012-12-02/-05-20"
+          },
+          "validated": true
+        },
+        {
+          "row": 78,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AESTDTC",
+            "variable_value": "2013-01-143"
+          },
+          "validated": true
+        },
+        {
+          "row": 79,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AESTDTC",
+            "variable_value": "2D/2012-11-16"
+          },
+          "validated": true
+        },
+        {
+          "row": 80,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AESTDTC",
+            "variable_value": "/2012-11-21T20:00"
+          },
+          "validated": true
+        },
+        {
+          "row": 82,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AEENDTC",
+            "variable_value": "2013-05-20T23:"
+          },
+          "validated": true
+        },
+        {
+          "row": 84,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AEENDTC",
+            "variable_value": "2012-11-21T20:00/P3"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "Value must be a valid ISO 8601 datetime or interval.",
+      "number_errors": 16,
+      "errors": [
+        {
+          "row": 21,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "RFSTDTC",
+            "variable_value": "2012-11-3008:05"
+          },
+          "validated": true
+        },
+        {
+          "row": 23,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "RFSTDTC",
+            "variable_value": "2013-08-29/P1H"
+          },
+          "validated": true
+        },
+        {
+          "row": 29,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "RFENDTC",
+            "variable_value": "/2014-03-19T10:06"
+          },
+          "validated": true
+        },
+        {
+          "row": 30,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "RFENDTC",
+            "variable_value": "2013-08-"
+          },
+          "validated": true
+        },
+        {
+          "row": 32,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "RFXSTDTC",
+            "variable_value": "2012-11-15T09:02/2W"
+          },
+          "validated": true
+        },
+        {
+          "row": 33,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "RFXSTDTC",
+            "variable_value": "06-08"
+          },
+          "validated": true
+        },
+        {
+          "row": 37,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "RFXENDTC",
+            "variable_value": "2D/PT1H"
+          },
+          "validated": true
+        },
+        {
+          "row": 38,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "RFXENDTC",
+            "variable_value": "2013-11-05Thh"
+          },
+          "validated": true
+        },
+        {
+          "row": 41,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "RFCSTDTC",
+            "variable_value": "2012-11-3"
+          },
+          "validated": true
+        },
+        {
+          "row": 43,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "RFCSTDTC",
+            "variable_value": "2012-11-15T09:02/2013-1-12"
+          },
+          "validated": true
+        },
+        {
+          "row": 46,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "RFCENDTC",
+            "variable_value": "2013-01-23T20:0"
+          },
+          "validated": true
+        },
+        {
+          "row": 47,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "RFCENDTC",
+            "variable_value": "/2013-01-12"
+          },
+          "validated": true
+        },
+        {
+          "row": 53,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "RFICDTC",
+            "variable_value": "2013-08-20/P1"
+          },
+          "validated": true
+        },
+        {
+          "row": 58,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "RFPENDTC",
+            "variable_value": "T1H/2014-02-13"
+          },
+          "validated": true
+        },
+        {
+          "row": 64,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "DTHDTC",
+            "variable_value": "x/x"
+          },
+          "validated": true
+        },
+        {
+          "row": 141,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "DMDTC",
+            "variable_value": "2012-11-23T10:055"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ec.xpt",
+      "domain": "EC",
+      "execution_status": "success",
+      "execution_message": "Value must be a valid ISO 8601 datetime or interval.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 52,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ECSTDTC",
+            "variable_value": "012-11-30"
+          },
+          "validated": true
+        },
+        {
+          "row": 54,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ECSTDTC",
+            "variable_value": "P1DT/2012-12-02T14:02"
+          },
+          "validated": true
+        },
+        {
+          "row": 56,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ECENDTC",
+            "variable_value": "2012-12-01/P2"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "Value must be a valid ISO 8601 datetime or interval.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 128,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBDTC",
+            "variable_value": "2012-11-23T00"
+          },
+          "validated": true
+        },
+        {
+          "row": 141,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "LBRFTDTC",
+            "variable_value": "2013-08-29PT1H"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "ml.xpt",
+      "domain": "ML",
+      "execution_status": "success",
+      "execution_message": "Value must be a valid ISO 8601 datetime or interval.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 40,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "MIDSDTC",
+            "variable_value": "T2015-06-03T19:20"
+          },
+          "validated": true
+        },
+        {
+          "row": 41,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "MIDSDTC",
+            "variable_value": "yy-77"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
