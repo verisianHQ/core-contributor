@@ -1,0 +1,58 @@
+# Variable: DV
+# Condition: 
+# Rule: DV is not present within BDS
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '888'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.3
+                Section: 3.2
+                Item: 'Table 3.2'
+                Cited Guidance: 
+                  'ADPPKIG v1.0, Section 3.2, Table 3.2: Core Value is required.'
+      - Name: ADPPKIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '888'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: ADPPKIG v1.0
+                Section: 3.2
+                Item: 'Table 3.2'
+                Cited Guidance: 
+                  'ADPPKIG v1.0, Section 3.2, Table 3.2: Core Value is required.'
+Check:
+  all:
+    - name: DV
+      operator: not_exists
+Core:
+  Id: AD0888
+  Status: Published
+  Version: '1'
+Description: Raise an error when the DV variable is not present within BDS.
+Executability: Fully Executable
+Outcome:
+  Message: DV is not present within BDS.
+  Output Variables:
+    - DV
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - BDS
+  Domains:
+    Include:
+      - BDS
+Sensitivity: Dataset
