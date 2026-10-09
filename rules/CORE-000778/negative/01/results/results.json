@@ -1,8 +1,8 @@
 {
   "datasets": [
     {
-      "dataset": "apdm.xpt",
-      "domain": "APDM",
+      "dataset": "apqscgi.xpt",
+      "domain": "APQS",
       "execution_status": "success",
       "execution_message": "Split dataset name length of Associated Persons non-supplemental qualifier dataset is shorter than or equal to 4 or greater than 6.",
       "number_errors": 1,
@@ -12,15 +12,15 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "dataset_name": "APDM"
+            "dataset_name": "APQSCGI"
           },
           "validated": true
         }
       ]
     },
     {
-      "dataset": "apdrug1ex.xpt",
-      "domain": "APDRUG1EX",
+      "dataset": "apqspgi.xpt",
+      "domain": "APQS",
       "execution_status": "success",
       "execution_message": "Split dataset name length of Associated Persons non-supplemental qualifier dataset is shorter than or equal to 4 or greater than 6.",
       "number_errors": 1,
@@ -30,7 +30,7 @@
           "SEQ": null,
           "USUBJID": null,
           "value": {
-            "dataset_name": "APDRUG1EX"
+            "dataset_name": "APQSPGI"
           },
           "validated": true
         }
