@@ -83,8 +83,8 @@ Check:
     - name: variable_value
       operator: invalid_date_interval
 Core:
-  Id: ''
-  Status: Draft
+  Id: CORE-002121
+  Status: Published
   Version: '1'
 Description: Part D - Raise an error when any of the values for --DTC, --STDTC, --ENDTC, --RFTDTC, MIDSDTC, RFSTDTC, RFENDTC, RFXSTDTC, RFXENDTC, RFCSTDTC, RFCENDTC, RFICDTC, RFPENDTC, DTHDTC, BRTHDTC, DMDTC is not ISO 8601 datetime or interval.
 Executability: Fully Executable
