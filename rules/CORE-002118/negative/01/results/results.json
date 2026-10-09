@@ -1,0 +1,67 @@
+{
+  "datasets": [
+    {
+      "dataset": "qs.xpt",
+      "domain": "QS",
+      "execution_status": "success",
+      "execution_message": "QSEVLINT must be ISO 8601 duration or interval.",
+      "number_errors": 6,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "QSEVLINT": "-P2"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "QSEVLINT": "-2W"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 3,
+          "USUBJID": "CDISC001",
+          "value": {
+            "QSEVLINT": "2013-12-15T10:00"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC001",
+          "value": {
+            "QSEVLINT": "2013-12-15T10:00/-P2"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": 5,
+          "USUBJID": "CDISC001",
+          "value": {
+            "QSEVLINT": "2W/2013-12-15T10:00"
+          },
+          "validated": true
+        },
+        {
+          "row": 6,
+          "SEQ": 6,
+          "USUBJID": "CDISC001",
+          "value": {
+            "QSEVLINT": "-P2/4W"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
