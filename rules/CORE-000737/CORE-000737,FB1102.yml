@@ -1,0 +1,172 @@
+# Variable: TSPARMCD
+# Condition:
+# Rule: All FDA Desired Trial Summary (TS) Parameters (TSPARMCDs) are present in the TS dataset.
+# verified
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the
+                  FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1102
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the
+                  FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1102
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All trial design data should be submitted as specified in the
+                  FDA Study Data Technical Conformance Guide (TCG).
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1102
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  any:
+    - name: $FDAdesired_missing_tsparmcds
+      operator: non_empty
+    - name: $FDAdesired_empty_tsparmcds
+      operator: non_empty
+Core:
+  Id: CORE-000737
+  Status: Published
+  Version: '1'
+Description: Raise an error when not all FDA Desired Trial Summary (TS)
+  Parameters (TSPARMCDs) are present in the TS dataset or TSVAL is not populated.
+Executability: Fully Executable
+Operations:
+  - id: $distinct_tsparmcds
+    operator: distinct
+    name: TSPARMCD
+  - id: $FDAdesired_missing_tsparmcds
+    operator: minus
+    name:
+      - ACTSUB
+      - ADAPT
+      - ADDON
+      - AGEMAX
+      - AGEMIN
+      - COMPTRT
+      - DCUTDESC
+      - DCUTDTC
+      - EXTTIND
+      - FCNTRY
+      - FDATCHSP
+      - HLTSUBJI
+      - LENGTH
+      - NARMS
+      - NCOHORT
+      - OBJPRIM
+      - OBJSEC
+      - ONGOSIND
+      - OUTMSPRI
+      - PDPSTIND
+      - PDSTIND
+      - PIPIND
+      - PLANSUB
+      - RDIND
+      - REGID
+      - SENDTC
+      - SEXPOP
+      - SPONSOR
+      - SDTMVER
+      - SDTIGVER
+      - STYPE
+      - STOPRULE
+      - SSTDTC
+      - TBLIND
+      - TCNTRL
+      - THERAREA
+      - TITLE
+      - TPHASE
+      - TTYPE
+      - INDIC
+      - SPREFID
+    subtract: $distinct_tsparmcds
+  - id: $empty_tsval_tsparmcds
+    operator: distinct
+    name: TSPARMCD
+    filter:
+      TSVAL: ""
+  - id: $FDAdesired_empty_tsparmcds
+    operator: intersect
+    name: $empty_tsval_tsparmcds
+    subtract:
+      - ACTSUB
+      - ADAPT
+      - ADDON
+      - AGEMAX
+      - AGEMIN
+      - COMPTRT
+      - DCUTDESC
+      - DCUTDTC
+      - EXTTIND
+      - FCNTRY
+      - FDATCHSP
+      - HLTSUBJI
+      - LENGTH
+      - NARMS
+      - NCOHORT
+      - OBJPRIM
+      - OBJSEC
+      - ONGOSIND
+      - OUTMSPRI
+      - PDPSTIND
+      - PDSTIND
+      - PIPIND
+      - PLANSUB
+      - RDIND
+      - REGID
+      - SENDTC
+      - SEXPOP
+      - SPONSOR
+      - SDTMVER
+      - SDTIGVER
+      - STYPE
+      - STOPRULE
+      - SSTDTC
+      - TBLIND
+      - TCNTRL
+      - THERAREA
+      - TITLE
+      - TPHASE
+      - TTYPE
+      - INDIC
+      - SPREFID
+Outcome:
+  Message: At least one FDA Desired TSPARMCD is missing in the TS dataset or TSVAL is not populated.
+  Output Variables:
+    - $FDAdesired_missing_tsparmcds
+    - $FDAdesired_empty_tsparmcds
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Dataset
