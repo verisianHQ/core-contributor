@@ -1,5 +1,43 @@
 # verified
 Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Following SDTM-specified controlled terminology and format guidelines for variables, when provided
+                Document: IG v3.2
+                Section: 3.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0011
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Following SDTM-specified controlled terminology and format guidelines for variables, when provided
+                Document: IG v3.3
+                Section: 3.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0011
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Following SDTM-specified controlled terminology and format guidelines for variables, when provided
+                Document: IG v3.4
+                Section: 3.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0011
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
   - Organization: FDA
     Standards:
       - Name: SDTMIG
@@ -154,7 +192,6 @@ Outcome:
     - variable_name
     - variable_value
     - library_variable_ccode
-    - library_variable_codelist_name
     - library_variable_codelist_value
 Rule Type: Value Check against Library Metadata
 Scope:
