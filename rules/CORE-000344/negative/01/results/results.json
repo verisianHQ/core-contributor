@@ -1,0 +1,70 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "Variable is not equal to any values within the extensible codelist or equal to 'MULTIPLE'.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 4,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_value": "DM",
+            "variable_name": "DOMAIN",
+            "define_variable_ccode": "C66734",
+            "define_variable_codelist_coded_values": "AE"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "Variable is not equal to any values within the extensible codelist or equal to 'MULTIPLE'.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 16,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_value": "MULTIPLEx",
+            "variable_name": "LBTESTCD",
+            "define_variable_ccode": "C65047",
+            "define_variable_codelist_coded_values": "ALB,ALP,ALT,ANISO,AST,BASO,BILI,CA,CHOL,CK,CL,COLOR,CREAT,EOS,GGT,GLUC,HCT,HGB,K,KETONES,LYM,MACROCY,MCH,MCHC,MCV,MONO,PH,PHOS,PLAT,POIKILO,PROT,RBC,SODIUM,SPGRAV,TSH,URATE,UREAN,UROBIL,VITB12,WBC"
+          },
+          "validated": true
+        },
+        {
+          "row": 18,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_value": "Xxxxxxx",
+            "variable_name": "LBTEST",
+            "define_variable_ccode": "C67154",
+            "define_variable_codelist_coded_values": "Albumin,Alkaline Phosphatase,Alanine Aminotransferase,Anisocytes; Anisocytosis,Aspartate Aminotransferase,Basophils,Bilirubin,Calcium,Cholesterol,Creatine Kinase,Chloride,Color,Creatinine,Eosinophils,Gamma Glutamyl Transferase,Glucose,Hematocrit,Hemoglobin,Potassium,Ketones,Lymphocytes,Macrocytes,Ery. Mean Corpuscular Hemoglobin,Ery. Mean Corpuscular HGB Concentration,Ery. Mean Corpuscular Volume,Monocytes,pH,Phosphate,Platelets,Poikilocytes,Protein,Erythrocytes,Sodium,Specific Gravity,Thyrotropin,Urate,Urea Nitrogen,Urobilinogen,Vitamin B12,Leukocytes"
+          },
+          "validated": true
+        },
+        {
+          "row": 64,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_value": "XXXXXXXXX",
+            "variable_name": "EPOCH",
+            "define_variable_ccode": "C99079",
+            "define_variable_codelist_coded_values": "SCREENING,TREATMENT"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
