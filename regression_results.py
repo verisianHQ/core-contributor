@@ -90,7 +90,7 @@ def build_runner(use_postgres: bool, dictionary_paths: Dict[str, str]) -> Any:
     from test import TestRunner
 
     return TestRunner(
-        standard="sdtm",
+        standard=STANDARD,
         use_pgserver=not use_postgres,
         whodrug_path=dictionary_paths.get("whodrug"),
         meddra_path=dictionary_paths.get("meddra"),
@@ -232,6 +232,8 @@ def _extract_case_key(path: Path, root: Path) -> Optional[str]:
 
 
 RULES_DIR = Path("rules")
+STANDARD_RULES_DIRS = {"sdtm": Path("rules"), "adam": Path("adam_rules")}
+STANDARD = "sdtm"
 
 
 def is_rule_verified(rule_id: str) -> bool:
@@ -500,6 +502,12 @@ def parse_args() -> argparse.Namespace:
         help="Run all rules in isolated mode and write baseline outputs outside rules/",
     )
     snapshot.add_argument("--baseline-dir", type=Path, default=DEFAULT_BASELINE_DIR)
+    snapshot.add_argument(
+        "--standard",
+        choices=sorted(STANDARD_RULES_DIRS),
+        default="sdtm",
+        help="Rule set to run: sdtm (rules/) or adam (adam_rules/)",
+    )
     snapshot.add_argument("--dictionary-paths-file", type=Path)
     snapshot.add_argument("--use-postgres", action="store_true", help="Use PostgreSQL instead of pgserver")
     snapshot.add_argument(
@@ -526,6 +534,12 @@ def parse_args() -> argparse.Namespace:
         help="Directory for regression diff summary output",
     )
     compare.add_argument("--current-dir", type=Path, help="Used when --current-source folder")
+    compare.add_argument(
+        "--standard",
+        choices=sorted(STANDARD_RULES_DIRS),
+        default="sdtm",
+        help="Rule set to run: sdtm (rules/) or adam (adam_rules/)",
+    )
     compare.add_argument("--dictionary-paths-file", type=Path)
     compare.add_argument("--use-postgres", action="store_true", help="Use PostgreSQL instead of pgserver")
     compare.add_argument("--summary-file", type=Path, help="Output markdown summary file path")
@@ -545,7 +559,10 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> int:
+    global RULES_DIR, STANDARD
     args = parse_args()
+    STANDARD = args.standard
+    RULES_DIR = STANDARD_RULES_DIRS[args.standard]
 
     if args.command == "snapshot":
         run_isolated_suite(
