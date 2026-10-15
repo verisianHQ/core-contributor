@@ -99,6 +99,8 @@ Check:
   all:
     - name: --OCCUR
       operator: non_empty
+    - name: --OCCUR
+      operator: exists
     - any:
         - name: --PRESP
           operator: not_exists
