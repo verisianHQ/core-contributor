@@ -157,23 +157,14 @@ Description: Raise an error when the variable length is not equal between datase
 Executability: Fully Executable
 Operations:
   - id: $max_variable_value_length
-    domain: global_value_check
-    name: variable_value_length
-    operator: max
-    group:
-      - variable_name
+    name: variable_name
+    operator: max_variable_value_length
   - id: $global_max_variable_length
-    domain: global_value_check
-    name: variable_length
-    operator: max
-    group:
-      - variable_name
+    name: variable_name
+    operator: global_max_variable_length
   - id: $global_min_variable_length
-    domain: global_value_check
-    name: variable_length
-    operator: min
-    group:
-      - variable_name
+    name: variable_name
+    operator: global_min_variable_length
   - id: $domain_label
     name: domain_label
     operator: domain_label
