@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    {
+      "dataset": "adppk.csv",
+      "domain": "adppk",
+      "execution_status": "success",
+      "execution_message": "SUBJTYPC has more than one value for a given SUBJTYP value when both variables are populated.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "SUBJTYPC": "A",
+            "SUBJTYP": "Healthy"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "SUBJTYPC": "B",
+            "SUBJTYP": "Healthy"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

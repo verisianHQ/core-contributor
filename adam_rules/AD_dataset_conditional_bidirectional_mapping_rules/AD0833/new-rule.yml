@@ -1,0 +1,51 @@
+# Variable: DVID
+# Condition: DVID and DVIDN are populated
+# Rule: Each DVID value must map to only one DVIDN value
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADPPKIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '833'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADPPKIG v1.0
+        Section: '3.2'
+        Item: Table 3.2
+        Cited Guidance: 'ADPPKIG v1.0, Section 3.2, Table 3.2: Unique numerical representation
+          of DVID. Convention is normally 0=dose, 1=for the first observation of interest,
+          etc. The numeric versions of the primary/character variables can be assigned
+          from its corresponding character pair variable.'
+Check:
+  all:
+  - name: DVIDN
+    operator: is_inconsistent_across_dataset
+    value: DVID
+    where_populated: true
+Core:
+  Id: AD0833
+  Status: Draft
+  Version: '1'
+Description: Each DVID value must map to only one DVIDN value when both variables
+  are populated.
+Executability: Fully Executable
+Outcome:
+  Message: DVIDN has more than one value for a given DVID value when both variables
+    are populated.
+  Output Variables:
+  - DVIDN
+  - DVID
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BDS
+  Domains:
+    Include:
+    - ADPPK
+Sensitivity: Record

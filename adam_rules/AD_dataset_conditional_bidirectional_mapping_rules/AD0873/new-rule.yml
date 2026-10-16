@@ -1,0 +1,50 @@
+# Variable: SEX
+# Condition: SEX and SEXN are populated
+# Rule: Each SEX value must map to only one SEXN value
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADPPKIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '873'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADPPKIG v1.0
+        Section: '3.3'
+        Item: Table 3.3
+        Cited Guidance: 'ADPPKIG v1.0, Section 3.3, Table 3.3: Numeric version of
+          SEX. Can be extended to other values beyond 1 and 2. Example values can
+          be as follows: 1=Male, 2=Female'
+Check:
+  all:
+  - name: SEXN
+    operator: is_inconsistent_across_dataset
+    value: SEX
+    where_populated: true
+Core:
+  Id: AD0873
+  Status: Draft
+  Version: '1'
+Description: Each SEX value must map to only one SEXN value when both variables are
+  populated.
+Executability: Fully Executable
+Outcome:
+  Message: SEXN has more than one value for a given SEX value when both variables
+    are populated.
+  Output Variables:
+  - SEXN
+  - SEX
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BDS
+  Domains:
+    Include:
+    - ADPPK
+Sensitivity: Record

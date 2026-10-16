@@ -1,0 +1,52 @@
+# Variable: RACE
+# Condition: RACE and RACEN are populated
+# Rule: Each RACE value must map to only one RACEN value
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADPPKIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '868'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADPPKIG v1.0
+        Section: '3.3'
+        Item: Table 3.3
+        Cited Guidance: 'ADPPKIG v1.0, Section 3.3, Table 3.3: Numeric version of
+          RACE eg. Codes used as per the specification. 1=American Indian OR Alaska
+          Native, 2=Asian, 3=Black/African American, 4=Native Hawaiian OR Other Pacific
+          Islander, 5=White. If races need to be categorized differently, then use
+          variables ARACE and ARACEN.'
+Check:
+  all:
+  - name: RACEN
+    operator: is_inconsistent_across_dataset
+    value: RACE
+    where_populated: true
+Core:
+  Id: AD0868
+  Status: Draft
+  Version: '1'
+Description: Each RACE value must map to only one RACEN value when both variables
+  are populated.
+Executability: Fully Executable
+Outcome:
+  Message: RACEN has more than one value for a given RACE value when both variables
+    are populated.
+  Output Variables:
+  - RACEN
+  - RACE
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BDS
+  Domains:
+    Include:
+    - ADPPK
+Sensitivity: Record
