@@ -1,0 +1,83 @@
+# Variable: ATPT
+# Condition: 
+# Rule: Within a given value of PARAMCD, there is more than one value of ATPT for a given value of ATPTN
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '117'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.0
+        Section: 3.2.3
+        Item: Table 3.2.3.1
+        Cited Guidance: 'ADaMIG v1.0, Section 3.2.3, Table 3.2.3.1: Within the same
+          parameter, there is a one-to-one mapping between ATPT and ATPTN.'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '117'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: 3.3.3
+        Item: Table 3.3.3.1
+        Cited Guidance: 'ADaMIG v1.2, Section 3.3.3, Table 3.3.3.1: There must be
+          a one-to-one relationship between ATPTN and ATPT within a parameter.'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '117'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: 3.3.3
+        Item: Table 3.3.3.1
+        Cited Guidance: 'ADaMIG v1.3, Section 3.3.3, Table 3.3.3.1: There must be
+          a one-to-one relationship between ATPTN and ATPT within a parameter.'
+      - Document: ADaMIG-MD v1.0
+        Section: '3.1'
+        Item: Table 3.3.3.1
+        Cited Guidance: 'ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis
+          needs by adding SPDEVID as a required key variable and USUBJID as a conditionally
+          required variable. See the BDS class for further details.'
+Check:
+  all:
+  - name: ATPT
+    operator: is_inconsistent_across_dataset
+    value:
+    - PARAMCD
+    - ATPTN
+Core:
+  Id: AD0117
+  Status: Draft
+  Version: '1'
+Description: Raise an error when within a given value of PARAMCD, there is more than one value of ATPT for a given value of ATPTN.
+Executability: Fully Executable
+Outcome:
+  Message: ATPT has more than one value for a given ATPTN value within a parameter.
+  Output Variables:
+  - ATPT
+  - PARAMCD
+  - ATPTN
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BASIC DATA STRUCTURE
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

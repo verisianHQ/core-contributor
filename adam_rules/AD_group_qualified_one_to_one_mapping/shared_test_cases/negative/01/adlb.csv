@@ -1,0 +1,8 @@
+STUDYID,USUBJID,PARAMCD,PARAM,AVISIT,AVISITN,ATPT,ATPTN,SHIFT1,SHIFT1N,AVAL,AVALC,BCHGCAT1,BCHG,PBCHGCA1,PBCHG
+Study Identifier,Unique Subject Identifier,Parameter Code,Parameter,Analysis Visit,Analysis Visit (N),Analysis Timepoint,Analysis Timepoint (N),Shift 1,Shift 1 (N),Analysis Value,Analysis Value (C),Change to Baseline Category 1,Change to Baseline,Percent Change to Baseline Category 1,Percent Change to Baseline
+Char,Char,Char,Char,Char,Num,Char,Num,Char,Num,Num,Char,Char,Num,Char,Num
+40,40,40,40,40,8,40,8,40,8,8,40,40,8,40,8
+CDISCPILOT01,CDISC001,PARAM1,Test Parameter 1,VIS1,1,TPT1,1,S1,1,1,C1,CAT1,10,PCAT1,5
+CDISCPILOT01,CDISC002,PARAM1,Test Parameter 1,VIS1,2,TPT1,2,S1,2,1,C2,CAT2,10,PCAT2,5
+CDISCPILOT01,CDISC003,PARAM1,Test Parameter 1,VIS2,1,TPT2,1,S2,1,2,C1,CAT1,20,PCAT1,15
+CDISCPILOT01,CDISC004,PARAM2,Test Parameter 2,VIS3,1,TPT3,1,S3,1,3,C1,CAT1,10,PCAT1,5
