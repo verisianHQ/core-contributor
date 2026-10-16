@@ -55,10 +55,10 @@ if %errorlevel% equ 0 (
 )
 
 echo.
-echo Python 3.12 not found. Attempting automatic installation... [cite: 6]
+echo Python 3.12 not found. Attempting automatic installation...
 echo.
 
-REM Try winget first (Windows 10 1809+ and Windows 11) [cite: 7]
+REM Try winget first (Windows 10 1809+ and Windows 11)
 where winget >nul 2>&1
 if %errorlevel% equ 0 (
     echo Installing Python 3.12 via winget...
@@ -72,7 +72,7 @@ if %errorlevel% equ 0 (
     )
 )
 
-REM Try chocolatey [cite: 8]
+REM Try chocolatey
 where choco >nul 2>&1
 if %errorlevel% equ 0 (
     echo Installing Python 3.12 via Chocolatey...
@@ -86,7 +86,7 @@ if %errorlevel% equ 0 (
     )
 )
 
-REM Direct download and install as last resort
+REM Direct download and install as last resort (per-user install, no admin required)
 echo Downloading Python 3.12 installer...
 powershell -Command "Invoke-WebRequest -Uri 'https://www.python.org/ftp/python/3.12.8/python-3.12.8-amd64.exe' -OutFile '%TEMP%\py312.exe'"
 %TEMP%\py312.exe /quiet InstallAllUsers=1 PrependPath=1
@@ -102,10 +102,10 @@ set "PATH=%SYS_PATH%;%USR_PATH%"
 
 :setup_venv
 echo.
-echo Setting up virtual environment... [cite: 9]
+echo Setting up virtual environment...
 if exist "venv\" rmdir /s /q venv
 
-%PYTHON_CMD% -m venv venv [cite: 10]
+%PYTHON_CMD% -m venv venv
 
 call venv\Scripts\activate.bat
 
@@ -115,5 +115,5 @@ venv\Scripts\python.exe -m pip install -r engine\requirements.txt --quiet
 venv\Scripts\python.exe -m pip install -r engine\requirements-dev.txt --quiet
 
 echo.
-echo Setup completed successfully! [cite: 11]
+echo Setup completed successfully!
 pause
