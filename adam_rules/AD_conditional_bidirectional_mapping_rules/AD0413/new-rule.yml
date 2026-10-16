@@ -1,0 +1,55 @@
+# Variable: ANLzzFN
+# Condition: ANLzzFN and ANLzzFL are populated
+# Rule: Each ANLzzFL value must map to only one ANLzzFN value
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '413'
+        Version: '2'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3; ADaMIG-MD v1.0
+        Section: 3.3.8; 3.1
+        Item: Table 3.3.8.1
+        Cited Guidance: 'ADaMIG v1.3, Section 3.3.8, Table 3.3.8.1: There must be a one-to-one relationship between ANLzzFN
+          and ANLzzFL within a dataset.
+
+          ANLzzFN cannot be present unless ANLzzFL is also present. When ANLzzFL and ANLzzFN are present, then on a given
+          record, either both must be populated or both must be null.
+
+
+          ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis needs by adding SPDEVID as a required key variable and
+          USUBJID as a conditionally required variable. See the BDS class for further details.'
+Check:
+  all:
+  - name: ^ANL(?P<zz>0[1-9]|[1-9][0-9])FN$
+    variable_regex_pattern: true
+    operator: is_inconsistent_across_dataset
+    value: ANL{{zz}}FL
+    where_populated: true
+Core:
+  Id: AD0413
+  Status: Draft
+  Version: '1'
+Description: Each ANLzzFL value must map to only one ANLzzFN value when both variables are populated.
+Executability: Fully Executable
+Outcome:
+  Message: ANLzzFN has more than one value for a given ANLzzFL value when both variables are populated.
+  Output Variables:
+  - ANL{{zz}}FN
+  - ANL{{zz}}FL
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BASIC DATA STRUCTURE
+    - MEDICAL DEVICE BASIC DATA STRUCTURE
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

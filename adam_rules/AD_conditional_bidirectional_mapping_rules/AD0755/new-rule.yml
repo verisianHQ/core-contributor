@@ -1,0 +1,75 @@
+# Variable: TRTSEQAN
+# Condition: TRTSEQAN and TRTSEQA are populated
+# Rule: Each TRTSEQA value must map to only one TRTSEQAN value
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '755'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: '3.2'
+        Item: Table 3.2.4
+        Cited Guidance: 'ADaMIG v1.1, Section 3.2, Table 3.2.4: One-to-one mapping to TRTSEQA within a study.'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '755'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: '3.2'
+        Item: Table 3.2.4
+        Cited Guidance: 'ADaMIG v1.2, Section 3.2, Table 3.2.4: Numeric representation of TRTSEQA. There must be a one-to-one
+          relationship between TRTSEQAN and TRTSEQA within a study. TRTSEQAN cannot be present unless TRTSEQA is also present.
+          When TRTSEQA and TRTSEQAN are present, then on a given record, either both must be populated or both must be null.'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '755'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: '3.2'
+        Item: Table 3.2.4
+        Cited Guidance: 'ADaMIG v1.3, Section 3.2, Table 3.2.4: Numeric representation of TRTSEQA. There must be a one-to-one
+          relationship between TRTSEQAN and TRTSEQA within a study. TRTSEQAN cannot be present unless TRTSEQA is also present.
+          When TRTSEQA and TRTSEQAN are present, then on a given record, either both must be populated or both must be null.'
+Check:
+  all:
+  - name: TRTSEQAN
+    operator: is_inconsistent_across_dataset
+    value: TRTSEQA
+    where_populated: true
+Core:
+  Id: AD0755
+  Status: Draft
+  Version: '1'
+Description: Each TRTSEQA value must map to only one TRTSEQAN value when both variables are populated.
+Executability: Fully Executable
+Outcome:
+  Message: TRTSEQAN has more than one value for a given TRTSEQA value when both variables are populated.
+  Output Variables:
+  - TRTSEQAN
+  - TRTSEQA
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - SUBJECT LEVEL ANALYSIS DATASET
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

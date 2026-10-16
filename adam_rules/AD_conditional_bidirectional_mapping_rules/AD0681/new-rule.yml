@@ -1,0 +1,47 @@
+# Variable: MODELGy
+# Condition: MODELGy and MODELGyN are populated
+# Rule: Each MODELGyN value must map to only one MODELGy value
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG-MD
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '681'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG-MD v1.0
+        Section: 3.2.1.2
+        Item: None
+        Cited Guidance: 'ADaMIG-MD v1.0, Section 3.2.1.2: Numeric representation of grouping "y" of the pooled device type
+          group.  There must be a one-to-one relationship between MODELGyN and MODELGy within a study. '
+Check:
+  all:
+  - name: ^MODELG(?P<y>[1-9][0-9]?)$
+    variable_regex_pattern: true
+    operator: is_inconsistent_across_dataset
+    value: MODELG{{y}}N
+    where_populated: true
+Core:
+  Id: AD0681
+  Status: Draft
+  Version: '1'
+Description: Each MODELGyN value must map to only one MODELGy value when both variables are populated.
+Executability: Fully Executable
+Outcome:
+  Message: MODELGy has more than one value for a given MODELGyN value when both variables are populated.
+  Output Variables:
+  - MODELG{{y}}
+  - MODELG{{y}}N
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - ADAM OTHER
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

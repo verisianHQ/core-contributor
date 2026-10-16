@@ -1,0 +1,79 @@
+# Variable: TRTxxAN
+# Condition: TRTxxAN and TRTxxA are populated
+# Rule: Each TRTxxA value must map to only one TRTxxAN value
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '767'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: '3.2'
+        Item: Table 3.2.4
+        Cited Guidance: 'ADaMIG v1.1, Section 3.2, Table 3.2.4: TRTxxAN: The numeric code variable for TRTxxA. One-to-one
+          mapping to TRTxxA within a study.'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '767'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: '3.2'
+        Item: Table 3.2.4
+        Cited Guidance: 'ADaMIG v1.2, Section 3.2, Table 3.2.4: TRTxxAN: Numeric representation of TRTxxA. There must be a
+          one-to-one relationship between TRTxxAN and TRTxxA within a study. TRTxxAN cannot be present unless TRTxxA is also
+          present. When TRTxxA and TRTxxAN are present, then on a given record, either both must be populated or both must
+          be null.'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '767'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: '3.2'
+        Item: Table 3.2.4
+        Cited Guidance: 'ADaMIG v1.3, Section 3.2, Table 3.2.4: TRTxxAN: Numeric representation of TRTxxA. There must be a
+          one-to-one relationship between TRTxxAN and TRTxxA within a study. TRTxxAN cannot be present unless TRTxxA is also
+          present. When TRTxxA and TRTxxAN are present, then on a given record, either both must be populated or both must
+          be null.'
+Check:
+  all:
+  - name: ^TRT(?P<xx>0[1-9]|[1-9][0-9])AN$
+    variable_regex_pattern: true
+    operator: is_inconsistent_across_dataset
+    value: TRT{{xx}}A
+    where_populated: true
+Core:
+  Id: AD0767
+  Status: Draft
+  Version: '1'
+Description: Each TRTxxA value must map to only one TRTxxAN value when both variables are populated.
+Executability: Fully Executable
+Outcome:
+  Message: TRTxxAN has more than one value for a given TRTxxA value when both variables are populated.
+  Output Variables:
+  - TRT{{xx}}AN
+  - TRT{{xx}}A
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - SUBJECT LEVEL ANALYSIS DATASET
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record
