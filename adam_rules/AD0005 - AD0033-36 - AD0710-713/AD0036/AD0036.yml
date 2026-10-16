@@ -1,0 +1,74 @@
+# Variable: *PFN
+# Condition: Variable with a suffix of PFN is present
+# Rule: Value is not 1, 0, or null
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '36'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.0
+                Section: '3'
+                Item: '7 (General Flag Variable Conventions)'
+                Cited Guidance: 'ADaMIG v1.0, Section 3, Item 7 (General Flag Variable Conventions):
+                  For parameter-level and record-level numeric population flag variables:
+                  1 = yes (included). Null values are allowed.'
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '36'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.1
+                Section: '3.1.4'
+                Item: '7'
+                Cited Guidance: 'ADaMIG v1.1, Section 3.1.4, Item 7: For parameter-level and
+                  record-level numeric population flag variables: 1 = yes (included). Null
+                  values are allowed. Depending on how validation checks are written, this
+                  difference could cause an issue for a producer-defined subject-level flag
+                  variable with a name that ends in "RFN" or "PFN" if it is copied into a
+                  BDS dataset.'
+Check:
+  all:
+    - name: variable_name
+      operator: suffix_matches_regex
+      suffix: 3
+      value: 'PFN'
+    - name: variable_value
+      operator: not_equal_to
+      value: '1'
+      value_is_literal: true
+    - name: variable_value
+      operator: not_equal_to
+      value: '0'
+      value_is_literal: true
+Core:
+  Id: AD0036
+  Status: Published
+  Version: '1'
+Description: Raise an error when a variable with a suffix of PFN has a value that is not 1, 0, or null.
+Executability: Fully Executable
+Outcome:
+  Message: A variable with a suffix of PFN has a value that is not 1, 0, or null.
+  Output Variables:
+    - variable_name
+    - variable_value
+Rule Type: Value Check with Variable Metadata
+Scope:
+  Classes:
+    Include:
+      - BDS
+  Domains:
+    Include:
+      - BDS
+Sensitivity: Record
