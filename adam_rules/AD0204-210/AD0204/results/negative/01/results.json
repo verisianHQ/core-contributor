@@ -1,0 +1,32 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "ADSL.AGE does not match DM.AGE for the corresponding subject.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "USUBJID": "CDISC001",
+            "AGE": 63.0,
+            "DM.AGE": 65.0
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "dm.csv",
+      "domain": "dm",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=AD0204, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

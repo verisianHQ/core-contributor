@@ -1,0 +1,93 @@
+# Variable: SEX
+# Condition: The value of ADSL.USUBJID is equal to the value of DM.USUBJID
+# Rule: ADSL.SEX is not equal to DM.SEX
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '206'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.3
+                Section: '3.2'
+                Item: 'Table 3.2.2'
+                Cited Guidance: 
+                  'ADaMIG v1.3, Section 3.2, Table 3.2.2: DM.SEX'
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '206'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.2
+                Section: '3.2'
+                Item: 'Table 3.2.2'
+                Cited Guidance: 
+                  'ADaMIG v1.2, Section 3.2, Table 3.2.2: DM.SEX'
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '206'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.1
+                Section: '3.2'
+                Item: 'Table 3.2.2'
+                Cited Guidance: 
+                  'ADaMIG v1.1, Section 3.2, Table 3.2.2: The sex of the subject is a required variable in ADSL; must be identical to DM.SEX.'
+      - Name: ADaMIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '206'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.0
+                Section: '3.1'
+                Item: 'Table 3.1.1'
+                Cited Guidance: 
+                  'ADaMIG v1.0, Section 3.1, Table 3.1.1: If the variable is not a copy of DM.SEX, then an additional differently named variable must be added.'
+Check:
+  all:
+    - name: SEX
+      operator: not_equal_to
+      value: DM.SEX
+Core:
+  Id: AD0206
+  Status: Published
+  Version: '1'
+Description: Raise an error when the value of ADSL.USUBJID is equal to the value of DM.USUBJID and ADSL.SEX is not equal to DM.SEX.
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: DM
+Outcome:
+  Message: ADSL.SEX does not match DM.SEX for the corresponding subject.
+  Output Variables:
+    - USUBJID
+    - SEX
+    - DM.SEX
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ADSL
+  Domains:
+    Include:
+      - ADSL
+Sensitivity: Record

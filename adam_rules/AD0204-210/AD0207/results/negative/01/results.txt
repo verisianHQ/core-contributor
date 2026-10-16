@@ -1,0 +1,20 @@
+Total Errors Found: 1
+
+Dataset: adsl.csv
+Domain: adsl
+Rule Message: ADSL.RACE does not match DM.RACE for the corresponding subject.
+Errors in this dataset: 1
+
+  Error 1:
+    Row: 1
+    SEQ: None
+    USUBJID: CDISC001
+    Fully Validated in Test Case: Yes
+
+
+Dataset: dm.csv
+Domain: dm
+Rule Message: Rule skipped - doesn't apply to domain for rule id=AD0207, dataset=DM
+Errors in this dataset: 0
+  No errors found in this dataset.
+

@@ -1,0 +1,32 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "ADSL.ARM does not match DM.ARM for the corresponding subject.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "CDISC001",
+          "value": {
+            "USUBJID": "CDISC001",
+            "ARM": "ARM001",
+            "DM.ARM": "ARM003"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "dm.csv",
+      "domain": "dm",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=AD0210, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}
