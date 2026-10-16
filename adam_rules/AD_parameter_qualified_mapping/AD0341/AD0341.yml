@@ -1,0 +1,87 @@
+# Variable: MCRITyMN where y is an integer [1-9, not zero-padded]
+# Condition: On rows where both MCRITyMN and MCRITyML are both populated
+# Rule: Within a parameter, there is more than one value of MCRITyMN for a given value of MCRITyML
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '341'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: 3.3.4
+        Item: Table 3.3.4.2
+        Cited Guidance: 'ADaMIG v1.1, Section 3.3.4, Table 3.3.4.2: CDISC Notes for
+          MCRITyMN state: "There is a one-to-one mapping between MCRITyML and MCRITyMN."'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '341'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: 3.3.4.3
+        Item: Table 3.3.4.3.1
+        Cited Guidance: 'ADaMIG v1.2, Section 3.3.4.3, Table 3.3.4..3.1: CDISC Notes
+          for MCRITyMN state: "There must be a one-to-one relationship between MCRITyMN
+          and MCRITyML within a parameter."'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '341'
+        Version: '2'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: 3.3.4.3
+        Item: Table 3.3.4.3.1
+        Cited Guidance: 'ADaMIG v1.3, Section 3.3.4.3, Table 3.3.4..3.1: CDISC Notes
+          for MCRITyMN state: "There must be a one-to-one relationship between MCRITyMN
+          and MCRITyML within a parameter."'
+      - Document: ADaMIG-MD v1.0
+        Section: '3.1'
+        Item: Table 3.3.4.3.1
+        Cited Guidance: 'ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis
+          needs by adding SPDEVID as a required key variable and USUBJID as a conditionally
+          required variable. See the BDS class for further details.'
+Check:
+  all:
+  - name: ^MCRIT(?P<y>[1-9][0-9]?)MN$
+    variable_regex_pattern: true
+    operator: is_inconsistent_across_dataset
+    value:
+    - PARAMCD
+    - MCRIT{{y}}ML
+    where_populated: true
+Core:
+  Id: AD0341
+  Status: Draft
+  Version: '1'
+Description: Raise an error when within a parameter, there is more than one value of MCRITyMN for a given value of MCRITyML, considering only those rows on which both variables are populated.
+Executability: Fully Executable
+Outcome:
+  Message: MCRITyMN has more than one value for a given MCRITyML value within a parameter.
+  Output Variables:
+  - MCRIT{{y}}MN
+  - PARAMCD
+  - MCRIT{{y}}ML
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BASIC DATA STRUCTURE
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

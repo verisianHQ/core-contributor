@@ -1,0 +1,35 @@
+{
+  "datasets": [
+    {
+      "dataset": "adlb.csv",
+      "domain": "adlb",
+      "execution_status": "success",
+      "execution_message": "BTOXGR has more than one value for a given BTOXGRN value within a parameter.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "BTOXGR": "A1",
+            "PARAMCD": "PARAM1",
+            "BTOXGRN": 1.0
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "STUDY001-003",
+          "value": {
+            "BTOXGR": "A2",
+            "PARAMCD": "PARAM1",
+            "BTOXGRN": 1.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "datasets": [
+    {
+      "dataset": "adlb.csv",
+      "domain": "adlb",
+      "execution_status": "success",
+      "execution_message": "CHGCATyN has more than one value for a given CHGCATy value within a parameter.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "CHGCAT1N": 1.0,
+            "PARAMCD": "PARAM1",
+            "CHGCAT1": "A1"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "STUDY001-002",
+          "value": {
+            "CHGCAT1N": 2.0,
+            "PARAMCD": "PARAM1",
+            "CHGCAT1": "A1"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

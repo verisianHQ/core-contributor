@@ -1,0 +1,35 @@
+{
+  "datasets": [
+    {
+      "dataset": "adlb.csv",
+      "domain": "adlb",
+      "execution_status": "success",
+      "execution_message": "MCRITyML has more than one value for a given MCRITyMN value within a parameter.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "MCRIT1ML": "A1",
+            "PARAMCD": "PARAM1",
+            "MCRIT1MN": 1.0
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "STUDY001-003",
+          "value": {
+            "MCRIT1ML": "A2",
+            "PARAMCD": "PARAM1",
+            "MCRIT1MN": 1.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

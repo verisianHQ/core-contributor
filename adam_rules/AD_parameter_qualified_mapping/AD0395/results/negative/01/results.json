@@ -1,0 +1,35 @@
+{
+  "datasets": [
+    {
+      "dataset": "adlb.csv",
+      "domain": "adlb",
+      "execution_status": "success",
+      "execution_message": "ATOXGRL has more than one value for a given ATOXGRLN value within a parameter.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "ATOXGRL": "A1",
+            "PARAMCD": "PARAM1",
+            "ATOXGRLN": 1.0
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "STUDY001-003",
+          "value": {
+            "ATOXGRL": "A2",
+            "PARAMCD": "PARAM1",
+            "ATOXGRLN": 1.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
