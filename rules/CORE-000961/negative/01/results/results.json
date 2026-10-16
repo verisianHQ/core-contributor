@@ -1,0 +1,40 @@
+{
+  "datasets": [
+    {
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "execution_status": "success",
+      "execution_message": "LBSTNRC is populated when LBORRES is a continuous measurement",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBSTNRC": "3.9"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBSTNRC": "900"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": 2,
+          "USUBJID": "CDISC001",
+          "value": {
+            "LBSTNRC": "NEGATIVE to TRACE"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
