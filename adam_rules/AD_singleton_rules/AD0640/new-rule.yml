@@ -1,0 +1,91 @@
+# Variable: AETRTEM
+# Condition: SUPPAE contains QNAM=AETRTEM
+# Rule: AETRTEM must be present in ADAE
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '640'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: OCCDS v1.1
+        Section: 3.2.5
+        Item: Table 3.2.5.3
+        Cited Guidance: AETRTEM is required when the treatment-emergent flag was collected in SUPPAE.
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '640'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: OCCDS v1.1
+        Section: 3.2.5
+        Item: Table 3.2.5.3
+        Cited Guidance: AETRTEM is required when the treatment-emergent flag was collected in SUPPAE.
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '640'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: OCCDS v1.1
+        Section: 3.2.5
+        Item: Table 3.2.5.3
+        Cited Guidance: AETRTEM is required when the treatment-emergent flag was collected in SUPPAE.
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '640'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: OCCDS v1.1
+        Section: 3.2.5
+        Item: Table 3.2.5.3
+        Cited Guidance: AETRTEM is required when the treatment-emergent flag was collected in SUPPAE.
+Check:
+  all:
+  - name: $suppae_aetrtem_count
+    operator: greater_than
+    value: 0
+  - name: AETRTEM
+    operator: not_exists
+Core:
+  Id: AD0640
+  Status: Draft
+  Version: '1'
+Description: SUPPAE.QNAM=AETRTEM is present but AETRTEM is not present in ADAE.
+Executability: Fully Executable
+Operations:
+- domain: SUPPAE
+  filter:
+    QNAM: AETRTEM
+  id: $suppae_aetrtem_count
+  operator: record_count
+Outcome:
+  Message: AETRTEM is not present.
+  Output Variables:
+  - AETRTEM
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - OCCDS
+  Domains:
+    Include:
+    - ADAE
+Sensitivity: Record

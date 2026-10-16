@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "A dataset is named ADSL and the dataset label is not \"Subject-Level Analysis Dataset\".",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "dataset_name": "ADSL",
+            "dataset_label": "Incorrect ADSL Label"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

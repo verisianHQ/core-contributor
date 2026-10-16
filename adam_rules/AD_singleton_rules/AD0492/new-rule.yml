@@ -1,0 +1,89 @@
+# Variable: SHIFTy
+# Condition: SHIFTy is present
+# Rule: At least one permitted before/after variable pair must be present
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '492'
+        Version: '2'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3; ADaMIG-MD v1.0
+        Section: 3.3.4.1; 3.1
+        Item: Table 3.3.4.1.1
+        Cited Guidance: 'ADaMIG v1.3, Section 3.3.4.1, Table 3.3.4.1.1: SHIFTy can only be based on the change in value of any of the following pairs (BASECATy, AVALCATy), (BNRIND, ANRIND), (ByIND, AyIND), (BTOXGR, ATOXGR), (BTOXGRL, ATOXGRL), (BTOXGRH, ATOXGRH), (BASE, AVAL) or (BASEC, AVALC).
+
+
+          ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis needs by adding SPDEVID as a required key variable and USUBJID as a conditionally required variable. See the BDS class for further details.'
+Check:
+  all:
+  - name: ^SHIFT(?P<y>[1-9][0-9]?)$
+    variable_regex_pattern: true
+    operator: exists
+  - all:
+    - any:
+      - name: 'BASECAT{{y}}'
+        operator: not_exists
+      - name: 'AVALCAT{{y}}'
+        operator: not_exists
+    - any:
+      - name: BNRIND
+        operator: not_exists
+      - name: ANRIND
+        operator: not_exists
+    - any:
+      - name: 'B{{y}}IND'
+        operator: not_exists
+      - name: 'A{{y}}IND'
+        operator: not_exists
+    - any:
+      - name: BTOXGR
+        operator: not_exists
+      - name: ATOXGR
+        operator: not_exists
+    - any:
+      - name: BTOXGRL
+        operator: not_exists
+      - name: ATOXGRL
+        operator: not_exists
+    - any:
+      - name: BTOXGRH
+        operator: not_exists
+      - name: ATOXGRH
+        operator: not_exists
+    - any:
+      - name: BASE
+        operator: not_exists
+      - name: AVAL
+        operator: not_exists
+    - any:
+      - name: BASEC
+        operator: not_exists
+      - name: AVALC
+        operator: not_exists
+Core:
+  Id: AD0492
+  Status: Draft
+  Version: '1'
+Description: SHIFTy is present without any permitted complete before/after variable pair.
+Executability: Fully Executable
+Outcome:
+  Message: SHIFTy is present without any permitted complete before/after variable pair.
+  Output Variables:
+  - SHIFT{{y}}
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BDS
+      - MDBDS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

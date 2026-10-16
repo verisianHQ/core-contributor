@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "Duplicate USUBJID values exist in ADSL.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "USUBJID": "STUDY001-001"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "USUBJID": "STUDY001-001"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

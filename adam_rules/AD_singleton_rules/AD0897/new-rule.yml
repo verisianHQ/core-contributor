@@ -1,0 +1,77 @@
+# Variable: TRTA
+# Condition: TRTA is populated
+# Rule: TRTA must match an actual treatment value in ADSL
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '897'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: 3.3.2
+        Item: Table 3.3.2.1
+        Cited Guidance: TRTA must match at least one character actual treatment value in ADSL.
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '897'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: 3.3.2
+        Item: Table 3.3.2.1
+        Cited Guidance: TRTA must match at least one character actual treatment value in ADSL.
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '897'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: 3.3.2
+        Item: Table 3.3.2.1
+        Cited Guidance: TRTA must match at least one character actual treatment value in ADSL.
+Check:
+  all:
+  - name: TRTA
+    operator: non_empty
+  - name: TRTA
+    operator: not_in_enumerated_columns
+    regex: ^(?:TRT(?:0[1-9]|[1-9][0-9])A|TRTSEQA|TR(?:0[1-9]|[1-9][0-9])AG[1-9][0-9]?)$
+    value: TRTA
+Core:
+  Id: AD0897
+  Status: Draft
+  Version: '1'
+Description: TRTA does not match an IG-defined character actual treatment value in ADSL.
+Executability: Fully Executable
+Match Datasets:
+- Keys:
+  - USUBJID
+  Name: ADSL
+Outcome:
+  Message: TRTA is not equal to at least one value of the character actual treatment variables in ADSL defined in the IG.
+  Output Variables:
+  - TRTA
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - ALL
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

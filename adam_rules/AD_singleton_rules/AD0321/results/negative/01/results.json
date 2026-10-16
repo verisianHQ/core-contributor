@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "adae.csv",
+      "domain": "adae",
+      "execution_status": "success",
+      "execution_message": "A dataset label is \"Subject-Level Analysis Dataset\" and the dataset is not named ADSL.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "dataset_name": "ADAE",
+            "dataset_label": "Subject-Level Analysis Dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "datasets": [
+    {
+      "dataset": "adppk.csv",
+      "domain": "adppk",
+      "execution_status": "success",
+      "execution_message": "ADOSEDUR is present while NDOSEDUR or DOSEDURU is absent.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "ADOSEDUR": 2.0,
+            "NDOSEDUR": "Not in dataset",
+            "DOSEDURU": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

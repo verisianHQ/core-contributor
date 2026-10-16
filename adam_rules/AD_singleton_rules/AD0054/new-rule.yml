@@ -1,0 +1,111 @@
+# Variable: USUBJID
+# Condition: ADSL exists
+# Rule: Key values must identify one record
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '54'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.0
+        Section: 1.3; 2.3.1; 3.1
+        Item: ''
+        Cited Guidance: 'ADaMIG v1.0, Section 1.3: The ADSL dataset contains one record per subject.
+
+
+          ADaMIG v1.0, Section 2.3.1: ADSL contains one record per subject, regardless of the type of clinical trial design.
+
+
+          ADaMIG v1.0, Section 3.1: The structure of ADSL is one record per subject, regardless of the type of clinical trial
+          design.'
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '54'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: 1.3; 2.3.1; 3.2
+        Item: ''
+        Cited Guidance: 'ADaMIG v1.1, Section 1.3: The ADSL dataset contains one record per subject.
+
+
+          ADaMIG v1.1, Section 2.3.1: ADSL contains one record per subject, regardless of the type of clinical trial design.
+
+
+          ADaMIG v1.1, Section 3.2: The structure of ADSL is one record per subject, regardless of the type of clinical trial
+          design.'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '54'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: 1.3; 2.3.1; 3.2
+        Item: ''
+        Cited Guidance: 'ADaMIG v1.2, Section 1.3: The ADSL dataset contains one record per subject.
+
+
+          ADaMIG v1.2, Section 2.3.1: ADSL contains one record per subject, regardless of the type of clinical trial design.
+
+
+          ADaMIG v1.2, Section 3.2: The structure of ADSL is one record per subject, regardless of the type of clinical trial
+          design.'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '54'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: 1.3; 2.3.1; 3.2
+        Item: ''
+        Cited Guidance: 'ADaMIG v1.3, Section 1.3: The ADSL dataset contains one record per subject.
+
+
+          ADaMIG v1.3, Section 2.3.1: ADSL contains one record per subject, regardless of the type of clinical trial design.
+
+
+          ADaMIG v1.3, Section 3.2: The structure of ADSL is one record per subject, regardless of the type of clinical trial
+          design.'
+Check:
+  all:
+  - name: USUBJID
+    operator: present_on_multiple_rows_within
+    within: USUBJID
+Core:
+  Id: AD0054
+  Status: Draft
+  Version: '1'
+Description: Duplicate USUBJID values exist in ADSL.
+Executability: Fully Executable
+Outcome:
+  Message: Duplicate USUBJID values exist in ADSL.
+  Output Variables:
+  - USUBJID
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - ADSL
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

@@ -1,0 +1,116 @@
+# Variable: variable_name
+# Condition: Variable metadata exists
+# Rule: Variable name starts with a character other than A-Z.
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '14'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: Model v2.1; ADaMIG v1.0
+        Section: 4.1.2; 3
+        Item: 5 (General Variable Naming Conventions)
+        Cited Guidance: 'Model v2.1, Section 4.1.2: In developing naming conventions, sponsors should consider the requirements
+          noted in the eCTD guidance document as well as the need to conform to the SAS Transport format requirements (e.g.,
+          the total length of the name cannot exceed 8 characters).
+
+
+          ADaMIG v1.0, Section 3, Item 5 (General Variable Naming Conventions): To ensure compliance with SAS Transport file
+          and Oracle constraints, all ADaM variable names must be no more than 8 characters in length, start with a letter
+          (not underscore), and be comprised only of letters (A-Z), underscore (_), and numerals (0-9). All ADaM variable
+          labels must be no more than 40 characters in length. All ADaM character variables must be no more than 200 characters
+          in length.'
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '14'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: Model v2.1; ADaMIG v1.1
+        Section: 4.1.2; 3.1.1
+        Item: '1'
+        Cited Guidance: 'Model v2.1, Section 4.1.2: In developing naming conventions, sponsors should consider the requirements
+          noted in the eCTD guidance document as well as the need to conform to the SAS Transport format requirements (e.g.,
+          the total length of the name cannot exceed 8 characters).
+
+
+          ADaMIG v1.1, Section 3.1.1, Item 1: To ensure compliance with SAS Version 5 transport file format and Oracle constraints,
+          all ADaM variable names must be no more than 8 characters in length, start with a letter (not underscore), and be
+          comprised only of letters (A-Z), underscore (_), and numerals (0-9). All ADaM variable labels must be no more than
+          40 characters in length. All ADaM character variables must be no more than 200 characters in length.'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '14'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: Model v2.1; ADaMIG v1.2
+        Section: 4.1.2; 3.1.1
+        Item: '1'
+        Cited Guidance: 'Model v2.1, Section 4.1.2: In developing naming conventions, sponsors should consider the requirements
+          noted in the eCTD guidance document as well as the need to conform to the SAS Transport format requirements (e.g.,
+          the total length of the name cannot exceed 8 characters).
+
+
+          ADaMIG v1.2, Section 3.1.1, Item 1: To ensure compliance with SAS Version 5 transport file format and Oracle constraints,
+          all ADaM variable names must be no more than 8 characters in length, start with a letter (not underscore), and be
+          composed only of letters (A-Z), underscore (_), and numerals (0-9). All ADaM variable labels must be no more than
+          40 characters in length. All ADaM character variables must be no more than 200 characters in length.'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '14'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: Model v2.1; ADaMIG v1.3
+        Section: 4.1.2; 3.1.1
+        Item: '1'
+        Cited Guidance: 'Model v2.1, Section 4.1.2: In developing naming conventions, sponsors should consider the requirements
+          noted in the eCTD guidance document as well as the need to conform to the SAS Transport format requirements (e.g.,
+          the total length of the name cannot exceed 8 characters).
+
+
+          ADaMIG v1.3, Section 3.1.1, Item 1: To ensure compliance with SAS Version 5 transport file format and Oracle constraints,
+          all ADaM variable names must be no more than 8 characters in length, start with a letter (not underscore), and be
+          composed only of letters (A-Z), underscore (_), and numerals (0-9). All ADaM variable labels must be no more than
+          40 characters in length. All ADaM character variables must be no more than 200 characters in length.'
+Check:
+  all:
+  - name: variable_name
+    operator: not_matches_regex
+    value: ^[A-Z]
+Core:
+  Id: AD0014
+  Status: Draft
+  Version: '1'
+Description: Variable name starts with a character other than A-Z.
+Executability: Fully Executable
+Outcome:
+  Message: Variable name starts with a character other than A-Z.
+  Output Variables:
+  - variable_name
+Rule Type: Variable Metadata Check
+Scope:
+  Data Structures:
+    Include:
+    - ALL
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Dataset

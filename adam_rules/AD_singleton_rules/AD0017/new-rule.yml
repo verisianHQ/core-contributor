@@ -1,0 +1,85 @@
+# Variable: Character variable value
+# Condition: Character variable is present
+# Rule: Character values must not exceed 200 characters
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '17'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: Model v2.1; ADaMIG v1.0
+        Section: 4.1.2; 3
+        Item: 5 (General Variable Naming Conventions)
+        Cited Guidance: All ADaM character variables must be no more than 200 characters in length.
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '17'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: Model v2.1; ADaMIG v1.1
+        Section: 4.1.2; 3.1.1
+        Item: '1'
+        Cited Guidance: All ADaM character variables must be no more than 200 characters in length.
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '17'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: Model v2.1; ADaMIG v1.2
+        Section: 4.1.2; 3.1.1
+        Item: '1'
+        Cited Guidance: All ADaM character variables must be no more than 200 characters in length.
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '17'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: Model v2.1; ADaMIG v1.3
+        Section: 4.1.2; 3.1.1
+        Item: '1'
+        Cited Guidance: All ADaM character variables must be no more than 200 characters in length.
+Check:
+  all:
+  - name: variable_value_length
+    operator: greater_than
+    value: 200
+Core:
+  Id: AD0017
+  Status: Draft
+  Version: '1'
+Description: A character variable value exceeds 200 characters.
+Executability: Fully Executable
+Outcome:
+  Message: Character variable value exceeds 200 characters.
+  Output Variables:
+  - variable_name
+  - variable_value
+  - variable_value_length
+Rule Type: Value Check with Variable Metadata
+Scope:
+  Data Structures:
+    Include:
+    - ALL
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

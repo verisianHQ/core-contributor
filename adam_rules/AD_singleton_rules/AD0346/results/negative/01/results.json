@@ -1,0 +1,70 @@
+{
+  "datasets": [
+    {
+      "dataset": "advs.csv",
+      "domain": "advs",
+      "execution_status": "success",
+      "execution_message": "Within PARAMCD, each AyLOC value must map to only one AyLO value when R2AyLO is present.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "PARAMCD": "PULSE",
+            "R2A1LO": 60.0,
+            "A1LOC": "LOW",
+            "A1LO": 50.0
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "STUDY001-002",
+          "value": {
+            "PARAMCD": "PULSE",
+            "R2A1LO": 60.0,
+            "A1LOC": "LOW",
+            "A1LO": 55.0
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "adlb.csv",
+      "domain": "adlb",
+      "execution_status": "success",
+      "execution_message": "Within PARAMCD, each AyLOC value must map to only one AyLO value when R2AyLO is present.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-003",
+          "value": {
+            "PARAMCD": "ALT",
+            "R2A12LO": 20.0,
+            "A12LOC": "LOW",
+            "A12LO": 10.0
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "STUDY001-004",
+          "value": {
+            "PARAMCD": "ALT",
+            "R2A12LO": 20.0,
+            "A12LOC": "LOW",
+            "A12LO": 15.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
