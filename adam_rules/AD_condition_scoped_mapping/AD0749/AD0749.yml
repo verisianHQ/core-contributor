@@ -1,0 +1,84 @@
+# Variable: BASECATy where y is an integer [1-9, not zero-padded]
+# Condition: Within a given value of PARAMCD
+# Rule: There is more than one value of BASECATy for a given value of AVAL
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '749'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: 3.3.4
+        Item: Table 3.3.4.1
+        Cited Guidance: 'ADaMIG v1.1, Section 3.3.4, Table 3.3.4.1: A categorization
+          of BASE or BASEC within a parameter'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '749'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: 3.3.4.1
+        Item: Table 3.3.4.1.1
+        Cited Guidance: 'ADaMIG v1.2, Section 3.3.4.1, Table 3.3.4.1.1: A categorization
+          of BASE or BASEC within a parameter'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '749'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: 3.3.4.1
+        Item: Table 3.3.4.1.1
+        Cited Guidance: 'ADaMIG v1.3, Section 3.3.4.1, Table 3.3.4.1.1: A categorization
+          of BASE or BASEC within a parameter'
+      - Document: ADaMIG-MD v1.0
+        Section: '3.1'
+        Item: Table 3.3.4.1.1
+        Cited Guidance: 'ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis
+          needs by adding SPDEVID as a required key variable and USUBJID as a conditionally
+          required variable. See the BDS class for further details.'
+Check:
+  all:
+  - name: ^BASECAT(?P<y>[1-9])$
+    variable_regex_pattern: true
+    operator: is_inconsistent_across_dataset
+    value:
+    - PARAMCD
+    - BASE
+Core:
+  Id: AD0749
+  Status: Draft
+  Version: '1'
+Description: Raise an error when within a given value of PARAMCD, there is more than one value of BASECATy for a given value of BASE and y, where y is a single-digit integer [1-9].
+Executability: Fully Executable
+Outcome:
+  Message: BASECATy has more than one value for a given BASE value within a parameter.
+  Output Variables:
+  - BASECAT{{y}}
+  - PARAMCD
+  - BASE
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BASIC DATA STRUCTURE
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

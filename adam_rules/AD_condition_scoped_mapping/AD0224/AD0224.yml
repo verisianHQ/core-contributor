@@ -1,0 +1,50 @@
+# Variable: CHGCATy where y is an integer [1-9, not zero-padded]
+# Condition: Within a given value of PARAMCD
+# Rule: There is more than one value of CHGCATy for a given value of CHG
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '224'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.0
+        Section: 3.2.4
+        Item: Table 3.2.4.1
+        Cited Guidance: 'ADaMIG v1.0, Section 3.2.4, Table 3.2.4.1: A categorical
+          representation of CHG'
+Check:
+  all:
+  - name: ^CHGCAT(?P<y>[1-9])$
+    variable_regex_pattern: true
+    operator: is_inconsistent_across_dataset
+    value:
+    - PARAMCD
+    - CHG
+Core:
+  Id: AD0224
+  Status: Draft
+  Version: '1'
+Description: Raise an error when within a given value of PARAMCD, there is more than one value of CHGCATy for a given value of CHG and y.
+Executability: Fully Executable
+Outcome:
+  Message: CHGCATy has more than one value for a given CHG value within a parameter.
+  Output Variables:
+  - CHGCAT{{y}}
+  - PARAMCD
+  - CHG
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BASIC DATA STRUCTURE
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record
