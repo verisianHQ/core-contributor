@@ -1,0 +1,50 @@
+# Variable: AWTARGET
+# Condition: AWTDIFF is populated
+# Rule: AWTARGET must be populated
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '159'
+              Version: '2'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADaMIG v1.3; ADaMIG-MD v1.0'
+                Section: '3.3.5; 3.1'
+                Item: 'Table 3.3.5.2'
+                Cited Guidance: |-
+                  ADaMIG v1.3, Section 3.3.5, Table 3.3.5.2: Absolute difference between ADY or ARELTM and AWTARGET.
+                  
+                  ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis needs by adding SPDEVID as a required key variable and USUBJID as a conditionally required variable. See the BDS class for further details.
+Check:
+  all:
+    - name: AWTDIFF
+      operator: non_empty
+    - name: AWTARGET
+      operator: empty
+Core:
+  Id: AD0159
+  Status: Draft
+  Version: '1'
+Description: 'AWTARGET must be populated when AWTDIFF is populated.'
+Executability: Fully Executable
+Outcome:
+  Message: 'AWTARGET is not populated when AWTDIFF is populated.'
+  Output Variables:
+    - AWTARGET
+    - AWTDIFF
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BDS
+      - MDBDS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

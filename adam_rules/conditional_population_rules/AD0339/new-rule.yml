@@ -1,0 +1,51 @@
+# Variable: MCRITy
+# Condition: MCRITyML is populated
+# Rule: MCRITy must be populated
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '339'
+              Version: '2'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADaMIG v1.3; ADaMIG-MD v1.0'
+                Section: '3.3.4.3; 3.1'
+                Item: 'Table 3.3.4.3.1'
+                Cited Guidance: |-
+                  ADaMIG v1.3, Section 3.3.4.3, Table 3.3.4.3.1: CDISC Notes for MCRITyML state: "Required if MCRITy is present."
+                  
+                  ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis needs by adding SPDEVID as a required key variable and USUBJID as a conditionally required variable. See the BDS class for further details.
+Check:
+  all:
+    - name: '^MCRIT(?P<y>[1-9])ML$'
+      variable_regex_pattern: true
+      operator: non_empty
+    - name: 'MCRIT{{y}}'
+      operator: empty
+Core:
+  Id: AD0339
+  Status: Draft
+  Version: '1'
+Description: 'MCRITy must be populated when MCRITyML is populated.'
+Executability: Fully Executable
+Outcome:
+  Message: 'MCRITy is not populated when MCRITyML is populated.'
+  Output Variables:
+    - 'MCRIT{{y}}'
+    - 'MCRIT{{y}}ML'
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BDS
+      - MDBDS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

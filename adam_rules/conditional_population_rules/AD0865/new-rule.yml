@@ -1,0 +1,47 @@
+# Variable: RACEN
+# Condition: RACE is populated
+# Rule: RACEN must be populated
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADPPKIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '865'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADPPKIG v1.0'
+                Section: '3.2'
+                Item: 'Table 3.3'
+                Cited Guidance: |-
+                  ADPPKIG v1.0, Section 3.3, Table 3.3: Numeric version of RACE eg. Codes used as per the specification. 1=American Indian OR Alaska Native, 2=Asian, 3=Black/African American, 4=Native Hawaiian OR Other Pacific Islander, 5=White. If races need to be categorized differently, then use variables ARACE and ARACEN.
+Check:
+  all:
+    - name: RACE
+      operator: non_empty
+    - name: RACEN
+      operator: empty
+Core:
+  Id: AD0865
+  Status: Draft
+  Version: '1'
+Description: 'RACEN must be populated when RACE is populated.'
+Executability: Fully Executable
+Outcome:
+  Message: 'RACEN is not populated when RACE is populated.'
+  Output Variables:
+    - RACEN
+    - RACE
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BDS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

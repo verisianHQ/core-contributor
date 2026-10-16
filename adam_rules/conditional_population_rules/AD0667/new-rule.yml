@@ -1,0 +1,89 @@
+# Variable: TRTA
+# Condition: DOSPCTDF is populated
+# Rule: TRTA must be populated
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADNCA
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '667'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADNCA v1.0'
+                Section: '4.2'
+                Item: 'Table 4.2.1'
+                Cited Guidance: |-
+                  ADNCA v1.0, Section 4.2, Table 4.2.1: CDISC Notes for DOSPCTDF state: Derived variable using a standard percent difference formula: (100*(DOSEA-DOSEP)/(DOSEP)).  DOSPCTDF is required if TRTA is populated.
+      - Name: ADNCA
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '667'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADNCA v1.0'
+                Section: '4.2'
+                Item: 'Table 4.2.1'
+                Cited Guidance: |-
+                  ADNCA v1.0, Section 4.2, Table 4.2.1: CDISC Notes for DOSPCTDF state: Derived variable using a standard percent difference formula: (100*(DOSEA-DOSEP)/(DOSEP)).  DOSPCTDF is required if TRTA is populated.
+      - Name: ADNCA
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '667'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADNCA v1.0'
+                Section: '4.2'
+                Item: 'Table 4.2.1'
+                Cited Guidance: |-
+                  ADNCA v1.0, Section 4.2, Table 4.2.1: CDISC Notes for DOSPCTDF state: Derived variable using a standard percent difference formula: (100*(DOSEA-DOSEP)/(DOSEP)).  DOSPCTDF is required if TRTA is populated.
+      - Name: ADNCA
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '667'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADNCA v1.0'
+                Section: '4.2'
+                Item: 'Table 4.2.1'
+                Cited Guidance: |-
+                  ADNCA v1.0, Section 4.2, Table 4.2.1: CDISC Notes for DOSPCTDF state: Derived variable using a standard percent difference formula: (100*(DOSEA-DOSEP)/(DOSEP)).  DOSPCTDF is required if TRTA is populated.
+Check:
+  all:
+    - name: DOSPCTDF
+      operator: non_empty
+    - name: TRTA
+      operator: empty
+Core:
+  Id: AD0667
+  Status: Draft
+  Version: '1'
+Description: 'TRTA must be populated when DOSPCTDF is populated.'
+Executability: Fully Executable
+Outcome:
+  Message: 'TRTA is not populated when DOSPCTDF is populated.'
+  Output Variables:
+    - TRTA
+    - DOSPCTDF
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BDS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

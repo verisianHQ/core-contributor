@@ -1,0 +1,63 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "TRTSEQPN is not populated when TRTSEQP is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "TRTSEQPN": null,
+            "TRTSEQP": "TRTSEQP Value"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "advs.csv",
+      "domain": "advs",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0416, dataset=ADVS",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "adae.csv",
+      "domain": "adae",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0416, dataset=ADAE",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "adpc.csv",
+      "domain": "adpc",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0416, dataset=ADPC",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "addl.csv",
+      "domain": "addl",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0416, dataset=ADDL",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "adppk.csv",
+      "domain": "adppk",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0416, dataset=ADPPK",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

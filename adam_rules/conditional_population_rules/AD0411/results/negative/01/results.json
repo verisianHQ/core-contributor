@@ -1,0 +1,63 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0411, dataset=ADSL",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "advs.csv",
+      "domain": "advs",
+      "execution_status": "success",
+      "execution_message": "ANLzzFL is not populated when ANLzzFN is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 24,
+          "SEQ": null,
+          "USUBJID": "STUDY001-024",
+          "value": {
+            "ANL01FL": null,
+            "ANL01FN": 24.0
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "adae.csv",
+      "domain": "adae",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0411, dataset=ADAE",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "adpc.csv",
+      "domain": "adpc",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "addl.csv",
+      "domain": "addl",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0411, dataset=ADDL",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "adppk.csv",
+      "domain": "adppk",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

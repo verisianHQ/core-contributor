@@ -1,0 +1,73 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0876, dataset=ADSL",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "advs.csv",
+      "domain": "advs",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "adae.csv",
+      "domain": "adae",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0876, dataset=ADAE",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "adpc.csv",
+      "domain": "adpc",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "addl.csv",
+      "domain": "addl",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0876, dataset=ADDL",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "adppk.csv",
+      "domain": "adppk",
+      "execution_status": "success",
+      "execution_message": "COUNTRY is not populated when COUNTRYN is populated.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 34,
+          "SEQ": null,
+          "USUBJID": "STUDY001-034",
+          "value": {
+            "COUNTRY": null,
+            "COUNTRYN": 34.0
+          },
+          "validated": true
+        },
+        {
+          "row": 36,
+          "SEQ": null,
+          "USUBJID": "STUDY001-036",
+          "value": {
+            "COUNTRY": null,
+            "COUNTRYN": 36.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

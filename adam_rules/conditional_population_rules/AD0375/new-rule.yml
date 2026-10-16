@@ -1,0 +1,66 @@
+# Variable: *GRy
+# Condition: *GRyN is populated
+# Rule: *GRy must be populated
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '375'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADaMIG v1.3'
+                Section: '3.1.1'
+                Item: '5; 6'
+                Cited Guidance: |-
+                  ADaMIG v1.3, Section 3.1.1, Item 5: For variable pairs designated as having a one-to-one relationship within a specified scope (e.g., within a parameter, within a study), if both variables are present in the dataset and there exists a row in that scope on which both variables are populated, then there must be a one-to-one relationship between the two variables on all rows within the scope on which both variables are populated. The scope noted in this document should be considered the minimum level for the mapping; it does not preclude the producer from using a broader level of scope. For example, if a one-to-one relationship is specified as within a PARAM, the producer may elect to use the same one-to-one relationship across all PARAMs within the dataset or study. In addition, note that "within a parameter" means "within a parameter within a dataset."
+                  
+                  ADaMIG v1.3, Section 3.1.1, Item 6: In a pair of corresponding variables (e.g., TRTP and TRTPN), the primary or most commonly used variable does not have the suffix or extension (i.e., N for numeric or C for character). The relevant suffix is used only on the name of the secondary member of the variable pair. For example, in the (TRTP, TRTPN) pair, the primary variable, TRTP, is character, but it is not named TRTPC. Similarly in the (APERIOD, APERIODC) pair, the primary variable, APERIOD, is numeric, but it is not named APERIODN. When a secondary variable is included in the dataset, then the primary variable must also be included. If both variables of a variable pair are present, there must be a one-to-one relationship between the values of the two variables, as described in Item 5 above.
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '375'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADaMIG v1.2'
+                Section: '3.1.1'
+                Item: '5; 6'
+                Cited Guidance: |-
+                  ADaMIG v1.2, Section 3.1.1, Item 5: For variable pairs designated as having a one-to-one relationship within a specified scope (e.g., within a parameter, within a study), if both variables are present in the dataset and there exists a row in that scope on which both variables are populated, then there must be a one-to-one relationship between the two variables on all rows within the scope on which both variables are populated. The scope noted in this document should be considered the minimum level for the mapping; it does not preclude the producer from using a broader level of scope. For example, if a one-to-one relationship is specified as within a PARAM, the producer may elect to use the same one-to-one relationship across all PARAMs within the dataset or study. In addition, note that "within a parameter" means "within a parameter within a dataset."
+                  
+                  ADaMIG v1.2, Section 3.1.1, Item 6: In a pair of corresponding variables (e.g., TRTP and TRTPN), the primary or most commonly used variable does not have the suffix or extension (i.e., N for numeric or C for character). The relevant suffix is used only on the name of the secondary member of the variable pair. For example, in the (TRTP, TRTPN) pair, the primary variable, TRTP, is character, but it is not named TRTPC. Similarly in the (APERIOD, APERIODC) pair, the primary variable, APERIOD, is numeric, but it is not named APERIODN. When a secondary variable is included in the dataset, then the primary variable must also be included. If both variables of a variable pair are present, there must be a one-to-one relationship between the values of the two variables, as described in Item 5 above.
+Check:
+  all:
+    - name: '^(?P<root>[A-Z][A-Z0-9_]*?)GR(?P<y>[1-9][0-9]?)N$'
+      variable_regex_pattern: true
+      operator: non_empty
+    - name: '{{root}}GR{{y}}'
+      operator: empty
+Core:
+  Id: AD0375
+  Status: Draft
+  Version: '1'
+Description: '*GRy must be populated when *GRyN is populated.'
+Executability: Fully Executable
+Outcome:
+  Message: '*GRy is not populated when *GRyN is populated.'
+  Output Variables:
+    - '{{root}}GR{{y}}'
+    - '{{root}}GR{{y}}N'
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

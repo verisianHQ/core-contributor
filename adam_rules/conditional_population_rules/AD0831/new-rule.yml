@@ -1,0 +1,47 @@
+# Variable: DVID
+# Condition: DVIDN is populated
+# Rule: DVID must be populated
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADPPKIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '831'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADPPKIG v1.0'
+                Section: '3.2'
+                Item: 'Table 3.2'
+                Cited Guidance: |-
+                  ADPPKIG v1.0, Section 3.2, Table 3.2: Unique numerical representation of DVID. Convention is normally 0=dose, 1=for the first observation of interest, etc. The numeric versions of the primary/character variables can be assigned from its corresponding character pair variable.
+Check:
+  all:
+    - name: DVIDN
+      operator: non_empty
+    - name: DVID
+      operator: empty
+Core:
+  Id: AD0831
+  Status: Draft
+  Version: '1'
+Description: 'DVID must be populated when DVIDN is populated.'
+Executability: Fully Executable
+Outcome:
+  Message: 'DVID is not populated when DVIDN is populated.'
+  Output Variables:
+    - DVID
+    - DVIDN
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BDS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

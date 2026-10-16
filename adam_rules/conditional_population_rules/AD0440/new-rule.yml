@@ -1,0 +1,52 @@
+# Variable: BASECATy
+# Condition: BASECAyN is populated
+# Rule: BASECATy must be populated
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '440'
+              Version: '2'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADaMIG v1.3; ADaMIG-MD v1.0'
+                Section: '3.3.4.1; 3.1'
+                Item: 'Table 3.3.4.1.1'
+                Cited Guidance: |-
+                  ADaMIG v1.3, Section 3.3.4.1, Table 3.3.4.1.1: There must be a one-to-one relationship between BASECAyN and BASECATy within a parameter.
+                  BASECAyN cannot be present unless BASECATy is also present. When BASECATy and BASECAyN are present, then on a given record, either both must be populated or both must be null.
+                  
+                  ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis needs by adding SPDEVID as a required key variable and USUBJID as a conditionally required variable. See the BDS class for further details.
+Check:
+  all:
+    - name: '^BASECA(?P<y>[1-9])N$'
+      variable_regex_pattern: true
+      operator: non_empty
+    - name: 'BASECAT{{y}}'
+      operator: empty
+Core:
+  Id: AD0440
+  Status: Draft
+  Version: '1'
+Description: BASECATy must be populated when BASECAyN is populated.
+Executability: Fully Executable
+Outcome:
+  Message: BASECATy is not populated when BASECAyN is populated.
+  Output Variables:
+    - 'BASECAT{{y}}'
+    - 'BASECA{{y}}N'
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BDS
+      - MDBDS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

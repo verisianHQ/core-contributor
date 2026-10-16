@@ -1,0 +1,48 @@
+# Variable: MODELGyN
+# Condition: MODELGy is populated
+# Rule: MODELGyN must be populated
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG-MD
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '683'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: 'ADaMIG-MD v1.0'
+                Section: '3.2.1.2'
+                Item: 'None'
+                Cited Guidance: |-
+                  ADaMIG-MD v1.0, Section 3.2.1.2: MODELGyN cannot be present unless MODELGy is also present. When MODELGy and MODELGyN are present, then on a given record, either both must be populated or both must be null.
+Check:
+  all:
+    - name: '^MODELG(?P<y>[1-9])$'
+      variable_regex_pattern: true
+      operator: non_empty
+    - name: 'MODELG{{y}}N'
+      operator: empty
+Core:
+  Id: AD0683
+  Status: Draft
+  Version: '1'
+Description: 'MODELGyN must be populated when MODELGy is populated.'
+Executability: Fully Executable
+Outcome:
+  Message: 'MODELGyN is not populated when MODELGy is populated.'
+  Output Variables:
+    - 'MODELG{{y}}N'
+    - 'MODELG{{y}}'
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - ADAM OTHER
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

@@ -1,0 +1,73 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0305, dataset=ADSL",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "advs.csv",
+      "domain": "advs",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0305, dataset=ADVS",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "adae.csv",
+      "domain": "adae",
+      "execution_status": "success",
+      "execution_message": "SMQzzSC is not populated when SMQzzNAM is populated.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "STUDY001-003",
+          "value": {
+            "SMQ01SC": null,
+            "SMQ01NAM": "SMQ01NAM Value"
+          },
+          "validated": true
+        },
+        {
+          "row": 5,
+          "SEQ": null,
+          "USUBJID": "STUDY001-005",
+          "value": {
+            "SMQ01SC": null,
+            "SMQ01NAM": "SMQ01NAM Value"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "adpc.csv",
+      "domain": "adpc",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0305, dataset=ADPC",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "addl.csv",
+      "domain": "addl",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0305, dataset=ADDL",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "adppk.csv",
+      "domain": "adppk",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0305, dataset=ADPPK",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}
