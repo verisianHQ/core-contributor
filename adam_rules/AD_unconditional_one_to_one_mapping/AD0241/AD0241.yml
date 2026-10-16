@@ -1,0 +1,47 @@
+# Variable: TRTAGyN where y is an integer [1-9, not zero-padded]
+# Condition: 
+# Rule: There is more than one value of TRTAGyN for a given value of TRTAGy
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '241'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.0
+        Section: 3.2.2
+        Item: Table 3.2.2.1
+        Cited Guidance: 'ADaMIG v1.0, Section 3.2.2, Table 3.2.2.1: TRTAGyN: The numeric
+          code for TRTAGy. One-to-one map to TRTAGy.'
+Check:
+  all:
+  - name: ^TRTAG(?P<y>[1-9][0-9]?)N$
+    variable_regex_pattern: true
+    operator: is_inconsistent_across_dataset
+    value: TRTAG{{y}}
+Core:
+  Id: AD0241
+  Status: Draft
+  Version: '1'
+Description: Raise an error when there is more than one value of TRTAGyN for a given value of TRTAGy, where y is a single-digit integer [1-9].
+Executability: Fully Executable
+Outcome:
+  Message: TRTAGyN has more than one value for a given TRTAGy value.
+  Output Variables:
+  - TRTAG{{y}}N
+  - TRTAG{{y}}
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BASIC DATA STRUCTURE
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

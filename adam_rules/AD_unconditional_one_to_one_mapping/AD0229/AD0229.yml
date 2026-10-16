@@ -1,0 +1,46 @@
+# Variable: TRTSEQA
+# Condition: 
+# Rule: There is more than one value of TRTSEQA for a given value of TRTSEQAN
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '229'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.0
+        Section: '3.1'
+        Item: Table 3.1.1
+        Cited Guidance: 'ADaMIG v1.0, Section 3.1, Table 3.1.1: One-to-one map to
+          TRTSEQA'
+Check:
+  all:
+  - name: TRTSEQA
+    operator: is_inconsistent_across_dataset
+    value: TRTSEQAN
+Core:
+  Id: AD0229
+  Status: Draft
+  Version: '1'
+Description: Raise an error when there is more than one value of TRTSEQA for a given value of TRTSEQAN.
+Executability: Fully Executable
+Outcome:
+  Message: TRTSEQA has more than one value for a given TRTSEQAN value.
+  Output Variables:
+  - TRTSEQA
+  - TRTSEQAN
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - SUBJECT LEVEL ANALYSIS DATASET
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

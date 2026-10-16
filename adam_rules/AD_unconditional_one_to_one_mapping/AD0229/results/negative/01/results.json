@@ -1,0 +1,49 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "TRTSEQA has more than one value for a given TRTSEQAN value.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "TRTSEQA": "A",
+            "TRTSEQAN": 1.0
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "STUDY001-003",
+          "value": {
+            "TRTSEQA": "B",
+            "TRTSEQAN": 1.0
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "advs.csv",
+      "domain": "advs",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0229, dataset=ADVS",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "adae.csv",
+      "domain": "adae",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0229, dataset=ADAE",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}
