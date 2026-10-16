@@ -1,0 +1,86 @@
+# Variable: RSUBJID
+# Condition: Relationship described is to a study subject
+# Rule: RSUBJID in DM.USUBJID
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0157
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Relationship described is to a study subject. RSUBJID
+                  is not in DM.USUBJID.
+                Document: APGuidev1.0
+                Item: RSUBJID
+                Section: 2.1.1
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0157
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: RSUBJID will be populated with the USUBJID of the
+                  related subject or the POOLID of the related pool.
+                Document: AP Guide v1.0
+                Item: Specification
+                Section: 2.1.1
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0157
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: RSUBJID will be populated with the USUBJID of the
+                  related subject or the POOLID of the related pool.
+                Document: AP Guide v1.0
+                Item: Specification
+                Section: 2.1.1
+Check:
+  all:
+    - name: RSUBJID
+      operator: not_equal_to
+      value: USUBJID
+    - name: RSUBJID
+      operator: not_equal_to
+      value: POOLID
+    - name: RSUBJID
+      operator: non_empty
+Core:
+  Id: CORE-000960
+  Status: Published
+  Version: '1'
+Description: Raise an error when RSUBJID is not null, and not in DM.USUBJID or POOLDEF.POOLID.
+Executability: Fully Executable
+Match Datasets:
+  - Name: DM
+    Keys:
+      - USUBJID
+    Join Type: left
+  - Name: POOLDEF
+    Keys:
+      - USUBJID
+    Join Type: left
+Outcome:
+  Message: RSUBJID is not null, and not in DM.USUBJID or POOLDEF.POOLID.
+  Output Variables:
+    - RSUBJID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - AP--
+Sensitivity: Record

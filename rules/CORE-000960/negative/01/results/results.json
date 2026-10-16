@@ -1,0 +1,56 @@
+{
+  "datasets": [
+    {
+      "dataset": "apdm.xpt",
+      "domain": "AP",
+      "execution_status": "success",
+      "execution_message": "RSUBJID is not null, and not in DM.USUBJID or POOLDEF.POOLID.",
+      "number_errors": 3,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "015246-076-0003-00003",
+          "value": {
+            "RSUBJID": "NOTAUSUBJID"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "000000-000-0000-00001",
+          "value": {
+            "RSUBJID": "NOTAPOOLID"
+          },
+          "validated": true
+        },
+        {
+          "row": 3,
+          "SEQ": null,
+          "USUBJID": "000000-000-0000-00002",
+          "value": {
+            "RSUBJID": "NOTEMPTY"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000960, dataset=DM",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "pooldef.xpt",
+      "domain": "PO",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=CORE-000960, dataset=POOLDEF",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}
