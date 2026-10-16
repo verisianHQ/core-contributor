@@ -1,0 +1,128 @@
+# Variable: *SDT
+# Condition: On rows where *SDT and *EDT are both populated
+# Rule: A variable with a suffix of SDT has a value greater than a value of a variable with the same root and a suffix of EDT
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '121'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.0
+        Section: '3'
+        Item: 9 (General Timing Variable Conventions)
+        Cited Guidance: 'ADaMIG v1.0, Section 3, Item 9 (General Timing Variable Conventions):
+          Names of timing start variables end with an S followed by the two characters
+          indicating the type of timing (e.g., SDT, STM), unless otherwise specified
+          elsewhere in Section 3.'
+      - Document: ADaMIG v1.0
+        Section: '3'
+        Item: 9 (General Timing Variable Conventions)
+        Cited Guidance: The ADaM Team acknowledges that this cited text does not adequately
+          support the creation of a conformance rule.  See definition of Message Type="Note"
+          in Section 3, Description of ADaM Conformance Rules Table.
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '121'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: 3.1.2
+        Item: '6'
+        Cited Guidance: 'ADaMIG v1.1, Section 3.1.2, Item 6: Names of timing start
+          variables end with an S followed by the characters indicating the type of
+          timing (i.e., SDT, STM, SDTM), unless otherwise specified elsewhere in Section
+          3.'
+      - Document: ADaMIG v1.1
+        Section: 3.1.2
+        Item: '6'
+        Cited Guidance: The ADaM Team acknowledges that this cited text does not adequately
+          support the creation of a conformance rule.  See definition of Message Type="Note"
+          in Section 3, Description of ADaM Conformance Rules Table.
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '121'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: 3.1.2
+        Item: '6'
+        Cited Guidance: 'ADaMIG v1.2, Section 3.1.2, Item 6: Names of timing start
+          variables end with an S followed by the characters indicating the type of
+          timing (i.e., SDT, STM, SDTM), unless otherwise specified elsewhere in Section
+          3, Standard ADaM Variables.'
+      - Document: ADaMIG v1.2
+        Section: 3.1.2
+        Item: '6'
+        Cited Guidance: The ADaM Team acknowledges that this cited text does not adequately
+          support the creation of a conformance rule.  See definition of Message Type="Note"
+          in Section 3, Description of ADaM Conformance Rules Table.
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '121'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: 3.1.2
+        Item: '6'
+        Cited Guidance: 'ADaMIG v1.3, Section 3.1.2, Item 6: Names of timing start
+          variables end with an S followed by the characters indicating the type of
+          timing (i.e., SDT, STM, SDTM), unless otherwise specified elsewhere in Section
+          3, Standard ADaM Variables.'
+      - Document: ADaMIG v1.3
+        Section: 3.1.2
+        Item: '6'
+        Cited Guidance: The ADaM Team acknowledges that this cited text does not adequately
+          support the creation of a conformance rule.  See definition of Message Type="Note"
+          in Section 3, Description of ADaM Conformance Rules Table.
+Check:
+  all:
+    - name: '^(?P<root>.*)SDT$'
+      variable_regex_pattern: true
+      operator: non_empty
+    - name: '{{root}}EDT'
+      operator: exists
+    - name: '{{root}}EDT'
+      operator: non_empty
+    - name: '^(?P<root>.*)SDT$'
+      variable_regex_pattern: true
+      operator: greater_than
+      value: '{{root}}EDT'
+Core:
+  Id: AD0121
+  Status: Draft
+  Version: '1'
+Description: Raise an error when the value of a variable with a suffix of SDT is greater than the value of a variable with the same root and a suffix of EDT, considering only rows on which both variables are populated.
+Executability: Fully Executable
+Outcome:
+  Message: '{{root}}SDT is greater than {{root}}EDT when both variables are populated.'
+  Output Variables:
+    - '{{root}}SDT'
+    - '{{root}}EDT'
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

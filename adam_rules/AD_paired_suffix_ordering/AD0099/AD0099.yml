@@ -1,0 +1,103 @@
+# Variable: *STDY
+# Condition: On rows where *STDY and *ENDY are both populated
+# Rule: A variable with a suffix of STDY has a value greater than a value of a variable with the same root and a suffix of ENDY
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '99'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.0
+        Section: ''
+        Item: ''
+        Cited Guidance: There is no guidance in the ADaMIG to support this rule, however
+          this rule can help identify issues with the data which may impact analysis.
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '99'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: ''
+        Item: ''
+        Cited Guidance: There is no guidance in the ADaMIG to support this rule, however
+          this rule can help identify issues with the data which may impact analysis.
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '99'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: ''
+        Item: ''
+        Cited Guidance: There is no guidance in the ADaMIG to support this rule, however
+          this rule can help identify issues with the data which may impact analysis.
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '99'
+        Version: '2'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: '3.1'
+        Item: ''
+        Cited Guidance: There is no guidance in the ADaMIG to support this rule, however
+          this rule can help identify issues with the data which may impact analysis.
+      - Document: ADaMIG-MD v1.0
+        Section: '3.1'
+        Item: ''
+        Cited Guidance: 'ADaMIG-MD v1.0, Section 3.1: The MDBDS supports analysis
+          needs by adding SPDEVID as a required key variable and USUBJID as a conditionally
+          required variable. See the BDS class for further details.'
+Check:
+  all:
+    - name: '^(?P<root>.*)STDY$'
+      variable_regex_pattern: true
+      operator: non_empty
+    - name: '{{root}}ENDY'
+      operator: exists
+    - name: '{{root}}ENDY'
+      operator: non_empty
+    - name: '^(?P<root>.*)STDY$'
+      variable_regex_pattern: true
+      operator: greater_than
+      value: '{{root}}ENDY'
+Core:
+  Id: AD0099
+  Status: Draft
+  Version: '1'
+Description: Raise an error when on a given record, a variable with a suffix of STDY has a value greater than a value of a variable with the same root and a suffix of ENDY, and both variables are populated.
+Executability: Fully Executable
+Outcome:
+  Message: '{{root}}STDY is greater than {{root}}ENDY when both variables are populated.'
+  Output Variables:
+    - '{{root}}STDY'
+    - '{{root}}ENDY'
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BDS
+      - MDBDS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record
