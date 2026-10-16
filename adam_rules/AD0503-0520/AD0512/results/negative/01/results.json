@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "adpe.csv",
+      "domain": "adpe",
+      "execution_status": "success",
+      "execution_message": "*SDY does not contain \"Relative Start Day\" in the label",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 9,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "ASDY",
+            "variable_label": "Analysis Relative Day"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

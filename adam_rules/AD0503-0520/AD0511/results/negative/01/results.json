@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "*SDTM does not contain \"Start Datetime\" in the label",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 8,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "TRTSDTM",
+            "variable_label": "First Exposure to Treatment"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "adpe.csv",
+      "domain": "adpe",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

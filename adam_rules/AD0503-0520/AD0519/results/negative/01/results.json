@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "*EDTF does not contain \"End Date Imputation Flag\" in the label",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 14,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "TRTEDTF",
+            "variable_label": "Last Exposure Imput. Flag"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "adpe.csv",
+      "domain": "adpe",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}
