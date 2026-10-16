@@ -1,0 +1,64 @@
+name: Record Rule Validation Date
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'rules/**/*.yml'
+      - 'rules/**/*.yaml'
+
+jobs:
+  record-date:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Inject Validation Date
+        id: update_yaml
+        run: |
+          CHANGED_FILES=$(git diff --name-only HEAD^ HEAD | grep -E '^rules/.*\.(yml|yaml)$' || true)
+          
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "No YAML rules changed."
+            echo "changes_made=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          
+          CURRENT_DATE=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+          MODIFIED=false
+          
+          for FILE in $CHANGED_FILES; do
+            if [ -f "$FILE" ]; then
+              if grep -iq "^# Validated: True" "$FILE"; then
+                if ! grep -iq "^# Validation Date:" "$FILE"; then
+                  echo "Adding validation date to $FILE"
+                  
+                  sed -i -e "s/^# Validated: True.*/&\n# Validation Date: $CURRENT_DATE/ig" "$FILE"
+                  MODIFIED=true
+                fi
+              fi
+            fi
+          done
+          
+          if [ "$MODIFIED" = true ]; then
+            echo "changes_made=true" >> $GITHUB_OUTPUT
+          else
+            echo "changes_made=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and Push
+        if: steps.update_yaml.outputs.changes_made == 'true'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git add rules/
+          git commit -m "chore: record validation timestamp for newly validated rules"
+          git push
