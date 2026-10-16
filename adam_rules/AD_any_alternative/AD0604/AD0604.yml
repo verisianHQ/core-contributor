@@ -1,0 +1,68 @@
+# Variable: PHSDT
+# Condition: 
+# Rule: On a given record, APHASEN is not present and the value of PHSDT is not equal to the value of at least one PHwSDT variable
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '604'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: 3.3.3
+        Item: ''
+        Cited Guidance: 'ADaMIG v1.2, Section 3.3.3: The values of period, subperiod,
+          and phase start (and end) timing variables must be consistent with their
+          subject-level counterparts from ADSL as described in Table 3.2.7 for each
+          value of APERIOD, ASPER, and APHASE, respectively.'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '604'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: 3.3.3
+        Item: ''
+        Cited Guidance: 'ADaMIG v1.3, Section 3.3.3: The values of period, subperiod,
+          and phase start (and end) timing variables must be consistent with their
+          subject-level counterparts from ADSL as described in Table 3.2.7 for each
+          value of APERIOD, ASPER, and APHASE, respectively.'
+Check:
+  all:
+    - name: APHASEN
+      operator: empty
+    - name: PHSDT
+      operator: non_empty
+    - name: PHSDT
+      operator: not_in_enumerated_columns
+      value: PHSDT
+      regex: '^PH[1-9][0-9]?SDT$'
+Core:
+  Id: AD0604
+  Status: Draft
+  Version: '1'
+Description: Raise an error when on a given record, APHASEN is not present and the value of PHSDT is not equal to the value of at least one PHwSDT variable.
+Executability: Fully Executable
+Outcome:
+  Message: PHSDT is not equal to any PHwSDT variable when APHASEN is not present.
+  Output Variables:
+    - PHSDT
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record
