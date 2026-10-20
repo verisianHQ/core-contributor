@@ -1,14 +1,14 @@
-To view the dashboard, follow the steps below. Please note that if you've never run the setup script before, run that first.
+To view the rules contributor dashboard (rule implementation status and test execution health for SDTM, FDA and ADaM rules), follow the steps below. Please note that if you've never run the setup script before, run that first.
 
 1. In VSCode terminal, in the core-contributor directory, activate the virtual environment by running one of the following: \
     WINDOWS: `.\venv\Scripts\activate` \
     MAC: `source ./venv/bin/activate`
 2. If this is your first time trying to use the dashboard, run: \
     `pip install -r streamlit/requirements.txt`
-    - If you've run this command before, skip to 3
+    - If you've run this command before, skip to 3 (note that rerunning the setup script recreates the virtual environment, so you will need to run this command again afterwards)
 3. Run: \
-  `streamlit run ./streamlit/app.py`
+    `streamlit run ./streamlit/app.py`
 
 The dashboard should open automatically in your default browser. If it doesn't, paste the 'Local URL' link found in the terminal into your browser.
 
-To use the terminal for other tasks, you'll need to stop streamlit by pressing CTRL + C with the terminal selected (note that this will cause the dashboard to lose connection. If you want to view the dashboard again you should rerun the streamlit command and open a new tab)
+To use the terminal for other tasks, you'll need to stop streamlit by pressing CTRL + C with the terminal selected (note that this will cause the dashboard to lose connection. If you want to view the dashboard again you should rerun the streamlit command and open a new tab).
