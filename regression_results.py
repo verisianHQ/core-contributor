@@ -244,7 +244,6 @@ def _extract_case_key(path: Path, root: Path) -> Optional[str]:
 
 
 def _find_rule_dir(rules_dir: Path, rule_id: str) -> Optional[Path]:
-    """Locate a rule folder, either standalone or inside a bundle (mirrors TestRunner.get_rule_path)."""
     standalone_path = rules_dir / rule_id
     if standalone_path.is_dir():
         return standalone_path
@@ -381,7 +380,7 @@ def write_diff_summary(
     """Write a readable markdown diff summary and return top-level stats.
 
     When verified_only=True, only cases whose rule_id has a '# verified' comment
-    at the top of its YAML (looked up under rules_dir) are included.
+    at the top of its YAML are included.
     """
     if verified_only:
         all_rule_ids = {k.split("/")[0] for k in baseline_results.keys() | current_results.keys()}
@@ -518,7 +517,6 @@ def write_diff_summary(
 
 
 def parse_args() -> argparse.Namespace:
-    # Options shared by every subcommand.
     common = argparse.ArgumentParser(add_help=False)
     common.add_argument(
         "--standard",
@@ -580,7 +578,6 @@ def parse_args() -> argparse.Namespace:
 
     args = parser.parse_args()
 
-    # Resolve per-standard defaults so SDTM and ADaM outputs never share a folder.
     if args.baseline_dir is None:
         args.baseline_dir = REGRESSION_ROOT / args.standard / "baseline"
     if args.command == "compare" and args.comparison_dir is None:
