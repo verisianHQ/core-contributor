@@ -2,11 +2,14 @@
 """Create isolated regression snapshots and compare rule outputs.
 
 Key behavior:
-- Snapshot and isolated compare runs DO NOT write into rules/*/results.
+- Snapshot and isolated compare runs DO NOT write into the rules folder
+  (rules/ for SDTM, adam_rules/ for ADaM).
 - Snapshot outputs are written only under the baseline directory.
 - Isolated compare outputs are written to a temporary folder and removed.
 - Comparison directory stores summary outputs only.
-- Comparison can also run against existing real results under rules/.
+- Comparison can also run against existing real results in the rules folder.
+- Baseline and comparison directories default to .regression/<standard>/ so
+  SDTM and ADaM runs never mix.
 
 The script compares case-level results.json files and ignores only
 `dictionary_versions` during diff normalization. The `validated` field is
@@ -24,8 +27,8 @@ import tempfile
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-DEFAULT_BASELINE_DIR = Path(".regression/baseline")
-DEFAULT_COMPARISON_DIR = Path(".regression/comparison")
+REGRESSION_ROOT = Path(".regression")
+STANDARD_RULES_DIRS = {"sdtm": Path("rules"), "adam": Path("adam_rules")}
 
 SUPPORTED_DICT_KEYS = {
     "whodrug",
@@ -85,12 +88,12 @@ def load_dictionary_paths(config_path: Optional[Path]) -> Dict[str, str]:
     return output
 
 
-def build_runner(use_postgres: bool, dictionary_paths: Dict[str, str]) -> Any:
+def build_runner(standard: str, use_postgres: bool, dictionary_paths: Dict[str, str]) -> Any:
     """Construct TestRunner with optional dictionary path overrides."""
     from test import TestRunner
 
     return TestRunner(
-        standard=STANDARD,
+        standard=standard,
         use_pgserver=not use_postgres,
         whodrug_path=dictionary_paths.get("whodrug"),
         meddra_path=dictionary_paths.get("meddra"),
@@ -141,6 +144,7 @@ def _execute_case(runner: Any, rule_id: str, test_type: str, case_info: Dict[str
 
 def run_isolated_suite(
     output_dir: Path,
+    standard: str,
     use_postgres: bool,
     dictionary_paths_file: Optional[Path],
     clean: bool,
@@ -153,10 +157,11 @@ def run_isolated_suite(
         shutil.rmtree(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    runner = build_runner(use_postgres=use_postgres, dictionary_paths=dictionary_paths)
+    runner = build_runner(standard=standard, use_postgres=use_postgres, dictionary_paths=dictionary_paths)
 
     summary = {
         "generated_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
+        "standard": standard,
         "output_dir": str(output_dir),
         "use_postgres": use_postgres,
         "dictionary_paths_file": str(dictionary_paths_file) if dictionary_paths_file else None,
@@ -218,27 +223,45 @@ def _extract_case_key(path: Path, root: Path) -> Optional[str]:
     if len(rel_parts) < 5:
         return None
 
-    if rel_parts[-2:] != ["results", "results.json"]:
+    if rel_parts[-1] != "results.json":
         return None
 
     # Accept roots that are either:
     # - <root>/rules/<rule>/<type>/<case>/results/results.json
     # - <root>/<rule>/<type>/<case>/results/results.json
-    rule, test_type, case_id = rel_parts[-5], rel_parts[-4], rel_parts[-3]
+    # - <root>/<bundle>/<rule>/results/<type>/<case>/results.json (bundled rules, see test.py)
+    if rel_parts[-2] == "results":
+        rule, test_type, case_id = rel_parts[-5], rel_parts[-4], rel_parts[-3]
+    elif rel_parts[-4] == "results":
+        rule, test_type, case_id = rel_parts[-5], rel_parts[-3], rel_parts[-2]
+    else:
+        return None
+
     if test_type not in {"positive", "negative"}:
         return None
 
     return f"{rule}/{test_type}/{case_id}"
 
 
-RULES_DIR = Path("rules")
-STANDARD_RULES_DIRS = {"sdtm": Path("rules"), "adam": Path("adam_rules")}
-STANDARD = "sdtm"
+def _find_rule_dir(rules_dir: Path, rule_id: str) -> Optional[Path]:
+    """Locate a rule folder, either standalone or inside a bundle (mirrors TestRunner.get_rule_path)."""
+    standalone_path = rules_dir / rule_id
+    if standalone_path.is_dir():
+        return standalone_path
+
+    if rules_dir.is_dir():
+        for d in rules_dir.iterdir():
+            if (d / rule_id).is_dir():
+                return d / rule_id
+
+    return None
 
 
-def is_rule_verified(rule_id: str) -> bool:
+def is_rule_verified(rules_dir: Path, rule_id: str) -> bool:
     """Return True if the rule YAML starts with a '# verified' comment (case-insensitive)."""
-    rule_path = RULES_DIR / rule_id
+    rule_path = _find_rule_dir(rules_dir, rule_id)
+    if not rule_path:
+        return False
     ymls = list(rule_path.glob("[!~]*.yml"))
     if not ymls:
         return False
@@ -351,19 +374,20 @@ def write_diff_summary(
     current_root: Path,
     baseline_results: Dict[str, Dict[str, Any]],
     current_results: Dict[str, Dict[str, Any]],
+    rules_dir: Path,
     max_diff_lines: int,
     verified_only: bool = False,
 ) -> Dict[str, Any]:
     """Write a readable markdown diff summary and return top-level stats.
 
     When verified_only=True, only cases whose rule_id has a '# verified' comment
-    at the top of its YAML are included.
+    at the top of its YAML (looked up under rules_dir) are included.
     """
     if verified_only:
-        all_keys = baseline_results.keys() | current_results.keys()
-        verified_rules = {k for k in all_keys if is_rule_verified(k.split("/")[0])}
-        baseline_results = {k: v for k, v in baseline_results.items() if k in verified_rules}
-        current_results = {k: v for k, v in current_results.items() if k in verified_rules}
+        all_rule_ids = {k.split("/")[0] for k in baseline_results.keys() | current_results.keys()}
+        verified_rules = {r for r in all_rule_ids if is_rule_verified(rules_dir, r)}
+        baseline_results = {k: v for k, v in baseline_results.items() if k.split("/")[0] in verified_rules}
+        current_results = {k: v for k, v in current_results.items() if k.split("/")[0] in verified_rules}
 
     baseline_keys = set(baseline_results.keys())
     current_keys = set(current_results.keys())
@@ -494,22 +518,30 @@ def write_diff_summary(
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Isolated regression snapshot and compare utility")
-    subparsers = parser.add_subparsers(dest="command", required=True)
-
-    snapshot = subparsers.add_parser(
-        "snapshot",
-        help="Run all rules in isolated mode and write baseline outputs outside rules/",
-    )
-    snapshot.add_argument("--baseline-dir", type=Path, default=DEFAULT_BASELINE_DIR)
-    snapshot.add_argument(
+    # Options shared by every subcommand.
+    common = argparse.ArgumentParser(add_help=False)
+    common.add_argument(
         "--standard",
         choices=sorted(STANDARD_RULES_DIRS),
         default="sdtm",
         help="Rule set to run: sdtm (rules/) or adam (adam_rules/)",
     )
-    snapshot.add_argument("--dictionary-paths-file", type=Path)
-    snapshot.add_argument("--use-postgres", action="store_true", help="Use PostgreSQL instead of pgserver")
+    common.add_argument(
+        "--baseline-dir",
+        type=Path,
+        help="Baseline output directory (default: .regression/<standard>/baseline)",
+    )
+    common.add_argument("--dictionary-paths-file", type=Path)
+    common.add_argument("--use-postgres", action="store_true", help="Use PostgreSQL instead of pgserver")
+
+    parser = argparse.ArgumentParser(description="Isolated regression snapshot and compare utility")
+    subparsers = parser.add_subparsers(dest="command", required=True)
+
+    snapshot = subparsers.add_parser(
+        "snapshot",
+        parents=[common],
+        help="Run all rules in isolated mode and write baseline outputs outside the rules folder",
+    )
     snapshot.add_argument(
         "--clean",
         action="store_true",
@@ -518,9 +550,9 @@ def parse_args() -> argparse.Namespace:
 
     compare = subparsers.add_parser(
         "compare",
-        help="Compare baseline outputs against isolated current run, rules/, or a custom folder",
+        parents=[common],
+        help="Compare baseline outputs against isolated current run, the rules folder, or a custom folder",
     )
-    compare.add_argument("--baseline-dir", type=Path, default=DEFAULT_BASELINE_DIR)
     compare.add_argument(
         "--current-source",
         choices=["isolated", "rules", "folder"],
@@ -530,18 +562,9 @@ def parse_args() -> argparse.Namespace:
     compare.add_argument(
         "--comparison-dir",
         type=Path,
-        default=DEFAULT_COMPARISON_DIR,
-        help="Directory for regression diff summary output",
+        help="Directory for regression diff summary output (default: .regression/<standard>/comparison)",
     )
     compare.add_argument("--current-dir", type=Path, help="Used when --current-source folder")
-    compare.add_argument(
-        "--standard",
-        choices=sorted(STANDARD_RULES_DIRS),
-        default="sdtm",
-        help="Rule set to run: sdtm (rules/) or adam (adam_rules/)",
-    )
-    compare.add_argument("--dictionary-paths-file", type=Path)
-    compare.add_argument("--use-postgres", action="store_true", help="Use PostgreSQL instead of pgserver")
     compare.add_argument("--summary-file", type=Path, help="Output markdown summary file path")
     compare.add_argument(
         "--max-diff-lines",
@@ -555,31 +578,38 @@ def parse_args() -> argparse.Namespace:
         help="Delete existing summary outputs before writing (if they exist)",
     )
 
-    return parser.parse_args()
+    args = parser.parse_args()
+
+    # Resolve per-standard defaults so SDTM and ADaM outputs never share a folder.
+    if args.baseline_dir is None:
+        args.baseline_dir = REGRESSION_ROOT / args.standard / "baseline"
+    if args.command == "compare" and args.comparison_dir is None:
+        args.comparison_dir = REGRESSION_ROOT / args.standard / "comparison"
+
+    return args
 
 
 def main() -> int:
-    global RULES_DIR, STANDARD
     args = parse_args()
-    STANDARD = args.standard
-    RULES_DIR = STANDARD_RULES_DIRS[args.standard]
+    rules_dir = STANDARD_RULES_DIRS[args.standard]
 
     if args.command == "snapshot":
         run_isolated_suite(
             output_dir=args.baseline_dir,
+            standard=args.standard,
             use_postgres=args.use_postgres,
             dictionary_paths_file=args.dictionary_paths_file,
             clean=args.clean,
         )
         print(f"Baseline created at: {args.baseline_dir}")
-        print("No files were written to rules/*/results by this command.")
+        print(f"No files were written to {rules_dir}/ by this command.")
         return 0
 
     baseline_root = args.baseline_dir
     baseline_results = collect_results(baseline_root)
     if not baseline_results:
         print(f"No baseline results found in: {baseline_root}")
-        print("Create one with: python regression_results.py snapshot --clean")
+        print(f"Create one with: python regression_results.py snapshot --standard {args.standard} --clean")
         return 1
 
     if args.current_source == "isolated":
@@ -587,6 +617,7 @@ def main() -> int:
             isolated_root = Path(tmp_dir)
             run_isolated_suite(
                 output_dir=isolated_root,
+                standard=args.standard,
                 use_postgres=args.use_postgres,
                 dictionary_paths_file=args.dictionary_paths_file,
                 clean=False,
@@ -610,6 +641,7 @@ def main() -> int:
                 current_root=current_root,
                 baseline_results=baseline_results,
                 current_results=current_results_snapshot,
+                rules_dir=rules_dir,
                 max_diff_lines=args.max_diff_lines,
             )
             write_diff_summary(
@@ -618,6 +650,7 @@ def main() -> int:
                 current_root=current_root,
                 baseline_results=baseline_results,
                 current_results=current_results_snapshot,
+                rules_dir=rules_dir,
                 max_diff_lines=args.max_diff_lines,
                 verified_only=True,
             )
@@ -639,7 +672,7 @@ def main() -> int:
 
             return 0 if (stats["added_cases"] + stats["removed_cases"] + stats["changed_cases"]) == 0 else 2
     elif args.current_source == "rules":
-        current_root = Path("rules")
+        current_root = rules_dir
     else:
         if not args.current_dir:
             print("--current-dir is required when --current-source folder")
@@ -666,6 +699,7 @@ def main() -> int:
         current_root=current_root,
         baseline_results=baseline_results,
         current_results=current_results,
+        rules_dir=rules_dir,
         max_diff_lines=args.max_diff_lines,
     )
     write_diff_summary(
@@ -674,6 +708,7 @@ def main() -> int:
         current_root=current_root,
         baseline_results=baseline_results,
         current_results=current_results,
+        rules_dir=rules_dir,
         max_diff_lines=args.max_diff_lines,
         verified_only=True,
     )

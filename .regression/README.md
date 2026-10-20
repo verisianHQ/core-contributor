@@ -1,15 +1,16 @@
-Run isolated regression snapshot/compare without writing to `rules/*/results`:  
+Run isolated regression snapshot/compare without writing to the rules folder (`rules/` for SDTM, `adam_rules/` for ADaM):  
+    - Pick the rule set with `--standard sdtm` (default) or `--standard adam`. Outputs default to `.regression/<standard>/baseline` and `.regression/<standard>/comparison`, so the two standards never mix.  
     - Create baseline outputs in a separate folder:  
-       - `python regression_results.py snapshot --baseline-dir .regression/baseline --clean`  
+       - `python regression_results.py snapshot --baseline-dir .regression/sdtm/baseline --clean`  
     - Snapshot writes only `results.json` files (no `results.txt`) plus `baseline_run_summary.json` in baseline directory.  
     - Compare baseline to a new isolated current run:  
-       - `python regression_results.py compare --baseline-dir .regression/baseline --comparison-dir .regression/comparison --clean`  
+       - `python regression_results.py compare --baseline-dir .regression/sdtm/baseline --comparison-dir .regression/sdtm/comparison --clean`  
       - Current run output is generated in a temporary folder and automatically removed.  
       - Regression summary files written to `--comparison-dir` are:  
         - `regression_diff_summary.md` — all rules  
         - `regression_diff_summary_verified.md` — verified rules only (rules with `# verified` or `# Verified` at the top of their YAML)  
-    - Compare baseline against existing real outputs already in `rules/*/results`:  
-       - `python regression_results.py compare --baseline-dir .regression/baseline --current-source rules --summary-file .regression/comparison/regression_diff_summary.md`  
+    - Compare baseline against existing real outputs already in the rules folder:  
+       - `python regression_results.py compare --baseline-dir .regression/sdtm/baseline --current-source rules --summary-file .regression/sdtm/comparison/regression_diff_summary.md`  
     - Pass external dictionary paths using a config file:  
        - `python regression_results.py snapshot --dictionary-paths-file dictionary_paths`  
        - `python regression_results.py compare --dictionary-paths-file dictionary_paths`  
