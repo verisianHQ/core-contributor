@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "rs.xpt",
+      "domain": "RS",
+      "execution_status": "success",
+      "execution_message": "RSEVAL must not be populated for records where RSCAT is populated with values from the Clinical Classification Use Case.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": 1,
+          "USUBJID": "CDISC001",
+          "value": {
+            "RSEVAL": "PERSON A"
+          },
+          "validated": true
+        },
+        {
+          "row": 4,
+          "SEQ": 4,
+          "USUBJID": "CDISC004",
+          "value": {
+            "RSEVAL": "PERSON B"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

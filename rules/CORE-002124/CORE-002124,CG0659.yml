@@ -1,0 +1,63 @@
+# Variable: --EVAL
+# Condition: Domain in ('QS', 'FT') or (Domain = 'RS' and it's the Clinical Classification Use Case)
+# Rule: --EVAL not present in dataset
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0659
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: --EVAL and --EVALID must not be used to model QRS
+                  data in SDTM.
+                Document: IG v3.4
+                Item: Assumption 8
+                Section: 6.3.9.1
+              - Cited Guidance: --EVAL and --EVALID must not be used to model QRS
+                  data in SDTM.
+                Document: IG v3.4
+                Item: Assumption 8
+                Section: 6.3.9.2
+              - Cited Guidance: --EVAL and --EVALID must not be used to model QRS
+                  data in SDTM.
+                Document: IG v3.4
+                Item: Assumption 8
+                Section: 6.3.9.3.2
+Check:
+  all:
+    - name: $rscat_ccode
+      operator: equal_to
+      value: C118971
+      value_is_literal: true
+    - name: RSEVAL
+      operator: exists
+Core:
+  Id: CORE-002124
+  Status: Published
+  Version: '1'
+Description: Raise an error when RSCAT is only populated with values from the Clinical Classification Use Case as per the define.xml document, but RSEVAL is present in the RS dataset.
+Executability: Fully Executable
+Operations:
+  - id: $rscat_ccode
+    name: RSCAT
+    operator: define_variable_metadata
+    attribute_name: define_variable_ccode
+Outcome:
+  Message: RSEVAL must not be present when RSCAT is only populated with values from the Clinical Classification Use Case.
+  Output Variables:
+    - RSEVAL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - RS
+Sensitivity: Dataset

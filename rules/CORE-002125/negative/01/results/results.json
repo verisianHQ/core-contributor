@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "rs.xpt",
+      "domain": "RS",
+      "execution_status": "success",
+      "execution_message": "RSEVALID must not be present when RSCAT is only populated with values from the Clinical Classification Use Case.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "RSEVALID": "PERSON A"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

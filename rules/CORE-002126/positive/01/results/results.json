@@ -1,0 +1,20 @@
+{
+  "datasets": [
+    {
+      "dataset": "rs.xpt",
+      "domain": "RS",
+      "execution_status": "success",
+      "execution_message": null,
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "qs.xpt",
+      "domain": "QS",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to domain for rule id=SDTMIG.CG0659.vlm, dataset=QS",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

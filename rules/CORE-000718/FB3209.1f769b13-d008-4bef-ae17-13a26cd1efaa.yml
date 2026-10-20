@@ -162,7 +162,7 @@ Description: Raise an error when Start Date/Time of Observation (--STDTC) is
   after the End Date/Time of Observation (--ENDTC).
 Executability: Fully Executable
 Outcome:
-  Message: --STDTC falls after  --ENDTC.
+  Message: --STDTC falls after --ENDTC.
   Output Variables:
     - --STDTC
     - --ENDTC

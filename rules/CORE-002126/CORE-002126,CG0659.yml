@@ -1,0 +1,62 @@
+# Variable: --EVAL
+# Condition: Domain in ('QS', 'FT') or (Domain = 'RS' and it's the Clinical Classification Use Case)
+# Rule: --EVAL not present in dataset
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0659
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: --EVAL and --EVALID must not be used to model QRS
+                  data in SDTM.
+                Document: IG v3.4
+                Item: Assumption 8
+                Section: 6.3.9.1
+              - Cited Guidance: --EVAL and --EVALID must not be used to model QRS
+                  data in SDTM.
+                Document: IG v3.4
+                Item: Assumption 8
+                Section: 6.3.9.2
+              - Cited Guidance: --EVAL and --EVALID must not be used to model QRS
+                  data in SDTM.
+                Document: IG v3.4
+                Item: Assumption 8
+                Section: 6.3.9.3.2
+Check:
+  all:
+    - name: variable_name
+      operator: equal_to
+      value: RSCAT
+      value_is_literal: true
+    - name: define_vlm_ccode
+      operator: equal_to
+      value: C118971
+      value_is_literal: true
+    - name: RSEVAL
+      operator: non_empty
+Core:
+  Id: CORE-002126
+  Status: Published
+  Version: '1'
+Description: Raise an error when some records in the RS dataset have RSCAT populated with values from the Clinical Classification Use Case as per the define.xml document but RSEVAL for those RSCAT records is populated.
+Executability: Fully Executable
+Outcome:
+  Message: RSEVAL must not be populated for records where RSCAT is populated with values from the Clinical Classification Use Case.
+  Output Variables:
+    - RSEVAL
+Rule Type: Value Check against Define XML VLM
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - RS
+Sensitivity: Record
