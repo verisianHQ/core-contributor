@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "adlb.csv",
+      "domain": "adlb",
+      "execution_status": "success",
+      "execution_message": "EVTSDT is greater than EVTEDT when both variables are populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "01-101",
+          "value": {
+            "EVTSDT": 10.0,
+            "EVTEDT": 1.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
