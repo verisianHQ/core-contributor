@@ -1,0 +1,41 @@
+{
+  "datasets": [
+    {
+      "dataset": "adlb.csv",
+      "domain": "adlb",
+      "execution_status": "success",
+      "execution_message": "Within a given value of PARAMCD, there is more than one value of CRIT1.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "01-101",
+          "value": {
+            "CRIT1": "A",
+            "PARAMCD": "P1"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "01-102",
+          "value": {
+            "CRIT1": "B",
+            "PARAMCD": "P1"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0151, dataset=ADSL",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

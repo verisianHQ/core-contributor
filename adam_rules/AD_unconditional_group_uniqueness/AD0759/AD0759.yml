@@ -1,0 +1,78 @@
+# Variable: TRxxAGy where xx is an integer [01-99, zero-padded] and y is an integer [1-99, not zero-padded]
+# Condition: 
+# Rule: Within a given value of TRTxxA, there is more than one value of TRxxAGy
+# verified
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '759'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: '3.2'
+        Item: Table 3.2.4
+        Cited Guidance: 'ADaMIG v1.1, Section 3.2, Table 3.2.4: TRxxAGy: Actual pooled
+          treatment y for period xx. Required when TRxxPGy is present and TRTxxA is
+          present.'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '759'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: '3.2'
+        Item: Table 3.2.4
+        Cited Guidance: 'ADaMIG v1.2, Section 3.2, Table 3.2.4: TRxxAGy: Actual pooled
+          treatment y for period xx. Required when TRxxPGy is present and TRTxxA is
+          present.'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '759'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: '3.2'
+        Item: Table 3.2.4
+        Cited Guidance: 'ADaMIG v1.3, Section 3.2, Table 3.2.4: TRxxAGy: Actual pooled
+          treatment y for period xx. Required when TRxxPGy is present and TRTxxA is
+          present.'
+Check:
+  all:
+    - name: '^TR(?P<xx>0[1-9]|[1-9][0-9])AG(?P<y>[1-9][0-9]?)$'
+      variable_regex_pattern: true
+      operator: is_inconsistent_across_dataset
+      value: TRT{{xx}}A
+Core:
+  Id: AD0759
+  Status: Draft
+  Version: '1'
+Description: Raise an error when within a given value of TRTxxA, there is more than one value of TRxxAGy, where xx is an integer [01-99, zero-padded] and y is an integer [1-99, not zero-padded].
+Executability: Fully Executable
+Outcome:
+  Message: Within a given value of TRT{{xx}}A, there is more than one value of TR{{xx}}AG{{y}}.
+  Output Variables:
+    - TR{{xx}}AG{{y}}
+    - TRT{{xx}}A
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - ADSL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record
