@@ -1,0 +1,89 @@
+# Variable: Dataset label
+# Condition: Dataset is named ADSL
+# Rule: Dataset label must be "Subject-Level Analysis Dataset"
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '320'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.0
+        Section: 2.3.1
+        Item: ''
+        Cited Guidance: 'ADaMIG v1.0, Section 2.3.1: ADSL contains one record per subject, regardless of the type of clinical trial design. ADSL is used to provide the variables that describe attributes of a subject. This allows simple combining with any other dataset, including SDTM domains and analysis datasets. ADSL is a source for subject-level variables used in other analysis datasets, such as population flags and treatment variables. There is only one ADSL per study. ADSL and its related metadata are required in a CDISC-based submission of data from a clinical trial even if no other analysis datasets are submitted.'
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '320'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: 2.3.1
+        Item: ''
+        Cited Guidance: 'ADaMIG v1.1, Section 2.3.1: ADSL contains one record per subject, regardless of the type of clinical trial design. The label of the ADSL dataset is "Subject-Level Analysis Dataset".'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '320'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: 2.3.1
+        Item: ''
+        Cited Guidance: 'ADaMIG v1.2, Section 2.3.1: ADSL contains one record per subject, regardless of the type of clinical trial design. The label of the ADSL dataset is "Subject-Level Analysis Dataset".'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '320'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: 2.3.1
+        Item: ''
+        Cited Guidance: 'ADaMIG v1.3, Section 2.3.1: ADSL contains one record per subject, regardless of the type of clinical trial design. The label of the ADSL dataset is "Subject-Level Analysis Dataset".'
+Check:
+  all:
+  - name: dataset_name
+    operator: equal_to
+    value: ADSL
+    value_is_literal: true
+  - name: dataset_label
+    operator: not_equal_to
+    value: Subject-Level Analysis Dataset
+    value_is_literal: true
+Core:
+  Id: AD0320
+  Status: Draft
+  Version: '1'
+Description: A dataset is named ADSL and the dataset label is not "Subject-Level Analysis Dataset".
+Executability: Fully Executable
+Outcome:
+  Message: A dataset is named ADSL and the dataset label is not "Subject-Level Analysis Dataset".
+  Output Variables:
+    - dataset_name
+    - dataset_label
+Rule Type: Dataset Metadata Check
+Scope:
+  Data Structures:
+    Include:
+      - ADSL
+  Domains:
+    Include:
+      - ADSL
+Sensitivity: Dataset

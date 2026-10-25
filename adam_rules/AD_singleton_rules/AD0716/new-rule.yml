@@ -1,0 +1,80 @@
+# Variable: *TM
+# Condition: Variable does not end in ELTM
+# Rule: Variable metadata type must be numeric
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '716'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: 3.1.2
+        Item: '4'
+        Cited Guidance: 'ADaMIG v1.1, Section 3.1.2, Item 4: Variables whose names end in TM are numeric times'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '716'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: 3.1.2
+        Item: '4'
+        Cited Guidance: 'ADaMIG v1.2, Section 3.1.2, Item 4: Variables whose names end in TM are numeric times'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '716'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: 3.1.2
+        Item: '4'
+        Cited Guidance: 'ADaMIG v1.3, Section 3.1.2, Item 4: Variables whose names end in TM are numeric times'
+Check:
+  all:
+  - name: variable_name
+    operator: suffix_matches_regex
+    suffix: 2
+    value: TM
+  - name: variable_name
+    operator: not_suffix_matches_regex
+    suffix: 4
+    value: ELTM
+  - name: variable_data_type
+    operator: not_equal_to
+    value: Num
+    value_is_literal: true
+Core:
+  Id: AD0716
+  Status: Draft
+  Version: '1'
+Description: A variable ending in TM, excluding ELTM, is not numeric.
+Executability: Fully Executable
+Outcome:
+  Message: A variable ending in TM, excluding ELTM, is not numeric.
+  Output Variables:
+  - variable_name
+  - variable_data_type
+Rule Type: Variable Metadata Check
+Scope:
+  Data Structures:
+    Include:
+    - ALL
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Dataset

@@ -1,0 +1,23 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "success",
+      "execution_message": "A same-root FN variable has a value other than 0, 1, or null when its FL variable is present.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "SAFFN": 2.0,
+            "SAFFL": "Y"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

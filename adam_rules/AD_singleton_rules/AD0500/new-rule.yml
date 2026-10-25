@@ -1,0 +1,67 @@
+# Variable: APHASE
+# Condition: APHASE is populated
+# Rule: APHASE must match an ADSL APHASEw value
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '500'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: 3.3.3
+        Item: Table 3.3.3.1
+        Cited Guidance: APHASE must be one of the values found in the ADSL APHASEw variables.
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '500'
+        Version: '2'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3; ADaMIG-MD v1.0
+        Section: 3.3.3; 3.1
+        Item: Table 3.3.3.1
+        Cited Guidance: APHASE must be one of the values found in the ADSL APHASEw variables.
+Check:
+  all:
+  - name: APHASE
+    operator: non_empty
+  - name: APHASE
+    operator: not_in_enumerated_columns
+    regex: ^APHASE[1-9]$
+    value: APHASE
+Core:
+  Id: AD0500
+  Status: Draft
+  Version: '1'
+Description: APHASE does not match a value in an ADSL APHASEw variable.
+Executability: Fully Executable
+Match Datasets:
+- Keys:
+  - USUBJID
+  Name: ADSL
+Outcome:
+  Message: The value of APHASE does not match a value in an ADSL variable APHASEw, where w is an integer [1-9, not zero-padded].
+  Output Variables:
+  - APHASE
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - BDS
+    - MDBDS
+    - OCCDS
+    - MDOCCDS
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

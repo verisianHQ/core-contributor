@@ -1,0 +1,77 @@
+# Variable: TRTP
+# Condition: TRTP is populated
+# Rule: TRTP must match a planned treatment value in ADSL
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '720'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: 3.3.2
+        Item: Table 3.3.2.1
+        Cited Guidance: TRTP must match at least one character planned treatment value in ADSL.
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '720'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: 3.3.2
+        Item: Table 3.3.2.1
+        Cited Guidance: TRTP must match at least one character planned treatment value in ADSL.
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '720'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: 3.3.2
+        Item: Table 3.3.2.1
+        Cited Guidance: TRTP must match at least one character planned treatment value in ADSL.
+Check:
+  all:
+  - name: TRTP
+    operator: non_empty
+  - name: TRTP
+    operator: not_in_enumerated_columns
+    regex: ^(?:TRT(?:0[1-9]|[1-9][0-9])P|TRTSEQP|TR(?:0[1-9]|[1-9][0-9])PG[1-9][0-9]?)$
+    value: TRTP
+Core:
+  Id: AD0720
+  Status: Draft
+  Version: '1'
+Description: TRTP does not match an IG-defined character planned treatment value in ADSL.
+Executability: Fully Executable
+Match Datasets:
+- Keys:
+  - USUBJID
+  Name: ADSL
+Outcome:
+  Message: Variable is not equal to at least one value of the IG-defined character planned treatment variables in ADSL.
+  Output Variables:
+  - TRTP
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - ALL
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

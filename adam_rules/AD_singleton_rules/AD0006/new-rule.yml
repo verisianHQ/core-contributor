@@ -1,0 +1,124 @@
+# Variable: *FN
+# Condition: Same-root *FL and *FN are present
+# Rule: *FN must be 0, 1, or null
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '6'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.0
+        Section: '3'
+        Item: 5 (General Flag Variable Conventions); 9 (General Flag Variable Conventions)
+        Cited Guidance: 'ADaMIG v1.0, Section 3, Item 5 (General Flag Variable Conventions): For subject-level numeric population
+          flag variables: 0 = no (not included), 1 = yes (included). Null values are not allowed.
+
+
+          ADaMIG v1.0, Section 3, Item 9 (General Flag Variable Conventions): For character flags with variable names that
+          end in FL and that are not population flags, a scheme of Y/N/null, or Y/null may be specified. As indicated in Table
+          3.3.4.2, and Table 3.3.8.1, some common character flags use the scheme Y/null. Corresponding 1/0/null and 1/null
+          schemes apply to numeric flags with variable names that end in FN and that are not population indicators.'
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '6'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.1
+        Section: 3.1.4
+        Item: 5; 9
+        Cited Guidance: 'ADaMIG v1.1, Section 3.1.4, Item 5: For subject-level numeric population flag variables: 0 = no (not
+          included), 1 = yes (included). Null values are not allowed.
+
+
+          ADaMIG v1.1, Section 3.1.4, Item 9: For character flags with variable names that end in FL and that are not population
+          flags, a scheme of Y/N/null, or Y/null may be specified. As indicated in Table 3.3.4.2, and Table 3.3.8.1, some
+          common character flags use the scheme Y/null. Corresponding 1/0/null and 1/null schemes apply to numeric flags with
+          variable names that end in FN and that are not population indicators.'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '6'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.2
+        Section: 3.1.4
+        Item: 5; 9
+        Cited Guidance: 'ADaMIG v1.2, Section 3.1.4, Item 5: For subject-level numeric population flag variables: 0 = no (not
+          included), 1 = yes (included). Null values are not allowed.
+
+
+          ADaMIG v1.2, Section 3.1.4, Item 9: For character flags with variable names that end in FL and that are not population
+          flags, a scheme of Y/N/null, or Y/null may be specified. As indicated in Tables 3.3.4.3.1 and 3.3.8.1, some common
+          character flags use the scheme Y/null. The choice of Y/N/null vs Y/null is dependent on analysis needs. Y/N/null
+          should be used when N and null values need to be analyzed differently. Y/null can be used when the need is to analyze
+          just the Y values. Corresponding 1/0/null and 1/null schemes apply to numeric flags with variable names that end
+          in FN and which are not population indicators.'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '6'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: ADaMIG v1.3
+        Section: 3.1.4
+        Item: 5; 9
+        Cited Guidance: 'ADaMIG v1.3, Section 3.1.4, Item 5: For subject-level numeric population flag variables: 0 = no (not
+          included), 1 = yes (included). Null values are not allowed.
+
+
+          ADaMIG v1.3, Section 3.1.4, Item 9: For character flags with variable names that end in FL and that are not population
+          flags, a scheme of Y/N/null, or Y/null may be specified. As indicated in Tables 3.3.4.3.1 and 3.3.8.1, some common
+          character flags use the scheme Y/null. The choice of Y/N/null vs Y/null is dependent on analysis needs. Y/N/null
+          should be used when N and null values need to be analyzed differently. Y/null can be used when the need is to analyze
+          just the Y values. Corresponding 1/0/null and 1/null schemes apply to numeric flags with variable names that end
+          in FN and which are not population indicators.'
+Check:
+  all:
+  - name: ^(?P<root>[A-Z][A-Z0-9_]{0,4})FN$
+    variable_regex_pattern: true
+    operator: non_empty
+  - name: '{{root}}FL'
+    operator: exists
+  - name: '{{root}}FN'
+    operator: not_equal_to
+    value: 0
+  - name: '{{root}}FN'
+    operator: not_equal_to
+    value: 1
+Core:
+  Id: AD0006
+  Status: Draft
+  Version: '1'
+Description: A same-root FN variable has a value other than 0, 1, or null when its FL variable is present.
+Executability: Fully Executable
+Outcome:
+  Message: A same-root FN variable has a value other than 0, 1, or null when its FL variable is present.
+  Output Variables:
+  - '{{root}}FN'
+  - '{{root}}FL'
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+    - ALL
+  Domains:
+    Include:
+    - ALL
+Sensitivity: Record

@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "advs.csv",
+      "domain": "advs",
+      "execution_status": "success",
+      "execution_message": "METABFL has a value other than Y or null.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "METABFL": "N"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

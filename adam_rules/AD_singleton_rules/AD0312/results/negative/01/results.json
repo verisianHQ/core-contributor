@@ -1,0 +1,31 @@
+{
+  "datasets": [
+    {
+      "dataset": "adae.csv",
+      "domain": "adae",
+      "execution_status": "success",
+      "execution_message": "SMQzzSC is not BROAD or NARROW when SMQzzNAM is populated.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "SMQ01NAM": "Neurologic Events",
+            "SMQ01SC": "WIDE"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ],
+  "unmatched_validation": [
+    {
+      "value": {
+        "SMQ02NAM": "Vascular Events",
+        "SMQ02SC": "INVALID"
+      }
+    }
+  ]
+}

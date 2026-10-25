@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    {
+      "dataset": "advs.csv",
+      "domain": "advs",
+      "execution_status": "success",
+      "execution_message": "BASETYPE is populated inconsistently within a value of PARAMCD.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "PARAMCD": "PULSE",
+            "BASETYPE": "ORIGINAL"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "STUDY001-002",
+          "value": {
+            "PARAMCD": "PULSE",
+            "BASETYPE": null
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

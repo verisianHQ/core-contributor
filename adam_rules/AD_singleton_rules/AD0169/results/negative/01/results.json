@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "dataset": "advs.csv",
+      "domain": "advs",
+      "execution_status": "success",
+      "execution_message": "CNSR is not a nonnegative integer.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": 1,
+          "SEQ": null,
+          "USUBJID": "STUDY001-001",
+          "value": {
+            "CNSR": -1.0
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}

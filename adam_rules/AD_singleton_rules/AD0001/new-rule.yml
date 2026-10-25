@@ -1,0 +1,95 @@
+# Variable: ADSL dataset
+# Condition: Study datasets are submitted
+# Rule: ADSL dataset must exist
+# verified 
+Authorities:
+- Organization: CDISC
+  Standards:
+  - Name: ADaMIG
+    Version: '1.0'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '1'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: Model v2.1; ADaMIG v1.0
+        Section: 6; 2.3.1
+        Cited Guidance: 'Model v2.1, Section 6: ADSL and its related metadata are required in a CDISC-based submission of data from a clinical trial even if no other analysis datasets are submitted.
+
+
+          ADaMIG v1.0, Section 2.3.1: ADSL and its related metadata are required in a CDISC-based submission of data from a clinical trial even if no other analysis datasets are submitted.'
+  - Name: ADaMIG
+    Version: '1.1'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '1'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: Model v2.1; ADaMIG v1.1
+        Section: 6; 2.3.1
+        Cited Guidance: 'Model v2.1, Section 6: ADSL and its related metadata are required in a CDISC-based submission of data from a clinical trial even if no other analysis datasets are submitted.
+
+
+          ADaMIG v1.1, Section 2.3.1: ADSL and its related metadata are required in a CDISC-based submission of data from a clinical trial even if no other ADaM datasets are submitted.'
+  - Name: ADaMIG
+    Version: '1.2'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '1'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: Model v2.1; ADaMIG v1.2
+        Section: 6; 2.3.1
+        Cited Guidance: 'Model v2.1, Section 6: ADSL and its related metadata are required in a CDISC-based submission of data from a clinical trial even if no other analysis datasets are submitted.
+
+
+          ADaMIG v1.2, Section 2.3.1: ADSL contains one record per subject, regardless of the type of clinical trial design. The label of the ADSL dataset is "Subject-Level Analysis Dataset." In a study, there is only one dataset in the class of "SUBJECT LEVEL ANALYSIS DATASET", and its name is ADSL.'
+  - Name: ADaMIG
+    Version: '1.3'
+    References:
+    - Origin: ADaM Conformance Rules
+      Rule Identifier:
+        Id: '1'
+        Version: '1'
+      Version: '5.0'
+      Citations:
+      - Document: Model v2.1; ADaMIG v1.3
+        Section: 6; 2.3.1
+        Cited Guidance: 'Model v2.1, Section 6: ADSL and its related metadata are required in a CDISC-based submission of data from a clinical trial even if no other analysis datasets are submitted.
+
+
+          ADaMIG v1.3, Section 2.3.1: ADSL contains one record per subject, regardless of the type of clinical trial design. The label of the ADSL dataset is "Subject-Level Analysis Dataset." In a study, there is only one dataset in the class of "SUBJECT LEVEL ANALYSIS DATASET", and its name is ADSL.'
+Check:
+  all:
+  - name: $dataset_names
+    operator: does_not_contain
+    value: adsl
+    value_is_literal: true
+Core:
+  Id: AD0001
+  Status: Draft
+  Version: '1'
+Description: ADSL dataset does not exist.
+Executability: Fully Executable
+Operations:
+- id: $dataset_names
+  operator: dataset_names
+Outcome:
+  Message: ADSL dataset does not exist.
+  Output Variables: 
+    - $dataset_names
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include: 
+      - ALL
+  Domains:
+    Include: 
+      - ALL
+Sensitivity: Study
