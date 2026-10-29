@@ -247,6 +247,8 @@ Check:
   all:
     - name: --STRESC
       operator: non_empty
+    - name: --STRESN
+      operator: exists
     - name: --STRESC
       operator: matches_regex
       value: ^-?(0|[1-9]\d*)(\.\d+)?$
