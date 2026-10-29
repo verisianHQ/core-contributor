@@ -248,7 +248,7 @@ NOTE: You must still run all First-time Local Setup Steps from above before this
    - `python test.py -h` - See all available options
 3) When you're done, you can deactivate the venv by running `deactivate`
 
-See also [streamlit/README.md](streamlit/README.md) for the rules contributor dashboard and [.regression/README.md](.regression/README.md) for regression testing across all rules.
+See also [.regression/README.md](.regression/README.md) for regression testing across all rules.
 
 
 # Something's Wrong!
