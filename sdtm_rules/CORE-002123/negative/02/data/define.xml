@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ODM
+  xmlns="http://www.cdisc.org/ns/odm/v1.3"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:def="http://www.cdisc.org/ns/def/v2.1"
+  ODMVersion="1.3.2"
+  FileOID="CORE-002123.negative.02"
+  FileType="Snapshot"
+  CreationDateTime="2026-11-02T00:00:00"
+  def:Context="Submission">
+  <Study OID="STDY.CORE-002123">
+    <GlobalVariables>
+      <StudyName>CDISC-TEST</StudyName>
+      <StudyDescription>CORE-002123 negative 02</StudyDescription>
+      <ProtocolName>CDISC-TEST</ProtocolName>
+    </GlobalVariables>
+    <MetaDataVersion OID="MDV.CORE-002123" Name="CORE-002123 negative 02" def:DefineVersion="2.1.0">
+      <def:Standards>
+        <def:Standard OID="STD.1" Name="SDTMIG" Type="IG" Version="3.4" Status="Final"/>
+        <def:Standard OID="STD.2" Name="CDISC/NCI" Type="CT" PublishingSet="SDTM" Version="2026-09-25" Status="Final"/>
+      </def:Standards>
+
+      <ItemGroupDef OID="IG.DM" Name="DM" Domain="DM" SASDatasetName="DM" Repeating="No" IsReferenceData="No" Purpose="Tabulation" def:StandardOID="STD.1" def:Structure="One record per subject" def:ArchiveLocationID="LF.DM">
+        <Description>
+          <TranslatedText xml:lang="en">Demographics</TranslatedText>
+        </Description>
+        <ItemRef ItemOID="IT.DM.AGEU" Mandatory="No" OrderNumber="1"/>
+        <ItemRef ItemOID="IT.DM.SEX" Mandatory="Yes" OrderNumber="2"/>
+        <def:Class Name="SPECIAL PURPOSE"/>
+        <def:leaf ID="LF.DM" xlink:href="dm.xpt">
+          <def:title>dm.xpt</def:title>
+        </def:leaf>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.AE" Name="AE" Domain="AE" SASDatasetName="AE" Repeating="Yes" IsReferenceData="No" Purpose="Tabulation" def:StandardOID="STD.1" def:Structure="One record per adverse event per subject" def:ArchiveLocationID="LF.AE">
+        <Description>
+          <TranslatedText xml:lang="en">Adverse Events</TranslatedText>
+        </Description>
+        <ItemRef ItemOID="IT.AE.AESEV" Mandatory="No" OrderNumber="1"/>
+        <ItemRef ItemOID="IT.AE.AESER" Mandatory="No" OrderNumber="2"/>
+        <def:Class Name="EVENTS"/>
+        <def:leaf ID="LF.AE" xlink:href="ae.xpt">
+          <def:title>ae.xpt</def:title>
+        </def:leaf>
+      </ItemGroupDef>
+
+      <ItemDef OID="IT.DM.AGEU" Name="AGEU" DataType="text" Length="6" SASFieldName="AGEU">
+        <Description>
+          <TranslatedText xml:lang="en">Age Units</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.AGEU"/>
+      </ItemDef>
+      <ItemDef OID="IT.DM.SEX" Name="SEX" DataType="text" Length="6" SASFieldName="SEX">
+        <Description>
+          <TranslatedText xml:lang="en">Sex</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.SEX"/>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AESEV" Name="AESEV" DataType="text" Length="8" SASFieldName="AESEV">
+        <Description>
+          <TranslatedText xml:lang="en">Severity/Intensity</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.AESEV"/>
+      </ItemDef>
+      <ItemDef OID="IT.AE.AESER" Name="AESER" DataType="text" Length="3" SASFieldName="AESER">
+        <Description>
+          <TranslatedText xml:lang="en">Serious Event</TranslatedText>
+        </Description>
+        <CodeListRef CodeListOID="CL.NY"/>
+      </ItemDef>
+
+      <CodeList OID="CL.AGEU" Name="Age Unit" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="YEARS" OrderNumber="1">
+          <Alias Context="nci:ExtCodeID" Name="C29848"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="YRS" OrderNumber="2" def:ExtendedValue="Yes"/>
+        <Alias Context="nci:ExtCodeID" Name="C66781"/>
+      </CodeList>
+      <CodeList OID="CL.SEX" Name="Sex" DataType="text" def:StandardOID="STD.2">
+        <CodeListItem CodedValue="F" OrderNumber="1">
+          <Decode>
+            <TranslatedText xml:lang="en">Female</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C16576"/>
+        </CodeListItem>
+        <CodeListItem CodedValue="M" OrderNumber="2">
+          <Decode>
+            <TranslatedText xml:lang="en">Male</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C20197"/>
+        </CodeListItem>
+        <CodeListItem CodedValue="FEMALE" OrderNumber="3" def:ExtendedValue="Yes">
+          <Decode>
+            <TranslatedText xml:lang="en">Female</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <Alias Context="nci:ExtCodeID" Name="C66731"/>
+      </CodeList>
+      <CodeList OID="CL.AESEV" Name="Severity/Intensity Scale for Adverse Events" DataType="text" def:StandardOID="STD.2">
+        <EnumeratedItem CodedValue="MILD" OrderNumber="1">
+          <Alias Context="nci:ExtCodeID" Name="C41338"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="MODERATE" OrderNumber="2">
+          <Alias Context="nci:ExtCodeID" Name="C41339"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="SEVERE" OrderNumber="3">
+          <Alias Context="nci:ExtCodeID" Name="C41340"/>
+        </EnumeratedItem>
+        <EnumeratedItem CodedValue="EXTREME" OrderNumber="4" def:ExtendedValue="Yes"/>
+        <Alias Context="nci:ExtCodeID" Name="C66769"/>
+      </CodeList>
+      <CodeList OID="CL.NY" Name="No Yes Response" DataType="text" def:StandardOID="STD.2">
+        <CodeListItem CodedValue="N" OrderNumber="1">
+          <Decode>
+            <TranslatedText xml:lang="en">No</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C49487"/>
+        </CodeListItem>
+        <CodeListItem CodedValue="Y" OrderNumber="2">
+          <Decode>
+            <TranslatedText xml:lang="en">Yes</TranslatedText>
+          </Decode>
+          <Alias Context="nci:ExtCodeID" Name="C49488"/>
+        </CodeListItem>
+        <CodeListItem CodedValue="YES" OrderNumber="3" def:ExtendedValue="Yes">
+          <Decode>
+            <TranslatedText xml:lang="en">Yes</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <Alias Context="nci:ExtCodeID" Name="C66742"/>
+      </CodeList>
+    </MetaDataVersion>
+  </Study>
+</ODM>

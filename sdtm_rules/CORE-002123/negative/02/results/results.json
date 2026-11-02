@@ -1,0 +1,70 @@
+{
+  "datasets": [
+    {
+      "dataset": "ae.xpt",
+      "domain": "AE",
+      "execution_status": "success",
+      "execution_message": "A new term has been added to a non-extensible code list.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 110,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AESEV",
+            "variable_value": "EXTREME",
+            "library_variable_ccode": "C66769",
+            "library_variable_codelist_value": "AESEV"
+          },
+          "validated": true
+        },
+        {
+          "row": 118,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AESER",
+            "variable_value": "YES",
+            "library_variable_ccode": "C66742",
+            "library_variable_codelist_value": "NY"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "execution_status": "success",
+      "execution_message": "A new term has been added to a non-extensible code list.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 64,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "AGEU",
+            "variable_value": "YRS",
+            "library_variable_ccode": "C66781",
+            "library_variable_codelist_value": "AGEU"
+          },
+          "validated": true
+        },
+        {
+          "row": 66,
+          "SEQ": null,
+          "USUBJID": "None",
+          "value": {
+            "variable_name": "SEX",
+            "variable_value": "FEMALE",
+            "library_variable_ccode": "C66731",
+            "library_variable_codelist_value": "SEX"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
