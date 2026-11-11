@@ -1,0 +1,58 @@
+{
+  "datasets": [
+    {
+      "dataset": "bds.csv",
+      "domain": "bds",
+      "execution_status": "success",
+      "execution_message": "ANLzzFL is not equal to Y or null within BDS or OCCDS.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "STUDY001-SUBJ0002",
+          "value": {
+            "ANL01FL": "N"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "STUDY001-SUBJ0002",
+          "value": {
+            "ANL02FL": "N"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "occds.csv",
+      "domain": "occds",
+      "execution_status": "success",
+      "execution_message": "ANLzzFL is not equal to Y or null within BDS or OCCDS.",
+      "number_errors": 2,
+      "errors": [
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "STUDY001-SUBJ0002",
+          "value": {
+            "ANL01FL": "N"
+          },
+          "validated": true
+        },
+        {
+          "row": 2,
+          "SEQ": null,
+          "USUBJID": "STUDY001-SUBJ0002",
+          "value": {
+            "ANL02FL": "N"
+          },
+          "validated": true
+        }
+      ]
+    }
+  ]
+}
