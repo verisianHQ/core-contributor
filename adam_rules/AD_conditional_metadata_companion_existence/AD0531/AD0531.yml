@@ -1,0 +1,92 @@
+# Variable: SEVGRyN, SEVGRy
+# Condition: SEVGRyN is present
+# Rule: SEVGRy is not present
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '531'
+              Version: '2'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.3
+                Section: 3.1.1
+                Item: '6'
+                Cited Guidance: 
+                  'ADaMIG v1.3, Section 3.1.1, Item 6: When a secondary variable is included in the dataset, then the primary variable must also be included.'
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '531'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.2
+                Section: 3.1.1
+                Item: '6'
+                Cited Guidance: 
+                  'ADaMIG v1.2, Section 3.1.1, Item 6: When a secondary variable is included in the dataset, then the primary variable must also be included.'
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '531'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.1
+                Section: 3.1.1
+                Item: '6'
+                Cited Guidance: 
+                  'ADaMIG v1.1, Section 3.1.1, Item 6: When the secondary variable is numeric, it can only be included if the primary variable is also present in the dataset.'
+      - Name: ADaMIG-MD
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '531'
+              Version: '2'
+            Version: '5.0'
+            Citations:
+              - Document: IG-MD v1.0
+                Section: 3.1
+                Item: '6'
+                Cited Guidance: 
+                  'ADaMIG-MD v1.0, Section 3.1: The MDOCCDS supports analysis needs by adding SPDEVID as a required identifier and allowing USUBJID be a conditionally required variable. See the OCCDS class for further details.'
+Check:
+  all:
+    - name: '^SEVGR(?P<y>[1-9]|[1-9][0-9])N$'
+      variable_regex_pattern: true
+      operator: exists
+    - name: 'SEVGR{{y}}'
+      operator: not_exists
+Core:
+  Id: AD0531
+  Status: Published
+  Version: '2'
+Description: Raise an error when the SEVGRyN variable is present within OCCDS or MDOCCDS, but the SEVGRy variable is not present.
+Executability: Fully Executable
+Outcome:
+  Message: SEVGRyN is present, but SEVGRy is not present within OCCDS or MDOCCDS.
+  Output Variables:
+    - 'SEVGR{{y}}N'
+    - 'SEVGR{{y}}'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - OCCDS
+      - MDOCCDS
+  Domains:
+    Include:
+      - OCCDS
+      - MDOCCDS
+Sensitivity: Dataset

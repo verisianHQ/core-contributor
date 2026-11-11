@@ -1,0 +1,39 @@
+{
+  "datasets": [
+    {
+      "dataset": "adsl.csv",
+      "domain": "adsl",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0864, dataset=ADSL",
+      "number_errors": 0,
+      "errors": []
+    },
+    {
+      "dataset": "bds.csv",
+      "domain": "bds",
+      "execution_status": "success",
+      "execution_message": "COHORTC is present, but COHORT is not present within BDS.",
+      "number_errors": 1,
+      "errors": [
+        {
+          "row": null,
+          "SEQ": null,
+          "USUBJID": null,
+          "value": {
+            "COHORTC": "AF-01001",
+            "COHORT": "Not in dataset"
+          },
+          "validated": true
+        }
+      ]
+    },
+    {
+      "dataset": "occds.csv",
+      "domain": "occds",
+      "execution_status": "skipped",
+      "execution_message": "Rule skipped - doesn't apply to data structure for rule id=AD0864, dataset=OCCDS",
+      "number_errors": 0,
+      "errors": []
+    }
+  ]
+}

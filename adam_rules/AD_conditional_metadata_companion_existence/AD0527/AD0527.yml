@@ -1,0 +1,75 @@
+# Variable: TRTSEQPN, TRTSEQP
+# Condition: TRTSEQPN is present
+# Rule: TRTSEQP is not present
+# verified
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '527'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.3
+                Section: 3.1.1
+                Item: '6'
+                Cited Guidance: 
+                  'ADaMIG v1.3, Section 3.1.1, Item 6: When a secondary variable is included in the dataset, then the primary variable must also be included.'
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '527'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.2
+                Section: 3.1.1
+                Item: '6'
+                Cited Guidance: 
+                  'ADaMIG v1.2, Section 3.1.1, Item 6: When a secondary variable is included in the dataset, then the primary variable must also be included.'
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '527'
+              Version: '1'
+            Version: '5.0'
+            Citations:
+              - Document: IG v1.1
+                Section: 3.1.1
+                Item: '6'
+                Cited Guidance: 
+                  'ADaMIG v1.1, Section 3.1.1, Item 6: When the secondary variable is numeric, it can only be included if the primary variable is also present in the dataset.'
+Check:
+  all:
+    - name: TRTSEQPN
+      operator: exists
+    - name: TRTSEQP
+      operator: not_exists
+Core:
+  Id: AD0527
+  Status: Published
+  Version: '1'
+Description: Raise an error when the TRTSEQPN variable is present within ADSL, but the TRTSEQP variable is not present.
+Executability: Fully Executable
+Outcome:
+  Message: TRTSEQPN is present, but TRTSEQP is not present within ADSL.
+  Output Variables:
+    - TRTSEQPN
+    - TRTSEQP
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ADSL
+  Domains:
+    Include:
+      - ADSL
+Sensitivity: Dataset
